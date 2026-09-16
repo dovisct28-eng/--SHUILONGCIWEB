@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>勾蓝瑶水龙祠 · 壁画叙事引导</title>
+<style>
+/* ============================================================
+   模块 A：水龙祠壁画叙事引导页面
+   滚动驱动 · 博物馆暗调 · 图像优先
+   ============================================================ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    --bg-deep:    #0a0a09;
+    --bg-navy:    #0d1b2a;
+    --indigo:     #1a2a4a;
+    --blue-gray:  #2c3e50;
+    --paper:      #f4f1ea;
+    --paper-dim:  rgba(244,241,234,0.62);
+    --paper-faint: rgba(244,241,234,0.32);
+    --gold:       #cfa15a;
+    --gold-bright:#d4af37;
+    --cinnabar:   #8b2635;
+}
+
+html, body {
+    background: var(--bg-deep);
+    color: var(--paper);
+    font-family: "Noto Serif SC", "Source Han Serif SC", STSong, "Songti SC", "PingFang SC", serif;
+    -webkit-font-smoothing: antialiased;
+}
+/* 注意：不要在 body 上设 overflow-x:hidden，
+   那会破坏 position:sticky 的相对视口吸附。 */
+body { line-height: 1.75; }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(207,161,90,0.35); }
+
+/* ---------- 全局固定 UI：进度与场景标注 ---------- */
+#progress-rail {
+    position: fixed; right: 26px; top: 50%; transform: translateY(-50%);
+    z-index: 100; display: flex; flex-direction: column; gap: 18px;
+}
+.rail-dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: rgba(244,241,234,0.22);
+    transition: all .5s ease; cursor: default;
+    position: relative;
+}
+.rail-dot.active {
+    background: var(--gold-bright);
+    box-shadow: 0 0 10px rgba(212,175,55,0.7);
+    transform: scale(1.35);
+}
+.rail-dot .tip {
+    position: absolute; right: 18px; top: 50%; transform: translateY(-50%);
+    white-space: nowrap; font-size: 11px; letter-spacing: 2px;
+    color: var(--paper-dim); opacity: 0; transition: opacity .4s;
+    pointer-events: none;
+}
+.rail-dot.active .tip { opacity: 1; color: var(--gold); }
+
+#scene-label {
+    position: fixed; top: 34px; right: 70px; z-index: 100;
+    font-size: 12px; letter-spacing: 4px; color: var(--paper-faint);
+    text-align: right; line-height: 1.6;
+}
+#scene-label .no { color: var(--gold); font-size: 13px; }
+
+#scroll-hint {
+    position: fixed; bottom: 38px; left: 50%; transform: translateX(-50%);
+    z-index: 100; font-size: 11px; letter-spacing: 6px; color: var(--paper-faint);
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+    transition: opacity .6s; pointer-events: none;
+}
+#scroll-hint .line {
+    width: 1px; height: 34px; background: linear-gradient(to bottom, transparent, var(--gold));
+    animation: hintDrop 2.2s ease-in-out infinite;
+}
+@keyframes hintDrop {
+    0% { transform: scaleY(0); transform-origin: top; }
+    55% { transform: scaleY(1); transform-origin: top; }
+    56% { transform-origin: bottom; }
+    100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+/* ---------- 通用舞台 ---------- */
+.scene { position: relative; width: 100%; }
+.stage {
+    position: sticky; top: 0; height: 100vh; width: 100%;
+    overflow: hidden; display: flex; align-items: center; justify-content: center;
+}
+
+/* 竖排标题 */
+.v-title {
+    writing-mode: vertical-rl; text-orientation: mixed;
+    letter-spacing: 0.45em; font-weight: 400;
+}
+.eyebrow {
+    font-size: 12px; letter-spacing: 6px; color: var(--gold);
+    text-transform: none; margin-bottom: 18px;
+}
+.body-text {
+    font-size: 15px; color: var(--paper-dim); font-weight: 300;
+    letter-spacing: 1px; max-width: 460px;
+}
+.hint-tag {
+    display: inline-block; padding: 4px 12px;
+    border: 1px solid rgba(207,161,90,0.4); border-radius: 2px;
+    font-size: 11px; letter-spacing: 3px; color: var(--gold);
+}
+
+/* ============================================================
+   SCENE 01  开屏
+   ============================================================ */
+#scene-01 .stage { background: var(--bg-deep); }
+#splash-bg {
+    position: absolute; inset: -5%;
+    background: url('assets/splash-bg.png') center center / cover no-repeat;
+    will-change: transform;
+    filter: brightness(0.62) saturate(0.85);
+}
+#splash-veil {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at center, rgba(10,10,9,0.25) 0%, rgba(10,10,9,0.85) 78%, #0a0a09 100%);
+}
+#scene-01 .content {
+    position: relative; z-index: 5; text-align: center;
+}
+#scene-01 h1 {
+    font-size: clamp(2.4rem, 6vw, 4.6rem); font-weight: 400;
+    letter-spacing: 0.35em; margin-left: 0.35em; color: var(--paper);
+    text-shadow: 0 4px 30px rgba(0,0,0,0.9);
+}
+#scene-01 .sub {
+    margin-top: 36px; font-size: 15px; font-weight: 300;
+    letter-spacing: 4px; color: var(--paper-dim);
+}
+#scene-01 .meta {
+    margin-top: 70px; font-size: 12px; letter-spacing: 3px;
+    color: var(--paper-faint);
+}
+#scene-01 .meta span { margin: 0 14px; }
+
+/* ============================================================
+   SCENE 02  建筑空间
+   ============================================================ */
+#scene-02 .stage {
+    background: radial-gradient(ellipse at 50% 40%, var(--indigo) 0%, var(--bg-navy) 60%, #070d16 100%);
+}
+#plan-svg-wrap {
+    position: relative; width: min(620px, 82vw);
+}
+#plan-svg { width: 100%; height: auto; display: block; }
+.plan-label {
+    position: absolute; font-size: 13px; letter-spacing: 3px;
+    color: var(--paper);
+}
+#plan-note {
+    position: absolute; bottom: -34px; left: 50%; transform: translateX(-50%);
+    font-size: 11px; letter-spacing: 3px; color: var(--paper-faint);
+}
+#scene-02 .text-block {
+    position: absolute; left: 9vw; top: 50%; transform: translateY(-50%);
+    max-width: 300px;
+}
+#scene-02 .text-block h2 {
+    font-size: 30px; font-weight: 400; letter-spacing: 0.2em; margin-bottom: 22px;
+}
+
+/* ============================================================
+   SCENE 03  壁画空间关系
+   ============================================================ */
+#scene-03 .stage {
+    background: linear-gradient(180deg, #070d16 0%, var(--bg-navy) 100%);
+    flex-direction: column; gap: 40px;
+}
+#scene-03 h2 {
+    font-size: 26px; font-weight: 400; letter-spacing: 0.3em;
+    margin-left: 0.3em;
+}
+#scene-03 .desc { font-size: 13px; color: var(--paper-dim); letter-spacing: 2px; }
+#mural-band {
+    display: flex; gap: 18px; justify-content: center; align-items: stretch;
+    flex-wrap: wrap; max-width: 1100px; padding: 0 30px;
+}
+.mural-chip {
+    width: 130px; text-align: center; opacity: 0;
+    transform: translateY(24px);
+}
+.mural-chip img {
+    width: 100%; height: 170px; object-fit: cover;
+    border: 1px solid rgba(207,161,90,0.25);
+    filter: brightness(0.85) sepia(0.15);
+}
+.mural-chip .name {
+    margin-top: 10px; font-size: 11px; letter-spacing: 2px;
+    color: var(--paper-dim);
+}
+#wall-caption {
+    display: flex; gap: 80px; font-size: 12px; letter-spacing: 3px;
+}
+#wall-caption .right { color: var(--cinnabar); }
+#wall-caption .left { color: var(--gold); }
+
+/* ============================================================
+   SCENE 04  出兵 · 入将
+   ============================================================ */
+#scene-04 .stage { background: #050505; }
+#scene-04 .mural-bg {
+    position: absolute; inset: 0;
+    background: url('assets/splash-bg.png') center center / cover;
+    filter: brightness(0.4) saturate(0.8);
+}
+#scene-04 .half-mask {
+    position: absolute; inset: 0; opacity: 0;
+    transition: opacity .2s linear;
+}
+#scene-04 .region {
+    position: absolute; top: 0; height: 100%; width: 50%;
+    display: flex; align-items: center; justify-content: center;
+}
+#scene-04 .region .rlabel {
+    writing-mode: vertical-rl; font-size: clamp(2rem,5vw,3.6rem);
+    letter-spacing: 0.4em; color: var(--paper);
+    text-shadow: 0 4px 30px rgba(0,0,0,1);
+}
+#scene-04 .region .rsub {
+    position: absolute; bottom: 14%;
+    writing-mode: vertical-rl; font-size: 13px; letter-spacing: 4px;
+    color: var(--paper-dim);
+}
+/* 出兵在远左，入将在远右 */
+#region-right .rlabel, #region-right .rsub { margin-left: 6vw; }
+#region-left  .rlabel, #region-left  .rsub { margin-right: 6vw; }
+#scene-04 .center-quote {
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center; z-index: 5;
+}
+#scene-04 .center-quote .big {
+    font-size: clamp(2rem, 5vw, 3.4rem); letter-spacing: 0.5em;
+    margin-left: 0.5em; color: var(--paper);
+}
+#scene-04 .center-quote .small {
+    margin-top: 26px; font-size: 13px; letter-spacing: 3px;
+    color: var(--paper-dim);
+}
+
+/* ============================================================
+   SCENE 05  右 → 左 观看秩序
+   ============================================================ */
+#scene-05 .stage { background: #06080d; }
+#scroll-track-wrap {
+    position: absolute; inset: 0; display: flex; align-items: center;
+}
+#scroll-track {
+    display: flex; gap: 3vw; padding: 0 8vw; will-change: transform;
+    align-items: center;
+}
+.track-item {
+    flex: 0 0 auto; height: 70vh;
+    border: 1px solid rgba(207,161,90,0.2);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.7);
+}
+.track-item img {
+    height: 100%; width: auto; display: block;
+    filter: brightness(0.9);
+}
+.track-item.first {
+    height: 70vh; display: flex; align-items: center; justify-content: center;
+    background: var(--bg-navy); padding: 0 4vw;
+}
+.track-item.first .dir-text {
+    writing-mode: vertical-rl; font-size: clamp(1.8rem,4vw,3rem);
+    letter-spacing: 0.5em; color: var(--gold);
+}
+#dir-overlay {
+    position: absolute; right: 6vw; top: 50%; transform: translateY(-50%);
+    text-align: center; z-index: 6; pointer-events: none;
+}
+#dir-overlay .arrow {
+    font-size: 60px; color: var(--gold-bright); line-height: 1;
+    text-shadow: 0 0 20px rgba(212,175,55,0.6);
+}
+#dir-overlay .dt {
+    margin-top: 14px; font-size: 14px; letter-spacing: 6px; color: var(--paper);
+}
+#dir-overlay .ds {
+    margin-top: 10px; font-size: 11px; letter-spacing: 3px; color: var(--paper-dim);
+    max-width: 200px;
+}
+#scene-05 .scene-head {
+    position: absolute; top: 9vh; left: 7vw; z-index: 6;
+}
+#scene-05 .scene-head h2 {
+    font-size: 24px; font-weight: 400; letter-spacing: 0.3em;
+}
+#scene-05 .scene-head p {
+    margin-top: 10px; font-size: 12px; letter-spacing: 3px; color: var(--paper-dim);
+}
+
+/* ============================================================
+   SCENE 06  壁画观看（整体 → 局部 → 细节）
+   ============================================================ */
+#scene-06 .stage { background: #050505; }
+#detail-frame {
+    position: absolute; inset: 0; overflow: hidden;
+}
+#detail-img {
+    position: absolute; top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 140%; height: auto; min-width: 100%;
+    will-change: transform;
+    filter: brightness(0.92);
+}
+#detail-veil {
+    position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgba(5,5,5,0.92) 0%, rgba(5,5,5,0.45) 38%, rgba(5,5,5,0) 65%, rgba(5,5,5,0) 100%);
+    pointer-events: none;
+}
+#detail-text {
+    position: absolute; left: 8vw; top: 50%; transform: translateY(-50%);
+    max-width: 420px; z-index: 5;
+}
+#detail-text .l1 {
+    font-size: 34px; font-weight: 400; letter-spacing: 0.25em;
+    margin-bottom: 18px; color: var(--paper);
+}
+#detail-text .l2 {
+    font-size: 14px; color: var(--gold); letter-spacing: 2px;
+    margin-bottom: 20px; font-weight: 300;
+}
+#detail-text .l3 {
+    font-size: 13px; color: var(--paper-dim); letter-spacing: 1px;
+    line-height: 2; opacity: 0;
+}
+#detail-progress {
+    position: absolute; bottom: 7vh; left: 8vw; z-index: 5;
+    display: flex; gap: 10px;
+}
+.dp-dot {
+    width: 26px; height: 2px; background: rgba(244,241,234,0.18);
+}
+.dp-dot.on { background: var(--gold-bright); }
+
+/* ============================================================
+   SCENE 07  聚焦《入将图》→ 进入探索
+   ============================================================ */
+#scene-07 .stage { background: #000; }
+#focus-bg {
+    position: absolute; inset: 0;
+    background: url('assets/splash-bg.png') center center / cover;
+    will-change: transform, filter;
+    filter: brightness(0.5);
+}
+#focus-darken {
+    position: absolute; inset: 0; background: rgba(0,0,0,0.55);
+    opacity: 0;
+}
+#scene-07 .final {
+    position: relative; z-index: 5; text-align: center;
+    transform: translateY(40px); opacity: 0;
+}
+#scene-07 h2 {
+    font-size: clamp(2.2rem,5.5vw,4rem); font-weight: 400;
+    letter-spacing: 0.4em; margin-left: 0.4em; color: var(--paper);
+}
+#scene-07 .final p {
+    margin-top: 22px; font-size: 14px; letter-spacing: 3px;
+    color: var(--paper-dim); font-weight: 300;
+}
+#enter-btn {
+    margin-top: 60px;
+    display: inline-block; padding: 18px 64px;
+    border: 1px solid var(--gold);
+    color: var(--gold-bright);
+    background: transparent;
+    font-family: inherit; font-size: 15px; letter-spacing: 8px;
+    cursor: pointer; text-decoration: none;
+    transition: all .5s ease;
+    position: relative;
+}
+#enter-btn:hover {
+    background: rgba(207,161,90,0.12);
+    box-shadow: 0 0 40px rgba(207,161,90,0.25);
+}
+#enter-btn::before, #enter-btn::after {
+    content: ''; position: absolute; width: 10px; height: 10px;
+    border: 1px solid var(--gold-bright);
+}
+#enter-btn::before { top: -1px; left: -1px; border-right: none; border-bottom: none; }
+#enter-btn::after  { bottom: -1px; right: -1px; border-left: none; border-top: none; }
+
+/* 响应式：平板 / 手机 */
+@media (max-width: 900px) {
+    #progress-rail { right: 14px; gap: 14px; }
+    #scene-label { right: 50px; }
+    #scene-02 .text-block { left: 6vw; max-width: 240px; }
+    #detail-text { left: 6vw; right: 6vw; max-width: none; }
+    #detail-veil {
+        background: linear-gradient(180deg, rgba(5,5,5,0.9) 0%, rgba(5,5,5,0.55) 45%, rgba(5,5,5,0) 75%);
+    }
+    #dir-overlay { right: 5vw; }
+    .mural-chip { width: 96px; }
+    .mural-chip img { height: 120px; }
+}
+@media (max-width: 560px) {
+    #scene-01 .meta span { display: block; margin: 4px 0; }
+    #scene-02 .text-block { position: static; transform: none; padding: 20px; }
+    #wall-caption { gap: 30px; }
+    #detail-text .l1 { font-size: 26px; }
+}
+</style>
+</head>
+<body>
+
+<!-- 全局进度 UI -->
+<div id="scene-label">
+    <div class="no">01 / 07</div>
+    <div class="name">水龙祠开屏</div>
+</div>
+<nav id="progress-rail">
+    <div class="rail-dot active"><span class="tip">开屏</span></div>
+    <div class="rail-dot"><span class="tip">建筑空间</span></div>
+    <div class="rail-dot"><span class="tip">壁画布局</span></div>
+    <div class="rail-dot"><span class="tip">出兵入将</span></div>
+    <div class="rail-dot"><span class="tip">右→左</span></div>
+    <div class="rail-dot"><span class="tip">壁画细节</span></div>
+    <div class="rail-dot"><span class="tip">进入探索</span></div>
+</nav>
+<div id="scroll-hint">
+    <span>向下探索</span>
+    <span class="line"></span>
+</div>
+
+<!-- ============================================================
+     SCENE 01  水龙祠开屏
+     ============================================================ -->
+<section class="scene" id="scene-01" data-scene="01" data-name="水龙祠开屏" style="height: 260vh;">
+    <div class="stage">
+        <div id="splash-bg"></div>
+        <div id="splash-veil"></div>
+        <div class="content">
+            <div class="eyebrow">湖南江永 · 勾蓝瑶寨大兴村</div>
+            <h1>勾蓝瑶水龙祠</h1>
+            <p class="sub">壁画所构成的，不只是图像，<br>也是一条被组织起来的观看路径</p>
+            <div class="meta">
+                <span>清乾隆二十五年建祠</span>·<span>约乾隆二十八年绘壁</span>·<span>2019 全国重点文物保护单位</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SCENE 02  进入建筑空间
+     ============================================================ -->
+<section class="scene" id="scene-02" data-scene="02" data-name="建筑空间" style="height: 320vh;">
+    <div class="stage">
+        <div class="text-block">
+            <div class="eyebrow">空间 · 02</div>
+            <h2>壁画，<br>在大殿两侧山墙</h2>
+            <p class="body-text">
+                镜头自祠外推进，落到建筑平面。<br>
+                右壁绘「出兵」，左壁绘「入将」——<br>
+                两铺壁画，分立大殿山墙。
+            </p>
+        </div>
+        <div id="plan-svg-wrap">
+            <!-- 数字化平面示意（非测绘图） -->
+            <svg id="plan-svg" viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg">
+                <!-- 大殿外轮廓 -->
+                <rect x="150" y="60" width="300" height="300"
+                      fill="none" stroke="rgba(244,241,234,0.35)" stroke-width="1.2"/>
+                <!-- 内殿 -->
+                <rect x="200" y="110" width="200" height="200"
+                      fill="rgba(26,42,74,0.4)" stroke="rgba(244,241,234,0.25)" stroke-width="1"/>
+                <!-- 后龛 -->
+                <rect x="250" y="130" width="100" height="60"
+                      fill="rgba(207,161,90,0.15)" stroke="rgba(207,161,90,0.5)" stroke-width="1"/>
+                <!-- 左壁（入将） -->
+                <rect class="wall left-wall" x="150" y="110" width="14" height="200"
+                      fill="var(--gold)" opacity="0.0"/>
+                <!-- 右壁（出兵） -->
+                <rect class="wall right-wall" x="436" y="110" width="14" height="200"
+                      fill="var(--cinnabar)" opacity="0.0"/>
+                <!-- 门 -->
+                <line x1="280" y1="360" x2="320" y2="360" stroke="rgba(244,241,234,0.5)" stroke-width="2"/>
+                <text x="300" y="390" text-anchor="middle" fill="rgba(244,241,234,0.4)"
+                      font-size="12" letter-spacing="3">前 · 门</text>
+            </svg>
+            <span class="plan-label" id="lbl-right" style="right: 12%; top: 50%; color: var(--cinnabar); opacity:0;">右壁 · 出兵</span>
+            <span class="plan-label" id="lbl-left"  style="left:  12%; top: 50%; color: var(--gold);    opacity:0;">左壁 · 入将</span>
+            <div id="plan-note">※ 空间关系示意，非测绘图</div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SCENE 03  壁画空间关系
+     ============================================================ -->
+<section class="scene" id="scene-03" data-scene="03" data-name="壁画布局" style="height: 300vh;">
+    <div class="stage">
+        <div class="eyebrow" style="position:absolute; top:12vh; left:7vw;">空间 · 03</div>
+        <h2>山墙之上，系列展开</h2>
+        <p class="desc">现有壁画系列（命名以模块 B 既有节点为准）</p>
+        <div id="mural-band">
+            <div class="mural-chip"><img src="assets/01_南门何五猖/org.png"  alt="" loading="lazy"><div class="name">南门何五猖</div></div>
+            <div class="mural-chip"><img src="assets/02_东门陈五猖/org.png"  alt="" loading="lazy"><div class="name">东门陈五猖</div></div>
+            <div class="mural-chip"><img src="assets/03_西门谢五猖/org.png"  alt="" loading="lazy"><div class="name">西门谢五猖</div></div>
+            <div class="mural-chip"><img src="assets/04_中门徐五猖/org.png"  alt="" loading="lazy"><div class="name">中门徐五猖</div></div>
+            <div class="mural-chip"><img src="assets/05_北门雷五猖/org.png"  alt="" loading="lazy"><div class="name">北门雷五猖</div></div>
+            <div class="mural-chip"><img src="assets/06_翻坛张五郎/org.png" alt="" loading="lazy"><div class="name">翻坛张五郎</div></div>
+            <div class="mural-chip"><img src="assets/07_梅山猖兵/org.png"  alt="" loading="lazy"><div class="name">梅山猖兵</div></div>
+            <div class="mural-chip"><img src="assets/10_上层猖兵/org.png"  alt="" loading="lazy"><div class="name">上层猖兵</div></div>
+        </div>
+        <div id="wall-caption">
+            <span class="right">右壁 · 出兵</span>
+            <span class="left">左壁 · 入将</span>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SCENE 04  出兵 · 入将
+     ============================================================ -->
+<section class="scene" id="scene-04" data-scene="04" data-name="出兵入将" style="height: 360vh;">
+    <div class="stage">
+        <div class="mural-bg"></div>
+        <div class="half-mask" id="mask-right" style="left:0; width:50%; background: rgba(0,0,0,0.55);"></div>
+        <div class="half-mask" id="mask-left"  style="right:0; width:50%; background: rgba(0,0,0,0.55);"></div>
+
+        <div class="region" id="region-right" style="right:50%;">
+            <div class="rlabel">出兵</div>
+            <div class="rsub">迎神出庙 · 仪式开端</div>
+        </div>
+        <div class="region" id="region-left" style="left:50%;">
+            <div class="rlabel">入将</div>
+            <div class="rsub">送神入庙 · 仪式收束</div>
+        </div>
+
+        <div class="center-quote">
+            <div class="big">出兵 · 入将</div>
+            <div class="small">潇贺古道民间迎神赛会仪式<br>瑶汉民间神祠的「标配壁画」</div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SCENE 05  右 → 左 观看秩序
+     ============================================================ -->
+<section class="scene" id="scene-05" data-scene="05" data-name="右→左" style="height: 520vh;">
+    <div class="stage">
+        <div class="scene-head">
+            <h2>观看秩序 · 右 → 左</h2>
+            <p>向下滚动推进叙事 · 壁画内容向左展开</p>
+        </div>
+        <div id="scroll-track-wrap">
+            <div id="scroll-track">
+                <div class="track-item first">
+                    <div class="dir-text">由右壁出兵起<br>至左壁入将终</div>
+                </div>
+                <div class="track-item"><img src="assets/10_上层猖兵/org.png"  alt="" loading="lazy"></div>
+                <div class="track-item"><img src="assets/06_翻坛张五郎/org.png" alt="" loading="lazy"></div>
+                <div class="track-item"><img src="assets/07_梅山猖兵/org.png"  alt="" loading="lazy"></div>
+                <div class="track-item"><img src="assets/01_南门何五猖/org.png"  alt="" loading="lazy"></div>
+                <div class="track-item"><img src="assets/05_北门雷五猖/org.png"  alt="" loading="lazy"></div>
+            </div>
+        </div>
+        <div id="dir-overlay">
+            <div class="arrow">←</div>
+            <div class="dt">观看方向</div>
+            <div class="ds">操作向下，画面向左；<br>与仪式时间顺序一致。</div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SCENE 06  壁画观看（整体 → 局部 → 细节）
+     ============================================================ -->
+<section class="scene" id="scene-06" data-scene="06" data-name="壁画细节" style="height: 720vh;">
+    <div class="stage">
+        <div id="detail-frame">
+            <!-- 默认以 splash-bg 为整体；各 stop 切换不同区域裁切 -->
+            <img id="detail-img" src="assets/splash-bg.png" alt="入将图">
+        </div>
+        <div id="detail-veil"></div>
+        <div id="detail-text">
+            <div class="l1" id="dt-l1">祭祀仪式</div>
+            <div class="l2" id="dt-l2">靠近后壁 · 打醮 · 椎牛 · 鸣炮</div>
+            <p class="l3" id="dt-l3">
+                官员与巫觋主持「打醮」，桌案、香炉、三牲、蜡烛齐备；
+                椎牛献祭，司炮官点火炮——神赛之仪，于此而起。
+            </p>
+        </div>
+        <div id="detail-progress">
+            <span class="dp-dot on"></span><span class="dp-dot"></span>
+            <span class="dp-dot"></span><span class="dp-dot"></span>
+            <span class="dp-dot"></span><span class="dp-dot"></span>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================================
+     SCENE 07  聚焦《入将图》→ 进入探索
+     ============================================================ -->
+<section class="scene" id="scene-07" data-scene="07" data-name="进入探索" style="height: 240vh;">
+    <div class="stage">
+        <div id="focus-bg"></div>
+        <div id="focus-darken"></div>
+        <div class="final">
+            <div class="eyebrow" style="color: var(--gold);">左壁 · 入将</div>
+            <h2>入将图</h2>
+            <p>神灵出行、番王进宝；<br>一壁之间，是一场仪式的收束。</p>
+            <a href="/index.html" id="enter-btn">进 入 探 索</a>
+        </div>
+    </div>
+</section>
+
+<!-- GSAP + ScrollTrigger（项目已用 GSAP 3.12.5） -->
+<script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script>
+/* ============================================================
+   模块 A 交互逻辑
+   原则：每个动画都服务于"理解空间或叙事"。
+   ============================================================ */
+gsap.registerPlugin(ScrollTrigger);
+
+/* ---------- 进度条 / 场景标注 ---------- */
+const dots = document.querySelectorAll('.rail-dot');
+const lblNo = document.querySelector('#scene-label .no');
+const lblName = document.querySelector('#scene-label .name');
+const hint = document.getElementById('scroll-hint');
+
+document.querySelectorAll('.scene').forEach((sec, i) => {
+    ScrollTrigger.create({
+        trigger: sec,
+        start: 'top center',
+        end: 'bottom center',
+        onToggle: self => {
+            if (!self.isActive) return;
+            dots.forEach((d, j) => d.classList.toggle('active', j === i));
+            lblNo.textContent  = sec.dataset.scene + ' / 07';
+            lblName.textContent = sec.dataset.name;
+            // Scene 07 隐藏"向下探索"提示
+            hint.style.opacity = (i === 6) ? '0' : '1';
+        }
+    });
+});
+
+/* ============================================================
+   SCENE 01  开屏：镜头缓慢推进
+   ============================================================ */
+gsap.fromTo('#splash-bg',
+    { scale: 1.08 },
+    {
+        scale: 1.22, ease: 'none',
+        scrollTrigger: {
+            trigger: '#scene-01',
+            start: 'top top', end: 'bottom bottom', scrub: 0.6
+        }
+    });
+gsap.from('#scene-01 .content', {
+    opacity: 0, y: 30, duration: 1.6, ease: 'power2.out', delay: 0.2
+});
+
+/* ============================================================
+   SCENE 02  建筑空间：平面渐显 + 山墙高亮
+   ============================================================ */
+gsap.from('#plan-svg-wrap', {
+    opacity: 0, scale: 0.85, ease: 'none',
+    scrollTrigger: {
+        trigger: '#scene-02', start: 'top 60%', end: '+=40%', scrub: 0.5
+    }
+});
+gsap.to('.right-wall', {
+    opacity: 0.9, ease: 'none',
+    scrollTrigger: {
+        trigger: '#scene-02', start: 'top 55%', end: '+=25%', scrub: true
+    }
+});
+gsap.to('#lbl-right', {
+    opacity: 1, x: -8, ease: 'none',
+    scrollTrigger: {
+        trigger: '#scene-02', start: 'top 50%', end: '+=25%', scrub: true
+    }
+});
+gsap.to('.left-wall', {
+    opacity: 0.9, ease: 'none',
+    scrollTrigger: {
+        trigger: '#scene-02', start: 'top 45%', end: '+=25%', scrub: true
+    }
+});
+gsap.to('#lbl-left', {
+    opacity: 1, x: 8, ease: 'none',
+    scrollTrigger: {
+        trigger: '#scene-02', start: 'top 40%', end: '+=25%', scrub: true
+    }
+});
+
+/* ============================================================
+   SCENE 03  壁画系列逐个浮入
+   ============================================================ */
+gsap.to('.mural-chip', {
+    opacity: 1, y: 0, stagger: 0.12, ease: 'power2.out',
+    scrollTrigger: {
+        trigger: '#scene-03', start: 'top 55%', end: '+=55%', scrub: 0.4
+    }
+});
+
+/* ============================================================
+   SCENE 04  出兵 · 入将：右壁先亮，左壁后亮
+   ============================================================ */
+const st4 = ScrollTrigger.create({
+    trigger: '#scene-04', start: 'top top', end: 'bottom bottom', scrub: 0.4,
+    onUpdate: self => {
+        const p = self.progress;
+        // 0~0.5：右壁高亮；0.5~1：左壁高亮
+        const r = Math.max(0, 1 - p * 2);          // 右壁从亮到暗
+        const l = Math.max(0, (p - 0.5) * 2);      // 左壁从暗到亮
+        document.getElementById('mask-right').style.opacity = (1 - r * 0.55).toFixed(2);
+        document.getElementById('mask-left').style.opacity  = (1 - l * 0.55).toFixed(2);
+        // 中央题字出现时，两侧竖排字渐隐，避免重叠
+        const c = Math.min(1, Math.max(0, (p - 0.35) * 3));
+        document.querySelector('#scene-04 .center-quote').style.opacity = c;
+        document.getElementById('region-right').style.opacity = r * (1 - c);
+        document.getElementById('region-left').style.opacity  = l * (1 - c);
+    }
+});
+
+/* ============================================================
+   SCENE 05  右→左：横卷左移
+   ============================================================ */
+const track = document.getElementById('scroll-track');
+function measureTrack() {
+    return track.scrollWidth - window.innerWidth;
+}
+gsap.to(track, {
+    x: () => -measureTrack(),
+    ease: 'none',
+    scrollTrigger: {
+        trigger: '#scene-05',
+        start: 'top top', end: 'bottom bottom',
+        scrub: 0.5, invalidateOnRefresh: true
+    }
+});
+
+/* ============================================================
+   SCENE 06  入将图：整体→局部→细节（六个 stop）
+   ============================================================ */
+const stops = [
+    { l1: '祭祀仪式', l2: '靠近后壁 · 打醮 · 椎牛 · 鸣炮',
+      l3: '官员与巫觋主持「打醮」，桌案、香炉、三牲、蜡烛齐备；椎牛献祭，司炮官点火炮——神赛之仪，于此而起。',
+      img: 'assets/splash-bg.png',            tx: -50, ty: -50, scale: 1.0 },
+    { l1: '上层 · 神灵', l2: '华盖 · 旗帜 · 辇车',
+      l3: '队伍以上、中、下三层云气分隔。上层为神灵所乘，华盖高举，旗帜招展，辇车徐行。',
+      img: 'assets/10_上层猖兵/org.png',      tx: -50, ty: -35, scale: 1.6 },
+    { l1: '中层 · 仪仗', l2: '肃静回避 · 金瓜钺斧 · 三军司令',
+      l3: '「肃静」「回避」起马牌前导，金瓜、钺斧、龙杖、弓弩、槊列于两旁；击鼓敲锣吹号角，「三军司令」旗在后。',
+      img: 'assets/07_梅山猖兵/org.png',      tx: -50, ty: -50, scale: 1.7 },
+    { l1: '下层 · 狩猎', l2: '扛麋鹿 · 刺虎 · 猎犬相随',
+      l3: '仪仗之下，夹杂狩猎场景：有人肩扛麋鹿，有人持矛刺虎，猎犬奔走其间——梅山狩猎之俗，隐于行列。',
+      img: 'assets/06_翻坛张五郎/org.png',   tx: -50, ty: -55, scale: 1.8 },
+    { l1: '首端 · 张五郎', l2: '倒立领路 · 梅山主神',
+      l3: '张五郎等五猖神立于队伍首端。他是梅山主神、狩猎神、瑶兵统帅、巫工匠祖师神，翻身倒立，为神赛仪式的领路神。',
+      img: 'assets/06_翻坛张五郎/org.png',   tx: -50, ty: -45, scale: 2.2 },
+    { l1: '尾端 · 番王进宝', l2: '天下太平 · 四海安宁',
+      l3: '队伍尾端绘「番王进宝」图像。它象征神赛之后，天下太平、四海安宁——出兵以靖，入将以宁。',
+      img: 'assets/splash-bg.png',            tx: -50, ty: -60, scale: 1.3 }
+];
+
+const dtL1 = document.getElementById('dt-l1');
+const dtL2 = document.getElementById('dt-l2');
+const dtL3 = document.getElementById('dt-l3');
+const dtImg = document.getElementById('detail-img');
+const dpDots = document.querySelectorAll('.dp-dot');
+let curStop = -1;
+
+function applyStop(i, instant) {
+    if (i === curStop) return;
+    curStop = i;
+    const s = stops[i];
+
+    // 切换图片（懒加载：首次进入才改 src）
+    if (dtImg.getAttribute('src') !== s.img) {
+        dtImg.src = s.img;
+    }
+    // 文字交叉淡化
+    gsap.timeline()
+        .to([dtL1, dtL2, dtL3], { opacity: 0, y: -12, duration: 0.35, ease: 'power2.in' })
+        .add(() => {
+            dtL1.textContent = s.l1;
+            dtL2.textContent = s.l2;
+            dtL3.textContent = s.l3;
+        })
+        .to(dtL1, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' })
+        .to(dtL2, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, '-=0.35');
+
+    // 镜头移动到该 stop
+    gsap.to(dtImg, {
+        xPercent: s.tx, yPercent: s.ty, scale: s.scale,
+        duration: 0.9, ease: 'power2.inOut'
+    });
+    // 第三层深入信息延迟出现
+    gsap.to(dtL3, { opacity: 0.85, duration: 0.8, delay: 0.5 });
+
+    dpDots.forEach((d, j) => d.classList.toggle('on', j === i));
+}
+
+// 六个 stop 等分 Scene 06 的滚动长度
+const totalPct = 100 / stops.length;
+stops.forEach((s, i) => {
+    ScrollTrigger.create({
+        trigger: '#scene-06',
+        start: `${i * totalPct}% ${100 / stops.length}%`,
+        end:   `${(i + 1) * totalPct}% ${100 / stops.length}%`,
+        onEnter: () => applyStop(i),
+        onEnterBack: () => applyStop(i)
+    });
+});
+// 初始
+applyStop(0);
+
+/* ============================================================
+   SCENE 07  聚焦：其他区域暗化，《入将图》成为主体
+   ============================================================ */
+gsap.to('#focus-bg', {
+    scale: 1.18, ease: 'none',
+    scrollTrigger: {
+        trigger: '#scene-07', start: 'top top', end: 'bottom bottom', scrub: 0.5
+    }
+});
+gsap.to('#focus-darken', {
+    opacity: 1, ease: 'none',
+    scrollTrigger: {
+        trigger: '#scene-07', start: 'top 30%', end: 'top 80%', scrub: true
+    }
+});
+gsap.to('#scene-07 .final', {
+    opacity: 1, y: 0, ease: 'none',
+    scrollTrigger: {
+        trigger: '#scene-07', start: 'top 45%', end: 'top 85%', scrub: true
+    }
+});
+
+/* 刷新一次，确保尺寸测量准确 */
+window.addEventListener('load', () => ScrollTrigger.refresh());
+window.addEventListener('resize', () => ScrollTrigger.refresh());
+</script>
+</body>
+</html>

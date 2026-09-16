@@ -8,6 +8,15 @@ const app = express();
 // 设置本地服务器的端口号
 const PORT = 3000;
 
+// ==========================================
+//  0. 模块 A：水龙祠叙事引导页（项目入口）
+//  注意：必须注册在 express.static 之前，
+//  否则静态中间件会默认把 / 指向 index.html。
+// ==========================================
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'landing.html'));
+});
+
 // 告诉 Express 将 'public' 文件夹作为静态资源目录
 app.use(express.static('public'));
 
@@ -44,7 +53,7 @@ app.get('/api/scan-assets', (req, res) => {
         // 3. 遍历每一个项目
         items.forEach(item => {
             const itemPath = path.join(assetsDirectory, item);
-            
+
             // 4. 判断当前项目是不是一个“文件夹”
             if (fs.statSync(itemPath).isDirectory()) {
                 // 如果是文件夹，说明这是一个“壁画系列”
@@ -81,7 +90,8 @@ app.get('/api/scan-assets', (req, res) => {
 app.listen(PORT, () => {
     console.log('==================================================');
     console.log(`  水龙祠全息展厅后台服务已成功启动！`);
-    console.log(`  👉 展厅大屏体感版 (WebGL): http://localhost:${PORT}`);
+    console.log(`  👉 模块 A 叙事引导: http://localhost:${PORT}/`);
+    console.log(`  👉 模块 B 展厅大屏体感版 (WebGL): http://localhost:${PORT}/index.html`);
     console.log(`  👉 移动端叙事长卷版 (VNG): http://localhost:${PORT}/m`);
     console.log('  温馨提示: 按 Ctrl+C 可以关闭本地服务');
     console.log('==================================================');
