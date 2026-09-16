@@ -51,12 +51,13 @@
 
 ### 现有入口与数据（以当前代码为准）
 
-- 大屏展厅版（WebGL）：`http://localhost:3000/`（`Mural-Exhibition/public/index.html`）
-- 移动端叙事长卷版：`http://localhost:3000/m`（`Mural-Exhibition/public/gallery.html`）
+- 大屏展厅版（WebGL）：`http://localhost:3000/`（`Mural-Exhibition/public/index.html`）——模块 A“进入探索”的目标入口
+- 移动端叙事长卷版：`http://localhost:3000/m`（`Mural-Exhibition/public/gallery.html`，归属模块 B，当前不接入模块 A）
 - 数据接口：`/api/scan-assets`（动态扫描 `Mural-Exhibition/public/assets/` 下的壁画系列，返回各系列 org/line/color/info 素材路径）
 
 ### 模块 A → 模块 B 连接方式
 
 - 通过明确的入口或路由完成，不做内部耦合；
-- 例如：模块 A 的“进入探索”按钮跳转到模块 B 的入口 URL；
+- 模块 A 的“进入探索”按钮跳转到**大屏展厅版（WebGL）** `http://localhost:3000/`；
+- 移动端叙事长卷版（`/m`）当前不接入模块 A（忽略）；
 - 不直接修改模块 B 的缩放逻辑、热点系统、Canvas/WebGL 核心、大图加载逻辑、节点系统。
