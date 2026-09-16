@@ -118,7 +118,7 @@ body { line-height: 1.75; }
 #scene-01 .stage { background: var(--bg-deep); }
 #splash-bg {
     position: absolute; inset: -5%;
-    background: url('assets/splash-bg.png') center center / cover no-repeat;
+    background: url('assets/landing/splash-bg.png') center center / cover no-repeat;
     will-change: transform;
     filter: brightness(0.62) saturate(0.85);
 }
@@ -211,7 +211,7 @@ body { line-height: 1.75; }
 #scene-04 .stage { background: #050505; }
 #scene-04 .mural-bg {
     position: absolute; inset: 0;
-    background: url('assets/splash-bg.png') center center / cover;
+    background: url('assets/landing/splash-bg.png') center center / cover;
     filter: brightness(0.4) saturate(0.8);
 }
 #scene-04 .half-mask {
@@ -352,7 +352,7 @@ body { line-height: 1.75; }
 #scene-07 .stage { background: #000; }
 #focus-bg {
     position: absolute; inset: 0;
-    background: url('assets/splash-bg.png') center center / cover;
+    background: url('assets/landing/splash-bg.png') center center / cover;
     will-change: transform, filter;
     filter: brightness(0.5);
 }
@@ -507,14 +507,14 @@ body { line-height: 1.75; }
         <h2>山墙之上，系列展开</h2>
         <p class="desc">现有壁画系列（命名以模块 B 既有节点为准）</p>
         <div id="mural-band">
-            <div class="mural-chip"><img src="assets/01_南门何五猖/org.png"  alt="" loading="lazy"><div class="name">南门何五猖</div></div>
-            <div class="mural-chip"><img src="assets/02_东门陈五猖/org.png"  alt="" loading="lazy"><div class="name">东门陈五猖</div></div>
-            <div class="mural-chip"><img src="assets/03_西门谢五猖/org.png"  alt="" loading="lazy"><div class="name">西门谢五猖</div></div>
-            <div class="mural-chip"><img src="assets/04_中门徐五猖/org.png"  alt="" loading="lazy"><div class="name">中门徐五猖</div></div>
-            <div class="mural-chip"><img src="assets/05_北门雷五猖/org.png"  alt="" loading="lazy"><div class="name">北门雷五猖</div></div>
-            <div class="mural-chip"><img src="assets/06_翻坛张五郎/org.png" alt="" loading="lazy"><div class="name">翻坛张五郎</div></div>
-            <div class="mural-chip"><img src="assets/07_梅山猖兵/org.png"  alt="" loading="lazy"><div class="name">梅山猖兵</div></div>
-            <div class="mural-chip"><img src="assets/10_上层猖兵/org.png"  alt="" loading="lazy"><div class="name">上层猖兵</div></div>
+            <div class="mural-chip"><img src="assets/landing/01_南门何五猖/org.png"  alt="" loading="lazy"><div class="name">南门何五猖</div></div>
+            <div class="mural-chip"><img src="assets/landing/02_东门陈五猖/org.png"  alt="" loading="lazy"><div class="name">东门陈五猖</div></div>
+            <div class="mural-chip"><img src="assets/landing/03_西门谢五猖/org.png"  alt="" loading="lazy"><div class="name">西门谢五猖</div></div>
+            <div class="mural-chip"><img src="assets/landing/04_中门徐五猖/org.png"  alt="" loading="lazy"><div class="name">中门徐五猖</div></div>
+            <div class="mural-chip"><img src="assets/landing/05_北门雷五猖/org.png"  alt="" loading="lazy"><div class="name">北门雷五猖</div></div>
+            <div class="mural-chip"><img src="assets/landing/06_翻坛张五郎/org.png" alt="" loading="lazy"><div class="name">翻坛张五郎</div></div>
+            <div class="mural-chip"><img src="assets/landing/07_梅山猖兵/org.png"  alt="" loading="lazy"><div class="name">梅山猖兵</div></div>
+            <div class="mural-chip"><img src="assets/landing/10_上层猖兵/org.png"  alt="" loading="lazy"><div class="name">上层猖兵</div></div>
         </div>
         <div id="wall-caption">
             <span class="right">右壁 · 出兵</span>
@@ -562,11 +562,11 @@ body { line-height: 1.75; }
                 <div class="track-item first">
                     <div class="dir-text">由右壁出兵起<br>至左壁入将终</div>
                 </div>
-                <div class="track-item"><img src="assets/10_上层猖兵/org.png"  alt="" loading="lazy"></div>
-                <div class="track-item"><img src="assets/06_翻坛张五郎/org.png" alt="" loading="lazy"></div>
-                <div class="track-item"><img src="assets/07_梅山猖兵/org.png"  alt="" loading="lazy"></div>
-                <div class="track-item"><img src="assets/01_南门何五猖/org.png"  alt="" loading="lazy"></div>
-                <div class="track-item"><img src="assets/05_北门雷五猖/org.png"  alt="" loading="lazy"></div>
+                <div class="track-item"><img src="assets/landing/10_上层猖兵/org.png"  alt="" loading="lazy"></div>
+                <div class="track-item"><img src="assets/landing/06_翻坛张五郎/org.png" alt="" loading="lazy"></div>
+                <div class="track-item"><img src="assets/landing/07_梅山猖兵/org.png"  alt="" loading="lazy"></div>
+                <div class="track-item"><img src="assets/landing/01_南门何五猖/org.png"  alt="" loading="lazy"></div>
+                <div class="track-item"><img src="assets/landing/05_北门雷五猖/org.png"  alt="" loading="lazy"></div>
             </div>
         </div>
         <div id="dir-overlay">
@@ -584,7 +584,7 @@ body { line-height: 1.75; }
     <div class="stage">
         <div id="detail-frame">
             <!-- 默认以 splash-bg 为整体；各 stop 切换不同区域裁切 -->
-            <img id="detail-img" src="assets/splash-bg.png" alt="入将图">
+            <img id="detail-img" src="assets/landing/splash-bg.png" alt="入将图">
         </div>
         <div id="detail-veil"></div>
         <div id="detail-text">
@@ -754,22 +754,22 @@ gsap.to(track, {
 const stops = [
     { l1: '祭祀仪式', l2: '靠近后壁 · 打醮 · 椎牛 · 鸣炮',
       l3: '官员与巫觋主持「打醮」，桌案、香炉、三牲、蜡烛齐备；椎牛献祭，司炮官点火炮——神赛之仪，于此而起。',
-      img: 'assets/splash-bg.png',            tx: -50, ty: -50, scale: 1.0 },
+      img: 'assets/landing/splash-bg.png',            tx: -50, ty: -50, scale: 1.0 },
     { l1: '上层 · 神灵', l2: '华盖 · 旗帜 · 辇车',
       l3: '队伍以上、中、下三层云气分隔。上层为神灵所乘，华盖高举，旗帜招展，辇车徐行。',
-      img: 'assets/10_上层猖兵/org.png',      tx: -50, ty: -35, scale: 1.6 },
+      img: 'assets/landing/10_上层猖兵/org.png',      tx: -50, ty: -35, scale: 1.6 },
     { l1: '中层 · 仪仗', l2: '肃静回避 · 金瓜钺斧 · 三军司令',
       l3: '「肃静」「回避」起马牌前导，金瓜、钺斧、龙杖、弓弩、槊列于两旁；击鼓敲锣吹号角，「三军司令」旗在后。',
-      img: 'assets/07_梅山猖兵/org.png',      tx: -50, ty: -50, scale: 1.7 },
+      img: 'assets/landing/07_梅山猖兵/org.png',      tx: -50, ty: -50, scale: 1.7 },
     { l1: '下层 · 狩猎', l2: '扛麋鹿 · 刺虎 · 猎犬相随',
       l3: '仪仗之下，夹杂狩猎场景：有人肩扛麋鹿，有人持矛刺虎，猎犬奔走其间——梅山狩猎之俗，隐于行列。',
-      img: 'assets/06_翻坛张五郎/org.png',   tx: -50, ty: -55, scale: 1.8 },
+      img: 'assets/landing/06_翻坛张五郎/org.png',   tx: -50, ty: -55, scale: 1.8 },
     { l1: '首端 · 张五郎', l2: '倒立领路 · 梅山主神',
       l3: '张五郎等五猖神立于队伍首端。他是梅山主神、狩猎神、瑶兵统帅、巫工匠祖师神，翻身倒立，为神赛仪式的领路神。',
-      img: 'assets/06_翻坛张五郎/org.png',   tx: -50, ty: -45, scale: 2.2 },
+      img: 'assets/landing/06_翻坛张五郎/org.png',   tx: -50, ty: -45, scale: 2.2 },
     { l1: '尾端 · 番王进宝', l2: '天下太平 · 四海安宁',
       l3: '队伍尾端绘「番王进宝」图像。它象征神赛之后，天下太平、四海安宁——出兵以靖，入将以宁。',
-      img: 'assets/splash-bg.png',            tx: -50, ty: -60, scale: 1.3 }
+      img: 'assets/landing/splash-bg.png',            tx: -50, ty: -60, scale: 1.3 }
 ];
 
 const dtL1 = document.getElementById('dt-l1');
