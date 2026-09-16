@@ -1,0 +1,9 @@
+# 依赖（可由 npm install 重建）
+node_modules/
+
+# 日志
+*.log
+
+# 系统文件
+Thumbs.db
+.DS_Store

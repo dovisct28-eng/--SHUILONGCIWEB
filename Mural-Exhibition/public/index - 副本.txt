@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水龙祠 - 全息考古展厅</title>
+    <style>
+        /* --- 基础重置 --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: "Noto Serif SC", "Source Han Serif SC", STSong, "PingFang SC", sans-serif; 
+            overflow: hidden; background: #000; color: #fff; 
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 10px; }
+
+        /* --- 0. 载入监控 UI --- */
+        #loading-indicator {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            color: rgba(250, 248, 245, 0.8); font-size: 1.2rem; letter-spacing: 8px;
+            font-weight: 300; z-index: 10000; transition: opacity 0.8s; pointer-events: none;
+            text-shadow: 0 0 15px rgba(255,255,255,0.3);
+        }
+        .is-loaded #loading-indicator { opacity: 0; }
+
+        /* --- 1. 殿堂级开屏动画 --- */
+        #splash-screen {
+            position: fixed; inset: 0; z-index: 9999; background: #000; 
+            transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .splash-image {
+            position: absolute; top: 0; left: 0; 
+            height: 100vh; width: auto; max-width: none !important; min-width: 100vw; 
+            will-change: transform; opacity: 0; transition: opacity 2s ease;
+        }
+        .is-loaded .splash-image { opacity: 1; animation: panMural 15s linear forwards; }
+
+        @keyframes panMural {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(calc(-100% + 100vw), 0, 0); }
+        }
+
+        .splash-overlay {
+            position: absolute; inset: 0; 
+            background: rgba(0,0,0,0.65);
+            opacity: 0; pointer-events: none;
+        }
+        .is-loaded .splash-overlay { animation: fadeIn 3s ease forwards 7s; }
+
+        /* 还原解耦排版：右侧标题 */
+        .splash-title { 
+            position: absolute; right: 12vw; top: 15vh;
+            writing-mode: vertical-rl;
+            font-size: 5rem; font-weight: 400; letter-spacing: 0.5em; 
+            color: #FAF8F5; 
+            text-shadow: 0 0 20px rgba(255,255,255,0.3), 0 5px 15px rgba(0,0,0,0.9);
+            opacity: 0; transform: translateX(30px);
+        }
+        .is-loaded .splash-title { animation: slideInLeft 3s cubic-bezier(0.2, 0.8, 0.2, 1) forwards 8.5s; }
+
+        /* 还原解耦排版：中右侧诗文 */
+        .splash-poem { 
+            position: absolute; right: 23vw; top: 20vh;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+        .splash-poem p {
+            font-size: 1.4rem; font-weight: 300; letter-spacing: 0.6em; line-height: 2;
+            color: rgba(232, 230, 225, 0.9);
+            text-shadow: 0 0 10px rgba(255,255,255,0.2), 0 2px 5px rgba(0,0,0,0.8);
+            opacity: 0; transform: translateX(20px);
+            white-space: nowrap; /* 强制不折行 */
+            margin-left: 35px; /* 使用原生 margin 控制列与列的呼吸间距 */
+        }
+        .is-loaded .splash-poem p:nth-child(1) { animation: slideInLeft 2s forwards 10.0s; }
+        .is-loaded .splash-poem p:nth-child(2) { animation: slideInLeft 2s forwards 10.3s; }
+        .is-loaded .splash-poem p:nth-child(3) { animation: slideInLeft 2s forwards 10.6s; }
+        .is-loaded .splash-poem p:nth-child(4) { animation: slideInLeft 2s forwards 10.9s; }
+        .is-loaded .splash-poem p:nth-child(5) { animation: slideInLeft 2s forwards 11.2s; }
+
+        /* 左下角双玉牌按钮 */
+        .splash-actions {
+            position: absolute; left: 12vw; bottom: 15vh;
+            display: flex; gap: 25px; z-index: 30; opacity: 0; pointer-events: auto;
+        }
+        .is-loaded .splash-actions { animation: fadeIn 2s forwards 12.5s; }
+        
+        .action-btn {
+            writing-mode: vertical-rl;
+            padding: 35px 12px; border-radius: 40px;
+            background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.4);
+            color: #fff; font-size: 1.1rem; letter-spacing: 6px;
+            display: flex; justify-content: center; align-items: center;
+            cursor: pointer; transition: all 0.4s ease; backdrop-filter: blur(8px);
+            position: relative;
+        }
+        .action-btn::after {
+            content: ''; position: absolute; inset: -2px; border-radius: 40px;
+            border: 1px solid rgba(212,175,55,0.5); opacity: 0; transition: opacity 0.4s;
+        }
+        .action-btn:hover { background: rgba(255,255,255,0.15); box-shadow: 0 0 25px rgba(255,255,255,0.3); transform: scale(1.05); border-color: #fff; }
+        .action-btn:hover::after { animation: pulseRing 2s infinite; }
+
+        /* 底部字幕 */
+        .splash-subtitle { 
+            position: absolute; bottom: 6vh; left: 50%; transform: translateX(-50%);
+            font-size: 0.9rem; letter-spacing: 2em; color: rgba(255,255,255,0.25); 
+            margin-left: 2em; opacity: 0; 
+        }
+        .is-loaded .splash-subtitle { animation: fadeIn 2s forwards 13s; }
+
+        @keyframes fadeIn { to { opacity: 1; } }
+        @keyframes slideInLeft { to { opacity: 1; transform: translateX(0); } }
+        @keyframes pulseRing { 0% { transform: scale(0.9); opacity: 1; } 100% { transform: scale(1.3); opacity: 0; } }
+
+
+        /* --- 2. 图鉴入口：全景探秘地图 (防断层铁壁引擎) --- */
+        #panorama-view {
+            position: fixed; inset: 0; z-index: 100; display: none; background: #000; overflow: hidden; opacity: 0; transition: opacity 1s ease; cursor: grab;
+        }
+        #panorama-view:active { cursor: grabbing; }
+        #panorama-wrapper { position: absolute; top: 0; left: 0; transform-origin: 0 0; will-change: transform; }
+        
+        .panorama-bg { display: block; pointer-events: none; opacity: 0.9; }
+
+        /* 将锚点容器固定为物理屏幕尺寸，不受壁画缩放影响 */
+        #hotspots-container { position: absolute; inset: 0; z-index: 60; pointer-events: none; }
+        /* 保持大头针永远 60x60，不论画面怎么缩放 */
+        .hotspot { position: absolute; width: 60px; height: 60px; transform: translate(-50%, -50%); cursor: pointer; pointer-events: auto; }
+        .hotspot-core { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 12px; height: 12px; background: rgba(255,255,255,0.8); border-radius: 50%; box-shadow: 0 0 15px 5px rgba(255,255,255,0.3); transition: all 0.3s; }
+        .hotspot-ring { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 1px solid rgba(255,255,255,0.6); border-radius: 50%; animation: pulseRing 2s infinite ease-out; }
+        .hotspot-tooltip { position: absolute; top: -45px; left: 50%; transform: translateX(-50%); background: rgba(0,0,0,0.8); backdrop-filter: blur(5px); padding: 6px 18px; border-radius: 30px; border: 1px solid rgba(255,255,255,0.15); color: #fff; font-size: 0.85rem; letter-spacing: 2px; white-space: nowrap; opacity: 0; pointer-events: none; transition: all 0.3s; }
+        .hotspot:hover .hotspot-tooltip { opacity: 1; top: -55px; box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+        .hotspot:hover .hotspot-core { transform: translate(-50%, -50%) scale(1.5); background: #d4af37; box-shadow: 0 0 20px 8px rgba(212,175,55,0.5); }
+        .hotspot:hover .hotspot-ring { border-color: #d4af37; }
+
+
+        /* --- 3. 展厅主系统 (双轨共用) --- */
+        #main-app { position: fixed; inset: 0; z-index: 200; display: none; background: #000; opacity: 0; transition: opacity 0.8s ease; }
+        
+        #display-area { position: absolute; inset: 0; z-index: 1; display: flex; justify-content: center; align-items: center; }
+
+        /* 动线A：WebGL 体感容器 (全屏) */
+        #webgl-container { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 2; transition: opacity 0.5s; opacity: 0; pointer-events: none; }
+        
+        /* 动线B：2D 图鉴保护结界 */
+        #gallery-container { 
+            position: absolute; inset: 0; z-index: 3; opacity: 0; pointer-events: none; transition: opacity 0.5s; 
+            padding-left: 300px; padding-right: 34%; padding-top: 40px; padding-bottom: 40px; 
+        }
+        #image-wrapper { position: relative; width: 100%; height: 100%; }
+        .layer-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; transition: opacity 0.5s ease-in-out; pointer-events: none; }
+        #img-line, #img-color { opacity: 0; }
+
+        /* 摄像机监控小窗 */
+        #camera-feed-container {
+            position: absolute; bottom: 30px; left: 30px; width: 160px; height: 120px;
+            background: rgba(0,0,0,0.5); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px;
+            z-index: 300; overflow: hidden; display: none; box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        #output-canvas { width: 100%; height: 100%; object-fit: cover; transform: scaleX(-1); }
+        #camera-status { position: absolute; bottom: 5px; left: 0; width: 100%; text-align: center; font-size: 0.75rem; color: #4cd137; letter-spacing: 1px; text-shadow: 0 1px 2px #000; }
+
+        /* 侧边栏菜单 (仅图鉴模式可见) */
+        #floating-menu { position: absolute; left: 30px; top: 50%; transform: translateY(-50%); width: 240px; max-height: 80vh; z-index: 10; background: rgba(15, 15, 15, 0.4); backdrop-filter: blur(15px); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); display: none; flex-direction: column; }
+        #floating-menu h2 { font-size: 1rem; font-weight: normal; color: #888; letter-spacing: 4px; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
+        #menu { list-style: none; overflow-y: auto; }
+        #menu li { padding: 12px 15px; margin-bottom: 8px; cursor: pointer; border-radius: 6px; color: #ddd; font-size: 0.95rem; letter-spacing: 1px; transition: all 0.3s; }
+        #menu li:hover, #menu li.active { background: rgba(255, 255, 255, 0.15); color: #fff; padding-left: 20px; }
+
+        /* 文字考据面板 (双模动态共用) */
+        #floating-info { 
+            position: absolute; right: 4%; top: 50%; transform: translateY(-50%) translateX(120%); 
+            width: 28%; min-width: 300px; max-height: 85vh; z-index: 10; 
+            background: rgba(5, 5, 5, 0.55); backdrop-filter: blur(25px); border: 1px solid rgba(255,255,255,0.08); 
+            border-radius: 16px; padding: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.6); 
+            display: flex; flex-direction: column; opacity: 0; pointer-events: none; 
+            transition: all 1s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+        }
+        #floating-info.visible { opacity: 1; pointer-events: auto; transform: translateY(-50%) translateX(0); }
+        
+        #info-title { font-size: 2rem; font-weight: 400; letter-spacing: 2px; margin-bottom: 20px; color: #fff; flex-shrink: 0; }
+        
+        #info-text { 
+            font-size: 0.95rem; line-height: 2.2; color: #ccc; white-space: pre-wrap; 
+            overflow-y: auto; flex-grow: 1; font-weight: 300; letter-spacing: 1px;
+            padding-right: 10px;
+        }
+        #info-text::-webkit-scrollbar { width: 4px; }
+        #info-text::-webkit-scrollbar-track { background: rgba(0,0,0,0.2); border-radius: 4px; }
+        #info-text::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.4); border-radius: 4px; }
+
+        /* 2D 专属控制台 */
+        .layer-controls { margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); display: none; gap: 10px; justify-content: center; flex-shrink: 0; }
+        .layer-btn { background: transparent; color: #aaa; border: 1px solid #555; padding: 8px 15px; border-radius: 20px; cursor: pointer; font-size: 0.8rem; letter-spacing: 1px; transition: all 0.3s; }
+        .layer-btn:hover, .layer-btn.active { background: #fff; color: #000; border-color: #fff; }
+
+        /* 左上角返回按钮 */
+        #back-btn { position: absolute; top: 30px; left: 30px; z-index: 200; display: flex; align-items: center; gap: 10px; color: #aaa; cursor: pointer; transition: color 0.3s; letter-spacing: 2px; }
+        #back-btn:hover { color: #fff; }
+        #back-btn svg { width: 24px; height: 24px; fill: currentColor; }
+
+        /* 一键穿梭门切换按钮 */
+        #quick-switch-btn {
+            position: absolute; top: 30px; right: 30px; z-index: 200;
+            padding: 10px 20px; border-radius: 20px;
+            background: rgba(0,0,0,0.5); border: 1px solid rgba(255,255,255,0.3);
+            color: #fff; font-size: 0.9rem; letter-spacing: 2px;
+            cursor: pointer; transition: all 0.3s; backdrop-filter: blur(10px);
+        }
+        #quick-switch-btn:hover { background: rgba(255,255,255,0.2); border-color: #fff; box-shadow: 0 0 15px rgba(255,255,255,0.2); }
+        
+        /* 【修复】切页时的电影级黑场转场 */
+        #swipe-flash { 
+            position: fixed; inset: 0; 
+            background: #000; /* 改为高级深邃黑 */
+            z-index: 500; opacity: 0; pointer-events: none; 
+        }
+
+        /* ================= 模式状态隔离 CSS ================= */
+        body.track-cyber #webgl-container { opacity: 1; pointer-events: auto; }
+        body.track-cyber #camera-feed-container { display: block; }
+        
+        body.track-gallery #gallery-container { opacity: 1; pointer-events: auto; }
+        body.track-gallery #floating-menu { display: flex; }
+        body.track-gallery #layer-controls { display: flex; }
+
+        /* 上帝模式 */
+        #admin-panel { position: absolute; top: 30px; right: 30px; z-index: 900; background: rgba(255,0,0,0.1); border: 1px solid #ff4757; border-radius: 8px; padding: 10px 20px; color: #ff4757; font-weight: bold; cursor: pointer; backdrop-filter: blur(10px); transition: all 0.3s; }
+        #admin-panel:hover { background: rgba(255,0,0,0.3); color: #fff; }
+        #admin-panel.active { background: #ff4757; color: #fff; box-shadow: 0 0 20px rgba(255,71,87,0.5); }
+        #coord-modal { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(20,20,20,0.95); border: 1px solid #444; border-radius: 12px; padding: 30px; z-index: 1000; display: none; flex-direction: column; align-items: center; box-shadow: 0 20px 50px rgba(0,0,0,0.8); }
+        #coord-modal h3 { color: #d4af37; margin-bottom: 15px; }
+        #coord-modal p { color: #aaa; font-size: 0.9rem; margin-bottom: 20px; }
+        #coord-code { background: #000; padding: 15px; border-radius: 6px; border: 1px dashed #666; color: #4cd137; font-family: monospace; font-size: 1.1rem; width: 100%; text-align: center; user-select: all; }
+        #close-modal-btn { margin-top: 20px; padding: 8px 30px; background: #fff; color: #000; border: none; border-radius: 20px; cursor: pointer; font-weight: bold; }
+        .picker-mode-active { cursor: crosshair !important; }
+        .temp-dot { position: absolute; width: 20px; height: 20px; background: #ff4757; border-radius: 50%; transform: translate(-50%, -50%); z-index: 500; border: 2px solid #fff; box-shadow: 0 0 10px #ff4757; pointer-events: none; }
+    </style>
+
+    <script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+    <script type="importmap">
+        { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+    </script>
+</head>
+<body>
+
+    <!-- 0. 载入监控 -->
+    <div id="loading-indicator">壁画数据极速载入中...</div>
+
+    <!-- 1. 殿堂级开屏大厅 -->
+    <div id="splash-screen">
+        <img class="splash-image" id="splash-bg-img" src="assets/splash-bg.png" alt="水龙祠全景" onerror="this.src=''; this.alt='请在assets文件夹放置splash-bg.png'">
+        <div class="splash-overlay"></div>
+        
+        <h1 class="splash-title">水龙祠壁画</h1>
+        
+        <div class="splash-poem">
+            <p>湘南江永，勾蓝瑶寨。</p>
+            <p>水龙古祠，丹青映壁。</p>
+            <p>巫楚交融，梅山神启。</p>
+            <p>诸神列绘，护佑一方。</p>
+            <p>民俗瑰宝，岁月长存。</p>
+        </div>
+        
+        <!-- 双动线分流入口 (并排玉牌) -->
+        <div class="splash-actions">
+            <div class="action-btn" id="btn-cyber-track">体感交互</div>
+            <div class="action-btn" id="btn-gallery-track">图鉴入口</div>
+        </div>
+        
+        <div class="splash-subtitle">全息交互数字复原</div>
+    </div>
+
+    <!-- 2. 动线 B 前置：全景地图探秘区 -->
+    <div id="panorama-view">
+        <div id="admin-panel" onclick="window.togglePickerMode()">🛠️ 开启坐标采集器</div>
+        <div id="panorama-wrapper">
+            <img class="panorama-bg" id="panorama-bg" src="assets/splash-bg.png" alt="全景底图" onerror="this.src=''">
+            <div id="hotspots-container"></div>
+        </div>
+    </div>
+    
+    <div id="coord-modal">
+        <h3>📍 坐标采集成功！</h3>
+        <p>请复制下方这行代码：</p>
+        <div id="coord-code"></div>
+        <button id="close-modal-btn" onclick="window.closeCoordModal()">关闭</button>
+    </div>
+
+    <!-- 3. 主系统 (双轨共用) -->
+    <div id="main-app">
+        <!-- 动态返回按钮 -->
+        <div id="back-btn" onclick="window.goBack()">
+            <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+            <span id="back-text">返回</span>
+        </div>
+
+        <!-- 一键切换动线按钮 -->
+        <div id="quick-switch-btn" onclick="window.toggleTrack()">
+            🔍 切换至图鉴模式
+        </div>
+
+        <!-- 仅图鉴可见侧边栏 -->
+        <div id="floating-menu">
+            <h2>壁画图谱</h2>
+            <ul id="menu"></ul>
+        </div>
+
+        <div id="display-area">
+            <!-- 动线A：3D 容器 -->
+            <div id="webgl-container"></div>
+            <!-- 动线B：2D 图鉴保护结界 -->
+            <div id="gallery-container">
+                <div id="image-wrapper">
+                    <img id="img-org" class="layer-img" src="" alt="原图">
+                    <img id="img-line" class="layer-img" src="" alt="线稿">
+                    <img id="img-color" class="layer-img" src="" alt="色稿">
+                </div>
+            </div>
+        </div>
+
+        <!-- 机器视觉监控窗 -->
+        <div id="camera-feed-container">
+            <video id="input-video" autoplay muted playsinline style="display: none;"></video>
+            <canvas id="output-canvas"></canvas>
+            <div id="camera-status">启动神识中...</div>
+        </div>
+
+        <div id="floating-info">
+            <h1 id="info-title">系列名称</h1>
+            <div id="info-text">考据文字...</div>
+            <div class="layer-controls" id="layer-controls">
+                <button class="layer-btn active" onclick="window.switchLayer('org')">原壁画</button>
+                <button class="layer-btn" onclick="window.switchLayer('line')">高清线稿</button>
+                <button class="layer-btn" onclick="window.switchLayer('color')">数字色稿</button>
+            </div>
+        </div>
+        
+        <!-- 切页视觉反馈黑幕 -->
+        <div id="swipe-flash"></div>
+    </div>
+
+    <script type="module">
+        import * as THREE from 'three';
+
+        /* ================= 坐标数据区 ================= */
+        const ANCHORS_CONFIG = [
+             { folderName: "01_南门何五猖", x: 5.82, y: 31.13 },
+           { folderName: "10_上层猖兵", x: 10.85, y: 17.68 },{ folderName: "02_东门陈五猖", x: 7.00, y: 28.73 },{ folderName: "03_西门谢五猖", x: 6.12, y: 22.80 },{ folderName: "04_中门徐五猖", x: 7.85, y: 22.10 },{ folderName: "05_北门雷五猖", x: 9.71, y: 23.65 },{ folderName: "06_翻坛张五郎", x: 8.78, y: 27.48 },{ folderName: "07_梅山猖兵", x: 12.21, y: 25.35 },
+        ];
+
+        let globalAssetsData = [];
+        let currentSeriesIndex = 0; 
+        let currentTrack = null;
+        let currentItemData = null; 
+
+        // --- 0. 载入监控 ---
+        const splashImg = document.getElementById('splash-bg-img');
+        if (splashImg.complete) {
+            document.body.classList.add('is-loaded');
+        } else {
+            splashImg.onload = () => document.body.classList.add('is-loaded');
+            splashImg.onerror = () => document.body.classList.add('is-loaded');
+        }
+        setTimeout(() => document.body.classList.add('is-loaded'), 5000);
+
+        // --- 1. 双动线入口分流 ---
+        document.getElementById('btn-cyber-track').addEventListener('click', () => {
+            currentTrack = 'cyber';
+            document.body.classList.remove('track-gallery');
+            document.body.classList.add('track-cyber');
+            document.getElementById('back-text').innerText = '返回大厅';
+            document.getElementById('quick-switch-btn').innerHTML = '🔍 切换至图鉴模式';
+            
+            hideSplash(() => {
+                const mainApp = document.getElementById('main-app');
+                mainApp.style.display = 'block';
+                void mainApp.offsetWidth; 
+                resizeWebGL();
+
+                setTimeout(() => {
+                    mainApp.style.opacity = '1';
+                    loadSeriesData(0); 
+                    startMediaPipe();  
+                }, 100);
+            });
+        });
+
+        document.getElementById('btn-gallery-track').addEventListener('click', () => {
+            currentTrack = 'gallery';
+            document.body.classList.remove('track-cyber');
+            document.body.classList.add('track-gallery');
+            document.getElementById('back-text').innerText = '返回全景地图';
+            document.getElementById('quick-switch-btn').innerHTML = '✋ 切换至体感模式';
+            
+            hideSplash(() => {
+                const panorama = document.getElementById('panorama-view');
+                panorama.style.display = 'block';
+                requestAnimationFrame(() => {
+                    initPanoramaTransform();
+                    panorama.style.opacity = '1';
+                });
+            });
+        });
+
+        function hideSplash(callback) {
+            const splash = document.getElementById('splash-screen');
+            splash.style.opacity = '0';
+            setTimeout(() => { splash.style.display = 'none'; callback(); }, 1000);
+        }
+
+        // --- 动态返回逻辑 ---
+        window.goBack = () => {
+            if (currentTrack === 'cyber') {
+                stopMediaPipe();
+                document.getElementById('main-app').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('main-app').style.display = 'none';
+                    const splash = document.getElementById('splash-screen');
+                    splash.style.display = 'flex';
+                    setTimeout(() => splash.style.opacity = '1', 50);
+                }, 800);
+            } else if (currentTrack === 'gallery') {
+                document.getElementById('main-app').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('main-app').style.display = 'none';
+                    const panorama = document.getElementById('panorama-view');
+                    panorama.style.display = 'block';
+                    updatePanoramaTransform(); 
+                    setTimeout(() => panorama.style.opacity = '1', 50);
+                }, 800);
+            }
+        };
+
+        // --- 核心新增：一键穿梭门 (双模互切) ---
+        window.toggleTrack = () => {
+            const btn = document.getElementById('quick-switch-btn');
+            if (currentTrack === 'cyber') {
+                currentTrack = 'gallery';
+                document.body.classList.remove('track-cyber');
+                document.body.classList.add('track-gallery');
+                document.getElementById('back-text').innerText = '返回全景地图';
+                btn.innerHTML = '✋ 切换至体感模式';
+                stopMediaPipe(); 
+                loadSeriesData(currentSeriesIndex); 
+            } else {
+                currentTrack = 'cyber';
+                document.body.classList.remove('track-gallery');
+                document.body.classList.add('track-cyber');
+                document.getElementById('back-text').innerText = '返回大厅';
+                btn.innerHTML = '🔍 切换至图鉴模式';
+                startMediaPipe(); 
+                setTimeout(() => {
+                    resizeWebGL();
+                    loadSeriesData(currentSeriesIndex);
+                }, 50);
+            }
+        };
+
+        // =========================================================
+        // 【终极防穿帮地图引擎】
+        // =========================================================
+        const panoramaView = document.getElementById('panorama-view');
+        const panoramaWrapper = document.getElementById('panorama-wrapper');
+        const imgBg = document.getElementById('panorama-bg');
+        let panScale = 1, panX = 0, panY = 0, isDragging = false, startX = 0, startY = 0, hasDragged = false;
+
+        function getBaseDimensions() { 
+            return { w: imgBg.naturalWidth || window.innerWidth, h: imgBg.naturalHeight || window.innerHeight }; 
+        }
+        
+        if (imgBg.complete) { if(panoramaView.style.display === 'block') initPanoramaTransform(); } 
+        else { imgBg.onload = () => { if(panoramaView.style.display === 'block') initPanoramaTransform(); }; }
+
+        function initPanoramaTransform() {
+            const { w, h } = getBaseDimensions();
+            panoramaWrapper.style.width = `${w}px`; panoramaWrapper.style.height = `${h}px`;
+            const minScale = Math.max(window.innerWidth / w, window.innerHeight / h);
+            panScale = minScale; 
+            panX = (window.innerWidth - (w * panScale)) / 2; panY = (window.innerHeight - (h * panScale)) / 2;
+            updatePanoramaTransform();
+        }
+        
+        function updatePanoramaTransform() {
+            const { w, h } = getBaseDimensions();
+            if(!w || !h) return;
+            
+            const minScale = Math.max(window.innerWidth / w, window.innerHeight / h);
+            panScale = Math.max(minScale, Math.min(panScale, 6));
+            
+            const currentW = w * panScale, currentH = h * panScale;
+            const minPanX = window.innerWidth - currentW;
+            const minPanY = window.innerHeight - currentH;
+            
+            panX = Math.max(minPanX, Math.min(0, panX));
+            panY = Math.max(minPanY, Math.min(0, panY));
+            
+            panoramaWrapper.style.transform = `translate(${panX}px, ${panY}px) scale(${panScale})`;
+
+            document.querySelectorAll('.hotspot, .temp-dot').forEach(el => {
+                const px = parseFloat(el.dataset.x), py = parseFloat(el.dataset.y);
+                if (!isNaN(px) && !isNaN(py)) {
+                    el.style.left = `${panX + (px / 100) * currentW}px`; el.style.top = `${panY + (py / 100) * currentH}px`;
+                }
+            });
+        }
+        
+        window.addEventListener('resize', () => { 
+            if(panoramaView.style.display === 'block') initPanoramaTransform(); 
+            if(document.getElementById('main-app').style.display === 'block') resizeWebGL(); 
+        });
+        
+        panoramaView.addEventListener('mousedown', (e) => { if(isPickerMode) return; isDragging = true; hasDragged = false; startX = e.clientX - panX; startY = e.clientY - panY; panoramaView.style.cursor = 'grabbing'; });
+        window.addEventListener('mousemove', (e) => { if(!isDragging) return; hasDragged = true; panX = e.clientX - startX; panY = e.clientY - startY; updatePanoramaTransform(); });
+        window.addEventListener('mouseup', () => { isDragging = false; if(panoramaView.style.display === 'block' && !isPickerMode) panoramaView.style.cursor = 'grab'; });
+        panoramaView.addEventListener('wheel', (e) => {
+            if(isPickerMode) return; e.preventDefault(); 
+            const { w, h } = getBaseDimensions();
+            const minScale = Math.max(window.innerWidth / w, window.innerHeight / h);
+            let newScale = Math.max(minScale, Math.min(panScale * Math.exp(-e.deltaY * 0.0015), 6));
+            panX = e.clientX - (e.clientX - panX) * (newScale / panScale); panY = e.clientY - (e.clientY - panY) * (newScale / panScale);
+            panScale = newScale; updatePanoramaTransform(); 
+        }, {passive: false});
+
+        let isPickerMode = false;
+        window.togglePickerMode = () => {
+            isPickerMode = !isPickerMode;
+            const btn = document.getElementById('admin-panel'), wrapper = document.getElementById('panorama-wrapper');
+            if (isPickerMode) { btn.innerHTML = "🔴 采集进行中"; btn.classList.add('active'); wrapper.classList.add('picker-mode-active'); } 
+            else { btn.innerHTML = "🛠️ 开启坐标采集器"; btn.classList.remove('active'); wrapper.classList.remove('picker-mode-active'); document.querySelectorAll('.temp-dot').forEach(el=>el.remove()); }
+        };
+        panoramaWrapper.addEventListener('click', (e) => {
+            if(!isPickerMode) return;
+            const rect = panoramaWrapper.getBoundingClientRect();
+            const x = ((e.clientX - rect.left) / rect.width) * 100;
+            const y = ((e.clientY - rect.top) / rect.height) * 100;
+            const dot = document.createElement('div'); dot.className = 'temp-dot'; dot.dataset.x = x; dot.dataset.y = y;
+            document.getElementById('hotspots-container').appendChild(dot);
+            updatePanoramaTransform();
+            document.getElementById('coord-code').innerText = `{ folderName: "...", x: ${x.toFixed(2)}, y: ${y.toFixed(2)} },`;
+            document.getElementById('coord-modal').style.display = 'flex';
+        });
+        window.closeCoordModal = () => { document.getElementById('coord-modal').style.display = 'none'; };
+
+        // =======================================================
+        // 【核心数据挂载与页面切换调度】
+        // =======================================================
+        const isPreviewEnv = window.location.protocol === 'file:' || window.location.protocol === 'blob:' || window.location.hostname.includes('usercontent');
+
+        function initAssetsData() {
+            if (isPreviewEnv) {
+                console.warn("在线预览模式：加载演示数据");
+                globalAssetsData = [
+                    { folderName: "01_上层猖兵", orgPath: "https://picsum.photos/seed/mural1/1024/512", linePath: "https://picsum.photos/seed/mural1/1024/512", colorPath: "https://picsum.photos/seed/mural1/1024/512", infoPath: "" },
+                    { folderName: "02_中层猖兵", orgPath: "https://picsum.photos/seed/mural2/1024/512", linePath: "https://picsum.photos/seed/mural2/1024/512", colorPath: "https://picsum.photos/seed/mural2/1024/512", infoPath: "" }
+                ];
+                document.getElementById('splash-bg-img').src = "https://picsum.photos/seed/muralbg/2048/1024";
+                document.getElementById('panorama-bg').src = "https://picsum.photos/seed/muralbg/2048/1024";
+                renderAssets();
+            } else {
+                try {
+                    fetch('/api/scan-assets').then(res => res.json()).then(result => {
+                        if (!result.success) throw new Error(result.message);
+                        globalAssetsData = result.data;
+                        renderAssets();
+                    }).catch(err => {
+                        console.error('本地服务未响应', err);
+                        const menu = document.getElementById('menu');
+                        if (menu) menu.innerHTML = '<li style="color:#ff4757; font-size:12px; padding:15px;">连接本地服务失败，请确保运行了 node server.js</li>';
+                    });
+                } catch(e) { console.error('Fetch 解析异常', e); }
+            }
+        }
+
+        function renderAssets() {
+            const menu = document.getElementById('menu'), hotspotsContainer = document.getElementById('hotspots-container');
+            menu.innerHTML = ''; hotspotsContainer.innerHTML = '';
+            if(globalAssetsData.length === 0) return;
+
+            globalAssetsData.forEach((item, index) => {
+                const li = document.createElement('li');
+                li.textContent = item.folderName; li.dataset.folder = item.folderName; 
+                li.addEventListener('click', () => loadSeriesData(index));
+                menu.appendChild(li);
+
+                const anchorConfig = ANCHORS_CONFIG.find(a => a.folderName === item.folderName);
+                if (anchorConfig) {
+                    const hotspot = document.createElement('div'); hotspot.className = 'hotspot';
+                    hotspot.dataset.x = anchorConfig.x; hotspot.dataset.y = anchorConfig.y;
+                    hotspot.innerHTML = `<div class="hotspot-ring"></div><div class="hotspot-core"></div><div class="hotspot-tooltip">${item.folderName}</div>`;
+                    hotspot.addEventListener('click', (e) => {
+                        if (isPickerMode || hasDragged) { e.preventDefault(); e.stopPropagation(); return; }
+                        document.getElementById('panorama-view').style.opacity = '0';
+                        setTimeout(() => {
+                            document.getElementById('panorama-view').style.display = 'none';
+                            const mainApp = document.getElementById('main-app');
+                            mainApp.style.display = 'block';
+                            document.getElementById('back-text').innerText = '返回全景地图';
+                            document.getElementById('quick-switch-btn').innerHTML = '✋ 切换至体感模式';
+                            void mainApp.offsetWidth; 
+                            resizeWebGL();
+                            setTimeout(() => { mainApp.style.opacity = '1'; loadSeriesData(index); }, 50);
+                        }, 800);
+                    });
+                    hotspotsContainer.appendChild(hotspot);
+                }
+            });
+        }
+        
+        initAssetsData();
+
+        function loadSeriesData(index) {
+            if (index < 0) index = globalAssetsData.length - 1;
+            if (index >= globalAssetsData.length) index = 0;
+            currentSeriesIndex = index;
+            const item = globalAssetsData[index];
+            currentItemData = item; 
+
+            isRevealed = false;
+            if (shaderMaterial) gsap.to(shaderMaterial.uniforms.uDispersion, { value: 0, duration: 0 });
+            if (camera) gsap.to(camera.position, { x: 0, z: defaultCameraZ || 1.8, duration: 0 });
+            
+            const infoPanel = document.getElementById('floating-info');
+            infoPanel.classList.remove('visible'); 
+
+            document.querySelectorAll('#menu li').forEach(el => el.classList.toggle('active', el.dataset.folder === item.folderName));
+            document.getElementById('info-title').innerText = item.folderName;
+            
+            const mockLongText = "【数字复原与考据】\n水龙祠壁画由于年代久远，表面覆盖了厚重的尘埃与氧化层。通过高光谱扫描技术与AI色彩还原算法，我们提取出了隐藏在斑驳之下的真实色彩。\n\n【上层：九天神将】\n画面上部描绘了天庭神祇与天兵天将，他们腾云驾雾，手持法器，神态威严，展现了瑶族先民对天界的想象。\n\n【中层：人间烟火】\n画面的中部刻画了极为丰富的生活场景。有集市的繁华、农耕的辛劳、以及盛大祭祀的仪式。这一层是研究古代湘南地区民俗生活的珍贵史料。\n\n【下层：幽冥使者】\n画面底部则进入了深渊幽冥，各种奇异的神话怪兽与阴间使者穿行其间，代表了生与死的轮回信仰。\n\n【技法分析】\n整幅壁画采用了传统的矿物颜料，线条遒劲有力，色彩对比强烈，是一幅融合了巫楚文化与梅山教信仰的集大成之作。";
+
+            if (item.infoPath) {
+                try {
+                    fetch(item.infoPath).then(res => res.ok ? res.text() : "考据加载失败").then(text => { 
+                        document.getElementById('info-text').innerText = text; 
+                        if (currentTrack === 'gallery') infoPanel.classList.add('visible'); 
+                    }).catch(() => {
+                        document.getElementById('info-text').innerText = mockLongText;
+                        if (currentTrack === 'gallery') infoPanel.classList.add('visible');
+                    }); 
+                } catch (e) {
+                    document.getElementById('info-text').innerText = mockLongText;
+                    if (currentTrack === 'gallery') infoPanel.classList.add('visible');
+                }
+            } else {
+                document.getElementById('info-text').innerText = mockLongText;
+                if (currentTrack === 'gallery') infoPanel.classList.add('visible');
+            }
+            
+            if (currentTrack === 'gallery') {
+                document.getElementById('img-org').src = item.orgPath;
+                document.getElementById('img-line').src = item.linePath;
+                document.getElementById('img-color').src = item.colorPath;
+                window.switchLayer('org');
+            } else if (currentTrack === 'cyber') {
+                updateWebGLMural(item.linePath, item.colorPath);
+            }
+        }
+
+        window.switchLayer = (layerType) => {
+            const imgOrg = document.getElementById('img-org'), imgLine = document.getElementById('img-line'), imgColor = document.getElementById('img-color');
+            document.querySelectorAll('.layer-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            if (layerType === 'org') { imgLine.style.opacity = '0'; imgColor.style.opacity = '0'; } 
+            else if (layerType === 'line') { imgLine.style.opacity = '1'; imgColor.style.opacity = '0'; } 
+            else if (layerType === 'color') { imgLine.style.opacity = '1'; imgColor.style.opacity = '1'; }
+        };
+
+        // =======================================================
+        // 【动线 A】 WebGL 赛博大厅 & 自适应视锥体算法
+        // =======================================================
+        const webglContainer = document.getElementById('webgl-container');
+        let scene, camera, renderer, lineMesh, colorPoints, shaderMaterial;
+        let defaultCameraZ = 1.8; 
+        let cameraOffsetX = 0;    
+        
+        const vertexShader = `
+            uniform vec2 uMouse;
+            uniform float uDispersion;
+            uniform float uTime;
+            varying vec2 vUv;
+            void main() {
+                vUv = uv;
+                vec3 pos = position;
+                float dist = distance(vUv, uMouse);
+                float localDisp = 1.0 - smoothstep(0.05, 0.15, dist);
+                float totalDisp = clamp(localDisp + uDispersion, 0.0, 1.0);
+                
+                float scatterX = sin(position.y * 15.0 + uTime * 2.0) * 0.1;
+                float scatterY = cos(position.x * 15.0 + uTime * 2.0) * 0.1;
+                float scatterZ = (sin(position.x * 10.0) + cos(position.y * 10.0) - 2.0) * 0.5;
+
+                pos.x += scatterX * totalDisp; pos.y += scatterY * totalDisp; pos.z += scatterZ * totalDisp; 
+                gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
+                gl_PointSize = 2.5; 
+            }
+        `;
+
+        const fragmentShader = `
+            uniform sampler2D uColorTex;
+            uniform vec2 uMouse;
+            uniform float uDispersion;
+            varying vec2 vUv;
+            void main() {
+                vec4 color = texture2D(uColorTex, vUv);
+                if (color.a < 0.1) discard; 
+                float dist = distance(vUv, uMouse);
+                float localDisp = 1.0 - smoothstep(0.07, 0.15, dist);
+                float totalDisp = clamp(localDisp + uDispersion, 0.0, 1.0);
+                gl_FragColor = vec4(color.rgb, color.a * (1.0 - totalDisp));
+            }
+        `;
+
+        function initWebGL() {
+            scene = new THREE.Scene();
+            const w = webglContainer.clientWidth || window.innerWidth;
+            const h = webglContainer.clientHeight || window.innerHeight;
+            
+            camera = new THREE.PerspectiveCamera(45, w / h, 0.1, 100);
+            renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+            renderer.setSize(w, h);
+            renderer.setPixelRatio(window.devicePixelRatio);
+            webglContainer.appendChild(renderer.domElement);
+
+            shaderMaterial = new THREE.ShaderMaterial({
+                vertexShader, fragmentShader, transparent: true, depthWrite: false,
+                uniforms: { uColorTex: { value: null }, uMouse: { value: new THREE.Vector2(-1, -1) }, uDispersion: { value: 0.0 }, uTime: { value: 0.0 } }
+            });
+            renderWebGL();
+        }
+
+        function resizeWebGL() {
+            if(!camera || !renderer) return;
+            const w = webglContainer.clientWidth || window.innerWidth;
+            const h = webglContainer.clientHeight || window.innerHeight;
+            if(w <= 0 || h <= 0) return;
+            
+            camera.aspect = w / h;
+            camera.updateProjectionMatrix();
+            renderer.setSize(w, h);
+            if(currentItemData) updateWebGLMural(currentItemData.linePath, currentItemData.colorPath);
+        }
+
+        function updateWebGLMural(linePath, colorPath) {
+            const textureLoader = new THREE.TextureLoader();
+            textureLoader.setCrossOrigin('anonymous'); 
+            const img = new Image(); 
+            img.crossOrigin = 'anonymous';
+            img.src = colorPath;
+            
+            img.onload = () => {
+                const aspect = img.width / img.height;
+                const planeHeight = 2.0; 
+                const planeWidth = planeHeight * aspect;
+
+                const fovRad = camera.fov * (Math.PI / 180);
+                const distH = (planeHeight / 2) / Math.tan(fovRad / 2);
+                const camAspect = camera.aspect || (window.innerWidth / window.innerHeight);
+                const distW = (planeWidth / 2) / (Math.tan(fovRad / 2) * camAspect);
+                
+                defaultCameraZ = Math.max(distH, distW) * 1.05; 
+                
+                if (!isRevealed) {
+                    camera.position.z = defaultCameraZ;
+                    camera.position.x = 0;
+                }
+                
+                cameraOffsetX = planeWidth * 0.25;
+
+                if(lineMesh) { scene.remove(lineMesh); lineMesh.geometry.dispose(); lineMesh.material.dispose(); }
+                if(colorPoints) { scene.remove(colorPoints); colorPoints.geometry.dispose(); }
+
+                textureLoader.load(linePath, (lineTex) => {
+                    lineMesh = new THREE.Mesh(new THREE.PlaneGeometry(planeWidth, planeHeight), new THREE.MeshBasicMaterial({ map: lineTex, transparent: true, depthWrite: false }));
+                    lineMesh.position.z = -0.05; scene.add(lineMesh);
+                });
+
+                textureLoader.load(colorPath, (colorTex) => {
+                    shaderMaterial.uniforms.uColorTex.value = colorTex;
+                    const segmentsY = Math.floor(800 / aspect);
+                    colorPoints = new THREE.Points(new THREE.PlaneGeometry(planeWidth, planeHeight, 800, segmentsY), shaderMaterial);
+                    scene.add(colorPoints);
+                });
+            }
+
+            img.onerror = () => {
+                const canvas = document.createElement('canvas');
+                canvas.width = 1024; canvas.height = 512;
+                const ctx = canvas.getContext('2d');
+                ctx.fillStyle = '#111'; ctx.fillRect(0, 0, 1024, 512);
+                ctx.fillStyle = '#d4af37'; ctx.font = '40px sans-serif'; ctx.textAlign = 'center';
+                ctx.fillText('图片加载失败 (可能受限于跨域)', 512, 256);
+                const fallbackData = canvas.toDataURL();
+                if (colorPath !== fallbackData) updateWebGLMural(fallbackData, fallbackData);
+            }
+        }
+
+        const clock = new THREE.Clock();
+        function renderWebGL() {
+            requestAnimationFrame(renderWebGL);
+            if (currentTrack === 'cyber' && shaderMaterial) {
+                shaderMaterial.uniforms.uTime.value = clock.getElapsedTime();
+                renderer.render(scene, camera);
+            }
+        }
+        initWebGL();
+
+        // =======================================================
+        // 【动线 A】 机器视觉交互：隔空切页 + 摇杆式隔空滚动阅读
+        // =======================================================
+        const videoElement = document.getElementById('input-video');
+        const canvasElement = document.getElementById('output-canvas');
+        const canvasCtx = canvasElement.getContext('2d');
+        const cameraStatus = document.getElementById('camera-status');
+        let handsModel = null, mpCamera = null;
+        
+        let pointerHistory = [];
+        let swipeCooldown = 0;
+        let isRevealed = false; 
+        
+        let gestureNeutralY = 0.5;
+
+        function initMediaPipe() {
+            cameraStatus.innerText = "神识加载中...";
+            handsModel = new Hands({locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`});
+            handsModel.setOptions({ maxNumHands: 2, modelComplexity: 1, minDetectionConfidence: 0.6, minTrackingConfidence: 0.6 });
+            
+            handsModel.onResults((results) => {
+                canvasCtx.save();
+                canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
+                canvasCtx.drawImage(results.image, 0, 0, canvasElement.width, canvasElement.height);
+                if (results.multiHandLandmarks && results.multiHandLandmarks.length > 0) {
+                    for (const landmarks of results.multiHandLandmarks) {
+                        drawConnectors(canvasCtx, landmarks, HAND_CONNECTIONS, {color: 'rgba(212,175,55,0.8)', lineWidth: 2});
+                        drawLandmarks(canvasCtx, landmarks, {color: '#fff', lineWidth: 1, radius: 2});
+                    }
+                    handleGestureLogic(results.multiHandLandmarks);
+                } else {
+                    if(shaderMaterial) gsap.to(shaderMaterial.uniforms.uMouse.value, { x: -1, y: -1, duration: 0.5 });
+                    pointerHistory = []; 
+                }
+                canvasCtx.restore();
+            });
+
+            mpCamera = new Camera(videoElement, { onFrame: async () => { await handsModel.send({image: videoElement}); }, width: 320, height: 240 });
+        }
+
+        function startMediaPipe() {
+            if(!handsModel) initMediaPipe();
+            mpCamera.start().then(() => { cameraStatus.innerText = "神识已连接"; cameraStatus.style.color = "#d4af37"; })
+                            .catch((err) => { 
+                                console.error("Camera Error:", err);
+                                if (err.name === 'NotReadableError' || err.message.includes('in use')) {
+                                    cameraStatus.innerHTML = "神识被占用<br><span style='font-size:10px'>请关闭其他占用摄像头的软件或网页</span>"; 
+                                } else {
+                                    cameraStatus.innerHTML = "调用失败<br><span style='font-size:10px'>请检查权限或使用localhost</span>"; 
+                                }
+                                cameraStatus.style.color = "#ff4757"; 
+                            });
+        }
+
+        function stopMediaPipe() {
+            if(mpCamera) mpCamera.stop();
+            if (videoElement && videoElement.srcObject) {
+                videoElement.srcObject.getTracks().forEach(track => track.stop());
+                videoElement.srcObject = null;
+            }
+            cameraStatus.innerText = "已休眠"; cameraStatus.style.color = "#aaa";
+        }
+
+        function handleGestureLogic(landmarksList) {
+            if(currentTrack !== 'cyber' || !shaderMaterial) return;
+
+            const handsCount = landmarksList.length;
+            const now = Date.now();
+            const infoPanel = document.getElementById('floating-info');
+            const infoText = document.getElementById('info-text');
+
+            if (handsCount === 2) {
+                pointerHistory = []; 
+                const f1 = landmarksList[0][8];
+                const f2 = landmarksList[1][8];
+                const dist = Math.hypot(f1.x - f2.x, f1.y - f2.y);
+                
+                if (dist > 0.35 && !isRevealed) {
+                    isRevealed = true;
+                    gestureNeutralY = (f1.y + f2.y) / 2;
+
+                    gsap.to(shaderMaterial.uniforms.uDispersion, { value: 1.0, duration: 1.5, ease: "power2.inOut" });
+                    gsap.to(shaderMaterial.uniforms.uMouse.value, { x: -1, y: -1, duration: 0.5 });
+                    gsap.to(camera.position, { x: cameraOffsetX, z: defaultCameraZ * 1.05, duration: 1.5, ease: "power2.inOut" });
+                    infoPanel.classList.add('visible');
+                    infoText.scrollTop = 0; 
+                } 
+                else if (dist < 0.15 && isRevealed) {
+                    isRevealed = false;
+                    gsap.to(shaderMaterial.uniforms.uDispersion, { value: 0.0, duration: 1.5, ease: "power2.inOut" });
+                    gsap.to(camera.position, { x: 0, z: defaultCameraZ, duration: 1.5, ease: "power2.inOut" });
+                    infoPanel.classList.remove('visible');
+                }
+
+            } else if (handsCount === 1 && !isRevealed) {
+                const indexFinger = landmarksList[0][8];
+                const targetX = 1.0 - indexFinger.x;
+                const targetY = 1.0 - indexFinger.y;
+                
+                gsap.to(shaderMaterial.uniforms.uMouse.value, { x: targetX, y: targetY, duration: 0.2 });
+
+                pointerHistory.push({ x: targetX, t: now });
+                if(pointerHistory.length > 15) pointerHistory.shift(); 
+
+                if (now - swipeCooldown > 1500 && pointerHistory.length > 5) {
+                    const oldest = pointerHistory[0];
+                    const newest = pointerHistory[pointerHistory.length - 1];
+                    const dx = newest.x - oldest.x; 
+                    const dt = newest.t - oldest.t;
+                    
+                    if (dt > 0 && Math.abs(dx) > 0.15 && (Math.abs(dx)/dt) > 0.0003) {
+                        triggerSwipeFlash();
+                        if (dx > 0) loadSeriesData(currentSeriesIndex + 1); 
+                        else loadSeriesData(currentSeriesIndex - 1);        
+                        swipeCooldown = now;
+                        pointerHistory = [];
+                    }
+                }
+            }
+
+            if (isRevealed && handsCount > 0) {
+                const maxScroll = infoText.scrollHeight - infoText.clientHeight;
+                
+                if (maxScroll > 0) {
+                    let totalY = 0;
+                    for (let i = 0; i < handsCount; i++) {
+                        totalY += landmarksList[i][8].y;
+                    }
+                    const avgY = totalY / handsCount;
+
+                    const deadzone = 0.08;
+                    let scrollSpeed = 0;
+                    
+                    if (avgY < gestureNeutralY - deadzone) {
+                        scrollSpeed = -((gestureNeutralY - deadzone) - avgY) * 150;
+                    } 
+                    else if (avgY > gestureNeutralY + deadzone) {
+                        scrollSpeed = (avgY - (gestureNeutralY + deadzone)) * 150;
+                    }
+
+                    if (scrollSpeed !== 0) {
+                        infoText.scrollTop += scrollSpeed;
+                    }
+                }
+            }
+        }
+
+        // 【修复重构】将闪白光替换为电影级黑场过渡
+        function triggerSwipeFlash() {
+            const flash = document.getElementById('swipe-flash');
+            // 瞬间切黑，完美遮挡 3D 贴图的切换
+            flash.style.transition = 'none';
+            flash.style.opacity = '1';
+            
+            // 延迟 100ms 后平滑淡出，仿佛人眼眨眼般的电影级转场
+            setTimeout(() => { 
+                flash.style.transition = 'opacity 1s ease-out'; 
+                flash.style.opacity = '0'; 
+            }, 100);
+        }
+
+    </script>
+</body>
+</html>

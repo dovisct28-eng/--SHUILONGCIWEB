@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>水龙祠入将图 - 移动端全息叙事 H5</title>
+    <!-- 引入美观的学术中文字体与现代图标 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600&family=Cinzel:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* --- 1. 全局博物馆暗调奢华视觉规范 --- */
+        :root {
+            --bg-color: #0a0a09;
+            --clay-dark: #121210;
+            --gold: #cfa15a;
+            --gold-glow: rgba(207, 161, 90, 0.4);
+            --text-main: #f4f3ef;
+            --text-muted: #9c9a94;
+            --border-color: rgba(207, 161, 90, 0.15);
+            --glass-bg: rgba(18, 18, 16, 0.8);
+        }
+
+        * { 
+            margin: 0; padding: 0; box-sizing: border-box; 
+            -webkit-tap-highlight-color: transparent; 
+            user-select: none;
+        }
+        body, html { 
+            width: 100%; height: 100%; overflow: hidden; 
+            background: var(--bg-color); color: var(--text-main); 
+            font-family: 'Noto Serif SC', -apple-system, serif; 
+        }
+
+        /* 移动端全包围容器（PC端打开时呈现优雅的手机样机外框） */
+        #app-wrapper {
+            position: relative; width: 100%; height: 100%; max-width: 460px; margin: 0 auto;
+            background: var(--bg-color); box-shadow: 0 0 50px rgba(0,0,0,0.9); 
+            overflow: hidden; display: flex; flex-direction: column;
+            border-left: 1px solid rgba(255,255,255,0.03);
+            border-right: 1px solid rgba(255,255,255,0.03);
+        }
+
+        /* --- 2. 殿堂级 H5 入场舱门（开屏动画） --- */
+        #splash-screen {
+            position: absolute; inset: 0; z-index: 1000; 
+            background: radial-gradient(circle at center, #1c1b18 0%, #080807 100%);
+            display: flex; flex-direction: column; justify-content: space-between; 
+            padding: 50px 30px; text-align: center; transition: all 0.8s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .splash-header { margin-top: 10vh; }
+        .splash-header h2 { font-family: 'Cinzel', serif; font-size: 1.1rem; letter-spacing: 6px; color: var(--gold); margin-bottom: 10px; }
+        .splash-header h1 { font-size: 2.2rem; font-weight: 600; letter-spacing: 8px; color: #fff; margin-bottom: 25px; line-height: 1.4; text-shadow: 0 4px 20px rgba(0,0,0,0.5); }
+        .splash-divider { width: 40px; height: 1px; background: var(--gold); margin: 0 auto 25px; position: relative; }
+        .splash-divider::before { content: '♦'; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); background: #1c1b18; padding: 0 5px; color: var(--gold); font-size: 8px; }
+        .splash-desc { font-size: 0.85rem; line-height: 1.8; color: var(--text-muted); padding: 0 10px; font-weight: 300; }
+        .splash-footer { margin-bottom: 5vh; }
+        .start-btn { 
+            display: inline-block; padding: 14px 50px; 
+            background: linear-gradient(135deg, #dfbc88 0%, #cfa15a 100%);
+            border: none; border-radius: 30px; color: #0d0d0c; 
+            font-size: 0.95rem; font-weight: 600; cursor: pointer; 
+            letter-spacing: 4px; box-shadow: 0 10px 30px var(--gold-glow);
+            transition: all 0.3s;
+        }
+        .start-btn:active { transform: scale(0.96); box-shadow: 0 5px 15px var(--gold-glow); }
+
+        /* --- 3. H5 主舞台布局 --- */
+        #main-narrative { 
+            position: relative; flex-grow: 1; width: 100%; 
+            display: flex; flex-direction: column; opacity: 0; 
+            transition: opacity 0.5s; 
+        }
+
+        /* 顶部 HUD：VNG 叙事弧动态张力曲线 [策略一参数映射] */
+        #vng-hud {
+            width: 100%; padding: 15px 20px 10px; 
+            background: linear-gradient(to bottom, rgba(10,10,9,0.95) 80%, transparent);
+            z-index: 100; border-bottom: 1px solid var(--border-color);
+        }
+        .hud-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+        .hud-title { font-size: 0.85rem; color: var(--gold); letter-spacing: 3px; font-weight: 600; }
+        .hud-phase { font-size: 0.7rem; color: var(--text-muted); background: rgba(255,255,255,0.05); padding: 2px 10px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); }
+        
+        /* 学术曲线图：展示叙事弧张力起伏 */
+        .vng-arc-graph { position: relative; width: 100%; height: 24px; margin-top: 5px; }
+        .vng-arc-line { width: 100%; height: 1px; background: rgba(207, 161, 90, 0.2); position: absolute; top: 12px; }
+        /* 张力节点轨道 */
+        .vng-nodes-container { display: flex; justify-content: space-between; position: absolute; width: 100%; top: 4px; padding: 0 5px; }
+        .vng-node { width: 16px; height: 16px; border-radius: 50%; background: #1a1a17; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; position: relative; z-index: 5; transition: all 0.4s; }
+        .vng-node::after { content: ''; width: 4px; height: 4px; border-radius: 50%; background: var(--text-muted); transition: all 0.4s; }
+        .vng-node.active { border-color: var(--gold); box-shadow: 0 0 10px var(--gold-glow); background: #cfa15a; }
+        .vng-node.active::after { background: #000; }
+        .vng-node-label { position: absolute; bottom: -18px; font-size: 7px; color: var(--text-muted); white-space: nowrap; scale: 0.85; opacity: 0.4; transition: opacity 0.4s; }
+        .vng-node.active .vng-node-label { color: var(--gold); opacity: 1; font-weight: bold; }
+
+        /* --- 4. 核心壁画视窗：双轨三维复原联动 --- */
+        #mural-viewport { 
+            position: relative; flex-grow: 1; width: 100%; 
+            overflow: hidden; background: #050505; cursor: grab; 
+        }
+        #mural-viewport:active { cursor: grabbing; }
+
+        #mural-container { 
+            position: absolute; top: 0; left: 0; height: 135%; 
+            display: flex; will-change: transform; 
+        }
+        
+        /* 独立面板 Slide 样式 */
+        .panel-slide { 
+            position: relative; height: 100%; width: 100vw; 
+            max-width: 460px; display: flex; align-items: center; 
+            justify-content: center; overflow: hidden; 
+        }
+
+        /* 核心科技点：原图/线稿/色稿完美叠置，支持自由透明度融混 */
+        .layer-mural-group {
+            position: relative; width: 100%; height: auto;
+            aspect-ratio: 4/5; /* 保证高宽比完美自适应 */
+        }
+        .layer-mural-img {
+            position: absolute; inset: 0; width: 100%; height: 100%;
+            object-fit: contain; pointer-events: none; will-change: opacity;
+            transition: opacity 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+        /* 原图层置于最底座，高清线稿与色稿叠置其上 */
+        .layer-img-org { z-index: 1; opacity: 1; }
+        .layer-img-line { z-index: 2; opacity: 0; }
+        .layer-img-color { z-index: 3; opacity: 0; }
+
+        .demo-watermark {
+            position: absolute; bottom: 8%; right: 5%; font-size: 8px;
+            letter-spacing: 1px; color: rgba(255,255,255,0.15); z-index: 10;
+        }
+
+        /* --- 5. 第三级：视觉焦点热区 --- */
+        .hotspot { 
+            position: absolute; border-radius: 50%; 
+            background: radial-gradient(circle, rgba(207,161,90,0.4) 0%, rgba(207,161,90,0) 70%);
+            border: 1.5px solid var(--gold); 
+            box-shadow: 0 0 15px var(--gold-glow); 
+            animation: pulse-ring 2.5s infinite; cursor: pointer; z-index: 15;
+        }
+        @keyframes pulse-ring { 
+            0% { transform: scale(0.9); opacity: 0.5; } 
+            50% { transform: scale(1.1); opacity: 1; } 
+            100% { transform: scale(0.9); opacity: 0.5; } 
+        }
+
+        /* --- 6. H5 多维透视控制台（精美毛玻璃面板） --- */
+        #h5-controls {
+            width: 100%; background: var(--glass-bg); 
+            backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+            border-top: 1px solid var(--border-color);
+            padding: 20px 25px calc(20px + env(safe-area-inset-bottom));
+            z-index: 110; display: flex; flex-direction: column; gap: 15px;
+        }
+
+        /* 第一排：原图、线稿、复原 三层跨层融合控制（圆润滑块） */
+        .layer-slider-bar {
+            display: flex; width: 100%; background: rgba(0,0,0,0.4);
+            padding: 4px; border-radius: 30px; border: 1px solid rgba(255,255,255,0.05);
+            position: relative;
+        }
+        .layer-slider-indicator {
+            position: absolute; top: 4px; bottom: 4px; left: 4px;
+            width: calc(33.33% - 4px); background: #cfa15a;
+            border-radius: 25px; transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            z-index: 1; box-shadow: 0 4px 12px rgba(207, 161, 90, 0.3);
+        }
+        .layer-tab-btn {
+            flex: 1; text-align: center; padding: 8px 0; font-size: 0.75rem;
+            color: var(--text-muted); cursor: pointer; position: relative; z-index: 2;
+            transition: color 0.3s; font-weight: 600; letter-spacing: 2px;
+        }
+        .layer-tab-btn.active { color: #0a0a09; }
+
+        /* 第二排：纵向层级切换指示（仅在高潮区等复杂段落显示） */
+        #h5-vertical-nav {
+            display: flex; justify-content: space-between; align-items: center;
+            background: rgba(255, 255, 255, 0.03); padding: 10px 15px;
+            border-radius: 12px; border: 1px dashed rgba(207,161,90,0.1);
+            display: none; /* 默认隐藏，高潮区动态浮现 */
+        }
+        .v-nav-title { font-size: 0.7rem; color: var(--gold); letter-spacing: 1px; }
+        .v-nav-tabs { display: flex; gap: 8px; }
+        .v-tab-btn {
+            padding: 4px 10px; font-size: 0.65rem; border-radius: 6px;
+            background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.05);
+            color: var(--text-muted); cursor: pointer; transition: all 0.3s;
+        }
+        .v-tab-btn.active { background: var(--gold); color: #000; font-weight: bold; }
+
+        /* 第三排：当前面板叙事概要与进度指示 */
+        .bottom-meta { display: flex; justify-content: space-between; align-items: center; }
+        .panel-name-text { font-size: 0.95rem; font-weight: 600; letter-spacing: 1px; color: #fff; }
+        .h5-indicators { display: flex; gap: 6px; }
+        .h5-dot { width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,0.15); transition: all 0.3s; }
+        .h5-dot.active { background: var(--gold); width: 15px; border-radius: 3px; }
+
+        /* --- 7. 第三级：考据抽屉/滑出详情模态窗 --- */
+        #drawer-modal { 
+            position: absolute; inset: 0; z-index: 1500; 
+            background: rgba(0,0,0,0.7); backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px); display: none; 
+            justify-content: center; align-items: flex-end; 
+        }
+        #drawer-content { 
+            width: 100%; max-height: 75%; background: var(--clay-dark); 
+            border-top: 1px solid var(--border-color);
+            border-radius: 24px 24px 0 0; padding: 35px 30px; 
+            display: flex; flex-direction: column; 
+            transform: translateY(100%); transition: transform 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+            box-shadow: 0 -10px 40px rgba(0,0,0,0.8);
+        }
+        .drawer-handle { width: 40px; height: 4px; background: rgba(255,255,255,0.1); border-radius: 2px; margin: -15px auto 20px; }
+        #drawer-title { font-size: 1.25rem; font-weight: 600; color: #fff; margin-bottom: 15px; letter-spacing: 2px; border-left: 3px solid var(--gold); padding-left: 12px; }
+        #drawer-text { font-size: 0.85rem; line-height: 2; color: #ccc; overflow-y: auto; flex-grow: 1; padding-right: 5px; font-weight: 300; }
+        #drawer-text p { margin-bottom: 12px; }
+        .close-drawer-btn { 
+            margin-top: 25px; padding: 12px; background: linear-gradient(135deg, #262624 0%, #171716 100%);
+            color: var(--gold); text-align: center; border-radius: 30px; font-size: 0.85rem; 
+            cursor: pointer; border: 1px solid var(--border-color); font-weight: bold; letter-spacing: 2px;
+        }
+    </style>
+    <!-- 引入 GSAP 做顺滑物理动效 -->
+    <script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
+</head>
+<body>
+
+<div id="app-wrapper">
+
+    <!-- 1. 第一级：H5奢华艺术大堂 -->
+    <div id="splash-screen">
+        <div class="splash-header">
+            <h2>Goulan Yao Culture Exhibit</h2>
+            <h1>水龙祠壁画数字化叙事</h1>
+            <div class="splash-divider"></div>
+            <p class="splash-desc">基于 Cohn 的视觉叙事语法（VNG）理论框架转译设计。我们将通过水平物理滑轨、纵向上浮透视与原图/线稿/色稿无缝混融，带领您步入这一非物质文化瑰宝的“面板×层级”复原世界。</p>
+        </div>
+        <div class="splash-footer">
+            <button class="start-btn" onclick="startH5Narrative()">开启全息视界</button>
+        </div>
+    </div>
+
+    <!-- 主系统 -->
+    <div id="main-narrative">
+        <!-- 顶部学术叙事弧张力指示面板 -->
+        <div id="vng-hud">
+            <div class="hud-meta">
+                <div class="hud-title" id="hud-title">加载中...</div>
+                <div class="hud-phase" id="hud-phase">VNG Arc Phase</div>
+            </div>
+            <!-- Cohn 学术叙事弧曲折起伏的极简化展示 -->
+            <div class="vng-arc-graph">
+                <div class="vng-arc-line"></div>
+                <div class="vng-nodes-container">
+                    <div class="vng-node active"><span class="vng-node-label">建立者</span></div>
+                    <div class="vng-node"><span class="vng-node-label">起始</span></div>
+                    <div class="vng-node"><span class="vng-node-label">延长</span></div>
+                    <div class="vng-node"><span class="vng-node-label">前高潮</span></div>
+                    <div class="vng-node"><span class="vng-node-label">峰值极值</span></div>
+                    <div class="vng-node"><span class="vng-node-label">释放</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 核心物理手势视窗 -->
+        <div id="mural-viewport">
+            <!-- 纵向层级探索快捷控制器（随面板5高潮触发浮现） -->
+            <div id="mural-container">
+                <!-- 动态扫描并渲染生成多个面板 Slide -->
+            </div>
+        </div>
+
+        <!-- 底部控制面板（跨层控制 + 纵向切换 + 面板进度） -->
+        <div id="h5-controls">
+            <!-- 多层透视透视混融滑块 [核心亮点：在任意面板都能融合看 原图/线稿/色稿] -->
+            <div class="layer-slider-bar">
+                <div class="layer-slider-indicator" id="layer-indicator"></div>
+                <div class="layer-tab-btn active" onclick="switchMuralLayer(0)">原壁画</div>
+                <div class="layer-tab-btn" onclick="switchMuralLayer(1)">高清线稿</div>
+                <div class="layer-tab-btn" onclick="switchMuralLayer(2)">数字色稿</div>
+            </div>
+
+            <!-- 动态纵向层级切换提示栏（面板5专享） -->
+            <div id="h5-vertical-nav">
+                <div class="v-nav-title">检测到纵向多层叙事：</div>
+                <div class="v-nav-tabs">
+                    <div class="v-tab-btn active" onclick="switchH5Vertical('up')">上界层</div>
+                    <div class="v-tab-btn" onclick="switchH5Vertical('mid')">仪仗层</div>
+                    <div class="v-tab-btn" onclick="switchH5Vertical('down')">世俗层</div>
+                </div>
+            </div>
+
+            <!-- 概要和分页点 -->
+            <div class="bottom-meta">
+                <div class="panel-name-text" id="panel-name-text">面板读取中...</div>
+                <div class="h5-indicators" id="h5-indicators">
+                    <!-- 动态生成小圆点 -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 3. 第三级信息深潜：考据抽屉 (滑出Drawer) -->
+    <div id="drawer-modal" onclick="closeDrawer()">
+        <div id="drawer-content" onclick="event.stopPropagation()">
+            <div class="drawer-handle"></div>
+            <h2 id="drawer-title">节点详情</h2>
+            <div id="drawer-text">
+                <!-- 考据详情内容 -->
+            </div>
+            <button class="close-drawer-btn" onclick="closeDrawer()">收回长卷</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // --- 严格对应论文【表1】和【2.2/2.3/2.4章节】的学术张力分析矩阵 ---
+    const NARRATIVE_CONFIG = [
+        { id: 1, name: "面板1：水龙祠与司炮官", arc: "建立者 (Establisher)", primaryLayer: "世俗层", vShift: "0%", hasVNav: false,
+          hotspots: [{ name: "司炮官点火炮", x: 55, y: 72, w: 55, h: 55, text: "【低焦点节点 · 世俗层】\n在庙门前，司炮官身着传统服饰，俯身点燃信炮。火炮腾空的声响标志着送神仪式的正式开启。这属于世俗生活的真实写照，为整幅壁画的线性行进时间轴确立了第一视觉与叙事的起点（S0）。" }]
+        },
+        { id: 2, name: "面板2：巫师与祭祀桌案", arc: "起始 (Initial)", primaryLayer: "世俗层", vShift: "0%", hasVNav: false,
+          hotspots: [{ name: "巫师祭祀仪式", x: 45, y: 68, w: 60, h: 60, text: "【中焦点节点 · 世俗层】\n民间巫师在祭祀桌案前进行宗教仪规。桌案上陈设着香烛与祭品，烟雾缭绕。巫师手持法器，代表了人界向神界传递祈求。送神大典由此开始积累张力（S1）。" }]
+        },
+        { id: 3, name: "面板3：仪仗前导与五猖神", arc: "延长 (Prolongation)", primaryLayer: "仪仗层", vShift: "-15%", hasVNav: false,
+          hotspots: [
+              { name: "五猖神与张五郎", x: 38, y: 48, w: 65, h: 65, text: "【高焦点节点 · 仪仗层】\n五猖神与倒立姿态的梅山文化守护神张五郎（翻坛张五郎）共同构成了仪仗队的前导组合。他们造型奇特，充满巫楚文化特色，承担驱邪开路、净坛护法的仪式功能，视觉焦点层级极高。" },
+              { name: "先锋回避牌", x: 68, y: 45, w: 50, h: 70, text: "【中焦点节点 · 仪仗层】\n上书“肃静”与“回避”的仪仗木牌。这一仪规将封建官衙的威仪投射到了神圣仪式之中，规整着人间秩序，护航神灵前进。" }
+          ]
+        },
+        { id: 4, name: "面板4：兵马仪仗主体", arc: "延长 (Prolongation)", primaryLayer: "仪仗层", vShift: "-15%", hasVNav: false,
+          hotspots: [{ name: "大规模军乐队列", x: 50, y: 46, w: 100, h: 65, text: "【低焦点节点 · 仪仗层】\n这里聚集了庞大的乐工和步兵。他们有的击鼓，有的敲锣，手持金瓜、钺斧等兵器礼器，塞会行进规模恢弘，声音张力由此叠加至极值的前夜。" }]
+        },
+        { id: 5, name: "面板5：将军与神灵", arc: "高潮 (Peak)", primaryLayer: "上界层", vShift: "-32%", hasVNav: true, // 核心跃升：默认展示上界层，且允许三层探索
+          hotspots: [
+              { name: "神灵辇车与华盖", x: 52, y: 22, w: 80, h: 80, text: "【高焦点节点 · 上界层】\n整幅壁画的绝对叙事峰值极点。主祀神灵坐于辇车之上，上方簇拥着精雕细琢的华盖羽扇，展示了瑶族信仰中的至高神圣。这是小论文中纵向叙事曲线的最高峰！" },
+              { name: "护送将军", x: 35, y: 48, w: 70, h: 70, text: "【高焦点节点 · 仪仗层】\n身形庞大、战马健硕的将军列队随行。在军屯文化的交融下，地方守护武将的威严被固化在送神的主轴线中，极具地方志价值。" }
+          ]
+        },
+        { id: 6, name: "面板6：后卫与收束", arc: "释放 (Release)", primaryLayer: "世俗层", vShift: "0%", hasVNav: false, // 释放下沉归位
+          hotspots: [{ name: "世俗狩猎场景", x: 48, y: 75, w: 100, h: 65, text: "【高焦点节点 · 世俗层】\n在神灵辇车过后，画面迅速转换为扛着麋鹿、刺杀猛虎的瑶民猎人生活图景。神灵归位，视觉焦点重新落回人间的日常生活，宣告这场盛大的赛神会圆满结束。" }]
+        }
+    ];
+
+    let globalData = [];
+    let currentPanelIdx = 0;
+    let containerWidth = 0;
+    let activeLayerIndex = 0; // 0: 原图, 1: 线稿, 2: 色稿
+
+    // --- 1. 获取本地 Express 后端真实壁画数据并映射 ---
+    function initMobileApp() {
+        const isPreviewEnv = window.location.protocol === 'file:' || window.location.protocol === 'blob:' || window.location.hostname.includes('usercontent');
+        
+        if (isPreviewEnv) {
+            console.log("处于静态直接打开环境，启动 H5 本地演示模式...");
+            globalData = []; // 依靠 img.onerror 的占位图驱动
+            buildMuralDOM();
+        } else {
+            fetch('/api/scan-assets')
+                .then(res => {
+                    if (!res.ok) throw new Error();
+                    return res.json();
+                })
+                .then(result => {
+                    if (result.success && result.data && result.data.length > 0) {
+                        console.log("成功加载本地文件资产:", result.data);
+                        globalData = result.data;
+                    }
+                    buildMuralDOM();
+                })
+                .catch(err => {
+                    console.log("无法获取服务器资产，自动触发无缝沙盒演示...");
+                    buildMuralDOM();
+                });
+        }
+    }
+
+    // --- 2. 动态创建和注入 H5 长卷 ---
+    function buildMuralDOM() {
+        const container = document.getElementById('mural-container');
+        const indicatorContainer = document.getElementById('h5-indicators');
+        
+        container.innerHTML = '';
+        indicatorContainer.innerHTML = '';
+
+        containerWidth = document.getElementById('app-wrapper').clientWidth || 375;
+        container.style.width = `${containerWidth * 6}px`; // 锁定 6 面板长卷
+
+        NARRATIVE_CONFIG.forEach((configItem, idx) => {
+            const slide = document.createElement('div');
+            slide.className = 'panel-slide';
+            slide.style.width = `${containerWidth}px`;
+
+            // A. 生成三层叠合画面
+            const imgGroup = document.createElement('div');
+            imgGroup.className = 'layer-mural-group';
+
+            // 智能检索匹配：读取用户上传的对应文件夹（如果没有上传，降级使用 predictedName 并加载 onerror 线上图）
+            const imgAssets = (globalData && globalData[idx]) ? globalData[idx] : null;
+            
+            const orgImg = document.createElement('img');
+            orgImg.className = 'layer-mural-img layer-img-org';
+            const lineImg = document.createElement('img');
+            lineImg.className = 'layer-mural-img layer-img-line';
+            const colorImg = document.createElement('img');
+            colorImg.className = 'layer-mural-img layer-img-color';
+
+            // 路径判定逻辑：优先使用后台真实路径，如无，预测标准相对路径
+            const folderGuesses = [
+                "01_南门何五猖", "02_东门陈五猖", "03_西门谢五猖", 
+                "04_中门徐五猖", "05_北门雷五猖", "06_翻坛张五郎",
+                "07_梅山猖兵", "10_上层猖兵"
+            ];
+            const predictedFolder = folderGuesses[idx] || `panel_${idx+1}`;
+
+            orgImg.src = imgAssets ? imgAssets.orgPath : `/assets/${predictedFolder}/org.png`;
+            lineImg.src = imgAssets ? imgAssets.linePath : `/assets/${predictedFolder}/line.png`;
+            colorImg.src = imgAssets ? imgAssets.colorPath : `/assets/${predictedFolder}/color.png`;
+
+            // 防报错铁壁防御机制：一旦用户上传的文件夹里面少图、或拼写错，自动获取高质学术模拟图展示！
+            orgImg.onerror = function() {
+                this.src = `https://picsum.photos/seed/mural_o${idx+1}/1024/768`;
+                const watermark = document.createElement('div');
+                watermark.className = 'demo-watermark';
+                watermark.innerText = "MURAL PREVIEW";
+                slide.appendChild(watermark);
+            };
+            lineImg.onerror = function() { this.src = `https://picsum.photos/seed/mural_l${idx+1}/1024/768`; };
+            colorImg.onerror = function() { this.src = `https://picsum.photos/seed/mural_c${idx+1}/1024/768`; };
+
+            imgGroup.appendChild(orgImg);
+            imgGroup.appendChild(lineImg);
+            imgGroup.appendChild(colorImg);
+            slide.appendChild(imgGroup);
+
+            // B. 挂载论文级考据热点热区
+            configItem.hotspots.forEach(hs => {
+                const hsDiv = document.createElement('div');
+                hsDiv.className = 'hotspot';
+                hsDiv.style.left = `${hs.x}%`;
+                hsDiv.style.top = `${hs.y}%`;
+                hsDiv.style.width = `${hs.w}px`;
+                hsDiv.style.height = `${hs.w}px`; // 保持正圆
+                hsDiv.style.transform = 'translate(-50%, -50%)';
+
+                // 点击触发高保真 Drawer 说明
+                hsDiv.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    openDrawer(hs.name, hs.text, imgAssets ? imgAssets.infoPath : null);
+                });
+                slide.appendChild(hsDiv);
+            });
+
+            container.appendChild(slide);
+
+            // C. 动态生成分页小圆点
+            const dot = document.createElement('div');
+            dot.className = `h5-dot ${idx === 0 ? 'active' : ''}`;
+            indicatorContainer.appendChild(dot);
+        });
+
+        // 默认更新到第1个面板
+        updateActiveH5State(0, false);
+    }
+
+    // --- 3. 水平物理滑轨控制（完美支持真机滑屏与PC鼠标拖拉） ---
+    let startX = 0, isDraggingMural = false;
+    const viewport = document.getElementById('mural-viewport');
+
+    function handleStart(clientX) {
+        startX = clientX;
+        isDraggingMural = true;
+    }
+    function handleMove(clientX) {
+        if (!isDraggingMural) return;
+        const diffX = clientX - startX;
+        const tempX = -currentPanelIdx * containerWidth + diffX;
+        // 渲染带有即时阻尼回弹的物理滑移
+        gsap.set("#mural-container", { x: tempX });
+    }
+    function handleEnd(clientX) {
+        if (!isDraggingMural) return;
+        isDraggingMural = false;
+        const diffX = clientX - startX;
+
+        if (diffX < -60 && currentPanelIdx < 5) {
+            currentPanelIdx++;
+        } else if (diffX > 60 && currentPanelIdx > 0) {
+            currentPanelIdx--;
+        }
+        updateActiveH5State(currentPanelIdx, true);
+    }
+
+    // 绑定触摸事件
+    viewport.addEventListener('touchstart', (e) => handleStart(e.touches[0].clientX), { passive: true });
+    viewport.addEventListener('touchmove', (e) => handleMove(e.touches[0].clientX), { passive: true });
+    viewport.addEventListener('touchend', (e) => handleEnd(e.changedTouches[0].clientX));
+    // 绑定鼠标拖拽
+    viewport.addEventListener('mousedown', (e) => { e.preventDefault(); handleStart(e.clientX); });
+    window.addEventListener('mousemove', (e) => handleMove(e.clientX));
+    window.addEventListener('mouseup', (e) => { if (isDraggingMural) handleEnd(e.clientX); });
+
+
+    // --- 4. 面板转移调度与“重力动态动画反馈” [策略三实现] ---
+    function updateActiveH5State(index, useAnimation) {
+        currentPanelIdx = index;
+        const config = NARRATIVE_CONFIG[index];
+
+        // A. 更新 VNG 叙事张力 HUD 与顶部分页节点
+        document.getElementById('hud-title').innerText = config.name;
+        document.getElementById('hud-phase').innerText = config.arc;
+        document.getElementById('panel-name-text').innerText = config.name;
+
+        // B. 同步顶端的叙事弧学术坐标节点
+        document.querySelectorAll('.vng-node').forEach((node, i) => {
+            node.classList.toggle('active', i === index);
+        });
+
+        // C. 同步小圆点
+        document.querySelectorAll('.h5-indicators .h5-dot').forEach((dot, i) => {
+            dot.classList.toggle('active', i === index);
+        });
+
+        // D. 面板 5 高潮自由探寻导航盘唤醒/隐藏
+        const vNav = document.getElementById('h5-vertical-nav');
+        vNav.style.display = config.hasVNav ? 'flex' : 'none';
+        if(config.hasVNav) {
+            document.querySelectorAll('.v-tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.v-tab-btn')[0].classList.add('active'); // 默认展示上层
+        }
+
+        // E. 执行纵向上浮下沉物理位移（对应论文的观照位移）
+        const targetX = -index * containerWidth;
+        const duration = useAnimation ? 0.6 : 0;
+
+        gsap.to("#mural-container", {
+            x: targetX,
+            y: config.vShift, // 面板5自动上浮32%以聚焦辇车神灵，面板6复原回落
+            duration: duration,
+            ease: "power2.out"
+        });
+
+        // F. 智能联动：切页时保留当前的原图/线稿/色稿混融状态
+        applyLayersMix();
+    }
+
+
+    // --- 5. 跨层透视无缝融混控制引擎 (三大图层实时联动) ---
+    window.switchMuralLayer = (layerIdx) => {
+        activeLayerIndex = layerIdx;
+        const indicator = document.getElementById('layer-indicator');
+        
+        // 滑块动画位移
+        indicator.style.transform = `translateX(${layerIdx * 100}%)`;
+
+        document.querySelectorAll('.layer-tab-btn').forEach((btn, i) => {
+            btn.classList.toggle('active', i === layerIdx);
+        });
+
+        applyLayersMix();
+    };
+
+    function applyLayersMix() {
+        // 获取当前处于激活视窗中的三层图片元素
+        const activeSlide = document.querySelectorAll('.panel-slide')[currentPanelIdx];
+        if(!activeSlide) return;
+
+        const orgImg = activeSlide.querySelector('.layer-img-org');
+        const lineImg = activeSlide.querySelector('.layer-img-line');
+        const colorImg = activeSlide.querySelector('.layer-img-color');
+
+        if (activeLayerIndex === 0) {
+            // 只看原图
+            if(orgImg) orgImg.style.opacity = '1';
+            if(lineImg) lineImg.style.opacity = '0';
+            if(colorImg) colorImg.style.opacity = '0';
+        } else if (activeLayerIndex === 1) {
+            // 透视出高清线稿
+            if(orgImg) orgImg.style.opacity = '1';
+            if(lineImg) lineImg.style.opacity = '1';
+            if(colorImg) colorImg.style.opacity = '0';
+        } else if (activeLayerIndex === 2) {
+            // 复原数字色彩稿
+            if(orgImg) orgImg.style.opacity = '1';
+            if(lineImg) lineImg.style.opacity = '1';
+            if(colorImg) colorImg.style.opacity = '1';
+        }
+    }
+
+
+    // --- 6. 面板5纵向垂直层级导航点击控制 ---
+    window.switchH5Vertical = (layerKey) => {
+        const tabs = document.querySelectorAll('.v-tab-btn');
+        tabs.forEach(t => t.classList.remove('active'));
+
+        let targetY = "-32%"; // 默认位置
+        if (layerKey === 'up') {
+            tabs[0].classList.add('active');
+            targetY = "-32%";
+        } else if (layerKey === 'mid') {
+            tabs[1].classList.add('active');
+            targetY = "-15%";
+        } else if (layerKey === 'down') {
+            tabs[2].classList.add('active');
+            targetY = "0%";
+        }
+
+        gsap.to("#mural-container", { y: targetY, duration: 0.5, ease: "power2.out" });
+    };
+
+
+    // --- 7. 第三级：考据抽屉滑出与动态 info.txt 载入 ---
+    function openDrawer(title, defaultText, infoPath) {
+        document.getElementById('drawer-title').innerText = title;
+        const textBox = document.getElementById('drawer-text');
+        
+        textBox.innerHTML = `<p>${defaultText.replace(/\n/g, '</p><p>')}</p>`;
+
+        // 若本地对应的文件夹下面放了 info.txt 说明，则动态调用它！
+        if (infoPath) {
+            fetch(infoPath)
+                .then(res => { if(res.ok) return res.text(); throw new Error(); })
+                .then(text => {
+                    // 解析 txt 格式为 HTML 段落
+                    const paras = text.split('\n').filter(p => p.trim() !== '');
+                    textBox.innerHTML = paras.map(p => `<p>${p}</p>`).join('');
+                })
+                .catch(() => {
+                    // 如读取失败，不报错，使用默认内置学术文本兜底
+                    console.log("未读取到本地自定义 info.txt，已启动内置学术文本。");
+                });
+        }
+
+        const modal = document.getElementById('drawer-modal');
+        modal.style.display = 'flex';
+        setTimeout(() => {
+            document.getElementById('drawer-content').style.transform = 'translateY(0)';
+        }, 10);
+    }
+
+    function closeDrawer() {
+        document.getElementById('drawer-content').style.transform = 'translateY(100%)';
+        setTimeout(() => {
+            document.getElementById('drawer-modal').style.display = 'none';
+        }, 350);
+    }
+
+
+    // --- 8. 开屏转场逻辑 ---
+    function startH5Narrative() {
+        const splash = document.getElementById('splash-screen');
+        splash.style.transform = 'scale(1.05)';
+        splash.style.opacity = '0';
+        
+        setTimeout(() => {
+            splash.style.display = 'none';
+            const main = document.getElementById('main-narrative');
+            main.style.opacity = '1';
+            initMobileApp(); // 初始化加载
+        }, 800);
+    }
+</script>
+</body>
+</html>
