@@ -7,3 +7,19 @@ node_modules/
 # 系统文件
 Thumbs.db
 .DS_Store
+desktop.ini
+
+# 环境与凭证文件（防止误提交）
+.env
+.env.*
+
+# IDE / 编辑器配置
+.vscode/
+.idea/
+
+# 大型原始素材：本地保留，不入库
+Mural-Exhibition/public/assets/splash-bg.png
+水龙祠实地照片/
+
+# 本地备份包
+*.bundle
