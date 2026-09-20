@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>水龙祠｜2.5D 建筑生长预览</title>
+  <style>
+    :root{font-family:"Microsoft YaHei",system-ui,sans-serif;color:#29322d;background:#e9e7df}*{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;grid-template-columns:minmax(280px,1fr) minmax(330px,48vw)}main{display:flex;flex-direction:column;justify-content:center;padding:clamp(28px,5vw,80px)}small{letter-spacing:.18em;color:#69756c}h1{font-size:clamp(32px,4vw,58px);line-height:1.15;margin:18px 0}p{max-width:37em;line-height:1.85;color:#536057}.controls{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0}button{font:inherit;padding:12px 24px;border-radius:3px;border:1px solid #4b6259;background:#40594e;color:white;cursor:pointer}button.secondary{background:transparent;color:#40594e}button:focus-visible{outline:3px solid #b88754;outline-offset:3px}.steps{padding-left:20px;line-height:2;color:#536057}.canvas{min-height:100vh;display:grid;place-items:center;background:#f7f5ee;box-shadow:inset 1px 0 #d8d6cc}.canvas object{display:block;width:min(100%,75vh);height:min(100vh,94vh)}.note{font-size:13px;margin-top:30px}@media(max-width:800px){body{display:block}.canvas{min-height:60vh}.canvas object{height:60vh}main{padding:26px}}
+  </style>
+</head>
+<body>
+  <main>
+    <small>模块 A · 建筑空间开场</small>
+    <h1>水龙祠<br>建筑生长预览</h1>
+    <p>以你提供的俯视线稿为造型主参考，保留围合院落、两侧廊屋、上方主殿与入口侧建筑。画面为设计化 2.5D 插画，不代表测绘成果或历史建造过程。</p>
+    <div class="controls"><button id="play">播放生长</button><button id="reset" class="secondary">显示完整建筑</button></div>
+    <ol class="steps"><li>院落地面</li><li>入口墙与两侧墙体</li><li>廊屋屋顶</li><li>主殿</li><li>戏台与入口侧屋顶</li></ol>
+    <p class="note">图层母版为同目录下的 SVG；每个建筑部分均有独立的图层 ID，可直接用于网页滚动动画。</p>
+  </main>
+  <div class="canvas"><object id="art" type="image/svg+xml" data="水龙祠-2.5D生长插画-v1.svg" aria-label="水龙祠建筑插画"></object></div>
+  <script>
+    const art=document.getElementById('art');
+    function root(){return art.contentDocument?.documentElement}
+    document.getElementById('play').addEventListener('click',()=>{const svg=root();if(!svg)return;svg.classList.remove('playing');void svg.getBoundingClientRect();svg.classList.add('playing')});
+    document.getElementById('reset').addEventListener('click',()=>root()?.classList.remove('playing'));
+  </script>
+</body>
+</html>
