@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="820" viewBox="0 0 1000 820" role="img" aria-label="水龙祠建筑结构与通路校对图">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M1 1 L9 5 L1 9" fill="none" stroke="#246a67" stroke-width="1.8"/>
+    </marker>
+    <style>
+      text { font-family: "Microsoft YaHei", "Noto Sans CJK SC", sans-serif; fill: #293335; }
+      .small { font-size: 19px; }
+      .label { font-size: 25px; font-weight: 600; }
+      .note { font-size: 18px; fill: #667477; }
+      .route { fill: none; stroke: #246a67; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1000" height="820" fill="#fff"/>
+  <text x="80" y="65" font-size="31" font-weight="700">水龙祠建筑结构校对图</text>
+  <text x="80" y="96" class="note">依据用户标注的平面关系绘制 · 非测绘图 · 上方为主殿，下方为入口</text>
+
+  <!-- Outer enclosure and the two long covered corridors. -->
+  <rect x="190" y="145" width="620" height="555" fill="#f9f4ee" stroke="#9a8172" stroke-width="10"/>
+  <rect x="200" y="155" width="105" height="535" fill="#eadbd0"/>
+  <rect x="695" y="155" width="105" height="535" fill="#eadbd0"/>
+  <text x="251" y="410" text-anchor="middle" class="small" transform="rotate(-90 251 410)">左侧廊道</text>
+  <text x="748" y="410" text-anchor="middle" class="small" transform="rotate(-90 748 410)">右侧廊道</text>
+
+  <!-- Hall joins both corridors, without circulation gaps. -->
+  <rect x="305" y="155" width="390" height="145" fill="#d9e5e4" stroke="#58706f" stroke-width="3"/>
+  <text x="500" y="235" text-anchor="middle" class="label">主殿</text>
+  <text x="500" y="328" text-anchor="middle" class="note">主殿与两侧廊道相通</text>
+
+  <!-- Stage is centered and joined to the barrier/entrance-side structure. -->
+  <rect x="397" y="527" width="206" height="96" fill="#ede2cf" stroke="#9b8059" stroke-width="3"/>
+  <path d="M397 527 H603" stroke="#246a67" stroke-width="8"/>
+  <text x="500" y="574" text-anchor="middle" class="label">戏台</text>
+  <text x="500" y="514" text-anchor="middle" class="small" fill="#246a67">开口朝主殿 ↑</text>
+  <path d="M335 623 H665" stroke="#c73c34" stroke-width="13" stroke-linecap="butt"/>
+  <text x="500" y="655" text-anchor="middle" class="small" fill="#a12c27">挡墙：中门不能直行</text>
+
+  <!-- Entrance wall; three door breaks. -->
+  <path d="M195 700 H319 M361 700 H479 M521 700 H639 M681 700 H805" stroke="#9a8172" stroke-width="10"/>
+  <text x="340" y="738" text-anchor="middle" class="small">左门</text>
+  <text x="500" y="738" text-anchor="middle" class="small">中门</text>
+  <text x="660" y="738" text-anchor="middle" class="small">右门</text>
+
+  <!-- Entry must turn around either end of the barrier. -->
+  <path class="route" d="M500 779 V678 H320 V608 H320 V359"/>
+  <path class="route" d="M500 779 V678 H680 V608 H680 V359"/>
+  <text x="500" y="799" text-anchor="middle" class="note">中门进入 → 绕挡墙左端或右端 → 院落与两侧廊道</text>
+</svg>
