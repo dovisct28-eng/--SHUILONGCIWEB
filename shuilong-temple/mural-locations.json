@@ -1,0 +1,67 @@
+[
+  {
+    "id": "mural-01",
+    "label": "第一幅",
+    "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+    "position": [
+      4.865,
+      1.55,
+      4.8
+    ],
+    "width": 3.2,
+    "height": 1.75,
+    "side": true
+  },
+  {
+    "id": "mural-02",
+    "label": "第二幅",
+    "wall": "主殿右侧内墙",
+    "position": [
+      4.52,
+      1.85,
+      -11.75
+    ],
+    "width": 5.5,
+    "height": 2,
+    "side": true
+  },
+  {
+    "id": "mural-03",
+    "label": "第三幅",
+    "wall": "主殿后墙右侧",
+    "position": [
+      2.25,
+      1.85,
+      -14.865
+    ],
+    "width": 3.35,
+    "height": 2,
+    "side": false
+  },
+  {
+    "id": "mural-04",
+    "label": "第四幅",
+    "wall": "主殿后墙左侧",
+    "position": [
+      -2.25,
+      1.85,
+      -14.865
+    ],
+    "width": 3.35,
+    "height": 2,
+    "side": false
+  },
+  {
+    "id": "mural-05",
+    "label": "第五幅",
+    "wall": "主殿左侧内墙",
+    "position": [
+      -4.52,
+      1.85,
+      -11.75
+    ],
+    "width": 5.5,
+    "height": 2,
+    "side": true
+  }
+]

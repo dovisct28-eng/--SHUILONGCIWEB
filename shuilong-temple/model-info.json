@@ -1,0 +1,18 @@
+{
+  "triangles": 86275,
+  "bytes": 2648436,
+  "groups": [
+    "01_Base",
+    "02_Enclosure",
+    "03_MainHall",
+    "04_WestGallery",
+    "05_EastGallery",
+    "06_Stage",
+    "07_Entrance",
+    "mural-01",
+    "mural-02",
+    "mural-03",
+    "mural-04",
+    "mural-05"
+  ]
+}
