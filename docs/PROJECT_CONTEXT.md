@@ -50,3 +50,5 @@
 - `AGENTS.md` — AI Agent 开发行为规范（模块边界、保护规则、提交与验证要求）
 - `docs/DESIGN_SPEC.md` — 网页设计与交互逻辑规格
 - `docs/CONTENT_MAP.md` — 模块 A 内容管理地图（含模块 B 素材清单）
+- [A01 五帧低保真分镜](A01_STORYBOARD.md) — Figma 节点、关键状态及静态验证记录
+- [A01 浏览器低保真交互原型开发任务书](A01_PROTOTYPE_TASK_BRIEF.md) — 下一阶段开发范围、交互规格、验收要求及后续路线
