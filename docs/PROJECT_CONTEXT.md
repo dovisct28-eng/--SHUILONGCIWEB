@@ -53,3 +53,4 @@
 - [A01 五帧低保真分镜](A01_STORYBOARD.md) — Figma 节点、关键状态及静态验证记录
 - [A01 浏览器低保真交互原型开发任务书](A01_PROTOTYPE_TASK_BRIEF.md) — 下一阶段开发范围、交互规格、验收要求及后续路线
 - [A02 低保真设计审查报告](A02_DESIGN_REVIEW.md) — A01→A02 过渡、A02/A03/A04 边界及 Figma 证据状态
+- [A02 建筑空间低保真原型任务书](A02_PROTOTYPE_TASK_BRIEF.md) — 下一阶段开发范围、模型节点、滚动结构、验收要求及待确认事项
