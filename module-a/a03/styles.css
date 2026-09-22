@@ -1,0 +1,27 @@
+.a03 { position:absolute; inset:0; z-index:5; pointer-events:none; }
+.a03-copy { position:absolute; left:7%; top:48%; transform:translateY(-50%); width:32%; max-width:450px; opacity:var(--a03-text,0); }
+.a03-kicker { margin:0 0 20px; color:#666b64; font-size:12px; letter-spacing:.18em; }
+.a03 h2 { margin:0 0 24px; font:500 clamp(40px,4.3vw,68px)/1.2 "Noto Serif SC","Songti SC",serif; letter-spacing:.06em; }
+.a03 h2 span { padding:0 .14em; color:#777a74; }
+.a03-lead { margin:0 0 26px; font-size:clamp(19px,1.6vw,25px); line-height:1.7; }
+.a03-research,.a03-purpose { margin:0 0 18px; font-size:clamp(16px,1.25vw,19px); line-height:1.85; color:#555a54; }
+.a03-source { border-top:1px solid #bdbfb7; padding-top:16px; margin:22px 0 0; font-size:12px; line-height:1.8; color:#62675f; }
+.a03-reading-hint,.a03-end { position:absolute; left:5%; bottom:28px; width:90%; text-align:center; color:#646962; font-size:13px; letter-spacing:.08em; }
+.a03-reading-hint { opacity:var(--a03-text,0); }
+.a03-handoff { position:absolute; top:5vh; left:7%; width:86%; text-align:center; opacity:var(--a03-handoff,0); }
+.a03-handoff h2 { font-size:clamp(30px,3vw,44px); margin-bottom:16px; }
+.a03-handoff p:not(.a03-kicker) { font-size:16px; line-height:1.8; margin:8px 0; }
+.a03-handoff .a03-route-note { color:#6a6e66; font-size:12px!important; }
+.a03-end { opacity:var(--a03-handoff,0); }
+/* Keep the accepted A01/A02 caption hidden even when their heading exits. */
+.model-caption { opacity:calc((1 - var(--a02-opacity)) * (1 - var(--a03-takeover,0))); }
+@media(max-width:1100px) { .a03-copy { left:5%; width:37%; } .a03 h2 { font-size:42px; } }
+@media(max-width:760px) {
+  .a03-copy { left:6%; top:35%; width:88%; max-width:none; }
+  .a03 h2 { font-size:34px; margin-bottom:10px; }
+  .a03-kicker { margin-bottom:10px; }
+  .a03-lead { font-size:18px; margin-bottom:12px; }
+  .a03-research,.a03-purpose { font-size:14px; line-height:1.65; margin-bottom:10px; }
+  .a03-source { margin-top:12px; padding-top:10px; }
+  .a03-handoff p:not(.a03-kicker) { font-size:14px; }
+}

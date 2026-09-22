@@ -1,0 +1,1480 @@
+{
+  "errors": [],
+  "rows": [
+    {
+      "width": 1440,
+      "height": 900,
+      "passed": true,
+      "a02Diff": {
+        "changed": 636,
+        "maxDelta": 3
+      },
+      "heroDiff": {
+        "changed": 0,
+        "maxDelta": 0
+      },
+      "states": [
+        {
+          "name": "transition",
+          "screens": 10.9,
+          "state": {
+            "phase": "a03-enter",
+            "vars": "--a03-text: 0.5575785161584003; --a03-handoff: 0; --a03-takeover: 1; --travel: 1; --model-opacity: 1; --model-x: 14.896000000000026vw; --model-scale: 0.6967199999999998; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 883,
+                  "y": 206.671875,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 379.078125,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 528.578125,
+                  "w": 78,
+                  "h": 39
+                }
+              }
+            ],
+            "copy": {
+              "x": 100.796875,
+              "y": 215.078125,
+              "w": 450,
+              "h": 433.84375
+            },
+            "frame": {
+              "x": 586.142333984375,
+              "y": 186.63983154296875,
+              "w": 696.719970703125,
+              "h": 526.7203369140625
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "reading",
+          "screens": 11.7,
+          "state": {
+            "phase": "a03-reading",
+            "vars": "--a03-text: 1; --a03-handoff: 0; --a03-takeover: 1; --travel: 1; --model-opacity: 1; --model-x: 19vw; --model-scale: 0.6599999999999999; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 883,
+                  "y": 206.671875,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 379.078125,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 528.578125,
+                  "w": 78,
+                  "h": 39
+                }
+              }
+            ],
+            "copy": {
+              "x": 100.796875,
+              "y": 215.078125,
+              "w": 450,
+              "h": 433.84375
+            },
+            "frame": {
+              "x": 663.5999755859375,
+              "y": 200.51998901367188,
+              "w": 660,
+              "h": 498.9599914550781
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "exit",
+          "screens": 12.7,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0.1825694966190834; --a03-handoff: 0.1262002743484226; --a03-takeover: 1; --travel: 1; --model-opacity: 1; --model-x: 3.4688204357625843vw; --model-scale: 0.7989631855747558; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 883,
+                  "y": 206.671875,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 379.078125,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 528.578125,
+                  "w": 78,
+                  "h": 39
+                }
+              }
+            ],
+            "copy": {
+              "x": 100.796875,
+              "y": 215.078125,
+              "w": 450,
+              "h": 433.84375
+            },
+            "frame": {
+              "x": 370.46942138671875,
+              "y": 147.99191284179688,
+              "w": 798.9631958007812,
+              "h": 604.01611328125
+            },
+            "copyHidden": "false",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        },
+        {
+          "name": "handoff",
+          "screens": 13.2,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0; --a03-handoff: 1; --a03-takeover: 1; --travel: 1; --model-opacity: 1; --model-x: 0vw; --model-scale: 0.83; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 883,
+                  "y": 206.671875,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 379.078125,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 528.578125,
+                  "w": 78,
+                  "h": 39
+                }
+              }
+            ],
+            "copy": {
+              "x": 100.796875,
+              "y": 215.078125,
+              "w": 450,
+              "h": 433.84375
+            },
+            "frame": {
+              "x": 305,
+              "y": 136.260009765625,
+              "w": 830,
+              "h": 627.47998046875
+            },
+            "copyHidden": "true",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "height": 1024,
+      "passed": true,
+      "a02Diff": {
+        "changed": 789,
+        "maxDelta": 4
+      },
+      "heroDiff": {
+        "changed": 0,
+        "maxDelta": 0
+      },
+      "states": [
+        {
+          "name": "transition",
+          "screens": 10.9,
+          "state": {
+            "phase": "a03-enter",
+            "vars": "--a03-text: 0.5584745407104509; --a03-handoff: 0; --a03-takeover: 1; --travel: 1; --model-opacity: 1; --model-x: 14.905348081231134vw; --model-scale: 0.696636359273195; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 883,
+                  "y": 225.828125,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 412.828125,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 574.984375,
+                  "w": 78,
+                  "h": 39
+                }
+              }
+            ],
+            "copy": {
+              "x": 100.796875,
+              "y": 274.59375,
+              "w": 450,
+              "h": 433.84375
+            },
+            "frame": {
+              "x": 586.31884765625,
+              "y": 226.37908935546875,
+              "w": 696.6363525390625,
+              "h": 571.2418212890625
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "reading",
+          "screens": 11.7,
+          "state": {
+            "phase": "a03-reading",
+            "vars": "--a03-text: 1; --a03-handoff: 0; --a03-takeover: 1; --travel: 1; --model-opacity: 1; --model-x: 19vw; --model-scale: 0.6599999999999999; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 883,
+                  "y": 225.828125,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 412.828125,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 574.984375,
+                  "w": 78,
+                  "h": 39
+                }
+              }
+            ],
+            "copy": {
+              "x": 100.796875,
+              "y": 274.59375,
+              "w": 450,
+              "h": 433.84375
+            },
+            "frame": {
+              "x": 663.5999755859375,
+              "y": 241.39999389648438,
+              "w": 660,
+              "h": 541.199951171875
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "exit",
+          "screens": 12.7,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0.1821470540954494; --a03-handoff: 0.12665069103241142; --a03-takeover: 1; --travel: 1; --model-opacity: 1; --model-x: 3.4607940278135385vw; --model-scale: 0.7990350008037735; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 883,
+                  "y": 225.828125,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 412.828125,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 574.984375,
+                  "w": 78,
+                  "h": 39
+                }
+              }
+            ],
+            "copy": {
+              "x": 100.796875,
+              "y": 274.59375,
+              "w": 450,
+              "h": 433.84375
+            },
+            "frame": {
+              "x": 370.31793212890625,
+              "y": 184.3956298828125,
+              "w": 799.0350952148438,
+              "h": 655.208740234375
+            },
+            "copyHidden": "false",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        },
+        {
+          "name": "handoff",
+          "screens": 13.2,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0; --a03-handoff: 1; --a03-takeover: 1; --travel: 1; --model-opacity: 1; --model-x: 0vw; --model-scale: 0.83; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 883,
+                  "y": 225.828125,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 412.828125,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 574.984375,
+                  "w": 78,
+                  "h": 39
+                }
+              }
+            ],
+            "copy": {
+              "x": 100.796875,
+              "y": 274.390625,
+              "w": 450,
+              "h": 433.84375
+            },
+            "frame": {
+              "x": 305,
+              "y": 171.49688720703125,
+              "w": 830,
+              "h": 680.5999755859375
+            },
+            "copyHidden": "true",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "passed": true,
+      "a02Diff": {
+        "changed": 811,
+        "maxDelta": 3
+      },
+      "heroDiff": {
+        "changed": 0,
+        "maxDelta": 0
+      },
+      "states": [
+        {
+          "name": "transition",
+          "screens": 10.9,
+          "state": {
+            "phase": "a03-enter",
+            "vars": "--a03-text: 0.5569810736924754; --a03-handoff: 0; --a03-takeover: 1; --travel: 1; --model-opacity: 1; --model-x: 14.889764079447176vw; --model-scale: 0.6967757950786305; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 867,
+                  "y": 173.46875,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 320.5625,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 448.109375,
+                  "w": 78,
+                  "h": 39
+                }
+              }
+            ],
+            "copy": {
+              "x": 95.609375,
+              "y": 158.03125,
+              "w": 437.109375,
+              "h": 421.1875
+            },
+            "frame": {
+              "x": 543.749267578125,
+              "y": 159.251708984375,
+              "w": 685.289794921875,
+              "h": 449.49658203125
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "reading",
+          "screens": 11.7,
+          "state": {
+            "phase": "a03-reading",
+            "vars": "--a03-text: 1; --a03-handoff: 0; --a03-takeover: 1; --travel: 1; --model-opacity: 1; --model-x: 19vw; --model-scale: 0.6599999999999999; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 867,
+                  "y": 173.46875,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 320.5625,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 448.109375,
+                  "w": 78,
+                  "h": 39
+                }
+              }
+            ],
+            "copy": {
+              "x": 95.609375,
+              "y": 158.03125,
+              "w": 437.109375,
+              "h": 421.1875
+            },
+            "frame": {
+              "x": 617.9798583984375,
+              "y": 171.1138916015625,
+              "w": 649.120361328125,
+              "h": 425.772216796875
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "exit",
+          "screens": 12.7,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0.18144374895922166; --a03-handoff: 0.12740277824911878; --a03-takeover: 1; --travel: 1; --model-opacity: 1; --model-x: 3.4474312302252117vw; --model-scale: 0.7991545626769323; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 867,
+                  "y": 173.46875,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 320.5625,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 448.109375,
+                  "w": 78,
+                  "h": 39
+                }
+              }
+            ],
+            "copy": {
+              "x": 95.609375,
+              "y": 158.03125,
+              "w": 437.109375,
+              "h": 421.1875
+            },
+            "frame": {
+              "x": 337.1014099121094,
+              "y": 126.22894287109375,
+              "w": 785.98095703125,
+              "h": 515.5421142578125
+            },
+            "copyHidden": "false",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        },
+        {
+          "name": "handoff",
+          "screens": 13.2,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0; --a03-handoff: 1; --a03-takeover: 1; --travel: 1; --model-opacity: 1; --model-x: 0vw; --model-scale: 0.83; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 867,
+                  "y": 173.46875,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 320.5625,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 448.109375,
+                  "w": 78,
+                  "h": 39
+                }
+              }
+            ],
+            "copy": {
+              "x": 95.609375,
+              "y": 157.625,
+              "w": 437.109375,
+              "h": 421.1875
+            },
+            "frame": {
+              "x": 274.8410339355469,
+              "y": 115.87335205078125,
+              "w": 816.31787109375,
+              "h": 535.4407958984375
+            },
+            "copyHidden": "true",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        }
+      ]
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "a02Diff": {
+        "changed": 299,
+        "maxDelta": 2
+      },
+      "heroDiff": {
+        "changed": 0,
+        "maxDelta": 0
+      },
+      "states": [
+        {
+          "name": "transition",
+          "screens": 10.9,
+          "state": {
+            "phase": "a03-enter",
+            "vars": "--a03-text: 0.5575785161584003; --a03-handoff: 0; --a03-takeover: 1; --travel: 1; --model-opacity: 1; --model-x: 14.896000000000026vw; --model-scale: 0.6967199999999998; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 883,
+                  "y": 225.828125,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 412.828125,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 574.984375,
+                  "w": 78,
+                  "h": 39
+                }
+              }
+            ],
+            "copy": {
+              "x": 134.390625,
+              "y": 292.46875,
+              "w": 450,
+              "h": 451.84375
+            },
+            "frame": {
+              "x": 897.6431884765625,
+              "y": 254.34478759765625,
+              "w": 696.7200927734375,
+              "h": 571.3104248046875
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "reading",
+          "screens": 11.7,
+          "state": {
+            "phase": "a03-reading",
+            "vars": "--a03-text: 1; --a03-handoff: 0; --a03-takeover: 1; --travel: 1; --model-opacity: 1; --model-x: 19vw; --model-scale: 0.6599999999999999; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 883,
+                  "y": 225.828125,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 412.828125,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 574.984375,
+                  "w": 78,
+                  "h": 39
+                }
+              }
+            ],
+            "copy": {
+              "x": 134.390625,
+              "y": 292.46875,
+              "w": 450,
+              "h": 451.84375
+            },
+            "frame": {
+              "x": 994.7999877929688,
+              "y": 269.3999938964844,
+              "w": 660.0000610351562,
+              "h": 541.199951171875
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "exit",
+          "screens": 12.7,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0.1825694966190834; --a03-handoff: 0.1262002743484226; --a03-takeover: 1; --travel: 1; --model-opacity: 1; --model-x: 3.4688204357625843vw; --model-scale: 0.7989631855747558; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 883,
+                  "y": 225.828125,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 412.828125,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 574.984375,
+                  "w": 78,
+                  "h": 39
+                }
+              }
+            ],
+            "copy": {
+              "x": 134.390625,
+              "y": 292.46875,
+              "w": 450,
+              "h": 451.84375
+            },
+            "frame": {
+              "x": 627.1197509765625,
+              "y": 212.42507934570312,
+              "w": 798.9632568359375,
+              "h": 655.14990234375
+            },
+            "copyHidden": "false",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        },
+        {
+          "name": "handoff",
+          "screens": 13.2,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0; --a03-handoff: 1; --a03-takeover: 1; --travel: 1; --model-opacity: 1; --model-x: 0vw; --model-scale: 0.83; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 883,
+                  "y": 225.828125,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 412.828125,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 574.984375,
+                  "w": 78,
+                  "h": 39
+                }
+              }
+            ],
+            "copy": {
+              "x": 134.390625,
+              "y": 292.46875,
+              "w": 450,
+              "h": 451.84375
+            },
+            "frame": {
+              "x": 545,
+              "y": 199.70001220703125,
+              "w": 830,
+              "h": 680.5999755859375
+            },
+            "copyHidden": "true",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "passed": true,
+      "a02Diff": {
+        "changed": 1160,
+        "maxDelta": 4
+      },
+      "heroDiff": {
+        "changed": 0,
+        "maxDelta": 0
+      },
+      "states": [
+        {
+          "name": "transition",
+          "screens": 10.9,
+          "state": {
+            "phase": "a03-enter",
+            "vars": "--a03-text: 0.5569810736924754; --a03-handoff: 0; --a03-takeover: 1; --travel: 1; --model-opacity: 1; --model-x: 14.889764079447176vw; --model-scale: 0.6967757950786305; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 682,
+                  "y": 173.46875,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 320.5625,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 448.109375,
+                  "w": 78,
+                  "h": 39
+                }
+              }
+            ],
+            "copy": {
+              "x": 51.1875,
+              "y": 174.5,
+              "w": 378.875,
+              "h": 388.25
+            },
+            "frame": {
+              "x": 386.2072448730469,
+              "y": 159.251708984375,
+              "w": 556.52783203125,
+              "h": 449.49658203125
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "reading",
+          "screens": 11.7,
+          "state": {
+            "phase": "a03-reading",
+            "vars": "--a03-text: 1; --a03-handoff: 0; --a03-takeover: 1; --travel: 1; --model-opacity: 1; --model-x: 19vw; --model-scale: 0.6599999999999999; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 682,
+                  "y": 173.46875,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 320.5625,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 448.109375,
+                  "w": 78,
+                  "h": 39
+                }
+              }
+            ],
+            "copy": {
+              "x": 51.1875,
+              "y": 174.5,
+              "w": 378.875,
+              "h": 388.25
+            },
+            "frame": {
+              "x": 442.9827880859375,
+              "y": 171.1138916015625,
+              "w": 527.1544189453125,
+              "h": 425.772216796875
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "exit",
+          "screens": 12.7,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0.18144374895922166; --a03-handoff: 0.12740277824911878; --a03-takeover: 1; --travel: 1; --model-opacity: 1; --model-x: 3.4474312302252117vw; --model-scale: 0.7991545626769323; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 682,
+                  "y": 173.46875,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 320.5625,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 448.109375,
+                  "w": 78,
+                  "h": 39
+                }
+              }
+            ],
+            "copy": {
+              "x": 51.1875,
+              "y": 174.5,
+              "w": 378.875,
+              "h": 388.25
+            },
+            "frame": {
+              "x": 228.15182495117188,
+              "y": 126.22894287109375,
+              "w": 638.2996826171875,
+              "h": 515.5421142578125
+            },
+            "copyHidden": "false",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        },
+        {
+          "name": "handoff",
+          "screens": 13.2,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0; --a03-handoff: 1; --a03-takeover: 1; --travel: 1; --model-opacity: 1; --model-x: 0vw; --model-scale: 0.83; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 682,
+                  "y": 173.46875,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 320.5625,
+                  "w": 78,
+                  "h": 39
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 39,
+                  "y": 448.109375,
+                  "w": 78,
+                  "h": 39
+                }
+              }
+            ],
+            "copy": {
+              "x": 51.1875,
+              "y": 174.09375,
+              "w": 378.875,
+              "h": 388.25
+            },
+            "frame": {
+              "x": 180.53173828125,
+              "y": 115.87335205078125,
+              "w": 662.9365234375,
+              "h": 535.4407958984375
+            },
+            "copyHidden": "true",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        }
+      ]
+    }
+  ]
+}

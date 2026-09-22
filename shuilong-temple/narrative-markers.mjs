@@ -19,16 +19,17 @@ export function layoutLabels(points, width, height) {
 }
 
 export function createMuralPresentation(pins, svg) {
-  let visibility = 0, emphasis = 0, core = new Set();
+  let visibility = 0, emphasis = 0, secondary = 1, core = new Set();
   const clamp = n => Math.max(0, Math.min(1, Number(n) || 0));
   return {
-    set({ visibility: v = 0, emphasis: e = 0, coreIds = [] } = {}) {
+    set({ visibility: v = 0, emphasis: e = 0, coreIds = [], secondaryVisibility = 1 } = {}) {
       visibility = clamp(v); emphasis = clamp(e); core = new Set(coreIds);
+      secondary = clamp(secondaryVisibility);
       document.body.classList.toggle('narrative-markers', visibility > 0);
       for (const p of pins) {
         p.button.tabIndex = -1;
         p.button.setAttribute('aria-label', p.m.label + '，模型示意位置');
-        p.button.setAttribute('aria-hidden', String(visibility === 0));
+        p.button.setAttribute('aria-hidden', String(visibility === 0 || (!core.has(p.m.id) && secondary === 0)));
       }
     },
     update(points, width, height) {
@@ -36,12 +37,12 @@ export function createMuralPresentation(pins, svg) {
       svg.style.opacity = visibility;
       for (const p of pins) {
         const pos = positions.find(v => v.id === p.m.id);
-        const show = visibility > 0 && Boolean(pos);
+        const show = visibility > 0 && Boolean(pos) && (core.has(p.m.id) || secondary > 0);
         p.button.hidden = !show;
         p.line.style.display = p.dot.style.display = show ? '' : 'none';
         if (!show) continue;
         const isCore = core.has(p.m.id);
-        const weight = isCore ? 1 : 1 - emphasis * .58;
+        const weight = isCore ? 1 : (1 - emphasis * .58) * secondary;
         p.button.style.opacity = visibility * weight;
         p.button.style.background = isCore ? `rgb(${Math.round(248 - emphasis * 191)} ${Math.round(247 - emphasis * 187)} ${Math.round(243 - emphasis * 185)})` : '#f8f7f3';
         p.button.style.color = isCore && emphasis > .5 ? '#fff' : '#393c38';
