@@ -55,7 +55,7 @@
 - 改变已有信息架构。
 如果模块 A 只需要一个“进入探索”按钮，优先通过入口/路由连接，而不是修改模块 B 内部结构。
 
-### 3. Git 提交
+### 3. Git 提交与远程同步
 
 每次改动完成后，都必须创建一个对应的 Git commit，以便后续追踪和回滚。
 Commit message 应准确描述本次修改，例如：
@@ -64,6 +64,31 @@ feat: implement mural scroll narrative
 fix: correct right-to-left mural direction
 refactor: optimize mural loading
 禁止在没有实际修改的情况下创建无意义 commit。
+
+当且仅当本次任务的相关代码修改、测试、构建检查、实际运行或浏览器验收以及必要文档更新全部完成并通过后，必须自动完成远程同步，不得等待用户再次要求“push”。
+
+默认远程仓库：
+https://github.com/dovisct28-eng/--SHUILONGCIWEB.git
+
+默认分支：
+master
+
+标准交付顺序：
+修改完成 → 更新/运行相关测试 → 完成必要验收 → 更新必要文档 → 创建 Git commit → git push origin master → 核实远程 master 已包含本次 commit。
+
+若在普通本地 Git 环境中执行，push 成功后应通过 `git fetch origin`、`git rev-parse HEAD`、`git rev-parse origin/master` 或其他等价可靠方式确认远程状态。只有确认远程 `master` 已包含本次 commit，才可以报告“已同步 GitHub”。
+
+如果使用 GitHub API、GitHub Contents API 或其他会直接在远程 `master` 创建 commit 的受控工具完成修改，则该远程 commit 本身可视为已 push，但仍应重新读取远程 `master` 或最新 commit 进行核实，并在最终报告中给出远程 commit SHA。
+
+如果 push 因网络、VPN、DNS、HTTPS connection reset、GitHub 认证、权限或远程不可达而失败：
+- 不得声称任务已同步；
+- 不得为了重试创建重复 commit；
+- 不得使用 `git push --force` 或 `git push -f`；
+- 不得删除或覆盖用户未提交的本地修改；
+- 必须保留已完成的本地 commit，并报告 commit SHA、push 失败原因以及 `origin/master` 是否更新；
+- 网络恢复后应优先直接重试 `git push origin master`。
+
+如果开发期间远程 `master` 出现新的提交，必须先检查差异并安全同步，禁止强制覆盖远程历史。
 
 ### 4. 测试与验证
 
@@ -172,5 +197,10 @@ localhost 环境
 本次完成的修改；
 测试与验证结果；
 Git commit hash；
+GitHub 远程同步状态；
+远程核实结果（正常情况下确认本地/本次 commit 与 `origin/master` 或远程 `master` 一致）；
 如存在未解决的问题或风险，明确列出。
+
+默认情况下，不需要等待用户额外发送“push”指令。满足本文件“Git 提交与远程同步”中的验收条件后，应自动完成 commit、push 和远程核实。
+
 如果需求存在事实错误、逻辑矛盾、技术不可行或信息不足，应先指出问题，再实施修改。
