@@ -154,10 +154,11 @@
         "target": "mural-05",
         "roofOpacity": 0,
         "mode": "playing",
-        "elapsed": 9.086400000000031,
-        "handoff": 0,
-        "targetMuralId": "mural-02",
-        "handoffStartCamera": {
+        "elapsed": 9.132200000000024,
+        "guideStartProgress": 0,
+        "nextGuideMuralId": "mural-05",
+        "routeComplete": false,
+        "overviewCamera": {
           "position": [
             -32.59337336488,
             36.75176932958399,
@@ -167,18 +168,6 @@
             0,
             -2.3,
             -1.75
-          ]
-        },
-        "handoffEndCamera": {
-          "position": [
-            -2.6874076128456617,
-            1.85,
-            -11.75
-          ],
-          "target": [
-            4.52,
-            1.85,
-            -11.75
           ]
         },
         "bounds": {
@@ -283,10 +272,11 @@
         "target": "mural-01",
         "roofOpacity": 0,
         "mode": "playing",
-        "elapsed": 24.105300000000206,
-        "handoff": 0,
-        "targetMuralId": "mural-02",
-        "handoffStartCamera": {
+        "elapsed": 24.101000000000134,
+        "guideStartProgress": 0,
+        "nextGuideMuralId": "mural-05",
+        "routeComplete": false,
+        "overviewCamera": {
           "position": [
             -32.59337336488,
             36.75176932958399,
@@ -296,18 +286,6 @@
             0,
             -2.3,
             -1.75
-          ]
-        },
-        "handoffEndCamera": {
-          "position": [
-            -2.6874076128456617,
-            1.85,
-            -11.75
-          ],
-          "target": [
-            4.52,
-            1.85,
-            -11.75
           ]
         },
         "bounds": {
@@ -412,10 +390,11 @@
         "target": "mural-02",
         "roofOpacity": 0,
         "mode": "playing",
-        "elapsed": 37.14110000000061,
-        "handoff": 0,
-        "targetMuralId": "mural-02",
-        "handoffStartCamera": {
+        "elapsed": 37.18710000000044,
+        "guideStartProgress": 0,
+        "nextGuideMuralId": "mural-05",
+        "routeComplete": false,
+        "overviewCamera": {
           "position": [
             -32.59337336488,
             36.75176932958399,
@@ -425,18 +404,6 @@
             0,
             -2.3,
             -1.75
-          ]
-        },
-        "handoffEndCamera": {
-          "position": [
-            -2.6874076128456617,
-            1.85,
-            -11.75
-          ],
-          "target": [
-            4.52,
-            1.85,
-            -11.75
           ]
         },
         "bounds": {
@@ -541,10 +508,11 @@
         "target": "mural-05",
         "roofOpacity": 0,
         "mode": "playing",
-        "elapsed": 45.57750000000146,
-        "handoff": 0,
-        "targetMuralId": "mural-02",
-        "handoffStartCamera": {
+        "elapsed": 45.821600000000615,
+        "guideStartProgress": 0,
+        "nextGuideMuralId": "mural-05",
+        "routeComplete": false,
+        "overviewCamera": {
           "position": [
             -32.59337336488,
             36.75176932958399,
@@ -554,18 +522,6 @@
             0,
             -2.3,
             -1.75
-          ]
-        },
-        "handoffEndCamera": {
-          "position": [
-            -2.6874076128456617,
-            1.85,
-            -11.75
-          ],
-          "target": [
-            4.52,
-            1.85,
-            -11.75
           ]
         },
         "bounds": {
@@ -670,10 +626,11 @@
         "target": "mural-05",
         "roofOpacity": 0,
         "mode": "playing",
-        "elapsed": 47.08560000000162,
-        "handoff": 0,
-        "targetMuralId": "mural-02",
-        "handoffStartCamera": {
+        "elapsed": 47.59350000000066,
+        "guideStartProgress": 0,
+        "nextGuideMuralId": "mural-05",
+        "routeComplete": false,
+        "overviewCamera": {
           "position": [
             -32.59337336488,
             36.75176932958399,
@@ -683,18 +640,6 @@
             0,
             -2.3,
             -1.75
-          ]
-        },
-        "handoffEndCamera": {
-          "position": [
-            -2.6874076128456617,
-            1.85,
-            -11.75
-          ],
-          "target": [
-            4.52,
-            1.85,
-            -11.75
           ]
         },
         "bounds": {
@@ -799,10 +744,11 @@
         "target": "mural-01",
         "roofOpacity": 0,
         "mode": "playing",
-        "elapsed": 53.080700000002246,
-        "handoff": 0,
-        "targetMuralId": "mural-02",
-        "handoffStartCamera": {
+        "elapsed": 53.402800000000845,
+        "guideStartProgress": 0,
+        "nextGuideMuralId": "mural-05",
+        "routeComplete": false,
+        "overviewCamera": {
           "position": [
             -32.59337336488,
             36.75176932958399,
@@ -812,18 +758,6 @@
             0,
             -2.3,
             -1.75
-          ]
-        },
-        "handoffEndCamera": {
-          "position": [
-            -2.6874076128456617,
-            1.85,
-            -11.75
-          ],
-          "target": [
-            4.52,
-            1.85,
-            -11.75
           ]
         },
         "bounds": {
@@ -929,9 +863,10 @@
         "roofOpacity": 0,
         "mode": "completed",
         "elapsed": 58,
-        "handoff": 0,
-        "targetMuralId": "mural-02",
-        "handoffStartCamera": {
+        "guideStartProgress": 0,
+        "nextGuideMuralId": "mural-05",
+        "routeComplete": true,
+        "overviewCamera": {
           "position": [
             -32.59337336488,
             36.75176932958399,
@@ -941,18 +876,6 @@
             0,
             -2.3,
             -1.75
-          ]
-        },
-        "handoffEndCamera": {
-          "position": [
-            -2.6874076128456617,
-            1.85,
-            -11.75
-          ],
-          "target": [
-            4.52,
-            1.85,
-            -11.75
           ]
         },
         "bounds": {

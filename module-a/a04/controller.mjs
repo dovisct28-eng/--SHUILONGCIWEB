@@ -38,8 +38,8 @@ export function createA04Controller(stage, frame, requestRender) {
       waitSince ||= performance.now();title.textContent='正在准备空间模型';description.textContent=performance.now()-waitSince>12000?'模型未能就绪。可刷新重试，或向上返回主题。观看顺序：第五幅 → 第一幅 → 第二幅。':'模型就绪后开始观看';status.textContent='';skip.hidden=replay.hidden=true;wake();return;
     }
     waitSince=0;
-    const overview=api.getA04Overview(),handoff=api.getA04Handoff();
-    if((!everEntered&&restored)||reduced.matches||(entering&&state.handoff>0)){mode='completed';elapsed=duration;}
+    const overview=api.getA04Overview();
+    if((!everEntered&&restored)||reduced.matches||(entering&&state.guideStart>0)){mode='completed';elapsed=duration;}
     everEntered=true;
     if(state.stable&&mode==='idle'){mode='playing';last=0;}
     if(screens<13.65&&mode==='playing'){mode='idle';elapsed=0;}
@@ -49,28 +49,28 @@ export function createA04Controller(stage, frame, requestRender) {
     let camera=mode==='idle'?mixCamera(entry,overview,state.entry):sample.camera;
     let growth=mode==='completed'?[1,1,1]:sample.growth;
     let target=sample.target;
-    if(state.handoff>0){
+    if(state.guideStart>0){
       if(mode==='playing'){early=lastCamera||camera;bridge=0;elapsed=duration;mode='completed';}
-      // A short continuous bridge joins the canonical reversible scroll path on early exit.
-      camera=mixCamera(overview,handoff,state.handoff);
-      if(early){camera=mixCamera(early,camera,smooth(bridge));if(bridge===1)early=null;}
-      growth=[1,1,1];target='mural-02';
+      // Early exit settles at the overview; normal guide preparation never moves the camera.
+      camera=overview;
+      if(early){camera=mixCamera(early,overview,smooth(bridge));if(bridge===1)early=null;}
+      growth=[1,1,1];target='mural-05';
     }else if(early){camera=mixCamera(early,overview,smooth(bridge));growth=[1,1,1];if(bridge===1)early=null;}
     if(state.entry<1&&mode==='completed')camera=mixCamera(entry,overview,state.entry);
     lastCamera=camera;
-    const routeOpacity=state.entry*(1-state.handoff),labelOpacity=1-state.handoff;
-    api.setA04({camera,entryProgress:state.entry,paths:route,growth,routeOpacity,labelOpacity,target,roofOpacity:.08*(1-state.entry),mode,elapsed,handoff:state.handoff,targetMuralId:'mural-02',handoffStartCamera:overview,handoffEndCamera:handoff});
+    const routeOpacity=state.entry*(1-.18*state.guideStart),labelOpacity=1;
+    api.setA04({camera,entryProgress:state.entry,paths:route,growth,routeOpacity,labelOpacity,target,roofOpacity:.08*(1-state.entry),mode,elapsed,guideStartProgress:state.guideStart,nextGuideMuralId:'mural-05',routeComplete:mode==='completed',overviewCamera:overview});
     const texts=[['01 / 第五幅','从主殿出发，转向身体右侧的第五幅。'],['02 / 第一幅','转回戏台方向，沿侧廊前行，再左转抵达第一幅。'],['03 / 第二幅《入将图》','转向主殿，沿对侧返回，抵达第二幅。'],['回望完整建筑','镜头抬高回撤，辨认三幅壁画之间的空间关系。'],['观看路线','先看第五幅，再前行至第一幅，最后返回第二幅。']];
     let text=texts[sample.phase];
     if(sample.phase===4&&mode==='playing')text=elapsed<48?['01 / 第五幅观察站位','先看身体右侧的第五幅。']:elapsed<54?['02 / 前行至第一幅','沿出发侧前行，横向左转到第一幅。']:['03 / 返回第二幅','沿对侧返回主殿，抵达第二幅《入将图》。'];
     if(mode==='idle')text=['从主殿出发','继续向下，开始自动空间观看。'];
-    if(mode==='completed')text=['第五幅 → 第一幅 → 第二幅','继续向下，走近《入将图》。'];
-    if(state.handoff>0)text=['走近第二幅《入将图》',state.handoff===1?'交接预览 · A05 图像导读待后续开发':'从建筑空间连续聚焦至第二幅壁面。'];
+    if(mode==='completed')text=['第五幅 → 第一幅 → 第二幅','完整路线已经建立。继续向下，从第五幅开始逐幅阅读。'];
+    if(state.guideStart>0)text=['从第五幅开始','接下来依次阅读第五幅、第一幅与第二幅。'];
     title.textContent=text[0];description.textContent=text[1];
-    const label=mode==='playing'?'自动观看中 · 可跳过，也可滚动离开':state.handoff>0?'向上滚动，返回完整路线':'这是一条项目设计的观看路径。';
+    const label=mode==='playing'?'自动观看中 · 可跳过，也可滚动离开':state.guideStart>0?'继续向下，进入第五幅壁画导读':'这是一条项目设计的观看路径。';
     if(status.textContent!==label)status.textContent=label;
-    skip.hidden=mode!=='playing';replay.hidden=mode!=='completed'||state.handoff>0||state.entry<1;
-    stage.dataset.phase=document.body.dataset.phase=state.handoff>0?'a04-handoff':`a04-${mode}`;
+    skip.hidden=mode!=='playing';replay.hidden=mode!=='completed'||state.guideStart>0||state.entry<1;
+    stage.dataset.phase=document.body.dataset.phase=state.guideStart>0?'a04-guide-start':`a04-${mode}`;
     document.body.dataset.a04Mode=mode;
     if(mode==='playing'||early||state.entry<1)wake();else last=0;
   };

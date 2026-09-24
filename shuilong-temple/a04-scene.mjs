@@ -58,17 +58,17 @@ export function createA04Scene(T, camera, scene, root, roofs, pins) {
   }
   return {
     overview,
-    handoff(){const d=Math.max(5.5/(2*Math.tan(camera.fov*Math.PI/360)*camera.aspect*.78),2/(2*Math.tan(camera.fov*Math.PI/360)*.55));return {position:[4.52-d,1.85,-11.75],target:[4.52,1.85,-11.75]};},
+    guideStart(){return {muralId:'mural-05',camera:overview(),routeComplete:true};},
     set(next){state=next;if(next)ensureRoute(next.paths);group.visible=Boolean(next);if(!next){nodeLabels.forEach(el=>el.style.display="none");pins.forEach(p=>p.button.textContent=p.m.label);}},
     apply(){
       if(!state)return false;
       setCamera(state.camera);
       roofs.forEach(m=>{m.material.opacity=state.roofOpacity;m.material.transparent=true;m.material.depthWrite=false;});
       material.opacity=state.routeOpacity;
-      lines.forEach((line,i)=>{grow(line,state.paths[i],state.growth[i]);let left=segments[i].reduce((n,p)=>n+p.length,0)*state.growth[i];for(const part of segments[i]){const f=Math.max(0,Math.min(1,left/part.length));part.mesh.visible=f>0;part.mesh.scale.set(1,part.length*f,1);part.mesh.position.copy(part.a).addScaledVector(part.delta,f/2);part.mesh.material.opacity=state.routeOpacity;left-=part.length;}dots[i].visible=state.growth[i]>=1;dots[i].material.opacity=state.routeOpacity;});
+      lines.forEach((line,i)=>{grow(line,state.paths[i],state.growth[i]);let left=segments[i].reduce((n,p)=>n+p.length,0)*state.growth[i];for(const part of segments[i]){const f=Math.max(0,Math.min(1,left/part.length));part.mesh.visible=f>0;part.mesh.scale.set(1,part.length*f,1);part.mesh.position.copy(part.a).addScaledVector(part.delta,f/2);part.mesh.material.opacity=state.routeOpacity;left-=part.length;}dots[i].visible=state.growth[i]>=1;dots[i].material.opacity=state.routeOpacity*(state.guideStartProgress>0&&i!==0?1-.45*state.guideStartProgress:1);});
       return true;
     },
-    labels(){if(!state)return;document.querySelectorAll(".spatial-label").forEach(el=>el.style.opacity=state.labelOpacity);nodeLabels.forEach((el,i)=>{const v=dots[i].position.clone().project(camera);el.style.display=state.growth[i]>=1&&state.routeOpacity>0?"block":"none";el.style.left=(v.x*.5+.5)*innerWidth+"px";el.style.top=(.5-v.y*.5)*innerHeight+"px";el.style.opacity=state.routeOpacity;});for(const pin of pins){
+    labels(){if(!state)return;document.querySelectorAll(".spatial-label").forEach(el=>el.style.opacity=state.labelOpacity);nodeLabels.forEach((el,i)=>{const v=dots[i].position.clone().project(camera);el.style.display=state.growth[i]>=1&&state.routeOpacity>0?"block":"none";el.style.left=(v.x*.5+.5)*innerWidth+"px";el.style.top=(.5-v.y*.5)*innerHeight+"px";el.style.opacity=state.routeOpacity*(state.guideStartProgress>0&&i!==0?1-.45*state.guideStartProgress:1);});for(const pin of pins){
       const current=pin.m.id===state.target;
       pin.button.style.opacity=String(state.labelOpacity*(current?1:1-.55*state.entryProgress));pin.line.style.opacity=pin.dot.style.opacity=state.labelOpacity*(current?1:1-.55*state.entryProgress);
       pin.button.dataset.current=String(current);pin.button.textContent=pin.m.label+(current&&state.entryProgress>.5?" · 当前":"");

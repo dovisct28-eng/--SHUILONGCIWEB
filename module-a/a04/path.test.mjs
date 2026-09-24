@@ -1,11 +1,13 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {chapter,cameras,route,sampleTour,duration,mixCamera} from './path.mjs';
+import {chapter,cameras,route,sampleTour,duration} from './path.mjs';
 const overview={position:[-32,37,-12],target:[0,-2.3,-1.75]};
-test('A03 boundary is untouched; entry and final handoff are independently reversible',()=>{
+test('A03 boundary and A04 entry stay fixed; guide preparation is reversible',()=>{
   assert.equal(chapter(13.2).active,false);assert.equal(chapter(14).entry,1);
-  assert.equal(chapter(16).handoff,0);assert.equal(chapter(18).handoff,1);
-  for(const p of [0,.2,.5,1]){const a=mixCamera(overview,cameras.handoff,p),b=mixCamera(cameras.handoff,overview,1-p);for(const key of ["position","target"])a[key].forEach((v,i)=>assert.ok(Math.abs(v-b[key][i])<1e-12));}
+  assert.equal(chapter(16).guideStart,0);assert.equal(chapter(18).guideStart,1);
+  for(const p of [16,16.5,17,17.5,18])assert.ok(Math.abs(chapter(p).guideStart+chapter(34-p).guideStart-1)<1e-12);
+  assert.equal('handoff' in cameras,false);
+  assert.deepEqual(sampleTour(duration,overview).camera,overview);
 });
 test('each mural has a stable independent camera before withdrawal',()=>{
   for(const [a,b,key] of [[8,11,'fifth'],[23,26,'first'],[36,39,'second']]){
