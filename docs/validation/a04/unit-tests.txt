@@ -1,0 +1,26 @@
+✔ rangeProgress clamps values and rejects invalid ranges (3.7687ms)
+✔ key animation boundaries map to confirmed phases (2.8453ms)
+✔ the reading interval keeps every animated property stable (0.7458ms)
+✔ A02 transition starts only after the independent reading distance (2.7051ms)
+✔ presentation moves the model right, then returns it to center for A02 (0.729ms)
+✔ A01, return to center and spatial settling never display mural markers (4.2284ms)
+✔ all five appear before simultaneous core emphasis, followed by stable reading (3.4872ms)
+✔ forward and reverse traversal produce identical complete states (0.4511ms)
+✔ crowded projected nodes remain ordered, separated and inside the label rails (1.1223ms)
+✔ A03 leaves the accepted A01 and entire A02 interval unchanged (1.7688ms)
+✔ theme has a stable reading interval before preparing the next route (1.9786ms)
+✔ arbitrary forward/reverse jumps and viewport changes are deterministic (1.5884ms)
+✔ marker API hides secondary labels AND their SVG lines/dots, then restores them (1.7781ms)
+✔ A03 boundary is untouched; entry and final handoff are independently reversible (1.2608ms)
+✔ each mural has a stable independent camera before withdrawal (2.1578ms)
+✔ route grows cumulatively only after withdrawal; completed state stays complete (1.5096ms)
+✔ walking lines clear model columns and remain inside perimeter walls (16.8392ms)
+✔ camera samples are continuous and above low-fidelity walls and beams during tour (29.0169ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 622.3648

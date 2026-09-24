@@ -27,16 +27,21 @@ function makeTemple(T){
  // Courtyard paving joints: shallow geometry, no external texture assets.
  for(let z=-9.5;z<10;z+=.65){box(0,.078,z,7,.008,.017,'stone');for(let x=-3.5;x<3.5;x+=1.2)box(x+(Math.round(z/.65)%2)*.6,.078,z+.325,.015,.009,.65,'stone');}
  part('02_Enclosure');
- for(let s of [-1,1]){box(s*5,1.4,-1.75,.22,2.8,27.5,'wall');box(s*5,2.82,-1.75,.32,.12,27.5,'trim');for(let z=-15;z<12;z+=2.5)box(s*5,1.45,z,.34,2.9,.3,'trim');}
+ for(let s of [-1,1]){box(s*5,1.4,-1.75,.22,2.8,27.5,'wall');box(s*5,2.82,-1.75,.32,.12,27.5,'trim');
+  // Sparse, paired pilasters leave the mural spans (-14.5..-9 and 3.2..6.4) unobstructed.
+  for(const z of [-15,-7.5,0,7.5,10])box(s*5,1.45,z,.34,2.9,.3,'trim');}
  box(0,1.65,-15.3,10,3.3,.25,'wall');
  part('03_MainHall');box(0,.25,-11.75,9.75,.5,7.2,'stone');
  for(let k=0;k<3;k++)box(0,.08+k*.095,-7.75-k*.25,6.8,.16+k*.19,.5,'stone');
  box(0,1.9,-15,9.4,2.9,.2,'wall');
  for(let s of [-1,1])box(s*4.65,1.9,-11.75,.22,2.9,6.6,'wall');
  // Front colonnade remains; rear mural wall has no columns or wood panels.
- for(let x of [-3.9,-2,0,2,3.9])col(x,-8.35,1.92,2.9);
+ for(const x of [-3.6,0,3.6])col(x,-8.35,1.92,2.9);
  box(0,3.18,-8.35,9.5,.26,.23,'wood');roof(0,-11.55,10.65,8.15,3.35,1.85);
- for(let side of [-1,1]){part(side<0?'04_WestGallery':'05_EastGallery');let x=side*4.05;box(x,.16,.85,1.75,.32,19.4,'stone');for(let z=-7.7;z<10.6;z+=2.35){col(side*3.25,z,1.42,2.5);box(side*3.65,2.47,z,.85,.17,.18,'wood');}box(side*3.25,2.62,1.1,.19,.22,19.3,'wood');roof(x,1,20.1,2.04,2.72,.57,Math.PI/2);}
+ for(let side of [-1,1]){part(side<0?'04_WestGallery':'05_EastGallery');let x=side*4.05;box(x,.16,.85,1.75,.32,19.4,'stone');
+  // Columns flank mural-01 rather than interrupting its Z=3.2..6.4 span.
+  for(const z of [-7.2,-2.4,2.4,7.2,9.5])col(side*3.25,z,1.42,2.5);
+  box(side*3.25,2.66,1.1,.19,.14,19.3,'wood');roof(x,1,20.1,2.04,2.72,.57,Math.PI/2);}
  part('06_Stage');box(0,.49,8.4,3.1,.98,2.65,'stone');
  // Stage opens toward the main hall (-Z), with its closed back at the entrance.
  box(0,1.68,9.48,2.85,1.65,.15,'wood');for(let s of [-1,1])box(s*1.35,1.64,8.47,.13,1.6,2,'wood');

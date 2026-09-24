@@ -1,0 +1,18 @@
+.a04{position:absolute;inset:0;z-index:7;pointer-events:none;color:#303b32}
+.a04[hidden]{display:none}
+.a04 header{position:absolute;top:4vh;left:5%;right:5%;text-align:center}
+.a04 header p{margin:0 0 8px;font-size:18px;letter-spacing:.15em}
+.a04 header span{font-size:12px;color:#71766c}
+.a04 footer{position:absolute;bottom:2.5vh;left:5%;right:5%;text-align:center}
+.a04 h2{margin:0 0 8px;font:400 clamp(20px,2vw,28px)/1.4 "Noto Serif SC","Songti SC",serif}
+.a04 footer p{margin:5px 0;font-size:14px}
+.a04 .a04-status{font-size:12px;color:#71766c}
+.a04-controls{margin-top:10px;display:flex;justify-content:center;gap:12px}
+.a04 button{pointer-events:auto;padding:7px 18px;background:#eeece5;border:1px solid #899184;border-radius:3px;color:#374533;font:inherit;cursor:pointer}
+.a04 button:focus-visible{outline:3px solid #b84f63;outline-offset:3px}
+.a03{opacity:calc(1 - var(--a04-entry,0))}
+.stage:has(.a04:not([hidden])) .model-caption{visibility:hidden}
+@media(max-height:800px){.a04 header{top:2vh}.a04 footer{bottom:1.5vh}.a04 footer p{font-size:12px}.a04-controls{margin-top:6px}.a04 button{padding:5px 14px}}
+
+.a04 footer{z-index:0}
+.a04 footer::before{content:"";position:absolute;inset:-22px -6% -3vh;background:linear-gradient(0deg,#e7e5df 0%,#e7e5dff0 74%,#e7e5df00 100%);z-index:-1;pointer-events:none}

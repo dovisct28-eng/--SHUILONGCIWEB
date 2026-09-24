@@ -1,0 +1,20 @@
+const {chromium}=require('playwright');const assert=require('node:assert/strict');const fs=require('node:fs');const path=require('node:path');
+(async()=>{const browser=await chromium.launch({channel:'chrome',headless:true});const report={};
+try{
+ const page=await browser.newPage({viewport:{width:1440,height:900}});
+ let release;const gate=new Promise(r=>release=r);
+ await page.route('**/a04-scene.mjs',async route=>{await gate;await route.continue();});
+ await page.goto('http://127.0.0.1:4173/module-a/a01/',{waitUntil:'domcontentloaded'});
+ await page.evaluate(()=>scrollTo(0,14.5*innerHeight));await page.waitForTimeout(500);
+ assert.equal(await page.locator('.a04 [data-title]').textContent(),'正在准备空间模型');
+ release();await page.waitForFunction(()=>document.querySelector('iframe').contentWindow.modelReady);await page.waitForFunction(()=>document.body.dataset.a04Mode==='playing');report.delayedModel=true;
+ await page.getByRole('button',{name:'跳过动画'}).click();await page.setViewportSize({width:1024,height:768});await page.evaluate(()=>scrollTo(0,14.5*innerHeight));await page.waitForTimeout(600);
+ const state=await page.evaluate(()=>document.querySelector('iframe').contentWindow.shuilongTemple.getA04State());assert.ok(state.bounds.left>0&&state.bounds.right<1&&state.bounds.bottom<.8);report.resizeBounds=state.bounds;
+ await page.evaluate(()=>scrollTo(0,18*innerHeight));await page.waitForTimeout(600);
+ const hidden=await page.evaluate(()=>{const doc=document.querySelector('iframe').contentDocument;return [...doc.querySelectorAll('.spatial-label,.mural-label')].every(el=>el.hidden||getComputedStyle(el).display==='none'||Number(el.style.opacity)===0);});assert.ok(hidden);report.handoffLabelsHidden=true;
+ await page.close();
+ const failed=await browser.newPage();await failed.route('**/a04-scene.mjs',route=>route.abort());await failed.goto('http://127.0.0.1:4173/module-a/a01/');await failed.evaluate(()=>scrollTo(0,14.5*innerHeight));
+ await failed.waitForFunction(()=>document.querySelector('.a04 [data-description]').textContent.includes('模型未能就绪'),null,{timeout:16000});
+ assert.equal(await failed.locator('.a04 button:visible').count(),0);assert.notEqual(await failed.evaluate(()=>document.body.dataset.a04Mode),'completed');report.failedModelFallback=true;await failed.close();
+ fs.writeFileSync(path.resolve(__dirname,'../../docs/validation/a04/resilience.json'),JSON.stringify(report,null,2));console.log('PASS: delayed model, failed model, resize, handoff marker cleanup');
+}finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1;});

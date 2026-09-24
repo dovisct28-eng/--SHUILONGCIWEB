@@ -18,7 +18,7 @@ export function createA03View(stage) {
       <p>以站在主殿、面向戏台为起点，先看身体右侧的第五幅。</p>
       <p class="a03-route-note">这是一条项目设计的观看路径。</p>
     </div>
-    <p class="a03-end" data-a03-end aria-hidden="true">主题引入结束 · 空间路线待后续展开 · 向上滚动可回看</p>`;
+    <p class="a03-end" data-a03-end aria-hidden="true">继续向下，观看空间路线 · 向上滚动可回看</p>`;
   stage.append(section);
   const copy = section.querySelector('[data-a03-copy]');
   const hint = section.querySelector('[data-a03-reading-hint]');

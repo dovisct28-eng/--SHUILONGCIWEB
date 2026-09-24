@@ -1,6 +1,7 @@
+import { createA04Controller } from '../a04/controller.mjs';
 import { derivePresentation, deriveScrollState } from './progress.mjs';
 import { CORE_MURALS, deriveA02State } from '../a02/progress.mjs';
-import { A03_START, A03_SCREENS, deriveA03State } from '../a03/progress.mjs';
+import { deriveA03State } from '../a03/progress.mjs';
 import { createA03View } from '../a03/view.mjs';
 
 const story = document.querySelector('[data-story]');
@@ -14,13 +15,14 @@ const a02 = document.querySelector('[data-a02]');
 const a02Description = document.querySelector('[data-a02-description]');
 const a02Status = document.querySelector('[data-a02-status]');
 const a02Hint = document.querySelector('[data-a02-hint]');
-story.style.height = `${(A03_START + A03_SCREENS + 1) * 100}vh`;
+story.style.height = `1900vh`;
+const renderA04 = createA04Controller(stage, modelFrame, requestRender);
 const renderA03 = createA03View(stage);
 const a03Styles = document.createElement('link');
 a03Styles.rel = 'stylesheet';
 a03Styles.href = new URL('../a03/styles.css', import.meta.url).href;
 document.head.append(a03Styles);
-document.title = '水龙祠｜A01–A03 滚动原型';
+document.title = '水龙祠｜A01–A04 空间叙事';
 
 debug.hidden = !debugEnabled;
 
@@ -85,6 +87,7 @@ function render() {
     revealWalls: smooth(spatial.revealWalls),
     secondaryVisibility: theme.secondary,
   });
+  renderA04(Math.max(0, -bounds.top) / innerHeight);
   if (debugEnabled) {
     debug.textContent = `${phase} · A01 ${(state.animation * 100).toFixed(1)}% · A02 ${(spatial.progress * 100).toFixed(1)}% · A03 ${(theme.progress * 100).toFixed(1)}%`;
   }
@@ -100,7 +103,7 @@ addEventListener('scroll', requestRender, { passive: true });
 addEventListener('resize', requestRender);
 modelFrame.addEventListener('load', () => { modelProgress = -1; requestRender(); });
 addEventListener('message', event => {
-  if (event.source !== modelFrame.contentWindow || event.data?.type !== 'shuilong:ready') return;
+  if (event.origin !== location.origin || event.source !== modelFrame.contentWindow || event.data?.type !== 'shuilong:ready') return;
   modelProgress = -1;
   requestRender();
 });

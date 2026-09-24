@@ -1,0 +1,11 @@
+{
+  "delayedModel": true,
+  "resizeBounds": {
+    "left": 0.17843544532200273,
+    "right": 0.8293325680296534,
+    "top": 0.22715813370028154,
+    "bottom": 0.6989341548187407
+  },
+  "handoffLabelsHidden": true,
+  "failedModelFallback": true
+}
