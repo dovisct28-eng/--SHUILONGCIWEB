@@ -3,6 +3,8 @@ import { derivePresentation, deriveScrollState } from './progress.mjs';
 import { CORE_MURALS, deriveA02State } from '../a02/progress.mjs';
 import { deriveA03State } from '../a03/progress.mjs';
 import { createA03View } from '../a03/view.mjs';
+import { createMuralGuide } from '../guide/controller.mjs';
+import { a05Guide } from '../a05/content.mjs';
 
 const story = document.querySelector('[data-story]');
 const stage = document.querySelector('[data-stage]');
@@ -15,14 +17,15 @@ const a02 = document.querySelector('[data-a02]');
 const a02Description = document.querySelector('[data-a02-description]');
 const a02Status = document.querySelector('[data-a02-status]');
 const a02Hint = document.querySelector('[data-a02-hint]');
-story.style.height = `1900vh`;
+story.style.height = `2600vh`;
 const renderA04 = createA04Controller(stage, modelFrame, requestRender);
+const renderA05 = createMuralGuide(stage, a05Guide, requestRender);
 const renderA03 = createA03View(stage);
 const a03Styles = document.createElement('link');
 a03Styles.rel = 'stylesheet';
 a03Styles.href = new URL('../a03/styles.css', import.meta.url).href;
 document.head.append(a03Styles);
-document.title = '水龙祠｜A01–A04 空间叙事';
+document.title = '水龙祠｜A01–A05 空间与壁画叙事';
 
 debug.hidden = !debugEnabled;
 
@@ -87,7 +90,9 @@ function render() {
     revealWalls: smooth(spatial.revealWalls),
     secondaryVisibility: theme.secondary,
   });
-  renderA04(Math.max(0, -bounds.top) / innerHeight);
+  const screens = Math.max(0, -bounds.top) / innerHeight;
+  renderA04(screens);
+  renderA05(screens);
   if (debugEnabled) {
     debug.textContent = `${phase} · A01 ${(state.animation * 100).toFixed(1)}% · A02 ${(spatial.progress * 100).toFixed(1)}% · A03 ${(theme.progress * 100).toFixed(1)}%`;
   }

@@ -1,0 +1,17 @@
+.mural-guide{position:absolute;inset:0;z-index:8;overflow:hidden;background:#e7e5df;color:#303b32;pointer-events:none}
+.mural-guide[hidden]{display:none}
+.mural-guide__canvas{position:absolute;inset:0;overflow:hidden}
+.mural-guide__image{position:absolute;left:0;top:50%;height:80vh;width:auto;max-width:none;display:block;will-change:transform}
+.mural-guide__veil{position:absolute;inset:0;background:linear-gradient(90deg,#e7e5dff5 0%,#e7e5dfeb 33%,#e7e5df00 80%);opacity:var(--intro-opacity);pointer-events:none}
+.mural-guide__intro{position:absolute;z-index:1;top:50%;left:7%;width:min(480px,43vw);transform:translateY(-50%);opacity:var(--intro-entrance)}
+.mural-guide__chapter{margin:0 0 16px;color:#686e65;font-size:13px;letter-spacing:.2em}
+.mural-guide h2{margin:0 0 24px;font:400 clamp(38px,4vw,58px)/1.25 "Noto Serif SC","Songti SC",serif}
+.mural-guide__description{margin:0;font-size:clamp(15px,1.2vw,18px);line-height:1.85}
+.mural-guide__source{margin:22px 0 0;font-size:12px;line-height:1.6;color:#6f756a}
+.mural-guide__marker{position:absolute;left:4%;top:2.5vh;margin:0;padding:6px 10px;background:#e7e5dfdc;font-size:13px;letter-spacing:.1em;opacity:var(--scan-opacity)}
+.mural-guide__next{position:absolute;left:50%;bottom:3vh;transform:translateX(-50%);margin:0;padding:9px 16px;background:#e7e5dfed;font-size:17px;white-space:nowrap;opacity:var(--handoff-opacity)}
+.mural-guide__status{position:absolute;right:3%;bottom:2vh;margin:0;color:#303b32;font-size:13px;background:#e7e5dfdc}
+@media(max-width:1100px){.mural-guide__intro{width:min(420px,48vw)}.mural-guide__image{height:78vh}}
+@media(prefers-reduced-motion:reduce){.mural-guide__image{height:70vh;will-change:auto}}
+.stage:has(.mural-guide:not([hidden])) .a04{opacity:calc(1 - var(--a05-entry))!important}
+.stage:has(.mural-guide:not([hidden])) .model-shell{opacity:calc(var(--model-opacity) * (1 - var(--a05-entry)))}

@@ -1,0 +1,70 @@
+{
+  "results": [
+    {
+      "viewport": "1920x1080",
+      "right": {
+        "offset": -1285.94,
+        "travel": 1285.94
+      },
+      "center": {
+        "offset": -642.97
+      },
+      "left": {
+        "offset": 0
+      },
+      "reverse": true,
+      "refresh": true,
+      "rapidCrossing": true
+    },
+    {
+      "viewport": "1440x900",
+      "right": {
+        "offset": -1231.61,
+        "travel": 1231.61
+      },
+      "center": {
+        "offset": -615.81
+      },
+      "left": {
+        "offset": 0
+      },
+      "reverse": true,
+      "refresh": true,
+      "rapidCrossing": true
+    },
+    {
+      "viewport": "1366x768",
+      "right": {
+        "offset": -913.63,
+        "travel": 913.74
+      },
+      "center": {
+        "offset": -456.98
+      },
+      "left": {
+        "offset": -0.06
+      },
+      "reverse": true,
+      "refresh": true,
+      "rapidCrossing": true
+    },
+    {
+      "viewport": "1024x768",
+      "right": {
+        "offset": -1198.6,
+        "travel": 1198.75
+      },
+      "center": {
+        "offset": -599.52
+      },
+      "left": {
+        "offset": -0.07
+      },
+      "reverse": true,
+      "refresh": true,
+      "rapidCrossing": true
+    }
+  ],
+  "errors": [],
+  "reducedMotion": true
+}
