@@ -9,7 +9,7 @@ function makeTemple(T){
  function mesh(g,m,x=0,y=0,z=0){const o=new T.Mesh(g,mats[m]);o.position.set(x,y,z);o.castShadow=true;o.receiveShadow=true;group.add(o);return o;}
  function box(x,y,z,w,h,d,m){return mesh(new T.BoxGeometry(w,h,d),m,x,y,z);}
  function line(points,r,m){return mesh(new T.TubeGeometry(new T.CatmullRomCurve3(points.map(p=>new T.Vector3(...p))),Math.max(2,points.length-1),r,4,false),m);}
- function col(x,z,y=1.7,h=2.5){mesh(new T.CylinderGeometry(.105,.135,h,10),'wood',x,y,z);mesh(new T.CylinderGeometry(.19,.21,.17,10),'stone',x,y-h/2,z);}
+ function col(x,z,y=1.7,h=2.5){mesh(new T.CylinderGeometry(.12,.15,h,12),'wood',x,y,z);box(x,y-h/2,z,.4,.12,.4,'stone');mesh(new T.CylinderGeometry(.2,.23,.16,12),'stone',x,y-h/2+.11,z);}
  // Curved roof with a horizontal ridge and hipped ends. The same surface
  // supplies roof skins, tile ribs and eaves so all details remain aligned.
  function roof(cx,cz,w,d,eave,rise,rot=0){
@@ -41,13 +41,14 @@ function makeTemple(T){
   box(x,3.025,-11.75,.22,.65,6.6,'brick');
   box(x,1.85,-11.75,.22,1.7,6.6,'plaster');
   box(x,.69,-11.75,.22,.62,6.6,'brick');
+  box(s*4.29,3.24,-11.75,.17,.18,6.7,'wood');
  }
  // Front colonnade remains; rear mural wall has no columns or wood panels.
  for(const x of [-3.6,0,3.6])col(x,-8.35,1.92,2.9);
  box(0,3.18,-8.35,9.5,.26,.23,'wood');roof(0,-11.55,10.65,8.15,3.35,1.85);
  for(let side of [-1,1]){part(side<0?'04_WestGallery':'05_EastGallery');let x=side*4.05;box(x,.16,.85,1.75,.32,19.4,'stone');
   // Columns flank mural-01 rather than interrupting its Z=3.2..6.4 span.
-  for(const z of [-7.2,-2.4,2.4,7.2,9.5])col(side*3.25,z,1.42,2.5);
+  for(const z of [-7.2,-2.4,2.4,7.2,9.5]){col(side*3.25,z,1.42,2.5);box(side*4.02,2.62,z,1.62,.13,.16,'wood');}
   box(side*3.25,2.66,1.1,.19,.14,19.3,'wood');roof(x,1,20.1,2.04,2.72,.57,Math.PI/2);}
  part('06_Stage');box(0,.49,8.4,3.1,.98,2.65,'stone');
  // Stage opens toward the main hall (-Z), with its closed back at the entrance.

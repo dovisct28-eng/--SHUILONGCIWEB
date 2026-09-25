@@ -6,22 +6,22 @@
         {
           "name": "a01",
           "phase": "reading",
-          "triangles": 82415
+          "triangles": 83035
         },
         {
           "name": "a02",
           "phase": "a02-reading",
-          "triangles": 89615
+          "triangles": 90235
         },
         {
           "name": "a03",
           "phase": "a03-reading",
-          "triangles": 89615
+          "triangles": 90235
         },
         {
           "name": "a04",
           "phase": "a04-playing",
-          "triangles": 89559
+          "triangles": 90179
         },
         {
           "name": "first-mural",
@@ -48,22 +48,22 @@
         {
           "name": "a01",
           "phase": "reading",
-          "triangles": 82415
+          "triangles": 83035
         },
         {
           "name": "a02",
           "phase": "a02-reading",
-          "triangles": 89615
+          "triangles": 90235
         },
         {
           "name": "a03",
           "phase": "a03-reading",
-          "triangles": 89615
+          "triangles": 90235
         },
         {
           "name": "a04",
           "phase": "a04-playing",
-          "triangles": 89559
+          "triangles": 90179
         }
       ],
       "singleModelLoad": true

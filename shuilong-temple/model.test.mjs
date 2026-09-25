@@ -66,6 +66,7 @@ test('mural spans and wall bands reflect the design model, not surveyed dimensio
   }
   assert.ok(points('03_MainHall', 'brick').length > 0);
   assert.equal(points('04_WestGallery', 'wood').length, points('05_EastGallery', 'wood').length);
+  assert.ok(points('05_EastGallery', 'wood').some(p => p[0] > 4.8 && p[0] < 4.9 && p[1] > 2.5 && p[1] < 2.7 && p[2] > 2.3 && p[2] < 2.5), 'gallery transverse beam flanks the first mural');
   assert.ok(points('07_Entrance', 'brick').length > 0);
   assert.ok(info.triangles < 150000);
 });

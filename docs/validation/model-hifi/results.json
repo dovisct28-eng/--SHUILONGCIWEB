@@ -154,7 +154,7 @@
         "target": "mural-05",
         "roofOpacity": 0,
         "mode": "playing",
-        "elapsed": 9.711999999999977,
+        "elapsed": 9.753699999999965,
         "guideStartProgress": 0,
         "secondaryOpacity": 1,
         "nextGuideMuralId": "mural-05",
@@ -172,10 +172,10 @@
           ]
         },
         "bounds": {
-          "left": -1961.0558185316042,
+          "left": -2810.664626771682,
           "right": 8933.985297062449,
           "top": -2676.422737542607,
-          "bottom": 560.4662141267393
+          "bottom": 802.4542842533153
         }
       }
     },
@@ -273,7 +273,7 @@
         "target": "mural-01",
         "roofOpacity": 0,
         "mode": "playing",
-        "elapsed": 24.708800000000373,
+        "elapsed": 24.75050000000033,
         "guideStartProgress": 0,
         "secondaryOpacity": 1,
         "nextGuideMuralId": "mural-05",
@@ -291,10 +291,10 @@
           ]
         },
         "bounds": {
-          "left": -261.377721336412,
-          "right": 320.196176801368,
-          "top": -133.43042862394375,
-          "bottom": 156.27421422215232
+          "left": -569.0731852258345,
+          "right": 249.45118880266344,
+          "top": -93.80992529960051,
+          "bottom": 121.22156139307633
         }
       }
     },
@@ -392,7 +392,7 @@
         "target": "mural-02",
         "roofOpacity": 0,
         "mode": "playing",
-        "elapsed": 37.82380000000076,
+        "elapsed": 37.76130000000062,
         "guideStartProgress": 0,
         "secondaryOpacity": 1,
         "nextGuideMuralId": "mural-05",
@@ -411,7 +411,7 @@
         },
         "bounds": {
           "left": -8932.985297062449,
-          "right": 1962.0558185316042,
+          "right": 2811.664626771682,
           "top": -2676.422737542607,
           "bottom": 5204.417514442055
         }
@@ -511,7 +511,7 @@
         "target": "mural-05",
         "roofOpacity": 0,
         "mode": "playing",
-        "elapsed": 45.62940000000049,
+        "elapsed": 45.650300000000655,
         "guideStartProgress": 0,
         "secondaryOpacity": 1,
         "nextGuideMuralId": "mural-05",
@@ -630,7 +630,7 @@
         "target": "mural-05",
         "roofOpacity": 0,
         "mode": "playing",
-        "elapsed": 47.143300000000416,
+        "elapsed": 47.15030000000066,
         "guideStartProgress": 0,
         "secondaryOpacity": 1,
         "nextGuideMuralId": "mural-05",
@@ -749,7 +749,7 @@
         "target": "mural-01",
         "roofOpacity": 0,
         "mode": "playing",
-        "elapsed": 53.143500000000635,
+        "elapsed": 53.13650000000075,
         "guideStartProgress": 0,
         "secondaryOpacity": 1,
         "nextGuideMuralId": "mural-05",
