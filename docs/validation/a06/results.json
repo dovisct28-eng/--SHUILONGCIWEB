@@ -1,0 +1,22 @@
+[
+  {
+    "viewport": "1920x1080",
+    "reverse": true,
+    "refresh": true
+  },
+  {
+    "viewport": "1440x900",
+    "reverse": true,
+    "refresh": true
+  },
+  {
+    "viewport": "1366x768",
+    "reverse": true,
+    "refresh": true
+  },
+  {
+    "viewport": "1024x768",
+    "reverse": true,
+    "refresh": true
+  }
+]

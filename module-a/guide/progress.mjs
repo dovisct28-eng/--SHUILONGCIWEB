@@ -4,7 +4,9 @@ const smooth = value => { const t = clamp(value); return t * t * (3 - 2 * t); };
 // Distances are viewport heights measured from the existing A01 story origin.
 export function guideProgress(screens, start, end) {
   return {
-    active: screens >= start,
+    active: screens >= start && screens < end,
+    visible: screens >= start && screens < end + 0.4,
+    opacity: screens < start ? 0 : screens < start + 0.4 ? smooth((screens - start) / 0.4) : screens < end ? 1 : 1 - smooth((screens - end) / 0.4),
     entry: smooth((screens - start) / 0.8),
     introduction: 1 - smooth((screens - (start + 1.7)) / 0.6),
     scan: screens >= end - 0.6 ? 1 : clamp((screens - (start + 2.2)) / (end - start - 2.8)),

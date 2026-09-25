@@ -9,6 +9,17 @@ test('A05 follows the unchanged A04 endpoint and has a stable reading interval',
   assert.equal(guideProgress(20.2, 18, 25).scan, 0);
   assert.equal(guideProgress(24.4, 18, 25).scan, 1);
   assert.equal(guideProgress(25, 18, 25).handoff, 1);
+  assert.equal(guideProgress(25, 18, 25).active, false);
+  assert.equal(guideProgress(25, 18, 25).visible, true);
+});
+
+test('A05 and A06 have bounded lifetimes with only a short transition overlap', () => {
+  for (const p of [18, 20, 24.99]) assert.equal(guideProgress(p,18,25).active,true);
+  for (const p of [25, 28, 31.99]) assert.equal(guideProgress(p,25,32).active,true);
+  assert.equal(guideProgress(25.2,18,25).visible,true);
+  assert.equal(guideProgress(25.2,25,32).visible,true);
+  assert.equal(guideProgress(25.4,18,25).visible,false);
+  assert.equal(guideProgress(32,25,32).active,false);
 });
 
 test('the same scroll position restores the same viewing position in either direction', () => {

@@ -1,13 +1,17 @@
 import {guideProgress, horizontalPlacement, mapMuralProjection, muralTransfer} from './progress.mjs';
 
 export function createMuralGuide(stage, config, requestRender) {
-  const stylesheet = document.createElement('link');
-  stylesheet.rel = 'stylesheet';
-  stylesheet.href = new URL('./styles.css', import.meta.url).href;
-  document.head.append(stylesheet);
+  if (!document.querySelector('[data-mural-guide-styles]')) {
+    const stylesheet = document.createElement('link');
+    stylesheet.rel = 'stylesheet';
+    stylesheet.href = new URL('./styles.css', import.meta.url).href;
+    stylesheet.dataset.muralGuideStyles = '';
+    document.head.append(stylesheet);
+  }
 
   const section = document.createElement('section');
   section.className = 'mural-guide';
+  section.dataset.chapter = config.chapter;
   section.hidden = true;
   section.setAttribute('aria-label', `${config.title}壁画导读`);
   section.innerHTML = `
@@ -39,18 +43,21 @@ export function createMuralGuide(stage, config, requestRender) {
       requested = true;
       image.src = config.image;
     }
-    const transferring=screens>config.start-.6&&screens<config.start;
+    const transferring=config.entryMode==='model'&&screens>config.start-.6&&screens<config.start;
     if (!transferring && lastModelMuralOpacity !== 1) {
       stage.querySelector('iframe')?.contentWindow?.shuilongTemple?.setMuralTransferOpacity?.(config.muralId, 1);
       lastModelMuralOpacity = 1;
     }
-    section.hidden = !state.active&&!transferring;
+    section.hidden = !state.visible&&!transferring;
     section.inert = !state.active;
-    if (section.hidden) { stage.style.removeProperty('--a05-entry'); return; }
+    if (section.hidden) {
+      if (config.entryMode==='model') stage.style.removeProperty('--a05-entry');
+      return;
+    }
 
-    section.style.opacity = '1';
+    section.style.opacity = config.entryMode==='model' ? String(screens<config.start?1:Math.max(0,1-(screens-config.end)/.4)) : String(state.opacity);
     const textExit=Math.max(0,Math.min(1,(screens-(config.start-.6))/.6));
-    stage.style.setProperty('--a05-entry',textExit*textExit*(3-2*textExit));
+    if (config.entryMode==='model') stage.style.setProperty('--a05-entry',textExit*textExit*(3-2*textExit));
     section.style.setProperty('--transfer-background',transferring?Math.max(0,Math.min(1,(screens-(config.start-.28))/.28)):1);
     section.style.setProperty('--intro-opacity', state.introduction);
     const reveal = Math.max(0, Math.min(1, (screens - config.start - 0.4) / 0.4));
@@ -59,7 +66,7 @@ export function createMuralGuide(stage, config, requestRender) {
     section.style.setProperty('--handoff-opacity', state.handoff);
     section.dataset.scanProgress = state.scan.toFixed(4);
     section.dataset.phase = state.handoff > 0 ? 'handoff' : state.scan > 0 ? 'scan' : 'introduction';
-    document.body.dataset.phase = `a${config.chapter}-${section.dataset.phase}`;
+    if (state.active && state.opacity > 0) document.body.dataset.phase = `a${config.chapter}-${section.dataset.phase}`;
 
     if (image.naturalWidth && image.naturalHeight) {
       const formalHeight=innerHeight*(matchMedia('(prefers-reduced-motion: reduce)').matches?.7:innerWidth<=1100?.78:.8);

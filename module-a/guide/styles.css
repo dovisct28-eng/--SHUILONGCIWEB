@@ -15,3 +15,4 @@
 @media(prefers-reduced-motion:reduce){.mural-guide__image{height:70vh;will-change:auto}}
 .stage:has(.mural-guide:not([hidden])) .a04{opacity:calc(1 - var(--a05-entry))!important}
 .stage:has(.a04:not([hidden])) .model-shell{opacity:calc(var(--model-opacity) * var(--a04-model-opacity,1))}
+.stage:has(.mural-guide[data-chapter="06"]:not([hidden])) .model-shell,.stage:has(.mural-guide[data-chapter="07"]:not([hidden])) .model-shell{opacity:0!important}
