@@ -6,6 +6,7 @@ import { createA03View } from '../a03/view.mjs';
 import { createMuralGuide } from '../guide/controller.mjs';
 import { a05Guide } from '../a05/content.mjs';
 import { a06Guide } from '../a06/content.mjs';
+import { a07Guide } from '../a07/content.mjs';
 
 const story = document.querySelector('[data-story]');
 const stage = document.querySelector('[data-stage]');
@@ -14,20 +15,22 @@ const debug = document.querySelector('[data-debug]');
 const debugEnabled = new URLSearchParams(location.search).has('debug');
 let framePending = false;
 let modelProgress = -1;
+let lastScreens = 0;
 const a02 = document.querySelector('[data-a02]');
 const a02Description = document.querySelector('[data-a02-description]');
 const a02Status = document.querySelector('[data-a02-status]');
 const a02Hint = document.querySelector('[data-a02-hint]');
-story.style.height = `3300vh`;
+story.style.height = `4100vh`;
 const renderA04 = createA04Controller(stage, modelFrame, requestRender);
 const renderA05 = createMuralGuide(stage, a05Guide, requestRender);
 const renderA06 = createMuralGuide(stage, a06Guide, requestRender);
+const renderA07 = createMuralGuide(stage, a07Guide, requestRender);
 const renderA03 = createA03View(stage);
 const a03Styles = document.createElement('link');
 a03Styles.rel = 'stylesheet';
 a03Styles.href = new URL('../a03/styles.css', import.meta.url).href;
 document.head.append(a03Styles);
-document.title = '水龙祠｜A01–A06 空间与壁画叙事';
+document.title = '水龙祠｜A01–A07 空间与壁画叙事';
 
 debug.hidden = !debugEnabled;
 
@@ -93,9 +96,11 @@ function render() {
     secondaryVisibility: theme.secondary,
   });
   const screens = Math.max(0, -bounds.top) / innerHeight;
+  lastScreens = screens;
   renderA04(screens);
   renderA05(screens);
   renderA06(screens);
+  renderA07(screens);
   if (debugEnabled) {
     debug.textContent = `${phase} · A01 ${(state.animation * 100).toFixed(1)}% · A02 ${(spatial.progress * 100).toFixed(1)}% · A03 ${(theme.progress * 100).toFixed(1)}%`;
   }
@@ -108,11 +113,8 @@ function requestRender() {
 }
 
 addEventListener('scroll', requestRender, { passive: true });
-let previousViewportHeight=innerHeight;
 addEventListener('resize', () => {
-  const screens=scrollY/previousViewportHeight;
-  previousViewportHeight=innerHeight;
-  scrollTo(0,screens*innerHeight);
+  scrollTo(0,lastScreens*innerHeight);
   requestRender();
 });
 modelFrame.addEventListener('load', () => { modelProgress = -1; requestRender(); });

@@ -1,0 +1,26 @@
+{
+  "isolated": true,
+  "restored": true,
+  "murals": {
+    "mural-01": [
+      1,
+      1
+    ],
+    "mural-02": [
+      1,
+      1
+    ],
+    "mural-03": [
+      1,
+      1
+    ],
+    "mural-04": [
+      1,
+      1
+    ],
+    "mural-05": [
+      0.2,
+      0.2
+    ]
+  }
+}

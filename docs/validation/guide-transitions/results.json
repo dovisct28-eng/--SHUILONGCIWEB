@@ -1,0 +1,22 @@
+{
+  "rapidReverseResize": true,
+  "requests": {
+    "01": 1,
+    "02": 1,
+    "05": 2
+  },
+  "detailRequests": 0,
+  "reducedMotion": true,
+  "failure01": true,
+  "failure02": true,
+  "modelFailure01GuideWorks": true,
+  "modelFailure02GuideWorks": true,
+  "cache01": {
+    "contexts": 2,
+    "transferBytes": 1351448
+  },
+  "cache02": {
+    "contexts": 2,
+    "transferBytes": 3552914
+  }
+}

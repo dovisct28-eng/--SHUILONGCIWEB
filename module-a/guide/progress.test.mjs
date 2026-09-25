@@ -22,6 +22,17 @@ test('A05 and A06 have bounded lifetimes with only a short transition overlap', 
   assert.equal(guideProgress(32,25,32).active,false);
 });
 
+test('A07 follows A06 and remains at the left edge through the story end', () => {
+  assert.equal(guideProgress(31.99,25,32).active,true);
+  assert.equal(guideProgress(32,25,32).active,false);
+  assert.equal(guideProgress(32.2,25,32).visible,true);
+  assert.equal(guideProgress(32.2,32,40).visible,true);
+  assert.equal(guideProgress(32.4,25,32).visible,false);
+  for (const p of [32,34,39.99]) assert.equal(guideProgress(p,32,40).active,true);
+  assert.equal(guideProgress(39.4,32,40).scan,1);
+  assert.equal(guideProgress(40,32,40).scan,1);
+});
+
 test('the same scroll position restores the same viewing position in either direction', () => {
   for (const screens of [20.2, 21.1, 22.3, 23.8, 24.4]) {
     const progress = guideProgress(screens, 18, 25).scan;

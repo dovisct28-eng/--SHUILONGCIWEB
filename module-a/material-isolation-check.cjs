@@ -1,5 +1,7 @@
 const {chromium} = require('playwright');
 const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
 
 (async () => {
   const browser = await chromium.launch({channel:'chrome', headless:true});
@@ -24,6 +26,9 @@ const assert = require('node:assert/strict');
     assert.deepEqual(restored, before);
     const uuids = Object.values(before).flat().map(item => item.uuid);
     assert.equal(new Set(uuids).size, uuids.length, 'mural materials have separate identities');
+    const output=path.resolve(__dirname,'../docs/validation/material-isolation');
+    fs.mkdirSync(output,{recursive:true});
+    fs.writeFileSync(path.join(output,'results.json'),JSON.stringify({isolated:true,restored:true,murals:Object.fromEntries(Object.entries(faded).map(([id,items])=>[id,items.map(item=>item.opacity)]))},null,2));
     console.log('mural material isolation: passed');
   } finally { await browser.close(); }
 })().catch(error => { console.error(error); process.exitCode = 1; });
