@@ -4,7 +4,7 @@ try{
  const page=await browser.newPage({viewport:{width:1440,height:900}});
  let release;const gate=new Promise(r=>release=r);
  await page.route('**/a04-scene.mjs',async route=>{await gate;await route.continue();});
- await page.goto('http://127.0.0.1:4173/module-a/a01/',{waitUntil:'domcontentloaded'});
+ await page.goto('http://127.0.0.1:4175/module-a/a01/',{waitUntil:'domcontentloaded'});
  await page.evaluate(()=>scrollTo(0,14.5*innerHeight));await page.waitForTimeout(500);
  assert.equal(await page.locator('.a04 [data-title]').textContent(),'正在准备空间模型');
  release();await page.waitForFunction(()=>document.querySelector('iframe').contentWindow.modelReady);await page.waitForFunction(()=>document.body.dataset.a04Mode==='playing');report.delayedModel=true;
@@ -14,8 +14,8 @@ try{
  const guide=await page.evaluate(()=>{const win=document.querySelector('iframe').contentWindow,doc=win.document,state=win.shuilongTemple.getA04State();return {state,projection:win.shuilongTemple.getMuralProjection('mural-05'),labels:[...doc.querySelectorAll('.mural-label')].filter(el=>!el.hidden&&getComputedStyle(el).display!=='none').map(el=>({text:el.textContent,opacity:Number(el.style.opacity)})),duplicateStart:[...doc.querySelectorAll('span')].filter(el=>el.textContent==='01 · 出发'&&el.style.display==='block').length};});
  assert.equal(guide.state.nextGuideMuralId,'mural-05');assert.notDeepEqual(guide.state.camera,guide.state.overviewCamera);assert.ok(guide.projection.width>0);assert.ok(guide.state.routeOpacity<.4);assert.equal(guide.duplicateStart,0);assert.ok(guide.labels.some(el=>el.text.includes('第五幅')&&el.opacity>.9));report.guideStart={projection:guide.projection,routeOpacity:guide.state.routeOpacity,duplicateStart:guide.duplicateStart,labels:guide.labels};
  await page.close();
- const failed=await browser.newPage();await failed.route('**/a04-scene.mjs',route=>route.abort());await failed.goto('http://127.0.0.1:4173/module-a/a01/');await failed.evaluate(()=>scrollTo(0,14.5*innerHeight));
+ const failed=await browser.newPage();await failed.route('**/a04-scene.mjs',route=>route.abort());await failed.goto('http://127.0.0.1:4175/module-a/a01/');await failed.evaluate(()=>scrollTo(0,14.5*innerHeight));
  await failed.waitForFunction(()=>document.querySelector('.a04 [data-description]').textContent.includes('模型未能就绪'),null,{timeout:16000});
  assert.equal(await failed.locator('.a04 button:visible').count(),0);assert.notEqual(await failed.evaluate(()=>document.body.dataset.a04Mode),'completed');report.failedModelFallback=true;await failed.close();
- fs.mkdirSync(path.resolve(__dirname,'../../docs/validation/a04-handoff'),{recursive:true});fs.writeFileSync(path.resolve(__dirname,'../../docs/validation/a04-handoff/resilience.json'),JSON.stringify(report,null,2));console.log('PASS: delayed model, failed model, resize, guide route and labels');
+ fs.mkdirSync(path.resolve(__dirname,'../../docs/validation/a04-final'),{recursive:true});fs.writeFileSync(path.resolve(__dirname,'../../docs/validation/a04-final/resilience.json'),JSON.stringify(report,null,2));console.log('PASS: delayed model, failed model, resize, guide route and labels');
 }finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1;});

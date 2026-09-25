@@ -3,7 +3,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 
-const output = path.resolve(__dirname,'../../docs/validation/a07');
+const output = path.resolve(__dirname,'../../docs/validation/a04-final/a07-regression');
 fs.mkdirSync(output,{recursive:true});
 const scroll=async(page,screens)=>{await page.evaluate(v=>scrollTo(0,v*innerHeight),screens);await page.waitForTimeout(160);};
 const state=page=>page.evaluate(()=>[...document.querySelectorAll('.mural-guide')].map(g=>{const image=g.querySelector('img'),r=image.getBoundingClientRect();return {chapter:g.dataset.chapter,hidden:g.hidden,opacity:Number(getComputedStyle(g).opacity),scan:Number(g.dataset.scanProgress),travel:Number(g.dataset.travelPx),offset:Number(g.dataset.offsetPx),left:r.left,right:r.right,width:r.width,loaded:image.naturalWidth>0,status:g.querySelector('.mural-guide__status').textContent};}));

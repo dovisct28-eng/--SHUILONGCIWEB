@@ -26,7 +26,7 @@ const path = require('node:path');
     assert.deepEqual(restored, before);
     const uuids = Object.values(before).flat().map(item => item.uuid);
     assert.equal(new Set(uuids).size, uuids.length, 'mural materials have separate identities');
-    const output=path.resolve(__dirname,'../docs/validation/material-isolation');
+    const output=path.resolve(__dirname,'../docs/validation/a04-final/material-isolation');
     fs.mkdirSync(output,{recursive:true});
     fs.writeFileSync(path.join(output,'results.json'),JSON.stringify({isolated:true,restored:true,murals:Object.fromEntries(Object.entries(faded).map(([id,items])=>[id,items.map(item=>item.opacity)]))},null,2));
     console.log('mural material isolation: passed');

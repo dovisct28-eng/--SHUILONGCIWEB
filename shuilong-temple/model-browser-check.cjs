@@ -4,11 +4,11 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { pathToFileURL } = require('node:url');
 
-const output = path.resolve(__dirname, '../docs/validation/model-structure');
+const output = path.resolve(__dirname, '../docs/validation/a04-final/model-structure');
 fs.mkdirSync(output, { recursive: true });
-const url = 'http://127.0.0.1:4173/module-a/a01/';
+const url = 'http://127.0.0.1:4175/module-a/a01/';
 (async () => {
-  const browser = await chromium.launch({ channel: 'chrome', headless: true });
+  const browser = await chromium.launch({ channel: 'chrome', headless: true, args: ['--allow-file-access-from-files'] });
   const results = [], errors = [];
   try {
     for (const [width, height] of [[1440, 900], [1024, 768]]) {
@@ -52,7 +52,7 @@ const url = 'http://127.0.0.1:4173/module-a/a01/';
     }
     const direct = await browser.newPage();
     direct.on('pageerror', error => errors.push(error.message));
-    await direct.goto('http://127.0.0.1:4173/shuilong-temple/水龙祠-交互预览.html?clean&controlled');
+    await direct.goto('http://127.0.0.1:4175/shuilong-temple/水龙祠-交互预览.html?clean&controlled');
     await direct.waitForFunction(() => window.modelReady);
     assert.equal(await direct.evaluate(() => window.shuilongTemple.getMurals().length), 5);
     results.push({ directPreview: true });

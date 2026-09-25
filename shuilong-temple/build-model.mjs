@@ -84,7 +84,9 @@ for (const group of groups) {
     const normal = accessor(new Float32Array(batch.normals), 'VEC3', 5126, 34962);
     const indices = accessor(new Uint32Array(batch.indices), 'SCALAR', 5125, 34963);
     triangles += batch.indices.length / 3;
-    primitives.push({ attributes: { POSITION: position, NORMAL: normal }, indices, material: palette.get(key), mode: 4 });
+    const color = key.split(':')[0];
+    const role = group.userData.mural ? color === '668f8c' ? 'placeholder' : color === 'cda85d' ? 'border' : null : null;
+    primitives.push({ attributes: { POSITION: position, NORMAL: normal }, indices, material: palette.get(key), mode: 4, ...(role ? { extras: { role } } : {}) });
   }
   const meshIndex = gltf.meshes.length;
   gltf.meshes.push({ primitives });

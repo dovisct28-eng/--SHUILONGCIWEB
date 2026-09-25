@@ -7,6 +7,7 @@ import { createMuralGuide } from '../guide/controller.mjs';
 import { a05Guide } from '../a05/content.mjs';
 import { a06Guide } from '../a06/content.mjs';
 import { a07Guide } from '../a07/content.mjs';
+import { createA08Controller } from '../a08/controller.mjs';
 
 const story = document.querySelector('[data-story]');
 const stage = document.querySelector('[data-stage]');
@@ -20,17 +21,18 @@ const a02 = document.querySelector('[data-a02]');
 const a02Description = document.querySelector('[data-a02-description]');
 const a02Status = document.querySelector('[data-a02-status]');
 const a02Hint = document.querySelector('[data-a02-hint]');
-story.style.height = `4100vh`;
+story.style.height = `4300vh`;
 const renderA04 = createA04Controller(stage, modelFrame, requestRender);
 const renderA05 = createMuralGuide(stage, a05Guide, requestRender);
 const renderA06 = createMuralGuide(stage, a06Guide, requestRender);
 const renderA07 = createMuralGuide(stage, a07Guide, requestRender);
+const renderA08 = createA08Controller(stage);
 const renderA03 = createA03View(stage);
 const a03Styles = document.createElement('link');
 a03Styles.rel = 'stylesheet';
 a03Styles.href = new URL('../a03/styles.css', import.meta.url).href;
 document.head.append(a03Styles);
-document.title = '水龙祠｜A01–A07 空间与壁画叙事';
+document.title = '水龙祠｜A01–A08 空间与壁画叙事';
 
 debug.hidden = !debugEnabled;
 
@@ -101,6 +103,7 @@ function render() {
   renderA05(screens);
   renderA06(screens);
   renderA07(screens);
+  renderA08(screens);
   if (debugEnabled) {
     debug.textContent = `${phase} · A01 ${(state.animation * 100).toFixed(1)}% · A02 ${(spatial.progress * 100).toFixed(1)}% · A03 ${(theme.progress * 100).toFixed(1)}%`;
   }

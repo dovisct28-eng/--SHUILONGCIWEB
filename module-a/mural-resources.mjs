@@ -8,9 +8,16 @@ export const MURAL_RESOURCES = Object.freeze({
   'mural-05': Object.freeze({ id: 'mural-05', label: '第五幅', display: display('mural-05'), detail: null }),
 });
 
-export function fitMuralImage(mural, aspectRatio) {
+// Model display limits are visual bounds in the prototype, separate from wall locations.
+export const MODEL_DISPLAY_BOUNDS = Object.freeze({
+  'mural-01': Object.freeze({ maxWidth: 4.0, maxHeight: 2.2 }),
+  'mural-02': Object.freeze({ maxWidth: 6.1, maxHeight: 2.35 }),
+  'mural-05': Object.freeze({ maxWidth: 6.1, maxHeight: 2.35 }),
+});
+
+export function fitMuralImage(mural, aspectRatio, bounds = mural) {
   const ratio = Number(aspectRatio);
   if (!(ratio > 0) || !Number.isFinite(ratio)) throw new TypeError('Mural image aspect ratio must be positive');
-  const height = Math.min(mural.height, mural.width / ratio);
+  const height = Math.min(bounds.maxHeight ?? bounds.height, (bounds.maxWidth ?? bounds.width) / ratio);
   return { width: height * ratio, height };
 }

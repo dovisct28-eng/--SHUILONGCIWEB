@@ -39,6 +39,7 @@ export function createMuralGuide(stage, config, requestRender) {
 
   return screens => {
     const state = guideProgress(screens, config.start, config.end);
+    const carried = config.chapter === '07' && screens >= config.end && screens <= 42.1;
     if (!requested && screens >= config.start - 2) {
       requested = true;
       image.src = config.image;
@@ -48,22 +49,22 @@ export function createMuralGuide(stage, config, requestRender) {
       stage.querySelector('iframe')?.contentWindow?.shuilongTemple?.setMuralTransferOpacity?.(config.muralId, 1);
       lastModelMuralOpacity = 1;
     }
-    section.hidden = !state.visible&&!transferring;
-    section.inert = !state.active;
+    section.hidden = !state.visible&&!transferring&&!carried;
+    section.inert = !state.active || carried;
     if (section.hidden) {
       if (config.entryMode==='model') stage.style.removeProperty('--a05-entry');
       return;
     }
 
-    section.style.opacity = config.entryMode==='model' ? String(screens<config.start?1:Math.max(0,1-(screens-config.end)/.4)) : String(state.opacity);
+    section.style.opacity = carried ? '1' : config.entryMode==='model' ? String(screens<config.start?1:Math.max(0,1-(screens-config.end)/.4)) : String(state.opacity);
     const textExit=Math.max(0,Math.min(1,(screens-(config.start-.6))/.6));
     if (config.entryMode==='model') stage.style.setProperty('--a05-entry',textExit*textExit*(3-2*textExit));
     section.style.setProperty('--transfer-background',transferring?Math.max(0,Math.min(1,(screens-(config.start-.28))/.28)):1);
-    section.style.setProperty('--intro-opacity', state.introduction);
+    section.style.setProperty('--intro-opacity', carried || transferring ? 0 : state.introduction * state.entry);
     const reveal = Math.max(0, Math.min(1, (screens - config.start - 0.4) / 0.4));
     section.style.setProperty('--intro-entrance', state.introduction * reveal * reveal * (3 - 2 * reveal));
-    section.style.setProperty('--scan-opacity', 1 - state.introduction);
-    section.style.setProperty('--handoff-opacity', state.handoff);
+    section.style.setProperty('--scan-opacity', carried ? 0 : 1 - state.introduction);
+    section.style.setProperty('--handoff-opacity', carried ? 0 : state.handoff);
     section.dataset.scanProgress = state.scan.toFixed(4);
     section.dataset.phase = state.handoff > 0 ? 'handoff' : state.scan > 0 ? 'scan' : 'introduction';
     if (state.active && state.opacity > 0) document.body.dataset.phase = `a${config.chapter}-${section.dataset.phase}`;
@@ -88,7 +89,7 @@ export function createMuralGuide(stage, config, requestRender) {
       section.style.setProperty('--transfer-background','1');
       image.style.height=`${formalHeight}px`;image.style.top='50%';image.style.left='0px';image.style.opacity='1';
       const renderedWidth = formalHeight * image.naturalWidth / image.naturalHeight;
-      const {x, travel} = horizontalPlacement(renderedWidth, stage.clientWidth, state.scan);
+      const {x, travel} = horizontalPlacement(renderedWidth, stage.clientWidth, carried ? 1 : state.scan);
       image.style.width = `${renderedWidth}px`;
       image.style.transform = `translate3d(${x}px, -50%, 0)`;
       section.dataset.travelPx = travel.toFixed(2);

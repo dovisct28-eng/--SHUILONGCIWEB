@@ -1,0 +1,79 @@
+{
+  "results": [
+    {
+      "viewport": "1440x900",
+      "states": [
+        {
+          "name": "a01",
+          "phase": "reading",
+          "triangles": 85301
+        },
+        {
+          "name": "a02",
+          "phase": "a02-reading",
+          "triangles": 92501
+        },
+        {
+          "name": "a03",
+          "phase": "a03-reading",
+          "triangles": 92501
+        },
+        {
+          "name": "a04",
+          "phase": "a04-playing",
+          "triangles": 92443
+        },
+        {
+          "name": "first-mural",
+          "title": "02 / 第一幅",
+          "camera": {
+            "position": [
+              2.6,
+              6.8,
+              4.8
+            ],
+            "target": [
+              4.865,
+              1.55,
+              4.8
+            ]
+          }
+        }
+      ],
+      "singleModelLoad": true
+    },
+    {
+      "viewport": "1024x768",
+      "states": [
+        {
+          "name": "a01",
+          "phase": "reading",
+          "triangles": 85301
+        },
+        {
+          "name": "a02",
+          "phase": "a02-reading",
+          "triangles": 92501
+        },
+        {
+          "name": "a03",
+          "phase": "a03-reading",
+          "triangles": 92501
+        },
+        {
+          "name": "a04",
+          "phase": "a04-playing",
+          "triangles": 92443
+        }
+      ],
+      "singleModelLoad": true
+    },
+    {
+      "directPreview": true
+    },
+    {
+      "offlineFilePreview": true
+    }
+  ],
+  "errors": []
+}

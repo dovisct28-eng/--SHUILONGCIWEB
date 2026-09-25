@@ -1,8 +1,8 @@
 const {chromium}=require('playwright');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');const path=require('node:path');
-const output=path.resolve(__dirname,'../../docs/validation/a04-handoff');fs.mkdirSync(output,{recursive:true});
-const muralOutput=path.resolve(__dirname,'../../docs/validation/mural-textures');fs.mkdirSync(muralOutput,{recursive:true});
+const output=path.resolve(__dirname,'../../docs/validation/a04-final');fs.mkdirSync(output,{recursive:true});
+const muralOutput=path.resolve(__dirname,'../../docs/validation/a04-final/mural-textures');fs.mkdirSync(muralOutput,{recursive:true});
 
 (async()=>{
   const browser=await chromium.launch({channel:'chrome',headless:true});
@@ -11,7 +11,7 @@ const muralOutput=path.resolve(__dirname,'../../docs/validation/mural-textures')
     for(const [width,height] of [[1920,1080],[1440,900],[1366,768],[1024,768]]){
       const page=await browser.newPage({viewport:{width,height}});
       page.on('pageerror',e=>errors.push(e.message));
-      await page.goto('http://127.0.0.1:4173/module-a/a01/');
+      await page.goto('http://127.0.0.1:4175/module-a/a01/');
       await page.waitForFunction(()=>document.querySelector('iframe').contentWindow.modelReady);
       const seek=async n=>{await page.evaluate(n=>scrollTo(0,n*innerHeight),n);await page.waitForTimeout(100);if(n>=16&&n<=18){const expected=n<=17.65?1:(()=>{const t=Math.max(0,Math.min(1,(n-17.65)/.35));return 1-t*t*(3-2*t)})();await page.waitForFunction(expected=>Math.abs(Number(getComputedStyle(document.querySelector('.model-shell')).opacity)-expected)<.02,expected,{timeout:3000});}};
       await seek(14.5);await page.getByRole('button',{name:'跳过动画'}).click();
@@ -55,7 +55,7 @@ const muralOutput=path.resolve(__dirname,'../../docs/validation/mural-textures')
       await page.close();
     }
     const reduced=await browser.newPage({viewport:{width:1024,height:768},reducedMotion:'reduce'});
-    await reduced.goto('http://127.0.0.1:4173/module-a/a01/');
+    await reduced.goto('http://127.0.0.1:4175/module-a/a01/');
     await reduced.waitForFunction(()=>document.querySelector('iframe').contentWindow.modelReady);
     const positions=[];
     for(const n of [16,17,17.6,18]){await reduced.evaluate(n=>scrollTo(0,n*innerHeight),n);await reduced.waitForTimeout(100);positions.push(await reduced.evaluate(()=>document.querySelector('iframe').contentWindow.shuilongTemple.getA04State().camera.position));}
