@@ -2,7 +2,8 @@
 function makeTemple(T){
  const root=new T.Group(); root.name='ShuilongTemple';
  const mats={};
- for(const [name,color] of Object.entries({stone:0xb6afa0,wall:0xd6cebb,trim:0xbfb49f,wood:0x594333,door:0x73543d,tile:0x424d54,tileDetail:0x58636b,ridge:0x77796f,metal:0x302c25,paving:0xcac2b1})) mats[name]=new T.MeshStandardMaterial({color,roughness:.91});
+ const colors={stone:0xaaa59a,wall:0xbcb09a,plaster:0xb7ac98,brick:0x805845,trim:0xa99e8a,wood:0x332923,door:0x26211e,tile:0x514b45,tileDetail:0x62574d,ridge:0x625b53,metal:0x302c25,paving:0x898375};
+ for(const [name,color] of Object.entries(colors)){mats[name]=new T.MeshStandardMaterial({color,roughness:name==='metal'?.8:.96});mats[name].userData.texture=name==='brick'?'brick':name==='wood'||name==='door'?'wood':name==='tile'||name==='tileDetail'||name==='ridge'?'roof':name==='stone'?'stone':name==='paving'?'paving':name==='metal'?null:'plaster';}
  let group=root;
  function part(name){group=new T.Group();group.name=name;root.add(group);}
  function mesh(g,m,x=0,y=0,z=0){const o=new T.Mesh(g,mats[m]);o.position.set(x,y,z);o.castShadow=true;o.receiveShadow=true;group.add(o);return o;}
@@ -24,8 +25,7 @@ function makeTemple(T){
   for(let sx of [-1,1])for(let sz of [-1,1]){let ps=[];for(let i=0;i<=10;i++){let f=i/10;ps.push(pt(sx*(.66+.34*f),sz*f,.05));}line(ps,.065,'ridge');}
  }
  part('01_Base');box(0,-.3,-1.75,11.8,.6,29.5,'stone');box(0,.035,-1.75,11.45,.07,29.15,'paving');
- // Courtyard paving joints: shallow geometry, no external texture assets.
- for(let z=-9.5;z<10;z+=.65){box(0,.078,z,7,.008,.017,'stone');for(let x=-3.5;x<3.5;x+=1.2)box(x+(Math.round(z/.65)%2)*.6,.078,z+.325,.015,.009,.65,'stone');}
+ // Paving joints are carried by the repeating material, not one mesh per paver.
  part('02_Enclosure');
  for(let s of [-1,1]){box(s*5,1.4,-1.75,.22,2.8,27.5,'wall');box(s*5,2.82,-1.75,.32,.12,27.5,'trim');
   // Sparse, paired pilasters leave the mural spans (-14.5..-9 and 3.2..6.4) unobstructed.
@@ -34,7 +34,14 @@ function makeTemple(T){
  part('03_MainHall');box(0,.25,-11.75,9.75,.5,7.2,'stone');
  for(let k=0;k<3;k++)box(0,.08+k*.095,-7.75-k*.25,6.8,.16+k*.19,.5,'stone');
  box(0,1.9,-15,9.4,2.9,.2,'wall');
- for(let s of [-1,1])box(s*4.65,1.9,-11.75,.22,2.9,6.6,'wall');
+ // Each side wall has brick above the mural plaster and a low weathered brick foot.
+ // The plaster is almost flush with the brick, leaving no visible picture backing.
+ for(let s of [-1,1]){
+  const x=s*4.65;
+  box(x,3.025,-11.75,.22,.65,6.6,'brick');
+  box(x,1.85,-11.75,.22,1.7,6.6,'plaster');
+  box(x,.69,-11.75,.22,.62,6.6,'brick');
+ }
  // Front colonnade remains; rear mural wall has no columns or wood panels.
  for(const x of [-3.6,0,3.6])col(x,-8.35,1.92,2.9);
  box(0,3.18,-8.35,9.5,.26,.23,'wood');roof(0,-11.55,10.65,8.15,3.35,1.85);
@@ -51,25 +58,27 @@ function makeTemple(T){
  // Three genuine arched openings are assembled from piers and arch spandrels.
  const doors=[[-3.25,.62,1.42],[0,.76,1.68],[3.25,.62,1.42]],wallZ=11.93,top=2.85;
  let edge=-5.12;
- for(let [cx,r,spring] of doors){let l=cx-r;box((edge+l)/2,top/2,wallZ,l-edge,top,.34,'wall');edge=cx+r;
+ for(let [cx,r,spring] of doors){let l=cx-r;box((edge+l)/2,top/2,wallZ,l-edge,top,.46,'brick');edge=cx+r;
   const verts=[],inds=[],n=18;for(let i=0;i<=n;i++){let x=-r+2*r*i/n,y=spring+Math.sqrt(Math.max(0,r*r-x*x));verts.push(cx+x,y,wallZ+.17,cx+x,top,wallZ+.17,cx+x,y,wallZ-.17,cx+x,top,wallZ-.17);if(i<n){let a=i*4;inds.push(a,a+4,a+1,a+1,a+4,a+5,a+2,a+3,a+6,a+3,a+7,a+6,a,a+2,a+4,a+2,a+6,a+4);}}
-  let geo=new T.BufferGeometry();geo.setAttribute('position',new T.Float32BufferAttribute(verts,3));geo.setIndex(inds);geo.computeVertexNormals();mesh(geo,'wall');
-  let shape=new T.Shape();shape.moveTo(-r,0);shape.lineTo(r,0);shape.lineTo(r,spring);shape.absarc(0,spring,r,0,Math.PI,false);shape.closePath();mesh(new T.ShapeGeometry(shape,18),'door',cx,.045,wallZ+.01);
-  for(let dx=-r+.12;dx<r;dx+=.17){let h=spring+Math.sqrt(r*r-dx*dx);box(cx+dx,h/2+.045,wallZ+.022,.018,h,.022,'wood');}
-  let arch=[];for(let i=0;i<=20;i++){let a=i/20*Math.PI;arch.push([cx+(r+.14)*Math.cos(a),spring+(r+.14)*Math.sin(a),wallZ+.23]);}line(arch,.095,'trim');
-  for(let s of [-1,1])box(cx+s*(r+.11),spring/2,wallZ+.23,.15,spring,.16,'trim');
+  let geo=new T.BufferGeometry();geo.setAttribute('position',new T.Float32BufferAttribute(verts,3));geo.setIndex(inds);geo.computeVertexNormals();mesh(geo,'brick');
+  box(cx,spring/2,wallZ+.07,2*r,spring,.07,'door');
+  for(let dx=-r+.12;dx<r;dx+=.17)box(cx+dx,spring/2,wallZ+.115,.018,spring,.018,'wood');
+  let infill=new T.Shape();infill.moveTo(-r,spring);infill.lineTo(r,spring);infill.absarc(0,spring,r,0,Math.PI,false);infill.closePath();mesh(new T.ShapeGeometry(infill,18),'brick',cx,0,wallZ+.19);
+  box(cx,spring,wallZ+.24,2*r+.12,.13,.2,'wood');
+  let arch=[];for(let i=0;i<=20;i++){let a=i/20*Math.PI;arch.push([cx+(r+.13)*Math.cos(a),spring+(r+.13)*Math.sin(a),wallZ+.27]);}line(arch,.105,'brick');
+  for(let s of [-1,1])box(cx+s*(r+.11),spring/2,wallZ+.27,.2,spring,.25,'brick');
   box(cx,.065,wallZ+.2,2*r+.2,.13,.65,'stone');for(let s of [-1,1])mesh(new T.TorusGeometry(.047,.014,5,10),'metal',cx+s*.1,.95,wallZ+.06);
  }
- box((edge+5.12)/2,top/2,wallZ,5.12-edge,top,.34,'wall');box(0,2.86,wallZ,10.5,.18,.52,'trim');
- for(let x of [-5.05,-1.67,1.67,5.05]){box(x,1.4,12.13,.19,2.8,.13,'trim');for(let y=.12;y<2.8;y+=.29)box(x,y,12.17,.3,.13,.12,'stone');}
+ box((edge+5.12)/2,top/2,wallZ,5.12-edge,top,.46,'brick');box(0,2.86,wallZ,10.5,.18,.52,'brick');
+ for(let x of [-5.05,-1.67,1.67,5.05])box(x,1.4,12.17,.25,2.8,.3,'brick');
  for(let x of [-5.08,5.08]){box(x,3,wallZ,.28,.2,.3,'stone');mesh(new T.SphereGeometry(.14,10,8),'trim',x,3.2,wallZ);}
  // Mural placeholders on inner wall faces. +Z is the entrance; -Z the hall.
  const murals=[
- {id:'mural-01',label:'第一幅',wall:'右侧廊内墙，越过戏台朝向主殿的一端',position:[4.865,1.55,4.8],width:3.2,height:1.75,side:true},
- {id:'mural-02',label:'第二幅',wall:'主殿右侧内墙',position:[4.52,1.85,-11.75],width:5.5,height:2,side:true},
+ {id:'mural-01',label:'第一幅',wall:'右侧廊内墙，越过戏台朝向主殿的一端',position:[4.865,1.55,4.8],width:3.65,height:1.2547,side:true},
+ {id:'mural-02',label:'第二幅',wall:'主殿右侧内墙',position:[4.515,1.85,-11.75],width:6.1,height:1.3796,side:true},
  {id:'mural-03',label:'第三幅',wall:'主殿后墙右侧',position:[2.25,1.85,-14.865],width:3.35,height:2,side:false},
  {id:'mural-04',label:'第四幅',wall:'主殿后墙左侧',position:[-2.25,1.85,-14.865],width:3.35,height:2,side:false},
- {id:'mural-05',label:'第五幅',wall:'主殿左侧内墙',position:[-4.52,1.85,-11.75],width:5.5,height:2,side:true}
+ {id:'mural-05',label:'第五幅',wall:'主殿左侧内墙',position:[-4.515,1.85,-11.75],width:6.1,height:1.64395,side:true}
  ];
  mats.mural=new T.MeshStandardMaterial({color:0x668f8c,roughness:1});
  mats.muralBorder=new T.MeshStandardMaterial({color:0xcda85d,roughness:.8});

@@ -34,17 +34,18 @@ test('display plane dimensions preserve image ratio and fit entirely within mura
   assert.throws(() => fitMuralImage(locations[0], 0), TypeError);
 });
 
-test('model display limits can enlarge images without changing location metadata', () => {
+test('photo-calibrated display planes fill their designed plaster spans without stretching', () => {
   for (const id of ['mural-01', 'mural-02', 'mural-05']) {
     const mural = locations.find(entry => entry.id === id);
-    const ratio = { 'mural-01': 2.91, 'mural-02': 4.42, 'mural-05': 3.71 }[id];
-    const original = fitMuralImage(mural, ratio);
-    const enlarged = fitMuralImage(mural, ratio, MODEL_DISPLAY_BOUNDS[id]);
-    assert.ok(enlarged.width > original.width);
-    assert.ok(enlarged.width <= MODEL_DISPLAY_BOUNDS[id].maxWidth);
-    assert.ok(enlarged.height <= MODEL_DISPLAY_BOUNDS[id].maxHeight);
-    assert.ok(Math.abs(enlarged.width / enlarged.height - ratio) < 1e-10);
+    const [imageWidth, imageHeight] = { 'mural-01': [2880, 990], 'mural-02': [6000, 1357], 'mural-05': [6000, 1617] }[id];
+    const ratio = imageWidth / imageHeight;
+    const fitted = fitMuralImage(mural, ratio, MODEL_DISPLAY_BOUNDS[id]);
+    assert.ok(Math.abs(fitted.width / fitted.height - ratio) < 1e-10);
+    assert.ok(Math.abs(fitted.width - mural.width) < .001);
+    assert.ok(Math.abs(fitted.height - mural.height) < .001);
+    assert.ok(fitted.width <= MODEL_DISPLAY_BOUNDS[id].maxWidth);
   }
+  assert.ok(locations[0].width < 19.4 / 4, 'first mural leaves substantial corridor wall on both sides');
 });
 
 test('iframe mural projections map through the scaled model frame into stage coordinates', () => {
@@ -64,5 +65,6 @@ test('the model runtime uses the shared display mapping and keeps image textures
   assert.match(runtime, /new T\.TextureLoader\(\)/);
   assert.match(runtime, /group\.userData\.mural=node\.extras\?\.mural/);
   assert.match(runtime, /syncMuralTextures\(\);resolve\(false\)/);
-  assert.doesNotMatch(builder, /display\.webp|TextureLoader|images:/);
+  assert.doesNotMatch(builder, /display\.webp|TextureLoader/);
+  assert.match(builder, /images: \[\]/);
 });

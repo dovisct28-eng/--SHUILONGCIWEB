@@ -8,11 +8,11 @@ export const MURAL_RESOURCES = Object.freeze({
   'mural-05': Object.freeze({ id: 'mural-05', label: '第五幅', display: display('mural-05'), detail: null }),
 });
 
-// Model display limits are visual bounds in the prototype, separate from wall locations.
+// Photo-calibrated design wall spans; these are not measured site dimensions.
 export const MODEL_DISPLAY_BOUNDS = Object.freeze({
-  'mural-01': Object.freeze({ maxWidth: 4.0, maxHeight: 2.2 }),
-  'mural-02': Object.freeze({ maxWidth: 6.1, maxHeight: 2.35 }),
-  'mural-05': Object.freeze({ maxWidth: 6.1, maxHeight: 2.35 }),
+  'mural-01': Object.freeze({ maxWidth: 3.65, maxHeight: 1.2547 }),
+  'mural-02': Object.freeze({ maxWidth: 6.1, maxHeight: 1.3796 }),
+  'mural-05': Object.freeze({ maxWidth: 6.1, maxHeight: 1.64395 }),
 });
 
 export function fitMuralImage(mural, aspectRatio, bounds = mural) {

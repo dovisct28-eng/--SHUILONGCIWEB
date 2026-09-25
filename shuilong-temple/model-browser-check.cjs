@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { pathToFileURL } = require('node:url');
 
-const output = path.resolve(__dirname, '../docs/validation/a04-final/model-structure');
+const output = path.resolve(__dirname, '../docs/validation/model-hifi/model-structure');
 fs.mkdirSync(output, { recursive: true });
 const url = 'http://127.0.0.1:4175/module-a/a01/';
 (async () => {

@@ -8,8 +8,8 @@
       1.55,
       4.8
     ],
-    "width": 3.2,
-    "height": 1.75,
+    "width": 3.65,
+    "height": 1.2547,
     "side": true
   },
   {
@@ -17,12 +17,12 @@
     "label": "第二幅",
     "wall": "主殿右侧内墙",
     "position": [
-      4.52,
+      4.515,
       1.85,
       -11.75
     ],
-    "width": 5.5,
-    "height": 2,
+    "width": 6.1,
+    "height": 1.3796,
     "side": true
   },
   {
@@ -56,12 +56,12 @@
     "label": "第五幅",
     "wall": "主殿左侧内墙",
     "position": [
-      -4.52,
+      -4.515,
       1.85,
       -11.75
     ],
-    "width": 5.5,
-    "height": 2,
+    "width": 6.1,
+    "height": 1.64395,
     "side": true
   }
 ]

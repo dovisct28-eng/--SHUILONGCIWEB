@@ -31,11 +31,12 @@ test('walking lines clear model columns and remain inside perimeter walls',()=>{
     for(const [x,z] of columns)assert.ok(Math.hypot(p[0]-x,p[2]-z)>.25,'column clearance');
   }
 });
-test('camera samples are continuous and above low-fidelity walls and beams during tour',()=>{
+test('camera samples stay continuous; first mural stop passes below the gallery beam',()=>{
   let previous=sampleTour(0,overview).camera.position;
   for(let time=.01;time<=duration;time+=.01){const current=sampleTour(time,overview).camera.position;
-    assert.ok(current[1]>=3.79);assert.ok(Math.hypot(...current.map((v,i)=>v-previous[i]))<.4);previous=current;
+    assert.ok(current[1]>=2.29);assert.ok(Math.hypot(...current.map((v,i)=>v-previous[i]))<.4);previous=current;
   }
+  assert.ok(cameras.first.position[1]<2.66);
 });
 test('handoff is reversible from overview through fifth approach to close view',()=>{
   assert.deepEqual(handoff(16,overview).camera,overview);

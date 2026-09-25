@@ -1,8 +1,8 @@
 const {chromium}=require('playwright');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');const path=require('node:path');
-const output=path.resolve(__dirname,'../../docs/validation/a04-final');fs.mkdirSync(output,{recursive:true});
-const muralOutput=path.resolve(__dirname,'../../docs/validation/a04-final/mural-textures');fs.mkdirSync(muralOutput,{recursive:true});
+const output=path.resolve(__dirname,'../../docs/validation/model-hifi');fs.mkdirSync(output,{recursive:true});
+const muralOutput=path.resolve(__dirname,'../../docs/validation/model-hifi/mural-textures');fs.mkdirSync(muralOutput,{recursive:true});
 const url='http://127.0.0.1:4175/module-a/a01/';
 (async()=>{
  const browser=await chromium.launch({channel:'chrome',headless:true});const errors=[],results=[];
@@ -53,7 +53,7 @@ const url='http://127.0.0.1:4175/module-a/a01/';
     assert.equal(texture.visible,true,`${muralId} display is visible at its stop`);
     assert.equal(texture.placeholderVisible,false,`${muralId} placeholder is hidden`);
     assert.equal(texture.borderVisible,false,`${muralId} border is hidden`);
-    assert.ok(texture.fitSize.width>({ 'mural-01':3.2,'mural-02':5.5,'mural-05':5.5 })[muralId],`${muralId} uses available wall width`);
+    assert.ok(texture.fitSize.width>=({ 'mural-01':3.65,'mural-02':6.1,'mural-05':6.1 })[muralId]-.002,`${muralId} fills its designed plaster span`);
     assert.equal(timing.requests,1,`${muralId} texture is requested once while viewing its route stop`);
     assert.ok(timing.transferBytes>=expectedBytes&&timing.transferBytes<=expectedBytes+2048,`${muralId} display texture is transferred once: ${JSON.stringify(timing)}`);
     muralResults.push({muralId,...texture,...timing});

@@ -22,12 +22,13 @@ const groups = root.children;
 const gltf = {
   asset: { version: '2.0', generator: 'ShuilongTemple procedural reference model' },
   scene: 0, scenes: [{ nodes: groups.map((_, index) => index) }],
-  nodes: [], meshes: [], materials: [], accessors: [], bufferViews: [], buffers: [],
+  nodes: [], meshes: [], materials: [], accessors: [], bufferViews: [], buffers: [], images: [], samplers: [], textures: [],
 };
 const chunks = [];
 let byteLength = 0, triangles = 0;
 const palette = new Map();
 function appendBuffer(bytes, target) {
+  if (byteLength % 4) { const padding = Buffer.alloc(4 - byteLength % 4); chunks.push(padding); byteLength += padding.length; }
   const offset = byteLength;
   chunks.push(bytes);
   byteLength += bytes.length;
@@ -37,7 +38,7 @@ function appendBuffer(bytes, target) {
 function accessor(array, type, componentType, target, includeBounds = false) {
   const bytes = Buffer.from(array.buffer, array.byteOffset, array.byteLength);
   const view = appendBuffer(bytes, target);
-  const entry = { bufferView: view, componentType, count: array.length / (type === 'VEC3' ? 3 : 1), type };
+  const entry = { bufferView: view, componentType, count: array.length / ({ VEC3: 3, VEC2: 2 }[type] || 1), type };
   if (includeBounds) {
     entry.min = [Infinity, Infinity, Infinity]; entry.max = [-Infinity, -Infinity, -Infinity];
     for (let i = 0; i < array.length; i += 3) for (let c = 0; c < 3; c++) {
@@ -48,20 +49,39 @@ function accessor(array, type, componentType, target, includeBounds = false) {
   gltf.accessors.push(entry);
   return gltf.accessors.length - 1;
 }
+const textureCache = new Map();
+function texture(kind, channel) {
+  const key = `${kind}-${channel}`;
+  if (textureCache.has(key)) return textureCache.get(key);
+  const bytes = fs.readFileSync(path.join(directory, 'textures', `${key}.jpg`));
+  const image = gltf.images.push({ bufferView: appendBuffer(bytes), mimeType: 'image/jpeg', name: key }) - 1;
+  if (!gltf.samplers.length) gltf.samplers.push({ magFilter: 9729, minFilter: 9987, wrapS: 10497, wrapT: 10497 });
+  const index = gltf.textures.push({ source: image, sampler: 0 }) - 1;
+  textureCache.set(key, index);
+  return index;
+}
+function worldUV(vertex, normal) {
+  const ax = Math.abs(normal.x), ay = Math.abs(normal.y), az = Math.abs(normal.z);
+  if (ay >= ax && ay >= az) return [vertex.x, vertex.z];
+  if (ax >= az) return [vertex.z, vertex.y];
+  return [vertex.x, vertex.y];
+}
 for (const group of groups) {
   const batches = new Map();
   for (const mesh of group.children) {
     if (!mesh.isMesh) continue;
     const material = mesh.material;
-    const key = `${material.color.getHexString()}:${material.side}`;
+    const key = `${material.color.getHexString()}:${material.side}:${material.userData.texture || ''}`;
     if (!palette.has(key)) {
       palette.set(key, gltf.materials.length);
+      const kind = material.userData.texture;
       gltf.materials.push({ pbrMetallicRoughness: {
-        baseColorFactor: [material.color.r, material.color.g, material.color.b, 1],
-        metallicFactor: 0, roughnessFactor: .91,
-      }, doubleSided: material.side === T.DoubleSide });
+        baseColorFactor: kind ? [1, 1, 1, 1] : [material.color.r, material.color.g, material.color.b, 1],
+        metallicFactor: 0, roughnessFactor: material.roughness,
+        ...(kind ? { baseColorTexture: { index: texture(kind, 'basecolor') }, metallicRoughnessTexture: { index: texture(kind, 'roughness') } } : {}),
+      }, ...(kind ? { normalTexture: { index: texture(kind, 'normal'), scale: .18 }, extras: { fallbackColor: [material.color.r, material.color.g, material.color.b], textureKey: kind } } : {}), doubleSided: material.side === T.DoubleSide });
     }
-    if (!batches.has(key)) batches.set(key, { positions: [], normals: [], indices: [] });
+    if (!batches.has(key)) batches.set(key, { positions: [], normals: [], uvs: [], indices: [] });
     const batch = batches.get(key), geometry = mesh.geometry;
     const base = batch.positions.length / 3;
     const positions = geometry.getAttribute('position'), normals = geometry.getAttribute('normal');
@@ -74,6 +94,10 @@ for (const group of groups) {
       normal.fromBufferAttribute(actualNormals, i).applyMatrix3(normalMatrix).normalize();
       batch.positions.push(vertex.x, vertex.y, vertex.z);
       batch.normals.push(normal.x, normal.y, normal.z);
+      if (material.userData.texture) {
+        const scale = material.userData.texture === 'brick' ? 2 : 1;
+        batch.uvs.push(...worldUV(vertex, normal).map(value => value * scale));
+      }
     }
     if (geometry.index) for (let i = 0; i < geometry.index.count; i++) batch.indices.push(base + geometry.index.getX(i));
     else for (let i = 0; i < positions.count; i++) batch.indices.push(base + i);
@@ -82,11 +106,12 @@ for (const group of groups) {
   for (const [key, batch] of batches) {
     const position = accessor(new Float32Array(batch.positions), 'VEC3', 5126, 34962, true);
     const normal = accessor(new Float32Array(batch.normals), 'VEC3', 5126, 34962);
+    const uv = batch.uvs.length ? accessor(new Float32Array(batch.uvs), 'VEC2', 5126, 34962) : null;
     const indices = accessor(new Uint32Array(batch.indices), 'SCALAR', 5125, 34963);
     triangles += batch.indices.length / 3;
     const color = key.split(':')[0];
     const role = group.userData.mural ? color === '668f8c' ? 'placeholder' : color === 'cda85d' ? 'border' : null : null;
-    primitives.push({ attributes: { POSITION: position, NORMAL: normal }, indices, material: palette.get(key), mode: 4, ...(role ? { extras: { role } } : {}) });
+    primitives.push({ attributes: { POSITION: position, NORMAL: normal, ...(uv !== null ? { TEXCOORD_0: uv } : {}) }, indices, material: palette.get(key), mode: 4, ...(role ? { extras: { role } } : {}) });
   }
   const meshIndex = gltf.meshes.length;
   gltf.meshes.push({ primitives });
@@ -102,9 +127,9 @@ header.writeUInt32LE(12 + 8 + paddedJson.length + 8 + paddedBinary.length, 8);
 const jsonHeader = Buffer.alloc(8); jsonHeader.writeUInt32LE(paddedJson.length); jsonHeader.write('JSON', 4);
 const binaryHeader = Buffer.alloc(8); binaryHeader.writeUInt32LE(paddedBinary.length); binaryHeader.write('BIN\0', 4);
 const output = Buffer.concat([header, jsonHeader, paddedJson, binaryHeader, paddedBinary]);
-const priorIds = JSON.parse(fs.readFileSync(path.join(directory, 'mural-locations.json'), 'utf8')).map(m => m.id);
-const builtIds = gltf.nodes.filter(node => node.extras.mural).map(node => node.extras.mural.id);
-if (JSON.stringify(priorIds) !== JSON.stringify(builtIds)) throw new Error('Mural identifiers changed');
+const expectedMurals = JSON.parse(fs.readFileSync(path.join(directory, 'mural-locations.json'), 'utf8'));
+const builtMurals = gltf.nodes.filter(node => node.extras.mural).map(node => node.extras.mural);
+if (JSON.stringify(expectedMurals) !== JSON.stringify(builtMurals)) throw new Error('Mural metadata differs from mural-locations.json');
 if (!/atob\('[A-Za-z0-9+/=]+'\)/.test(preview)) throw new Error('Offline model copy not found');
 let embedded = preview.replace(/atob\('[A-Za-z0-9+/=]+'\)/, `atob('${output.toString('base64')}')`);
 for (const [name, file] of [['inlineA04', 'a04-scene.mjs'], ['inlineMarkers', 'narrative-markers.mjs']]) {

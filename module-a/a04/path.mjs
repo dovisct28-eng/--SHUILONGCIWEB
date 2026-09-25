@@ -3,7 +3,7 @@ export const smooth = n => { const t = clamp(n); return t*t*(3-2*t); };
 export const mixVector = (a,b,t) => t<=0?[...a]:t>=1?[...b]:a.map((v,i)=>v+(b[i]-v)*t);
 export const mixCamera = (a,b,t) => ({position:mixVector(a.position,b.position,t),target:mixVector(a.target,b.target,t)});
 // Model coordinates, not surveyed dimensions. Walking points are separate from wall centres.
-export const walls = {'mural-05':[-4.52,1.85,-11.75],'mural-01':[4.865,1.55,4.8],'mural-02':[4.52,1.85,-11.75]};
+export const walls = {'mural-05':[-4.515,1.85,-11.75],'mural-01':[4.865,1.55,4.8],'mural-02':[4.515,1.85,-11.75]};
 export const route = [
   [[-2.7,.56,-11.75]],
   [[-2.7,.56,-11.75],[-2.7,.56,-8.05],[-2.7,.13,-7.4],[-2.7,.13,4.8],[2.7,.13,4.8],[3.8,.36,4.8]],
@@ -14,7 +14,7 @@ export const cameras = {
   fifth:{position:[1.2,5.8,-11.75],target:walls['mural-05']},
   forward:{position:[-2.7,3.8,-10],target:[-2.7,2,5]},
   turn:{position:[-2.7,3.8,4.8],target:[3.8,1.55,4.8]},
-  first:{position:[2.6,6.8,4.8],target:walls['mural-01']},
+  first:{position:[-1.2,2.3,4.8],target:walls['mural-01']},
   returnTurn:{position:[2.7,3.8,4.8],target:[2.7,2,-11.75]},
   second:{position:[-1.2,5.8,-11.75],target:walls['mural-02']},
   lift:{position:[1,12,-10],target:[0,0,-3]},
