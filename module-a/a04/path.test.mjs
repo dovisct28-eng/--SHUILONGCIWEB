@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {chapter,cameras,route,sampleTour,duration} from './path.mjs';
+import {chapter,cameras,route,sampleTour,handoff,duration} from './path.mjs';
 const overview={position:[-32,37,-12],target:[0,-2.3,-1.75]};
 test('A03 boundary and A04 entry stay fixed; guide preparation is reversible',()=>{
   assert.equal(chapter(13.2).active,false);assert.equal(chapter(14).entry,1);
@@ -36,4 +36,11 @@ test('camera samples are continuous and above low-fidelity walls and beams durin
   for(let time=.01;time<=duration;time+=.01){const current=sampleTour(time,overview).camera.position;
     assert.ok(current[1]>=3.79);assert.ok(Math.hypot(...current.map((v,i)=>v-previous[i]))<.4);previous=current;
   }
+});
+test('handoff is reversible from overview through fifth approach to close view',()=>{
+  assert.deepEqual(handoff(16,overview).camera,overview);
+  assert.deepEqual(handoff(17,overview).camera,cameras.fifthApproach);
+  assert.deepEqual(handoff(18,overview).camera,cameras.fifthClose);
+  assert.ok(handoff(16,overview).routeOpacity>handoff(17,overview).routeOpacity);
+  assert.equal(handoff(18,overview).modelOpacity,0);
 });

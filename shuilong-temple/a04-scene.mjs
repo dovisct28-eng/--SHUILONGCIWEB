@@ -4,7 +4,7 @@ export function createA04Scene(T, camera, scene, root, roofs, pins) {
   const group=new T.Group(); group.name='A04-route'; group.visible=false; scene.add(group);
   const material=new T.LineBasicMaterial({color:0xb84f63,depthTest:false,transparent:true});
   const lines=[],dots=[],segments=[],nodeLabels=[];
-  for(const text of ["01 · 出发","02","03"]){const el=document.createElement("span");el.textContent=text;el.style.cssText="position:absolute;font:12px system-ui;color:#843348;background:#f4f0e7e8;padding:2px 5px;pointer-events:none;display:none;transform:translate(-50%,8px)";document.body.append(el);nodeLabels.push(el);}
+  for(const text of ["","① 第一幅","② 第二幅"]){const el=document.createElement("span");el.textContent=text;el.style.cssText="position:absolute;font:12px system-ui;color:#843348;background:#f4f0e7e8;padding:2px 5px;pointer-events:none;display:none;transform:translate(-50%,8px)";document.body.append(el);nodeLabels.push(el);}
   const bounds=new T.Box3(new T.Vector3(-5.9,-.6,-16.5),new T.Vector3(5.9,3.4,13));
   const corners=[];
   for(const x of [bounds.min.x,bounds.max.x])for(const y of [bounds.min.y,bounds.max.y])for(const z of [bounds.min.z,bounds.max.z])corners.push(new T.Vector3(x,y,z));
@@ -65,15 +65,16 @@ export function createA04Scene(T, camera, scene, root, roofs, pins) {
       setCamera(state.camera);
       roofs.forEach(m=>{m.material.opacity=state.roofOpacity;m.material.transparent=true;m.material.depthWrite=false;});
       material.opacity=state.routeOpacity;
-      lines.forEach((line,i)=>{grow(line,state.paths[i],state.growth[i]);let left=segments[i].reduce((n,p)=>n+p.length,0)*state.growth[i];for(const part of segments[i]){const f=Math.max(0,Math.min(1,left/part.length));part.mesh.visible=f>0;part.mesh.scale.set(1,part.length*f,1);part.mesh.position.copy(part.a).addScaledVector(part.delta,f/2);part.mesh.material.opacity=state.routeOpacity;left-=part.length;}dots[i].visible=state.growth[i]>=1;dots[i].material.opacity=state.routeOpacity*(state.guideStartProgress>0&&i!==0?1-.45*state.guideStartProgress:1);});
+      lines.forEach((line,i)=>{grow(line,state.paths[i],state.growth[i]);let left=segments[i].reduce((n,p)=>n+p.length,0)*state.growth[i];for(const part of segments[i]){const f=Math.max(0,Math.min(1,left/part.length));part.mesh.visible=f>0;part.mesh.scale.set(1,part.length*f,1);part.mesh.position.copy(part.a).addScaledVector(part.delta,f/2);part.mesh.material.opacity=state.routeOpacity;left-=part.length;}dots[i].visible=i!==0&&state.growth[i]>=1;dots[i].material.opacity=state.routeOpacity*(i?state.secondaryOpacity??1:1);});
       return true;
     },
-    labels(){if(!state)return;document.querySelectorAll(".spatial-label").forEach(el=>el.style.opacity=state.labelOpacity);nodeLabels.forEach((el,i)=>{const v=dots[i].position.clone().project(camera);el.style.display=state.growth[i]>=1&&state.routeOpacity>0?"block":"none";el.style.left=(v.x*.5+.5)*innerWidth+"px";el.style.top=(.5-v.y*.5)*innerHeight+"px";el.style.opacity=state.routeOpacity*(state.guideStartProgress>0&&i!==0?1-.45*state.guideStartProgress:1);});for(const pin of pins){
+    labels(){if(!state)return;document.querySelectorAll(".spatial-label").forEach(el=>el.style.opacity=state.labelOpacity);nodeLabels.forEach((el,i)=>{const v=dots[i].position.clone().project(camera);el.style.display=i!==0&&state.growth[i]>=1&&state.routeOpacity>0?"block":"none";el.style.left=(v.x*.5+.5)*innerWidth+"px";el.style.top=(.5-v.y*.5)*innerHeight+"px";el.style.opacity=state.routeOpacity*(state.secondaryOpacity??1);});for(const pin of pins){
       const current=pin.m.id===state.target;
-      pin.button.style.opacity=String(state.labelOpacity*(current?1:1-.55*state.entryProgress));pin.line.style.opacity=pin.dot.style.opacity=state.labelOpacity*(current?1:1-.55*state.entryProgress);
+      pin.button.style.opacity=String(state.labelOpacity*(current?1:(1-.55*state.entryProgress)*(state.secondaryOpacity??1)));pin.line.style.opacity=pin.dot.style.opacity=state.labelOpacity*(current?1:(1-.55*state.entryProgress)*(state.secondaryOpacity??1));
       pin.button.dataset.current=String(current);pin.button.textContent=pin.m.label+(current&&state.entryProgress>.5?" · 当前":"");
       pin.button.setAttribute('aria-label',pin.m.label+(current?'，当前观看目标':'，路线位置'));
     }},
+    projection(id){const mural=root.getObjectByName(id);if(!mural||!state)return null;setCamera(state.camera);mural.updateWorldMatrix(true,true);const box=new T.Box3().setFromObject(mural),points=[];for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z])points.push(new T.Vector3(x,y,z).project(camera));const xs=points.map(p=>(p.x+1)*innerWidth/2),ys=points.map(p=>(1-p.y)*innerHeight/2);return {left:Math.min(...xs),top:Math.min(...ys),width:Math.max(...xs)-Math.min(...xs),height:Math.max(...ys)-Math.min(...ys)};},
     getState(){return state?{...state,bounds:visibleBounds(),camera:{position:camera.position.toArray(),target:state.camera.target}}:null;},
   };
 }

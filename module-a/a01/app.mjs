@@ -105,7 +105,13 @@ function requestRender() {
 }
 
 addEventListener('scroll', requestRender, { passive: true });
-addEventListener('resize', requestRender);
+let previousViewportHeight=innerHeight;
+addEventListener('resize', () => {
+  const screens=scrollY/previousViewportHeight;
+  previousViewportHeight=innerHeight;
+  scrollTo(0,screens*innerHeight);
+  requestRender();
+});
 modelFrame.addEventListener('load', () => { modelProgress = -1; requestRender(); });
 addEventListener('message', event => {
   if (event.origin !== location.origin || event.source !== modelFrame.contentWindow || event.data?.type !== 'shuilong:ready') return;

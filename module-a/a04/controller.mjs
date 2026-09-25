@@ -1,4 +1,4 @@
-import {chapter,smooth,mixCamera,route,sampleTour,duration} from './path.mjs';
+import {chapter,smooth,mixCamera,route,sampleTour,handoff,duration} from './path.mjs';
 
 export function createA04Controller(stage, frame, requestRender) {
   const style=document.createElement('link');style.rel='stylesheet';style.href=new URL('./styles.css',import.meta.url).href;document.head.append(style);
@@ -21,7 +21,7 @@ export function createA04Controller(stage, frame, requestRender) {
     section.hidden=!state.active;section.inert=!state.active;
     if(!state.active){
       if(active){api?.setA04?.(null);mode='idle';elapsed=0;early=null;last=0;}
-      active=false;waitSince=0;section.style.opacity='0';stage.style.removeProperty('--a04-entry');
+      active=false;waitSince=0;section.style.opacity='0';stage.style.removeProperty('--a04-entry');stage.style.removeProperty('--a04-model-opacity');
       frame.parentElement.style.width='';frame.parentElement.style.height='';
       return;
     }
@@ -50,22 +50,22 @@ export function createA04Controller(stage, frame, requestRender) {
     let growth=mode==='completed'?[1,1,1]:sample.growth;
     let target=sample.target;
     if(state.guideStart>0){
-      if(mode==='playing'){early=lastCamera||camera;bridge=0;elapsed=duration;mode='completed';}
-      // Early exit settles at the overview; normal guide preparation never moves the camera.
-      camera=overview;
-      if(early){camera=mixCamera(early,overview,smooth(bridge));if(bridge===1)early=null;}
+      if(mode==='playing'){early=null;elapsed=duration;mode='completed';}
+      camera=handoff(screens,overview).camera;
       growth=[1,1,1];target='mural-05';
     }else if(early){camera=mixCamera(early,overview,smooth(bridge));growth=[1,1,1];if(bridge===1)early=null;}
     if(state.entry<1&&mode==='completed')camera=mixCamera(entry,overview,state.entry);
     lastCamera=camera;
-    const routeOpacity=state.entry*(1-.18*state.guideStart),labelOpacity=1;
-    api.setA04({camera,entryProgress:state.entry,paths:route,growth,routeOpacity,labelOpacity,target,roofOpacity:.08*(1-state.entry),mode,elapsed,guideStartProgress:state.guideStart,nextGuideMuralId:'mural-05',routeComplete:mode==='completed',overviewCamera:overview});
+    const transfer=handoff(screens,overview);
+    const routeOpacity=state.entry*(screens>16?transfer.routeOpacity:1),labelOpacity=1;
+    stage.style.setProperty('--a04-model-opacity',screens>16?transfer.modelOpacity:1);
+    api.setA04({camera,entryProgress:state.entry,paths:route,growth,routeOpacity,labelOpacity,target,roofOpacity:.08*(1-state.entry),mode,elapsed,guideStartProgress:state.guideStart,secondaryOpacity:screens>16?transfer.secondaryOpacity:1,nextGuideMuralId:'mural-05',routeComplete:mode==='completed',overviewCamera:overview});
     const texts=[['01 / 第五幅','从主殿出发，转向身体右侧的第五幅。'],['02 / 第一幅','转回戏台方向，沿侧廊前行，再左转抵达第一幅。'],['03 / 第二幅《入将图》','转向主殿，沿对侧返回，抵达第二幅。'],['回望完整建筑','镜头抬高回撤，辨认三幅壁画之间的空间关系。'],['观看路线','先看第五幅，再前行至第一幅，最后返回第二幅。']];
     let text=texts[sample.phase];
     if(sample.phase===4&&mode==='playing')text=elapsed<48?['01 / 第五幅观察站位','先看身体右侧的第五幅。']:elapsed<54?['02 / 前行至第一幅','沿出发侧前行，横向左转到第一幅。']:['03 / 返回第二幅','沿对侧返回主殿，抵达第二幅《入将图》。'];
     if(mode==='idle')text=['从主殿出发','继续向下，开始自动空间观看。'];
     if(mode==='completed')text=['第五幅 → 第一幅 → 第二幅','完整路线已经建立。继续向下，从第五幅开始逐幅阅读。'];
-    if(state.guideStart>0)text=['从第五幅开始','接下来依次阅读第五幅、第一幅与第二幅。'];
+    if(state.guideStart>0)text=['从第五幅开始','镜头正接近主殿中的第五幅。继续向下，进入壁画。'];
     title.textContent=text[0];description.textContent=text[1];
     const label=mode==='playing'?'自动观看中 · 可跳过，也可滚动离开':state.guideStart>0?'继续向下，进入第五幅壁画导读':'这是一条项目设计的观看路径。';
     if(status.textContent!==label)status.textContent=label;

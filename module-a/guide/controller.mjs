@@ -1,4 +1,4 @@
-import {guideProgress, horizontalPlacement} from './progress.mjs';
+import {guideProgress, horizontalPlacement, muralTransfer} from './progress.mjs';
 
 export function createMuralGuide(stage, config, requestRender) {
   const stylesheet = document.createElement('link');
@@ -35,16 +35,19 @@ export function createMuralGuide(stage, config, requestRender) {
 
   return screens => {
     const state = guideProgress(screens, config.start, config.end);
-    if (!requested && screens >= config.start - 0.7) {
+    if (!requested && screens >= config.start - 2) {
       requested = true;
       image.src = config.image;
     }
-    section.hidden = !state.active;
+    const transferring=screens>config.start-.6&&screens<config.start;
+    section.hidden = !state.active&&!transferring;
     section.inert = !state.active;
-    if (!state.active) { stage.style.removeProperty('--a05-entry'); return; }
+    if (section.hidden) { stage.style.removeProperty('--a05-entry'); return; }
 
-    section.style.opacity = state.entry;
-    stage.style.setProperty('--a05-entry', state.entry);
+    section.style.opacity = '1';
+    const textExit=Math.max(0,Math.min(1,(screens-(config.start-.6))/.6));
+    stage.style.setProperty('--a05-entry',textExit*textExit*(3-2*textExit));
+    section.style.setProperty('--transfer-background',transferring?Math.max(0,Math.min(1,(screens-(config.start-.28))/.28)):1);
     section.style.setProperty('--intro-opacity', state.introduction);
     const reveal = Math.max(0, Math.min(1, (screens - config.start - 0.4) / 0.4));
     section.style.setProperty('--intro-entrance', state.introduction * reveal * reveal * (3 - 2 * reveal));
@@ -55,7 +58,19 @@ export function createMuralGuide(stage, config, requestRender) {
     document.body.dataset.phase = `a${config.chapter}-${section.dataset.phase}`;
 
     if (image.naturalWidth && image.naturalHeight) {
-      const renderedWidth = image.getBoundingClientRect().height * image.naturalWidth / image.naturalHeight;
+      const formalHeight=innerHeight*(matchMedia('(prefers-reduced-motion: reduce)').matches?.7:innerWidth<=1100?.78:.8);
+      if(transferring){
+        const api=stage.querySelector('iframe')?.contentWindow?.shuilongTemple;
+        const projection=api?.getMuralProjection?.(config.muralId);
+        const layout=muralTransfer(screens,projection,stage.clientWidth,stage.clientHeight,image.naturalWidth/image.naturalHeight,formalHeight,config.start);
+        Object.assign(image.style,{left:`${layout.left}px`,top:`${layout.top}px`,width:`${layout.width}px`,height:`${layout.height}px`,transform:'none',opacity:String(layout.imageOpacity)});
+        section.style.setProperty('--transfer-background',layout.backgroundOpacity);
+        section.dataset.projection=projection?JSON.stringify(projection):'';
+        return;
+      }
+      section.style.setProperty('--transfer-background','1');
+      image.style.height=`${formalHeight}px`;image.style.top='50%';image.style.left='0px';image.style.opacity='1';
+      const renderedWidth = formalHeight * image.naturalWidth / image.naturalHeight;
       const {x, travel} = horizontalPlacement(renderedWidth, stage.clientWidth, state.scan);
       image.style.width = `${renderedWidth}px`;
       image.style.transform = `translate3d(${x}px, -50%, 0)`;

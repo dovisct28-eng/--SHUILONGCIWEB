@@ -1,7 +1,7 @@
 const {chromium}=require('playwright');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');const path=require('node:path');
-const output=path.resolve(__dirname,'../../docs/validation/a04');fs.mkdirSync(output,{recursive:true});
+const output=path.resolve(__dirname,'../../docs/validation/a04-handoff');fs.mkdirSync(output,{recursive:true});
 const url='http://127.0.0.1:4173/module-a/a01/';
 (async()=>{
  const browser=await chromium.launch({channel:'chrome',headless:true});const errors=[],results=[];
@@ -18,11 +18,11 @@ const url='http://127.0.0.1:4173/module-a/a01/';
    await scroll(p,14.5);await p.getByRole('button',{name:'跳过动画'}).click();await p.waitForTimeout(300);
    const final=await get(p);assert.equal(final.mode,'completed');assert.deepEqual(final.growth,[1,1,1]);assert.ok(final.bounds.left>0&&final.bounds.right<1&&final.bounds.top>.1&&final.bounds.bottom<.8);
    assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);await shot(p,`overview-${tag}`);
-   await scroll(p,18);const guide=await get(p);assert.equal(guide.mode,'completed');assert.deepEqual(guide.growth,[1,1,1]);assert.equal(guide.guideStartProgress,1);assert.equal(guide.nextGuideMuralId,'mural-05');assert.equal(guide.target,'mural-05');assert.equal(guide.routeComplete,true);assert.deepEqual(guide.camera,final.camera);assert.ok(guide.routeOpacity>.7);
+   await scroll(p,18);const guide=await get(p);assert.equal(guide.mode,'completed');assert.deepEqual(guide.growth,[1,1,1]);assert.equal(guide.guideStartProgress,1);assert.equal(guide.nextGuideMuralId,'mural-05');assert.equal(guide.target,'mural-05');assert.equal(guide.routeComplete,true);assert.notDeepEqual(guide.camera,final.camera);assert.ok(guide.routeOpacity<.4);
    assert.deepEqual(await p.evaluate(()=>document.querySelector('iframe').contentWindow.shuilongTemple.getA04GuideStart()),{muralId:'mural-05',camera:guide.overviewCamera,routeComplete:true});
    assert.deepEqual(await p.evaluate(()=>document.querySelector('iframe').contentWindow.shuilongTemple.getA04Handoff()),{muralId:'mural-05',camera:guide.overviewCamera,routeComplete:true});
    assert.equal(await p.locator('.a04 [data-title]').textContent(),'从第五幅开始');await shot(p,`guide-start-${tag}`);
-   await p.reload();await p.waitForFunction(()=>document.querySelector('iframe').contentWindow.modelReady);await p.waitForTimeout(500);assert.equal((await get(p)).mode,'completed');assert.equal((await get(p)).nextGuideMuralId,'mural-05');assert.deepEqual((await get(p)).camera,(await get(p)).overviewCamera);
+   await p.reload();await p.waitForFunction(()=>document.querySelector('iframe').contentWindow.modelReady);await p.waitForTimeout(500);assert.equal((await get(p)).mode,'completed');assert.equal((await get(p)).nextGuideMuralId,'mural-05');assert.deepEqual((await get(p)).camera,guide.camera);
    await scroll(p,14.5);assert.equal((await get(p)).mode,'completed');assert.deepEqual((await get(p)).camera,final.camera);
    await p.reload();await p.waitForFunction(()=>document.querySelector('iframe').contentWindow.modelReady);await p.waitForTimeout(500);assert.equal((await get(p)).mode,'completed');
    await scroll(p,13.2);assert.equal(await get(p),null);assert.deepEqual(await p.evaluate(()=>document.querySelector('iframe').contentWindow.shuilongTemple.getIntroState()),before);

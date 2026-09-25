@@ -1,9 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {guideProgress, horizontalPlacement} from './progress.mjs';
+import {guideProgress, horizontalPlacement, muralTransfer} from './progress.mjs';
 
 test('A05 follows the unchanged A04 endpoint and has a stable reading interval', () => {
-  assert.equal(guideProgress(18, 18, 25).active, false);
+  assert.equal(guideProgress(18, 18, 25).active, true);
   assert.equal(guideProgress(18.8, 18, 25).entry, 1);
   assert.equal(guideProgress(19.2, 18, 25).introduction, 1);
   assert.equal(guideProgress(20.2, 18, 25).scan, 0);
@@ -24,4 +24,12 @@ test('the same scroll position restores the same viewing position in either dire
 
 test('an image already narrower than the viewport remains centered without invented travel', () => {
   assert.deepEqual(horizontalPlacement(1000, 1440, 0.5), {travel:0, x:220});
+});
+test('mural image grows from the projected wall to its formal right-edge placement',()=>{
+  const wall={left:400,top:200,width:500,height:300};
+  const from=muralTransfer(17.4,wall,1440,900,3,720);
+  const end=muralTransfer(18,wall,1440,900,3,720);
+  assert.deepEqual([from.left,from.top,from.width,from.height],[wall.left,wall.top,wall.width,wall.height]);
+  assert.equal(end.left+end.width,1440);assert.equal(end.height,720);
+  assert.equal(end.imageOpacity,1);assert.equal(end.backgroundOpacity,1);
 });

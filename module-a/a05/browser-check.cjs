@@ -3,7 +3,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 
-const output = path.resolve(__dirname, '../../docs/validation/a05');
+const output = path.resolve(__dirname, '../../docs/validation/a05-handoff');
 fs.mkdirSync(output, {recursive:true});
 const url = 'http://127.0.0.1:4174/module-a/a01/';
 
@@ -38,7 +38,7 @@ const url = 'http://127.0.0.1:4174/module-a/a01/';
       await scroll(page,14.5);
       await page.getByRole('button',{name:'跳过动画'}).click();
       await scroll(page,18);
-      assert.equal((await state(page)).hidden,true);
+      assert.equal((await state(page)).hidden,false);
       const a04 = await page.evaluate(() => document.querySelector('iframe').contentWindow.shuilongTemple.getA04State());
       assert.equal(a04.mode,'completed');
       assert.equal(a04.target,'mural-05');
@@ -66,7 +66,7 @@ const url = 'http://127.0.0.1:4174/module-a/a01/';
       await scroll(page,18.85);
       assert.equal((await state(page)).introOpacity,1);
       await scroll(page,18);
-      assert.equal((await state(page)).hidden,true);
+      assert.equal((await state(page)).hidden,false);
       assert.equal(await page.evaluate(() => document.querySelector('iframe').contentWindow.shuilongTemple.getA04State().mode),'completed');
 
       for (const [name,point] of [['intro',18.85],['center',22.3],['left',24.4]]) {

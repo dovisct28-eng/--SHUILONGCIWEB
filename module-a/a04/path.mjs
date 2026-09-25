@@ -18,6 +18,8 @@ export const cameras = {
   returnTurn:{position:[2.7,3.8,4.8],target:[2.7,2,-11.75]},
   second:{position:[-1.2,5.8,-11.75],target:walls['mural-02']},
   lift:{position:[1,12,-10],target:[0,0,-3]},
+  fifthApproach:{position:[1.2,9,-8],target:walls['mural-05']},
+  fifthClose:{position:[-1.5,5.2,-10.5],target:walls['mural-05']},
 };
 export const duration = 58;
 // Each arrival includes a stationary interval. Elevated interpretation avoids roof/beam intersections.
@@ -36,4 +38,10 @@ export function sampleTour(seconds, overview) {
 }
 export function chapter(screens) {
   return {active:screens>13.202,entry:smooth((screens-13.2)/.8),guideStart:smooth((screens-16)/2),stable:screens>=14};
+}
+export function handoff(screens, overview) {
+  const approach=smooth(screens-16),close=smooth(screens-17);
+  return {camera:screens<=17?mixCamera(overview,cameras.fifthApproach,approach):mixCamera(cameras.fifthApproach,cameras.fifthClose,close),
+    routeOpacity:1-.72*smooth((screens-16)/1.7),secondaryOpacity:1-.8*smooth((screens-16)/1.5),
+    modelOpacity:1-smooth((screens-17.65)/.35)};
 }

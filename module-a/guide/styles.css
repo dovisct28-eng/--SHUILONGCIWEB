@@ -1,4 +1,4 @@
-.mural-guide{position:absolute;inset:0;z-index:8;overflow:hidden;background:#e7e5df;color:#303b32;pointer-events:none}
+.mural-guide{position:absolute;inset:0;z-index:8;overflow:hidden;background:rgba(231,229,223,var(--transfer-background,1));color:#303b32;pointer-events:none}
 .mural-guide[hidden]{display:none}
 .mural-guide__canvas{position:absolute;inset:0;overflow:hidden}
 .mural-guide__image{position:absolute;left:0;top:50%;height:80vh;width:auto;max-width:none;display:block;will-change:transform}
@@ -14,4 +14,4 @@
 @media(max-width:1100px){.mural-guide__intro{width:min(420px,48vw)}.mural-guide__image{height:78vh}}
 @media(prefers-reduced-motion:reduce){.mural-guide__image{height:70vh;will-change:auto}}
 .stage:has(.mural-guide:not([hidden])) .a04{opacity:calc(1 - var(--a05-entry))!important}
-.stage:has(.mural-guide:not([hidden])) .model-shell{opacity:calc(var(--model-opacity) * (1 - var(--a05-entry)))}
+.stage:has(.a04:not([hidden])) .model-shell{opacity:calc(var(--model-opacity) * var(--a04-model-opacity,1))}

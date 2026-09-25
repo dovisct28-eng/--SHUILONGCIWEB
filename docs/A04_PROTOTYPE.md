@@ -102,3 +102,11 @@
 13.2、14、16、18 屏边界、三幅空间观看、58 秒自动时间线、镜头回撤、全景相机和路线几何均未改变。快速跨段时沿用 800ms 桥接恢复 overview；返回 16 屏以下保持 completed 和完整路线，不重播自动观看。
 
 新增 `getA04GuideStart()`，返回 `{muralId:'mural-05',camera:overview,routeComplete:true}`。`getA04Handoff()` 暂时保留为同值兼容别名，不再返回第二幅近景。`getA04State()` 现提供 `guideStartProgress`、`nextGuideMuralId`、`overviewCamera`、`routeComplete`；旧的 `targetMuralId`、`handoffStartCamera`、`handoffEndCamera` 不再提供。历史 `handoff-*` 截图仍是旧方案证据，新验证使用 `guide-start-*`。
+
+## 2026-09-24 A04→A05 连续交接修订
+
+前版在 16–18 屏保持 overview 不动，到 18 屏后整张二维第五幅图片淡入，空间位置与图像之间缺少视觉联系。现在 16 屏保留完整建筑及路线；16–17 屏从 overview 插值到 `fifthApproach`；17–18 屏到 `fifthClose`。相机、路线与次要节点透明度由滚动位置直接决定。第五幅保留定位强调，第一幅、第二幅及路线逐步弱化。自动观看的 58 秒关键帧、回撤、跳过、重播均未改动。
+
+路线起点改由第五幅自身的定位标记承担；独立“01 · 出发”标签与圆点已移除。模型场景新增 `getMuralProjection('mural-05')`，把第五幅模型包围盒投影成屏幕矩形供父页面使用。该位置是模型示意投影，并非实地测绘或原图逐像素配准。17.4–18 屏真实图片由投影矩形扩展到 A05 的右端起始构图，建筑随滚动退出。反向滚动复用同一函数。浏览器验收结果以本轮最终交付报告为准；历史截图及记录保留。
+
+本轮验收：`node --test` 的 A01–A05 相关测试全部通过；A04 原浏览器检查在 1920×1080、1440×900、1366×768、1024×768 通过，含实际 58 秒播放、skip、replay 和刷新；A05 四尺寸浏览器检查通过；模型检查、A03 五尺寸回归、延迟/失败模型检查与交接专项检查通过。交接专项覆盖 16、17、17.6、17.8、18 屏的截帧、反向、快速跳段、17.6 屏 resize 与刷新，以及 reduced-motion。证据见 `docs/validation/a04-handoff/` 和 `docs/validation/a05-handoff/`。模型第五幅投影采用包围盒矩形，透视中的四边形与真实图像矩形仍不能逐像素配准；用户体验节奏仍待现场验收。
