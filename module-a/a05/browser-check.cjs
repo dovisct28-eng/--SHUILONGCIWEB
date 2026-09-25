@@ -5,7 +5,7 @@ const path = require('node:path');
 
 const output = path.resolve(__dirname, '../../docs/validation/a05-handoff');
 fs.mkdirSync(output, {recursive:true});
-const url = 'http://127.0.0.1:4174/module-a/a01/';
+const url = 'http://127.0.0.1:4175/module-a/a01/';
 
 (async () => {
   const browser = await chromium.launch({channel:'chrome', headless:true});
@@ -15,7 +15,7 @@ const url = 'http://127.0.0.1:4174/module-a/a01/';
     page.on('pageerror', error => errors.push(error.message));
     page.on('response', response => { if (response.status() >= 400) errors.push(`${response.status()} ${response.url()}`); });
     page.on('request', request => {
-      if (/detail\.webp|mural-0[12]-display\.webp|Mural-Exhibition/.test(request.url())) errors.push(`unexpected resource ${request.url()}`);
+      if (/detail\.webp|Mural-Exhibition/.test(request.url())) errors.push(`unexpected resource ${request.url()}`);
     });
     await page.goto(url);
     await page.waitForFunction(() => document.querySelector('iframe').contentWindow.modelReady);
@@ -46,6 +46,11 @@ const url = 'http://127.0.0.1:4174/module-a/a01/';
       assert.ok(await page.evaluate(() => Number(getComputedStyle(document.querySelector('.mural-guide__intro')).opacity)<.05));
       await scroll(page,18.85);
       await page.waitForFunction(() => document.querySelector('.mural-guide img').naturalWidth > 0);
+      await page.waitForFunction(() => document.querySelector('iframe').contentWindow.shuilongTemple.getMuralTextureState('mural-05').loaded);
+      const sharedCache=await page.evaluate(()=>{const frame=document.querySelector('iframe'),url=document.querySelector('.mural-guide__image').currentSrc,entries=[...performance.getEntriesByName(url),...frame.contentWindow.performance.getEntriesByName(url)];return {url,contexts:entries.length,transferBytes:entries.reduce((sum,entry)=>sum+entry.transferSize,0),encodedBytes:entries.reduce((sum,entry)=>sum+entry.encodedBodySize,0)}});
+      const expectedBytes=fs.statSync(path.resolve(__dirname,'../../水龙祠壁画素材/网页展示图/mural-05-display.webp')).size;
+      assert.equal(sharedCache.contexts,2,'model texture and A05 image use the same display URL');
+      assert.ok(sharedCache.transferBytes>=expectedBytes&&sharedCache.transferBytes<=expectedBytes+2048,`shared cache transfers mural-05 once: ${JSON.stringify(sharedCache)}`);
       const intro = await state(page);
       assert.equal(intro.phase,'introduction');assert.equal(intro.title,'第五幅');assert.equal(intro.introOpacity,1);
       await scroll(page,20.2);
@@ -88,7 +93,7 @@ const url = 'http://127.0.0.1:4174/module-a/a01/';
           await page.screenshot({path:path.join(output,`${name}-${tag}.png`)});
         }
       }
-      results.push({viewport:tag,right:{offset:right.offset,travel:right.travel},center:{offset:center.offset},left:{offset:left.offset},reverse:true,refresh:true,rapidCrossing:true});
+      results.push({viewport:tag,right:{offset:right.offset,travel:right.travel},center:{offset:center.offset},left:{offset:left.offset},reverse:true,refresh:true,rapidCrossing:true,sharedCache});
       await page.close();
     }
     const reduced = await open({width:1024,height:768},{reducedMotion:'reduce'});

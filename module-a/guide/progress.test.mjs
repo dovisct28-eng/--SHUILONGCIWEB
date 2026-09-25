@@ -29,7 +29,8 @@ test('mural image grows from the projected wall to its formal right-edge placeme
   const wall={left:400,top:200,width:500,height:300};
   const from=muralTransfer(17.4,wall,1440,900,3,720);
   const end=muralTransfer(18,wall,1440,900,3,720);
-  assert.deepEqual([from.left,from.top,from.width,from.height],[wall.left,wall.top,wall.width,wall.height]);
+  assert.deepEqual([from.left,from.top,from.width,from.height],[400,266.6666666666667,500,166.66666666666666]);
+  assert.equal(from.width/from.height,3);
   assert.equal(end.left+end.width,1440);assert.equal(end.height,720);
   assert.equal(end.imageOpacity,1);assert.equal(end.backgroundOpacity,1);
 });

@@ -1,0 +1,54 @@
+{
+  "textures": [
+    {
+      "muralId": "mural-05",
+      "loaded": true,
+      "requested": true,
+      "aspect": 3.7105751391465676,
+      "planeAspect": 3.7105751391465676,
+      "side": true,
+      "rotationY": 1.5707963267948966,
+      "requests": 1,
+      "transferBytes": 2842484,
+      "encodedBytes": 2842184
+    },
+    {
+      "muralId": "mural-01",
+      "loaded": true,
+      "requested": true,
+      "aspect": 2.909090909090909,
+      "planeAspect": 2.909090909090909,
+      "side": true,
+      "rotationY": -1.5707963267948966,
+      "requests": 1,
+      "transferBytes": 1351448,
+      "encodedBytes": 1351148
+    },
+    {
+      "muralId": "mural-02",
+      "loaded": true,
+      "requested": true,
+      "aspect": 4.421518054532056,
+      "planeAspect": 4.421518054532056,
+      "side": true,
+      "rotationY": -1.5707963267948966,
+      "requests": 1,
+      "transferBytes": 3552914,
+      "encodedBytes": 3552614
+    }
+  ],
+  "fallback": {
+    "texture": {
+      "loaded": false,
+      "requested": true,
+      "planeAspect": null,
+      "side": true
+    },
+    "modelReady": true,
+    "a04": true,
+    "canvas": true,
+    "placeholderRemainsAvailable": true
+  },
+  "errors": [],
+  "glbBytes": 2595664
+}

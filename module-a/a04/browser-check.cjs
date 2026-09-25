@@ -2,7 +2,8 @@ const {chromium}=require('playwright');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');const path=require('node:path');
 const output=path.resolve(__dirname,'../../docs/validation/a04-handoff');fs.mkdirSync(output,{recursive:true});
-const url='http://127.0.0.1:4173/module-a/a01/';
+const muralOutput=path.resolve(__dirname,'../../docs/validation/mural-textures');fs.mkdirSync(muralOutput,{recursive:true});
+const url='http://127.0.0.1:4175/module-a/a01/';
 (async()=>{
  const browser=await chromium.launch({channel:'chrome',headless:true});const errors=[],results=[];
  const open=async(viewport,options={})=>{const page=await browser.newPage({viewport,...options});page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400)errors.push(`${r.status()} ${r.url()}`);});await page.goto(url);await page.waitForFunction(()=>document.querySelector('iframe').contentWindow.modelReady);return page;};
@@ -19,6 +20,7 @@ const url='http://127.0.0.1:4173/module-a/a01/';
    const final=await get(p);assert.equal(final.mode,'completed');assert.deepEqual(final.growth,[1,1,1]);assert.ok(final.bounds.left>0&&final.bounds.right<1&&final.bounds.top>.1&&final.bounds.bottom<.8);
    assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);await shot(p,`overview-${tag}`);
    await scroll(p,18);const guide=await get(p);assert.equal(guide.mode,'completed');assert.deepEqual(guide.growth,[1,1,1]);assert.equal(guide.guideStartProgress,1);assert.equal(guide.nextGuideMuralId,'mural-05');assert.equal(guide.target,'mural-05');assert.equal(guide.routeComplete,true);assert.notDeepEqual(guide.camera,final.camera);assert.ok(guide.routeOpacity<.4);
+   if(width===1440)await p.screenshot({path:path.join(muralOutput,'overview.png')});
    assert.deepEqual(await p.evaluate(()=>document.querySelector('iframe').contentWindow.shuilongTemple.getA04GuideStart()),{muralId:'mural-05',camera:guide.overviewCamera,routeComplete:true});
    assert.deepEqual(await p.evaluate(()=>document.querySelector('iframe').contentWindow.shuilongTemple.getA04Handoff()),{muralId:'mural-05',camera:guide.overviewCamera,routeComplete:true});
    assert.equal(await p.locator('.a04 [data-title]').textContent(),'从第五幅开始');await shot(p,`guide-start-${tag}`);
@@ -33,10 +35,24 @@ const url='http://127.0.0.1:4173/module-a/a01/';
    results.push({viewport:tag,bounds:final.bounds,widthRatio:final.bounds.right-final.bounds.left,heightRatio:final.bounds.bottom-final.bounds.top,reversal:true,refresh:true,earlyExit:true,rapidCrossing:true});
    await p.close();
   }
-  const p=await open({width:1440,height:900});await scroll(p,14.5);
+  const p=await open({width:1440,height:900});await scroll(p,14.5);const muralResults=[];
   // Observe real automatic playback, not a test-only seek API.
   for(const [name,t] of [['fifth',9],['first',24],['second',37],['withdrawn',45.5],['route-01',47],['route-02',53],['route-03',58]]){
    await p.waitForFunction(t=>document.querySelector('iframe').contentWindow.shuilongTemple.getA04State()?.elapsed>=t,t,{timeout:25000});
+   if(['fifth','first','second'].includes(name)){
+    const muralId={fifth:'mural-05',first:'mural-01',second:'mural-02'}[name];
+    await p.waitForFunction(id=>document.querySelector('iframe').contentWindow.shuilongTemple.getMuralTextureState(id).loaded,muralId,{timeout:15000});
+    const texture=await p.evaluate(id=>document.querySelector('iframe').contentWindow.shuilongTemple.getMuralTextureState(id),muralId);
+    const timing=await p.evaluate(id=>{const entries=document.querySelector('iframe').contentWindow.performance.getEntriesByType('resource').filter(entry=>decodeURIComponent(entry.name).endsWith(`${id}-display.webp`));return {requests:entries.length,transferBytes:entries.reduce((sum,entry)=>sum+entry.transferSize,0),encodedBytes:entries.reduce((sum,entry)=>sum+entry.encodedBodySize,0)}},muralId);
+    const expectedBytes=fs.statSync(path.resolve(__dirname,`../../水龙祠壁画素材/网页展示图/${muralId}-display.webp`)).size;
+    assert.ok(Math.abs(texture.aspect-texture.planeAspect)<1e-10,`${muralId} keeps image aspect ratio`);
+    assert.equal(texture.rotationY,muralId==='mural-05'?Math.PI/2:-Math.PI/2,`${muralId} orientation`);
+    assert.equal(texture.side,true,`${muralId} belongs to the expected side wall`);
+    assert.equal(timing.requests,1,`${muralId} texture is requested once while viewing its route stop`);
+    assert.ok(timing.transferBytes>=expectedBytes&&timing.transferBytes<=expectedBytes+2048,`${muralId} display texture is transferred once: ${JSON.stringify(timing)}`);
+    muralResults.push({muralId,...texture,...timing});
+    await p.screenshot({path:path.join(muralOutput,`${muralId}.png`)});
+   }
    await shot(p,name);results.push({name,state:await get(p)});console.log('captured',name);
   }
   const y=await p.evaluate(()=>scrollY);await p.waitForTimeout(1000);assert.equal(await p.evaluate(()=>scrollY),y);assert.equal((await get(p)).mode,'completed');
@@ -45,7 +61,18 @@ const url='http://127.0.0.1:4173/module-a/a01/';
   await p.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,get:()=>true});document.dispatchEvent(new Event('visibilitychange'));});const paused=(await get(p)).elapsed;await p.waitForTimeout(800);assert.equal((await get(p)).elapsed,paused);
   await p.evaluate(()=>{delete document.hidden;document.dispatchEvent(new Event('visibilitychange'));});await p.waitForTimeout(400);assert.ok((await get(p)).elapsed>paused);await p.close();
   const reduced=await open({width:1024,height:768},{reducedMotion:'reduce'});await scroll(reduced,14.5);assert.equal((await get(reduced)).mode,'completed');await reduced.close();
+  const failed=await browser.newPage({viewport:{width:1440,height:900}}),failureErrors=[];
+  failed.on('pageerror',error=>failureErrors.push(error.message));
+  await failed.route('**/mural-05-display.webp',route=>route.request().frame()===failed.mainFrame()?route.continue():route.abort());
+  await failed.goto(url);await failed.waitForFunction(()=>document.querySelector('iframe').contentWindow.modelReady);
+  await scroll(failed,14.5);
+  await failed.waitForFunction(()=>document.querySelector('iframe').contentWindow.shuilongTemple.getMuralTextureState('mural-05').requested);
+  await failed.waitForTimeout(400);
+  const fallback=await failed.evaluate(()=>{const frame=document.querySelector('iframe'),api=frame.contentWindow.shuilongTemple;return {texture:api.getMuralTextureState('mural-05'),modelReady:frame.contentWindow.modelReady,a04:Boolean(api.getA04State()),canvas:Boolean(frame.contentDocument.querySelector('canvas'))}});
+  assert.equal(fallback.texture.loaded,false);assert.equal(fallback.texture.requested,true);assert.equal(fallback.modelReady,true);assert.equal(fallback.a04,true);assert.equal(fallback.canvas,true);assert.deepEqual(failureErrors,[]);
+  await failed.screenshot({path:path.join(muralOutput,'mural-05-fallback.png')});await failed.close();
   assert.deepEqual(errors,[]);fs.writeFileSync(path.join(output,'results.json'),JSON.stringify({results,errors,automaticPlayback:true,keyboard:true,visibilitySimulation:true,reducedMotion:true},null,2));
+  fs.writeFileSync(path.join(muralOutput,'results.json'),JSON.stringify({textures:muralResults,fallback:{...fallback,placeholderRemainsAvailable:true},errors,glbBytes:fs.statSync(path.resolve(__dirname,'../../shuilong-temple/shuilong-temple.glb')).size},null,2));
   console.log('A04 browser checks passed');
  }finally{await browser.close();}
 })().catch(e=>{console.error(e);process.exitCode=1;});

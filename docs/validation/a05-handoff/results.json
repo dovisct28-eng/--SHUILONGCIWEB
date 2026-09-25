@@ -14,7 +14,13 @@
       },
       "reverse": true,
       "refresh": true,
-      "rapidCrossing": true
+      "rapidCrossing": true,
+      "sharedCache": {
+        "url": "http://127.0.0.1:4175/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "contexts": 2,
+        "transferBytes": 2842484,
+        "encodedBytes": 5684368
+      }
     },
     {
       "viewport": "1440x900",
@@ -30,7 +36,13 @@
       },
       "reverse": true,
       "refresh": true,
-      "rapidCrossing": true
+      "rapidCrossing": true,
+      "sharedCache": {
+        "url": "http://127.0.0.1:4175/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "contexts": 2,
+        "transferBytes": 2842484,
+        "encodedBytes": 5684368
+      }
     },
     {
       "viewport": "1366x768",
@@ -46,7 +58,13 @@
       },
       "reverse": true,
       "refresh": true,
-      "rapidCrossing": true
+      "rapidCrossing": true,
+      "sharedCache": {
+        "url": "http://127.0.0.1:4175/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "contexts": 2,
+        "transferBytes": 2842484,
+        "encodedBytes": 5684368
+      }
     },
     {
       "viewport": "1024x768",
@@ -62,7 +80,13 @@
       },
       "reverse": true,
       "refresh": true,
-      "rapidCrossing": true
+      "rapidCrossing": true,
+      "sharedCache": {
+        "url": "http://127.0.0.1:4175/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "contexts": 2,
+        "transferBytes": 2842484,
+        "encodedBytes": 5684368
+      }
     }
   ],
   "errors": [],

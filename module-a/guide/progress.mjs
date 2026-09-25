@@ -21,9 +21,22 @@ export function horizontalPlacement(imageWidth, viewportWidth, progress) {
 export function muralTransfer(screens, projection, viewportWidth, viewportHeight, ratio, formalHeight, start=18) {
   const t=smooth((screens-(start-.35))/.35);
   const width=formalHeight*ratio, left=viewportWidth-width;
-  const from=projection||{left:viewportWidth*.38,top:viewportHeight*.42,width:viewportWidth*.24,height:viewportHeight*.16};
+  const bounds=projection||{left:viewportWidth*.38,top:viewportHeight*.42,width:viewportWidth*.24,height:viewportHeight*.16};
+  const fromWidth=Math.min(bounds.width,bounds.height*ratio),fromHeight=fromWidth/ratio;
+  const from={left:bounds.left+(bounds.width-fromWidth)/2,top:bounds.top+(bounds.height-fromHeight)/2,width:fromWidth,height:fromHeight};
   const lerp=(a,b)=>a+(b-a)*t;
   return {left:lerp(from.left,left),top:lerp(from.top,(viewportHeight-formalHeight)/2),
     width:lerp(from.width,width),height:lerp(from.height,formalHeight),
     imageOpacity:smooth((screens-(start-.6))/.25),backgroundOpacity:smooth((screens-(start-.28))/.28)};
+}
+
+export function mapMuralProjection(projection, frameRect, frameWidth, frameHeight, stageRect) {
+  if (!projection || !(frameWidth > 0) || !(frameHeight > 0)) return null;
+  const scaleX = frameRect.width / frameWidth, scaleY = frameRect.height / frameHeight;
+  return {
+    left: frameRect.left - stageRect.left + projection.left * scaleX,
+    top: frameRect.top - stageRect.top + projection.top * scaleY,
+    width: projection.width * scaleX,
+    height: projection.height * scaleY,
+  };
 }

@@ -1,4 +1,4 @@
-import {guideProgress, horizontalPlacement, muralTransfer} from './progress.mjs';
+import {guideProgress, horizontalPlacement, mapMuralProjection, muralTransfer} from './progress.mjs';
 
 export function createMuralGuide(stage, config, requestRender) {
   const stylesheet = document.createElement('link');
@@ -29,7 +29,7 @@ export function createMuralGuide(stage, config, requestRender) {
   section.querySelector('.mural-guide__marker').textContent = `${config.title}　${config.order}`;
   section.querySelector('.mural-guide__next').textContent = config.next;
   const status = section.querySelector('.mural-guide__status');
-  let requested = false, failed = false;
+  let requested = false, failed = false, lastModelMuralOpacity = 1;
   image.addEventListener('load', requestRender);
   image.addEventListener('error', () => { failed = true; requestRender(); });
 
@@ -40,6 +40,10 @@ export function createMuralGuide(stage, config, requestRender) {
       image.src = config.image;
     }
     const transferring=screens>config.start-.6&&screens<config.start;
+    if (!transferring && lastModelMuralOpacity !== 1) {
+      stage.querySelector('iframe')?.contentWindow?.shuilongTemple?.setMuralTransferOpacity?.(config.muralId, 1);
+      lastModelMuralOpacity = 1;
+    }
     section.hidden = !state.active&&!transferring;
     section.inert = !state.active;
     if (section.hidden) { stage.style.removeProperty('--a05-entry'); return; }
@@ -60,9 +64,15 @@ export function createMuralGuide(stage, config, requestRender) {
     if (image.naturalWidth && image.naturalHeight) {
       const formalHeight=innerHeight*(matchMedia('(prefers-reduced-motion: reduce)').matches?.7:innerWidth<=1100?.78:.8);
       if(transferring){
-        const api=stage.querySelector('iframe')?.contentWindow?.shuilongTemple;
-        const projection=api?.getMuralProjection?.(config.muralId);
+        const frame=stage.querySelector('iframe'), api=frame?.contentWindow?.shuilongTemple;
+        const localProjection=api?.getMuralProjection?.(config.muralId);
+        const projection=mapMuralProjection(localProjection,frame?.getBoundingClientRect(),frame?.contentWindow?.innerWidth,frame?.contentWindow?.innerHeight,stage.getBoundingClientRect());
         const layout=muralTransfer(screens,projection,stage.clientWidth,stage.clientHeight,image.naturalWidth/image.naturalHeight,formalHeight,config.start);
+        const modelOpacity=1-layout.imageOpacity;
+        if (Math.abs(modelOpacity-lastModelMuralOpacity)>.001) {
+          api?.setMuralTransferOpacity?.(config.muralId,modelOpacity);
+          lastModelMuralOpacity=modelOpacity;
+        }
         Object.assign(image.style,{left:`${layout.left}px`,top:`${layout.top}px`,width:`${layout.width}px`,height:`${layout.height}px`,transform:'none',opacity:String(layout.imageOpacity)});
         section.style.setProperty('--transfer-background',layout.backgroundOpacity);
         section.dataset.projection=projection?JSON.stringify(projection):'';

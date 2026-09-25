@@ -74,7 +74,7 @@ export function createA04Scene(T, camera, scene, root, roofs, pins) {
       pin.button.dataset.current=String(current);pin.button.textContent=pin.m.label+(current&&state.entryProgress>.5?" · 当前":"");
       pin.button.setAttribute('aria-label',pin.m.label+(current?'，当前观看目标':'，路线位置'));
     }},
-    projection(id){const mural=root.getObjectByName(id);if(!mural||!state)return null;setCamera(state.camera);mural.updateWorldMatrix(true,true);const box=new T.Box3().setFromObject(mural),points=[];for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z])points.push(new T.Vector3(x,y,z).project(camera));const xs=points.map(p=>(p.x+1)*innerWidth/2),ys=points.map(p=>(1-p.y)*innerHeight/2);return {left:Math.min(...xs),top:Math.min(...ys),width:Math.max(...xs)-Math.min(...xs),height:Math.max(...ys)-Math.min(...ys)};},
+    projection(id){const mural=root.getObjectByName(id);if(!mural||!state)return null;const subject=mural.getObjectByName(id+'-display-texture')||mural;setCamera(state.camera);subject.updateWorldMatrix(true,true);const box=new T.Box3().setFromObject(subject),points=[];for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z])points.push(new T.Vector3(x,y,z).project(camera));const xs=points.map(p=>(p.x+1)*innerWidth/2),ys=points.map(p=>(1-p.y)*innerHeight/2);return {left:Math.min(...xs),top:Math.min(...ys),width:Math.max(...xs)-Math.min(...xs),height:Math.max(...ys)-Math.min(...ys)};},
     getState(){return state?{...state,bounds:visibleBounds(),camera:{position:camera.position.toArray(),target:state.camera.target}}:null;},
   };
 }
