@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { pathToFileURL } = require('node:url');
 
-const output = path.resolve(__dirname, '../docs/validation/model-hifi/model-structure');
+const output = process.env.MODEL_VALIDATION_DIR ? path.resolve(process.env.MODEL_VALIDATION_DIR, 'model-structure') : path.resolve(__dirname, '../docs/validation/model-hifi/model-structure');
 fs.mkdirSync(output, { recursive: true });
 const url = 'http://127.0.0.1:4175/module-a/a01/';
 (async () => {
@@ -19,19 +19,22 @@ const url = 'http://127.0.0.1:4175/module-a/a01/';
       page.on('response', response => { if (response.status() >= 400) errors.push(`${response.status()} ${response.url()}`); });
       await page.goto(url);
       await page.waitForFunction(() => document.querySelector('iframe').contentWindow.modelReady);
+      await page.waitForFunction(() => document.querySelector('iframe').contentWindow.shuilongTemple.getArchitectureState().every(material => material.clonesLoaded));
       const states = [];
       for (const [name, screens] of [['a01', 5.7], ['a02', 9.8], ['a03', 11.7], ['a04', 14.5]]) {
         await page.evaluate(value => scrollTo(0, value * innerHeight), screens);
-        await page.waitForTimeout(400);
+        await page.waitForTimeout(700);
         const state = await page.evaluate(() => ({
           phase: document.body.dataset.phase,
           murals: document.querySelector('iframe').contentWindow.shuilongTemple.getMurals(),
           overflow: document.documentElement.scrollWidth > innerWidth,
           triangles: document.querySelector('iframe').contentWindow.modelStats?.triangles,
+          modelOpacity: Number(getComputedStyle(document.querySelector('.model-shell')).opacity),
         }));
         assert.equal(state.overflow, false);
         assert.equal(state.murals.length, 5);
         assert.ok(state.triangles > 0);
+        assert.ok(state.modelOpacity > .99, 'model is fully visible before capturing the settled state');
         states.push({ name, phase: state.phase, triangles: state.triangles });
         await page.screenshot({ path: path.join(output, `${name}-${width}x${height}.png`) });
       }

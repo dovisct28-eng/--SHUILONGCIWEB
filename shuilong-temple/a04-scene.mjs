@@ -63,7 +63,7 @@ export function createA04Scene(T, camera, scene, root, roofs, pins) {
     apply(){
       if(!state)return false;
       setCamera(state.camera);
-      roofs.forEach(m=>{m.material.opacity=state.roofOpacity;m.material.transparent=true;m.material.depthWrite=false;});
+      roofs.forEach(m=>{const transparent=state.roofOpacity<1;if(m.material.transparent!==transparent){m.material.transparent=transparent;m.material.needsUpdate=true;}m.material.opacity=state.roofOpacity;m.material.depthWrite=!transparent;});
       material.opacity=state.routeOpacity;
       lines.forEach((line,i)=>{grow(line,state.paths[i],state.growth[i]);let left=segments[i].reduce((n,p)=>n+p.length,0)*state.growth[i];for(const part of segments[i]){const f=Math.max(0,Math.min(1,left/part.length));part.mesh.visible=f>0;part.mesh.scale.set(1,part.length*f,1);part.mesh.position.copy(part.a).addScaledVector(part.delta,f/2);part.mesh.material.opacity=state.routeOpacity;left-=part.length;}dots[i].visible=i!==0&&state.growth[i]>=1;dots[i].material.opacity=state.routeOpacity*(i?state.secondaryOpacity??1:1);});
       return true;

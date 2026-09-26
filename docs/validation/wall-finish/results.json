@@ -1,0 +1,66 @@
+[
+  {
+    "viewport": [
+      1920,
+      1080
+    ],
+    "views": [
+      "exterior-side",
+      "exterior-rear",
+      "entrance",
+      "interior-gallery",
+      "interior-entry"
+    ],
+    "singleModelLoad": true,
+    "muralRequests": 0,
+    "errors": []
+  },
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "views": [
+      "exterior-side",
+      "exterior-rear",
+      "entrance",
+      "interior-gallery",
+      "interior-entry"
+    ],
+    "singleModelLoad": true,
+    "muralRequests": 0,
+    "errors": []
+  },
+  {
+    "viewport": [
+      1366,
+      768
+    ],
+    "views": [
+      "exterior-side",
+      "exterior-rear",
+      "entrance",
+      "interior-gallery",
+      "interior-entry"
+    ],
+    "singleModelLoad": true,
+    "muralRequests": 0,
+    "errors": []
+  },
+  {
+    "viewport": [
+      1024,
+      768
+    ],
+    "views": [
+      "exterior-side",
+      "exterior-rear",
+      "entrance",
+      "interior-gallery",
+      "interior-entry"
+    ],
+    "singleModelLoad": true,
+    "muralRequests": 0,
+    "errors": []
+  }
+]

@@ -18,13 +18,16 @@ def clamp(v):
     return max(0, min(255, int(v)))
 
 
-def smooth_noise(x, y, step, seed):
+def smooth_noise(x, y, step, seed, periodic=False):
     gx, gy = x / step, y / step
     ix, iy = int(gx), int(gy)
     fx, fy = gx - ix, gy - iy
     fx, fy = fx * fx * (3 - 2 * fx), fy * fy * (3 - 2 * fy)
-    top = noise(ix, iy, seed) * (1 - fx) + noise(ix + 1, iy, seed) * fx
-    bottom = noise(ix, iy + 1, seed) * (1 - fx) + noise(ix + 1, iy + 1, seed) * fx
+    period = SIZE // step
+    def sample(a, b):
+        return noise(a % period, b % period, seed) if periodic else noise(a, b, seed)
+    top = sample(ix, iy) * (1 - fx) + sample(ix + 1, iy) * fx
+    bottom = sample(ix, iy + 1) * (1 - fx) + sample(ix + 1, iy + 1) * fx
     return top * (1 - fy) + bottom * fy
 
 
@@ -33,20 +36,23 @@ def texture(kind):
     rough = Image.new('RGB', (SIZE, SIZE))
     normal = Image.new('RGB', (SIZE, SIZE))
     colors = {
-        'plaster': (199, 184, 157), 'brick': (139, 91, 68),
+        'plaster': (190, 183, 167), 'brick': (124, 91, 76),
         'wood': (55, 45, 39), 'roof': (82, 76, 70),
         'stone': (157, 153, 144), 'paving': (135, 127, 111),
     }
     base = colors[kind]
     for y in range(SIZE):
         for x in range(SIZE):
-            large = smooth_noise(x, y, 58, 2) - .5
+            wall = kind in ('brick', 'plaster')
+            large = smooth_noise(x, y, 64 if wall else 58, 2, periodic=wall) - .5
             small = noise(x // 3, y // 3, 7) - .5
             grain = 0
             if kind == 'brick':
                 row = y // 64
-                joint = y % 64 < 4 or (x + (row % 2) * 64) % 128 < 4
-                grain = (noise((x + (row % 2) * 64) // 128, row, 4) - .5) * 30
+                # Small irregularities soften the mortar edges without modeling bricks.
+                edge = smooth_noise(x, y, 16, 23, periodic=True) * 1.4
+                joint = y % 64 < 3 + edge or (x + (row % 2) * 64) % 128 < 3 + edge
+                grain = (noise(((x + (row % 2) * 64) // 128) % 4, row, 4) - .5) * 24
             elif kind == 'wood':
                 grain = 7 * math.sin(x * .12 + 2 * math.sin(y * .012)) + 4 * math.sin(x * .047)
             elif kind == 'roof':
@@ -62,9 +68,10 @@ def texture(kind):
             if kind == 'paving' and noise(x // 64, y // 64, 13) > .9:
                 variation -= 12
             if kind == 'brick' and joint:
-                color.putpixel((x, y), tuple(clamp(c + small * 8) for c in (177, 166, 147)))
+                color.putpixel((x, y), tuple(clamp(c + small * 8 + large * 6) for c in (166, 159, 145)))
             else:
-                color.putpixel((x, y), tuple(clamp(c + variation) for c in base))
+                weathering = max(0, large - .08) * .45 if kind == 'brick' else 0
+                color.putpixel((x, y), tuple(clamp((c + variation) * (1 - weathering) + 172 * weathering) for c in base))
             r = clamp(237 + small * 14 + large * 9)
             rough.putpixel((x, y), (r, r, r))
             # Very shallow relief; the wall painting itself has no normal map.

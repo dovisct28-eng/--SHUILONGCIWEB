@@ -1,8 +1,8 @@
 const {chromium}=require('playwright');
 const assert=require('node:assert/strict');
 const fs=require('node:fs');const path=require('node:path');
-const output=path.resolve(__dirname,'../../docs/validation/model-hifi');fs.mkdirSync(output,{recursive:true});
-const muralOutput=path.resolve(__dirname,'../../docs/validation/model-hifi/mural-textures');fs.mkdirSync(muralOutput,{recursive:true});
+const output=process.env.MODEL_VALIDATION_DIR?path.resolve(process.env.MODEL_VALIDATION_DIR):path.resolve(__dirname,'../../docs/validation/model-hifi');fs.mkdirSync(output,{recursive:true});
+const muralOutput=path.join(output,'mural-textures');fs.mkdirSync(muralOutput,{recursive:true});
 const url='http://127.0.0.1:4175/module-a/a01/';
 (async()=>{
  const browser=await chromium.launch({channel:'chrome',headless:true});const errors=[],results=[];

@@ -1,0 +1,78 @@
+{
+  "textures": [
+    {
+      "muralId": "mural-05",
+      "loaded": true,
+      "requested": true,
+      "visible": true,
+      "placeholderVisible": false,
+      "borderVisible": false,
+      "aspect": 3.7105751391465676,
+      "planeAspect": 3.7105751391465676,
+      "fitSize": {
+        "width": 6.1,
+        "height": 1.64395
+      },
+      "side": true,
+      "rotationY": 1.5707963267948966,
+      "requests": 1,
+      "transferBytes": 2842484,
+      "encodedBytes": 2842184
+    },
+    {
+      "muralId": "mural-01",
+      "loaded": true,
+      "requested": true,
+      "visible": true,
+      "placeholderVisible": false,
+      "borderVisible": false,
+      "aspect": 2.909090909090909,
+      "planeAspect": 2.909090909090909,
+      "fitSize": {
+        "width": 3.65,
+        "height": 1.2546875
+      },
+      "side": true,
+      "rotationY": -1.5707963267948966,
+      "requests": 1,
+      "transferBytes": 1351448,
+      "encodedBytes": 1351148
+    },
+    {
+      "muralId": "mural-02",
+      "loaded": true,
+      "requested": true,
+      "visible": true,
+      "placeholderVisible": false,
+      "borderVisible": false,
+      "aspect": 4.421518054532056,
+      "planeAspect": 4.421518054532056,
+      "fitSize": {
+        "width": 6.099926308032424,
+        "height": 1.3796
+      },
+      "side": true,
+      "rotationY": -1.5707963267948966,
+      "requests": 1,
+      "transferBytes": 3552914,
+      "encodedBytes": 3552614
+    }
+  ],
+  "fallback": {
+    "texture": {
+      "loaded": false,
+      "requested": true,
+      "visible": false,
+      "placeholderVisible": true,
+      "borderVisible": true,
+      "planeAspect": null,
+      "side": true
+    },
+    "modelReady": true,
+    "a04": true,
+    "canvas": true,
+    "placeholderRemainsAvailable": true
+  },
+  "errors": [],
+  "glbBytes": 3348544
+}

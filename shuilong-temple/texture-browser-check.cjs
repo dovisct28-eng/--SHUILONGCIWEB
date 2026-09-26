@@ -1,6 +1,9 @@
 const { chromium } = require('playwright');
 const assert = require('node:assert/strict');
 const path = require('node:path');
+const fs = require('node:fs');
+const output = path.resolve(process.env.MODEL_VALIDATION_DIR || path.join(__dirname, '../docs/validation/model-hifi'));
+fs.mkdirSync(output, { recursive: true });
 
 (async () => {
   const browser = await chromium.launch({ channel: 'chrome', headless: true });
@@ -21,7 +24,7 @@ const path = require('node:path');
     await page.waitForFunction(() => document.querySelector('iframe').contentWindow.modelReady);
     await page.evaluate(() => scrollTo(0, 14.5 * innerHeight));
     await page.waitForFunction(() => document.querySelector('iframe').contentWindow.shuilongTemple.getA04State()?.elapsed >= 9, null, { timeout: 20000 });
-    await page.screenshot({ path: path.resolve(__dirname, '../docs/validation/model-hifi/textured-fifth.png') });
+    await page.screenshot({ path: path.join(output, 'textured-fifth.png') });
     const fallback = await browser.newPage();
     const fallbackErrors = [];
     fallback.on('pageerror', error => fallbackErrors.push(error.message));

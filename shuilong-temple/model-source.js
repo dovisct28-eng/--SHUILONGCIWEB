@@ -8,6 +8,19 @@ function makeTemple(T){
  function part(name){group=new T.Group();group.name=name;root.add(group);}
  function mesh(g,m,x=0,y=0,z=0){const o=new T.Mesh(g,mats[m]);o.position.set(x,y,z);o.castShadow=true;o.receiveShadow=true;group.add(o);return o;}
  function box(x,y,z,w,h,d,m){return mesh(new T.BoxGeometry(w,h,d),m,x,y,z);}
+ // One closed wall volume, with separate inward plaster and outward masonry faces.
+ // Splitting triangles avoids overlapping surface planes and works with the GLB batches.
+ function wallMesh(geometry,axis,sign,x=0,y=0,z=0){
+  const g=geometry.index?geometry.toNonIndexed():geometry,p=g.getAttribute('position'),n=g.getAttribute('normal');
+  const faces={brick:{p:[],n:[]},plaster:{p:[],n:[]}},a=new T.Vector3(),b=new T.Vector3(),c=new T.Vector3();
+  for(let i=0;i<p.count;i+=3){a.fromBufferAttribute(p,i);b.fromBufferAttribute(p,i+1);c.fromBufferAttribute(p,i+2);const inward=b.sub(a).cross(c.sub(a)).normalize()[axis]*sign>.99,face=faces[inward?'plaster':'brick'];
+   for(let j=i;j<i+3;j++){face.p.push(p.getX(j),p.getY(j),p.getZ(j));face.n.push(n.getX(j),n.getY(j),n.getZ(j));}}
+  for(const [material,face] of Object.entries(faces)){if(!face.p.length)continue;const skin=new T.BufferGeometry();skin.setAttribute('position',new T.Float32BufferAttribute(face.p,3));skin.setAttribute('normal',new T.Float32BufferAttribute(face.n,3));
+   if(material==='plaster'){const colors=[];for(let i=1;i<face.p.length;i+=3){const tone=.88+.12*Math.min(1,Math.max(0,(face.p[i]+y)/2));colors.push(tone,tone,tone);}skin.setAttribute('color',new T.Float32BufferAttribute(colors,3));mats.plaster.vertexColors=true;}
+   mesh(skin,material,x,y,z);
+  }
+ }
+ function wallBox(x,y,z,w,h,d,axis,sign){wallMesh(new T.BoxGeometry(w,h,d),axis,sign,x,y,z);}
  function line(points,r,m){return mesh(new T.TubeGeometry(new T.CatmullRomCurve3(points.map(p=>new T.Vector3(...p))),Math.max(2,points.length-1),r,4,false),m);}
  function col(x,z,y=1.7,h=2.5){mesh(new T.CylinderGeometry(.12,.15,h,12),'wood',x,y,z);box(x,y-h/2,z,.4,.12,.4,'stone');mesh(new T.CylinderGeometry(.2,.23,.16,12),'stone',x,y-h/2+.11,z);}
  // Curved roof with a horizontal ridge and hipped ends. The same surface
@@ -27,19 +40,19 @@ function makeTemple(T){
  part('01_Base');box(0,-.3,-1.75,11.8,.6,29.5,'stone');box(0,.035,-1.75,11.45,.07,29.15,'paving');
  // Paving joints are carried by the repeating material, not one mesh per paver.
  part('02_Enclosure');
- for(let s of [-1,1]){box(s*5,1.4,-1.75,.22,2.8,27.5,'wall');box(s*5,2.82,-1.75,.32,.12,27.5,'trim');
+ for(let s of [-1,1]){wallBox(s*5,1.4,-1.75,.22,2.8,27.5,'x',-s);wallBox(s*5,2.82,-1.75,.32,.12,27.5,'x',-s);
   // Sparse, paired pilasters leave the mural spans (-14.5..-9 and 3.2..6.4) unobstructed.
-  for(const z of [-15,-7.5,0,7.5,10])box(s*5,1.45,z,.34,2.9,.3,'trim');}
- box(0,1.65,-15.3,10,3.3,.25,'wall');
+  for(const z of [-15,-7.5,0,7.5,10])wallBox(s*5,1.45,z,.34,2.9,.3,'x',-s);}
+ wallBox(0,1.65,-15.3,10,3.3,.25,'z',1);
  part('03_MainHall');box(0,.25,-11.75,9.75,.5,7.2,'stone');
  for(let k=0;k<3;k++)box(0,.08+k*.095,-7.75-k*.25,6.8,.16+k*.19,.5,'stone');
- box(0,1.9,-15,9.4,2.9,.2,'wall');
+ wallBox(0,1.9,-15,9.4,2.9,.2,'z',1);
  // Each side wall has brick above the mural plaster and a low weathered brick foot.
  // The plaster is almost flush with the brick, leaving no visible picture backing.
  for(let s of [-1,1]){
   const x=s*4.65;
   box(x,3.025,-11.75,.22,.65,6.6,'brick');
-  box(x,1.85,-11.75,.22,1.7,6.6,'plaster');
+  wallBox(x,1.85,-11.75,.22,1.7,6.6,'x',-s);
   box(x,.69,-11.75,.22,.62,6.6,'brick');
   box(s*4.29,3.24,-11.75,.17,.18,6.7,'wood');
  }
@@ -59,18 +72,18 @@ function makeTemple(T){
  // Three genuine arched openings are assembled from piers and arch spandrels.
  const doors=[[-3.25,.62,1.42],[0,.76,1.68],[3.25,.62,1.42]],wallZ=11.93,top=2.85;
  let edge=-5.12;
- for(let [cx,r,spring] of doors){let l=cx-r;box((edge+l)/2,top/2,wallZ,l-edge,top,.46,'brick');edge=cx+r;
-  const verts=[],inds=[],n=18;for(let i=0;i<=n;i++){let x=-r+2*r*i/n,y=spring+Math.sqrt(Math.max(0,r*r-x*x));verts.push(cx+x,y,wallZ+.17,cx+x,top,wallZ+.17,cx+x,y,wallZ-.17,cx+x,top,wallZ-.17);if(i<n){let a=i*4;inds.push(a,a+4,a+1,a+1,a+4,a+5,a+2,a+3,a+6,a+3,a+7,a+6,a,a+2,a+4,a+2,a+6,a+4);}}
-  let geo=new T.BufferGeometry();geo.setAttribute('position',new T.Float32BufferAttribute(verts,3));geo.setIndex(inds);geo.computeVertexNormals();mesh(geo,'brick');
+ for(let [cx,r,spring] of doors){let l=cx-r;wallBox((edge+l)/2,top/2,wallZ,l-edge,top,.46,'z',-1);edge=cx+r;
+  const verts=[],inds=[],n=18;for(let i=0;i<=n;i++){let x=-r+2*r*i/n,y=spring+Math.sqrt(Math.max(0,r*r-x*x));verts.push(cx+x,y,wallZ+.23,cx+x,top,wallZ+.23,cx+x,y,wallZ-.23,cx+x,top,wallZ-.23);if(i<n){let a=i*4;inds.push(a,a+4,a+1,a+1,a+4,a+5,a+2,a+3,a+6,a+3,a+7,a+6,a,a+2,a+4,a+2,a+6,a+4);}}
+  let geo=new T.BufferGeometry();geo.setAttribute('position',new T.Float32BufferAttribute(verts,3));geo.setIndex(inds);geo.computeVertexNormals();wallMesh(geo,'z',-1);
   box(cx,spring/2,wallZ+.07,2*r,spring,.07,'door');
   for(let dx=-r+.12;dx<r;dx+=.17)box(cx+dx,spring/2,wallZ+.115,.018,spring,.018,'wood');
-  let infill=new T.Shape();infill.moveTo(-r,spring);infill.lineTo(r,spring);infill.absarc(0,spring,r,0,Math.PI,false);infill.closePath();mesh(new T.ShapeGeometry(infill,18),'brick',cx,0,wallZ+.19);
+  let infill=new T.Shape();infill.moveTo(-r,spring);infill.lineTo(r,spring);infill.absarc(0,spring,r,0,Math.PI,false);infill.closePath();wallMesh(new T.ExtrudeGeometry(infill,{depth:.42,bevelEnabled:false,curveSegments:18}),'z',-1,cx,0,wallZ-.23);
   box(cx,spring,wallZ+.24,2*r+.12,.13,.2,'wood');
   let arch=[];for(let i=0;i<=20;i++){let a=i/20*Math.PI;arch.push([cx+(r+.13)*Math.cos(a),spring+(r+.13)*Math.sin(a),wallZ+.27]);}line(arch,.105,'brick');
   for(let s of [-1,1])box(cx+s*(r+.11),spring/2,wallZ+.27,.2,spring,.25,'brick');
   box(cx,.065,wallZ+.2,2*r+.2,.13,.65,'stone');for(let s of [-1,1])mesh(new T.TorusGeometry(.047,.014,5,10),'metal',cx+s*.1,.95,wallZ+.06);
  }
- box((edge+5.12)/2,top/2,wallZ,5.12-edge,top,.46,'brick');box(0,2.86,wallZ,10.5,.18,.52,'brick');
+ wallBox((edge+5.12)/2,top/2,wallZ,5.12-edge,top,.46,'z',-1);wallBox(0,2.86,wallZ,10.5,.18,.52,'z',-1);
  for(let x of [-5.05,-1.67,1.67,5.05])box(x,1.4,12.17,.25,2.8,.3,'brick');
  for(let x of [-5.08,5.08]){box(x,3,wallZ,.28,.2,.3,'stone');mesh(new T.SphereGeometry(.14,10,8),'trim',x,3.2,wallZ);}
  // Mural placeholders on inner wall faces. +Z is the entrance; -Z the hall.

@@ -81,12 +81,14 @@ for (const group of groups) {
         ...(kind ? { baseColorTexture: { index: texture(kind, 'basecolor') }, metallicRoughnessTexture: { index: texture(kind, 'roughness') } } : {}),
       }, ...(kind ? { normalTexture: { index: texture(kind, 'normal'), scale: .18 }, extras: { fallbackColor: [material.color.r, material.color.g, material.color.b], textureKey: kind } } : {}), doubleSided: material.side === T.DoubleSide });
     }
-    if (!batches.has(key)) batches.set(key, { positions: [], normals: [], uvs: [], indices: [] });
+    if (!batches.has(key)) batches.set(key, { positions: [], normals: [], uvs: [], colors: [], hasColors: false, indices: [] });
     const batch = batches.get(key), geometry = mesh.geometry;
     const base = batch.positions.length / 3;
     const positions = geometry.getAttribute('position'), normals = geometry.getAttribute('normal');
     if (!normals) geometry.computeVertexNormals();
     const actualNormals = geometry.getAttribute('normal');
+    const colors = geometry.getAttribute('color');
+    batch.hasColors ||= Boolean(colors);
     const normalMatrix = new T.Matrix3().getNormalMatrix(mesh.matrixWorld);
     const vertex = new T.Vector3(), normal = new T.Vector3();
     for (let i = 0; i < positions.count; i++) {
@@ -94,6 +96,7 @@ for (const group of groups) {
       normal.fromBufferAttribute(actualNormals, i).applyMatrix3(normalMatrix).normalize();
       batch.positions.push(vertex.x, vertex.y, vertex.z);
       batch.normals.push(normal.x, normal.y, normal.z);
+      batch.colors.push(colors ? colors.getX(i) : 1, colors ? colors.getY(i) : 1, colors ? colors.getZ(i) : 1);
       if (material.userData.texture) {
         const scale = material.userData.texture === 'brick' ? 2 : 1;
         batch.uvs.push(...worldUV(vertex, normal).map(value => value * scale));
@@ -107,11 +110,12 @@ for (const group of groups) {
     const position = accessor(new Float32Array(batch.positions), 'VEC3', 5126, 34962, true);
     const normal = accessor(new Float32Array(batch.normals), 'VEC3', 5126, 34962);
     const uv = batch.uvs.length ? accessor(new Float32Array(batch.uvs), 'VEC2', 5126, 34962) : null;
+    const colorAttribute = batch.hasColors ? accessor(new Float32Array(batch.colors), 'VEC3', 5126, 34962) : null;
     const indices = accessor(new Uint32Array(batch.indices), 'SCALAR', 5125, 34963);
     triangles += batch.indices.length / 3;
     const color = key.split(':')[0];
     const role = group.userData.mural ? color === '668f8c' ? 'placeholder' : color === 'cda85d' ? 'border' : null : null;
-    primitives.push({ attributes: { POSITION: position, NORMAL: normal, ...(uv !== null ? { TEXCOORD_0: uv } : {}) }, indices, material: palette.get(key), mode: 4, ...(role ? { extras: { role } } : {}) });
+    primitives.push({ attributes: { POSITION: position, NORMAL: normal, ...(uv !== null ? { TEXCOORD_0: uv } : {}), ...(colorAttribute !== null ? { COLOR_0: colorAttribute } : {}) }, indices, material: palette.get(key), mode: 4, ...(role ? { extras: { role } } : {}) });
   }
   const meshIndex = gltf.meshes.length;
   gltf.meshes.push({ primitives });

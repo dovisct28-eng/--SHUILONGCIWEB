@@ -93,3 +93,70 @@ test('GLB exports valid UV and embedded PBR texture chains', () => {
     }
   }
 });
+
+function readAccessor(id) {
+  const accessor = doc.accessors[id], view = doc.bufferViews[accessor.bufferView];
+  const offset = dataStart + view.byteOffset + (accessor.byteOffset || 0);
+  const components = { SCALAR: 1, VEC2: 2, VEC3: 3 }[accessor.type];
+  return Array.from({ length: accessor.count }, (_, i) => Array.from({ length: components }, (_, j) =>
+    binary[accessor.componentType === 5126 ? 'readFloatLE' : 'readUInt32LE'](offset + (i * components + j) * 4)));
+}
+
+test('closed perimeter wall faces are exterior brick and interior plaster in the exported GLB', () => {
+  function faceMaterials(group, axis, coordinate, sample = null) {
+    const node = doc.nodes.find(n => n.name === group), keys = [];
+    for (const primitive of doc.meshes[node.mesh].primitives) {
+      const key = doc.materials[primitive.material].extras?.textureKey;
+      if (!['brick', 'plaster'].includes(key)) continue;
+      const points = readAccessor(primitive.attributes.POSITION), indices = readAccessor(primitive.indices).flat();
+      for (let i = 0; i < indices.length; i += 3) {
+        const triangle = indices.slice(i, i + 3).map(index => points[index]);
+        if (!triangle.every(point => Math.abs(point[axis] - coordinate) < .0001)) continue;
+        if (sample) {
+          const axes = [0, 1, 2].filter(value => value !== axis), [u, v] = axes;
+          const sides = triangle.map((a, j) => { const b = triangle[(j + 1) % 3]; return (b[u] - a[u]) * (sample[1] - a[v]) - (b[v] - a[v]) * (sample[0] - a[u]); });
+          if (!sides.every(value => value >= -.00001) && !sides.every(value => value <= .00001)) continue;
+        }
+        keys.push(key);
+      }
+    }
+    assert.ok(keys.length, `${group} has a face at ${coordinate}`);
+    return new Set(keys);
+  }
+  for (const sign of [-1, 1]) {
+    assert.deepEqual(faceMaterials('02_Enclosure', 0, sign * 5.11), new Set(['brick']));
+    assert.deepEqual(faceMaterials('02_Enclosure', 0, sign * 4.89), new Set(['plaster']));
+    assert.deepEqual(faceMaterials('02_Enclosure', 0, sign * 5.17), new Set(['brick']));
+    assert.deepEqual(faceMaterials('02_Enclosure', 0, sign * 4.83), new Set(['plaster']));
+  }
+  assert.deepEqual(faceMaterials('02_Enclosure', 2, -15.425), new Set(['brick']));
+  assert.deepEqual(faceMaterials('02_Enclosure', 2, -15.175), new Set(['plaster']));
+  assert.deepEqual(faceMaterials('07_Entrance', 2, 12.16), new Set(['brick']));
+  assert.deepEqual(faceMaterials('07_Entrance', 2, 11.7), new Set(['plaster']));
+  for (const [x, y] of [[-3.25, 1.7], [0, 2], [3.25, 1.7]]) {
+    assert.deepEqual(faceMaterials('07_Entrance', 2, 11.7, [x, y]), new Set(['plaster']), 'arch infill is closed and plastered from inside');
+    assert.deepEqual(faceMaterials('07_Entrance', 2, 12.12, [x, y]), new Set(['brick']), 'arch infill is brick from outside');
+  }
+  // Main hall interior keeps the documented upper/lower brick bands around plaster.
+  for (const sign of [-1, 1]) {
+    assert.deepEqual(faceMaterials('03_MainHall', 0, sign * 4.76), new Set(['brick']));
+    assert.deepEqual(faceMaterials('03_MainHall', 0, sign * 4.54), new Set(['brick', 'plaster']));
+  }
+});
+
+test('interior plaster has a subtle height gradient, with COLOR_0 preserved for both previews', () => {
+  let colored = 0;
+  for (const mesh of doc.meshes) for (const primitive of mesh.primitives) {
+    if (primitive.attributes.COLOR_0 === undefined) continue;
+    colored++;
+    assert.equal(doc.materials[primitive.material].extras.textureKey, 'plaster');
+    const positions = readAccessor(primitive.attributes.POSITION), colors = readAccessor(primitive.attributes.COLOR_0);
+    assert.equal(colors.length, positions.length);
+    for (let i = 0; i < colors.length; i++) {
+      const expected = .88 + .12 * Math.min(1, Math.max(0, positions[i][1] / 2));
+      for (const value of colors[i]) assert.ok(Math.abs(value - expected) < .00001);
+    }
+  }
+  assert.ok(colored >= 3);
+  assert.ok(preview.includes("g.setAttribute('color',new T.BufferAttribute(attr(p.attributes.COLOR_0),3))"));
+});
