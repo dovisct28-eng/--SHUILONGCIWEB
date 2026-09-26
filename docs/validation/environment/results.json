@@ -1,0 +1,373 @@
+{
+  "baseline": "84c8dd674daab88fb4cd0bbe93f774b9beb0f1ac",
+  "unitTests": {
+    "passed": 44,
+    "failed": 0
+  },
+  "build": {
+    "triangles": 83360,
+    "bytes": 3348544,
+    "glbUnchanged": true
+  },
+  "browserSuites": [
+    "environment-browser-check",
+    "model-browser-check",
+    "a04/browser-check",
+    "a04/transition-check",
+    "texture-browser-check"
+  ],
+  "screenshotDirectory": "C:/Users/dovis/.codex/visualizations/2026/09/26/01a0ddd2-ad68-7883-807e-71a10068583b",
+  "inspected": [
+    "a01-1440x900.png",
+    "a01-1920x1080.png",
+    "a02-1440x900.png",
+    "a03-1440x900.png",
+    "a04-overview-1440x900.png",
+    "a04-fifth-1440x900.png",
+    "a04-first-1440x900.png",
+    "a04-second-1440x900.png"
+  ],
+  "environment": [
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "states": [
+        {
+          "name": "a01",
+          "environmentOpacity": 1,
+          "foregroundOpacity": 1,
+          "environmentSaturation": 0.65,
+          "environmentContrast": 0.8,
+          "focusStrength": 0,
+          "fogDensity": 0.007,
+          "lightIntensity": 3.3,
+          "target": null,
+          "chapter": "A01",
+          "visible": true,
+          "groups": [
+            "Terrain",
+            "Field",
+            "Vegetation",
+            "Foreground",
+            "DistantMountains",
+            "Atmosphere"
+          ],
+          "triangles": 4830,
+          "meshes": 26,
+          "resourceRequests": 0,
+          "error": null,
+          "shadowEnabled": true,
+          "exposure": 1.12
+        },
+        {
+          "name": "a02",
+          "environmentOpacity": 0.7038222222222222,
+          "foregroundOpacity": 0.01274074074074072,
+          "environmentSaturation": 0.65,
+          "environmentContrast": 0.8,
+          "focusStrength": 0,
+          "fogDensity": 0.007,
+          "lightIntensity": 3.3,
+          "target": null,
+          "chapter": "A02",
+          "visible": true,
+          "groups": [
+            "Terrain",
+            "Field",
+            "Vegetation",
+            "Foreground",
+            "DistantMountains",
+            "Atmosphere"
+          ],
+          "triangles": 4830,
+          "meshes": 26,
+          "resourceRequests": 0,
+          "error": null,
+          "shadowEnabled": true,
+          "exposure": 1.12
+        },
+        {
+          "name": "a03",
+          "environmentOpacity": 0.36200274348422495,
+          "foregroundOpacity": 0,
+          "environmentSaturation": 0.40857338820301786,
+          "environmentContrast": 0.5585733882030179,
+          "focusStrength": 0.2124554183813443,
+          "fogDensity": 0.009897119341563787,
+          "lightIntensity": 3.3,
+          "target": null,
+          "chapter": "A03",
+          "visible": true,
+          "groups": [
+            "Terrain",
+            "Field",
+            "Vegetation",
+            "Foreground",
+            "DistantMountains",
+            "Atmosphere"
+          ],
+          "triangles": 4830,
+          "meshes": 26,
+          "resourceRequests": 0,
+          "error": null,
+          "shadowEnabled": true,
+          "exposure": 1.12
+        }
+      ],
+      "errors": [],
+      "singleGLB": true
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "states": [
+        {
+          "name": "a01",
+          "environmentOpacity": 1,
+          "foregroundOpacity": 1,
+          "environmentSaturation": 0.65,
+          "environmentContrast": 0.8,
+          "focusStrength": 0,
+          "fogDensity": 0.007,
+          "lightIntensity": 3.3,
+          "target": null,
+          "chapter": "A01",
+          "visible": true,
+          "groups": [
+            "Terrain",
+            "Field",
+            "Vegetation",
+            "Foreground",
+            "DistantMountains",
+            "Atmosphere"
+          ],
+          "triangles": 4830,
+          "meshes": 26,
+          "resourceRequests": 0,
+          "error": null,
+          "shadowEnabled": true,
+          "exposure": 1.12
+        },
+        {
+          "name": "a02",
+          "environmentOpacity": 0.7038222222222222,
+          "foregroundOpacity": 0.01274074074074072,
+          "environmentSaturation": 0.65,
+          "environmentContrast": 0.8,
+          "focusStrength": 0,
+          "fogDensity": 0.007,
+          "lightIntensity": 3.3,
+          "target": null,
+          "chapter": "A02",
+          "visible": true,
+          "groups": [
+            "Terrain",
+            "Field",
+            "Vegetation",
+            "Foreground",
+            "DistantMountains",
+            "Atmosphere"
+          ],
+          "triangles": 4830,
+          "meshes": 26,
+          "resourceRequests": 0,
+          "error": null,
+          "shadowEnabled": true,
+          "exposure": 1.12
+        },
+        {
+          "name": "a03",
+          "environmentOpacity": 0.36200274348422495,
+          "foregroundOpacity": 0,
+          "environmentSaturation": 0.40857338820301786,
+          "environmentContrast": 0.5585733882030179,
+          "focusStrength": 0.2124554183813443,
+          "fogDensity": 0.009897119341563787,
+          "lightIntensity": 3.3,
+          "target": null,
+          "chapter": "A03",
+          "visible": true,
+          "groups": [
+            "Terrain",
+            "Field",
+            "Vegetation",
+            "Foreground",
+            "DistantMountains",
+            "Atmosphere"
+          ],
+          "triangles": 4830,
+          "meshes": 26,
+          "resourceRequests": 0,
+          "error": null,
+          "shadowEnabled": true,
+          "exposure": 1.12
+        }
+      ],
+      "errors": [],
+      "singleGLB": true
+    },
+    {
+      "failure": "environment",
+      "visual": {
+        "error": "TypeError: Failed to fetch dynamically imported module: http://127.0.0.1:4175/shuilong-temple/environment.mjs",
+        "shadowEnabled": true,
+        "exposure": 1.12
+      },
+      "errors": []
+    },
+    {
+      "failure": "glb",
+      "visual": {
+        "environmentOpacity": 1,
+        "foregroundOpacity": 1,
+        "environmentSaturation": 0.65,
+        "environmentContrast": 0.8,
+        "focusStrength": 0,
+        "fogDensity": 0.007,
+        "lightIntensity": 3.3,
+        "target": null,
+        "chapter": "A01",
+        "visible": true,
+        "groups": [
+          "Terrain",
+          "Field",
+          "Vegetation",
+          "Foreground",
+          "DistantMountains",
+          "Atmosphere"
+        ],
+        "triangles": 4830,
+        "meshes": 26,
+        "resourceRequests": 0,
+        "error": null,
+        "shadowEnabled": true,
+        "exposure": 1.12
+      },
+      "errors": []
+    },
+    {
+      "failure": "mural",
+      "visual": {
+        "environmentOpacity": 1,
+        "foregroundOpacity": 1,
+        "environmentSaturation": 0.65,
+        "environmentContrast": 0.8,
+        "focusStrength": 0,
+        "fogDensity": 0.007,
+        "lightIntensity": 3.3,
+        "target": null,
+        "chapter": "A01",
+        "visible": true,
+        "groups": [
+          "Terrain",
+          "Field",
+          "Vegetation",
+          "Foreground",
+          "DistantMountains",
+          "Atmosphere"
+        ],
+        "triangles": 4830,
+        "meshes": 26,
+        "resourceRequests": 0,
+        "error": null,
+        "shadowEnabled": true,
+        "exposure": 1.12
+      },
+      "errors": []
+    },
+    {
+      "failure": "reduced-motion",
+      "visual": {
+        "environmentOpacity": 1,
+        "foregroundOpacity": 1,
+        "environmentSaturation": 0.65,
+        "environmentContrast": 0.8,
+        "focusStrength": 0,
+        "fogDensity": 0.007,
+        "lightIntensity": 3.3,
+        "target": null,
+        "chapter": "A01",
+        "visible": true,
+        "groups": [
+          "Terrain",
+          "Field",
+          "Vegetation",
+          "Foreground",
+          "DistantMountains",
+          "Atmosphere"
+        ],
+        "triangles": 4830,
+        "meshes": 26,
+        "resourceRequests": 0,
+        "error": null,
+        "shadowEnabled": true,
+        "exposure": 1.12
+      },
+      "errors": []
+    }
+  ],
+  "performance": [
+    {
+      "enabled": false,
+      "readyMs": 906,
+      "glb": 1,
+      "medianFrameMs": 7,
+      "p95FrameMs": 7.599999999999909,
+      "render": {
+        "triangles": 83362,
+        "drawCalls": 47
+      },
+      "visual": {
+        "error": "TypeError: Failed to fetch dynamically imported module: http://127.0.0.1:4175/shuilong-temple/environment.mjs",
+        "shadowEnabled": true,
+        "exposure": 1.12
+      }
+    },
+    {
+      "enabled": true,
+      "readyMs": 1281,
+      "glb": 1,
+      "medianFrameMs": 7,
+      "p95FrameMs": 7.400000000000091,
+      "render": {
+        "triangles": 88212,
+        "drawCalls": 74
+      },
+      "visual": {
+        "environmentOpacity": 1,
+        "foregroundOpacity": 1,
+        "environmentSaturation": 0.65,
+        "environmentContrast": 0.8,
+        "focusStrength": 0,
+        "fogDensity": 0.007,
+        "lightIntensity": 3.3,
+        "target": null,
+        "chapter": "A01",
+        "visible": true,
+        "groups": [
+          "Terrain",
+          "Field",
+          "Vegetation",
+          "Foreground",
+          "DistantMountains",
+          "Atmosphere"
+        ],
+        "triangles": 4830,
+        "meshes": 26,
+        "resourceRequests": 0,
+        "error": null,
+        "shadowEnabled": true,
+        "exposure": 1.12
+      }
+    }
+  ],
+  "limitations": [
+    "Designed environment, not surveyed landscape or verified species.",
+    "Headless local frame timing is an indicative sample, not a cross-device GPU benchmark.",
+    "Existing A01 scroll entrance and A04 cameras retained."
+  ]
+}

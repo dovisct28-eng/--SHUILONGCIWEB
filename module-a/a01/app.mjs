@@ -99,6 +99,7 @@ function render() {
   });
   const screens = Math.max(0, -bounds.top) / innerHeight;
   lastScreens = screens;
+  modelFrame.contentWindow?.shuilongTemple?.setVisualProgress?.(screens);
   renderA04(screens);
   renderA05(screens);
   renderA06(screens);

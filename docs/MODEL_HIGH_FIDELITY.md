@@ -38,3 +38,69 @@
 去掉了旧铺地缝逐条几何，贴图直接嵌入 GLB；GLB 仍只加载一次，三幅壁画仍逐幅按需请求。代表性截图和浏览器测试结果保存在 `docs/validation/model-hifi/`。已核查 A01—A04、A04→A05、A05—A08 基本可达、尺寸 1920×1080 / 1440×900 / 1366×768 / 1024×768、刷新、倒滚、跳过、重播、reduced-motion、单幅壁画加载失败、建筑贴图解码失败和外部 GLB 请求失败回退。
 
 仍需现场资料确认：墙体确切尺寸、壁画与抹灰层边界、砖缝尺度、门洞厚度、未入镜梁架及石础细部。当前材质为受照片约束的视觉表达；不宜将它称为 1:1 文物复原。
+
+## 视觉导演 / Environment Art Direction（2026-09-26）
+
+开发基线为远程 `master` 的 `84c8dd674daab88fb4cd0bbe93f774b9beb0f1ac`。本轮作用于模块 A 的共享模型展示场景与背景，不修改模块 B、建筑源几何、GLB、五幅壁画元数据、原始图片或 A04 镜头路线。
+
+### 资料边界与设计意图
+
+`PROJECT_CONTEXT.md`、`CONTENT_MAP.md` 将研究对象明确为**湖南江永勾蓝瑶水龙祠**，与任务书中的“晋南”不一致。本轮不把晋南地貌或植物类别当成现场事实。土地、田地、树冠及远山仅为服务空间层次的设计性重构，不代表实际地界、作物、植被品种或现场山体轮廓；没有引入 AI 文物图像。
+
+### 光照与色彩
+
+- 一盏方向光位于 `(-19,23,-22)`，斜光高度约 38°，暖白色 `#fff1dd`，强度由 3.3 随 A04 进入减至 3.05。Hemisphere 填充光由 2.1 降至 0.95，天空微冷、地面暖灰；不增加 Spotlight 或动态灯阵列。
+- 保留 PCF soft shadow，2048² 阴影贴图；扩大覆盖范围至 ±25，沿用小 normalBias / bias，屋檐、廊柱与台阶保留投影。基础地面保留低强度 ShadowMaterial；树下使用低透明度接触片，不用高反差大树影抢夺建筑焦点。
+- ACES exposure 从 1.22 调到 1.12。壁画展示平面为 MeshBasicMaterial，并明确 `toneMapped:false, fog:false`，不受建筑曝光、雾或焦点压暗影响；源图和单幅按需加载机制不变。
+- 页背景为暖灰天空到灰褐土地的弱渐变，iframe 透明。FogExp2 密度 0.007–0.010，建筑环境采用米灰、灰褐与灰绿；原有砖、抹灰、木、瓦的贴图链保持不变。
+
+### 环境与章节状态
+
+`shuilong-temple/environment.mjs` 独立创建 `Environment`，子层为 Terrain、Field、Vegetation、Foreground、DistantMountains、Atmosphere。远山由同一环境控制器创建内联 SVG 背景，Atmosphere 由场景 Fog 表达；两者不增加三角面。没有增加第二个 RAF 或后处理管线。
+
+土地使用不规则径向网格、低起伏和顶点透明度，将矩形基座的外侧埋入场地；环境专用 shader 对视口边缘进一步渐隐，避免 iframe 硬裁切。建筑真实台基和院内铺地仍保留。单侧三块田地、弯曲土路、六组不对称树冠、少量石块与近景矮植被提供层次。树冠和树干使用 InstancedMesh。远山为低对比、轻模糊的 SVG 轮廓，始终位于画布背后，不会覆盖屋面或壁画。
+
+`visualState(screens, tour)` 从现有滚动与 A04 状态派生环境 opacity、前景 opacity、对比、饱和度、focusStrength、fogDensity 和主光强度。A01 保留完整环境；A02 前景退场、环境约 70%；A03 环境逐步降至约 35%；A04 进入完成后环境完全隐藏。倒滚按相同函数恢复，无额外过渡计时器，适用于 reduced-motion 与 resize。
+
+建筑焦点只改变运行时非壁画材质的颜色乘数：主殿保持最高建筑权重，围墙和入口稍降，A04 第一幅对应东廊，第二/第五幅对应主殿。没有全局 CSS 饱和度滤镜、发光壁画或人工光圈。A01 左文右景、A02 空间总览以及 A04 停靠镜头继续沿用既有镜头坐标，通过环境前后层、斜光与淡出建立章节差异；保留原有 A01 滚动开场，不自动跳滚到建筑完成态。
+
+环境无外部图片或 HDRI，HTTP 模式只新增一个约 9 KB 的环境代码模块；file 预览使用构建时内联副本。模块加载或环境创建失败会保留建筑与壁画运行，初始化异常清理已创建的环境资源。模型 ready 通知移至初始化结束后，避免异步环境导入覆盖父页面恢复的滚动状态。
+
+### 成本与验收
+
+| 项目 | 本轮结果 |
+| --- | ---: |
+| 建筑 GLB | 3,348,544 B，增量 0 B |
+| 建筑三角面 | 83,360，增量 0 |
+| 环境三角面（含实例展开计数） | 4,830 |
+| 环境 Mesh 对象 | 26 |
+| 新增环境图片 / HDRI | 0 B / 0 请求 |
+| 环境模块源码 | 9,169 B |
+| 预览 HTML 增量（含离线副本） | 10,715 B |
+| 1440×900 A01 渲染调用抽样 | 47 → 74 |
+| 无环境 / 有环境帧间隔中位数 | 7.0 / 7.0 ms |
+| 无环境 / 有环境 P95 帧间隔 | 7.6 / 7.4 ms |
+| 无环境 / 有环境 modelReady 抽样 | 906 / 1,281 ms |
+
+性能数据为本机 Chrome headless、同尺寸、90 帧窗口的一次对照抽样；无环境对照通过阻断环境模块实现，仍使用本轮光照。不是原提交的完整性能基准，也不构成所有 PC/GPU 的帧率保证。GLB 在每次页面加载中均只请求一次。
+
+44 项单元测试全部通过，涵盖原有 40 项及新增环境状态、独立分组、资源释放、倒滚、几何预算与壁画隔离。模型构建通过，GLB 与离线副本一致。浏览器验收通过：
+
+- A01/A02/A03：1440×900 与 1920×1080；人工查看首屏完成态的地面衔接、主体权重、远近层次与屋面明暗。
+- A04：第五幅、第一幅、第二幅实际自动播放停靠截图；全景与路线、跳过、重播、隐藏页面暂停、刷新、倒滚、快速跨章、reduced-motion。
+- A04→A05：1920×1080、1440×900、1366×768、1024×768 的连续交接；A05–A08 可达，三幅导读图片正常加载。
+- resize、GLB 请求失败的内联回退、建筑贴图失败的基础材质回退、壁画失败的占位回退，以及环境模块失败后建筑/A04/A05 可用。
+- 最终截图人工检查通过；远山保持低对比背景，不作为可辨识的地理证据。截图保存在工作区外，未将临时 PNG 加入仓库。具体结果、截图路径与性能记录见 `docs/validation/environment/results.json`。
+
+复验命令（先启动 `A01_PORT=4175` 的 `module-a/a01/server.mjs`，浏览器脚本需可解析 Playwright，并将 `MODEL_VALIDATION_DIR` 指向工作区外的截图目录）：
+
+```text
+node shuilong-temple/build-model.mjs
+node --test module-a/*/*.test.mjs module-a/*.test.mjs shuilong-temple/*.test.mjs
+node shuilong-temple/environment-browser-check.cjs
+node shuilong-temple/environment-performance-check.cjs
+node shuilong-temple/model-browser-check.cjs
+node module-a/a04/browser-check.cjs
+node module-a/a04/transition-check.cjs
+node shuilong-temple/texture-browser-check.cjs
+```

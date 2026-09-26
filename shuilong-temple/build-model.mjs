@@ -136,7 +136,7 @@ const builtMurals = gltf.nodes.filter(node => node.extras.mural).map(node => nod
 if (JSON.stringify(expectedMurals) !== JSON.stringify(builtMurals)) throw new Error('Mural metadata differs from mural-locations.json');
 if (!/atob\('[A-Za-z0-9+/=]+'\)/.test(preview)) throw new Error('Offline model copy not found');
 let embedded = preview.replace(/atob\('[A-Za-z0-9+/=]+'\)/, `atob('${output.toString('base64')}')`);
-for (const [name, file] of [['inlineA04', 'a04-scene.mjs'], ['inlineMarkers', 'narrative-markers.mjs']]) {
+for (const [name, file] of [['inlineA04', 'a04-scene.mjs'], ['inlineMarkers', 'narrative-markers.mjs'], ['inlineEnvironment', 'environment.mjs']]) {
   const expression = new RegExp(`const ${name}="(?:\\\\.|[^"\\\\])*";`);
   if (!expression.test(embedded)) throw new Error(`Offline module ${name} not found`);
   embedded = embedded.replace(expression, `const ${name}=${JSON.stringify(fs.readFileSync(path.join(directory, file), 'utf8'))};`);
