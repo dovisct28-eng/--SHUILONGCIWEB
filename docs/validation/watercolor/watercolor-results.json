@@ -1,0 +1,314 @@
+[
+  {
+    "viewport": [
+      1920,
+      1080
+    ],
+    "assets": [
+      "http://127.0.0.1:4175/shuilong-temple/environment-assets/watercolor-tree.webp",
+      "http://127.0.0.1:4175/shuilong-temple/environment-assets/ivory-mist.webp",
+      "http://127.0.0.1:4175/shuilong-temple/environment-assets/distant-landscape.webp"
+    ],
+    "errors": [],
+    "state": {
+      "environmentOpacity": 1,
+      "foregroundOpacity": 1,
+      "environmentSaturation": 0.65,
+      "environmentContrast": 0.8,
+      "focusStrength": 0,
+      "fogDensity": 0.007,
+      "lightIntensity": 3.3,
+      "target": null,
+      "chapter": "A01",
+      "visible": true,
+      "groups": [
+        "Terrain",
+        "Field",
+        "Vegetation",
+        "Foreground",
+        "DistantMountains",
+        "Atmosphere"
+      ],
+      "triangles": 782,
+      "meshes": 25,
+      "resourceRequests": 3,
+      "assets": {
+        "tree": "loaded",
+        "mountains": "loaded",
+        "mist": "loaded"
+      },
+      "error": null,
+      "shadowEnabled": true,
+      "exposure": 1.18
+    }
+  },
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "assets": [
+      "http://127.0.0.1:4175/shuilong-temple/environment-assets/watercolor-tree.webp",
+      "http://127.0.0.1:4175/shuilong-temple/environment-assets/ivory-mist.webp",
+      "http://127.0.0.1:4175/shuilong-temple/environment-assets/distant-landscape.webp"
+    ],
+    "errors": [],
+    "state": {
+      "environmentOpacity": 1,
+      "foregroundOpacity": 1,
+      "environmentSaturation": 0.65,
+      "environmentContrast": 0.8,
+      "focusStrength": 0,
+      "fogDensity": 0.007,
+      "lightIntensity": 3.3,
+      "target": null,
+      "chapter": "A01",
+      "visible": true,
+      "groups": [
+        "Terrain",
+        "Field",
+        "Vegetation",
+        "Foreground",
+        "DistantMountains",
+        "Atmosphere"
+      ],
+      "triangles": 782,
+      "meshes": 25,
+      "resourceRequests": 3,
+      "assets": {
+        "tree": "loaded",
+        "mountains": "loaded",
+        "mist": "loaded"
+      },
+      "error": null,
+      "shadowEnabled": true,
+      "exposure": 1.18
+    }
+  },
+  {
+    "viewport": [
+      1366,
+      768
+    ],
+    "assets": [
+      "http://127.0.0.1:4175/shuilong-temple/environment-assets/watercolor-tree.webp",
+      "http://127.0.0.1:4175/shuilong-temple/environment-assets/ivory-mist.webp",
+      "http://127.0.0.1:4175/shuilong-temple/environment-assets/distant-landscape.webp"
+    ],
+    "errors": [],
+    "state": {
+      "environmentOpacity": 1,
+      "foregroundOpacity": 1,
+      "environmentSaturation": 0.65,
+      "environmentContrast": 0.8,
+      "focusStrength": 0,
+      "fogDensity": 0.007,
+      "lightIntensity": 3.3,
+      "target": null,
+      "chapter": "A01",
+      "visible": true,
+      "groups": [
+        "Terrain",
+        "Field",
+        "Vegetation",
+        "Foreground",
+        "DistantMountains",
+        "Atmosphere"
+      ],
+      "triangles": 782,
+      "meshes": 25,
+      "resourceRequests": 3,
+      "assets": {
+        "tree": "loaded",
+        "mountains": "loaded",
+        "mist": "loaded"
+      },
+      "error": null,
+      "shadowEnabled": true,
+      "exposure": 1.18
+    }
+  },
+  {
+    "viewport": [
+      1024,
+      768
+    ],
+    "assets": [
+      "http://127.0.0.1:4175/shuilong-temple/environment-assets/watercolor-tree.webp",
+      "http://127.0.0.1:4175/shuilong-temple/environment-assets/ivory-mist.webp",
+      "http://127.0.0.1:4175/shuilong-temple/environment-assets/distant-landscape.webp"
+    ],
+    "errors": [],
+    "state": {
+      "environmentOpacity": 1,
+      "foregroundOpacity": 1,
+      "environmentSaturation": 0.65,
+      "environmentContrast": 0.8,
+      "focusStrength": 0,
+      "fogDensity": 0.007,
+      "lightIntensity": 3.3,
+      "target": null,
+      "chapter": "A01",
+      "visible": true,
+      "groups": [
+        "Terrain",
+        "Field",
+        "Vegetation",
+        "Foreground",
+        "DistantMountains",
+        "Atmosphere"
+      ],
+      "triangles": 782,
+      "meshes": 25,
+      "resourceRequests": 3,
+      "assets": {
+        "tree": "loaded",
+        "mountains": "loaded",
+        "mist": "loaded"
+      },
+      "error": null,
+      "shadowEnabled": true,
+      "exposure": 1.18
+    }
+  },
+  {
+    "failure": "watercolor-tree",
+    "state": {
+      "environmentOpacity": 1,
+      "foregroundOpacity": 1,
+      "environmentSaturation": 0.65,
+      "environmentContrast": 0.8,
+      "focusStrength": 0,
+      "fogDensity": 0.007,
+      "lightIntensity": 3.3,
+      "target": null,
+      "chapter": "A01",
+      "visible": true,
+      "groups": [
+        "Terrain",
+        "Field",
+        "Vegetation",
+        "Foreground",
+        "DistantMountains",
+        "Atmosphere"
+      ],
+      "triangles": 4730,
+      "meshes": 21,
+      "resourceRequests": 3,
+      "assets": {
+        "tree": "failed",
+        "mountains": "loaded",
+        "mist": "loaded"
+      },
+      "error": null,
+      "shadowEnabled": true,
+      "exposure": 1.18
+    },
+    "errors": []
+  },
+  {
+    "failure": "distant-landscape",
+    "state": {
+      "environmentOpacity": 1,
+      "foregroundOpacity": 1,
+      "environmentSaturation": 0.65,
+      "environmentContrast": 0.8,
+      "focusStrength": 0,
+      "fogDensity": 0.007,
+      "lightIntensity": 3.3,
+      "target": null,
+      "chapter": "A01",
+      "visible": true,
+      "groups": [
+        "Terrain",
+        "Field",
+        "Vegetation",
+        "Foreground",
+        "DistantMountains",
+        "Atmosphere"
+      ],
+      "triangles": 782,
+      "meshes": 25,
+      "resourceRequests": 3,
+      "assets": {
+        "tree": "loaded",
+        "mountains": "failed",
+        "mist": "loaded"
+      },
+      "error": null,
+      "shadowEnabled": true,
+      "exposure": 1.18
+    },
+    "errors": []
+  },
+  {
+    "failure": "ivory-mist",
+    "state": {
+      "environmentOpacity": 1,
+      "foregroundOpacity": 1,
+      "environmentSaturation": 0.65,
+      "environmentContrast": 0.8,
+      "focusStrength": 0,
+      "fogDensity": 0.007,
+      "lightIntensity": 3.3,
+      "target": null,
+      "chapter": "A01",
+      "visible": true,
+      "groups": [
+        "Terrain",
+        "Field",
+        "Vegetation",
+        "Foreground",
+        "DistantMountains",
+        "Atmosphere"
+      ],
+      "triangles": 776,
+      "meshes": 22,
+      "resourceRequests": 3,
+      "assets": {
+        "tree": "loaded",
+        "mountains": "loaded",
+        "mist": "failed"
+      },
+      "error": null,
+      "shadowEnabled": true,
+      "exposure": 1.18
+    },
+    "errors": []
+  },
+  {
+    "offline": true,
+    "state": {
+      "environmentOpacity": 1,
+      "foregroundOpacity": 1,
+      "environmentSaturation": 0.65,
+      "environmentContrast": 0.8,
+      "focusStrength": 0,
+      "fogDensity": 0.007,
+      "lightIntensity": 3.3,
+      "target": null,
+      "chapter": "A01",
+      "visible": true,
+      "groups": [
+        "Terrain",
+        "Field",
+        "Vegetation",
+        "Foreground",
+        "DistantMountains",
+        "Atmosphere"
+      ],
+      "triangles": 782,
+      "meshes": 25,
+      "resourceRequests": 3,
+      "assets": {
+        "tree": "loaded",
+        "mountains": "loaded",
+        "mist": "loaded"
+      },
+      "error": null,
+      "shadowEnabled": true,
+      "exposure": 1.18
+    },
+    "errors": []
+  }
+]

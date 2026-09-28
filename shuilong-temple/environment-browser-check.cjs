@@ -15,6 +15,7 @@ const seek=async(p,n)=>{await p.evaluate(n=>scrollTo(0,n*innerHeight),n);await p
    p.on('pageerror',e=>errors.push(e.message));p.on('request',r=>requests.push(r.url()));
    await p.goto(url);await p.waitForFunction(()=>document.querySelector('iframe').contentWindow.modelReady);
    await p.waitForFunction(()=>document.querySelector('iframe').contentWindow.shuilongTemple.getArchitectureState().every(m=>m.clonesLoaded));
+   await p.waitForFunction(()=>Object.values(document.querySelector('iframe').contentWindow.shuilongTemple.getVisualState().assets).every(s=>s==='loaded'));
    const states=[];
    for(const [name,n] of [['a01',5.7],['a02',9.8],['a03',12.9]]){
     await seek(p,n);const state=await read(p);assert.equal(state.error,null);states.push({name,...state});

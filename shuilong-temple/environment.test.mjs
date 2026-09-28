@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {createEnvironment,createArchitectureFocus,visualState} from './environment.mjs';
+import {createEnvironment,createArchitectureFocus,visualState,ENVIRONMENT_ASSETS} from './environment.mjs';
 const preview=fs.readFileSync(new URL('./水龙祠-交互预览.html',import.meta.url),'utf8');
 const core=JSON.parse(preview.match(/const coreURL=URL\.createObjectURL\(new Blob\(\[("(?:\\.|[^"\\])*")\]/s)[1]);
 const line=preview.split('\n').find(l=>l.startsWith('const moduleText='));
@@ -17,7 +17,7 @@ test('chapter states withdraw environment continuously and reverse exactly',()=>
   assert.equal(visualState(14.5,{entryProgress:1,target:'mural-01'}).environmentOpacity,0);
   for(let n=13.2;n<14;n+=.001)assert.ok(Math.abs(visualState(n).environmentOpacity-visualState(n+.001).environmentOpacity)<.002);
 });
-test('environment is separate, bounded, resource-free, disposable and resizable',()=>{
+test('headless fallback environment is separate, bounded, disposable and resizable',()=>{
   const scene=new T.Scene(),building=new T.Group();scene.add(building);
   const env=createEnvironment(T,scene);assert.equal(scene.children.length,2);
   assert.deepEqual(env.getState().groups,['Terrain','Field','Vegetation','Foreground','DistantMountains','Atmosphere']);
@@ -32,6 +32,39 @@ test('environment is separate, bounded, resource-free, disposable and resizable'
   env.apply(visualState(0));assert.equal(env.group.visible,true);
   let disposed=0;env.group.traverse(m=>{if(m.isMesh)m.geometry.addEventListener('dispose',()=>disposed++);});
   env.dispose();assert.equal(scene.children.length,1);assert.ok(disposed>0);
+});
+test('watercolor assets load once, stay grounded, withdraw and recover with chapters',()=>{
+  const pending=new Map(),textureLoader={load:(url,success,_progress,failure)=>pending.set(url,{success,failure})};
+  const env=createEnvironment(T,new T.Scene(),{textureLoader});
+  assert.equal(pending.size,2);assert.equal(env.getState().resourceRequests,2);
+  const tree=new T.Texture(),mist=new T.Texture();
+  pending.get(ENVIRONMENT_ASSETS.tree).success(tree);pending.get(ENVIRONMENT_ASSETS.mist).success(mist);
+  const cards=[];env.group.traverse(m=>{if(m.name==='WatercolorTree')cards.push(m);});
+  assert.equal(cards.length,6);assert.equal(new Set(cards.map(m=>m.material.map)).size,1);
+  assert.ok(cards.every(m=>m.position.y===-.1 && m.geometry.attributes.position.getY(2)===0));
+  assert.ok(cards.every(m=>m.material.toneMapped===false && !m.material.depthWrite));
+  env.apply(visualState(14.5));assert.equal(env.group.visible,false);
+  env.apply(visualState(0));assert.equal(env.group.visible,true);assert.equal(pending.size,2);
+  assert.ok(env.getState().triangles<1000,'loaded billboards replace the polygon crowns');
+  let freed=0;tree.addEventListener('dispose',()=>freed++);mist.addEventListener('dispose',()=>freed++);
+  env.dispose();assert.equal(freed,2);
+});
+test('failed or late assets cannot remove fallback trees or revive disposed scene',()=>{
+  const pending=new Map(),scene=new T.Scene();
+  const env=createEnvironment(T,scene,{textureLoader:{load:(url,success,_p,failure)=>pending.set(url,{success,failure})}});
+  pending.get(ENVIRONMENT_ASSETS.tree).failure();assert.equal(env.getState().assets.tree,'failed');
+  assert.ok(env.group.getObjectByName('Vegetation').children.some(m=>m.isInstancedMesh&&m.visible));
+  env.dispose();const late=new T.Texture();let freed=false;late.addEventListener('dispose',()=>freed=true);
+  pending.get(ENVIRONMENT_ASSETS.mist).success(late);assert.equal(freed,true);assert.equal(scene.children.length,0);
+});
+test('offline watercolor assets match local web assets within the resource budget',()=>{
+  const assets=JSON.parse(preview.match(/^const inlineEnvironmentAssets=(.*);$/m)[1]);let bytes=0;
+  for(const [key,file] of Object.entries(ENVIRONMENT_ASSETS)){
+    const local=fs.readFileSync(new URL(file,import.meta.url));bytes+=local.length;
+    assert.equal(local.subarray(0,4).toString(),'RIFF');
+    assert.deepEqual(Buffer.from(assets[key].split(',')[1],'base64'),local);
+  }
+  assert.ok(bytes<650000);
 });
 test('visual hierarchy never changes mural colors or geometry, and restores on reverse',()=>{
   const root=new T.Group();

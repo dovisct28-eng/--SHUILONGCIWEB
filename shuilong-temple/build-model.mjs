@@ -141,6 +141,11 @@ for (const [name, file] of [['inlineA04', 'a04-scene.mjs'], ['inlineMarkers', 'n
   if (!expression.test(embedded)) throw new Error(`Offline module ${name} not found`);
   embedded = embedded.replace(expression, `const ${name}=${JSON.stringify(fs.readFileSync(path.join(directory, file), 'utf8'))};`);
 }
+// The file:// preview uses data URIs; localhost loads each optimized asset once.
+const environmentAssets=Object.fromEntries(Object.entries({tree:'watercolor-tree',mountains:'distant-landscape',mist:'ivory-mist'}).map(([key,name])=>[key,`data:image/webp;base64,${fs.readFileSync(path.join(directory,'environment-assets',`${name}.webp`)).toString('base64')}`]));
+const assetDeclaration=`const inlineEnvironmentAssets=${JSON.stringify(environmentAssets)};`;
+if(/^const inlineEnvironmentAssets=.*;$/m.test(embedded)) embedded=embedded.replace(/^const inlineEnvironmentAssets=.*;$/m,assetDeclaration);
+else embedded=embedded.replace('const localModule=',`${assetDeclaration}\nconst localModule=`);
 fs.writeFileSync(path.join(directory, 'shuilong-temple.glb'), output);
 fs.writeFileSync(previewPath, embedded);
 fs.writeFileSync(path.join(directory, 'model-info.json'), `${JSON.stringify({ triangles, bytes: output.length, groups: groups.map(group => group.name) }, null, 2)}\n`);

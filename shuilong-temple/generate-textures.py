@@ -36,15 +36,17 @@ def texture(kind):
     rough = Image.new('RGB', (SIZE, SIZE))
     normal = Image.new('RGB', (SIZE, SIZE))
     colors = {
-        'plaster': (190, 183, 167), 'brick': (124, 91, 76),
-        'wood': (55, 45, 39), 'roof': (82, 76, 70),
-        'stone': (157, 153, 144), 'paving': (135, 127, 111),
+        # A warm, restrained illustration palette, informed by the site photos.
+        # These are display materials, not sampled conservation colour records.
+        'plaster': (211, 201, 180), 'brick': (158, 112, 87),
+        'wood': (97, 66, 47), 'roof': (105, 99, 87),
+        'stone': (184, 177, 161), 'paving': (183, 171, 148),
     }
     base = colors[kind]
     for y in range(SIZE):
         for x in range(SIZE):
-            wall = kind in ('brick', 'plaster')
-            large = smooth_noise(x, y, 64 if wall else 58, 2, periodic=wall) - .5
+            # All six materials repeat in world space; keep broad stains periodic.
+            large = smooth_noise(x, y, 64, 2, periodic=True) - .5
             small = noise(x // 3, y // 3, 7) - .5
             grain = 0
             if kind == 'brick':
@@ -52,27 +54,30 @@ def texture(kind):
                 # Small irregularities soften the mortar edges without modeling bricks.
                 edge = smooth_noise(x, y, 16, 23, periodic=True) * 1.4
                 joint = y % 64 < 3 + edge or (x + (row % 2) * 64) % 128 < 3 + edge
-                grain = (noise(((x + (row % 2) * 64) // 128) % 4, row, 4) - .5) * 24
+                grain = (noise(((x + (row % 2) * 64) // 128) % 4, row, 4) - .5) * 32
             elif kind == 'wood':
-                grain = 7 * math.sin(x * .12 + 2 * math.sin(y * .012)) + 4 * math.sin(x * .047)
+                grain = 5 * math.sin(x * math.tau / 32 + 1.2 * math.sin(y * math.tau / SIZE)) + 3 * math.sin(x * math.tau / 128)
             elif kind == 'roof':
-                joint = y % 128 < 5 or (x + ((y // 128) % 2) * 64) % 64 < 3
-                grain = -20 if joint else 5 * math.sin(x * .09)
+                # Narrow channels read as layered grey clay, without tiny geometry.
+                tile_x, tile_y = x // 64, y // 128
+                joint = y % 128 < 4 or x % 64 < 3
+                clay = (noise(tile_x, tile_y, 31) - .5) * 29
+                grain = -21 if joint else clay + 8 * math.sin((x % 64) * math.pi / 64)
             elif kind == 'paving':
                 row = y // 128
                 joint = y % 128 < 5 or (x + (row % 2) * 64) % 128 < 4
-                grain = -24 if joint else (noise((x + (row % 2) * 64) // 128, row, 3) - .5) * 17
-            variation = large * (16 if kind == 'plaster' else 20) + small * 8 + grain
+                grain = -20 if joint else (noise(((x + (row % 2) * 64) // 128) % 4, row, 3) - .5) * 25
+            variation = large * (13 if kind == 'plaster' else 19) + small * 6 + grain
             if kind == 'brick' and noise(x // 64, y // 64, 11) > .91:
                 variation -= 15
             if kind == 'paving' and noise(x // 64, y // 64, 13) > .9:
                 variation -= 12
             if kind == 'brick' and joint:
-                color.putpixel((x, y), tuple(clamp(c + small * 8 + large * 6) for c in (166, 159, 145)))
+                color.putpixel((x, y), tuple(clamp(c + small * 6 + large * 6) for c in (180, 167, 145)))
             else:
                 weathering = max(0, large - .08) * .45 if kind == 'brick' else 0
                 color.putpixel((x, y), tuple(clamp((c + variation) * (1 - weathering) + 172 * weathering) for c in base))
-            r = clamp(237 + small * 14 + large * 9)
+            r = clamp((218 if kind == 'wood' else 237) + small * 14 + large * 9)
             rough.putpixel((x, y), (r, r, r))
             # Very shallow relief; the wall painting itself has no normal map.
             bump = 1.6 if kind in ('plaster', 'wood', 'stone') else 4.5
@@ -83,5 +88,6 @@ def texture(kind):
         image.save(OUT / f'{kind}-{suffix}.jpg', quality=78, optimize=True, subsampling=0)
 
 
-for material in ('plaster', 'brick', 'wood', 'roof', 'stone', 'paving'):
-    texture(material)
+if __name__ == '__main__':
+    for material in ('plaster', 'brick', 'wood', 'roof', 'stone', 'paving'):
+        texture(material)

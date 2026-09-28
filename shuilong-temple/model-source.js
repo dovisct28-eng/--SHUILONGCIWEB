@@ -2,7 +2,9 @@
 function makeTemple(T){
  const root=new T.Group(); root.name='ShuilongTemple';
  const mats={};
- const colors={stone:0xaaa59a,wall:0xbcb09a,plaster:0xb7ac98,brick:0x805845,trim:0xa99e8a,wood:0x332923,door:0x26211e,tile:0x514b45,tileDetail:0x62574d,ridge:0x625b53,metal:0x302c25,paving:0x898375};
+ // Match the warm display textures when image loading falls back to solid colour.
+ // Architectural dimensions and the mural surfaces remain independent of this palette.
+ const colors={stone:0xb8b1a1,wall:0xd3c9b4,plaster:0xd3c9b4,brick:0x9e7057,trim:0xb8b1a1,wood:0x61422f,door:0x513a2c,tile:0x696357,tileDetail:0x766e5f,ridge:0x78705f,metal:0x302c25,paving:0xb7ab94};
  for(const [name,color] of Object.entries(colors)){mats[name]=new T.MeshStandardMaterial({color,roughness:name==='metal'?.8:.96});mats[name].userData.texture=name==='brick'?'brick':name==='wood'||name==='door'?'wood':name==='tile'||name==='tileDetail'||name==='ridge'?'roof':name==='stone'?'stone':name==='paving'?'paving':name==='metal'?null:'plaster';}
  let group=root;
  function part(name){group=new T.Group();group.name=name;root.add(group);}

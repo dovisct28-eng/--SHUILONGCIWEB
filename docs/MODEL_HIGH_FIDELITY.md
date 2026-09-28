@@ -122,3 +122,36 @@ node shuilong-temple/texture-browser-check.cjs
 验收产物位于 `docs/validation/visual-integration/`。`visual-integration-browser-check.cjs` 在 1920×1080、1440×900、1366×768、1024×768 各输出 10 个状态，共 40 张截图，并断言无 depth、无标题渐变底板、iframe/body 透明、无横向溢出。逐尺寸联系表与 1024px 完整构图已人工检查；A04 三次实际播放停靠及路线总览截图也已人工检查。截图保留本地，仓库提交文本报告与可复现脚本，避免将大量临时 PNG 纳入代码库。
 
 最终验证：模型构建通过，45/45 单元测试通过；environment-browser-check、environment-performance-check、model-browser-check、A04 browser-check、A04 transition-check、texture-browser-check 与新增 visual-integration-browser-check 全部通过。A04 专项报告 errors 为空，自动播放、键盘、页面隐藏暂停与 reduced-motion 均通过。2026-09-28 续跑确认四尺寸 A04→A05 交接、PBR 贴图和失败回退通过。`git diff --check` 通过。
+
+## 水墨建筑整体效果（2026-09-28）
+
+基线 `f790aa5b314fd3802f141787969610f7bf975908`。用户确认以参考图的大效果为目标，允许自由生成独立水墨树木、远山、云气，并明确不要求精细屋檐。范围为模块 A 的建筑展示；没有修改模块 B、总平面、建筑几何、壁画 ID/位置、原始壁画或 A04 观看路线。
+
+### 建筑与构图
+
+依据修复后航拍及主殿面向戏台照片辨别材质关系，升级现有六类程序纹理：暖灰瓦、低饱和陶砖、暖褐木、浅暖铺地、石材和旧抹灰。屋面用适量瓦片色差与沟槽改善整体可读性，木纹降低条纹感；没有增加屋脊装饰或细小几何。颜色为参考图导向的展示选择，不是现场测色记录。源色板同步更新以支持贴图失败回退。
+
+曝光由 1.12 调至 1.18；半球补光由 .95 调至 1.2，采用暖中性色。主光方向与强度曲线不变。壁画仍是 `toneMapped:false` 的独立材质。
+
+A01 受控开屏相机俯视角减少 .16 rad，相机距离缩短 4 个模型单位；6.2—7.4 屏之间按 smoothstep 归零，恢复原 A02 基准，A04 仍使用既有相机控制器。改变的是开屏取景，不改变模型比例或后续空间路线。
+
+### 环境资产与运行策略
+
+内置 image_gen 生成三张透明素材，经 Sharp 等比缩小编码为 WebP，合计 573,624 B。文件、尺寸、来源和完整提示词见 `shuilong-temple/environment-assets/README.md`。全为设计性环境，不用于判断实际树种、地貌或历史景观。
+
+- 六棵树共享一张贴图，底部锚定在建筑外围，面向相机；有深度测试，无投影和深度写入。解码成功后隐藏原多面体树冠与树干，失败则保留它们。树木属环境插画，并非可从任意方向检查枝干的三维植物。
+- 淡远山位于建筑 canvas 后方，不覆盖模型；载入失败保留原 SVG 远景。三片低透明云气位于外围地面，不覆盖壁画。
+- 沿用环境随 A01→A04 退出的曲线；A04 中完全隐藏。倒滚恢复不再次请求素材；未增加 RAF 或后处理器。
+- localhost 每种素材请求一次，全部本地提供。构建脚本为 file 预览生成内嵌 data URI；销毁后到达的贴图会立即释放，DOM 回调不重新挂载。
+
+### 成本与本轮验收
+
+建筑仍为 83,360 三角面；GLB 从 3,348,544 B 降为 3,329,000 B。水墨贴图载入后，可见环境为 782 三角面、25 个 Mesh，原几何树木保留在内存中用于加载回退。独立 PNG 母稿未加入仓库，成品 WebP 与离线副本均在项目中。
+
+- 构建通过；48 项 Node 单元测试、3 项 Python 材质测试通过。新增资产只加载一次、底部锚定、章节退出恢复、失败回退、延迟回调清理、内嵌资源一致性及预算检查。
+- `watercolor-browser-check.cjs` 通过：1920×1080、1440×900、1366×768、1024×768，正向/倒滚，三个独立素材失败路径、A04/A05 可达、离线内嵌图片。file 验收沿用 Chrome `--allow-file-access-from-files`，主要使用入口仍为 localhost。
+- `environment-browser-check.cjs` 通过：A01—A03，A04 三次实际自动播放停靠及回撤、A05—A08 可达、resize、reduced-motion、模块/GLB/壁画失败回退。人工检查了主视角、窄屏、建筑空间与第一幅停靠截图。
+- `visual-integration-browser-check.cjs` 40 个章节/尺寸截图通过；A04 `transition-check.cjs` 四尺寸交接通过；`texture-browser-check.cjs` 建筑贴图和失败回退通过。
+- `environment-performance-check.cjs` 在其他浏览器验收结束后独立运行：无环境/有环境帧间隔中位数均为 6.9 ms，P95 为 7.6/7.1 ms，modelReady 948/1200 ms，draw calls 47/78；每页 GLB 请求一次。仅本机 headless 90 帧抽样，不能解释为跨设备帧率保证，modelReady 也不等于所有图片完成解码。
+
+本轮报告与截图位于 `C:/Users/dovis/.codex/visualizations/2026/09/28/01a0e7a0-4edc-7863-b2a8-414b84a1bddc/watercolor/`，文本报告另存 `docs/validation/watercolor/`。效果是支持连续三维叙事的水墨环境合成，不是对参考生成图的逐像素复刻。
