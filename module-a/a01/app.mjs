@@ -66,8 +66,8 @@ function render() {
     travel,
   }, innerWidth);
 
-  stage.style.setProperty('--travel', travel);
   stage.style.setProperty('--model-opacity', Math.min(1, Math.max(0, (state.animation - 0.14) / 0.1)));
+  stage.style.setProperty('--hero-composition', 1 - transition);
   const narrow = innerWidth <= 760;
   stage.style.setProperty('--model-x', `${presentation.modelX + (narrow ? 0 : 19) * theme.composition}vw`);
   stage.style.setProperty('--model-scale', mix(0.72, 0.83, state.growth) - (narrow ? .35 : .17) * theme.composition);

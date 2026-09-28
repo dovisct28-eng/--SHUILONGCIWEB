@@ -104,3 +104,21 @@ node module-a/a04/browser-check.cjs
 node module-a/a04/transition-check.cjs
 node shuilong-temple/texture-browser-check.cjs
 ```
+
+## A01–A03 Visual Integration / 视觉整合（2026-09-26）
+
+本轮以 `27fec089b8508c3f670feaf4970a1c8b13014d62` 为基线。用户附件仅用于建筑清晰、环境退后与纸面留白的视觉关系，不用于推定水龙祠建筑结构或历史景观。
+
+- 删除 A01 的 `.depth`、`.depth-layer`、三层框与 `.depth-note` DOM/CSS，以及只供它们使用的 `--travel` 写入。`state.travel` 仍控制开场文字退出，保留正式用途。删除模型旁的开发性说明及其跨章 CSS。
+- `.copy` 使用 `background:none`；A03 明确保持无背景。没有新增伪元素底板、标题遮罩或 backdrop-filter。正文依靠左侧留白阅读。
+- Layer 0 由父页面 stage 的 `#f2eee4` 连续纸面提供，删除天地渐变及重复覆盖。iframe、内部 html/body 均透明，WebGL 保留 alpha 并显式设 clear alpha 为 0。
+- Layer 1 沿用轻量 SVG 远山，降低不透明度、柔化边缘与边界消融；其柔淡空气层位于建筑 canvas 后面，不覆盖屋面与壁画。Layer 2 为暖灰淡土、少量非对称树石：地面从内环开始连续衰减 alpha，增强不规则外轮廓；删除规则田块与硬边道路，降低树冠权重。Layer 3 保留建筑原有 PBR 材质与几何。未增加具象祥云或背景位图。
+- A01 的宽屏首屏模型容器适度增大，随 A01→A02 原有 transition 连续回到原尺寸，A03/A04 的容器和镜头基准保持原值。1024px 宽度继续使用既有窄桌面布局。
+- 保留环境退出曲线：A01 100%，A02 稳定态约 70%，A03 稳定态约 35%，随 A04 entry 连续归零；可逆且不增加 RAF。
+- 山体、树木、石块、土地及雾化空气层均为视觉性重构，不代表经测绘确认的地形、植物或历史景观。未修改建筑结构、GLB、五幅壁画元数据、原始纹理、A04 镜头/路线/时序、A05–A08 代码或模块 B。
+
+性能：建筑仍为 83,360 三角面、3,348,544 B，GLB 增量为零。环境由 4,830 降为 4,804 三角面、26 降为 22 个 Mesh；本机 A01 抽样 draw calls 为 69（前轮记录 74）。本轮无环境/有环境对照帧间隔中位数均为 6.9ms、P95 均为 7.0ms，modelReady 为 1034/1333ms。无新增图片、HDRI、canvas、RAF 或后期处理器，每页 GLB 请求一次。帧间隔数据仅是本机 Chrome headless 抽样，不是跨设备性能保证，前轮与本轮时间值也不是严格配对实验。
+
+验收产物位于 `docs/validation/visual-integration/`。`visual-integration-browser-check.cjs` 在 1920×1080、1440×900、1366×768、1024×768 各输出 10 个状态，共 40 张截图，并断言无 depth、无标题渐变底板、iframe/body 透明、无横向溢出。逐尺寸联系表与 1024px 完整构图已人工检查；A04 三次实际播放停靠及路线总览截图也已人工检查。截图保留本地，仓库提交文本报告与可复现脚本，避免将大量临时 PNG 纳入代码库。
+
+最终验证：模型构建通过，45/45 单元测试通过；environment-browser-check、environment-performance-check、model-browser-check、A04 browser-check、A04 transition-check、texture-browser-check 与新增 visual-integration-browser-check 全部通过。A04 专项报告 errors 为空，自动播放、键盘、页面隐藏暂停与 reduced-motion 均通过。2026-09-28 续跑确认四尺寸 A04→A05 交接、PBR 贴图和失败回退通过。`git diff --check` 通过。

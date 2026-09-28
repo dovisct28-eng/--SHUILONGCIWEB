@@ -22,6 +22,12 @@ test('environment is separate, bounded, resource-free, disposable and resizable'
   const env=createEnvironment(T,scene);assert.equal(scene.children.length,2);
   assert.deepEqual(env.getState().groups,['Terrain','Field','Vegetation','Foreground','DistantMountains','Atmosphere']);
   assert.ok(env.getState().triangles<7000);assert.equal(env.getState().resourceRequests,0);
+  const terrain=env.group.getObjectByName('Terrain').children[0];
+  const alpha=terrain.geometry.getAttribute('color');
+  assert.equal(alpha.getW(0),1);
+  assert.ok(alpha.getW(65)<1 && alpha.getW(65)>0, 'soil must fade before its outer ring');
+  assert.equal(alpha.getW(alpha.count-1),0);
+  assert.equal(env.group.getObjectByName('Field').children.length,0, 'no hard-edged field strips or road');
   env.resize(1440,900,2);env.apply(visualState(14.5));assert.equal(env.group.visible,false);
   env.apply(visualState(0));assert.equal(env.group.visible,true);
   let disposed=0;env.group.traverse(m=>{if(m.isMesh)m.geometry.addEventListener('dispose',()=>disposed++);});

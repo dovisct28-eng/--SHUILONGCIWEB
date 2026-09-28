@@ -1,5 +1,5 @@
 .a03 { position:absolute; inset:0; z-index:5; pointer-events:none; }
-.a03-copy { position:absolute; left:7%; top:48%; transform:translateY(-50%); width:32%; max-width:450px; opacity:var(--a03-text,0); }
+.a03-copy { position:absolute; left:7%; top:48%; transform:translateY(-50%); width:32%; max-width:450px; background:none; opacity:var(--a03-text,0); }
 .a03-kicker { margin:0 0 20px; color:#666b64; font-size:12px; letter-spacing:.18em; }
 .a03 h2 { margin:0 0 24px; font:500 clamp(40px,4.3vw,68px)/1.2 "Noto Serif SC","Songti SC",serif; letter-spacing:.06em; }
 .a03 h2 span { padding:0 .14em; color:#777a74; }
@@ -13,8 +13,6 @@
 .a03-handoff p:not(.a03-kicker) { font-size:16px; line-height:1.8; margin:8px 0; }
 .a03-handoff .a03-route-note { color:#6a6e66; font-size:12px!important; }
 .a03-end { opacity:var(--a03-handoff,0); }
-/* Keep the accepted A01/A02 caption hidden even when their heading exits. */
-.model-caption { opacity:calc((1 - var(--a02-opacity)) * (1 - var(--a03-takeover,0))); }
 @media(max-width:1100px) { .a03-copy { left:5%; width:37%; } .a03 h2 { font-size:42px; } }
 @media(max-width:760px) {
   .a03-copy { left:6%; top:35%; width:88%; max-width:none; }
