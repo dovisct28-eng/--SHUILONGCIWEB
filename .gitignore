@@ -23,3 +23,7 @@ Mural-Exhibition/public/assets/splash-bg.png
 
 # 本地备份包
 *.bundle
+
+# 模块 A 低保真归档的本地 Worktree 与运行状态
+/.lofi-preview/
+/.lofi-runtime/
