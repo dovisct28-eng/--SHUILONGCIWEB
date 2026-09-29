@@ -53,12 +53,10 @@ function Test-ArchiveResponse {
 }
 
 function Get-PortOwners {
-    try {
-        return @(Get-NetTCPConnection -LocalAddress '127.0.0.1' -LocalPort $Port -State Listen -ErrorAction Stop |
-            Select-Object -ExpandProperty OwningProcess -Unique)
-    } catch [Microsoft.PowerShell.Cmdletization.Cim.CimJobException] {
-        return @()
-    }
+    # Wildcard IPv4/IPv6 listeners can also block this port. Fail closed on errors.
+    return @(Get-NetTCPConnection -State Listen -ErrorAction Stop |
+        Where-Object { $_.LocalPort -eq $Port } |
+        Select-Object -ExpandProperty OwningProcess -Unique)
 }
 
 function Test-ArchiveOwner {
@@ -66,8 +64,9 @@ function Test-ArchiveOwner {
     try {
         $process = Get-CimInstance Win32_Process -Filter "ProcessId = $ProcessId" -ErrorAction Stop
         if (-not $process -or -not $process.CommandLine) { return $false }
+        $expectedCommand = '^\s*(?:"[^"]+"|\S+)\s+"' + [regex]::Escape($ServerPath) + '"\s*$'
         return $process.Name -match '^node(\.exe)?$' -and
-            $process.CommandLine.IndexOf($ServerPath, [StringComparison]::OrdinalIgnoreCase) -ge 0
+            $process.CommandLine -match $expectedCommand
     } catch {
         return $false
     }
@@ -122,6 +121,17 @@ try {
         Stop-Launcher '.lofi-preview belongs to another Git repository and will not be overwritten.'
     }
 
+    $registered = Invoke-Git @('-c', 'core.quotePath=false', 'worktree', 'list', '--porcelain')
+    $registeredPaths = @($registered | Where-Object { $_.StartsWith('worktree ') } |
+        ForEach-Object { Get-NormalizedPath $_.Substring(9) })
+    if ((Get-NormalizedPath $WorktreePath) -notin $registeredPaths) {
+        Stop-Launcher '.lofi-preview is not registered with this repository.'
+    }
+    $headRef = (Invoke-Git @('rev-parse', '--abbrev-ref', 'HEAD') $WorktreePath)[0]
+    if ($headRef -ne 'HEAD') {
+        Stop-Launcher 'The archive worktree must have a detached HEAD. No branch was changed.'
+    }
+
     $worktreeCommit = (Invoke-Git @('rev-parse', 'HEAD') $WorktreePath)[0].Trim()
     if ($worktreeCommit -ne $BaselineCommit -or $worktreeCommit -ne $tagCommit) {
         Stop-Launcher "Worktree commit mismatch. Expected $BaselineCommit; found $worktreeCommit."
@@ -141,7 +151,7 @@ try {
         exit 0
     }
 
-    $owners = Get-PortOwners
+    $owners = @(Get-PortOwners)
     if ($owners.Count -gt 0) {
         $knownOwners = @($owners | Where-Object { Test-ArchiveOwner -ProcessId $_ })
         if ($knownOwners.Count -ne $owners.Count -or -not (Test-ArchiveResponse)) {
@@ -154,9 +164,10 @@ try {
         Start-Process -FilePath 'cmd.exe' -ArgumentList '/k', $serverCommand -WorkingDirectory $WorktreePath | Out-Null
 
         $ready = $false
-        for ($attempt = 0; $attempt -lt 30; $attempt++) {
+        $startupTimer = [Diagnostics.Stopwatch]::StartNew()
+        while ($startupTimer.Elapsed.TotalSeconds -lt 15) {
             Start-Sleep -Milliseconds 500
-            $owners = Get-PortOwners
+            $owners = @(Get-PortOwners)
             if ($owners.Count -gt 0) {
                 $knownOwners = @($owners | Where-Object { Test-ArchiveOwner -ProcessId $_ })
                 if ($knownOwners.Count -ne $owners.Count) {

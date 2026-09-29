@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import { normalizeSourceLineEndings as normalize } from './source-equivalence.mjs';
 import {createEnvironment,createArchitectureFocus,visualState,ENVIRONMENT_ASSETS} from './environment.mjs';
 const preview=fs.readFileSync(new URL('./水龙祠-交互预览.html',import.meta.url),'utf8');
 const core=JSON.parse(preview.match(/const coreURL=URL\.createObjectURL\(new Blob\(\[("(?:\\.|[^"\\])*")\]/s)[1]);
@@ -77,6 +78,6 @@ test('visual hierarchy never changes mural colors or geometry, and restores on r
 });
 test('offline environment module matches source',()=>{
   const literal=preview.match(/const inlineEnvironment=("(?:\\.|[^"\\])*");/)[1];
-  assert.equal(JSON.parse(literal),fs.readFileSync(new URL('./environment.mjs',import.meta.url),'utf8'));
+  assert.equal(normalize(JSON.parse(literal)),normalize(fs.readFileSync(new URL('./environment.mjs',import.meta.url),'utf8')));
   assert.match(preview,/map:texture,toneMapped:false,fog:false,alphaMap:muralMask/);
 });

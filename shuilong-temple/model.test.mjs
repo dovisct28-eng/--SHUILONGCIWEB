@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
+import { normalizeSourceLineEndings as normalize } from './source-equivalence.mjs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -34,7 +35,7 @@ test('GLB, model statistics, and offline preview are the same shared model', () 
   for (const [name, file] of [['inlineA04', 'a04-scene.mjs'], ['inlineMarkers', 'narrative-markers.mjs']]) {
     const literal = preview.match(new RegExp(`const ${name}=("(?:\\\\.|[^"\\\\])*");`))?.[1];
     assert.ok(literal, `${name} embedded module`);
-    assert.equal(JSON.parse(literal), fs.readFileSync(path.join(directory, file), 'utf8'));
+    assert.equal(normalize(JSON.parse(literal)), normalize(fs.readFileSync(path.join(directory, file), 'utf8')));
   }
 });
 test('five stable mural IDs and all duplicated metadata agree', () => {
