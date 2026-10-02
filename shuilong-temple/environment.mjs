@@ -36,6 +36,10 @@ export function createEnvironment(T, scene, options = {}) {
     },undefined,()=>{if(!disposed)assetState[key]='failed';});
   };
   const materials = [], geometries = new Set(), resolution={value:new T.Vector2(1,1)};
+  const heroObjects=[];
+  const heroLayout=(object,position,scale)=>{
+    heroObjects.push({object,basePosition:object.position.clone(),baseScale:object.scale.clone(),position:new T.Vector3(...position),scale:new T.Vector3(...scale)});
+  };
   const material = (color, basic=false) => {
     const m = new (basic?T.MeshBasicMaterial:T.MeshStandardMaterial)({color,transparent:true,depthWrite:false,...(!basic?{roughness:1}:{})});
     m.userData.baseColor=m.color.clone();
@@ -91,6 +95,8 @@ export function createEnvironment(T, scene, options = {}) {
       const card=new T.PlaneGeometry(1,1);card.translate(0,.5,0);
       clusters.forEach(([x,z,h],i)=>{
         const tree=mesh('Vegetation',card,foliage,[x,-.1,z],[h*.867*(i%2?-1:1),h,1]);
+        const [hx,hz,hh]=[[7.7,-14,5.1],[8.2,-5,5.5],[7.6,10.5,4.6],[-7.2,12.5,5.2],[-7.8,-6,4.6],[-7.8,-17.5,4.1]][i];
+        heroLayout(tree,[hx,-.1,hz],[hh*.867*(i%2?-1:1),hh,1]);
         tree.material.side=T.DoubleSide;tree.receiveShadow=false;tree.name='WatercolorTree';
         tree.onBeforeRender=(_r,_s,camera)=>{tree.quaternion.copy(camera.quaternion);tree.updateMatrixWorld();};
       });
@@ -99,6 +105,16 @@ export function createEnvironment(T, scene, options = {}) {
     for(const [x,z] of clusters){const m=mesh('Vegetation',new T.CircleGeometry(.65,12),contact,[x,-.07,z],[1, .7, 1]);m.rotation.x=-Math.PI/2;}
     const stone=material(0xb3ae9e),rock=new T.IcosahedronGeometry(1,0);
     for(const [x,z,s] of [[-7,-15,.35],[8,-18,.5],[-9,12,.3],[11,-10,.25]])mesh('Vegetation',rock,stone,[x,-.03,z],[s,s*.45,s*.8]);
+    // Low asymmetric foreground rocks, a design accent rather than recorded geology.
+    const nearStone=material(0x8d8879);nearStone.userData.a01Only=true;
+    for(const [x,z,s] of [[-6.8,-17.4,.82],[-7.8,-17,.62],[-6.4,-18.3,.55]])mesh('Foreground',rock,nearStone,[x,-.12,z],[s,s*.62,s*.85]);
+    // Soft footprint contact under the plinth, not a circular halo or another render pass.
+    const grounding=material(0x625a4b,true);grounding.userData.a01Only=true;grounding.userData.contact=true;
+    grounding.onBeforeCompile=shader=>{
+      shader.vertexShader='varying vec2 footprint;\n'+shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\n footprint=position.xy;');
+      shader.fragmentShader='varying vec2 footprint;\n'+shader.fragmentShader.replace('#include <opaque_fragment>',`vec2 outside=max(abs(footprint)-vec2(5.65,14.5),0.0);diffuseColor.a*=exp(-3.0*dot(outside,outside));\n#include <opaque_fragment>`);
+    };grounding.customProgramCacheKey=()=> 'a01-footprint-v1';
+    const footprint=mesh('Terrain',new T.PlaneGeometry(16,34),grounding,[0,-.59,-1.75]);footprint.rotation.x=-Math.PI/2;footprint.receiveShadow=false;
     // Low foreground scrub occupies a single near corner, never the mural walls.
     const grass=material(0xb0ad98);grass.userData.foreground=true;
     for(let i=0;i<5;i++)mesh('Foreground',crownGeometry,grass,[-7.5+i*.35,.02,-17+Math.sin(i)*.6],[.35,.22,.3]);
@@ -130,7 +146,11 @@ export function createEnvironment(T, scene, options = {}) {
   let state=visualState();const hsl={},haze=new T.Color(0xf2eee4);
   return {group, resize(width,height,pixelRatio=1){resolution.value.set(width*pixelRatio,height*pixelRatio);}, apply(next){state=next;group.visible=next.environmentOpacity>.001;
     if(backdrop)backdrop.style.opacity=String(next.environmentOpacity);
-    for(const m of materials){m.opacity=(m.userData.foreground?next.foregroundOpacity:next.environmentOpacity*(m.userData.contact?.12:1))*(m.userData.wash??1);m.color.copy(m.userData.baseColor);m.color.getHSL(hsl);m.color.setHSL(hsl.h,hsl.s*next.environmentSaturation,hsl.l);m.color.lerp(haze,(1-next.environmentContrast)*.12);}
+    const hero=next.heroWeight??0;
+    for(const entry of heroObjects){entry.object.position.copy(entry.basePosition).lerp(entry.position,hero);entry.object.scale.copy(entry.baseScale).lerp(entry.scale,hero);}
+    if(backdrop){backdrop.style.transform=`translateY(${-4*hero}%)`;const image=backdrop.querySelector('img');if(image)image.style.opacity=String(.36+.08*hero);}
+    for(const m of materials){m.opacity=(m.userData.foreground?next.foregroundOpacity:next.environmentOpacity*(m.userData.contact?.12:1))*(m.userData.wash??1)*(m.userData.a01Only?hero:1);m.color.copy(m.userData.baseColor);m.color.getHSL(hsl);m.color.setHSL(hsl.h,hsl.s*next.environmentSaturation,hsl.l);m.color.lerp(haze,(1-next.environmentContrast)*.12);}
+    for(const layer of Object.values(layers))for(const m of layer.children)if(m.material?.userData.a01Only)m.visible=hero>.001;
     layers.Foreground.visible=next.foregroundOpacity>.001;
   }, getState(){let triangles=0,meshes=0;group.traverseVisible(m=>{if(m.isMesh){meshes++;triangles+=(m.geometry.index?.count??m.geometry.attributes.position.count)/3*(m.isInstancedMesh?m.count:1);}});return {...state,visible:group.visible,groups:group.children.map(g=>g.name),triangles,meshes,resourceRequests,assets:{...assetState}};},dispose};
 }

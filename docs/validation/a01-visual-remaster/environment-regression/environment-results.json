@@ -1,0 +1,337 @@
+[
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "states": [
+      {
+        "name": "a01",
+        "environmentOpacity": 1,
+        "foregroundOpacity": 1,
+        "environmentSaturation": 0.65,
+        "environmentContrast": 0.8,
+        "focusStrength": 0,
+        "fogDensity": 0.007,
+        "lightIntensity": 3.3,
+        "target": null,
+        "chapter": "A01",
+        "heroWeight": 1,
+        "visible": true,
+        "groups": [
+          "Terrain",
+          "Field",
+          "Vegetation",
+          "Foreground",
+          "DistantMountains",
+          "Atmosphere"
+        ],
+        "triangles": 844,
+        "meshes": 29,
+        "resourceRequests": 3,
+        "assets": {
+          "tree": "loaded",
+          "mountains": "loaded",
+          "mist": "loaded"
+        },
+        "error": null,
+        "shadowEnabled": true,
+        "exposure": 1.06
+      },
+      {
+        "name": "a02",
+        "environmentOpacity": 0.7038222222222222,
+        "foregroundOpacity": 0.01274074074074072,
+        "environmentSaturation": 0.65,
+        "environmentContrast": 0.8,
+        "focusStrength": 0,
+        "fogDensity": 0.007,
+        "lightIntensity": 3.3,
+        "target": null,
+        "chapter": "A02",
+        "heroWeight": 0,
+        "visible": true,
+        "groups": [
+          "Terrain",
+          "Field",
+          "Vegetation",
+          "Foreground",
+          "DistantMountains",
+          "Atmosphere"
+        ],
+        "triangles": 782,
+        "meshes": 25,
+        "resourceRequests": 3,
+        "assets": {
+          "tree": "loaded",
+          "mountains": "loaded",
+          "mist": "loaded"
+        },
+        "error": null,
+        "shadowEnabled": true,
+        "exposure": 1.18
+      },
+      {
+        "name": "a03",
+        "environmentOpacity": 0.36200274348422495,
+        "foregroundOpacity": 0,
+        "environmentSaturation": 0.40857338820301786,
+        "environmentContrast": 0.5585733882030179,
+        "focusStrength": 0.2124554183813443,
+        "fogDensity": 0.009897119341563787,
+        "lightIntensity": 3.3,
+        "target": null,
+        "chapter": "A03",
+        "heroWeight": 0,
+        "visible": true,
+        "groups": [
+          "Terrain",
+          "Field",
+          "Vegetation",
+          "Foreground",
+          "DistantMountains",
+          "Atmosphere"
+        ],
+        "triangles": 676,
+        "meshes": 17,
+        "resourceRequests": 3,
+        "assets": {
+          "tree": "loaded",
+          "mountains": "loaded",
+          "mist": "loaded"
+        },
+        "error": null,
+        "shadowEnabled": true,
+        "exposure": 1.18
+      }
+    ],
+    "errors": [],
+    "singleGLB": true
+  },
+  {
+    "viewport": [
+      1920,
+      1080
+    ],
+    "states": [
+      {
+        "name": "a01",
+        "environmentOpacity": 1,
+        "foregroundOpacity": 1,
+        "environmentSaturation": 0.65,
+        "environmentContrast": 0.8,
+        "focusStrength": 0,
+        "fogDensity": 0.007,
+        "lightIntensity": 3.3,
+        "target": null,
+        "chapter": "A01",
+        "heroWeight": 1,
+        "visible": true,
+        "groups": [
+          "Terrain",
+          "Field",
+          "Vegetation",
+          "Foreground",
+          "DistantMountains",
+          "Atmosphere"
+        ],
+        "triangles": 844,
+        "meshes": 29,
+        "resourceRequests": 3,
+        "assets": {
+          "tree": "loaded",
+          "mountains": "loaded",
+          "mist": "loaded"
+        },
+        "error": null,
+        "shadowEnabled": true,
+        "exposure": 1.06
+      },
+      {
+        "name": "a02",
+        "environmentOpacity": 0.7038222222222222,
+        "foregroundOpacity": 0.01274074074074072,
+        "environmentSaturation": 0.65,
+        "environmentContrast": 0.8,
+        "focusStrength": 0,
+        "fogDensity": 0.007,
+        "lightIntensity": 3.3,
+        "target": null,
+        "chapter": "A02",
+        "heroWeight": 0,
+        "visible": true,
+        "groups": [
+          "Terrain",
+          "Field",
+          "Vegetation",
+          "Foreground",
+          "DistantMountains",
+          "Atmosphere"
+        ],
+        "triangles": 782,
+        "meshes": 25,
+        "resourceRequests": 3,
+        "assets": {
+          "tree": "loaded",
+          "mountains": "loaded",
+          "mist": "loaded"
+        },
+        "error": null,
+        "shadowEnabled": true,
+        "exposure": 1.18
+      },
+      {
+        "name": "a03",
+        "environmentOpacity": 0.36200274348422495,
+        "foregroundOpacity": 0,
+        "environmentSaturation": 0.40857338820301786,
+        "environmentContrast": 0.5585733882030179,
+        "focusStrength": 0.2124554183813443,
+        "fogDensity": 0.009897119341563787,
+        "lightIntensity": 3.3,
+        "target": null,
+        "chapter": "A03",
+        "heroWeight": 0,
+        "visible": true,
+        "groups": [
+          "Terrain",
+          "Field",
+          "Vegetation",
+          "Foreground",
+          "DistantMountains",
+          "Atmosphere"
+        ],
+        "triangles": 676,
+        "meshes": 17,
+        "resourceRequests": 3,
+        "assets": {
+          "tree": "loaded",
+          "mountains": "loaded",
+          "mist": "loaded"
+        },
+        "error": null,
+        "shadowEnabled": true,
+        "exposure": 1.18
+      }
+    ],
+    "errors": [],
+    "singleGLB": true
+  },
+  {
+    "failure": "environment",
+    "visual": {
+      "error": "TypeError: Failed to fetch dynamically imported module: http://127.0.0.1:4175/shuilong-temple/environment.mjs",
+      "shadowEnabled": true,
+      "exposure": 1.06
+    },
+    "errors": []
+  },
+  {
+    "failure": "glb",
+    "visual": {
+      "environmentOpacity": 1,
+      "foregroundOpacity": 1,
+      "environmentSaturation": 0.65,
+      "environmentContrast": 0.8,
+      "focusStrength": 0,
+      "fogDensity": 0.007,
+      "lightIntensity": 3.3,
+      "target": null,
+      "chapter": "A01",
+      "heroWeight": 1,
+      "visible": true,
+      "groups": [
+        "Terrain",
+        "Field",
+        "Vegetation",
+        "Foreground",
+        "DistantMountains",
+        "Atmosphere"
+      ],
+      "triangles": 844,
+      "meshes": 29,
+      "resourceRequests": 3,
+      "assets": {
+        "tree": "loaded",
+        "mountains": "loaded",
+        "mist": "loaded"
+      },
+      "error": null,
+      "shadowEnabled": true,
+      "exposure": 1.06
+    },
+    "errors": []
+  },
+  {
+    "failure": "mural",
+    "visual": {
+      "environmentOpacity": 1,
+      "foregroundOpacity": 1,
+      "environmentSaturation": 0.65,
+      "environmentContrast": 0.8,
+      "focusStrength": 0,
+      "fogDensity": 0.007,
+      "lightIntensity": 3.3,
+      "target": null,
+      "chapter": "A01",
+      "heroWeight": 1,
+      "visible": true,
+      "groups": [
+        "Terrain",
+        "Field",
+        "Vegetation",
+        "Foreground",
+        "DistantMountains",
+        "Atmosphere"
+      ],
+      "triangles": 844,
+      "meshes": 29,
+      "resourceRequests": 3,
+      "assets": {
+        "tree": "loaded",
+        "mountains": "loaded",
+        "mist": "loaded"
+      },
+      "error": null,
+      "shadowEnabled": true,
+      "exposure": 1.06
+    },
+    "errors": []
+  },
+  {
+    "failure": "reduced-motion",
+    "visual": {
+      "environmentOpacity": 1,
+      "foregroundOpacity": 1,
+      "environmentSaturation": 0.65,
+      "environmentContrast": 0.8,
+      "focusStrength": 0,
+      "fogDensity": 0.007,
+      "lightIntensity": 3.3,
+      "target": null,
+      "chapter": "A01",
+      "heroWeight": 1,
+      "visible": true,
+      "groups": [
+        "Terrain",
+        "Field",
+        "Vegetation",
+        "Foreground",
+        "DistantMountains",
+        "Atmosphere"
+      ],
+      "triangles": 844,
+      "meshes": 29,
+      "resourceRequests": 3,
+      "assets": {
+        "tree": "loaded",
+        "mountains": "loaded",
+        "mist": "loaded"
+      },
+      "error": null,
+      "shadowEnabled": true,
+      "exposure": 1.06
+    },
+    "errors": []
+  }
+]

@@ -2,15 +2,17 @@
 const clamp = n => Math.max(0, Math.min(1, Number(n) || 0));
 const ease = n => { const t = clamp(n); return t*t*(3-2*t); };
 const range = (n,a,b) => ease((n-a)/(b-a));
-const windows = {hall:[0,.18], west:[.06,.24], east:[.06,.24], stage:[.12,.28], entrance:[.18,.34], roof:[.22,.40], timber:[.28,.44], court:[.32,.46]};
+const windows = {hall:[.12,.36], west:[.18,.42], east:[.18,.42], stage:[.26,.46], entrance:[.32,.50], roof:[.40,.60], timber:[.44,.61], court:[.46,.62]};
 export function deriveLineState(animation = 0, reducedMotion = false) {
   const progress = clamp(animation), growth = clamp((progress-.2)/.45);
-  const solid = range(growth,.38,.94);
+  const solid = range(growth,.60,.83);
   return {
     progress, growth, solid,
-    solidGrowth: range(growth,.26,.88),
-    lineOpacity: (progress < .2 ? range(progress,.02,.17) : 1) * (1-range(growth,.55,.97)),
-    environmentWeight: .06 + .94*range(growth,.38,.96),
+    solidGrowth: range(growth,.50,.80),
+    materialWeight: range(growth,.76,.91),
+    lightingWeight: range(growth,.83,.98),
+    lineOpacity: (progress < .2 ? range(progress,.02,.17) : 1) * (1-range(growth,.72,.94)),
+    environmentWeight: .035 + .965*range(growth,.89,.995),
     assembly: range(progress,.03,.2),
     depth: reducedMotion ? 0 : 1-range(progress,.03,.2),
     groups: Object.fromEntries(Object.entries(windows).map(([key,[a,b]]) => [key, range(growth,a,b)])),
