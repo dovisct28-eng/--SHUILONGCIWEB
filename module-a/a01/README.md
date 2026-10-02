@@ -1,4 +1,4 @@
-# 模块 A｜A01–A03 浏览器低保真原型
+# 模块 A｜连续叙事入口与 A01 高保真开屏
 
 双击仓库根目录的 `启动模块A原型.bat`，或运行 `node module-a/a01/server.mjs` 后打开 `http://127.0.0.1:4173/module-a/a01/`。
 
@@ -8,8 +8,10 @@
 
 运行进度映射测试：`node --test module-a/a01/progress.test.mjs module-a/a02/progress.test.mjs`。浏览器验证脚本位于 `module-a/a02/browser-check.cjs`，结果与截图归档在 `docs/validation/a02/`。
 
-当前空间入口与 A02 文案仍为低保真设计内容。壁画位置采用项目模型节点，只表示模型示意位置，实际墙位仍待现场或权威资料核实。
+2026-10-02：A01 实现「一线成祠」建筑线描生成，详见 [实现与验收](../../docs/A01_HIGH_FIDELITY.md)。线描来自原模型源几何，经离线简化后在现有 Three.js 场景中以 LineSegments 显示；四阶段、阅读距离及一次回中不变。字体与中性色仍为打样选择，不代表全项目冻结。
 
-A03 在 A02 完整区间之后新增3个视口高度，呈现“出兵·入将”研究视角、观看目的与 A04 出发站位提示。使用同一建筑，反向滚动恢复 A02；完整 A04 路线和顶部导航尚未实现。文案依据、分段与验证入口见 `docs/A03_PROTOTYPE.md`。
+A02—A08 保留已完成的低保真叙事；A04 路线与三幅导读已实现，顶部导航尚未实现。壁画位置仍为模型示意位置，实际墙位待核实。A03 文案依据见 `docs/A03_PROTOTYPE.md`。
 
 包括 A03 的测试：`node --test module-a/a01/progress.test.mjs module-a/a02/progress.test.mjs module-a/a03/progress.test.mjs`。浏览器检查见 `module-a/a03/browser-check.cjs`，截图与结果在 `docs/validation/a03/`。
+
+A01 新验收：`node module-a/a01/line-browser-check.cjs`、`node module-a/a01/line-performance-check.cjs`（需要 NODE_PATH 可解析 Playwright/PNGJS）；`A01_VALIDATION_DIR` 可指定输出目录。构建仍为 `node shuilong-temple/build-model.mjs`，同时更新简化线条和离线副本。

@@ -14,6 +14,7 @@ const stage = document.querySelector('[data-stage]');
 const modelFrame = document.querySelector('[data-model-frame]');
 const debug = document.querySelector('[data-debug]');
 const debugEnabled = new URLSearchParams(location.search).has('debug');
+const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 let framePending = false;
 let modelProgress = -1;
 let lastScreens = 0;
@@ -66,14 +67,16 @@ function render() {
     travel,
   }, innerWidth);
 
-  stage.style.setProperty('--model-opacity', Math.min(1, Math.max(0, (state.animation - 0.14) / 0.1)));
+  const api = modelFrame.contentWindow?.shuilongTemple;
+  const hasLines = api?.setA01Presentation?.(state.animation, reducedMotion.matches);
+  stage.style.setProperty('--model-opacity', hasLines ? 1 : Math.min(1, Math.max(0, (state.animation - 0.14) / 0.1)));
   stage.style.setProperty('--hero-composition', 1 - transition);
   const narrow = innerWidth <= 760;
   stage.style.setProperty('--model-x', `${presentation.modelX + (narrow ? 0 : 19) * theme.composition}vw`);
   stage.style.setProperty('--model-scale', mix(0.72, 0.83, state.growth) - (narrow ? .35 : .17) * theme.composition);
   modelFrame.parentElement.style.top = `${(narrow ? 43 : 50) + (narrow ? 35 : 0) * theme.composition}%`;
   stage.style.setProperty('--copy-opacity', presentation.copyVisibility);
-  stage.style.setProperty('--copy-x', `${mix(-34, 0, copy)}px`);
+  stage.style.setProperty('--copy-x', `${mix(-12, 0, copy)}px`);
   stage.style.setProperty('--intro-mark-opacity', presentation.introMarkVisibility);
   stage.style.setProperty('--hint-opacity', presentation.hintVisibility);
   stage.style.setProperty('--a02-opacity', smooth(spatial.heading) * (1 - theme.takeover));
@@ -91,7 +94,7 @@ function render() {
   document.body.dataset.modelProgress = state.growth.toFixed(4);
   document.body.dataset.readingProgress = state.reading.toFixed(4);
   document.body.dataset.transitionProgress = state.transition.toFixed(4);
-  setModelProgress(state.growth);
+  if (!hasLines) setModelProgress(state.growth);
   modelFrame.contentWindow?.shuilongTemple?.setMuralPresentation({
     visibility: smooth(spatial.markers), emphasis: smooth(spatial.emphasis), coreIds: CORE_MURALS,
     revealWalls: smooth(spatial.revealWalls),
@@ -117,6 +120,7 @@ function requestRender() {
 }
 
 addEventListener('scroll', requestRender, { passive: true });
+reducedMotion.addEventListener('change', requestRender);
 addEventListener('resize', () => {
   scrollTo(0,lastScreens*innerHeight);
   requestRender();

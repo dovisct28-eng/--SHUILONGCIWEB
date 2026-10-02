@@ -150,3 +150,4 @@ fs.writeFileSync(path.join(directory, 'shuilong-temple.glb'), output);
 fs.writeFileSync(previewPath, embedded);
 fs.writeFileSync(path.join(directory, 'model-info.json'), `${JSON.stringify({ triangles, bytes: output.length, groups: groups.map(group => group.name) }, null, 2)}\n`);
 console.log(`Built ${triangles} triangles, ${output.length} bytes; GLB and offline preview match.`);
+await import('./build-a01-lines.mjs');
