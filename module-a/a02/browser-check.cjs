@@ -52,7 +52,7 @@ function assertSameImage(before,after) {
         }
         if (name==='core') {
           assert.equal(state.labels.filter(l=>l.core==='true'&&l.opacity===1).length,3);
-          assert.equal(state.labels.filter(l=>l.core==='false'&&l.opacity<.5).length,2);
+          assert.equal(state.labels.filter(l=>l.core==='false'&&l.opacity>=.79&&l.opacity<1).length,2,'secondary labels retreat while retaining readable contrast');
         }
         states.push(state);
         if (name==='hero') heroImage = await page.screenshot();

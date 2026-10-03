@@ -9,6 +9,7 @@ import { a05Guide } from '../a05/content.mjs';
 import { a06Guide } from '../a06/content.mjs';
 import { a07Guide } from '../a07/content.mjs';
 import { createA08Controller } from '../a08/controller.mjs';
+import { directorFrame } from '../visual-director/state.mjs';
 
 const story = document.querySelector('[data-story]');
 const stage = document.querySelector('[data-stage]');
@@ -19,6 +20,7 @@ const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 let framePending = false;
 let modelProgress = -1;
 let lastScreens = 0;
+let narrativeFontsRequested=false;
 const a02 = document.querySelector('[data-a02]');
 const a02Description = document.querySelector('[data-a02-description]');
 const a02Status = document.querySelector('[data-a02-status]');
@@ -36,6 +38,7 @@ const a03Styles = document.createElement('link');
 a03Styles.rel = 'stylesheet';
 a03Styles.href = new URL('../a03/styles.css', import.meta.url).href;
 document.head.append(a03Styles);
+const directorStyles=document.createElement('link');directorStyles.rel='stylesheet';directorStyles.href=new URL('../visual-director/styles.css',import.meta.url).href;document.head.append(directorStyles);
 document.title = '水龙祠｜A01–A08 空间与壁画叙事';
 
 debug.hidden = !debugEnabled;
@@ -62,6 +65,7 @@ function render() {
   const shift = smooth(state.shift);
   const copy = smooth(state.copy);
   const screens = Math.max(0, -bounds.top) / innerHeight;
+  if(screens>=6.8&&!narrativeFontsRequested){narrativeFontsRequested=true;const fonts=document.createElement('link');fonts.rel='stylesheet';fonts.href=new URL('../visual-director/fonts/fonts.css',import.meta.url).href;document.head.append(fonts);}
   const framing = cinematicState(state.animation,screens,reducedMotion.matches);
   const transition = framing.center;
   const presentation = derivePresentation({
@@ -80,7 +84,7 @@ function render() {
   const narrow = innerWidth <= 760;
   stage.style.setProperty('--model-x', `${presentation.modelX*framing.hero + (narrow ? 0 : 19) * theme.composition}vw`);
   stage.style.setProperty('--model-scale',1);
-  const canvas=canvasFrame(innerWidth,innerHeight,framing,theme.composition);
+  const canvas=directorFrame(canvasFrame(innerWidth,innerHeight,framing,theme.composition),innerWidth,innerHeight,screens,theme.composition);
   stage.style.setProperty('--canvas-width',`${canvas.width}px`);
   stage.style.setProperty('--canvas-height',`${canvas.height}px`);
   modelFrame.parentElement.style.top = `${50+framing.hero*((narrow?-7:0)+(narrow?35:0)*theme.composition)}%`;
@@ -136,8 +140,8 @@ addEventListener('resize', () => {
 });
 modelFrame.addEventListener('load', () => { modelProgress = -1; requestRender(); });
 addEventListener('message', event => {
-  if (event.origin !== location.origin || event.source !== modelFrame.contentWindow || event.data?.type !== 'shuilong:ready') return;
-  modelProgress = -1;
+  if (event.origin !== location.origin || event.source !== modelFrame.contentWindow || !['shuilong:ready','shuilong:mural-ready'].includes(event.data?.type)) return;
+  if(event.data.type==='shuilong:ready')modelProgress = -1;
   requestRender();
 });
 requestRender();

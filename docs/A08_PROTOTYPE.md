@@ -1,5 +1,7 @@
 # A08《入将图》探索交接：低保真实现与验收
 
+2026-10-03 当前高保真：A07 同幅同尺度图像上用右侧局部暗化承载短文，入口改为“进入探索 →”、细下划线及明确键盘 focus，实际点击区域至少 44px。四尺寸入口／返回、逆向、刷新、resize 和 reduced-motion 通过，最低背景采样对比度 5.34。仍点击原 localhost:3000 入口，模块 B 不改。具体遮罩／Accent 未冻结，见 [本轮验收](validation/module-a-visual-director-v2/README.md)。
+
 日期：2026-09-25。范围仅为模块 A；模块 B 内部未改动。
 
 A07 右端至左端巡视在 40 屏结束，A08 继续保留同一张 `mural-02-display.webp` 的左端画面和尺度。40—41 屏仅叠加简短说明与“进入探索”按钮，42 屏保持稳定。纵向滚动不触发跳转。按钮指向已由 `Mural-Exhibition/server.js` 确认的本地服务 `http://localhost:3000/index.html`；浏览器返回恢复 A08 滚动位置。

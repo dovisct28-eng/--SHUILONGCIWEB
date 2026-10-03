@@ -1,0 +1,122 @@
+{
+  "baseline": "0ea01b6c8e759f851e20751d3883431037a87096",
+  "files": [
+    {
+      "file": "shuilong-temple/shuilong-temple.glb",
+      "bytes": 3329000,
+      "baselineSHA256": "fbbfce1c0bfbf8a09c33ed65a6bb1f60589b6c70300841fa0283c2a4498ae047",
+      "sha256": "fbbfce1c0bfbf8a09c33ed65a6bb1f60589b6c70300841fa0283c2a4498ae047",
+      "unchanged": true
+    },
+    {
+      "file": "shuilong-temple/model-source.js",
+      "bytes": 9734,
+      "baselineSHA256": "34cb568a732558da0b46ed9841d7601ba63d712da84a68d764819f40d74f2d3b",
+      "sha256": "34cb568a732558da0b46ed9841d7601ba63d712da84a68d764819f40d74f2d3b",
+      "unchanged": true
+    },
+    {
+      "file": "shuilong-temple/mural-locations.json",
+      "bytes": 1086,
+      "baselineSHA256": "4e313a04bf4cf5f8da9fdd0cf0637bb18ad4f18a0b23a75cd30de16274e6e84e",
+      "sha256": "4e313a04bf4cf5f8da9fdd0cf0637bb18ad4f18a0b23a75cd30de16274e6e84e",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/a04/path.mjs",
+      "bytes": 3098,
+      "baselineSHA256": "a620b612c4ef42d723198de22b06f7636f992bb8514cf920ede8fbf88a10bfd5",
+      "sha256": "a620b612c4ef42d723198de22b06f7636f992bb8514cf920ede8fbf88a10bfd5",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/a01/styles.css",
+      "bytes": 5706,
+      "baselineSHA256": "a359c327c95c5cfefe320571e868cad3422eea841a93dc854656eb93794a2749",
+      "sha256": "a359c327c95c5cfefe320571e868cad3422eea841a93dc854656eb93794a2749",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/a01/cinematic-state.mjs",
+      "bytes": 1090,
+      "baselineSHA256": "788a1d44f0001391fa9cbac5e820204f89cf5ed80efff2990a389a7b1a3dde24",
+      "sha256": "788a1d44f0001391fa9cbac5e820204f89cf5ed80efff2990a389a7b1a3dde24",
+      "unchanged": true
+    },
+    {
+      "file": "shuilong-temple/a01-camera.mjs",
+      "bytes": 1829,
+      "baselineSHA256": "f9c5bc7fa882bd26a2ee473e94d93aae5b0899e751e4d10553b5899a145cc646",
+      "sha256": "f9c5bc7fa882bd26a2ee473e94d93aae5b0899e751e4d10553b5899a145cc646",
+      "unchanged": true
+    },
+    {
+      "file": "shuilong-temple/a01-art-direction.mjs",
+      "bytes": 4554,
+      "baselineSHA256": "76a60ed140fb700bd8d23f7dafa18c56ef0cf3f5108b1bdce45f25489e9977de",
+      "sha256": "76a60ed140fb700bd8d23f7dafa18c56ef0cf3f5108b1bdce45f25489e9977de",
+      "unchanged": true
+    },
+    {
+      "file": "shuilong-temple/a01-environment.mjs",
+      "bytes": 9710,
+      "baselineSHA256": "24a5c13a9f800268f49dda54daa7af3ae13c3416792ef6e0688146dbd590a931",
+      "sha256": "24a5c13a9f800268f49dda54daa7af3ae13c3416792ef6e0688146dbd590a931",
+      "unchanged": true
+    },
+    {
+      "file": "shuilong-temple/a01-post.mjs",
+      "bytes": 4622,
+      "baselineSHA256": "dcaec3fe56d0fd05a62ae3afdf86e27dd0366e26ae4d937e2b4793f085525cc7",
+      "sha256": "dcaec3fe56d0fd05a62ae3afdf86e27dd0366e26ae4d937e2b4793f085525cc7",
+      "unchanged": true
+    },
+    {
+      "file": "水龙祠壁画素材/网页展示图/mural-01-display.webp",
+      "bytes": 1351148,
+      "baselineSHA256": "afc5a15eebec4e430151795f73c1cb958496ca6c629552d23be62588766716ef",
+      "sha256": "afc5a15eebec4e430151795f73c1cb958496ca6c629552d23be62588766716ef",
+      "unchanged": true
+    },
+    {
+      "file": "水龙祠壁画素材/网页展示图/mural-02-display.webp",
+      "bytes": 3552614,
+      "baselineSHA256": "17864d02d97ccc8d208e15a0f4c5cff82088777b0ee1dcd1f04bf643ce3e0dae",
+      "sha256": "17864d02d97ccc8d208e15a0f4c5cff82088777b0ee1dcd1f04bf643ce3e0dae",
+      "unchanged": true
+    },
+    {
+      "file": "水龙祠壁画素材/网页展示图/mural-05-display.webp",
+      "bytes": 2842184,
+      "baselineSHA256": "a4a0adba234d933044d9d2fe4e703c44f2482cb792af398397344498559aedd3",
+      "sha256": "a4a0adba234d933044d9d2fe4e703c44f2482cb792af398397344498559aedd3",
+      "unchanged": true
+    }
+  ],
+  "pixels": [
+    {
+      "size": "1440x900",
+      "changed": 0,
+      "maxDelta": 0,
+      "pixels": 1296000
+    },
+    {
+      "size": "1024x768",
+      "changed": 0,
+      "maxDelta": 0,
+      "pixels": 786432
+    },
+    {
+      "size": "1366x768",
+      "changed": 0,
+      "maxDelta": 0,
+      "pixels": 1049088
+    },
+    {
+      "size": "1920x1080",
+      "changed": 0,
+      "maxDelta": 0,
+      "pixels": 2073600
+    }
+  ]
+}

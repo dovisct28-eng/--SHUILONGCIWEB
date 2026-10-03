@@ -1,4 +1,5 @@
 import {guideProgress, horizontalPlacement, mapMuralProjection, muralTransfer} from './progress.mjs';
+import {quadTransform} from '../visual-director/projection.mjs';
 
 export function createMuralGuide(stage, config, requestRender) {
   if (!document.querySelector('[data-mural-guide-styles]')) {
@@ -82,12 +83,15 @@ export function createMuralGuide(stage, config, requestRender) {
           lastModelMuralOpacity=modelOpacity;
         }
         Object.assign(image.style,{left:`${layout.left}px`,top:`${layout.top}px`,width:`${layout.width}px`,height:`${layout.height}px`,transform:'none',opacity:String(layout.imageOpacity)});
+        const formalWidth=formalHeight*image.naturalWidth/image.naturalHeight;
+        const matrix=quadTransform(layout.corners,formalWidth,formalHeight);
+        if(matrix)Object.assign(image.style,{left:'0px',top:'0px',width:`${formalWidth}px`,height:`${formalHeight}px`,transformOrigin:'0 0',transform:`matrix3d(${matrix.join(',')})`});
         section.style.setProperty('--transfer-background',layout.backgroundOpacity);
         section.dataset.projection=projection?JSON.stringify(projection):'';
         return;
       }
       section.style.setProperty('--transfer-background','1');
-      image.style.height=`${formalHeight}px`;image.style.top='50%';image.style.left='0px';image.style.opacity='1';
+      image.style.height=`${formalHeight}px`;image.style.top='50%';image.style.left='0px';image.style.opacity='1';image.style.transformOrigin='50% 50%';
       const renderedWidth = formalHeight * image.naturalWidth / image.naturalHeight;
       const {x, travel} = horizontalPlacement(renderedWidth, stage.clientWidth, carried ? 1 : state.scan);
       image.style.width = `${renderedWidth}px`;

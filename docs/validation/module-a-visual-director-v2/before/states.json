@@ -1,0 +1,9030 @@
+[
+  {
+    "name": "a01",
+    "width": 1440,
+    "height": 900,
+    "art": {
+      "position": [
+        -23.33250595253667,
+        19.342753798798213,
+        -26.88031350693665
+      ],
+      "target": [
+        0,
+        -1.25,
+        -1.75
+      ],
+      "fov": 32,
+      "aspect": 1.6012759170653907,
+      "bounds": {
+        "left": 0.033658173548008874,
+        "right": 0.8460913907159093,
+        "top": 0.11427552436756994,
+        "bottom": 0.9575977160679886
+      },
+      "heroWeight": 1,
+      "lighting": {
+        "fill": 0.72,
+        "sun": 4.5,
+        "position": [
+          -16,
+          22,
+          16
+        ]
+      },
+      "exposure": 0.98
+    },
+    "stats": {
+      "geometries": 53,
+      "textures": 22,
+      "calls": 47,
+      "triangles": 170210,
+      "lines": 0,
+      "post": {
+        "enabled": true,
+        "error": null,
+        "passes": 2,
+        "size": [
+          1004,
+          627
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 408,
+          "calls": 47,
+          "triangles": 170210,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 7554096,
+        "multisampleBytes": 15108192,
+        "targetBytes": 22662288
+      }
+    },
+    "tour": null,
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      }
+    ]
+  },
+  {
+    "name": "a02-space",
+    "width": 1440,
+    "height": 900,
+    "art": {
+      "position": [
+        -26.77238089799736,
+        41.988926812550105,
+        -22.634674912070263
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.3237639553429028,
+      "bounds": {
+        "left": 0.13195680777416352,
+        "right": 0.8320101536871227,
+        "top": 0.1743707488734595,
+        "bottom": 0.8942177896042582
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.3,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 54,
+      "textures": 20,
+      "calls": 42,
+      "triangles": 90262,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          830,
+          627
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 447,
+          "calls": 42,
+          "triangles": 90262,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 6244920,
+        "multisampleBytes": 12489840,
+        "targetBytes": 18734760
+      }
+    },
+    "tour": null,
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      }
+    ]
+  },
+  {
+    "name": "a02-five",
+    "width": 1440,
+    "height": 900,
+    "art": {
+      "position": [
+        -26.77238089799736,
+        41.988926812550105,
+        -22.634674912070263
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.3237639553429028,
+      "bounds": {
+        "left": 0.13195680777416352,
+        "right": 0.8320101536871227,
+        "top": 0.1743707488734595,
+        "bottom": 0.8942177896042582
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.3,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 64,
+      "textures": 20,
+      "calls": 52,
+      "triangles": 90562,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          830,
+          627
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 548,
+          "calls": 52,
+          "triangles": 90562,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 6244920,
+        "multisampleBytes": 12489840,
+        "targetBytes": 18734760
+      }
+    },
+    "tour": null,
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      }
+    ]
+  },
+  {
+    "name": "a02-core",
+    "width": 1440,
+    "height": 900,
+    "art": {
+      "position": [
+        -26.77238089799736,
+        41.988926812550105,
+        -22.634674912070263
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.3237639553429028,
+      "bounds": {
+        "left": 0.13195680777416352,
+        "right": 0.8320101536871227,
+        "top": 0.1743707488734595,
+        "bottom": 0.8942177896042582
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.3,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 64,
+      "textures": 20,
+      "calls": 52,
+      "triangles": 90562,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          830,
+          627
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 661,
+          "calls": 52,
+          "triangles": 90562,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 6244920,
+        "multisampleBytes": 12489840,
+        "targetBytes": 18734760
+      }
+    },
+    "tour": null,
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      }
+    ]
+  },
+  {
+    "name": "a03-enter",
+    "width": 1440,
+    "height": 900,
+    "art": {
+      "position": [
+        -26.77238089799736,
+        41.988926812550105,
+        -22.634674912070263
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.3225806451612903,
+      "bounds": {
+        "left": 0.13162752028744018,
+        "right": 0.8323072024884144,
+        "top": 0.1743707488734595,
+        "bottom": 0.8942177896042582
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.3,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 64,
+      "textures": 20,
+      "calls": 52,
+      "triangles": 90562,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          697,
+          527
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 768,
+          "calls": 52,
+          "triangles": 90562,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 4407828,
+        "multisampleBytes": 8815656,
+        "targetBytes": 13223484
+      }
+    },
+    "tour": null,
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      }
+    ]
+  },
+  {
+    "name": "a03",
+    "width": 1440,
+    "height": 900,
+    "art": {
+      "position": [
+        -26.77238089799736,
+        41.988926812550105,
+        -22.634674912070263
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.3226452905811623,
+      "bounds": {
+        "left": 0.13164552480746528,
+        "right": 0.8322909606896614,
+        "top": 0.1743707488734595,
+        "bottom": 0.8942177896042582
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.3,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 64,
+      "textures": 20,
+      "calls": 52,
+      "triangles": 90562,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          660,
+          499
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 877,
+          "calls": 52,
+          "triangles": 90562,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 3952080,
+        "multisampleBytes": 7904160,
+        "targetBytes": 11856240
+      }
+    },
+    "tour": null,
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      }
+    ]
+  },
+  {
+    "name": "a04-overview",
+    "width": 1440,
+    "height": 900,
+    "art": {
+      "position": [
+        -32.59337336488,
+        36.75176932958399,
+        -12.276474514251372
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.6,
+      "bounds": {
+        "left": 0.18189625969681483,
+        "right": 0.8272672030323605,
+        "top": 0.1787995274379663,
+        "bottom": 0.7420364510269166
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 63,
+      "triangles": 91130,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1440,
+          900
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 1005,
+          "calls": 63,
+          "triangles": 91130,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 15552000,
+        "multisampleBytes": 31104000,
+        "targetBytes": 46656000
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -32.59337336488,
+          36.75176932958399,
+          -12.276474514251372
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 1,
+      "labelOpacity": 1,
+      "target": "mural-02",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 0,
+      "secondaryOpacity": 1,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -32.59337336488,
+          36.75176932958399,
+          -12.276474514251372
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": 0.18189625969681483,
+        "right": 0.8272672030323605,
+        "top": 0.1787995274379663,
+        "bottom": 0.7420364510269166
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      }
+    ]
+  },
+  {
+    "name": "approach",
+    "width": 1440,
+    "height": 900,
+    "art": {
+      "position": [
+        1.2,
+        9,
+        -8
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.6,
+      "bounds": {
+        "left": -509330.8143762182,
+        "right": 41973.1035586739,
+        "top": -53774.444779167796,
+        "bottom": 1940982.9527602429
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 29,
+      "triangles": 64682,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1440,
+          900
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 1172,
+          "calls": 29,
+          "triangles": 64682,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 15552000,
+        "multisampleBytes": 31104000,
+        "targetBytes": 46656000
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          1.2,
+          9,
+          -8
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.5456950946468553,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 0.5,
+      "secondaryOpacity": 0.40740740740740744,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -32.59337336488,
+          36.75176932958399,
+          -12.276474514251372
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -12454.581510268978,
+        "right": 13846.639619695086,
+        "top": -12905.999425268434,
+        "bottom": 11496.864062275854
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      }
+    ]
+  },
+  {
+    "name": "transfer",
+    "width": 1440,
+    "height": 900,
+    "art": {
+      "position": [
+        -1.2192000000000018,
+        5.5951999999999975,
+        -10.240000000000002
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.6,
+      "bounds": {
+        "left": -53620.82903443664,
+        "right": 242609.66840556246,
+        "top": -118631.3261827262,
+        "bottom": 31708.822471030202
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 28,
+      "triangles": 64650,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1440,
+          900
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 1309,
+          "calls": 28,
+          "triangles": 64650,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 15552000,
+        "multisampleBytes": 31104000,
+        "targetBytes": 46656000
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -1.2192000000000018,
+          5.5951999999999975,
+          -10.240000000000002
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.28,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 0.9720000000000002,
+      "secondaryOpacity": 0.19999999999999996,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -32.59337336488,
+          36.75176932958399,
+          -12.276474514251372
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -2677.55180875283,
+        "right": 9297.938031684609,
+        "top": -35160.52782768782,
+        "bottom": 4318.825041690267
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      }
+    ]
+  },
+  {
+    "name": "a05-enter",
+    "width": 1440,
+    "height": 900,
+    "art": {
+      "position": [
+        -1.5,
+        5.2,
+        -10.5
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.6,
+      "bounds": {
+        "left": -759322.5726177597,
+        "right": 81883.1814813116,
+        "top": -54422.712831121906,
+        "bottom": 354852.4748324003
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 23,
+      "triangles": 40114,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1440,
+          900
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 1528,
+          "calls": 23,
+          "triangles": 40114,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 15552000,
+        "multisampleBytes": 31104000,
+        "targetBytes": 46656000
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -1.5,
+          5.2,
+          -10.5
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.28,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 1,
+      "secondaryOpacity": 0.19999999999999996,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -32.59337336488,
+          36.75176932958399,
+          -12.276474514251372
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -46490.4788278991,
+        "right": 81883.1814813116,
+        "top": -54422.712831121906,
+        "bottom": 31499.898930651187
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      }
+    ]
+  },
+  {
+    "name": "a05-intro",
+    "width": 1440,
+    "height": 900,
+    "art": {
+      "position": [
+        -1.5,
+        5.2,
+        -10.5
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.6,
+      "bounds": {
+        "left": -759322.5726177597,
+        "right": 81883.1814813116,
+        "top": -54422.712831121906,
+        "bottom": 354852.4748324003
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 23,
+      "triangles": 40114,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1440,
+          900
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 1757,
+          "calls": 23,
+          "triangles": 40114,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 15552000,
+        "multisampleBytes": 31104000,
+        "targetBytes": 46656000
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -1.5,
+          5.2,
+          -10.5
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.28,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 1,
+      "secondaryOpacity": 0.19999999999999996,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -32.59337336488,
+          36.75176932958399,
+          -12.276474514251372
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -46490.4788278991,
+        "right": 81883.1814813116,
+        "top": -54422.712831121906,
+        "bottom": 31499.898930651187
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      }
+    ]
+  },
+  {
+    "name": "a05-scan",
+    "width": 1440,
+    "height": 900,
+    "art": {
+      "position": [
+        -1.5,
+        5.2,
+        -10.5
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.6,
+      "bounds": {
+        "left": -759322.5726177597,
+        "right": 81883.1814813116,
+        "top": -54422.712831121906,
+        "bottom": 354852.4748324003
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 23,
+      "triangles": 40114,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1440,
+          900
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 1963,
+          "calls": 23,
+          "triangles": 40114,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 15552000,
+        "multisampleBytes": 31104000,
+        "targetBytes": 46656000
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -1.5,
+          5.2,
+          -10.5
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.28,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 1,
+      "secondaryOpacity": 0.19999999999999996,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -32.59337336488,
+          36.75176932958399,
+          -12.276474514251372
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -46490.4788278991,
+        "right": 81883.1814813116,
+        "top": -54422.712831121906,
+        "bottom": 31499.898930651187
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      }
+    ]
+  },
+  {
+    "name": "a06-scan",
+    "width": 1440,
+    "height": 900,
+    "art": {
+      "position": [
+        -1.5,
+        5.2,
+        -10.5
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.6,
+      "bounds": {
+        "left": -759322.5726177597,
+        "right": 81883.1814813116,
+        "top": -54422.712831121906,
+        "bottom": 354852.4748324003
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 23,
+      "triangles": 40114,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1440,
+          900
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 2096,
+          "calls": 23,
+          "triangles": 40114,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 15552000,
+        "multisampleBytes": 31104000,
+        "targetBytes": 46656000
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -1.5,
+          5.2,
+          -10.5
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.28,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 1,
+      "secondaryOpacity": 0.19999999999999996,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -32.59337336488,
+          36.75176932958399,
+          -12.276474514251372
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -46490.4788278991,
+        "right": 81883.1814813116,
+        "top": -54422.712831121906,
+        "bottom": 31499.898930651187
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-01-display.webp",
+        "bytes": 1351448
+      }
+    ]
+  },
+  {
+    "name": "a07-scan",
+    "width": 1440,
+    "height": 900,
+    "art": {
+      "position": [
+        -1.5,
+        5.2,
+        -10.5
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.6,
+      "bounds": {
+        "left": -759322.5726177597,
+        "right": 81883.1814813116,
+        "top": -54422.712831121906,
+        "bottom": 354852.4748324003
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 23,
+      "triangles": 40114,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1440,
+          900
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 2210,
+          "calls": 23,
+          "triangles": 40114,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 15552000,
+        "multisampleBytes": 31104000,
+        "targetBytes": 46656000
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -1.5,
+          5.2,
+          -10.5
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.28,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 1,
+      "secondaryOpacity": 0.19999999999999996,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -32.59337336488,
+          36.75176932958399,
+          -12.276474514251372
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -46490.4788278991,
+        "right": 81883.1814813116,
+        "top": -54422.712831121906,
+        "bottom": 31499.898930651187
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-01-display.webp",
+        "bytes": 1351448
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+        "bytes": 0
+      }
+    ]
+  },
+  {
+    "name": "a08",
+    "width": 1440,
+    "height": 900,
+    "art": {
+      "position": [
+        -1.5,
+        5.2,
+        -10.5
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.6,
+      "bounds": {
+        "left": -759322.5726177597,
+        "right": 81883.1814813116,
+        "top": -54422.712831121906,
+        "bottom": 354852.4748324003
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 23,
+      "triangles": 40114,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1440,
+          900
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 2428,
+          "calls": 23,
+          "triangles": 40114,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 15552000,
+        "multisampleBytes": 31104000,
+        "targetBytes": 46656000
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -1.5,
+          5.2,
+          -10.5
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.28,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 1,
+      "secondaryOpacity": 0.19999999999999996,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -32.59337336488,
+          36.75176932958399,
+          -12.276474514251372
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -46490.4788278991,
+        "right": 81883.1814813116,
+        "top": -54422.712831121906,
+        "bottom": 31499.898930651187
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-01-display.webp",
+        "bytes": 1351448
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+        "bytes": 0
+      }
+    ]
+  },
+  {
+    "name": "a01",
+    "width": 1024,
+    "height": 768,
+    "art": {
+      "position": [
+        -29.748945089484256,
+        25.005761093467722,
+        -33.791149721344226
+      ],
+      "target": [
+        0,
+        -1.25,
+        -1.75
+      ],
+      "fov": 32,
+      "aspect": 1.2392523364485981,
+      "bounds": {
+        "left": 0.04627203200610447,
+        "right": 0.8596375069756161,
+        "top": 0.1847037086697082,
+        "bottom": 0.8249852275156406
+      },
+      "heroWeight": 1,
+      "lighting": {
+        "fill": 0.72,
+        "sun": 4.5,
+        "position": [
+          -16,
+          22,
+          16
+        ]
+      },
+      "exposure": 0.98
+    },
+    "stats": {
+      "geometries": 53,
+      "textures": 22,
+      "calls": 47,
+      "triangles": 170210,
+      "lines": 0,
+      "post": {
+        "enabled": true,
+        "error": null,
+        "passes": 2,
+        "size": [
+          663,
+          535
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 384,
+          "calls": 47,
+          "triangles": 170210,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 4256460,
+        "multisampleBytes": 8512920,
+        "targetBytes": 12769380
+      }
+    },
+    "tour": null,
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      }
+    ]
+  },
+  {
+    "name": "a02-space",
+    "width": 1024,
+    "height": 768,
+    "art": {
+      "position": [
+        -26.77238089799736,
+        41.988926812550105,
+        -22.634674912070263
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.2392523364485981,
+      "bounds": {
+        "left": 0.10685786296428751,
+        "right": 0.8546518020037646,
+        "top": 0.1743707488734595,
+        "bottom": 0.8942177896042582
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.3,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 54,
+      "textures": 22,
+      "calls": 42,
+      "triangles": 90262,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          663,
+          535
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 472,
+          "calls": 42,
+          "triangles": 90262,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 4256460,
+        "multisampleBytes": 8512920,
+        "targetBytes": 12769380
+      }
+    },
+    "tour": null,
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      }
+    ]
+  },
+  {
+    "name": "a02-five",
+    "width": 1024,
+    "height": 768,
+    "art": {
+      "position": [
+        -26.77238089799736,
+        41.988926812550105,
+        -22.634674912070263
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.2392523364485981,
+      "bounds": {
+        "left": 0.10685786296428751,
+        "right": 0.8546518020037646,
+        "top": 0.1743707488734595,
+        "bottom": 0.8942177896042582
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.3,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 64,
+      "textures": 22,
+      "calls": 52,
+      "triangles": 90562,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          663,
+          535
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 576,
+          "calls": 52,
+          "triangles": 90562,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 4256460,
+        "multisampleBytes": 8512920,
+        "targetBytes": 12769380
+      }
+    },
+    "tour": null,
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      }
+    ]
+  },
+  {
+    "name": "a02-core",
+    "width": 1024,
+    "height": 768,
+    "art": {
+      "position": [
+        -26.77238089799736,
+        41.988926812550105,
+        -22.634674912070263
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.2392523364485981,
+      "bounds": {
+        "left": 0.10685786296428751,
+        "right": 0.8546518020037646,
+        "top": 0.1743707488734595,
+        "bottom": 0.8942177896042582
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.3,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 64,
+      "textures": 22,
+      "calls": 52,
+      "triangles": 90562,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          663,
+          535
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 684,
+          "calls": 52,
+          "triangles": 90562,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 4256460,
+        "multisampleBytes": 8512920,
+        "targetBytes": 12769380
+      }
+    },
+    "tour": null,
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      }
+    ]
+  },
+  {
+    "name": "a03-enter",
+    "width": 1024,
+    "height": 768,
+    "art": {
+      "position": [
+        -26.77238089799736,
+        41.988926812550105,
+        -22.634674912070263
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.2377777777777779,
+      "bounds": {
+        "left": 0.10638951464083357,
+        "right": 0.8550742969775436,
+        "top": 0.1743707488734595,
+        "bottom": 0.8942177896042582
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.3,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 64,
+      "textures": 20,
+      "calls": 52,
+      "triangles": 90562,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          557,
+          450
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 768,
+          "calls": 52,
+          "triangles": 90562,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 3007800,
+        "multisampleBytes": 6015600,
+        "targetBytes": 9023400
+      }
+    },
+    "tour": null,
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      }
+    ]
+  },
+  {
+    "name": "a03",
+    "width": 1024,
+    "height": 768,
+    "art": {
+      "position": [
+        -26.77238089799736,
+        41.988926812550105,
+        -22.634674912070263
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.2370892018779343,
+      "bounds": {
+        "left": 0.10617042721065256,
+        "right": 0.8552719347899032,
+        "top": 0.1743707488734595,
+        "bottom": 0.8942177896042582
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.3,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 64,
+      "textures": 20,
+      "calls": 52,
+      "triangles": 90562,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          527,
+          426
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 867,
+          "calls": 52,
+          "triangles": 90562,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 2694024,
+        "multisampleBytes": 5388048,
+        "targetBytes": 8082072
+      }
+    },
+    "tour": null,
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      }
+    ]
+  },
+  {
+    "name": "a04-overview",
+    "width": 1024,
+    "height": 768,
+    "art": {
+      "position": [
+        -38.57181925853921,
+        43.91484776810319,
+        -14.20729516389437
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.3333333333333333,
+      "bounds": {
+        "left": 0.17843544532200273,
+        "right": 0.8293325680296534,
+        "top": 0.22715813370028154,
+        "bottom": 0.6989341548187407
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 63,
+      "triangles": 91130,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1024,
+          768
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 932,
+          "calls": 63,
+          "triangles": 91130,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 9437184,
+        "multisampleBytes": 18874368,
+        "targetBytes": 28311552
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -38.57181925853921,
+          43.91484776810319,
+          -14.20729516389437
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 1,
+      "labelOpacity": 1,
+      "target": "mural-02",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 0,
+      "secondaryOpacity": 1,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -38.57181925853921,
+          43.91484776810319,
+          -14.20729516389437
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": 0.17843544532200273,
+        "right": 0.8293325680296534,
+        "top": 0.22715813370028154,
+        "bottom": 0.6989341548187407
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      }
+    ]
+  },
+  {
+    "name": "approach",
+    "width": 1024,
+    "height": 768,
+    "art": {
+      "position": [
+        1.2,
+        9,
+        -8
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.3333333333333333,
+      "bounds": {
+        "left": -611197.0772514618,
+        "right": 50367.62427040868,
+        "top": -53774.444779167796,
+        "bottom": 1940982.9527602429
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 29,
+      "triangles": 64682,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1024,
+          768
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 1080,
+          "calls": 29,
+          "triangles": 64682,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 9437184,
+        "multisampleBytes": 18874368,
+        "targetBytes": 28311552
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          1.2,
+          9,
+          -8
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.5456950946468553,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 0.5,
+      "secondaryOpacity": 0.40740740740740744,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -38.57181925853921,
+          43.91484776810319,
+          -14.20729516389437
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -14945.597812322776,
+        "right": 16615.867543634104,
+        "top": -12905.999425268434,
+        "bottom": 11496.864062275854
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      }
+    ]
+  },
+  {
+    "name": "transfer",
+    "width": 1024,
+    "height": 768,
+    "art": {
+      "position": [
+        -1.2178486824035677,
+        5.59710185439498,
+        -10.238748780003302
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.3333333333333333,
+      "bounds": {
+        "left": -14608.835684499745,
+        "right": 119867.61002414701,
+        "top": -43281.84010545007,
+        "bottom": 6346.181612443763
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 23,
+      "triangles": 40114,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1024,
+          768
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 1176,
+          "calls": 23,
+          "triangles": 40114,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 9437184,
+        "multisampleBytes": 18874368,
+        "targetBytes": 28311552
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -1.2178486824035677,
+          5.59710185439498,
+          -10.238748780003302
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.28,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 0.9718592122749049,
+      "secondaryOpacity": 0.19999999999999996,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -38.57181925853921,
+          43.91484776810319,
+          -14.20729516389437
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -2852.124372908008,
+        "right": 12510.416399639746,
+        "top": -36038.22782088753,
+        "bottom": 5112.835795757189
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      }
+    ]
+  },
+  {
+    "name": "a05-enter",
+    "width": 1024,
+    "height": 768,
+    "art": {
+      "position": [
+        -1.5,
+        5.2,
+        -10.5
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.3333333333333333,
+      "bounds": {
+        "left": -911187.1871413117,
+        "right": 98259.71777757393,
+        "top": -54422.712831121906,
+        "bottom": 354852.4748324003
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 22,
+      "triangles": 39802,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1024,
+          768
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 1347,
+          "calls": 22,
+          "triangles": 39802,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 9437184,
+        "multisampleBytes": 18874368,
+        "targetBytes": 28311552
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -1.5,
+          5.2,
+          -10.5
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.28,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 1,
+      "secondaryOpacity": 0.19999999999999996,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -38.57181925853921,
+          43.91484776810319,
+          -14.20729516389437
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -55788.67459347893,
+        "right": 98259.71777757393,
+        "top": -54422.712831121906,
+        "bottom": 31499.898930651187
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      }
+    ]
+  },
+  {
+    "name": "a05-intro",
+    "width": 1024,
+    "height": 768,
+    "art": {
+      "position": [
+        -1.5,
+        5.2,
+        -10.5
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.3333333333333333,
+      "bounds": {
+        "left": -911187.1871413117,
+        "right": 98259.71777757393,
+        "top": -54422.712831121906,
+        "bottom": 354852.4748324003
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 22,
+      "triangles": 39802,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1024,
+          768
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 1522,
+          "calls": 22,
+          "triangles": 39802,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 9437184,
+        "multisampleBytes": 18874368,
+        "targetBytes": 28311552
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -1.5,
+          5.2,
+          -10.5
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.28,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 1,
+      "secondaryOpacity": 0.19999999999999996,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -38.57181925853921,
+          43.91484776810319,
+          -14.20729516389437
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -55788.67459347893,
+        "right": 98259.71777757393,
+        "top": -54422.712831121906,
+        "bottom": 31499.898930651187
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      }
+    ]
+  },
+  {
+    "name": "a05-scan",
+    "width": 1024,
+    "height": 768,
+    "art": {
+      "position": [
+        -1.5,
+        5.2,
+        -10.5
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.3333333333333333,
+      "bounds": {
+        "left": -911187.1871413117,
+        "right": 98259.71777757393,
+        "top": -54422.712831121906,
+        "bottom": 354852.4748324003
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 22,
+      "triangles": 39802,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1024,
+          768
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 1687,
+          "calls": 22,
+          "triangles": 39802,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 9437184,
+        "multisampleBytes": 18874368,
+        "targetBytes": 28311552
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -1.5,
+          5.2,
+          -10.5
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.28,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 1,
+      "secondaryOpacity": 0.19999999999999996,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -38.57181925853921,
+          43.91484776810319,
+          -14.20729516389437
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -55788.67459347893,
+        "right": 98259.71777757393,
+        "top": -54422.712831121906,
+        "bottom": 31499.898930651187
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      }
+    ]
+  },
+  {
+    "name": "a06-scan",
+    "width": 1024,
+    "height": 768,
+    "art": {
+      "position": [
+        -1.5,
+        5.2,
+        -10.5
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.3333333333333333,
+      "bounds": {
+        "left": -911187.1871413117,
+        "right": 98259.71777757393,
+        "top": -54422.712831121906,
+        "bottom": 354852.4748324003
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 22,
+      "triangles": 39802,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1024,
+          768
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 1789,
+          "calls": 22,
+          "triangles": 39802,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 9437184,
+        "multisampleBytes": 18874368,
+        "targetBytes": 28311552
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -1.5,
+          5.2,
+          -10.5
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.28,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 1,
+      "secondaryOpacity": 0.19999999999999996,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -38.57181925853921,
+          43.91484776810319,
+          -14.20729516389437
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -55788.67459347893,
+        "right": 98259.71777757393,
+        "top": -54422.712831121906,
+        "bottom": 31499.898930651187
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-01-display.webp",
+        "bytes": 1351448
+      }
+    ]
+  },
+  {
+    "name": "a07-scan",
+    "width": 1024,
+    "height": 768,
+    "art": {
+      "position": [
+        -1.5,
+        5.2,
+        -10.5
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.3333333333333333,
+      "bounds": {
+        "left": -911187.1871413117,
+        "right": 98259.71777757393,
+        "top": -54422.712831121906,
+        "bottom": 354852.4748324003
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 22,
+      "triangles": 39802,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1024,
+          768
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 1867,
+          "calls": 22,
+          "triangles": 39802,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 9437184,
+        "multisampleBytes": 18874368,
+        "targetBytes": 28311552
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -1.5,
+          5.2,
+          -10.5
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.28,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 1,
+      "secondaryOpacity": 0.19999999999999996,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -38.57181925853921,
+          43.91484776810319,
+          -14.20729516389437
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -55788.67459347893,
+        "right": 98259.71777757393,
+        "top": -54422.712831121906,
+        "bottom": 31499.898930651187
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-01-display.webp",
+        "bytes": 1351448
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+        "bytes": 0
+      }
+    ]
+  },
+  {
+    "name": "a08",
+    "width": 1024,
+    "height": 768,
+    "art": {
+      "position": [
+        -1.5,
+        5.2,
+        -10.5
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.3333333333333333,
+      "bounds": {
+        "left": -911187.1871413117,
+        "right": 98259.71777757393,
+        "top": -54422.712831121906,
+        "bottom": 354852.4748324003
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 22,
+      "triangles": 39802,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1024,
+          768
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 2038,
+          "calls": 22,
+          "triangles": 39802,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 9437184,
+        "multisampleBytes": 18874368,
+        "targetBytes": 28311552
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -1.5,
+          5.2,
+          -10.5
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.28,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 1,
+      "secondaryOpacity": 0.19999999999999996,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -38.57181925853921,
+          43.91484776810319,
+          -14.20729516389437
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -55788.67459347893,
+        "right": 98259.71777757393,
+        "top": -54422.712831121906,
+        "bottom": 31499.898930651187
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-01-display.webp",
+        "bytes": 1351448
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+        "bytes": 0
+      }
+    ]
+  },
+  {
+    "name": "a01",
+    "width": 1366,
+    "height": 768,
+    "art": {
+      "position": [
+        -23.33250595253667,
+        19.342753798798213,
+        -26.88031350693665
+      ],
+      "target": [
+        0,
+        -1.25,
+        -1.75
+      ],
+      "fov": 32,
+      "aspect": 1.7794392523364486,
+      "bounds": {
+        "left": 0.08034985749731532,
+        "right": 0.8114395775688277,
+        "top": 0.11427552436756994,
+        "bottom": 0.9575977160679886
+      },
+      "heroWeight": 1,
+      "lighting": {
+        "fill": 0.72,
+        "sun": 4.5,
+        "position": [
+          -16,
+          22,
+          16
+        ]
+      },
+      "exposure": 0.98
+    },
+    "stats": {
+      "geometries": 53,
+      "textures": 22,
+      "calls": 47,
+      "triangles": 170210,
+      "lines": 0,
+      "post": {
+        "enabled": true,
+        "error": null,
+        "passes": 2,
+        "size": [
+          952,
+          535
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 294,
+          "calls": 47,
+          "triangles": 170210,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 6111840,
+        "multisampleBytes": 12223680,
+        "targetBytes": 18335520
+      }
+    },
+    "tour": null,
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      }
+    ]
+  },
+  {
+    "name": "a02-space",
+    "width": 1366,
+    "height": 768,
+    "art": {
+      "position": [
+        -26.77238089799736,
+        41.988926812550105,
+        -22.634674912070263
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.5252336448598132,
+      "bounds": {
+        "left": 0.18057201365848358,
+        "right": 0.7881545891280586,
+        "top": 0.1743707488734595,
+        "bottom": 0.8942177896042582
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.3,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 54,
+      "textures": 20,
+      "calls": 42,
+      "triangles": 90262,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          816,
+          535
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 399,
+          "calls": 42,
+          "triangles": 90262,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 5238720,
+        "multisampleBytes": 10477440,
+        "targetBytes": 15716160
+      }
+    },
+    "tour": null,
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      }
+    ]
+  },
+  {
+    "name": "a02-five",
+    "width": 1366,
+    "height": 768,
+    "art": {
+      "position": [
+        -26.77238089799736,
+        41.988926812550105,
+        -22.634674912070263
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.5252336448598132,
+      "bounds": {
+        "left": 0.18057201365848358,
+        "right": 0.7881545891280586,
+        "top": 0.1743707488734595,
+        "bottom": 0.8942177896042582
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.3,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 64,
+      "textures": 20,
+      "calls": 52,
+      "triangles": 90562,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          816,
+          535
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 502,
+          "calls": 52,
+          "triangles": 90562,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 5238720,
+        "multisampleBytes": 10477440,
+        "targetBytes": 15716160
+      }
+    },
+    "tour": null,
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      }
+    ]
+  },
+  {
+    "name": "a02-core",
+    "width": 1366,
+    "height": 768,
+    "art": {
+      "position": [
+        -26.77238089799736,
+        41.988926812550105,
+        -22.634674912070263
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.5252336448598132,
+      "bounds": {
+        "left": 0.18057201365848358,
+        "right": 0.7881545891280586,
+        "top": 0.1743707488734595,
+        "bottom": 0.8942177896042582
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.3,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 64,
+      "textures": 20,
+      "calls": 52,
+      "triangles": 90562,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          816,
+          535
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 597,
+          "calls": 52,
+          "triangles": 90562,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 5238720,
+        "multisampleBytes": 10477440,
+        "targetBytes": 15716160
+      }
+    },
+    "tour": null,
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      }
+    ]
+  },
+  {
+    "name": "a03-enter",
+    "width": 1366,
+    "height": 768,
+    "art": {
+      "position": [
+        -26.77238089799736,
+        41.988926812550105,
+        -22.634674912070263
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.5222222222222221,
+      "bounds": {
+        "left": 0.17994008708750986,
+        "right": 0.7887246473233458,
+        "top": 0.1743707488734595,
+        "bottom": 0.8942177896042582
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.3,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 64,
+      "textures": 20,
+      "calls": 52,
+      "triangles": 90562,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          685,
+          450
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 698,
+          "calls": 52,
+          "triangles": 90562,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 3699000,
+        "multisampleBytes": 7398000,
+        "targetBytes": 11097000
+      }
+    },
+    "tour": null,
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      }
+    ]
+  },
+  {
+    "name": "a03",
+    "width": 1366,
+    "height": 768,
+    "art": {
+      "position": [
+        -26.77238089799736,
+        41.988926812550105,
+        -22.634674912070263
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.5234741784037558,
+      "bounds": {
+        "left": 0.18020310499231723,
+        "right": 0.7884873800220014,
+        "top": 0.1743707488734595,
+        "bottom": 0.8942177896042582
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.3,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 64,
+      "textures": 20,
+      "calls": 52,
+      "triangles": 90562,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          649,
+          426
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 804,
+          "calls": 52,
+          "triangles": 90562,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 3317688,
+        "multisampleBytes": 6635376,
+        "targetBytes": 9953064
+      }
+    },
+    "tour": null,
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      }
+    ]
+  },
+  {
+    "name": "a04-overview",
+    "width": 1366,
+    "height": 768,
+    "art": {
+      "position": [
+        -31.305177248048405,
+        35.208316399977775,
+        -11.860434006833483
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.7786458333333333,
+      "bounds": {
+        "left": 0.20117405583633458,
+        "right": 0.8071345586491346,
+        "top": 0.16604560993250478,
+        "bottom": 0.7538894827677299
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 63,
+      "triangles": 91130,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1366,
+          768
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 894,
+          "calls": 63,
+          "triangles": 91130,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 12589056,
+        "multisampleBytes": 25178112,
+        "targetBytes": 37767168
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -31.305177248048405,
+          35.208316399977775,
+          -11.860434006833483
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 1,
+      "labelOpacity": 1,
+      "target": "mural-02",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 0,
+      "secondaryOpacity": 1,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -31.305177248048405,
+          35.208316399977775,
+          -11.860434006833483
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": 0.20182642514670163,
+        "right": 0.8071345586491346,
+        "top": 0.16604560993250478,
+        "bottom": 0.7538894827677299
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      }
+    ]
+  },
+  {
+    "name": "approach",
+    "width": 1366,
+    "height": 768,
+    "art": {
+      "position": [
+        1.2,
+        9,
+        -8
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.7786458333333333,
+      "bounds": {
+        "left": -458173.96493813826,
+        "right": 37757.407212956445,
+        "top": -53774.444779167796,
+        "bottom": 1940982.9527602429
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 29,
+      "triangles": 64682,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1366,
+          768
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 1057,
+          "calls": 29,
+          "triangles": 64682,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 12589056,
+        "multisampleBytes": 25178112,
+        "targetBytes": 37767168
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          1.2,
+          9,
+          -8
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.5456950946468553,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 0.5,
+      "secondaryOpacity": 0.40740740740740744,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -31.305177248048405,
+          35.208316399977775,
+          -11.860434006833483
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -11203.602606016488,
+        "right": 12455.943898009753,
+        "top": -12905.999425268434,
+        "bottom": 11496.864062275854
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      }
+    ]
+  },
+  {
+    "name": "transfer",
+    "width": 1366,
+    "height": 768,
+    "art": {
+      "position": [
+        -1.2178486824035677,
+        5.59710185439498,
+        -10.238748780003302
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.7786458333333333,
+      "bounds": {
+        "left": -10951.154275935387,
+        "right": 89856.95729482175,
+        "top": -43281.84010545007,
+        "bottom": 6346.181612443763
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 28,
+      "triangles": 64650,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1366,
+          768
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 1174,
+          "calls": 28,
+          "triangles": 64650,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 12589056,
+        "multisampleBytes": 25178112,
+        "targetBytes": 37767168
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -1.2178486824035677,
+          5.59710185439498,
+          -10.238748780003302
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.28,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 0.9718592122749049,
+      "secondaryOpacity": 0.19999999999999996,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -31.305177248048405,
+          35.208316399977775,
+          -11.860434006833483
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -2137.9241272751096,
+        "right": 9378.358267372694,
+        "top": -36038.22782088753,
+        "bottom": 5112.835795757189
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      }
+    ]
+  },
+  {
+    "name": "a05-enter",
+    "width": 1366,
+    "height": 768,
+    "art": {
+      "position": [
+        -1.5,
+        5.2,
+        -10.5
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.7786458333333333,
+      "bounds": {
+        "left": -683056.7413123741,
+        "right": 73658.94729446244,
+        "top": -54422.712831121906,
+        "bottom": 354852.4748324003
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 24,
+      "triangles": 40426,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1366,
+          768
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 1365,
+          "calls": 24,
+          "triangles": 40426,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 12589056,
+        "multisampleBytes": 25178112,
+        "targetBytes": 37767168
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -1.5,
+          5.2,
+          -10.5
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.28,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 1,
+      "secondaryOpacity": 0.19999999999999996,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -31.305177248048405,
+          35.208316399977775,
+          -11.860434006833483
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -41820.96031019211,
+        "right": 73658.94729446244,
+        "top": -54422.712831121906,
+        "bottom": 31499.898930651187
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      }
+    ]
+  },
+  {
+    "name": "a05-intro",
+    "width": 1366,
+    "height": 768,
+    "art": {
+      "position": [
+        -1.5,
+        5.2,
+        -10.5
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.7786458333333333,
+      "bounds": {
+        "left": -683056.7413123741,
+        "right": 73658.94729446244,
+        "top": -54422.712831121906,
+        "bottom": 354852.4748324003
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 24,
+      "triangles": 40426,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1366,
+          768
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 1573,
+          "calls": 24,
+          "triangles": 40426,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 12589056,
+        "multisampleBytes": 25178112,
+        "targetBytes": 37767168
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -1.5,
+          5.2,
+          -10.5
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.28,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 1,
+      "secondaryOpacity": 0.19999999999999996,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -31.305177248048405,
+          35.208316399977775,
+          -11.860434006833483
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -41820.96031019211,
+        "right": 73658.94729446244,
+        "top": -54422.712831121906,
+        "bottom": 31499.898930651187
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      }
+    ]
+  },
+  {
+    "name": "a05-scan",
+    "width": 1366,
+    "height": 768,
+    "art": {
+      "position": [
+        -1.5,
+        5.2,
+        -10.5
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.7786458333333333,
+      "bounds": {
+        "left": -683056.7413123741,
+        "right": 73658.94729446244,
+        "top": -54422.712831121906,
+        "bottom": 354852.4748324003
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 24,
+      "triangles": 40426,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1366,
+          768
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 1747,
+          "calls": 24,
+          "triangles": 40426,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 12589056,
+        "multisampleBytes": 25178112,
+        "targetBytes": 37767168
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -1.5,
+          5.2,
+          -10.5
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.28,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 1,
+      "secondaryOpacity": 0.19999999999999996,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -31.305177248048405,
+          35.208316399977775,
+          -11.860434006833483
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -41820.96031019211,
+        "right": 73658.94729446244,
+        "top": -54422.712831121906,
+        "bottom": 31499.898930651187
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      }
+    ]
+  },
+  {
+    "name": "a06-scan",
+    "width": 1366,
+    "height": 768,
+    "art": {
+      "position": [
+        -1.5,
+        5.2,
+        -10.5
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.7786458333333333,
+      "bounds": {
+        "left": -683056.7413123741,
+        "right": 73658.94729446244,
+        "top": -54422.712831121906,
+        "bottom": 354852.4748324003
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 24,
+      "triangles": 40426,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1366,
+          768
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 1877,
+          "calls": 24,
+          "triangles": 40426,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 12589056,
+        "multisampleBytes": 25178112,
+        "targetBytes": 37767168
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -1.5,
+          5.2,
+          -10.5
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.28,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 1,
+      "secondaryOpacity": 0.19999999999999996,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -31.305177248048405,
+          35.208316399977775,
+          -11.860434006833483
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -41820.96031019211,
+        "right": 73658.94729446244,
+        "top": -54422.712831121906,
+        "bottom": 31499.898930651187
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-01-display.webp",
+        "bytes": 1351448
+      }
+    ]
+  },
+  {
+    "name": "a07-scan",
+    "width": 1366,
+    "height": 768,
+    "art": {
+      "position": [
+        -1.5,
+        5.2,
+        -10.5
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.7786458333333333,
+      "bounds": {
+        "left": -683056.7413123741,
+        "right": 73658.94729446244,
+        "top": -54422.712831121906,
+        "bottom": 354852.4748324003
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 24,
+      "triangles": 40426,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1366,
+          768
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 1981,
+          "calls": 24,
+          "triangles": 40426,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 12589056,
+        "multisampleBytes": 25178112,
+        "targetBytes": 37767168
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -1.5,
+          5.2,
+          -10.5
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.28,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 1,
+      "secondaryOpacity": 0.19999999999999996,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -31.305177248048405,
+          35.208316399977775,
+          -11.860434006833483
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -41820.96031019211,
+        "right": 73658.94729446244,
+        "top": -54422.712831121906,
+        "bottom": 31499.898930651187
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-01-display.webp",
+        "bytes": 1351448
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+        "bytes": 0
+      }
+    ]
+  },
+  {
+    "name": "a08",
+    "width": 1366,
+    "height": 768,
+    "art": {
+      "position": [
+        -1.5,
+        5.2,
+        -10.5
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.7786458333333333,
+      "bounds": {
+        "left": -683056.7413123741,
+        "right": 73658.94729446244,
+        "top": -54422.712831121906,
+        "bottom": 354852.4748324003
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 24,
+      "triangles": 40426,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1366,
+          768
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 2183,
+          "calls": 24,
+          "triangles": 40426,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 12589056,
+        "multisampleBytes": 25178112,
+        "targetBytes": 37767168
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -1.5,
+          5.2,
+          -10.5
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.28,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 1,
+      "secondaryOpacity": 0.19999999999999996,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -31.305177248048405,
+          35.208316399977775,
+          -11.860434006833483
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -41820.96031019211,
+        "right": 73658.94729446244,
+        "top": -54422.712831121906,
+        "bottom": 31499.898930651187
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-01-display.webp",
+        "bytes": 1351448
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+        "bytes": 0
+      }
+    ]
+  },
+  {
+    "name": "a01",
+    "width": 1920,
+    "height": 1080,
+    "art": {
+      "position": [
+        -23.33250595253667,
+        19.342753798798213,
+        -26.88031350693665
+      ],
+      "target": [
+        0,
+        -1.25,
+        -1.75
+      ],
+      "fov": 32,
+      "aspect": 1.653386454183267,
+      "bounds": {
+        "left": 0.048356082192088756,
+        "right": 0.8351834700561941,
+        "top": 0.11427552436756994,
+        "bottom": 0.9575977160679886
+      },
+      "heroWeight": 1,
+      "lighting": {
+        "fill": 0.72,
+        "sun": 4.5,
+        "position": [
+          -16,
+          22,
+          16
+        ]
+      },
+      "exposure": 0.98
+    },
+    "stats": {
+      "geometries": 53,
+      "textures": 22,
+      "calls": 47,
+      "triangles": 170210,
+      "lines": 0,
+      "post": {
+        "enabled": true,
+        "error": null,
+        "passes": 2,
+        "size": [
+          1245,
+          753
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 613,
+          "calls": 47,
+          "triangles": 170210,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 11249820,
+        "multisampleBytes": 22499640,
+        "targetBytes": 33749460
+      }
+    },
+    "tour": null,
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      }
+    ]
+  },
+  {
+    "name": "a02-space",
+    "width": 1920,
+    "height": 1080,
+    "art": {
+      "position": [
+        -26.77238089799736,
+        41.988926812550105,
+        -22.634674912070263
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.2187958883994126,
+      "bounds": {
+        "left": 0.10025930796523969,
+        "right": 0.8606043296027603,
+        "top": 0.1743707488734595,
+        "bottom": 0.8942177896042582
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.3,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 54,
+      "textures": 20,
+      "calls": 42,
+      "triangles": 90262,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          830,
+          681
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 666,
+          "calls": 42,
+          "triangles": 90262,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 6782760,
+        "multisampleBytes": 13565520,
+        "targetBytes": 20348280
+      }
+    },
+    "tour": null,
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      }
+    ]
+  },
+  {
+    "name": "a02-five",
+    "width": 1920,
+    "height": 1080,
+    "art": {
+      "position": [
+        -26.77238089799736,
+        41.988926812550105,
+        -22.634674912070263
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.2187958883994126,
+      "bounds": {
+        "left": 0.10025930796523969,
+        "right": 0.8606043296027603,
+        "top": 0.1743707488734595,
+        "bottom": 0.8942177896042582
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.3,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 64,
+      "textures": 20,
+      "calls": 52,
+      "triangles": 90562,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          830,
+          681
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 785,
+          "calls": 52,
+          "triangles": 90562,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 6782760,
+        "multisampleBytes": 13565520,
+        "targetBytes": 20348280
+      }
+    },
+    "tour": null,
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      }
+    ]
+  },
+  {
+    "name": "a02-core",
+    "width": 1920,
+    "height": 1080,
+    "art": {
+      "position": [
+        -26.77238089799736,
+        41.988926812550105,
+        -22.634674912070263
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.2187958883994126,
+      "bounds": {
+        "left": 0.10025930796523969,
+        "right": 0.8606043296027603,
+        "top": 0.1743707488734595,
+        "bottom": 0.8942177896042582
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.3,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 64,
+      "textures": 20,
+      "calls": 52,
+      "triangles": 90562,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          830,
+          681
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 906,
+          "calls": 52,
+          "triangles": 90562,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 6782760,
+        "multisampleBytes": 13565520,
+        "targetBytes": 20348280
+      }
+    },
+    "tour": null,
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      }
+    ]
+  },
+  {
+    "name": "a03-enter",
+    "width": 1920,
+    "height": 1080,
+    "art": {
+      "position": [
+        -26.77238089799736,
+        41.988926812550105,
+        -22.634674912070263
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.2206654991243433,
+      "bounds": {
+        "left": 0.10087156372699879,
+        "right": 0.8600520163584149,
+        "top": 0.1743707488734595,
+        "bottom": 0.8942177896042582
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.3,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 64,
+      "textures": 20,
+      "calls": 52,
+      "triangles": 90562,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          697,
+          571
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 1018,
+          "calls": 52,
+          "triangles": 90562,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 4775844,
+        "multisampleBytes": 9551688,
+        "targetBytes": 14327532
+      }
+    },
+    "tour": null,
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      }
+    ]
+  },
+  {
+    "name": "a03",
+    "width": 1920,
+    "height": 1080,
+    "art": {
+      "position": [
+        -26.77238089799736,
+        41.988926812550105,
+        -22.634674912070263
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.21996303142329,
+      "bounds": {
+        "left": 0.10064174132432613,
+        "right": 0.8602593381424986,
+        "top": 0.1743707488734595,
+        "bottom": 0.8942177896042582
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.3,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 64,
+      "textures": 20,
+      "calls": 52,
+      "triangles": 90562,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          660,
+          541
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 1135,
+          "calls": 52,
+          "triangles": 90562,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 4284720,
+        "multisampleBytes": 8569440,
+        "targetBytes": 12854160
+      }
+    },
+    "tour": null,
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      }
+    ]
+  },
+  {
+    "name": "a04-overview",
+    "width": 1920,
+    "height": 1080,
+    "art": {
+      "position": [
+        -31.305177248048405,
+        35.208316399977775,
+        -11.860434006833483
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.7777777777777777,
+      "bounds": {
+        "left": 0.2010281447307859,
+        "right": 0.8072845266953501,
+        "top": 0.16604560993250478,
+        "bottom": 0.7538894827677299
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 63,
+      "triangles": 91130,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1920,
+          1080
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 1234,
+          "calls": 63,
+          "triangles": 91130,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 24883200,
+        "multisampleBytes": 49766400,
+        "targetBytes": 74649600
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -31.305177248048405,
+          35.208316399977775,
+          -11.860434006833483
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 1,
+      "labelOpacity": 1,
+      "target": "mural-02",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 0,
+      "secondaryOpacity": 1,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -31.305177248048405,
+          35.208316399977775,
+          -11.860434006833483
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": 0.20168083258085528,
+        "right": 0.8072845266953501,
+        "top": 0.16604560993250478,
+        "bottom": 0.7538894827677299
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      }
+    ]
+  },
+  {
+    "name": "approach",
+    "width": 1920,
+    "height": 1080,
+    "art": {
+      "position": [
+        1.2,
+        9,
+        -8
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.7777777777777777,
+      "bounds": {
+        "left": -458397.68293859635,
+        "right": 37775.84320280652,
+        "top": -53774.444779167796,
+        "bottom": 1940982.9527602429
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 29,
+      "triangles": 64682,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1920,
+          1080
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 1485,
+          "calls": 29,
+          "triangles": 64682,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 24883200,
+        "multisampleBytes": 49766400,
+        "targetBytes": 74649600
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          1.2,
+          9,
+          -8
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.5456950946468553,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 0.5,
+      "secondaryOpacity": 0.40740740740740744,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -31.305177248048405,
+          35.208316399977775,
+          -11.860434006833483
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -11209.07335924208,
+        "right": 12462.025657725579,
+        "top": -12905.999425268434,
+        "bottom": 11496.864062275854
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      }
+    ]
+  },
+  {
+    "name": "transfer",
+    "width": 1920,
+    "height": 1080,
+    "art": {
+      "position": [
+        -1.2192000000000018,
+        5.5951999999999975,
+        -10.240000000000002
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.7777777777777777,
+      "bounds": {
+        "left": -48258.69613099298,
+        "right": 218348.7515650062,
+        "top": -118631.3261827262,
+        "bottom": 31708.822471030202
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 28,
+      "triangles": 64650,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1920,
+          1080
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 1739,
+          "calls": 28,
+          "triangles": 64650,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 24883200,
+        "multisampleBytes": 49766400,
+        "targetBytes": 74649600
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -1.2192000000000018,
+          5.5951999999999975,
+          -10.240000000000002
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.28,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 0.9720000000000002,
+      "secondaryOpacity": 0.19999999999999996,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -31.305177248048405,
+          35.208316399977775,
+          -11.860434006833483
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -2409.746627877547,
+        "right": 8368.194228516148,
+        "top": -35160.52782768782,
+        "bottom": 4318.825041690267
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      }
+    ]
+  },
+  {
+    "name": "a05-enter",
+    "width": 1920,
+    "height": 1080,
+    "art": {
+      "position": [
+        -1.5,
+        5.2,
+        -10.5
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.7777777777777777,
+      "bounds": {
+        "left": -683390.2653559839,
+        "right": 73694.91333318045,
+        "top": -54422.712831121906,
+        "bottom": 354852.4748324003
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 24,
+      "triangles": 40426,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1920,
+          1080
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 2031,
+          "calls": 24,
+          "triangles": 40426,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 24883200,
+        "multisampleBytes": 49766400,
+        "targetBytes": 74649600
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -1.5,
+          5.2,
+          -10.5
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.28,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 1,
+      "secondaryOpacity": 0.19999999999999996,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -31.305177248048405,
+          35.208316399977775,
+          -11.860434006833483
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -41841.380945109195,
+        "right": 73694.91333318045,
+        "top": -54422.712831121906,
+        "bottom": 31499.898930651187
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      }
+    ]
+  },
+  {
+    "name": "a05-intro",
+    "width": 1920,
+    "height": 1080,
+    "art": {
+      "position": [
+        -1.5,
+        5.2,
+        -10.5
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.7777777777777777,
+      "bounds": {
+        "left": -683390.2653559839,
+        "right": 73694.91333318045,
+        "top": -54422.712831121906,
+        "bottom": 354852.4748324003
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 24,
+      "triangles": 40426,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1920,
+          1080
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 2351,
+          "calls": 24,
+          "triangles": 40426,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 24883200,
+        "multisampleBytes": 49766400,
+        "targetBytes": 74649600
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -1.5,
+          5.2,
+          -10.5
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.28,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 1,
+      "secondaryOpacity": 0.19999999999999996,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -31.305177248048405,
+          35.208316399977775,
+          -11.860434006833483
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -41841.380945109195,
+        "right": 73694.91333318045,
+        "top": -54422.712831121906,
+        "bottom": 31499.898930651187
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      }
+    ]
+  },
+  {
+    "name": "a05-scan",
+    "width": 1920,
+    "height": 1080,
+    "art": {
+      "position": [
+        -1.5,
+        5.2,
+        -10.5
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.7777777777777777,
+      "bounds": {
+        "left": -683390.2653559839,
+        "right": 73694.91333318045,
+        "top": -54422.712831121906,
+        "bottom": 354852.4748324003
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 24,
+      "triangles": 40426,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1920,
+          1080
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 2635,
+          "calls": 24,
+          "triangles": 40426,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 24883200,
+        "multisampleBytes": 49766400,
+        "targetBytes": 74649600
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -1.5,
+          5.2,
+          -10.5
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.28,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 1,
+      "secondaryOpacity": 0.19999999999999996,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -31.305177248048405,
+          35.208316399977775,
+          -11.860434006833483
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -41841.380945109195,
+        "right": 73694.91333318045,
+        "top": -54422.712831121906,
+        "bottom": 31499.898930651187
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      }
+    ]
+  },
+  {
+    "name": "a06-scan",
+    "width": 1920,
+    "height": 1080,
+    "art": {
+      "position": [
+        -1.5,
+        5.2,
+        -10.5
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.7777777777777777,
+      "bounds": {
+        "left": -683390.2653559839,
+        "right": 73694.91333318045,
+        "top": -54422.712831121906,
+        "bottom": 354852.4748324003
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 24,
+      "triangles": 40426,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1920,
+          1080
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 2852,
+          "calls": 24,
+          "triangles": 40426,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 24883200,
+        "multisampleBytes": 49766400,
+        "targetBytes": 74649600
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -1.5,
+          5.2,
+          -10.5
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.28,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 1,
+      "secondaryOpacity": 0.19999999999999996,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -31.305177248048405,
+          35.208316399977775,
+          -11.860434006833483
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -41841.380945109195,
+        "right": 73694.91333318045,
+        "top": -54422.712831121906,
+        "bottom": 31499.898930651187
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-01-display.webp",
+        "bytes": 1351448
+      }
+    ]
+  },
+  {
+    "name": "a07-scan",
+    "width": 1920,
+    "height": 1080,
+    "art": {
+      "position": [
+        -1.5,
+        5.2,
+        -10.5
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.7777777777777777,
+      "bounds": {
+        "left": -683390.2653559839,
+        "right": 73694.91333318045,
+        "top": -54422.712831121906,
+        "bottom": 354852.4748324003
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 24,
+      "triangles": 40426,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1920,
+          1080
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 3024,
+          "calls": 24,
+          "triangles": 40426,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 24883200,
+        "multisampleBytes": 49766400,
+        "targetBytes": 74649600
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -1.5,
+          5.2,
+          -10.5
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.28,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 1,
+      "secondaryOpacity": 0.19999999999999996,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -31.305177248048405,
+          35.208316399977775,
+          -11.860434006833483
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -41841.380945109195,
+        "right": 73694.91333318045,
+        "top": -54422.712831121906,
+        "bottom": 31499.898930651187
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-01-display.webp",
+        "bytes": 1351448
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+        "bytes": 0
+      }
+    ]
+  },
+  {
+    "name": "a08",
+    "width": 1920,
+    "height": 1080,
+    "art": {
+      "position": [
+        -1.5,
+        5.2,
+        -10.5
+      ],
+      "target": [
+        0,
+        0,
+        -1.75
+      ],
+      "fov": 34,
+      "aspect": 1.7777777777777777,
+      "bounds": {
+        "left": -683390.2653559839,
+        "right": 73694.91333318045,
+        "top": -54422.712831121906,
+        "bottom": 354852.4748324003
+      },
+      "heroWeight": 0,
+      "lighting": {
+        "fill": 1.2,
+        "sun": 3.05,
+        "position": [
+          -19,
+          23,
+          -22
+        ]
+      },
+      "exposure": 1.18
+    },
+    "stats": {
+      "geometries": 77,
+      "textures": 23,
+      "calls": 24,
+      "triangles": 40426,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1920,
+          1080
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 3336,
+          "calls": 24,
+          "triangles": 40426,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 24883200,
+        "multisampleBytes": 49766400,
+        "targetBytes": 74649600
+      }
+    },
+    "tour": {
+      "camera": {
+        "position": [
+          -1.5,
+          5.2,
+          -10.5
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0.28,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "roofOpacity": 0,
+      "mode": "completed",
+      "elapsed": 58,
+      "guideStartProgress": 1,
+      "secondaryOpacity": 0.19999999999999996,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -31.305177248048405,
+          35.208316399977775,
+          -11.860434006833483
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "bounds": {
+        "left": -41841.380945109195,
+        "right": 73694.91333318045,
+        "top": -54422.712831121906,
+        "bottom": 31499.898930651187
+      }
+    },
+    "requests": [
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+        "bytes": 35604
+      },
+      {
+        "name": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+        "bytes": 25448
+      },
+      {
+        "name": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+        "bytes": 103118
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "bytes": 0
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-01-display.webp",
+        "bytes": 1351448
+      },
+      {
+        "name": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+        "bytes": 0
+      }
+    ]
+  }
+]

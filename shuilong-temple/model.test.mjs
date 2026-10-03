@@ -32,10 +32,12 @@ test('GLB, model statistics, and offline preview are the same shared model', () 
   const inline = preview.match(/atob\('([A-Za-z0-9+/=]+)'\)/)?.[1];
   assert.ok(inline);
   assert.ok(Buffer.from(inline, 'base64').equals(binary));
-  for (const [name, file] of [['inlineA04', 'a04-scene.mjs'], ['inlineMarkers', 'narrative-markers.mjs']]) {
+  for (const [name, file] of [['inlineA04', 'a04-scene.mjs'], ['inlineMarkers', 'narrative-markers.mjs'],['inlineDirector','director-light.mjs']]) {
     const literal = preview.match(new RegExp(`const ${name}=("(?:\\\\.|[^"\\\\])*");`))?.[1];
     assert.ok(literal, `${name} embedded module`);
-    assert.equal(normalize(JSON.parse(literal)), normalize(fs.readFileSync(path.join(directory, file), 'utf8')));
+    const source=fs.readFileSync(path.join(directory,file),'utf8');
+    const expected=source.replace(/import \{([^}]+)\} from '\.\.\/module-a\/visual-director\/state\.mjs';/,(_,names)=>`const {${names}}=(()=>{${fs.readFileSync(path.join(directory,'../module-a/visual-director/state.mjs'),'utf8').replaceAll('export ','')}\nreturn {${names}};})();`);
+    assert.equal(normalize(JSON.parse(literal)), normalize(expected));
   }
 });
 test('five stable mural IDs and all duplicated metadata agree', () => {

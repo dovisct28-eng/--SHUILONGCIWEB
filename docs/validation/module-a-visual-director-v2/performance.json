@@ -1,0 +1,331 @@
+{
+  "baseline": "0ea01b6c8e759f851e20751d3883431037a87096",
+  "scenes": [
+    {
+      "name": "a01",
+      "before": {
+        "calls": 47,
+        "triangles": 170210,
+        "geometries": 53,
+        "textures": 22,
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1004,
+            627
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 408,
+            "calls": 47,
+            "triangles": 170210,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 7554096,
+          "multisampleBytes": 15108192,
+          "targetBytes": 22662288
+        }
+      },
+      "after": {
+        "calls": 47,
+        "triangles": 170210,
+        "geometries": 53,
+        "textures": 22,
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1004,
+            627
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 326,
+            "calls": 47,
+            "triangles": 170210,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 7554096,
+          "multisampleBytes": 15108192,
+          "targetBytes": 22662288
+        }
+      }
+    },
+    {
+      "name": "a02-core",
+      "before": {
+        "calls": 52,
+        "triangles": 90562,
+        "geometries": 64,
+        "textures": 20,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            830,
+            627
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 661,
+            "calls": 52,
+            "triangles": 90562,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 6244920,
+          "multisampleBytes": 12489840,
+          "targetBytes": 18734760
+        }
+      },
+      "after": {
+        "calls": 52,
+        "triangles": 90562,
+        "geometries": 64,
+        "textures": 20,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1354,
+            756
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 634,
+            "calls": 52,
+            "triangles": 90562,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 12283488,
+          "multisampleBytes": 24566976,
+          "targetBytes": 36850464
+        }
+      }
+    },
+    {
+      "name": "a03",
+      "before": {
+        "calls": 52,
+        "triangles": 90562,
+        "geometries": 64,
+        "textures": 20,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            660,
+            499
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 877,
+            "calls": 52,
+            "triangles": 90562,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 3952080,
+          "multisampleBytes": 7904160,
+          "targetBytes": 11856240
+        }
+      },
+      "after": {
+        "calls": 52,
+        "triangles": 90562,
+        "geometries": 64,
+        "textures": 20,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            660,
+            499
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 862,
+            "calls": 52,
+            "triangles": 90562,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 3952080,
+          "multisampleBytes": 7904160,
+          "targetBytes": 11856240
+        }
+      }
+    },
+    {
+      "name": "a04-overview",
+      "before": {
+        "calls": 63,
+        "triangles": 91130,
+        "geometries": 77,
+        "textures": 23,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1440,
+            900
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1005,
+            "calls": 63,
+            "triangles": 91130,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15552000,
+          "multisampleBytes": 31104000,
+          "targetBytes": 46656000
+        }
+      },
+      "after": {
+        "calls": 73,
+        "triangles": 91586,
+        "geometries": 78,
+        "textures": 23,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1440,
+            900
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 928,
+            "calls": 73,
+            "triangles": 91586,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15552000,
+          "multisampleBytes": 31104000,
+          "targetBytes": 46656000
+        }
+      }
+    },
+    {
+      "name": "a08",
+      "before": {
+        "calls": 23,
+        "triangles": 40114,
+        "geometries": 77,
+        "textures": 23,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1440,
+            900
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 2428,
+            "calls": 23,
+            "triangles": 40114,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15552000,
+          "multisampleBytes": 31104000,
+          "targetBytes": 46656000
+        }
+      },
+      "after": {
+        "calls": 24,
+        "triangles": 40146,
+        "geometries": 78,
+        "textures": 23,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1440,
+            900
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 2291,
+            "calls": 24,
+            "triangles": 40146,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15552000,
+          "multisampleBytes": 31104000,
+          "targetBytes": 46656000
+        }
+      }
+    }
+  ],
+  "htmlBytes": {
+    "before": 7526553,
+    "after": 7536684
+  },
+  "sizes": [
+    {
+      "width": 1440,
+      "height": 900,
+      "firstAddedFontBytes": 0,
+      "chapterFontRequests": 3,
+      "chapterFontEncodedBytes": 233560,
+      "uniqueChapterFontFiles": 2,
+      "modelViewportWidthRatio": 0.5454236803762741,
+      "ctaContrast": 6.35402097541009,
+      "bodyContrast": 8.247716561631385
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "firstAddedFontBytes": 0,
+      "chapterFontRequests": 3,
+      "chapterFontEncodedBytes": 233560,
+      "uniqueChapterFontFiles": 2,
+      "modelViewportWidthRatio": 0.6461600255152294,
+      "ctaContrast": 5.344880025551726,
+      "bodyContrast": 7.505799499816233
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "firstAddedFontBytes": 0,
+      "chapterFontRequests": 3,
+      "chapterFontEncodedBytes": 233560,
+      "uniqueChapterFontFiles": 2,
+      "modelViewportWidthRatio": 0.4846233248154393,
+      "ctaContrast": 6.045064278108472,
+      "bodyContrast": 8.37037640080917
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "firstAddedFontBytes": 0,
+      "chapterFontRequests": 3,
+      "chapterFontEncodedBytes": 233560,
+      "uniqueChapterFontFiles": 2,
+      "modelViewportWidthRatio": 0.49086514205701415,
+      "ctaContrast": 7.2298646937090885,
+      "bodyContrast": 9.240452570917475
+    }
+  ],
+  "scope": "Same localhost machine and recorded state; no frame-rate, memory or GPU-time claim."
+}

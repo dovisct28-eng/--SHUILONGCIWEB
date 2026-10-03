@@ -39,14 +39,15 @@ function comparePixels(before,after) {
       const capture=()=>page.evaluate(()=>{
         const win=document.querySelector('iframe').contentWindow;
         const rect=el=>{const r=el.getBoundingClientRect();return {x:r.x,y:r.y,w:r.width,h:r.height};};
+        const copyVisible=document.querySelector('[data-a03-copy]').getAttribute('aria-hidden')==='false';
         return {
           phase:document.body.dataset.phase,
           vars:document.querySelector('[data-stage]').getAttribute('style'),
           camera:win.shuilongTemple.getIntroState(),
           labels:[...win.document.querySelectorAll('.mural-label')].filter(el=>!el.hidden&&win.getComputedStyle(el).display!=='none').map(el=>({id:el.dataset.muralId,opacity:el.style.opacity,rect:rect(el)})),
-          copy:rect(document.querySelector('[data-a03-copy]')),
-          title:rect(document.querySelector('.a03-title')),
-          titleLines:[...document.querySelectorAll('.a03-title span')].map(rect),
+          copy:copyVisible?rect(document.querySelector('[data-a03-copy]')):null,
+          title:copyVisible?rect(document.querySelector('.a03-title')):null,
+          titleLines:copyVisible?[...document.querySelectorAll('.a03-title span')].map(rect):[],
           titleText:document.querySelector('.a03-title').textContent,
           topic:document.querySelector('.a03-copy .a03-kicker').textContent,
           frame:rect(document.querySelector('iframe')),
@@ -55,7 +56,7 @@ function comparePixels(before,after) {
           overflow:document.documentElement.scrollWidth>document.documentElement.clientWidth,
         };
       });
-      const stop=async screens=>{await page.evaluate(y=>scrollTo(0,y),Math.round(screens*height));await page.waitForTimeout(350);return capture();};
+      const stop=async screens=>{await page.evaluate(y=>scrollTo(0,y),Math.round(screens*height));await page.waitForTimeout(350);await page.evaluate(()=>Promise.all([document.fonts.ready,document.querySelector('iframe').contentDocument.fonts.ready]));return capture();};
       const hero=await stop(5.7),heroImage=await page.screenshot();
       fs.writeFileSync(path.join(output,`hero-before-${width}x${height}.png`),heroImage);
       const a02=await stop(10.2),a02Image=await page.screenshot();

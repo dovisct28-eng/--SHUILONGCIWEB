@@ -29,7 +29,8 @@ export function muralTransfer(screens, projection, viewportWidth, viewportHeight
   const lerp=(a,b)=>a+(b-a)*t;
   return {left:lerp(from.left,left),top:lerp(from.top,(viewportHeight-formalHeight)/2),
     width:lerp(from.width,width),height:lerp(from.height,formalHeight),
-    imageOpacity:smooth((screens-(start-.6))/.25),backgroundOpacity:smooth((screens-(start-.28))/.28)};
+    imageOpacity:smooth((screens-(start-.6))/.25),backgroundOpacity:smooth((screens-(start-.28))/.28),
+    corners:projection?.quad?.map((p,i)=>{const target=[{x:left,y:(viewportHeight-formalHeight)/2},{x:left+width,y:(viewportHeight-formalHeight)/2},{x:left+width,y:(viewportHeight+formalHeight)/2},{x:left,y:(viewportHeight+formalHeight)/2}][i];return {x:lerp(p.x,target.x),y:lerp(p.y,target.y)};})};
 }
 
 export function mapMuralProjection(projection, frameRect, frameWidth, frameHeight, stageRect) {
@@ -40,5 +41,6 @@ export function mapMuralProjection(projection, frameRect, frameWidth, frameHeigh
     top: frameRect.top - stageRect.top + projection.top * scaleY,
     width: projection.width * scaleX,
     height: projection.height * scaleY,
+    ...(projection.quad?{quad:projection.quad.map(p=>({x:frameRect.left-stageRect.left+p.x*scaleX,y:frameRect.top-stageRect.top+p.y*scaleY}))}:{}),
   };
 }

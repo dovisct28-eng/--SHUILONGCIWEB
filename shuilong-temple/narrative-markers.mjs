@@ -1,5 +1,6 @@
 // Screen positions remain anchored to the renderer's projected GLB nodes.
 // Sorted vertical rails prevent overlap without implying a viewing route.
+import {markerReveal,paletteFor} from '../module-a/visual-director/state.mjs';
 export function layoutLabels(points, width, height) {
   const result = [];
   for (const side of [-1, 1]) {
@@ -34,7 +35,8 @@ export function createMuralPresentation(pins, svg) {
     },
     update(points, width, height) {
       const positions = layoutLabels(points, width, height);
-      svg.style.opacity = visibility;
+      const reveal=markerReveal(visibility),palette=paletteFor(document.body.dataset?.directorAccent);
+      svg.style.opacity = 1;
       for (const p of pins) {
         const pos = positions.find(v => v.id === p.m.id);
         const show = visibility > 0 && Boolean(pos) && (core.has(p.m.id) || secondary > 0);
@@ -42,18 +44,18 @@ export function createMuralPresentation(pins, svg) {
         p.line.style.display = p.dot.style.display = show ? '' : 'none';
         if (!show) continue;
         const isCore = core.has(p.m.id);
-        const weight = isCore ? 1 : (1 - emphasis * .58) * secondary;
-        p.button.style.opacity = visibility * weight;
+        const weight = isCore ? 1 : (1 - emphasis * .2) * secondary;
+        p.button.style.opacity = reveal.label * weight;
         p.button.style.background = 'transparent';
-        p.button.style.color = isCore ? '#d8d2c5' : '#a0a39c';
+        p.button.style.color = isCore ? '#d8d2c5' : '#c6c9c2';
         p.button.style.fontWeight = isCore && emphasis > .5 ? '500' : '400';
         p.button.dataset.core = String(isCore);
         p.button.style.left = pos.lx + 'px'; p.button.style.top = pos.ly + 'px';
-        p.line.style.opacity = p.dot.style.opacity = weight;
-        for (const [key, value] of Object.entries({x1:pos.x,y1:pos.y,x2:pos.lx,y2:pos.ly})) p.line.setAttribute(key, value);
+        p.line.style.opacity = reveal.line * (isCore?1:weight*.6); p.dot.style.opacity = reveal.anchor * (isCore?1:weight*.6);
+        for (const [key, value] of Object.entries({x1:pos.x,y1:pos.y,x2:pos.x+(pos.lx-pos.x)*reveal.line,y2:pos.y+(pos.ly-pos.y)*reveal.line})) p.line.setAttribute(key, value);
         p.line.setAttribute('stroke', '#a0a39c');
         p.dot.setAttribute('cx', pos.x); p.dot.setAttribute('cy', pos.y);
-        p.dot.setAttribute('fill', '#c9b69a'); p.dot.setAttribute('r', isCore ? 2.3 + emphasis * .7 : 2);
+        p.dot.setAttribute('fill', palette.accent); p.dot.setAttribute('r', isCore ? 2.3 + emphasis * .7 : 2);
       }
     },
   };

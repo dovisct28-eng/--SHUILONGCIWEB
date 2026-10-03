@@ -39,8 +39,8 @@ const muralOutput=path.join(output,'mural-textures');fs.mkdirSync(muralOutput,{r
       assert.ok(Math.abs(samples[6].image.width-samples[7].image.width)<30);
       if(width===1440){
         await seek(17.6);await page.setViewportSize({width:1024,height:768});await page.waitForTimeout(150);
-        const resized=await page.evaluate(()=>{const p=JSON.parse(document.querySelector('.mural-guide').dataset.projection),r=document.querySelector('.mural-guide__image').getBoundingClientRect(),ratio=6000/1617,width=Math.min(p.width,p.height*ratio),height=width/ratio;return {p,left:r.left,top:r.top,expected:{left:p.left+(p.width-width)/2,top:p.top+(p.height-height)/2}}});
-        assert.ok(Math.abs(resized.left-resized.expected.left)<3&&Math.abs(resized.top-resized.expected.top)<3,'resize keeps contain-fitted image on mapped mural projection');
+        const resized=await page.evaluate(()=>{const p=JSON.parse(document.querySelector('.mural-guide').dataset.projection),r=document.querySelector('.mural-guide__image').getBoundingClientRect();return {p,left:r.left,top:r.top,expected:{left:Math.min(...p.quad.map(v=>v.x)),top:Math.min(...p.quad.map(v=>v.y))}}});
+        assert.ok(Math.abs(resized.left-resized.expected.left)<3&&Math.abs(resized.top-resized.expected.top)<3,'resize keeps actual wall corner registration');
         await page.setViewportSize({width,height});await page.waitForTimeout(150);
       }
       for(const n of [17.8,17.4,16,18,20.2,24.4,18,17.6])await seek(n);
@@ -49,8 +49,9 @@ const muralOutput=path.join(output,'mural-textures');fs.mkdirSync(muralOutput,{r
       await page.waitForFunction(()=>document.querySelector('iframe').contentWindow.shuilongTemple.getMuralTextureState('mural-05').loaded);
       assert.ok(await page.evaluate(()=>document.querySelector('iframe').contentWindow.shuilongTemple.getMuralProjection('mural-05')?.width>0));
       await page.waitForFunction(()=>document.querySelector('.mural-guide__image').naturalWidth>0);
-      const restored=await page.evaluate(()=>{const p=JSON.parse(document.querySelector('.mural-guide').dataset.projection),image=document.querySelector('.mural-guide__image'),r=image.getBoundingClientRect(),ratio=image.naturalWidth/image.naturalHeight,width=Math.min(p.width,p.height*ratio),height=width/ratio;return {screen:scrollY/innerHeight,p,left:r.left,top:r.top,width:r.width,height:r.height,style:{left:image.style.left,top:image.style.top,width:image.style.width,height:image.style.height},expected:{left:p.left+(p.width-width)/2,top:p.top+(p.height-height)/2}}});
-      assert.ok(Math.abs(restored.left-restored.expected.left)<3&&Math.abs(restored.top-restored.expected.top)<3,`refresh restores the contain-fitted image to the parent-space mural projection: ${JSON.stringify(restored)}`);
+      await page.waitForFunction(()=>JSON.parse(document.querySelector('.mural-guide').dataset.projection||'{}').quad?.length===4);
+      const restored=await page.evaluate(()=>{const p=JSON.parse(document.querySelector('.mural-guide').dataset.projection),image=document.querySelector('.mural-guide__image'),r=image.getBoundingClientRect();return {screen:scrollY/innerHeight,p,left:r.left,top:r.top,width:r.width,height:r.height,style:{left:image.style.left,top:image.style.top,width:image.style.width,height:image.style.height},expected:{left:Math.min(...p.quad.map(v=>v.x)),top:Math.min(...p.quad.map(v=>v.y))}}});
+      assert.ok(Math.abs(restored.left-restored.expected.left)<3&&Math.abs(restored.top-restored.expected.top)<3,`refresh restores actual wall corner registration: ${JSON.stringify(restored)}`);
       console.log(`${width}x${height} transition PASS`);
       await page.close();
     }
