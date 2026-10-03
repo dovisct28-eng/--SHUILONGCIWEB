@@ -3,6 +3,7 @@ const clamp = n => Math.max(0, Math.min(1, Number(n) || 0));
 const ease = n => { const t = clamp(n); return t*t*(3-2*t); };
 const range = (n,a,b) => ease((n-a)/(b-a));
 const windows = {hall:[.12,.36], west:[.18,.42], east:[.18,.42], stage:[.26,.46], entrance:[.32,.50], roof:[.40,.60], timber:[.44,.61], court:[.46,.62]};
+const approach={hall:[-.05,0],roof:[-.05,0],timber:[.02,.10],west:[.04,.15],east:[.04,.15],stage:[.07,.18],entrance:[.07,.18],court:[.08,.20]};
 export function deriveLineState(animation = 0, reducedMotion = false) {
   const progress = clamp(animation), growth = clamp((progress-.2)/.45);
   const solid = range(growth,.60,.83);
@@ -11,11 +12,11 @@ export function deriveLineState(animation = 0, reducedMotion = false) {
     solidGrowth: range(growth,.50,.80),
     materialWeight: range(growth,.76,.91),
     lightingWeight: range(growth,.83,.98),
-    lineOpacity: (progress < .2 ? range(progress,.02,.17) : 1) * (1-range(growth,.72,.94)),
+    lineOpacity: (.72+.28*range(progress,0,.02)) * (1-range(growth,.72,.94)),
     environmentWeight: .035 + .965*range(growth,.89,.995),
     assembly: range(progress,.03,.2),
     depth: reducedMotion ? 0 : 1-range(progress,.03,.2),
-    groups: Object.fromEntries(Object.entries(windows).map(([key,[a,b]]) => [key, range(growth,a,b)])),
+    groups: Object.fromEntries(Object.entries(windows).map(([key,[a,b]]) => [key, Math.max(range(progress,...approach[key]),range(growth,a,b))])),
   };
 }
 
@@ -39,11 +40,11 @@ export function createArchitectureLines(T, root, data) {
   try {
     // Axes and sparse locating strokes derive from the actual courtyard bounds.
     // Deliberately open segments, never a rectangular perspective tunnel.
-    add('axes',[0,.08,-17.2,0,.08,13.3, -6.3,.08,-11.55,6.3,.08,-11.55, -6.3,.08,8.35,6.3,.08,8.35],0x938a7c,.45);
-    add('locators',[-5,.1,-15.3,-5,.1,-13.8, 5,.1,9.8,5,.1,11.3, -1,.1,11.93,1,.1,11.93],0x62675f,.55);
+    add('axes',[0,.08,-17.2,0,.08,13.3, -6.3,.08,-11.55,6.3,.08,-11.55, -6.3,.08,8.35,6.3,.08,8.35],0x8899a4,.28);
+    add('locators',[-5,.1,-15.3,-5,.1,-13.8, 5,.1,9.8,5,.1,11.3, -1,.1,11.93,1,.1,11.93],0x8899a4,.4);
     for (const [key, positions] of Object.entries(data)) {
       if (!positions.length || positions.length%6 || positions.some(n=>!Number.isFinite(n))) throw Error(`Invalid A01 contour ${key}`);
-      add(key,positions,0x343833,key==='court'?.52:key==='timber'?.67:1);
+      add(key,positions,key==='roof'?0xd8c4a6:0xadaeaa,key==='court'?.42:key==='timber'?.7:1);
     }
     root.add(group);
   } catch(error) { dispose(); throw error; }

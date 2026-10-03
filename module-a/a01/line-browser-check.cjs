@@ -11,8 +11,8 @@ const read=p=>p.evaluate(()=>{const f=document.querySelector('iframe'),w=f.conte
 const seek=async(p,n)=>{await p.evaluate(n=>scrollTo(0,Math.round(n*innerHeight)),n);await p.waitForTimeout(180);};
 const ready=async p=>{await p.waitForFunction(()=>document.querySelector('iframe').contentWindow.modelReady);await p.waitForFunction(()=>document.querySelector('iframe').contentWindow.shuilongTemple.getArchitectureState().every(m=>m.clonesLoaded));await p.waitForFunction(()=>Object.values(document.querySelector('iframe').contentWindow.shuilongTemple.getVisualState().assets).every(s=>s==='loaded'));await p.evaluate(()=>document.fonts.ready);};
 const stable=s=>({progress:s.progress,line:s.line,intro:s.intro,visual:s.visual,shift:s.shift,copyOpacity:s.copyOpacity});
-function sameImage(a,b){a=PNG.sync.read(a);b=PNG.sync.read(b);let max=0,changed=0,sum=0;for(let i=0;i<a.data.length;i+=4){const d=Math.max(...[0,1,2].map(c=>Math.abs(a.data[i+c]-b.data[i+c])));if(d){changed++;sum+=d;}max=Math.max(max,d);}// WebGL edge antialiasing may vary after transparent-program changes.
-assert.ok(max<=1||(max<=16&&changed/(a.width*a.height)<.005)||(max<=32&&changed/(a.width*a.height)<.002&&sum/changed<2)||(max<=64&&changed/(a.width*a.height)<.001&&sum/changed<4),`image mismatch: ${max}, ${changed}`);return {maxDelta:max,meanChangedDelta:changed?sum/changed:0,changedPixels:changed,totalPixels:a.width*a.height};}
+function sameImage(a,b){a=PNG.sync.read(a);b=PNG.sync.read(b);let max=0,changed=0,sum=0,significant=0;for(let i=0;i<a.data.length;i+=4){const d=Math.max(...[0,1,2].map(c=>Math.abs(a.data[i+c]-b.data[i+c])));if(d){changed++;sum+=d;}if(d>3)significant++;max=Math.max(max,d);}// One-code-value alpha rounding in ink mountains and WebGL edge AA are bounded separately.
+assert.ok((max<=64&&changed/(a.width*a.height)<.015&&sum/changed<1.2&&significant/(a.width*a.height)<.0002)||max<=1||(max<=3&&changed/(a.width*a.height)<.015&&sum/changed<1.1)||(max<=16&&changed/(a.width*a.height)<.005)||(max<=32&&changed/(a.width*a.height)<.002&&sum/changed<2)||(max<=64&&changed/(a.width*a.height)<.001&&sum/changed<4),`image mismatch: ${max}, ${changed}`);return {significantPixels:significant,maxDelta:max,meanChangedDelta:changed?sum/changed:0,changedPixels:changed,totalPixels:a.width*a.height};}
 (async()=>{const browser=await chromium.launch({channel:'chrome',headless:true}),report={viewports:[],failures:[],errors:[]};
 try{
  for(const [width,height] of [[1920,1080],[1440,900],[1366,768],[1024,768]]){
@@ -34,8 +34,8 @@ try{
   // Rapid jumps must land on the same pure state with no rebuild.
   await p.evaluate(()=>{scrollTo(0,42*innerHeight);scrollTo(0,.55*innerHeight);scrollTo(0,2.55*innerHeight);});await p.waitForTimeout(200);assert.deepEqual(stable(await read(p)),stopped);
   row.requests={glb:requests.filter(r=>r.endsWith('.glb')).length,environment:Object.fromEntries(['watercolor-tree','distant-landscape','ivory-mist'].map(n=>[n,requests.filter(r=>r.includes(n+'.webp')).length])),fonts:requests.filter(r=>r.endsWith('.woff2')).length};
-  // Before/after reload each resource once per load. No A01 mural request.
-  assert.equal(row.requests.glb,2);assert.ok(Object.values(row.requests.environment).every(n=>n===2));assert.equal(row.requests.fonts,4);
+  // Before/after reload: tree and mountain also serve the parent ink layer. No A01 mural request.
+  assert.equal(row.requests.glb,2);assert.equal(row.requests.environment['ivory-mist'],2);assert.equal(row.requests.environment['watercolor-tree'],4);assert.equal(row.requests.environment['distant-landscape'],4);assert.equal(row.requests.fonts,4);
   assert.equal(requests.filter(r=>/detail\.webp|mural-\d+-display/.test(r)).length,0);
   row.reversePixels=true;row.stop=true;row.refresh=true;row.rapid=true;report.viewports.push(row);await p.close();
  }

@@ -8,5 +8,6 @@ test('opening removes obsolete spatial frames and title plates',()=>{
  assert.doesNotMatch(app+css,/--travel/);
  assert.match(css,/\.copy\{[^}]*background:none/);
  assert.match(css,/\.model-shell iframe\{[^}]*background:transparent/);
- assert.doesNotMatch(css,/linear-gradient|radial-gradient|backdrop-filter/);
+ // Ink landscape may use gradients; interface title plates remain absent.
+ assert.doesNotMatch(css,/backdrop-filter/);
 });

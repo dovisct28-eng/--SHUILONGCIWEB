@@ -1,0 +1,14 @@
+// One pass at a time: screenshots must be inspected before the next pass.
+const {chromium}=require('playwright');
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),sharp=require('sharp');
+const output=process.env.A01_VALIDATION_DIR||path.resolve(__dirname,'../../docs/validation/a01-ink-spatial');
+const pass=process.argv[2]||'baseline',previous=process.argv[3];
+const states=[['near-line',.2],['pullback',.7],['overview-line',1],['complete-line',2.4],['conversion',2.75],['scene',3.25],['push',3.8],['hero',5.7]];
+(async()=>{const directory=path.join(output,pass);fs.mkdirSync(directory,{recursive:true});const browser=await chromium.launch({channel:'chrome',headless:true});
+try{const page=await browser.newPage({viewport:{width:1440,height:900}}),errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('http://127.0.0.1:4173/module-a/a01/');
+await page.waitForFunction(()=>document.querySelector('iframe').contentWindow.modelReady);await page.waitForFunction(()=>document.querySelector('iframe').contentWindow.shuilongTemple.getArchitectureState().every(m=>m.clonesLoaded));await page.waitForFunction(()=>Object.values(document.querySelector('iframe').contentWindow.shuilongTemple.getVisualState().assets).every(v=>v==='loaded'));await page.evaluate(()=>document.fonts.ready);
+const report={pass,viewport:[1440,900],states:[],errors};for(const [name,n]of states){await page.evaluate(n=>scrollTo(0,Math.round(n*innerHeight)),n);await page.waitForTimeout(300);const state=await page.evaluate(()=>{const api=document.querySelector('iframe').contentWindow.shuilongTemple;return {art:api.getA01ArtState(),line:api.getA01LineState(),visual:api.getVisualState(),stats:api.getA01RenderStats()};});report.states.push({name,n,...state});await page.screenshot({path:path.join(directory,`${name}.png`)});}
+assert.deepEqual(errors,[]);fs.writeFileSync(path.join(directory,'results.json'),JSON.stringify(report,null,2));
+if(previous){const inputs=[];for(let row=0;row<states.length;row++){const [name]=states[row];for(let col=0;col<2;col++){const label=col?pass:previous;const image=await sharp(path.join(output,label,`${name}.png`)).resize(720,450).png().toBuffer();inputs.push({input:image,left:col*720,top:row*480});const text=Buffer.from(`<svg width="720" height="30"><rect width="720" height="30" fill="#141a1e"/><text x="18" y="21" fill="#e6dac6" font-size="16">${label} / ${name}</text></svg>`);inputs.push({input:text,left:col*720,top:row*480+450});}}await sharp({create:{width:1440,height:states.length*480,channels:3,background:'#141a1e'}}).composite(inputs).jpeg({quality:86}).toFile(path.join(output,`${pass}-comparison.jpg`));}
+console.log(`PASS: ${pass}, eight 1440×900 frames captured`);
+}finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1;});

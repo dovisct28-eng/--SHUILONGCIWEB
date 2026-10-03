@@ -1,0 +1,314 @@
+[
+  {
+    "viewport": [
+      1920,
+      1080
+    ],
+    "roles": [
+      {
+        "selector": ".eyebrow",
+        "color": "rgb(188, 193, 188)",
+        "fontSize": "14px",
+        "rect": {
+          "x": 120,
+          "y": 355.203125,
+          "width": 400,
+          "height": 22.390625
+        },
+        "minContrast": 7.970434809920737,
+        "maxContrast": 10.207698326142136,
+        "required": 4.5
+      },
+      {
+        "selector": "h1",
+        "color": "rgb(236, 223, 205)",
+        "fontSize": "96px",
+        "rect": {
+          "x": 120,
+          "y": 401.59375,
+          "width": 400,
+          "height": 110.390625
+        },
+        "minContrast": 11.246976327240343,
+        "maxContrast": 14.214215446367362,
+        "required": 3
+      },
+      {
+        "selector": ".theme",
+        "color": "rgb(236, 223, 205)",
+        "fontSize": "34px",
+        "rect": {
+          "x": 120,
+          "y": 531.984375,
+          "width": 400,
+          "height": 51
+        },
+        "minContrast": 11.876780019377646,
+        "maxContrast": 13.779725571225432,
+        "required": 3
+      },
+      {
+        "selector": ".copy p",
+        "color": "rgb(188, 193, 188)",
+        "fontSize": "18px",
+        "rect": {
+          "x": 120,
+          "y": 614.984375,
+          "width": 360,
+          "height": 66.59375
+        },
+        "minContrast": 8.947918627799398,
+        "maxContrast": 10.073522627285458,
+        "required": 4.5
+      },
+      {
+        "selector": ".scroll-hint",
+        "color": "rgb(188, 193, 188)",
+        "fontSize": "13px",
+        "rect": {
+          "x": 932.6953125,
+          "y": 1000.5,
+          "width": 54.609375,
+          "height": 53.5
+        },
+        "minContrast": 9.354166751864751,
+        "maxContrast": 9.63109112488571,
+        "required": 4.5
+      }
+    ]
+  },
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "roles": [
+      {
+        "selector": ".eyebrow",
+        "color": "rgb(188, 193, 188)",
+        "fontSize": "14px",
+        "rect": {
+          "x": 90,
+          "y": 276.0625,
+          "width": 400,
+          "height": 22.390625
+        },
+        "minContrast": 6.9341236098511345,
+        "maxContrast": 10.237016410152211,
+        "required": 4.5
+      },
+      {
+        "selector": "h1",
+        "color": "rgb(236, 223, 205)",
+        "fontSize": "86.4px",
+        "rect": {
+          "x": 90,
+          "y": 322.453125,
+          "width": 400,
+          "height": 99.359375
+        },
+        "minContrast": 10.26744778850358,
+        "maxContrast": 14.127464936257796,
+        "required": 3
+      },
+      {
+        "selector": ".theme",
+        "color": "rgb(236, 223, 205)",
+        "fontSize": "31.68px",
+        "rect": {
+          "x": 90,
+          "y": 441.8125,
+          "width": 400,
+          "height": 47.53125
+        },
+        "minContrast": 10.950850127757173,
+        "maxContrast": 13.74686728155273,
+        "required": 3
+      },
+      {
+        "selector": ".copy p",
+        "color": "rgb(188, 193, 188)",
+        "fontSize": "18px",
+        "rect": {
+          "x": 90,
+          "y": 521.34375,
+          "width": 360,
+          "height": 66.59375
+        },
+        "minContrast": 8.537489930052702,
+        "maxContrast": 10.137535018756218,
+        "required": 4.5
+      },
+      {
+        "selector": ".scroll-hint",
+        "color": "rgb(188, 193, 188)",
+        "fontSize": "13px",
+        "rect": {
+          "x": 692.6953125,
+          "y": 820.5,
+          "width": 54.609375,
+          "height": 53.5
+        },
+        "minContrast": 9.337891040372751,
+        "maxContrast": 9.639478846433645,
+        "required": 4.5
+      }
+    ]
+  },
+  {
+    "viewport": [
+      1366,
+      768
+    ],
+    "roles": [
+      {
+        "selector": ".eyebrow",
+        "color": "rgb(188, 193, 188)",
+        "fontSize": "14px",
+        "rect": {
+          "x": 85.375,
+          "y": 224.484375,
+          "width": 396.125,
+          "height": 22.390625
+        },
+        "minContrast": 6.633084266903281,
+        "maxContrast": 10.145399915077618,
+        "required": 4.5
+      },
+      {
+        "selector": "h1",
+        "color": "rgb(236, 223, 205)",
+        "fontSize": "81.96px",
+        "rect": {
+          "x": 85.375,
+          "y": 266.875,
+          "width": 396.125,
+          "height": 94.234375
+        },
+        "minContrast": 9.375106731202713,
+        "maxContrast": 14.244671638869875,
+        "required": 3
+      },
+      {
+        "selector": ".theme",
+        "color": "rgb(236, 223, 205)",
+        "fontSize": "30.052px",
+        "rect": {
+          "x": 85.375,
+          "y": 377.109375,
+          "width": 396.125,
+          "height": 45.0625
+        },
+        "minContrast": 9.943622809339223,
+        "maxContrast": 13.651935043677646,
+        "required": 3
+      },
+      {
+        "selector": ".copy p",
+        "color": "rgb(188, 193, 188)",
+        "fontSize": "18px",
+        "rect": {
+          "x": 85.375,
+          "y": 446.171875,
+          "width": 360,
+          "height": 66.59375
+        },
+        "minContrast": 8.607532769790653,
+        "maxContrast": 10.151498205724732,
+        "required": 4.5
+      },
+      {
+        "selector": ".scroll-hint",
+        "color": "rgb(188, 193, 188)",
+        "fontSize": "13px",
+        "rect": {
+          "x": 655.6953125,
+          "y": 694.5,
+          "width": 54.609375,
+          "height": 53.5
+        },
+        "minContrast": 9.178152707188723,
+        "maxContrast": 9.615218860751167,
+        "required": 4.5
+      }
+    ]
+  },
+  {
+    "viewport": [
+      1024,
+      768
+    ],
+    "roles": [
+      {
+        "selector": ".eyebrow",
+        "color": "rgb(188, 193, 188)",
+        "fontSize": "13px",
+        "rect": {
+          "x": 51.1875,
+          "y": 235.890625,
+          "width": 307.1875,
+          "height": 20.796875
+        },
+        "minContrast": 6.732574277390653,
+        "maxContrast": 9.970682126328327,
+        "required": 4.5
+      },
+      {
+        "selector": "h1",
+        "color": "rgb(236, 223, 205)",
+        "fontSize": "72px",
+        "rect": {
+          "x": 51.1875,
+          "y": 276.6875,
+          "width": 307.1875,
+          "height": 82.796875
+        },
+        "minContrast": 9.890480467191026,
+        "maxContrast": 13.904922558381493,
+        "required": 3
+      },
+      {
+        "selector": ".theme",
+        "color": "rgb(236, 223, 205)",
+        "fontSize": "26px",
+        "rect": {
+          "x": 51.1875,
+          "y": 375.484375,
+          "width": 307.1875,
+          "height": 39
+        },
+        "minContrast": 10.841629585351907,
+        "maxContrast": 13.83953290903594,
+        "required": 3
+      },
+      {
+        "selector": ".copy p",
+        "color": "rgb(188, 193, 188)",
+        "fontSize": "17px",
+        "rect": {
+          "x": 51.1875,
+          "y": 438.484375,
+          "width": 300,
+          "height": 62.875
+        },
+        "minContrast": 8.33497516037443,
+        "maxContrast": 10.151498205724732,
+        "required": 4.5
+      },
+      {
+        "selector": ".scroll-hint",
+        "color": "rgb(188, 193, 188)",
+        "fontSize": "13px",
+        "rect": {
+          "x": 484.6953125,
+          "y": 694.5,
+          "width": 54.609375,
+          "height": 53.5
+        },
+        "minContrast": 9.271403962681,
+        "maxContrast": 9.639478846433645,
+        "required": 4.5
+      }
+    ]
+  }
+]

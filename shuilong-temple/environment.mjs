@@ -68,7 +68,7 @@ export function createEnvironment(T, scene, options = {}) {
       if(r&&i<segments){const b=r*(segments+1)+i,c=b-segments-1;indices.push(c,c+1,b,b,c+1,b+1);}
     }
     const ground=new T.BufferGeometry();ground.setAttribute('position',new T.Float32BufferAttribute(positions,3));ground.setAttribute('color',new T.Float32BufferAttribute(colors,4));ground.setIndex(indices);ground.computeVertexNormals();
-    const soil=material(0xffffff);soil.vertexColors=true;mesh('Terrain',ground,soil,[0,0,0]);
+    const soil=material(0xffffff);soil.vertexColors=true;soil.userData.inkColor=new T.Color(0x35454e);mesh('Terrain',ground,soil,[0,0,0]);
     // Six asymmetric clusters. Shared instancing keeps draw calls independent of leaf count.
     const clusters=[[7.1,-15,4.3],[7.8,-7,5.2],[7.4,4,3.5],[-7.2,11.5,3.6],[-7.1,-7,3.9],[-6.8,-16,2.8]];
     const crownGeometry=new T.IcosahedronGeometry(1,0),trunkGeometry=new T.CylinderGeometry(.07,.13,1,5);
@@ -91,7 +91,7 @@ export function createEnvironment(T, scene, options = {}) {
     load('tree',texture=>{
       crowns.visible=trunks.visible=false;
       const foliage=material(0xffffff,true);foliage.map=texture;foliage.toneMapped=false;foliage.fog=false;
-      foliage.alphaTest=.025;foliage.userData.wash=.86;foliage.needsUpdate=true;
+      foliage.userData.inkColor=new T.Color(0x71817a);foliage.alphaTest=.025;foliage.userData.wash=.86;foliage.needsUpdate=true;
       const card=new T.PlaneGeometry(1,1);card.translate(0,.5,0);
       clusters.forEach(([x,z,h],i)=>{
         const tree=mesh('Vegetation',card,foliage,[x,-.1,z],[h*.867*(i%2?-1:1),h,1]);
@@ -120,7 +120,7 @@ export function createEnvironment(T, scene, options = {}) {
     for(let i=0;i<5;i++)mesh('Foreground',crownGeometry,grass,[-7.5+i*.35,.02,-17+Math.sin(i)*.6],[.35,.22,.3]);
     load('mist',texture=>{
       const wash=material(0xffffff,true);wash.map=texture;wash.toneMapped=false;wash.fog=false;
-      wash.userData.wash=.55;wash.userData.foreground=true;wash.needsUpdate=true;
+      wash.userData.inkColor=new T.Color(0x9aa9b0);wash.userData.inkOpacity=.52;wash.userData.wash=.55;wash.userData.foreground=true;wash.needsUpdate=true;
       for(const [x,z,w,angle] of [[-9,-5,13,.9],[9,8,12,1],[0,-19,14,.9]]){
         const cloud=mesh('Foreground',new T.PlaneGeometry(w,w*.337),wash,[x,-.06,z]);
         cloud.rotation.set(-Math.PI/2,0,angle);cloud.receiveShadow=false;cloud.name='WatercolorMist';
@@ -148,8 +148,8 @@ export function createEnvironment(T, scene, options = {}) {
     if(backdrop)backdrop.style.opacity=String(next.environmentOpacity);
     const hero=next.heroWeight??0;
     for(const entry of heroObjects){entry.object.position.copy(entry.basePosition).lerp(entry.position,hero);entry.object.scale.copy(entry.baseScale).lerp(entry.scale,hero);}
-    if(backdrop){backdrop.style.transform=`translateY(${-4*hero}%)`;const image=backdrop.querySelector('img');if(image)image.style.opacity=String(.36+.08*hero);}
-    for(const m of materials){m.opacity=(m.userData.foreground?next.foregroundOpacity:next.environmentOpacity*(m.userData.contact?.12:1))*(m.userData.wash??1)*(m.userData.a01Only?hero:1);m.color.copy(m.userData.baseColor);m.color.getHSL(hsl);m.color.setHSL(hsl.h,hsl.s*next.environmentSaturation,hsl.l);m.color.lerp(haze,(1-next.environmentContrast)*.12);}
+    if(backdrop){backdrop.style.transform=`translateY(${-4*hero}%)`;const image=backdrop.querySelector('img');if(image){image.style.opacity=String(.36-.18*hero);image.style.filter=`brightness(${1-.3*hero}) saturate(${1-.5*hero})`;}}
+    for(const m of materials){m.opacity=(m.userData.foreground?next.foregroundOpacity:next.environmentOpacity*(m.userData.contact?.12:1))*(m.userData.wash??1)*(m.userData.a01Only?hero:1)*(1-hero*(1-(m.userData.inkOpacity??1)));m.color.copy(m.userData.baseColor);m.color.getHSL(hsl);m.color.setHSL(hsl.h,hsl.s*next.environmentSaturation,hsl.l);m.color.lerp(haze,(1-next.environmentContrast)*.12);if(m.userData.inkColor)m.color.lerp(m.userData.inkColor,hero);}
     for(const layer of Object.values(layers))for(const m of layer.children)if(m.material?.userData.a01Only)m.visible=hero>.001;
     layers.Foreground.visible=next.foregroundOpacity>.001;
   }, getState(){let triangles=0,meshes=0;group.traverseVisible(m=>{if(m.isMesh){meshes++;triangles+=(m.geometry.index?.count??m.geometry.attributes.position.count)/3*(m.isInstancedMesh?m.count:1);}});return {...state,visible:group.visible,groups:group.children.map(g=>g.name),triangles,meshes,resourceRequests,assets:{...assetState}};},dispose};

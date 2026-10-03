@@ -14,7 +14,10 @@ const T=await import(url(moduleText.replaceAll('./three.core.js',url(core))));
 
 test('line structure precedes solid; exits before shift and never returns at A02',()=>{
  assert.equal(deriveLineState(0).solid,0);
- assert.equal(deriveLineState(.15).groups.hall,0);
+ assert.ok(deriveLineState(0).lineOpacity>.5);assert.equal(deriveLineState(0).groups.roof,1);
+ assert.equal(deriveLineState(.15).groups.hall,1);
+ assert.equal(deriveLineState(.04).groups.roof,1);
+ assert.ok(deriveLineState(.15).groups.court<1);
  const line=deriveLineState(.48);
  assert.ok(Object.values(line.groups).every(n=>n===1));
  assert.ok(line.solid<.12&&line.lineOpacity===1);
@@ -74,11 +77,22 @@ test('A01 restores camera, lighting and base materials at A02, without touching 
  const m=new T.Mesh(new T.BoxGeometry(),new T.MeshStandardMaterial());m.material.userData.textureKey='roof';g.add(m);root.add(g);}
  const focus=createArchitectureFocus(T,root),art=createA01ArtDirection(T,{root,scene,camera,sun,fill,renderer,floor});
  const mural=root.children[1].children[0].material.color.clone(),target=new T.Vector3(0,0,-1.75);
- focus(visualState(8));const base=root.children[0].children[0].material.color.clone();
+ focus(visualState(8));const material=root.children[0].children[0].material,base=material.color.clone(),baseRoughness=material.roughness,baseMetalness=material.metalness;
+ const originalColors={sun:sun.color.clone(),sky:fill.color.clone(),ground:fill.groundColor.clone(),fog:scene.fog.color.clone()};
  const seek=n=>{const state=visualState(n);focus(state);art.apply(deriveHeroWeight(n),state,deriveLineState(1));art.camera(4.05,.68,54,target,deriveHeroWeight(n));};
- seek(5.7);const hero=art.getState();assert.equal(camera.fov,32);assert.equal(fill.intensity,.95);
- seek(8);assert.ok(root.children[0].children[0].material.color.equals(base));assert.equal(camera.fov,34);assert.equal(renderer.toneMappingExposure,1.18);assert.equal(fill.intensity,1.2);assert.deepEqual(sun.position.toArray(),[-19,23,-22]);
+ seek(5.7);const hero=art.getState();assert.equal(camera.fov,32);assert.equal(fill.intensity,.75);
+ seek(8);assert.ok(root.children[0].children[0].material.color.equals(base));assert.equal(camera.fov,34);assert.equal(renderer.toneMappingExposure,1.18);assert.equal(material.roughness,baseRoughness);assert.equal(material.metalness,baseMetalness);assert.ok(sun.color.equals(originalColors.sun)&&fill.color.equals(originalColors.sky)&&fill.groundColor.equals(originalColors.ground)&&scene.fog.color.equals(originalColors.fog));assert.equal(fill.intensity,1.2);assert.deepEqual(sun.position.toArray(),[-19,23,-22]);
  assert.ok(root.children[1].children[0].material.color.equals(mural));
  seek(5.7);assert.deepEqual(art.getState(),hero);
  for(let n=6.2;n<7.2;n+=.002)assert.ok(Math.abs(deriveHeroWeight(n)-deriveHeroWeight(n+.002))<.004);
+});
+
+test('near camera pulls back continuously and reduced motion retains the full compound',()=>{
+ const camera=new T.PerspectiveCamera(34,1.6,.1,180),scene=new T.Scene();scene.fog=new T.FogExp2();const sun=new T.DirectionalLight(),fill=new T.HemisphereLight();
+ const art=createA01ArtDirection(T,{root:new T.Group(),camera,scene,sun,fill,renderer:{},floor:{material:{}}}),target=new T.Vector3(0,0,-1.75);
+ art.camera(.28,.68,58,target,1,deriveLineState(.04));const near=art.getState();
+ art.camera(.28,.68,58,target,1,deriveLineState(.20));const whole=art.getState();assert.ok(near.target[2]<-10);assert.equal(whole.target[2],-1.75);
+ art.camera(.28,.68,58,target,1,deriveLineState(.04,true));assert.deepEqual(art.getState().target,whole.target);
+ let previous=null;for(let p=0;p<=.201;p+=.001){art.camera(.28,.68,58,target,1,deriveLineState(p));const position=camera.position.clone();if(previous)assert.ok(position.distanceTo(previous)<.35);previous=position;}
+ art.camera(.28,.68,58,target,1,deriveLineState(.04));assert.deepEqual(art.getState(),near);
 });

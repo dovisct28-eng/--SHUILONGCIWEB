@@ -158,3 +158,7 @@ Chrome 154.0.8037.93 headless、1440×900，同机每版本三个独立 context 
 产物见 [验收目录](validation/a01-visual-remaster/README.md)、[四尺寸 Hero](validation/a01-visual-remaster/contact/heroes.jpg)、[Before / After](validation/a01-visual-remaster/contact/before-after.jpg)、[生长与交接](validation/a01-visual-remaster/contact/growth-and-handoff.jpg)。原 `a01-line/` 记录未覆盖，完整原始 PNG 保留本地，提交精选图、联系表和结构化报告。
 
 仍存在的限制：1024 的高度为 46.8vh，优先避免裁切与文案相压；原模型屋面/砖纹的程序重复感及未测绘细节仍在，没有为追逐参考图更改几何；本轮视觉改善不等于历史复原精度提升。
+
+## 暗灰水墨方向（2026-10-02 后续）
+
+用户随后提供墨境分镜，要求先拆解再按五 Pass 实施。当前 A01 转为局部暗灰空间，上一轮纸色记录保留；交接恢复共享浅色体系，不改变建筑或壁画。见 [拆解与实施](A01_INK_SPATIAL.md)、[新验收索引](validation/a01-ink-spatial/README.md)。

@@ -19,3 +19,5 @@ A01 新验收：`node module-a/a01/line-browser-check.cjs`、`node module-a/a01/
 2026-10-02 Visual Remaster：A01 专用镜头、材质与灯光由 `shuilong-temple/a01-art-direction.mjs` 管理，6.2—7.2 屏回中时恢复共享基准。生长阶段分开结构、实体、材料、光影和环境；壁画占位及边框到 A02 标记阶段才可见，避免半透明墙体透出占位。建筑几何、壁画位置与模块 B 未改。
 
 本轮验收：`visual-remaster-browser-check.cjs`（四尺寸投影边界、11 状态、倒滚、阅读、交接与回退）、`visual-remaster-performance-check.cjs`（对照 `7e59a97`，同机各三次冷加载）、`visual-remaster-contact.cjs`（Sharp 联系表）。结果见 `docs/validation/a01-visual-remaster/`；完整记录追加于 [A01_HIGH_FIDELITY.md](../../docs/A01_HIGH_FIDELITY.md)。运行浏览器脚本须启动 4173/4175 两个本地端口，并使用 `A01_VALIDATION_DIR` / `MODEL_VALIDATION_DIR` 指定新输出目录，保留原验收记录。
+
+2026-10-02 后续暗灰水墨方向：先拆解，再 Camera / Lighting / Material / Environment / Composite 五轮对照。入口近景轮廓和背景只改变展示，A02 前恢复共享基准。见 docs/A01_INK_SPATIAL.md 和 docs/validation/a01-ink-spatial/README.md；逐轮截图用 ink-pass-check.cjs。

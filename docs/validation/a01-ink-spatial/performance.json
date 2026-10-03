@@ -1,0 +1,299 @@
+{
+  "browser": "154.0.8037.93",
+  "baseline": "9191fed7cd5d2c7dbe50c859231ead46f37cebd1",
+  "glbBytes": 3329000,
+  "samples": [
+    {
+      "sample": 0,
+      "enabled": false,
+      "requests": 36,
+      "blobRequests": 0,
+      "artModuleRequests": 1,
+      "textMs": 537,
+      "readyMs": 1518,
+      "assetsMs": 1663,
+      "medianFrameMs": 4.199999999999818,
+      "p95FrameMs": 4.599999999999909,
+      "states": [
+        {
+          "name": "line",
+          "stats": {
+            "geometries": 47,
+            "textures": 18,
+            "calls": 67,
+            "triangles": 5998,
+            "lines": 786
+          }
+        },
+        {
+          "name": "overlap",
+          "stats": {
+            "geometries": 62,
+            "textures": 21,
+            "calls": 83,
+            "triangles": 91038,
+            "lines": 786
+          }
+        },
+        {
+          "name": "hero",
+          "stats": {
+            "geometries": 62,
+            "textures": 21,
+            "calls": 71,
+            "triangles": 83898,
+            "lines": 0
+          }
+        }
+      ],
+      "glbRequests": 1,
+      "fontRequests": 2,
+      "environmentRequests": 3,
+      "memoryStable": null
+    },
+    {
+      "sample": 0,
+      "enabled": true,
+      "requests": 38,
+      "blobRequests": 0,
+      "artModuleRequests": 1,
+      "textMs": 417,
+      "readyMs": 1059,
+      "assetsMs": 1118,
+      "medianFrameMs": 8.299999999999727,
+      "p95FrameMs": 12.400000000000091,
+      "states": [
+        {
+          "name": "line",
+          "stats": {
+            "geometries": 46,
+            "textures": 18,
+            "calls": 67,
+            "triangles": 5998,
+            "lines": 786
+          }
+        },
+        {
+          "name": "overlap",
+          "stats": {
+            "geometries": 61,
+            "textures": 21,
+            "calls": 83,
+            "triangles": 91038,
+            "lines": 786
+          }
+        },
+        {
+          "name": "hero",
+          "stats": {
+            "geometries": 61,
+            "textures": 21,
+            "calls": 71,
+            "triangles": 83898,
+            "lines": 0
+          }
+        }
+      ],
+      "glbRequests": 1,
+      "fontRequests": 2,
+      "environmentRequests": 4,
+      "memoryStable": true
+    },
+    {
+      "sample": 1,
+      "enabled": false,
+      "requests": 36,
+      "blobRequests": 0,
+      "artModuleRequests": 1,
+      "textMs": 420,
+      "readyMs": 1025,
+      "assetsMs": 1105,
+      "medianFrameMs": 4.199999999999818,
+      "p95FrameMs": 4.599999999999909,
+      "states": [
+        {
+          "name": "line",
+          "stats": {
+            "geometries": 47,
+            "textures": 18,
+            "calls": 67,
+            "triangles": 5998,
+            "lines": 786
+          }
+        },
+        {
+          "name": "overlap",
+          "stats": {
+            "geometries": 62,
+            "textures": 21,
+            "calls": 83,
+            "triangles": 91038,
+            "lines": 786
+          }
+        },
+        {
+          "name": "hero",
+          "stats": {
+            "geometries": 62,
+            "textures": 21,
+            "calls": 71,
+            "triangles": 83898,
+            "lines": 0
+          }
+        }
+      ],
+      "glbRequests": 1,
+      "fontRequests": 2,
+      "environmentRequests": 3,
+      "memoryStable": null
+    },
+    {
+      "sample": 1,
+      "enabled": true,
+      "requests": 38,
+      "blobRequests": 0,
+      "artModuleRequests": 1,
+      "textMs": 399,
+      "readyMs": 1014,
+      "assetsMs": 1070,
+      "medianFrameMs": 8.199999999999818,
+      "p95FrameMs": 8.400000000000091,
+      "states": [
+        {
+          "name": "line",
+          "stats": {
+            "geometries": 46,
+            "textures": 18,
+            "calls": 67,
+            "triangles": 5998,
+            "lines": 786
+          }
+        },
+        {
+          "name": "overlap",
+          "stats": {
+            "geometries": 61,
+            "textures": 21,
+            "calls": 83,
+            "triangles": 91038,
+            "lines": 786
+          }
+        },
+        {
+          "name": "hero",
+          "stats": {
+            "geometries": 61,
+            "textures": 21,
+            "calls": 71,
+            "triangles": 83898,
+            "lines": 0
+          }
+        }
+      ],
+      "glbRequests": 1,
+      "fontRequests": 2,
+      "environmentRequests": 4,
+      "memoryStable": true
+    },
+    {
+      "sample": 2,
+      "enabled": false,
+      "requests": 36,
+      "blobRequests": 0,
+      "artModuleRequests": 1,
+      "textMs": 417,
+      "readyMs": 1019,
+      "assetsMs": 1105,
+      "medianFrameMs": 4.199999999999818,
+      "p95FrameMs": 4.400000000000091,
+      "states": [
+        {
+          "name": "line",
+          "stats": {
+            "geometries": 47,
+            "textures": 18,
+            "calls": 67,
+            "triangles": 5998,
+            "lines": 786
+          }
+        },
+        {
+          "name": "overlap",
+          "stats": {
+            "geometries": 62,
+            "textures": 21,
+            "calls": 83,
+            "triangles": 91038,
+            "lines": 786
+          }
+        },
+        {
+          "name": "hero",
+          "stats": {
+            "geometries": 62,
+            "textures": 21,
+            "calls": 71,
+            "triangles": 83898,
+            "lines": 0
+          }
+        }
+      ],
+      "glbRequests": 1,
+      "fontRequests": 2,
+      "environmentRequests": 3,
+      "memoryStable": null
+    },
+    {
+      "sample": 2,
+      "enabled": true,
+      "requests": 38,
+      "blobRequests": 0,
+      "artModuleRequests": 1,
+      "textMs": 405,
+      "readyMs": 1018,
+      "assetsMs": 1075,
+      "medianFrameMs": 8.200000000000045,
+      "p95FrameMs": 8.400000000000091,
+      "states": [
+        {
+          "name": "line",
+          "stats": {
+            "geometries": 46,
+            "textures": 18,
+            "calls": 67,
+            "triangles": 5998,
+            "lines": 786
+          }
+        },
+        {
+          "name": "overlap",
+          "stats": {
+            "geometries": 61,
+            "textures": 21,
+            "calls": 83,
+            "triangles": 91038,
+            "lines": 786
+          }
+        },
+        {
+          "name": "hero",
+          "stats": {
+            "geometries": 61,
+            "textures": 21,
+            "calls": 71,
+            "triangles": 83898,
+            "lines": 0
+          }
+        }
+      ],
+      "glbRequests": 1,
+      "fontRequests": 2,
+      "environmentRequests": 4,
+      "memoryStable": true
+    }
+  ],
+  "gpu": {
+    "vendor": "Google Inc. (NVIDIA)",
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+  }
+}

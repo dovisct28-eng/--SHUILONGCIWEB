@@ -29,6 +29,8 @@ const renderA06 = createMuralGuide(stage, a06Guide, requestRender);
 const renderA07 = createMuralGuide(stage, a07Guide, requestRender);
 const renderA08 = createA08Controller(stage);
 const renderA03 = createA03View(stage);
+let renderInkScene=()=>{};
+try{const ink=await import('./ink-scene.mjs');renderInkScene=ink.createInkScene(stage);}catch(error){stage.dataset.inkError=String(error);}
 const a03Styles = document.createElement('link');
 a03Styles.rel = 'stylesheet';
 a03Styles.href = new URL('../a03/styles.css', import.meta.url).href;
@@ -101,6 +103,7 @@ function render() {
     secondaryVisibility: theme.secondary,
   });
   const screens = Math.max(0, -bounds.top) / innerHeight;
+  renderInkScene(screens,reducedMotion.matches);
   lastScreens = screens;
   modelFrame.contentWindow?.shuilongTemple?.setVisualProgress?.(screens);
   renderA04(screens);
