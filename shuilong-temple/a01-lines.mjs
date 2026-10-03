@@ -2,8 +2,8 @@
 const clamp = n => Math.max(0, Math.min(1, Number(n) || 0));
 const ease = n => { const t = clamp(n); return t*t*(3-2*t); };
 const range = (n,a,b) => ease((n-a)/(b-a));
-const windows = {hall:[.12,.36], west:[.18,.42], east:[.18,.42], stage:[.26,.46], entrance:[.32,.50], roof:[.40,.60], timber:[.44,.61], court:[.46,.62]};
-const approach={hall:[-.05,0],roof:[-.05,0],timber:[.02,.10],west:[.04,.15],east:[.04,.15],stage:[.07,.18],entrance:[.07,.18],court:[.08,.20]};
+const windows = {hall:[.12,.36], west:[.18,.42], east:[.18,.42], stage:[.26,.46], entrance:[.32,.50], roof:[.40,.60], timber:[.44,.61], court:[.46,.62],detail:[.40,.60]};
+const approach={hall:[-.05,0],roof:[-.05,0],detail:[-.05,0],timber:[.02,.10],west:[.04,.15],east:[.04,.15],stage:[.07,.18],entrance:[.07,.18],court:[.08,.20]};
 export function deriveLineState(animation = 0, reducedMotion = false) {
   const progress = clamp(animation), growth = clamp((progress-.2)/.45);
   const solid = range(growth,.60,.83);
@@ -22,12 +22,20 @@ export function deriveLineState(animation = 0, reducedMotion = false) {
 
 export function createArchitectureLines(T, root, data) {
   const group = new T.Group(); group.name = 'A01ArchitectureLines';
-  const geometries = [], materials = [], entries = [];
+  const geometries = [], materials = [], entries = [],hierarchy={Primary:0,Secondary:0,Detail:0};
   let state = deriveLineState(), disposed = false;
   const add = (key, positions, color, opacity = 1) => {
     const geometry = new T.BufferGeometry(); geometries.push(geometry);
     geometry.setAttribute('position', new T.Float32BufferAttribute(positions,3));
-    const material = new T.LineBasicMaterial({color,transparent:true,opacity:0,depthWrite:false,toneMapped:false,fog:false});
+    const colors=[];
+    for(let i=0;i<positions.length;i+=6){
+      const length=Math.hypot(positions[i+3]-positions[i],positions[i+4]-positions[i+1],positions[i+5]-positions[i+2]);
+      const rank=key==='axes'||key==='locators'||key==='court'||key==='detail'?'Detail':key==='roof'&&Math.max(positions[i+1],positions[i+4])>3.1||key==='hall'&&length>2?'Primary':'Secondary';
+      hierarchy[rank]++;const tint=new T.Color(rank==='Primary'?0xf0cba3:rank==='Secondary'?0xb7afa2:0x6f808c);
+      tint.multiplyScalar(.86+.14*(.5+.5*Math.sin(i*.37)));colors.push(tint.r,tint.g,tint.b,tint.r,tint.g,tint.b);
+    }
+    geometry.setAttribute('color',new T.Float32BufferAttribute(colors,3));
+    const material = new T.LineBasicMaterial({color:0xffffff,vertexColors:true,transparent:true,opacity:0,depthWrite:false,toneMapped:false,fog:false});
     materials.push(material);
     const line = new T.LineSegments(geometry,material); line.name = key;
     line.frustumCulled = false; group.add(line);
@@ -44,7 +52,7 @@ export function createArchitectureLines(T, root, data) {
     add('locators',[-5,.1,-15.3,-5,.1,-13.8, 5,.1,9.8,5,.1,11.3, -1,.1,11.93,1,.1,11.93],0x8899a4,.4);
     for (const [key, positions] of Object.entries(data)) {
       if (!positions.length || positions.length%6 || positions.some(n=>!Number.isFinite(n))) throw Error(`Invalid A01 contour ${key}`);
-      add(key,positions,key==='roof'?0xd8c4a6:0xadaeaa,key==='court'?.42:key==='timber'?.7:1);
+      add(key,positions,key==='roof'?0xd8c4a6:0xadaeaa,key==='detail'?.48:key==='court'?.42:key==='timber'?.7:1);
     }
     root.add(group);
   } catch(error) { dispose(); throw error; }
@@ -62,7 +70,7 @@ export function createArchitectureLines(T, root, data) {
         entry.line.position.set(auxiliary ? next.depth*(entry.key==='axes'?-.6:.8) : 0,auxiliary ? next.depth*(entry.key==='axes'?.4:1.1) : 0,auxiliary ? next.depth*(entry.key==='axes'?-1.8:2.2) : 0);
       }
     },
-    getState() { return {...state,visible:group.visible,geometries:geometries.length,materials:materials.length,segments:entries.reduce((n,e)=>n+e.count/2,0),drawCalls:group.visible?entries.filter(e=>e.line.visible).length:0,groups:entries.map(e=>({key:e.key,drawCount:e.geometry.drawRange.count,opacity:e.material.opacity,position:e.line.position.toArray()})),disposed}; },
+    getState() { return {...state,hierarchy:{...hierarchy},visible:group.visible,geometries:geometries.length,materials:materials.length,segments:entries.reduce((n,e)=>n+e.count/2,0),drawCalls:group.visible?entries.filter(e=>e.line.visible).length:0,groups:entries.map(e=>({key:e.key,drawCount:e.geometry.drawRange.count,opacity:e.material.opacity,position:e.line.position.toArray()})),disposed}; },
     dispose,
   };
 }

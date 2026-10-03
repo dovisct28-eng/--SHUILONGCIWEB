@@ -1,0 +1,1746 @@
+{
+  "pass": "line",
+  "viewport": [
+    1440,
+    900
+  ],
+  "states": [
+    {
+      "name": "near-line",
+      "n": 0.2,
+      "art": {
+        "position": [
+          1.5611776946896847,
+          10.348736741045283,
+          -3.42066420172573
+        ],
+        "target": [
+          0,
+          4.5,
+          -12
+        ],
+        "fov": 32,
+        "bounds": {
+          "left": -376051.22005158965,
+          "right": 6788.871571431666,
+          "top": -13713.774688474436,
+          "bottom": 789745.9946270091
+        },
+        "heroWeight": 1,
+        "lighting": {
+          "fill": 1.2,
+          "sun": 3.3,
+          "position": [
+            -19,
+            23,
+            -22
+          ]
+        },
+        "exposure": 1.18
+      },
+      "line": {
+        "progress": 0.04,
+        "growth": 0,
+        "solid": 0,
+        "solidGrowth": 0,
+        "materialWeight": 0,
+        "lightingWeight": 0,
+        "lineOpacity": 1,
+        "environmentWeight": 0.035,
+        "assembly": 0.00997353958884592,
+        "depth": 0.990026460411154,
+        "groups": [
+          {
+            "key": "axes",
+            "drawCount": 0,
+            "opacity": 0.28,
+            "position": [
+              -0.5940158762466924,
+              0.39601058416446167,
+              -1.7820476287400773
+            ]
+          },
+          {
+            "key": "locators",
+            "drawCount": 0,
+            "opacity": 0.4,
+            "position": [
+              0.7920211683289233,
+              1.0890291064522695,
+              2.178058212904539
+            ]
+          },
+          {
+            "key": "hall",
+            "drawCount": 102,
+            "opacity": 1,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "west",
+            "drawCount": 0,
+            "opacity": 1,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "east",
+            "drawCount": 0,
+            "opacity": 1,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "stage",
+            "drawCount": 0,
+            "opacity": 1,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "entrance",
+            "drawCount": 0,
+            "opacity": 1,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "roof",
+            "drawCount": 840,
+            "opacity": 1,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "timber",
+            "drawCount": 30,
+            "opacity": 0.7,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "court",
+            "drawCount": 0,
+            "opacity": 0.42,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "hierarchy": {
+          "Primary": 299,
+          "Secondary": 409,
+          "Detail": 78
+        },
+        "visible": true,
+        "geometries": 10,
+        "materials": 10,
+        "segments": 786,
+        "drawCalls": 3,
+        "disposed": false,
+        "error": null
+      },
+      "visual": {
+        "environmentOpacity": 0.035,
+        "foregroundOpacity": 0.035,
+        "environmentSaturation": 0.65,
+        "environmentContrast": 0.8,
+        "focusStrength": 0,
+        "fogDensity": 0.007,
+        "lightIntensity": 3.3,
+        "target": null,
+        "chapter": "A01",
+        "heroWeight": 1,
+        "visible": false,
+        "groups": [
+          "Terrain",
+          "Field",
+          "Vegetation",
+          "Foreground",
+          "DistantMountains",
+          "Atmosphere"
+        ],
+        "triangles": 0,
+        "meshes": 0,
+        "resourceRequests": 3,
+        "assets": {
+          "tree": "loaded",
+          "mountains": "loaded",
+          "mist": "loaded"
+        },
+        "error": null,
+        "shadowEnabled": true,
+        "exposure": 1.18
+      },
+      "stats": {
+        "geometries": 16,
+        "textures": 2,
+        "calls": 3,
+        "triangles": 0,
+        "lines": 486,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1906,
+            1200
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 61,
+            "calls": 3,
+            "triangles": 0,
+            "points": 0,
+            "lines": 486
+          },
+          "targetBytes": 27446400
+        }
+      }
+    },
+    {
+      "name": "pullback",
+      "n": 0.7,
+      "art": {
+        "position": [
+          5.057565240088458,
+          19.51680600484461,
+          22.800309200659356
+        ],
+        "target": [
+          0,
+          0.5693359375,
+          -4.9931640625
+        ],
+        "fov": 32,
+        "bounds": {
+          "left": 0.019378203289054263,
+          "right": 0.7003976020582682,
+          "top": 0.12154362736818508,
+          "bottom": 1.5432494213230838
+        },
+        "heroWeight": 1,
+        "lighting": {
+          "fill": 1.2,
+          "sun": 3.3,
+          "position": [
+            -19,
+            23,
+            -22
+          ]
+        },
+        "exposure": 1.18
+      },
+      "line": {
+        "progress": 0.14,
+        "growth": 0,
+        "solid": 0,
+        "solidGrowth": 0,
+        "materialWeight": 0,
+        "lightingWeight": 0,
+        "lineOpacity": 1,
+        "environmentWeight": 0.035,
+        "assembly": 0.7142275595359251,
+        "depth": 0.2857724404640749,
+        "groups": [
+          {
+            "key": "axes",
+            "drawCount": 4,
+            "opacity": 0.28,
+            "position": [
+              -0.17146346427844494,
+              0.11430897618562996,
+              -0.5143903928353348
+            ]
+          },
+          {
+            "key": "locators",
+            "drawCount": 4,
+            "opacity": 0.4,
+            "position": [
+              0.22861795237125992,
+              0.3143496845104824,
+              0.6286993690209648
+            ]
+          },
+          {
+            "key": "hall",
+            "drawCount": 102,
+            "opacity": 1,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "west",
+            "drawCount": 14,
+            "opacity": 1,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "east",
+            "drawCount": 14,
+            "opacity": 1,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "stage",
+            "drawCount": 16,
+            "opacity": 1,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "entrance",
+            "drawCount": 150,
+            "opacity": 1,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "roof",
+            "drawCount": 840,
+            "opacity": 1,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "timber",
+            "drawCount": 202,
+            "opacity": 0.7,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "court",
+            "drawCount": 72,
+            "opacity": 0.42,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "hierarchy": {
+          "Primary": 299,
+          "Secondary": 409,
+          "Detail": 78
+        },
+        "visible": true,
+        "geometries": 10,
+        "materials": 10,
+        "segments": 786,
+        "drawCalls": 10,
+        "disposed": false,
+        "error": null
+      },
+      "visual": {
+        "environmentOpacity": 0.035,
+        "foregroundOpacity": 0.035,
+        "environmentSaturation": 0.65,
+        "environmentContrast": 0.8,
+        "focusStrength": 0,
+        "fogDensity": 0.007,
+        "lightIntensity": 3.3,
+        "target": null,
+        "chapter": "A01",
+        "heroWeight": 1,
+        "visible": false,
+        "groups": [
+          "Terrain",
+          "Field",
+          "Vegetation",
+          "Foreground",
+          "DistantMountains",
+          "Atmosphere"
+        ],
+        "triangles": 0,
+        "meshes": 0,
+        "resourceRequests": 3,
+        "assets": {
+          "tree": "loaded",
+          "mountains": "loaded",
+          "mist": "loaded"
+        },
+        "error": null,
+        "shadowEnabled": true,
+        "exposure": 1.18
+      },
+      "stats": {
+        "geometries": 16,
+        "textures": 2,
+        "calls": 10,
+        "triangles": 0,
+        "lines": 709,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1378,
+            863
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 136,
+            "calls": 10,
+            "triangles": 0,
+            "points": 0,
+            "lines": 709
+          },
+          "targetBytes": 14270568
+        }
+      }
+    },
+    {
+      "name": "overview-line",
+      "n": 1,
+      "art": {
+        "position": [
+          6.675893189673032,
+          23.760312349803158,
+          34.93687403262045
+        ],
+        "target": [
+          0,
+          -1.25,
+          -1.75
+        ],
+        "fov": 32,
+        "bounds": {
+          "left": 0.22143115899529153,
+          "right": 0.6661452253450335,
+          "top": 0.10318386813529334,
+          "bottom": 0.9485978263674697
+        },
+        "heroWeight": 1,
+        "lighting": {
+          "fill": 1.2,
+          "sun": 3.3,
+          "position": [
+            -19,
+            23,
+            -22
+          ]
+        },
+        "exposure": 1.18
+      },
+      "line": {
+        "progress": 0.2,
+        "growth": 0,
+        "solid": 0,
+        "solidGrowth": 0,
+        "materialWeight": 0,
+        "lightingWeight": 0,
+        "lineOpacity": 1,
+        "environmentWeight": 0.035,
+        "assembly": 1,
+        "depth": 0,
+        "groups": [
+          {
+            "key": "axes",
+            "drawCount": 6,
+            "opacity": 0.28,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "locators",
+            "drawCount": 6,
+            "opacity": 0.4,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "hall",
+            "drawCount": 102,
+            "opacity": 1,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "west",
+            "drawCount": 16,
+            "opacity": 1,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "east",
+            "drawCount": 16,
+            "opacity": 1,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "stage",
+            "drawCount": 24,
+            "opacity": 1,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "entrance",
+            "drawCount": 216,
+            "opacity": 1,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "roof",
+            "drawCount": 840,
+            "opacity": 1,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "timber",
+            "drawCount": 202,
+            "opacity": 0.7,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "court",
+            "drawCount": 144,
+            "opacity": 0.42,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "hierarchy": {
+          "Primary": 299,
+          "Secondary": 409,
+          "Detail": 78
+        },
+        "visible": true,
+        "geometries": 10,
+        "materials": 10,
+        "segments": 786,
+        "drawCalls": 10,
+        "disposed": false,
+        "error": null
+      },
+      "visual": {
+        "environmentOpacity": 0.035,
+        "foregroundOpacity": 0.035,
+        "environmentSaturation": 0.65,
+        "environmentContrast": 0.8,
+        "focusStrength": 0,
+        "fogDensity": 0.007,
+        "lightIntensity": 3.3,
+        "target": null,
+        "chapter": "A01",
+        "heroWeight": 1,
+        "visible": false,
+        "groups": [
+          "Terrain",
+          "Field",
+          "Vegetation",
+          "Foreground",
+          "DistantMountains",
+          "Atmosphere"
+        ],
+        "triangles": 0,
+        "meshes": 0,
+        "resourceRequests": 3,
+        "assets": {
+          "tree": "loaded",
+          "mountains": "loaded",
+          "mist": "loaded"
+        },
+        "error": null,
+        "shadowEnabled": true,
+        "exposure": 1.18
+      },
+      "stats": {
+        "geometries": 16,
+        "textures": 2,
+        "calls": 10,
+        "triangles": 0,
+        "lines": 786,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1210,
+            756
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 227,
+            "calls": 10,
+            "triangles": 0,
+            "points": 0,
+            "lines": 786
+          },
+          "targetBytes": 10977120
+        }
+      }
+    },
+    {
+      "name": "complete-line",
+      "n": 2.4,
+      "art": {
+        "position": [
+          35.04967721672557,
+          23.09361236188685,
+          7.677070626504602
+        ],
+        "target": [
+          0,
+          -1.25,
+          -1.75
+        ],
+        "fov": 32,
+        "bounds": {
+          "left": 0.10538173389849376,
+          "right": 0.914588867221492,
+          "top": 0.1608964257691396,
+          "bottom": 0.7346661806114013
+        },
+        "heroWeight": 1,
+        "lighting": {
+          "fill": 1.2,
+          "sun": 3.3,
+          "position": [
+            -19,
+            23,
+            -22
+          ]
+        },
+        "exposure": 1.18
+      },
+      "line": {
+        "progress": 0.48,
+        "growth": 0.6222222222222221,
+        "solid": 0.02620143559965587,
+        "solidGrowth": 0.36269877559315084,
+        "materialWeight": 0,
+        "lightingWeight": 0,
+        "lineOpacity": 1,
+        "environmentWeight": 0.035,
+        "assembly": 1,
+        "depth": 0,
+        "groups": [
+          {
+            "key": "axes",
+            "drawCount": 6,
+            "opacity": 0.28,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "locators",
+            "drawCount": 6,
+            "opacity": 0.4,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "hall",
+            "drawCount": 102,
+            "opacity": 1,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "west",
+            "drawCount": 16,
+            "opacity": 1,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "east",
+            "drawCount": 16,
+            "opacity": 1,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "stage",
+            "drawCount": 24,
+            "opacity": 1,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "entrance",
+            "drawCount": 216,
+            "opacity": 1,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "roof",
+            "drawCount": 840,
+            "opacity": 1,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "timber",
+            "drawCount": 202,
+            "opacity": 0.7,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "court",
+            "drawCount": 144,
+            "opacity": 0.42,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "hierarchy": {
+          "Primary": 299,
+          "Secondary": 409,
+          "Detail": 78
+        },
+        "visible": true,
+        "geometries": 10,
+        "materials": 10,
+        "segments": 786,
+        "drawCalls": 10,
+        "disposed": false,
+        "error": null
+      },
+      "visual": {
+        "environmentOpacity": 0.035,
+        "foregroundOpacity": 0.035,
+        "environmentSaturation": 0.65,
+        "environmentContrast": 0.8,
+        "focusStrength": 0,
+        "fogDensity": 0.007,
+        "lightIntensity": 3.3,
+        "target": null,
+        "chapter": "A01",
+        "heroWeight": 1,
+        "visible": false,
+        "groups": [
+          "Terrain",
+          "Field",
+          "Vegetation",
+          "Foreground",
+          "DistantMountains",
+          "Atmosphere"
+        ],
+        "triangles": 0,
+        "meshes": 0,
+        "resourceRequests": 3,
+        "assets": {
+          "tree": "loaded",
+          "mountains": "loaded",
+          "mist": "loaded"
+        },
+        "error": null,
+        "shadowEnabled": true,
+        "exposure": 1.18
+      },
+      "stats": {
+        "geometries": 37,
+        "textures": 19,
+        "calls": 44,
+        "triangles": 138526,
+        "lines": 786,
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1210,
+            756
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 268,
+            "calls": 44,
+            "triangles": 138526,
+            "points": 0,
+            "lines": 786
+          },
+          "targetBytes": 10977120
+        }
+      }
+    },
+    {
+      "name": "conversion",
+      "n": 2.75,
+      "art": {
+        "position": [
+          -24.500049435173057,
+          21.533841802781144,
+          -25.280660563983552
+        ],
+        "target": [
+          0,
+          -1.25,
+          -1.75
+        ],
+        "fov": 32,
+        "bounds": {
+          "left": 0.04496633067555761,
+          "right": 0.8552482433071229,
+          "top": 0.10563489424173189,
+          "bottom": 0.9598509978455652
+        },
+        "heroWeight": 1,
+        "lighting": {
+          "fill": 1.2,
+          "sun": 3.3,
+          "position": [
+            -19,
+            23,
+            -22
+          ]
+        },
+        "exposure": 1.18
+      },
+      "line": {
+        "progress": 0.55,
+        "growth": 0.7777777777777778,
+        "solid": 0.8687512140994392,
+        "solidGrowth": 0.9843519788650104,
+        "materialWeight": 0.038810343951633394,
+        "lightingWeight": 0,
+        "lineOpacity": 0.8293103466045,
+        "environmentWeight": 0.035,
+        "assembly": 1,
+        "depth": 0,
+        "groups": [
+          {
+            "key": "axes",
+            "drawCount": 6,
+            "opacity": 0.23220689704926,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "locators",
+            "drawCount": 6,
+            "opacity": 0.3317241386418,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "hall",
+            "drawCount": 102,
+            "opacity": 0.8293103466045,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "west",
+            "drawCount": 16,
+            "opacity": 0.8293103466045,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "east",
+            "drawCount": 16,
+            "opacity": 0.8293103466045,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "stage",
+            "drawCount": 24,
+            "opacity": 0.8293103466045,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "entrance",
+            "drawCount": 216,
+            "opacity": 0.8293103466045,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "roof",
+            "drawCount": 840,
+            "opacity": 0.8293103466045,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "timber",
+            "drawCount": 202,
+            "opacity": 0.58051724262315,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "court",
+            "drawCount": 144,
+            "opacity": 0.34831034557388996,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "hierarchy": {
+          "Primary": 299,
+          "Secondary": 409,
+          "Detail": 78
+        },
+        "visible": true,
+        "geometries": 10,
+        "materials": 10,
+        "segments": 786,
+        "drawCalls": 10,
+        "disposed": false,
+        "error": null
+      },
+      "visual": {
+        "environmentOpacity": 0.035,
+        "foregroundOpacity": 0.035,
+        "environmentSaturation": 0.65,
+        "environmentContrast": 0.8,
+        "focusStrength": 0,
+        "fogDensity": 0.007,
+        "lightIntensity": 3.3,
+        "target": null,
+        "chapter": "A01",
+        "heroWeight": 1,
+        "visible": false,
+        "groups": [
+          "Terrain",
+          "Field",
+          "Vegetation",
+          "Foreground",
+          "DistantMountains",
+          "Atmosphere"
+        ],
+        "triangles": 0,
+        "meshes": 0,
+        "resourceRequests": 3,
+        "assets": {
+          "tree": "loaded",
+          "mountains": "loaded",
+          "mist": "loaded"
+        },
+        "error": null,
+        "shadowEnabled": true,
+        "exposure": 1.18
+      },
+      "stats": {
+        "geometries": 52,
+        "textures": 22,
+        "calls": 64,
+        "triangles": 223646,
+        "lines": 786,
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1210,
+            756
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 688,
+            "calls": 64,
+            "triangles": 223646,
+            "points": 0,
+            "lines": 786
+          },
+          "targetBytes": 10977120
+        }
+      }
+    },
+    {
+      "name": "scene",
+      "n": 3.25,
+      "art": {
+        "position": [
+          -24.562694992950668,
+          21.532222162738286,
+          -25.211763957786985
+        ],
+        "target": [
+          0,
+          -1.25,
+          -1.75
+        ],
+        "fov": 32,
+        "bounds": {
+          "left": 0.044858503505474434,
+          "right": 0.8559282849191849,
+          "top": 0.10583920054141843,
+          "bottom": 0.959043859534048
+        },
+        "heroWeight": 1,
+        "lighting": {
+          "fill": 0.83,
+          "sun": 4.25,
+          "position": [
+            -16,
+            22,
+            16
+          ]
+        },
+        "exposure": 0.98
+      },
+      "line": {
+        "progress": 0.65,
+        "growth": 1,
+        "solid": 1,
+        "solidGrowth": 1,
+        "materialWeight": 1,
+        "lightingWeight": 1,
+        "lineOpacity": 0,
+        "environmentWeight": 1,
+        "assembly": 1,
+        "depth": 0,
+        "groups": [
+          {
+            "key": "axes",
+            "drawCount": 6,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "locators",
+            "drawCount": 6,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "hall",
+            "drawCount": 102,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "west",
+            "drawCount": 16,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "east",
+            "drawCount": 16,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "stage",
+            "drawCount": 24,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "entrance",
+            "drawCount": 216,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "roof",
+            "drawCount": 840,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "timber",
+            "drawCount": 202,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "court",
+            "drawCount": 144,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "hierarchy": {
+          "Primary": 299,
+          "Secondary": 409,
+          "Detail": 78
+        },
+        "visible": false,
+        "geometries": 10,
+        "materials": 10,
+        "segments": 786,
+        "drawCalls": 0,
+        "disposed": false,
+        "error": null
+      },
+      "visual": {
+        "environmentOpacity": 1,
+        "foregroundOpacity": 1,
+        "environmentSaturation": 0.65,
+        "environmentContrast": 0.8,
+        "focusStrength": 0,
+        "fogDensity": 0.007,
+        "lightIntensity": 3.3,
+        "target": null,
+        "chapter": "A01",
+        "heroWeight": 1,
+        "visible": false,
+        "groups": [
+          "Terrain",
+          "Field",
+          "Vegetation",
+          "Foreground",
+          "DistantMountains",
+          "Atmosphere"
+        ],
+        "triangles": 0,
+        "meshes": 0,
+        "resourceRequests": 3,
+        "assets": {
+          "tree": "loaded",
+          "mountains": "loaded",
+          "mist": "loaded"
+        },
+        "error": null,
+        "shadowEnabled": true,
+        "exposure": 0.98
+      },
+      "stats": {
+        "geometries": 52,
+        "textures": 22,
+        "calls": 85,
+        "triangles": 299506,
+        "lines": 0,
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1210,
+            756
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 960,
+            "calls": 85,
+            "triangles": 299506,
+            "points": 0,
+            "lines": 0
+          },
+          "targetBytes": 10977120
+        }
+      }
+    },
+    {
+      "name": "push",
+      "n": 3.8,
+      "art": {
+        "position": [
+          -24.562694992950668,
+          21.532222162738286,
+          -25.211763957786985
+        ],
+        "target": [
+          0,
+          -1.25,
+          -1.75
+        ],
+        "fov": 32,
+        "bounds": {
+          "left": 0.044858503505474434,
+          "right": 0.8559282849191849,
+          "top": 0.10583920054141843,
+          "bottom": 0.959043859534048
+        },
+        "heroWeight": 1,
+        "lighting": {
+          "fill": 0.83,
+          "sun": 4.25,
+          "position": [
+            -16,
+            22,
+            16
+          ]
+        },
+        "exposure": 0.98
+      },
+      "line": {
+        "progress": 0.76,
+        "growth": 1,
+        "solid": 1,
+        "solidGrowth": 1,
+        "materialWeight": 1,
+        "lightingWeight": 1,
+        "lineOpacity": 0,
+        "environmentWeight": 1,
+        "assembly": 1,
+        "depth": 0,
+        "groups": [
+          {
+            "key": "axes",
+            "drawCount": 6,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "locators",
+            "drawCount": 6,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "hall",
+            "drawCount": 102,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "west",
+            "drawCount": 16,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "east",
+            "drawCount": 16,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "stage",
+            "drawCount": 24,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "entrance",
+            "drawCount": 216,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "roof",
+            "drawCount": 840,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "timber",
+            "drawCount": 202,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "court",
+            "drawCount": 144,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "hierarchy": {
+          "Primary": 299,
+          "Secondary": 409,
+          "Detail": 78
+        },
+        "visible": false,
+        "geometries": 10,
+        "materials": 10,
+        "segments": 786,
+        "drawCalls": 0,
+        "disposed": false,
+        "error": null
+      },
+      "visual": {
+        "environmentOpacity": 1,
+        "foregroundOpacity": 1,
+        "environmentSaturation": 0.65,
+        "environmentContrast": 0.8,
+        "focusStrength": 0,
+        "fogDensity": 0.007,
+        "lightIntensity": 3.3,
+        "target": null,
+        "chapter": "A01",
+        "heroWeight": 1,
+        "visible": false,
+        "groups": [
+          "Terrain",
+          "Field",
+          "Vegetation",
+          "Foreground",
+          "DistantMountains",
+          "Atmosphere"
+        ],
+        "triangles": 0,
+        "meshes": 0,
+        "resourceRequests": 3,
+        "assets": {
+          "tree": "loaded",
+          "mountains": "loaded",
+          "mist": "loaded"
+        },
+        "error": null,
+        "shadowEnabled": true,
+        "exposure": 0.98
+      },
+      "stats": {
+        "geometries": 52,
+        "textures": 22,
+        "calls": 85,
+        "triangles": 299506,
+        "lines": 0,
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1210,
+            756
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1402,
+            "calls": 85,
+            "triangles": 299506,
+            "points": 0,
+            "lines": 0
+          },
+          "targetBytes": 10977120
+        }
+      }
+    },
+    {
+      "name": "hero",
+      "n": 5.7,
+      "art": {
+        "position": [
+          -24.562694992950668,
+          21.532222162738286,
+          -25.211763957786985
+        ],
+        "target": [
+          0,
+          -1.25,
+          -1.75
+        ],
+        "fov": 32,
+        "bounds": {
+          "left": 0.044858503505474434,
+          "right": 0.8559282849191849,
+          "top": 0.10583920054141843,
+          "bottom": 0.959043859534048
+        },
+        "heroWeight": 1,
+        "lighting": {
+          "fill": 0.83,
+          "sun": 4.25,
+          "position": [
+            -16,
+            22,
+            16
+          ]
+        },
+        "exposure": 0.98
+      },
+      "line": {
+        "progress": 1,
+        "growth": 1,
+        "solid": 1,
+        "solidGrowth": 1,
+        "materialWeight": 1,
+        "lightingWeight": 1,
+        "lineOpacity": 0,
+        "environmentWeight": 1,
+        "assembly": 1,
+        "depth": 0,
+        "groups": [
+          {
+            "key": "axes",
+            "drawCount": 6,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "locators",
+            "drawCount": 6,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "hall",
+            "drawCount": 102,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "west",
+            "drawCount": 16,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "east",
+            "drawCount": 16,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "stage",
+            "drawCount": 24,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "entrance",
+            "drawCount": 216,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "roof",
+            "drawCount": 840,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "timber",
+            "drawCount": 202,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          },
+          {
+            "key": "court",
+            "drawCount": 144,
+            "opacity": 0,
+            "position": [
+              0,
+              0,
+              0
+            ]
+          }
+        ],
+        "hierarchy": {
+          "Primary": 299,
+          "Secondary": 409,
+          "Detail": 78
+        },
+        "visible": false,
+        "geometries": 10,
+        "materials": 10,
+        "segments": 786,
+        "drawCalls": 0,
+        "disposed": false,
+        "error": null
+      },
+      "visual": {
+        "environmentOpacity": 1,
+        "foregroundOpacity": 1,
+        "environmentSaturation": 0.65,
+        "environmentContrast": 0.8,
+        "focusStrength": 0,
+        "fogDensity": 0.007,
+        "lightIntensity": 3.3,
+        "target": null,
+        "chapter": "A01",
+        "heroWeight": 1,
+        "visible": false,
+        "groups": [
+          "Terrain",
+          "Field",
+          "Vegetation",
+          "Foreground",
+          "DistantMountains",
+          "Atmosphere"
+        ],
+        "triangles": 0,
+        "meshes": 0,
+        "resourceRequests": 3,
+        "assets": {
+          "tree": "loaded",
+          "mountains": "loaded",
+          "mist": "loaded"
+        },
+        "error": null,
+        "shadowEnabled": true,
+        "exposure": 0.98
+      },
+      "stats": {
+        "geometries": 52,
+        "textures": 22,
+        "calls": 85,
+        "triangles": 299506,
+        "lines": 0,
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1210,
+            756
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1874,
+            "calls": 85,
+            "triangles": 299506,
+            "points": 0,
+            "lines": 0
+          },
+          "targetBytes": 10977120
+        }
+      }
+    }
+  ],
+  "errors": []
+}

@@ -136,10 +136,13 @@ const builtMurals = gltf.nodes.filter(node => node.extras.mural).map(node => nod
 if (JSON.stringify(expectedMurals) !== JSON.stringify(builtMurals)) throw new Error('Mural metadata differs from mural-locations.json');
 if (!/atob\('[A-Za-z0-9+/=]+'\)/.test(preview)) throw new Error('Offline model copy not found');
 let embedded = preview.replace(/atob\('[A-Za-z0-9+/=]+'\)/, `atob('${output.toString('base64')}')`);
-for (const [name, file] of [['inlineA04', 'a04-scene.mjs'], ['inlineMarkers', 'narrative-markers.mjs'], ['inlineEnvironment', 'environment.mjs'], ['inlineA01Art', 'a01-art-direction.mjs']]) {
+for (const [name, file] of [['inlineA04', 'a04-scene.mjs'], ['inlineMarkers', 'narrative-markers.mjs'], ['inlineEnvironment', 'environment.mjs'], ['inlineA01Art', 'a01-art-direction.mjs'], ['inlineA01Environment','a01-environment.mjs'], ['inlineA01Post','a01-post.mjs']]) {
   const expression = new RegExp(`const ${name}="(?:\\\\.|[^"\\\\])*";`);
   if (!expression.test(embedded)) throw new Error(`Offline module ${name} not found`);
-  embedded = embedded.replace(expression, `const ${name}=${JSON.stringify(fs.readFileSync(path.join(directory, file), 'utf8'))};`);
+  let moduleSource=fs.readFileSync(path.join(directory, file), 'utf8');
+  if(name==='inlineA01Art')moduleSource=moduleSource.replace("import { createA01Camera } from './a01-camera.mjs';",`const {createA01Camera}=(()=>{${fs.readFileSync(path.join(directory,'a01-camera.mjs'),'utf8').replaceAll('export ','')}\nreturn {createA01Camera};})();`);
+  if(name==='inlineA01Art')moduleSource=moduleSource.replace("import { createA01Materials } from './a01-material.mjs';",`const {createA01Materials}=(()=>{${fs.readFileSync(path.join(directory,'a01-material.mjs'),'utf8').replaceAll('export ','')}\nreturn {createA01Materials};})();`);
+  embedded = embedded.replace(expression, `const ${name}=${JSON.stringify(moduleSource)};`);
 }
 // The file:// preview uses data URIs; localhost loads each optimized asset once.
 const environmentAssets=Object.fromEntries(Object.entries({tree:'watercolor-tree',mountains:'distant-landscape',mist:'ivory-mist'}).map(([key,name])=>[key,`data:image/webp;base64,${fs.readFileSync(path.join(directory,'environment-assets',`${name}.webp`)).toString('base64')}`]));

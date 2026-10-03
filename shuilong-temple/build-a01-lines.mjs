@@ -1,5 +1,5 @@
 // Extract designed structural contours from the SAME source as the GLB.
-// No tile ribs, brick textures, mural surfaces or invented architecture.
+// Sparse original tile ribs are v2 detail; no mural or invented architecture.
 import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
 const directory = new URL('./', import.meta.url);
@@ -12,12 +12,13 @@ const T = await import(url(moduleSource.replaceAll('./three.core.js', url(core))
 const source = fs.readFileSync(new URL('model-source.js', directory), 'utf8');
 const root = new Function('T', `${source}\nreturn makeTemple(T);`)(T);
 root.updateMatrixWorld(true);
-const layers = Object.fromEntries(['hall','west','east','stage','entrance','roof','timber','court'].map(key => [key, []]));
+const layers = Object.fromEntries(['hall','west','east','stage','entrance','roof','timber','court','detail'].map(key => [key, []]));
 const names = {'03_MainHall':'hall','04_WestGallery':'west','05_EastGallery':'east','06_Stage':'stage','07_Entrance':'entrance','02_Enclosure':'court'};
 const append = (key, a, b, matrix) => {
   a.applyMatrix4(matrix); b.applyMatrix4(matrix);
   layers[key].push(...a.toArray(), ...b.toArray());
 };
+let rib=0;
 for (const group of root.children) {
   const key = names[group.name];
   if (!key) continue;
@@ -25,7 +26,10 @@ for (const group of root.children) {
     const g = mesh.geometry, kind = mesh.material.userData.texture;
     if (g.type === 'TubeGeometry') {
       // Model roof ridges/eaves/hips and entrance arches only. Exclude tile ribs.
-      if (g.parameters.radius < .06) continue;
+      if (g.parameters.radius < .06) {
+        if(kind==='roof'&&g.parameters.radius===.023&&rib++%12===0){const points=g.parameters.path.getPoints(4);for(let i=1;i<points.length;i++)append('detail',points[i-1].clone(),points[i].clone(),mesh.matrixWorld);}
+        continue;
+      }
       const points = g.parameters.path.getPoints(kind === 'roof' ? 12 : 10);
       for (let i = 1; i < points.length; i++) append(kind === 'roof' ? 'roof' : key, points[i-1].clone(), points[i].clone(), mesh.matrixWorld);
     } else if (kind === 'roof') continue;

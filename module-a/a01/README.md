@@ -1,5 +1,7 @@
 # 模块 A｜连续叙事入口与 A01 高保真开屏
 
+2026-10-03 Cinematic v2：喀斯特远谷、同空间坡面/植被/雾、六类表面变化与两遍 HDR 深度 AO 后期已实现。建筑源几何、壁画和 A02—A08 规则保留；当前是待用户审图的版本，尚未视觉冻结。详见 [实现说明](../../docs/A01_CINEMATIC_V2.md) 与 [截图及技术验收](../../docs/validation/a01-cinematic-v2/README.md)。新增检查：`cinematic-browser-check.cjs`、`cinematic-performance-check.cjs`、`cinematic-protection-check.cjs`；后者需要模块 B 的 3000 服务，性能脚本应单独运行。
+
 双击仓库根目录的 `启动模块A原型.bat`，或运行 `node module-a/a01/server.mjs` 后打开 `http://127.0.0.1:4173/module-a/a01/`。
 
 页面使用 5 个视口高度映射 A01 四阶段动画、1.2 个视口高度作为稳定阅读区间；其后 4 个视口高度完成 A02，其中包含原有的 1 个视口高度回中过渡。真实三维模型来自 `shuilong-temple/水龙祠-交互预览.html`，通过公开接口按滚动进度控制建筑显现、屋顶弱化和壁画标记。
