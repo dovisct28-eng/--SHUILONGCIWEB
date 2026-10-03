@@ -1,5 +1,9 @@
 # 模块 A｜连续叙事入口与 A01 高保真开屏
 
+2026-10-03 最新：A01 正式全视口 cinematic 状态、48–58% Hero 收束、独立景观退场/一次回中/信息接管；A02–A08 采用深色空间＋暖米灰信息。建筑、壁画与光影属于空间层；文字、编号、文献与说明属于展陈信息层。具体 HEX 为打样值，整体待用户视觉审查。A04 自动路线及 A05–A07 巡视不变，模块 B 未改。环境采用颜色/深度/阴影同步 discard，visibility≤.04 停渲染，A02 不返场旧景观。
+
+最新检查：`node --test`、`node shuilong-temple/build-model.mjs`、`node module-a/a01/dark-browser-check.cjs`、`node module-a/a01/dark-regression-check.cjs a04`（另有 guides / a08 / transfer / resilience）、`node module-a/a01/dark-contact.cjs`。需要 NODE_PATH 可解析 Playwright、Sharp；截图/展板/结果见 [统一验收](../../docs/validation/module-a-dark-system/README.md)。下方 V3 和旧版本记录保留历史含义，最新全屏与章际视觉以本段为准。
+
 2026-10-03 当前 V3：屋檐局部发现 → 曲线后撤 → 分级墨线 → 定向光扫实体化 → 雾与山谷 → Hero。保持真实 GLB、5 屏动画、1.2 屏阅读及一次回中；减少动态效果直接显示稳定 Hero。详见 [V3 实现说明](../../docs/A01_CINEMATIC_V3.md) 与 [审图/技术验收](../../docs/validation/a01-cinematic-v3/README.md)。新增检查为 `v3-browser-check.cjs`、`v3-performance-check.cjs`、`v3-regression-check.cjs`、`v3-pass-check.cjs` 和 `v3-contact.cjs`，需要 Playwright/PNGJS/Sharp 可解析；性能脚本单独运行。旧版本说明与证据保持其历史含义，不作为 V3 的验收命令。当前版本待用户视觉审查，未视觉冻结。
 
 双击仓库根目录的 `启动模块A原型.bat`，或运行 `node module-a/a01/server.mjs` 后打开 `http://127.0.0.1:4173/module-a/a01/`。

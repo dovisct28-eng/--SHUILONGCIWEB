@@ -9,7 +9,7 @@ export function deriveA02State(localScroll, viewportHeight) {
   const screens = localScroll / Math.max(1, viewportHeight) - A02_START;
   return Object.freeze({
     progress: rangeProgress(screens, 0, A02_SCREENS),
-    heading: rangeProgress(screens, .65, 1.15),
+    heading: rangeProgress(screens, .35, 1),
     revealWalls: rangeProgress(screens, 1.15, 1.65),
     markers: rangeProgress(screens, 1.7, 2.25),
     emphasis: rangeProgress(screens, 2.8, 3.3),

@@ -2,9 +2,9 @@
 export function createA04Scene(T, camera, scene, root, roofs, pins) {
   let state=null,overviewAspect=0,overviewCache=null;
   const group=new T.Group(); group.name='A04-route'; group.visible=false; scene.add(group);
-  const material=new T.LineBasicMaterial({color:0xb84f63,depthTest:false,transparent:true});
+  const material=new T.LineBasicMaterial({color:0xb9a98f,depthTest:false,transparent:true});
   const lines=[],dots=[],segments=[],nodeLabels=[];
-  for(const text of ["","① 第一幅","② 第二幅"]){const el=document.createElement("span");el.textContent=text;el.style.cssText="position:absolute;font:12px system-ui;color:#843348;background:#f4f0e7e8;padding:2px 5px;pointer-events:none;display:none;transform:translate(-50%,8px)";document.body.append(el);nodeLabels.push(el);}
+  for(const text of ["","① 第一幅","② 第二幅"]){const el=document.createElement("span");el.textContent=text;el.style.cssText="position:absolute;font:12px system-ui;color:#d8d2c5;background:#171b1dcc;padding:2px 5px;pointer-events:none;display:none;transform:translate(-50%,8px)";document.body.append(el);nodeLabels.push(el);}
   const bounds=new T.Box3(new T.Vector3(-5.9,-.6,-16.5),new T.Vector3(5.9,3.4,13));
   const corners=[];
   for(const x of [bounds.min.x,bounds.max.x])for(const y of [bounds.min.y,bounds.max.y])for(const z of [bounds.min.z,bounds.max.z])corners.push(new T.Vector3(x,y,z));
@@ -38,8 +38,8 @@ export function createA04Scene(T, camera, scene, root, roofs, pins) {
     paths.forEach((points,i)=>{
       const geometry=new T.BufferGeometry().setFromPoints(points.map(v=>new T.Vector3(...v)));
       const line=new T.Line(geometry,material);line.renderOrder=20;group.add(line);lines.push(line);
-      const parts=points.slice(1).map((point,j)=>{const a=new T.Vector3(...points[j]),b=new T.Vector3(...point),delta=b.clone().sub(a);const mesh=new T.Mesh(new T.CylinderGeometry(.045,.045,1,8),new T.MeshBasicMaterial({color:0xb84f63,transparent:true,depthTest:false}));mesh.quaternion.setFromUnitVectors(new T.Vector3(0,1,0),delta.clone().normalize());mesh.renderOrder=20;group.add(mesh);return {mesh,a,delta,length:delta.length()};});segments.push(parts);
-      const dot=new T.Mesh(new T.SphereGeometry(.15,12,8),new T.MeshBasicMaterial({color:0xb84f63,depthTest:false,transparent:true}));
+      const parts=points.slice(1).map((point,j)=>{const a=new T.Vector3(...points[j]),b=new T.Vector3(...point),delta=b.clone().sub(a);const mesh=new T.Mesh(new T.CylinderGeometry(.045,.045,1,8),new T.MeshBasicMaterial({color:0xb9a98f,transparent:true,depthTest:false}));mesh.quaternion.setFromUnitVectors(new T.Vector3(0,1,0),delta.clone().normalize());mesh.renderOrder=20;group.add(mesh);return {mesh,a,delta,length:delta.length()};});segments.push(parts);
+      const dot=new T.Mesh(new T.SphereGeometry(.15,12,8),new T.MeshBasicMaterial({color:0xb9a98f,depthTest:false,transparent:true}));
       dot.position.fromArray(points.at(-1));dot.renderOrder=21;group.add(dot);dots.push(dot);
     });
   }
@@ -72,6 +72,8 @@ export function createA04Scene(T, camera, scene, root, roofs, pins) {
       const current=pin.m.id===state.target;
       pin.button.style.opacity=String(state.labelOpacity*(current?1:(1-.55*state.entryProgress)*(state.secondaryOpacity??1)));pin.line.style.opacity=pin.dot.style.opacity=state.labelOpacity*(current?1:(1-.55*state.entryProgress)*(state.secondaryOpacity??1));
       pin.button.dataset.current=String(current);pin.button.textContent=pin.m.label+(current&&state.entryProgress>.5?" · 当前":"");
+      // Small local backing keeps the active label readable over pale plaster.
+      pin.button.style.background=current?'#101519d9':'transparent';
       pin.button.setAttribute('aria-label',pin.m.label+(current?'，当前观看目标':'，路线位置'));
     }},
     projection(id){const mural=root.getObjectByName(id);if(!mural||!state)return null;const subject=mural.getObjectByName(id+'-display-texture')||mural;setCamera(state.camera);subject.updateWorldMatrix(true,true);const box=new T.Box3().setFromObject(subject),points=[];for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z])points.push(new T.Vector3(x,y,z).project(camera));const xs=points.map(p=>(p.x+1)*innerWidth/2),ys=points.map(p=>(1-p.y)*innerHeight/2);return {left:Math.min(...xs),top:Math.min(...ys),width:Math.max(...xs)-Math.min(...xs),height:Math.max(...ys)-Math.min(...ys)};},

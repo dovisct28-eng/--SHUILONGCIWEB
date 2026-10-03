@@ -1,5 +1,6 @@
 import { createA04Controller } from '../a04/controller.mjs';
 import { derivePresentation, deriveScrollState } from './progress.mjs';
+import { cinematicState, canvasFrame } from './cinematic-state.mjs';
 import { CORE_MURALS, deriveA02State } from '../a02/progress.mjs';
 import { deriveA03State } from '../a03/progress.mjs';
 import { createA03View } from '../a03/view.mjs';
@@ -60,7 +61,9 @@ function render() {
   const travel = smooth(state.travel);
   const shift = smooth(state.shift);
   const copy = smooth(state.copy);
-  const transition = smooth(state.transition);
+  const screens = Math.max(0, -bounds.top) / innerHeight;
+  const framing = cinematicState(state.animation,screens,reducedMotion.matches);
+  const transition = framing.center;
   const presentation = derivePresentation({
     ...state,
     shift: reducedMotion.matches ? 1 : shift,
@@ -72,11 +75,15 @@ function render() {
   const api = modelFrame.contentWindow?.shuilongTemple;
   const hasLines = api?.setA01Presentation?.(state.animation, reducedMotion.matches);
   stage.style.setProperty('--model-opacity', hasLines ? 1 : Math.min(1, Math.max(0, (state.animation - 0.14) / 0.1)));
-  stage.style.setProperty('--hero-composition', 1 - transition);
+  stage.style.setProperty('--hero-weight',framing.hero);
+  stage.style.setProperty('--cinematic-weight',framing.cinematic);
   const narrow = innerWidth <= 760;
-  stage.style.setProperty('--model-x', `${presentation.modelX + (narrow ? 0 : 19) * theme.composition}vw`);
-  stage.style.setProperty('--model-scale', (hasLines ? .83 : mix(0.72, 0.83, state.growth)) - (narrow ? .35 : .17) * theme.composition);
-  modelFrame.parentElement.style.top = `${(narrow ? 43 : 50) + (narrow ? 35 : 0) * theme.composition}%`;
+  stage.style.setProperty('--model-x', `${presentation.modelX*framing.hero + (narrow ? 0 : 19) * theme.composition}vw`);
+  stage.style.setProperty('--model-scale',1);
+  const canvas=canvasFrame(innerWidth,innerHeight,framing,theme.composition);
+  stage.style.setProperty('--canvas-width',`${canvas.width}px`);
+  stage.style.setProperty('--canvas-height',`${canvas.height}px`);
+  modelFrame.parentElement.style.top = `${50+framing.hero*((narrow?-7:0)+(narrow?35:0)*theme.composition)}%`;
   stage.style.setProperty('--copy-opacity', presentation.copyVisibility);
   stage.style.setProperty('--copy-x', `${reducedMotion.matches ? 0 : mix(-12, 0, copy)}px`);
   stage.style.setProperty('--intro-mark-opacity', hasLines ? 0 : presentation.introMarkVisibility);
@@ -102,7 +109,6 @@ function render() {
     revealWalls: smooth(spatial.revealWalls),
     secondaryVisibility: theme.secondary,
   });
-  const screens = Math.max(0, -bounds.top) / innerHeight;
   renderInkScene(screens,reducedMotion.matches);
   lastScreens = screens;
   modelFrame.contentWindow?.shuilongTemple?.setVisualProgress?.(screens);

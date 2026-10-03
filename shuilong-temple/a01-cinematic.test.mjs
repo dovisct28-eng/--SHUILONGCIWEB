@@ -1,5 +1,5 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
-import {a01TerrainHeight}from './a01-environment.mjs';
+import {a01TerrainHeight,createA01Environment,environmentVisible}from './a01-environment.mjs';
 import {createA01Materials}from './a01-material.mjs';
 import {createA01Post}from './a01-post.mjs';
 import {createArchitectureLines}from './a01-lines.mjs';import {ARCHITECTURE_LINES}from './a01-lines-data.mjs';
@@ -9,6 +9,20 @@ test('terrain stays beneath the court, masks the plinth edge and falls continuou
  for(const x of [-5,0,5])for(const z of [-15,0,12])assert.equal(a01TerrainHeight(x,z),-.615);
  for(const z of [-14,-7,0,7,12])assert.ok(a01TerrainHeight(5.9,z)>0&&a01TerrainHeight(5.9,z)<.6);
  assert.ok(a01TerrainHeight(20,0)<-4);let previous=a01TerrainHeight(6,0);for(let x=6;x<35;x+=.01){const h=a01TerrainHeight(x,0);assert.ok(Math.abs(h-previous)<.04);previous=h;}
+});
+test('environment discards color/depth and matching shadow fragments, then stops rendering',()=>{
+ const previous=globalThis.document;
+ globalThis.document={createElement:()=>({width:0,height:0,getContext:()=>({beginPath(){},ellipse(){},fill(){}})})};
+ try{
+  const scene=new T.Scene(),env=createA01Environment(T,scene),group=scene.getObjectByName('A01NarrativeEnvironment');
+  const shader=()=>({uniforms:{},vertexShader:'#include <worldpos_vertex>\n#include <project_vertex>',fragmentShader:'#include <color_fragment>\n#include <alphatest_fragment>\n#include <opaque_fragment>'});
+  const canopy=group.getObjectByName('CanopyGroves'),surface=shader(),shadow=shader();canopy.material.onBeforeCompile(surface);canopy.customDepthMaterial.onBeforeCompile(shadow);
+  assert.equal(canopy.material.depthWrite,true);assert.equal(canopy.material.transparent,false);
+  assert.match(surface.fragmentShader,/if\(coverage<=threshold\)discard/);assert.match(shadow.fragmentShader,/a01EnvironmentVisibility<=hash/);
+  assert.equal(surface.uniforms.a01EnvironmentVisibility,shadow.uniforms.a01EnvironmentVisibility);
+  for(const weight of [1,.5,.04,.03,0,1]){env.apply(weight,1);assert.equal(group.visible,environmentVisible(weight));assert.equal(surface.uniforms.a01EnvironmentVisibility.value,weight);}
+  env.apply(0,1);assert.equal(group.visible,false);env.dispose();assert.equal(scene.children.length,0);
+ }finally{globalThis.document=previous;}
 });
 test('directional reveal and its shadow share uniforms and restore at A02',()=>{
  const m=new T.MeshStandardMaterial();m.userData.textureKey='roof';const mesh=new T.Mesh(new T.BoxGeometry(),m),rig=createA01Materials(T,[m],[mesh]);

@@ -86,7 +86,8 @@ test('A01 restores camera, lighting and base materials at A02, without touching 
  seek(8);assert.ok(root.children[0].children[0].material.color.equals(base));assert.equal(camera.fov,34);assert.equal(renderer.toneMappingExposure,1.18);assert.equal(material.roughness,baseRoughness);assert.equal(material.metalness,baseMetalness);assert.ok(sun.color.equals(originalColors.sun)&&fill.color.equals(originalColors.sky)&&fill.groundColor.equals(originalColors.ground)&&scene.fog.color.equals(originalColors.fog));assert.equal(fill.intensity,1.2);assert.deepEqual(sun.position.toArray(),[-19,23,-22]);
  assert.ok(root.children[1].children[0].material.color.equals(mural));
  seek(5.7);assert.deepEqual(art.getState(),hero);
- for(let n=6.2;n<7.2;n+=.002)assert.ok(Math.abs(deriveHeroWeight(n)-deriveHeroWeight(n+.002))<.004);
+ // A .6-screen transfer has max smoothstep slope 1.5/.6; .002 steps stay <.0051.
+ for(let n=6.2;n<7.2;n+=.002)assert.ok(Math.abs(deriveHeroWeight(n)-deriveHeroWeight(n+.002))<.0051);
 });
 
 test('near camera pulls back continuously and reduced motion retains the full compound',()=>{

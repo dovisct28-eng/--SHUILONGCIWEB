@@ -1,6 +1,8 @@
 // Art-directed narrative environment. Imaginary karst setting, not site survey.
 // Near terrain, vegetation, rocks and haze share the architecture's camera/light.
 const unit=n=>Math.max(0,Math.min(1,n)),ease=n=>{const t=unit(n);return t*t*(3-2*t);};
+export const ENVIRONMENT_EXIT_THRESHOLD=.04;
+export function environmentVisible(amount){return amount>ENVIRONMENT_EXIT_THRESHOLD;}
 export function a01TerrainHeight(x,z){
   // The berm reaches the outside of the plinth, beneath the unchanged enclosure.
   const outside=Math.hypot(Math.max(0,Math.abs(x)-5.15),Math.max(0,Math.abs(z+1.75)-13.9));
@@ -14,7 +16,7 @@ export function createA01Environment(T,scene){
   const noise=`float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
     float noise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(hash(i),hash(i+vec2(1,0)),f.x),mix(hash(i+vec2(0,1)),hash(i+vec2(1)),f.x),f.y);}`;
   const mat=(color,terrain=false)=>{
-    const m=new T.MeshStandardMaterial({color,roughness:1,transparent:true,depthWrite:true});materials.push(m);
+    const m=new T.MeshStandardMaterial({color,roughness:1,transparent:false,depthWrite:true});materials.push(m);
     m.onBeforeCompile=s=>{
       s.uniforms.a01EnvironmentVisibility=visibility;s.uniforms.a01EnvironmentResolution=resolution;
       s.vertexShader='varying vec3 a01World;\n'+s.vertexShader.replace('#include <worldpos_vertex>',`#include <worldpos_vertex>
@@ -27,8 +29,13 @@ export function createA01Environment(T,scene){
       s.fragmentShader=s.fragmentShader.replace('#include <opaque_fragment>',`vec2 edge=gl_FragCoord.xy/a01EnvironmentResolution;
         diffuseColor.a*=a01EnvironmentVisibility*smoothstep(0.,.15,edge.x)*smoothstep(0.,.15,1.-edge.x)*smoothstep(0.,.15,edge.y)*smoothstep(0.,.15,1.-edge.y);
         ${terrain?'float bank=length(max(abs(a01World.xz+vec2(0.,1.75))-vec2(6.1,15.),0.));diffuseColor.a*=1.-smoothstep(3.,19.,bank);':''}
+        // Discard stops both color and depth; surviving fragments stay opaque.
+        float coverage=diffuseColor.a;
+        float threshold=hash(floor(a01World.xz*73.+a01World.y*19.));
+        if(coverage<=threshold)discard;
+        diffuseColor.a=1.;
         #include <opaque_fragment>`);
-    };m.customProgramCacheKey=()=>`a01-landscape-${terrain}`;return m;
+    };m.customProgramCacheKey=()=>`a01-landscape-dither-${terrain}`;return m;
   };
   // Plateau begins at the existing plinth bottom, then falls into wooded slopes.
   const land=geometry(new T.PlaneGeometry(100,100,144,144));land.rotateX(-Math.PI/2);
@@ -72,6 +79,16 @@ export function createA01Environment(T,scene){
   canopies.castShadow=true;canopies.receiveShadow=true;branches.castShadow=true;branches.receiveShadow=true;canopies.name='CanopyGroves';branches.name='BranchGroves';group.add(canopies,branches);
   const rocks=new T.InstancedMesh(geometry(new T.IcosahedronGeometry(1,0)),mat(0x404951),32);
   for(let i=0;i<32;i++){const x=(random()<.6?-1:1)*(6.7+random()*9),z=-23+random()*49,s=.15+random()*.6;dummy.position.set(x,a01TerrainHeight(x,z)+s*.15,z);dummy.scale.set(s,s*.4,s*.7);dummy.rotation.set(random(),random(),random());dummy.updateMatrix();rocks.setMatrixAt(i,dummy.matrix);}rocks.castShadow=true;rocks.receiveShadow=true;rocks.name='SoilRocks';group.add(rocks);
+  // Fade shadows with the same world-space pattern as the visible geometry.
+  for(const mesh of [canopies,branches,rocks]){
+    const depth=new T.MeshDepthMaterial({depthPacking:T.RGBADepthPacking,map:mesh.material.map,alphaTest:mesh.material.alphaTest,side:mesh.material.side});materials.push(depth);
+    depth.onBeforeCompile=s=>{
+      s.uniforms.a01EnvironmentVisibility=visibility;
+      s.vertexShader='varying vec3 fadeWorld;\n'+s.vertexShader.replace('#include <project_vertex>',`vec4 fadeP=vec4(transformed,1.);\n#ifdef USE_INSTANCING\nfadeP=instanceMatrix*fadeP;\n#endif\nfadeWorld=(modelMatrix*fadeP).xyz;\n#include <project_vertex>`);
+      s.fragmentShader='varying vec3 fadeWorld;uniform float a01EnvironmentVisibility;\n'+noise+'\n'+s.fragmentShader;
+      s.fragmentShader=s.fragmentShader.replace('#include <alphatest_fragment>',`#include <alphatest_fragment>\nif(a01EnvironmentVisibility<=hash(floor(fadeWorld.xz*73.+fadeWorld.y*19.)))discard;`);
+    };depth.customProgramCacheKey=()=> 'a01-environment-shadow-dither';mesh.customDepthMaterial=depth;
+  }
   // Soft, static world-space mist. Scroll is the only clock; no drifting timer.
   const mist=new T.ShaderMaterial({transparent:true,depthWrite:false,uniforms:{amount:visibility,color:{value:new T.Color(0x879391)}},
     vertexShader:'varying vec2 vUv;void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',
@@ -82,7 +99,7 @@ export function createA01Environment(T,scene){
   }
   let state={weight:0,establish:0,trees:trees.length};
   return {
-    apply(weight,progress,reduced=false){const establish=ease((progress-.20)/.48);visibility.value=weight*establish;group.visible=visibility.value>.0001;state={weight,establish,trees:trees.length};
+    apply(weight,progress,reduced=false){const establish=ease((progress-.20)/.48);visibility.value=unit(weight)*establish;group.visible=environmentVisible(visibility.value);state={weight,establish,visibility:visibility.value,trees:trees.length};
       // Fixed objects give genuine depth parallax under the shared moving camera.
       group.position.set(0,0,0);
     },

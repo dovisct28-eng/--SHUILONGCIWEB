@@ -1,12 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {inkPalette,contrastRatio} from './ink-scene.mjs';
-import {deriveHeroWeight} from '../../shuilong-temple/a01-art-direction.mjs';
-test('ink palette restores shared paper and readable text through the original handoff',()=>{
+import {cinematicState} from './cinematic-state.mjs';
+test('dark chapter palette keeps information readable and withdraws the valley first',()=>{
   assert.deepEqual(inkPalette(5),inkPalette(6.19));
-  assert.deepEqual(inkPalette(7.2),{weight:0,paper:'#f2eee4',ink:'#343833',secondary:'#62675f'});
+  assert.deepEqual(inkPalette(7.2),{weight:0,paper:'#171b1d',ink:'#d8d2c5',secondary:'#a0a39c'});
   for(let screens=0;screens<14;screens+=.005){const palette=inkPalette(screens);
-    assert.equal(palette.weight,deriveHeroWeight(screens));
+    assert.equal(palette.weight,cinematicState(1,screens).environment);
     assert.ok(contrastRatio(palette.ink,palette.paper)>=4.5);
     assert.ok(contrastRatio(palette.secondary,palette.paper)>=4.5);
     inkPalette(20);assert.deepEqual(inkPalette(screens),palette);

@@ -5,7 +5,7 @@ import { createA01Materials } from './a01-material.mjs';
 const clamp = n => Math.max(0, Math.min(1, Number(n) || 0));
 const smooth = n => { const t=clamp(n); return t*t*(3-2*t); };
 export function deriveHeroWeight(screens=0) {
-  return 1-smooth((screens-6.2)/1);
+  return 1-smooth((screens-6.4)/.6);
 }
 export function createA01ArtDirection(T, {camera,root,scene,renderer,sun,fill,floor}) {
   const cameraRig=createA01Camera(T,camera);

@@ -30,9 +30,10 @@ export function createA04Controller(stage, frame, requestRender) {
     section.inert=state.entry<.9;
     // The outer frame and inner projection change together; no screenshot scaling.
     const w=innerWidth,h=innerHeight,baseWidth=w<=1100?w*.78:Math.min(w*.72,1000),baseHeight=Math.min(h*.84,820);
-    frame.parentElement.style.width=`${baseWidth+(w-baseWidth)*state.entry}px`;
-    frame.parentElement.style.height=`${baseHeight+(h-baseHeight)*state.entry}px`;
-    stage.style.setProperty('--model-scale',.83+.17*state.entry);
+    const frameScale=.83+.17*state.entry;
+    frame.parentElement.style.width=`${(baseWidth+(w-baseWidth)*state.entry)*frameScale}px`;
+    frame.parentElement.style.height=`${(baseHeight+(h-baseHeight)*state.entry)*frameScale}px`;
+    stage.style.setProperty('--model-scale',1);
     if(frame.clientWidth!==fitWidth||frame.clientHeight!==fitHeight){fitWidth=frame.clientWidth;fitHeight=frame.clientHeight;wake();}
     if(!api?.getA04Overview||!frame.contentWindow.modelReady){
       waitSince ||= performance.now();title.textContent='正在准备空间模型';description.textContent=performance.now()-waitSince>12000?'模型未能就绪。可刷新重试，或向上返回主题。观看顺序：第五幅 → 第一幅 → 第二幅。':'模型就绪后开始观看';status.textContent='';skip.hidden=replay.hidden=true;wake();return;

@@ -14,7 +14,7 @@ export function visualState(screens = 0, tour = null) {
     foregroundOpacity: (1-space)*(1-entry), environmentSaturation: .65-.25*theme,
     environmentContrast: .8-.25*theme, focusStrength: .22*theme+.55*entry,
     fogDensity: .007+.003*theme, lightIntensity: 3.3-.25*entry,
-    target: tour?.target || null, chapter: entry>0?'A04':theme>0?'A03':space>0?'A02':'A01' };
+    architectureWeight:1-.32*theme*(1-entry),target: tour?.target || null, chapter: entry>0?'A04':theme>0?'A03':space>0?'A02':'A01' };
 }
 
 export function createEnvironment(T, scene, options = {}) {
@@ -164,7 +164,7 @@ export function createArchitectureFocus(T, root) {
   return state=>{for(const e of entries){const m=e.mesh.material;
     if(!e.base || Boolean(m.map)!==e.mapped){e.base=m.color.clone();e.mapped=Boolean(m.map);}
     const current=state.target==='mural-01'?e.group==='05_EastGallery':e.group==='03_MainHall';
-    const weight=current?1:e.group==='03_MainHall'?.98:e.group==='02_Enclosure'||e.group==='07_Entrance'?.84:.92;
-    m.color.copy(e.base).lerp(neutral,state.focusStrength*(current?.015:.12)).multiplyScalar(1-(1-weight)*( .45+state.focusStrength));
+    const weight=state.target?(current?.82:.42):(e.group==='03_MainHall'?.98:e.group==='02_Enclosure'||e.group==='07_Entrance'?.84:.92);
+    m.color.copy(e.base).lerp(neutral,state.focusStrength*(current?.015:.12)).multiplyScalar((state.target?weight:1-(1-weight)*(.45+state.focusStrength))*(state.architectureWeight??1));
   }};
 }

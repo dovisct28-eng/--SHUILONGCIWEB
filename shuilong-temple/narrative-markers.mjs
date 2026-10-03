@@ -44,15 +44,16 @@ export function createMuralPresentation(pins, svg) {
         const isCore = core.has(p.m.id);
         const weight = isCore ? 1 : (1 - emphasis * .58) * secondary;
         p.button.style.opacity = visibility * weight;
-        p.button.style.background = isCore ? `rgb(${Math.round(248 - emphasis * 191)} ${Math.round(247 - emphasis * 187)} ${Math.round(243 - emphasis * 185)})` : '#f8f7f3';
-        p.button.style.color = isCore && emphasis > .5 ? '#fff' : '#393c38';
+        p.button.style.background = 'transparent';
+        p.button.style.color = isCore ? '#d8d2c5' : '#a0a39c';
+        p.button.style.fontWeight = isCore && emphasis > .5 ? '500' : '400';
         p.button.dataset.core = String(isCore);
         p.button.style.left = pos.lx + 'px'; p.button.style.top = pos.ly + 'px';
         p.line.style.opacity = p.dot.style.opacity = weight;
         for (const [key, value] of Object.entries({x1:pos.x,y1:pos.y,x2:pos.lx,y2:pos.ly})) p.line.setAttribute(key, value);
-        p.line.setAttribute('stroke', '#62665f');
+        p.line.setAttribute('stroke', '#a0a39c');
         p.dot.setAttribute('cx', pos.x); p.dot.setAttribute('cy', pos.y);
-        p.dot.setAttribute('fill', '#393c38'); p.dot.setAttribute('r', isCore ? 3.5 + emphasis * 2 : 3.5);
+        p.dot.setAttribute('fill', '#c9b69a'); p.dot.setAttribute('r', isCore ? 2.3 + emphasis * .7 : 2);
       }
     },
   };
