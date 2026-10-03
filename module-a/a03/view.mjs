@@ -4,9 +4,8 @@ export function createA03View(stage) {
   section.setAttribute('aria-label', '出兵·入将主题引入');
   section.innerHTML = `
     <article class="a03-copy" data-a03-copy aria-hidden="true">
-      <p class="a03-kicker">03 / 主题引入</p>
-      <h2>出兵<span>·</span>入将</h2>
-      <p class="a03-lead">从壁画的位置，走向出行与归来的故事。</p>
+      <p class="a03-kicker">出兵·入将</p>
+      <h2 class="a03-title"><span>从出行与归来，</span><span>看壁画之间的联系</span></h2>
       <p class="a03-research">李济民将“出兵入将”解释为迎神赛会中队伍出庙与入庙的场景。</p>
       <p class="a03-purpose">以这组关系为线索，留意队伍的朝向，以及不同壁面之间的联系。</p>
       <p class="a03-source">研究视角：李济民，2025，第122页。<br>主题尚有不同释读，这里提供一种观看线索。</p>

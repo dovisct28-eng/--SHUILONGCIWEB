@@ -15,17 +15,18 @@ function comparePixels(before,after) {
     maxDelta=Math.max(maxDelta,delta);if(delta)changed++;
     assert.ok(delta<=16,`visible pixel difference: ${delta} at pixel ${i/4}`);
   }
-  assert.ok(changed/(a.width*a.height)<.005,'widespread visual difference');
+  assert.ok(changed/(a.width*a.height)<.005,`widespread visual difference: ${changed}/${a.width*a.height} pixels, maximum channel delta ${maxDelta}`);
   return {changed,maxDelta};
 }
 
 (async()=>{
-  const browser=await chromium.launch({channel:'chrome',headless:true});
-  const output=path.resolve(__dirname,'../../docs/validation/a03');
+  const output=process.env.A03_VALIDATION_DIR ? path.resolve(process.env.A03_VALIDATION_DIR) : path.resolve(__dirname,'../../docs/validation/a03');
   fs.mkdirSync(output,{recursive:true});
   const errors=[],rows=[];
-  try {
     for(const [width,height] of [[1440,900],[1440,1024],[1366,768],[1920,1080],[1024,768]]) {
+      // Keep GPU/compositor caches from earlier viewport sizes out of pixel comparisons.
+      const browser=await chromium.launch({channel:'chrome',headless:true});
+      try {
       const page=await browser.newPage({viewport:{width,height}});
       page.on('pageerror',e=>errors.push(e.message));
       page.on('response',r=>{if(r.status()>=400)errors.push(`${r.status()} ${r.url()}`);});
@@ -33,6 +34,8 @@ function comparePixels(before,after) {
       page.on('request',r=>resources.push(r.url()));
       await page.goto('http://127.0.0.1:4173/module-a/a01/');
       await page.waitForFunction(()=>document.querySelector('iframe').contentWindow.modelReady);
+      await page.waitForFunction(()=>document.querySelector('iframe').contentWindow.shuilongTemple.getArchitectureState().every(m=>m.clonesLoaded));
+      await page.evaluate(async()=>{await document.fonts.ready;await Promise.all([...document.images].filter(img=>img.src).map(img=>img.decode()));});
       const capture=()=>page.evaluate(()=>{
         const win=document.querySelector('iframe').contentWindow;
         const rect=el=>{const r=el.getBoundingClientRect();return {x:r.x,y:r.y,w:r.width,h:r.height};};
@@ -42,6 +45,10 @@ function comparePixels(before,after) {
           camera:win.shuilongTemple.getIntroState(),
           labels:[...win.document.querySelectorAll('.mural-label')].filter(el=>!el.hidden&&win.getComputedStyle(el).display!=='none').map(el=>({id:el.dataset.muralId,opacity:el.style.opacity,rect:rect(el)})),
           copy:rect(document.querySelector('[data-a03-copy]')),
+          title:rect(document.querySelector('.a03-title')),
+          titleLines:[...document.querySelectorAll('.a03-title span')].map(rect),
+          titleText:document.querySelector('.a03-title').textContent,
+          topic:document.querySelector('.a03-copy .a03-kicker').textContent,
           frame:rect(document.querySelector('iframe')),
           copyHidden:document.querySelector('[data-a03-copy]').getAttribute('aria-hidden'),
           handoffHidden:document.querySelector('[data-a03-handoff]').getAttribute('aria-hidden'),
@@ -50,6 +57,7 @@ function comparePixels(before,after) {
       });
       const stop=async screens=>{await page.evaluate(y=>scrollTo(0,y),Math.round(screens*height));await page.waitForTimeout(350);return capture();};
       const hero=await stop(5.7),heroImage=await page.screenshot();
+      fs.writeFileSync(path.join(output,`hero-before-${width}x${height}.png`),heroImage);
       const a02=await stop(10.2),a02Image=await page.screenshot();
       await page.screenshot({path:path.join(output,`a02-before-${width}x${height}.png`)});
       assert.equal(a02.labels.length,5);
@@ -64,6 +72,12 @@ function comparePixels(before,after) {
         }
         if(name==='reading') {
           assert.equal(state.phase,'a03-reading');assert.equal(state.copyHidden,'false');
+          assert.equal(state.topic,'出兵·入将');
+          assert.equal(state.titleText,'从出行与归来，看壁画之间的联系');
+          assert.equal(state.titleLines.length,2);
+          for(const line of state.titleLines) assert.ok(line.x>=state.copy.x && line.x+line.w<=state.copy.x+state.copy.w+1,'heading leaves copy column');
+          const fit=await page.locator('.a03-title').evaluate(el=>({fits:el.scrollWidth<=el.clientWidth,lower:el.querySelectorAll('span')[1].getBoundingClientRect().top>el.querySelector('span').getBoundingClientRect().top}));
+          assert.equal(fit.fits,true,'long heading overflows');assert.equal(fit.lower,true,'heading must have two lines');
           assert.ok(state.copy.y>=0 && state.copy.y+state.copy.h<height-65,'text clips or covers hint');
           assert.ok(state.copy.x+state.copy.w<=state.frame.x,'text overlaps model frame');
           await page.waitForTimeout(600);assert.deepEqual(await capture(),state,'pause changes state');
@@ -76,17 +90,26 @@ function comparePixels(before,after) {
       await page.screenshot({path:path.join(output,`a02-returned-${width}x${height}.png`)});
       const a02Diff=comparePixels(a02Image,await page.screenshot());
       assert.deepEqual(await stop(5.7),hero);
-      const heroDiff=comparePixels(heroImage,await page.screenshot());
+      const heroReturned=await page.screenshot();fs.writeFileSync(path.join(output,`hero-returned-${width}x${height}.png`),heroReturned);
+      const heroDiff=comparePixels(heroImage,heroReturned);
       await stop(10.2);await page.mouse.wheel(0,1.5*height);await page.waitForTimeout(650);
       assert.equal((await capture()).phase,'a03-reading');
       await page.reload();await page.waitForFunction(()=>document.querySelector('iframe').contentWindow.modelReady);await page.waitForTimeout(500);
       assert.equal((await capture()).phase,'a03-reading','reload loses position');
+      await page.setViewportSize({width:width===1024?1440:1024,height:768});await page.waitForTimeout(350);
+      const resized=await capture();assert.equal(resized.phase,'a03-reading');
+      assert.ok(resized.copy.y>=0 && resized.copy.y+resized.copy.h<768-65,'resize clips reading copy');
+      await page.setViewportSize({width,height});await page.waitForTimeout(350);
+      await page.emulateMedia({reducedMotion:'reduce'});await page.waitForTimeout(350);
+      const reduced=await capture();assert.equal(reduced.phase,'a03-reading');assert.equal(reduced.copyHidden,'false');
+      assert.ok(reduced.copy.y>=0 && reduced.copy.y+reduced.copy.h<height-65,'reduced motion clips reading copy');
+      await page.screenshot({path:path.join(output,`reduced-${width}x${height}.png`)});
       assert.ok(resources.every(url=>!url.includes('水龙祠壁画素材')&&!url.includes('相关文献')&&!url.includes('Mural-Exhibition')),'unexpected heavy resources');
-      rows.push({width,height,passed:true,a02Diff,heroDiff,states});
+      rows.push({width,height,passed:true,a02Diff,heroDiff,states,resize:true,reducedMotion:true});
       await page.close();
+      } finally { await browser.close(); }
     }
     assert.deepEqual(errors,[]);
     fs.writeFileSync(path.join(output,'results.json'),JSON.stringify({errors,rows},null,2));
-    console.log('PASS: A03 five viewports; readable copy; core-only markers; stable camera; reverse pixels; wheel; reload; no page errors.');
-  } finally { await browser.close(); }
+    console.log('PASS: A03 five viewports; two-line reading heading; readable copy; core-only markers; stable camera; reverse pixels; wheel; reload; resize; reduced motion; no page errors.');
 })().catch(e=>{console.error(e);process.exitCode=1;});
