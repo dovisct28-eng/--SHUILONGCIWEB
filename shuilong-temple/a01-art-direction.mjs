@@ -9,14 +9,14 @@ export function deriveHeroWeight(screens=0) {
 }
 export function createA01ArtDirection(T, {camera,root,scene,renderer,sun,fill,floor}) {
   const cameraRig=createA01Camera(T,camera);
-  const entries=[];
+  const entries=[],meshes=[];
   root.children.filter(g=>!g.name.startsWith('mural-')).forEach(g=>g.traverse(m=>{
-    if(m.isMesh)entries.push(m.material);
+    if(m.isMesh){entries.push(m.material);meshes.push(m);}
   }));
-  const colors={roof:[.47,.54,.63],wood:[.54,.43,.35],brick:[.66,.51,.46],plaster:[1.35,1.37,1.39],stone:[.72,.82,.90],paving:[.74,.77,.79]};
+  const colors={roof:[.53,.54,.53],wood:[.54,.46,.38],brick:[.61,.48,.43],plaster:[1.35,1.37,1.39],stone:[.42,.48,.51],paving:[.74,.77,.79]};
   const surfaces={roof:[.77,.035],wood:[.88,0],brick:[.98,0],plaster:[.98,0],stone:[.94,0],paving:[.95,0]};
   const baseSurfaces=new Map(entries.map(m=>[m,{roughness:m.roughness,metalness:m.metalness}]));
-  const surfaceRig=createA01Materials(T,entries);
+  const surfaceRig=createA01Materials(T,entries,meshes);
   const multiplier=new T.Color(),white=new T.Color(1,1,1),neutral=new T.Color(.46,.51,.56),cameraTarget=new T.Vector3();
   const oldSun=sun.position.clone(),heroSun=new T.Vector3(-16,22,16);
   const sunColor=sun.color.clone(),skyColor=fill.color.clone(),groundColor=fill.groundColor.clone(),fogColor=scene.fog.color.clone();
@@ -25,7 +25,7 @@ export function createA01ArtDirection(T, {camera,root,scene,renderer,sun,fill,fl
     apply(weight,state,line) {
       // A rapid A01→A04 jump must reset FOV before the tour owns camera position.
       const fov=34-2*weight;
-      surfaceRig.apply(weight*(line?.materialWeight??1));
+      surfaceRig.apply(weight, line?.solid??1,weight);
       if(camera.fov!==fov){camera.fov=fov;camera.updateProjectionMatrix();}
       // Called after shared focus restores each base color, so seeks cannot accumulate tint.
       for(const m of entries){const tint=colors[m.userData.textureKey];if(!tint)continue;
@@ -36,12 +36,12 @@ export function createA01ArtDirection(T, {camera,root,scene,renderer,sun,fill,fl
       }
       const lit=weight*(line?.lightingWeight??1);
       renderer.toneMappingExposure=1.18-.20*lit;
-      fill.intensity=1.2-.37*lit;
+      fill.intensity=1.2-.48*lit;
       sun.color.copy(sunColor).lerp(warm,lit);
       fill.color.copy(skyColor).lerp(cool,lit);fill.groundColor.copy(groundColor).lerp(ground,lit);
       scene.fog.color.copy(fogColor).lerp(inkFog,weight);
       sun.position.copy(oldSun).lerp(heroSun,lit);
-      sun.intensity=state.lightIntensity+.95*lit;
+      sun.intensity=state.lightIntensity+1.2*lit;
       scene.fog.density=state.fogDensity+.003*lit;
       floor.material.opacity=.15+.20*lit;
       // The legacy infinite shadow plane writes depth, hiding every downhill slope.
@@ -54,6 +54,7 @@ export function createA01ArtDirection(T, {camera,root,scene,renderer,sun,fill,fl
       cameraTarget.copy(cameraRig.apply(theta,phi,distance,target,weight,line));
     },
     setCameraCandidate: value=>cameraRig.setCandidate(value),
+    dispose:()=>surfaceRig.dispose(),
     getState(){
       root.updateMatrixWorld(true);camera.updateMatrixWorld();
       const point=new T.Vector3(),bounds={left:Infinity,right:-Infinity,top:Infinity,bottom:-Infinity};

@@ -12,25 +12,25 @@ const moduleText=JSON.parse(moduleLine.slice('const moduleText='.length,moduleLi
 const url=s=>`data:text/javascript;base64,${Buffer.from(s).toString('base64')}`;
 const T=await import(url(moduleText.replaceAll('./three.core.js',url(core))));
 
-test('line structure precedes solid; exits before shift and never returns at A02',()=>{
+test('V3 hierarchy completes before directional light; exits before Hero and A02',()=>{
  assert.equal(deriveLineState(0).solid,0);
  assert.ok(deriveLineState(0).lineOpacity>.5);assert.equal(deriveLineState(0).groups.roof,1);
- assert.equal(deriveLineState(.15).groups.hall,1);
+ assert.ok(deriveLineState(.15).groups.hall<1);
  assert.equal(deriveLineState(.04).groups.roof,1);
  assert.ok(deriveLineState(.15).groups.court<1);
- const line=deriveLineState(.48);
+ const line=deriveLineState(.58);
  assert.ok(Object.values(line.groups).every(n=>n===1));
  assert.ok(line.solid<.12&&line.lineOpacity===1);
- const overlay=deriveLineState(.54);
+ const overlay=deriveLineState(.64);
  assert.ok(overlay.solid>.3&&overlay.solid<.9&&overlay.lineOpacity>.2);
- for(const p of [.65,.82,1,2]){assert.equal(deriveLineState(p).solid,1);assert.equal(deriveLineState(p).lineOpacity,0);}
+ for(const p of [.72,.82,1,2]){assert.equal(deriveLineState(p).solid,1);assert.equal(deriveLineState(p).lineOpacity,0);}
 });
 test('forward/reverse, clamped input and reduced motion are deterministic',()=>{
  for(const p of [0,.1,.2,.35,.47,.64,1]){
   const before=deriveLineState(p);deriveLineState(1);deriveLineState(0);
   assert.deepEqual(deriveLineState(p),before);
   const reduced=deriveLineState(p,true);assert.equal(reduced.depth,0);
-  assert.equal(reduced.solid,before.solid);assert.deepEqual(reduced.groups,before.groups);
+  assert.equal(reduced.solid,1);assert.equal(reduced.lineOpacity,0);assert.ok(Object.values(reduced.groups).every(n=>n===1));
  }
  assert.equal(deriveLineState(-1).progress,0);assert.equal(deriveLineState(NaN).progress,0);
 });
@@ -63,10 +63,10 @@ test('standalone line/data copies match modules; no timers, canvas or extra RAF'
 });
 
 test('material and light arrive after structure, before the environmental climax',()=>{
- const structure=deriveLineState(.48),solid=deriveLineState(.55),material=deriveLineState(.60),complete=deriveLineState(.65);
+ const structure=deriveLineState(.54),solid=deriveLineState(.64),material=deriveLineState(.70),complete=deriveLineState(.82);
  assert.equal(structure.materialWeight,0);assert.equal(structure.lightingWeight,0);
- assert.ok(solid.solid>.5&&solid.materialWeight<.15);
- assert.ok(material.materialWeight>.9&&material.environmentWeight<.05);
+ assert.ok(solid.solid>.3&&solid.solid<.9&&solid.environmentWeight===0);
+ assert.equal(material.materialWeight,1);assert.equal(material.environmentWeight,0);
  assert.equal(complete.environmentWeight,1);assert.equal(complete.lightingWeight,1);
 });
 
@@ -82,7 +82,7 @@ test('A01 restores camera, lighting and base materials at A02, without touching 
  focus(visualState(8));const material=root.children[0].children[0].material,base=material.color.clone(),baseRoughness=material.roughness,baseMetalness=material.metalness;
  const originalColors={sun:sun.color.clone(),sky:fill.color.clone(),ground:fill.groundColor.clone(),fog:scene.fog.color.clone()};
  const seek=n=>{const state=visualState(n);focus(state);art.apply(deriveHeroWeight(n),state,deriveLineState(1));art.camera(4.05,.68,54,target,deriveHeroWeight(n));};
- seek(5.7);const hero=art.getState();assert.equal(camera.fov,32);assert.equal(fill.intensity,.83);
+ seek(5.7);const hero=art.getState();assert.equal(camera.fov,32);assert.equal(fill.intensity,.72);
  seek(8);assert.ok(root.children[0].children[0].material.color.equals(base));assert.equal(camera.fov,34);assert.equal(renderer.toneMappingExposure,1.18);assert.equal(material.roughness,baseRoughness);assert.equal(material.metalness,baseMetalness);assert.ok(sun.color.equals(originalColors.sun)&&fill.color.equals(originalColors.sky)&&fill.groundColor.equals(originalColors.ground)&&scene.fog.color.equals(originalColors.fog));assert.equal(fill.intensity,1.2);assert.deepEqual(sun.position.toArray(),[-19,23,-22]);
  assert.ok(root.children[1].children[0].material.color.equals(mural));
  seek(5.7);assert.deepEqual(art.getState(),hero);
@@ -93,9 +93,9 @@ test('near camera pulls back continuously and reduced motion retains the full co
  const camera=new T.PerspectiveCamera(34,1.6,.1,180),scene=new T.Scene();scene.fog=new T.FogExp2();const sun=new T.DirectionalLight(),fill=new T.HemisphereLight();
  const art=createA01ArtDirection(T,{root:new T.Group(),camera,scene,sun,fill,renderer:{},floor:{material:{}}}),target=new T.Vector3(0,0,-1.75);
  art.camera(.28,.68,58,target,1,deriveLineState(.04));const near=art.getState();
- art.camera(.28,.68,58,target,1,deriveLineState(.20));const whole=art.getState();assert.ok(near.target[2]<-10);assert.equal(whole.target[2],-1.75);
+ art.camera(.28,.68,58,target,1,deriveLineState(.48));const whole=art.getState();assert.ok(near.target[2]<-10);assert.equal(whole.target[2],-1.75);
  art.camera(.28,.68,58,target,1,deriveLineState(.04,true));assert.deepEqual(art.getState().target,whole.target);
  // Four percent macro hold shortens the continuous pullback; bound every 0.1% step.
- let previous=null;for(let p=0;p<=.201;p+=.001){art.camera(.28,.68,58,target,1,deriveLineState(p));const position=camera.position.clone();if(previous)assert.ok(position.distanceTo(previous)<.5);previous=position;}
+ let previous=null;for(let p=0;p<=.49;p+=.001){art.camera(4.05,.68,54,target,1,deriveLineState(p));const position=camera.position.clone();if(previous)assert.ok(position.distanceTo(previous)<.8);previous=position;}
  art.camera(.28,.68,58,target,1,deriveLineState(.04));assert.deepEqual(art.getState(),near);
 });

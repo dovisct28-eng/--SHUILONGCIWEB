@@ -1,0 +1,14 @@
+# A01 V3 remote landscape matte
+
+Created 2026-10-03 with the built-in imagegen tool (imagegen skill). This is an imaginary narrative karst valley, not evidence of Shuilong Temple's actual surrounding geography. No temple, architectural elements or murals were generated. The unchanged project GLB, near terrain, vegetation and ground fog are rendered independently.
+
+- Generated source: `C:/Users/dovis/.codex/generated_images/01a100a6-f37f-7280-9e16-e7c9f35e1b0c/exec-0b4f7d66-5d59-4f00-83fe-b813ba02afcd.png` (retained locally; not shipped).
+- Source PNG SHA256: `187298427d4a41320d29aae9bfa7693372208368cc022e79d5c0bd99a10eae84`.
+- Web asset: `karst-valley.webp`, 1586 × 992, 102,818 bytes, Sharp WebP quality 82 / effort 6, no color or scene edits.
+- WebP SHA256: `9a4c0ded91822f6794dc22b1e1e6e80daf5ab4db188953fe01f9afa88aa3dba7`.
+- Two masked DOM views share this one local URL; sky and valley establish at separate scroll intervals. No remote URL or API is required when running the page.
+- The V2 asset is retained as a historical reference. This asset is an A01 review candidate, not a frozen project visual decision.
+
+## Generation prompt
+
+Use case: stylized-concept. Asset type: distant environment matte for a PC Web scroll-driven Chinese heritage architecture scene, wide 16:10 composition. Primary request: an imaginary restrained ink-gray karst valley at sunset, with realistic atmospheric distance and muted painterly natural textures. It is an artistic narrative setting, not a reconstruction of any real geographic site. No architecture, buildings, temples, walls, paving, roads, people, lettering, symbols or interface. Camera: elevated oblique view looking across a quiet valley, upper-right soft pale amber sun at 86% x / 12% y. Leftmost 35% is a very dark low-frequency blue-gray forested slope with subdued detail and open space for separate overlaid text; do not put sharp bright branches there. Middle-right 40–85% x / 35–75% y has a low-contrast softly lit gently sloping gray-green clearing, a calm space where a separate real-time temple will be composited. Do not paint a temple or its shadow. Long distances unfold behind that clearing: sparse mid-distance groves, valley mist between low karst peaks, softer distant ridges, then sunset sky. Warm muted beige light from upper right, cool ink-gray shadows, faint luminous mist ribbons. Foreground outer bottom/right corners contain subdued dark vegetation masses; avoid a cliff framing the central clearing. Balanced plausible modest valley scale, no towering epic fantasy cliffs. Sky and haze are pale warm gray, greens desaturated. Quiet heritage exhibition mood, no fantasy poster, no neon, no oversaturated orange, no decorative paper grain. Keep the center of the lower-right clearing uncluttered so foreground trees and ground fog can be rendered separately in 3D. Deliver a polished backdrop with softer details near the compositing zone, not a standalone dramatic landscape hero.

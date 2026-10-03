@@ -1,0 +1,560 @@
+{
+  "baseline": "edd1708f4b97223884e47c8a416f033ba91431ae",
+  "browser": "154.0.8037.93",
+  "samples": [
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "sample": 0,
+      "enabled": false,
+      "modelMs": 3332,
+      "readyMs": 3428,
+      "requests": 42,
+      "fonts": 2,
+      "matte": 1,
+      "medianFrameMs": 8.5,
+      "p95FrameMs": 816.5,
+      "stats": {
+        "geometries": 53,
+        "textures": 22,
+        "calls": 46,
+        "triangles": 172798,
+        "lines": 0,
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1210,
+            756
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 282,
+            "calls": 46,
+            "triangles": 172798,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 10977120,
+          "multisampleBytes": 21954240,
+          "targetBytes": 32931360
+        }
+      },
+      "memory": {
+        "used": 42686370,
+        "total": 97894782
+      }
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "sample": 0,
+      "enabled": true,
+      "modelMs": 2551,
+      "readyMs": 2636,
+      "requests": 42,
+      "fonts": 2,
+      "matte": 1,
+      "medianFrameMs": 4.300000000000182,
+      "p95FrameMs": 16.600000000000364,
+      "stats": {
+        "geometries": 53,
+        "textures": 22,
+        "calls": 48,
+        "triangles": 199154,
+        "lines": 0,
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1210,
+            756
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 257,
+            "calls": 48,
+            "triangles": 199154,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 10977120,
+          "multisampleBytes": 21954240,
+          "targetBytes": 32931360
+        }
+      },
+      "memory": {
+        "used": 47312381,
+        "total": 98212161
+      }
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "sample": 1,
+      "enabled": false,
+      "modelMs": 2790,
+      "readyMs": 2914,
+      "requests": 42,
+      "fonts": 2,
+      "matte": 1,
+      "medianFrameMs": 12.399999999999636,
+      "p95FrameMs": 229.0999999999999,
+      "stats": {
+        "geometries": 53,
+        "textures": 22,
+        "calls": 46,
+        "triangles": 172798,
+        "lines": 0,
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1210,
+            756
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 266,
+            "calls": 46,
+            "triangles": 172798,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 10977120,
+          "multisampleBytes": 21954240,
+          "targetBytes": 32931360
+        }
+      },
+      "memory": {
+        "used": 45178548,
+        "total": 97632260
+      }
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "sample": 1,
+      "enabled": true,
+      "modelMs": 2815,
+      "readyMs": 2901,
+      "requests": 42,
+      "fonts": 2,
+      "matte": 1,
+      "medianFrameMs": 4.200000000000728,
+      "p95FrameMs": 16.699999999999818,
+      "stats": {
+        "geometries": 53,
+        "textures": 22,
+        "calls": 48,
+        "triangles": 199154,
+        "lines": 0,
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1210,
+            756
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 262,
+            "calls": 48,
+            "triangles": 199154,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 10977120,
+          "multisampleBytes": 21954240,
+          "targetBytes": 32931360
+        }
+      },
+      "memory": {
+        "used": 48256287,
+        "total": 98474135
+      }
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "sample": 2,
+      "enabled": false,
+      "modelMs": 2888,
+      "readyMs": 2982,
+      "requests": 42,
+      "fonts": 2,
+      "matte": 1,
+      "medianFrameMs": 8.400000000000091,
+      "p95FrameMs": 241.60000000000036,
+      "stats": {
+        "geometries": 53,
+        "textures": 22,
+        "calls": 46,
+        "triangles": 172798,
+        "lines": 0,
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1210,
+            756
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 271,
+            "calls": 46,
+            "triangles": 172798,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 10977120,
+          "multisampleBytes": 21954240,
+          "targetBytes": 32931360
+        }
+      },
+      "memory": {
+        "used": 43244516,
+        "total": 97632256
+      }
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "sample": 2,
+      "enabled": true,
+      "modelMs": 2684,
+      "readyMs": 2750,
+      "requests": 42,
+      "fonts": 2,
+      "matte": 1,
+      "medianFrameMs": 4.300000000000182,
+      "p95FrameMs": 16.699999999999818,
+      "stats": {
+        "geometries": 53,
+        "textures": 22,
+        "calls": 48,
+        "triangles": 199154,
+        "lines": 0,
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1210,
+            756
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 265,
+            "calls": 48,
+            "triangles": 199154,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 10977120,
+          "multisampleBytes": 21954240,
+          "targetBytes": 32931360
+        }
+      },
+      "memory": {
+        "used": 47480995,
+        "total": 98736459
+      }
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "sample": 0,
+      "enabled": false,
+      "modelMs": 2322,
+      "readyMs": 2392,
+      "requests": 42,
+      "fonts": 2,
+      "matte": 1,
+      "medianFrameMs": 8.300000000000182,
+      "p95FrameMs": 216.5,
+      "stats": {
+        "geometries": 53,
+        "textures": 22,
+        "calls": 46,
+        "triangles": 172798,
+        "lines": 0,
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1500,
+            907
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 276,
+            "calls": 46,
+            "triangles": 172798,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 16326000,
+          "multisampleBytes": 32652000,
+          "targetBytes": 48978000
+        }
+      },
+      "memory": {
+        "used": 44086949,
+        "total": 98156553
+      }
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "sample": 0,
+      "enabled": true,
+      "modelMs": 2445,
+      "readyMs": 2501,
+      "requests": 42,
+      "fonts": 2,
+      "matte": 1,
+      "medianFrameMs": 4.200000000000273,
+      "p95FrameMs": 16.699999999999818,
+      "stats": {
+        "geometries": 53,
+        "textures": 22,
+        "calls": 48,
+        "triangles": 199154,
+        "lines": 0,
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1500,
+            907
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 257,
+            "calls": 48,
+            "triangles": 199154,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 16326000,
+          "multisampleBytes": 32652000,
+          "targetBytes": 48978000
+        }
+      },
+      "memory": {
+        "used": 47174613,
+        "total": 97687869
+      }
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "sample": 1,
+      "enabled": false,
+      "modelMs": 2332,
+      "readyMs": 2411,
+      "requests": 42,
+      "fonts": 2,
+      "matte": 1,
+      "medianFrameMs": 8.400000000000091,
+      "p95FrameMs": 208.30000000000018,
+      "stats": {
+        "geometries": 53,
+        "textures": 22,
+        "calls": 46,
+        "triangles": 172798,
+        "lines": 0,
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1500,
+            907
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 269,
+            "calls": 46,
+            "triangles": 172798,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 16326000,
+          "multisampleBytes": 32652000,
+          "targetBytes": 48978000
+        }
+      },
+      "memory": {
+        "used": 43388021,
+        "total": 98156553
+      }
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "sample": 1,
+      "enabled": true,
+      "modelMs": 2584,
+      "readyMs": 2678,
+      "requests": 42,
+      "fonts": 2,
+      "matte": 1,
+      "medianFrameMs": 4.300000000000182,
+      "p95FrameMs": 20.799999999999727,
+      "stats": {
+        "geometries": 53,
+        "textures": 22,
+        "calls": 48,
+        "triangles": 199154,
+        "lines": 0,
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1500,
+            907
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 278,
+            "calls": 48,
+            "triangles": 199154,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 16326000,
+          "multisampleBytes": 32652000,
+          "targetBytes": 48978000
+        }
+      },
+      "memory": {
+        "used": 47792827,
+        "total": 98212027
+      }
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "sample": 2,
+      "enabled": false,
+      "modelMs": 2882,
+      "readyMs": 2989,
+      "requests": 42,
+      "fonts": 2,
+      "matte": 1,
+      "medianFrameMs": 8.399999999999636,
+      "p95FrameMs": 250.10000000000036,
+      "stats": {
+        "geometries": 53,
+        "textures": 22,
+        "calls": 46,
+        "triangles": 172798,
+        "lines": 0,
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1500,
+            907
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 285,
+            "calls": 46,
+            "triangles": 172798,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 16326000,
+          "multisampleBytes": 32652000,
+          "targetBytes": 48978000
+        }
+      },
+      "memory": {
+        "used": 43798845,
+        "total": 97894409
+      }
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "sample": 2,
+      "enabled": true,
+      "modelMs": 2775,
+      "readyMs": 2880,
+      "requests": 42,
+      "fonts": 2,
+      "matte": 1,
+      "medianFrameMs": 4.300000000000182,
+      "p95FrameMs": 12.600000000000364,
+      "stats": {
+        "geometries": 53,
+        "textures": 22,
+        "calls": 48,
+        "triangles": 199154,
+        "lines": 0,
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1500,
+            907
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 272,
+            "calls": 48,
+            "triangles": 199154,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 16326000,
+          "multisampleBytes": 32652000,
+          "targetBytes": 48978000
+        }
+      },
+      "memory": {
+        "used": 46871011,
+        "total": 95328583
+      }
+    }
+  ],
+  "errors": [],
+  "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+}

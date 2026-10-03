@@ -1,6 +1,6 @@
 # 模块 A｜连续叙事入口与 A01 高保真开屏
 
-2026-10-03 Cinematic v2：喀斯特远谷、同空间坡面/植被/雾、六类表面变化与两遍 HDR 深度 AO 后期已实现。建筑源几何、壁画和 A02—A08 规则保留；当前是待用户审图的版本，尚未视觉冻结。详见 [实现说明](../../docs/A01_CINEMATIC_V2.md) 与 [截图及技术验收](../../docs/validation/a01-cinematic-v2/README.md)。新增检查：`cinematic-browser-check.cjs`、`cinematic-performance-check.cjs`、`cinematic-protection-check.cjs`；后者需要模块 B 的 3000 服务，性能脚本应单独运行。
+2026-10-03 当前 V3：屋檐局部发现 → 曲线后撤 → 分级墨线 → 定向光扫实体化 → 雾与山谷 → Hero。保持真实 GLB、5 屏动画、1.2 屏阅读及一次回中；减少动态效果直接显示稳定 Hero。详见 [V3 实现说明](../../docs/A01_CINEMATIC_V3.md) 与 [审图/技术验收](../../docs/validation/a01-cinematic-v3/README.md)。新增检查为 `v3-browser-check.cjs`、`v3-performance-check.cjs`、`v3-regression-check.cjs`、`v3-pass-check.cjs` 和 `v3-contact.cjs`，需要 Playwright/PNGJS/Sharp 可解析；性能脚本单独运行。旧版本说明与证据保持其历史含义，不作为 V3 的验收命令。当前版本待用户视觉审查，未视觉冻结。
 
 双击仓库根目录的 `启动模块A原型.bat`，或运行 `node module-a/a01/server.mjs` 后打开 `http://127.0.0.1:4173/module-a/a01/`。
 

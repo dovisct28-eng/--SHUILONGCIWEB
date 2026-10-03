@@ -27,6 +27,9 @@ export function createA01Post(T,renderer,scene,camera){
       }`});
   const geometry=new T.PlaneGeometry(2,2),quad=new T.Mesh(geometry,material);quad.frustumCulled=false;screen.add(quad);
   let enabled=false,error=null,last={calls:0,triangles:0,lines:0},size=[1,1],rendering=false;
+  // Three logs shader errors by default; make a failed post program observable
+  // inside our existing render catch, so it cannot hide a healthy scene.
+  const shaderFailure=(gl,program)=>{throw Error(`A01 post shader compilation failed: ${gl.getProgramInfoLog(program)}`);};
   return {
     apply(weight,line){uniforms.weight.value=weight*(line?.solid??1);enabled=weight>.001&&(line?.solid??1)>.02;},
     resize(width,height){const dpr=Math.min(renderer.getPixelRatio(),1.5);size=[Math.max(1,Math.round(width*dpr)),Math.max(1,Math.round(height*dpr))];target.setSize(...size);uniforms.texel.value.set(1/size[0],1/size[1]);},
@@ -34,7 +37,9 @@ export function createA01Post(T,renderer,scene,camera){
       const autoReset=renderer.info.autoReset;try{rendering=true;renderer.info.autoReset=true;
         // Match the original renderer's scene counters (shadow traversal excluded).
         renderer.setRenderTarget(target);renderer.clear();renderer.render(scene,camera);const sceneStats={...renderer.info.render};
-        renderer.setRenderTarget(null);renderer.clear();renderer.render(screen,quadCamera);last={...renderer.info.render,calls:sceneStats.calls+renderer.info.render.calls,triangles:sceneStats.triangles+renderer.info.render.triangles,lines:sceneStats.lines+renderer.info.render.lines};
+        renderer.setRenderTarget(null);renderer.clear();const previousShaderError=renderer.debug.onShaderError;
+        try{renderer.debug.onShaderError=shaderFailure;renderer.render(screen,quadCamera);}finally{renderer.debug.onShaderError=previousShaderError;}
+        last={...renderer.info.render,calls:sceneStats.calls+renderer.info.render.calls,triangles:sceneStats.triangles+renderer.info.render.triangles,lines:sceneStats.lines+renderer.info.render.lines};
         Object.assign(renderer.info.render,last);
       }catch(e){error=String(e);renderer.setRenderTarget(null);renderer.render(scene,camera);last={...renderer.info.render};}finally{renderer.info.autoReset=autoReset;rendering=false;}},
     getState(){return {enabled:enabled&&!error,error,passes:enabled&&!error?2:1,size,aoSamples:12,stats:last,colorDepthBytes:size[0]*size[1]*12,multisampleBytes:size[0]*size[1]*12*target.samples,targetBytes:size[0]*size[1]*12*(1+target.samples)};},

@@ -1,0 +1,954 @@
+[
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "progress": 64,
+    "art": {
+      "position": [
+        -24.562694992950668,
+        21.532222162738286,
+        -25.211763957786985
+      ],
+      "target": [
+        0,
+        -1.25,
+        -1.75
+      ],
+      "fov": 32,
+      "aspect": 1.6005291005291005,
+      "bounds": {
+        "left": 0.044858503505474434,
+        "right": 0.8559282849191849,
+        "top": 0.10583920054141843,
+        "bottom": 0.959043859534048
+      },
+      "heroWeight": 1,
+      "lighting": {
+        "fill": 0.9602399999999998,
+        "sun": 3.9156,
+        "position": [
+          -17.055999999999997,
+          22.352,
+          2.624000000000013
+        ]
+      },
+      "exposure": 1.0503999999999998
+    },
+    "line": {
+      "progress": 0.64,
+      "growth": 0.9777777777777777,
+      "solid": 0.5000000000000007,
+      "reducedMotion": false,
+      "solidGrowth": 0.5000000000000007,
+      "materialWeight": 0.5000000000000007,
+      "lightingWeight": 0.6480000000000004,
+      "lineOpacity": 1,
+      "environmentWeight": 0,
+      "assembly": 1,
+      "depth": 0,
+      "groups": [
+        {
+          "key": "axes",
+          "drawCount": 6,
+          "opacity": 0.28,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "locators",
+          "drawCount": 6,
+          "opacity": 0.4,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "hall",
+          "drawCount": 102,
+          "opacity": 1,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "west",
+          "drawCount": 16,
+          "opacity": 1,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "east",
+          "drawCount": 16,
+          "opacity": 1,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "stage",
+          "drawCount": 24,
+          "opacity": 1,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "entrance",
+          "drawCount": 216,
+          "opacity": 1,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "roof",
+          "drawCount": 840,
+          "opacity": 1,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "timber",
+          "drawCount": 202,
+          "opacity": 0.7,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "court",
+          "drawCount": 144,
+          "opacity": 0.42,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "detail",
+          "drawCount": 552,
+          "opacity": 0.48,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "hierarchy": {
+        "Primary": 299,
+        "Secondary": 409,
+        "Detail": 354
+      },
+      "visible": true,
+      "geometries": 11,
+      "materials": 11,
+      "segments": 1062,
+      "drawCalls": 11,
+      "disposed": false,
+      "error": null
+    },
+    "environment": {
+      "weight": 0,
+      "establish": 0.9803240740740741,
+      "trees": 192,
+      "visible": false,
+      "layers": [
+        "Foreground",
+        "NearAtmosphere",
+        "Terrain",
+        "MidgroundGroves",
+        "FarHaze"
+      ],
+      "triangles": 62088,
+      "drawCalls": 8
+    },
+    "post": {
+      "enabled": true,
+      "error": null,
+      "passes": 2,
+      "size": [
+        1210,
+        756
+      ],
+      "aoSamples": 12,
+      "stats": {
+        "frame": 232,
+        "calls": 53,
+        "triangles": 90262,
+        "points": 0,
+        "lines": 1062
+      },
+      "colorDepthBytes": 10977120,
+      "multisampleBytes": 21954240,
+      "targetBytes": 32931360
+    },
+    "stats": {
+      "geometries": 53,
+      "textures": 22,
+      "calls": 53,
+      "triangles": 90262,
+      "lines": 1062,
+      "post": {
+        "enabled": true,
+        "error": null,
+        "passes": 2,
+        "size": [
+          1210,
+          756
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 232,
+          "calls": 53,
+          "triangles": 90262,
+          "points": 0,
+          "lines": 1062
+        },
+        "colorDepthBytes": 10977120,
+        "multisampleBytes": 21954240,
+        "targetBytes": 32931360
+      }
+    },
+    "errors": []
+  },
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "progress": 70,
+    "art": {
+      "position": [
+        -24.562694992950668,
+        21.532222162738286,
+        -25.211763957786985
+      ],
+      "target": [
+        0,
+        -1.25,
+        -1.75
+      ],
+      "fov": 32,
+      "aspect": 1.6005291005291005,
+      "bounds": {
+        "left": 0.044858503505474434,
+        "right": 0.8559282849191849,
+        "top": 0.10583920054141843,
+        "bottom": 0.959043859534048
+      },
+      "heroWeight": 1,
+      "lighting": {
+        "fill": 0.83,
+        "sun": 4.25,
+        "position": [
+          -16,
+          22,
+          16
+        ]
+      },
+      "exposure": 0.98
+    },
+    "line": {
+      "progress": 0.7,
+      "growth": 1,
+      "solid": 1,
+      "reducedMotion": false,
+      "solidGrowth": 1,
+      "materialWeight": 1,
+      "lightingWeight": 1,
+      "lineOpacity": 0.35200000000000264,
+      "environmentWeight": 0,
+      "assembly": 1,
+      "depth": 0,
+      "groups": [
+        {
+          "key": "axes",
+          "drawCount": 6,
+          "opacity": 0.09856000000000074,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "locators",
+          "drawCount": 6,
+          "opacity": 0.14080000000000106,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "hall",
+          "drawCount": 102,
+          "opacity": 0.35200000000000264,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "west",
+          "drawCount": 16,
+          "opacity": 0.35200000000000264,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "east",
+          "drawCount": 16,
+          "opacity": 0.35200000000000264,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "stage",
+          "drawCount": 24,
+          "opacity": 0.35200000000000264,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "entrance",
+          "drawCount": 216,
+          "opacity": 0.35200000000000264,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "roof",
+          "drawCount": 840,
+          "opacity": 0.35200000000000264,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "timber",
+          "drawCount": 202,
+          "opacity": 0.24640000000000184,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "court",
+          "drawCount": 144,
+          "opacity": 0.1478400000000011,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "detail",
+          "drawCount": 552,
+          "opacity": 0.16896000000000128,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "hierarchy": {
+        "Primary": 299,
+        "Secondary": 409,
+        "Detail": 354
+      },
+      "visible": true,
+      "geometries": 11,
+      "materials": 11,
+      "segments": 1062,
+      "drawCalls": 11,
+      "disposed": false,
+      "error": null
+    },
+    "environment": {
+      "weight": 0,
+      "establish": 1,
+      "trees": 192,
+      "visible": false,
+      "layers": [
+        "Foreground",
+        "NearAtmosphere",
+        "Terrain",
+        "MidgroundGroves",
+        "FarHaze"
+      ],
+      "triangles": 62088,
+      "drawCalls": 8
+    },
+    "post": {
+      "enabled": true,
+      "error": null,
+      "passes": 2,
+      "size": [
+        1210,
+        756
+      ],
+      "aoSamples": 12,
+      "stats": {
+        "frame": 292,
+        "calls": 48,
+        "triangles": 83062,
+        "points": 0,
+        "lines": 1062
+      },
+      "colorDepthBytes": 10977120,
+      "multisampleBytes": 21954240,
+      "targetBytes": 32931360
+    },
+    "stats": {
+      "geometries": 53,
+      "textures": 22,
+      "calls": 48,
+      "triangles": 83062,
+      "lines": 1062,
+      "post": {
+        "enabled": true,
+        "error": null,
+        "passes": 2,
+        "size": [
+          1210,
+          756
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 292,
+          "calls": 48,
+          "triangles": 83062,
+          "points": 0,
+          "lines": 1062
+        },
+        "colorDepthBytes": 10977120,
+        "multisampleBytes": 21954240,
+        "targetBytes": 32931360
+      }
+    },
+    "errors": []
+  },
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "progress": 82,
+    "art": {
+      "position": [
+        -24.562694992950668,
+        21.532222162738286,
+        -25.211763957786985
+      ],
+      "target": [
+        0,
+        -1.25,
+        -1.75
+      ],
+      "fov": 32,
+      "aspect": 1.6005291005291005,
+      "bounds": {
+        "left": 0.044858503505474434,
+        "right": 0.8559282849191849,
+        "top": 0.10583920054141843,
+        "bottom": 0.959043859534048
+      },
+      "heroWeight": 1,
+      "lighting": {
+        "fill": 0.83,
+        "sun": 4.25,
+        "position": [
+          -16,
+          22,
+          16
+        ]
+      },
+      "exposure": 0.98
+    },
+    "line": {
+      "progress": 0.82,
+      "growth": 1,
+      "solid": 1,
+      "reducedMotion": false,
+      "solidGrowth": 1,
+      "materialWeight": 1,
+      "lightingWeight": 1,
+      "lineOpacity": 0,
+      "environmentWeight": 1,
+      "assembly": 1,
+      "depth": 0,
+      "groups": [
+        {
+          "key": "axes",
+          "drawCount": 6,
+          "opacity": 0,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "locators",
+          "drawCount": 6,
+          "opacity": 0,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "hall",
+          "drawCount": 102,
+          "opacity": 0,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "west",
+          "drawCount": 16,
+          "opacity": 0,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "east",
+          "drawCount": 16,
+          "opacity": 0,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "stage",
+          "drawCount": 24,
+          "opacity": 0,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "entrance",
+          "drawCount": 216,
+          "opacity": 0,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "roof",
+          "drawCount": 840,
+          "opacity": 0,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "timber",
+          "drawCount": 202,
+          "opacity": 0,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "court",
+          "drawCount": 144,
+          "opacity": 0,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "detail",
+          "drawCount": 552,
+          "opacity": 0,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "hierarchy": {
+        "Primary": 299,
+        "Secondary": 409,
+        "Detail": 354
+      },
+      "visible": false,
+      "geometries": 11,
+      "materials": 11,
+      "segments": 1062,
+      "drawCalls": 0,
+      "disposed": false,
+      "error": null
+    },
+    "environment": {
+      "weight": 1,
+      "establish": 1,
+      "trees": 192,
+      "visible": true,
+      "layers": [
+        "Foreground",
+        "NearAtmosphere",
+        "Terrain",
+        "MidgroundGroves",
+        "FarHaze"
+      ],
+      "triangles": 62088,
+      "drawCalls": 8
+    },
+    "post": {
+      "enabled": true,
+      "error": null,
+      "passes": 2,
+      "size": [
+        1210,
+        756
+      ],
+      "aoSamples": 12,
+      "stats": {
+        "frame": 526,
+        "calls": 46,
+        "triangles": 172798,
+        "points": 0,
+        "lines": 0
+      },
+      "colorDepthBytes": 10977120,
+      "multisampleBytes": 21954240,
+      "targetBytes": 32931360
+    },
+    "stats": {
+      "geometries": 53,
+      "textures": 22,
+      "calls": 46,
+      "triangles": 172798,
+      "lines": 0,
+      "post": {
+        "enabled": true,
+        "error": null,
+        "passes": 2,
+        "size": [
+          1210,
+          756
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 526,
+          "calls": 46,
+          "triangles": 172798,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 10977120,
+        "multisampleBytes": 21954240,
+        "targetBytes": 32931360
+      }
+    },
+    "errors": []
+  },
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "progress": 100,
+    "art": {
+      "position": [
+        -24.562694992950668,
+        21.532222162738286,
+        -25.211763957786985
+      ],
+      "target": [
+        0,
+        -1.25,
+        -1.75
+      ],
+      "fov": 32,
+      "aspect": 1.6005291005291005,
+      "bounds": {
+        "left": 0.044858503505474434,
+        "right": 0.8559282849191849,
+        "top": 0.10583920054141843,
+        "bottom": 0.959043859534048
+      },
+      "heroWeight": 1,
+      "lighting": {
+        "fill": 0.83,
+        "sun": 4.25,
+        "position": [
+          -16,
+          22,
+          16
+        ]
+      },
+      "exposure": 0.98
+    },
+    "line": {
+      "progress": 1,
+      "growth": 1,
+      "solid": 1,
+      "reducedMotion": false,
+      "solidGrowth": 1,
+      "materialWeight": 1,
+      "lightingWeight": 1,
+      "lineOpacity": 0,
+      "environmentWeight": 1,
+      "assembly": 1,
+      "depth": 0,
+      "groups": [
+        {
+          "key": "axes",
+          "drawCount": 6,
+          "opacity": 0,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "locators",
+          "drawCount": 6,
+          "opacity": 0,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "hall",
+          "drawCount": 102,
+          "opacity": 0,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "west",
+          "drawCount": 16,
+          "opacity": 0,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "east",
+          "drawCount": 16,
+          "opacity": 0,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "stage",
+          "drawCount": 24,
+          "opacity": 0,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "entrance",
+          "drawCount": 216,
+          "opacity": 0,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "roof",
+          "drawCount": 840,
+          "opacity": 0,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "timber",
+          "drawCount": 202,
+          "opacity": 0,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "court",
+          "drawCount": 144,
+          "opacity": 0,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        },
+        {
+          "key": "detail",
+          "drawCount": 552,
+          "opacity": 0,
+          "position": [
+            0,
+            0,
+            0
+          ]
+        }
+      ],
+      "hierarchy": {
+        "Primary": 299,
+        "Secondary": 409,
+        "Detail": 354
+      },
+      "visible": false,
+      "geometries": 11,
+      "materials": 11,
+      "segments": 1062,
+      "drawCalls": 0,
+      "disposed": false,
+      "error": null
+    },
+    "environment": {
+      "weight": 1,
+      "establish": 1,
+      "trees": 192,
+      "visible": true,
+      "layers": [
+        "Foreground",
+        "NearAtmosphere",
+        "Terrain",
+        "MidgroundGroves",
+        "FarHaze"
+      ],
+      "triangles": 62088,
+      "drawCalls": 8
+    },
+    "post": {
+      "enabled": true,
+      "error": null,
+      "passes": 2,
+      "size": [
+        1210,
+        756
+      ],
+      "aoSamples": 12,
+      "stats": {
+        "frame": 984,
+        "calls": 46,
+        "triangles": 172798,
+        "points": 0,
+        "lines": 0
+      },
+      "colorDepthBytes": 10977120,
+      "multisampleBytes": 21954240,
+      "targetBytes": 32931360
+    },
+    "stats": {
+      "geometries": 53,
+      "textures": 22,
+      "calls": 46,
+      "triangles": 172798,
+      "lines": 0,
+      "post": {
+        "enabled": true,
+        "error": null,
+        "passes": 2,
+        "size": [
+          1210,
+          756
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 984,
+          "calls": 46,
+          "triangles": 172798,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 10977120,
+        "multisampleBytes": 21954240,
+        "targetBytes": 32931360
+      }
+    },
+    "errors": []
+  }
+]

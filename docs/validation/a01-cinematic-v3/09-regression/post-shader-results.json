@@ -1,0 +1,13 @@
+{
+  "browser": "154.0.8037.93",
+  "viewports": [],
+  "fallbacks": [
+    {
+      "mode": "post-shader",
+      "heroAvailable": true,
+      "a02Available": true,
+      "postError": "Error: A01 post shader compilation failed: Fragment shader is not compiled.\n"
+    }
+  ],
+  "errors": []
+}

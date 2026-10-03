@@ -63,10 +63,10 @@ function render() {
   const transition = smooth(state.transition);
   const presentation = derivePresentation({
     ...state,
-    shift,
-    copy,
+    shift: reducedMotion.matches ? 1 : shift,
+    copy: reducedMotion.matches ? 1 : copy,
     transition,
-    travel,
+    travel: reducedMotion.matches ? 1 : travel,
   }, innerWidth);
 
   const api = modelFrame.contentWindow?.shuilongTemple;
@@ -75,11 +75,11 @@ function render() {
   stage.style.setProperty('--hero-composition', 1 - transition);
   const narrow = innerWidth <= 760;
   stage.style.setProperty('--model-x', `${presentation.modelX + (narrow ? 0 : 19) * theme.composition}vw`);
-  stage.style.setProperty('--model-scale', mix(0.72, 0.83, state.growth) - (narrow ? .35 : .17) * theme.composition);
+  stage.style.setProperty('--model-scale', (hasLines ? .83 : mix(0.72, 0.83, state.growth)) - (narrow ? .35 : .17) * theme.composition);
   modelFrame.parentElement.style.top = `${(narrow ? 43 : 50) + (narrow ? 35 : 0) * theme.composition}%`;
   stage.style.setProperty('--copy-opacity', presentation.copyVisibility);
-  stage.style.setProperty('--copy-x', `${mix(-12, 0, copy)}px`);
-  stage.style.setProperty('--intro-mark-opacity', presentation.introMarkVisibility);
+  stage.style.setProperty('--copy-x', `${reducedMotion.matches ? 0 : mix(-12, 0, copy)}px`);
+  stage.style.setProperty('--intro-mark-opacity', hasLines ? 0 : presentation.introMarkVisibility);
   stage.style.setProperty('--hint-opacity', presentation.hintVisibility);
   stage.style.setProperty('--a02-opacity', smooth(spatial.heading) * (1 - theme.takeover));
   a02.setAttribute('aria-hidden', String(spatial.heading === 0 || theme.takeover === 1));

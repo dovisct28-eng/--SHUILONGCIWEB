@@ -2,8 +2,10 @@
 // Near terrain, vegetation, rocks and haze share the architecture's camera/light.
 const unit=n=>Math.max(0,Math.min(1,n)),ease=n=>{const t=unit(n);return t*t*(3-2*t);};
 export function a01TerrainHeight(x,z){
-  const outside=Math.hypot(Math.max(0,Math.abs(x)-6.05),Math.max(0,Math.abs(z+1.75)-14.9));
-  return -.615-.10*outside**1.55+ease(outside/7)*(.42*Math.sin(x*.37+z*.13)+.31*Math.cos(z*.4));
+  // The berm reaches the outside of the plinth, beneath the unchanged enclosure.
+  const outside=Math.hypot(Math.max(0,Math.abs(x)-5.15),Math.max(0,Math.abs(z+1.75)-13.9));
+  const berm=(.94+.12*Math.sin(z*.52+x*.3))*ease(outside/.6)*(1-ease((outside-1.1)/2.8));
+  return -.615+berm-.10*outside**1.55+ease(outside/7)*(.42*Math.sin(x*.37+z*.13)+.31*Math.cos(z*.4));
 }
 export function createA01Environment(T,scene){
   const group=new T.Group();group.name='A01NarrativeEnvironment';scene.add(group);
@@ -29,16 +31,19 @@ export function createA01Environment(T,scene){
     };m.customProgramCacheKey=()=>`a01-landscape-${terrain}`;return m;
   };
   // Plateau begins at the existing plinth bottom, then falls into wooded slopes.
-  const land=geometry(new T.PlaneGeometry(100,100,96,96));land.rotateX(-Math.PI/2);
+  const land=geometry(new T.PlaneGeometry(100,100,144,144));land.rotateX(-Math.PI/2);
   const p=land.attributes.position;for(let i=0;i<p.count;i++)p.setY(i,a01TerrainHeight(p.getX(i),p.getZ(i)));land.computeVertexNormals();
-  const soil=new T.Mesh(land,mat(0x414e53,true));soil.receiveShadow=true;soil.name='SlopingSoil';group.add(soil);
+  const soil=new T.Mesh(land,mat(0x343f3d,true));soil.receiveShadow=true;soil.name='SlopingSoil';group.add(soil);
   let seed=20261003;const random=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;};
   // Asymmetric groves with clear space around the main roof. No tree cards.
   const trees=[];for(let i=0;i<210;i++){
-    const scrub=i>=146,side=i<92||i%3?-1:1,x=side*(scrub?6.5+random()*5.5:7.7+random()*19),z=scrub?-19+random()*34:-27+random()*62;
+    const scrub=i>=146,side=i<92||i%3?-1:1,x=side*(scrub?6.25+random()*2.2:9+random()*17),z=scrub?-15+random()*28:-27+random()*62;
     if(z<-7&&z>-19&&Math.abs(x)<10.8)continue;
     trees.push([x,z,scrub?.38+random()*1.1:1.2+random()*3.0,random()*6.28]);
   }
+  // Near camera silhouettes and small wall-foot clusters share the same instancing.
+  trees.push([-17,-8,8.5,.3],[-18,-3,9,1.5],[-14,-13,6,.8]);
+  for(const [x,z,h]of [[-6.6,-8,1.5],[-6.8,1,2.4],[-6.3,6.5,2.7],[-6.8,-17.2,3.8],[-3.2,-17.6,1.8],[-7.1,-13.4,1.5]])trees.push([x,z,h,random()*6.28]);
   // A branch-leaf brush, instanced through a 3D canopy, rather than a tree billboard.
   const brush=document.createElement('canvas');brush.width=brush.height=96;const ctx=brush.getContext('2d');
   ctx.fillStyle='white';for(let i=0;i<190;i++){
@@ -68,20 +73,21 @@ export function createA01Environment(T,scene){
   const rocks=new T.InstancedMesh(geometry(new T.IcosahedronGeometry(1,0)),mat(0x404951),32);
   for(let i=0;i<32;i++){const x=(random()<.6?-1:1)*(6.7+random()*9),z=-23+random()*49,s=.15+random()*.6;dummy.position.set(x,a01TerrainHeight(x,z)+s*.15,z);dummy.scale.set(s,s*.4,s*.7);dummy.rotation.set(random(),random(),random());dummy.updateMatrix();rocks.setMatrixAt(i,dummy.matrix);}rocks.castShadow=true;rocks.receiveShadow=true;rocks.name='SoilRocks';group.add(rocks);
   // Soft, static world-space mist. Scroll is the only clock; no drifting timer.
-  const mist=new T.ShaderMaterial({transparent:true,depthWrite:false,uniforms:{amount:visibility,color:{value:new T.Color(0x9ba9aa)}},
+  const mist=new T.ShaderMaterial({transparent:true,depthWrite:false,uniforms:{amount:visibility,color:{value:new T.Color(0x879391)}},
     vertexShader:'varying vec2 vUv;void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',
-    fragmentShader:`varying vec2 vUv;uniform float amount;uniform vec3 color;${noise}void main(){vec2 q=vUv*2.-1.;float edge=exp(-3.*dot(q,q));float cloud=noise(vUv*7.)*.55+noise(vUv*17.)*.25;gl_FragColor=vec4(color,amount*edge*cloud*.72);}`});materials.push(mist);
+    fragmentShader:`varying vec2 vUv;uniform float amount;uniform vec3 color;${noise}void main(){vec2 q=vUv*2.-1.;float edge=exp(-4.*dot(q,q));float cloud=noise(vUv*7.)*.55+noise(vUv*17.)*.25;gl_FragColor=vec4(color,amount*edge*cloud*.9);}`});materials.push(mist);
   const cloudGeometry=geometry(new T.PlaneGeometry(1,1));
-  for(const [x,z,y,w,h] of [[-9,-18,.3,19,7],[12,10,.7,25,10],[-8,22,1,33,13],[0,35,3,58,17]]){
+  for(const [x,z,y,w,h] of [[-3,-17,.75,18,8],[-6.8,-7,.2,8,13],[-6.8,7,.3,8,16],[8,10,.5,20,8],[-8,22,1,33,13],[0,35,3,58,17]]){
     const cloud=new T.Mesh(cloudGeometry,mist);cloud.position.set(x,y,z);cloud.scale.set(w,h,1);cloud.rotation.x=-Math.PI*.4;cloud.name='GroundHaze';group.add(cloud);
   }
   let state={weight:0,establish:0,trees:trees.length};
   return {
     apply(weight,progress,reduced=false){const establish=ease((progress-.20)/.48);visibility.value=weight*establish;group.visible=visibility.value>.0001;state={weight,establish,trees:trees.length};
-      const movement=reduced?0:(1-ease((progress-.2)/.48));group.position.set(movement*.4,0,movement*.8);
+      // Fixed objects give genuine depth parallax under the shared moving camera.
+      group.position.set(0,0,0);
     },
     resize(w,h,dpr=1){resolution.value.set(w*dpr,h*dpr);},
-    getState(){return {...state,visible:group.visible,layers:['Foreground','NearAtmosphere','Terrain','MidgroundGroves','FarHaze'],triangles:land.index.count/3+trees.length*72*2+trees.length*4*20+32*20+8,drawCalls:8};},
+    getState(){return {...state,visible:group.visible,layers:['Foreground','GroundFog','Terrain','MidgroundGroves','ValleyMist','AtmosphericHaze'],triangles:land.index.count/3+trees.length*72*2+trees.length*4*20+32*20+12,drawCalls:10};},
     dispose(){group.removeFromParent();resources.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());},
   };
 }

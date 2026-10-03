@@ -10,12 +10,14 @@ export function inkPalette(screens=0){
 }
 export function createInkScene(stage){
   const layer=document.createElement('div');layer.className='ink-landscape';layer.setAttribute('aria-hidden','true');
-  const mountains=document.createElement('img');mountains.src=new URL('../../shuilong-temple/environment-assets/a01-v2/karst-valley.webp',import.meta.url).href;mountains.alt='';mountains.decoding='async';mountains.className='ink-valley';mountains.onerror=()=>mountains.hidden=true;layer.append(mountains);
+  const mountains=document.createElement('img');mountains.src=new URL('../../shuilong-temple/environment-assets/a01-v3/karst-valley.webp',import.meta.url).href;mountains.alt='';mountains.decoding='async';mountains.className='ink-valley';mountains.onerror=()=>mountains.hidden=true;layer.append(mountains);
   const sky=mountains.cloneNode();sky.className='ink-sky';sky.onerror=()=>sky.hidden=true;layer.prepend(sky);
   stage.prepend(layer);
-  return (screens,reducedMotion=false)=>{stage.style.setProperty('--ink-near',reducedMotion?0:1-smooth(screens));const palette=inkPalette(screens),n=Math.min(1,Math.max(0,(screens/5-.12)/.56)),landscape=n*n*(3-2*n);
+  return (screens,reducedMotion=false)=>{stage.style.setProperty('--ink-near',0);const palette=inkPalette(screens),n=Math.min(1,Math.max(0,(screens/5-.70)/.12)),landscape=reducedMotion?1:n*n*(3-2*n);
     stage.style.setProperty('--a01-paper',palette.paper);stage.style.setProperty('--a01-ink',palette.ink);stage.style.setProperty('--a01-secondary',palette.secondary);stage.style.setProperty('--ink-weight',palette.weight);stage.style.setProperty('--ink-landscape',landscape);
     stage.style.setProperty('--ink-parallax',reducedMotion?0:1-smooth(Math.min(1,screens/3.4)));
+    stage.style.setProperty('--ink-sky-reveal',reducedMotion?1:smooth((screens/5-.70)/.065));
+    stage.style.setProperty('--ink-valley-reveal',reducedMotion?1:smooth((screens/5-.745)/.075));
     layer.hidden=palette.weight===0;
   };
 }

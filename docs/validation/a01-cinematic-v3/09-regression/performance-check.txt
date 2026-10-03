@@ -1,0 +1,12 @@
+1440x900 sample 0 V2 46 calls / 172798 triangles
+1440x900 sample 0 V3 48 calls / 199154 triangles
+1440x900 sample 1 V2 46 calls / 172798 triangles
+1440x900 sample 1 V3 48 calls / 199154 triangles
+1440x900 sample 2 V2 46 calls / 172798 triangles
+1440x900 sample 2 V3 48 calls / 199154 triangles
+1920x1080 sample 0 V2 46 calls / 172798 triangles
+1920x1080 sample 0 V3 48 calls / 199154 triangles
+1920x1080 sample 1 V2 46 calls / 172798 triangles
+1920x1080 sample 1 V3 48 calls / 199154 triangles
+1920x1080 sample 2 V2 46 calls / 172798 triangles
+1920x1080 sample 2 V3 48 calls / 199154 triangles
