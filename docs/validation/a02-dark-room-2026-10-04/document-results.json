@@ -1,0 +1,162 @@
+{
+  "links": [
+    {
+      "file": "docs/A02_DARK_ROOM.md",
+      "target": "HIFI_VISUAL_SPEC.md",
+      "exists": true
+    },
+    {
+      "file": "docs/A02_DARK_ROOM.md",
+      "target": "DESIGN_SPEC.md",
+      "exists": true
+    },
+    {
+      "file": "docs/A02_DARK_ROOM.md",
+      "target": "CONTENT_MAP.md",
+      "exists": true
+    },
+    {
+      "file": "docs/A02_DARK_ROOM.md",
+      "target": "MODULE_A_ROADMAP.md",
+      "exists": true
+    },
+    {
+      "file": "docs/A02_DARK_ROOM.md",
+      "target": "validation/a02-dark-room-2026-10-04/README.md",
+      "exists": true
+    },
+    {
+      "file": "docs/validation/a02-dark-room-2026-10-04/README.md",
+      "target": "A01-A02-contact-sheet.png",
+      "exists": true
+    },
+    {
+      "file": "docs/validation/a02-dark-room-2026-10-04/README.md",
+      "target": "A02-state-sheet.png",
+      "exists": true
+    },
+    {
+      "file": "docs/validation/a02-dark-room-2026-10-04/README.md",
+      "target": "responsive-sheet.png",
+      "exists": true
+    },
+    {
+      "file": "docs/validation/a02-dark-room-2026-10-04/README.md",
+      "target": "marker-build-sheet.png",
+      "exists": true
+    },
+    {
+      "file": "docs/validation/a02-dark-room-2026-10-04/README.md",
+      "target": "grayscale-thumbnail.png",
+      "exists": true
+    },
+    {
+      "file": "docs/validation/a02-dark-room-2026-10-04/README.md",
+      "target": "responsive/1920x1080.webp",
+      "exists": true
+    },
+    {
+      "file": "docs/validation/a02-dark-room-2026-10-04/README.md",
+      "target": "responsive/1440x900.webp",
+      "exists": true
+    },
+    {
+      "file": "docs/validation/a02-dark-room-2026-10-04/README.md",
+      "target": "responsive/1366x768.webp",
+      "exists": true
+    },
+    {
+      "file": "docs/validation/a02-dark-room-2026-10-04/README.md",
+      "target": "responsive/1024x768.webp",
+      "exists": true
+    },
+    {
+      "file": "docs/validation/a02-dark-room-2026-10-04/README.md",
+      "target": "../../A02_DARK_ROOM.md",
+      "exists": true
+    },
+    {
+      "file": "docs/validation/a02-dark-room-2026-10-04/README.md",
+      "target": "pass-1/results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/validation/a02-dark-room-2026-10-04/README.md",
+      "target": "pass-1/stable.webp",
+      "exists": true
+    },
+    {
+      "file": "docs/validation/a02-dark-room-2026-10-04/README.md",
+      "target": "pass-2/stable.webp",
+      "exists": true
+    },
+    {
+      "file": "docs/validation/a02-dark-room-2026-10-04/README.md",
+      "target": "pass-3/stable.webp",
+      "exists": true
+    },
+    {
+      "file": "docs/validation/a02-dark-room-2026-10-04/README.md",
+      "target": "pass-4/stable.webp",
+      "exists": true
+    },
+    {
+      "file": "docs/validation/a02-dark-room-2026-10-04/README.md",
+      "target": "states/entry-1440x900.webp",
+      "exists": true
+    },
+    {
+      "file": "docs/validation/a02-dark-room-2026-10-04/README.md",
+      "target": "states/stable-1440x900.webp",
+      "exists": true
+    },
+    {
+      "file": "docs/validation/a02-dark-room-2026-10-04/README.md",
+      "target": "states/core-1440x900.webp",
+      "exists": true
+    },
+    {
+      "file": "docs/validation/a02-dark-room-2026-10-04/README.md",
+      "target": "states/end-1440x900.webp",
+      "exists": true
+    },
+    {
+      "file": "docs/validation/a02-dark-room-2026-10-04/README.md",
+      "target": "states/reverse-1440x900.webp",
+      "exists": true
+    },
+    {
+      "file": "docs/validation/a02-dark-room-2026-10-04/README.md",
+      "target": "reduced/core-1024x768.webp",
+      "exists": true
+    },
+    {
+      "file": "docs/validation/a02-dark-room-2026-10-04/README.md",
+      "target": "tests.txt",
+      "exists": true
+    },
+    {
+      "file": "docs/validation/a02-dark-room-2026-10-04/README.md",
+      "target": "browser-results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/validation/a02-dark-room-2026-10-04/README.md",
+      "target": "build-results.json",
+      "exists": true
+    },
+    {
+      "file": "docs/validation/a02-dark-room-2026-10-04/README.md",
+      "target": "shared-regression.json",
+      "exists": true
+    },
+    {
+      "file": "docs/validation/a02-dark-room-2026-10-04/README.md",
+      "target": "performance.json",
+      "exists": true
+    }
+  ],
+  "missing": [],
+  "passed": true,
+  "scope": "New A02 links; historical reports preserved"
+}

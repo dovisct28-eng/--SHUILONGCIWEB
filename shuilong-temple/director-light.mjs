@@ -1,10 +1,13 @@
 import {directorState,wallReveal} from '../module-a/visual-director/state.mjs';
+import {createA02Light} from './a02-light.mjs';
 // Reuses the existing sun, hemisphere and material instances; mural texture planes are excluded.
-export function createDirectorLight(T,{renderer,camera,sun,fill,root}){
+export function createDirectorLight(T,{renderer,camera,sun,fill,root,scene,floor}){
+  const room=createA02Light(T,{renderer,camera,sun,fill,root,scene,floor});
   const entries=[];root.children.filter(g=>!g.name.startsWith('mural-')).forEach(g=>g.traverse(m=>{if(m.isMesh)entries.push({mesh:m,group:g.name});}));
   const white=new T.Color(0xffffff),neutral=new T.Color(0xf0e8dc);let last=directorState(),fontsRequested=false;
-  return {apply(screens,tour){last=directorState(screens,tour);if(last.space===0)return;
-    if(!fontsRequested&&typeof document!=='undefined'){fontsRequested=true;const link=document.createElement('link');link.rel='stylesheet';link.href='../module-a/visual-director/fonts/fonts.css';document.head.append(link);const css=document.createElement('style');css.textContent='.narrative-markers .mural-label,.route-node-label,.spatial-label{font-family:"Narrative Sans","Microsoft YaHei",system-ui,sans-serif;line-height:1.5}';document.head.append(css);}
+  return {camera:screens=>room.camera(screens),apply(screens,tour){last=directorState(screens,tour);
+    if(screens>=6.8&&!fontsRequested&&typeof document!=='undefined'){fontsRequested=true;const link=document.createElement('link');link.rel='stylesheet';link.href='../module-a/visual-director/fonts/fonts.css';document.head.append(link);const css=document.createElement('style');css.textContent='.narrative-markers .mural-label,.route-node-label,.spatial-label{font-family:"Narrative Sans","Microsoft YaHei",system-ui,sans-serif;line-height:1.5}';document.head.append(css);}
+    if(!tour&&room.apply(screens)){last={...last,...room.getState()};return;}if(last.space===0)return;
     renderer.toneMappingExposure=last.exposure;camera.fov=last.fov;camera.updateProjectionMatrix();
     fill.intensity=last.fill;fill.color.set(0xd6dce0);fill.groundColor.set(0x514940);
     sun.intensity=last.sun;sun.color.copy(white).lerp(neutral,.45*last.space);sun.position.set(-16,25,14);

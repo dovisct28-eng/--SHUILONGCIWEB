@@ -1,0 +1,34 @@
+{
+  "syntaxFiles": [
+    "module-a/a01/app.mjs",
+    "module-a/a01/cinematic-state.mjs",
+    "module-a/a01/cinematic-state.test.mjs",
+    "module-a/a01/ink-scene.mjs",
+    "module-a/a02/spatial.mjs",
+    "module-a/a02/markers.mjs",
+    "module-a/a02/spatial.test.mjs",
+    "module-a/a02/capture.cjs",
+    "module-a/a02/pass-check.cjs",
+    "module-a/a02/room-browser-check.cjs",
+    "module-a/a02/performance-check.cjs",
+    "module-a/a02/boards.cjs",
+    "module-a/a02/build-check.cjs",
+    "module-a/a02/shared-regression-check.cjs",
+    "module-a/a02/pack-evidence.cjs",
+    "shuilong-temple/a02-light.mjs",
+    "shuilong-temple/director-light.mjs",
+    "shuilong-temple/narrative-markers.mjs",
+    "shuilong-temple/build-model.mjs",
+    "shuilong-temple/model.test.mjs",
+    "shuilong-temple/inline-a02.mjs",
+    "shuilong-temple/sync-a02-preview.mjs"
+  ],
+  "htmlModule": true,
+  "protectedDiffEmpty": true,
+  "archiveRefs": [
+    "48f272497e86e4549c5bcd0dee275ff347171a3f",
+    "48f272497e86e4549c5bcd0dee275ff347171a3f"
+  ],
+  "modelRebuilt": false,
+  "offlineModulesSynchronized": true
+}

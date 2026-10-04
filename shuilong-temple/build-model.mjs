@@ -3,6 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import {inlineA02} from './inline-a02.mjs';
 
 const directory = path.dirname(fileURLToPath(import.meta.url));
 const previewPath = path.join(directory, '水龙祠-交互预览.html');
@@ -143,7 +144,8 @@ for (const [name, file] of [['inlineA04', 'a04-scene.mjs'], ['inlineMarkers', 'n
   moduleSource=moduleSource.replace(/import \{([^}]+)\} from '\.\.\/module-a\/visual-director\/state\.mjs';/,(_,names)=>`const {${names}}=(()=>{${fs.readFileSync(path.join(directory,'../module-a/visual-director/state.mjs'),'utf8').replaceAll('export ','')}\nreturn {${names}};})();`);
   if(name==='inlineA01Art')moduleSource=moduleSource.replace("import { createA01Camera } from './a01-camera.mjs';",`const {createA01Camera}=(()=>{${fs.readFileSync(path.join(directory,'a01-camera.mjs'),'utf8').replaceAll('export ','')}\nreturn {createA01Camera};})();`);
   if(name==='inlineA01Art')moduleSource=moduleSource.replace("import { createA01Materials } from './a01-material.mjs';",`const {createA01Materials}=(()=>{${fs.readFileSync(path.join(directory,'a01-material.mjs'),'utf8').replaceAll('export ','')}\nreturn {createA01Materials};})();`);
-  embedded = embedded.replace(expression, `const ${name}=${JSON.stringify(moduleSource)};`);
+  moduleSource=inlineA02(moduleSource);
+  embedded = embedded.replace(expression, () => `const ${name}=${JSON.stringify(moduleSource)};`);
 }
 // The file:// preview uses data URIs; localhost loads each optimized asset once.
 const environmentAssets=Object.fromEntries(Object.entries({tree:'watercolor-tree',mountains:'distant-landscape',mist:'ivory-mist'}).map(([key,name])=>[key,`data:image/webp;base64,${fs.readFileSync(path.join(directory,'environment-assets',`${name}.webp`)).toString('base64')}`]));

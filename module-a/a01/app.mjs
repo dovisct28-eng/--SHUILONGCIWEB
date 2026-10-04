@@ -10,6 +10,7 @@ import { a06Guide } from '../a06/content.mjs';
 import { a07Guide } from '../a07/content.mjs';
 import { createA08Controller } from '../a08/controller.mjs';
 import { directorFrame } from '../visual-director/state.mjs';
+import {architecturalRoom,roomFrame,createRoomField} from '../a02/spatial.mjs';
 
 const story = document.querySelector('[data-story]');
 const stage = document.querySelector('[data-stage]');
@@ -25,6 +26,9 @@ const a02 = document.querySelector('[data-a02]');
 const a02Description = document.querySelector('[data-a02-description]');
 const a02Status = document.querySelector('[data-a02-status]');
 const a02Hint = document.querySelector('[data-a02-hint]');
+const roomField=createRoomField(stage);
+const a02Pass=Number(new URLSearchParams(location.search).get('a02-pass')||5);
+const roomStyles=document.createElement('link');roomStyles.rel='stylesheet';roomStyles.href=new URL('../a02/styles.css',import.meta.url).href;document.head.append(roomStyles);
 story.style.height = `4300vh`;
 const renderA04 = createA04Controller(stage, modelFrame, requestRender);
 const renderA05 = createMuralGuide(stage, a05Guide, requestRender);
@@ -67,6 +71,7 @@ function render() {
   const screens = Math.max(0, -bounds.top) / innerHeight;
   if(screens>=6.8&&!narrativeFontsRequested){narrativeFontsRequested=true;const fonts=document.createElement('link');fonts.rel='stylesheet';fonts.href=new URL('../visual-director/fonts/fonts.css',import.meta.url).href;document.head.append(fonts);}
   const framing = cinematicState(state.animation,screens,reducedMotion.matches);
+  const room=architecturalRoom(screens);
   const transition = framing.center;
   const presentation = derivePresentation({
     ...state,
@@ -84,7 +89,8 @@ function render() {
   const narrow = innerWidth <= 760;
   stage.style.setProperty('--model-x', `${presentation.modelX*framing.hero + (narrow ? 0 : 19) * theme.composition}vw`);
   stage.style.setProperty('--model-scale',1);
-  const canvas=directorFrame(canvasFrame(innerWidth,innerHeight,framing,theme.composition),innerWidth,innerHeight,screens,theme.composition);
+  const previousCanvas=directorFrame(canvasFrame(innerWidth,innerHeight,framing,theme.composition),innerWidth,innerHeight,screens,theme.composition);
+  const canvas=roomFrame(previousCanvas,innerWidth,innerHeight,screens);
   stage.style.setProperty('--canvas-width',`${canvas.width}px`);
   stage.style.setProperty('--canvas-height',`${canvas.height}px`);
   modelFrame.parentElement.style.top = `${50+framing.hero*((narrow?-7:0)+(narrow?35:0)*theme.composition)}%`;
@@ -92,10 +98,10 @@ function render() {
   stage.style.setProperty('--copy-x', `${reducedMotion.matches ? 0 : mix(-12, 0, copy)}px`);
   stage.style.setProperty('--intro-mark-opacity', hasLines ? 0 : presentation.introMarkVisibility);
   stage.style.setProperty('--hint-opacity', presentation.hintVisibility);
-  stage.style.setProperty('--a02-opacity', smooth(spatial.heading) * (1 - theme.takeover));
+  stage.style.setProperty('--a02-opacity', (a02Pass<4?0:room.heading) * (1 - theme.takeover));
   a02.setAttribute('aria-hidden', String(spatial.heading === 0 || theme.takeover === 1));
   const focused = spatial.emphasis > .5;
-  a02Description.textContent = focused ? '第一幅、第二幅、第五幅，是后续观看的核心位置。' : spatial.markers > 0 ? '五幅壁画，分布于不同的建筑壁面。' : '先认识建筑，再看五幅壁画的位置。';
+  a02Description.textContent = '先认识建筑，再看五幅壁画的位置。';
   a02Status.textContent = focused ? '核心三幅 · 共同强调' : spatial.markers > 0 ? '五幅位置 · 总览' : '建筑空间';
   a02Hint.textContent = spatial.phase === 'a02-reading' ? '继续向下，了解出兵·入将' : '向下滚动，查看壁画位置';
   const phase = theme.phase !== 'a02' ? theme.phase : spatial.phase === 'a01' ? state.phase : spatial.phase;
@@ -109,11 +115,13 @@ function render() {
   document.body.dataset.transitionProgress = state.transition.toFixed(4);
   if (!hasLines) setModelProgress(state.growth);
   modelFrame.contentWindow?.shuilongTemple?.setMuralPresentation({
-    visibility: smooth(spatial.markers), emphasis: smooth(spatial.emphasis), coreIds: CORE_MURALS,
-    revealWalls: smooth(spatial.revealWalls),
+    visibility: a02Pass<5?0:smooth(spatial.markers), emphasis: smooth(spatial.emphasis), coreIds: CORE_MURALS,
+    revealWalls: smooth(spatial.revealWalls)*(1-room.weight),
     secondaryVisibility: theme.secondary,
+    architecturalWeight:room.weight,
   });
   renderInkScene(screens,reducedMotion.matches);
+  roomField(a02Pass>=3?screens:0);
   lastScreens = screens;
   modelFrame.contentWindow?.shuilongTemple?.setVisualProgress?.(screens);
   renderA04(screens);

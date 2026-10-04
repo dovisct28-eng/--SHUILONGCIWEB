@@ -6,7 +6,7 @@ const readable=(color,background)=>{if(contrastRatio(color,background)>=4.5)retu
 const mixColor=(a,b,t)=>'#'+[0,2,4].map(i=>Math.round(parseInt(a.slice(i,i+2),16)*(1-t)+parseInt(b.slice(i,i+2),16)*t).toString(16).padStart(2,'0')).join('');
 export function inkPalette(screens=0){
   screens=Math.max(0,Number(screens)||0);
-  const weight=1-smooth((screens-6.2)/.35);
+  const weight=1-smooth((screens-6.2)/1);
   let paper=mixColor('141b20','171b1d',smooth((screens-6.2)/1));
   paper=mixColor(paper.slice(1),'101519',smooth((screens-10.2)/1));
   paper=mixColor(paper.slice(1),'1a2023',smooth((screens-12.3)/1.7));

@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import { normalizeSourceLineEndings as normalize } from './source-equivalence.mjs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import {inlineA02} from './inline-a02.mjs';
 
 const directory = path.dirname(fileURLToPath(import.meta.url));
 const binary = fs.readFileSync(path.join(directory, 'shuilong-temple.glb'));
@@ -37,7 +38,7 @@ test('GLB, model statistics, and offline preview are the same shared model', () 
     assert.ok(literal, `${name} embedded module`);
     const source=fs.readFileSync(path.join(directory,file),'utf8');
     const expected=source.replace(/import \{([^}]+)\} from '\.\.\/module-a\/visual-director\/state\.mjs';/,(_,names)=>`const {${names}}=(()=>{${fs.readFileSync(path.join(directory,'../module-a/visual-director/state.mjs'),'utf8').replaceAll('export ','')}\nreturn {${names}};})();`);
-    assert.equal(normalize(JSON.parse(literal)), normalize(expected));
+    assert.equal(normalize(JSON.parse(literal)), normalize(inlineA02(expected)));
   }
 });
 test('five stable mural IDs and all duplicated metadata agree', () => {

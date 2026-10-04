@@ -1,0 +1,2832 @@
+{
+  "errors": [],
+  "rows": [
+    {
+      "name": "hero",
+      "screen": 6.2,
+      "frame": {
+        "x": 477.22344970703125,
+        "y": 136.265625,
+        "w": 1003.9530639648438,
+        "h": 627.46875
+      },
+      "art": {
+        "position": [
+          -23.33250595253667,
+          19.342753798798213,
+          -26.88031350693665
+        ],
+        "target": [
+          0,
+          -1.25,
+          -1.75
+        ],
+        "fov": 32,
+        "aspect": 1.6012759170653907,
+        "bounds": {
+          "left": 0.033658173548008874,
+          "right": 0.8460913907159093,
+          "top": 0.11427552436756994,
+          "bottom": 0.9575977160679886
+        },
+        "heroWeight": 1,
+        "lighting": {
+          "fill": 0.72,
+          "sun": 4.5,
+          "position": [
+            -16,
+            22,
+            16
+          ]
+        },
+        "exposure": 0.98
+      },
+      "director": {
+        "space": 0,
+        "theme": 0,
+        "exposure": 1.18,
+        "fill": 1.2,
+        "sun": 3.3,
+        "fov": 34,
+        "architecture": 1,
+        "transfer": 0,
+        "lights": 2,
+        "newTextures": 0,
+        "newPostTargets": 0
+      },
+      "stats": {
+        "geometries": 43,
+        "textures": 22,
+        "calls": 47,
+        "triangles": 170210,
+        "lines": 0,
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1004,
+            627
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 81,
+            "calls": 47,
+            "triangles": 170210,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 7554096,
+          "multisampleBytes": 15108192,
+          "targetBytes": 22662288
+        }
+      },
+      "architecture": [
+        {
+          "key": "stone",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.22499999999999998,
+              0.22499999999999998
+            ],
+            [
+              0.22499999999999998,
+              0.22499999999999998
+            ],
+            [
+              0.22499999999999998,
+              0.22499999999999998
+            ],
+            [
+              0.22499999999999998,
+              0.22499999999999998
+            ],
+            [
+              0.22499999999999998,
+              0.22499999999999998
+            ],
+            [
+              0.22499999999999998,
+              0.22499999999999998
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "paving",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.22499999999999998,
+              0.22499999999999998
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "brick",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.22499999999999998,
+              0.22499999999999998
+            ],
+            [
+              0.22499999999999998,
+              0.22499999999999998
+            ],
+            [
+              0.22499999999999998,
+              0.22499999999999998
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "plaster",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.22499999999999998,
+              0.22499999999999998
+            ],
+            [
+              0.22499999999999998,
+              0.22499999999999998
+            ],
+            [
+              0.22499999999999998,
+              0.22499999999999998
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "wood",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.22499999999999998,
+              0.22499999999999998
+            ],
+            [
+              0.22499999999999998,
+              0.22499999999999998
+            ],
+            [
+              0.22499999999999998,
+              0.22499999999999998
+            ],
+            [
+              0.22499999999999998,
+              0.22499999999999998
+            ],
+            [
+              0.22499999999999998,
+              0.22499999999999998
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "roof",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.27899999999999997,
+              0.27899999999999997
+            ],
+            [
+              0.27899999999999997,
+              0.27899999999999997
+            ],
+            [
+              0.27899999999999997,
+              0.27899999999999997
+            ],
+            [
+              0.27899999999999997,
+              0.27899999999999997
+            ],
+            [
+              0.27899999999999997,
+              0.27899999999999997
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "roof",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.27899999999999997,
+              0.27899999999999997
+            ],
+            [
+              0.27899999999999997,
+              0.27899999999999997
+            ],
+            [
+              0.27899999999999997,
+              0.27899999999999997
+            ],
+            [
+              0.27899999999999997,
+              0.27899999999999997
+            ],
+            [
+              0.27899999999999997,
+              0.27899999999999997
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "roof",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.27899999999999997,
+              0.27899999999999997
+            ],
+            [
+              0.27899999999999997,
+              0.27899999999999997
+            ],
+            [
+              0.27899999999999997,
+              0.27899999999999997
+            ],
+            [
+              0.27899999999999997,
+              0.27899999999999997
+            ],
+            [
+              0.27899999999999997,
+              0.27899999999999997
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "wood",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.22499999999999998,
+              0.22499999999999998
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "plaster",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.22499999999999998,
+              0.22499999999999998
+            ]
+          ],
+          "clonesLoaded": true
+        }
+      ],
+      "env": {
+        "weight": 1,
+        "establish": 1,
+        "visibility": 1,
+        "trees": 201,
+        "visible": true,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "post": {
+        "enabled": true,
+        "error": null,
+        "passes": 2,
+        "size": [
+          1004,
+          627
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 81,
+          "calls": 47,
+          "triangles": 170210,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 7554096,
+        "multisampleBytes": 15108192,
+        "targetBytes": 22662288
+      },
+      "labels": [
+        {
+          "id": "mural-01",
+          "hidden": true,
+          "opacity": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "mural-02",
+          "hidden": true,
+          "opacity": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "mural-03",
+          "hidden": true,
+          "opacity": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "mural-04",
+          "hidden": true,
+          "opacity": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "mural-05",
+          "hidden": true,
+          "opacity": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        }
+      ],
+      "a02": "0",
+      "canvas": 1
+    },
+    {
+      "name": "25",
+      "screen": 6.45,
+      "frame": {
+        "x": 471.6859436035156,
+        "y": 135.7421875,
+        "w": 1004.828125,
+        "h": 628.515625
+      },
+      "art": {
+        "position": [
+          -23.513385249332003,
+          19.820614149035624,
+          -26.87520118071702
+        ],
+        "target": [
+          0,
+          -1.2254050925925928,
+          -1.75
+        ],
+        "fov": 31.994384765625,
+        "aspect": 1.5977742448330683,
+        "bounds": {
+          "left": 0.03745074117747216,
+          "right": 0.8455388660487123,
+          "top": 0.11464333669324828,
+          "bottom": 0.9578753521298375
+        },
+        "heroWeight": 0.9803240740740742,
+        "lighting": {
+          "fill": 0.72,
+          "sun": 4.5,
+          "position": [
+            -16,
+            22.03369140625,
+            15.9775390625
+          ]
+        },
+        "exposure": 0.98
+      },
+      "director": {
+        "space": 0,
+        "theme": 0,
+        "exposure": 0.98,
+        "fill": 0.72,
+        "sun": 4.5,
+        "fov": 31.994384765625,
+        "architecture": 1,
+        "transfer": 0,
+        "arrival": 0.011230468749999922,
+        "weight": 0.011230468749999922,
+        "environment": 0.84375,
+        "heading": 0,
+        "field": 0.15625,
+        "exit": 0,
+        "grain": 0.016,
+        "atmosphere": 0.065,
+        "lights": 2,
+        "newTextures": 0,
+        "newPostTargets": 0
+      },
+      "stats": {
+        "geometries": 44,
+        "textures": 22,
+        "calls": 48,
+        "triangles": 170212,
+        "lines": 0,
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1005,
+            629
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 507,
+            "calls": 48,
+            "triangles": 170212,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 7585740,
+          "multisampleBytes": 15171480,
+          "targetBytes": 22757220
+        }
+      },
+      "architecture": [
+        {
+          "key": "stone",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.22411458333333334,
+              0.22411458333333334
+            ],
+            [
+              0.22411458333333334,
+              0.22411458333333334
+            ],
+            [
+              0.22411458333333334,
+              0.22411458333333334
+            ],
+            [
+              0.22411458333333334,
+              0.22411458333333334
+            ],
+            [
+              0.22411458333333334,
+              0.22411458333333334
+            ],
+            [
+              0.22411458333333334,
+              0.22411458333333334
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "paving",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.22411458333333334,
+              0.22411458333333334
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "brick",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.22411458333333334,
+              0.22411458333333334
+            ],
+            [
+              0.22411458333333334,
+              0.22411458333333334
+            ],
+            [
+              0.22411458333333334,
+              0.22411458333333334
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "plaster",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.22411458333333334,
+              0.22411458333333334
+            ],
+            [
+              0.22411458333333334,
+              0.22411458333333334
+            ],
+            [
+              0.22411458333333334,
+              0.22411458333333334
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "wood",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.22411458333333334,
+              0.22411458333333334
+            ],
+            [
+              0.22411458333333334,
+              0.22411458333333334
+            ],
+            [
+              0.22411458333333334,
+              0.22411458333333334
+            ],
+            [
+              0.22411458333333334,
+              0.22411458333333334
+            ],
+            [
+              0.22411458333333334,
+              0.22411458333333334
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "roof",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.27705208333333337,
+              0.27705208333333337
+            ],
+            [
+              0.27705208333333337,
+              0.27705208333333337
+            ],
+            [
+              0.27705208333333337,
+              0.27705208333333337
+            ],
+            [
+              0.27705208333333337,
+              0.27705208333333337
+            ],
+            [
+              0.27705208333333337,
+              0.27705208333333337
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "roof",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.27705208333333337,
+              0.27705208333333337
+            ],
+            [
+              0.27705208333333337,
+              0.27705208333333337
+            ],
+            [
+              0.27705208333333337,
+              0.27705208333333337
+            ],
+            [
+              0.27705208333333337,
+              0.27705208333333337
+            ],
+            [
+              0.27705208333333337,
+              0.27705208333333337
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "roof",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.27705208333333337,
+              0.27705208333333337
+            ],
+            [
+              0.27705208333333337,
+              0.27705208333333337
+            ],
+            [
+              0.27705208333333337,
+              0.27705208333333337
+            ],
+            [
+              0.27705208333333337,
+              0.27705208333333337
+            ],
+            [
+              0.27705208333333337,
+              0.27705208333333337
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "wood",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.22411458333333334,
+              0.22411458333333334
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "plaster",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.22411458333333334,
+              0.22411458333333334
+            ]
+          ],
+          "clonesLoaded": true
+        }
+      ],
+      "env": {
+        "weight": 0.84375,
+        "establish": 1,
+        "visibility": 0.84375,
+        "trees": 201,
+        "visible": true,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "post": {
+        "enabled": true,
+        "error": null,
+        "passes": 2,
+        "size": [
+          1005,
+          629
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 507,
+          "calls": 48,
+          "triangles": 170212,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 7585740,
+        "multisampleBytes": 15171480,
+        "targetBytes": 22757220
+      },
+      "labels": [
+        {
+          "id": "mural-01",
+          "hidden": true,
+          "opacity": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "mural-02",
+          "hidden": true,
+          "opacity": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "mural-03",
+          "hidden": true,
+          "opacity": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "mural-04",
+          "hidden": true,
+          "opacity": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "mural-05",
+          "hidden": true,
+          "opacity": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        }
+      ],
+      "a02": "0",
+      "canvas": 1
+    },
+    {
+      "name": "50",
+      "screen": 6.7,
+      "frame": {
+        "x": 317.4828186035156,
+        "y": 121.625,
+        "w": 1064.234375,
+        "h": 656.75
+      },
+      "art": {
+        "position": [
+          -26.38036113286118,
+          28.993756486734764,
+          -26.11470921180486
+        ],
+        "target": [
+          0,
+          -0.6250000000000006,
+          -1.75
+        ],
+        "fov": 31.841796875,
+        "aspect": 1.6194824961948249,
+        "bounds": {
+          "left": 0.11564098139921841,
+          "right": 0.8179415685395406,
+          "top": 0.12662907112606525,
+          "bottom": 0.9446654398434691
+        },
+        "heroWeight": 0.5000000000000004,
+        "lighting": {
+          "fill": 0.72,
+          "sun": 4.5,
+          "position": [
+            -16,
+            22.94921875,
+            15.3671875
+          ]
+        },
+        "exposure": 0.98
+      },
+      "director": {
+        "space": 0,
+        "theme": 0,
+        "exposure": 0.98,
+        "fill": 0.72,
+        "sun": 4.5,
+        "fov": 31.841796875,
+        "architecture": 1,
+        "transfer": 0,
+        "arrival": 0.31640624999999967,
+        "weight": 0.31640624999999967,
+        "environment": 0.5,
+        "heading": 0,
+        "field": 0.5,
+        "exit": 0,
+        "grain": 0.016,
+        "atmosphere": 0.065,
+        "lights": 2,
+        "newTextures": 0,
+        "newPostTargets": 0
+      },
+      "stats": {
+        "geometries": 44,
+        "textures": 22,
+        "calls": 48,
+        "triangles": 170212,
+        "lines": 0,
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1064,
+            657
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 937,
+            "calls": 48,
+            "triangles": 170212,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 8388576,
+          "multisampleBytes": 16777152,
+          "targetBytes": 25165728
+        }
+      },
+      "architecture": [
+        {
+          "key": "stone",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.20249999999999999,
+              0.20249999999999999
+            ],
+            [
+              0.20249999999999999,
+              0.20249999999999999
+            ],
+            [
+              0.20249999999999999,
+              0.20249999999999999
+            ],
+            [
+              0.20249999999999999,
+              0.20249999999999999
+            ],
+            [
+              0.20249999999999999,
+              0.20249999999999999
+            ],
+            [
+              0.20249999999999999,
+              0.20249999999999999
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "paving",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.20249999999999999,
+              0.20249999999999999
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "brick",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.20249999999999999,
+              0.20249999999999999
+            ],
+            [
+              0.20249999999999999,
+              0.20249999999999999
+            ],
+            [
+              0.20249999999999999,
+              0.20249999999999999
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "plaster",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.20249999999999999,
+              0.20249999999999999
+            ],
+            [
+              0.20249999999999999,
+              0.20249999999999999
+            ],
+            [
+              0.20249999999999999,
+              0.20249999999999999
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "wood",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.20249999999999999,
+              0.20249999999999999
+            ],
+            [
+              0.20249999999999999,
+              0.20249999999999999
+            ],
+            [
+              0.20249999999999999,
+              0.20249999999999999
+            ],
+            [
+              0.20249999999999999,
+              0.20249999999999999
+            ],
+            [
+              0.20249999999999999,
+              0.20249999999999999
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "roof",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.22950000000000007,
+              0.22950000000000007
+            ],
+            [
+              0.22950000000000007,
+              0.22950000000000007
+            ],
+            [
+              0.22950000000000007,
+              0.22950000000000007
+            ],
+            [
+              0.22950000000000007,
+              0.22950000000000007
+            ],
+            [
+              0.22950000000000007,
+              0.22950000000000007
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "roof",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.22950000000000007,
+              0.22950000000000007
+            ],
+            [
+              0.22950000000000007,
+              0.22950000000000007
+            ],
+            [
+              0.22950000000000007,
+              0.22950000000000007
+            ],
+            [
+              0.22950000000000007,
+              0.22950000000000007
+            ],
+            [
+              0.22950000000000007,
+              0.22950000000000007
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "roof",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.22950000000000007,
+              0.22950000000000007
+            ],
+            [
+              0.22950000000000007,
+              0.22950000000000007
+            ],
+            [
+              0.22950000000000007,
+              0.22950000000000007
+            ],
+            [
+              0.22950000000000007,
+              0.22950000000000007
+            ],
+            [
+              0.22950000000000007,
+              0.22950000000000007
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "wood",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.20249999999999999,
+              0.20249999999999999
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "plaster",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.20249999999999999,
+              0.20249999999999999
+            ]
+          ],
+          "clonesLoaded": true
+        }
+      ],
+      "env": {
+        "weight": 0.5,
+        "establish": 1,
+        "visibility": 0.5,
+        "trees": 201,
+        "visible": true,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "post": {
+        "enabled": true,
+        "error": null,
+        "passes": 2,
+        "size": [
+          1064,
+          657
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 937,
+          "calls": 48,
+          "triangles": 170212,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 8388576,
+        "multisampleBytes": 16777152,
+        "targetBytes": 25165728
+      },
+      "labels": [
+        {
+          "id": "mural-01",
+          "hidden": true,
+          "opacity": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "mural-02",
+          "hidden": true,
+          "opacity": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "mural-03",
+          "hidden": true,
+          "opacity": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "mural-04",
+          "hidden": true,
+          "opacity": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "mural-05",
+          "hidden": true,
+          "opacity": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        }
+      ],
+      "a02": "0",
+      "canvas": 1
+    },
+    {
+      "name": "75",
+      "screen": 6.95,
+      "frame": {
+        "x": 97.5687255859375,
+        "y": 100.734375,
+        "w": 1255.0625,
+        "h": 698.53125
+      },
+      "art": {
+        "position": [
+          -26.891640827446434,
+          29.86790237295163,
+          -25.98454091031861
+        ],
+        "target": [
+          0,
+          -0.024594907407407662,
+          -1.75
+        ],
+        "fov": 31.615966796875,
+        "aspect": 1.7954220314735336,
+        "bounds": {
+          "left": 0.1571523775151848,
+          "right": 0.7871036808395571,
+          "top": 0.12315134368441882,
+          "bottom": 0.9350957549009058
+        },
+        "heroWeight": 0.01967592592592604,
+        "lighting": {
+          "fill": 0.72,
+          "sun": 4.5,
+          "position": [
+            -16,
+            24.30419921875,
+            14.4638671875
+          ]
+        },
+        "exposure": 0.98
+      },
+      "director": {
+        "space": 0,
+        "theme": 0,
+        "exposure": 0.98,
+        "fill": 0.72,
+        "sun": 4.5,
+        "fov": 31.615966796875,
+        "architecture": 1,
+        "transfer": 0,
+        "arrival": 0.7680664062499998,
+        "weight": 0.7680664062499998,
+        "environment": 0.15625,
+        "heading": 0,
+        "field": 0.84375,
+        "exit": 0,
+        "grain": 0.016,
+        "atmosphere": 0.065,
+        "lights": 2,
+        "newTextures": 0,
+        "newPostTargets": 0
+      },
+      "stats": {
+        "geometries": 44,
+        "textures": 22,
+        "calls": 48,
+        "triangles": 170212,
+        "lines": 0,
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1255,
+            699
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1327,
+            "calls": 48,
+            "triangles": 170212,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 10526940,
+          "multisampleBytes": 21053880,
+          "targetBytes": 31580820
+        }
+      },
+      "architecture": [
+        {
+          "key": "stone",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18088541666666663,
+              0.18088541666666663
+            ],
+            [
+              0.18088541666666663,
+              0.18088541666666663
+            ],
+            [
+              0.18088541666666663,
+              0.18088541666666663
+            ],
+            [
+              0.18088541666666663,
+              0.18088541666666663
+            ],
+            [
+              0.18088541666666663,
+              0.18088541666666663
+            ],
+            [
+              0.18088541666666663,
+              0.18088541666666663
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "paving",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18088541666666663,
+              0.18088541666666663
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "brick",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18088541666666663,
+              0.18088541666666663
+            ],
+            [
+              0.18088541666666663,
+              0.18088541666666663
+            ],
+            [
+              0.18088541666666663,
+              0.18088541666666663
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "plaster",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18088541666666663,
+              0.18088541666666663
+            ],
+            [
+              0.18088541666666663,
+              0.18088541666666663
+            ],
+            [
+              0.18088541666666663,
+              0.18088541666666663
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "wood",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18088541666666663,
+              0.18088541666666663
+            ],
+            [
+              0.18088541666666663,
+              0.18088541666666663
+            ],
+            [
+              0.18088541666666663,
+              0.18088541666666663
+            ],
+            [
+              0.18088541666666663,
+              0.18088541666666663
+            ],
+            [
+              0.18088541666666663,
+              0.18088541666666663
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "roof",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18194791666666668,
+              0.18194791666666668
+            ],
+            [
+              0.18194791666666668,
+              0.18194791666666668
+            ],
+            [
+              0.18194791666666668,
+              0.18194791666666668
+            ],
+            [
+              0.18194791666666668,
+              0.18194791666666668
+            ],
+            [
+              0.18194791666666668,
+              0.18194791666666668
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "roof",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18194791666666668,
+              0.18194791666666668
+            ],
+            [
+              0.18194791666666668,
+              0.18194791666666668
+            ],
+            [
+              0.18194791666666668,
+              0.18194791666666668
+            ],
+            [
+              0.18194791666666668,
+              0.18194791666666668
+            ],
+            [
+              0.18194791666666668,
+              0.18194791666666668
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "roof",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18194791666666668,
+              0.18194791666666668
+            ],
+            [
+              0.18194791666666668,
+              0.18194791666666668
+            ],
+            [
+              0.18194791666666668,
+              0.18194791666666668
+            ],
+            [
+              0.18194791666666668,
+              0.18194791666666668
+            ],
+            [
+              0.18194791666666668,
+              0.18194791666666668
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "wood",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18088541666666663,
+              0.18088541666666663
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "plaster",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18088541666666663,
+              0.18088541666666663
+            ]
+          ],
+          "clonesLoaded": true
+        }
+      ],
+      "env": {
+        "weight": 0.15625,
+        "establish": 1,
+        "visibility": 0.15625,
+        "trees": 201,
+        "visible": true,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "post": {
+        "enabled": true,
+        "error": null,
+        "passes": 2,
+        "size": [
+          1255,
+          699
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 1327,
+          "calls": 48,
+          "triangles": 170212,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 10526940,
+        "multisampleBytes": 21053880,
+        "targetBytes": 31580820
+      },
+      "labels": [
+        {
+          "id": "mural-01",
+          "hidden": true,
+          "opacity": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "mural-02",
+          "hidden": true,
+          "opacity": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "mural-03",
+          "hidden": true,
+          "opacity": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "mural-04",
+          "hidden": true,
+          "opacity": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "mural-05",
+          "hidden": true,
+          "opacity": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        }
+      ],
+      "a02": "0",
+      "canvas": 1
+    },
+    {
+      "name": "stable",
+      "screen": 7.55,
+      "frame": {
+        "x": 28.8046875,
+        "y": 90,
+        "w": 1382.390625,
+        "h": 720
+      },
+      "art": {
+        "position": [
+          -26.9205496426545,
+          26.35036318521572,
+          -26.9494847490699
+        ],
+        "target": [
+          0,
+          0,
+          -1.75
+        ],
+        "fov": 31.5,
+        "aspect": 1.9194444444444445,
+        "bounds": {
+          "left": 0.16400195512358617,
+          "right": 0.7737310945300924,
+          "top": 0.12361445468948257,
+          "bottom": 0.92378305583399
+        },
+        "heroWeight": 0,
+        "lighting": {
+          "fill": 0.72,
+          "sun": 4.5,
+          "position": [
+            -16,
+            25,
+            14
+          ]
+        },
+        "exposure": 0.98
+      },
+      "director": {
+        "space": 1,
+        "theme": 0,
+        "exposure": 0.98,
+        "fill": 0.72,
+        "sun": 4.5,
+        "fov": 31.5,
+        "architecture": 1,
+        "transfer": 0,
+        "arrival": 1,
+        "weight": 1,
+        "environment": 0,
+        "heading": 1,
+        "field": 1,
+        "exit": 0,
+        "grain": 0.016,
+        "atmosphere": 0.065,
+        "lights": 2,
+        "newTextures": 0,
+        "newPostTargets": 0
+      },
+      "stats": {
+        "geometries": 44,
+        "textures": 20,
+        "calls": 37,
+        "triangles": 83062,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1382,
+            720
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1464,
+            "calls": 37,
+            "triangles": 83062,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 11940480,
+          "multisampleBytes": 23880960,
+          "targetBytes": 35821440
+        }
+      },
+      "architecture": [
+        {
+          "key": "stone",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "paving",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "brick",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "plaster",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "wood",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "roof",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "roof",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "roof",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "wood",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ]
+          ],
+          "clonesLoaded": true
+        },
+        {
+          "key": "plaster",
+          "base": true,
+          "roughness": true,
+          "normal": true,
+          "wrap": 1000,
+          "image": [
+            512,
+            512
+          ],
+          "normalScale": [
+            0.18,
+            0.18
+          ],
+          "cloneNormalScales": [
+            [
+              0.18,
+              0.18
+            ],
+            [
+              0.18,
+              0.18
+            ]
+          ],
+          "clonesLoaded": true
+        }
+      ],
+      "env": {
+        "weight": 0,
+        "establish": 1,
+        "visibility": 0,
+        "trees": 201,
+        "visible": false,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1382,
+          720
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 1464,
+          "calls": 37,
+          "triangles": 83062,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 11940480,
+        "multisampleBytes": 23880960,
+        "targetBytes": 35821440
+      },
+      "labels": [
+        {
+          "id": "mural-01",
+          "hidden": true,
+          "opacity": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "mural-02",
+          "hidden": true,
+          "opacity": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "mural-03",
+          "hidden": true,
+          "opacity": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "mural-04",
+          "hidden": true,
+          "opacity": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        },
+        {
+          "id": "mural-05",
+          "hidden": true,
+          "opacity": "",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 0,
+            "height": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "left": 0
+          }
+        }
+      ],
+      "a02": "0",
+      "canvas": 1
+    }
+  ]
+}
