@@ -1,0 +1,898 @@
+[
+  {
+    "file": "baseline/a03-1024x768.jpg",
+    "width": 1024,
+    "height": 768,
+    "bytes": 70586,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "baseline/a03-1366x768.jpg",
+    "width": 1366,
+    "height": 768,
+    "bytes": 72960,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "baseline/a03-1440x900.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 85154,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "baseline/a03-1920x1080.jpg",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 104948,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "baseline/core-1024x768.jpg",
+    "width": 1024,
+    "height": 768,
+    "bytes": 96573,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "baseline/core-1366x768.jpg",
+    "width": 1366,
+    "height": 768,
+    "bytes": 107296,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "baseline/core-1440x900.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 137507,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "baseline/core-1920x1080.jpg",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 186669,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "baseline/five-1024x768.jpg",
+    "width": 1024,
+    "height": 768,
+    "bytes": 96481,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "baseline/five-1366x768.jpg",
+    "width": 1366,
+    "height": 768,
+    "bytes": 107330,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "baseline/five-1440x900.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 137506,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "baseline/five-1920x1080.jpg",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 186534,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "baseline/hero-1024x768.jpg",
+    "width": 1024,
+    "height": 768,
+    "bytes": 133633,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "baseline/hero-1366x768.jpg",
+    "width": 1366,
+    "height": 768,
+    "bytes": 180959,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "baseline/hero-1440x900.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 220019,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "baseline/hero-1920x1080.jpg",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 319331,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "baseline/stable-1024x768.jpg",
+    "width": 1024,
+    "height": 768,
+    "bytes": 88834,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "baseline/stable-1366x768.jpg",
+    "width": 1366,
+    "height": 768,
+    "bytes": 99267,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "baseline/stable-1440x900.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 129571,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "baseline/stable-1920x1080.jpg",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 178532,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "contact/25-1024x768.jpg",
+    "width": 1024,
+    "height": 768,
+    "bytes": 127585,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "contact/25-1366x768.jpg",
+    "width": 1366,
+    "height": 768,
+    "bytes": 179745,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "contact/25-1440x900.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 198057,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "contact/25-1920x1080.jpg",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 296442,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "contact/50-1024x768.jpg",
+    "width": 1024,
+    "height": 768,
+    "bytes": 111908,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "contact/50-1366x768.jpg",
+    "width": 1366,
+    "height": 768,
+    "bytes": 145723,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "contact/50-1440x900.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 162565,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "contact/50-1920x1080.jpg",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 228014,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "contact/75-1024x768.jpg",
+    "width": 1024,
+    "height": 768,
+    "bytes": 110504,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "contact/75-1366x768.jpg",
+    "width": 1366,
+    "height": 768,
+    "bytes": 153587,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "contact/75-1440x900.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 151335,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "contact/75-1920x1080.jpg",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 248427,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "contact/hero-1024x768.jpg",
+    "width": 1024,
+    "height": 768,
+    "bytes": 133633,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "contact/hero-1366x768.jpg",
+    "width": 1366,
+    "height": 768,
+    "bytes": 180959,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "contact/hero-1440x900.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 220019,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "contact/hero-1920x1080.jpg",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 319332,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "contact/stable-1024x768.jpg",
+    "width": 1024,
+    "height": 768,
+    "bytes": 113315,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "contact/stable-1366x768.jpg",
+    "width": 1366,
+    "height": 768,
+    "bytes": 145383,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "contact/stable-1440x900.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 195056,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "contact/stable-1920x1080.jpg",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 267450,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "reduced/core-1024x768.jpg",
+    "width": 1024,
+    "height": 768,
+    "bytes": 121199,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "reduced/core-1366x768.jpg",
+    "width": 1366,
+    "height": 768,
+    "bytes": 152878,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "reduced/core-1440x900.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 202703,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "reduced/core-1920x1080.jpg",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 275194,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "reduced/five-1024x768.jpg",
+    "width": 1024,
+    "height": 768,
+    "bytes": 120885,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "reduced/five-1366x768.jpg",
+    "width": 1366,
+    "height": 768,
+    "bytes": 152664,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "reduced/five-1440x900.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 202443,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "reduced/five-1920x1080.jpg",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 274891,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "reduced/returned-1024x768.jpg",
+    "width": 1024,
+    "height": 768,
+    "bytes": 133633,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "reduced/returned-1366x768.jpg",
+    "width": 1366,
+    "height": 768,
+    "bytes": 180959,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "reduced/returned-1440x900.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 220019,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "reduced/returned-1920x1080.jpg",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 319332,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "reduced/stable-1024x768.jpg",
+    "width": 1024,
+    "height": 768,
+    "bytes": 113324,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "reduced/stable-1366x768.jpg",
+    "width": 1366,
+    "height": 768,
+    "bytes": 145359,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "reduced/stable-1440x900.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 195022,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "reduced/stable-1920x1080.jpg",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 267412,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "regression/a03-1024x768.jpg",
+    "width": 1024,
+    "height": 768,
+    "bytes": 70578,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "regression/a03-1366x768.jpg",
+    "width": 1366,
+    "height": 768,
+    "bytes": 72973,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "regression/a03-1440x900.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 85138,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "regression/a03-1920x1080.jpg",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 104870,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "regression/hero-1024x768.jpg",
+    "width": 1024,
+    "height": 768,
+    "bytes": 133600,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "regression/hero-1366x768.jpg",
+    "width": 1366,
+    "height": 768,
+    "bytes": 180959,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "regression/hero-1440x900.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 220019,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "regression/hero-1920x1080.jpg",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 319353,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "responsive/1024x768.jpg",
+    "width": 1024,
+    "height": 768,
+    "bytes": 121187,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "responsive/1366x768.jpg",
+    "width": 1366,
+    "height": 768,
+    "bytes": 152896,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "responsive/1440x900.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 202720,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "responsive/1920x1080.jpg",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 275234,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "shared-regression/a03-after.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 85146,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "shared-regression/a03-before.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 85150,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "shared-regression/a04-after.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 126252,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "shared-regression/a04-before.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 126252,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "shared-regression/a05-after.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 376955,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "shared-regression/a05-before.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 376916,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "shared-regression/a06-after.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 588817,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "shared-regression/a06-before.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 588761,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "shared-regression/a07-after.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 635699,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "shared-regression/a07-before.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 635692,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "shared-regression/a08-after.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 396824,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "shared-regression/a08-before.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 396846,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/anchor-1024x768.jpg",
+    "width": 1024,
+    "height": 768,
+    "bytes": 113927,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/anchor-1366x768.jpg",
+    "width": 1366,
+    "height": 768,
+    "bytes": 145971,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/anchor-1440x900.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 195642,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/anchor-1920x1080.jpg",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 268291,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/core-1024x768.jpg",
+    "width": 1024,
+    "height": 768,
+    "bytes": 121187,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/core-1366x768.jpg",
+    "width": 1366,
+    "height": 768,
+    "bytes": 152896,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/core-1440x900.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 202720,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/core-1920x1080.jpg",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 275234,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/end-1024x768.jpg",
+    "width": 1024,
+    "height": 768,
+    "bytes": 121177,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/end-1366x768.jpg",
+    "width": 1366,
+    "height": 768,
+    "bytes": 152895,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/end-1440x900.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 202738,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/end-1920x1080.jpg",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 275218,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/entry-1024x768.jpg",
+    "width": 1024,
+    "height": 768,
+    "bytes": 111909,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/entry-1366x768.jpg",
+    "width": 1366,
+    "height": 768,
+    "bytes": 145751,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/entry-1440x900.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 162536,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/entry-1920x1080.jpg",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 228038,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/five-1024x768.jpg",
+    "width": 1024,
+    "height": 768,
+    "bytes": 120901,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/five-1366x768.jpg",
+    "width": 1366,
+    "height": 768,
+    "bytes": 152663,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/five-1440x900.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 202450,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/five-1920x1080.jpg",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 274876,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/line-1024x768.jpg",
+    "width": 1024,
+    "height": 768,
+    "bytes": 115025,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/line-1366x768.jpg",
+    "width": 1366,
+    "height": 768,
+    "bytes": 147220,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/line-1440x900.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 196761,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/line-1920x1080.jpg",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 269458,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/reverse-1024x768.jpg",
+    "width": 1024,
+    "height": 768,
+    "bytes": 121180,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/reverse-1366x768.jpg",
+    "width": 1366,
+    "height": 768,
+    "bytes": 152871,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/reverse-1440x900.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 202734,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/reverse-1920x1080.jpg",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 275208,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/stable-1024x768.jpg",
+    "width": 1024,
+    "height": 768,
+    "bytes": 113307,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/stable-1366x768.jpg",
+    "width": 1366,
+    "height": 768,
+    "bytes": 145389,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/stable-1440x900.jpg",
+    "width": 1440,
+    "height": 900,
+    "bytes": 195004,
+    "quality": 90,
+    "lossless": false
+  },
+  {
+    "file": "states/stable-1920x1080.jpg",
+    "width": 1920,
+    "height": 1080,
+    "bytes": 267430,
+    "quality": 90,
+    "lossless": false
+  }
+]

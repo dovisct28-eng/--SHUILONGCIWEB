@@ -18,8 +18,11 @@ test('environment discards color/depth and matching shadow fragments, then stops
   const shader=()=>({uniforms:{},vertexShader:'#include <worldpos_vertex>\n#include <project_vertex>',fragmentShader:'#include <color_fragment>\n#include <alphatest_fragment>\n#include <opaque_fragment>'});
   const canopy=group.getObjectByName('CanopyGroves'),surface=shader(),shadow=shader();canopy.material.onBeforeCompile(surface);canopy.customDepthMaterial.onBeforeCompile(shadow);
   assert.equal(canopy.material.depthWrite,true);assert.equal(canopy.material.transparent,false);
-  assert.match(surface.fragmentShader,/if\(coverage<=threshold\)discard/);assert.match(shadow.fragmentShader,/a01EnvironmentVisibility<=hash/);
+  assert.match(surface.fragmentShader,/if\(coverage<=threshold\)discard/);assert.match(shadow.fragmentShader,/coverage<=hash/);
   assert.equal(surface.uniforms.a01EnvironmentVisibility,shadow.uniforms.a01EnvironmentVisibility);
+  assert.equal(surface.uniforms.a02Room,shadow.uniforms.a02Room);
+  const ground=group.getObjectByName('SlopingSoil');env.apply(1,1,false,1);assert.equal(ground.material.transparent,true);assert.equal(ground.material.depthWrite,false);assert.equal(surface.uniforms.a02Room.value,1);
+  env.apply(1,1,false,0);assert.equal(ground.material.transparent,false);assert.equal(ground.material.depthWrite,true);assert.equal(surface.uniforms.a02Room.value,0);
   for(const weight of [1,.5,.04,.03,0,1]){env.apply(weight,1);assert.equal(group.visible,environmentVisible(weight));assert.equal(surface.uniforms.a01EnvironmentVisibility.value,weight);}
   env.apply(0,1);assert.equal(group.visible,false);env.dispose();assert.equal(scene.children.length,0);
  }finally{globalThis.document=previous;}

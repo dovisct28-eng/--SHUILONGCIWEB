@@ -7,4 +7,10 @@ for(const[symbol,name]of [['inlineMarkers','narrative-markers.mjs'],['inlineDire
  source=inlineA02(source);
  const expression=new RegExp(`const ${symbol}="(?:\\\\.|[^"\\\\])*";`);if(!expression.test(preview))throw Error(`Missing ${symbol}`);
  preview=preview.replace(expression,()=>`const ${symbol}=${JSON.stringify(source)};`);
-}fs.writeFileSync(file,preview);console.log('A02 preview modules synchronized; model binary untouched.');
+}
+const environment=fs.readFileSync(new URL('a01-environment.mjs',import.meta.url),'utf8');
+const oldCall='a01Environment?.apply(environmentExit*(lineState?.environmentWeight??1),lineState?.progress??1,lineState?.reducedMotion??false);';
+const roomCall='const roomSite=visualTour?0:smooth(Math.max(0,Math.min(1,(visualScreens-6.4)/.8)))*(1-smooth(Math.max(0,Math.min(1,(visualScreens-10.2)/.75))));a01Environment?.apply((environmentExit+roomSite*(1-environmentExit))*(lineState?.environmentWeight??1),lineState?.progress??1,lineState?.reducedMotion??false,roomSite);';
+preview=preview.replace(oldCall,roomCall);
+preview=preview.replace(/const inlineA01Environment="(?:\\.|[^"\\])*";/,()=>`const inlineA01Environment=${JSON.stringify(environment)};`);
+fs.writeFileSync(file,preview);console.log('A02 preview modules synchronized; model binary untouched.');

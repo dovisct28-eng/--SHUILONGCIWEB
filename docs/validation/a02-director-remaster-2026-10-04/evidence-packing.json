@@ -1,0 +1,674 @@
+[
+  {
+    "file": "baseline/a03-1024x768.webp",
+    "pngBytes": 164647,
+    "webpBytes": 100382,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "baseline/a03-1366x768.webp",
+    "pngBytes": 170720,
+    "webpBytes": 102102,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "baseline/a03-1440x900.webp",
+    "pngBytes": 198658,
+    "webpBytes": 118678,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "baseline/a03-1920x1080.webp",
+    "pngBytes": 232946,
+    "webpBytes": 136150,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "baseline/core-1024x768.webp",
+    "pngBytes": 758838,
+    "webpBytes": 642444,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "baseline/core-1366x768.webp",
+    "pngBytes": 952206,
+    "webpBytes": 826270,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "baseline/core-1440x900.webp",
+    "pngBytes": 1185775,
+    "webpBytes": 1024580,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "baseline/core-1920x1080.webp",
+    "pngBytes": 1752122,
+    "webpBytes": 1571166,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "baseline/five-1024x768.webp",
+    "pngBytes": 757243,
+    "webpBytes": 643092,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "baseline/five-1366x768.webp",
+    "pngBytes": 950480,
+    "webpBytes": 826074,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "baseline/five-1440x900.webp",
+    "pngBytes": 1184586,
+    "webpBytes": 1024486,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "baseline/five-1920x1080.webp",
+    "pngBytes": 1749809,
+    "webpBytes": 1569496,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "baseline/hero-1024x768.webp",
+    "pngBytes": 825867,
+    "webpBytes": 632486,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "baseline/hero-1366x768.webp",
+    "pngBytes": 1109520,
+    "webpBytes": 812738,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "baseline/hero-1440x900.webp",
+    "pngBytes": 1340835,
+    "webpBytes": 987568,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "baseline/hero-1920x1080.webp",
+    "pngBytes": 2028144,
+    "webpBytes": 1470996,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "baseline/stable-1024x768.webp",
+    "pngBytes": 747760,
+    "webpBytes": 632328,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "baseline/stable-1366x768.webp",
+    "pngBytes": 934596,
+    "webpBytes": 816380,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "baseline/stable-1440x900.webp",
+    "pngBytes": 1167067,
+    "webpBytes": 1014936,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "baseline/stable-1920x1080.webp",
+    "pngBytes": 1727648,
+    "webpBytes": 1558366,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "contact/25-1024x768.webp",
+    "pngBytes": 819873,
+    "webpBytes": 623440,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "contact/25-1366x768.webp",
+    "pngBytes": 1116443,
+    "webpBytes": 839892,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "contact/25-1440x900.webp",
+    "pngBytes": 1296844,
+    "webpBytes": 994768,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "contact/25-1920x1080.webp",
+    "pngBytes": 2001797,
+    "webpBytes": 1527128,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "contact/50-1024x768.webp",
+    "pngBytes": 807436,
+    "webpBytes": 630846,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "contact/50-1366x768.webp",
+    "pngBytes": 1074438,
+    "webpBytes": 839884,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "contact/50-1440x900.webp",
+    "pngBytes": 1262142,
+    "webpBytes": 988886,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "contact/50-1920x1080.webp",
+    "pngBytes": 1900177,
+    "webpBytes": 1520326,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "contact/75-1024x768.webp",
+    "pngBytes": 853658,
+    "webpBytes": 670420,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "contact/75-1366x768.webp",
+    "pngBytes": 1159334,
+    "webpBytes": 903314,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "contact/75-1440x900.webp",
+    "pngBytes": 1320646,
+    "webpBytes": 1043770,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "contact/75-1920x1080.webp",
+    "pngBytes": 2101210,
+    "webpBytes": 1672582,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "contact/hero-1024x768.webp",
+    "pngBytes": 825866,
+    "webpBytes": 632486,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "contact/hero-1366x768.webp",
+    "pngBytes": 1109521,
+    "webpBytes": 812736,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "contact/hero-1440x900.webp",
+    "pngBytes": 1340835,
+    "webpBytes": 987570,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "contact/hero-1920x1080.webp",
+    "pngBytes": 2028143,
+    "webpBytes": 1470996,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "contact/stable-1024x768.webp",
+    "pngBytes": 861556,
+    "webpBytes": 662904,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "contact/stable-1366x768.webp",
+    "pngBytes": 1151125,
+    "webpBytes": 890848,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "contact/stable-1440x900.webp",
+    "pngBytes": 1443462,
+    "webpBytes": 1113198,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "contact/stable-1920x1080.webp",
+    "pngBytes": 2132804,
+    "webpBytes": 1682824,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "reduced/core-1024x768.webp",
+    "pngBytes": 875358,
+    "webpBytes": 673290,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "reduced/core-1366x768.webp",
+    "pngBytes": 1168239,
+    "webpBytes": 901034,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "reduced/core-1440x900.webp",
+    "pngBytes": 1461348,
+    "webpBytes": 1124718,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "reduced/core-1920x1080.webp",
+    "pngBytes": 2153129,
+    "webpBytes": 1693582,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "reduced/five-1024x768.webp",
+    "pngBytes": 874685,
+    "webpBytes": 673456,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "reduced/five-1366x768.webp",
+    "pngBytes": 1166197,
+    "webpBytes": 901490,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "reduced/five-1440x900.webp",
+    "pngBytes": 1459629,
+    "webpBytes": 1125614,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "reduced/five-1920x1080.webp",
+    "pngBytes": 2151309,
+    "webpBytes": 1694758,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "reduced/returned-1024x768.webp",
+    "pngBytes": 825867,
+    "webpBytes": 632486,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "reduced/returned-1366x768.webp",
+    "pngBytes": 1109520,
+    "webpBytes": 812738,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "reduced/returned-1440x900.webp",
+    "pngBytes": 1340835,
+    "webpBytes": 987568,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "reduced/returned-1920x1080.webp",
+    "pngBytes": 2028143,
+    "webpBytes": 1470996,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "reduced/stable-1024x768.webp",
+    "pngBytes": 861554,
+    "webpBytes": 662816,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "reduced/stable-1366x768.webp",
+    "pngBytes": 1151106,
+    "webpBytes": 890848,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "reduced/stable-1440x900.webp",
+    "pngBytes": 1443456,
+    "webpBytes": 1114180,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "reduced/stable-1920x1080.webp",
+    "pngBytes": 2132796,
+    "webpBytes": 1682820,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "regression/a03-1024x768.webp",
+    "pngBytes": 164611,
+    "webpBytes": 100280,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "regression/a03-1366x768.webp",
+    "pngBytes": 170708,
+    "webpBytes": 102118,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "regression/a03-1440x900.webp",
+    "pngBytes": 198690,
+    "webpBytes": 118522,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "regression/a03-1920x1080.webp",
+    "pngBytes": 232921,
+    "webpBytes": 136346,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "regression/hero-1024x768.webp",
+    "pngBytes": 825594,
+    "webpBytes": 631944,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "regression/hero-1366x768.webp",
+    "pngBytes": 1109520,
+    "webpBytes": 812738,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "regression/hero-1440x900.webp",
+    "pngBytes": 1340835,
+    "webpBytes": 987568,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "regression/hero-1920x1080.webp",
+    "pngBytes": 2028196,
+    "webpBytes": 1471472,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "responsive/1024x768.webp",
+    "pngBytes": 875354,
+    "webpBytes": 673508,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "responsive/1366x768.webp",
+    "pngBytes": 1168247,
+    "webpBytes": 901032,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "responsive/1440x900.webp",
+    "pngBytes": 1461354,
+    "webpBytes": 1124304,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "responsive/1920x1080.webp",
+    "pngBytes": 2153156,
+    "webpBytes": 1693778,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "shared-regression/a03-after.webp",
+    "pngBytes": 198711,
+    "webpBytes": 118618,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "shared-regression/a03-before.webp",
+    "pngBytes": 198669,
+    "webpBytes": 118646,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "shared-regression/a04-after.webp",
+    "pngBytes": 425784,
+    "webpBytes": 284912,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "shared-regression/a04-before.webp",
+    "pngBytes": 425782,
+    "webpBytes": 284912,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "shared-regression/a05-after.webp",
+    "pngBytes": 1775892,
+    "webpBytes": 1310834,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "shared-regression/a05-before.webp",
+    "pngBytes": 1775829,
+    "webpBytes": 1310868,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "shared-regression/a06-after.webp",
+    "pngBytes": 2308892,
+    "webpBytes": 1633298,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "shared-regression/a06-before.webp",
+    "pngBytes": 2308868,
+    "webpBytes": 1633198,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "shared-regression/a07-after.webp",
+    "pngBytes": 2442205,
+    "webpBytes": 1772666,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "shared-regression/a07-before.webp",
+    "pngBytes": 2442226,
+    "webpBytes": 1772554,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "shared-regression/a08-after.webp",
+    "pngBytes": 1978533,
+    "webpBytes": 1401370,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "shared-regression/a08-before.webp",
+    "pngBytes": 1978522,
+    "webpBytes": 1401354,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/anchor-1024x768.webp",
+    "pngBytes": 862952,
+    "webpBytes": 663666,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/anchor-1366x768.webp",
+    "pngBytes": 1152458,
+    "webpBytes": 891732,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/anchor-1440x900.webp",
+    "pngBytes": 1444394,
+    "webpBytes": 1114220,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/anchor-1920x1080.webp",
+    "pngBytes": 2134344,
+    "webpBytes": 1686352,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/core-1024x768.webp",
+    "pngBytes": 875354,
+    "webpBytes": 673508,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/core-1366x768.webp",
+    "pngBytes": 1168247,
+    "webpBytes": 901032,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/core-1440x900.webp",
+    "pngBytes": 1461354,
+    "webpBytes": 1124304,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/core-1920x1080.webp",
+    "pngBytes": 2153156,
+    "webpBytes": 1693778,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/end-1024x768.webp",
+    "pngBytes": 875357,
+    "webpBytes": 673290,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/end-1366x768.webp",
+    "pngBytes": 1168257,
+    "webpBytes": 901028,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/end-1440x900.webp",
+    "pngBytes": 1461358,
+    "webpBytes": 1124312,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/end-1920x1080.webp",
+    "pngBytes": 2153144,
+    "webpBytes": 1693778,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/entry-1024x768.webp",
+    "pngBytes": 807438,
+    "webpBytes": 630464,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/entry-1366x768.webp",
+    "pngBytes": 1074439,
+    "webpBytes": 839886,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/entry-1440x900.webp",
+    "pngBytes": 1262226,
+    "webpBytes": 989822,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/entry-1920x1080.webp",
+    "pngBytes": 1900317,
+    "webpBytes": 1518644,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/five-1024x768.webp",
+    "pngBytes": 874686,
+    "webpBytes": 673694,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/five-1366x768.webp",
+    "pngBytes": 1166191,
+    "webpBytes": 901290,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/five-1440x900.webp",
+    "pngBytes": 1459649,
+    "webpBytes": 1125330,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/five-1920x1080.webp",
+    "pngBytes": 2151298,
+    "webpBytes": 1694654,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/line-1024x768.webp",
+    "pngBytes": 863911,
+    "webpBytes": 666412,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/line-1366x768.webp",
+    "pngBytes": 1153612,
+    "webpBytes": 895134,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/line-1440x900.webp",
+    "pngBytes": 1446652,
+    "webpBytes": 1117576,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/line-1920x1080.webp",
+    "pngBytes": 2136002,
+    "webpBytes": 1689020,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/reverse-1024x768.webp",
+    "pngBytes": 875349,
+    "webpBytes": 673184,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/reverse-1366x768.webp",
+    "pngBytes": 1168241,
+    "webpBytes": 901026,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/reverse-1440x900.webp",
+    "pngBytes": 1461360,
+    "webpBytes": 1124892,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/reverse-1920x1080.webp",
+    "pngBytes": 2153145,
+    "webpBytes": 1693580,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/stable-1024x768.webp",
+    "pngBytes": 861474,
+    "webpBytes": 662914,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/stable-1366x768.webp",
+    "pngBytes": 1151131,
+    "webpBytes": 890850,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/stable-1440x900.webp",
+    "pngBytes": 1443459,
+    "webpBytes": 1113486,
+    "pixelsIdentical": true
+  },
+  {
+    "file": "states/stable-1920x1080.webp",
+    "pngBytes": 2132802,
+    "webpBytes": 1682820,
+    "pixelsIdentical": true
+  }
+]

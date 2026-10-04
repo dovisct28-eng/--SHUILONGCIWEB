@@ -3,6 +3,7 @@ async function sheet(name,items,cols=3){const w=640,h=400,bar=32,parts=[];for(le
 (async()=>{
 await sheet('A01-A02-contact-sheet.png',[['A01 Hero / 6.20','contact/hero-1440x900.png'],['Handoff 25% / 6.45','contact/25-1440x900.png'],['Handoff 50% / 6.70','contact/50-1440x900.png'],['Handoff 75% / 6.95','contact/75-1440x900.png'],['A02 stable / 7.55','contact/stable-1440x900.png']]);
 await sheet('A02-state-sheet.png',[['Entry / 6.70','states/entry-1440x900.png'],['Architecture stable / 7.55','states/stable-1440x900.png'],['All five locations / 8.70','states/five-1440x900.png'],['Core locations / 9.65','states/core-1440x900.png'],['A02 output / 10.15','states/end-1440x900.png'],['Reverse / 9.65','states/reverse-1440x900.png']]);
+await sheet('before-after.png',[['Before / architecture','baseline/stable-1440x900.png'],['After / architecture','states/stable-1440x900.png'],['Before / core locations','baseline/core-1440x900.png'],['After / core locations','states/core-1440x900.png']],2);
 await sheet('responsive-sheet.png',[[1920,1080],[1440,900],[1366,768],[1024,768]].map(([w,h])=>[`${w} x ${h} / actual viewport`,`responsive/${w}x${h}.png`]),2);
 await sheet('marker-build-sheet.png',[['Anchor / 8.03','states/anchor-1440x900.png'],['Leader / 8.20','states/line-1440x900.png'],['Label / 8.70','states/five-1440x900.png']]);
 await sharp(path.join(out,'states/stable-1440x900.png')).greyscale().resize(720,450).png().toFile(path.join(out,'grayscale-thumbnail.png'));

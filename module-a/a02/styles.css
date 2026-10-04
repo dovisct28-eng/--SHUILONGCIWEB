@@ -1,9 +1,10 @@
 /* A02 only; field sits behind the renderer, never over building or mural pixels. */
-.a02-field{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden;background:linear-gradient(118deg,#0b141b 0%,#182126 39%,#20272a 67%,#121b20 100%)}
-.a02-field__light{position:absolute;inset:-30%;transform:rotate(-19deg);background:linear-gradient(90deg,transparent 17%,#72818a09 34%,#b5a18b16 52%,#73838c07 72%,transparent 90%);filter:blur(70px)}
+.a02-field{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden;background:linear-gradient(118deg,#081117 0%,#142026 39%,#252b2c 67%,#0c171e 100%)}
+.a02-field__distance{position:absolute;inset:0;background:url('../../shuilong-temple/environment-assets/a01-v3/karst-valley.webp') center 40%/cover;opacity:.28;filter:brightness(.64) saturate(.48);mask-image:linear-gradient(#000 0%,#0009 37%,transparent 70%)}
+.a02-field__light{position:absolute;inset:-30%;transform:rotate(-24deg);background:linear-gradient(90deg,transparent 30%,#8397a411 44%,#b5a18b35 58%,#d3b99718 66%,transparent 76%);filter:blur(70px)}
 .a02-field__air{position:absolute;inset:0;background:linear-gradient(165deg,#61798812,transparent 49%,#060e1680 91%),linear-gradient(90deg,#060d1490,transparent 23%,transparent 80%,#060d1470)}
 .a02-field__grain{position:absolute;inset:0;opacity:var(--a02-grain,.016);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.76' numOctaves='3' stitchTiles='stitch' seed='17'/%3E%3C/filter%3E%3Cpath filter='url(%23n)' opacity='.65' d='M0 0h160v160H0z'/%3E%3C/svg%3E")}
-.stage .a02 header{top:4.5vh}.stage .a02 h2{font-size:clamp(28px,2.15vw,38px);letter-spacing:.06em;line-height:1.35}
+.stage .a02 header{top:4.5vh}.stage .a02 h2{font-size:clamp(30px,2.6vw,46px);letter-spacing:.08em;line-height:1.35}
 .stage .a02-kicker{font-size:12px;letter-spacing:.16em;margin-bottom:13px;color:#a0a39c}
 .stage .a02-description{font-size:15px;margin-top:13px;line-height:1.7}
 .stage .a02 footer{bottom:3vh}.stage .a02-status{font-size:13px;letter-spacing:.08em;margin-bottom:7px;color:#bfc0b6}

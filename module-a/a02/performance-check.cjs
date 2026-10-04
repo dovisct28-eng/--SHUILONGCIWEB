@@ -1,6 +1,6 @@
 const{chromium}=require('playwright'),{execFileSync}=require('node:child_process');const{out,seek,read,ready}=require('./capture.cjs');const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
-const baseline='d8fe7edd7d995df0c5aef00de551b98761bcf413';
-const replaced=['module-a/a01/app.mjs','module-a/a01/ink-scene.mjs','module-a/a01/cinematic-state.mjs','shuilong-temple/director-light.mjs','shuilong-temple/narrative-markers.mjs','shuilong-temple/水龙祠-交互预览.html'];
+const baseline=process.env.A02_BASELINE||'d8fe7edd7d995df0c5aef00de551b98761bcf413';
+const replaced=['module-a/a01/app.mjs','module-a/a01/ink-scene.mjs','module-a/a01/cinematic-state.mjs','module-a/a02/spatial.mjs','module-a/a02/styles.css','shuilong-temple/a02-light.mjs','shuilong-temple/a01-environment.mjs','shuilong-temple/director-light.mjs','shuilong-temple/narrative-markers.mjs','shuilong-temple/水龙祠-交互预览.html'];
 const bodies=new Map(replaced.map(p=>[p,execFileSync('git',['show',`${baseline}:${p}`],{maxBuffer:20*1024*1024})]));
 (async()=>{const b=await chromium.launch({channel:'chrome',headless:true});const report={baseline,browser:b.version(),rows:[],limitations:'Same machine, headless installed Chrome; frame intervals include browser scheduling. No GPU-time or cross-device claim.'};try{
 for(const [width,height]of [[1440,900],[1024,768]])for(const version of ['before','after']){

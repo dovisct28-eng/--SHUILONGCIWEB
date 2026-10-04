@@ -4,7 +4,7 @@ export function architecturalRoom(screens=0) {
   const arrival=ease((screens-6.4)/.8), release=ease((screens-10.2)/.75);
   return {arrival,weight:arrival*(1-release),environment:1-ease((screens-6.2)/1),
     heading:ease((screens-7.05)/.45),field:ease((screens-6.2)/1)*(1-release),
-    exit:release,grain:.016,atmosphere:.065};
+    exit:release,site:arrival*(1-release),grain:.016,atmosphere:.065};
 }
 export function roomFrame(frame,width,height,screens) {
   const s=architecturalRoom(screens),w=s.weight;
@@ -12,7 +12,7 @@ export function roomFrame(frame,width,height,screens) {
 }
 export function createRoomField(stage) {
   const field=document.createElement('div');field.className='a02-field';field.setAttribute('aria-hidden','true');
-  field.innerHTML='<div class="a02-field__light"></div><div class="a02-field__air"></div><div class="a02-field__grain"></div>';
+  field.innerHTML='<div class="a02-field__distance"></div><div class="a02-field__light"></div><div class="a02-field__air"></div><div class="a02-field__grain"></div>';
   stage.insertBefore(field,stage.querySelector('.hero'));
   return screens=>{const s=architecturalRoom(screens);field.hidden=s.field===0;field.style.opacity=s.field;
     stage.style.setProperty('--a02-grain',s.grain);stage.style.setProperty('--a02-air',s.atmosphere);};

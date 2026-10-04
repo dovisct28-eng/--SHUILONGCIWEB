@@ -1,0 +1,1553 @@
+{
+  "baseline": "73f3e57a818826e2a395034ff6947b69f9d9e989",
+  "browser": "154.0.8037.93",
+  "rows": [
+    {
+      "size": [
+        1440,
+        900
+      ],
+      "version": "before",
+      "modelReadyMs": 2561,
+      "firstLoadBytes": 11786729,
+      "firstRequests": 53,
+      "chapterBytes": 12020865,
+      "scene": {
+        "stats": {
+          "geometries": 64,
+          "textures": 20,
+          "calls": 47,
+          "triangles": 83362,
+          "lines": 0,
+          "post": {
+            "enabled": false,
+            "error": null,
+            "passes": 1,
+            "size": [
+              1382,
+              720
+            ],
+            "aoSamples": 12,
+            "stats": {
+              "frame": 185,
+              "calls": 47,
+              "triangles": 83362,
+              "points": 0,
+              "lines": 0
+            },
+            "colorDepthBytes": 11940480,
+            "multisampleBytes": 23880960,
+            "targetBytes": 35821440
+          }
+        },
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1382,
+            720
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 185,
+            "calls": 47,
+            "triangles": 83362,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 11940480,
+          "multisampleBytes": 23880960,
+          "targetBytes": 35821440
+        },
+        "director": {
+          "space": 1,
+          "theme": 0,
+          "exposure": 0.96,
+          "fill": 0.52,
+          "sun": 3.15,
+          "fov": 31.5,
+          "architecture": 1,
+          "transfer": 0,
+          "arrival": 1,
+          "weight": 1,
+          "environment": 0,
+          "heading": 1,
+          "field": 1,
+          "exit": 0,
+          "grain": 0.016,
+          "atmosphere": 0.065,
+          "lights": 2,
+          "newTextures": 0,
+          "newPostTargets": 0
+        },
+        "geometryCount": 64,
+        "textureCount": 20
+      },
+      "timing": {
+        "frameMeanMs": 4.134444444450653,
+        "frameP95Ms": 4.3999999994412065,
+        "heapBytes": 34676067,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "devicePixelRatio": 1
+      },
+      "scrollTiming": {
+        "meanMs": 4.131111111109042,
+        "p95Ms": 4.599999999627471
+      },
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/",
+          "bytes": 1549,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/styles.css",
+          "bytes": 5706,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/app.mjs",
+          "bytes": 8507,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/cinematic-state.mjs",
+          "bytes": 1088,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/spatial.mjs",
+          "bytes": 1283,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a04/controller.mjs",
+          "bytes": 7440,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/progress.mjs",
+          "bytes": 2093,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/progress.mjs",
+          "bytes": 902,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/view.mjs",
+          "bytes": 2163,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a05/content.mjs",
+          "bytes": 781,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/progress.mjs",
+          "bytes": 956,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/guide/controller.mjs",
+          "bytes": 6708,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a07/content.mjs",
+          "bytes": 1040,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a06/content.mjs",
+          "bytes": 780,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a08/controller.mjs",
+          "bytes": 1066,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/state.mjs",
+          "bytes": 1873,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+          "bytes": 35304,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+          "bytes": 25148,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a04/path.mjs",
+          "bytes": 3098,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a08/progress.mjs",
+          "bytes": 178,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/mural-resources.mjs",
+          "bytes": 1416,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/projection.mjs",
+          "bytes": 646,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/guide/progress.mjs",
+          "bytes": 2996,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/styles.css",
+          "bytes": 1770,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/%E6%B0%B4%E9%BE%99%E7%A5%A0-%E4%BA%A4%E4%BA%92%E9%A2%84%E8%A7%88.html?clean&controlled",
+          "bytes": 7545556,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a04/styles.css",
+          "bytes": 1513,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a08/styles.css",
+          "bytes": 1088,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/guide/styles.css",
+          "bytes": 2624,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/ink-scene.mjs",
+          "bytes": 2787,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/mural-resources.mjs",
+          "bytes": 1416,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/styles.css",
+          "bytes": 3321,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/styles.css",
+          "bytes": 2090,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+          "bytes": 102818,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/material-isolation.mjs",
+          "bytes": 273,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/narrative-markers.mjs",
+          "bytes": 3996,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a04-scene.mjs",
+          "bytes": 9597,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/state.mjs",
+          "bytes": 1873,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/markers.mjs",
+          "bytes": 995,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/shuilong-temple.glb",
+          "bytes": 3329000,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-lines.mjs",
+          "bytes": 6438,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-lines-data.mjs",
+          "bytes": 36739,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment.mjs",
+          "bytes": 13934,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-art-direction.mjs",
+          "bytes": 4554,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment-assets/watercolor-tree.webp",
+          "bytes": 330776,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment-assets/ivory-mist.webp",
+          "bytes": 61818,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment-assets/distant-landscape.webp",
+          "bytes": 181030,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-camera.mjs",
+          "bytes": 1829,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-material.mjs",
+          "bytes": 4480,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-environment.mjs",
+          "bytes": 9710,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/director-light.mjs",
+          "bytes": 2255,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a02-light.mjs",
+          "bytes": 3823,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/spatial.mjs",
+          "bytes": 1283,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-post.mjs",
+          "bytes": 4622,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/fonts.css",
+          "bytes": 288,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/fonts.css",
+          "bytes": 288,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/narrative-sans.woff2",
+          "bytes": 96644,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/narrative-serif.woff2",
+          "bytes": 40272,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/narrative-sans.woff2",
+          "bytes": 96644,
+          "status": 200
+        }
+      ]
+    },
+    {
+      "size": [
+        1440,
+        900
+      ],
+      "version": "after",
+      "modelReadyMs": 2888,
+      "firstLoadBytes": 11792000,
+      "firstRequests": 53,
+      "chapterBytes": 12026136,
+      "scene": {
+        "stats": {
+          "geometries": 64,
+          "textures": 20,
+          "calls": 57,
+          "triangles": 170510,
+          "lines": 0,
+          "post": {
+            "enabled": false,
+            "error": null,
+            "passes": 1,
+            "size": [
+              1382,
+              720
+            ],
+            "aoSamples": 12,
+            "stats": {
+              "frame": 183,
+              "calls": 57,
+              "triangles": 170510,
+              "points": 0,
+              "lines": 0
+            },
+            "colorDepthBytes": 11940480,
+            "multisampleBytes": 23880960,
+            "targetBytes": 35821440
+          }
+        },
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1382,
+            720
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 183,
+            "calls": 57,
+            "triangles": 170510,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 11940480,
+          "multisampleBytes": 23880960,
+          "targetBytes": 35821440
+        },
+        "director": {
+          "space": 1,
+          "theme": 0,
+          "exposure": 1.01,
+          "fill": 0.33,
+          "sun": 3.5,
+          "fov": 31.5,
+          "architecture": 1,
+          "transfer": 0,
+          "arrival": 1,
+          "weight": 1,
+          "environment": 0,
+          "heading": 1,
+          "field": 1,
+          "exit": 0,
+          "site": 1,
+          "grain": 0.016,
+          "atmosphere": 0.065,
+          "lights": 4,
+          "newTextures": 0,
+          "newPostTargets": 0
+        },
+        "geometryCount": 64,
+        "textureCount": 20
+      },
+      "timing": {
+        "frameMeanMs": 4.124444444446514,
+        "frameP95Ms": 4.400000000372529,
+        "heapBytes": 43339207,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "devicePixelRatio": 1
+      },
+      "scrollTiming": {
+        "meanMs": 4.125555555563834,
+        "p95Ms": 4.5
+      },
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/",
+          "bytes": 1549,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/styles.css",
+          "bytes": 5706,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+          "bytes": 35304,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+          "bytes": 25148,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/app.mjs",
+          "bytes": 8584,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a04/controller.mjs",
+          "bytes": 7440,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/progress.mjs",
+          "bytes": 2093,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/progress.mjs",
+          "bytes": 902,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/cinematic-state.mjs",
+          "bytes": 1088,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/progress.mjs",
+          "bytes": 956,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/view.mjs",
+          "bytes": 2163,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a05/content.mjs",
+          "bytes": 781,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a06/content.mjs",
+          "bytes": 780,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a07/content.mjs",
+          "bytes": 1040,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/guide/controller.mjs",
+          "bytes": 6708,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/spatial.mjs",
+          "bytes": 1347,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a08/controller.mjs",
+          "bytes": 1066,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/state.mjs",
+          "bytes": 1873,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a04/path.mjs",
+          "bytes": 3098,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/mural-resources.mjs",
+          "bytes": 1416,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a08/progress.mjs",
+          "bytes": 178,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/projection.mjs",
+          "bytes": 646,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/guide/progress.mjs",
+          "bytes": 2996,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/styles.css",
+          "bytes": 2029,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a04/styles.css",
+          "bytes": 1513,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/guide/styles.css",
+          "bytes": 2624,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a08/styles.css",
+          "bytes": 1088,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/%E6%B0%B4%E9%BE%99%E7%A5%A0-%E4%BA%A4%E4%BA%92%E9%A2%84%E8%A7%88.html?clean&controlled",
+          "bytes": 7548123,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+          "bytes": 102818,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/ink-scene.mjs",
+          "bytes": 2813,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/styles.css",
+          "bytes": 2090,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/styles.css",
+          "bytes": 3321,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/mural-resources.mjs",
+          "bytes": 1416,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/material-isolation.mjs",
+          "bytes": 273,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/narrative-markers.mjs",
+          "bytes": 4523,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a04-scene.mjs",
+          "bytes": 9597,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/markers.mjs",
+          "bytes": 995,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/state.mjs",
+          "bytes": 1873,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/shuilong-temple.glb",
+          "bytes": 3329000,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-lines-data.mjs",
+          "bytes": 36739,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-lines.mjs",
+          "bytes": 6438,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment.mjs",
+          "bytes": 13934,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment-assets/watercolor-tree.webp",
+          "bytes": 330776,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment-assets/distant-landscape.webp",
+          "bytes": 181030,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment-assets/ivory-mist.webp",
+          "bytes": 61818,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-art-direction.mjs",
+          "bytes": 4554,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-camera.mjs",
+          "bytes": 1829,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-material.mjs",
+          "bytes": 4480,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-environment.mjs",
+          "bytes": 11001,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/director-light.mjs",
+          "bytes": 2281,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a02-light.mjs",
+          "bytes": 4193,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/spatial.mjs",
+          "bytes": 1347,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-post.mjs",
+          "bytes": 4622,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/fonts.css",
+          "bytes": 288,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/fonts.css",
+          "bytes": 288,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/narrative-sans.woff2",
+          "bytes": 96644,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/narrative-serif.woff2",
+          "bytes": 40272,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/narrative-sans.woff2",
+          "bytes": 96644,
+          "status": 200
+        }
+      ]
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "version": "before",
+      "modelReadyMs": 2092,
+      "firstLoadBytes": 11786729,
+      "firstRequests": 53,
+      "chapterBytes": 12020865,
+      "scene": {
+        "stats": {
+          "geometries": 64,
+          "textures": 20,
+          "calls": 47,
+          "triangles": 83362,
+          "lines": 0,
+          "post": {
+            "enabled": false,
+            "error": null,
+            "passes": 1,
+            "size": [
+              983,
+              614
+            ],
+            "aoSamples": 12,
+            "stats": {
+              "frame": 189,
+              "calls": 47,
+              "triangles": 83362,
+              "points": 0,
+              "lines": 0
+            },
+            "colorDepthBytes": 7242744,
+            "multisampleBytes": 14485488,
+            "targetBytes": 21728232
+          }
+        },
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            983,
+            614
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 189,
+            "calls": 47,
+            "triangles": 83362,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 7242744,
+          "multisampleBytes": 14485488,
+          "targetBytes": 21728232
+        },
+        "director": {
+          "space": 1,
+          "theme": 0,
+          "exposure": 0.96,
+          "fill": 0.52,
+          "sun": 3.15,
+          "fov": 31.5,
+          "architecture": 1,
+          "transfer": 0,
+          "arrival": 1,
+          "weight": 1,
+          "environment": 0,
+          "heading": 1,
+          "field": 1,
+          "exit": 0,
+          "grain": 0.016,
+          "atmosphere": 0.065,
+          "lights": 2,
+          "newTextures": 0,
+          "newPostTargets": 0
+        },
+        "geometryCount": 64,
+        "textureCount": 20
+      },
+      "timing": {
+        "frameMeanMs": 4.135555555557625,
+        "frameP95Ms": 4.400000000372529,
+        "heapBytes": 34792656,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "devicePixelRatio": 1
+      },
+      "scrollTiming": {
+        "meanMs": 4.126666666660458,
+        "p95Ms": 4.3999999994412065
+      },
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/",
+          "bytes": 1549,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/styles.css",
+          "bytes": 5706,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/app.mjs",
+          "bytes": 8507,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+          "bytes": 35304,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+          "bytes": 25148,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a04/controller.mjs",
+          "bytes": 7440,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/cinematic-state.mjs",
+          "bytes": 1088,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/spatial.mjs",
+          "bytes": 1283,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/progress.mjs",
+          "bytes": 2093,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/progress.mjs",
+          "bytes": 902,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/progress.mjs",
+          "bytes": 956,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/guide/controller.mjs",
+          "bytes": 6708,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/view.mjs",
+          "bytes": 2163,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a05/content.mjs",
+          "bytes": 781,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a06/content.mjs",
+          "bytes": 780,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a07/content.mjs",
+          "bytes": 1040,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a08/controller.mjs",
+          "bytes": 1066,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/state.mjs",
+          "bytes": 1873,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a04/path.mjs",
+          "bytes": 3098,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/guide/progress.mjs",
+          "bytes": 2996,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/mural-resources.mjs",
+          "bytes": 1416,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/projection.mjs",
+          "bytes": 646,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a08/progress.mjs",
+          "bytes": 178,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/styles.css",
+          "bytes": 1770,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/%E6%B0%B4%E9%BE%99%E7%A5%A0-%E4%BA%A4%E4%BA%92%E9%A2%84%E8%A7%88.html?clean&controlled",
+          "bytes": 7545556,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/guide/styles.css",
+          "bytes": 2624,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a04/styles.css",
+          "bytes": 1513,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a08/styles.css",
+          "bytes": 1088,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/ink-scene.mjs",
+          "bytes": 2787,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/mural-resources.mjs",
+          "bytes": 1416,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/styles.css",
+          "bytes": 3321,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/styles.css",
+          "bytes": 2090,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+          "bytes": 102818,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/material-isolation.mjs",
+          "bytes": 273,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/narrative-markers.mjs",
+          "bytes": 3996,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a04-scene.mjs",
+          "bytes": 9597,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/state.mjs",
+          "bytes": 1873,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/markers.mjs",
+          "bytes": 995,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/shuilong-temple.glb",
+          "bytes": 3329000,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-lines.mjs",
+          "bytes": 6438,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-lines-data.mjs",
+          "bytes": 36739,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment.mjs",
+          "bytes": 13934,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment-assets/watercolor-tree.webp",
+          "bytes": 330776,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment-assets/ivory-mist.webp",
+          "bytes": 61818,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment-assets/distant-landscape.webp",
+          "bytes": 181030,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-art-direction.mjs",
+          "bytes": 4554,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-camera.mjs",
+          "bytes": 1829,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-material.mjs",
+          "bytes": 4480,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-environment.mjs",
+          "bytes": 9710,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/director-light.mjs",
+          "bytes": 2255,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a02-light.mjs",
+          "bytes": 3823,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/spatial.mjs",
+          "bytes": 1283,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-post.mjs",
+          "bytes": 4622,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/fonts.css",
+          "bytes": 288,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/fonts.css",
+          "bytes": 288,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/narrative-serif.woff2",
+          "bytes": 40272,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/narrative-sans.woff2",
+          "bytes": 96644,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/narrative-sans.woff2",
+          "bytes": 96644,
+          "status": 200
+        }
+      ]
+    },
+    {
+      "size": [
+        1024,
+        768
+      ],
+      "version": "after",
+      "modelReadyMs": 2036,
+      "firstLoadBytes": 11792000,
+      "firstRequests": 53,
+      "chapterBytes": 12026136,
+      "scene": {
+        "stats": {
+          "geometries": 64,
+          "textures": 20,
+          "calls": 57,
+          "triangles": 170510,
+          "lines": 0,
+          "post": {
+            "enabled": false,
+            "error": null,
+            "passes": 1,
+            "size": [
+              983,
+              614
+            ],
+            "aoSamples": 12,
+            "stats": {
+              "frame": 309,
+              "calls": 57,
+              "triangles": 170510,
+              "points": 0,
+              "lines": 0
+            },
+            "colorDepthBytes": 7242744,
+            "multisampleBytes": 14485488,
+            "targetBytes": 21728232
+          }
+        },
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            983,
+            614
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 309,
+            "calls": 57,
+            "triangles": 170510,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 7242744,
+          "multisampleBytes": 14485488,
+          "targetBytes": 21728232
+        },
+        "director": {
+          "space": 1,
+          "theme": 0,
+          "exposure": 1.01,
+          "fill": 0.33,
+          "sun": 3.5,
+          "fov": 31.5,
+          "architecture": 1,
+          "transfer": 0,
+          "arrival": 1,
+          "weight": 1,
+          "environment": 0,
+          "heading": 1,
+          "field": 1,
+          "exit": 0,
+          "site": 1,
+          "grain": 0.016,
+          "atmosphere": 0.065,
+          "lights": 4,
+          "newTextures": 0,
+          "newPostTargets": 0
+        },
+        "geometryCount": 64,
+        "textureCount": 20
+      },
+      "timing": {
+        "frameMeanMs": 4.095555555561765,
+        "frameP95Ms": 4.5,
+        "heapBytes": 31639688,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "devicePixelRatio": 1
+      },
+      "scrollTiming": {
+        "meanMs": 4.155555555555556,
+        "p95Ms": 4.8999999994412065
+      },
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/",
+          "bytes": 1549,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/styles.css",
+          "bytes": 5706,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/app.mjs",
+          "bytes": 8584,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+          "bytes": 35304,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+          "bytes": 25148,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/progress.mjs",
+          "bytes": 2093,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/progress.mjs",
+          "bytes": 902,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a04/controller.mjs",
+          "bytes": 7440,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/progress.mjs",
+          "bytes": 956,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/cinematic-state.mjs",
+          "bytes": 1088,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/view.mjs",
+          "bytes": 2163,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/guide/controller.mjs",
+          "bytes": 6708,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a07/content.mjs",
+          "bytes": 1040,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a05/content.mjs",
+          "bytes": 781,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a06/content.mjs",
+          "bytes": 780,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/spatial.mjs",
+          "bytes": 1347,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a08/controller.mjs",
+          "bytes": 1066,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/state.mjs",
+          "bytes": 1873,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/projection.mjs",
+          "bytes": 646,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/guide/progress.mjs",
+          "bytes": 2996,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/mural-resources.mjs",
+          "bytes": 1416,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a04/path.mjs",
+          "bytes": 3098,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a08/progress.mjs",
+          "bytes": 178,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/styles.css",
+          "bytes": 2029,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a04/styles.css",
+          "bytes": 1513,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/guide/styles.css",
+          "bytes": 2624,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a08/styles.css",
+          "bytes": 1088,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/%E6%B0%B4%E9%BE%99%E7%A5%A0-%E4%BA%A4%E4%BA%92%E9%A2%84%E8%A7%88.html?clean&controlled",
+          "bytes": 7548123,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+          "bytes": 102818,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/ink-scene.mjs",
+          "bytes": 2813,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/styles.css",
+          "bytes": 2090,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/styles.css",
+          "bytes": 3321,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/mural-resources.mjs",
+          "bytes": 1416,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/material-isolation.mjs",
+          "bytes": 273,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/narrative-markers.mjs",
+          "bytes": 4523,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a04-scene.mjs",
+          "bytes": 9597,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/markers.mjs",
+          "bytes": 995,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/state.mjs",
+          "bytes": 1873,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/shuilong-temple.glb",
+          "bytes": 3329000,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-lines.mjs",
+          "bytes": 6438,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-lines-data.mjs",
+          "bytes": 36739,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment.mjs",
+          "bytes": 13934,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment-assets/watercolor-tree.webp",
+          "bytes": 330776,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment-assets/ivory-mist.webp",
+          "bytes": 61818,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment-assets/distant-landscape.webp",
+          "bytes": 181030,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-art-direction.mjs",
+          "bytes": 4554,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-camera.mjs",
+          "bytes": 1829,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-material.mjs",
+          "bytes": 4480,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-environment.mjs",
+          "bytes": 11001,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/director-light.mjs",
+          "bytes": 2281,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a02-light.mjs",
+          "bytes": 4193,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/spatial.mjs",
+          "bytes": 1347,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-post.mjs",
+          "bytes": 4622,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/fonts.css",
+          "bytes": 288,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/fonts.css",
+          "bytes": 288,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/narrative-serif.woff2",
+          "bytes": 40272,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/narrative-sans.woff2",
+          "bytes": 96644,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/narrative-sans.woff2",
+          "bytes": 96644,
+          "status": 200
+        }
+      ]
+    }
+  ],
+  "limitations": "Same machine, headless installed Chrome; frame intervals include browser scheduling. No GPU-time or cross-device claim."
+}

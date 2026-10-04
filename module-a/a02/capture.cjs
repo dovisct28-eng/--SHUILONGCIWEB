@@ -1,6 +1,6 @@
 const {chromium}=require('playwright');
 const fs=require('node:fs'),path=require('node:path');
-const out=path.resolve(__dirname,'../../docs/validation/a02-dark-room-2026-10-04');
+const out=path.resolve(__dirname,'../../docs/validation',process.env.A02_EVIDENCE||'a02-dark-room-2026-10-04');
 const seek=async(p,n)=>{await p.evaluate(n=>scrollTo(0,n*innerHeight),n);await p.waitForTimeout(450);await p.evaluate(()=>Promise.all([document.fonts.ready,document.querySelector('iframe').contentDocument.fonts.ready]));};
 const read=p=>p.evaluate(()=>{const f=document.querySelector('iframe'),a=f.contentWindow.shuilongTemple,r=f.getBoundingClientRect();return {screen:scrollY/innerHeight,frame:{x:r.x,y:r.y,w:r.width,h:r.height},art:a.getA01ArtState(),director:a.getDirectorState(),stats:a.getA01RenderStats(),architecture:a.getArchitectureState(),env:a.getA01EnvironmentState(),post:a.getA01PostState(),labels:[...f.contentDocument.querySelectorAll('.mural-label')].map(e=>({id:e.dataset.muralId,hidden:e.hidden,opacity:e.style.opacity,core:e.dataset.core,rect:JSON.parse(JSON.stringify(e.getBoundingClientRect()))})),a02:getComputedStyle(document.querySelector('.a02')).opacity,canvas:f.contentDocument.querySelectorAll('canvas').length};});
 const ready=async p=>{await p.waitForFunction(()=>document.querySelector('iframe').contentWindow.modelReady);await p.waitForFunction(()=>document.querySelector('iframe').contentWindow.shuilongTemple.getArchitectureState().every(m=>m.clonesLoaded));await p.waitForTimeout(300);};

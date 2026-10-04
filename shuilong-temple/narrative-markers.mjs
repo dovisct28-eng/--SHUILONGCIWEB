@@ -52,7 +52,12 @@ export function createMuralPresentation(pins, svg) {
         p.button.style.color = roomWeight>.001?'#d8d2c5':isCore ? '#d8d2c5' : '#c6c9c2';
         p.button.style.fontWeight = isCore && emphasis > .5 ? '500' : '400';
         p.button.dataset.core = String(isCore);
-        p.button.textContent=(roomWeight>.001?circled[p.m.id]+'  ':'')+p.m.label;
+        const labelMode=roomWeight>.001?'room':'legacy';
+        if(p.button.dataset.labelMode!==labelMode){
+          if(labelMode==='room'){p.button.replaceChildren();const number=document.createElement('span');number.textContent=circled[p.m.id];number.style.cssText=`color:${isCore?palette.accent:'#a0a39c'};font-size:19px;margin-right:7px`;p.button.append(number,document.createTextNode(p.m.label));}
+          else p.button.textContent=p.m.label;
+          p.button.dataset.labelMode=labelMode;
+        }
         p.button.style.fontSize=roomWeight>.001?'15px':'';
         p.line.setAttribute('stroke-dasharray',roomWeight>.001?'none':'3 3');
         p.line.setAttribute('stroke-width',roomWeight>.001?'.8':'1.2');
@@ -61,7 +66,7 @@ export function createMuralPresentation(pins, svg) {
         const deltaX=pos.lx-pos.x,deltaY=pos.ly-pos.y;
         const trim=roomWeight>.001?Math.max(0,1-49/Math.max(1,Math.hypot(deltaX,deltaY))):1;
         for (const [key, value] of Object.entries({x1:pos.x,y1:pos.y,x2:pos.x+deltaX*trim*reveal.line,y2:pos.y+deltaY*trim*reveal.line})) p.line.setAttribute(key, value);
-        p.line.setAttribute('stroke', '#a0a39c');
+        p.line.setAttribute('stroke', roomWeight>.001&&isCore&&emphasis>.5?palette.accent:'#a0a39c');
         p.dot.setAttribute('cx', pos.x); p.dot.setAttribute('cy', pos.y);
         p.dot.setAttribute('fill', palette.accent); p.dot.setAttribute('r', isCore ? 2.3 + emphasis * .7 : 2);
       }

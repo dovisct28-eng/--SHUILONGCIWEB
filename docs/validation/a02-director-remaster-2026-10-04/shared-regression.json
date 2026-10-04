@@ -1,0 +1,38 @@
+[
+  {
+    "name": "a03",
+    "screen": 11.5,
+    "changedFraction": 0.0010871913580246914,
+    "maxDelta": 2
+  },
+  {
+    "name": "a04",
+    "screen": 15,
+    "changedFraction": 0.0000023148148148148148,
+    "maxDelta": 1
+  },
+  {
+    "name": "a05",
+    "screen": 22.3,
+    "changedFraction": 0.0016875,
+    "maxDelta": 1
+  },
+  {
+    "name": "a06",
+    "screen": 29.5,
+    "changedFraction": 0.0064729938271604935,
+    "maxDelta": 2
+  },
+  {
+    "name": "a07",
+    "screen": 37,
+    "changedFraction": 0.0010478395061728396,
+    "maxDelta": 2
+  },
+  {
+    "name": "a08",
+    "screen": 42,
+    "changedFraction": 0.00019984567901234568,
+    "maxDelta": 1
+  }
+]
