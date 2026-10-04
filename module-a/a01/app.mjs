@@ -4,6 +4,7 @@ import { cinematicState, canvasFrame } from './cinematic-state.mjs';
 import { CORE_MURALS, deriveA02State } from '../a02/progress.mjs';
 import { deriveA03State } from '../a03/progress.mjs';
 import { createA03View } from '../a03/view.mjs';
+import { a03Frame, a03Visual, A03_TARGETS } from '../a03/composition.mjs';
 import { createMuralGuide } from '../guide/controller.mjs';
 import { a05Guide } from '../a05/content.mjs';
 import { a06Guide } from '../a06/content.mjs';
@@ -87,13 +88,16 @@ function render() {
   stage.style.setProperty('--hero-weight',framing.hero);
   stage.style.setProperty('--cinematic-weight',framing.cinematic);
   const narrow = innerWidth <= 760;
-  stage.style.setProperty('--model-x', `${presentation.modelX*framing.hero + (narrow ? 0 : 19) * theme.composition}vw`);
+  const themeVisual=a03Visual(screens);
+  stage.style.setProperty('--model-x', `${presentation.modelX*framing.hero + (narrow ? 0 : A03_TARGETS.reading.x*100) * theme.composition}vw`);
   stage.style.setProperty('--model-scale',1);
   const previousCanvas=directorFrame(canvasFrame(innerWidth,innerHeight,framing,theme.composition),innerWidth,innerHeight,screens,theme.composition);
-  const canvas=roomFrame(previousCanvas,innerWidth,innerHeight,screens);
+  const canvas=a03Frame(roomFrame(previousCanvas,innerWidth,innerHeight,screens),innerWidth,innerHeight,screens);
   stage.style.setProperty('--canvas-width',`${canvas.width}px`);
   stage.style.setProperty('--canvas-height',`${canvas.height}px`);
-  modelFrame.parentElement.style.top = `${50+framing.hero*((narrow?-7:0)+(narrow?35:0)*theme.composition)}%`;
+  modelFrame.parentElement.style.top = `${50+framing.hero*((narrow?-7:0)+(narrow?35:A03_TARGETS.reading.y*100)*theme.composition)}%`;
+  stage.style.setProperty('--a03-field',themeVisual.field);
+  stage.style.setProperty('--a03-support',theme.composition);
   stage.style.setProperty('--copy-opacity', presentation.copyVisibility);
   stage.style.setProperty('--copy-x', `${reducedMotion.matches ? 0 : mix(-12, 0, copy)}px`);
   stage.style.setProperty('--intro-mark-opacity', hasLines ? 0 : presentation.introMarkVisibility);
@@ -119,6 +123,8 @@ function render() {
     revealWalls: smooth(spatial.revealWalls)*(1-room.weight),
     secondaryVisibility: theme.secondary,
     architecturalWeight:room.weight,
+    themeWeight:theme.composition,
+    fifthWeight:themeVisual.fifth,
   });
   renderInkScene(screens,reducedMotion.matches);
   roomField(a02Pass>=3?screens:0);

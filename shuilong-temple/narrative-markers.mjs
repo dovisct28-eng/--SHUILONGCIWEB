@@ -2,6 +2,7 @@
 // Sorted vertical rails prevent overlap without implying a viewing route.
 import {markerReveal,paletteFor} from '../module-a/visual-director/state.mjs';
 import {roomLabels,circled} from '../module-a/a02/markers.mjs';
+import {a03Labels} from '../module-a/a03/composition.mjs';
 export function layoutLabels(points, width, height) {
   const result = [];
   for (const side of [-1, 1]) {
@@ -21,10 +22,11 @@ export function layoutLabels(points, width, height) {
 }
 
 export function createMuralPresentation(pins, svg) {
-  let visibility = 0, emphasis = 0, secondary = 1, roomWeight=0, core = new Set();
+  let visibility = 0, emphasis = 0, secondary = 1, roomWeight=0, themeWeight=0, fifthWeight=0, core = new Set();
   const clamp = n => Math.max(0, Math.min(1, Number(n) || 0));
   return {
-    set({ visibility: v = 0, emphasis: e = 0, coreIds = [], secondaryVisibility = 1, architecturalWeight=0 } = {}) {
+    set({ visibility: v = 0, emphasis: e = 0, coreIds = [], secondaryVisibility = 1, architecturalWeight=0, themeWeight:t=0, fifthWeight:f=0 } = {}) {
+      themeWeight=clamp(t);fifthWeight=clamp(f);
       roomWeight=clamp(architecturalWeight);
       visibility = clamp(v); emphasis = clamp(e); core = new Set(coreIds);
       secondary = clamp(secondaryVisibility);
@@ -37,6 +39,8 @@ export function createMuralPresentation(pins, svg) {
     },
     update(points, width, height) {
       const positions = roomWeight>.001?roomLabels(points,width,height):layoutLabels(points, width, height);
+      const layoutWeight=Math.max(themeWeight,fifthWeight);
+      if(layoutWeight>0){const targets=a03Labels(points,width,height);for(const pos of positions){const target=targets.find(p=>p.id===pos.id);pos.lx+=(target.lx-pos.lx)*layoutWeight;pos.ly+=(target.ly-pos.ly)*layoutWeight;}}
       const reveal=markerReveal(visibility),palette=paletteFor(document.body.dataset?.directorAccent);
       svg.style.opacity = 1;
       for (const p of pins) {
@@ -46,25 +50,25 @@ export function createMuralPresentation(pins, svg) {
         p.line.style.display = p.dot.style.display = show ? '' : 'none';
         if (!show) continue;
         const isCore = core.has(p.m.id);
-        const weight = isCore ? 1 : (1 - emphasis * (roomWeight>.001?.25:.2)) * secondary;
+        const weight = (isCore ? 1 : (1 - emphasis * (roomWeight>.001?.25:.2)) * secondary)*(p.m.id==='mural-05'?1:1-.24*fifthWeight);
         p.button.style.opacity = reveal.label * weight;
         p.button.style.background = 'transparent';
         p.button.style.color = roomWeight>.001?'#d8d2c5':isCore ? '#d8d2c5' : '#c6c9c2';
         p.button.style.fontWeight = isCore && emphasis > .5 ? '500' : '400';
         p.button.dataset.core = String(isCore);
         const labelMode=roomWeight>.001?'room':'legacy';
-        if(p.button.dataset.labelMode!==labelMode){
+        if(p.button.dataset.labelMode!==labelMode||(labelMode==='room'&&p.button.childElementCount===0)){
           if(labelMode==='room'){p.button.replaceChildren();const number=document.createElement('span');number.textContent=circled[p.m.id];number.style.cssText=`color:${isCore?palette.accent:'#a0a39c'};font-size:19px;margin-right:7px`;p.button.append(number,document.createTextNode(p.m.label));}
           else p.button.textContent=p.m.label;
           p.button.dataset.labelMode=labelMode;
         }
         p.button.style.fontSize=roomWeight>.001?'15px':'';
-        p.line.setAttribute('stroke-dasharray',roomWeight>.001?'none':'3 3');
-        p.line.setAttribute('stroke-width',roomWeight>.001?'.8':'1.2');
+        p.line.setAttribute('stroke-dasharray',roomWeight>.001||themeWeight>0||fifthWeight>0?'none':'3 3');
+        p.line.setAttribute('stroke-width',roomWeight>.001||themeWeight>0||fifthWeight>0?'.8':'1.2');
         p.button.style.left = pos.lx + 'px'; p.button.style.top = pos.ly + 'px';
-        p.line.style.opacity = reveal.line * (isCore?1:weight*.6); p.dot.style.opacity = reveal.anchor * (isCore?1:weight*.6);
+        p.line.style.opacity = reveal.line * (isCore?weight:weight*.6); p.dot.style.opacity = reveal.anchor * (isCore?weight:weight*.6);
         const deltaX=pos.lx-pos.x,deltaY=pos.ly-pos.y;
-        const trim=roomWeight>.001?Math.max(0,1-49/Math.max(1,Math.hypot(deltaX,deltaY))):1;
+        const trim=roomWeight>.001||layoutWeight>0?Math.max(0,1-(roomWeight>.001?49:34)/Math.max(1,Math.hypot(deltaX,deltaY))):1;
         for (const [key, value] of Object.entries({x1:pos.x,y1:pos.y,x2:pos.x+deltaX*trim*reveal.line,y2:pos.y+deltaY*trim*reveal.line})) p.line.setAttribute(key, value);
         p.line.setAttribute('stroke', roomWeight>.001&&isCore&&emphasis>.5?palette.accent:'#a0a39c');
         p.dot.setAttribute('cx', pos.x); p.dot.setAttribute('cy', pos.y);

@@ -1,0 +1,1815 @@
+{
+  "errors": [],
+  "rows": [
+    {
+      "width": 1440,
+      "height": 900,
+      "passed": true,
+      "a02Diff": {
+        "changed": 66,
+        "maxDelta": 2
+      },
+      "heroDiff": {
+        "changed": 0,
+        "maxDelta": 0
+      },
+      "states": [
+        {
+          "name": "transition",
+          "screens": 10.9,
+          "state": {
+            "phase": "a03-enter",
+            "vars": "--a03-text: 0.5575785161584003; --a03-handoff: 0; --a03-takeover: 1; --a03-kicker: 0.9939894815927881; --a03-title: 0.87379972565158; --a03-research: 0.6675197220135272; --a03-purpose: 0.4320060105184109; --a03-source: 0.21893669739771662; --a03-hint: 0.0553935860058331; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 7.840000000000014vw; --model-scale: 1; --canvas-width: 1311.5954341478405px; --canvas-height: 788.1284763706985px; --a03-field: 0.9872592592592598; --a03-support: 0.7840000000000014; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #12161a; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 782.5,
+                  "y": 144.578125,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 375.078125,
+                  "y": 315.3125,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 478.515625,
+                  "y": 577.515625,
+                  "w": 99,
+                  "h": 44.5
+                }
+              }
+            ],
+            "copy": {
+              "x": 100.796875,
+              "y": 209.6484375,
+              "w": 518.390625,
+              "h": 444.703125
+            },
+            "title": {
+              "x": 100.796875,
+              "y": 254.0390625,
+              "w": 518.390625,
+              "h": 115.78125
+            },
+            "titleLines": [
+              {
+                "x": 100.796875,
+                "y": 254.0390625,
+                "w": 518.390625,
+                "h": 57.890625
+              },
+              {
+                "x": 100.796875,
+                "y": 311.9296875,
+                "w": 518.390625,
+                "h": 57.890625
+              }
+            ],
+            "titleText": "从出行与归来，看壁画之间的联系",
+            "topic": "出兵·入将",
+            "frame": {
+              "x": 177.09912109375,
+              "y": 73.5625,
+              "w": 1311.59375,
+              "h": 788.125
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "reading",
+          "screens": 11.7,
+          "state": {
+            "phase": "a03-reading",
+            "vars": "--a03-text: 1; --a03-handoff: 0; --a03-takeover: 1; --a03-kicker: 1; --a03-title: 1; --a03-research: 1; --a03-purpose: 1; --a03-source: 1; --a03-hint: 1; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 10vw; --model-scale: 1; --canvas-width: 1440px; --canvas-height: 846px; --a03-field: 1; --a03-support: 1; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #101519; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 821.65625,
+                  "y": 162.28125,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 494.796875,
+                  "y": 342.78125,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 494.796875,
+                  "y": 602.4375,
+                  "w": 76,
+                  "h": 40
+                }
+              }
+            ],
+            "copy": {
+              "x": 100.796875,
+              "y": 209.6484375,
+              "w": 518.390625,
+              "h": 444.703125
+            },
+            "title": {
+              "x": 100.796875,
+              "y": 254.0390625,
+              "w": 518.390625,
+              "h": 115.78125
+            },
+            "titleLines": [
+              {
+                "x": 100.796875,
+                "y": 254.0390625,
+                "w": 518.390625,
+                "h": 57.890625
+              },
+              {
+                "x": 100.796875,
+                "y": 311.9296875,
+                "w": 518.390625,
+                "h": 57.890625
+              }
+            ],
+            "titleText": "从出行与归来，看壁画之间的联系",
+            "topic": "出兵·入将",
+            "frame": {
+              "x": 144,
+              "y": 49.5,
+              "w": 1440,
+              "h": 846
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "exit",
+          "screens": 12.7,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0.1825694966190834; --a03-handoff: 0.1262002743484226; --a03-takeover: 1; --a03-kicker: 0.1825694966190834; --a03-title: 0.1825694966190834; --a03-research: 0.1825694966190834; --a03-purpose: 0.1825694966190834; --a03-source: 0.1825694966190834; --a03-hint: 0.1825694966190834; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 1.825694966190834vw; --model-scale: 1; --canvas-width: 1286.6011846360334px; --canvas-height: 749.7495105380945px; --a03-field: 1; --a03-support: 0.1825694966190834; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #11171a; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "0.969712",
+                "rect": {
+                  "x": 1092.3125,
+                  "y": 190.734375,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "0.969712",
+                "rect": {
+                  "x": 112.6875,
+                  "y": 364.359375,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 112.6875,
+                  "y": 530.515625,
+                  "w": 76,
+                  "h": 40
+                }
+              }
+            ],
+            "copy": {
+              "x": 100.796875,
+              "y": 209.6484375,
+              "w": 518.390625,
+              "h": 444.703125
+            },
+            "title": {
+              "x": 100.796875,
+              "y": 254.0390625,
+              "w": 518.390625,
+              "h": 115.78125
+            },
+            "titleLines": [
+              {
+                "x": 100.796875,
+                "y": 254.0390625,
+                "w": 518.390625,
+                "h": 57.890625
+              },
+              {
+                "x": 100.796875,
+                "y": 311.9296875,
+                "w": 518.390625,
+                "h": 57.890625
+              }
+            ],
+            "titleText": "从出行与归来，看壁画之间的联系",
+            "topic": "出兵·入将",
+            "frame": {
+              "x": 102.99310302734375,
+              "y": 79.2265625,
+              "w": 1286.59375,
+              "h": 749.734375
+            },
+            "copyHidden": "false",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        },
+        {
+          "name": "handoff",
+          "screens": 13.2,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0; --a03-handoff: 1; --a03-takeover: 1; --a03-kicker: 0; --a03-title: 0; --a03-research: 0; --a03-purpose: 0; --a03-source: 0; --a03-hint: 0; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 0vw; --model-scale: 1; --canvas-width: 830px; --canvas-height: 627.48px; --a03-field: 0; --a03-support: 0; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #151b1e; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 714,
+                  "y": 167.578125,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 40,
+                  "y": 310.625,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 40,
+                  "y": 434.484375,
+                  "w": 76,
+                  "h": 40
+                }
+              }
+            ],
+            "copy": null,
+            "title": null,
+            "titleLines": [],
+            "titleText": "从出行与归来，看壁画之间的联系",
+            "topic": "出兵·入将",
+            "frame": {
+              "x": 305,
+              "y": 136.265625,
+              "w": 830,
+              "h": 627.46875
+            },
+            "copyHidden": "true",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        }
+      ],
+      "resize": true,
+      "reducedMotion": true
+    },
+    {
+      "width": 1440,
+      "height": 1024,
+      "passed": true,
+      "a02Diff": {
+        "changed": 299,
+        "maxDelta": 1
+      },
+      "heroDiff": {
+        "changed": 0,
+        "maxDelta": 0
+      },
+      "states": [
+        {
+          "name": "transition",
+          "screens": 10.9,
+          "state": {
+            "phase": "a03-enter",
+            "vars": "--a03-text: 0.5584745407104509; --a03-handoff: 0; --a03-takeover: 1; --a03-kicker: 0.994218448010448; --a03-title: 0.8746986742372881; --a03-research: 0.6687820744438359; --a03-purpose: 0.43332689462032536; --a03-source: 0.22008733760065283; --a03-hint: 0.05621622324685113; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 7.844920042753229vw; --model-scale: 1; --canvas-width: 1311.7824702296364px; --canvas-height: 892.1483433455832px; --a03-field: 0.9874529981259951; --a03-support: 0.7844920042753228; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #12161a; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 783.421875,
+                  "y": 185.828125,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 374.015625,
+                  "y": 362.03125,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 478.34375,
+                  "y": 634.921875,
+                  "w": 99,
+                  "h": 44.5
+                }
+              }
+            ],
+            "copy": {
+              "x": 100.796875,
+              "y": 269.1640625,
+              "w": 518.390625,
+              "h": 444.703125
+            },
+            "title": {
+              "x": 100.796875,
+              "y": 313.5546875,
+              "w": 518.390625,
+              "h": 115.78125
+            },
+            "titleLines": [
+              {
+                "x": 100.796875,
+                "y": 313.5546875,
+                "w": 518.390625,
+                "h": 57.890625
+              },
+              {
+                "x": 100.796875,
+                "y": 371.4453125,
+                "w": 518.390625,
+                "h": 57.890625
+              }
+            ],
+            "titleText": "从出行与归来，看壁画之间的联系",
+            "topic": "出兵·入将",
+            "frame": {
+              "x": 177.07623291015625,
+              "y": 86.0078125,
+              "w": 1311.78125,
+              "h": 892.140625
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "reading",
+          "screens": 11.7,
+          "state": {
+            "phase": "a03-reading",
+            "vars": "--a03-text: 1; --a03-handoff: 0; --a03-takeover: 1; --a03-kicker: 1; --a03-title: 1; --a03-research: 1; --a03-purpose: 1; --a03-source: 1; --a03-hint: 1; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 10vw; --model-scale: 1; --canvas-width: 1440px; --canvas-height: 962.56px; --a03-field: 1; --a03-support: 1; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #101519; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 822.09375,
+                  "y": 211.0625,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 494.796875,
+                  "y": 394.375,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 494.796875,
+                  "y": 665.453125,
+                  "w": 76,
+                  "h": 40
+                }
+              }
+            ],
+            "copy": {
+              "x": 100.796875,
+              "y": 269.1640625,
+              "w": 518.390625,
+              "h": 444.703125
+            },
+            "title": {
+              "x": 100.796875,
+              "y": 313.5546875,
+              "w": 518.390625,
+              "h": 115.78125
+            },
+            "titleLines": [
+              {
+                "x": 100.796875,
+                "y": 313.5546875,
+                "w": 518.390625,
+                "h": 57.890625
+              },
+              {
+                "x": 100.796875,
+                "y": 371.4453125,
+                "w": 518.390625,
+                "h": 57.890625
+              }
+            ],
+            "titleText": "从出行与归来，看壁画之间的联系",
+            "topic": "出兵·入将",
+            "frame": {
+              "x": 144,
+              "y": 56.3203125,
+              "w": 1440,
+              "h": 962.546875
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "exit",
+          "screens": 12.7,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0.1821470540954494; --a03-handoff: 0.12665069103241142; --a03-takeover: 1; --a03-kicker: 0.1821470540954494; --a03-title: 0.1821470540954494; --a03-research: 0.1821470540954494; --a03-purpose: 0.1821470540954494; --a03-source: 0.1821470540954494; --a03-hint: 0.1821470540954494; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 1.821470540954494vw; --model-scale: 1; --canvas-width: 1286.7242321753754px; --canvas-height: 848.280364772583px; --a03-field: 1; --a03-support: 0.1821470540954494; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #11171a; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "0.969604",
+                "rect": {
+                  "x": 1093.328125,
+                  "y": 221.984375,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "0.969604",
+                "rect": {
+                  "x": 112.515625,
+                  "y": 414.09375,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 112.515625,
+                  "y": 597.171875,
+                  "w": 76,
+                  "h": 40
+                }
+              }
+            ],
+            "copy": {
+              "x": 100.796875,
+              "y": 269.1640625,
+              "w": 518.390625,
+              "h": 444.703125
+            },
+            "title": {
+              "x": 100.796875,
+              "y": 313.5546875,
+              "w": 518.390625,
+              "h": 115.78125
+            },
+            "titleLines": [
+              {
+                "x": 100.796875,
+                "y": 313.5546875,
+                "w": 518.390625,
+                "h": 57.890625
+              },
+              {
+                "x": 100.796875,
+                "y": 371.4453125,
+                "w": 518.390625,
+                "h": 57.890625
+              }
+            ],
+            "titleText": "从出行与归来，看壁画之间的联系",
+            "topic": "出兵·入将",
+            "frame": {
+              "x": 102.86981201171875,
+              "y": 92.5234375,
+              "w": 1286.71875,
+              "h": 848.265625
+            },
+            "copyHidden": "false",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        },
+        {
+          "name": "handoff",
+          "screens": 13.2,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0; --a03-handoff: 1; --a03-takeover: 1; --a03-kicker: 0; --a03-title: 0; --a03-research: 0; --a03-purpose: 0; --a03-source: 0; --a03-hint: 0; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 0vw; --model-scale: 1; --canvas-width: 830px; --canvas-height: 680.6px; --a03-field: 0; --a03-support: 0; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #151b1e; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 714,
+                  "y": 183.734375,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 40,
+                  "y": 339.109375,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 40,
+                  "y": 473.625,
+                  "w": 76,
+                  "h": 40
+                }
+              }
+            ],
+            "copy": null,
+            "title": null,
+            "titleLines": [],
+            "titleText": "从出行与归来，看壁画之间的联系",
+            "topic": "出兵·入将",
+            "frame": {
+              "x": 305,
+              "y": 171.703125,
+              "w": 830,
+              "h": 680.59375
+            },
+            "copyHidden": "true",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        }
+      ],
+      "resize": true,
+      "reducedMotion": true
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "passed": true,
+      "a02Diff": {
+        "changed": 486,
+        "maxDelta": 2
+      },
+      "heroDiff": {
+        "changed": 0,
+        "maxDelta": 0
+      },
+      "states": [
+        {
+          "name": "transition",
+          "screens": 10.9,
+          "state": {
+            "phase": "a03-enter",
+            "vars": "--a03-text: 0.5569810736924754; --a03-handoff: 0; --a03-takeover: 1; --a03-kicker: 0.9938344484306091; --a03-title: 0.8731990307016881; --a03-research: 0.6666775561169885; --a03-purpose: 0.4311256594353692; --a03-source: 0.21817069090658842; --a03-hint: 0.05484812589974563; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 7.836717936551145vw; --model-scale: 1; --canvas-width: 1248.1464773580951px; --canvas-height: 672.1296651124953px; --a03-field: 0.9871293162488486; --a03-support: 0.7836717936551145; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #12161a; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 739.921875,
+                  "y": 110.328125,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 355.90625,
+                  "y": 262.90625,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 455.890625,
+                  "y": 504.109375,
+                  "w": 99,
+                  "h": 44.5
+                }
+              }
+            ],
+            "copy": {
+              "x": 95.609375,
+              "y": 149.2578125,
+              "w": 491.75,
+              "h": 438.734375
+            },
+            "title": {
+              "x": 95.609375,
+              "y": 193.6484375,
+              "w": 491.75,
+              "h": 109.8125
+            },
+            "titleLines": [
+              {
+                "x": 95.609375,
+                "y": 193.6484375,
+                "w": 491.75,
+                "h": 54.90625
+              },
+              {
+                "x": 95.609375,
+                "y": 248.5546875,
+                "w": 491.75,
+                "h": 54.90625
+              }
+            ],
+            "titleText": "从出行与归来，看壁画之间的联系",
+            "topic": "出兵·入将",
+            "frame": {
+              "x": 165.979248046875,
+              "y": 62.96875,
+              "w": 1248.140625,
+              "h": 672.125
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "reading",
+          "screens": 11.7,
+          "state": {
+            "phase": "a03-reading",
+            "vars": "--a03-text: 1; --a03-handoff: 0; --a03-takeover: 1; --a03-kicker: 1; --a03-title: 1; --a03-research: 1; --a03-purpose: 1; --a03-source: 1; --a03-hint: 1; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 10vw; --model-scale: 1; --canvas-width: 1366px; --canvas-height: 721.92px; --a03-field: 1; --a03-support: 1; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #101519; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 775.15625,
+                  "y": 129.015625,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 467.40625,
+                  "y": 289.1875,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 467.40625,
+                  "y": 520.890625,
+                  "w": 76,
+                  "h": 40
+                }
+              }
+            ],
+            "copy": {
+              "x": 95.609375,
+              "y": 149.2578125,
+              "w": 491.75,
+              "h": 438.734375
+            },
+            "title": {
+              "x": 95.609375,
+              "y": 193.6484375,
+              "w": 491.75,
+              "h": 109.8125
+            },
+            "titleLines": [
+              {
+                "x": 95.609375,
+                "y": 193.6484375,
+                "w": 491.75,
+                "h": 54.90625
+              },
+              {
+                "x": 95.609375,
+                "y": 248.5546875,
+                "w": 491.75,
+                "h": 54.90625
+              }
+            ],
+            "titleText": "从出行与归来，看壁画之间的联系",
+            "topic": "出兵·入将",
+            "frame": {
+              "x": 136.5999755859375,
+              "y": 42.234375,
+              "w": 1366,
+              "h": 721.90625
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "exit",
+          "screens": 12.7,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0.18144374895922166; --a03-handoff: 0.12740277824911878; --a03-takeover: 1; --a03-kicker: 0.18144374895922166; --a03-title: 0.18144374895922166; --a03-research: 0.18144374895922166; --a03-purpose: 0.18144374895922166; --a03-source: 0.18144374895922166; --a03-hint: 0.18144374895922166; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 1.8144374895922166vw; --model-scale: 1; --canvas-width: 1224.9389723961206px; --canvas-height: 634.6651195490018px; --a03-field: 1; --a03-support: 0.18144374895922166; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #11171a; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "0.969423",
+                "rect": {
+                  "x": 1034.453125,
+                  "y": 157.703125,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "0.969423",
+                "rect": {
+                  "x": 108.078125,
+                  "y": 305.578125,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 108.125,
+                  "y": 447.59375,
+                  "w": 76,
+                  "h": 40
+                }
+              }
+            ],
+            "copy": {
+              "x": 95.609375,
+              "y": 149.2578125,
+              "w": 491.75,
+              "h": 438.734375
+            },
+            "title": {
+              "x": 95.609375,
+              "y": 193.6484375,
+              "w": 491.75,
+              "h": 109.8125
+            },
+            "titleLines": [
+              {
+                "x": 95.609375,
+                "y": 193.6484375,
+                "w": 491.75,
+                "h": 54.90625
+              },
+              {
+                "x": 95.609375,
+                "y": 248.5546875,
+                "w": 491.75,
+                "h": 54.90625
+              }
+            ],
+            "titleText": "从出行与归来，看壁画之间的联系",
+            "topic": "出兵·入将",
+            "frame": {
+              "x": 95.31646728515625,
+              "y": 70.140625,
+              "w": 1224.9375,
+              "h": 634.65625
+            },
+            "copyHidden": "false",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        },
+        {
+          "name": "handoff",
+          "screens": 13.2,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0; --a03-handoff: 1; --a03-takeover: 1; --a03-kicker: 0; --a03-title: 0; --a03-research: 0; --a03-purpose: 0; --a03-source: 0; --a03-hint: 0; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 0vw; --model-scale: 1; --canvas-width: 816.3216px; --canvas-height: 535.4496px; --a03-field: 0; --a03-support: 0; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #151b1e; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 700,
+                  "y": 140.0625,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 40,
+                  "y": 262.109375,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 40,
+                  "y": 367.796875,
+                  "w": 76,
+                  "h": 40
+                }
+              }
+            ],
+            "copy": null,
+            "title": null,
+            "titleLines": [],
+            "titleText": "从出行与归来，看壁画之间的联系",
+            "topic": "出兵·入将",
+            "frame": {
+              "x": 274.84375,
+              "y": 116.28125,
+              "w": 816.3125,
+              "h": 535.4375
+            },
+            "copyHidden": "true",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        }
+      ],
+      "resize": true,
+      "reducedMotion": true
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "a02Diff": {
+        "changed": 50,
+        "maxDelta": 1
+      },
+      "heroDiff": {
+        "changed": 0,
+        "maxDelta": 0
+      },
+      "states": [
+        {
+          "name": "transition",
+          "screens": 10.9,
+          "state": {
+            "phase": "a03-enter",
+            "vars": "--a03-text: 0.5575785161584003; --a03-handoff: 0; --a03-takeover: 1; --a03-kicker: 0.9939894815927881; --a03-title: 0.87379972565158; --a03-research: 0.6675197220135272; --a03-purpose: 0.4320060105184109; --a03-source: 0.21893669739771662; --a03-hint: 0.0553935860058331; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 7.840000000000014vw; --model-scale: 1; --canvas-width: 1709.966535229441px; --canvas-height: 935.5969298300931px; --a03-field: 0.9872592592592598; --a03-support: 0.7840000000000014; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #12161a; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 1025.671875,
+                  "y": 168.796875,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 516.75,
+                  "y": 382.75,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 628.65625,
+                  "y": 698.953125,
+                  "w": 99,
+                  "h": 44.5
+                }
+              }
+            ],
+            "copy": {
+              "x": 134.390625,
+              "y": 276.7578125,
+              "w": 560,
+              "h": 483.265625
+            },
+            "title": {
+              "x": 134.390625,
+              "y": 321.1484375,
+              "w": 560,
+              "h": 154.34375
+            },
+            "titleLines": [
+              {
+                "x": 134.390625,
+                "y": 321.1484375,
+                "w": 560,
+                "h": 77.171875
+              },
+              {
+                "x": 134.390625,
+                "y": 398.3203125,
+                "w": 560,
+                "h": 77.171875
+              }
+            ],
+            "titleText": "从出行与归来，看壁画之间的联系",
+            "topic": "出兵·入将",
+            "frame": {
+              "x": 255.55145263671875,
+              "y": 93.359375,
+              "w": 1709.953125,
+              "h": 935.59375
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "reading",
+          "screens": 11.7,
+          "state": {
+            "phase": "a03-reading",
+            "vars": "--a03-text: 1; --a03-handoff: 0; --a03-takeover: 1; --a03-kicker: 1; --a03-title: 1; --a03-research: 1; --a03-purpose: 1; --a03-source: 1; --a03-hint: 1; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 10vw; --model-scale: 1; --canvas-width: 1920px; --canvas-height: 1015.1999999999999px; --a03-field: 1; --a03-support: 1; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #101519; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 1104.9375,
+                  "y": 189.5,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 672.390625,
+                  "y": 414.671875,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 672.390625,
+                  "y": 736.359375,
+                  "w": 76,
+                  "h": 40
+                }
+              }
+            ],
+            "copy": {
+              "x": 134.390625,
+              "y": 276.7578125,
+              "w": 560,
+              "h": 483.265625
+            },
+            "title": {
+              "x": 134.390625,
+              "y": 321.1484375,
+              "w": 560,
+              "h": 154.34375
+            },
+            "titleLines": [
+              {
+                "x": 134.390625,
+                "y": 321.1484375,
+                "w": 560,
+                "h": 77.171875
+              },
+              {
+                "x": 134.390625,
+                "y": 398.3203125,
+                "w": 560,
+                "h": 77.171875
+              }
+            ],
+            "titleText": "从出行与归来，看壁画之间的联系",
+            "topic": "出兵·入将",
+            "frame": {
+              "x": 192,
+              "y": 59.40625,
+              "w": 1920,
+              "h": 1015.1875
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "exit",
+          "screens": 12.7,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0.1825694966190834; --a03-handoff: 0.1262002743484226; --a03-takeover: 1; --a03-kicker: 0.1825694966190834; --a03-title: 0.1825694966190834; --a03-research: 0.1825694966190834; --a03-purpose: 0.1825694966190834; --a03-source: 0.1825694966190834; --a03-hint: 0.1825694966190834; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 1.825694966190834vw; --model-scale: 1; --canvas-width: 1675.723056702533px; --canvas-height: 889.3020710780474px; --a03-field: 1; --a03-support: 0.1825694966190834; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #11171a; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "0.969712",
+                "rect": {
+                  "x": 1452.359375,
+                  "y": 228.6875,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "0.969712",
+                "rect": {
+                  "x": 138.96875,
+                  "y": 435.734375,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 138.96875,
+                  "y": 634.109375,
+                  "w": 76,
+                  "h": 40
+                }
+              }
+            ],
+            "copy": {
+              "x": 134.390625,
+              "y": 276.7578125,
+              "w": 560,
+              "h": 483.265625
+            },
+            "title": {
+              "x": 134.390625,
+              "y": 321.1484375,
+              "w": 560,
+              "h": 154.34375
+            },
+            "titleLines": [
+              {
+                "x": 134.390625,
+                "y": 321.1484375,
+                "w": 560,
+                "h": 77.171875
+              },
+              {
+                "x": 134.390625,
+                "y": 398.3203125,
+                "w": 560,
+                "h": 77.171875
+              }
+            ],
+            "titleText": "从出行与归来，看壁画之间的联系",
+            "topic": "出兵·入将",
+            "frame": {
+              "x": 157.1939697265625,
+              "y": 100.2734375,
+              "w": 1675.71875,
+              "h": 889.296875
+            },
+            "copyHidden": "false",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        },
+        {
+          "name": "handoff",
+          "screens": 13.2,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0; --a03-handoff: 1; --a03-takeover: 1; --a03-kicker: 0; --a03-title: 0; --a03-research: 0; --a03-purpose: 0; --a03-source: 0; --a03-hint: 0; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 0vw; --model-scale: 1; --canvas-width: 830px; --canvas-height: 680.6px; --a03-field: 0; --a03-support: 0; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #151b1e; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 714,
+                  "y": 183.734375,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 40,
+                  "y": 339.109375,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 40,
+                  "y": 473.625,
+                  "w": 76,
+                  "h": 40
+                }
+              }
+            ],
+            "copy": null,
+            "title": null,
+            "titleLines": [],
+            "titleText": "从出行与归来，看壁画之间的联系",
+            "topic": "出兵·入将",
+            "frame": {
+              "x": 545,
+              "y": 199.703125,
+              "w": 830,
+              "h": 680.59375
+            },
+            "copyHidden": "true",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        }
+      ],
+      "resize": true,
+      "reducedMotion": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "passed": true,
+      "a02Diff": {
+        "changed": 437,
+        "maxDelta": 2
+      },
+      "heroDiff": {
+        "changed": 0,
+        "maxDelta": 0
+      },
+      "states": [
+        {
+          "name": "transition",
+          "screens": 10.9,
+          "state": {
+            "phase": "a03-enter",
+            "vars": "--a03-text: 0.5569810736924754; --a03-handoff: 0; --a03-takeover: 1; --a03-kicker: 0.9938344484306091; --a03-title: 0.8731990307016881; --a03-research: 0.6666775561169885; --a03-purpose: 0.4311256594353692; --a03-source: 0.21817069090658842; --a03-hint: 0.05484812589974563; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 7.836717936551145vw; --model-scale: 1; --canvas-width: 942.8171628203359px; --canvas-height: 672.1296651124953px; --a03-field: 0.9871293162488486; --a03-support: 0.7836717936551145; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #12161a; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 549.5625,
+                  "y": 135.15625,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 245.28125,
+                  "y": 262.234375,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 340.328125,
+                  "y": 474.296875,
+                  "w": 99,
+                  "h": 44.5
+                }
+              }
+            ],
+            "copy": {
+              "x": 51.1875,
+              "y": 183.9609375,
+              "w": 378.875,
+              "h": 369.328125
+            },
+            "title": {
+              "x": 51.1875,
+              "y": 228.3515625,
+              "w": 378.875,
+              "h": 91.09375
+            },
+            "titleLines": [
+              {
+                "x": 51.1875,
+                "y": 228.3515625,
+                "w": 378.875,
+                "h": 45.546875
+              },
+              {
+                "x": 51.1875,
+                "y": 273.8984375,
+                "w": 378.875,
+                "h": 45.546875
+              }
+            ],
+            "titleText": "从出行与归来，看壁画之间的联系",
+            "topic": "出兵·入将",
+            "frame": {
+              "x": 120.84173583984375,
+              "y": 62.96875,
+              "w": 942.8125610351562,
+              "h": 672.125
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "reading",
+          "screens": 11.7,
+          "state": {
+            "phase": "a03-reading",
+            "vars": "--a03-text: 1; --a03-handoff: 0; --a03-takeover: 1; --a03-kicker: 1; --a03-title: 1; --a03-research: 1; --a03-purpose: 1; --a03-source: 1; --a03-hint: 1; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 10vw; --model-scale: 1; --canvas-width: 1024px; --canvas-height: 721.92px; --a03-field: 1; --a03-support: 1; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #101519; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 573.75,
+                  "y": 159.921875,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 340.875,
+                  "y": 291.0625,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 340.875,
+                  "y": 487.734375,
+                  "w": 76,
+                  "h": 40
+                }
+              }
+            ],
+            "copy": {
+              "x": 51.1875,
+              "y": 183.9609375,
+              "w": 378.875,
+              "h": 369.328125
+            },
+            "title": {
+              "x": 51.1875,
+              "y": 228.3515625,
+              "w": 378.875,
+              "h": 91.09375
+            },
+            "titleLines": [
+              {
+                "x": 51.1875,
+                "y": 228.3515625,
+                "w": 378.875,
+                "h": 45.546875
+              },
+              {
+                "x": 51.1875,
+                "y": 273.8984375,
+                "w": 378.875,
+                "h": 45.546875
+              }
+            ],
+            "titleText": "从出行与归来，看壁画之间的联系",
+            "topic": "出兵·入将",
+            "frame": {
+              "x": 102.39999389648438,
+              "y": 42.234375,
+              "w": 1024,
+              "h": 721.90625
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "exit",
+          "screens": 12.7,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0.18144374895922166; --a03-handoff: 0.12740277824911878; --a03-takeover: 1; --a03-kicker: 0.18144374895922166; --a03-title: 0.18144374895922166; --a03-research: 0.18144374895922166; --a03-purpose: 0.18144374895922166; --a03-source: 0.18144374895922166; --a03-hint: 0.18144374895922166; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 1.8144374895922166vw; --model-scale: 1; --canvas-width: 925.5482965659672px; --canvas-height: 634.6651195490018px; --a03-field: 1; --a03-support: 0.18144374895922166; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #11171a; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "0.969423",
+                "rect": {
+                  "x": 758.5,
+                  "y": 162.171875,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "0.969423",
+                "rect": {
+                  "x": 88,
+                  "y": 304.96875,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 88,
+                  "y": 441.21875,
+                  "w": 76,
+                  "h": 40
+                }
+              }
+            ],
+            "copy": {
+              "x": 51.1875,
+              "y": 183.9609375,
+              "w": 378.875,
+              "h": 369.328125
+            },
+            "title": {
+              "x": 51.1875,
+              "y": 228.3515625,
+              "w": 378.875,
+              "h": 91.09375
+            },
+            "titleLines": [
+              {
+                "x": 51.1875,
+                "y": 228.3515625,
+                "w": 378.875,
+                "h": 45.546875
+              },
+              {
+                "x": 51.1875,
+                "y": 273.8984375,
+                "w": 378.875,
+                "h": 45.546875
+              }
+            ],
+            "titleText": "从出行与归来，看壁画之间的联系",
+            "topic": "出兵·入将",
+            "frame": {
+              "x": 67.806396484375,
+              "y": 70.140625,
+              "w": 925.546875,
+              "h": 634.65625
+            },
+            "copyHidden": "false",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        },
+        {
+          "name": "handoff",
+          "screens": 13.2,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0; --a03-handoff: 1; --a03-takeover: 1; --a03-kicker: 0; --a03-title: 0; --a03-research: 0; --a03-purpose: 0; --a03-source: 0; --a03-hint: 0; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 0vw; --model-scale: 1; --canvas-width: 662.9376px; --canvas-height: 535.4496px; --a03-field: 0; --a03-support: 0; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #151b1e; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "1",
+                "rect": {
+                  "x": 547,
+                  "y": 140.0625,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "1",
+                "rect": {
+                  "x": 40,
+                  "y": 262.109375,
+                  "w": 76,
+                  "h": 40
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 40,
+                  "y": 367.796875,
+                  "w": 76,
+                  "h": 40
+                }
+              }
+            ],
+            "copy": null,
+            "title": null,
+            "titleLines": [],
+            "titleText": "从出行与归来，看壁画之间的联系",
+            "topic": "出兵·入将",
+            "frame": {
+              "x": 180.53125,
+              "y": 116.28125,
+              "w": 662.9375,
+              "h": 535.4375
+            },
+            "copyHidden": "true",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        }
+      ],
+      "resize": true,
+      "reducedMotion": true
+    }
+  ]
+}

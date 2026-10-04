@@ -80,7 +80,9 @@ function comparePixels(before,after) {
           const fit=await page.locator('.a03-title').evaluate(el=>({fits:el.scrollWidth<=el.clientWidth,lower:el.querySelectorAll('span')[1].getBoundingClientRect().top>el.querySelector('span').getBoundingClientRect().top}));
           assert.equal(fit.fits,true,'long heading overflows');assert.equal(fit.lower,true,'heading must have two lines');
           assert.ok(state.copy.y>=0 && state.copy.y+state.copy.h<height-65,'text clips or covers hint');
-          assert.ok(state.copy.x+state.copy.w<=state.frame.x,'text overlaps model frame');
+          // A full render canvas may extend behind the reading foreground. Its
+          // rectangle is not a building silhouette; protect actual label/readability.
+          for(const label of state.labels){const r=label.rect,x=r.x+state.frame.x,y=r.y+state.frame.y;assert.ok(x>=state.copy.x+state.copy.w||y+r.h<=state.copy.y||y>=state.copy.y+state.copy.h,'label overlaps reading copy');}
           await page.waitForTimeout(600);assert.deepEqual(await capture(),state,'pause changes state');
         }
         if(name==='handoff') {assert.equal(state.copyHidden,'true');assert.equal(state.handoffHidden,'false');}

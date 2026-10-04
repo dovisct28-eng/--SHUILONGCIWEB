@@ -10,10 +10,17 @@ export function deriveA03State(localScroll, viewportHeight) {
   const enter = smooth(rangeProgress(screens, .35, 1));
   const exit = smooth(rangeProgress(screens, 2.1, 2.65));
   const takeover = smooth(rangeProgress(screens, 0, .55));
+  const establish=(start,end)=>smooth(rangeProgress(screens,start,end))*(1-exit);
   return Object.freeze({
     progress: rangeProgress(screens, 0, A03_SCREENS),
     takeover,
     text: enter * (1 - exit),
+    kicker: establish(.28,.72),
+    title: establish(.35,.80),
+    research: establish(.43,.87),
+    purpose: establish(.50,.94),
+    source: establish(.57,1),
+    hint: establish(.65,1),
     composition: smooth(rangeProgress(screens, 0, 1)) * (1 - exit),
     secondary: 1 - takeover,
     handoff: smooth(rangeProgress(screens, 2.4, 2.85)),

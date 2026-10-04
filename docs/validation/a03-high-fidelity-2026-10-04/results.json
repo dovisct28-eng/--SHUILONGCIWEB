@@ -1,0 +1,5909 @@
+{
+  "baseline": "b6ce49f90383534bb85c30d1251d8d2dab6cec7f",
+  "browser": "154.0.8037.93",
+  "sizes": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "occupancy": 0.5838926992339929,
+      "rows": [
+        {
+          "name": "01-a02-stable",
+          "screen": 9.65,
+          "phase": "a02-reading",
+          "frame": {
+            "x": 38.40625,
+            "y": 108,
+            "w": 1843.1875,
+            "h": 864
+          },
+          "bounds": {
+            "left": 366.23896508397706,
+            "right": 1437.9269320068438,
+            "top": 198.96488982688,
+            "bottom": 935.0811544612436
+          },
+          "env": {
+            "weight": 1,
+            "establish": 1,
+            "visibility": 1,
+            "roomWeight": 1,
+            "trees": 201,
+            "visible": true,
+            "layers": [
+              "Foreground",
+              "GroundFog",
+              "Terrain",
+              "MidgroundGroves",
+              "ValleyMist",
+              "AtmosphericHaze"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          },
+          "art": {
+            "position": [
+              -25.457476292510236,
+              24.855778229497474,
+              -25.579947534446536
+            ],
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "fov": 31.5,
+            "aspect": 2.1331018518518516,
+            "bounds": {
+              "left": 0.177861837216223,
+              "right": 0.7592937137468889,
+              "top": 0.10528343729962963,
+              "bottom": 0.9572698547005134
+            },
+            "heroWeight": 0,
+            "lighting": {
+              "fill": 0.33,
+              "sun": 3.5,
+              "position": [
+                -12,
+                25,
+                -16
+              ]
+            },
+            "exposure": 1.01
+          },
+          "stats": {
+            "geometries": 64,
+            "textures": 20,
+            "calls": 57,
+            "triangles": 170510,
+            "lines": 0,
+            "post": {
+              "enabled": false,
+              "error": null,
+              "passes": 1,
+              "size": [
+                1843,
+                864
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 9,
+                "calls": 57,
+                "triangles": 170510,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 19108224,
+              "multisampleBytes": 38216448,
+              "targetBytes": 57324672
+            }
+          },
+          "copy": {
+            "x": 134.390625,
+            "y": 276.7578125,
+            "w": 560,
+            "h": 483.265625
+          },
+          "text": [
+            {
+              "text": "出兵·入将",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 276.7578125,
+                "w": 560,
+                "h": 22.390625
+              },
+              "fits": true
+            },
+            {
+              "text": "从出行与归来，看壁画之间的联系",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 321.1484375,
+                "w": 560,
+                "h": 154.34375
+              },
+              "fits": true
+            },
+            {
+              "text": "李济民将“出兵入将”解释为迎神赛会中队伍出庙与入庙的场景。",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 505.4921875,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "以这组关系为线索，留意队伍的朝向，以及不同壁面之间的联系。",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 593.8671875,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "研究视角：李济民，2025，第122页。主题尚有不同释读，这里提供一种观看线索。",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 689.2421875,
+                "w": 500,
+                "h": 70.78125
+              },
+              "fits": true
+            }
+          ],
+          "labels": [
+            {
+              "id": "mural-01",
+              "opacity": "1",
+              "rect": {
+                "x": 1316.59375,
+                "y": 222,
+                "w": 99,
+                "h": 44.5
+              }
+            },
+            {
+              "id": "mural-02",
+              "opacity": "1",
+              "rect": {
+                "x": 351.125,
+                "y": 414.3125,
+                "w": 99,
+                "h": 44.5
+              }
+            },
+            {
+              "id": "mural-03",
+              "opacity": "0.75",
+              "rect": {
+                "x": 285.453125,
+                "y": 597,
+                "w": 99,
+                "h": 44.5
+              }
+            },
+            {
+              "id": "mural-04",
+              "opacity": "0.75",
+              "rect": {
+                "x": 389.640625,
+                "y": 769.28125,
+                "w": 99,
+                "h": 44.5
+              }
+            },
+            {
+              "id": "mural-05",
+              "opacity": "1",
+              "rect": {
+                "x": 888.15625,
+                "y": 766.265625,
+                "w": 99,
+                "h": 44.5
+              }
+            }
+          ],
+          "murals": [
+            {
+              "id": "mural-01",
+              "label": "第一幅",
+              "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "width": 3.65,
+              "height": 1.2547,
+              "side": true
+            },
+            {
+              "id": "mural-02",
+              "label": "第二幅",
+              "wall": "主殿右侧内墙",
+              "position": [
+                4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.3796,
+              "side": true
+            },
+            {
+              "id": "mural-03",
+              "label": "第三幅",
+              "wall": "主殿后墙右侧",
+              "position": [
+                2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-04",
+              "label": "第四幅",
+              "wall": "主殿后墙左侧",
+              "position": [
+                -2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-05",
+              "label": "第五幅",
+              "wall": "主殿左侧内墙",
+              "position": [
+                -4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.64395,
+              "side": true
+            }
+          ],
+          "overflow": false,
+          "canvases": 1
+        },
+        {
+          "name": "02-a02-a03-transition",
+          "screen": 10.4,
+          "phase": "a03-enter",
+          "frame": {
+            "x": 65.507080078125,
+            "y": 101.515625,
+            "w": 1828.921875,
+            "h": 882.5625
+          },
+          "bounds": {
+            "left": 403.3797521451143,
+            "right": 1455.3239613099004,
+            "top": 197.74395744807694,
+            "bottom": 946.314931800316
+          },
+          "env": {
+            "weight": 0.824592592592591,
+            "establish": 1,
+            "visibility": 0.824592592592591,
+            "roomWeight": 0.824592592592591,
+            "trees": 201,
+            "visible": true,
+            "layers": [
+              "Foreground",
+              "GroundFog",
+              "Terrain",
+              "MidgroundGroves",
+              "ValleyMist",
+              "AtmosphericHaze"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          },
+          "art": {
+            "position": [
+              -25.7554291005808,
+              27.64177226235084,
+              -25.202512775859095
+            ],
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "fov": 31.660043036444446,
+            "aspect": 2.0713476783691958,
+            "bounds": {
+              "left": 0.1847387122902608,
+              "right": 0.7599104697852528,
+              "top": 0.10903288146513923,
+              "bottom": 0.9572118765530101
+            },
+            "heroWeight": 0,
+            "lighting": {
+              "fill": 0.3252617481481481,
+              "sun": 3.296151466666665,
+              "position": [
+                -12.628660148148153,
+                25,
+                -10.970718814814775
+              ]
+            },
+            "exposure": 0.9820099735703701
+          },
+          "stats": {
+            "geometries": 64,
+            "textures": 20,
+            "calls": 62,
+            "triangles": 177710,
+            "lines": 0,
+            "post": {
+              "enabled": false,
+              "error": null,
+              "passes": 1,
+              "size": [
+                1829,
+                883
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 215,
+                "calls": 62,
+                "triangles": 177710,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 19380084,
+              "multisampleBytes": 38760168,
+              "targetBytes": 58140252
+            }
+          },
+          "copy": {
+            "x": 134.390625,
+            "y": 276.7578125,
+            "w": 560,
+            "h": 483.265625
+          },
+          "text": [
+            {
+              "text": "出兵·入将",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 276.7578125,
+                "w": 560,
+                "h": 22.390625
+              },
+              "fits": true
+            },
+            {
+              "text": "从出行与归来，看壁画之间的联系",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 321.1484375,
+                "w": 560,
+                "h": 154.34375
+              },
+              "fits": true
+            },
+            {
+              "text": "李济民将“出兵入将”解释为迎神赛会中队伍出庙与入庙的场景。",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 505.4921875,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "以这组关系为线索，留意队伍的朝向，以及不同壁面之间的联系。",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 593.8671875,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "研究视角：李济民，2025，第122页。主题尚有不同释读，这里提供一种观看线索。",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 689.2421875,
+                "w": 500,
+                "h": 70.78125
+              },
+              "fits": true
+            }
+          ],
+          "labels": [
+            {
+              "id": "mural-01",
+              "opacity": "1",
+              "rect": {
+                "x": 1315.788330078125,
+                "y": 226.21875,
+                "w": 99,
+                "h": 44.5
+              }
+            },
+            {
+              "id": "mural-02",
+              "opacity": "1",
+              "rect": {
+                "x": 413.616455078125,
+                "y": 430.859375,
+                "w": 99,
+                "h": 44.5
+              }
+            },
+            {
+              "id": "mural-03",
+              "opacity": "0.524606",
+              "rect": {
+                "x": 357.225830078125,
+                "y": 612.984375,
+                "w": 99,
+                "h": 44.5
+              }
+            },
+            {
+              "id": "mural-04",
+              "opacity": "0.524606",
+              "rect": {
+                "x": 447.085205078125,
+                "y": 780.8125,
+                "w": 99,
+                "h": 44.5
+              }
+            },
+            {
+              "id": "mural-05",
+              "opacity": "1",
+              "rect": {
+                "x": 887.210205078125,
+                "y": 784.890625,
+                "w": 99,
+                "h": 44.5
+              }
+            }
+          ],
+          "murals": [
+            {
+              "id": "mural-01",
+              "label": "第一幅",
+              "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "width": 3.65,
+              "height": 1.2547,
+              "side": true
+            },
+            {
+              "id": "mural-02",
+              "label": "第二幅",
+              "wall": "主殿右侧内墙",
+              "position": [
+                4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.3796,
+              "side": true
+            },
+            {
+              "id": "mural-03",
+              "label": "第三幅",
+              "wall": "主殿后墙右侧",
+              "position": [
+                2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-04",
+              "label": "第四幅",
+              "wall": "主殿后墙左侧",
+              "position": [
+                -2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-05",
+              "label": "第五幅",
+              "wall": "主殿左侧内墙",
+              "position": [
+                -4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.64395,
+              "side": true
+            }
+          ],
+          "overflow": false,
+          "canvases": 1
+        },
+        {
+          "name": "03-a03-enter",
+          "screen": 10.85,
+          "phase": "a03-enter",
+          "frame": {
+            "x": 259.46649169921875,
+            "y": 98.7578125,
+            "w": 1676.875,
+            "h": 921.265625
+          },
+          "bounds": {
+            "left": 563.1375435865995,
+            "right": 1546.897675467228,
+            "top": 230.09911180066172,
+            "bottom": 943.4342176465375
+          },
+          "env": {
+            "weight": 0.04859259259259219,
+            "establish": 1,
+            "visibility": 0.04859259259259219,
+            "roomWeight": 0.04859259259259219,
+            "trees": 201,
+            "visible": true,
+            "layers": [
+              "Foreground",
+              "GroundFog",
+              "Terrain",
+              "MidgroundGroves",
+              "ValleyMist",
+              "AtmosphericHaze"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          },
+          "art": {
+            "position": [
+              -26.44045981509735,
+              30.09256492674981,
+              -25.380642654122745
+            ],
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "fov": 33.70143287469445,
+            "aspect": 1.8208469055374592,
+            "bounds": {
+              "left": 0.18109343385009657,
+              "right": 0.7677562035142806,
+              "top": 0.14256615653130628,
+              "bottom": 0.9168652147924627
+            },
+            "heroWeight": 0,
+            "lighting": {
+              "fill": 0.33814454814814815,
+              "sun": 2.8277968666666666,
+              "position": [
+                -13.072236148148146,
+                25,
+                -7.422110814814825
+              ]
+            },
+            "exposure": 0.8456145376453703
+          },
+          "stats": {
+            "geometries": 64,
+            "textures": 20,
+            "calls": 62,
+            "triangles": 177710,
+            "lines": 0,
+            "post": {
+              "enabled": false,
+              "error": null,
+              "passes": 1,
+              "size": [
+                1677,
+                921
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 530,
+                "calls": 62,
+                "triangles": 177710,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 18534204,
+              "multisampleBytes": 37068408,
+              "targetBytes": 55602612
+            }
+          },
+          "copy": {
+            "x": 134.390625,
+            "y": 276.7578125,
+            "w": 560,
+            "h": 483.265625
+          },
+          "text": [
+            {
+              "text": "出兵·入将",
+              "opacity": "0.932123",
+              "rect": {
+                "x": 134.390625,
+                "y": 276.7578125,
+                "w": 560,
+                "h": 22.390625
+              },
+              "fits": true
+            },
+            {
+              "text": "从出行与归来，看壁画之间的联系",
+              "opacity": "0.740741",
+              "rect": {
+                "x": 134.390625,
+                "y": 321.1484375,
+                "w": 560,
+                "h": 154.34375
+              },
+              "fits": true
+            },
+            {
+              "text": "李济民将“出兵入将”解释为迎神赛会中队伍出庙与入庙的场景。",
+              "opacity": "0.5",
+              "rect": {
+                "x": 134.390625,
+                "y": 505.4921875,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "以这组关系为线索，留意队伍的朝向，以及不同壁面之间的联系。",
+              "opacity": "0.269417",
+              "rect": {
+                "x": 134.390625,
+                "y": 593.8671875,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "研究视角：李济民，2025，第122页。主题尚有不同释读，这里提供一种观看线索。",
+              "opacity": "0.0909605",
+              "rect": {
+                "x": 134.390625,
+                "y": 689.2421875,
+                "w": 500,
+                "h": 70.78125
+              },
+              "fits": true
+            }
+          ],
+          "labels": [
+            {
+              "id": "mural-01",
+              "opacity": "1",
+              "rect": {
+                "x": 1283.0289916992188,
+                "y": 263.2421875,
+                "w": 99,
+                "h": 44.5
+              }
+            },
+            {
+              "id": "mural-02",
+              "opacity": "1",
+              "rect": {
+                "x": 744.9821166992188,
+                "y": 474.9296875,
+                "w": 99,
+                "h": 44.5
+              }
+            },
+            {
+              "id": "mural-05",
+              "opacity": "1",
+              "rect": {
+                "x": 889.3571166992188,
+                "y": 792.2890625,
+                "w": 99,
+                "h": 44.5
+              }
+            }
+          ],
+          "murals": [
+            {
+              "id": "mural-01",
+              "label": "第一幅",
+              "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "width": 3.65,
+              "height": 1.2547,
+              "side": true
+            },
+            {
+              "id": "mural-02",
+              "label": "第二幅",
+              "wall": "主殿右侧内墙",
+              "position": [
+                4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.3796,
+              "side": true
+            },
+            {
+              "id": "mural-03",
+              "label": "第三幅",
+              "wall": "主殿后墙右侧",
+              "position": [
+                2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-04",
+              "label": "第四幅",
+              "wall": "主殿后墙左侧",
+              "position": [
+                -2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-05",
+              "label": "第五幅",
+              "wall": "主殿左侧内墙",
+              "position": [
+                -4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.64395,
+              "side": true
+            }
+          ],
+          "overflow": false,
+          "canvases": 1
+        },
+        {
+          "name": "04-a03-reading",
+          "screen": 11.7,
+          "phase": "a03-reading",
+          "frame": {
+            "x": 192,
+            "y": 59.40625,
+            "w": 1920,
+            "h": 1015.1875
+          },
+          "bounds": {
+            "left": 532.9278640156647,
+            "right": 1654.0018465449311,
+            "top": 207.84848988986886,
+            "bottom": 975.8430376672952
+          },
+          "env": {
+            "weight": 0,
+            "establish": 1,
+            "visibility": 0,
+            "roomWeight": 0,
+            "trees": 201,
+            "visible": false,
+            "layers": [
+              "Foreground",
+              "GroundFog",
+              "Terrain",
+              "MidgroundGroves",
+              "ValleyMist",
+              "AtmosphericHaze"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          },
+          "art": {
+            "position": [
+              -26.335320302596795,
+              25.75252920292842,
+              -26.401669863220555
+            ],
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "fov": 34,
+            "aspect": 1.8916256157635467,
+            "bounds": {
+              "left": 0.17756659584149198,
+              "right": 0.7614592950754849,
+              "top": 0.14622150084577368,
+              "bottom": 0.9027266270194375
+            },
+            "heroWeight": 0,
+            "lighting": {
+              "fill": 0.36,
+              "sun": 2.9,
+              "position": [
+                -12,
+                25,
+                -16
+              ]
+            },
+            "exposure": 0.84
+          },
+          "stats": {
+            "geometries": 64,
+            "textures": 20,
+            "calls": 52,
+            "triangles": 90562,
+            "lines": 0,
+            "post": {
+              "enabled": false,
+              "error": null,
+              "passes": 1,
+              "size": [
+                1920,
+                1015
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 835,
+                "calls": 52,
+                "triangles": 90562,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 23385600,
+              "multisampleBytes": 46771200,
+              "targetBytes": 70156800
+            }
+          },
+          "copy": {
+            "x": 134.390625,
+            "y": 276.7578125,
+            "w": 560,
+            "h": 483.265625
+          },
+          "text": [
+            {
+              "text": "出兵·入将",
+              "opacity": "1",
+              "rect": {
+                "x": 134.390625,
+                "y": 276.7578125,
+                "w": 560,
+                "h": 22.390625
+              },
+              "fits": true
+            },
+            {
+              "text": "从出行与归来，看壁画之间的联系",
+              "opacity": "1",
+              "rect": {
+                "x": 134.390625,
+                "y": 321.1484375,
+                "w": 560,
+                "h": 154.34375
+              },
+              "fits": true
+            },
+            {
+              "text": "李济民将“出兵入将”解释为迎神赛会中队伍出庙与入庙的场景。",
+              "opacity": "1",
+              "rect": {
+                "x": 134.390625,
+                "y": 505.4921875,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "以这组关系为线索，留意队伍的朝向，以及不同壁面之间的联系。",
+              "opacity": "1",
+              "rect": {
+                "x": 134.390625,
+                "y": 593.8671875,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "研究视角：李济民，2025，第122页。主题尚有不同释读，这里提供一种观看线索。",
+              "opacity": "1",
+              "rect": {
+                "x": 134.390625,
+                "y": 689.2421875,
+                "w": 500,
+                "h": 70.78125
+              },
+              "fits": true
+            }
+          ],
+          "labels": [
+            {
+              "id": "mural-01",
+              "opacity": "1",
+              "rect": {
+                "x": 1296.9375,
+                "y": 248.90625,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-02",
+              "opacity": "1",
+              "rect": {
+                "x": 864.390625,
+                "y": 474.078125,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-05",
+              "opacity": "1",
+              "rect": {
+                "x": 864.390625,
+                "y": 795.765625,
+                "w": 76,
+                "h": 40
+              }
+            }
+          ],
+          "murals": [
+            {
+              "id": "mural-01",
+              "label": "第一幅",
+              "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "width": 3.65,
+              "height": 1.2547,
+              "side": true
+            },
+            {
+              "id": "mural-02",
+              "label": "第二幅",
+              "wall": "主殿右侧内墙",
+              "position": [
+                4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.3796,
+              "side": true
+            },
+            {
+              "id": "mural-03",
+              "label": "第三幅",
+              "wall": "主殿后墙右侧",
+              "position": [
+                2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-04",
+              "label": "第四幅",
+              "wall": "主殿后墙左侧",
+              "position": [
+                -2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-05",
+              "label": "第五幅",
+              "wall": "主殿左侧内墙",
+              "position": [
+                -4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.64395,
+              "side": true
+            }
+          ],
+          "overflow": false,
+          "canvases": 1
+        },
+        {
+          "name": "05-a03-handoff",
+          "screen": 12.920370370370371,
+          "phase": "a03-handoff",
+          "frame": {
+            "x": 108.7890625,
+            "y": 98.3046875,
+            "w": 1702.421875,
+            "h": 883.390625
+          },
+          "bounds": {
+            "left": 529.6937249609841,
+            "right": 1348.1774083205223,
+            "top": 252.34217232904342,
+            "bottom": 888.2482995446242
+          },
+          "env": {
+            "weight": 0,
+            "establish": 1,
+            "visibility": 0,
+            "roomWeight": 0,
+            "trees": 201,
+            "visible": false,
+            "layers": [
+              "Foreground",
+              "GroundFog",
+              "Terrain",
+              "MidgroundGroves",
+              "ValleyMist",
+              "AtmosphericHaze"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          },
+          "art": {
+            "position": [
+              -26.77238089799736,
+              41.988926812550105,
+              -22.634674912070263
+            ],
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "fov": 34,
+            "aspect": 1.927519818799547,
+            "bounds": {
+              "left": 0.24723875359095943,
+              "right": 0.7280148146713178,
+              "top": 0.1743707488734595,
+              "bottom": 0.8942177896042582
+            },
+            "heroWeight": 0,
+            "lighting": {
+              "fill": 0.2799999999999999,
+              "sun": 2.5999999999999996,
+              "position": [
+                -16,
+                25,
+                14
+              ]
+            },
+            "exposure": 0.8099999999999999
+          },
+          "stats": {
+            "geometries": 64,
+            "textures": 20,
+            "calls": 52,
+            "triangles": 90562,
+            "lines": 0,
+            "post": {
+              "enabled": false,
+              "error": null,
+              "passes": 1,
+              "size": [
+                1702,
+                883
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 1131,
+                "calls": 52,
+                "triangles": 90562,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 18034392,
+              "multisampleBytes": 36068784,
+              "targetBytes": 54103176
+            }
+          },
+          "copy": {
+            "x": 134.390625,
+            "y": 276.7578125,
+            "w": 560,
+            "h": 483.265625
+          },
+          "text": [
+            {
+              "text": "出兵·入将",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 276.7578125,
+                "w": 560,
+                "h": 22.390625
+              },
+              "fits": true
+            },
+            {
+              "text": "从出行与归来，看壁画之间的联系",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 321.1484375,
+                "w": 560,
+                "h": 154.34375
+              },
+              "fits": true
+            },
+            {
+              "text": "李济民将“出兵入将”解释为迎神赛会中队伍出庙与入庙的场景。",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 505.4921875,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "以这组关系为线索，留意队伍的朝向，以及不同壁面之间的联系。",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 593.8671875,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "研究视角：李济民，2025，第122页。主题尚有不同释读，这里提供一种观看线索。",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 689.2421875,
+                "w": 500,
+                "h": 70.78125
+              },
+              "fits": true
+            }
+          ],
+          "labels": [
+            {
+              "id": "mural-01",
+              "opacity": "0.808273",
+              "rect": {
+                "x": 1215.8359375,
+                "y": 296.6328125,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-02",
+              "opacity": "0.808273",
+              "rect": {
+                "x": 589.5390625,
+                "y": 501.6015625,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-05",
+              "opacity": "1",
+              "rect": {
+                "x": 591.8828125,
+                "y": 771.2578125,
+                "w": 76,
+                "h": 40
+              }
+            }
+          ],
+          "murals": [
+            {
+              "id": "mural-01",
+              "label": "第一幅",
+              "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "width": 3.65,
+              "height": 1.2547,
+              "side": true
+            },
+            {
+              "id": "mural-02",
+              "label": "第二幅",
+              "wall": "主殿右侧内墙",
+              "position": [
+                4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.3796,
+              "side": true
+            },
+            {
+              "id": "mural-03",
+              "label": "第三幅",
+              "wall": "主殿后墙右侧",
+              "position": [
+                2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-04",
+              "label": "第四幅",
+              "wall": "主殿后墙左侧",
+              "position": [
+                -2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-05",
+              "label": "第五幅",
+              "wall": "主殿左侧内墙",
+              "position": [
+                -4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.64395,
+              "side": true
+            }
+          ],
+          "overflow": false,
+          "canvases": 1
+        },
+        {
+          "name": "06-a04-entry",
+          "screen": 13.210185185185185,
+          "phase": "a04-idle",
+          "frame": {
+            "x": 544.78125,
+            "y": 199.6171875,
+            "w": 830.4375,
+            "h": 680.765625
+          },
+          "bounds": {
+            "left": 628.0620624484776,
+            "right": 1259.4650303749168,
+            "top": 318.3474067265341,
+            "bottom": 808.2872031799732
+          },
+          "env": {
+            "weight": 0,
+            "establish": 1,
+            "visibility": 0,
+            "roomWeight": 0,
+            "trees": 201,
+            "visible": false,
+            "layers": [
+              "Foreground",
+              "GroundFog",
+              "Terrain",
+              "MidgroundGroves",
+              "ValleyMist",
+              "AtmosphericHaze"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          },
+          "art": {
+            "position": [
+              -26.77969530096792,
+              41.991802820490086,
+              -22.63113663158625
+            ],
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "fov": 34,
+            "aspect": 1.2187958883994126,
+            "bounds": {
+              "left": 0.10028546693577489,
+              "right": 0.8606111602317053,
+              "top": 0.17440689551052768,
+              "bottom": 0.8940962841359288
+            },
+            "heroWeight": 0,
+            "lighting": {
+              "fill": 0.2799999999999999,
+              "sun": 2.5999999999999996,
+              "position": [
+                -16,
+                25,
+                14
+              ]
+            },
+            "exposure": 0.8100723216832002
+          },
+          "stats": {
+            "geometries": 65,
+            "textures": 22,
+            "calls": 52,
+            "triangles": 90506,
+            "lines": 0,
+            "post": {
+              "enabled": false,
+              "error": null,
+              "passes": 1,
+              "size": [
+                830,
+                681
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 1367,
+                "calls": 52,
+                "triangles": 90506,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 6782760,
+              "multisampleBytes": 13565520,
+              "targetBytes": 20348280
+            }
+          },
+          "copy": {
+            "x": 134.390625,
+            "y": 276.7578125,
+            "w": 560,
+            "h": 483.265625
+          },
+          "text": [
+            {
+              "text": "出兵·入将",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 276.7578125,
+                "w": 560,
+                "h": 22.390625
+              },
+              "fits": true
+            },
+            {
+              "text": "从出行与归来，看壁画之间的联系",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 321.1484375,
+                "w": 560,
+                "h": 154.34375
+              },
+              "fits": true
+            },
+            {
+              "text": "李济民将“出兵入将”解释为迎神赛会中队伍出庙与入庙的场景。",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 505.4921875,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "以这组关系为线索，留意队伍的朝向，以及不同壁面之间的联系。",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 593.8671875,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "研究视角：李济民，2025，第122页。主题尚有不同释读，这里提供一种观看线索。",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 689.2421875,
+                "w": 500,
+                "h": 70.78125
+              },
+              "fits": true
+            }
+          ],
+          "labels": [
+            {
+              "id": "mural-01",
+              "opacity": "0.999904",
+              "rect": {
+                "x": 1258.78125,
+                "y": 383.3515625,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-02",
+              "opacity": "0.999904",
+              "rect": {
+                "x": 584.78125,
+                "y": 538.6640625,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-05",
+              "opacity": "1",
+              "rect": {
+                "x": 584.78125,
+                "y": 673.1953125,
+                "w": 76,
+                "h": 40
+              }
+            }
+          ],
+          "murals": [
+            {
+              "id": "mural-01",
+              "label": "第一幅",
+              "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "width": 3.65,
+              "height": 1.2547,
+              "side": true
+            },
+            {
+              "id": "mural-02",
+              "label": "第二幅",
+              "wall": "主殿右侧内墙",
+              "position": [
+                4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.3796,
+              "side": true
+            },
+            {
+              "id": "mural-03",
+              "label": "第三幅",
+              "wall": "主殿后墙右侧",
+              "position": [
+                2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-04",
+              "label": "第四幅",
+              "wall": "主殿后墙左侧",
+              "position": [
+                -2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-05",
+              "label": "第五幅",
+              "wall": "主殿左侧内墙",
+              "position": [
+                -4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.64395,
+              "side": true
+            }
+          ],
+          "overflow": false,
+          "canvases": 1
+        }
+      ],
+      "reverse": true,
+      "pause": true,
+      "stable": true,
+      "wheel": true,
+      "slowWheel": true,
+      "jumps": true,
+      "reload": true,
+      "reduced": true,
+      "boundary": [
+        {
+          "screen": 13.19537037037037,
+          "phase": "a03-handoff",
+          "frame": {
+            "x": 544.75,
+            "y": 199.6484375,
+            "w": 830.5,
+            "h": 680.703125
+          },
+          "bounds": {
+            "left": 628.414855439301,
+            "right": 1259.1215083756038,
+            "top": 318.3431511667541,
+            "bottom": 808.3452813142111
+          },
+          "env": {
+            "weight": 0,
+            "establish": 1,
+            "visibility": 0,
+            "roomWeight": 0,
+            "trees": 201,
+            "visible": false,
+            "layers": [
+              "Foreground",
+              "GroundFog",
+              "Terrain",
+              "MidgroundGroves",
+              "ValleyMist",
+              "AtmosphericHaze"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          },
+          "art": {
+            "position": [
+              -26.77238089799736,
+              41.988926812550105,
+              -22.634674912070263
+            ],
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "fov": 34,
+            "aspect": 1.2202643171806167,
+            "bounds": {
+              "left": 0.10074034369572676,
+              "right": 0.860170389374598,
+              "top": 0.1743707488734595,
+              "bottom": 0.8942177896042582
+            },
+            "heroWeight": 0,
+            "lighting": {
+              "fill": 0.2799999999999999,
+              "sun": 2.5999999999999996,
+              "position": [
+                -16,
+                25,
+                14
+              ]
+            },
+            "exposure": 0.8099999999999999
+          },
+          "stats": {
+            "geometries": 64,
+            "textures": 20,
+            "calls": 52,
+            "triangles": 90562,
+            "lines": 0,
+            "post": {
+              "enabled": false,
+              "error": null,
+              "passes": 1,
+              "size": [
+                831,
+                681
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 366,
+                "calls": 52,
+                "triangles": 90562,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 6790932,
+              "multisampleBytes": 13581864,
+              "targetBytes": 20372796
+            }
+          },
+          "copy": {
+            "x": 134.390625,
+            "y": 276.7578125,
+            "w": 560,
+            "h": 483.265625
+          },
+          "text": [
+            {
+              "text": "出兵·入将",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 276.7578125,
+                "w": 560,
+                "h": 22.390625
+              },
+              "fits": true
+            },
+            {
+              "text": "从出行与归来，看壁画之间的联系",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 321.1484375,
+                "w": 560,
+                "h": 154.34375
+              },
+              "fits": true
+            },
+            {
+              "text": "李济民将“出兵入将”解释为迎神赛会中队伍出庙与入庙的场景。",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 505.4921875,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "以这组关系为线索，留意队伍的朝向，以及不同壁面之间的联系。",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 593.8671875,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "研究视角：李济民，2025，第122页。主题尚有不同释读，这里提供一种观看线索。",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 689.2421875,
+                "w": 500,
+                "h": 70.78125
+              },
+              "fits": true
+            }
+          ],
+          "labels": [
+            {
+              "id": "mural-01",
+              "opacity": "0.999328",
+              "rect": {
+                "x": 1259.078125,
+                "y": 383.2578125,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-02",
+              "opacity": "0.999328",
+              "rect": {
+                "x": 585.390625,
+                "y": 538.6328125,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-05",
+              "opacity": "1",
+              "rect": {
+                "x": 585.390625,
+                "y": 673.4140625,
+                "w": 76,
+                "h": 40
+              }
+            }
+          ],
+          "murals": [
+            {
+              "id": "mural-01",
+              "label": "第一幅",
+              "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "width": 3.65,
+              "height": 1.2547,
+              "side": true
+            },
+            {
+              "id": "mural-02",
+              "label": "第二幅",
+              "wall": "主殿右侧内墙",
+              "position": [
+                4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.3796,
+              "side": true
+            },
+            {
+              "id": "mural-03",
+              "label": "第三幅",
+              "wall": "主殿后墙右侧",
+              "position": [
+                2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-04",
+              "label": "第四幅",
+              "wall": "主殿后墙左侧",
+              "position": [
+                -2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-05",
+              "label": "第五幅",
+              "wall": "主殿左侧内墙",
+              "position": [
+                -4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.64395,
+              "side": true
+            }
+          ],
+          "overflow": false,
+          "canvases": 1
+        },
+        {
+          "screen": 13.199074074074074,
+          "phase": "a03-handoff",
+          "frame": {
+            "x": 544.9921875,
+            "y": 199.703125,
+            "w": 830.015625,
+            "h": 680.59375
+          },
+          "bounds": {
+            "left": 628.2089796628359,
+            "right": 1259.307228012941,
+            "top": 318.37876686609604,
+            "bottom": 808.3021637434731
+          },
+          "env": {
+            "weight": 0,
+            "establish": 1,
+            "visibility": 0,
+            "roomWeight": 0,
+            "trees": 201,
+            "visible": false,
+            "layers": [
+              "Foreground",
+              "GroundFog",
+              "Terrain",
+              "MidgroundGroves",
+              "ValleyMist",
+              "AtmosphericHaze"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          },
+          "art": {
+            "position": [
+              -26.77238089799736,
+              41.988926812550105,
+              -22.634674912070263
+            ],
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "fov": 34,
+            "aspect": 1.2187958883994126,
+            "bounds": {
+              "left": 0.10025930796523969,
+              "right": 0.8606043296027603,
+              "top": 0.1743707488734595,
+              "bottom": 0.8942177896042582
+            },
+            "heroWeight": 0,
+            "lighting": {
+              "fill": 0.2799999999999999,
+              "sun": 2.5999999999999996,
+              "position": [
+                -16,
+                25,
+                14
+              ]
+            },
+            "exposure": 0.8099999999999999
+          },
+          "stats": {
+            "geometries": 64,
+            "textures": 20,
+            "calls": 52,
+            "triangles": 90562,
+            "lines": 0,
+            "post": {
+              "enabled": false,
+              "error": null,
+              "passes": 1,
+              "size": [
+                830,
+                681
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 479,
+                "calls": 52,
+                "triangles": 90562,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 6782760,
+              "multisampleBytes": 13565520,
+              "targetBytes": 20348280
+            }
+          },
+          "copy": {
+            "x": 134.390625,
+            "y": 276.7578125,
+            "w": 560,
+            "h": 483.265625
+          },
+          "text": [
+            {
+              "text": "出兵·入将",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 276.7578125,
+                "w": 560,
+                "h": 22.390625
+              },
+              "fits": true
+            },
+            {
+              "text": "从出行与归来，看壁画之间的联系",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 321.1484375,
+                "w": 560,
+                "h": 154.34375
+              },
+              "fits": true
+            },
+            {
+              "text": "李济民将“出兵入将”解释为迎神赛会中队伍出庙与入庙的场景。",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 505.4921875,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "以这组关系为线索，留意队伍的朝向，以及不同壁面之间的联系。",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 593.8671875,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "研究视角：李济民，2025，第122页。主题尚有不同释读，这里提供一种观看线索。",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 689.2421875,
+                "w": 500,
+                "h": 70.78125
+              },
+              "fits": true
+            }
+          ],
+          "labels": [
+            {
+              "id": "mural-01",
+              "opacity": "0.999973",
+              "rect": {
+                "x": 1258.9609375,
+                "y": 383.4375,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-02",
+              "opacity": "0.999973",
+              "rect": {
+                "x": 585.0078125,
+                "y": 538.8125,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-05",
+              "opacity": "1",
+              "rect": {
+                "x": 585.0078125,
+                "y": 673.328125,
+                "w": 76,
+                "h": 40
+              }
+            }
+          ],
+          "murals": [
+            {
+              "id": "mural-01",
+              "label": "第一幅",
+              "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "width": 3.65,
+              "height": 1.2547,
+              "side": true
+            },
+            {
+              "id": "mural-02",
+              "label": "第二幅",
+              "wall": "主殿右侧内墙",
+              "position": [
+                4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.3796,
+              "side": true
+            },
+            {
+              "id": "mural-03",
+              "label": "第三幅",
+              "wall": "主殿后墙右侧",
+              "position": [
+                2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-04",
+              "label": "第四幅",
+              "wall": "主殿后墙左侧",
+              "position": [
+                -2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-05",
+              "label": "第五幅",
+              "wall": "主殿左侧内墙",
+              "position": [
+                -4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.64395,
+              "side": true
+            }
+          ],
+          "overflow": false,
+          "canvases": 1
+        },
+        {
+          "screen": 13.2,
+          "phase": "a03-handoff",
+          "frame": {
+            "x": 545,
+            "y": 199.703125,
+            "w": 830,
+            "h": 680.59375
+          },
+          "bounds": {
+            "left": 628.215225611149,
+            "right": 1259.301593570291,
+            "top": 318.37876686609604,
+            "bottom": 808.3021637434731
+          },
+          "env": {
+            "weight": 0,
+            "establish": 1,
+            "visibility": 0,
+            "roomWeight": 0,
+            "trees": 201,
+            "visible": false,
+            "layers": [
+              "Foreground",
+              "GroundFog",
+              "Terrain",
+              "MidgroundGroves",
+              "ValleyMist",
+              "AtmosphericHaze"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          },
+          "art": {
+            "position": [
+              -26.77238089799736,
+              41.988926812550105,
+              -22.634674912070263
+            ],
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "fov": 34,
+            "aspect": 1.2187958883994126,
+            "bounds": {
+              "left": 0.10025930796523969,
+              "right": 0.8606043296027603,
+              "top": 0.1743707488734595,
+              "bottom": 0.8942177896042582
+            },
+            "heroWeight": 0,
+            "lighting": {
+              "fill": 0.2799999999999999,
+              "sun": 2.5999999999999996,
+              "position": [
+                -16,
+                25,
+                14
+              ]
+            },
+            "exposure": 0.8099999999999999
+          },
+          "stats": {
+            "geometries": 64,
+            "textures": 20,
+            "calls": 52,
+            "triangles": 90562,
+            "lines": 0,
+            "post": {
+              "enabled": false,
+              "error": null,
+              "passes": 1,
+              "size": [
+                830,
+                681
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 595,
+                "calls": 52,
+                "triangles": 90562,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 6782760,
+              "multisampleBytes": 13565520,
+              "targetBytes": 20348280
+            }
+          },
+          "copy": {
+            "x": 134.390625,
+            "y": 276.7578125,
+            "w": 560,
+            "h": 483.265625
+          },
+          "text": [
+            {
+              "text": "出兵·入将",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 276.7578125,
+                "w": 560,
+                "h": 22.390625
+              },
+              "fits": true
+            },
+            {
+              "text": "从出行与归来，看壁画之间的联系",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 321.1484375,
+                "w": 560,
+                "h": 154.34375
+              },
+              "fits": true
+            },
+            {
+              "text": "李济民将“出兵入将”解释为迎神赛会中队伍出庙与入庙的场景。",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 505.4921875,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "以这组关系为线索，留意队伍的朝向，以及不同壁面之间的联系。",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 593.8671875,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "研究视角：李济民，2025，第122页。主题尚有不同释读，这里提供一种观看线索。",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 689.2421875,
+                "w": 500,
+                "h": 70.78125
+              },
+              "fits": true
+            }
+          ],
+          "labels": [
+            {
+              "id": "mural-01",
+              "opacity": "1",
+              "rect": {
+                "x": 1259,
+                "y": 383.4375,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-02",
+              "opacity": "1",
+              "rect": {
+                "x": 585,
+                "y": 538.8125,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-05",
+              "opacity": "1",
+              "rect": {
+                "x": 585,
+                "y": 673.328125,
+                "w": 76,
+                "h": 40
+              }
+            }
+          ],
+          "murals": [
+            {
+              "id": "mural-01",
+              "label": "第一幅",
+              "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "width": 3.65,
+              "height": 1.2547,
+              "side": true
+            },
+            {
+              "id": "mural-02",
+              "label": "第二幅",
+              "wall": "主殿右侧内墙",
+              "position": [
+                4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.3796,
+              "side": true
+            },
+            {
+              "id": "mural-03",
+              "label": "第三幅",
+              "wall": "主殿后墙右侧",
+              "position": [
+                2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-04",
+              "label": "第四幅",
+              "wall": "主殿后墙左侧",
+              "position": [
+                -2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-05",
+              "label": "第五幅",
+              "wall": "主殿左侧内墙",
+              "position": [
+                -4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.64395,
+              "side": true
+            }
+          ],
+          "overflow": false,
+          "canvases": 1
+        },
+        {
+          "screen": 13.200925925925926,
+          "phase": "a03-handoff",
+          "frame": {
+            "x": 545,
+            "y": 199.703125,
+            "w": 830,
+            "h": 680.59375
+          },
+          "bounds": {
+            "left": 628.215225611149,
+            "right": 1259.301593570291,
+            "top": 318.37876686609604,
+            "bottom": 808.3021637434731
+          },
+          "env": {
+            "weight": 0,
+            "establish": 1,
+            "visibility": 0,
+            "roomWeight": 0,
+            "trees": 201,
+            "visible": false,
+            "layers": [
+              "Foreground",
+              "GroundFog",
+              "Terrain",
+              "MidgroundGroves",
+              "ValleyMist",
+              "AtmosphericHaze"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          },
+          "art": {
+            "position": [
+              -26.77238089799736,
+              41.988926812550105,
+              -22.634674912070263
+            ],
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "fov": 34,
+            "aspect": 1.2187958883994126,
+            "bounds": {
+              "left": 0.10025930796523969,
+              "right": 0.8606043296027603,
+              "top": 0.1743707488734595,
+              "bottom": 0.8942177896042582
+            },
+            "heroWeight": 0,
+            "lighting": {
+              "fill": 0.2799999999999999,
+              "sun": 2.5999999999999996,
+              "position": [
+                -16,
+                25,
+                14
+              ]
+            },
+            "exposure": 0.8099999999999999
+          },
+          "stats": {
+            "geometries": 64,
+            "textures": 20,
+            "calls": 52,
+            "triangles": 90562,
+            "lines": 0,
+            "post": {
+              "enabled": false,
+              "error": null,
+              "passes": 1,
+              "size": [
+                830,
+                681
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 707,
+                "calls": 52,
+                "triangles": 90562,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 6782760,
+              "multisampleBytes": 13565520,
+              "targetBytes": 20348280
+            }
+          },
+          "copy": {
+            "x": 134.390625,
+            "y": 276.7578125,
+            "w": 560,
+            "h": 483.265625
+          },
+          "text": [
+            {
+              "text": "出兵·入将",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 276.7578125,
+                "w": 560,
+                "h": 22.390625
+              },
+              "fits": true
+            },
+            {
+              "text": "从出行与归来，看壁画之间的联系",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 321.1484375,
+                "w": 560,
+                "h": 154.34375
+              },
+              "fits": true
+            },
+            {
+              "text": "李济民将“出兵入将”解释为迎神赛会中队伍出庙与入庙的场景。",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 505.4921875,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "以这组关系为线索，留意队伍的朝向，以及不同壁面之间的联系。",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 593.8671875,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "研究视角：李济民，2025，第122页。主题尚有不同释读，这里提供一种观看线索。",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 689.2421875,
+                "w": 500,
+                "h": 70.78125
+              },
+              "fits": true
+            }
+          ],
+          "labels": [
+            {
+              "id": "mural-01",
+              "opacity": "1",
+              "rect": {
+                "x": 1259,
+                "y": 383.4375,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-02",
+              "opacity": "1",
+              "rect": {
+                "x": 585,
+                "y": 538.8125,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-05",
+              "opacity": "1",
+              "rect": {
+                "x": 585,
+                "y": 673.328125,
+                "w": 76,
+                "h": 40
+              }
+            }
+          ],
+          "murals": [
+            {
+              "id": "mural-01",
+              "label": "第一幅",
+              "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "width": 3.65,
+              "height": 1.2547,
+              "side": true
+            },
+            {
+              "id": "mural-02",
+              "label": "第二幅",
+              "wall": "主殿右侧内墙",
+              "position": [
+                4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.3796,
+              "side": true
+            },
+            {
+              "id": "mural-03",
+              "label": "第三幅",
+              "wall": "主殿后墙右侧",
+              "position": [
+                2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-04",
+              "label": "第四幅",
+              "wall": "主殿后墙左侧",
+              "position": [
+                -2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-05",
+              "label": "第五幅",
+              "wall": "主殿左侧内墙",
+              "position": [
+                -4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.64395,
+              "side": true
+            }
+          ],
+          "overflow": false,
+          "canvases": 1
+        },
+        {
+          "screen": 13.204629629629629,
+          "phase": "a04-completed",
+          "frame": {
+            "x": 544.9609375,
+            "y": 199.6875,
+            "w": 830.078125,
+            "h": 680.625
+          },
+          "bounds": {
+            "left": 628.188501678535,
+            "right": 1259.330944814106,
+            "top": 318.37369729312286,
+            "bottom": 808.2973161393156
+          },
+          "env": {
+            "weight": 0,
+            "establish": 1,
+            "visibility": 0,
+            "roomWeight": 0,
+            "trees": 201,
+            "visible": false,
+            "layers": [
+              "Foreground",
+              "GroundFog",
+              "Terrain",
+              "MidgroundGroves",
+              "ValleyMist",
+              "AtmosphericHaze"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          },
+          "art": {
+            "position": [
+              -26.773899194655396,
+              41.98952380361846,
+              -22.633940448921912
+            ],
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "fov": 34,
+            "aspect": 1.2187958883994126,
+            "bounds": {
+              "left": 0.10026473613978809,
+              "right": 0.8606057499878171,
+              "top": 0.1743782513030272,
+              "bottom": 0.8941925673304914
+            },
+            "heroWeight": 0,
+            "lighting": {
+              "fill": 0.2799999999999999,
+              "sun": 2.5999999999999996,
+              "position": [
+                -16,
+                25,
+                14
+              ]
+            },
+            "exposure": 0.8100150122669407
+          },
+          "stats": {
+            "geometries": 77,
+            "textures": 22,
+            "calls": 73,
+            "triangles": 91586,
+            "lines": 0,
+            "post": {
+              "enabled": false,
+              "error": null,
+              "passes": 1,
+              "size": [
+                830,
+                681
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 724,
+                "calls": 73,
+                "triangles": 91586,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 6782760,
+              "multisampleBytes": 13565520,
+              "targetBytes": 20348280
+            }
+          },
+          "copy": {
+            "x": 134.390625,
+            "y": 276.7578125,
+            "w": 560,
+            "h": 483.265625
+          },
+          "text": [
+            {
+              "text": "出兵·入将",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 276.7578125,
+                "w": 560,
+                "h": 22.390625
+              },
+              "fits": true
+            },
+            {
+              "text": "从出行与归来，看壁画之间的联系",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 321.1484375,
+                "w": 560,
+                "h": 154.34375
+              },
+              "fits": true
+            },
+            {
+              "text": "李济民将“出兵入将”解释为迎神赛会中队伍出庙与入庙的场景。",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 505.4921875,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "以这组关系为线索，留意队伍的朝向，以及不同壁面之间的联系。",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 593.8671875,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "研究视角：李济民，2025，第122页。主题尚有不同释读，这里提供一种观看线索。",
+              "opacity": "0",
+              "rect": {
+                "x": 134.390625,
+                "y": 689.2421875,
+                "w": 500,
+                "h": 70.78125
+              },
+              "fits": true
+            }
+          ],
+          "labels": [
+            {
+              "id": "mural-01",
+              "opacity": "0.99998",
+              "rect": {
+                "x": 1258.9609375,
+                "y": 383.421875,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-02",
+              "opacity": "0.99998",
+              "rect": {
+                "x": 584.9609375,
+                "y": 538.78125,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-05",
+              "opacity": "0.99998",
+              "rect": {
+                "x": 584.9609375,
+                "y": 673.296875,
+                "w": 76,
+                "h": 40
+              }
+            }
+          ],
+          "murals": [
+            {
+              "id": "mural-01",
+              "label": "第一幅",
+              "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "width": 3.65,
+              "height": 1.2547,
+              "side": true
+            },
+            {
+              "id": "mural-02",
+              "label": "第二幅",
+              "wall": "主殿右侧内墙",
+              "position": [
+                4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.3796,
+              "side": true
+            },
+            {
+              "id": "mural-03",
+              "label": "第三幅",
+              "wall": "主殿后墙右侧",
+              "position": [
+                2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-04",
+              "label": "第四幅",
+              "wall": "主殿后墙左侧",
+              "position": [
+                -2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-05",
+              "label": "第五幅",
+              "wall": "主殿左侧内墙",
+              "position": [
+                -4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.64395,
+              "side": true
+            }
+          ],
+          "overflow": false,
+          "canvases": 1
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "occupancy": 0.6194953078004815,
+      "rows": [
+        {
+          "name": "01-a02-stable",
+          "screen": 9.65,
+          "phase": "a02-reading",
+          "frame": {
+            "x": 28.8046875,
+            "y": 90,
+            "w": 1382.390625,
+            "h": 720
+          },
+          "bounds": {
+            "left": 225.1096294544907,
+            "right": 1118.3444897289314,
+            "top": 165.80407485573335,
+            "bottom": 779.2342953843696
+          },
+          "env": {
+            "weight": 1,
+            "establish": 1,
+            "visibility": 1,
+            "roomWeight": 1,
+            "trees": 201,
+            "visible": true,
+            "layers": [
+              "Foreground",
+              "GroundFog",
+              "Terrain",
+              "MidgroundGroves",
+              "ValleyMist",
+              "AtmosphericHaze"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          },
+          "art": {
+            "position": [
+              -25.457476292510236,
+              24.855778229497474,
+              -25.579947534446536
+            ],
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "fov": 31.5,
+            "aspect": 1.9194444444444445,
+            "bounds": {
+              "left": 0.14200395923148762,
+              "right": 0.7881562436297131,
+              "top": 0.10528343729962963,
+              "bottom": 0.9572698547005134
+            },
+            "heroWeight": 0,
+            "lighting": {
+              "fill": 0.33,
+              "sun": 3.5,
+              "position": [
+                -12,
+                25,
+                -16
+              ]
+            },
+            "exposure": 1.01
+          },
+          "stats": {
+            "geometries": 64,
+            "textures": 20,
+            "calls": 57,
+            "triangles": 170510,
+            "lines": 0,
+            "post": {
+              "enabled": false,
+              "error": null,
+              "passes": 1,
+              "size": [
+                1382,
+                720
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 13,
+                "calls": 57,
+                "triangles": 170510,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 11940480,
+              "multisampleBytes": 23880960,
+              "targetBytes": 35821440
+            }
+          },
+          "copy": {
+            "x": 100.796875,
+            "y": 209.6484375,
+            "w": 518.390625,
+            "h": 444.703125
+          },
+          "text": [
+            {
+              "text": "出兵·入将",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 209.6484375,
+                "w": 518.390625,
+                "h": 22.390625
+              },
+              "fits": true
+            },
+            {
+              "text": "从出行与归来，看壁画之间的联系",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 254.0390625,
+                "w": 518.390625,
+                "h": 115.78125
+              },
+              "fits": true
+            },
+            {
+              "text": "李济民将“出兵入将”解释为迎神赛会中队伍出庙与入庙的场景。",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 399.8203125,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "以这组关系为线索，留意队伍的朝向，以及不同壁面之间的联系。",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 488.1953125,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "研究视角：李济民，2025，第122页。主题尚有不同释读，这里提供一种观看线索。",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 583.5703125,
+                "w": 500,
+                "h": 70.78125
+              },
+              "fits": true
+            }
+          ],
+          "labels": [
+            {
+              "id": "mural-01",
+              "opacity": "1",
+              "rect": {
+                "x": 1026.6484375,
+                "y": 168.78125,
+                "w": 99,
+                "h": 44.5
+              }
+            },
+            {
+              "id": "mural-02",
+              "opacity": "1",
+              "rect": {
+                "x": 179.2265625,
+                "y": 326.21875,
+                "w": 99,
+                "h": 44.5
+              }
+            },
+            {
+              "id": "mural-03",
+              "opacity": "0.75",
+              "rect": {
+                "x": 124.5078125,
+                "y": 492.953125,
+                "w": 99,
+                "h": 44.5
+              }
+            },
+            {
+              "id": "mural-04",
+              "opacity": "0.75",
+              "rect": {
+                "x": 211.3359375,
+                "y": 649.015625,
+                "w": 99,
+                "h": 44.5
+              }
+            },
+            {
+              "id": "mural-05",
+              "opacity": "1",
+              "rect": {
+                "x": 680.1015625,
+                "y": 648.515625,
+                "w": 99,
+                "h": 44.5
+              }
+            }
+          ],
+          "murals": [
+            {
+              "id": "mural-01",
+              "label": "第一幅",
+              "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "width": 3.65,
+              "height": 1.2547,
+              "side": true
+            },
+            {
+              "id": "mural-02",
+              "label": "第二幅",
+              "wall": "主殿右侧内墙",
+              "position": [
+                4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.3796,
+              "side": true
+            },
+            {
+              "id": "mural-03",
+              "label": "第三幅",
+              "wall": "主殿后墙右侧",
+              "position": [
+                2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-04",
+              "label": "第四幅",
+              "wall": "主殿后墙左侧",
+              "position": [
+                -2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-05",
+              "label": "第五幅",
+              "wall": "主殿左侧内墙",
+              "position": [
+                -4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.64395,
+              "side": true
+            }
+          ],
+          "overflow": false,
+          "canvases": 1
+        },
+        {
+          "name": "02-a02-a03-transition",
+          "screen": 10.4,
+          "phase": "a03-enter",
+          "frame": {
+            "x": 47.46820068359375,
+            "y": 84.109375,
+            "w": 1375.015625,
+            "h": 736.4375
+          },
+          "bounds": {
+            "left": 254.35096962377793,
+            "right": 1131.2171177279697,
+            "top": 164.40527764398348,
+            "bottom": 789.0360963390074
+          },
+          "env": {
+            "weight": 0.824592592592591,
+            "establish": 1,
+            "visibility": 0.824592592592591,
+            "roomWeight": 0.824592592592591,
+            "trees": 201,
+            "visible": true,
+            "layers": [
+              "Foreground",
+              "GroundFog",
+              "Terrain",
+              "MidgroundGroves",
+              "ValleyMist",
+              "AtmosphericHaze"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          },
+          "art": {
+            "position": [
+              -25.7554291005808,
+              27.64177226235084,
+              -25.202512775859095
+            ],
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "fov": 31.660043036444446,
+            "aspect": 1.8682065217391304,
+            "bounds": {
+              "left": 0.15045848583734034,
+              "right": 0.7881720740768862,
+              "top": 0.10903288146513923,
+              "bottom": 0.9572118765530101
+            },
+            "heroWeight": 0,
+            "lighting": {
+              "fill": 0.3252617481481481,
+              "sun": 3.296151466666665,
+              "position": [
+                -12.628660148148153,
+                25,
+                -10.970718814814775
+              ]
+            },
+            "exposure": 0.9820099735703701
+          },
+          "stats": {
+            "geometries": 64,
+            "textures": 20,
+            "calls": 62,
+            "triangles": 177710,
+            "lines": 0,
+            "post": {
+              "enabled": false,
+              "error": null,
+              "passes": 1,
+              "size": [
+                1375,
+                736
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 239,
+                "calls": 62,
+                "triangles": 177710,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 12144000,
+              "multisampleBytes": 24288000,
+              "targetBytes": 36432000
+            }
+          },
+          "copy": {
+            "x": 100.796875,
+            "y": 209.6484375,
+            "w": 518.390625,
+            "h": 444.703125
+          },
+          "text": [
+            {
+              "text": "出兵·入将",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 209.6484375,
+                "w": 518.390625,
+                "h": 22.390625
+              },
+              "fits": true
+            },
+            {
+              "text": "从出行与归来，看壁画之间的联系",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 254.0390625,
+                "w": 518.390625,
+                "h": 115.78125
+              },
+              "fits": true
+            },
+            {
+              "text": "李济民将“出兵入将”解释为迎神赛会中队伍出庙与入庙的场景。",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 399.8203125,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "以这组关系为线索，留意队伍的朝向，以及不同壁面之间的联系。",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 488.1953125,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "研究视角：李济民，2025，第122页。主题尚有不同释读，这里提供一种观看线索。",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 583.5703125,
+                "w": 500,
+                "h": 70.78125
+              },
+              "fits": true
+            }
+          ],
+          "labels": [
+            {
+              "id": "mural-01",
+              "opacity": "1",
+              "rect": {
+                "x": 1020.0150756835938,
+                "y": 173.15625,
+                "w": 99,
+                "h": 44.5
+              }
+            },
+            {
+              "id": "mural-02",
+              "opacity": "1",
+              "rect": {
+                "x": 234.28070068359375,
+                "y": 341.203125,
+                "w": 99,
+                "h": 44.5
+              }
+            },
+            {
+              "id": "mural-03",
+              "opacity": "0.524606",
+              "rect": {
+                "x": 187.26507568359375,
+                "y": 505.984375,
+                "w": 99,
+                "h": 44.5
+              }
+            },
+            {
+              "id": "mural-04",
+              "opacity": "0.524606",
+              "rect": {
+                "x": 262.17132568359375,
+                "y": 657.046875,
+                "w": 99,
+                "h": 44.5
+              }
+            },
+            {
+              "id": "mural-05",
+              "opacity": "1",
+              "rect": {
+                "x": 676.7494506835938,
+                "y": 662.453125,
+                "w": 99,
+                "h": 44.5
+              }
+            }
+          ],
+          "murals": [
+            {
+              "id": "mural-01",
+              "label": "第一幅",
+              "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "width": 3.65,
+              "height": 1.2547,
+              "side": true
+            },
+            {
+              "id": "mural-02",
+              "label": "第二幅",
+              "wall": "主殿右侧内墙",
+              "position": [
+                4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.3796,
+              "side": true
+            },
+            {
+              "id": "mural-03",
+              "label": "第三幅",
+              "wall": "主殿后墙右侧",
+              "position": [
+                2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-04",
+              "label": "第四幅",
+              "wall": "主殿后墙左侧",
+              "position": [
+                -2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-05",
+              "label": "第五幅",
+              "wall": "主殿左侧内墙",
+              "position": [
+                -4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.64395,
+              "side": true
+            }
+          ],
+          "overflow": false,
+          "canvases": 1
+        },
+        {
+          "name": "03-a03-enter",
+          "screen": 10.85,
+          "phase": "a03-enter",
+          "frame": {
+            "x": 177.568603515625,
+            "y": 77.34375,
+            "w": 1291.71875,
+            "h": 777.625
+          },
+          "bounds": {
+            "left": 395.6842239255218,
+            "right": 1185.2840574697675,
+            "top": 200.59694929361183,
+            "bottom": 769.4674274585591
+          },
+          "env": {
+            "weight": 0.04859259259259219,
+            "establish": 1,
+            "visibility": 0.04859259259259219,
+            "roomWeight": 0.04859259259259219,
+            "trees": 201,
+            "visible": true,
+            "layers": [
+              "Foreground",
+              "GroundFog",
+              "Terrain",
+              "MidgroundGroves",
+              "ValleyMist",
+              "AtmosphericHaze"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          },
+          "art": {
+            "position": [
+              -27.835726332660844,
+              31.51788262948984,
+              -26.68670801300084
+            ],
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "fov": 33.70143287469445,
+            "aspect": 1.660668380462725,
+            "bounds": {
+              "left": 0.16885689737792908,
+              "right": 0.7801353459908686,
+              "top": 0.1584995329286119,
+              "bottom": 0.8900481304723473
+            },
+            "heroWeight": 0,
+            "lighting": {
+              "fill": 0.33814454814814815,
+              "sun": 2.8277968666666666,
+              "position": [
+                -13.072236148148146,
+                25,
+                -7.422110814814825
+              ]
+            },
+            "exposure": 0.8456145376453703
+          },
+          "stats": {
+            "geometries": 64,
+            "textures": 20,
+            "calls": 62,
+            "triangles": 177710,
+            "lines": 0,
+            "post": {
+              "enabled": false,
+              "error": null,
+              "passes": 1,
+              "size": [
+                1292,
+                778
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 485,
+                "calls": 62,
+                "triangles": 177710,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 12062112,
+              "multisampleBytes": 24124224,
+              "targetBytes": 36186336
+            }
+          },
+          "copy": {
+            "x": 100.796875,
+            "y": 209.6484375,
+            "w": 518.390625,
+            "h": 444.703125
+          },
+          "text": [
+            {
+              "text": "出兵·入将",
+              "opacity": "0.932123",
+              "rect": {
+                "x": 100.796875,
+                "y": 209.6484375,
+                "w": 518.390625,
+                "h": 22.390625
+              },
+              "fits": true
+            },
+            {
+              "text": "从出行与归来，看壁画之间的联系",
+              "opacity": "0.740741",
+              "rect": {
+                "x": 100.796875,
+                "y": 254.0390625,
+                "w": 518.390625,
+                "h": 115.78125
+              },
+              "fits": true
+            },
+            {
+              "text": "李济民将“出兵入将”解释为迎神赛会中队伍出庙与入庙的场景。",
+              "opacity": "0.5",
+              "rect": {
+                "x": 100.796875,
+                "y": 399.8203125,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "以这组关系为线索，留意队伍的朝向，以及不同壁面之间的联系。",
+              "opacity": "0.269417",
+              "rect": {
+                "x": 100.796875,
+                "y": 488.1953125,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "研究视角：李济民，2025，第122页。主题尚有不同释读，这里提供一种观看线索。",
+              "opacity": "0.0909605",
+              "rect": {
+                "x": 100.796875,
+                "y": 583.5703125,
+                "w": 500,
+                "h": 70.78125
+              },
+              "fits": true
+            }
+          ],
+          "labels": [
+            {
+              "id": "mural-01",
+              "opacity": "1",
+              "rect": {
+                "x": 961.927978515625,
+                "y": 217.796875,
+                "w": 99,
+                "h": 44.5
+              }
+            },
+            {
+              "id": "mural-02",
+              "opacity": "1",
+              "rect": {
+                "x": 527.443603515625,
+                "y": 387.234375,
+                "w": 99,
+                "h": 44.5
+              }
+            },
+            {
+              "id": "mural-05",
+              "opacity": "1",
+              "rect": {
+                "x": 661.349853515625,
+                "y": 653.234375,
+                "w": 99,
+                "h": 44.5
+              }
+            }
+          ],
+          "murals": [
+            {
+              "id": "mural-01",
+              "label": "第一幅",
+              "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "width": 3.65,
+              "height": 1.2547,
+              "side": true
+            },
+            {
+              "id": "mural-02",
+              "label": "第二幅",
+              "wall": "主殿右侧内墙",
+              "position": [
+                4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.3796,
+              "side": true
+            },
+            {
+              "id": "mural-03",
+              "label": "第三幅",
+              "wall": "主殿后墙右侧",
+              "position": [
+                2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-04",
+              "label": "第四幅",
+              "wall": "主殿后墙左侧",
+              "position": [
+                -2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-05",
+              "label": "第五幅",
+              "wall": "主殿左侧内墙",
+              "position": [
+                -4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.64395,
+              "side": true
+            }
+          ],
+          "overflow": false,
+          "canvases": 1
+        },
+        {
+          "name": "04-a03-reading",
+          "screen": 11.7,
+          "phase": "a03-reading",
+          "frame": {
+            "x": 144,
+            "y": 49.5,
+            "w": 1440,
+            "h": 846
+          },
+          "bounds": {
+            "left": 373.4530927182381,
+            "right": 1265.5263359509315,
+            "top": 184.42894771572824,
+            "bottom": 793.2779374063366
+          },
+          "env": {
+            "weight": 0,
+            "establish": 1,
+            "visibility": 0,
+            "roomWeight": 0,
+            "trees": 201,
+            "visible": false,
+            "layers": [
+              "Foreground",
+              "GroundFog",
+              "Terrain",
+              "MidgroundGroves",
+              "ValleyMist",
+              "AtmosphericHaze"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          },
+          "art": {
+            "position": [
+              -27.540161206440597,
+              26.983319913962394,
+              -27.529483759462895
+            ],
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "fov": 34,
+            "aspect": 1.702127659574468,
+            "bounds": {
+              "left": 0.15934242549877647,
+              "right": 0.778837733299258,
+              "top": 0.15949048193348492,
+              "bottom": 0.8791701387781756
+            },
+            "heroWeight": 0,
+            "lighting": {
+              "fill": 0.36,
+              "sun": 2.9,
+              "position": [
+                -12,
+                25,
+                -16
+              ]
+            },
+            "exposure": 0.84
+          },
+          "stats": {
+            "geometries": 64,
+            "textures": 20,
+            "calls": 52,
+            "triangles": 90562,
+            "lines": 0,
+            "post": {
+              "enabled": false,
+              "error": null,
+              "passes": 1,
+              "size": [
+                1440,
+                846
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 734,
+                "calls": 52,
+                "triangles": 90562,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 14618880,
+              "multisampleBytes": 29237760,
+              "targetBytes": 43856640
+            }
+          },
+          "copy": {
+            "x": 100.796875,
+            "y": 209.6484375,
+            "w": 518.390625,
+            "h": 444.703125
+          },
+          "text": [
+            {
+              "text": "出兵·入将",
+              "opacity": "1",
+              "rect": {
+                "x": 100.796875,
+                "y": 209.6484375,
+                "w": 518.390625,
+                "h": 22.390625
+              },
+              "fits": true
+            },
+            {
+              "text": "从出行与归来，看壁画之间的联系",
+              "opacity": "1",
+              "rect": {
+                "x": 100.796875,
+                "y": 254.0390625,
+                "w": 518.390625,
+                "h": 115.78125
+              },
+              "fits": true
+            },
+            {
+              "text": "李济民将“出兵入将”解释为迎神赛会中队伍出庙与入庙的场景。",
+              "opacity": "1",
+              "rect": {
+                "x": 100.796875,
+                "y": 399.8203125,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "以这组关系为线索，留意队伍的朝向，以及不同壁面之间的联系。",
+              "opacity": "1",
+              "rect": {
+                "x": 100.796875,
+                "y": 488.1953125,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "研究视角：李济民，2025，第122页。主题尚有不同释读，这里提供一种观看线索。",
+              "opacity": "1",
+              "rect": {
+                "x": 100.796875,
+                "y": 583.5703125,
+                "w": 500,
+                "h": 70.78125
+              },
+              "fits": true
+            }
+          ],
+          "labels": [
+            {
+              "id": "mural-01",
+              "opacity": "1",
+              "rect": {
+                "x": 965.65625,
+                "y": 211.78125,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-02",
+              "opacity": "1",
+              "rect": {
+                "x": 638.796875,
+                "y": 392.28125,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-05",
+              "opacity": "1",
+              "rect": {
+                "x": 638.796875,
+                "y": 651.9375,
+                "w": 76,
+                "h": 40
+              }
+            }
+          ],
+          "murals": [
+            {
+              "id": "mural-01",
+              "label": "第一幅",
+              "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "width": 3.65,
+              "height": 1.2547,
+              "side": true
+            },
+            {
+              "id": "mural-02",
+              "label": "第二幅",
+              "wall": "主殿右侧内墙",
+              "position": [
+                4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.3796,
+              "side": true
+            },
+            {
+              "id": "mural-03",
+              "label": "第三幅",
+              "wall": "主殿后墙右侧",
+              "position": [
+                2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-04",
+              "label": "第四幅",
+              "wall": "主殿后墙左侧",
+              "position": [
+                -2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-05",
+              "label": "第五幅",
+              "wall": "主殿左侧内墙",
+              "position": [
+                -4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.64395,
+              "side": true
+            }
+          ],
+          "overflow": false,
+          "canvases": 1
+        },
+        {
+          "name": "05-a03-handoff",
+          "screen": 12.92,
+          "phase": "a03-handoff",
+          "frame": {
+            "x": 70.4296875,
+            "y": 78.6875,
+            "w": 1299.140625,
+            "h": 742.625
+          },
+          "bounds": {
+            "left": 357.9694944155542,
+            "right": 1046.5861353706646,
+            "top": 208.17957738215284,
+            "bottom": 742.7559860048623
+          },
+          "env": {
+            "weight": 0,
+            "establish": 1,
+            "visibility": 0,
+            "roomWeight": 0,
+            "trees": 201,
+            "visible": false,
+            "layers": [
+              "Foreground",
+              "GroundFog",
+              "Terrain",
+              "MidgroundGroves",
+              "ValleyMist",
+              "AtmosphericHaze"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          },
+          "art": {
+            "position": [
+              -26.77238089799736,
+              41.988926812550105,
+              -22.634674912070263
+            ],
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "fov": 34,
+            "aspect": 1.7483176312247646,
+            "bounds": {
+              "left": 0.22133077927230105,
+              "right": 0.7513862849686997,
+              "top": 0.1743707488734595,
+              "bottom": 0.8942177896042582
+            },
+            "heroWeight": 0,
+            "lighting": {
+              "fill": 0.2799999999999999,
+              "sun": 2.5999999999999996,
+              "position": [
+                -16,
+                25,
+                14
+              ]
+            },
+            "exposure": 0.8099999999999999
+          },
+          "stats": {
+            "geometries": 64,
+            "textures": 20,
+            "calls": 52,
+            "triangles": 90562,
+            "lines": 0,
+            "post": {
+              "enabled": false,
+              "error": null,
+              "passes": 1,
+              "size": [
+                1299,
+                743
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 947,
+                "calls": 52,
+                "triangles": 90562,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 11581884,
+              "multisampleBytes": 23163768,
+              "targetBytes": 34745652
+            }
+          },
+          "copy": {
+            "x": 100.796875,
+            "y": 209.6484375,
+            "w": 518.390625,
+            "h": 444.703125
+          },
+          "text": [
+            {
+              "text": "出兵·入将",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 209.6484375,
+                "w": 518.390625,
+                "h": 22.390625
+              },
+              "fits": true
+            },
+            {
+              "text": "从出行与归来，看壁画之间的联系",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 254.0390625,
+                "w": 518.390625,
+                "h": 115.78125
+              },
+              "fits": true
+            },
+            {
+              "text": "李济民将“出兵入将”解释为迎神赛会中队伍出庙与入庙的场景。",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 399.8203125,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "以这组关系为线索，留意队伍的朝向，以及不同壁面之间的联系。",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 488.1953125,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "研究视角：李济民，2025，第122页。主题尚有不同释读，这里提供一种观看线索。",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 583.5703125,
+                "w": 500,
+                "h": 70.78125
+              },
+              "fits": true
+            }
+          ],
+          "labels": [
+            {
+              "id": "mural-01",
+              "opacity": "0.808516",
+              "rect": {
+                "x": 906.4765625,
+                "y": 242.4375,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-02",
+              "opacity": "0.808516",
+              "rect": {
+                "x": 431.6640625,
+                "y": 414.921875,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-05",
+              "opacity": "1",
+              "rect": {
+                "x": 431.6640625,
+                "y": 641.71875,
+                "w": 76,
+                "h": 40
+              }
+            }
+          ],
+          "murals": [
+            {
+              "id": "mural-01",
+              "label": "第一幅",
+              "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "width": 3.65,
+              "height": 1.2547,
+              "side": true
+            },
+            {
+              "id": "mural-02",
+              "label": "第二幅",
+              "wall": "主殿右侧内墙",
+              "position": [
+                4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.3796,
+              "side": true
+            },
+            {
+              "id": "mural-03",
+              "label": "第三幅",
+              "wall": "主殿后墙右侧",
+              "position": [
+                2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-04",
+              "label": "第四幅",
+              "wall": "主殿后墙左侧",
+              "position": [
+                -2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-05",
+              "label": "第五幅",
+              "wall": "主殿左侧内墙",
+              "position": [
+                -4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.64395,
+              "side": true
+            }
+          ],
+          "overflow": false,
+          "canvases": 1
+        },
+        {
+          "name": "06-a04-entry",
+          "screen": 13.21,
+          "phase": "a04-idle",
+          "frame": {
+            "x": 304.8828125,
+            "y": 136.203125,
+            "w": 830.234375,
+            "h": 627.59375
+          },
+          "bounds": {
+            "left": 413.95717081425937,
+            "right": 996.0997285814683,
+            "top": 245.65004272824834,
+            "bottom": 697.3495464261932
+          },
+          "env": {
+            "weight": 0,
+            "establish": 1,
+            "visibility": 0,
+            "roomWeight": 0,
+            "trees": 201,
+            "visible": false,
+            "layers": [
+              "Foreground",
+              "GroundFog",
+              "Terrain",
+              "MidgroundGroves",
+              "ValleyMist",
+              "AtmosphericHaze"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          },
+          "art": {
+            "position": [
+              -26.778013118694226,
+              41.98999858302885,
+              -22.630805078052177
+            ],
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "fov": 34,
+            "aspect": 1.321656050955414,
+            "bounds": {
+              "left": 0.13137779113790532,
+              "right": 0.8325563682923491,
+              "top": 0.17439134428640873,
+              "bottom": 0.8941236610883924
+            },
+            "heroWeight": 0,
+            "lighting": {
+              "fill": 0.2799999999999999,
+              "sun": 2.5999999999999996,
+              "position": [
+                -16,
+                25,
+                14
+              ]
+            },
+            "exposure": 0.8100697265625
+          },
+          "stats": {
+            "geometries": 65,
+            "textures": 22,
+            "calls": 52,
+            "triangles": 90506,
+            "lines": 0,
+            "post": {
+              "enabled": false,
+              "error": null,
+              "passes": 1,
+              "size": [
+                830,
+                628
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 1116,
+                "calls": 52,
+                "triangles": 90506,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 6254880,
+              "multisampleBytes": 12509760,
+              "targetBytes": 18764640
+            }
+          },
+          "copy": {
+            "x": 100.796875,
+            "y": 209.6484375,
+            "w": 518.390625,
+            "h": 444.703125
+          },
+          "text": [
+            {
+              "text": "出兵·入将",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 209.6484375,
+                "w": 518.390625,
+                "h": 22.390625
+              },
+              "fits": true
+            },
+            {
+              "text": "从出行与归来，看壁画之间的联系",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 254.0390625,
+                "w": 518.390625,
+                "h": 115.78125
+              },
+              "fits": true
+            },
+            {
+              "text": "李济民将“出兵入将”解释为迎神赛会中队伍出庙与入庙的场景。",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 399.8203125,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "以这组关系为线索，留意队伍的朝向，以及不同壁面之间的联系。",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 488.1953125,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "研究视角：李济民，2025，第122页。主题尚有不同释读，这里提供一种观看线索。",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 583.5703125,
+                "w": 500,
+                "h": 70.78125
+              },
+              "fits": true
+            }
+          ],
+          "labels": [
+            {
+              "id": "mural-01",
+              "opacity": "0.999907",
+              "rect": {
+                "x": 1018.8828125,
+                "y": 304.078125,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-02",
+              "opacity": "0.999907",
+              "rect": {
+                "x": 344.8828125,
+                "y": 447.3125,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-05",
+              "opacity": "1",
+              "rect": {
+                "x": 344.8828125,
+                "y": 571.375,
+                "w": 76,
+                "h": 40
+              }
+            }
+          ],
+          "murals": [
+            {
+              "id": "mural-01",
+              "label": "第一幅",
+              "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "width": 3.65,
+              "height": 1.2547,
+              "side": true
+            },
+            {
+              "id": "mural-02",
+              "label": "第二幅",
+              "wall": "主殿右侧内墙",
+              "position": [
+                4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.3796,
+              "side": true
+            },
+            {
+              "id": "mural-03",
+              "label": "第三幅",
+              "wall": "主殿后墙右侧",
+              "position": [
+                2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-04",
+              "label": "第四幅",
+              "wall": "主殿后墙左侧",
+              "position": [
+                -2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-05",
+              "label": "第五幅",
+              "wall": "主殿左侧内墙",
+              "position": [
+                -4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.64395,
+              "side": true
+            }
+          ],
+          "overflow": false,
+          "canvases": 1
+        }
+      ],
+      "reverse": true,
+      "pause": true,
+      "stable": true,
+      "wheel": true,
+      "slowWheel": true,
+      "jumps": true,
+      "reload": true,
+      "reduced": true,
+      "boundary": [
+        {
+          "screen": 13.195555555555556,
+          "phase": "a03-handoff",
+          "frame": {
+            "x": 304.875,
+            "y": 136.234375,
+            "w": 830.25,
+            "h": 627.53125
+          },
+          "bounds": {
+            "left": 413.944790594937,
+            "right": 996.0910655534366,
+            "top": 245.65746900399813,
+            "bottom": 697.3839822825972
+          },
+          "env": {
+            "weight": 0,
+            "establish": 1,
+            "visibility": 0,
+            "roomWeight": 0,
+            "trees": 201,
+            "visible": false,
+            "layers": [
+              "Foreground",
+              "GroundFog",
+              "Terrain",
+              "MidgroundGroves",
+              "ValleyMist",
+              "AtmosphericHaze"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          },
+          "art": {
+            "position": [
+              -26.77238089799736,
+              41.988926812550105,
+              -22.634674912070263
+            ],
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "fov": 34,
+            "aspect": 1.321656050955414,
+            "bounds": {
+              "left": 0.13136981703696116,
+              "right": 0.8325396754633383,
+              "top": 0.1743707488734595,
+              "bottom": 0.8942177896042582
+            },
+            "heroWeight": 0,
+            "lighting": {
+              "fill": 0.2799999999999999,
+              "sun": 2.5999999999999996,
+              "position": [
+                -16,
+                25,
+                14
+              ]
+            },
+            "exposure": 0.8099999999999999
+          },
+          "stats": {
+            "geometries": 47,
+            "textures": 19,
+            "calls": 52,
+            "triangles": 90562,
+            "lines": 0,
+            "post": {
+              "enabled": false,
+              "error": null,
+              "passes": 1,
+              "size": [
+                830,
+                628
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 341,
+                "calls": 52,
+                "triangles": 90562,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 6254880,
+              "multisampleBytes": 12509760,
+              "targetBytes": 18764640
+            }
+          },
+          "copy": {
+            "x": 100.796875,
+            "y": 209.6484375,
+            "w": 518.390625,
+            "h": 444.703125
+          },
+          "text": [
+            {
+              "text": "出兵·入将",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 209.6484375,
+                "w": 518.390625,
+                "h": 22.390625
+              },
+              "fits": true
+            },
+            {
+              "text": "从出行与归来，看壁画之间的联系",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 254.0390625,
+                "w": 518.390625,
+                "h": 115.78125
+              },
+              "fits": true
+            },
+            {
+              "text": "李济民将“出兵入将”解释为迎神赛会中队伍出庙与入庙的场景。",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 399.8203125,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "以这组关系为线索，留意队伍的朝向，以及不同壁面之间的联系。",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 488.1953125,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "研究视角：李济民，2025，第122页。主题尚有不同释读，这里提供一种观看线索。",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 583.5703125,
+                "w": 500,
+                "h": 70.78125
+              },
+              "fits": true
+            }
+          ],
+          "labels": [
+            {
+              "id": "mural-01",
+              "opacity": "0.99938",
+              "rect": {
+                "x": 1018.25,
+                "y": 304.015625,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-02",
+              "opacity": "0.99938",
+              "rect": {
+                "x": 345.453125,
+                "y": 447.296875,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-05",
+              "opacity": "1",
+              "rect": {
+                "x": 345.453125,
+                "y": 571.5625,
+                "w": 76,
+                "h": 40
+              }
+            }
+          ],
+          "murals": [
+            {
+              "id": "mural-01",
+              "label": "第一幅",
+              "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "width": 3.65,
+              "height": 1.2547,
+              "side": true
+            },
+            {
+              "id": "mural-02",
+              "label": "第二幅",
+              "wall": "主殿右侧内墙",
+              "position": [
+                4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.3796,
+              "side": true
+            },
+            {
+              "id": "mural-03",
+              "label": "第三幅",
+              "wall": "主殿后墙右侧",
+              "position": [
+                2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-04",
+              "label": "第四幅",
+              "wall": "主殿后墙左侧",
+              "position": [
+                -2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-05",
+              "label": "第五幅",
+              "wall": "主殿左侧内墙",
+              "position": [
+                -4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.64395,
+              "side": true
+            }
+          ],
+          "overflow": false,
+          "canvases": 1
+        },
+        {
+          "screen": 13.198888888888888,
+          "phase": "a03-handoff",
+          "frame": {
+            "x": 304.9921875,
+            "y": 136.265625,
+            "w": 830.015625,
+            "h": 627.46875
+          },
+          "bounds": {
+            "left": 414.5183997776772,
+            "right": 995.5736152189633,
+            "top": 245.67782083219353,
+            "bottom": 697.359343670747
+          },
+          "env": {
+            "weight": 0,
+            "establish": 1,
+            "visibility": 0,
+            "roomWeight": 0,
+            "trees": 201,
+            "visible": false,
+            "layers": [
+              "Foreground",
+              "GroundFog",
+              "Terrain",
+              "MidgroundGroves",
+              "ValleyMist",
+              "AtmosphericHaze"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          },
+          "art": {
+            "position": [
+              -26.77238089799736,
+              41.988926812550105,
+              -22.634674912070263
+            ],
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "fov": 34,
+            "aspect": 1.3237639553429028,
+            "bounds": {
+              "left": 0.13195680777416352,
+              "right": 0.8320101536871227,
+              "top": 0.1743707488734595,
+              "bottom": 0.8942177896042582
+            },
+            "heroWeight": 0,
+            "lighting": {
+              "fill": 0.2799999999999999,
+              "sun": 2.5999999999999996,
+              "position": [
+                -16,
+                25,
+                14
+              ]
+            },
+            "exposure": 0.8099999999999999
+          },
+          "stats": {
+            "geometries": 47,
+            "textures": 19,
+            "calls": 52,
+            "triangles": 90562,
+            "lines": 0,
+            "post": {
+              "enabled": false,
+              "error": null,
+              "passes": 1,
+              "size": [
+                830,
+                627
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 448,
+                "calls": 52,
+                "triangles": 90562,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 6244920,
+              "multisampleBytes": 12489840,
+              "targetBytes": 18734760
+            }
+          },
+          "copy": {
+            "x": 100.796875,
+            "y": 209.6484375,
+            "w": 518.390625,
+            "h": 444.703125
+          },
+          "text": [
+            {
+              "text": "出兵·入将",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 209.6484375,
+                "w": 518.390625,
+                "h": 22.390625
+              },
+              "fits": true
+            },
+            {
+              "text": "从出行与归来，看壁画之间的联系",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 254.0390625,
+                "w": 518.390625,
+                "h": 115.78125
+              },
+              "fits": true
+            },
+            {
+              "text": "李济民将“出兵入将”解释为迎神赛会中队伍出庙与入庙的场景。",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 399.8203125,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "以这组关系为线索，留意队伍的朝向，以及不同壁面之间的联系。",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 488.1953125,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "研究视角：李济民，2025，第122页。主题尚有不同释读，这里提供一种观看线索。",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 583.5703125,
+                "w": 500,
+                "h": 70.78125
+              },
+              "fits": true
+            }
+          ],
+          "labels": [
+            {
+              "id": "mural-01",
+              "opacity": "0.999961",
+              "rect": {
+                "x": 1018.9453125,
+                "y": 303.84375,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-02",
+              "opacity": "0.999961",
+              "rect": {
+                "x": 345.0234375,
+                "y": 446.890625,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-05",
+              "opacity": "1",
+              "rect": {
+                "x": 345.0234375,
+                "y": 570.75,
+                "w": 76,
+                "h": 40
+              }
+            }
+          ],
+          "murals": [
+            {
+              "id": "mural-01",
+              "label": "第一幅",
+              "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "width": 3.65,
+              "height": 1.2547,
+              "side": true
+            },
+            {
+              "id": "mural-02",
+              "label": "第二幅",
+              "wall": "主殿右侧内墙",
+              "position": [
+                4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.3796,
+              "side": true
+            },
+            {
+              "id": "mural-03",
+              "label": "第三幅",
+              "wall": "主殿后墙右侧",
+              "position": [
+                2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-04",
+              "label": "第四幅",
+              "wall": "主殿后墙左侧",
+              "position": [
+                -2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-05",
+              "label": "第五幅",
+              "wall": "主殿左侧内墙",
+              "position": [
+                -4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.64395,
+              "side": true
+            }
+          ],
+          "overflow": false,
+          "canvases": 1
+        },
+        {
+          "screen": 13.2,
+          "phase": "a03-handoff",
+          "frame": {
+            "x": 305,
+            "y": 136.265625,
+            "w": 830,
+            "h": 627.46875
+          },
+          "bounds": {
+            "left": 414.5241504525557,
+            "right": 995.5684275603119,
+            "top": 245.67782083219353,
+            "bottom": 697.359343670747
+          },
+          "env": {
+            "weight": 0,
+            "establish": 1,
+            "visibility": 0,
+            "roomWeight": 0,
+            "trees": 201,
+            "visible": false,
+            "layers": [
+              "Foreground",
+              "GroundFog",
+              "Terrain",
+              "MidgroundGroves",
+              "ValleyMist",
+              "AtmosphericHaze"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          },
+          "art": {
+            "position": [
+              -26.77238089799736,
+              41.988926812550105,
+              -22.634674912070263
+            ],
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "fov": 34,
+            "aspect": 1.3237639553429028,
+            "bounds": {
+              "left": 0.13195680777416352,
+              "right": 0.8320101536871227,
+              "top": 0.1743707488734595,
+              "bottom": 0.8942177896042582
+            },
+            "heroWeight": 0,
+            "lighting": {
+              "fill": 0.2799999999999999,
+              "sun": 2.5999999999999996,
+              "position": [
+                -16,
+                25,
+                14
+              ]
+            },
+            "exposure": 0.8099999999999999
+          },
+          "stats": {
+            "geometries": 47,
+            "textures": 19,
+            "calls": 52,
+            "triangles": 90562,
+            "lines": 0,
+            "post": {
+              "enabled": false,
+              "error": null,
+              "passes": 1,
+              "size": [
+                830,
+                627
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 568,
+                "calls": 52,
+                "triangles": 90562,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 6244920,
+              "multisampleBytes": 12489840,
+              "targetBytes": 18734760
+            }
+          },
+          "copy": {
+            "x": 100.796875,
+            "y": 209.6484375,
+            "w": 518.390625,
+            "h": 444.703125
+          },
+          "text": [
+            {
+              "text": "出兵·入将",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 209.6484375,
+                "w": 518.390625,
+                "h": 22.390625
+              },
+              "fits": true
+            },
+            {
+              "text": "从出行与归来，看壁画之间的联系",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 254.0390625,
+                "w": 518.390625,
+                "h": 115.78125
+              },
+              "fits": true
+            },
+            {
+              "text": "李济民将“出兵入将”解释为迎神赛会中队伍出庙与入庙的场景。",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 399.8203125,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "以这组关系为线索，留意队伍的朝向，以及不同壁面之间的联系。",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 488.1953125,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "研究视角：李济民，2025，第122页。主题尚有不同释读，这里提供一种观看线索。",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 583.5703125,
+                "w": 500,
+                "h": 70.78125
+              },
+              "fits": true
+            }
+          ],
+          "labels": [
+            {
+              "id": "mural-01",
+              "opacity": "1",
+              "rect": {
+                "x": 1019,
+                "y": 303.84375,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-02",
+              "opacity": "1",
+              "rect": {
+                "x": 345,
+                "y": 446.890625,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-05",
+              "opacity": "1",
+              "rect": {
+                "x": 345,
+                "y": 570.75,
+                "w": 76,
+                "h": 40
+              }
+            }
+          ],
+          "murals": [
+            {
+              "id": "mural-01",
+              "label": "第一幅",
+              "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "width": 3.65,
+              "height": 1.2547,
+              "side": true
+            },
+            {
+              "id": "mural-02",
+              "label": "第二幅",
+              "wall": "主殿右侧内墙",
+              "position": [
+                4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.3796,
+              "side": true
+            },
+            {
+              "id": "mural-03",
+              "label": "第三幅",
+              "wall": "主殿后墙右侧",
+              "position": [
+                2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-04",
+              "label": "第四幅",
+              "wall": "主殿后墙左侧",
+              "position": [
+                -2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-05",
+              "label": "第五幅",
+              "wall": "主殿左侧内墙",
+              "position": [
+                -4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.64395,
+              "side": true
+            }
+          ],
+          "overflow": false,
+          "canvases": 1
+        },
+        {
+          "screen": 13.20111111111111,
+          "phase": "a03-handoff",
+          "frame": {
+            "x": 305,
+            "y": 136.265625,
+            "w": 830,
+            "h": 627.46875
+          },
+          "bounds": {
+            "left": 414.5241504525557,
+            "right": 995.5684275603119,
+            "top": 245.67782083219353,
+            "bottom": 697.359343670747
+          },
+          "env": {
+            "weight": 0,
+            "establish": 1,
+            "visibility": 0,
+            "roomWeight": 0,
+            "trees": 201,
+            "visible": false,
+            "layers": [
+              "Foreground",
+              "GroundFog",
+              "Terrain",
+              "MidgroundGroves",
+              "ValleyMist",
+              "AtmosphericHaze"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          },
+          "art": {
+            "position": [
+              -26.77238089799736,
+              41.988926812550105,
+              -22.634674912070263
+            ],
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "fov": 34,
+            "aspect": 1.3237639553429028,
+            "bounds": {
+              "left": 0.13195680777416352,
+              "right": 0.8320101536871227,
+              "top": 0.1743707488734595,
+              "bottom": 0.8942177896042582
+            },
+            "heroWeight": 0,
+            "lighting": {
+              "fill": 0.2799999999999999,
+              "sun": 2.5999999999999996,
+              "position": [
+                -16,
+                25,
+                14
+              ]
+            },
+            "exposure": 0.8099999999999999
+          },
+          "stats": {
+            "geometries": 47,
+            "textures": 19,
+            "calls": 52,
+            "triangles": 90562,
+            "lines": 0,
+            "post": {
+              "enabled": false,
+              "error": null,
+              "passes": 1,
+              "size": [
+                830,
+                627
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 688,
+                "calls": 52,
+                "triangles": 90562,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 6244920,
+              "multisampleBytes": 12489840,
+              "targetBytes": 18734760
+            }
+          },
+          "copy": {
+            "x": 100.796875,
+            "y": 209.6484375,
+            "w": 518.390625,
+            "h": 444.703125
+          },
+          "text": [
+            {
+              "text": "出兵·入将",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 209.6484375,
+                "w": 518.390625,
+                "h": 22.390625
+              },
+              "fits": true
+            },
+            {
+              "text": "从出行与归来，看壁画之间的联系",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 254.0390625,
+                "w": 518.390625,
+                "h": 115.78125
+              },
+              "fits": true
+            },
+            {
+              "text": "李济民将“出兵入将”解释为迎神赛会中队伍出庙与入庙的场景。",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 399.8203125,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "以这组关系为线索，留意队伍的朝向，以及不同壁面之间的联系。",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 488.1953125,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "研究视角：李济民，2025，第122页。主题尚有不同释读，这里提供一种观看线索。",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 583.5703125,
+                "w": 500,
+                "h": 70.78125
+              },
+              "fits": true
+            }
+          ],
+          "labels": [
+            {
+              "id": "mural-01",
+              "opacity": "1",
+              "rect": {
+                "x": 1019,
+                "y": 303.84375,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-02",
+              "opacity": "1",
+              "rect": {
+                "x": 345,
+                "y": 446.890625,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-05",
+              "opacity": "1",
+              "rect": {
+                "x": 345,
+                "y": 570.75,
+                "w": 76,
+                "h": 40
+              }
+            }
+          ],
+          "murals": [
+            {
+              "id": "mural-01",
+              "label": "第一幅",
+              "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "width": 3.65,
+              "height": 1.2547,
+              "side": true
+            },
+            {
+              "id": "mural-02",
+              "label": "第二幅",
+              "wall": "主殿右侧内墙",
+              "position": [
+                4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.3796,
+              "side": true
+            },
+            {
+              "id": "mural-03",
+              "label": "第三幅",
+              "wall": "主殿后墙右侧",
+              "position": [
+                2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-04",
+              "label": "第四幅",
+              "wall": "主殿后墙左侧",
+              "position": [
+                -2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-05",
+              "label": "第五幅",
+              "wall": "主殿左侧内墙",
+              "position": [
+                -4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.64395,
+              "side": true
+            }
+          ],
+          "overflow": false,
+          "canvases": 1
+        },
+        {
+          "screen": 13.205555555555556,
+          "phase": "a04-completed",
+          "frame": {
+            "x": 304.96875,
+            "y": 136.2421875,
+            "w": 830.0625,
+            "h": 627.515625
+          },
+          "bounds": {
+            "left": 414.01595756523676,
+            "right": 996.0330087048972,
+            "top": 245.66655994256277,
+            "bottom": 697.3595245136925
+          },
+          "env": {
+            "weight": 0,
+            "establish": 1,
+            "visibility": 0,
+            "roomWeight": 0,
+            "trees": 201,
+            "visible": false,
+            "layers": [
+              "Foreground",
+              "GroundFog",
+              "Terrain",
+              "MidgroundGroves",
+              "ValleyMist",
+              "AtmosphericHaze"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          },
+          "art": {
+            "position": [
+              -26.7741257301172,
+              41.98925884136379,
+              -22.633476058002458
+            ],
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "fov": 34,
+            "aspect": 1.321656050955414,
+            "bounds": {
+              "left": 0.1313722852980791,
+              "right": 0.8325448489781158,
+              "top": 0.17437712796802912,
+              "bottom": 0.8941886299862134
+            },
+            "heroWeight": 0,
+            "lighting": {
+              "fill": 0.2799999999999999,
+              "sun": 2.5999999999999996,
+              "position": [
+                -16,
+                25,
+                14
+              ]
+            },
+            "exposure": 0.8100216009194958
+          },
+          "stats": {
+            "geometries": 60,
+            "textures": 21,
+            "calls": 73,
+            "triangles": 91586,
+            "lines": 0,
+            "post": {
+              "enabled": false,
+              "error": null,
+              "passes": 1,
+              "size": [
+                830,
+                628
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 702,
+                "calls": 73,
+                "triangles": 91586,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 6254880,
+              "multisampleBytes": 12509760,
+              "targetBytes": 18764640
+            }
+          },
+          "copy": {
+            "x": 100.796875,
+            "y": 209.6484375,
+            "w": 518.390625,
+            "h": 444.703125
+          },
+          "text": [
+            {
+              "text": "出兵·入将",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 209.6484375,
+                "w": 518.390625,
+                "h": 22.390625
+              },
+              "fits": true
+            },
+            {
+              "text": "从出行与归来，看壁画之间的联系",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 254.0390625,
+                "w": 518.390625,
+                "h": 115.78125
+              },
+              "fits": true
+            },
+            {
+              "text": "李济民将“出兵入将”解释为迎神赛会中队伍出庙与入庙的场景。",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 399.8203125,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "以这组关系为线索，留意队伍的朝向，以及不同壁面之间的联系。",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 488.1953125,
+                "w": 500,
+                "h": 68.375
+              },
+              "fits": true
+            },
+            {
+              "text": "研究视角：李济民，2025，第122页。主题尚有不同释读，这里提供一种观看线索。",
+              "opacity": "0",
+              "rect": {
+                "x": 100.796875,
+                "y": 583.5703125,
+                "w": 500,
+                "h": 70.78125
+              },
+              "fits": true
+            }
+          ],
+          "labels": [
+            {
+              "id": "mural-01",
+              "opacity": "0.999971",
+              "rect": {
+                "x": 1018.96875,
+                "y": 304.1171875,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-02",
+              "opacity": "0.999971",
+              "rect": {
+                "x": 344.96875,
+                "y": 447.3828125,
+                "w": 76,
+                "h": 40
+              }
+            },
+            {
+              "id": "mural-05",
+              "opacity": "0.999971",
+              "rect": {
+                "x": 344.96875,
+                "y": 571.4453125,
+                "w": 76,
+                "h": 40
+              }
+            }
+          ],
+          "murals": [
+            {
+              "id": "mural-01",
+              "label": "第一幅",
+              "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "width": 3.65,
+              "height": 1.2547,
+              "side": true
+            },
+            {
+              "id": "mural-02",
+              "label": "第二幅",
+              "wall": "主殿右侧内墙",
+              "position": [
+                4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.3796,
+              "side": true
+            },
+            {
+              "id": "mural-03",
+              "label": "第三幅",
+              "wall": "主殿后墙右侧",
+              "position": [
+                2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-04",
+              "label": "第四幅",
+              "wall": "主殿后墙左侧",
+              "position": [
+                -2.25,
+                1.85,
+                -14.865
+              ],
+              "width": 3.35,
+              "height": 2,
+              "side": false
+            },
+            {
+              "id": "mural-05",
+              "label": "第五幅",
+              "wall": "主殿左侧内墙",
+              "position": [
+                -4.515,
+                1.85,
+                -11.75
+              ],
+              "width": 6.1,
+              "height": 1.64395,
+              "side": true
+            }
+          ],
+          "overflow": false,
+          "canvases": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "networkFailures": [],
+  "optionalFailures": [],
+  "regression": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "screen": 0.6,
+      "changed": 0,
+      "max": 0
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "screen": 2.5,
+      "changed": 0,
+      "max": 0
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "screen": 4,
+      "changed": 0,
+      "max": 0
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "screen": 5.7,
+      "changed": 0,
+      "max": 0
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "screen": 6.7,
+      "changed": 0.00001253858024691358,
+      "max": 1
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "screen": 7.55,
+      "changed": 0.000049189814814814815,
+      "max": 1
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "screen": 8.7,
+      "changed": 0.000024594907407407408,
+      "max": 1
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "screen": 9.65,
+      "changed": 0.000025559413580246914,
+      "max": 10
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "screen": 10.2,
+      "changed": 0.000009162808641975309,
+      "max": 1
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "screen": 13.21,
+      "changed": 0.0006360918209876544,
+      "max": 1
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "screen": 0.6,
+      "changed": 0,
+      "max": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "screen": 2.5,
+      "changed": 0,
+      "max": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "screen": 4,
+      "changed": 0.018277006172839505,
+      "max": 2
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "screen": 5.7,
+      "changed": 0,
+      "max": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "screen": 6.7,
+      "changed": 0.01165817901234568,
+      "max": 1
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "screen": 7.55,
+      "changed": 0.0000625,
+      "max": 1
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "screen": 8.7,
+      "changed": 0.00002777777777777778,
+      "max": 2
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "screen": 9.65,
+      "changed": 0.00003780864197530864,
+      "max": 1
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "screen": 10.2,
+      "changed": 0.0000154320987654321,
+      "max": 1
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "screen": 13.21,
+      "changed": 0.0005949074074074074,
+      "max": 2
+    }
+  ]
+}

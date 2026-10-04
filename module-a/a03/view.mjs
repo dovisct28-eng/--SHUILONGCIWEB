@@ -19,6 +19,9 @@ export function createA03View(stage) {
     </div>
     <p class="a03-end" data-a03-end aria-hidden="true">继续向下，观看空间路线 · 向上滚动可回看</p>`;
   stage.append(section);
+  const field=document.createElement('div');field.className='a03-field';field.setAttribute('aria-hidden','true');
+  field.innerHTML='<div class="a03-field__light"></div><div class="a03-field__distance"></div><div class="a03-field__grain"></div>';
+  stage.insertBefore(field,stage.querySelector('.hero'));
   const copy = section.querySelector('[data-a03-copy]');
   const hint = section.querySelector('[data-a03-reading-hint]');
   const handoff = section.querySelector('[data-a03-handoff]');
@@ -27,6 +30,7 @@ export function createA03View(stage) {
     stage.style.setProperty('--a03-text', state.text);
     stage.style.setProperty('--a03-handoff', state.handoff);
     stage.style.setProperty('--a03-takeover', state.takeover);
+    for(const key of ['kicker','title','research','purpose','source','hint'])stage.style.setProperty(`--a03-${key}`,state[key]);
     for (const [el, opacity] of [[copy,state.text],[hint,state.text],[handoff,state.handoff],[end,state.handoff]]) {
       el.setAttribute('aria-hidden', String(opacity === 0));
       el.style.visibility = opacity === 0 ? 'hidden' : 'visible';
