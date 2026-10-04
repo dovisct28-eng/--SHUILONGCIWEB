@@ -3,6 +3,16 @@ import assert from 'node:assert/strict';
 import { deriveA03State, A03_START, A03_SCREENS } from './progress.mjs';
 import { createMuralPresentation } from '../../shuilong-temple/narrative-markers.mjs';
 
+test('poster opens roofs gradually, holds cutaway and hands its endpoint to A04',()=>{
+  const at=n=>deriveA03State((A03_START+n)*1000,1000);
+  for(const n of [0,.3,.65])assert.equal(at(n).roofOpacity,1);
+  assert.ok(Math.abs(at(1.2).roofOpacity-.66)<1e-9);
+  for(const n of [1.65,1.9,2.1,2.45,2.65]){assert.ok(Math.abs(at(n).roofOpacity-.15)<1e-9);assert.equal(at(n).markerFocus,1);}
+  assert.ok(Math.abs(at(3).roofOpacity-.08)<1e-9);
+  assert.equal(at(2.45).fifthFocus,1);
+  let roof=1;for(let n=0;n<=3;n+=.005){const s=at(n);assert.ok(s.roofOpacity<=roof+1e-9);roof=s.roofOpacity;assert.deepEqual(s,at(n));}
+});
+
 test('A03 leaves the accepted A01 and entire A02 interval unchanged', () => {
   for (const height of [768,900,1024,1080]) for (const screens of [0,5.7,6.7,8.7,A03_START]) {
     const state = deriveA03State(screens*height,height);

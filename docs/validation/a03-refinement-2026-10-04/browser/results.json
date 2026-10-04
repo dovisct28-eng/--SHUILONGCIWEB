@@ -1,0 +1,1815 @@
+{
+  "errors": [],
+  "rows": [
+    {
+      "width": 1440,
+      "height": 900,
+      "passed": true,
+      "a02Diff": {
+        "changed": 49,
+        "maxDelta": 2
+      },
+      "heroDiff": {
+        "changed": 0,
+        "maxDelta": 0
+      },
+      "states": [
+        {
+          "name": "transition",
+          "screens": 10.9,
+          "state": {
+            "phase": "a03-enter",
+            "vars": "--a03-text: 0.5575785161584003; --a03-handoff: 0; --a03-takeover: 1; --a03-kicker: 0.9939894815927881; --a03-title: 0.87379972565158; --a03-return: 0.6675197220135272; --a03-introduction: 0.4320060105184109; --a03-purpose: 0.21893669739771662; --a03-hint: 0.0553935860058331; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 0vw; --model-scale: 1; --canvas-width: 1311.5954341478405px; --canvas-height: 830.4644763706985px; --a03-field: 0.9872592592592598; --a03-support: 0.7840000000000014; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #12161a; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "0.28522",
+                "rect": {
+                  "x": 1014.65625,
+                  "y": 141.0625,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "0.28522",
+                "rect": {
+                  "x": 61.171875,
+                  "y": 415.8125,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "0.28522",
+                "rect": {
+                  "x": 565.046875,
+                  "y": 632.875,
+                  "w": 99,
+                  "h": 44.5
+                }
+              }
+            ],
+            "copy": {
+              "x": 54.71875,
+              "y": 766.5,
+              "w": 430,
+              "h": 93
+            },
+            "title": {
+              "x": 0,
+              "y": 0,
+              "w": 1440,
+              "h": 0
+            },
+            "titleLines": [
+              {
+                "x": 994.9987182617188,
+                "y": 405,
+                "w": 508.04693603515625,
+                "h": 259.203125
+              },
+              {
+                "x": -43.1600227355957,
+                "y": 108,
+                "w": 508.046875,
+                "h": 259.203125
+              }
+            ],
+            "titleText": "出庙 · 入庙",
+            "topic": "出兵入将",
+            "frame": {
+              "x": 64.203125,
+              "y": -11.1015625,
+              "w": 1311.59375,
+              "h": 830.453125
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "reading",
+          "screens": 11.7,
+          "state": {
+            "phase": "a03-reading",
+            "vars": "--a03-text: 1; --a03-handoff: 0; --a03-takeover: 1; --a03-kicker: 1; --a03-title: 1; --a03-return: 1; --a03-introduction: 1; --a03-purpose: 1; --a03-hint: 1; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 0vw; --model-scale: 1; --canvas-width: 1440px; --canvas-height: 900px; --a03-field: 1; --a03-support: 1; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #101519; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "0.95626",
+                "rect": {
+                  "x": 1133.203125,
+                  "y": 158.1875,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "0.95626",
+                "rect": {
+                  "x": 46.421875,
+                  "y": 475.25,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "0.95626",
+                "rect": {
+                  "x": 610.1875,
+                  "y": 667,
+                  "w": 99,
+                  "h": 44.5
+                }
+              }
+            ],
+            "copy": {
+              "x": 54.71875,
+              "y": 766.5,
+              "w": 430,
+              "h": 93
+            },
+            "title": {
+              "x": 0,
+              "y": 0,
+              "w": 1440,
+              "h": 0
+            },
+            "titleLines": [
+              {
+                "x": 989.546875,
+                "y": 405,
+                "w": 508.046875,
+                "h": 259.203125
+              },
+              {
+                "x": -28.796875,
+                "y": 108,
+                "w": 508.046875,
+                "h": 259.203125
+              }
+            ],
+            "titleText": "出庙 · 入庙",
+            "topic": "出兵入将",
+            "frame": {
+              "x": 0,
+              "y": -58.5,
+              "w": 1440,
+              "h": 900
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "exit",
+          "screens": 12.7,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0.1825694966190834; --a03-handoff: 0.1262002743484226; --a03-takeover: 1; --a03-kicker: 0.1825694966190834; --a03-title: 0.1825694966190834; --a03-return: 0.1825694966190834; --a03-introduction: 0.1825694966190834; --a03-purpose: 0.1825694966190834; --a03-hint: 0.1825694966190834; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 0vw; --model-scale: 1; --canvas-width: 1286.6011846360334px; --canvas-height: 759.608263355525px; --a03-field: 1; --a03-support: 0.1825694966190834; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #11171a; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065; --a03-fifth-x: 574.4583680828162px; --a03-fifth-y: 616.5841897735147px;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "0.38",
+                "rect": {
+                  "x": 1014.84375,
+                  "y": 146.1875,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "0.38",
+                "rect": {
+                  "x": 104.625,
+                  "y": 425.953125,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 557.640625,
+                  "y": 603.203125,
+                  "w": 99,
+                  "h": 44.5
+                }
+              }
+            ],
+            "copy": {
+              "x": 54.71875,
+              "y": 766.5,
+              "w": 430,
+              "h": 93
+            },
+            "title": {
+              "x": 0,
+              "y": 0,
+              "w": 1440,
+              "h": 0
+            },
+            "titleLines": [
+              {
+                "x": 1024.85986328125,
+                "y": 405,
+                "w": 508.046875,
+                "h": 259.203125
+              },
+              {
+                "x": -64.10987091064453,
+                "y": 108,
+                "w": 508.046875,
+                "h": 259.203125
+              }
+            ],
+            "titleText": "出庙 · 入庙",
+            "topic": "出兵入将",
+            "frame": {
+              "x": 76.703125,
+              "y": 59.515625,
+              "w": 1286.59375,
+              "h": 759.59375
+            },
+            "copyHidden": "false",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        },
+        {
+          "name": "handoff",
+          "screens": 13.2,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0; --a03-handoff: 1; --a03-takeover: 1; --a03-kicker: 0; --a03-title: 0; --a03-return: 0; --a03-introduction: 0; --a03-purpose: 0; --a03-hint: 0; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 0vw; --model-scale: 1; --canvas-width: 830px; --canvas-height: 627.48px; --a03-field: 0; --a03-support: 0; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #151b1e; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065; --a03-fifth-x: 607.2587147843498px; --a03-fifth-y: 590.7566009734942px;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "0.38",
+                "rect": {
+                  "x": 702.5,
+                  "y": 165.328125,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "0.38",
+                "rect": {
+                  "x": 28.5,
+                  "y": 308.375,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 28.5,
+                  "y": 432.234375,
+                  "w": 99,
+                  "h": 44.5
+                }
+              }
+            ],
+            "copy": null,
+            "title": null,
+            "titleLines": [],
+            "titleText": "出庙 · 入庙",
+            "topic": "出兵入将",
+            "frame": {
+              "x": 305,
+              "y": 136.265625,
+              "w": 830,
+              "h": 627.46875
+            },
+            "copyHidden": "true",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        }
+      ],
+      "resize": true,
+      "reducedMotion": true
+    },
+    {
+      "width": 1440,
+      "height": 1024,
+      "passed": true,
+      "a02Diff": {
+        "changed": 351,
+        "maxDelta": 1
+      },
+      "heroDiff": {
+        "changed": 0,
+        "maxDelta": 0
+      },
+      "states": [
+        {
+          "name": "transition",
+          "screens": 10.9,
+          "state": {
+            "phase": "a03-enter",
+            "vars": "--a03-text: 0.5584745407104509; --a03-handoff: 0; --a03-takeover: 1; --a03-kicker: 0.994218448010448; --a03-title: 0.8746986742372881; --a03-return: 0.6687820744438359; --a03-introduction: 0.43332689462032536; --a03-purpose: 0.22008733760065283; --a03-hint: 0.05621622324685113; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 0vw; --model-scale: 1; --canvas-width: 1311.7824702296364px; --canvas-height: 940.347532088259px; --a03-field: 0.9874529981259951; --a03-support: 0.7844920042753228; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #12161a; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "0.2853",
+                "rect": {
+                  "x": 1015.890625,
+                  "y": 184.5,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "0.2853",
+                "rect": {
+                  "x": 54.578125,
+                  "y": 476.03125,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "0.2853",
+                "rect": {
+                  "x": 564.59375,
+                  "y": 694.84375,
+                  "w": 99,
+                  "h": 44.5
+                }
+              }
+            ],
+            "copy": {
+              "x": 54.71875,
+              "y": 884.921875,
+              "w": 430,
+              "h": 93
+            },
+            "title": {
+              "x": 0,
+              "y": 0,
+              "w": 1440,
+              "h": 0
+            },
+            "titleLines": [
+              {
+                "x": 994.9598999023438,
+                "y": 460.796875,
+                "w": 508.04693603515625,
+                "h": 259.203125
+              },
+              {
+                "x": -43.105491638183594,
+                "y": 122.875,
+                "w": 508.046875,
+                "h": 259.203125
+              }
+            ],
+            "titleText": "出庙 · 入庙",
+            "topic": "出兵入将",
+            "frame": {
+              "x": 64.109375,
+              "y": -10.390625,
+              "w": 1311.78125,
+              "h": 940.34375
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "reading",
+          "screens": 11.7,
+          "state": {
+            "phase": "a03-reading",
+            "vars": "--a03-text: 1; --a03-handoff: 0; --a03-takeover: 1; --a03-kicker: 1; --a03-title: 1; --a03-return: 1; --a03-introduction: 1; --a03-purpose: 1; --a03-hint: 1; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 0vw; --model-scale: 1; --canvas-width: 1440px; --canvas-height: 1024px; --a03-field: 1; --a03-support: 1; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #101519; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "0.956368",
+                "rect": {
+                  "x": 1133.71875,
+                  "y": 210.28125,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "0.956368",
+                "rect": {
+                  "x": 51.59375,
+                  "y": 545.453125,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "0.956368",
+                "rect": {
+                  "x": 615.953125,
+                  "y": 735.171875,
+                  "w": 99,
+                  "h": 44.5
+                }
+              }
+            ],
+            "copy": {
+              "x": 54.71875,
+              "y": 884.921875,
+              "w": 430,
+              "h": 93
+            },
+            "title": {
+              "x": 0,
+              "y": 0,
+              "w": 1440,
+              "h": 0
+            },
+            "titleLines": [
+              {
+                "x": 989.546875,
+                "y": 460.796875,
+                "w": 508.046875,
+                "h": 259.203125
+              },
+              {
+                "x": -28.796875,
+                "y": 122.875,
+                "w": 508.046875,
+                "h": 259.203125
+              }
+            ],
+            "titleText": "出庙 · 入庙",
+            "topic": "出兵入将",
+            "frame": {
+              "x": 0,
+              "y": -66.5625,
+              "w": 1440,
+              "h": 1024
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "exit",
+          "screens": 12.7,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0.1821470540954494; --a03-handoff: 0.12665069103241142; --a03-takeover: 1; --a03-kicker: 0.1821470540954494; --a03-title: 0.1821470540954494; --a03-return: 0.1821470540954494; --a03-introduction: 0.1821470540954494; --a03-purpose: 0.1821470540954494; --a03-hint: 0.1821470540954494; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 0vw; --model-scale: 1; --canvas-width: 1286.7242321753754px; --canvas-height: 859.4714797762074px; --a03-field: 1; --a03-support: 0.1821470540954494; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #11171a; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065; --a03-fifth-x: 559.6410818373074px; --a03-fifth-y: 694.3996965910977px;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "0.38",
+                "rect": {
+                  "x": 1019.71875,
+                  "y": 171.890625,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "0.38",
+                "rect": {
+                  "x": 74.421875,
+                  "y": 483.828125,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 542.890625,
+                  "y": 679.3125,
+                  "w": 99,
+                  "h": 44.5
+                }
+              }
+            ],
+            "copy": {
+              "x": 54.71875,
+              "y": 884.921875,
+              "w": 430,
+              "h": 93
+            },
+            "title": {
+              "x": 0,
+              "y": 0,
+              "w": 1440,
+              "h": 0
+            },
+            "titleLines": [
+              {
+                "x": 1024.878173828125,
+                "y": 460.796875,
+                "w": 508.046875,
+                "h": 259.203125
+              },
+              {
+                "x": -64.12812042236328,
+                "y": 122.875,
+                "w": 508.046875,
+                "h": 259.203125
+              }
+            ],
+            "titleText": "出庙 · 入庙",
+            "topic": "出兵入将",
+            "frame": {
+              "x": 76.640625,
+              "y": 70.140625,
+              "w": 1286.71875,
+              "h": 859.46875
+            },
+            "copyHidden": "false",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        },
+        {
+          "name": "handoff",
+          "screens": 13.2,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0; --a03-handoff: 1; --a03-takeover: 1; --a03-kicker: 0; --a03-title: 0; --a03-return: 0; --a03-introduction: 0; --a03-purpose: 0; --a03-hint: 0; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 0vw; --model-scale: 1; --canvas-width: 830px; --canvas-height: 680.6px; --a03-field: 0; --a03-support: 0; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #151b1e; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065; --a03-fifth-x: 597.5489390241501px; --a03-fifth-y: 665.3368644544648px;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "0.396584",
+                "rect": {
+                  "x": 702.5,
+                  "y": 181.484375,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "0.396584",
+                "rect": {
+                  "x": 28.5,
+                  "y": 336.859375,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 28.5,
+                  "y": 471.375,
+                  "w": 99,
+                  "h": 44.5
+                }
+              }
+            ],
+            "copy": null,
+            "title": null,
+            "titleLines": [],
+            "titleText": "出庙 · 入庙",
+            "topic": "出兵入将",
+            "frame": {
+              "x": 305,
+              "y": 171.703125,
+              "w": 830,
+              "h": 680.59375
+            },
+            "copyHidden": "true",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        }
+      ],
+      "resize": true,
+      "reducedMotion": true
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "passed": true,
+      "a02Diff": {
+        "changed": 394,
+        "maxDelta": 2
+      },
+      "heroDiff": {
+        "changed": 17990,
+        "maxDelta": 2
+      },
+      "states": [
+        {
+          "name": "transition",
+          "screens": 10.9,
+          "state": {
+            "phase": "a03-enter",
+            "vars": "--a03-text: 0.5569810736924754; --a03-handoff: 0; --a03-takeover: 1; --a03-kicker: 0.9938344484306091; --a03-title: 0.8731990307016881; --a03-return: 0.6666775561169885; --a03-introduction: 0.4311256594353692; --a03-purpose: 0.21817069090658842; --a03-hint: 0.05484812589974563; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 0vw; --model-scale: 1; --canvas-width: 1248.1464773580951px; --canvas-height: 708.2412613641231px; --a03-field: 0.9871293162488486; --a03-support: 0.7836717936551145; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #12161a; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "0.285167",
+                "rect": {
+                  "x": 961.65625,
+                  "y": 100.984375,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "0.285167",
+                "rect": {
+                  "x": 60.203125,
+                  "y": 348.90625,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "0.285167",
+                "rect": {
+                  "x": 537.34375,
+                  "y": 555.859375,
+                  "w": 99,
+                  "h": 44.5
+                }
+              }
+            ],
+            "copy": {
+              "x": 51.90625,
+              "y": 640.453125,
+              "w": 430,
+              "h": 93
+            },
+            "title": {
+              "x": 0,
+              "y": 0,
+              "w": 1366,
+              "h": 0
+            },
+            "titleLines": [
+              {
+                "x": 943.8837890625,
+                "y": 345.59375,
+                "w": 481.9375,
+                "h": 245.875
+              },
+              {
+                "x": -40.97205352783203,
+                "y": 92.15625,
+                "w": 481.9375,
+                "h": 245.875
+              }
+            ],
+            "titleText": "出庙 · 入庙",
+            "topic": "出兵入将",
+            "frame": {
+              "x": 58.9296875,
+              "y": -9.2421875,
+              "w": 1248.140625,
+              "h": 708.234375
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "reading",
+          "screens": 11.7,
+          "state": {
+            "phase": "a03-reading",
+            "vars": "--a03-text: 1; --a03-handoff: 0; --a03-takeover: 1; --a03-kicker: 1; --a03-title: 1; --a03-return: 1; --a03-introduction: 1; --a03-purpose: 1; --a03-hint: 1; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 0vw; --model-scale: 1; --canvas-width: 1366px; --canvas-height: 768px; --a03-field: 1; --a03-support: 1; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #101519; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "0.956546",
+                "rect": {
+                  "x": 1071.984375,
+                  "y": 113.296875,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "0.956546",
+                "rect": {
+                  "x": 36.84375,
+                  "y": 401.109375,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "0.956546",
+                "rect": {
+                  "x": 570.90625,
+                  "y": 585.640625,
+                  "w": 99,
+                  "h": 44.5
+                }
+              }
+            ],
+            "copy": {
+              "x": 51.90625,
+              "y": 640.453125,
+              "w": 430,
+              "h": 93
+            },
+            "title": {
+              "x": 0,
+              "y": 0,
+              "w": 1366,
+              "h": 0
+            },
+            "titleLines": [
+              {
+                "x": 938.6875,
+                "y": 345.59375,
+                "w": 481.9375,
+                "h": 245.875
+              },
+              {
+                "x": -27.3125,
+                "y": 92.15625,
+                "w": 481.9375,
+                "h": 245.875
+              }
+            ],
+            "titleText": "出庙 · 入庙",
+            "topic": "出兵入将",
+            "frame": {
+              "x": 0,
+              "y": -49.921875,
+              "w": 1366,
+              "h": 768
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "exit",
+          "screens": 12.7,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0.18144374895922166; --a03-handoff: 0.12740277824911878; --a03-takeover: 1; --a03-kicker: 0.18144374895922166; --a03-title: 0.18144374895922166; --a03-return: 0.18144374895922166; --a03-introduction: 0.18144374895922166; --a03-purpose: 0.18144374895922166; --a03-hint: 0.18144374895922166; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 0vw; --model-scale: 1; --canvas-width: 1224.9389723961206px; --canvas-height: 643.0260475010427px; --a03-field: 1; --a03-support: 0.18144374895922166; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #11171a; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065; --a03-fifth-x: 558.540445929827px; --a03-fifth-y: 526.2792870224027px;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "0.38",
+                "rect": {
+                  "x": 958.921875,
+                  "y": 119.234375,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "0.38",
+                "rect": {
+                  "x": 125.359375,
+                  "y": 357.109375,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 542.625,
+                  "y": 508.46875,
+                  "w": 99,
+                  "h": 44.5
+                }
+              }
+            ],
+            "copy": {
+              "x": 51.90625,
+              "y": 640.453125,
+              "w": 430,
+              "h": 93
+            },
+            "title": {
+              "x": 0,
+              "y": 0,
+              "w": 1366,
+              "h": 0
+            },
+            "titleLines": [
+              {
+                "x": 972.23193359375,
+                "y": 345.59375,
+                "w": 481.9375,
+                "h": 245.875
+              },
+              {
+                "x": -60.85693359375,
+                "y": 92.15625,
+                "w": 481.9375,
+                "h": 245.875
+              }
+            ],
+            "titleText": "出庙 · 入庙",
+            "topic": "出兵入将",
+            "frame": {
+              "x": 70.53125,
+              "y": 53.4296875,
+              "w": 1224.9375,
+              "h": 643.015625
+            },
+            "copyHidden": "false",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        },
+        {
+          "name": "handoff",
+          "screens": 13.2,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0; --a03-handoff: 1; --a03-takeover: 1; --a03-kicker: 0; --a03-title: 0; --a03-return: 0; --a03-introduction: 0; --a03-purpose: 0; --a03-hint: 0; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 0vw; --model-scale: 1; --canvas-width: 816.3216px; --canvas-height: 535.4496px; --a03-field: 0; --a03-support: 0; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #151b1e; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065; --a03-fifth-x: 586.6450457091341px; --a03-fifth-y: 504.08455485776614px;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "0.48424",
+                "rect": {
+                  "x": 688.5,
+                  "y": 137.8125,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "0.48424",
+                "rect": {
+                  "x": 28.5,
+                  "y": 259.859375,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 28.5,
+                  "y": 365.546875,
+                  "w": 99,
+                  "h": 44.5
+                }
+              }
+            ],
+            "copy": null,
+            "title": null,
+            "titleLines": [],
+            "titleText": "出庙 · 入庙",
+            "topic": "出兵入将",
+            "frame": {
+              "x": 274.84375,
+              "y": 116.28125,
+              "w": 816.3125,
+              "h": 535.4375
+            },
+            "copyHidden": "true",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        }
+      ],
+      "resize": true,
+      "reducedMotion": true
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "a02Diff": {
+        "changed": 64,
+        "maxDelta": 1
+      },
+      "heroDiff": {
+        "changed": 35366,
+        "maxDelta": 2
+      },
+      "states": [
+        {
+          "name": "transition",
+          "screens": 10.9,
+          "state": {
+            "phase": "a03-enter",
+            "vars": "--a03-text: 0.5575785161584003; --a03-handoff: 0; --a03-takeover: 1; --a03-kicker: 0.9939894815927881; --a03-title: 0.87379972565158; --a03-return: 0.6675197220135272; --a03-introduction: 0.4320060105184109; --a03-purpose: 0.21893669739771662; --a03-hint: 0.0553935860058331; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 0vw; --model-scale: 1; --canvas-width: 1709.966535229441px; --canvas-height: 986.4001298300932px; --a03-field: 0.9872592592592598; --a03-support: 0.7840000000000014; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #12161a; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "0.28522",
+                "rect": {
+                  "x": 1329.03125,
+                  "y": 158.640625,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "0.28522",
+                "rect": {
+                  "x": 111.484375,
+                  "y": 502.390625,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "0.28522",
+                "rect": {
+                  "x": 740.859375,
+                  "y": 772.265625,
+                  "w": 99,
+                  "h": 44.5
+                }
+              }
+            ],
+            "copy": {
+              "x": 72.953125,
+              "y": 938.40625,
+              "w": 430,
+              "h": 93
+            },
+            "title": {
+              "x": 0,
+              "y": 0,
+              "w": 1920,
+              "h": 0
+            },
+            "titleLines": [
+              {
+                "x": 1326.6754150390625,
+                "y": 486,
+                "w": 677.390625,
+                "h": 345.59375
+              },
+              {
+                "x": -57.54148864746094,
+                "y": 129.59375,
+                "w": 677.390625,
+                "h": 345.59375
+              }
+            ],
+            "titleText": "出庙 · 入庙",
+            "topic": "出兵入将",
+            "frame": {
+              "x": 105.0234375,
+              "y": -8.2421875,
+              "w": 1709.953125,
+              "h": 986.390625
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "reading",
+          "screens": 11.7,
+          "state": {
+            "phase": "a03-reading",
+            "vars": "--a03-text: 1; --a03-handoff: 0; --a03-takeover: 1; --a03-kicker: 1; --a03-title: 1; --a03-return: 1; --a03-introduction: 1; --a03-purpose: 1; --a03-hint: 1; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 0vw; --model-scale: 1; --canvas-width: 1920px; --canvas-height: 1080px; --a03-field: 1; --a03-support: 1; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #101519; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "0.95626",
+                "rect": {
+                  "x": 1526.8125,
+                  "y": 168.484375,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "0.95626",
+                "rect": {
+                  "x": 71.90625,
+                  "y": 573.109375,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "0.95626",
+                "rect": {
+                  "x": 822.578125,
+                  "y": 832.46875,
+                  "w": 99,
+                  "h": 44.5
+                }
+              }
+            ],
+            "copy": {
+              "x": 72.953125,
+              "y": 938.40625,
+              "w": 430,
+              "h": 93
+            },
+            "title": {
+              "x": 0,
+              "y": 0,
+              "w": 1920,
+              "h": 0
+            },
+            "titleLines": [
+              {
+                "x": 1319.40625,
+                "y": 486,
+                "w": 677.390625,
+                "h": 345.59375
+              },
+              {
+                "x": -38.390625,
+                "y": 129.59375,
+                "w": 677.390625,
+                "h": 345.59375
+              }
+            ],
+            "titleText": "出庙 · 入庙",
+            "topic": "出兵入将",
+            "frame": {
+              "x": 0,
+              "y": -70.203125,
+              "w": 1920,
+              "h": 1080
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "exit",
+          "screens": 12.7,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0.1825694966190834; --a03-handoff: 0.1262002743484226; --a03-takeover: 1; --a03-kicker: 0.1825694966190834; --a03-title: 0.1825694966190834; --a03-return: 0.1825694966190834; --a03-introduction: 0.1825694966190834; --a03-purpose: 0.1825694966190834; --a03-hint: 0.1825694966190834; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 0vw; --model-scale: 1; --canvas-width: 1675.723056702533px; --canvas-height: 901.132574458964px; --a03-field: 1; --a03-support: 0.1825694966190834; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #11171a; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065; --a03-fifth-x: 785.6443104909634px; --a03-fifth-y: 739.2092900326033px;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "0.38",
+                "rect": {
+                  "x": 1331.53125,
+                  "y": 175.9375,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "0.38",
+                "rect": {
+                  "x": 181.609375,
+                  "y": 509.3125,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 756.453125,
+                  "y": 721.4375,
+                  "w": 99,
+                  "h": 44.5
+                }
+              }
+            ],
+            "copy": {
+              "x": 72.953125,
+              "y": 938.40625,
+              "w": 430,
+              "h": 93
+            },
+            "title": {
+              "x": 0,
+              "y": 0,
+              "w": 1920,
+              "h": 0
+            },
+            "titleLines": [
+              {
+                "x": 1366.490234375,
+                "y": 486,
+                "w": 677.390625,
+                "h": 345.59375
+              },
+              {
+                "x": -85.47462463378906,
+                "y": 129.59375,
+                "w": 677.390625,
+                "h": 345.59375
+              }
+            ],
+            "titleText": "出庙 · 入庙",
+            "topic": "出兵入将",
+            "frame": {
+              "x": 122.140625,
+              "y": 76.609375,
+              "w": 1675.71875,
+              "h": 901.125
+            },
+            "copyHidden": "false",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        },
+        {
+          "name": "handoff",
+          "screens": 13.2,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0; --a03-handoff: 1; --a03-takeover: 1; --a03-kicker: 0; --a03-title: 0; --a03-return: 0; --a03-introduction: 0; --a03-purpose: 0; --a03-hint: 0; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 0vw; --model-scale: 1; --canvas-width: 830px; --canvas-height: 680.6px; --a03-field: 0; --a03-support: 0; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #151b1e; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065; --a03-fifth-x: 837.5489390241501px; --a03-fifth-y: 693.3368644544648px;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "0.38",
+                "rect": {
+                  "x": 702.5,
+                  "y": 181.484375,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "0.38",
+                "rect": {
+                  "x": 28.5,
+                  "y": 336.859375,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 28.5,
+                  "y": 471.375,
+                  "w": 99,
+                  "h": 44.5
+                }
+              }
+            ],
+            "copy": null,
+            "title": null,
+            "titleLines": [],
+            "titleText": "出庙 · 入庙",
+            "topic": "出兵入将",
+            "frame": {
+              "x": 545,
+              "y": 199.703125,
+              "w": 830,
+              "h": 680.59375
+            },
+            "copyHidden": "true",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        }
+      ],
+      "resize": true,
+      "reducedMotion": true
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "passed": true,
+      "a02Diff": {
+        "changed": 271,
+        "maxDelta": 2
+      },
+      "heroDiff": {
+        "changed": 0,
+        "maxDelta": 0
+      },
+      "states": [
+        {
+          "name": "transition",
+          "screens": 10.9,
+          "state": {
+            "phase": "a03-enter",
+            "vars": "--a03-text: 0.5569810736924754; --a03-handoff: 0; --a03-takeover: 1; --a03-kicker: 0.9938344484306091; --a03-title: 0.8731990307016881; --a03-return: 0.6666775561169885; --a03-introduction: 0.4311256594353692; --a03-purpose: 0.21817069090658842; --a03-hint: 0.05484812589974563; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 0vw; --model-scale: 1; --canvas-width: 942.8171628203359px; --canvas-height: 708.2412613641231px; --a03-field: 0.9871293162488486; --a03-support: 0.7836717936551145; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #12161a; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "0.285167",
+                "rect": {
+                  "x": 716.53125,
+                  "y": 134.765625,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "0.285167",
+                "rect": {
+                  "x": 18.65625,
+                  "y": 347.9375,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "0.285167",
+                "rect": {
+                  "x": 402.140625,
+                  "y": 519.046875,
+                  "w": 99,
+                  "h": 44.5
+                }
+              }
+            ],
+            "copy": {
+              "x": 38.90625,
+              "y": 644.109375,
+              "w": 409.59375,
+              "h": 85.5
+            },
+            "title": {
+              "x": 0,
+              "y": 0,
+              "w": 1024,
+              "h": 0
+            },
+            "titleLines": [
+              {
+                "x": 667.0203247070312,
+                "y": 368.625,
+                "w": 381.34368896484375,
+                "h": 194.5625
+              },
+              {
+                "x": -20.474040985107422,
+                "y": 115.1875,
+                "w": 381.34375,
+                "h": 194.5625
+              }
+            ],
+            "titleText": "出庙 · 入庙",
+            "topic": "出兵入将",
+            "frame": {
+              "x": 40.59375,
+              "y": -9.2421875,
+              "w": 942.8125,
+              "h": 708.234375
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "reading",
+          "screens": 11.7,
+          "state": {
+            "phase": "a03-reading",
+            "vars": "--a03-text: 1; --a03-handoff: 0; --a03-takeover: 1; --a03-kicker: 1; --a03-title: 1; --a03-return: 1; --a03-introduction: 1; --a03-purpose: 1; --a03-hint: 1; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 0vw; --model-scale: 1; --canvas-width: 1024px; --canvas-height: 768px; --a03-field: 1; --a03-support: 1; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #101519; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "0.956546",
+                "rect": {
+                  "x": 792.03125,
+                  "y": 159.953125,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "0.956546",
+                "rect": {
+                  "x": 23.75,
+                  "y": 403.984375,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "0.956546",
+                "rect": {
+                  "x": 425.1875,
+                  "y": 541.984375,
+                  "w": 99,
+                  "h": 44.5
+                }
+              }
+            ],
+            "copy": {
+              "x": 38.90625,
+              "y": 644.109375,
+              "w": 409.59375,
+              "h": 85.5
+            },
+            "title": {
+              "x": 0,
+              "y": 0,
+              "w": 1024,
+              "h": 0
+            },
+            "titleLines": [
+              {
+                "x": 663.125,
+                "y": 368.625,
+                "w": 381.34375,
+                "h": 194.5625
+              },
+              {
+                "x": -10.234375,
+                "y": 115.1875,
+                "w": 381.34375,
+                "h": 194.5625
+              }
+            ],
+            "titleText": "出庙 · 入庙",
+            "topic": "出兵入将",
+            "frame": {
+              "x": 0,
+              "y": -49.921875,
+              "w": 1024,
+              "h": 768
+            },
+            "copyHidden": "false",
+            "handoffHidden": "true",
+            "overflow": false
+          }
+        },
+        {
+          "name": "exit",
+          "screens": 12.7,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0.18144374895922166; --a03-handoff: 0.12740277824911878; --a03-takeover: 1; --a03-kicker: 0.18144374895922166; --a03-title: 0.18144374895922166; --a03-return: 0.18144374895922166; --a03-introduction: 0.18144374895922166; --a03-purpose: 0.18144374895922166; --a03-hint: 0.18144374895922166; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 0vw; --model-scale: 1; --canvas-width: 925.5482965659672px; --canvas-height: 643.0260475010427px; --a03-field: 1; --a03-support: 0.18144374895922166; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #11171a; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065; --a03-fifth-x: 393.1566828027938px; --a03-fifth-y: 519.3701254527082px;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "0.38",
+                "rect": {
+                  "x": 721,
+                  "y": 124.046875,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "0.38",
+                "rect": {
+                  "x": 32.28125,
+                  "y": 356.453125,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 373.125,
+                  "y": 501.546875,
+                  "w": 99,
+                  "h": 44.5
+                }
+              }
+            ],
+            "copy": {
+              "x": 38.90625,
+              "y": 644.109375,
+              "w": 409.59375,
+              "h": 85.5
+            },
+            "title": {
+              "x": 0,
+              "y": 0,
+              "w": 1024,
+              "h": 0
+            },
+            "titleLines": [
+              {
+                "x": 688.2710571289062,
+                "y": 368.625,
+                "w": 381.34368896484375,
+                "h": 194.5625
+              },
+              {
+                "x": -35.38042449951172,
+                "y": 115.1875,
+                "w": 381.34375,
+                "h": 194.5625
+              }
+            ],
+            "titleText": "出庙 · 入庙",
+            "topic": "出兵入将",
+            "frame": {
+              "x": 49.2265625,
+              "y": 53.4296875,
+              "w": 925.546875,
+              "h": 643.015625
+            },
+            "copyHidden": "false",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        },
+        {
+          "name": "handoff",
+          "screens": 13.2,
+          "state": {
+            "phase": "a03-handoff",
+            "vars": "--a03-text: 0; --a03-handoff: 1; --a03-takeover: 1; --a03-kicker: 0; --a03-title: 0; --a03-return: 0; --a03-introduction: 0; --a03-purpose: 0; --a03-hint: 0; --model-opacity: 1; --hero-weight: 1; --cinematic-weight: 0; --model-x: 0vw; --model-scale: 1; --canvas-width: 662.9376px; --canvas-height: 535.4496px; --a03-field: 0; --a03-support: 0; --copy-opacity: 0; --copy-x: 0px; --intro-mark-opacity: 0; --hint-opacity: 0; --a02-opacity: 0; --a01-paper: #151b1e; --a01-ink: #d8d2c5; --a01-secondary: #a0a39c; --ink-weight: 0; --ink-landscape: 1; --ink-parallax: 0; --ink-sky-reveal: 1; --ink-valley-reveal: 1; --a02-grain: 0.016; --a02-air: 0.065; --a03-fifth-x: 415.83254570913414px; --a03-fifth-y: 504.08455485776614px;",
+            "camera": {
+              "active": false,
+              "elapsed": 9500,
+              "rotationProgress": 0.7916666666666666,
+              "growthComplete": true,
+              "theta": 4.049911184307752,
+              "phi": 0.68,
+              "distance": 54,
+              "target": [
+                0,
+                0,
+                -1.75
+              ],
+              "allScalesIdentity": true
+            },
+            "labels": [
+              {
+                "id": "mural-01",
+                "opacity": "0.48424",
+                "rect": {
+                  "x": 535.5,
+                  "y": 137.8125,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-02",
+                "opacity": "0.48424",
+                "rect": {
+                  "x": 28.5,
+                  "y": 259.859375,
+                  "w": 99,
+                  "h": 44.5
+                }
+              },
+              {
+                "id": "mural-05",
+                "opacity": "1",
+                "rect": {
+                  "x": 28.5,
+                  "y": 365.546875,
+                  "w": 99,
+                  "h": 44.5
+                }
+              }
+            ],
+            "copy": null,
+            "title": null,
+            "titleLines": [],
+            "titleText": "出庙 · 入庙",
+            "topic": "出兵入将",
+            "frame": {
+              "x": 180.53125,
+              "y": 116.28125,
+              "w": 662.9375,
+              "h": 535.4375
+            },
+            "copyHidden": "true",
+            "handoffHidden": "false",
+            "overflow": false
+          }
+        }
+      ],
+      "resize": true,
+      "reducedMotion": true
+    }
+  ]
+}

@@ -9,7 +9,10 @@ export function a03Visual(screens) {
   const state=deriveA03State(screens*1000,1000);
   return { weight:state.composition, arrival:ease(screens-A03_START),
     field:ease((screens-A03_START)/.75)*(1-ease((screens-13.05)/.15)),
-    fifth:state.handoff*(1-ease((screens-13.05)/.15)),
+    cutaway:state.cutaway, roofOpacity:state.roofOpacity,
+    markerFocus:state.markerFocus,
+    labels:Math.max(state.composition,state.fifthFocus)*(1-ease((screens-12.85)/.35)),
+    fifth:state.fifthFocus*(1-ease((screens-13.2)/.002)),
     environment:(1-.62*ease((screens-A03_START)/.75))*(1-ease((screens-12.3)/.75)) };
 }
 export function a03Frame(frame,width,height,screens) {
@@ -24,7 +27,7 @@ export function a03Frame(frame,width,height,screens) {
 }
 // Label positions may move; x/y remain the renderer's unchanged wall projections.
 export function a03Labels(points,width,height) {
-  const offsets={'mural-01':[.07,-.065],'mural-02':[-.045,-.06],'mural-05':[-.035,.075]};
+  const offsets={'mural-01':[.29,-.06],'mural-02':[-.16,.065],'mural-05':[.085,.09]};
   const labels=points.map(p=>{const [dx,dy]=offsets[p.id]||[0,0];return {...p,
     lx:Math.max(66,Math.min(width-66,p.x+width*dx)),
     ly:Math.max(70,Math.min(height-65,p.y+height*dy))};}).sort((a,b)=>a.ly-b.ly);

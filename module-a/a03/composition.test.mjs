@@ -16,7 +16,7 @@ test('A03 influences leave both protected chapter endpoints unchanged',()=>{
 test('all reading information establishes in order and stays static through the reading interval',()=>{
   const state=n=>deriveA03State(n*1000,1000);
   for(const n of [10.5,10.8,11]){const s=state(n),values=['kicker','title','return','introduction','purpose','hint'].map(k=>s[k]);for(let i=1;i<values.length;i++)assert.ok(values[i]<=values[i-1]);}
-  for(const n of [11.2,11.6,12.1]){const s=state(n);assert.ok(['kicker','title','return','introduction','purpose','hint'].every(k=>s[k]===1));assert.deepEqual(a03Visual(n),a03Visual(11.7));assert.equal(a03Visual(n).environment,.38);}
+  for(const n of [11.2,11.6,12.1]){const s=state(n);assert.ok(['kicker','title','return','introduction','purpose','hint'].every(k=>s[k]===1));assert.equal(a03Visual(n).weight,1);assert.equal(a03Visual(n).environment,.38);}
   assert.equal(state(13.2).text,0);assert.equal(state(13.2).handoff,1);
 });
 test('framing and field are continuous, reversible and deterministic on arbitrary seeks',()=>{
@@ -60,4 +60,17 @@ test('A03 modifies only architectural rendering and preserves real mural materia
   rig.apply(11.7);const reading=material.color.clone();assert.equal(renderer.toneMappingExposure,1);assert.equal(camera.fov,31.5);assert.deepEqual(material.color,base);assert.equal(original.color.getHex(),0x987654);assert.equal(scene.children.length,0);
   material.color.copy(base);renderer.toneMappingExposure=1;rig.apply(11.7);assert.deepEqual(material.color,reading,'restored base does not accumulate tint');
   rig.apply(13.2);assert.deepEqual(material.color,reading,'endpoint has zero influence');
+});
+
+test('near-wall cutaway patches a shared material once and restores A04/A02 state',()=>{
+  const root=new T.Group(),material=new T.MeshStandardMaterial();material.userData.textureKey='brick';
+  for(const name of ['02_Enclosure','03_MainHall']){const g=new T.Group();g.name=name;const mesh=new T.Mesh(new T.BoxGeometry(),material);mesh.castShadow=true;g.add(mesh);root.add(g);}
+  const mural=new T.Group();mural.name='mural-05';const original=new T.MeshStandardMaterial({color:0x668f8c});mural.add(new T.Mesh(new T.BoxGeometry(),original));root.add(mural);
+  const before=original.clone(),rig=createA03Light(T,{camera:new T.PerspectiveCamera(),root});
+  const shader={uniforms:{},vertexShader:'#include <begin_vertex>',fragmentShader:'#include <opaque_fragment>'};material.onBeforeCompile(shader);
+  assert.equal((shader.vertexShader.match(/varying vec3 a03WallPosition/g)||[]).length,1);
+  rig.walls(10.2);assert.equal(material.transparent,false);assert.equal(shader.uniforms.a03WallReveal.value,0);
+  rig.walls(12.05);assert.equal(material.transparent,true);assert.equal(material.depthWrite,false);assert.equal(shader.uniforms.a03WallReveal.value,1);
+  assert.deepEqual(original.color,before.color);assert.equal(original.side,before.side);assert.equal(original.opacity,before.opacity);
+  for(const n of [13.55,9.65]){rig.walls(n);assert.equal(shader.uniforms.a03WallReveal.value,0);assert.equal(material.transparent,false);assert.equal(material.depthWrite,true);assert.ok(root.children.slice(0,2).every(g=>g.children[0].castShadow));}
 });

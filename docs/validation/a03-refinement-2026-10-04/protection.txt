@@ -1,0 +1,5 @@
+PASS protected 1920x1080
+PASS protected 1440x900
+PASS protected 1366x768
+PASS protected 1024x768
+PASS all refinement checks

@@ -121,10 +121,14 @@ function render() {
   if (!hasLines) setModelProgress(state.growth);
   modelFrame.contentWindow?.shuilongTemple?.setMuralPresentation({
     visibility: a02Pass<5?0:smooth(spatial.markers), emphasis: smooth(spatial.emphasis), coreIds: CORE_MURALS,
-    revealWalls: smooth(spatial.revealWalls)*(1-Math.max(room.weight,themeVisual.field)),
+    revealWalls: screens>10.2 ? (1-themeVisual.roofOpacity)/.92 : smooth(spatial.revealWalls)*(1-room.weight),
+    spatialLabels: screens>10.2 ? 0 : undefined,
+    roofTransparent: screens>10.2 ? true : undefined,
     secondaryVisibility: theme.secondary,
     architecturalWeight:room.weight,
     themeWeight:theme.composition,
+    markerFocus:themeVisual.markerFocus,
+    themeLayout:themeVisual.labels,
     fifthWeight:themeVisual.fifth,
   });
   renderInkScene(screens,reducedMotion.matches);

@@ -10,10 +10,20 @@ export function deriveA03State(localScroll, viewportHeight) {
   const enter = smooth(rangeProgress(screens, .35, 1));
   const exit = smooth(rangeProgress(screens, 2.1, 2.65));
   const takeover = smooth(rangeProgress(screens, 0, .55));
+  // Spatial reveal persists independently of the poster's exit.
+  const cutaway = screens < 1.2
+    ? .4 * smooth(rangeProgress(screens, .65, 1.2))
+    : .4 + .6 * smooth(rangeProgress(screens, 1.2, 1.65));
+  const markerFocus = smooth(rangeProgress(screens, .65, 1.65));
+  const fifthFocus = smooth(rangeProgress(screens, 2.1, 2.45));
   const establish=(start,end)=>smooth(rangeProgress(screens,start,end))*(1-exit);
   return Object.freeze({
     progress: rangeProgress(screens, 0, A03_SCREENS),
     takeover,
+    cutaway,
+    markerFocus,
+    fifthFocus,
+    roofOpacity: 1 - .85 * cutaway - .07 * smooth(rangeProgress(screens, 2.65, 3)),
     text: enter * (1 - exit),
     kicker: establish(.28,.72),
     title: establish(.35,.80),

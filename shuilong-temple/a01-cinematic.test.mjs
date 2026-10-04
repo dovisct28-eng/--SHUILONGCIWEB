@@ -24,7 +24,7 @@ test('environment discards color/depth and matching shadow fragments, then stops
   const ground=group.getObjectByName('SlopingSoil');env.apply(1,1,false,1);assert.equal(ground.material.transparent,true);assert.equal(ground.material.depthWrite,false);assert.equal(surface.uniforms.a02Room.value,1);
   env.apply(1,1,false,0);assert.equal(ground.material.transparent,false);assert.equal(ground.material.depthWrite,true);assert.equal(surface.uniforms.a02Room.value,0);
   for(const weight of [1,.5,.04,.03,0,1]){env.apply(weight,1);assert.equal(group.visible,environmentVisible(weight));assert.equal(surface.uniforms.a01EnvironmentVisibility.value,weight);}
-  env.apply(.5,1,false,1,1);assert.equal(canopy.material.transparent,true);assert.equal(canopy.material.depthWrite,true);assert.equal(canopy.customDepthMaterial.depthWrite,true);assert.equal(canopy.customDepthMaterial.transparent,false);assert.equal(surface.uniforms.a03Poster.value,1);
+  env.apply(.5,1,false,1,1);assert.equal(canopy.material.transparent,true);assert.equal(canopy.material.depthWrite,false);assert.equal(canopy.customDepthMaterial.depthWrite,true);assert.equal(canopy.customDepthMaterial.transparent,false);assert.equal(surface.uniforms.a03Poster.value,1);
   env.apply(1,1);assert.equal(canopy.material.transparent,false);assert.equal(canopy.material.depthWrite,true);assert.equal(surface.uniforms.a03Poster.value,0);
   env.apply(1,1,false,1,.000001);assert.equal(canopy.material.transparent,false,'subpixel chapter rounding must preserve the A02 render mode');
   env.apply(0,1);assert.equal(group.visible,false);env.dispose();assert.equal(scene.children.length,0);

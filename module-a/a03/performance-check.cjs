@@ -1,6 +1,6 @@
 const {chromium}=require('playwright'),fs=require('node:fs'),path=require('node:path'),{execFileSync}=require('node:child_process'),assert=require('node:assert/strict');
 const {ready,seek,read}=require('../a02/capture.cjs');
-const out=path.resolve('docs/validation/a03-poster-remaster-2026-10-04'),baseline='8686c4d51d0414c80db5ae0377495fab2ec00005';
+const out=path.resolve('docs/validation/a03-refinement-2026-10-04'),baseline='c23615a99fb926a831fc7f811b4a00a168023112';
 const files=['module-a/visual-director/fonts/narrative-serif.woff2','module-a/visual-director/fonts/narrative-sans.woff2','module-a/a01/app.mjs','module-a/a02/spatial.mjs','module-a/a03/composition.mjs','module-a/a03/lighting.mjs','module-a/a03/styles.css','module-a/a03/view.mjs','module-a/a03/progress.mjs','shuilong-temple/director-light.mjs','shuilong-temple/narrative-markers.mjs','shuilong-temple/水龙祠-交互预览.html'];
 const bodies=new Map(files.map(f=>[f,execFileSync('git',['show',`${baseline}:${f}`],{maxBuffer:30*1024*1024})]));
 (async()=>{const b=await chromium.launch({channel:'chrome',headless:true}),report={baseline,rows:[],limitations:'同机 headless Chrome；帧间隔含浏览器调度，不等于GPU耗时或跨设备帧率。'};try{

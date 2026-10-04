@@ -36,7 +36,7 @@ export function createA01Environment(T,scene){
         float distanceFromPlinth=length(max(abs(a01World.xz+vec2(0.,1.75))-vec2(6.1,15.),0.));
         float roomBoundary=1.-smoothstep(4.,22.,distanceFromPlinth);
         float coverage=diffuseColor.a*mix(1.,roomBoundary,a02Room);
-        ${terrain?'':'coverage*=mix(1.,.30,a03Poster*smoothstep(.59,.80,edge.x)*(1.-smoothstep(.45,.67,edge.y)));'}
+        ${terrain?'':'float rightClearance=smoothstep(.59,.71,edge.x)*(1.-smoothstep(.54,.66,edge.y));float leftClearance=(1.-smoothstep(.31,.43,edge.x))*smoothstep(.49,.61,edge.y);float clearance=max(rightClearance,leftClearance);coverage*=mix(1.,.005,a03Poster*clearance);'}
         float threshold=hash(floor(a01World.xz*73.+a01World.y*19.));
         ${terrain?'if(a02Room>.001){if(coverage<.002)discard;diffuseColor.a=coverage;}else{if(coverage<=threshold)discard;diffuseColor.a=1.;}':'if(coverage<=threshold*(1.-a03Poster))discard;diffuseColor.a=mix(1.,coverage,a03Poster);'}
         #include <opaque_fragment>`);
@@ -105,7 +105,7 @@ export function createA01Environment(T,scene){
   let state={weight:0,establish:0,trees:trees.length};
   return {
     apply(weight,progress,reduced=false,roomWeight=0,posterWeight=0){const establish=ease((progress-.20)/.48);room.value=unit(roomWeight);poster.value=unit(posterWeight);visibility.value=unit(weight)*establish;group.visible=environmentVisible(visibility.value);state={weight,establish,visibility:visibility.value,roomWeight:room.value,posterWeight:poster.value,trees:trees.length};
-      for(const material of materials){if(!material.isMeshStandardMaterial||material===soil.material)continue;const soft=poster.value>.001;if(material.transparent!==soft){material.transparent=soft;material.needsUpdate=true;}}
+      for(const material of materials){if(!material.isMeshStandardMaterial||material===soil.material)continue;const soft=poster.value>.001;material.depthWrite=!soft;if(material.transparent!==soft){material.transparent=soft;material.needsUpdate=true;}}
       const softGround=room.value>.001;if(soil.material.transparent!==softGround){soil.material.transparent=softGround;soil.material.depthWrite=!softGround;soil.material.needsUpdate=true;}
       // Fixed objects give genuine depth parallax under the shared moving camera.
       group.position.set(0,0,0);

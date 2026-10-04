@@ -1,0 +1,1 @@
+PASS: 72 animation frames / four sizes / numerical and pixel reversal / refresh / resize / rapid seeks / chapter cleanup / six fallbacks

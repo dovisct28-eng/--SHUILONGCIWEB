@@ -1,5 +1,5 @@
 const fs=require('node:fs'),path=require('node:path'),{spawnSync}=require('node:child_process');
-const out=path.resolve('docs/validation/a03-poster-remaster-2026-10-04');
+const out=path.resolve('docs/validation/a03-refinement-2026-10-04');
 const selected=process.argv[2]||'a04',tasks={a04:'module-a/a04/browser-check.cjs',a01:'module-a/a01/v3-browser-check.cjs',a02:'module-a/a02/browser-check.cjs'},filename=path.resolve(tasks[selected]);
 const output=path.join(out,'regression',selected);fs.mkdirSync(output,{recursive:true});
 let source=fs.readFileSync(filename,'utf8').replaceAll('127.0.0.1:4175','127.0.0.1:4173');

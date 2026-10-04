@@ -1,0 +1,350 @@
+{
+  "baseline": "c23615a99fb926a831fc7f811b4a00a168023112",
+  "rows": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "version": "before",
+      "readyMs": 3013,
+      "initialBytes": 11826772,
+      "chapterBytes": 12061360,
+      "resourceCount": 64,
+      "stats": {
+        "geometries": 64,
+        "textures": 20,
+        "calls": 58,
+        "triangles": 199454,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1920,
+            1080
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 184,
+            "calls": 58,
+            "triangles": 199454,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 24883200,
+          "multisampleBytes": 49766400,
+          "targetBytes": 74649600
+        }
+      },
+      "canvases": 1,
+      "sample": {
+        "idle": {
+          "mean": 4.354444444427887,
+          "p95": 4.600000001490116
+        },
+        "scroll": {
+          "mean": 13.621111111135946,
+          "p95": 15.900000002235174
+        },
+        "heap": 55896855,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      },
+      "newAssets": [
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/progress.mjs",
+          "bytes": 1230,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/view.mjs",
+          "bytes": 1825,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/composition.mjs",
+          "bytes": 2097,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/styles.css",
+          "bytes": 2581,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/composition.mjs",
+          "bytes": 2097,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/progress.mjs",
+          "bytes": 1230,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/lighting.mjs",
+          "bytes": 1065,
+          "status": 200
+        }
+      ]
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "version": "after",
+      "readyMs": 1855,
+      "initialBytes": 11844292,
+      "chapterBytes": 12078880,
+      "resourceCount": 64,
+      "stats": {
+        "geometries": 64,
+        "textures": 20,
+        "calls": 63,
+        "triangles": 206654,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1920,
+            1080
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 420,
+            "calls": 63,
+            "triangles": 206654,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 24883200,
+          "multisampleBytes": 49766400,
+          "targetBytes": 74649600
+        }
+      },
+      "canvases": 1,
+      "sample": {
+        "idle": {
+          "mean": 4.1511111110862755,
+          "p95": 4.899999998509884
+        },
+        "scroll": {
+          "mean": 10.99333333335817,
+          "p95": 20.5
+        },
+        "heap": 51861455,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      },
+      "newAssets": [
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/progress.mjs",
+          "bytes": 1697,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/composition.mjs",
+          "bytes": 2276,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/view.mjs",
+          "bytes": 1826,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/styles.css",
+          "bytes": 2594,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/composition.mjs",
+          "bytes": 2276,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/progress.mjs",
+          "bytes": 1697,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/lighting.mjs",
+          "bytes": 2994,
+          "status": 200
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "version": "before",
+      "readyMs": 2067,
+      "initialBytes": 11826772,
+      "chapterBytes": 12061360,
+      "resourceCount": 64,
+      "stats": {
+        "geometries": 64,
+        "textures": 20,
+        "calls": 58,
+        "triangles": 199454,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1440,
+            900
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 282,
+            "calls": 58,
+            "triangles": 199454,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15552000,
+          "multisampleBytes": 31104000,
+          "targetBytes": 46656000
+        }
+      },
+      "canvases": 1,
+      "sample": {
+        "idle": {
+          "mean": 4.108888888855775,
+          "p95": 4.5
+        },
+        "scroll": {
+          "mean": 10.294444444444444,
+          "p95": 17.099999997764826
+        },
+        "heap": 36877431,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      },
+      "newAssets": [
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/progress.mjs",
+          "bytes": 1230,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/composition.mjs",
+          "bytes": 2097,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/view.mjs",
+          "bytes": 1825,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/styles.css",
+          "bytes": 2581,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/composition.mjs",
+          "bytes": 2097,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/progress.mjs",
+          "bytes": 1230,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/lighting.mjs",
+          "bytes": 1065,
+          "status": 200
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "version": "after",
+      "readyMs": 1907,
+      "initialBytes": 11844292,
+      "chapterBytes": 12078880,
+      "resourceCount": 64,
+      "stats": {
+        "geometries": 64,
+        "textures": 20,
+        "calls": 63,
+        "triangles": 206654,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1440,
+            900
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 343,
+            "calls": 63,
+            "triangles": 206654,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15552000,
+          "multisampleBytes": 31104000,
+          "targetBytes": 46656000
+        }
+      },
+      "canvases": 1,
+      "sample": {
+        "idle": {
+          "mean": 4.1,
+          "p95": 4.899999998509884
+        },
+        "scroll": {
+          "mean": 10.264444444452723,
+          "p95": 20.5
+        },
+        "heap": 41903840,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      },
+      "newAssets": [
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/progress.mjs",
+          "bytes": 1697,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/view.mjs",
+          "bytes": 1826,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/composition.mjs",
+          "bytes": 2276,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/styles.css",
+          "bytes": 2594,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/composition.mjs",
+          "bytes": 2276,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/progress.mjs",
+          "bytes": 1697,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/lighting.mjs",
+          "bytes": 2994,
+          "status": 200
+        }
+      ]
+    }
+  ],
+  "limitations": "同机 headless Chrome；帧间隔含浏览器调度，不等于GPU耗时或跨设备帧率。"
+}

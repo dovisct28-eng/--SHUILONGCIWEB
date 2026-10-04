@@ -1,5 +1,6 @@
 import {architecturalRoom,ease} from '../module-a/a02/spatial.mjs';
 import {directorState} from '../module-a/visual-director/state.mjs';
+import {a03Visual} from '../module-a/a03/composition.mjs';
 // Reuses the sun, fog, terrain and materials. A03 inherits these same local lights.
 // The focus controller restores base colors before each apply: seeks never accumulate tint.
 export function createA02Light(T,{renderer,camera,sun,fill,root,scene,floor}) {
@@ -41,7 +42,9 @@ export function createA02Light(T,{renderer,camera,sun,fill,root,scene,floor}) {
       sun.intensity+=(5.2-sun.intensity)*poster;sun.color.lerp(new T.Color(0xffc99c),.55*poster);
       sun.position.lerp(new T.Vector3(-16,18,-20),poster);
       fill.intensity+=(.24-fill.intensity)*poster;
-      if(lit){courtyard.intensity+=12*poster;gallery.intensity+=8*poster;}
+      const cutaway=a03Visual(screens).cutaway;
+      courtyard.position.set(-2,2.4,-3-6*cutaway*poster);
+      if(lit){courtyard.intensity+=(12+6*cutaway)*poster;gallery.intensity+=(8+5*cutaway)*poster;}
       camera.fov=(32+(31.5-32)*settle)*(1-t)+legacy.fov*t;camera.updateProjectionMatrix();
       for(const m of entries){const key=m.userData.textureKey,from=hero[key];if(!from)continue;
         const endTint=lit?room[key]:from;

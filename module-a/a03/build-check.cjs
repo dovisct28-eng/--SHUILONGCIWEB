@@ -1,7 +1,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),{execFileSync}=require('node:child_process');
-const out=path.resolve('docs/validation/a03-poster-remaster-2026-10-04');
-const baseline='8686c4d51d0414c80db5ae0377495fab2ec00005';
-const files=['module-a/a01/app.mjs','module-a/a03/composition.mjs','module-a/a03/lighting.mjs','module-a/a03/progress.mjs','module-a/a03/view.mjs','module-a/a03/composition.test.mjs','module-a/a03/browser-check.cjs','module-a/a03/remaster-check.cjs','module-a/a03/build-check.cjs','module-a/a03/regression-check.cjs','module-a/a03/boards-check.cjs','module-a/a03/performance-check.cjs','module-a/a03/sync-preview.mjs','module-a/a02/spatial.mjs','shuilong-temple/a02-light.mjs','shuilong-temple/a01-environment.mjs','shuilong-temple/director-light.mjs','shuilong-temple/narrative-markers.mjs','shuilong-temple/inline-a02.mjs'];
+const out=path.resolve('docs/validation/a03-refinement-2026-10-04');
+const baseline='c23615a99fb926a831fc7f811b4a00a168023112';
+const files=['module-a/a03/cutaway-check.cjs','module-a/a03/progress.test.mjs','shuilong-temple/a01-cinematic.test.mjs','module-a/a01/app.mjs','module-a/a03/composition.mjs','module-a/a03/lighting.mjs','module-a/a03/progress.mjs','module-a/a03/view.mjs','module-a/a03/composition.test.mjs','module-a/a03/browser-check.cjs','module-a/a03/remaster-check.cjs','module-a/a03/build-check.cjs','module-a/a03/regression-check.cjs','module-a/a03/boards-check.cjs','module-a/a03/performance-check.cjs','module-a/a03/sync-preview.mjs','module-a/a02/spatial.mjs','shuilong-temple/a02-light.mjs','shuilong-temple/a01-environment.mjs','shuilong-temple/director-light.mjs','shuilong-temple/narrative-markers.mjs','shuilong-temple/inline-a02.mjs'];
 for(const file of files)execFileSync(process.execPath,['--check',file]);
 const html=fs.readFileSync('shuilong-temple/水龙祠-交互预览.html','utf8'),script=html.match(/<script type="module">([\s\S]*?)<\/script>/)[1];execFileSync(process.execPath,['--input-type=module','--check'],{input:script,maxBuffer:30*1024*1024});
 // A03 source and its controlled hooks are the only intentional chapter changes.
