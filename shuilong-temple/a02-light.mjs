@@ -1,6 +1,6 @@
 import {architecturalRoom,ease} from '../module-a/a02/spatial.mjs';
 import {directorState} from '../module-a/visual-director/state.mjs';
-// Reuses the sun, fog, terrain and materials. Two non-shadow local lights only act in A02.
+// Reuses the sun, fog, terrain and materials. A03 inherits these same local lights.
 // The focus controller restores base colors before each apply: seeks never accumulate tint.
 export function createA02Light(T,{renderer,camera,sun,fill,root,scene,floor}) {
   const entries=[];root.children.filter(g=>!g.name.startsWith('mural-')).forEach(g=>g.traverse(m=>{if(m.isMesh)entries.push(m.material);}));
@@ -21,12 +21,12 @@ export function createA02Light(T,{renderer,camera,sun,fill,root,scene,floor}) {
       focus.copy(camera.position).addScaledVector(direction,camera.position.distanceTo(target));
       camera.position.lerp(position,s.weight);focus.lerp(target,s.weight);camera.lookAt(focus);
     },
-    apply(screens){if(screens<=6.4||screens>=10.95)return false;
-      const s=architecturalRoom(screens),a=ease((screens-6.4)/.6),h=1-a,settle=s.arrival;
+    apply(screens){if(screens<=6.4||screens>=13.05)return false;
+      const s=architecturalRoom(Math.min(screens,10.2)),a=ease((screens-6.4)/.6),h=1-a,settle=s.arrival;
       const lit=pass()>=2;
       const end={exposure:lit?1.01:.98,fill:lit?.33:.72,sun:lit?3.5:4.5};
       // The endpoint reconnects to the existing A03 inputs without developing A03.
-      const t=s.exit,legacy=directorState(screens);
+      const t=ease((screens-12.3)/.75),legacy=directorState(screens);
       renderer.toneMappingExposure=(.98+(end.exposure-.98)*settle)*(1-t)+legacy.exposure*t;
       fill.intensity=(.72+(end.fill-.72)*settle)*(1-t)+legacy.fill*t;
       fill.color.set(0xa5b9ce).lerp(new T.Color(0xd6dce0),t);
@@ -34,7 +34,14 @@ export function createA02Light(T,{renderer,camera,sun,fill,root,scene,floor}) {
       sun.intensity=(4.5+(end.sun-4.5)*settle)*(1-t)+legacy.sun*t;
       sun.color.set(0xffd4a1).lerp(new T.Color(0xf0e8dc),.4*settle).lerp(new T.Color(0xffffff).lerp(new T.Color(0xf0e8dc),.45),t);
       sun.position.set(-16+4*s.weight,22+3*settle,16-32*s.weight);
-      courtyard.intensity=lit?40*s.weight:0;gallery.intensity=lit?30*s.weight:0;
+      courtyard.intensity=lit?40*s.weight*(1-t):0;gallery.intensity=lit?30*s.weight*(1-t):0;
+      // A03-only warm directional contrast; A02's approved endpoint remains exact.
+      const poster=ease((screens-10.2)/.75)*(1-t);
+      renderer.toneMappingExposure+=(1.10-renderer.toneMappingExposure)*poster;
+      sun.intensity+=(5.2-sun.intensity)*poster;sun.color.lerp(new T.Color(0xffc99c),.55*poster);
+      sun.position.lerp(new T.Vector3(-16,18,-20),poster);
+      fill.intensity+=(.24-fill.intensity)*poster;
+      if(lit){courtyard.intensity+=12*poster;gallery.intensity+=8*poster;}
       camera.fov=(32+(31.5-32)*settle)*(1-t)+legacy.fov*t;camera.updateProjectionMatrix();
       for(const m of entries){const key=m.userData.textureKey,from=hero[key];if(!from)continue;
         const endTint=lit?room[key]:from;
@@ -46,7 +53,7 @@ export function createA02Light(T,{renderer,camera,sun,fill,root,scene,floor}) {
         if(lit)m.roughness=m.roughness+(Math.max(m.roughness,key==='roof'?.84:.94)-m.roughness)*s.weight;
       }
       if(scene){scene.fog.color.set(0x15222b).lerp(new T.Color(0xe7e5df),t);scene.fog.density=(.007+.002*s.weight)*(1-t)+(.007+.003*ease((screens-10.5)/2.7))*t;}
-      if(floor){floor.visible=true;floor.material.depthWrite=false;floor.material.opacity=.15+.04*s.weight;}
+      if(floor){floor.visible=true;floor.material.depthWrite=false;floor.material.opacity=(.15+.04*s.weight)*(1-t)+.18*t;}
       last={...s,exposure:renderer.toneMappingExposure,fill:fill.intensity,sun:sun.intensity,fov:camera.fov,lights:4,newTextures:0,newPostTargets:0};
       return true;
     },reset(){courtyard.intensity=gallery.intensity=0;},getState:()=>last,

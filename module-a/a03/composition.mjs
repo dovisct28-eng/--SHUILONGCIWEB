@@ -3,14 +3,14 @@ import { A03_START, deriveA03State } from './progress.mjs';
 const ease = n => { const t=Math.max(0,Math.min(1,n)); return t*t*(3-2*t); };
 // Display targets only: no geometry, wall coordinates or shared defaults change.
 export const A03_TARGETS = Object.freeze({
-  reading: Object.freeze({ width:1, height:.94, x:.10, y:.025, fov:34, radius:45 }),
+  reading: Object.freeze({ width:1, height:1, x:0, y:-.065, fov:31.5, radius:42 }),
 });
 export function a03Visual(screens) {
   const state=deriveA03State(screens*1000,1000);
   return { weight:state.composition, arrival:ease(screens-A03_START),
     field:ease((screens-A03_START)/.75)*(1-ease((screens-13.05)/.15)),
     fifth:state.handoff*(1-ease((screens-13.05)/.15)),
-    environment:1-ease((screens-A03_START)/.75) };
+    environment:(1-.62*ease((screens-A03_START)/.75))*(1-ease((screens-12.3)/.75)) };
 }
 export function a03Frame(frame,width,height,screens) {
   const {weight}=a03Visual(screens),target=A03_TARGETS.reading;
@@ -26,7 +26,7 @@ export function a03Frame(frame,width,height,screens) {
 export function a03Labels(points,width,height) {
   const offsets={'mural-01':[.07,-.065],'mural-02':[-.045,-.06],'mural-05':[-.035,.075]};
   const labels=points.map(p=>{const [dx,dy]=offsets[p.id]||[0,0];return {...p,
-    lx:Math.max(width*.37,Math.min(width-66,p.x+width*dx)),
+    lx:Math.max(66,Math.min(width-66,p.x+width*dx)),
     ly:Math.max(70,Math.min(height-65,p.y+height*dy))};}).sort((a,b)=>a.ly-b.ly);
   for(let i=1;i<labels.length;i++)labels[i].ly=Math.max(labels[i].ly,labels[i-1].ly+46);
   const excess=Math.max(0,(labels.at(-1)?.ly||0)-(height-65));

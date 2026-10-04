@@ -1,0 +1,1 @@
+PASS: four review boards and WebP screenshots generated

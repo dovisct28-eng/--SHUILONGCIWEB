@@ -23,6 +23,7 @@ export function layoutLabels(points, width, height) {
 
 export function createMuralPresentation(pins, svg) {
   let visibility = 0, emphasis = 0, secondary = 1, roomWeight=0, themeWeight=0, fifthWeight=0, core = new Set();
+  let lastFifth='';
   const clamp = n => Math.max(0, Math.min(1, Number(n) || 0));
   return {
     set({ visibility: v = 0, emphasis: e = 0, coreIds = [], secondaryVisibility = 1, architecturalWeight=0, themeWeight:t=0, fifthWeight:f=0 } = {}) {
@@ -38,6 +39,10 @@ export function createMuralPresentation(pins, svg) {
       }
     },
     update(points, width, height) {
+      // Use the real renderer projection after the camera/resize has settled.
+      const fifth=points.find(p=>p.id==='mural-05'),key=fifth?`${fifth.x},${fifth.y},${width},${height}`:'';
+      if(fifthWeight>0&&key!==lastFifth&&typeof window!=='undefined'){lastFifth=key;window.parent.postMessage({type:'shuilong:a03-anchor',x:fifth.x,y:fifth.y},location.origin);}
+      if(fifthWeight===0)lastFifth='';
       const positions = roomWeight>.001?roomLabels(points,width,height):layoutLabels(points, width, height);
       const layoutWeight=Math.max(themeWeight,fifthWeight);
       if(layoutWeight>0){const targets=a03Labels(points,width,height);for(const pos of positions){const target=targets.find(p=>p.id===pos.id);pos.lx+=(target.lx-pos.lx)*layoutWeight;pos.ly+=(target.ly-pos.ly)*layoutWeight;}}
@@ -51,7 +56,7 @@ export function createMuralPresentation(pins, svg) {
         if (!show) continue;
         const isCore = core.has(p.m.id);
         const weight = (isCore ? 1 : (1 - emphasis * (roomWeight>.001?.25:.2)) * secondary)*(p.m.id==='mural-05'?1:1-.24*fifthWeight);
-        p.button.style.opacity = reveal.label * weight;
+        p.button.style.opacity = reveal.label * weight * (1-.18*themeWeight);
         p.button.style.background = 'transparent';
         p.button.style.color = roomWeight>.001?'#d8d2c5':isCore ? '#d8d2c5' : '#c6c9c2';
         p.button.style.fontWeight = isCore && emphasis > .5 ? '500' : '400';
@@ -62,11 +67,11 @@ export function createMuralPresentation(pins, svg) {
           else p.button.textContent=p.m.label;
           p.button.dataset.labelMode=labelMode;
         }
-        p.button.style.fontSize=roomWeight>.001?'15px':'';
+        p.button.style.fontSize=themeWeight>.001?'13px':roomWeight>.001?'15px':'';
         p.line.setAttribute('stroke-dasharray',roomWeight>.001||themeWeight>0||fifthWeight>0?'none':'3 3');
         p.line.setAttribute('stroke-width',roomWeight>.001||themeWeight>0||fifthWeight>0?'.8':'1.2');
         p.button.style.left = pos.lx + 'px'; p.button.style.top = pos.ly + 'px';
-        p.line.style.opacity = reveal.line * (isCore?weight:weight*.6); p.dot.style.opacity = reveal.anchor * (isCore?weight:weight*.6);
+        p.line.style.opacity = reveal.line * (isCore?weight:weight*.6)*(1-.38*themeWeight); p.dot.style.opacity = reveal.anchor * (isCore?weight:weight*.6)*(1-.25*themeWeight);
         const deltaX=pos.lx-pos.x,deltaY=pos.ly-pos.y;
         const trim=roomWeight>.001||layoutWeight>0?Math.max(0,1-(roomWeight>.001?49:34)/Math.max(1,Math.hypot(deltaX,deltaY))):1;
         for (const [key, value] of Object.entries({x1:pos.x,y1:pos.y,x2:pos.x+deltaX*trim*reveal.line,y2:pos.y+deltaY*trim*reveal.line})) p.line.setAttribute(key, value);

@@ -1,0 +1,1 @@
+PASS: actual resource bytes, renderer counts, idle/scroll sampling; no added geometry, texture or canvas.

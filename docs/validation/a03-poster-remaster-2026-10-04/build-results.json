@@ -1,0 +1,51 @@
+{
+  "syntaxFiles": [
+    "module-a/a01/app.mjs",
+    "module-a/a03/composition.mjs",
+    "module-a/a03/lighting.mjs",
+    "module-a/a03/progress.mjs",
+    "module-a/a03/view.mjs",
+    "module-a/a03/composition.test.mjs",
+    "module-a/a03/browser-check.cjs",
+    "module-a/a03/remaster-check.cjs",
+    "module-a/a03/build-check.cjs",
+    "module-a/a03/regression-check.cjs",
+    "module-a/a03/boards-check.cjs",
+    "module-a/a03/performance-check.cjs",
+    "module-a/a03/sync-preview.mjs",
+    "module-a/a02/spatial.mjs",
+    "shuilong-temple/a02-light.mjs",
+    "shuilong-temple/a01-environment.mjs",
+    "shuilong-temple/director-light.mjs",
+    "shuilong-temple/narrative-markers.mjs",
+    "shuilong-temple/inline-a02.mjs"
+  ],
+  "htmlModule": true,
+  "protectedFiles": [
+    "shuilong-temple/shuilong-temple.glb",
+    "shuilong-temple/model-source.js",
+    "shuilong-temple/model-info.json",
+    "shuilong-temple/mural-locations.json",
+    "module-a/a01/styles.css",
+    "module-a/a01/cinematic-state.mjs",
+    "module-a/a01/ink-scene.mjs",
+    "module-a/a02/styles.css",
+    "module-a/a02/markers.mjs",
+    "module-a/a02/progress.mjs",
+    "module-a/a04",
+    "module-a/a05",
+    "module-a/a06",
+    "module-a/a07",
+    "module-a/a08",
+    "module-a/guide",
+    "Mural-Exhibition",
+    "水龙祠壁画素材"
+  ],
+  "protectedDiffEmpty": true,
+  "archiveRefs": [
+    "48f272497e86e4549c5bcd0dee275ff347171a3f",
+    "48f272497e86e4549c5bcd0dee275ff347171a3f"
+  ],
+  "noBundler": true,
+  "modelRebuilt": false
+}

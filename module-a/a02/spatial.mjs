@@ -14,6 +14,7 @@ export function createRoomField(stage) {
   const field=document.createElement('div');field.className='a02-field';field.setAttribute('aria-hidden','true');
   field.innerHTML='<div class="a02-field__distance"></div><div class="a02-field__light"></div><div class="a02-field__air"></div><div class="a02-field__grain"></div>';
   stage.insertBefore(field,stage.querySelector('.hero'));
-  return screens=>{const s=architecturalRoom(screens);field.hidden=s.field===0;field.style.opacity=s.field;
+  return (screens,poster=0,residual=0)=>{const s=architecturalRoom(screens),weight=s.field+poster*(1-s.field);field.hidden=weight===0;field.style.opacity=weight;
+    field.querySelector('.a02-field__distance').style.opacity=.28*(poster>0?residual:1);
     stage.style.setProperty('--a02-grain',s.grain);stage.style.setProperty('--a02-air',s.atmosphere);};
 }

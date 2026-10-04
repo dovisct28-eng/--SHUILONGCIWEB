@@ -1,0 +1,2 @@
+warning: unable to access 'C:\Users\dovis/.config/git/ignore': Permission denied
+PASS: source syntax, inline module parse, protected resources and archive references.

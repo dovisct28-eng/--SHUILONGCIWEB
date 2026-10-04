@@ -8,7 +8,7 @@ const line=preview.split('\n').find(s=>s.startsWith('const moduleText='));
 const source=JSON.parse(line.slice(17,line.lastIndexOf('".replaceAll(')+1));
 const uri=s=>`data:text/javascript;base64,${Buffer.from(s).toString('base64')}`;
 const T=await import(uri(source.replaceAll('./three.core.js',uri(core))));
-test('A02 local lights reset outside their chapter, preserve murals and do not accumulate tint',()=>{
+test('A02 local lights continue into A03, reset before A04 and preserve murals',()=>{
  const previous=globalThis.window;globalThis.window={parent:{location:{search:''}}};
  try {
   const scene=new T.Scene();scene.fog=new T.FogExp2();
@@ -20,7 +20,7 @@ test('A02 local lights reset outside their chapter, preserve murals and do not a
   assert.equal(scene.children.length,2);assert.ok(scene.children.every(l=>l.isPointLight&&!l.castShadow&&l.intensity===0));
   assert.equal(rig.apply(6.2),false);assert.equal(rig.apply(9.65),true);
   assert.ok(scene.children.every(l=>l.intensity>0));const color=m.color.toArray(),state=rig.getState();
-  rig.reset();assert.ok(scene.children.every(l=>l.intensity===0));assert.equal(rig.apply(11.5),false);
+  rig.reset();assert.ok(scene.children.every(l=>l.intensity===0));m.color.set(0xffffff);assert.equal(rig.apply(11.5),true);assert.deepEqual(m.color.toArray(),color);assert.equal(renderer.toneMappingExposure,1.10);assert.ok(scene.children.every(l=>l.intensity>0));rig.reset();assert.equal(rig.apply(13.05),false);assert.ok(scene.children.every(l=>l.intensity===0));
   m.color.set(0xffffff);rig.apply(9.65);assert.deepEqual(m.color.toArray(),color);assert.deepEqual(rig.getState(),state);
   assert.equal(muralMaterial.color.getHex(),0x987654);assert.equal(rig.getState().newPostTargets,0);
  } finally {globalThis.window=previous;}

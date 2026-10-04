@@ -89,6 +89,7 @@ function render() {
   stage.style.setProperty('--cinematic-weight',framing.cinematic);
   const narrow = innerWidth <= 760;
   const themeVisual=a03Visual(screens);
+  if(theme.handoff===0){stage.style.removeProperty('--a03-fifth-x');stage.style.removeProperty('--a03-fifth-y');}
   stage.style.setProperty('--model-x', `${presentation.modelX*framing.hero + (narrow ? 0 : A03_TARGETS.reading.x*100) * theme.composition}vw`);
   stage.style.setProperty('--model-scale',1);
   const previousCanvas=directorFrame(canvasFrame(innerWidth,innerHeight,framing,theme.composition),innerWidth,innerHeight,screens,theme.composition);
@@ -120,14 +121,14 @@ function render() {
   if (!hasLines) setModelProgress(state.growth);
   modelFrame.contentWindow?.shuilongTemple?.setMuralPresentation({
     visibility: a02Pass<5?0:smooth(spatial.markers), emphasis: smooth(spatial.emphasis), coreIds: CORE_MURALS,
-    revealWalls: smooth(spatial.revealWalls)*(1-room.weight),
+    revealWalls: smooth(spatial.revealWalls)*(1-Math.max(room.weight,themeVisual.field)),
     secondaryVisibility: theme.secondary,
     architecturalWeight:room.weight,
     themeWeight:theme.composition,
     fifthWeight:themeVisual.fifth,
   });
   renderInkScene(screens,reducedMotion.matches);
-  roomField(a02Pass>=3?screens:0);
+  roomField(a02Pass>=3?screens:0,themeVisual.field,themeVisual.environment);
   lastScreens = screens;
   modelFrame.contentWindow?.shuilongTemple?.setVisualProgress?.(screens);
   renderA04(screens);
@@ -154,6 +155,11 @@ addEventListener('resize', () => {
 });
 modelFrame.addEventListener('load', () => { modelProgress = -1; requestRender(); });
 addEventListener('message', event => {
+  if(event.origin===location.origin&&event.source===modelFrame.contentWindow&&event.data?.type==='shuilong:a03-anchor'){
+    if(lastScreens<12.6||lastScreens>13.202)return;
+    const {x,y}=event.data;if(!Number.isFinite(x)||!Number.isFinite(y))return;
+    const r=modelFrame.getBoundingClientRect();stage.style.setProperty('--a03-fifth-x',`${r.x+x}px`);stage.style.setProperty('--a03-fifth-y',`${r.y+y}px`);return;
+  }
   if (event.origin !== location.origin || event.source !== modelFrame.contentWindow || !['shuilong:ready','shuilong:mural-ready'].includes(event.data?.type)) return;
   if(event.data.type==='shuilong:ready')modelProgress = -1;
   requestRender();

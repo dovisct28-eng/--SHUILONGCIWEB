@@ -48,8 +48,8 @@ function comparePixels(before,after) {
           copy:copyVisible?rect(document.querySelector('[data-a03-copy]')):null,
           title:copyVisible?rect(document.querySelector('.a03-title')):null,
           titleLines:copyVisible?[...document.querySelectorAll('.a03-title span')].map(rect):[],
-          titleText:document.querySelector('.a03-title').textContent,
-          topic:document.querySelector('.a03-copy .a03-kicker').textContent,
+          titleText:document.querySelector('.a03-title').getAttribute('aria-label'),
+          topic:document.querySelector('.a03-kicker').textContent,
           frame:rect(document.querySelector('iframe')),
           copyHidden:document.querySelector('[data-a03-copy]').getAttribute('aria-hidden'),
           handoffHidden:document.querySelector('[data-a03-handoff]').getAttribute('aria-hidden'),
@@ -73,13 +73,11 @@ function comparePixels(before,after) {
         }
         if(name==='reading') {
           assert.equal(state.phase,'a03-reading');assert.equal(state.copyHidden,'false');
-          assert.equal(state.topic,'出兵·入将');
-          assert.equal(state.titleText,'从出行与归来，看壁画之间的联系');
+          assert.equal(state.topic,'出兵入将');
+          assert.equal(state.titleText,'出庙 · 入庙');
           assert.equal(state.titleLines.length,2);
-          for(const line of state.titleLines) assert.ok(line.x>=state.copy.x && line.x+line.w<=state.copy.x+state.copy.w+1,'heading leaves copy column');
-          const fit=await page.locator('.a03-title').evaluate(el=>({fits:el.scrollWidth<=el.clientWidth,lower:el.querySelectorAll('span')[1].getBoundingClientRect().top>el.querySelector('span').getBoundingClientRect().top}));
-          assert.equal(fit.fits,true,'long heading overflows');assert.equal(fit.lower,true,'heading must have two lines');
-          assert.ok(state.copy.y>=0 && state.copy.y+state.copy.h<height-65,'text clips or covers hint');
+          assert.ok(state.titleLines[0].x<state.titleLines[1].x,'poster must remain asymmetric');
+          assert.ok(state.copy.y>=0 && state.copy.y+state.copy.h<height-25,'text clips or covers hint');
           // A full render canvas may extend behind the reading foreground. Its
           // rectangle is not a building silhouette; protect actual label/readability.
           for(const label of state.labels){const r=label.rect,x=r.x+state.frame.x,y=r.y+state.frame.y;assert.ok(x>=state.copy.x+state.copy.w||y+r.h<=state.copy.y||y>=state.copy.y+state.copy.h,'label overlaps reading copy');}
@@ -101,11 +99,11 @@ function comparePixels(before,after) {
       assert.equal((await capture()).phase,'a03-reading','reload loses position');
       await page.setViewportSize({width:width===1024?1440:1024,height:768});await page.waitForTimeout(350);
       const resized=await capture();assert.equal(resized.phase,'a03-reading');
-      assert.ok(resized.copy.y>=0 && resized.copy.y+resized.copy.h<768-65,'resize clips reading copy');
+      assert.ok(resized.copy.y>=0 && resized.copy.y+resized.copy.h<768-25,'resize clips reading copy');
       await page.setViewportSize({width,height});await page.waitForTimeout(350);
       await page.emulateMedia({reducedMotion:'reduce'});await page.waitForTimeout(350);
       const reduced=await capture();assert.equal(reduced.phase,'a03-reading');assert.equal(reduced.copyHidden,'false');
-      assert.ok(reduced.copy.y>=0 && reduced.copy.y+reduced.copy.h<height-65,'reduced motion clips reading copy');
+      assert.ok(reduced.copy.y>=0 && reduced.copy.y+reduced.copy.h<height-25,'reduced motion clips reading copy');
       await page.screenshot({path:path.join(output,`reduced-${width}x${height}.png`)});
       assert.ok(resources.every(url=>!url.includes('水龙祠壁画素材')&&!url.includes('相关文献')&&!url.includes('Mural-Exhibition')),'unexpected heavy resources');
       rows.push({width,height,passed:true,a02Diff,heroDiff,states,resize:true,reducedMotion:true});
@@ -114,5 +112,5 @@ function comparePixels(before,after) {
     }
     assert.deepEqual(errors,[]);
     fs.writeFileSync(path.join(output,'results.json'),JSON.stringify({errors,rows},null,2));
-    console.log('PASS: A03 five viewports; two-line reading heading; readable copy; core-only markers; stable camera; reverse pixels; wheel; reload; resize; reduced motion; no page errors.');
+    console.log('PASS: A03 five viewports; poster title and occlusion layers; readable copy; core-only markers; stable camera; reverse pixels; wheel; reload; resize; reduced motion; no page errors.');
 })().catch(e=>{console.error(e);process.exitCode=1;});

@@ -9,3 +9,5 @@
 本轮实际文件：宋体 40,272 B，黑体 96,644 B，合计 136,916 B。冷加载全流程为 3 次请求／2 个唯一文件，共 233,560 encoded bytes：当前 no-store 本地服务下页面与模型 iframe 分别请求黑体，不把文件预算当成传输总预算。四尺寸首屏新增字体为零；主动阻断 WOFF2 后，1440／1024 两宽低高度视口的 A02、A03、三幅介绍、A08 安全区检查通过。证据见 [导演深化验收](../../../docs/validation/module-a-visual-director-v2/README.md)。
 
 标题 fallback：Narrative Serif → Songti SC → SimSun → serif。正文 fallback：Narrative Sans → Microsoft YaHei → PingFang SC → system-ui → sans-serif。
+
+2026-10-04 A03 海报重制：标题子集增加“出庙 · 入庙 / 出兵入将”，正文重新从当前源码收集。仍使用原 Noto 字体、本地 WOFF2 和 OFL 授权；宋体40,844 B、黑体96,584 B，合计137,428 B，比原包增加512 B，未增加字体文件或首屏注册。具体跨上下文传输字节以本轮性能报告为准。字族/大小继续是候选，A01独立字体不改。

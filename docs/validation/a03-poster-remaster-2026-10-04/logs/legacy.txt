@@ -1,0 +1,1 @@
+PASS: A03 five viewports; poster title and occlusion layers; readable copy; core-only markers; stable camera; reverse pixels; wheel; reload; resize; reduced motion; no page errors.
