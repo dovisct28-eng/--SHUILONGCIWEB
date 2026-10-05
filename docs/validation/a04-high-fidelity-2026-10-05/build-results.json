@@ -1,0 +1,52 @@
+{
+  "baseline": "65e76a187ebdb56a1b877fe9ddb61f2beefc9d08",
+  "syntaxFiles": [
+    "module-a/a03/composition.mjs",
+    "module-a/a03/cutaway.mjs",
+    "module-a/a03/lighting.mjs",
+    "shuilong-temple/a04-scene.mjs",
+    "shuilong-temple/director-light.mjs",
+    "shuilong-temple/inline-a02.mjs",
+    "module-a/a04/boards.cjs",
+    "module-a/a04/browser-check.cjs",
+    "module-a/a04/build-check.cjs",
+    "module-a/a04/capture.cjs",
+    "module-a/a04/composition.mjs",
+    "module-a/a04/controller.mjs",
+    "module-a/a04/copy.mjs",
+    "module-a/a04/cutaway-state.mjs",
+    "module-a/a04/path.mjs",
+    "module-a/a04/path.test.mjs",
+    "module-a/a04/performance-check.cjs",
+    "module-a/a04/regression-check.cjs",
+    "module-a/a04/resilience-check.cjs",
+    "module-a/a04/review-check.cjs",
+    "module-a/a04/state.test.mjs",
+    "module-a/a04/sync-preview.mjs",
+    "module-a/a04/timing.mjs",
+    "module-a/a04/transition-check.cjs"
+  ],
+  "htmlModule": true,
+  "protectedFiles": [
+    "shuilong-temple/shuilong-temple.glb",
+    "shuilong-temple/model-source.js",
+    "shuilong-temple/model-info.json",
+    "shuilong-temple/mural-locations.json",
+    "module-a/a05",
+    "module-a/a06",
+    "module-a/a07",
+    "module-a/a08",
+    "module-a/guide",
+    "Mural-Exhibition",
+    "水龙祠壁画素材",
+    "module-a/a01/app.mjs",
+    "module-a/a01/styles.css"
+  ],
+  "protectedDiffEmpty": true,
+  "archiveRefs": [
+    "48f272497e86e4549c5bcd0dee275ff347171a3f",
+    "48f272497e86e4549c5bcd0dee275ff347171a3f"
+  ],
+  "noBundler": true,
+  "modelRebuilt": false
+}

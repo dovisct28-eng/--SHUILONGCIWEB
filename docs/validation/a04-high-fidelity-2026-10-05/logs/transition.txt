@@ -1,0 +1,4 @@
+1920x1080 transition PASS
+1440x900 transition PASS
+1366x768 transition PASS
+1024x768 transition PASS

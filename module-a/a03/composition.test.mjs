@@ -11,7 +11,7 @@ test('A03 influences leave both protected chapter endpoints unchanged',()=>{
     const v=a03Visual(n);assert.equal(v.weight,0);assert.equal(v.field,0);assert.equal(v.fifth,0);
     assert.deepEqual(a03Frame(frame,1920,1080,n),frame);
   }
-  assert.deepEqual(a03Frame(frame,1920,1080,13.2),{width:830,height:680.6});
+  assert.deepEqual(a03Frame(frame,1920,1080,13.2),{width:1920,height:1080});
 });
 test('all reading information establishes in order and stays static through the reading interval',()=>{
   const state=n=>deriveA03State(n*1000,1000);

@@ -20,10 +20,10 @@ export function a03Frame(frame,width,height,screens) {
   const {weight}=a03Visual(screens),target=A03_TARGETS.reading;
   const reading={width:frame.width+(width*target.width-frame.width)*weight,
     height:frame.height+(height*target.height-frame.height)*weight};
-  // Match the existing A04 controller's entry canvas exactly, before it takes over.
+  // The A03 exit and A04 share a full viewport; only the camera moves.
   if(screens<A03_START+2.65||screens>A03_START+3.002)return reading;
   const handoff=ease((screens-A03_START-2.65)/.35);
-  const entry={width:(width<=1100?width*.78:Math.min(width*.72,1000))*.83,height:Math.min(height*.84,820)*.83};
+  const entry={width,height};
   return {width:reading.width+(entry.width-reading.width)*handoff,height:reading.height+(entry.height-reading.height)*handoff};
 }
 // Label positions may move; x/y remain the renderer's unchanged wall projections.

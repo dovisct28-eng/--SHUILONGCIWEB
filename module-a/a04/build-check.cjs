@@ -1,0 +1,12 @@
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),{execFileSync}=require('node:child_process');
+const baseline='65e76a187ebdb56a1b877fe9ddb61f2beefc9d08',out=path.resolve('docs/validation/a04-high-fidelity-2026-10-05');
+const files=['module-a/a03/composition.mjs','module-a/a03/cutaway.mjs','module-a/a03/lighting.mjs','shuilong-temple/a04-scene.mjs','shuilong-temple/director-light.mjs','shuilong-temple/inline-a02.mjs',...fs.readdirSync('module-a/a04').filter(f=>/\.(mjs|cjs)$/.test(f)).map(f=>'module-a/a04/'+f)];
+for(const file of files)execFileSync(process.execPath,['--check',file]);
+const html=fs.readFileSync('shuilong-temple/水龙祠-交互预览.html','utf8'),script=html.match(/<script type="module">([\s\S]*?)<\/script>/)[1];
+execFileSync(process.execPath,['--input-type=module','--check'],{input:script,maxBuffer:30*1024*1024});
+const protectedFiles=['shuilong-temple/shuilong-temple.glb','shuilong-temple/model-source.js','shuilong-temple/model-info.json','shuilong-temple/mural-locations.json','module-a/a05','module-a/a06','module-a/a07','module-a/a08','module-a/guide','Mural-Exhibition','水龙祠壁画素材','module-a/a01/app.mjs','module-a/a01/styles.css'];
+assert.equal(execFileSync('git',['diff',baseline,'--',...protectedFiles]).toString(),'');
+const refs=execFileSync('git',['rev-parse','module-a-lofi-final-v1.0^{}','archive/module-a-lofi']).toString().trim().split(/\r?\n/);
+assert.ok(refs.every(s=>s==='48f272497e86e4549c5bcd0dee275ff347171a3f'));
+fs.writeFileSync(path.join(out,'build-results.json'),JSON.stringify({baseline,syntaxFiles:files,htmlModule:true,protectedFiles,protectedDiffEmpty:true,archiveRefs:refs,noBundler:true,modelRebuilt:false},null,2));
+console.log('PASS: native modules, inline module, protected resources and fixed archive references.');

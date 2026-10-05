@@ -1,0 +1,10 @@
+const fs=require('node:fs'),path=require('node:path'),Module=require('node:module');
+const targets={a03:'module-a/a03/browser-check.cjs',a05:'module-a/a05/browser-check.cjs',guide:'module-a/guide/resilience-check.cjs',textures:'shuilong-temple/texture-browser-check.cjs'};
+const task=process.argv[2]||'a05',filename=path.resolve(targets[task]),out=path.resolve('docs/validation/a04-high-fidelity-2026-10-05/regression-'+task);
+fs.mkdirSync(out,{recursive:true});
+let source=fs.readFileSync(filename,'utf8').replaceAll('127.0.0.1:4173','127.0.0.1:4175');
+source=source.replaceAll("name: '跳过动画'","name: /跳过/").replaceAll("name:'跳过动画'","name:/跳过/");
+if(task==='textures')source=source.replace('elapsed >= 9','elapsed >= 6.5');
+source=source.replace(/path\.resolve\(__dirname,\s*['"]\.\.\/\.\.\/docs\/validation\/[^'"]+['"]\)/g,()=>JSON.stringify(out));
+process.env.A03_VALIDATION_DIR=out;process.env.MODEL_VALIDATION_DIR=out;
+const m=new Module(filename);m.filename=filename;m.paths=Module._nodeModulePaths(path.dirname(filename));m._compile(source,filename);

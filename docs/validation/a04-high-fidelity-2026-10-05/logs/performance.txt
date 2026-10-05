@@ -1,0 +1,42 @@
+warning: unable to access 'C:\Users\dovis/.config/git/ignore': Permission denied
+warning: in the working copy of 'docs/A04_PROTOTYPE.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/DESIGN_SPEC.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/HIFI_VISUAL_SPEC.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'docs/LOFI_ARCHIVE.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'module-a/a03/composition.mjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'module-a/a03/composition.test.mjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'module-a/a03/cutaway.mjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'module-a/a03/lighting.mjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'module-a/a04/browser-check.cjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'module-a/a04/controller.mjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'module-a/a04/path.mjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'module-a/a04/path.test.mjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'module-a/a04/resilience-check.cjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'module-a/a04/styles.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'module-a/a04/transition-check.cjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'module-a/visual-director/fonts/README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'module-a/visual-director/fonts/subset.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'scripts/Start-LofiArchive.ps1', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'scripts/lofi-launcher.test.cjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'shuilong-temple/a04-roof.test.mjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'shuilong-temple/a04-scene.mjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'shuilong-temple/director-light.mjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'shuilong-temple/inline-a02.mjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'shuilong-temple/shared-world.test.mjs', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'shuilong-temple/水龙祠-交互预览.html', LF will be replaced by CRLF the next time Git touches it
+1920 before fifth {"geometries":78,"textures":23,"calls":15,"triangles":1386,"lines":0,"post":{"enabled":false,"error":null,"passes":1,"size":[1920,1080],"aoSamples":12,"stats":{"frame":1004,"calls":15,"triangles":1386,"points":0,"lines":0},"colorDepthBytes":24883200,"multisampleBytes":49766400,"targetBytes":74649600}}
+1920 before first {"geometries":79,"textures":24,"calls":12,"triangles":1681,"lines":0,"post":{"enabled":false,"error":null,"passes":1,"size":[1920,1080],"aoSamples":12,"stats":{"frame":1257,"calls":12,"triangles":1681,"points":0,"lines":0},"colorDepthBytes":24883200,"multisampleBytes":49766400,"targetBytes":74649600}}
+1920 before second {"geometries":79,"textures":24,"calls":15,"triangles":1386,"lines":0,"post":{"enabled":false,"error":null,"passes":1,"size":[1920,1080],"aoSamples":12,"stats":{"frame":1510,"calls":15,"triangles":1386,"points":0,"lines":0},"colorDepthBytes":24883200,"multisampleBytes":49766400,"targetBytes":74649600}}
+1920 before summary {"geometries":79,"textures":24,"calls":53,"triangles":6466,"lines":0,"post":{"enabled":false,"error":null,"passes":1,"size":[1920,1080],"aoSamples":12,"stats":{"frame":1764,"calls":53,"triangles":6466,"points":0,"lines":0},"colorDepthBytes":24883200,"multisampleBytes":49766400,"targetBytes":74649600}}
+1920 after fifth {"geometries":66,"textures":22,"calls":25,"triangles":37898,"lines":0,"post":{"enabled":false,"error":null,"passes":1,"size":[1920,1080],"aoSamples":12,"stats":{"frame":1046,"calls":25,"triangles":37898,"points":0,"lines":0},"colorDepthBytes":24883200,"multisampleBytes":49766400,"targetBytes":74649600}}
+1920 after first {"geometries":67,"textures":23,"calls":27,"triangles":60097,"lines":0,"post":{"enabled":false,"error":null,"passes":1,"size":[1920,1080],"aoSamples":12,"stats":{"frame":1301,"calls":27,"triangles":60097,"points":0,"lines":0},"colorDepthBytes":24883200,"multisampleBytes":49766400,"targetBytes":74649600}}
+1920 after second {"geometries":68,"textures":24,"calls":26,"triangles":37922,"lines":0,"post":{"enabled":false,"error":null,"passes":1,"size":[1920,1080],"aoSamples":12,"stats":{"frame":1447,"calls":26,"triangles":37922,"points":0,"lines":0},"colorDepthBytes":24883200,"multisampleBytes":49766400,"targetBytes":74649600}}
+1920 after summary {"geometries":68,"textures":24,"calls":56,"triangles":83578,"lines":0,"post":{"enabled":false,"error":null,"passes":1,"size":[1920,1080],"aoSamples":12,"stats":{"frame":1702,"calls":56,"triangles":83578,"points":0,"lines":0},"colorDepthBytes":24883200,"multisampleBytes":49766400,"targetBytes":74649600}}
+1440 before fifth {"geometries":67,"textures":23,"calls":15,"triangles":1386,"lines":0,"post":{"enabled":false,"error":null,"passes":1,"size":[1440,900],"aoSamples":12,"stats":{"frame":1025,"calls":15,"triangles":1386,"points":0,"lines":0},"colorDepthBytes":15552000,"multisampleBytes":31104000,"targetBytes":46656000}}
+1440 before first {"geometries":68,"textures":24,"calls":11,"triangles":1458,"lines":0,"post":{"enabled":false,"error":null,"passes":1,"size":[1440,900],"aoSamples":12,"stats":{"frame":1284,"calls":11,"triangles":1458,"points":0,"lines":0},"colorDepthBytes":15552000,"multisampleBytes":31104000,"targetBytes":46656000}}
+1440 before second {"geometries":68,"textures":24,"calls":15,"triangles":1386,"lines":0,"post":{"enabled":false,"error":null,"passes":1,"size":[1440,900],"aoSamples":12,"stats":{"frame":1539,"calls":15,"triangles":1386,"points":0,"lines":0},"colorDepthBytes":15552000,"multisampleBytes":31104000,"targetBytes":46656000}}
+1440 before summary {"geometries":68,"textures":24,"calls":53,"triangles":6466,"lines":0,"post":{"enabled":false,"error":null,"passes":1,"size":[1440,900],"aoSamples":12,"stats":{"frame":1793,"calls":53,"triangles":6466,"points":0,"lines":0},"colorDepthBytes":15552000,"multisampleBytes":31104000,"targetBytes":46656000}}
+1440 after fifth {"geometries":55,"textures":22,"calls":25,"triangles":37898,"lines":0,"post":{"enabled":false,"error":null,"passes":1,"size":[1440,900],"aoSamples":12,"stats":{"frame":1047,"calls":25,"triangles":37898,"points":0,"lines":0},"colorDepthBytes":15552000,"multisampleBytes":31104000,"targetBytes":46656000}}
+1440 after first {"geometries":56,"textures":23,"calls":26,"triangles":59874,"lines":0,"post":{"enabled":false,"error":null,"passes":1,"size":[1440,900],"aoSamples":12,"stats":{"frame":1302,"calls":26,"triangles":59874,"points":0,"lines":0},"colorDepthBytes":15552000,"multisampleBytes":31104000,"targetBytes":46656000}}
+1440 after second {"geometries":57,"textures":24,"calls":26,"triangles":37922,"lines":0,"post":{"enabled":false,"error":null,"passes":1,"size":[1440,900],"aoSamples":12,"stats":{"frame":1558,"calls":26,"triangles":37922,"points":0,"lines":0},"colorDepthBytes":15552000,"multisampleBytes":31104000,"targetBytes":46656000}}
+1440 after summary {"geometries":57,"textures":24,"calls":56,"triangles":83578,"lines":0,"post":{"enabled":false,"error":null,"passes":1,"size":[1440,900],"aoSamples":12,"stats":{"frame":1814,"calls":56,"triangles":83578,"points":0,"lines":0},"colorDepthBytes":15552000,"multisampleBytes":31104000,"targetBytes":46656000}}

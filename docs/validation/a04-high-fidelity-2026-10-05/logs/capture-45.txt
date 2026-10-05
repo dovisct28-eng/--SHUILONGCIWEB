@@ -1,0 +1,13 @@
+captured a03-poster
+captured 01-a03-end
+captured 02-a04-entry
+captured 03-a04-overview
+captured 04-a04-fifth
+captured 05-a04-travel-first
+captured 06-a04-first
+captured 07-a04-return-second
+captured 08-a04-second
+captured 09-a04-withdraw
+captured 10-a04-route-summary
+captured 11-a04-fifth-handoff
+captured 12-a05-entry

@@ -9,9 +9,10 @@ export function createDirectorLight(T,{renderer,camera,sun,fill,root,scene,floor
   const white=new T.Color(0xffffff),neutral=new T.Color(0xf0e8dc);let last=directorState(),fontsRequested=false;
   return {camera:screens=>{room.camera(screens);theme.camera(screens);},apply(screens,tour){last=directorState(screens,tour);
     if(screens>=6.8&&!fontsRequested&&typeof document!=='undefined'){fontsRequested=true;const link=document.createElement('link');link.rel='stylesheet';link.href='../module-a/visual-director/fonts/fonts.css';document.head.append(link);const css=document.createElement('style');css.textContent='.narrative-markers .mural-label,.route-node-label,.spatial-label{font-family:"Narrative Sans","Microsoft YaHei",system-ui,sans-serif;line-height:1.5}';document.head.append(css);}
-    room.reset();theme.walls(screens);if(!tour&&room.apply(screens)){last={...last,...room.getState()};theme.apply(screens);return;}if(last.space===0)return;
+    room.reset();theme.walls(screens,tour);if(!tour&&room.apply(screens)){last={...last,...room.getState()};theme.apply(screens);return;}if(last.space===0)return;
     if(screens>=13.05&&screens<=18.002){room.applyRoute();last={...last,...room.getState()};camera.fov=last.fov;camera.updateProjectionMatrix();
       for(const e of entries){if(last.transfer>0&&e.group!=='03_MainHall')e.mesh.material.color.multiplyScalar(1-last.transfer*.45);}
+      if(tour?.mode==='playing'&&tour.target){const focus=tour.target==='mural-01'?'05_EastGallery':'03_MainHall';for(const e of entries)if(e.group!==focus)e.mesh.material.color.multiplyScalar(.9);}
       return;
     }
     renderer.toneMappingExposure=last.exposure;camera.fov=last.fov;camera.updateProjectionMatrix();

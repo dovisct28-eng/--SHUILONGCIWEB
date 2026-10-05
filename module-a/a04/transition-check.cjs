@@ -14,7 +14,7 @@ const muralOutput=path.join(output,'mural-textures');fs.mkdirSync(muralOutput,{r
       await page.goto('http://127.0.0.1:4175/module-a/a01/');
       await page.waitForFunction(()=>document.querySelector('iframe').contentWindow.modelReady);
       const seek=async n=>{await page.evaluate(n=>scrollTo(0,n*innerHeight),n);await page.waitForTimeout(100);if(n>=16&&n<=18){const expected=n<=17.65?1:(()=>{const t=Math.max(0,Math.min(1,(n-17.65)/.35));return 1-t*t*(3-2*t)})();await page.waitForFunction(expected=>Math.abs(Number(getComputedStyle(document.querySelector('.model-shell')).opacity)-expected)<.02,expected,{timeout:3000});}};
-      await seek(14.5);await page.getByRole('button',{name:'跳过动画'}).click();
+      await seek(14.5);await page.getByRole('button',{name:/跳过/}).click();
       const samples=[];
       for(const n of [16,16.5,17,17.4,17.6,17.8,17.99,18,18.1,18.8]){
         await seek(n);

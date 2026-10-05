@@ -1,0 +1,2876 @@
+[
+  {
+    "name": "a03-poster",
+    "screen": 12.15,
+    "frame": {
+      "width": 1920,
+      "height": 1080
+    },
+    "state": null,
+    "stats": {
+      "geometries": 63,
+      "textures": 22,
+      "calls": 54,
+      "triangles": 186108,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1920,
+          1080
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 255,
+          "calls": 54,
+          "triangles": 186108,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 24883200,
+        "multisampleBytes": 49766400,
+        "targetBytes": 74649600
+      }
+    },
+    "cutaway": {
+      "active": true,
+      "main": 1,
+      "side": 1,
+      "handoff": 0,
+      "wall": 1,
+      "preserved": [
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        }
+      ],
+      "mainRoofDrawn": false,
+      "galleryCut": 1,
+      "movie": {
+        "active": false,
+        "weight": 0,
+        "center": [
+          0,
+          0
+        ],
+        "half": [
+          0,
+          0
+        ],
+        "summary": 0
+      }
+    },
+    "world": {
+      "chapter": "A03",
+      "environment": 0.44,
+      "foreground": 0.22,
+      "vegetation": 0.44,
+      "mountains": 0.52,
+      "fog": 0.19799999999999998,
+      "room": 0.65,
+      "posterClearance": 1,
+      "routeSpace": 0,
+      "architecture": 1,
+      "cutaway": 1,
+      "visible": true
+    },
+    "director": {
+      "space": 1,
+      "theme": 1,
+      "exposure": 1.1,
+      "fill": 0.52,
+      "sun": 4.6,
+      "fov": 31.5,
+      "architecture": 0.88,
+      "transfer": 0,
+      "arrival": 1,
+      "weight": 1,
+      "environment": 0,
+      "heading": 1,
+      "field": 1,
+      "exit": 0,
+      "site": 1,
+      "grain": 0.016,
+      "atmosphere": 0.065,
+      "lights": 4,
+      "newTextures": 0,
+      "newPostTargets": 0
+    },
+    "canvas": 1
+  },
+  {
+    "name": "01-a03-end",
+    "screen": 13.2,
+    "frame": {
+      "width": 1920,
+      "height": 1080
+    },
+    "state": null,
+    "stats": {
+      "geometries": 64,
+      "textures": 22,
+      "calls": 47,
+      "triangles": 83362,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1920,
+          1080
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 313,
+          "calls": 47,
+          "triangles": 83362,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 24883200,
+        "multisampleBytes": 49766400,
+        "targetBytes": 74649600
+      }
+    },
+    "cutaway": {
+      "active": true,
+      "main": 1,
+      "side": 1,
+      "handoff": 1,
+      "wall": 0,
+      "preserved": [
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        }
+      ],
+      "mainRoofDrawn": true,
+      "galleryCut": 0,
+      "movie": {
+        "active": false,
+        "weight": 0,
+        "center": [
+          0,
+          0
+        ],
+        "half": [
+          0,
+          0
+        ],
+        "summary": 0
+      }
+    },
+    "world": {
+      "chapter": "A04",
+      "environment": 0,
+      "foreground": 0,
+      "vegetation": 0,
+      "mountains": 0,
+      "fog": 0,
+      "room": 0.65,
+      "posterClearance": 0,
+      "routeSpace": 1,
+      "architecture": 1,
+      "cutaway": 1,
+      "visible": false
+    },
+    "director": {
+      "space": 1,
+      "theme": 1,
+      "exposure": 1.1,
+      "fill": 0.52,
+      "sun": 4.6,
+      "fov": 34,
+      "architecture": 0.88,
+      "transfer": 0,
+      "look": "shared-temple",
+      "fogColor": "#15222b",
+      "fogDensity": 0.0045,
+      "lights": 4,
+      "newTextures": 0,
+      "newPostTargets": 0
+    },
+    "canvas": 1
+  },
+  {
+    "name": "02-a04-entry",
+    "screen": 13.4,
+    "frame": {
+      "width": 1920,
+      "height": 1080
+    },
+    "state": {
+      "camera": {
+        "position": [
+          -27.29711509648823,
+          39.844394729828224,
+          -21.106456592301303
+        ],
+        "target": [
+          0.1562500000000015,
+          0.01562500000000015,
+          -1.9140625000000016
+        ]
+      },
+      "entryProgress": 0.1562500000000015,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        0,
+        0,
+        0
+      ],
+      "routeOpacity": 0.1562500000000015,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "mode": "idle",
+      "elapsed": 0,
+      "storyTime": 0,
+      "currentRoute": -1,
+      "guideStartProgress": 0,
+      "secondaryOpacity": 1,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": false,
+      "overviewCamera": {
+        "position": [
+          -30.130679768338908,
+          28.26392148313018,
+          -12.85407766554902
+        ],
+        "target": [
+          1,
+          0.1,
+          -2.8
+        ]
+      },
+      "bounds": {
+        "left": 0.21784231674528542,
+        "right": 0.7655794629148294,
+        "top": 0.17608475063695989,
+        "bottom": 0.8941959692446063
+      }
+    },
+    "stats": {
+      "geometries": 65,
+      "textures": 24,
+      "calls": 47,
+      "triangles": 83306,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1920,
+          1080
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 381,
+          "calls": 47,
+          "triangles": 83306,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 24883200,
+        "multisampleBytes": 49766400,
+        "targetBytes": 74649600
+      }
+    },
+    "cutaway": {
+      "active": false,
+      "main": 0,
+      "side": 0,
+      "handoff": 0,
+      "wall": 0,
+      "preserved": [
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        }
+      ],
+      "mainRoofDrawn": true,
+      "galleryCut": 0,
+      "movie": {
+        "active": true,
+        "name": "fifth",
+        "weight": 0.06561279296875118,
+        "center": [
+          -1.4,
+          -11.75
+        ],
+        "half": [
+          4.3,
+          4.1
+        ],
+        "summary": 0,
+        "wallWeight": 1
+      }
+    },
+    "world": {
+      "chapter": "A04",
+      "environment": 0,
+      "foreground": 0,
+      "vegetation": 0,
+      "mountains": 0,
+      "fog": 0,
+      "room": 0.65,
+      "posterClearance": 0,
+      "routeSpace": 1,
+      "architecture": 1,
+      "cutaway": 1,
+      "visible": false
+    },
+    "director": {
+      "space": 1,
+      "theme": 0.8437499999999984,
+      "exposure": 1.1,
+      "fill": 0.52,
+      "sun": 4.6,
+      "fov": 34,
+      "architecture": 0.8987500000000002,
+      "transfer": 0,
+      "look": "shared-temple",
+      "fogColor": "#15222b",
+      "fogDensity": 0.0045,
+      "lights": 4,
+      "newTextures": 0,
+      "newPostTargets": 0
+    },
+    "canvas": 1
+  },
+  {
+    "name": "03-a04-overview",
+    "screen": 14.5,
+    "frame": {
+      "width": 1920,
+      "height": 1080
+    },
+    "state": {
+      "camera": {
+        "position": [
+          -27.99145066653877,
+          26.356060167885975,
+          -12.767974255325985
+        ],
+        "target": [
+          0.7114490875360537,
+          0.24817479288689134,
+          -2.2073008284524347
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        0.04528151747295903,
+        0,
+        0
+      ],
+      "routeOpacity": 1,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "mode": "playing",
+      "elapsed": 0.6623999999999993,
+      "storyTime": 0.5139310344827581,
+      "currentRoute": 0,
+      "guideStartProgress": 0,
+      "secondaryOpacity": 1,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": false,
+      "overviewCamera": {
+        "position": [
+          -30.130679768338908,
+          28.26392148313018,
+          -12.85407766554902
+        ],
+        "target": [
+          1,
+          0.1,
+          -2.8
+        ]
+      },
+      "bounds": {
+        "left": 0.15222910765612147,
+        "right": 0.8841142600397434,
+        "top": 0.2022328387387341,
+        "bottom": 0.898999114491694
+      }
+    },
+    "stats": {
+      "geometries": 66,
+      "textures": 24,
+      "calls": 56,
+      "triangles": 83522,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1920,
+          1080
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 543,
+          "calls": 56,
+          "triangles": 83522,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 24883200,
+        "multisampleBytes": 49766400,
+        "targetBytes": 74649600
+      }
+    },
+    "cutaway": {
+      "active": false,
+      "main": 0,
+      "side": 0,
+      "handoff": 0,
+      "wall": 0,
+      "preserved": [
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        }
+      ],
+      "mainRoofDrawn": true,
+      "galleryCut": 0,
+      "movie": {
+        "active": true,
+        "name": "fifth",
+        "weight": 1,
+        "center": [
+          -1.4,
+          -11.75
+        ],
+        "half": [
+          4.3,
+          4.1
+        ],
+        "summary": 0,
+        "wallWeight": 0.954718482527041
+      }
+    },
+    "world": {
+      "chapter": "A04",
+      "environment": 0,
+      "foreground": 0,
+      "vegetation": 0,
+      "mountains": 0,
+      "fog": 0,
+      "room": 0.65,
+      "posterClearance": 0,
+      "routeSpace": 1,
+      "architecture": 1,
+      "cutaway": 1,
+      "visible": false
+    },
+    "director": {
+      "space": 1,
+      "theme": 0,
+      "exposure": 1.1,
+      "fill": 0.52,
+      "sun": 4.6,
+      "fov": 34,
+      "architecture": 1,
+      "transfer": 0,
+      "look": "shared-temple",
+      "fogColor": "#15222b",
+      "fogDensity": 0.0045,
+      "lights": 4,
+      "newTextures": 0,
+      "newPostTargets": 0
+    },
+    "canvas": 1
+  },
+  {
+    "name": "04-a04-fifth",
+    "screen": 14.5,
+    "frame": {
+      "width": 1920,
+      "height": 1080
+    },
+    "state": {
+      "camera": {
+        "position": [
+          3.2,
+          6.5,
+          -10.7
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        0,
+        0
+      ],
+      "routeOpacity": 1,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "mode": "playing",
+      "elapsed": 9.015599999999996,
+      "storyTime": 6.9948620689655145,
+      "currentRoute": 0,
+      "guideStartProgress": 0,
+      "secondaryOpacity": 1,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": false,
+      "overviewCamera": {
+        "position": [
+          -30.130679768338908,
+          28.26392148313018,
+          -12.85407766554902
+        ],
+        "target": [
+          1,
+          0.1,
+          -2.8
+        ]
+      },
+      "bounds": {
+        "left": -33097.288149889864,
+        "right": 232015.97318549527,
+        "top": -71178.89924851604,
+        "bottom": 20533.2036607722
+      }
+    },
+    "stats": {
+      "geometries": 66,
+      "textures": 24,
+      "calls": 25,
+      "triangles": 37898,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1920,
+          1080
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 2095,
+          "calls": 25,
+          "triangles": 37898,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 24883200,
+        "multisampleBytes": 49766400,
+        "targetBytes": 74649600
+      }
+    },
+    "cutaway": {
+      "active": false,
+      "main": 0,
+      "side": 0,
+      "handoff": 0,
+      "wall": 0,
+      "preserved": [
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        }
+      ],
+      "mainRoofDrawn": true,
+      "galleryCut": 0,
+      "movie": {
+        "active": true,
+        "name": "fifth",
+        "weight": 1,
+        "center": [
+          -1.4,
+          -11.75
+        ],
+        "half": [
+          4.3,
+          4.1
+        ],
+        "summary": 0,
+        "wallWeight": 0
+      }
+    },
+    "world": {
+      "chapter": "A04",
+      "environment": 0,
+      "foreground": 0,
+      "vegetation": 0,
+      "mountains": 0,
+      "fog": 0,
+      "room": 0.65,
+      "posterClearance": 0,
+      "routeSpace": 1,
+      "architecture": 1,
+      "cutaway": 1,
+      "visible": false
+    },
+    "director": {
+      "space": 1,
+      "theme": 0,
+      "exposure": 1.1,
+      "fill": 0.52,
+      "sun": 4.6,
+      "fov": 34,
+      "architecture": 1,
+      "transfer": 0,
+      "look": "shared-temple",
+      "fogColor": "#15222b",
+      "fogDensity": 0.0045,
+      "lights": 4,
+      "newTextures": 0,
+      "newPostTargets": 0
+    },
+    "canvas": 1
+  },
+  {
+    "name": "05-a04-travel-first",
+    "screen": 14.5,
+    "frame": {
+      "width": 1920,
+      "height": 1080
+    },
+    "state": {
+      "camera": {
+        "position": [
+          -2.7,
+          3.8,
+          -0.9111829042470703
+        ],
+        "target": [
+          -2.7,
+          2,
+          6.842327789679648
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        0.5688117387879575,
+        0
+      ],
+      "routeOpacity": 1,
+      "labelOpacity": 1,
+      "target": "mural-01",
+      "mode": "playing",
+      "elapsed": 17.348499999999845,
+      "storyTime": 13.460043103448156,
+      "currentRoute": 1,
+      "guideStartProgress": 0,
+      "secondaryOpacity": 1,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": false,
+      "overviewCamera": {
+        "position": [
+          -30.130679768338908,
+          28.26392148313018,
+          -12.85407766554902
+        ],
+        "target": [
+          1,
+          0.1,
+          -2.8
+        ]
+      },
+      "bounds": {
+        "left": -10374.548928924954,
+        "right": 2397.766571731886,
+        "top": -300.4665872705471,
+        "bottom": 1896.3274616387412
+      }
+    },
+    "stats": {
+      "geometries": 67,
+      "textures": 25,
+      "calls": 34,
+      "triangles": 69322,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1920,
+          1080
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 3486,
+          "calls": 34,
+          "triangles": 69322,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 24883200,
+        "multisampleBytes": 49766400,
+        "targetBytes": 74649600
+      }
+    },
+    "cutaway": {
+      "active": false,
+      "main": 0,
+      "side": 0,
+      "handoff": 0,
+      "wall": 0,
+      "preserved": [
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        }
+      ],
+      "mainRoofDrawn": true,
+      "galleryCut": 0,
+      "movie": {
+        "active": true,
+        "name": "travelToFirst",
+        "weight": 1,
+        "center": [
+          -2.7,
+          -2.3361657230593025
+        ],
+        "half": [
+          2.9,
+          3.4999999999999996
+        ],
+        "summary": 0,
+        "wallWeight": 0
+      }
+    },
+    "world": {
+      "chapter": "A04",
+      "environment": 0,
+      "foreground": 0,
+      "vegetation": 0,
+      "mountains": 0,
+      "fog": 0,
+      "room": 0.65,
+      "posterClearance": 0,
+      "routeSpace": 1,
+      "architecture": 1,
+      "cutaway": 1,
+      "visible": false
+    },
+    "director": {
+      "space": 1,
+      "theme": 0,
+      "exposure": 1.1,
+      "fill": 0.52,
+      "sun": 4.6,
+      "fov": 34,
+      "architecture": 1,
+      "transfer": 0,
+      "look": "shared-temple",
+      "fogColor": "#15222b",
+      "fogDensity": 0.0045,
+      "lights": 4,
+      "newTextures": 0,
+      "newPostTargets": 0
+    },
+    "canvas": 1
+  },
+  {
+    "name": "06-a04-first",
+    "screen": 14.5,
+    "frame": {
+      "width": 1920,
+      "height": 1080
+    },
+    "state": {
+      "camera": {
+        "position": [
+          -1.2,
+          2.3,
+          4.8
+        ],
+        "target": [
+          4.865,
+          1.55,
+          4.8
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        0
+      ],
+      "routeOpacity": 1,
+      "labelOpacity": 1,
+      "target": "mural-01",
+      "mode": "playing",
+      "elapsed": 26.40659999999979,
+      "storyTime": 20.487879310344667,
+      "currentRoute": 1,
+      "guideStartProgress": 0,
+      "secondaryOpacity": 1,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": false,
+      "overviewCamera": {
+        "position": [
+          -30.130679768338908,
+          28.26392148313018,
+          -12.85407766554902
+        ],
+        "target": [
+          1,
+          0.1,
+          -2.8
+        ]
+      },
+      "bounds": {
+        "left": -14696.854155700761,
+        "right": 12949.234758702283,
+        "top": -1374.3672343819746,
+        "bottom": 5373.52672795389
+      }
+    },
+    "stats": {
+      "geometries": 67,
+      "textures": 25,
+      "calls": 27,
+      "triangles": 60097,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1920,
+          1080
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 5221,
+          "calls": 27,
+          "triangles": 60097,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 24883200,
+        "multisampleBytes": 49766400,
+        "targetBytes": 74649600
+      }
+    },
+    "cutaway": {
+      "active": false,
+      "main": 0,
+      "side": 0,
+      "handoff": 0,
+      "wall": 0,
+      "preserved": [
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        }
+      ],
+      "mainRoofDrawn": true,
+      "galleryCut": 0,
+      "movie": {
+        "active": true,
+        "name": "first",
+        "weight": 1,
+        "center": [
+          3.6,
+          4.8
+        ],
+        "half": [
+          2.2,
+          3.1
+        ],
+        "summary": 0,
+        "wallWeight": 0
+      }
+    },
+    "world": {
+      "chapter": "A04",
+      "environment": 0,
+      "foreground": 0,
+      "vegetation": 0,
+      "mountains": 0,
+      "fog": 0,
+      "room": 0.65,
+      "posterClearance": 0,
+      "routeSpace": 1,
+      "architecture": 1,
+      "cutaway": 1,
+      "visible": false
+    },
+    "director": {
+      "space": 1,
+      "theme": 0,
+      "exposure": 1.1,
+      "fill": 0.52,
+      "sun": 4.6,
+      "fov": 34,
+      "architecture": 1,
+      "transfer": 0,
+      "look": "shared-temple",
+      "fogColor": "#15222b",
+      "fogDensity": 0.0045,
+      "lights": 4,
+      "newTextures": 0,
+      "newPostTargets": 0
+    },
+    "canvas": 1
+  },
+  {
+    "name": "07-a04-return-second",
+    "screen": 14.5,
+    "frame": {
+      "width": 1920,
+      "height": 1080
+    },
+    "state": {
+      "camera": {
+        "position": [
+          -0.8587941461144664,
+          5.428600710933739,
+          -4.549374451656649
+        ],
+        "target": [
+          2.7,
+          2,
+          -13.10716725911145
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        0.5621661258402257
+      ],
+      "routeOpacity": 1,
+      "labelOpacity": 1,
+      "target": "mural-02",
+      "mode": "playing",
+      "elapsed": 35.33540000000013,
+      "storyTime": 27.415396551724236,
+      "currentRoute": 2,
+      "guideStartProgress": 0,
+      "secondaryOpacity": 1,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": false,
+      "overviewCamera": {
+        "position": [
+          -30.130679768338908,
+          28.26392148313018,
+          -12.85407766554902
+        ],
+        "target": [
+          1,
+          0.1,
+          -2.8
+        ]
+      },
+      "bounds": {
+        "left": -4189.427915238224,
+        "right": 3089.455724182009,
+        "top": -4017.968401467451,
+        "bottom": 2365.1402677602605
+      }
+    },
+    "stats": {
+      "geometries": 68,
+      "textures": 26,
+      "calls": 32,
+      "triangles": 61090,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1920,
+          1080
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 6900,
+          "calls": 32,
+          "triangles": 61090,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 24883200,
+        "multisampleBytes": 49766400,
+        "targetBytes": 74649600
+      }
+    },
+    "cutaway": {
+      "active": false,
+      "main": 0,
+      "side": 0,
+      "handoff": 0,
+      "wall": 0,
+      "preserved": [
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        }
+      ],
+      "mainRoofDrawn": true,
+      "galleryCut": 0,
+      "movie": {
+        "active": true,
+        "name": "returnToSecond",
+        "weight": 1,
+        "center": [
+          2.3632345231515033,
+          -4.503849382655736
+        ],
+        "half": [
+          3.643249188760339,
+          11.083450292848399
+        ],
+        "summary": 0,
+        "wallWeight": 0
+      }
+    },
+    "world": {
+      "chapter": "A04",
+      "environment": 0,
+      "foreground": 0,
+      "vegetation": 0,
+      "mountains": 0,
+      "fog": 0,
+      "room": 0.65,
+      "posterClearance": 0,
+      "routeSpace": 1,
+      "architecture": 1,
+      "cutaway": 1,
+      "visible": false
+    },
+    "director": {
+      "space": 1,
+      "theme": 0,
+      "exposure": 1.1,
+      "fill": 0.52,
+      "sun": 4.6,
+      "fov": 34,
+      "architecture": 1,
+      "transfer": 0,
+      "look": "shared-temple",
+      "fogColor": "#15222b",
+      "fogDensity": 0.0045,
+      "lights": 4,
+      "newTextures": 0,
+      "newPostTargets": 0
+    },
+    "canvas": 1
+  },
+  {
+    "name": "08-a04-second",
+    "screen": 14.5,
+    "frame": {
+      "width": 1920,
+      "height": 1080
+    },
+    "state": {
+      "camera": {
+        "position": [
+          -3.2,
+          6.5,
+          -10.7
+        ],
+        "target": [
+          4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 1,
+      "labelOpacity": 1,
+      "target": "mural-02",
+      "mode": "playing",
+      "elapsed": 44.38840000000121,
+      "storyTime": 34.439275862069906,
+      "currentRoute": 2,
+      "guideStartProgress": 0,
+      "secondaryOpacity": 1,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": false,
+      "overviewCamera": {
+        "position": [
+          -30.130679768338908,
+          28.26392148313018,
+          -12.85407766554902
+        ],
+        "target": [
+          1,
+          0.1,
+          -2.8
+        ]
+      },
+      "bounds": {
+        "left": -232014.97318549527,
+        "right": 33098.288149889864,
+        "top": -71178.89924851604,
+        "bottom": 20533.2036607722
+      }
+    },
+    "stats": {
+      "geometries": 68,
+      "textures": 26,
+      "calls": 26,
+      "triangles": 37922,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1920,
+          1080
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 8654,
+          "calls": 26,
+          "triangles": 37922,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 24883200,
+        "multisampleBytes": 49766400,
+        "targetBytes": 74649600
+      }
+    },
+    "cutaway": {
+      "active": false,
+      "main": 0,
+      "side": 0,
+      "handoff": 0,
+      "wall": 0,
+      "preserved": [
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        }
+      ],
+      "mainRoofDrawn": true,
+      "galleryCut": 0,
+      "movie": {
+        "active": true,
+        "name": "second",
+        "weight": 1,
+        "center": [
+          1.4,
+          -11.75
+        ],
+        "half": [
+          4.3,
+          4.1
+        ],
+        "summary": 0,
+        "wallWeight": 0
+      }
+    },
+    "world": {
+      "chapter": "A04",
+      "environment": 0,
+      "foreground": 0,
+      "vegetation": 0,
+      "mountains": 0,
+      "fog": 0,
+      "room": 0.65,
+      "posterClearance": 0,
+      "routeSpace": 1,
+      "architecture": 1,
+      "cutaway": 1,
+      "visible": false
+    },
+    "director": {
+      "space": 1,
+      "theme": 0,
+      "exposure": 1.1,
+      "fill": 0.52,
+      "sun": 4.6,
+      "fov": 34,
+      "architecture": 1,
+      "transfer": 0,
+      "look": "shared-temple",
+      "fogColor": "#15222b",
+      "fogDensity": 0.0045,
+      "lights": 4,
+      "newTextures": 0,
+      "newPostTargets": 0
+    },
+    "canvas": 1
+  },
+  {
+    "name": "09-a04-withdraw",
+    "screen": 14.5,
+    "frame": {
+      "width": 1920,
+      "height": 1080
+    },
+    "state": {
+      "camera": {
+        "position": [
+          -7.804238209842268,
+          16.59968879668604,
+          -10.80717735121352
+        ],
+        "target": [
+          0.28281548219825625,
+          0.028281548219825627,
+          -2.9434369035603485
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 1,
+      "labelOpacity": 1,
+      "target": null,
+      "mode": "playing",
+      "elapsed": 51.170900000002014,
+      "storyTime": 39.70156034482915,
+      "currentRoute": -1,
+      "guideStartProgress": 0,
+      "secondaryOpacity": 1,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": false,
+      "overviewCamera": {
+        "position": [
+          -30.130679768338908,
+          28.26392148313018,
+          -12.85407766554902
+        ],
+        "target": [
+          1,
+          0.1,
+          -2.8
+        ]
+      },
+      "bounds": {
+        "left": -0.3305842520077371,
+        "right": 1.1353048875112743,
+        "top": -0.3670332043363801,
+        "bottom": 2.0334255601038027
+      }
+    },
+    "stats": {
+      "geometries": 68,
+      "textures": 26,
+      "calls": 54,
+      "triangles": 83518,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1920,
+          1080
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 10002,
+          "calls": 54,
+          "triangles": 83518,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 24883200,
+        "multisampleBytes": 49766400,
+        "targetBytes": 74649600
+      }
+    },
+    "cutaway": {
+      "active": false,
+      "main": 0,
+      "side": 0,
+      "handoff": 0,
+      "wall": 0,
+      "preserved": [
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        }
+      ],
+      "mainRoofDrawn": true,
+      "galleryCut": 0,
+      "movie": {
+        "active": true,
+        "name": "withdraw",
+        "weight": 1,
+        "center": [
+          1.4,
+          -11.75
+        ],
+        "half": [
+          4.3,
+          4.1
+        ],
+        "summary": 0.8327121121160339,
+        "wallWeight": 0
+      }
+    },
+    "world": {
+      "chapter": "A04",
+      "environment": 0,
+      "foreground": 0,
+      "vegetation": 0,
+      "mountains": 0,
+      "fog": 0,
+      "room": 0.65,
+      "posterClearance": 0,
+      "routeSpace": 1,
+      "architecture": 1,
+      "cutaway": 1,
+      "visible": false
+    },
+    "director": {
+      "space": 1,
+      "theme": 0,
+      "exposure": 1.1,
+      "fill": 0.52,
+      "sun": 4.6,
+      "fov": 34,
+      "architecture": 1,
+      "transfer": 0,
+      "look": "shared-temple",
+      "fogColor": "#15222b",
+      "fogDensity": 0.0045,
+      "lights": 4,
+      "newTextures": 0,
+      "newPostTargets": 0
+    },
+    "canvas": 1
+  },
+  {
+    "name": "10-a04-route-summary",
+    "screen": 14.5,
+    "frame": {
+      "width": 1920,
+      "height": 1080
+    },
+    "state": {
+      "camera": {
+        "position": [
+          -30.130679768338908,
+          28.26392148313018,
+          -12.85407766554902
+        ],
+        "target": [
+          1,
+          0.1,
+          -2.8
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 1,
+      "labelOpacity": 1,
+      "target": null,
+      "mode": "completed",
+      "elapsed": 58,
+      "storyTime": 45,
+      "currentRoute": -1,
+      "guideStartProgress": 0,
+      "secondaryOpacity": 1,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -30.130679768338908,
+          28.26392148313018,
+          -12.85407766554902
+        ],
+        "target": [
+          1,
+          0.1,
+          -2.8
+        ]
+      },
+      "bounds": {
+        "left": 0.19298235434161826,
+        "right": 0.8763361189168206,
+        "top": 0.22552401513171189,
+        "bottom": 0.8487674867591858
+      }
+    },
+    "stats": {
+      "geometries": 68,
+      "textures": 26,
+      "calls": 56,
+      "triangles": 83578,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1920,
+          1080
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 11199,
+          "calls": 56,
+          "triangles": 83578,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 24883200,
+        "multisampleBytes": 49766400,
+        "targetBytes": 74649600
+      }
+    },
+    "cutaway": {
+      "active": false,
+      "main": 0,
+      "side": 0,
+      "handoff": 0,
+      "wall": 0,
+      "preserved": [
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        }
+      ],
+      "mainRoofDrawn": true,
+      "galleryCut": 0,
+      "movie": {
+        "active": true,
+        "name": "summary",
+        "weight": 1,
+        "center": [
+          -1.4,
+          -11.75
+        ],
+        "half": [
+          4.3,
+          4.1
+        ],
+        "summary": 1,
+        "wallWeight": 1
+      }
+    },
+    "world": {
+      "chapter": "A04",
+      "environment": 0,
+      "foreground": 0,
+      "vegetation": 0,
+      "mountains": 0,
+      "fog": 0,
+      "room": 0.65,
+      "posterClearance": 0,
+      "routeSpace": 1,
+      "architecture": 1,
+      "cutaway": 1,
+      "visible": false
+    },
+    "director": {
+      "space": 1,
+      "theme": 0,
+      "exposure": 1.1,
+      "fill": 0.52,
+      "sun": 4.6,
+      "fov": 34,
+      "architecture": 1,
+      "transfer": 0,
+      "look": "shared-temple",
+      "fogColor": "#15222b",
+      "fogDensity": 0.0045,
+      "lights": 4,
+      "newTextures": 0,
+      "newPostTargets": 0
+    },
+    "canvas": 1
+  },
+  {
+    "name": "11-a04-fifth-handoff",
+    "screen": 17.6,
+    "frame": {
+      "width": 1920,
+      "height": 1080
+    },
+    "state": {
+      "camera": {
+        "position": [
+          -0.5496000000000056,
+          6.537599999999992,
+          -9.620000000000005
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "mode": "completed",
+      "elapsed": 58,
+      "storyTime": 45,
+      "currentRoute": -1,
+      "guideStartProgress": 0.8960000000000007,
+      "secondaryOpacity": 0,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -30.130679768338908,
+          28.26392148313018,
+          -12.85407766554902
+        ],
+        "target": [
+          1,
+          0.1,
+          -2.8
+        ]
+      },
+      "bounds": {
+        "left": -9707.500696123763,
+        "right": 20124.848488862197,
+        "top": -49815.57148313455,
+        "bottom": 23121.606193612137
+      }
+    },
+    "stats": {
+      "geometries": 68,
+      "textures": 26,
+      "calls": 24,
+      "triangles": 60298,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1920,
+          1080
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 11365,
+          "calls": 24,
+          "triangles": 60298,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 24883200,
+        "multisampleBytes": 49766400,
+        "targetBytes": 74649600
+      }
+    },
+    "cutaway": {
+      "active": false,
+      "main": 0,
+      "side": 0,
+      "handoff": 0,
+      "wall": 0,
+      "preserved": [
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        }
+      ],
+      "mainRoofDrawn": true,
+      "galleryCut": 0,
+      "movie": {
+        "active": true,
+        "name": "handoff",
+        "weight": 1,
+        "center": [
+          -1.4,
+          -11.75
+        ],
+        "half": [
+          4.3,
+          4.1
+        ],
+        "summary": 0,
+        "wallWeight": 0
+      }
+    },
+    "world": {
+      "chapter": "A04",
+      "environment": 0,
+      "foreground": 0,
+      "vegetation": 0,
+      "mountains": 0,
+      "fog": 0,
+      "room": 0.65,
+      "posterClearance": 0,
+      "routeSpace": 1,
+      "architecture": 1,
+      "cutaway": 1,
+      "visible": false
+    },
+    "director": {
+      "space": 1,
+      "theme": 0,
+      "exposure": 1.1,
+      "fill": 0.52,
+      "sun": 4.6,
+      "fov": 34,
+      "architecture": 1,
+      "transfer": 0.9973008320115759,
+      "look": "shared-temple",
+      "fogColor": "#15222b",
+      "fogDensity": 0.0045,
+      "lights": 4,
+      "newTextures": 0,
+      "newPostTargets": 0
+    },
+    "canvas": 1
+  },
+  {
+    "name": "12-a05-entry",
+    "screen": 18.1,
+    "frame": {
+      "width": 1920,
+      "height": 1080
+    },
+    "state": {
+      "camera": {
+        "position": [
+          -1.5,
+          5.2,
+          -10.5
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ]
+      },
+      "entryProgress": 1,
+      "paths": [
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ]
+        ],
+        [
+          [
+            -2.7,
+            0.56,
+            -11.75
+          ],
+          [
+            -2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            -2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            -2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            3.8,
+            0.36,
+            4.8
+          ]
+        ],
+        [
+          [
+            3.8,
+            0.36,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            4.8
+          ],
+          [
+            2.7,
+            0.13,
+            -7.4
+          ],
+          [
+            2.7,
+            0.56,
+            -8.05
+          ],
+          [
+            2.7,
+            0.56,
+            -11.75
+          ]
+        ]
+      ],
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "routeOpacity": 0,
+      "labelOpacity": 1,
+      "target": "mural-05",
+      "mode": "completed",
+      "elapsed": 58,
+      "storyTime": 45,
+      "currentRoute": -1,
+      "guideStartProgress": 1,
+      "secondaryOpacity": 0,
+      "nextGuideMuralId": "mural-05",
+      "routeComplete": true,
+      "overviewCamera": {
+        "position": [
+          -30.130679768338908,
+          28.26392148313018,
+          -12.85407766554902
+        ],
+        "target": [
+          1,
+          0.1,
+          -2.8
+        ]
+      },
+      "bounds": {
+        "left": -683390.2653559839,
+        "right": 73694.91333318045,
+        "top": -54422.712831121906,
+        "bottom": 354852.4748324003
+      }
+    },
+    "stats": {
+      "geometries": 68,
+      "textures": 26,
+      "calls": 21,
+      "triangles": 37514,
+      "lines": 0,
+      "post": {
+        "enabled": false,
+        "error": null,
+        "passes": 1,
+        "size": [
+          1920,
+          1080
+        ],
+        "aoSamples": 12,
+        "stats": {
+          "frame": 11577,
+          "calls": 21,
+          "triangles": 37514,
+          "points": 0,
+          "lines": 0
+        },
+        "colorDepthBytes": 24883200,
+        "multisampleBytes": 49766400,
+        "targetBytes": 74649600
+      }
+    },
+    "cutaway": {
+      "active": false,
+      "main": 0,
+      "side": 0,
+      "handoff": 0,
+      "wall": 0,
+      "preserved": [
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "06_Stage",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        },
+        {
+          "group": "07_Entrance",
+          "visible": true,
+          "opacity": 1
+        }
+      ],
+      "mainRoofDrawn": true,
+      "galleryCut": 0,
+      "movie": {
+        "active": true,
+        "name": "handoff",
+        "weight": 1,
+        "center": [
+          -1.4,
+          -11.75
+        ],
+        "half": [
+          4.3,
+          4.1
+        ],
+        "summary": 0,
+        "wallWeight": 0
+      }
+    },
+    "world": {
+      "chapter": "A04",
+      "environment": 0,
+      "foreground": 0,
+      "vegetation": 0,
+      "mountains": 0,
+      "fog": 0,
+      "room": 0.65,
+      "posterClearance": 0,
+      "routeSpace": 1,
+      "architecture": 1,
+      "cutaway": 1,
+      "visible": false
+    },
+    "director": {
+      "space": 1,
+      "theme": 0,
+      "exposure": 0.96,
+      "fill": 0.2799999999999999,
+      "sun": 2.5999999999999996,
+      "fov": 34,
+      "architecture": 1,
+      "transfer": 1,
+      "lights": 2,
+      "newTextures": 0,
+      "newPostTargets": 0
+    },
+    "canvas": 1
+  }
+]

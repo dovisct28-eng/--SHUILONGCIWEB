@@ -1,24 +1,18 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createA04Scene } from './a04-scene.mjs';
+import fs from 'node:fs';
+import {createA03Cutaway} from '../module-a/a03/cutaway.mjs';
+const html=fs.readFileSync(new URL('./水龙祠-交互预览.html',import.meta.url),'utf8');
+const core=JSON.parse(html.match(/const coreURL=URL\.createObjectURL\(new Blob\(\[("(?:\\.|[^"\\])*")\]/s)[1]);
+const line=html.split('\n').find(s=>s.startsWith('const moduleText='));
+const source=JSON.parse(line.slice(17,line.lastIndexOf('".replaceAll(')+1));
+const uri=s=>`data:text/javascript;base64,${Buffer.from(s).toString('base64')}`;
+const T=await import(uri(source.replaceAll('./three.core.js',uri(core))));
 
-test('opaque roofs regain depth writing after a transparent A04 transition', () => {
-  const previousDocument = globalThis.document;
-  globalThis.document = { createElement: () => ({ style: {} }), body: { append() {} } };
-  class Vector3 { constructor(x, y, z) { Object.assign(this, { x, y, z }); } }
-  class Group { add() {} }
-  class Box3 { constructor(min, max) { Object.assign(this, { min, max }); } }
-  const T = { Vector3, Group, Box3, LineBasicMaterial: class {} };
-  const camera = { position: { fromArray() {} }, lookAt() {}, updateMatrixWorld() {} };
-  const roof = { material: { opacity: 1, transparent: false, depthWrite: true } };
-  try {
-    const controller = createA04Scene(T, camera, { add() {} }, {}, [roof], []);
-    for (const opacity of [1, .12, 0, 1]) {
-      controller.set({ paths: [], camera: { position: [0, 0, 0], target: [0, 0, 0] }, roofOpacity: opacity });
-      assert.equal(controller.apply(), true);
-      assert.equal(roof.material.opacity, opacity);
-      assert.equal(roof.material.depthWrite, opacity === 1);
-      assert.equal(roof.material.transparent, opacity < 1);
-    }
-  } finally { globalThis.document = previousDocument; }
+test('A04 shared windows keep every roof opaque and restore depths after arbitrary seeks',()=>{
+ const root=new T.Group(),meshes=[];
+ for(const name of ['03_MainHall','04_WestGallery','05_EastGallery','06_Stage','07_Entrance']){const g=new T.Group();g.name=name;const m=new T.MeshStandardMaterial();m.userData.textureKey='roof';const mesh=new T.Mesh(new T.BoxGeometry(),m);mesh.castShadow=true;g.add(mesh);root.add(g);meshes.push(mesh);}
+ const rig=createA03Cutaway(root);
+ for(const storyTime of [6,20,34,45,6,45]){rig.apply(14.5,false,{storyTime,entryProgress:1,routeComplete:storyTime===45});for(const m of meshes){assert.equal(m.visible,true);assert.equal(m.material.opacity,1);assert.equal(m.material.transparent,false);assert.equal(m.material.depthWrite,true);}assert.ok(meshes.slice(3).every(m=>m.castShadow));}
+ rig.apply(12.15);assert.equal(meshes[0].visible,false);rig.apply(9.65);assert.ok(meshes.every(m=>m.visible&&m.castShadow));
 });

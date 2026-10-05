@@ -15,15 +15,15 @@ const url='http://127.0.0.1:4175/module-a/a01/';
    const p=await open({width,height}),tag=`${width}x${height}`;
    await scroll(p,13.2);const before=await p.evaluate(()=>document.querySelector('iframe').contentWindow.shuilongTemple.getIntroState());await shot(p,`a03-end-${tag}`);
    await scroll(p,13.21);await shot(p,`entry-${tag}`);
-   assert.ok(await p.evaluate(()=>[...document.querySelector('iframe').contentDocument.querySelectorAll('.mural-label')].filter(el=>!el.hidden).every(el=>Number(el.style.opacity)>.95)),'entry must inherit visible core labels');
-   await scroll(p,14.5);await p.getByRole('button',{name:'跳过动画'}).click();await p.waitForTimeout(300);
-   const final=await get(p);assert.equal(final.mode,'completed');assert.deepEqual(final.growth,[1,1,1]);assert.ok(final.bounds.left>0&&final.bounds.right<1&&final.bounds.top>.1&&final.bounds.bottom<.8);
+   assert.ok(await p.evaluate(()=>document.querySelector('iframe').contentDocument.querySelectorAll('canvas').length===1),'entry must keep the single shared canvas');
+   await scroll(p,14.5);await p.getByRole('button',{name:/跳过/}).click();await p.waitForTimeout(300);
+   const final=await get(p);assert.equal(final.mode,'completed');assert.deepEqual(final.growth,[1,1,1]);assert.ok(final.bounds.left>0&&final.bounds.right<1&&final.bounds.top>.04&&final.bounds.bottom<.94);
    assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);await shot(p,`overview-${tag}`);
    await scroll(p,18);const guide=await get(p);assert.equal(guide.mode,'completed');assert.deepEqual(guide.growth,[1,1,1]);assert.equal(guide.guideStartProgress,1);assert.equal(guide.nextGuideMuralId,'mural-05');assert.equal(guide.target,'mural-05');assert.equal(guide.routeComplete,true);assert.notDeepEqual(guide.camera,final.camera);assert.ok(guide.routeOpacity<.4);
    if(width===1440)await p.screenshot({path:path.join(muralOutput,'overview.png')});
    assert.deepEqual(await p.evaluate(()=>document.querySelector('iframe').contentWindow.shuilongTemple.getA04GuideStart()),{muralId:'mural-05',camera:guide.overviewCamera,routeComplete:true});
    assert.deepEqual(await p.evaluate(()=>document.querySelector('iframe').contentWindow.shuilongTemple.getA04Handoff()),{muralId:'mural-05',camera:guide.overviewCamera,routeComplete:true});
-   assert.equal(await p.locator('.a04 [data-title]').textContent(),'从第五幅开始');await shot(p,`guide-start-${tag}`);
+   assert.equal(await p.locator('.a04 [data-title]').textContent(),'从第五铺开始');await shot(p,`guide-start-${tag}`);
    await p.reload();await p.waitForFunction(()=>document.querySelector('iframe').contentWindow.modelReady);await p.waitForTimeout(500);assert.equal((await get(p)).mode,'completed');assert.equal((await get(p)).nextGuideMuralId,'mural-05');assert.deepEqual((await get(p)).camera,guide.camera);
    await scroll(p,14.5);assert.equal((await get(p)).mode,'completed');assert.deepEqual((await get(p)).camera,final.camera);
    await p.reload();await p.waitForFunction(()=>document.querySelector('iframe').contentWindow.modelReady);await p.waitForTimeout(500);assert.equal((await get(p)).mode,'completed');
@@ -39,7 +39,7 @@ const url='http://127.0.0.1:4175/module-a/a01/';
   }
   const p=await open({width:1440,height:900});await scroll(p,14.5);const muralResults=[];
   // Observe real automatic playback, not a test-only seek API.
-  for(const [name,t] of [['fifth',9],['first',24],['second',37],['withdrawn',45.5],['route-01',47],['route-02',53],['route-03',58]]){
+  for(const [name,t] of [['fifth',6.5],['first',20],['second',34],['withdrawn',41],['route-01',43],['route-02',44],['route-03',45]]){
    await p.waitForFunction(t=>document.querySelector('iframe').contentWindow.shuilongTemple.getA04State()?.elapsed>=t,t,{timeout:25000});
    if(['fifth','first','second'].includes(name)){
     const muralId={fifth:'mural-05',first:'mural-01',second:'mural-02'}[name];
@@ -62,7 +62,7 @@ const url='http://127.0.0.1:4175/module-a/a01/';
    await shot(p,name);results.push({name,state:await get(p)});console.log('captured',name);
   }
   const y=await p.evaluate(()=>scrollY);await p.waitForTimeout(1000);assert.equal(await p.evaluate(()=>scrollY),y);assert.equal((await get(p)).mode,'completed');
-  await p.getByRole('button',{name:'重新观看'}).focus();await p.keyboard.press('Enter');await p.waitForTimeout(300);assert.equal((await get(p)).mode,'playing');
+  await p.getByRole('button',{name:/重新观看/}).focus();await p.keyboard.press('Enter');await p.waitForTimeout(300);assert.equal((await get(p)).mode,'playing');
   // Dispatch visibility events with an overridden read-only visibility getter.
   await p.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,get:()=>true});document.dispatchEvent(new Event('visibilitychange'));});await p.waitForTimeout(100);const paused=(await get(p)).elapsed;await p.waitForTimeout(800);assert.equal((await get(p)).elapsed,paused);
   await p.evaluate(()=>{delete document.hidden;document.dispatchEvent(new Event('visibilitychange'));});await p.waitForTimeout(400);assert.ok((await get(p)).elapsed>paused);await p.close();

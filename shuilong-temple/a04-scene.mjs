@@ -1,84 +1,52 @@
-// Optional A04 controller; the existing renderer owns the single render loop.
-import {routeStyle,paletteFor,wallReveal} from '../module-a/visual-director/state.mjs';
-export function createA04Scene(T, camera, scene, root, roofs, pins) {
-  let state=null,overviewAspect=0,overviewCache=null;
-  const group=new T.Group(); group.name='A04-route'; group.visible=false; scene.add(group);
-  const material=new T.LineBasicMaterial({color:0xb9a98f,depthTest:false,transparent:true});
-  const lines=[],dots=[],segments=[],nodeLabels=[];
-  for(const text of ["⑤ 第五幅","① 第一幅","② 第二幅"]){const el=document.createElement("span");el.className='route-node-label';el.textContent=text;el.style.cssText="position:absolute;z-index:4;font:13px system-ui;color:#d8d2c5;background:#101519d9;padding:3px 6px;pointer-events:none;display:none;transform:translate(-50%,10px)";document.body.append(el);nodeLabels.push(el);}
-  const bounds=new T.Box3(new T.Vector3(-5.9,-.6,-16.5),new T.Vector3(5.9,3.4,13));
-  const corners=[];
-  for(const x of [bounds.min.x,bounds.max.x])for(const y of [bounds.min.y,bounds.max.y])for(const z of [bounds.min.z,bounds.max.z])corners.push(new T.Vector3(x,y,z));
-  function projected() {
-    camera.updateMatrixWorld();
-    const p=corners.map(v=>v.clone().project(camera));
-    return {left:Math.min(...p.map(v=>v.x))*.5+.5,right:Math.max(...p.map(v=>v.x))*.5+.5,
-      top:.5-Math.max(...p.map(v=>v.y))*.5,bottom:.5-Math.min(...p.map(v=>v.y))*.5};
+// The existing renderer owns the single temple and render loop.
+import { paletteFor } from '../module-a/visual-director/state.mjs';
+import {a04Labels} from '../module-a/a04/composition.mjs';
+import {routeWeights} from '../module-a/a04/timing.mjs';
+export function createA04Scene(T,camera,scene,root,roofs,pins){
+  let state=null,overviewKey='',overviewCache=null;
+  const group=new T.Group();group.name='A04-route';group.visible=false;scene.add(group);
+  const segments=[],nodeLabels=[],traceMaterials=[],futureMaterials=[];
+  const vector=new T.Vector3(),look=new T.Vector3();
+  const coreIds=['mural-05','mural-01','mural-02'];
+  const css=document.createElement('style');css.textContent=`
+  .a04-node{position:absolute;z-index:4;display:none;transform:translate(-50%,-50%);pointer-events:none;color:#a8aaa2;font:13px/1.5 "Narrative Sans","Microsoft YaHei",sans-serif;text-align:center;text-shadow:0 2px 6px #101519}
+  .a04-node b{display:block;width:30px;height:30px;margin:0 auto 4px;line-height:30px;font-size:22px;font-weight:400;border:1px solid transparent;border-radius:50%}
+  .a04-node[data-current=true]{color:#e2dcd0}.a04-node[data-current=true] b{width:40px;height:40px;line-height:40px;font-size:28px;border-color:#b9a98f;outline:1px solid #b9a98f60;outline-offset:4px}
+  `;document.head.append(css);
+  for(const [i,name]of ['第五铺','第一铺','第二铺'].entries()){const el=document.createElement('span');el.className='a04-node';el.innerHTML=`<b>${['⑤','①','②'][i]}</b><span>${name}</span>`;document.body.append(el);nodeLabels.push(el);}
+  const corners=[];for(const x of [-5.9,5.9])for(const y of [-.6,6.8])for(const z of [-16.5,13])corners.push(new T.Vector3(x,y,z));
+  const setCamera=c=>{camera.position.fromArray(c.position);look.fromArray(c.target);camera.lookAt(look);camera.updateMatrixWorld();};
+  function projected(){camera.updateMatrixWorld();let left=Infinity,right=-Infinity,top=Infinity,bottom=-Infinity;for(const p of corners){vector.copy(p).project(camera);left=Math.min(left,vector.x*.5+.5);right=Math.max(right,vector.x*.5+.5);top=Math.min(top,.5-vector.y*.5);bottom=Math.max(bottom,.5-vector.y*.5);}return {left,right,top,bottom};}
+  function visibleBounds(){root.updateMatrixWorld(true);camera.updateMatrixWorld();let left=Infinity,right=-Infinity,top=Infinity,bottom=-Infinity;
+    root.traverse(m=>{if(!m.isMesh||!m.visible||!m.parent.visible||m.material.opacity<.1)return;const positions=m.geometry.attributes.position;for(let i=0;i<positions.count;i++){vector.fromBufferAttribute(positions,i).applyMatrix4(m.matrixWorld).project(camera);const x=vector.x*.5+.5,y=.5-vector.y*.5;left=Math.min(left,x);right=Math.max(right,x);top=Math.min(top,y);bottom=Math.max(bottom,y);}});return {left,right,top,bottom};}
+  function overview(){const key=camera.aspect+':'+camera.fov;if(overviewCache&&overviewKey===key)return overviewCache;
+    const position=camera.position.clone(),quaternion=camera.quaternion.clone(),target=[1,.1,-2.8],theta=4.4,phi=.86;
+    let near=15,far=100,c;for(let i=0;i<24;i++){const d=(near+far)/2;c={position:[target[0]+d*Math.sin(phi)*Math.sin(theta),target[1]+d*Math.cos(phi),target[2]+d*Math.sin(phi)*Math.cos(theta)],target};setCamera(c);const box=projected();if(box.right-box.left>.82||box.bottom-box.top>.75)near=d;else far=d;}
+    camera.position.copy(position);camera.quaternion.copy(quaternion);camera.updateMatrixWorld();overviewKey=key;return overviewCache=c;
   }
-  function visibleBounds(){
-    root.updateMatrixWorld(true);camera.updateMatrixWorld();let left=Infinity,right=-Infinity,top=Infinity,bottom=-Infinity;const point=new T.Vector3();
-    root.traverse(m=>{if(!m.isMesh||!m.visible||!m.parent.visible||m.material.opacity<.1)return;const positions=m.geometry.attributes.position;for(let i=0;i<positions.count;i++){point.fromBufferAttribute(positions,i).applyMatrix4(m.matrixWorld).project(camera);const x=point.x*.5+.5,y=.5-point.y*.5;left=Math.min(left,x);right=Math.max(right,x);top=Math.min(top,y);bottom=Math.max(bottom,y);}});return {left,right,top,bottom};
-  }
-  const setCamera=c=>{camera.position.fromArray(c.position);camera.lookAt(new T.Vector3(...c.target));camera.updateMatrixWorld();};
-  function overview() {
-    if(overviewCache&&overviewAspect===camera.aspect)return overviewCache;
-    const previous={position:camera.position.toArray(),quaternion:camera.quaternion.clone()};
-    const target=[0,-2.3,-1.75],theta=4.4,phi=.72;
-    let near=15,far=100,c;
-    for(let i=0;i<24;i++) {
-      const d=(near+far)/2;
-      c={position:[d*Math.sin(phi)*Math.sin(theta),target[1]+d*Math.cos(phi),target[2]+d*Math.sin(phi)*Math.cos(theta)],target};
-      setCamera(c);const box=projected();
-      if(box.right-box.left>.68||box.bottom-box.top>.61)near=d;else far=d;
-    }
-    camera.position.fromArray(previous.position);camera.quaternion.copy(previous.quaternion);camera.updateMatrixWorld();
-    overviewAspect=camera.aspect;overviewCache=c;return c;
-  }
-  function ensureRoute(paths) {
-    if(lines.length)return;
-    paths.forEach((points,i)=>{
-      const geometry=new T.BufferGeometry().setFromPoints(points.map(v=>new T.Vector3(...v)));
-      const line=new T.Line(geometry,material);line.renderOrder=20;group.add(line);lines.push(line);
-      const parts=points.slice(1).map((point,j)=>{const a=new T.Vector3(...points[j]),b=new T.Vector3(...point),delta=b.clone().sub(a);const mesh=new T.Mesh(new T.CylinderGeometry(.038,.038,1,8),new T.MeshBasicMaterial({color:0xb9a98f,transparent:true,depthTest:false}));mesh.quaternion.setFromUnitVectors(new T.Vector3(0,1,0),delta.clone().normalize());mesh.renderOrder=20;group.add(mesh);const future=new T.Mesh(mesh.geometry,new T.MeshBasicMaterial({color:0xb9a98f,transparent:true,depthTest:false}));future.quaternion.copy(mesh.quaternion);future.position.copy(a).addScaledVector(delta,.5);future.scale.set(.6,delta.length(),.6);future.renderOrder=19;group.add(future);const backing=new T.Mesh(mesh.geometry,new T.MeshBasicMaterial({color:0x101519,transparent:true,opacity:.9,depthTest:false}));backing.quaternion.copy(mesh.quaternion);backing.renderOrder=18;group.add(backing);return {mesh,future,backing,a,delta,length:delta.length()};});segments.push(parts);
-      const dot=new T.Mesh(new T.SphereGeometry(.15,12,8),new T.MeshBasicMaterial({color:0xb9a98f,depthTest:false,transparent:true}));
-      dot.position.fromArray(points.at(-1));dot.renderOrder=21;group.add(dot);dots.push(dot);
+  function ensureRoute(paths){if(segments.length)return;const geometry=new T.CylinderGeometry(.014,.014,1,6);
+    paths.forEach(points=>{const trace=new T.MeshBasicMaterial({color:0xb9a98f,transparent:true,depthTest:false,depthWrite:false,toneMapped:false,fog:false}),future=trace.clone();traceMaterials.push(trace);futureMaterials.push(future);
+      let total=0;const parts=points.slice(1).map((point,j)=>{const a=new T.Vector3(...points[j]),delta=new T.Vector3(...point).sub(a),length=delta.length();total+=length;
+        const mesh=new T.Mesh(geometry,trace),next=new T.Mesh(geometry,future);mesh.quaternion.setFromUnitVectors(new T.Vector3(0,1,0),delta.clone().normalize());next.quaternion.copy(mesh.quaternion);mesh.renderOrder=20;next.renderOrder=19;group.add(mesh,next);return {mesh,next,a,delta,length};});segments.push({parts,total});
     });
   }
-  function grow(line,points,progress) {
-    if(points.length<2){line.visible=false;return;}
-    const lengths=points.slice(1).map((p,i)=>Math.hypot(...p.map((v,j)=>v-points[i][j])));
-    let left=lengths.reduce((a,b)=>a+b,0)*progress;const positions=[points[0]];
-    for(let i=0;i<lengths.length;i++) {
-      const f=Math.min(1,left/lengths[i]);positions.push(points[i].map((v,j)=>v+(points[i+1][j]-v)*f));
-      left-=lengths[i];if(left<=0)break;
-    }
-    // Reuse a fixed buffer during animation, avoiding per-frame GPU allocations.
-    const attribute=line.geometry.attributes.position;
-    positions.forEach((p,i)=>attribute.setXYZ(i,...p));attribute.needsUpdate=true;
-    line.geometry.setDrawRange(0,positions.length);line.geometry.computeBoundingSphere();line.visible=false;
-  }
+  function hideLabels(){nodeLabels.forEach(el=>el.style.display='none');}
   return {
-    overview,
-    guideStart(){return {muralId:'mural-05',camera:overview(),routeComplete:true};},
-    set(next){state=next;if(next)ensureRoute(next.paths);group.visible=Boolean(next);if(!next){nodeLabels.forEach(el=>el.style.display="none");pins.forEach(p=>p.button.textContent=p.m.label);}},
-    apply(){
-      if(!state)return false;
-      setCamera(state.camera);
-      roofs.forEach(m=>{const transparent=state.roofOpacity<1;if(m.material.transparent!==transparent){m.material.transparent=transparent;m.material.needsUpdate=true;}m.material.opacity=state.roofOpacity;m.material.depthWrite=!transparent;});
-      material.opacity=state.routeOpacity;const palette=paletteFor(document.body.dataset?.directorAccent);
-      lines.forEach((line,i)=>{grow(line,state.paths[i],state.growth[i]);const style=routeStyle(state.growth,i,state.elapsed,state.routeComplete);let left=segments[i].reduce((n,p)=>n+p.length,0)*state.growth[i];for(const part of segments[i]){const f=Math.max(0,Math.min(1,left/part.length));part.mesh.visible=f>0;part.mesh.scale.set(style.current?1.18:1,part.length*f,style.current?1.18:1);part.mesh.position.copy(part.a).addScaledVector(part.delta,f/2);part.mesh.material.color.set(palette.route);part.future.material.color.set(palette.route);part.mesh.material.opacity=state.routeOpacity*style.trace;part.backing.visible=f>0&&style.trace>0;part.backing.position.copy(part.mesh.position);part.backing.scale.copy(part.mesh.scale);part.backing.scale.x*=1.65;part.backing.scale.z*=1.65;part.backing.material.opacity=.9*state.routeOpacity;part.future.visible=style.future>0&&f<1;part.future.material.opacity=state.routeOpacity*style.future;left-=part.length;}dots[i].visible=state.growth[i]>=1;dots[i].material.color.set(palette.accent);dots[i].material.opacity=state.routeOpacity*(i?state.secondaryOpacity??1:1);});
-      return true;
+    overview,guideStart:()=>({muralId:'mural-05',camera:overview(),routeComplete:true}),
+    set(next){state=next;if(next)ensureRoute(next.paths);group.visible=Boolean(next);if(!next){hideLabels();for(const pin of pins){pin.button.style.background='transparent';delete pin.button.dataset.current;}}},
+    apply(){if(!state)return false;setCamera(state.camera);const palette=paletteFor(document.body.dataset.directorAccent);
+      segments.forEach(({parts,total},i)=>{const style=routeWeights(state.growth,i,state.currentRoute,state.routeComplete||state.currentRoute===-1);traceMaterials[i].color.set(style.current?palette.route:0x595c55);futureMaterials[i].color.set(palette.route);traceMaterials[i].opacity=state.routeOpacity*style.trace;futureMaterials[i].opacity=state.routeOpacity*style.future;
+        let left=total*state.growth[i];for(const part of parts){const f=Math.max(0,Math.min(1,left/part.length));part.mesh.visible=f>0&&state.routeOpacity>.001;part.mesh.scale.set(style.current?1.3:1,part.length*f,style.current?1.3:1);part.mesh.position.copy(part.a).addScaledVector(part.delta,f/2);part.next.visible=f<1&&style.future>0&&state.routeOpacity>.001;part.next.scale.set(.65,part.length*(1-f),.65);part.next.position.copy(part.a).addScaledVector(part.delta,(f+1)/2);left-=part.length;}
+      });return true;
     },
-    labels(){if(!state)return;document.querySelectorAll(".spatial-label").forEach(el=>el.style.opacity=state.labelOpacity);nodeLabels.forEach((el,i)=>{const v=dots[i].position.clone().project(camera);el.style.display=state.growth[i]>=1&&state.routeOpacity>0?"block":"none";el.style.left=(v.x*.5+.5)*innerWidth+"px";el.style.top=(.5-v.y*.5)*innerHeight+"px";el.style.opacity=state.routeOpacity*(state.secondaryOpacity??1);});for(const pin of pins){
-      const current=pin.m.id===state.target&&(!state.routeComplete||state.guideStartProgress>0);
-      const labelWeight=state.mode==='playing'?wallReveal(state.elapsed):1;
-      pin.button.style.opacity=String(state.labelOpacity*(current?labelWeight:(1-.2*state.entryProgress)*(state.secondaryOpacity??1)));pin.line.style.opacity=pin.dot.style.opacity=state.labelOpacity*(current?labelWeight:(1-.55*state.entryProgress)*(state.secondaryOpacity??1));
-      pin.button.dataset.current=String(current);pin.button.textContent=pin.m.label+(current&&state.entryProgress>.5?" · 当前":"");
-      // Small local backing keeps the active label readable over pale plaster.
-      pin.button.style.background=current?'#101519d9':'transparent';
-      pin.button.setAttribute('aria-label',pin.m.label+(current?'，当前观看目标':'，路线位置'));
-    }},
+    labels(){if(!state)return;document.querySelectorAll('.spatial-label').forEach(el=>el.style.opacity='0');
+      for(const pin of pins){pin.button.hidden=true;pin.line.style.display=pin.dot.style.display='none';}
+      const points=coreIds.map(id=>{const pin=pins.find(p=>p.m.id===id);if(!pin)return null;vector.fromArray(pin.m.position).project(camera);return {id,x:(vector.x*.5+.5)*innerWidth,y:(.5-vector.y*.5)*innerHeight,z:vector.z};}).filter(Boolean);
+      const placements=a04Labels(points,innerWidth,innerHeight,state.target);nodeLabels.forEach((el,i)=>{const p=placements.find(p=>p.id===coreIds[i]);const secondary=state.guideStartProgress>0&&i>0?state.secondaryOpacity:1;
+        el.style.display=p&&secondary>.001?'block':'none';if(!p)return;el.dataset.current=String(p.current);el.style.left=p.lx+'px';el.style.top=p.ly+'px';el.style.opacity=String(state.entryProgress*secondary*(p.current?1:state.target ? .42 : .72));
+      });
+    },
     projection(id){const mural=root.getObjectByName(id);if(!mural||!state)return null;const subject=mural.getObjectByName(id+'-display-texture')||mural;setCamera(state.camera);subject.updateWorldMatrix(true,true);const box=new T.Box3().setFromObject(subject),points=[];for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z])points.push(new T.Vector3(x,y,z).project(camera));const xs=points.map(p=>(p.x+1)*innerWidth/2),ys=points.map(p=>(1-p.y)*innerHeight/2);const quad=subject.isMesh&&subject.geometry.attributes.position.count===4?[0,1,3,2].map(i=>{const p=new T.Vector3().fromBufferAttribute(subject.geometry.attributes.position,i).applyMatrix4(subject.matrixWorld).project(camera);return {x:(p.x+1)*innerWidth/2,y:(1-p.y)*innerHeight/2};}):null;return {left:Math.min(...xs),top:Math.min(...ys),width:Math.max(...xs)-Math.min(...xs),height:Math.max(...ys)-Math.min(...ys),quad};},
-    getState(){return state?{...state,bounds:visibleBounds(),camera:{position:camera.position.toArray(),target:state.camera.target}}:null;},
+    getState:()=>state?{...state,bounds:visibleBounds(),camera:{position:camera.position.toArray(),target:state.camera.target}}:null,
   };
 }

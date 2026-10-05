@@ -1,0 +1,1 @@
+PASS: architectural PBR maps, GLB fallback, and texture failure fallback

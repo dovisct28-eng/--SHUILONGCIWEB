@@ -9,5 +9,5 @@ export function inlineA02(source) {
     const light=read('./a02-light.mjs').replace("import {architecturalRoom,ease} from '../module-a/a02/spatial.mjs';",wrap('architecturalRoom,ease',read('../module-a/a02/spatial.mjs'))).replace("import {directorState} from '../module-a/visual-director/state.mjs';",wrap('directorState',read('../module-a/visual-director/state.mjs')));
     source=source.replace("import {createA02Light} from './a02-light.mjs';",wrap('createA02Light',light));
   }
-  return source.replace(/import\s*\{([^}]+)\}\s*from\s*'(\.\.\/module-a\/a03\/[^']+)';/g,(_,names,relative)=>wrap(names,inlineTheme(new URL(relative,import.meta.url))));
+  return source.replace(/import\s*\{([^}]+)\}\s*from\s*'(\.\.\/module-a\/(?:a03|a04)\/[^']+)';/g,(_,names,relative)=>wrap(names,inlineTheme(new URL(relative,import.meta.url))));
 }

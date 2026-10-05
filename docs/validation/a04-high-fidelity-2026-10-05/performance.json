@@ -1,0 +1,787 @@
+{
+  "baseline": "65e76a187ebdb56a1b877fe9ddb61f2beefc9d08",
+  "worldPrewarm": "A02 8.8 screens with full roofs/environment, architectural maps ready, 1500 ms settle; A03 12.15 then A04.",
+  "rows": [
+    {
+      "w": 1920,
+      "h": 1080,
+      "version": "before",
+      "name": "fifth",
+      "timing": {
+        "mean": 4.165833333328677,
+        "p95": 4.7000000001862645,
+        "samples": 120,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      },
+      "stats": {
+        "geometries": 78,
+        "textures": 23,
+        "calls": 15,
+        "triangles": 1386,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1920,
+            1080
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1004,
+            "calls": 15,
+            "triangles": 1386,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 24883200,
+          "multisampleBytes": 49766400,
+          "targetBytes": 74649600
+        }
+      }
+    },
+    {
+      "w": 1920,
+      "h": 1080,
+      "version": "before",
+      "name": "first",
+      "timing": {
+        "mean": 4.1649999999984475,
+        "p95": 4.5,
+        "samples": 120,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      },
+      "stats": {
+        "geometries": 79,
+        "textures": 24,
+        "calls": 12,
+        "triangles": 1681,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1920,
+            1080
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1257,
+            "calls": 12,
+            "triangles": 1681,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 24883200,
+          "multisampleBytes": 49766400,
+          "targetBytes": 74649600
+        }
+      }
+    },
+    {
+      "w": 1920,
+      "h": 1080,
+      "version": "before",
+      "name": "second",
+      "timing": {
+        "mean": 4.166666666666667,
+        "p95": 4.7000000001862645,
+        "samples": 120,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      },
+      "stats": {
+        "geometries": 79,
+        "textures": 24,
+        "calls": 15,
+        "triangles": 1386,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1920,
+            1080
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1510,
+            "calls": 15,
+            "triangles": 1386,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 24883200,
+          "multisampleBytes": 49766400,
+          "targetBytes": 74649600
+        }
+      }
+    },
+    {
+      "w": 1920,
+      "h": 1080,
+      "version": "before",
+      "name": "summary",
+      "timing": {
+        "mean": 4.167500000004656,
+        "p95": 4.7999999998137355,
+        "samples": 120,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      },
+      "stats": {
+        "geometries": 79,
+        "textures": 24,
+        "calls": 53,
+        "triangles": 6466,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1920,
+            1080
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1764,
+            "calls": 53,
+            "triangles": 6466,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 24883200,
+          "multisampleBytes": 49766400,
+          "targetBytes": 74649600
+        }
+      }
+    },
+    {
+      "w": 1920,
+      "h": 1080,
+      "version": "before",
+      "name": "moving-route",
+      "timing": {
+        "mean": 4.1649999999984475,
+        "p95": 4.7000000001862645,
+        "samples": 120,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      },
+      "stats": {
+        "geometries": 79,
+        "textures": 24,
+        "calls": 18,
+        "triangles": 4650,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1920,
+            1080
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1896,
+            "calls": 18,
+            "triangles": 4650,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 24883200,
+          "multisampleBytes": 49766400,
+          "targetBytes": 74649600
+        }
+      }
+    },
+    {
+      "w": 1920,
+      "h": 1080,
+      "version": "after",
+      "name": "fifth",
+      "timing": {
+        "mean": 4.169999999995343,
+        "p95": 4.7000000001862645,
+        "samples": 120,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      },
+      "stats": {
+        "geometries": 66,
+        "textures": 22,
+        "calls": 25,
+        "triangles": 37898,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1920,
+            1080
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1046,
+            "calls": 25,
+            "triangles": 37898,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 24883200,
+          "multisampleBytes": 49766400,
+          "targetBytes": 74649600
+        }
+      }
+    },
+    {
+      "w": 1920,
+      "h": 1080,
+      "version": "after",
+      "name": "first",
+      "timing": {
+        "mean": 4.166666666666667,
+        "p95": 4.400000000372529,
+        "samples": 120,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      },
+      "stats": {
+        "geometries": 67,
+        "textures": 23,
+        "calls": 27,
+        "triangles": 60097,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1920,
+            1080
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1301,
+            "calls": 27,
+            "triangles": 60097,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 24883200,
+          "multisampleBytes": 49766400,
+          "targetBytes": 74649600
+        }
+      }
+    },
+    {
+      "w": 1920,
+      "h": 1080,
+      "version": "after",
+      "name": "second",
+      "timing": {
+        "mean": 4.163333333330229,
+        "p95": 4.599999999627471,
+        "samples": 120,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      },
+      "stats": {
+        "geometries": 68,
+        "textures": 24,
+        "calls": 26,
+        "triangles": 37922,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1920,
+            1080
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1447,
+            "calls": 26,
+            "triangles": 37922,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 24883200,
+          "multisampleBytes": 49766400,
+          "targetBytes": 74649600
+        }
+      }
+    },
+    {
+      "w": 1920,
+      "h": 1080,
+      "version": "after",
+      "name": "summary",
+      "timing": {
+        "mean": 4.164166666660458,
+        "p95": 4.5,
+        "samples": 120,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      },
+      "stats": {
+        "geometries": 68,
+        "textures": 24,
+        "calls": 56,
+        "triangles": 83578,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1920,
+            1080
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1702,
+            "calls": 56,
+            "triangles": 83578,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 24883200,
+          "multisampleBytes": 49766400,
+          "targetBytes": 74649600
+        }
+      }
+    },
+    {
+      "w": 1920,
+      "h": 1080,
+      "version": "after",
+      "name": "moving-route",
+      "timing": {
+        "mean": 4.166666666666667,
+        "p95": 4.6000000005587935,
+        "samples": 120,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      },
+      "stats": {
+        "geometries": 68,
+        "textures": 24,
+        "calls": 27,
+        "triangles": 60097,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1920,
+            1080
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1834,
+            "calls": 27,
+            "triangles": 60097,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 24883200,
+          "multisampleBytes": 49766400,
+          "targetBytes": 74649600
+        }
+      }
+    },
+    {
+      "w": 1440,
+      "h": 900,
+      "version": "before",
+      "name": "fifth",
+      "timing": {
+        "mean": 4.165833333336438,
+        "p95": 4.6000000005587935,
+        "samples": 120,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      },
+      "stats": {
+        "geometries": 67,
+        "textures": 23,
+        "calls": 15,
+        "triangles": 1386,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1440,
+            900
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1025,
+            "calls": 15,
+            "triangles": 1386,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15552000,
+          "multisampleBytes": 31104000,
+          "targetBytes": 46656000
+        }
+      }
+    },
+    {
+      "w": 1440,
+      "h": 900,
+      "version": "before",
+      "name": "first",
+      "timing": {
+        "mean": 4.1649999999984475,
+        "p95": 4.400000000372529,
+        "samples": 120,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      },
+      "stats": {
+        "geometries": 68,
+        "textures": 24,
+        "calls": 11,
+        "triangles": 1458,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1440,
+            900
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1284,
+            "calls": 11,
+            "triangles": 1458,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15552000,
+          "multisampleBytes": 31104000,
+          "targetBytes": 46656000
+        }
+      }
+    },
+    {
+      "w": 1440,
+      "h": 900,
+      "version": "before",
+      "name": "second",
+      "timing": {
+        "mean": 4.167499999996895,
+        "p95": 4.5,
+        "samples": 120,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      },
+      "stats": {
+        "geometries": 68,
+        "textures": 24,
+        "calls": 15,
+        "triangles": 1386,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1440,
+            900
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1539,
+            "calls": 15,
+            "triangles": 1386,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15552000,
+          "multisampleBytes": 31104000,
+          "targetBytes": 46656000
+        }
+      }
+    },
+    {
+      "w": 1440,
+      "h": 900,
+      "version": "before",
+      "name": "summary",
+      "timing": {
+        "mean": 4.1649999999984475,
+        "p95": 4.599999999627471,
+        "samples": 120,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      },
+      "stats": {
+        "geometries": 68,
+        "textures": 24,
+        "calls": 53,
+        "triangles": 6466,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1440,
+            900
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1793,
+            "calls": 53,
+            "triangles": 6466,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15552000,
+          "multisampleBytes": 31104000,
+          "targetBytes": 46656000
+        }
+      }
+    },
+    {
+      "w": 1440,
+      "h": 900,
+      "version": "before",
+      "name": "moving-route",
+      "timing": {
+        "mean": 4.164166666660458,
+        "p95": 4.3999999994412065,
+        "samples": 120,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      },
+      "stats": {
+        "geometries": 68,
+        "textures": 24,
+        "calls": 18,
+        "triangles": 4650,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1440,
+            900
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1925,
+            "calls": 18,
+            "triangles": 4650,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15552000,
+          "multisampleBytes": 31104000,
+          "targetBytes": 46656000
+        }
+      }
+    },
+    {
+      "w": 1440,
+      "h": 900,
+      "version": "after",
+      "name": "fifth",
+      "timing": {
+        "mean": 4.167500000004656,
+        "p95": 4.7000000001862645,
+        "samples": 120,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      },
+      "stats": {
+        "geometries": 55,
+        "textures": 22,
+        "calls": 25,
+        "triangles": 37898,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1440,
+            900
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1047,
+            "calls": 25,
+            "triangles": 37898,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15552000,
+          "multisampleBytes": 31104000,
+          "targetBytes": 46656000
+        }
+      }
+    },
+    {
+      "w": 1440,
+      "h": 900,
+      "version": "after",
+      "name": "first",
+      "timing": {
+        "mean": 4.1683333333348855,
+        "p95": 4.3999999994412065,
+        "samples": 120,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      },
+      "stats": {
+        "geometries": 56,
+        "textures": 23,
+        "calls": 26,
+        "triangles": 59874,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1440,
+            900
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1302,
+            "calls": 26,
+            "triangles": 59874,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15552000,
+          "multisampleBytes": 31104000,
+          "targetBytes": 46656000
+        }
+      }
+    },
+    {
+      "w": 1440,
+      "h": 900,
+      "version": "after",
+      "name": "second",
+      "timing": {
+        "mean": 4.1625,
+        "p95": 4.400000000372529,
+        "samples": 120,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      },
+      "stats": {
+        "geometries": 57,
+        "textures": 24,
+        "calls": 26,
+        "triangles": 37922,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1440,
+            900
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1558,
+            "calls": 26,
+            "triangles": 37922,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15552000,
+          "multisampleBytes": 31104000,
+          "targetBytes": 46656000
+        }
+      }
+    },
+    {
+      "w": 1440,
+      "h": 900,
+      "version": "after",
+      "name": "summary",
+      "timing": {
+        "mean": 4.1649999999984475,
+        "p95": 4.7999999998137355,
+        "samples": 120,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      },
+      "stats": {
+        "geometries": 57,
+        "textures": 24,
+        "calls": 56,
+        "triangles": 83578,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1440,
+            900
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1814,
+            "calls": 56,
+            "triangles": 83578,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15552000,
+          "multisampleBytes": 31104000,
+          "targetBytes": 46656000
+        }
+      }
+    },
+    {
+      "w": 1440,
+      "h": 900,
+      "version": "after",
+      "name": "moving-route",
+      "timing": {
+        "mean": 4.168333333327125,
+        "p95": 4.7000000001862645,
+        "samples": 120,
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+      },
+      "stats": {
+        "geometries": 57,
+        "textures": 24,
+        "calls": 26,
+        "triangles": 59874,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1440,
+            900
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1946,
+            "calls": 26,
+            "triangles": 59874,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15552000,
+          "multisampleBytes": 31104000,
+          "targetBytes": 46656000
+        }
+      }
+    }
+  ],
+  "limits": "Same-machine headless Chrome. 120 frames after 10 warmup frames; frame intervals include scheduling, not GPU duration or cross-device guarantees. Local cutaway retains opaque roofs and submits their original triangles."
+}

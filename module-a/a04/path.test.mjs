@@ -10,16 +10,16 @@ test('A03 boundary and A04 entry stay fixed; guide preparation is reversible',()
   assert.deepEqual(sampleTour(duration,overview).camera,overview);
 });
 test('each mural has a stable independent camera before withdrawal',()=>{
-  for(const [a,b,key] of [[8,11,'fifth'],[23,26,'first'],[36,39,'second']]){
+  for(const [a,b,key] of [[6,8,'fifth'],[18,22,'first'],[32,36,'second']]){
     assert.deepEqual(sampleTour(a,overview).camera,cameras[key]);
     assert.deepEqual(sampleTour(b,overview).camera,cameras[key]);
   }
   assert.deepEqual(sampleTour(duration,overview).camera,overview);
 });
-test('route grows cumulatively only after withdrawal; completed state stays complete',()=>{
-  assert.deepEqual(sampleTour(44,overview).growth,[0,0,0]);
-  assert.deepEqual(sampleTour(47,overview).growth,[1,0,0]);
-  assert.deepEqual(sampleTour(53,overview).growth,[1,1,0]);
+test('route grows during each journey and completed state stays complete',()=>{
+  assert.deepEqual(sampleTour(8,overview).growth,[1,0,0]);
+  assert.deepEqual(sampleTour(22,overview).growth,[1,1,0]);
+  assert.deepEqual(sampleTour(36,overview).growth,[1,1,1]);
   assert.deepEqual(sampleTour(100,overview).growth,[1,1,1]);
 });
 test('walking lines clear model columns and remain inside perimeter walls',()=>{

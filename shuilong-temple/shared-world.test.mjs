@@ -32,8 +32,8 @@ test('selective cutaway hides the main roof while preserving entrance/stage and 
   assert.equal(meshes['03_MainHall'].visible,false);assert.equal(rig.getState().galleryCut,1);
   for(const name of ['06_Stage','07_Entrance']){assert.equal(meshes[name].material.opacity,1);assert.equal(meshes[name].material.transparent,false);assert.equal(meshes[name].visible,true);}
   const gallery=meshes['05_EastGallery'].material,s={uniforms:{},vertexShader:'#include <begin_vertex>',fragmentShader:'#include <alphatest_fragment>'};gallery.onBeforeCompile(s);assert.match(s.fragmentShader,/discard/);assert.equal(gallery.transparent,false);
-  for(const n of [13.65,9.65,12.15,5.7]){rig.apply(n);assert.equal(meshes['03_MainHall'].visible,n!==12.15&&n!==13.65);}
-  rig.apply(13.1999);assert.ok(Math.abs(meshes['07_Entrance'].material.opacity-.08)<.00001);assert.ok(Math.abs(meshes['03_MainHall'].material.opacity-.08)<.00001);
+  for(const n of [13.65,9.65,12.15,5.7]){rig.apply(n);assert.equal(meshes['03_MainHall'].visible,n!==12.15);}
+  rig.apply(13.1999);assert.equal(meshes['07_Entrance'].material.opacity,1);assert.ok(meshes['03_MainHall'].material.opacity>.999);
 });
 test('controlled preview owns a single landscape and embeds current shared state for offline use',()=>{
   assert.match(html,/if\(!new URLSearchParams\(location.search\)\.has\('controlled'\)\)environment=mod.createEnvironment/);

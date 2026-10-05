@@ -1,0 +1,12 @@
+const {chromium}=require('playwright'),fs=require('node:fs'),path=require('node:path');
+const out=path.resolve('docs/validation/a04-high-fidelity-2026-10-05');
+const read=p=>p.evaluate(()=>{const f=document.querySelector('iframe'),api=f.contentWindow.shuilongTemple;return {screen:scrollY/innerHeight,frame:{width:f.clientWidth,height:f.clientHeight},state:api.getA04State(),stats:api.getA01RenderStats(),cutaway:api.getA03CutawayState(),world:api.getSharedWorldState(),director:api.getDirectorState(),canvas:f.contentDocument.querySelectorAll('canvas').length};});
+const seek=async(p,n)=>{await p.evaluate(n=>scrollTo(0,n*innerHeight),n);await p.waitForTimeout(350);};
+const open=async(b,width=1920,height=1080,{url='http://127.0.0.1:4175/module-a/a01/',...options}={})=>{const p=await b.newPage({viewport:{width,height},...options});await p.goto(url);await p.waitForFunction(()=>document.querySelector('iframe').contentWindow.modelReady);await p.waitForTimeout(400);return p;};
+module.exports={out,read,seek,open};
+if(require.main===module)(async()=>{const b=await chromium.launch({channel:'chrome',headless:true}),rows=[];try{const dir=path.join(out,process.argv[2]||'before');fs.mkdirSync(dir,{recursive:true});const length=process.argv[2]==='duration-58'?58:45;const p=await open(b,1920,1080,{url:'http://127.0.0.1:4175/module-a/a01/'+(length===58?'?a04-duration=58':'')});
+const shot=async name=>{await p.screenshot({path:path.join(dir,name+'.png')});rows.push({name,...await read(p)});console.log('captured',name);};
+for(const[name,n]of [['a03-poster',12.15],['01-a03-end',13.2],['02-a04-entry',13.4]]){await seek(p,n);await shot(name);}
+await seek(p,14.5);const times=process.argv[2]!=='before'?[['03-a04-overview',0],['04-a04-fifth',6.5],['05-a04-travel-first',13],['06-a04-first',20],['07-a04-return-second',27],['08-a04-second',34],['09-a04-withdraw',39],['10-a04-route-summary',45]].map(([name,t])=>[name,t*length/45]):[['03-a04-overview',0],['04-a04-fifth',9],['05-a04-travel-first',17],['06-a04-first',24],['07-a04-return-second',31],['08-a04-second',37],['09-a04-withdraw',43],['10-a04-route-summary',58]];
+for(const[name,t]of times){await p.waitForFunction(t=>document.querySelector('iframe').contentWindow.shuilongTemple.getA04State()?.elapsed>=t,t,{timeout:25000});await shot(name);}
+for(const[name,n]of [['11-a04-fifth-handoff',17.6],['12-a05-entry',18.1]]){await seek(p,n);await shot(name);}fs.writeFileSync(path.join(dir,'states.json'),JSON.stringify(rows,null,2));}finally{await b.close();}})().catch(e=>{console.error(e);process.exitCode=1;});

@@ -6,7 +6,7 @@ export function createA03Light(T,{camera,root}) {
   const cutaway=createA03Cutaway(root);
   const preference=typeof matchMedia==='function'?matchMedia('(prefers-reduced-motion: reduce)'):null;
   return {
-    walls:screens=>cutaway.apply(screens,preference?.matches),
+    walls:(screens,tour)=>cutaway.apply(screens,preference?.matches,tour),
     getCutawayState:()=>cutaway.getState(),
     camera(screens){const {weight}=a03Visual(screens);if(!weight)return;
       const radius=A03_TARGETS.reading.radius*Math.max(1,1.78/camera.aspect),phi=.93,theta=3.96;
