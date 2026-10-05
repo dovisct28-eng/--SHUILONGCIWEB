@@ -62,8 +62,8 @@ const guideState = (page, chapter) => page.locator(`.mural-guide[data-chapter="$
         await seek(page, point);
         assert.equal(await page.locator('[data-a02-status]').textContent(), expected);
         assert.equal(await page.locator('#a02-title').textContent(), '壁画藏在何处');
-        assert.equal(await page.locator('[data-a02-description]').textContent(), '五幅壁画散落在水龙祠的不同墙面。\n\n先看清它们的位置，再从其中三幅，走进“出兵入将”。');
-        assert.equal(await page.locator('.a02-note').textContent(), '模型空间示意 · 编号沿用项目记录');
+        assert.equal(await page.locator('[data-a02-description]').textContent(), '五幅壁画散落在水龙祠的不同墙面。\n\n从其中三幅，走进“出兵入将”');
+        assert.equal(await page.locator('.a02-note').count(), 0);
         const heading = await inspect(page, '.a02 header'), footer = await inspect(page, '.a02 footer');
         fits(heading, width, height); fits(footer, width, height);
         spatial.push({point, expected, heading, footer});

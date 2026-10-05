@@ -11,15 +11,15 @@ test('A01 and A02 contain the approved copy, without the superseded explanations
   const html = read('./a01/index.html'), app = read('./a01/app.mjs');
   for (const text of ['湖南江永 · 勾蓝瑶', '<h1>水龙祠</h1>', '出兵 · 入将',
     '一座神祠，两侧壁画，留下了一场出发与归来的故事。', '走近水龙祠',
-    '02 / 建筑空间', '壁画藏在何处', '模型空间示意 · 编号沿用项目记录']) {
+    '02 / 建筑空间', '壁画藏在何处']) {
     assert.ok(html.includes(text), text);
   }
-  const body = '五幅壁画散落在水龙祠的不同墙面。\n\n先看清它们的位置，再从其中三幅，走进“出兵入将”。';
-  assert.ok(html.replace(/<[^>]+>/g, '').includes(body));
+  const body = '五幅壁画散落在水龙祠的不同墙面。\n\n从其中三幅，走进“出兵入将”';
+  assert.ok(html.replace(/\r\n/g, '\n').replace(/<[^>]+>/g, '').includes(body));
   for (const text of ['建筑空间', '五幅壁画 · 空间总览', '第五幅 · 第一幅 · 第二幅', '继续向下，走近“出兵入将”']) {
     assert.ok(app.includes(text), text);
   }
-  assert.doesNotMatch(html + app, /从建筑空间出发，循着|向下探索|先认识建筑，再看|壁画，在建筑的何处|核心三幅 · 共同强调|五幅位置 · 总览|实际墙位待核实|了解出兵·入将/);
+  assert.doesNotMatch(html + app, /先看清它们的位置|模型空间示意 · 编号沿用项目记录|a02-note|从建筑空间出发，循着|向下探索|先认识建筑，再看|壁画，在建筑的何处|核心三幅 · 共同强调|五幅位置 · 总览|实际墙位待核实|了解出兵·入将/);
 });
 
 test('three guides match the final copy verbatim, including paragraph and explicit line breaks', () => {

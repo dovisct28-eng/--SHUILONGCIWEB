@@ -1,0 +1,272 @@
+{
+  "browser": "154.0.8037.93",
+  "url": "http://127.0.0.1:4173/module-a/a01/",
+  "viewports": [
+    {
+      "viewport": "1920x1080",
+      "states": [
+        {
+          "point": 7.6,
+          "status": "建筑空间",
+          "bounds": {
+            "overflow": false
+          },
+          "lineCount": 7
+        },
+        {
+          "point": 8.7,
+          "status": "五幅壁画 · 空间总览",
+          "bounds": {
+            "overflow": false
+          },
+          "lineCount": 7
+        },
+        {
+          "point": 9.9,
+          "status": "第五幅 · 第一幅 · 第二幅",
+          "bounds": {
+            "overflow": false
+          },
+          "lineCount": 8
+        },
+        {
+          "point": 8.7,
+          "status": "五幅壁画 · 空间总览",
+          "bounds": {
+            "overflow": false
+          },
+          "lineCount": 7
+        }
+      ],
+      "errors": []
+    },
+    {
+      "viewport": "1440x900",
+      "states": [
+        {
+          "point": 7.6,
+          "status": "建筑空间",
+          "bounds": {
+            "overflow": false
+          },
+          "lineCount": 7
+        },
+        {
+          "point": 8.7,
+          "status": "五幅壁画 · 空间总览",
+          "bounds": {
+            "overflow": false
+          },
+          "lineCount": 7
+        },
+        {
+          "point": 9.9,
+          "status": "第五幅 · 第一幅 · 第二幅",
+          "bounds": {
+            "overflow": false
+          },
+          "lineCount": 8
+        },
+        {
+          "point": 8.7,
+          "status": "五幅壁画 · 空间总览",
+          "bounds": {
+            "overflow": false
+          },
+          "lineCount": 7
+        }
+      ],
+      "errors": []
+    },
+    {
+      "viewport": "1366x768",
+      "states": [
+        {
+          "point": 7.6,
+          "status": "建筑空间",
+          "bounds": {
+            "overflow": false
+          },
+          "lineCount": 7
+        },
+        {
+          "point": 8.7,
+          "status": "五幅壁画 · 空间总览",
+          "bounds": {
+            "overflow": false
+          },
+          "lineCount": 7
+        },
+        {
+          "point": 9.9,
+          "status": "第五幅 · 第一幅 · 第二幅",
+          "bounds": {
+            "overflow": false
+          },
+          "lineCount": 8
+        },
+        {
+          "point": 8.7,
+          "status": "五幅壁画 · 空间总览",
+          "bounds": {
+            "overflow": false
+          },
+          "lineCount": 7
+        }
+      ],
+      "errors": []
+    },
+    {
+      "viewport": "1024x768",
+      "states": [
+        {
+          "point": 7.6,
+          "status": "建筑空间",
+          "bounds": {
+            "overflow": false
+          },
+          "lineCount": 7
+        },
+        {
+          "point": 8.7,
+          "status": "五幅壁画 · 空间总览",
+          "bounds": {
+            "overflow": false
+          },
+          "lineCount": 7
+        },
+        {
+          "point": 9.9,
+          "status": "第五幅 · 第一幅 · 第二幅",
+          "bounds": {
+            "overflow": false
+          },
+          "lineCount": 8
+        },
+        {
+          "point": 8.7,
+          "status": "五幅壁画 · 空间总览",
+          "bounds": {
+            "overflow": false
+          },
+          "lineCount": 7
+        }
+      ],
+      "errors": []
+    },
+    {
+      "viewport": "1100x614",
+      "states": [
+        {
+          "point": 7.6,
+          "status": "建筑空间",
+          "bounds": {
+            "overflow": false
+          },
+          "lineCount": 7
+        },
+        {
+          "point": 8.7,
+          "status": "五幅壁画 · 空间总览",
+          "bounds": {
+            "overflow": false
+          },
+          "lineCount": 7
+        },
+        {
+          "point": 9.9,
+          "status": "第五幅 · 第一幅 · 第二幅",
+          "bounds": {
+            "overflow": false
+          },
+          "lineCount": 8
+        },
+        {
+          "point": 8.7,
+          "status": "五幅壁画 · 空间总览",
+          "bounds": {
+            "overflow": false
+          },
+          "lineCount": 7
+        }
+      ],
+      "errors": []
+    },
+    {
+      "viewport": "760x900",
+      "states": [
+        {
+          "point": 7.6,
+          "status": "建筑空间",
+          "bounds": {
+            "overflow": false
+          },
+          "lineCount": 7
+        },
+        {
+          "point": 8.7,
+          "status": "五幅壁画 · 空间总览",
+          "bounds": {
+            "overflow": false
+          },
+          "lineCount": 7
+        },
+        {
+          "point": 9.9,
+          "status": "第五幅 · 第一幅 · 第二幅",
+          "bounds": {
+            "overflow": false
+          },
+          "lineCount": 8
+        },
+        {
+          "point": 8.7,
+          "status": "五幅壁画 · 空间总览",
+          "bounds": {
+            "overflow": false
+          },
+          "lineCount": 7
+        }
+      ],
+      "errors": []
+    },
+    {
+      "viewport": "390x844",
+      "states": [
+        {
+          "point": 7.6,
+          "status": "建筑空间",
+          "bounds": {
+            "overflow": false
+          },
+          "lineCount": 7
+        },
+        {
+          "point": 8.7,
+          "status": "五幅壁画 · 空间总览",
+          "bounds": {
+            "overflow": false
+          },
+          "lineCount": 7
+        },
+        {
+          "point": 9.9,
+          "status": "第五幅 · 第一幅 · 第二幅",
+          "bounds": {
+            "overflow": false
+          },
+          "lineCount": 8
+        },
+        {
+          "point": 8.7,
+          "status": "五幅壁画 · 空间总览",
+          "bounds": {
+            "overflow": false
+          },
+          "lineCount": 7
+        }
+      ],
+      "errors": []
+    }
+  ]
+}
