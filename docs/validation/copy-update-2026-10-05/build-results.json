@@ -1,0 +1,29 @@
+{
+  "syntaxFiles": [
+    "module-a/a01/app.mjs",
+    "module-a/a05/content.mjs",
+    "module-a/a06/content.mjs",
+    "module-a/a07/content.mjs",
+    "module-a/guide/controller.mjs",
+    "module-a/copy.test.mjs",
+    "module-a/copy-browser-check.cjs"
+  ],
+  "protectedFilesUnchanged": [
+    "module-a/a03",
+    "module-a/a04",
+    "module-a/a08",
+    "module-a/a01/progress.mjs",
+    "module-a/a01/cinematic-state.mjs",
+    "module-a/guide/progress.mjs",
+    "module-a/mural-resources.mjs",
+    "shuilong-temple",
+    "Mural-Exhibition",
+    "水龙祠壁画素材/网页展示图"
+  ],
+  "archiveRefs": [
+    "48f272497e86e4549c5bcd0dee275ff347171a3f",
+    "48f272497e86e4549c5bcd0dee275ff347171a3f"
+  ],
+  "modelRebuilt": false,
+  "buildType": "Static native HTML/CSS/ES modules; source syntax and localhost browser checks"
+}

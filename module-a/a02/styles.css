@@ -7,7 +7,9 @@
 .stage .a02 header{top:4.5vh}.stage .a02 h2{font-size:clamp(30px,2.6vw,46px);letter-spacing:.08em;line-height:1.35}
 .stage .a02-kicker{font-size:12px;letter-spacing:.16em;margin-bottom:13px;color:#a0a39c}
 .stage .a02-description{font-size:15px;margin-top:13px;line-height:1.7}
+.a02-description span{display:block}.a02-description span+span{margin-top:6px}
 .stage .a02 footer{bottom:3vh}.stage .a02-status{font-size:13px;letter-spacing:.08em;margin-bottom:7px;color:#bfc0b6}
 .stage .a02-note{font-size:12px;color:#a0a39c}.stage .a02-hint{font-size:13px;margin-top:13px}
 @media(max-height:800px){.stage .a02 header{top:3.7vh}.stage .a02-kicker{margin-bottom:9px}.stage .a02-description{margin-top:9px;font-size:14px}.stage .a02 footer{bottom:2.5vh}}
 @media(max-width:1100px){.stage .a02 h2{font-size:28px}}
+@media(max-width:760px){.stage .a02-kicker{font-size:10px;line-height:1.4;margin-bottom:4px}.stage .a02 h2{font-size:22px;line-height:1.25}.stage .a02-description{max-width:300px;margin:4px auto 0;font-size:12px;line-height:1.4}.a02-description span+span{margin-top:4px}}

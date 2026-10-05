@@ -1,0 +1,18 @@
+[
+  {
+    "file": "module-a\\a01\\fonts\\a01-serif.woff2",
+    "cmapPass": true
+  },
+  {
+    "file": "module-a\\a01\\fonts\\a01-sans.woff2",
+    "cmapPass": true
+  },
+  {
+    "file": "module-a\\visual-director\\fonts\\narrative-serif.woff2",
+    "cmapPass": true
+  },
+  {
+    "file": "module-a\\visual-director\\fonts\\narrative-sans.woff2",
+    "cmapPass": true
+  }
+]

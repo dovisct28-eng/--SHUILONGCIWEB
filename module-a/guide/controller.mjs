@@ -20,18 +20,18 @@ export function createMuralGuide(stage, config, requestRender) {
     <div class="mural-guide__veil" aria-hidden="true"></div>
     <div class="mural-guide__intro">
       <p class="mural-guide__chapter"></p><h2></h2>
-      <p class="mural-guide__description"></p><p class="mural-guide__source"></p>
+      <p class="mural-guide__source mural-guide__subtitle"></p><p class="mural-guide__description"></p>
     </div>
     <p class="mural-guide__marker"></p>
     <p class="mural-guide__next"></p>
     <p class="mural-guide__status" role="status"></p>`;
   stage.append(section);
   const image = section.querySelector('img');
-  section.querySelector('.mural-guide__chapter').textContent = `${config.chapter} / 壁画导读`;
+  section.querySelector('.mural-guide__chapter').textContent = config.chapterLabel;
   section.querySelector('h2').textContent = config.title;
   section.querySelector('.mural-guide__description').textContent = config.introduction;
-  section.querySelector('.mural-guide__source').textContent = config.source;
-  section.querySelector('.mural-guide__marker').textContent = `${config.title}　${config.order}`;
+  section.querySelector('.mural-guide__subtitle').textContent = config.subtitle;
+  section.querySelector('.mural-guide__marker').textContent = config.marker;
   section.querySelector('.mural-guide__next').textContent = config.next;
   const status = section.querySelector('.mural-guide__status');
   let requested = false, failed = false, lastModelMuralOpacity = 1;

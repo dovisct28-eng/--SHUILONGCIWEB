@@ -1,10 +1,10 @@
 import {MURAL_RESOURCES} from '../mural-resources.mjs';
 
 export const a06Guide = {
-  muralId: 'mural-01', chapter: '06', title: '第一幅', order: '02 / 03',
+  muralId: 'mural-01', chapter: '06', title: '行进途中', order: '02 / 03',
+  chapterLabel: '06 / 行进', subtitle: '出庙之后，归庙之前', marker: '途中　02 / 03',
   start: 25, end: 32, direction: 'right-to-left',
-  introduction: '沿本项目的观看路线，从第五幅来到第一幅。刘灿姣、林伟（2016）的发现报告记载，第一铺位于右面走廊，并描述了画面中骑马与步行的人物；这些是该文的现场记录，不据此推定人物身份或仪式名称。接下来从画面右端向左端，完整观看这一幅壁画。',
-  source: '刘灿姣、林伟（2016），《湖南江永水龙祠壁画的发现报告》，第 20 页',
+  introduction: '离开水龙祠之后，\n赛会的队伍继续向前。\n\n从整组“出兵入将”的叙事来看，这一铺处在神灵出庙与最终归庙之间。\n\n在这里，我们继续沿着壁画向前，\n跟随这场赛会走向归程。',
   image: MURAL_RESOURCES['mural-01'].display,
-  next: '① → ②　下一幅：第二幅《入将图》',
+  next: '巡游之后，队伍重新归庙 →',
 };

@@ -1,21 +1,21 @@
 {
-  "text": " %-./0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz·—→。《》下与中事人从位像入兵出勾南发叙向图壁字将建循探数水永江湖物瑶画的着祠空筑索置蓝走近间龙！（），：；？",
+  "text": " %-./0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz·—→。《》一下与两了事侧入兵出勾南发叙场壁字将座归故数来水永江湖瑶画留的神祠蓝走近龙！（），：；？",
   "budgetBytes": 65536,
   "fonts": [
     {
       "file": "a01-serif.woff2",
       "weight": 500,
       "sourceVersion": "Version 2.003;hotconv 1.1.1;makeotfexe 2.6.0",
-      "bytes": 35304,
-      "sha256": "80fb25abb086c9e9578f8ae34fa687c3a3983ff8806335972bbda5bc3a883791",
+      "bytes": 29440,
+      "sha256": "36b417eab4d95d2415be86122efef45e29fefece899385cd6e8f0b27ed696301",
       "sourceSHA256": "19322be2ecf5dd2abd546db7a86cc83c286026cbd28593583bfcfd721e48c9fe"
     },
     {
       "file": "a01-sans.woff2",
       "weight": 400,
       "sourceVersion": "Version 2.004;hotconv 1.0.118;makeotfexe 2.5.65603",
-      "bytes": 25148,
-      "sha256": "473b6d99d2410fa335d8c9e942a0024fd03343eeada37183ec87dac1dbd9f358",
+      "bytes": 20768,
+      "sha256": "968cde0999848ba84f7f4b0a572e1788c12f45353663fe2ab5fe6efd368501c0",
       "sourceSHA256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b"
     }
   ]
