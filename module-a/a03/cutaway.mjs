@@ -17,9 +17,7 @@ export function createA03Cutaway(root){
         float cutRegion=${region};float cut=${name}*cutRegion;
         if(a04Cutweight>0.){
         float localWindow=(1.-smoothstep(a04Cuthx-.02,a04Cuthx,abs(a03CutPosition.x-a04Cutx)))*(1.-smoothstep(a04Cuthz-.02,a04Cuthz,abs(a03CutPosition.z-a04Cutz)));
-        float summaryWindow=(1.-smoothstep(1.2,1.4,abs(a03CutPosition.x+3.6)))*(1.-smoothstep(3.2,3.4,abs(a03CutPosition.z+11.75)));
-        summaryWindow=max(summaryWindow,(1.-smoothstep(.7,.9,abs(a03CutPosition.x-4.4)))*(1.-smoothstep(2.4,2.6,abs(a03CutPosition.z-4.8))));
-        float movieWindow=mix(localWindow,summaryWindow,a04Cutsummary);
+        float movieWindow=localWindow*(1.-a04Cutsummary);
         ${name==='a03WallReveal'?'movieWindow*=a04Cutwall*step(.86,a03CutPosition.y)*(1.-step(2.95,a03CutPosition.y))*step(4.2,abs(a03CutPosition.x));':''}
         cut=max(cut,a04Cutweight*movieWindow);
         }
@@ -28,7 +26,7 @@ export function createA03Cutaway(root){
           float cutNoise=fract(sin(dot(floor(a03CutPosition.xz*85.+a03CutPosition.y*31.),vec2(127.1,311.7)))*43758.5453);
           if(cut>cutNoise)discard;
         }`);
-    };m.customProgramCacheKey=()=>cache()+'-'+name+'-selective-v3';m.needsUpdate=true;
+    };m.customProgramCacheKey=()=>cache()+'-'+name+'-selective-v4';m.needsUpdate=true;
   }
   root?.children.filter(g=>!g.name.startsWith('mural-')).forEach(g=>g.traverse(mesh=>{
     if(!mesh.isMesh)return;const m=mesh.material,key=m.userData.textureKey;
@@ -67,8 +65,9 @@ export function createA03Cutaway(root){
         for(const e of galleries)e.mesh.castShadow=e.shadow&&side<.001&&handoff<.001;
       }else if(tour||screens>13.2){for(const e of allRoofs)roof(e,1);}
       else for(const e of allRoofs){e.mesh.visible=true;e.mesh.castShadow=e.shadow;}
-      for(const e of [...hall,...galleries])if(tour)e.mesh.castShadow=false;
-      for(const e of walls)e.mesh.castShadow=e.shadow&&side*(1-handoff)<.001&&!tour;
+      const fullRoof=movieState.active&&movieState.summary>=.999;
+      for(const e of [...hall,...galleries])if(tour)e.mesh.castShadow=e.shadow&&fullRoof;
+      for(const e of walls)e.mesh.castShadow=e.shadow&&side*(1-handoff)<.001&&(!tour||fullRoof);
       state={active,main,side,handoff,wall:wallReveal.value,
         preserved:preserved.map(e=>({group:e.mesh.parent.name,visible:e.mesh.visible,opacity:e.mesh.material.opacity})),
         mainRoofDrawn:hall.some(e=>e.mesh.visible),galleryCut:galleryReveal.value,movie:movieState};

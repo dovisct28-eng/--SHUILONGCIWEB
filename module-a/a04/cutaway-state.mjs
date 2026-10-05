@@ -5,6 +5,8 @@ export function cutawayState(tour){
   if(!tour)return {active:false,weight:0,center:[0,0],half:[0,0],summary:0};
   const t=tour.storyTime??tour.elapsed??0,entry=tour.entryProgress??1;
   let region=fifth,name='fifth',summary=0;
+  // Summary closes every opening; scrolling toward the fifth mural reopens
+  // only that local window. The same progress restores it on reverse scroll.
   if(tour.guideStartProgress>0){name='handoff';region=fifth;summary=1-smooth(tour.guideStartProgress/.35);}
   else if(tour.routeComplete){name='summary';summary=1;}
   else if(t>=36){name='withdraw';summary=smooth((t-36)/5);region=second;}

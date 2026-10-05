@@ -15,4 +15,7 @@ test('A04 shared windows keep every roof opaque and restore depths after arbitra
  const rig=createA03Cutaway(root);
  for(const storyTime of [6,20,34,45,6,45]){rig.apply(14.5,false,{storyTime,entryProgress:1,routeComplete:storyTime===45});for(const m of meshes){assert.equal(m.visible,true);assert.equal(m.material.opacity,1);assert.equal(m.material.transparent,false);assert.equal(m.material.depthWrite,true);}assert.ok(meshes.slice(3).every(m=>m.castShadow));}
  rig.apply(12.15);assert.equal(meshes[0].visible,false);rig.apply(9.65);assert.ok(meshes.every(m=>m.visible&&m.castShadow));
+ rig.apply(14.5,false,{storyTime:45,entryProgress:1,routeComplete:true});assert.ok(meshes.every(m=>m.castShadow),'complete roof casts its original shadows in summary');
+ rig.apply(16.8,false,{storyTime:45,entryProgress:1,routeComplete:true,guideStartProgress:.2});assert.ok(meshes.slice(0,3).every(m=>!m.castShadow),'local opening has no uncut shadow ghost');
+ rig.apply(16,false,{storyTime:45,entryProgress:1,routeComplete:true,guideStartProgress:0});assert.ok(meshes.every(m=>m.castShadow),'reverse approach restores full roof and shadows');
 });
