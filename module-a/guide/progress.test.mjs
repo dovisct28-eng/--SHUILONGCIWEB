@@ -1,12 +1,15 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {guideProgress, horizontalPlacement, muralTransfer} from './progress.mjs';
+import {guideProgress, horizontalPlacement, muralTransfer, introReading, guideHeight} from './progress.mjs';
+import {a05Guide} from '../a05/content.mjs';
+import {a06Guide} from '../a06/content.mjs';
+import {a07Guide} from '../a07/content.mjs';
 
 test('A05 follows the unchanged A04 endpoint and has a stable reading interval', () => {
   assert.equal(guideProgress(18, 18, 25).active, true);
   assert.equal(guideProgress(18.8, 18, 25).entry, 1);
   assert.equal(guideProgress(19.2, 18, 25).introduction, 1);
-  assert.equal(guideProgress(20.2, 18, 25).scan, 0);
+  assert.equal(guideProgress(21.2, 18, 25).scan, 0);
   assert.equal(guideProgress(24.4, 18, 25).scan, 1);
   assert.equal(guideProgress(25, 18, 25).handoff, 1);
   assert.equal(guideProgress(25, 18, 25).active, false);
@@ -34,7 +37,7 @@ test('A07 follows A06 and remains at the left edge through the story end', () =>
 });
 
 test('the same scroll position restores the same viewing position in either direction', () => {
-  for (const screens of [20.2, 21.1, 22.3, 23.8, 24.4]) {
+  for (const screens of [21.2, 21.8, 22.8, 23.8, 24.4]) {
     const progress = guideProgress(screens, 18, 25).scan;
     const {x, travel} = horizontalPlacement(2600, 1440, progress);
     assert.equal(travel, 1160);
@@ -42,6 +45,37 @@ test('the same scroll position restores the same viewing position in either dire
   }
   assert.deepEqual(horizontalPlacement(2600, 1440, 0), {travel:1160, x:-1160});
   assert.deepEqual(horizontalPlacement(2600, 1440, 1), {travel:1160, x:0});
+});
+
+test('reading groups preserve every paragraph and finish before the scan begins', () => {
+  for (const guide of [a05Guide,a06Guide,a07Guide]) {
+    const count = guide.readingGroups.length + 1;
+    assert.equal(guide.readingGroups.reduce((a,b)=>a+b,0), guide.introduction.split('\n\n').length);
+    for(let stage=0;stage<count;stage++){
+      const progress=(stage+.5)/count;
+      const reading=introReading(progress,count);
+      assert.equal(reading[stage].opacity,1);
+      assert.equal(reading.filter(r=>r.opacity>0).length,1);
+      assert.equal(guideProgress(guide.start+.55+progress*2.4,guide.start,guide.end).scan,0);
+      assert.deepEqual(reading,introReading(progress,count));
+    }
+    for(let p=0;p<=1;p+=.001){
+      const reading=introReading(p,count);
+      assert.ok(reading.reduce((sum,r)=>sum+r.opacity,0)>.99,'no blank reading gap');
+      assert.ok(reading.every(r=>r.opacity>=0&&r.opacity<=1&&Math.abs(r.y)<=10));
+    }
+    assert.equal(guideProgress(guide.start+3.2,guide.start,guide.end).introduction,0);
+    assert.equal(guideProgress(guide.start+3.2,guide.start,guide.end).scan,0);
+    assert.ok(Math.abs(guideProgress((guide.start+3.2+guide.end-.6)/2,guide.start,guide.end).scan-.5)<1e-12);
+    assert.equal(guideProgress(guide.end-.6,guide.start,guide.end).scan,1);
+  }
+});
+
+test('gallery scale is shared across all three murals and reduced motion',()=>{
+  for(const [width,height]of [[1920,1080],[1440,900],[1366,768],[1024,768]]){
+    assert.equal(guideHeight(width,height),height*(width<=1100?.86:.88));
+    assert.equal(guideHeight(width,height,true),height*.82);
+  }
 });
 
 test('an image already narrower than the viewport remains centered without invented travel', () => {

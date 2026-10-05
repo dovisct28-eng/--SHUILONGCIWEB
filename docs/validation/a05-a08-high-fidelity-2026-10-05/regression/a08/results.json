@@ -1,0 +1,122 @@
+{
+  "report": [
+    {
+      "viewport": "1920x1080",
+      "left": {
+        "screen": 39.5,
+        "guideVisible": true,
+        "guideLeft": 0,
+        "a08Visible": false,
+        "buttonVisible": true,
+        "overflow": false
+      },
+      "middle": {
+        "screen": 40.5,
+        "guideVisible": true,
+        "guideLeft": 0,
+        "a08Visible": true,
+        "buttonVisible": true,
+        "overflow": false
+      },
+      "end": {
+        "screen": 42,
+        "guideVisible": true,
+        "guideLeft": 0,
+        "a08Visible": true,
+        "buttonVisible": true,
+        "overflow": false
+      },
+      "reverse": true,
+      "refresh": true
+    },
+    {
+      "viewport": "1440x900",
+      "left": {
+        "screen": 39.5,
+        "guideVisible": true,
+        "guideLeft": 0,
+        "a08Visible": false,
+        "buttonVisible": true,
+        "overflow": false
+      },
+      "middle": {
+        "screen": 40.5,
+        "guideVisible": true,
+        "guideLeft": 0,
+        "a08Visible": true,
+        "buttonVisible": true,
+        "overflow": false
+      },
+      "end": {
+        "screen": 42,
+        "guideVisible": true,
+        "guideLeft": 0,
+        "a08Visible": true,
+        "buttonVisible": true,
+        "overflow": false
+      },
+      "reverse": true,
+      "refresh": true,
+      "browserBack": true
+    },
+    {
+      "viewport": "1366x768",
+      "left": {
+        "screen": 39.5,
+        "guideVisible": true,
+        "guideLeft": 0,
+        "a08Visible": false,
+        "buttonVisible": true,
+        "overflow": false
+      },
+      "middle": {
+        "screen": 40.5,
+        "guideVisible": true,
+        "guideLeft": 0,
+        "a08Visible": true,
+        "buttonVisible": true,
+        "overflow": false
+      },
+      "end": {
+        "screen": 42,
+        "guideVisible": true,
+        "guideLeft": 0,
+        "a08Visible": true,
+        "buttonVisible": true,
+        "overflow": false
+      },
+      "reverse": true,
+      "refresh": true
+    },
+    {
+      "viewport": "1024x768",
+      "left": {
+        "screen": 39.5,
+        "guideVisible": true,
+        "guideLeft": 0,
+        "a08Visible": false,
+        "buttonVisible": true,
+        "overflow": false
+      },
+      "middle": {
+        "screen": 40.5,
+        "guideVisible": true,
+        "guideLeft": 0,
+        "a08Visible": true,
+        "buttonVisible": true,
+        "overflow": false
+      },
+      "end": {
+        "screen": 42,
+        "guideVisible": true,
+        "guideLeft": 0,
+        "a08Visible": true,
+        "buttonVisible": true,
+        "overflow": false
+      },
+      "reverse": true,
+      "refresh": true
+    }
+  ],
+  "reducedMotion": true
+}

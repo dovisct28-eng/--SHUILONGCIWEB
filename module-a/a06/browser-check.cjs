@@ -23,7 +23,7 @@ const state = page => page.evaluate(() => [...document.querySelectorAll('.mural-
       const errors=[];page.on('pageerror',e=>errors.push(e.message));
       await page.goto('http://127.0.0.1:4175/module-a/a01/');
       await page.waitForFunction(()=>document.querySelector('iframe')?.contentWindow?.modelReady);
-      for(const [name,point] of [['a05-left',24.4],['transition',25.2],['intro',25.85],['right',27.2],['center',29.3],['left',31.4]]){
+      for(const [name,point] of [['a05-left',24.4],['transition',25.2],['intro',25.85],['right',28.2],['center',29.8],['left',31.4]]){
         await scroll(page,point);
         await page.waitForFunction(()=>document.querySelectorAll('.mural-guide')[1]?.querySelector('img').naturalWidth>0);
         const [a05,a06]=await state(page);
@@ -33,9 +33,9 @@ const state = page => page.evaluate(() => [...document.querySelectorAll('.mural-
         if(name==='left'){assert.ok(Math.abs(a06.left)<2);assert.equal(a05.hidden,true);}
         if(width===1440) await page.screenshot({path:path.join(output,`${name}-${width}x${height}.png`)});
       }
-      await scroll(page,29.3);const center=(await state(page))[1];
+      await scroll(page,29.8);const center=(await state(page))[1];
       await scroll(page,24.4);assert.equal((await state(page))[0].hidden,false);
-      await scroll(page,29.3);assert.ok(Math.abs((await state(page))[1].offset-center.offset)<2);
+      await scroll(page,29.8);assert.ok(Math.abs((await state(page))[1].offset-center.offset)<2);
       await page.reload();await page.waitForFunction(()=>document.querySelectorAll('.mural-guide')[1]?.querySelector('img').naturalWidth>0);
       assert.ok(Math.abs((await state(page))[1].offset-center.offset)<2);
       assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);

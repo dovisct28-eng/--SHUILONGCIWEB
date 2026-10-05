@@ -9,7 +9,7 @@ files+=list((repo/'a03').glob('*.mjs'))+list((repo/'a04').glob('*.mjs'))
 for chapter in ['a05','a06','a07','a08','guide']:
     files+=list((repo/chapter).glob('*.mjs'))
 content=''.join(f.read_text(encoding='utf-8') for f in files if not f.name.endswith('.test.mjs'))
-chars=''.join(sorted(set(re.findall(r'[\u3000-\u9fff]',content)+list('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz，。·：；！？（）《》—→⑤①② /%.-…“”'))))
+chars=''.join(sorted(set(re.findall(r'[\u3000-\u9fff]',content)+list('0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz，。·：；！？（）《》—→←↓⑤①② /%.-…“”'))))
 titles='出庙 · 入庙出兵入将壁画，在建筑的何处从出行与归来，看壁画之间的联系从第五幅出发正在准备空间模型回望完整建筑观看路线第五幅观察站位前行至第一幅返回第二幅《入将图》从主殿出发从第五幅开始三铺之间三铺，一条观看路径第五铺前往第一铺返回第二铺从第五铺开始①②⑤ / →0123456789'
 titles+='壁画藏在何处神灵出庙行进途中入将 · 神灵归庙'
 serifchars=''.join(sorted(set(titles+'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz，。·：；！？（）《》— /%.-…“”')))

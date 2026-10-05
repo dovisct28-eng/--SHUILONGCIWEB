@@ -11,7 +11,7 @@ const read=page=>page.evaluate(()=>({screens:scrollY/innerHeight,guides:[...docu
  try{
   const page=await browser.newPage({viewport:{width:1440,height:900}});
   await page.goto('http://127.0.0.1:4175/module-a/a01/');
-  for(const [chapter,point,index] of [['A06 intro',25.85,1],['A06 center',29.3,1],['A06 left',31.4,1],['A07 intro',32.85,2],['A07 center',36.8,2],['A07 left',39.4,2]]){
+  for(const [chapter,point,index] of [['A06 intro',25.85,1],['A06 center',29.8,1],['A06 left',31.4,1],['A07 intro',32.85,2],['A07 center',37.3,2],['A07 left',39.4,2]]){
     await scroll(page,point);await page.waitForFunction(i=>document.querySelectorAll('.mural-guide')[i]?.querySelector('img').naturalWidth>0,index);
     const before=await read(page);assert.equal(before.guides[index].hidden,false);
     await page.reload();await page.waitForFunction(i=>document.querySelectorAll('.mural-guide')[i]?.querySelector('img').naturalWidth>0,index);
@@ -24,7 +24,7 @@ const read=page=>page.evaluate(()=>({screens:scrollY/innerHeight,guides:[...docu
     await scroll(page,point);
     assert.ok((await read(page)).a04Opacity<.001,`A04 copy is absent during ${point} crossfade`);
   }
-  for(const [chapter,point,index] of [['A06',29.3,1],['A07',36.8,2]]){
+  for(const [chapter,point,index] of [['A06',29.8,1],['A07',37.3,2]]){
     await page.setViewportSize({width:1440,height:900});await scroll(page,point);
     const before=await read(page);
     await page.setViewportSize({width:1024,height:768});await page.waitForTimeout(250);

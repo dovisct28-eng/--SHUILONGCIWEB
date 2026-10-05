@@ -1,0 +1,40 @@
+{
+  "fourSizes": true,
+  "chapterSamples": 104,
+  "defaultHoverFocus": true,
+  "refresh": [
+    18.95,
+    22.8,
+    29.8,
+    32.85,
+    39.4,
+    42
+  ],
+  "resize": [
+    17.6,
+    18.95,
+    20.55,
+    22.8,
+    24.8,
+    25.2,
+    34.65,
+    37.3,
+    40.5,
+    42
+  ],
+  "reducedMotion": true,
+  "fontFallback": true,
+  "errors": [],
+  "documents": [
+    "docs/A05_PROTOTYPE.md",
+    "docs/A06_PROTOTYPE.md",
+    "docs/A07_PROTOTYPE.md",
+    "docs/A08_PROTOTYPE.md",
+    "docs/HIFI_VISUAL_SPEC.md",
+    "docs/DESIGN_SPEC.md",
+    "D:\\YJS\\出兵入将-PC端页面\\docs\\validation\\a05-a08-high-fidelity-2026-10-05\\README.md"
+  ],
+  "links": 83,
+  "whiteSpace": true,
+  "reviewQuestions": 15
+}

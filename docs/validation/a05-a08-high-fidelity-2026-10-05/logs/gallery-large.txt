@@ -1,0 +1,3 @@
+gallery 1920x1080 PASS
+gallery 1440x900 PASS
+PASS: reading, direction, exact carry, reverse, resize, reload, focus, actual B return, fallback and reduced motion

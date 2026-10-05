@@ -1,0 +1,3 @@
+performance before captured
+performance after captured
+PASS: same renderer/canvas, geometry and GPU texture counts; no new mural or first-screen font requests

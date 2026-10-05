@@ -36,7 +36,7 @@ const url = 'http://127.0.0.1:4175/module-a/a01/';
       const page = await open({width,height});
       const tag = `${width}x${height}`;
       await scroll(page,14.5);
-      await page.getByRole('button',{name:'跳过动画'}).click();
+      await page.getByRole('button',{name:'跳过空间观看动画'}).click();
       await scroll(page,18);
       assert.equal((await state(page)).hidden,false);
       const a04 = await page.evaluate(() => document.querySelector('iframe').contentWindow.shuilongTemple.getA04State());
@@ -52,11 +52,11 @@ const url = 'http://127.0.0.1:4175/module-a/a01/';
       assert.equal(sharedCache.contexts,2,'model texture and A05 image use the same display URL');
       assert.ok(sharedCache.transferBytes>=expectedBytes&&sharedCache.transferBytes<=expectedBytes+2048,`shared cache transfers mural-05 once: ${JSON.stringify(sharedCache)}`);
       const intro = await state(page);
-      assert.equal(intro.phase,'introduction');assert.equal(intro.title,'第五幅');assert.equal(intro.introOpacity,1);
-      await scroll(page,20.2);
+      assert.equal(intro.phase,'introduction');assert.equal(intro.title,'神灵出庙');assert.equal(intro.introOpacity,1);
+      await scroll(page,21.2);
       const right = await state(page);
       assert.ok(right.scan<.001);assert.ok(right.travel>0);assert.ok(Math.abs(right.right-width)<2);
-      await scroll(page,22.3);
+      await scroll(page,22.8);
       const center = await state(page);
       assert.ok(Math.abs(center.scan-.5)<.001);assert.ok(Math.abs(center.offset+center.travel/2)<2);
       await scroll(page,24.4);
@@ -64,9 +64,9 @@ const url = 'http://127.0.0.1:4175/module-a/a01/';
       assert.ok(left.scan>.999);assert.ok(Math.abs(left.left)<2);assert.ok(left.right>=width-2);
       await scroll(page,25);
       assert.equal((await state(page)).phase,'handoff');assert.equal((await state(page)).nextOpacity,1);
-      await scroll(page,22.3);
+      await scroll(page,22.8);
       assert.ok(Math.abs((await state(page)).offset-center.offset)<2);
-      await scroll(page,20.2);
+      await scroll(page,21.2);
       assert.ok(Math.abs((await state(page)).offset-right.offset)<2);
       await scroll(page,18.85);
       assert.equal((await state(page)).introOpacity,1);
@@ -74,7 +74,7 @@ const url = 'http://127.0.0.1:4175/module-a/a01/';
       assert.equal((await state(page)).hidden,false);
       assert.equal(await page.evaluate(() => document.querySelector('iframe').contentWindow.shuilongTemple.getA04State().mode),'completed');
 
-      for (const [name,point] of [['intro',18.85],['center',22.3],['left',24.4]]) {
+      for (const [name,point] of [['intro',18.85],['center',22.8],['left',24.4]]) {
         await scroll(page,point);
         await page.reload();
         await page.waitForFunction(() => document.querySelector('.mural-guide img').naturalWidth > 0);
@@ -84,10 +84,10 @@ const url = 'http://127.0.0.1:4175/module-a/a01/';
       await scroll(page,18);
       await scroll(page,25);
       assert.equal((await state(page)).phase,'handoff');
-      await scroll(page,20.2);
+      await scroll(page,21.2);
       assert.ok((await state(page)).scan<.001);
       if (tag==='1440x900'||tag==='1024x768') {
-        const frames = tag==='1440x900' ? [['transition',18.4],['intro',18.85],['right',20.2],['center',22.3],['left',24.4],['handoff',25]] : [['intro',18.85],['center',22.3],['handoff',25]];
+        const frames = tag==='1440x900' ? [['transition',18.4],['intro',18.85],['right',21.2],['center',22.8],['left',24.4],['handoff',25]] : [['intro',18.85],['center',22.8],['handoff',25]];
         for (const [name,point] of frames) {
           await scroll(page,point);
           await page.screenshot({path:path.join(output,`${name}-${tag}.png`)});
@@ -97,7 +97,7 @@ const url = 'http://127.0.0.1:4175/module-a/a01/';
       await page.close();
     }
     const reduced = await open({width:1024,height:768},{reducedMotion:'reduce'});
-    await scroll(reduced,20.2);await reduced.waitForFunction(() => document.querySelector('.mural-guide img').naturalWidth > 0);
+    await scroll(reduced,21.2);await reduced.waitForFunction(() => document.querySelector('.mural-guide img').naturalWidth > 0);
     assert.ok(Math.abs((await state(reduced)).right-1024)<2);
     await scroll(reduced,24.4);assert.ok(Math.abs((await state(reduced)).left)<2);
     await reduced.close();

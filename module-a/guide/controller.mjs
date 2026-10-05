@@ -1,4 +1,4 @@
-import {guideProgress, horizontalPlacement, mapMuralProjection, muralTransfer} from './progress.mjs';
+import {guideProgress, horizontalPlacement, mapMuralProjection, muralTransfer, introReading, guideHeight} from './progress.mjs';
 import {quadTransform} from '../visual-director/projection.mjs';
 
 export function createMuralGuide(stage, config, requestRender) {
@@ -19,19 +19,32 @@ export function createMuralGuide(stage, config, requestRender) {
     <div class="mural-guide__canvas"><img class="mural-guide__image" alt="${config.title}壁画网页展示图"></div>
     <div class="mural-guide__veil" aria-hidden="true"></div>
     <div class="mural-guide__intro">
-      <p class="mural-guide__chapter"></p><h2></h2>
-      <p class="mural-guide__source mural-guide__subtitle"></p><p class="mural-guide__description"></p>
+      <div class="mural-guide__reading mural-guide__opening"><h2></h2><p class="mural-guide__source mural-guide__subtitle"></p><span class="mural-guide__continue" aria-hidden="true">↓</span></div>
+      <div class="mural-guide__description"></div>
     </div>
     <p class="mural-guide__marker"></p>
+    <div class="mural-guide__axis" aria-hidden="true"><span class="mural-guide__direction">← 观看方向：从右向左</span><span class="mural-guide__rail"><i></i><i></i><i></i><b></b></span></div>
     <p class="mural-guide__next"></p>
     <p class="mural-guide__status" role="status"></p>`;
   stage.append(section);
   const image = section.querySelector('img');
-  section.querySelector('.mural-guide__chapter').textContent = config.chapterLabel;
   section.querySelector('h2').textContent = config.title;
-  section.querySelector('.mural-guide__description').textContent = config.introduction;
+  const paragraphs = config.introduction.split('\n\n');
+  let first = 0;
+  for (const size of config.readingGroups || [paragraphs.length]) {
+    const layer = document.createElement('div');
+    layer.className = 'mural-guide__reading';
+    for (const text of paragraphs.slice(first, first + size)) {
+      const paragraph = document.createElement('p');
+      paragraph.textContent = text;
+      layer.append(paragraph);
+    }
+    first += size;
+    section.querySelector('.mural-guide__description').append(layer);
+  }
+  const layers = [...section.querySelectorAll('.mural-guide__reading')];
   section.querySelector('.mural-guide__subtitle').textContent = config.subtitle;
-  section.querySelector('.mural-guide__marker').textContent = config.marker;
+  section.querySelector('.mural-guide__marker').textContent = `A${config.chapter} / ${config.chapterLabel.split(' / ')[1]}`;
   section.querySelector('.mural-guide__next').textContent = config.next;
   const status = section.querySelector('.mural-guide__status');
   let requested = false, failed = false, lastModelMuralOpacity = 1;
@@ -66,12 +79,20 @@ export function createMuralGuide(stage, config, requestRender) {
     section.style.setProperty('--intro-entrance', state.introduction * reveal * reveal * (3 - 2 * reveal));
     section.style.setProperty('--scan-opacity', carried ? 0 : 1 - state.introduction);
     section.style.setProperty('--handoff-opacity', carried ? 0 : state.handoff);
+    section.style.setProperty('--axis-position', `${(1 - state.scan) * 100}%`);
+    introReading(state.introProgress, layers.length).forEach((reading, index) => {
+      layers[index].style.opacity = reading.opacity;
+      layers[index].style.transform = `translateY(${reading.y}px)`;
+      layers[index].setAttribute('aria-hidden', String(reading.opacity < 0.5));
+    });
+    section.dataset.introStage = String(Math.min(layers.length - 1, Math.floor(state.introProgress * layers.length)));
+    section.dataset.introProgress = state.introProgress.toFixed(4);
     section.dataset.scanProgress = state.scan.toFixed(4);
-    section.dataset.phase = state.handoff > 0 ? 'handoff' : state.scan > 0 ? 'scan' : 'introduction';
+    section.dataset.phase = state.handoff > 0 ? 'handoff' : screens >= config.start + 3.2 ? 'scan' : 'introduction';
     if (state.active && state.opacity > 0) document.body.dataset.phase = `a${config.chapter}-${section.dataset.phase}`;
 
     if (image.naturalWidth && image.naturalHeight) {
-      const formalHeight=innerHeight*(matchMedia('(prefers-reduced-motion: reduce)').matches?.7:innerWidth<=1100?.78:.8);
+      const formalHeight=guideHeight(innerWidth, innerHeight, matchMedia('(prefers-reduced-motion: reduce)').matches);
       if(transferring){
         const frame=stage.querySelector('iframe'), api=frame?.contentWindow?.shuilongTemple;
         const localProjection=api?.getMuralProjection?.(config.muralId);
@@ -94,8 +115,13 @@ export function createMuralGuide(stage, config, requestRender) {
       image.style.height=`${formalHeight}px`;image.style.top='50%';image.style.left='0px';image.style.opacity='1';image.style.transformOrigin='50% 50%';
       const renderedWidth = formalHeight * image.naturalWidth / image.naturalHeight;
       const {x, travel} = horizontalPlacement(renderedWidth, stage.clientWidth, carried ? 1 : state.scan);
+      // A short wall-to-wall drift accompanies the existing overlap. Both
+      // images remain visible; the next mural's right edge settles before INTRO.
+      const departing = config.chapter !== '07' && screens >= config.end;
+      const wallShift = departing ? -stage.clientWidth * 0.045 * ((screens - config.end) / 0.4)
+        : config.entryMode !== 'model' ? stage.clientWidth * 0.045 * (1 - Math.min(1, Math.max(0, (screens - config.start) / 0.4))) : 0;
       image.style.width = `${renderedWidth}px`;
-      image.style.transform = `translate3d(${x}px, -50%, 0)`;
+      image.style.transform = `translate3d(${x + wallShift}px, -50%, 0)`;
       section.dataset.travelPx = travel.toFixed(2);
       section.dataset.offsetPx = x.toFixed(2);
       status.textContent = '';
