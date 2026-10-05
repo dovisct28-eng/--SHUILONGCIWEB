@@ -1,9 +1,9 @@
 /* Title sits behind the existing transparent WebGL architecture; information sits above. */
-.a03-poster { position:absolute;inset:0;z-index:2;overflow:hidden;pointer-events:none;color:#d8d2c5; }
+.a03-poster { position:absolute;inset:0;z-index:2;overflow:hidden;pointer-events:none;color:#e7dcc8; }
 .stage .a03-poster .a03-title { margin:0;font:500 clamp(150px,18vw,360px)/1 "Narrative Serif","Noto Serif SC","Songti SC",SimSun,serif;letter-spacing:-.02em; }
 .a03-title span { position:absolute;white-space:nowrap; }
 .a03-title__in { left:-2vw;top:12vh;opacity:var(--a03-return,0);transform:translateX(calc((1 - var(--a03-return,0)) * -3vw)); }
-.a03-title__out { right:-4vw;top:45vh;opacity:var(--a03-title,0);transform:translateX(calc((1 - var(--a03-title,0)) * 3vw)); }
+.a03-title__out { right:-4vw;top:49vh;opacity:var(--a03-title,0);transform:translateX(calc((1 - var(--a03-title,0)) * 3vw)); }
 .a03 { position:absolute;inset:0;z-index:5;pointer-events:none;color:#d8d2c5; }
 .a03::before { content:"";position:absolute;inset:65% 0 0;opacity:var(--a03-text,0);background:linear-gradient(transparent,#08111785); }
 .a03-kicker { position:absolute;top:3vh;left:0;width:100%;margin:0;text-align:center;font:500 clamp(14px,1.25vw,23px)/1.5 "Narrative Serif","Songti SC",SimSun,serif;letter-spacing:.10em;opacity:calc(var(--a03-kicker,0) * .72); }
@@ -19,7 +19,7 @@
 .a03-end { opacity:var(--a03-handoff,0); }
 @media(max-width:1100px) {
   .stage .a03-poster .a03-title { font-size:clamp(150px,19vw,230px); }
-  .a03-title__in { left:-1vw;top:15vh; }.a03-title__out { right:-2vw;top:48vh; }
+  .a03-title__in { left:-1vw;top:15vh; }.a03-title__out { right:2vw;top:40vh; }
   .stage .a03-copy { width:40vw;bottom:5%; }
   .a03-copy p { font-size:14px;line-height:1.75; }
 }

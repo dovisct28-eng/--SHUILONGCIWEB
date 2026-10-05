@@ -12,6 +12,7 @@ import { a07Guide } from '../a07/content.mjs';
 import { createA08Controller } from '../a08/controller.mjs';
 import { directorFrame } from '../visual-director/state.mjs';
 import {architecturalRoom,roomFrame,createRoomField} from '../a02/spatial.mjs';
+import {normalizeTitleRects} from '../../shuilong-temple/shared-world.mjs';
 
 const story = document.querySelector('[data-story]');
 const stage = document.querySelector('[data-stage]');
@@ -121,9 +122,10 @@ function render() {
   if (!hasLines) setModelProgress(state.growth);
   modelFrame.contentWindow?.shuilongTemple?.setMuralPresentation({
     visibility: a02Pass<5?0:smooth(spatial.markers), emphasis: smooth(spatial.emphasis), coreIds: CORE_MURALS,
-    revealWalls: screens>10.2 ? (1-themeVisual.roofOpacity)/.92 : smooth(spatial.revealWalls)*(1-room.weight),
+    revealWalls: screens>10.2 ? 0 : smooth(spatial.revealWalls)*(1-room.weight),
     spatialLabels: screens>10.2 ? 0 : undefined,
-    roofTransparent: screens>10.2 ? true : undefined,
+    roofTransparent: screens>10.2 ? false : undefined,
+    selectiveCutaway:screens>10.2,
     secondaryVisibility: theme.secondary,
     architecturalWeight:room.weight,
     themeWeight:theme.composition,
@@ -136,6 +138,8 @@ function render() {
   lastScreens = screens;
   modelFrame.contentWindow?.shuilongTemple?.setVisualProgress?.(screens);
   renderA04(screens);
+  const titleRects=[stage.querySelector('.a03-title__in'),stage.querySelector('.a03-title__out')].map(e=>e.getBoundingClientRect());
+  api?.setPosterTitleRects?.(normalizeTitleRects(titleRects,modelFrame.getBoundingClientRect()));
   renderA05(screens);
   renderA06(screens);
   renderA07(screens);

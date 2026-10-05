@@ -1,0 +1,1025 @@
+{
+  "errors": [],
+  "rows": [
+    {
+      "width": 1440,
+      "height": 900,
+      "passed": true,
+      "states": [
+        {
+          "phase": "reading",
+          "x": "18vw",
+          "camera": {
+            "active": false,
+            "elapsed": 9500,
+            "rotationProgress": 0.7916666666666666,
+            "growthComplete": true,
+            "theta": 4.049911184307752,
+            "phi": 0.68,
+            "distance": 54,
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "allScalesIdentity": true
+          },
+          "labels": [],
+          "overflow": false
+        },
+        {
+          "phase": "a02-transition",
+          "x": "9.000000000000007vw",
+          "camera": {
+            "active": false,
+            "elapsed": 9500,
+            "rotationProgress": 0.7916666666666666,
+            "growthComplete": true,
+            "theta": 4.049911184307752,
+            "phi": 0.68,
+            "distance": 54,
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "allScalesIdentity": true
+          },
+          "labels": [],
+          "overflow": false
+        },
+        {
+          "phase": "a02-space",
+          "x": "0vw",
+          "camera": {
+            "active": false,
+            "elapsed": 9500,
+            "rotationProgress": 0.7916666666666666,
+            "growthComplete": true,
+            "theta": 4.049911184307752,
+            "phi": 0.68,
+            "distance": 54,
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "allScalesIdentity": true
+          },
+          "labels": [],
+          "overflow": false
+        },
+        {
+          "phase": "a02-overview",
+          "x": "0vw",
+          "camera": {
+            "active": false,
+            "elapsed": 9500,
+            "rotationProgress": 0.7916666666666666,
+            "growthComplete": true,
+            "theta": 4.049911184307752,
+            "phi": 0.68,
+            "distance": 54,
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "allScalesIdentity": true
+          },
+          "labels": [
+            {
+              "id": "mural-01",
+              "core": "true",
+              "opacity": 1,
+              "x": 997.84375,
+              "y": 78.78125,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-02",
+              "core": "true",
+              "opacity": 1,
+              "x": 150.421875,
+              "y": 236.21875,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-03",
+              "core": "false",
+              "opacity": 1,
+              "x": 95.703125,
+              "y": 402.953125,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-04",
+              "core": "false",
+              "opacity": 1,
+              "x": 182.53125,
+              "y": 559.015625,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-05",
+              "core": "true",
+              "opacity": 1,
+              "x": 651.296875,
+              "y": 558.515625,
+              "w": 99,
+              "h": 44.5
+            }
+          ],
+          "overflow": false
+        },
+        {
+          "phase": "a02-reading",
+          "x": "0vw",
+          "camera": {
+            "active": false,
+            "elapsed": 9500,
+            "rotationProgress": 0.7916666666666666,
+            "growthComplete": true,
+            "theta": 4.049911184307752,
+            "phi": 0.68,
+            "distance": 54,
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "allScalesIdentity": true
+          },
+          "labels": [
+            {
+              "id": "mural-01",
+              "core": "true",
+              "opacity": 1,
+              "x": 997.84375,
+              "y": 78.78125,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-02",
+              "core": "true",
+              "opacity": 1,
+              "x": 150.421875,
+              "y": 236.21875,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-03",
+              "core": "false",
+              "opacity": 0.75,
+              "x": 95.703125,
+              "y": 402.953125,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-04",
+              "core": "false",
+              "opacity": 0.75,
+              "x": 182.53125,
+              "y": 559.015625,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-05",
+              "core": "true",
+              "opacity": 1,
+              "x": 651.296875,
+              "y": 558.515625,
+              "w": 99,
+              "h": 44.5
+            }
+          ],
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "height": 1024,
+      "passed": true,
+      "states": [
+        {
+          "phase": "reading",
+          "x": "18vw",
+          "camera": {
+            "active": false,
+            "elapsed": 9500,
+            "rotationProgress": 0.7916666666666666,
+            "growthComplete": true,
+            "theta": 4.049911184307752,
+            "phi": 0.68,
+            "distance": 54,
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "allScalesIdentity": true
+          },
+          "labels": [],
+          "overflow": false
+        },
+        {
+          "phase": "a02-transition",
+          "x": "8.991210938741776vw",
+          "camera": {
+            "active": false,
+            "elapsed": 9500,
+            "rotationProgress": 0.7916666666666666,
+            "growthComplete": true,
+            "theta": 4.049911184307752,
+            "phi": 0.68,
+            "distance": 54,
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "allScalesIdentity": true
+          },
+          "labels": [],
+          "overflow": false
+        },
+        {
+          "phase": "a02-space",
+          "x": "0vw",
+          "camera": {
+            "active": false,
+            "elapsed": 9500,
+            "rotationProgress": 0.7916666666666666,
+            "growthComplete": true,
+            "theta": 4.049911184307752,
+            "phi": 0.68,
+            "distance": 54,
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "allScalesIdentity": true
+          },
+          "labels": [],
+          "overflow": false
+        },
+        {
+          "phase": "a02-overview",
+          "x": "0vw",
+          "camera": {
+            "active": false,
+            "elapsed": 9500,
+            "rotationProgress": 0.7916666666666666,
+            "growthComplete": true,
+            "theta": 4.049911184307752,
+            "phi": 0.68,
+            "distance": 54,
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "allScalesIdentity": true
+          },
+          "labels": [
+            {
+              "id": "mural-01",
+              "core": "true",
+              "opacity": 1,
+              "x": 999.40625,
+              "y": 120.8125,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-02",
+              "core": "true",
+              "opacity": 1,
+              "x": 143.78125,
+              "y": 285.53125,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-03",
+              "core": "false",
+              "opacity": 1,
+              "x": 91.5,
+              "y": 453.203125,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-04",
+              "core": "false",
+              "opacity": 1,
+              "x": 182,
+              "y": 608.78125,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-05",
+              "core": "true",
+              "opacity": 1,
+              "x": 650.796875,
+              "y": 608.4375,
+              "w": 99,
+              "h": 44.5
+            }
+          ],
+          "overflow": false
+        },
+        {
+          "phase": "a03-enter",
+          "x": "0vw",
+          "camera": {
+            "active": false,
+            "elapsed": 9500,
+            "rotationProgress": 0.7916666666666666,
+            "growthComplete": true,
+            "theta": 4.049911184307752,
+            "phi": 0.68,
+            "distance": 54,
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "allScalesIdentity": true
+          },
+          "labels": [
+            {
+              "id": "mural-01",
+              "core": "true",
+              "opacity": 1,
+              "x": 999.40625,
+              "y": 120.8125,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-02",
+              "core": "true",
+              "opacity": 1,
+              "x": 143.78125,
+              "y": 285.53125,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-03",
+              "core": "false",
+              "opacity": 0.75,
+              "x": 91.5,
+              "y": 453.203125,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-04",
+              "core": "false",
+              "opacity": 0.75,
+              "x": 182,
+              "y": 608.78125,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-05",
+              "core": "true",
+              "opacity": 1,
+              "x": 650.796875,
+              "y": 608.4375,
+              "w": 99,
+              "h": 44.5
+            }
+          ],
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "passed": true,
+      "states": [
+        {
+          "phase": "reading",
+          "x": "18vw",
+          "camera": {
+            "active": false,
+            "elapsed": 9500,
+            "rotationProgress": 0.7916666666666666,
+            "growthComplete": true,
+            "theta": 4.049911184307752,
+            "phi": 0.68,
+            "distance": 54,
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "allScalesIdentity": true
+          },
+          "labels": [],
+          "overflow": false
+        },
+        {
+          "phase": "a02-transition",
+          "x": "8.976562523547543vw",
+          "camera": {
+            "active": false,
+            "elapsed": 9500,
+            "rotationProgress": 0.7916666666666666,
+            "growthComplete": true,
+            "theta": 4.049911184307752,
+            "phi": 0.68,
+            "distance": 54,
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "allScalesIdentity": true
+          },
+          "labels": [],
+          "overflow": false
+        },
+        {
+          "phase": "a02-space",
+          "x": "0vw",
+          "camera": {
+            "active": false,
+            "elapsed": 9500,
+            "rotationProgress": 0.7916666666666666,
+            "growthComplete": true,
+            "theta": 4.049911184307752,
+            "phi": 0.68,
+            "distance": 54,
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "allScalesIdentity": true
+          },
+          "labels": [],
+          "overflow": false
+        },
+        {
+          "phase": "a02-overview",
+          "x": "0vw",
+          "camera": {
+            "active": false,
+            "elapsed": 9500,
+            "rotationProgress": 0.7916666666666666,
+            "growthComplete": true,
+            "theta": 4.049911184307752,
+            "phi": 0.68,
+            "distance": 54,
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "allScalesIdentity": true
+          },
+          "labels": [
+            {
+              "id": "mural-01",
+              "core": "true",
+              "opacity": 1,
+              "x": 940.34375,
+              "y": 72.75,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-02",
+              "core": "true",
+              "opacity": 1,
+              "x": 165.140625,
+              "y": 184.625,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-03",
+              "core": "false",
+              "opacity": 1,
+              "x": 118.46875,
+              "y": 339.609375,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-04",
+              "core": "false",
+              "opacity": 1,
+              "x": 192.515625,
+              "y": 483.75,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-05",
+              "core": "true",
+              "opacity": 1,
+              "x": 639.375,
+              "y": 485.078125,
+              "w": 99,
+              "h": 44.5
+            }
+          ],
+          "overflow": false
+        },
+        {
+          "phase": "a03-enter",
+          "x": "0vw",
+          "camera": {
+            "active": false,
+            "elapsed": 9500,
+            "rotationProgress": 0.7916666666666666,
+            "growthComplete": true,
+            "theta": 4.049911184307752,
+            "phi": 0.68,
+            "distance": 54,
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "allScalesIdentity": true
+          },
+          "labels": [
+            {
+              "id": "mural-01",
+              "core": "true",
+              "opacity": 1,
+              "x": 940.34375,
+              "y": 72.75,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-02",
+              "core": "true",
+              "opacity": 1,
+              "x": 165.140625,
+              "y": 184.625,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-03",
+              "core": "false",
+              "opacity": 0.749998,
+              "x": 118.46875,
+              "y": 339.609375,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-04",
+              "core": "false",
+              "opacity": 0.749998,
+              "x": 192.515625,
+              "y": 483.75,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-05",
+              "core": "true",
+              "opacity": 1,
+              "x": 639.375,
+              "y": 485.078125,
+              "w": 99,
+              "h": 44.5
+            }
+          ],
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "passed": true,
+      "states": [
+        {
+          "phase": "reading",
+          "x": "18vw",
+          "camera": {
+            "active": false,
+            "elapsed": 9500,
+            "rotationProgress": 0.7916666666666666,
+            "growthComplete": true,
+            "theta": 4.049911184307752,
+            "phi": 0.68,
+            "distance": 54,
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "allScalesIdentity": true
+          },
+          "labels": [],
+          "overflow": false
+        },
+        {
+          "phase": "a02-transition",
+          "x": "9.000000000000007vw",
+          "camera": {
+            "active": false,
+            "elapsed": 9500,
+            "rotationProgress": 0.7916666666666666,
+            "growthComplete": true,
+            "theta": 4.049911184307752,
+            "phi": 0.68,
+            "distance": 54,
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "allScalesIdentity": true
+          },
+          "labels": [],
+          "overflow": false
+        },
+        {
+          "phase": "a02-space",
+          "x": "0vw",
+          "camera": {
+            "active": false,
+            "elapsed": 9500,
+            "rotationProgress": 0.7916666666666666,
+            "growthComplete": true,
+            "theta": 4.049911184307752,
+            "phi": 0.68,
+            "distance": 54,
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "allScalesIdentity": true
+          },
+          "labels": [],
+          "overflow": false
+        },
+        {
+          "phase": "a02-overview",
+          "x": "0vw",
+          "camera": {
+            "active": false,
+            "elapsed": 9500,
+            "rotationProgress": 0.7916666666666666,
+            "growthComplete": true,
+            "theta": 4.049911184307752,
+            "phi": 0.68,
+            "distance": 54,
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "allScalesIdentity": true
+          },
+          "labels": [
+            {
+              "id": "mural-01",
+              "core": "true",
+              "opacity": 1,
+              "x": 1278.1875,
+              "y": 114,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-02",
+              "core": "true",
+              "opacity": 1,
+              "x": 312.71875,
+              "y": 306.3125,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-03",
+              "core": "false",
+              "opacity": 1,
+              "x": 247.046875,
+              "y": 489,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-04",
+              "core": "false",
+              "opacity": 1,
+              "x": 351.234375,
+              "y": 661.28125,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-05",
+              "core": "true",
+              "opacity": 1,
+              "x": 849.75,
+              "y": 658.265625,
+              "w": 99,
+              "h": 44.5
+            }
+          ],
+          "overflow": false
+        },
+        {
+          "phase": "a02-reading",
+          "x": "0vw",
+          "camera": {
+            "active": false,
+            "elapsed": 9500,
+            "rotationProgress": 0.7916666666666666,
+            "growthComplete": true,
+            "theta": 4.049911184307752,
+            "phi": 0.68,
+            "distance": 54,
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "allScalesIdentity": true
+          },
+          "labels": [
+            {
+              "id": "mural-01",
+              "core": "true",
+              "opacity": 1,
+              "x": 1278.1875,
+              "y": 114,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-02",
+              "core": "true",
+              "opacity": 1,
+              "x": 312.71875,
+              "y": 306.3125,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-03",
+              "core": "false",
+              "opacity": 0.75,
+              "x": 247.046875,
+              "y": 489,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-04",
+              "core": "false",
+              "opacity": 0.75,
+              "x": 351.234375,
+              "y": 661.28125,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-05",
+              "core": "true",
+              "opacity": 1,
+              "x": 849.75,
+              "y": 658.265625,
+              "w": 99,
+              "h": 44.5
+            }
+          ],
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "height": 768,
+      "passed": true,
+      "states": [
+        {
+          "phase": "reading",
+          "x": "16vw",
+          "camera": {
+            "active": false,
+            "elapsed": 9500,
+            "rotationProgress": 0.7916666666666666,
+            "growthComplete": true,
+            "theta": 4.049911184307752,
+            "phi": 0.68,
+            "distance": 54,
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "allScalesIdentity": true
+          },
+          "labels": [],
+          "overflow": false
+        },
+        {
+          "phase": "a02-transition",
+          "x": "7.979166687597816vw",
+          "camera": {
+            "active": false,
+            "elapsed": 9500,
+            "rotationProgress": 0.7916666666666666,
+            "growthComplete": true,
+            "theta": 4.049911184307752,
+            "phi": 0.68,
+            "distance": 54,
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "allScalesIdentity": true
+          },
+          "labels": [],
+          "overflow": false
+        },
+        {
+          "phase": "a02-space",
+          "x": "0vw",
+          "camera": {
+            "active": false,
+            "elapsed": 9500,
+            "rotationProgress": 0.7916666666666666,
+            "growthComplete": true,
+            "theta": 4.049911184307752,
+            "phi": 0.68,
+            "distance": 54,
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "allScalesIdentity": true
+          },
+          "labels": [],
+          "overflow": false
+        },
+        {
+          "phase": "a02-overview",
+          "x": "0vw",
+          "camera": {
+            "active": false,
+            "elapsed": 9500,
+            "rotationProgress": 0.7916666666666666,
+            "growthComplete": true,
+            "theta": 4.049911184307752,
+            "phi": 0.68,
+            "distance": 54,
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "allScalesIdentity": true
+          },
+          "labels": [
+            {
+              "id": "mural-01",
+              "core": "true",
+              "opacity": 1,
+              "x": 698.109375,
+              "y": 72.75,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-02",
+              "core": "true",
+              "opacity": 1,
+              "x": 31.3125,
+              "y": 185.46875,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-03",
+              "core": "false",
+              "opacity": 1,
+              "x": 26.5,
+              "y": 332.9375,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-04",
+              "core": "false",
+              "opacity": 1,
+              "x": 59.96875,
+              "y": 468.359375,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-05",
+              "core": "true",
+              "opacity": 1,
+              "x": 491.515625,
+              "y": 471.09375,
+              "w": 99,
+              "h": 44.5
+            }
+          ],
+          "overflow": false
+        },
+        {
+          "phase": "a03-enter",
+          "x": "0vw",
+          "camera": {
+            "active": false,
+            "elapsed": 9500,
+            "rotationProgress": 0.7916666666666666,
+            "growthComplete": true,
+            "theta": 4.049911184307752,
+            "phi": 0.68,
+            "distance": 54,
+            "target": [
+              0,
+              0,
+              -1.75
+            ],
+            "allScalesIdentity": true
+          },
+          "labels": [
+            {
+              "id": "mural-01",
+              "core": "true",
+              "opacity": 1,
+              "x": 698.109375,
+              "y": 72.75,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-02",
+              "core": "true",
+              "opacity": 1,
+              "x": 31.3125,
+              "y": 185.46875,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-03",
+              "core": "false",
+              "opacity": 0.749998,
+              "x": 26.5,
+              "y": 332.9375,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-04",
+              "core": "false",
+              "opacity": 0.749998,
+              "x": 59.96875,
+              "y": 468.359375,
+              "w": 99,
+              "h": 44.5
+            },
+            {
+              "id": "mural-05",
+              "core": "true",
+              "opacity": 1,
+              "x": 491.515625,
+              "y": 471.09375,
+              "w": 99,
+              "h": 44.5
+            }
+          ],
+          "overflow": false
+        }
+      ]
+    }
+  ]
+}

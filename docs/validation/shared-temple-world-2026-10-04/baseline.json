@@ -1,0 +1,1838 @@
+{
+  "baseline": "49eac2fbc3e31a545e970a723c0db37120692586",
+  "rows": [
+    {
+      "name": "01-a01-stable",
+      "width": 1920,
+      "height": 1080,
+      "screen": 5.7,
+      "stats": {
+        "geometries": 53,
+        "textures": 22,
+        "calls": 47,
+        "triangles": 170210,
+        "lines": 0,
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1245,
+            753
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 263,
+            "calls": 47,
+            "triangles": 170210,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 11249820,
+          "multisampleBytes": 22499640,
+          "targetBytes": 33749460
+        }
+      },
+      "env": {
+        "weight": 1,
+        "establish": 1,
+        "visibility": 1,
+        "roomWeight": 0,
+        "posterWeight": 0,
+        "trees": 201,
+        "visible": true,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        }
+      ],
+      "light": {
+        "space": 0,
+        "theme": 0,
+        "exposure": 1.18,
+        "fill": 1.2,
+        "sun": 3.3,
+        "fov": 34,
+        "architecture": 1,
+        "transfer": 0,
+        "lights": 2,
+        "newTextures": 0,
+        "newPostTargets": 0
+      },
+      "heap": 54600638,
+      "frameMean": 5.2200000000082785,
+      "frameP95": 7.199999999254942
+    },
+    {
+      "name": "02-a01-a02-transition",
+      "width": 1920,
+      "height": 1080,
+      "screen": 6.7,
+      "stats": {
+        "geometries": 54,
+        "textures": 22,
+        "calls": 48,
+        "triangles": 170212,
+        "lines": 0,
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1292,
+            763
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 845,
+            "calls": 48,
+            "triangles": 170212,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 11829552,
+          "multisampleBytes": 23659104,
+          "targetBytes": 35488656
+        }
+      },
+      "env": {
+        "weight": 0.6582031249999998,
+        "establish": 1,
+        "visibility": 0.6582031249999998,
+        "roomWeight": 0.31640624999999967,
+        "posterWeight": 0,
+        "trees": 201,
+        "visible": true,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        }
+      ],
+      "light": {
+        "space": 0,
+        "theme": 0,
+        "exposure": 0.9894921875,
+        "fill": 0.5966015625000001,
+        "sun": 4.18359375,
+        "fov": 31.841796875,
+        "architecture": 1,
+        "transfer": 0,
+        "arrival": 0.31640624999999967,
+        "weight": 0.31640624999999967,
+        "environment": 0.5,
+        "heading": 0,
+        "field": 0.5,
+        "exit": 0,
+        "site": 0.31640624999999967,
+        "grain": 0.016,
+        "atmosphere": 0.065,
+        "lights": 4,
+        "newTextures": 0,
+        "newPostTargets": 0
+      },
+      "heap": 43048232,
+      "frameMean": 5.734444444461001,
+      "frameP95": 7.800000000745058
+    },
+    {
+      "name": "03-a02-stable",
+      "width": 1920,
+      "height": 1080,
+      "screen": 9.65,
+      "stats": {
+        "geometries": 64,
+        "textures": 20,
+        "calls": 57,
+        "triangles": 170510,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1843,
+            864
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1418,
+            "calls": 57,
+            "triangles": 170510,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 19108224,
+          "multisampleBytes": 38216448,
+          "targetBytes": 57324672
+        }
+      },
+      "env": {
+        "weight": 1,
+        "establish": 1,
+        "visibility": 1,
+        "roomWeight": 1,
+        "posterWeight": 0,
+        "trees": 201,
+        "visible": true,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": true,
+          "castShadow": true
+        }
+      ],
+      "light": {
+        "space": 1,
+        "theme": 0,
+        "exposure": 1.01,
+        "fill": 0.33,
+        "sun": 3.5,
+        "fov": 31.5,
+        "architecture": 1,
+        "transfer": 0,
+        "arrival": 1,
+        "weight": 1,
+        "environment": 0,
+        "heading": 1,
+        "field": 1,
+        "exit": 0,
+        "site": 1,
+        "grain": 0.016,
+        "atmosphere": 0.065,
+        "lights": 4,
+        "newTextures": 0,
+        "newPostTargets": 0
+      },
+      "heap": 36492564,
+      "frameMean": 4.140000000016557,
+      "frameP95": 5.199999999254942
+    },
+    {
+      "name": "04-a02-a03-transition",
+      "width": 1920,
+      "height": 1080,
+      "screen": 10.55,
+      "stats": {
+        "geometries": 64,
+        "textures": 20,
+        "calls": 63,
+        "triangles": 206654,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1759,
+            915
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1827,
+            "calls": 63,
+            "triangles": 206654,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 19313820,
+          "multisampleBytes": 38627640,
+          "targetBytes": 57941460
+        }
+      },
+      "env": {
+        "weight": 0.7209540740740723,
+        "establish": 1,
+        "visibility": 0.7209540740740723,
+        "roomWeight": 0.7209540740740723,
+        "posterWeight": 0.4500740740740769,
+        "trees": 201,
+        "visible": true,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        }
+      ],
+      "light": {
+        "space": 1,
+        "theme": 0.28175000000000194,
+        "exposure": 1.050506666666667,
+        "fill": 0.2894933333333331,
+        "sun": 4.265125925925931,
+        "fov": 31.5,
+        "architecture": 0.9661899999999998,
+        "transfer": 0,
+        "arrival": 1,
+        "weight": 1,
+        "environment": 0,
+        "heading": 1,
+        "field": 1,
+        "exit": 0,
+        "site": 1,
+        "grain": 0.016,
+        "atmosphere": 0.065,
+        "lights": 4,
+        "newTextures": 0,
+        "newPostTargets": 0
+      },
+      "heap": 55221499,
+      "frameMean": 4.228888888905446,
+      "frameP95": 4.899999998509884
+    },
+    {
+      "name": "05-a03-entry",
+      "width": 1920,
+      "height": 1080,
+      "screen": 10.8,
+      "stats": {
+        "geometries": 64,
+        "textures": 20,
+        "calls": 63,
+        "triangles": 206654,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1659,
+            953
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 2257,
+            "calls": 63,
+            "triangles": 206654,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 18972324,
+          "multisampleBytes": 37944648,
+          "targetBytes": 56916972
+        }
+      },
+      "env": {
+        "weight": 0.4444799999999989,
+        "establish": 1,
+        "visibility": 0.4444799999999989,
+        "roomWeight": 0.8960000000000019,
+        "posterWeight": 0.8960000000000019,
+        "trees": 201,
+        "visible": true,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "depthWrite": false,
+          "castShadow": false
+        }
+      ],
+      "light": {
+        "space": 1,
+        "theme": 0.648000000000002,
+        "exposure": 1.0906400000000003,
+        "fill": 0.2493599999999998,
+        "sun": 5.023200000000004,
+        "fov": 31.5,
+        "architecture": 0.9222399999999997,
+        "transfer": 0,
+        "arrival": 1,
+        "weight": 1,
+        "environment": 0,
+        "heading": 1,
+        "field": 1,
+        "exit": 0,
+        "site": 1,
+        "grain": 0.016,
+        "atmosphere": 0.065,
+        "lights": 4,
+        "newTextures": 0,
+        "newPostTargets": 0
+      },
+      "heap": 50750018,
+      "frameMean": 4.137777777802613,
+      "frameP95": 4.399999998509884
+    },
+    {
+      "name": "06-a03-poster",
+      "width": 1920,
+      "height": 1080,
+      "screen": 11.15,
+      "stats": {
+        "geometries": 64,
+        "textures": 20,
+        "calls": 63,
+        "triangles": 206654,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1911,
+            1076
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 2686,
+            "calls": 63,
+            "triangles": 206654,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 24674832,
+          "multisampleBytes": 49349664,
+          "targetBytes": 74024496
+        }
+      },
+      "env": {
+        "weight": 0.38,
+        "establish": 1,
+        "visibility": 0.38,
+        "roomWeight": 1,
+        "posterWeight": 1,
+        "trees": 201,
+        "visible": true,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 0.8068820435762575,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.8068820435762575,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.8068820435762575,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.8068820435762575,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.8068820435762575,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.8068820435762575,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.8068820435762575,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.8068820435762575,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.8068820435762575,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.8068820435762575,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.8068820435762575,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.8068820435762575,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.8068820435762575,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.8068820435762575,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.8068820435762575,
+          "depthWrite": false,
+          "castShadow": false
+        }
+      ],
+      "light": {
+        "space": 1,
+        "theme": 0.9927500000000004,
+        "exposure": 1.1,
+        "fill": 0.24,
+        "sun": 5.2,
+        "fov": 31.5,
+        "architecture": 0.8808699999999999,
+        "transfer": 0,
+        "arrival": 1,
+        "weight": 1,
+        "environment": 0,
+        "heading": 1,
+        "field": 1,
+        "exit": 0,
+        "site": 1,
+        "grain": 0.016,
+        "atmosphere": 0.065,
+        "lights": 4,
+        "newTextures": 0,
+        "newPostTargets": 0
+      },
+      "heap": 54055763,
+      "frameMean": 4.125555555563834,
+      "frameP95": 4.400000002235174
+    },
+    {
+      "name": "07-a03-cutaway",
+      "width": 1920,
+      "height": 1080,
+      "screen": 11.6,
+      "stats": {
+        "geometries": 64,
+        "textures": 20,
+        "calls": 63,
+        "triangles": 206654,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1920,
+            1080
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 3108,
+            "calls": 63,
+            "triangles": 206654,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 24883200,
+          "multisampleBytes": 49766400,
+          "targetBytes": 74649600
+        }
+      },
+      "env": {
+        "weight": 0.38,
+        "establish": 1,
+        "visibility": 0.38,
+        "roomWeight": 1,
+        "posterWeight": 1,
+        "trees": 201,
+        "visible": true,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 0.44732510288065774,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.44732510288065774,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.44732510288065774,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.44732510288065774,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.44732510288065774,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.44732510288065774,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.44732510288065774,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.44732510288065774,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.44732510288065774,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.44732510288065774,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.44732510288065774,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.44732510288065774,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.44732510288065774,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.44732510288065774,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.44732510288065774,
+          "depthWrite": false,
+          "castShadow": false
+        }
+      ],
+      "light": {
+        "space": 1,
+        "theme": 1,
+        "exposure": 1.1,
+        "fill": 0.24,
+        "sun": 5.2,
+        "fov": 31.5,
+        "architecture": 0.88,
+        "transfer": 0,
+        "arrival": 1,
+        "weight": 1,
+        "environment": 0,
+        "heading": 1,
+        "field": 1,
+        "exit": 0,
+        "site": 1,
+        "grain": 0.016,
+        "atmosphere": 0.065,
+        "lights": 4,
+        "newTextures": 0,
+        "newPostTargets": 0
+      },
+      "heap": 34619570,
+      "frameMean": 4.116666666666666,
+      "frameP95": 4.400000002235174
+    },
+    {
+      "name": "08-a03-three-murals",
+      "width": 1920,
+      "height": 1080,
+      "screen": 12.15,
+      "stats": {
+        "geometries": 64,
+        "textures": 20,
+        "calls": 63,
+        "triangles": 206654,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1920,
+            1080
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 3532,
+            "calls": 63,
+            "triangles": 206654,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 24883200,
+          "multisampleBytes": 49766400,
+          "targetBytes": 74649600
+        }
+      },
+      "env": {
+        "weight": 0.38,
+        "establish": 1,
+        "visibility": 0.38,
+        "roomWeight": 1,
+        "posterWeight": 1,
+        "trees": 201,
+        "visible": true,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        }
+      ],
+      "light": {
+        "space": 1,
+        "theme": 1,
+        "exposure": 1.1,
+        "fill": 0.24,
+        "sun": 5.2,
+        "fov": 31.5,
+        "architecture": 0.88,
+        "transfer": 0,
+        "arrival": 1,
+        "weight": 1,
+        "environment": 0,
+        "heading": 1,
+        "field": 1,
+        "exit": 0,
+        "site": 1,
+        "grain": 0.016,
+        "atmosphere": 0.065,
+        "lights": 4,
+        "newTextures": 0,
+        "newPostTargets": 0
+      },
+      "heap": 55021764,
+      "frameMean": 4.122222222222222,
+      "frameP95": 4.400000002235174
+    },
+    {
+      "name": "09-a03-fifth-focus",
+      "width": 1920,
+      "height": 1080,
+      "screen": 12.7,
+      "stats": {
+        "geometries": 64,
+        "textures": 20,
+        "calls": 63,
+        "triangles": 206654,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1676,
+            901
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 3971,
+            "calls": 63,
+            "triangles": 206654,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 18120912,
+          "multisampleBytes": 36241824,
+          "targetBytes": 54362736
+        }
+      },
+      "env": {
+        "weight": 0.1710281481481492,
+        "establish": 1,
+        "visibility": 0.1710281481481492,
+        "roomWeight": 0.45007407407407685,
+        "posterWeight": 0.45007407407407685,
+        "trees": 201,
+        "visible": true,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.15000000000000002,
+          "depthWrite": false,
+          "castShadow": false
+        }
+      ],
+      "light": {
+        "space": 1,
+        "theme": 1,
+        "exposure": 0.9900229618655702,
+        "fill": 0.2743724071330589,
+        "sun": 3.992949254320995,
+        "fov": 32.874814814814805,
+        "architecture": 0.88,
+        "transfer": 0,
+        "arrival": 1,
+        "weight": 1,
+        "environment": 0,
+        "heading": 1,
+        "field": 1,
+        "exit": 0,
+        "site": 1,
+        "grain": 0.016,
+        "atmosphere": 0.065,
+        "lights": 4,
+        "newTextures": 0,
+        "newPostTargets": 0
+      },
+      "heap": 51072769,
+      "frameMean": 4.139999999975164,
+      "frameP95": 4.699999999254942
+    },
+    {
+      "name": "10-a03-a04-transition",
+      "width": 1920,
+      "height": 1080,
+      "screen": 13.195,
+      "stats": {
+        "geometries": 64,
+        "textures": 20,
+        "calls": 52,
+        "triangles": 90562,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            831,
+            681
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 4407,
+            "calls": 52,
+            "triangles": 90562,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 6790932,
+          "multisampleBytes": 13581864,
+          "targetBytes": 20372796
+        }
+      },
+      "env": {
+        "weight": 0,
+        "establish": 1,
+        "visibility": 0,
+        "roomWeight": 0,
+        "posterWeight": 0,
+        "trees": 201,
+        "visible": false,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 0.08003641907913905,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.08003641907913905,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.08003641907913905,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.08003641907913905,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.08003641907913905,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.08003641907913905,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.08003641907913905,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.08003641907913905,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.08003641907913905,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.08003641907913905,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.08003641907913905,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.08003641907913905,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.08003641907913905,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.08003641907913905,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.08003641907913905,
+          "depthWrite": false,
+          "castShadow": false
+        }
+      ],
+      "light": {
+        "space": 1,
+        "theme": 1,
+        "exposure": 0.8099999999999999,
+        "fill": 0.2799999999999999,
+        "sun": 2.5999999999999996,
+        "fov": 34,
+        "architecture": 0.88,
+        "transfer": 0,
+        "lights": 2,
+        "newTextures": 0,
+        "newPostTargets": 0
+      },
+      "heap": 41006459,
+      "frameMean": 4.127777777777778,
+      "frameP95": 4.400000002235174
+    },
+    {
+      "name": "11-a04-route",
+      "width": 1920,
+      "height": 1080,
+      "screen": 13.65,
+      "stats": {
+        "geometries": 65,
+        "textures": 22,
+        "calls": 52,
+        "triangles": 90506,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1439,
+            907
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 4550,
+            "calls": 52,
+            "triangles": 90506,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15662076,
+          "multisampleBytes": 31324152,
+          "targetBytes": 46986228
+        }
+      },
+      "env": {
+        "weight": 0,
+        "establish": 1,
+        "visibility": 0,
+        "roomWeight": 0,
+        "posterWeight": 0,
+        "trees": 201,
+        "visible": false,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 0.03253906249999984,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.03253906249999984,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.03253906249999984,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.03253906249999984,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.03253906249999984,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.03253906249999984,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.03253906249999984,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.03253906249999984,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.03253906249999984,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.03253906249999984,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.03253906249999984,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.03253906249999984,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.03253906249999984,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.03253906249999984,
+          "depthWrite": false,
+          "castShadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 0.03253906249999984,
+          "depthWrite": false,
+          "castShadow": false
+        }
+      ],
+      "light": {
+        "space": 1,
+        "theme": 0.406738281249998,
+        "exposure": 0.8989892578125003,
+        "fill": 0.2799999999999999,
+        "sun": 2.5999999999999996,
+        "fov": 34,
+        "architecture": 0.9511914062500002,
+        "transfer": 0,
+        "lights": 2,
+        "newTextures": 0,
+        "newPostTargets": 0
+      },
+      "heap": 59329350,
+      "frameMean": 4.143333333358169,
+      "frameP95": 5.699999999254942
+    }
+  ],
+  "errors": []
+}

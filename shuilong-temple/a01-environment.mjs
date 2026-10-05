@@ -12,6 +12,9 @@ export function a01TerrainHeight(x,z){
 export function createA01Environment(T,scene){
   const group=new T.Group();group.name='A01NarrativeEnvironment';scene.add(group);
   const resources=[],materials=[],resolution={value:new T.Vector2(1,1)},visibility={value:0},room={value:0},poster={value:0};
+  const foregroundRatio={value:1},fogAmount={value:0};
+  const titleIn={value:new T.Vector4(-2,-2,-2,-2)},titleOut={value:new T.Vector4(-2,-2,-2,-2)};
+  const titleMask=`float titleZone(vec2 uv,vec4 r){float d=max(max(r.x-uv.x,uv.x-r.z),max(r.y-uv.y,uv.y-r.w));return 1.-smoothstep(-.025,.035,d);}`;
   const geometry=g=>{resources.push(g);return g;};
   const noise=`float hash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
     float noise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(hash(i),hash(i+vec2(1,0)),f.x),mix(hash(i+vec2(0,1)),hash(i+vec2(1)),f.x),f.y);}`;
@@ -19,9 +22,10 @@ export function createA01Environment(T,scene){
     const m=new T.MeshStandardMaterial({color,roughness:1,transparent:false,depthWrite:true});materials.push(m);
     m.onBeforeCompile=s=>{
       s.uniforms.a01EnvironmentVisibility=visibility;s.uniforms.a01EnvironmentResolution=resolution;s.uniforms.a02Room=room;s.uniforms.a03Poster=poster;
+      s.uniforms.a01ForegroundRatio=foregroundRatio;s.uniforms.titleIn=titleIn;s.uniforms.titleOut=titleOut;
       s.vertexShader='varying vec3 a01World;\n'+s.vertexShader.replace('#include <worldpos_vertex>',`#include <worldpos_vertex>
         vec4 a01P=vec4(transformed,1.);\n#ifdef USE_INSTANCING\na01P=instanceMatrix*a01P;\n#endif\na01World=(modelMatrix*a01P).xyz;`);
-      s.fragmentShader='varying vec3 a01World;uniform float a01EnvironmentVisibility;uniform vec2 a01EnvironmentResolution;uniform float a02Room;uniform float a03Poster;\n'+noise+'\n'+s.fragmentShader;
+      s.fragmentShader='varying vec3 a01World;uniform float a01EnvironmentVisibility;uniform vec2 a01EnvironmentResolution;uniform float a02Room;uniform float a03Poster;uniform float a01ForegroundRatio;uniform vec4 titleIn;uniform vec4 titleOut;\n'+titleMask+noise+'\n'+s.fragmentShader;
       s.fragmentShader=s.fragmentShader.replace('#include <color_fragment>',`#include <color_fragment>
         float grain=noise(a01World.xz*5.3)*.12+noise(a01World.xz*.33)*.19;
         diffuseColor.rgb*=.79+grain;
@@ -36,9 +40,14 @@ export function createA01Environment(T,scene){
         float distanceFromPlinth=length(max(abs(a01World.xz+vec2(0.,1.75))-vec2(6.1,15.),0.));
         float roomBoundary=1.-smoothstep(4.,22.,distanceFromPlinth);
         float coverage=diffuseColor.a*mix(1.,roomBoundary,a02Room);
-        ${terrain?'':'float rightClearance=smoothstep(.59,.71,edge.x)*(1.-smoothstep(.54,.66,edge.y));float leftClearance=(1.-smoothstep(.31,.43,edge.x))*smoothstep(.49,.61,edge.y);float clearance=max(rightClearance,leftClearance);coverage*=mix(1.,.005,a03Poster*clearance);'}
+        float nearGroves=(1.-smoothstep(-14.,-10.,a01World.x))*(1.-smoothstep(3.,12.,a01World.z));
+        coverage*=mix(1.,a01ForegroundRatio,nearGroves);
+        vec2 posterUV=vec2(edge.x,1.-edge.y);
+        float clearance=max(titleZone(posterUV,titleIn),titleZone(posterUV,titleOut));
+        coverage*=mix(1.,${terrain?'.008':'.0003'},a03Poster*clearance);
+        ${terrain?'':'coverage*=mix(1.,.24,a02Room);'}
         float threshold=hash(floor(a01World.xz*73.+a01World.y*19.));
-        ${terrain?'if(a02Room>.001){if(coverage<.002)discard;diffuseColor.a=coverage;}else{if(coverage<=threshold)discard;diffuseColor.a=1.;}':'if(coverage<=threshold*(1.-a03Poster))discard;diffuseColor.a=mix(1.,coverage,a03Poster);'}
+        ${terrain?'if(a02Room>.001){if(coverage<.002)discard;diffuseColor.a=coverage;}else{if(coverage<=threshold)discard;diffuseColor.a=1.;}':'if(a02Room>.001||a03Poster>.001){if(coverage<.002)discard;diffuseColor.a=coverage;}else{if(coverage<=threshold)discard;diffuseColor.a=1.;}'}
         #include <opaque_fragment>`);
     };m.customProgramCacheKey=()=>`a01-landscape-dither-${terrain}`;return m;
   };
@@ -95,23 +104,26 @@ export function createA01Environment(T,scene){
     };depth.customProgramCacheKey=()=> 'a01-environment-shadow-dither';mesh.customDepthMaterial=depth;
   }
   // Soft, static world-space mist. Scroll is the only clock; no drifting timer.
-  const mist=new T.ShaderMaterial({transparent:true,depthWrite:false,uniforms:{amount:visibility,room:room,color:{value:new T.Color(0x879391)}},
+  const mist=new T.ShaderMaterial({transparent:true,depthWrite:false,uniforms:{amount:fogAmount,room:room,poster:poster,resolution,titleIn,titleOut,color:{value:new T.Color(0x879391)}},
     vertexShader:'varying vec2 vUv;void main(){vUv=uv;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);}',
-    fragmentShader:`varying vec2 vUv;uniform float amount;uniform float room;uniform vec3 color;${noise}void main(){vec2 q=vUv*2.-1.;float edge=exp(-4.*dot(q,q));float cloud=noise(vUv*7.)*.55+noise(vUv*17.)*.25;gl_FragColor=vec4(color,amount*edge*cloud*mix(.9,.22,room));}`});materials.push(mist);
+    fragmentShader:`varying vec2 vUv;uniform float amount;uniform float room;uniform float poster;uniform vec2 resolution;uniform vec4 titleIn;uniform vec4 titleOut;uniform vec3 color;${titleMask}${noise}void main(){vec2 q=vUv*2.-1.;float edge=exp(-4.*dot(q,q));float cloud=noise(vUv*7.)*.55+noise(vUv*17.)*.25;vec2 uv=gl_FragCoord.xy/resolution;uv.y=1.-uv.y;float clear=max(titleZone(uv,titleIn),titleZone(uv,titleOut));gl_FragColor=vec4(color,amount*edge*cloud*mix(.9,.22,room)*(1.-poster*clear));}`});materials.push(mist);
   const cloudGeometry=geometry(new T.PlaneGeometry(1,1));
   for(const [x,z,y,w,h] of [[-3,-17,.75,18,8],[-6.8,-7,.2,8,13],[-6.8,7,.3,8,16],[8,10,.5,20,8],[-8,22,1,33,13],[0,35,3,58,17]]){
     const cloud=new T.Mesh(cloudGeometry,mist);cloud.position.set(x,y,z);cloud.scale.set(w,h,1);cloud.rotation.x=-Math.PI*.4;cloud.name='GroundHaze';group.add(cloud);
   }
   let state={weight:0,establish:0,trees:trees.length};
   return {
-    apply(weight,progress,reduced=false,roomWeight=0,posterWeight=0){const establish=ease((progress-.20)/.48);room.value=unit(roomWeight);poster.value=unit(posterWeight);visibility.value=unit(weight)*establish;group.visible=environmentVisible(visibility.value);state={weight,establish,visibility:visibility.value,roomWeight:room.value,posterWeight:poster.value,trees:trees.length};
-      for(const material of materials){if(!material.isMeshStandardMaterial||material===soil.material)continue;const soft=poster.value>.001;material.depthWrite=!soft;if(material.transparent!==soft){material.transparent=soft;material.needsUpdate=true;}}
+    apply(weight,progress,reduced=false,roomWeight=0,posterWeight=0,layers={}){const establish=ease((progress-.20)/.48);room.value=unit(roomWeight);poster.value=unit(posterWeight);visibility.value=unit(weight)*establish;foregroundRatio.value=weight>0?unit((layers.foreground??weight)/weight):1;fogAmount.value=visibility.value*(weight>0?unit((layers.fog??weight)/weight):0);group.visible=environmentVisible(visibility.value);state={weight,establish,visibility:visibility.value,roomWeight:room.value,posterWeight:poster.value,layerWeights:{ground:visibility.value,foreground:visibility.value*foregroundRatio.value,fog:fogAmount.value},trees:trees.length};
+      for(const material of materials){if(!material.isMeshStandardMaterial||material===soil.material)continue;const soft=room.value>.001||poster.value>.001;material.depthWrite=!soft;if(material.transparent!==soft){material.transparent=soft;material.needsUpdate=true;}}
       const softGround=room.value>.001;if(soil.material.transparent!==softGround){soil.material.transparent=softGround;soil.material.depthWrite=!softGround;soil.material.needsUpdate=true;}
+      canopies.castShadow=branches.castShadow=rocks.castShadow=room.value<.1;
       // Fixed objects give genuine depth parallax under the shared moving camera.
       group.position.set(0,0,0);
     },
     resize(w,h,dpr=1){resolution.value.set(w*dpr,h*dpr);},
-    getState(){return {...state,visible:group.visible,layers:['Foreground','GroundFog','Terrain','MidgroundGroves','ValleyMist','AtmosphericHaze'],triangles:land.index.count/3+trees.length*72*2+trees.length*4*20+32*20+12,drawCalls:10};},
+    setTitleRects(rects=[]){for(const [i,u]of [titleIn,titleOut].entries()){const r=rects[i];u.value.set(r?.left??-2,r?.top??-2,r?.right??-2,r?.bottom??-2);}},
+    identity:group,
+    getState(){return {...state,visible:group.visible,titleRects:[titleIn.value.toArray(),titleOut.value.toArray()],layers:['Foreground','TempleGround','MidgroundGroves','DistanceMatte'],triangles:land.index.count/3+trees.length*72*2+trees.length*4*20+32*20+12,drawCalls:group.visible?10:0};},
     dispose(){group.removeFromParent();resources.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());},
   };
 }

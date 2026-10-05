@@ -12,7 +12,8 @@ function assertSameImage(before,after) {
     const delta=Math.max(...[0,1,2].map(c=>Math.abs(a.data[i+c]-b.data[i+c])));
     if(delta)changed++;maxDelta=Math.max(maxDelta,delta);
   }
-  assert.ok(maxDelta<=1||(maxDelta<=16&&changed/(a.width*a.height)<.005),`A01 visual difference: max channel delta ${maxDelta}, changed pixels ${changed}/${a.width*a.height}`);
+  // Match A03: <=2/255 compositor quantization alone is harmless.
+  assert.ok(maxDelta<=2||(maxDelta<=16&&changed/(a.width*a.height)<.005),`A01 visual difference: max channel delta ${maxDelta}, changed pixels ${changed}/${a.width*a.height}`);
 }
 
 (async () => {

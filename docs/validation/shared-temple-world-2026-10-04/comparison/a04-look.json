@@ -1,0 +1,131 @@
+{
+  "baseline": "49eac2fbc3e31a545e970a723c0db37120692586",
+  "cameraUnchanged": true,
+  "growthUnchanged": true,
+  "rows": [
+    {
+      "version": "before",
+      "camera": {
+        "position": [
+          -31.305177248048405,
+          35.208316399977775,
+          -11.860434006833483
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "light": {
+        "space": 1,
+        "theme": 0,
+        "exposure": 0.96,
+        "fill": 0.2799999999999999,
+        "sun": 2.5999999999999996,
+        "fov": 34,
+        "architecture": 1,
+        "transfer": 0,
+        "lights": 2,
+        "newTextures": 0,
+        "newPostTargets": 0
+      },
+      "environment": {
+        "weight": 0,
+        "establish": 1,
+        "visibility": 0,
+        "roomWeight": 0,
+        "posterWeight": 0,
+        "trees": 201,
+        "visible": false,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      }
+    },
+    {
+      "version": "after",
+      "camera": {
+        "position": [
+          -31.305177248048405,
+          35.208316399977775,
+          -11.860434006833483
+        ],
+        "target": [
+          0,
+          -2.3,
+          -1.75
+        ]
+      },
+      "growth": [
+        1,
+        1,
+        1
+      ],
+      "light": {
+        "space": 1,
+        "theme": 0,
+        "exposure": 1.1,
+        "fill": 0.52,
+        "sun": 4.6,
+        "fov": 34,
+        "architecture": 1,
+        "transfer": 0,
+        "look": "shared-temple",
+        "fogColor": "#15222b",
+        "fogDensity": 0.0045,
+        "lights": 4,
+        "newTextures": 0,
+        "newPostTargets": 0
+      },
+      "environment": {
+        "weight": 0,
+        "establish": 1,
+        "visibility": 0,
+        "roomWeight": 0.65,
+        "posterWeight": 0,
+        "layerWeights": {
+          "ground": 0,
+          "foreground": 0,
+          "fog": 0
+        },
+        "trees": 201,
+        "visible": false,
+        "titleRects": [
+          [
+            -2,
+            -2,
+            -2,
+            -2
+          ],
+          [
+            -2,
+            -2,
+            -2,
+            -2
+          ]
+        ],
+        "layers": [
+          "Foreground",
+          "TempleGround",
+          "MidgroundGroves",
+          "DistanceMatte"
+        ],
+        "triangles": 87148,
+        "drawCalls": 0
+      }
+    }
+  ]
+}

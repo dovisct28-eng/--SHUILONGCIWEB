@@ -1,0 +1,34 @@
+[
+  {
+    "width": 1920,
+    "height": 1080,
+    "glyphs": 51576,
+    "affected": 43707,
+    "meanClearDistance": 0.54217859839385,
+    "meanWithoutClearanceDistance": 53.60496030384149
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "glyphs": 29395,
+    "affected": 24851,
+    "meanClearDistance": 0.5106836747012192,
+    "meanWithoutClearanceDistance": 52.0090539616112
+  },
+  {
+    "width": 1366,
+    "height": 768,
+    "glyphs": 26452,
+    "affected": 22416,
+    "meanClearDistance": 0.560001784439686,
+    "meanWithoutClearanceDistance": 52.94075660242684
+  },
+  {
+    "width": 1024,
+    "height": 768,
+    "glyphs": 19064,
+    "affected": 18846,
+    "meanClearDistance": 7.007269447097527,
+    "meanWithoutClearanceDistance": 71.35970497718348
+  }
+]

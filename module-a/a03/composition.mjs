@@ -1,9 +1,10 @@
 import { A03_START, deriveA03State } from './progress.mjs';
+import {deriveSharedWorldState} from '../../shuilong-temple/shared-world.mjs';
 
 const ease = n => { const t=Math.max(0,Math.min(1,n)); return t*t*(3-2*t); };
 // Display targets only: no geometry, wall coordinates or shared defaults change.
 export const A03_TARGETS = Object.freeze({
-  reading: Object.freeze({ width:1, height:1, x:0, y:-.065, fov:31.5, radius:42 }),
+  reading: Object.freeze({ width:1, height:1, x:0, y:-.035, fov:31.5, radius:45 }),
 });
 export function a03Visual(screens) {
   const state=deriveA03State(screens*1000,1000);
@@ -13,7 +14,7 @@ export function a03Visual(screens) {
     markerFocus:state.markerFocus,
     labels:Math.max(state.composition,state.fifthFocus)*(1-ease((screens-12.85)/.35)),
     fifth:state.fifthFocus*(1-ease((screens-13.2)/.002)),
-    environment:(1-.62*ease((screens-A03_START)/.75))*(1-ease((screens-12.3)/.75)) };
+    environment:deriveSharedWorldState(screens).environment };
 }
 export function a03Frame(frame,width,height,screens) {
   const {weight}=a03Visual(screens),target=A03_TARGETS.reading;

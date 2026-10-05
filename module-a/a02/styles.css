@@ -1,6 +1,6 @@
 /* A02 only; field sits behind the renderer, never over building or mural pixels. */
-.a02-field{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden;background:linear-gradient(118deg,#081117 0%,#142026 39%,#252b2c 67%,#0c171e 100%)}
-.a02-field__distance{position:absolute;inset:0;background:url('../../shuilong-temple/environment-assets/a01-v3/karst-valley.webp') center 40%/cover;opacity:.28;filter:brightness(.64) saturate(.48);mask-image:linear-gradient(#000 0%,#0009 37%,transparent 70%)}
+.a02-field{will-change:opacity;position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden;background:linear-gradient(118deg,#08111775 0%,#14202660 39%,#252b2c28 67%,#0c171e85 100%)}
+.a02-field__distance{position:absolute;inset:0;background:linear-gradient(165deg,#273a4440,transparent 65%);opacity:.28}
 .a02-field__light{position:absolute;inset:-30%;transform:rotate(-24deg);background:linear-gradient(90deg,transparent 30%,#8397a411 44%,#b5a18b35 58%,#d3b99718 66%,transparent 76%);filter:blur(70px)}
 .a02-field__air{position:absolute;inset:0;background:linear-gradient(165deg,#61798812,transparent 49%,#060e1680 91%),linear-gradient(90deg,#060d1490,transparent 23%,transparent 80%,#060d1470)}
 .a02-field__grain{position:absolute;inset:0;opacity:var(--a02-grain,.016);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.76' numOctaves='3' stitchTiles='stitch' seed='17'/%3E%3C/filter%3E%3Cpath filter='url(%23n)' opacity='.65' d='M0 0h160v160H0z'/%3E%3C/svg%3E")}

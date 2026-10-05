@@ -1,0 +1,4734 @@
+{
+  "baseline": "49eac2fbc3e31a545e970a723c0db37120692586",
+  "rows": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "version": "before",
+      "name": "A01",
+      "readyMs": 2625,
+      "stats": {
+        "geometries": 53,
+        "textures": 22,
+        "calls": 47,
+        "triangles": 170210,
+        "lines": 0,
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1245,
+            753
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 286,
+            "calls": 47,
+            "triangles": 170210,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 11249820,
+          "multisampleBytes": 22499640,
+          "targetBytes": 33749460
+        }
+      },
+      "env": {
+        "weight": 1,
+        "establish": 1,
+        "visibility": 1,
+        "roomWeight": 0,
+        "posterWeight": 0,
+        "trees": 201,
+        "visible": true,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "mean": 4.168888888922003,
+      "p95": 4.5,
+      "heap": 54850549,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "version": "before",
+      "name": "A02",
+      "readyMs": 2625,
+      "stats": {
+        "geometries": 64,
+        "textures": 20,
+        "calls": 57,
+        "triangles": 170510,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1843,
+            864
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 492,
+            "calls": 57,
+            "triangles": 170510,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 19108224,
+          "multisampleBytes": 38216448,
+          "targetBytes": 57324672
+        }
+      },
+      "env": {
+        "weight": 1,
+        "establish": 1,
+        "visibility": 1,
+        "roomWeight": 1,
+        "posterWeight": 0,
+        "trees": 201,
+        "visible": true,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "mean": 4.1899999999337725,
+      "p95": 4.700000002980232,
+      "heap": 30511862,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "version": "before",
+      "name": "A03-complete",
+      "readyMs": 2625,
+      "stats": {
+        "geometries": 64,
+        "textures": 20,
+        "calls": 63,
+        "triangles": 206654,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1671,
+            933
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 699,
+            "calls": 63,
+            "triangles": 206654,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 18708516,
+          "multisampleBytes": 37417032,
+          "targetBytes": 56125548
+        }
+      },
+      "env": {
+        "weight": 0.5407407407407407,
+        "establish": 1,
+        "visibility": 0.5407407407407407,
+        "roomWeight": 0.7407407407407407,
+        "posterWeight": 0.7407407407407407,
+        "trees": 201,
+        "visible": true,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "mean": 4.16444444441133,
+      "p95": 4.799999997019768,
+      "heap": 36922268,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "version": "before",
+      "name": "A03-transition",
+      "readyMs": 2625,
+      "stats": {
+        "geometries": 64,
+        "textures": 20,
+        "calls": 63,
+        "triangles": 206654,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1886,
+            1065
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 823,
+            "calls": 63,
+            "triangles": 206654,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 24103080,
+          "multisampleBytes": 48206160,
+          "targetBytes": 72309240
+        }
+      },
+      "env": {
+        "weight": 0.38,
+        "establish": 1,
+        "visibility": 0.38,
+        "roomWeight": 1,
+        "posterWeight": 1,
+        "trees": 201,
+        "visible": true,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "mean": 4.166666666666667,
+      "p95": 4.700000002980232,
+      "heap": 45531048,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "version": "before",
+      "name": "A03-stable",
+      "readyMs": 2625,
+      "stats": {
+        "geometries": 64,
+        "textures": 20,
+        "calls": 63,
+        "triangles": 206654,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1920,
+            1080
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1030,
+            "calls": 63,
+            "triangles": 206654,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 24883200,
+          "multisampleBytes": 49766400,
+          "targetBytes": 74649600
+        }
+      },
+      "env": {
+        "weight": 0.38,
+        "establish": 1,
+        "visibility": 0.38,
+        "roomWeight": 1,
+        "posterWeight": 1,
+        "trees": 201,
+        "visible": true,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "mean": 4.163333333366447,
+      "p95": 4.799999997019768,
+      "heap": 42099104,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "version": "before",
+      "name": "A03-fifth",
+      "readyMs": 2625,
+      "stats": {
+        "geometries": 64,
+        "textures": 20,
+        "calls": 63,
+        "triangles": 206654,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1676,
+            901
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1238,
+            "calls": 63,
+            "triangles": 206654,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 18120912,
+          "multisampleBytes": 36241824,
+          "targetBytes": 54362736
+        }
+      },
+      "env": {
+        "weight": 0.1710281481481492,
+        "establish": 1,
+        "visibility": 0.1710281481481492,
+        "roomWeight": 0.45007407407407685,
+        "posterWeight": 0.45007407407407685,
+        "trees": 201,
+        "visible": true,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "mean": 4.1722222222222225,
+      "p95": 4.699999988079071,
+      "heap": 39217092,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "version": "before",
+      "name": "A04-entry",
+      "readyMs": 2625,
+      "stats": {
+        "geometries": 65,
+        "textures": 22,
+        "calls": 52,
+        "triangles": 90506,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            980,
+            737
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1366,
+            "calls": 52,
+            "triangles": 90506,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 8667120,
+          "multisampleBytes": 17334240,
+          "targetBytes": 26001360
+        }
+      },
+      "env": {
+        "weight": 0,
+        "establish": 1,
+        "visibility": 0,
+        "roomWeight": 0,
+        "posterWeight": 0,
+        "trees": 201,
+        "visible": false,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "mean": 4.166666666666667,
+      "p95": 5.5,
+      "heap": 57077114,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "version": "before",
+      "name": "A04-playing",
+      "readyMs": 2625,
+      "stats": {
+        "geometries": 65,
+        "textures": 22,
+        "calls": 44,
+        "triangles": 90322,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1920,
+            1080
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 2169,
+            "calls": 44,
+            "triangles": 90322,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 24883200,
+          "multisampleBytes": 49766400,
+          "targetBytes": 74649600
+        }
+      },
+      "env": {
+        "weight": 0,
+        "establish": 1,
+        "visibility": 0,
+        "roomWeight": 0,
+        "posterWeight": 0,
+        "trees": 201,
+        "visible": false,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "mean": 4.165555555621783,
+      "p95": 5.9000000059604645,
+      "heap": 38012424,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "version": "before",
+      "name": "A04-overview",
+      "readyMs": 2625,
+      "stats": {
+        "geometries": 78,
+        "textures": 23,
+        "calls": 73,
+        "triangles": 91586,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1920,
+            1080
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 2492,
+            "calls": 73,
+            "triangles": 91586,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 24883200,
+          "multisampleBytes": 49766400,
+          "targetBytes": 74649600
+        }
+      },
+      "env": {
+        "weight": 0,
+        "establish": 1,
+        "visibility": 0,
+        "roomWeight": 0,
+        "posterWeight": 0,
+        "trees": 201,
+        "visible": false,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "mean": 4.166666666666667,
+      "p95": 4.5999999940395355,
+      "heap": 46608344,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "version": "before",
+      "name": "A03-scroll",
+      "mean": 8.642222222354677,
+      "p95": 14.199999988079071,
+      "heap": 33401408,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/",
+          "bytes": 1549,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/app.mjs",
+          "bytes": 9706,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/styles.css",
+          "bytes": 5706,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/composition.mjs",
+          "bytes": 2276,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+          "bytes": 35304,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a04/controller.mjs",
+          "bytes": 7440,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+          "bytes": 25148,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/cinematic-state.mjs",
+          "bytes": 1088,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/progress.mjs",
+          "bytes": 2093,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/progress.mjs",
+          "bytes": 902,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/progress.mjs",
+          "bytes": 1697,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/view.mjs",
+          "bytes": 1826,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/guide/controller.mjs",
+          "bytes": 6708,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a05/content.mjs",
+          "bytes": 781,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a06/content.mjs",
+          "bytes": 780,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/state.mjs",
+          "bytes": 1873,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a07/content.mjs",
+          "bytes": 1040,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a08/controller.mjs",
+          "bytes": 1066,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/spatial.mjs",
+          "bytes": 1490,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/guide/progress.mjs",
+          "bytes": 2996,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/projection.mjs",
+          "bytes": 646,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/mural-resources.mjs",
+          "bytes": 1416,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a04/path.mjs",
+          "bytes": 3098,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a08/progress.mjs",
+          "bytes": 178,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/styles.css",
+          "bytes": 2029,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/%E6%B0%B4%E9%BE%99%E7%A5%A0-%E4%BA%A4%E4%BA%92%E9%A2%84%E8%A7%88.html?clean&controlled",
+          "bytes": 7582407,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a04/styles.css",
+          "bytes": 1513,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/guide/styles.css",
+          "bytes": 2624,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a08/styles.css",
+          "bytes": 1088,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/ink-scene.mjs",
+          "bytes": 2787,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+          "bytes": 102818,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/styles.css",
+          "bytes": 2593,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/styles.css",
+          "bytes": 3321,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/mural-resources.mjs",
+          "bytes": 1416,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/material-isolation.mjs",
+          "bytes": 273,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a04-scene.mjs",
+          "bytes": 9597,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/narrative-markers.mjs",
+          "bytes": 6073,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/composition.mjs",
+          "bytes": 2276,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/state.mjs",
+          "bytes": 1873,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/markers.mjs",
+          "bytes": 995,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/progress.mjs",
+          "bytes": 1697,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/progress.mjs",
+          "bytes": 2093,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/progress.mjs",
+          "bytes": 902,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/shuilong-temple.glb",
+          "bytes": 3329000,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-lines.mjs",
+          "bytes": 6438,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-lines-data.mjs",
+          "bytes": 36739,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment.mjs",
+          "bytes": 13934,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment-assets/ivory-mist.webp",
+          "bytes": 61818,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment-assets/watercolor-tree.webp",
+          "bytes": 330776,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment-assets/distant-landscape.webp",
+          "bytes": 181030,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-art-direction.mjs",
+          "bytes": 4554,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-camera.mjs",
+          "bytes": 1829,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-material.mjs",
+          "bytes": 4480,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-environment.mjs",
+          "bytes": 11711,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/director-light.mjs",
+          "bytes": 2521,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a02-light.mjs",
+          "bytes": 4932,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/lighting.mjs",
+          "bytes": 2993,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/spatial.mjs",
+          "bytes": 1490,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-post.mjs",
+          "bytes": 4622,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/fonts.css",
+          "bytes": 288,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/fonts.css",
+          "bytes": 288,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/narrative-serif.woff2",
+          "bytes": 40844,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/narrative-sans.woff2",
+          "bytes": 96584,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/narrative-sans.woff2",
+          "bytes": 96584,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+          "bytes": 2842184,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+          "bytes": 3552614,
+          "status": 200
+        }
+      ],
+      "bytes": 18473435,
+      "requests": 66,
+      "glbRequests": 1
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "version": "after",
+      "name": "A01",
+      "readyMs": 3655,
+      "stats": {
+        "geometries": 53,
+        "textures": 22,
+        "calls": 47,
+        "triangles": 170210,
+        "lines": 0,
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1245,
+            753
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 284,
+            "calls": 47,
+            "triangles": 170210,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 11249820,
+          "multisampleBytes": 22499640,
+          "targetBytes": 33749460
+        }
+      },
+      "env": {
+        "weight": 1,
+        "establish": 1,
+        "visibility": 1,
+        "roomWeight": 0,
+        "posterWeight": 0,
+        "layerWeights": {
+          "ground": 1,
+          "foreground": 1,
+          "fog": 1
+        },
+        "trees": 201,
+        "visible": true,
+        "titleRects": [
+          [
+            -2,
+            -2,
+            -2,
+            -2
+          ],
+          [
+            -2,
+            -2,
+            -2,
+            -2
+          ]
+        ],
+        "layers": [
+          "Foreground",
+          "TempleGround",
+          "MidgroundGroves",
+          "DistanceMatte"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "world": {
+        "chapter": "A01",
+        "environment": 1,
+        "foreground": 1,
+        "vegetation": 1,
+        "mountains": 1,
+        "fog": 1,
+        "room": 0,
+        "posterClearance": 0,
+        "routeSpace": 0,
+        "architecture": 1,
+        "cutaway": 0,
+        "visible": true
+      },
+      "cutaway": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0
+      },
+      "mean": 4.207777777810891,
+      "p95": 4.799999997019768,
+      "heap": 56137399,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "version": "after",
+      "name": "A02",
+      "readyMs": 3655,
+      "stats": {
+        "geometries": 63,
+        "textures": 20,
+        "calls": 57,
+        "triangles": 199452,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1843,
+            864
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 394,
+            "calls": 57,
+            "triangles": 199452,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 19108224,
+          "multisampleBytes": 38216448,
+          "targetBytes": 57324672
+        }
+      },
+      "env": {
+        "weight": 0.62,
+        "establish": 1,
+        "visibility": 0.62,
+        "roomWeight": 1,
+        "posterWeight": 0,
+        "layerWeights": {
+          "ground": 0.62,
+          "foreground": 0.31,
+          "fog": 0.27899999999999997
+        },
+        "trees": 201,
+        "visible": true,
+        "titleRects": [
+          [
+            -2,
+            -2,
+            -2,
+            -2
+          ],
+          [
+            -2,
+            -2,
+            -2,
+            -2
+          ]
+        ],
+        "layers": [
+          "Foreground",
+          "TempleGround",
+          "MidgroundGroves",
+          "DistanceMatte"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "world": {
+        "chapter": "A02",
+        "environment": 0.62,
+        "foreground": 0.31,
+        "vegetation": 0.62,
+        "mountains": 0.5800000000000001,
+        "fog": 0.27899999999999997,
+        "room": 1,
+        "posterClearance": 0,
+        "routeSpace": 0,
+        "architecture": 1,
+        "cutaway": 0,
+        "visible": true
+      },
+      "cutaway": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0
+      },
+      "mean": 4.178888888822661,
+      "p95": 4.5,
+      "heap": 30640399,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "version": "after",
+      "name": "A03-complete",
+      "readyMs": 3655,
+      "stats": {
+        "geometries": 63,
+        "textures": 20,
+        "calls": 57,
+        "triangles": 199452,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1671,
+            933
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 607,
+            "calls": 57,
+            "triangles": 199452,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 18708516,
+          "multisampleBytes": 37417032,
+          "targetBytes": 56125548
+        }
+      },
+      "env": {
+        "weight": 0.4866666666666667,
+        "establish": 1,
+        "visibility": 0.4866666666666667,
+        "roomWeight": 0.7407407407407407,
+        "posterWeight": 0.7407407407407407,
+        "layerWeights": {
+          "ground": 0.4866666666666667,
+          "foreground": 0.24333333333333335,
+          "fog": 0.219
+        },
+        "trees": 201,
+        "visible": true,
+        "titleRects": [
+          [
+            -0.12957036107656777,
+            0.08044206296048224,
+            0.27578349255733936,
+            0.45080375083724045
+          ],
+          [
+            0.7406023698936897,
+            0.5086738111185533,
+            1.1459562235275969,
+            0.8790354989953114
+          ]
+        ],
+        "layers": [
+          "Foreground",
+          "TempleGround",
+          "MidgroundGroves",
+          "DistanceMatte"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "world": {
+        "chapter": "A03",
+        "environment": 0.4866666666666667,
+        "foreground": 0.24333333333333335,
+        "vegetation": 0.4866666666666667,
+        "mountains": 0.5355555555555557,
+        "fog": 0.219,
+        "room": 0.7407407407407407,
+        "posterClearance": 0.7407407407407407,
+        "routeSpace": 0,
+        "architecture": 1,
+        "cutaway": 0,
+        "visible": true
+      },
+      "cutaway": {
+        "active": true,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0
+      },
+      "mean": 4.168888888922003,
+      "p95": 4.5999999940395355,
+      "heap": 47663400,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "version": "after",
+      "name": "A03-transition",
+      "readyMs": 3655,
+      "stats": {
+        "geometries": 63,
+        "textures": 20,
+        "calls": 58,
+        "triangles": 200892,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1886,
+            1065
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 816,
+            "calls": 58,
+            "triangles": 200892,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 24103080,
+          "multisampleBytes": 48206160,
+          "targetBytes": 72309240
+        }
+      },
+      "env": {
+        "weight": 0.44,
+        "establish": 1,
+        "visibility": 0.44,
+        "roomWeight": 0.65,
+        "posterWeight": 1,
+        "layerWeights": {
+          "ground": 0.44,
+          "foreground": 0.22,
+          "fog": 0.19799999999999998
+        },
+        "trees": 201,
+        "visible": true,
+        "titleRects": [
+          [
+            -0.029443933480822294,
+            0.14924683553586882,
+            0.32977454075418233,
+            0.473657577846551
+          ],
+          [
+            0.6905921930282466,
+            0.5243476730371522,
+            1.0498106672632512,
+            0.8487584153478344
+          ]
+        ],
+        "layers": [
+          "Foreground",
+          "TempleGround",
+          "MidgroundGroves",
+          "DistanceMatte"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "world": {
+        "chapter": "A03",
+        "environment": 0.44,
+        "foreground": 0.22,
+        "vegetation": 0.44,
+        "mountains": 0.52,
+        "fog": 0.19799999999999998,
+        "room": 0.65,
+        "posterClearance": 1,
+        "routeSpace": 0,
+        "architecture": 1,
+        "cutaway": 0.699474079639368,
+        "visible": true
+      },
+      "cutaway": {
+        "active": true,
+        "main": 0.6994740796393697,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0
+      },
+      "mean": 4.182222222288449,
+      "p95": 5,
+      "heap": 36724824,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "version": "after",
+      "name": "A03-stable",
+      "readyMs": 3655,
+      "stats": {
+        "geometries": 63,
+        "textures": 20,
+        "calls": 54,
+        "triangles": 186108,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1920,
+            1080
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1029,
+            "calls": 54,
+            "triangles": 186108,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 24883200,
+          "multisampleBytes": 49766400,
+          "targetBytes": 74649600
+        }
+      },
+      "env": {
+        "weight": 0.44,
+        "establish": 1,
+        "visibility": 0.44,
+        "roomWeight": 0.65,
+        "posterWeight": 1,
+        "layerWeights": {
+          "ground": 0.44,
+          "foreground": 0.22,
+          "fog": 0.19799999999999998
+        },
+        "trees": 201,
+        "visible": true,
+        "titleRects": [
+          [
+            -0.0199951171875,
+            0.15500578703703705,
+            0.3328125,
+            0.475
+          ],
+          [
+            0.6871907552083333,
+            0.525,
+            1.0399983723958333,
+            0.844994212962963
+          ]
+        ],
+        "layers": [
+          "Foreground",
+          "TempleGround",
+          "MidgroundGroves",
+          "DistanceMatte"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "world": {
+        "chapter": "A03",
+        "environment": 0.44,
+        "foreground": 0.22,
+        "vegetation": 0.44,
+        "mountains": 0.52,
+        "fog": 0.19799999999999998,
+        "room": 0.65,
+        "posterClearance": 1,
+        "routeSpace": 0,
+        "architecture": 1,
+        "cutaway": 1,
+        "visible": true
+      },
+      "cutaway": {
+        "active": true,
+        "main": 1,
+        "side": 1,
+        "handoff": 0,
+        "wall": 1,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": false,
+        "galleryCut": 1
+      },
+      "mean": 4.177777777777778,
+      "p95": 4.699999988079071,
+      "heap": 33688843,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "version": "after",
+      "name": "A03-fifth",
+      "readyMs": 3655,
+      "stats": {
+        "geometries": 63,
+        "textures": 20,
+        "calls": 54,
+        "triangles": 186108,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1676,
+            901
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1236,
+            "calls": 54,
+            "triangles": 186108,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 18120912,
+          "multisampleBytes": 36241824,
+          "targetBytes": 54362736
+        }
+      },
+      "env": {
+        "weight": 0.4297520661157029,
+        "establish": 1,
+        "visibility": 0.4297520661157029,
+        "roomWeight": 0.65,
+        "posterWeight": 0.976709241172052,
+        "layerWeights": {
+          "ground": 0.4297520661157029,
+          "foreground": 0.21487603305785144,
+          "fog": 0.19338842975206627
+        },
+        "trees": 201,
+        "visible": true,
+        "titleRects": [
+          [
+            -0.12389623833581206,
+            0.05222638368705784,
+            0.2803426143952921,
+            0.43574004716326814
+          ],
+          [
+            0.7425766462152434,
+            0.4956651407962269,
+            1.1468154989463477,
+            0.8791788042724372
+          ]
+        ],
+        "layers": [
+          "Foreground",
+          "TempleGround",
+          "MidgroundGroves",
+          "DistanceMatte"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "world": {
+        "chapter": "A03",
+        "environment": 0.4297520661157029,
+        "foreground": 0.21487603305785144,
+        "vegetation": 0.4297520661157029,
+        "mountains": 0.5078888054094671,
+        "fog": 0.19338842975206627,
+        "room": 0.65,
+        "posterClearance": 0.976709241172052,
+        "routeSpace": 0.023290758827947945,
+        "architecture": 1,
+        "cutaway": 1,
+        "visible": true
+      },
+      "cutaway": {
+        "active": true,
+        "main": 1,
+        "side": 1,
+        "handoff": 0,
+        "wall": 1,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": false,
+        "galleryCut": 1
+      },
+      "mean": 4.166666666666667,
+      "p95": 4.799999997019768,
+      "heap": 47728868,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "version": "after",
+      "name": "A04-entry",
+      "readyMs": 3655,
+      "stats": {
+        "geometries": 65,
+        "textures": 22,
+        "calls": 52,
+        "triangles": 90506,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            980,
+            737
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1361,
+            "calls": 52,
+            "triangles": 90506,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 8667120,
+          "multisampleBytes": 17334240,
+          "targetBytes": 26001360
+        }
+      },
+      "env": {
+        "weight": 0,
+        "establish": 1,
+        "visibility": 0,
+        "roomWeight": 0.65,
+        "posterWeight": 0,
+        "layerWeights": {
+          "ground": 0,
+          "foreground": 0,
+          "fog": 0
+        },
+        "trees": 201,
+        "visible": false,
+        "titleRects": [
+          [
+            -2,
+            -2,
+            -2,
+            -2
+          ],
+          [
+            -2,
+            -2,
+            -2,
+            -2
+          ]
+        ],
+        "layers": [
+          "Foreground",
+          "TempleGround",
+          "MidgroundGroves",
+          "DistanceMatte"
+        ],
+        "triangles": 87148,
+        "drawCalls": 0
+      },
+      "world": {
+        "chapter": "A04",
+        "environment": 0,
+        "foreground": 0,
+        "vegetation": 0,
+        "mountains": 0,
+        "fog": 0,
+        "room": 0.65,
+        "posterClearance": 0,
+        "routeSpace": 1,
+        "architecture": 1,
+        "cutaway": 1,
+        "visible": false
+      },
+      "cutaway": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 0.06749999999999988
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 0.06749999999999988
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 0.06749999999999988
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 0.06749999999999988
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 0.06749999999999988
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 0.06749999999999988
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0
+      },
+      "mean": 4.1722222222222225,
+      "p95": 6.5,
+      "heap": 38500565,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "version": "after",
+      "name": "A04-playing",
+      "readyMs": 3655,
+      "stats": {
+        "geometries": 65,
+        "textures": 22,
+        "calls": 24,
+        "triangles": 5202,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1920,
+            1080
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 2176,
+            "calls": 24,
+            "triangles": 5202,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 24883200,
+          "multisampleBytes": 49766400,
+          "targetBytes": 74649600
+        }
+      },
+      "env": {
+        "weight": 0,
+        "establish": 1,
+        "visibility": 0,
+        "roomWeight": 0.65,
+        "posterWeight": 0,
+        "layerWeights": {
+          "ground": 0,
+          "foreground": 0,
+          "fog": 0
+        },
+        "trees": 201,
+        "visible": false,
+        "titleRects": [
+          [
+            -2,
+            -2,
+            -2,
+            -2
+          ],
+          [
+            -2,
+            -2,
+            -2,
+            -2
+          ]
+        ],
+        "layers": [
+          "Foreground",
+          "TempleGround",
+          "MidgroundGroves",
+          "DistanceMatte"
+        ],
+        "triangles": 87148,
+        "drawCalls": 0
+      },
+      "world": {
+        "chapter": "A04",
+        "environment": 0,
+        "foreground": 0,
+        "vegetation": 0,
+        "mountains": 0,
+        "fog": 0,
+        "room": 0.65,
+        "posterClearance": 0,
+        "routeSpace": 1,
+        "architecture": 1,
+        "cutaway": 1,
+        "visible": false
+      },
+      "cutaway": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": false,
+            "opacity": 0
+          },
+          {
+            "group": "06_Stage",
+            "visible": false,
+            "opacity": 0
+          },
+          {
+            "group": "06_Stage",
+            "visible": false,
+            "opacity": 0
+          },
+          {
+            "group": "07_Entrance",
+            "visible": false,
+            "opacity": 0
+          },
+          {
+            "group": "07_Entrance",
+            "visible": false,
+            "opacity": 0
+          },
+          {
+            "group": "07_Entrance",
+            "visible": false,
+            "opacity": 0
+          }
+        ],
+        "mainRoofDrawn": false,
+        "galleryCut": 0
+      },
+      "mean": 4.167777777877119,
+      "p95": 6.100000008940697,
+      "heap": 35389919,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "version": "after",
+      "name": "A04-overview",
+      "readyMs": 3655,
+      "stats": {
+        "geometries": 78,
+        "textures": 23,
+        "calls": 53,
+        "triangles": 6466,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1920,
+            1080
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 2407,
+            "calls": 53,
+            "triangles": 6466,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 24883200,
+          "multisampleBytes": 49766400,
+          "targetBytes": 74649600
+        }
+      },
+      "env": {
+        "weight": 0,
+        "establish": 1,
+        "visibility": 0,
+        "roomWeight": 0.65,
+        "posterWeight": 0,
+        "layerWeights": {
+          "ground": 0,
+          "foreground": 0,
+          "fog": 0
+        },
+        "trees": 201,
+        "visible": false,
+        "titleRects": [
+          [
+            -2,
+            -2,
+            -2,
+            -2
+          ],
+          [
+            -2,
+            -2,
+            -2,
+            -2
+          ]
+        ],
+        "layers": [
+          "Foreground",
+          "TempleGround",
+          "MidgroundGroves",
+          "DistanceMatte"
+        ],
+        "triangles": 87148,
+        "drawCalls": 0
+      },
+      "world": {
+        "chapter": "A04",
+        "environment": 0,
+        "foreground": 0,
+        "vegetation": 0,
+        "mountains": 0,
+        "fog": 0,
+        "room": 0.65,
+        "posterClearance": 0,
+        "routeSpace": 1,
+        "architecture": 1,
+        "cutaway": 1,
+        "visible": false
+      },
+      "cutaway": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": false,
+            "opacity": 0
+          },
+          {
+            "group": "06_Stage",
+            "visible": false,
+            "opacity": 0
+          },
+          {
+            "group": "06_Stage",
+            "visible": false,
+            "opacity": 0
+          },
+          {
+            "group": "07_Entrance",
+            "visible": false,
+            "opacity": 0
+          },
+          {
+            "group": "07_Entrance",
+            "visible": false,
+            "opacity": 0
+          },
+          {
+            "group": "07_Entrance",
+            "visible": false,
+            "opacity": 0
+          }
+        ],
+        "mainRoofDrawn": false,
+        "galleryCut": 0
+      },
+      "mean": 4.167777777877119,
+      "p95": 4.4000000059604645,
+      "heap": 51942913,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "version": "after",
+      "name": "A03-scroll",
+      "mean": 8.719999999966886,
+      "p95": 14.100000008940697,
+      "heap": 34565521,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/",
+          "bytes": 1549,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/styles.css",
+          "bytes": 5706,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/app.mjs",
+          "bytes": 10095,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+          "bytes": 35304,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+          "bytes": 25148,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/cinematic-state.mjs",
+          "bytes": 1088,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/progress.mjs",
+          "bytes": 2093,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a04/controller.mjs",
+          "bytes": 7440,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/progress.mjs",
+          "bytes": 902,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/progress.mjs",
+          "bytes": 1697,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/view.mjs",
+          "bytes": 1826,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a06/content.mjs",
+          "bytes": 780,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a05/content.mjs",
+          "bytes": 781,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a07/content.mjs",
+          "bytes": 1040,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/guide/controller.mjs",
+          "bytes": 6708,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/composition.mjs",
+          "bytes": 2332,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a08/controller.mjs",
+          "bytes": 1066,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/state.mjs",
+          "bytes": 1873,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/spatial.mjs",
+          "bytes": 1490,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/shared-world.mjs",
+          "bytes": 1395,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a04/path.mjs",
+          "bytes": 3098,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/mural-resources.mjs",
+          "bytes": 1416,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/guide/progress.mjs",
+          "bytes": 2996,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/projection.mjs",
+          "bytes": 646,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a08/progress.mjs",
+          "bytes": 178,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/styles.css",
+          "bytes": 1918,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a04/styles.css",
+          "bytes": 1513,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a08/styles.css",
+          "bytes": 1088,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/guide/styles.css",
+          "bytes": 2624,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/ink-scene.mjs",
+          "bytes": 2907,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/%E6%B0%B4%E9%BE%99%E7%A5%A0-%E4%BA%A4%E4%BA%92%E9%A2%84%E8%A7%88.html?clean&controlled",
+          "bytes": 7594072,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/styles.css",
+          "bytes": 2593,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/styles.css",
+          "bytes": 3321,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+          "bytes": 102818,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/mural-resources.mjs",
+          "bytes": 1416,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/material-isolation.mjs",
+          "bytes": 273,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/shared-world.mjs",
+          "bytes": 1395,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a04-scene.mjs",
+          "bytes": 9597,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/narrative-markers.mjs",
+          "bytes": 6073,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/markers.mjs",
+          "bytes": 995,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/state.mjs",
+          "bytes": 1873,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/composition.mjs",
+          "bytes": 2332,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/progress.mjs",
+          "bytes": 1697,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/progress.mjs",
+          "bytes": 2093,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/progress.mjs",
+          "bytes": 902,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/shuilong-temple.glb",
+          "bytes": 3329000,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-lines.mjs",
+          "bytes": 6438,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-lines-data.mjs",
+          "bytes": 36739,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment.mjs",
+          "bytes": 13934,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-art-direction.mjs",
+          "bytes": 4554,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-camera.mjs",
+          "bytes": 1829,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-material.mjs",
+          "bytes": 4480,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-environment.mjs",
+          "bytes": 13269,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/director-light.mjs",
+          "bytes": 2864,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/lighting.mjs",
+          "bytes": 1369,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a02-light.mjs",
+          "bytes": 5984,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/spatial.mjs",
+          "bytes": 1490,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/cutaway.mjs",
+          "bytes": 3718,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-post.mjs",
+          "bytes": 4622,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/fonts.css",
+          "bytes": 288,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/fonts.css",
+          "bytes": 288,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/narrative-sans.woff2",
+          "bytes": 96584,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/narrative-serif.woff2",
+          "bytes": 40844,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/narrative-sans.woff2",
+          "bytes": 96584,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+          "bytes": 2842184,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+          "bytes": 3552614,
+          "status": 200
+        }
+      ],
+      "bytes": 17919823,
+      "requests": 66,
+      "glbRequests": 1
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "version": "before",
+      "name": "A01",
+      "readyMs": 1858,
+      "stats": {
+        "geometries": 53,
+        "textures": 22,
+        "calls": 47,
+        "triangles": 170210,
+        "lines": 0,
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1004,
+            627
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 281,
+            "calls": 47,
+            "triangles": 170210,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 7554096,
+          "multisampleBytes": 15108192,
+          "targetBytes": 22662288
+        }
+      },
+      "env": {
+        "weight": 1,
+        "establish": 1,
+        "visibility": 1,
+        "roomWeight": 0,
+        "posterWeight": 0,
+        "trees": 201,
+        "visible": true,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "mean": 4.166666666666667,
+      "p95": 4.600000008940697,
+      "heap": 33860305,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "version": "before",
+      "name": "A02",
+      "readyMs": 1858,
+      "stats": {
+        "geometries": 64,
+        "textures": 20,
+        "calls": 57,
+        "triangles": 170510,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1382,
+            720
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 383,
+            "calls": 57,
+            "triangles": 170510,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 11940480,
+          "multisampleBytes": 23880960,
+          "targetBytes": 35821440
+        }
+      },
+      "env": {
+        "weight": 1,
+        "establish": 1,
+        "visibility": 1,
+        "roomWeight": 1,
+        "posterWeight": 0,
+        "trees": 201,
+        "visible": true,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "mean": 4.134444444543785,
+      "p95": 4.700000002980232,
+      "heap": 35982609,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "version": "before",
+      "name": "A03-complete",
+      "readyMs": 1858,
+      "stats": {
+        "geometries": 64,
+        "textures": 20,
+        "calls": 63,
+        "triangles": 206654,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1288,
+            788
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 527,
+            "calls": 63,
+            "triangles": 206654,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 12179328,
+          "multisampleBytes": 24358656,
+          "targetBytes": 36537984
+        }
+      },
+      "env": {
+        "weight": 0.5407407407407407,
+        "establish": 1,
+        "visibility": 0.5407407407407407,
+        "roomWeight": 0.7407407407407407,
+        "posterWeight": 0.7407407407407407,
+        "trees": 201,
+        "visible": true,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "mean": 4.165555555621783,
+      "p95": 4.299999997019768,
+      "heap": 36527911,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "version": "before",
+      "name": "A03-transition",
+      "readyMs": 1858,
+      "stats": {
+        "geometries": 64,
+        "textures": 20,
+        "calls": 63,
+        "triangles": 206654,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1419,
+            889
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 717,
+            "calls": 63,
+            "triangles": 206654,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15137892,
+          "multisampleBytes": 30275784,
+          "targetBytes": 45413676
+        }
+      },
+      "env": {
+        "weight": 0.38,
+        "establish": 1,
+        "visibility": 0.38,
+        "roomWeight": 1,
+        "posterWeight": 1,
+        "trees": 201,
+        "visible": true,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "mean": 4.1722222222222225,
+      "p95": 4.799999997019768,
+      "heap": 36179755,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "version": "before",
+      "name": "A03-stable",
+      "readyMs": 1858,
+      "stats": {
+        "geometries": 64,
+        "textures": 20,
+        "calls": 63,
+        "triangles": 206654,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1440,
+            900
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 929,
+            "calls": 63,
+            "triangles": 206654,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15552000,
+          "multisampleBytes": 31104000,
+          "targetBytes": 46656000
+        }
+      },
+      "env": {
+        "weight": 0.38,
+        "establish": 1,
+        "visibility": 0.38,
+        "roomWeight": 1,
+        "posterWeight": 1,
+        "trees": 201,
+        "visible": true,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "mean": 4.25,
+      "p95": 5.200000002980232,
+      "heap": 54341568,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "version": "before",
+      "name": "A03-fifth",
+      "readyMs": 1858,
+      "stats": {
+        "geometries": 64,
+        "textures": 20,
+        "calls": 63,
+        "triangles": 206654,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1287,
+            760
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1141,
+            "calls": 63,
+            "triangles": 206654,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 11737440,
+          "multisampleBytes": 23474880,
+          "targetBytes": 35212320
+        }
+      },
+      "env": {
+        "weight": 0.1710281481481492,
+        "establish": 1,
+        "visibility": 0.1710281481481492,
+        "roomWeight": 0.45007407407407685,
+        "posterWeight": 0.45007407407407685,
+        "trees": 201,
+        "visible": true,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "mean": 4.165555555621783,
+      "p95": 4.4000000059604645,
+      "heap": 52547037,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "version": "before",
+      "name": "A04-entry",
+      "readyMs": 1858,
+      "stats": {
+        "geometries": 65,
+        "textures": 22,
+        "calls": 52,
+        "triangles": 90506,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            915,
+            667
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1273,
+            "calls": 52,
+            "triangles": 90506,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 7323660,
+          "multisampleBytes": 14647320,
+          "targetBytes": 21970980
+        }
+      },
+      "env": {
+        "weight": 0,
+        "establish": 1,
+        "visibility": 0,
+        "roomWeight": 0,
+        "posterWeight": 0,
+        "trees": 201,
+        "visible": false,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "mean": 4.161111111111111,
+      "p95": 5.5,
+      "heap": 44197344,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "version": "before",
+      "name": "A04-playing",
+      "readyMs": 1858,
+      "stats": {
+        "geometries": 65,
+        "textures": 22,
+        "calls": 44,
+        "triangles": 90322,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1440,
+            900
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 2089,
+            "calls": 44,
+            "triangles": 90322,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15552000,
+          "multisampleBytes": 31104000,
+          "targetBytes": 46656000
+        }
+      },
+      "env": {
+        "weight": 0,
+        "establish": 1,
+        "visibility": 0,
+        "roomWeight": 0,
+        "posterWeight": 0,
+        "trees": 201,
+        "visible": false,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "mean": 4.214444444411331,
+      "p95": 5.5,
+      "heap": 46881603,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "version": "before",
+      "name": "A04-overview",
+      "readyMs": 1858,
+      "stats": {
+        "geometries": 78,
+        "textures": 23,
+        "calls": 73,
+        "triangles": 91586,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1440,
+            900
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 2342,
+            "calls": 73,
+            "triangles": 91586,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15552000,
+          "multisampleBytes": 31104000,
+          "targetBytes": 46656000
+        }
+      },
+      "env": {
+        "weight": 0,
+        "establish": 1,
+        "visibility": 0,
+        "roomWeight": 0,
+        "posterWeight": 0,
+        "trees": 201,
+        "visible": false,
+        "layers": [
+          "Foreground",
+          "GroundFog",
+          "Terrain",
+          "MidgroundGroves",
+          "ValleyMist",
+          "AtmosphericHaze"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "mean": 4.173333333267106,
+      "p95": 4.700000002980232,
+      "heap": 45414987,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "version": "before",
+      "name": "A03-scroll",
+      "mean": 8.255555555555556,
+      "p95": 12.799999997019768,
+      "heap": 61197665,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/",
+          "bytes": 1549,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/styles.css",
+          "bytes": 5706,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/app.mjs",
+          "bytes": 9706,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+          "bytes": 35304,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+          "bytes": 25148,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/composition.mjs",
+          "bytes": 2276,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a04/controller.mjs",
+          "bytes": 7440,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/progress.mjs",
+          "bytes": 2093,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/cinematic-state.mjs",
+          "bytes": 1088,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/progress.mjs",
+          "bytes": 902,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/progress.mjs",
+          "bytes": 1697,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a05/content.mjs",
+          "bytes": 781,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/view.mjs",
+          "bytes": 1826,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a06/content.mjs",
+          "bytes": 780,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/guide/controller.mjs",
+          "bytes": 6708,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a07/content.mjs",
+          "bytes": 1040,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a08/controller.mjs",
+          "bytes": 1066,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/state.mjs",
+          "bytes": 1873,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/spatial.mjs",
+          "bytes": 1490,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a04/path.mjs",
+          "bytes": 3098,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/mural-resources.mjs",
+          "bytes": 1416,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/projection.mjs",
+          "bytes": 646,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/guide/progress.mjs",
+          "bytes": 2996,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a08/progress.mjs",
+          "bytes": 178,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/%E6%B0%B4%E9%BE%99%E7%A5%A0-%E4%BA%A4%E4%BA%92%E9%A2%84%E8%A7%88.html?clean&controlled",
+          "bytes": 7582407,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/styles.css",
+          "bytes": 2029,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a04/styles.css",
+          "bytes": 1513,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/guide/styles.css",
+          "bytes": 2624,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a08/styles.css",
+          "bytes": 1088,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+          "bytes": 102818,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/ink-scene.mjs",
+          "bytes": 2787,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/styles.css",
+          "bytes": 2593,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/styles.css",
+          "bytes": 3321,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/mural-resources.mjs",
+          "bytes": 1416,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/material-isolation.mjs",
+          "bytes": 273,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a04-scene.mjs",
+          "bytes": 9597,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/narrative-markers.mjs",
+          "bytes": 6073,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/composition.mjs",
+          "bytes": 2276,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/state.mjs",
+          "bytes": 1873,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/markers.mjs",
+          "bytes": 995,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/progress.mjs",
+          "bytes": 1697,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/progress.mjs",
+          "bytes": 2093,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/progress.mjs",
+          "bytes": 902,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/shuilong-temple.glb",
+          "bytes": 3329000,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-lines.mjs",
+          "bytes": 6438,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-lines-data.mjs",
+          "bytes": 36739,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment.mjs",
+          "bytes": 13934,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment-assets/watercolor-tree.webp",
+          "bytes": 330776,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment-assets/ivory-mist.webp",
+          "bytes": 61818,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment-assets/distant-landscape.webp",
+          "bytes": 181030,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-art-direction.mjs",
+          "bytes": 4554,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-camera.mjs",
+          "bytes": 1829,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-material.mjs",
+          "bytes": 4480,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-environment.mjs",
+          "bytes": 11711,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/director-light.mjs",
+          "bytes": 2521,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a02-light.mjs",
+          "bytes": 4932,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/lighting.mjs",
+          "bytes": 2993,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/spatial.mjs",
+          "bytes": 1490,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-post.mjs",
+          "bytes": 4622,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/fonts.css",
+          "bytes": 288,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/fonts.css",
+          "bytes": 288,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/narrative-serif.woff2",
+          "bytes": 40844,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/narrative-sans.woff2",
+          "bytes": 96584,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/narrative-sans.woff2",
+          "bytes": 96584,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+          "bytes": 2842184,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+          "bytes": 3552614,
+          "status": 200
+        }
+      ],
+      "bytes": 18473435,
+      "requests": 66,
+      "glbRequests": 1
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "version": "after",
+      "name": "A01",
+      "readyMs": 2255,
+      "stats": {
+        "geometries": 53,
+        "textures": 22,
+        "calls": 47,
+        "triangles": 170210,
+        "lines": 0,
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1004,
+            627
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 284,
+            "calls": 47,
+            "triangles": 170210,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 7554096,
+          "multisampleBytes": 15108192,
+          "targetBytes": 22662288
+        }
+      },
+      "env": {
+        "weight": 1,
+        "establish": 1,
+        "visibility": 1,
+        "roomWeight": 0,
+        "posterWeight": 0,
+        "layerWeights": {
+          "ground": 1,
+          "foreground": 1,
+          "fog": 1
+        },
+        "trees": 201,
+        "visible": true,
+        "titleRects": [
+          [
+            -2,
+            -2,
+            -2,
+            -2
+          ],
+          [
+            -2,
+            -2,
+            -2,
+            -2
+          ]
+        ],
+        "layers": [
+          "Foreground",
+          "TempleGround",
+          "MidgroundGroves",
+          "DistanceMatte"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "world": {
+        "chapter": "A01",
+        "environment": 1,
+        "foreground": 1,
+        "vegetation": 1,
+        "mountains": 1,
+        "fog": 1,
+        "room": 0,
+        "posterClearance": 0,
+        "routeSpace": 0,
+        "architecture": 1,
+        "cutaway": 0,
+        "visible": true
+      },
+      "cutaway": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0
+      },
+      "mean": 4.148888888789548,
+      "p95": 4.700000002980232,
+      "heap": 30143904,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "version": "after",
+      "name": "A02",
+      "readyMs": 2255,
+      "stats": {
+        "geometries": 63,
+        "textures": 20,
+        "calls": 57,
+        "triangles": 199452,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1382,
+            720
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 485,
+            "calls": 57,
+            "triangles": 199452,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 11940480,
+          "multisampleBytes": 23880960,
+          "targetBytes": 35821440
+        }
+      },
+      "env": {
+        "weight": 0.62,
+        "establish": 1,
+        "visibility": 0.62,
+        "roomWeight": 1,
+        "posterWeight": 0,
+        "layerWeights": {
+          "ground": 0.62,
+          "foreground": 0.31,
+          "fog": 0.27899999999999997
+        },
+        "trees": 201,
+        "visible": true,
+        "titleRects": [
+          [
+            -2,
+            -2,
+            -2,
+            -2
+          ],
+          [
+            -2,
+            -2,
+            -2,
+            -2
+          ]
+        ],
+        "layers": [
+          "Foreground",
+          "TempleGround",
+          "MidgroundGroves",
+          "DistanceMatte"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "world": {
+        "chapter": "A02",
+        "environment": 0.62,
+        "foreground": 0.31,
+        "vegetation": 0.62,
+        "mountains": 0.5800000000000001,
+        "fog": 0.27899999999999997,
+        "room": 1,
+        "posterClearance": 0,
+        "routeSpace": 0,
+        "architecture": 1,
+        "cutaway": 0,
+        "visible": true
+      },
+      "cutaway": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0
+      },
+      "mean": 4.212222222155995,
+      "p95": 4.5,
+      "heap": 43015293,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "version": "after",
+      "name": "A03-complete",
+      "readyMs": 2255,
+      "stats": {
+        "geometries": 63,
+        "textures": 20,
+        "calls": 57,
+        "triangles": 199452,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1288,
+            788
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 692,
+            "calls": 57,
+            "triangles": 199452,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 12179328,
+          "multisampleBytes": 24358656,
+          "targetBytes": 36537984
+        }
+      },
+      "env": {
+        "weight": 0.4866666666666667,
+        "establish": 1,
+        "visibility": 0.4866666666666667,
+        "roomWeight": 0.7407407407407407,
+        "posterWeight": 0.7407407407407407,
+        "layerWeights": {
+          "ground": 0.4866666666666667,
+          "foreground": 0.24333333333333335,
+          "fog": 0.219
+        },
+        "trees": 201,
+        "visible": true,
+        "titleRects": [
+          [
+            -0.11270956146643453,
+            0.08578003491509284,
+            0.28178941330941143,
+            0.4148746230757023
+          ],
+          [
+            0.7341514905181932,
+            0.508570068243136,
+            1.1286504652940392,
+            0.8376646564037454
+          ]
+        ],
+        "layers": [
+          "Foreground",
+          "TempleGround",
+          "MidgroundGroves",
+          "DistanceMatte"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "world": {
+        "chapter": "A03",
+        "environment": 0.4866666666666667,
+        "foreground": 0.24333333333333335,
+        "vegetation": 0.4866666666666667,
+        "mountains": 0.5355555555555557,
+        "fog": 0.219,
+        "room": 0.7407407407407407,
+        "posterClearance": 0.7407407407407407,
+        "routeSpace": 0,
+        "architecture": 1,
+        "cutaway": 0,
+        "visible": true
+      },
+      "cutaway": {
+        "active": true,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0
+      },
+      "mean": 4.166666666666667,
+      "p95": 4.399999991059303,
+      "heap": 32976075,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "version": "after",
+      "name": "A03-transition",
+      "readyMs": 2255,
+      "stats": {
+        "geometries": 63,
+        "textures": 20,
+        "calls": 58,
+        "triangles": 200892,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1419,
+            889
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 903,
+            "calls": 58,
+            "triangles": 200892,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15137892,
+          "multisampleBytes": 30275784,
+          "targetBytes": 45413676
+        }
+      },
+      "env": {
+        "weight": 0.44,
+        "establish": 1,
+        "visibility": 0.44,
+        "roomWeight": 0.65,
+        "posterWeight": 1,
+        "layerWeights": {
+          "ground": 0.44,
+          "foreground": 0.22,
+          "fog": 0.19799999999999998
+        },
+        "trees": 201,
+        "visible": true,
+        "titleRects": [
+          [
+            -0.027757282087990748,
+            0.14977152899824253,
+            0.3303177137822807,
+            0.4413181019332162
+          ],
+          [
+            0.6899785254115963,
+            0.524323374340949,
+            1.0480535212818678,
+            0.8158699472759227
+          ]
+        ],
+        "layers": [
+          "Foreground",
+          "TempleGround",
+          "MidgroundGroves",
+          "DistanceMatte"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "world": {
+        "chapter": "A03",
+        "environment": 0.44,
+        "foreground": 0.22,
+        "vegetation": 0.44,
+        "mountains": 0.52,
+        "fog": 0.19799999999999998,
+        "room": 0.65,
+        "posterClearance": 1,
+        "routeSpace": 0,
+        "architecture": 1,
+        "cutaway": 0.699474079639368,
+        "visible": true
+      },
+      "cutaway": {
+        "active": true,
+        "main": 0.6994740796393697,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0
+      },
+      "mean": 4.165555555621783,
+      "p95": 4.700000002980232,
+      "heap": 49307117,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "version": "after",
+      "name": "A03-stable",
+      "readyMs": 2255,
+      "stats": {
+        "geometries": 63,
+        "textures": 20,
+        "calls": 54,
+        "triangles": 186108,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1440,
+            900
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1112,
+            "calls": 54,
+            "triangles": 186108,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15552000,
+          "multisampleBytes": 31104000,
+          "targetBytes": 46656000
+        }
+      },
+      "env": {
+        "weight": 0.44,
+        "establish": 1,
+        "visibility": 0.44,
+        "roomWeight": 0.65,
+        "posterWeight": 1,
+        "layerWeights": {
+          "ground": 0.44,
+          "foreground": 0.22,
+          "fog": 0.19799999999999998
+        },
+        "trees": 201,
+        "visible": true,
+        "titleRects": [
+          [
+            -0.01999782986111111,
+            0.155,
+            0.3328125,
+            0.44300347222222225
+          ],
+          [
+            0.6871853298611111,
+            0.525,
+            1.0399956597222222,
+            0.8130034722222222
+          ]
+        ],
+        "layers": [
+          "Foreground",
+          "TempleGround",
+          "MidgroundGroves",
+          "DistanceMatte"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "world": {
+        "chapter": "A03",
+        "environment": 0.44,
+        "foreground": 0.22,
+        "vegetation": 0.44,
+        "mountains": 0.52,
+        "fog": 0.19799999999999998,
+        "room": 0.65,
+        "posterClearance": 1,
+        "routeSpace": 0,
+        "architecture": 1,
+        "cutaway": 1,
+        "visible": true
+      },
+      "cutaway": {
+        "active": true,
+        "main": 1,
+        "side": 1,
+        "handoff": 0,
+        "wall": 1,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": false,
+        "galleryCut": 1
+      },
+      "mean": 4.165555555456215,
+      "p95": 4.299999997019768,
+      "heap": 42665209,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "version": "after",
+      "name": "A03-fifth",
+      "readyMs": 2255,
+      "stats": {
+        "geometries": 63,
+        "textures": 20,
+        "calls": 54,
+        "triangles": 186108,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1287,
+            760
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1320,
+            "calls": 54,
+            "triangles": 186108,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 11737440,
+          "multisampleBytes": 23474880,
+          "targetBytes": 35212320
+        }
+      },
+      "env": {
+        "weight": 0.4297520661157029,
+        "establish": 1,
+        "visibility": 0.4297520661157029,
+        "roomWeight": 0.65,
+        "posterWeight": 0.976709241172052,
+        "layerWeights": {
+          "ground": 0.4297520661157029,
+          "foreground": 0.21487603305785144,
+          "fog": 0.19338842975206627
+        },
+        "trees": 201,
+        "visible": true,
+        "titleRects": [
+          [
+            -0.10944635469482464,
+            0.057349734644341135,
+            0.28543110759659407,
+            0.3985888838606163
+          ],
+          [
+            0.7369511458308032,
+            0.4957419673345127,
+            1.131828608122222,
+            0.8369811165507879
+          ]
+        ],
+        "layers": [
+          "Foreground",
+          "TempleGround",
+          "MidgroundGroves",
+          "DistanceMatte"
+        ],
+        "triangles": 87148,
+        "drawCalls": 10
+      },
+      "world": {
+        "chapter": "A03",
+        "environment": 0.4297520661157029,
+        "foreground": 0.21487603305785144,
+        "vegetation": 0.4297520661157029,
+        "mountains": 0.5078888054094671,
+        "fog": 0.19338842975206627,
+        "room": 0.65,
+        "posterClearance": 0.976709241172052,
+        "routeSpace": 0.023290758827947945,
+        "architecture": 1,
+        "cutaway": 1,
+        "visible": true
+      },
+      "cutaway": {
+        "active": true,
+        "main": 1,
+        "side": 1,
+        "handoff": 0,
+        "wall": 1,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": false,
+        "galleryCut": 1
+      },
+      "mean": 4.166666666666667,
+      "p95": 4.9000000059604645,
+      "heap": 56578892,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "version": "after",
+      "name": "A04-entry",
+      "readyMs": 2255,
+      "stats": {
+        "geometries": 65,
+        "textures": 22,
+        "calls": 52,
+        "triangles": 90506,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            915,
+            667
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 1446,
+            "calls": 52,
+            "triangles": 90506,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 7323660,
+          "multisampleBytes": 14647320,
+          "targetBytes": 21970980
+        }
+      },
+      "env": {
+        "weight": 0,
+        "establish": 1,
+        "visibility": 0,
+        "roomWeight": 0.65,
+        "posterWeight": 0,
+        "layerWeights": {
+          "ground": 0,
+          "foreground": 0,
+          "fog": 0
+        },
+        "trees": 201,
+        "visible": false,
+        "titleRects": [
+          [
+            -2,
+            -2,
+            -2,
+            -2
+          ],
+          [
+            -2,
+            -2,
+            -2,
+            -2
+          ]
+        ],
+        "layers": [
+          "Foreground",
+          "TempleGround",
+          "MidgroundGroves",
+          "DistanceMatte"
+        ],
+        "triangles": 87148,
+        "drawCalls": 0
+      },
+      "world": {
+        "chapter": "A04",
+        "environment": 0,
+        "foreground": 0,
+        "vegetation": 0,
+        "mountains": 0,
+        "fog": 0,
+        "room": 0.65,
+        "posterClearance": 0,
+        "routeSpace": 1,
+        "architecture": 1,
+        "cutaway": 1,
+        "visible": false
+      },
+      "cutaway": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 0.06749999999999988
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 0.06749999999999988
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 0.06749999999999988
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 0.06749999999999988
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 0.06749999999999988
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 0.06749999999999988
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0
+      },
+      "mean": 4.16444444441133,
+      "p95": 6,
+      "heap": 45235277,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "version": "after",
+      "name": "A04-playing",
+      "readyMs": 2255,
+      "stats": {
+        "geometries": 65,
+        "textures": 22,
+        "calls": 24,
+        "triangles": 5202,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1440,
+            900
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 2256,
+            "calls": 24,
+            "triangles": 5202,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15552000,
+          "multisampleBytes": 31104000,
+          "targetBytes": 46656000
+        }
+      },
+      "env": {
+        "weight": 0,
+        "establish": 1,
+        "visibility": 0,
+        "roomWeight": 0.65,
+        "posterWeight": 0,
+        "layerWeights": {
+          "ground": 0,
+          "foreground": 0,
+          "fog": 0
+        },
+        "trees": 201,
+        "visible": false,
+        "titleRects": [
+          [
+            -2,
+            -2,
+            -2,
+            -2
+          ],
+          [
+            -2,
+            -2,
+            -2,
+            -2
+          ]
+        ],
+        "layers": [
+          "Foreground",
+          "TempleGround",
+          "MidgroundGroves",
+          "DistanceMatte"
+        ],
+        "triangles": 87148,
+        "drawCalls": 0
+      },
+      "world": {
+        "chapter": "A04",
+        "environment": 0,
+        "foreground": 0,
+        "vegetation": 0,
+        "mountains": 0,
+        "fog": 0,
+        "room": 0.65,
+        "posterClearance": 0,
+        "routeSpace": 1,
+        "architecture": 1,
+        "cutaway": 1,
+        "visible": false
+      },
+      "cutaway": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": false,
+            "opacity": 0
+          },
+          {
+            "group": "06_Stage",
+            "visible": false,
+            "opacity": 0
+          },
+          {
+            "group": "06_Stage",
+            "visible": false,
+            "opacity": 0
+          },
+          {
+            "group": "07_Entrance",
+            "visible": false,
+            "opacity": 0
+          },
+          {
+            "group": "07_Entrance",
+            "visible": false,
+            "opacity": 0
+          },
+          {
+            "group": "07_Entrance",
+            "visible": false,
+            "opacity": 0
+          }
+        ],
+        "mainRoofDrawn": false,
+        "galleryCut": 0
+      },
+      "mean": 4.163333333366447,
+      "p95": 6.100000008940697,
+      "heap": 35779596,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "version": "after",
+      "name": "A04-overview",
+      "readyMs": 2255,
+      "stats": {
+        "geometries": 78,
+        "textures": 23,
+        "calls": 53,
+        "triangles": 6466,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1440,
+            900
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 2577,
+            "calls": 53,
+            "triangles": 6466,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15552000,
+          "multisampleBytes": 31104000,
+          "targetBytes": 46656000
+        }
+      },
+      "env": {
+        "weight": 0,
+        "establish": 1,
+        "visibility": 0,
+        "roomWeight": 0.65,
+        "posterWeight": 0,
+        "layerWeights": {
+          "ground": 0,
+          "foreground": 0,
+          "fog": 0
+        },
+        "trees": 201,
+        "visible": false,
+        "titleRects": [
+          [
+            -2,
+            -2,
+            -2,
+            -2
+          ],
+          [
+            -2,
+            -2,
+            -2,
+            -2
+          ]
+        ],
+        "layers": [
+          "Foreground",
+          "TempleGround",
+          "MidgroundGroves",
+          "DistanceMatte"
+        ],
+        "triangles": 87148,
+        "drawCalls": 0
+      },
+      "world": {
+        "chapter": "A04",
+        "environment": 0,
+        "foreground": 0,
+        "vegetation": 0,
+        "mountains": 0,
+        "fog": 0,
+        "room": 0.65,
+        "posterClearance": 0,
+        "routeSpace": 1,
+        "architecture": 1,
+        "cutaway": 1,
+        "visible": false
+      },
+      "cutaway": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": false,
+            "opacity": 0
+          },
+          {
+            "group": "06_Stage",
+            "visible": false,
+            "opacity": 0
+          },
+          {
+            "group": "06_Stage",
+            "visible": false,
+            "opacity": 0
+          },
+          {
+            "group": "07_Entrance",
+            "visible": false,
+            "opacity": 0
+          },
+          {
+            "group": "07_Entrance",
+            "visible": false,
+            "opacity": 0
+          },
+          {
+            "group": "07_Entrance",
+            "visible": false,
+            "opacity": 0
+          }
+        ],
+        "mainRoofDrawn": false,
+        "galleryCut": 0
+      },
+      "mean": 4.165555555621783,
+      "p95": 4.399999991059303,
+      "heap": 49481631,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "version": "after",
+      "name": "A03-scroll",
+      "mean": 8.439999999933773,
+      "p95": 13.799999997019768,
+      "heap": 60872031,
+      "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/",
+          "bytes": 1549,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/styles.css",
+          "bytes": 5706,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/app.mjs",
+          "bytes": 10095,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/cinematic-state.mjs",
+          "bytes": 1088,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/progress.mjs",
+          "bytes": 2093,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/fonts/a01-serif.woff2",
+          "bytes": 35304,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/fonts/a01-sans.woff2",
+          "bytes": 25148,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/view.mjs",
+          "bytes": 1826,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/composition.mjs",
+          "bytes": 2332,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/progress.mjs",
+          "bytes": 1697,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a04/controller.mjs",
+          "bytes": 7440,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/progress.mjs",
+          "bytes": 902,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a07/content.mjs",
+          "bytes": 1040,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a05/content.mjs",
+          "bytes": 781,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a08/controller.mjs",
+          "bytes": 1066,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a06/content.mjs",
+          "bytes": 780,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/guide/controller.mjs",
+          "bytes": 6708,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/shared-world.mjs",
+          "bytes": 1395,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/spatial.mjs",
+          "bytes": 1490,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/state.mjs",
+          "bytes": 1873,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a04/path.mjs",
+          "bytes": 3098,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a08/progress.mjs",
+          "bytes": 178,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/mural-resources.mjs",
+          "bytes": 1416,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/projection.mjs",
+          "bytes": 646,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/guide/progress.mjs",
+          "bytes": 2996,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/styles.css",
+          "bytes": 1918,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a04/styles.css",
+          "bytes": 1513,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/guide/styles.css",
+          "bytes": 2624,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a08/styles.css",
+          "bytes": 1088,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/ink-scene.mjs",
+          "bytes": 2907,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/%E6%B0%B4%E9%BE%99%E7%A5%A0-%E4%BA%A4%E4%BA%92%E9%A2%84%E8%A7%88.html?clean&controlled",
+          "bytes": 7594072,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/styles.css",
+          "bytes": 3321,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/styles.css",
+          "bytes": 2593,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+          "bytes": 102818,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/mural-resources.mjs",
+          "bytes": 1416,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/material-isolation.mjs",
+          "bytes": 273,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/shared-world.mjs",
+          "bytes": 1395,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a04-scene.mjs",
+          "bytes": 9597,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/narrative-markers.mjs",
+          "bytes": 6073,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/markers.mjs",
+          "bytes": 995,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/state.mjs",
+          "bytes": 1873,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/composition.mjs",
+          "bytes": 2332,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/progress.mjs",
+          "bytes": 1697,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a01/progress.mjs",
+          "bytes": 2093,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/progress.mjs",
+          "bytes": 902,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/shuilong-temple.glb",
+          "bytes": 3329000,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-lines.mjs",
+          "bytes": 6438,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-lines-data.mjs",
+          "bytes": 36739,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/environment.mjs",
+          "bytes": 13934,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-art-direction.mjs",
+          "bytes": 4554,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-camera.mjs",
+          "bytes": 1829,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-material.mjs",
+          "bytes": 4480,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-environment.mjs",
+          "bytes": 13269,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/director-light.mjs",
+          "bytes": 2864,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/lighting.mjs",
+          "bytes": 1369,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a02-light.mjs",
+          "bytes": 5984,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a03/cutaway.mjs",
+          "bytes": 3718,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/a02/spatial.mjs",
+          "bytes": 1490,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/shuilong-temple/a01-post.mjs",
+          "bytes": 4622,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/fonts.css",
+          "bytes": 288,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/fonts.css",
+          "bytes": 288,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/narrative-sans.woff2",
+          "bytes": 96584,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/narrative-serif.woff2",
+          "bytes": 40844,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/module-a/visual-director/fonts/narrative-sans.woff2",
+          "bytes": 96584,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+          "bytes": 2842184,
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+          "bytes": 3552614,
+          "status": 200
+        }
+      ],
+      "bytes": 17919823,
+      "requests": 66,
+      "glbRequests": 1
+    }
+  ],
+  "limits": "Same-machine headless Chrome, 90 sampled frames after 10 warmup frames. Frame intervals include browser scheduling; not GPU timings or a cross-device guarantee."
+}

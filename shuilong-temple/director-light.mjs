@@ -10,6 +10,10 @@ export function createDirectorLight(T,{renderer,camera,sun,fill,root,scene,floor
   return {camera:screens=>{room.camera(screens);theme.camera(screens);},apply(screens,tour){last=directorState(screens,tour);
     if(screens>=6.8&&!fontsRequested&&typeof document!=='undefined'){fontsRequested=true;const link=document.createElement('link');link.rel='stylesheet';link.href='../module-a/visual-director/fonts/fonts.css';document.head.append(link);const css=document.createElement('style');css.textContent='.narrative-markers .mural-label,.route-node-label,.spatial-label{font-family:"Narrative Sans","Microsoft YaHei",system-ui,sans-serif;line-height:1.5}';document.head.append(css);}
     room.reset();theme.walls(screens);if(!tour&&room.apply(screens)){last={...last,...room.getState()};theme.apply(screens);return;}if(last.space===0)return;
+    if(screens>=13.05&&screens<=18.002){room.applyRoute();last={...last,...room.getState()};camera.fov=last.fov;camera.updateProjectionMatrix();
+      for(const e of entries){if(last.transfer>0&&e.group!=='03_MainHall')e.mesh.material.color.multiplyScalar(1-last.transfer*.45);}
+      return;
+    }
     renderer.toneMappingExposure=last.exposure;camera.fov=last.fov;camera.updateProjectionMatrix();
     fill.intensity=last.fill;fill.color.set(0xd6dce0);fill.groundColor.set(0x514940);
     sun.intensity=last.sun;sun.color.copy(white).lerp(neutral,.45*last.space);sun.position.set(-16,25,14);
@@ -21,5 +25,5 @@ export function createDirectorLight(T,{renderer,camera,sun,fill,root,scene,floor
       if(local)m.color.multiplyScalar(1+.08*(tour.mode==='playing'?wallReveal(tour.elapsed+.3):1));
     }
     if(!tour)theme.apply(screens);
-  },getState:()=>({...last,lights:last.lights||2,newTextures:0,newPostTargets:0})};
+  },getCutawayState:()=>theme.getCutawayState(),getState:()=>({...last,lights:last.lights||2,newTextures:0,newPostTargets:0})};
 }
