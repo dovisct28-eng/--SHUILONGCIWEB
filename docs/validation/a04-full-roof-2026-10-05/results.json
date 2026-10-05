@@ -1,0 +1,2291 @@
+{
+  "baseline": "33f3cfdd2a766c1673662666da07ad58c50be624",
+  "browser": "154.0.8037.93",
+  "rows": [
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "posterDifference": 0,
+      "reverse": true,
+      "reducedMotion": true,
+      "refresh": true,
+      "before": {
+        "movie": {
+          "active": true,
+          "name": "fifth",
+          "weight": 1,
+          "center": [
+            -1.4,
+            -11.75
+          ],
+          "half": [
+            4.3,
+            4.1
+          ],
+          "summary": 0,
+          "wallWeight": 1
+        },
+        "roof": {
+          "vertices": 8934,
+          "outside": 2596,
+          "min": [
+            -5.380646228790283,
+            -15.697999954223633
+          ],
+          "max": [
+            5.380646228790283,
+            -7.4019999504089355
+          ]
+        },
+        "state": {
+          "mode": "snapshot",
+          "elapsed": 0,
+          "storyTime": 0,
+          "routeComplete": false,
+          "guideStartProgress": 0
+        },
+        "canvas": 1,
+        "roofFlags": {
+          "count": 15,
+          "allVisibleOpaqueWithDepth": true
+        },
+        "overflow": false
+      },
+      "after": {
+        "movie": {
+          "active": true,
+          "name": "fifth",
+          "weight": 1,
+          "center": [
+            -1.4,
+            -11.75
+          ],
+          "half": [
+            6.9,
+            4.4
+          ],
+          "summary": 0,
+          "wallWeight": 1
+        },
+        "roof": {
+          "vertices": 8934,
+          "outside": 0,
+          "min": [
+            -5.380646228790283,
+            -15.697999954223633
+          ],
+          "max": [
+            5.380646228790283,
+            -7.4019999504089355
+          ]
+        },
+        "state": {
+          "mode": "snapshot",
+          "elapsed": 0,
+          "storyTime": 0,
+          "routeComplete": false,
+          "guideStartProgress": 0
+        },
+        "canvas": 1,
+        "roofFlags": {
+          "count": 15,
+          "allVisibleOpaqueWithDepth": true
+        },
+        "overflow": false
+      },
+      "states": [
+        {
+          "time": 6,
+          "movie": {
+            "active": true,
+            "name": "fifth",
+            "weight": 1,
+            "center": [
+              -1.4,
+              -11.75
+            ],
+            "half": [
+              6.9,
+              4.4
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 0,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 6,
+            "storyTime": 6,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 8,
+          "movie": {
+            "active": true,
+            "name": "travelToFirst",
+            "weight": 1,
+            "center": [
+              -1.4,
+              -11.75
+            ],
+            "half": [
+              6.9,
+              4.4
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 0,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 8,
+            "storyTime": 8,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 9,
+          "movie": {
+            "active": true,
+            "name": "travelToFirst",
+            "weight": 1,
+            "center": [
+              -2.05,
+              -11.2866
+            ],
+            "half": [
+              4.9,
+              3.95
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 2632,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 9,
+            "storyTime": 9,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 10,
+          "movie": {
+            "active": true,
+            "name": "travelToFirst",
+            "weight": 1,
+            "center": [
+              -2.7,
+              -10.0288
+            ],
+            "half": [
+              2.9000000000000004,
+              3.5
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 5490,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 10,
+            "storyTime": 10,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 20,
+          "movie": {
+            "active": true,
+            "name": "first",
+            "weight": 1,
+            "center": [
+              3.6,
+              4.8
+            ],
+            "half": [
+              2.2,
+              3.1
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 8934,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 20,
+            "storyTime": 20,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 34,
+          "movie": {
+            "active": true,
+            "name": "second",
+            "weight": 1,
+            "center": [
+              1.4,
+              -11.75
+            ],
+            "half": [
+              4.3,
+              4.1
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 2596,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 34,
+            "storyTime": 34,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 39,
+          "movie": {
+            "active": true,
+            "name": "withdraw",
+            "weight": 1,
+            "center": [
+              1.4,
+              -11.75
+            ],
+            "half": [
+              4.3,
+              4.1
+            ],
+            "summary": 0.648,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 2596,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 39,
+            "storyTime": 39,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 45,
+          "movie": {
+            "active": true,
+            "name": "summary",
+            "weight": 1,
+            "center": [
+              -1.4,
+              -11.75
+            ],
+            "half": [
+              6.9,
+              4.4
+            ],
+            "summary": 1,
+            "wallWeight": 1
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 0,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 45,
+            "storyTime": 45,
+            "routeComplete": true,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "posterDifference": 0,
+      "reverse": true,
+      "reducedMotion": true,
+      "refresh": true,
+      "before": {
+        "movie": {
+          "active": true,
+          "name": "fifth",
+          "weight": 1,
+          "center": [
+            -1.4,
+            -11.75
+          ],
+          "half": [
+            4.3,
+            4.1
+          ],
+          "summary": 0,
+          "wallWeight": 1
+        },
+        "roof": {
+          "vertices": 8934,
+          "outside": 2596,
+          "min": [
+            -5.380646228790283,
+            -15.697999954223633
+          ],
+          "max": [
+            5.380646228790283,
+            -7.4019999504089355
+          ]
+        },
+        "state": {
+          "mode": "snapshot",
+          "elapsed": 0,
+          "storyTime": 0,
+          "routeComplete": false,
+          "guideStartProgress": 0
+        },
+        "canvas": 1,
+        "roofFlags": {
+          "count": 15,
+          "allVisibleOpaqueWithDepth": true
+        },
+        "overflow": false
+      },
+      "after": {
+        "movie": {
+          "active": true,
+          "name": "fifth",
+          "weight": 1,
+          "center": [
+            -1.4,
+            -11.75
+          ],
+          "half": [
+            6.9,
+            4.4
+          ],
+          "summary": 0,
+          "wallWeight": 1
+        },
+        "roof": {
+          "vertices": 8934,
+          "outside": 0,
+          "min": [
+            -5.380646228790283,
+            -15.697999954223633
+          ],
+          "max": [
+            5.380646228790283,
+            -7.4019999504089355
+          ]
+        },
+        "state": {
+          "mode": "snapshot",
+          "elapsed": 0,
+          "storyTime": 0,
+          "routeComplete": false,
+          "guideStartProgress": 0
+        },
+        "canvas": 1,
+        "roofFlags": {
+          "count": 15,
+          "allVisibleOpaqueWithDepth": true
+        },
+        "overflow": false
+      },
+      "states": [
+        {
+          "time": 6,
+          "movie": {
+            "active": true,
+            "name": "fifth",
+            "weight": 1,
+            "center": [
+              -1.4,
+              -11.75
+            ],
+            "half": [
+              6.9,
+              4.4
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 0,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 6,
+            "storyTime": 6,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 8,
+          "movie": {
+            "active": true,
+            "name": "travelToFirst",
+            "weight": 1,
+            "center": [
+              -1.4,
+              -11.75
+            ],
+            "half": [
+              6.9,
+              4.4
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 0,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 8,
+            "storyTime": 8,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 9,
+          "movie": {
+            "active": true,
+            "name": "travelToFirst",
+            "weight": 1,
+            "center": [
+              -2.05,
+              -11.2866
+            ],
+            "half": [
+              4.9,
+              3.95
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 2632,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 9,
+            "storyTime": 9,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 10,
+          "movie": {
+            "active": true,
+            "name": "travelToFirst",
+            "weight": 1,
+            "center": [
+              -2.7,
+              -10.0288
+            ],
+            "half": [
+              2.9000000000000004,
+              3.5
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 5490,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 10,
+            "storyTime": 10,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 20,
+          "movie": {
+            "active": true,
+            "name": "first",
+            "weight": 1,
+            "center": [
+              3.6,
+              4.8
+            ],
+            "half": [
+              2.2,
+              3.1
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 8934,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 20,
+            "storyTime": 20,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 34,
+          "movie": {
+            "active": true,
+            "name": "second",
+            "weight": 1,
+            "center": [
+              1.4,
+              -11.75
+            ],
+            "half": [
+              4.3,
+              4.1
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 2596,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 34,
+            "storyTime": 34,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 39,
+          "movie": {
+            "active": true,
+            "name": "withdraw",
+            "weight": 1,
+            "center": [
+              1.4,
+              -11.75
+            ],
+            "half": [
+              4.3,
+              4.1
+            ],
+            "summary": 0.648,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 2596,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 39,
+            "storyTime": 39,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 45,
+          "movie": {
+            "active": true,
+            "name": "summary",
+            "weight": 1,
+            "center": [
+              -1.4,
+              -11.75
+            ],
+            "half": [
+              6.9,
+              4.4
+            ],
+            "summary": 1,
+            "wallWeight": 1
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 0,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 45,
+            "storyTime": 45,
+            "routeComplete": true,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "posterDifference": 0,
+      "reverse": true,
+      "reducedMotion": true,
+      "refresh": true,
+      "before": {
+        "movie": {
+          "active": true,
+          "name": "fifth",
+          "weight": 1,
+          "center": [
+            -1.4,
+            -11.75
+          ],
+          "half": [
+            4.3,
+            4.1
+          ],
+          "summary": 0,
+          "wallWeight": 1
+        },
+        "roof": {
+          "vertices": 8934,
+          "outside": 2596,
+          "min": [
+            -5.380646228790283,
+            -15.697999954223633
+          ],
+          "max": [
+            5.380646228790283,
+            -7.4019999504089355
+          ]
+        },
+        "state": {
+          "mode": "snapshot",
+          "elapsed": 0,
+          "storyTime": 0,
+          "routeComplete": false,
+          "guideStartProgress": 0
+        },
+        "canvas": 1,
+        "roofFlags": {
+          "count": 15,
+          "allVisibleOpaqueWithDepth": true
+        },
+        "overflow": false
+      },
+      "after": {
+        "movie": {
+          "active": true,
+          "name": "fifth",
+          "weight": 1,
+          "center": [
+            -1.4,
+            -11.75
+          ],
+          "half": [
+            6.9,
+            4.4
+          ],
+          "summary": 0,
+          "wallWeight": 1
+        },
+        "roof": {
+          "vertices": 8934,
+          "outside": 0,
+          "min": [
+            -5.380646228790283,
+            -15.697999954223633
+          ],
+          "max": [
+            5.380646228790283,
+            -7.4019999504089355
+          ]
+        },
+        "state": {
+          "mode": "snapshot",
+          "elapsed": 0,
+          "storyTime": 0,
+          "routeComplete": false,
+          "guideStartProgress": 0
+        },
+        "canvas": 1,
+        "roofFlags": {
+          "count": 15,
+          "allVisibleOpaqueWithDepth": true
+        },
+        "overflow": false
+      },
+      "states": [
+        {
+          "time": 6,
+          "movie": {
+            "active": true,
+            "name": "fifth",
+            "weight": 1,
+            "center": [
+              -1.4,
+              -11.75
+            ],
+            "half": [
+              6.9,
+              4.4
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 0,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 6,
+            "storyTime": 6,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 8,
+          "movie": {
+            "active": true,
+            "name": "travelToFirst",
+            "weight": 1,
+            "center": [
+              -1.4,
+              -11.75
+            ],
+            "half": [
+              6.9,
+              4.4
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 0,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 8,
+            "storyTime": 8,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 9,
+          "movie": {
+            "active": true,
+            "name": "travelToFirst",
+            "weight": 1,
+            "center": [
+              -2.05,
+              -11.2866
+            ],
+            "half": [
+              4.9,
+              3.95
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 2632,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 9,
+            "storyTime": 9,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 10,
+          "movie": {
+            "active": true,
+            "name": "travelToFirst",
+            "weight": 1,
+            "center": [
+              -2.7,
+              -10.0288
+            ],
+            "half": [
+              2.9000000000000004,
+              3.5
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 5490,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 10,
+            "storyTime": 10,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 20,
+          "movie": {
+            "active": true,
+            "name": "first",
+            "weight": 1,
+            "center": [
+              3.6,
+              4.8
+            ],
+            "half": [
+              2.2,
+              3.1
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 8934,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 20,
+            "storyTime": 20,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 34,
+          "movie": {
+            "active": true,
+            "name": "second",
+            "weight": 1,
+            "center": [
+              1.4,
+              -11.75
+            ],
+            "half": [
+              4.3,
+              4.1
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 2596,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 34,
+            "storyTime": 34,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 39,
+          "movie": {
+            "active": true,
+            "name": "withdraw",
+            "weight": 1,
+            "center": [
+              1.4,
+              -11.75
+            ],
+            "half": [
+              4.3,
+              4.1
+            ],
+            "summary": 0.648,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 2596,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 39,
+            "storyTime": 39,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 45,
+          "movie": {
+            "active": true,
+            "name": "summary",
+            "weight": 1,
+            "center": [
+              -1.4,
+              -11.75
+            ],
+            "half": [
+              6.9,
+              4.4
+            ],
+            "summary": 1,
+            "wallWeight": 1
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 0,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 45,
+            "storyTime": 45,
+            "routeComplete": true,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "viewport": [
+        1024,
+        768
+      ],
+      "posterDifference": 0,
+      "reverse": true,
+      "reducedMotion": true,
+      "refresh": true,
+      "before": {
+        "movie": {
+          "active": true,
+          "name": "fifth",
+          "weight": 1,
+          "center": [
+            -1.4,
+            -11.75
+          ],
+          "half": [
+            4.3,
+            4.1
+          ],
+          "summary": 0,
+          "wallWeight": 1
+        },
+        "roof": {
+          "vertices": 8934,
+          "outside": 2596,
+          "min": [
+            -5.380646228790283,
+            -15.697999954223633
+          ],
+          "max": [
+            5.380646228790283,
+            -7.4019999504089355
+          ]
+        },
+        "state": {
+          "mode": "snapshot",
+          "elapsed": 0,
+          "storyTime": 0,
+          "routeComplete": false,
+          "guideStartProgress": 0
+        },
+        "canvas": 1,
+        "roofFlags": {
+          "count": 15,
+          "allVisibleOpaqueWithDepth": true
+        },
+        "overflow": false
+      },
+      "after": {
+        "movie": {
+          "active": true,
+          "name": "fifth",
+          "weight": 1,
+          "center": [
+            -1.4,
+            -11.75
+          ],
+          "half": [
+            6.9,
+            4.4
+          ],
+          "summary": 0,
+          "wallWeight": 1
+        },
+        "roof": {
+          "vertices": 8934,
+          "outside": 0,
+          "min": [
+            -5.380646228790283,
+            -15.697999954223633
+          ],
+          "max": [
+            5.380646228790283,
+            -7.4019999504089355
+          ]
+        },
+        "state": {
+          "mode": "snapshot",
+          "elapsed": 0,
+          "storyTime": 0,
+          "routeComplete": false,
+          "guideStartProgress": 0
+        },
+        "canvas": 1,
+        "roofFlags": {
+          "count": 15,
+          "allVisibleOpaqueWithDepth": true
+        },
+        "overflow": false
+      },
+      "states": [
+        {
+          "time": 6,
+          "movie": {
+            "active": true,
+            "name": "fifth",
+            "weight": 1,
+            "center": [
+              -1.4,
+              -11.75
+            ],
+            "half": [
+              6.9,
+              4.4
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 0,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 6,
+            "storyTime": 6,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 8,
+          "movie": {
+            "active": true,
+            "name": "travelToFirst",
+            "weight": 1,
+            "center": [
+              -1.4,
+              -11.75
+            ],
+            "half": [
+              6.9,
+              4.4
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 0,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 8,
+            "storyTime": 8,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 9,
+          "movie": {
+            "active": true,
+            "name": "travelToFirst",
+            "weight": 1,
+            "center": [
+              -2.05,
+              -11.2866
+            ],
+            "half": [
+              4.9,
+              3.95
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 2632,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 9,
+            "storyTime": 9,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 10,
+          "movie": {
+            "active": true,
+            "name": "travelToFirst",
+            "weight": 1,
+            "center": [
+              -2.7,
+              -10.0288
+            ],
+            "half": [
+              2.9000000000000004,
+              3.5
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 5490,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 10,
+            "storyTime": 10,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 20,
+          "movie": {
+            "active": true,
+            "name": "first",
+            "weight": 1,
+            "center": [
+              3.6,
+              4.8
+            ],
+            "half": [
+              2.2,
+              3.1
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 8934,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 20,
+            "storyTime": 20,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 34,
+          "movie": {
+            "active": true,
+            "name": "second",
+            "weight": 1,
+            "center": [
+              1.4,
+              -11.75
+            ],
+            "half": [
+              4.3,
+              4.1
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 2596,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 34,
+            "storyTime": 34,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 39,
+          "movie": {
+            "active": true,
+            "name": "withdraw",
+            "weight": 1,
+            "center": [
+              1.4,
+              -11.75
+            ],
+            "half": [
+              4.3,
+              4.1
+            ],
+            "summary": 0.648,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 2596,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 39,
+            "storyTime": 39,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 45,
+          "movie": {
+            "active": true,
+            "name": "summary",
+            "weight": 1,
+            "center": [
+              -1.4,
+              -11.75
+            ],
+            "half": [
+              6.9,
+              4.4
+            ],
+            "summary": 1,
+            "wallWeight": 1
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 0,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 45,
+            "storyTime": 45,
+            "routeComplete": true,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        }
+      ]
+    },
+    {
+      "viewport": [
+        780,
+        614
+      ],
+      "posterDifference": 0,
+      "reverse": true,
+      "reducedMotion": true,
+      "refresh": true,
+      "before": {
+        "movie": {
+          "active": true,
+          "name": "fifth",
+          "weight": 1,
+          "center": [
+            -1.4,
+            -11.75
+          ],
+          "half": [
+            4.3,
+            4.1
+          ],
+          "summary": 0,
+          "wallWeight": 1
+        },
+        "roof": {
+          "vertices": 8934,
+          "outside": 2596,
+          "min": [
+            -5.380646228790283,
+            -15.697999954223633
+          ],
+          "max": [
+            5.380646228790283,
+            -7.4019999504089355
+          ]
+        },
+        "state": {
+          "mode": "snapshot",
+          "elapsed": 0,
+          "storyTime": 0,
+          "routeComplete": false,
+          "guideStartProgress": 0
+        },
+        "canvas": 1,
+        "roofFlags": {
+          "count": 15,
+          "allVisibleOpaqueWithDepth": true
+        },
+        "overflow": false
+      },
+      "after": {
+        "movie": {
+          "active": true,
+          "name": "fifth",
+          "weight": 1,
+          "center": [
+            -1.4,
+            -11.75
+          ],
+          "half": [
+            6.9,
+            4.4
+          ],
+          "summary": 0,
+          "wallWeight": 1
+        },
+        "roof": {
+          "vertices": 8934,
+          "outside": 0,
+          "min": [
+            -5.380646228790283,
+            -15.697999954223633
+          ],
+          "max": [
+            5.380646228790283,
+            -7.4019999504089355
+          ]
+        },
+        "state": {
+          "mode": "snapshot",
+          "elapsed": 0,
+          "storyTime": 0,
+          "routeComplete": false,
+          "guideStartProgress": 0
+        },
+        "canvas": 1,
+        "roofFlags": {
+          "count": 15,
+          "allVisibleOpaqueWithDepth": true
+        },
+        "overflow": false
+      },
+      "states": [
+        {
+          "time": 6,
+          "movie": {
+            "active": true,
+            "name": "fifth",
+            "weight": 1,
+            "center": [
+              -1.4,
+              -11.75
+            ],
+            "half": [
+              6.9,
+              4.4
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 0,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 6,
+            "storyTime": 6,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 8,
+          "movie": {
+            "active": true,
+            "name": "travelToFirst",
+            "weight": 1,
+            "center": [
+              -1.4,
+              -11.75
+            ],
+            "half": [
+              6.9,
+              4.4
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 0,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 8,
+            "storyTime": 8,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 9,
+          "movie": {
+            "active": true,
+            "name": "travelToFirst",
+            "weight": 1,
+            "center": [
+              -2.05,
+              -11.2866
+            ],
+            "half": [
+              4.9,
+              3.95
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 2632,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 9,
+            "storyTime": 9,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 10,
+          "movie": {
+            "active": true,
+            "name": "travelToFirst",
+            "weight": 1,
+            "center": [
+              -2.7,
+              -10.0288
+            ],
+            "half": [
+              2.9000000000000004,
+              3.5
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 5490,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 10,
+            "storyTime": 10,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 20,
+          "movie": {
+            "active": true,
+            "name": "first",
+            "weight": 1,
+            "center": [
+              3.6,
+              4.8
+            ],
+            "half": [
+              2.2,
+              3.1
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 8934,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 20,
+            "storyTime": 20,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 34,
+          "movie": {
+            "active": true,
+            "name": "second",
+            "weight": 1,
+            "center": [
+              1.4,
+              -11.75
+            ],
+            "half": [
+              4.3,
+              4.1
+            ],
+            "summary": 0,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 2596,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 34,
+            "storyTime": 34,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 39,
+          "movie": {
+            "active": true,
+            "name": "withdraw",
+            "weight": 1,
+            "center": [
+              1.4,
+              -11.75
+            ],
+            "half": [
+              4.3,
+              4.1
+            ],
+            "summary": 0.648,
+            "wallWeight": 0
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 2596,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 39,
+            "storyTime": 39,
+            "routeComplete": false,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        },
+        {
+          "time": 45,
+          "movie": {
+            "active": true,
+            "name": "summary",
+            "weight": 1,
+            "center": [
+              -1.4,
+              -11.75
+            ],
+            "half": [
+              6.9,
+              4.4
+            ],
+            "summary": 1,
+            "wallWeight": 1
+          },
+          "roof": {
+            "vertices": 8934,
+            "outside": 0,
+            "min": [
+              -5.380646228790283,
+              -15.697999954223633
+            ],
+            "max": [
+              5.380646228790283,
+              -7.4019999504089355
+            ]
+          },
+          "state": {
+            "mode": "snapshot",
+            "elapsed": 45,
+            "storyTime": 45,
+            "routeComplete": true,
+            "guideStartProgress": 0
+          },
+          "canvas": 1,
+          "roofFlags": {
+            "count": 15,
+            "allVisibleOpaqueWithDepth": true
+          },
+          "overflow": false
+        }
+      ]
+    }
+  ],
+  "actualPlayback": {
+    "movie": {
+      "active": true,
+      "name": "fifth",
+      "weight": 1,
+      "center": [
+        -1.4,
+        -11.75
+      ],
+      "half": [
+        6.9,
+        4.4
+      ],
+      "summary": 0,
+      "wallWeight": 0
+    },
+    "roof": {
+      "vertices": 8934,
+      "outside": 0,
+      "min": [
+        -5.380646228790283,
+        -15.697999954223633
+      ],
+      "max": [
+        5.380646228790283,
+        -7.4019999504089355
+      ]
+    },
+    "state": {
+      "mode": "playing",
+      "elapsed": 6.000200000000004,
+      "storyTime": 6.000200000000004,
+      "routeComplete": false,
+      "guideStartProgress": 0
+    },
+    "canvas": 1,
+    "roofFlags": {
+      "count": 15,
+      "allVisibleOpaqueWithDepth": true
+    },
+    "overflow": false
+  },
+  "naturalCompletion": {
+    "movie": {
+      "active": true,
+      "name": "summary",
+      "weight": 1,
+      "center": [
+        -1.4,
+        -11.75
+      ],
+      "half": [
+        6.9,
+        4.4
+      ],
+      "summary": 1,
+      "wallWeight": 1
+    },
+    "roof": {
+      "vertices": 8934,
+      "outside": 0,
+      "min": [
+        -5.380646228790283,
+        -15.697999954223633
+      ],
+      "max": [
+        5.380646228790283,
+        -7.4019999504089355
+      ]
+    },
+    "state": {
+      "mode": "completed",
+      "elapsed": 45,
+      "storyTime": 45,
+      "routeComplete": true,
+      "guideStartProgress": 0
+    },
+    "canvas": 1,
+    "roofFlags": {
+      "count": 15,
+      "allVisibleOpaqueWithDepth": true
+    },
+    "overflow": false
+  },
+  "errors": []
+}

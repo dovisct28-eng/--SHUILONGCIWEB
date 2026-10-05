@@ -1,0 +1,37 @@
+{
+  "baseline": "33f3cfdd2a766c1673662666da07ad58c50be624",
+  "syntaxFiles": [
+    "module-a/a03/cutaway.mjs",
+    "module-a/a04/cutaway-state.mjs",
+    "module-a/a04/state.test.mjs",
+    "module-a/a04/full-roof-check.cjs"
+  ],
+  "htmlModule": true,
+  "offlineSourceMatches": true,
+  "protectedFiles": [
+    "shuilong-temple/shuilong-temple.glb",
+    "shuilong-temple/model-source.js",
+    "shuilong-temple/model-info.json",
+    "shuilong-temple/mural-locations.json",
+    "module-a/a04/path.mjs",
+    "module-a/a04/controller.mjs",
+    "module-a/a04/styles.css",
+    "module-a/a04/timing.mjs",
+    "module-a/a01",
+    "module-a/a02",
+    "module-a/a05",
+    "module-a/a06",
+    "module-a/a07",
+    "module-a/a08",
+    "module-a/guide",
+    "Mural-Exhibition",
+    "水龙祠壁画素材"
+  ],
+  "protectedDiffEmpty": true,
+  "archiveRefs": [
+    "48f272497e86e4549c5bcd0dee275ff347171a3f",
+    "48f272497e86e4549c5bcd0dee275ff347171a3f"
+  ],
+  "noBundler": true,
+  "modelRebuilt": false
+}

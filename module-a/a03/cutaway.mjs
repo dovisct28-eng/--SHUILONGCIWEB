@@ -55,7 +55,7 @@ export function createA03Cutaway(root){
       const handoff=active?ease((local-2.85)/.15):0;
       const movieState=cutawayState(tour);
       const bridge=active?handoff:tour?1:0;
-      const current=movieState.active?movieState:{center:[-1.4,-11.75],half:[4.3,4.1],summary:0};
+      const current=movieState.active?movieState:{center:[-1.4,-11.75],half:[6.9,4.4],summary:0};
       movie.weight.value=bridge;movie.summary.value=current.summary;movie.wall.value=current.wallWeight??1;movie.x.value=current.center[0];movie.z.value=current.center[1];movie.hx.value=current.half[0];movie.hz.value=current.half[1];
       galleryReveal.value=wallReveal.value=side*(1-bridge);
       if(active&&!tour){
