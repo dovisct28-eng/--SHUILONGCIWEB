@@ -1,0 +1,3 @@
+before continuity captured
+after continuity captured
+PASS 25 forward boundary/stable comparisons and reverse mural checks

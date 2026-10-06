@@ -1,0 +1,146 @@
+[
+  {
+    "viewport": "1440x900",
+    "screen": 23,
+    "chapter": "05",
+    "brandHidden": false,
+    "brandInert": false,
+    "brandDisplay": "flex",
+    "prompt": "随队伍继续前行 →",
+    "promptOpacity": 0,
+    "rect": {
+      "x": 1261.078125,
+      "y": 16,
+      "right": 1368,
+      "bottom": 35
+    },
+    "tools": {
+      "x": 1261,
+      "y": 0,
+      "right": 1408,
+      "bottom": 44
+    },
+    "overlap": true,
+    "bodyPhase": "a05-scan"
+  },
+  {
+    "viewport": "1440x900",
+    "screen": 24.8,
+    "chapter": "05",
+    "brandHidden": false,
+    "brandInert": false,
+    "brandDisplay": "flex",
+    "prompt": "随队伍继续前行 →",
+    "promptOpacity": 0.740741,
+    "rect": {
+      "x": 1261.078125,
+      "y": 16,
+      "right": 1368,
+      "bottom": 35
+    },
+    "tools": {
+      "x": 1261,
+      "y": 0,
+      "right": 1408,
+      "bottom": 44
+    },
+    "overlap": true,
+    "bodyPhase": "a05-handoff"
+  },
+  {
+    "viewport": "1440x900",
+    "screen": 29,
+    "chapter": "06",
+    "brandHidden": false,
+    "brandInert": false,
+    "brandDisplay": "flex",
+    "prompt": "巡游之后，队伍重新归庙 →",
+    "promptOpacity": 0,
+    "rect": {
+      "x": 1209.078125,
+      "y": 16,
+      "right": 1368,
+      "bottom": 35
+    },
+    "tools": {
+      "x": 1261,
+      "y": 0,
+      "right": 1408,
+      "bottom": 44
+    },
+    "overlap": true,
+    "bodyPhase": "a06-scan"
+  },
+  {
+    "viewport": "1440x900",
+    "screen": 31.8,
+    "chapter": "06",
+    "brandHidden": false,
+    "brandInert": false,
+    "brandDisplay": "flex",
+    "prompt": "巡游之后，队伍重新归庙 →",
+    "promptOpacity": 0.740741,
+    "rect": {
+      "x": 1209.078125,
+      "y": 16,
+      "right": 1368,
+      "bottom": 35
+    },
+    "tools": {
+      "x": 1261,
+      "y": 0,
+      "right": 1408,
+      "bottom": 44
+    },
+    "overlap": true,
+    "bodyPhase": "a06-handoff"
+  },
+  {
+    "viewport": "1440x900",
+    "screen": 38,
+    "chapter": "07",
+    "brandHidden": false,
+    "brandInert": false,
+    "brandDisplay": "flex",
+    "prompt": "从完整故事，进入画中细节 →",
+    "promptOpacity": 0,
+    "rect": {
+      "x": 1196.078125,
+      "y": 16,
+      "right": 1368,
+      "bottom": 35
+    },
+    "tools": {
+      "x": 1261,
+      "y": 0,
+      "right": 1408,
+      "bottom": 44
+    },
+    "overlap": true,
+    "bodyPhase": "a07-scan"
+  },
+  {
+    "viewport": "1440x900",
+    "screen": 39.8,
+    "chapter": "07",
+    "brandHidden": false,
+    "brandInert": false,
+    "brandDisplay": "flex",
+    "prompt": "从完整故事，进入画中细节 →",
+    "promptOpacity": 0.740741,
+    "rect": {
+      "x": 1196.078125,
+      "y": 16,
+      "right": 1368,
+      "bottom": 35
+    },
+    "tools": {
+      "x": 1261,
+      "y": 0,
+      "right": 1408,
+      "bottom": 44
+    },
+    "overlap": true,
+    "bodyPhase": "a07-handoff"
+  }
+]

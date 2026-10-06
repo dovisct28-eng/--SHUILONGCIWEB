@@ -1,0 +1,149 @@
+✔ cinematic, framing and environment windows are independent and reversible (6.0785ms)
+✔ local font subsets cover A01 copy, match manifest and remain within budget (7.4702ms)
+✔ shared valley continues through A02/A03 while information remains readable (136.3581ms)
+✔ rangeProgress clamps values and rejects invalid ranges (4.1279ms)
+✔ key animation boundaries map to confirmed phases (1.8706ms)
+✔ the reading interval keeps every animated property stable (1.0086ms)
+✔ A02 transition starts only after the independent reading distance (2.0166ms)
+✔ presentation moves the model right, then returns it to center for A02 (1.0697ms)
+✔ opening removes obsolete spatial frames and title plates (3.8841ms)
+✔ A01, return to center and spatial settling never display mural markers (2.1077ms)
+✔ all five appear before simultaneous core emphasis, followed by stable reading (3.9848ms)
+✔ forward and reverse traversal produce identical complete states (1.7445ms)
+✔ crowded projected nodes remain ordered, separated and inside the label rails (1.0876ms)
+✔ A02 local lights continue into A03, reset before A04 and preserve murals (12.8879ms)
+✔ room is scoped to the A02 handoff and releases the existing next chapter endpoint (4.6659ms)
+✔ every parameter is continuous and stateless in both directions (30.3248ms)
+✔ A02 labels retain the original projected anchor and remain separated (2.0277ms)
+✔ candidate text and reduced secondary labels have readable dark-field contrast (0.5697ms)
+✔ room adds no renderer, postprocessing, texture loader or autonomous clock (8.5685ms)
+✔ A03 influences leave both protected chapter endpoints unchanged (17.2078ms)
+✔ all reading information establishes in order and stays static through the reading interval (3.976ms)
+✔ framing and field are continuous, reversible and deterministic on arbitrary seeks (49.8166ms)
+✔ A03 annotations keep each real projected anchor and separate crowded labels (1.1098ms)
+✔ reading colors retain contrast and add no autonomous clock or render resources (3.7074ms)
+✔ poster retains one accessible heading, approved copy and real WebGL layering (3.5345ms)
+✔ A03 modifies only architectural rendering and preserves real mural materials (6.9413ms)
+✔ near-wall cutaway patches a shared material once and restores A04/A02 state (2.81ms)
+✔ poster opens roofs gradually, holds cutaway and hands its endpoint to A04 (17.0573ms)
+✔ A03 leaves the accepted A01 and entire A02 interval unchanged (0.4267ms)
+✔ theme has a stable reading interval before preparing the next route (0.428ms)
+✔ arbitrary forward/reverse jumps and viewport changes are deterministic (0.5579ms)
+✔ marker API hides secondary labels AND their SVG lines/dots, then restores them (2.9799ms)
+✔ A03 boundary and A04 entry stay fixed; guide preparation is reversible (4.5386ms)
+✔ each mural has a stable independent camera before withdrawal (4.9845ms)
+✔ route grows during each journey and completed state stays complete (1.6143ms)
+✔ walking lines clear model columns and remain inside perimeter walls (11.2471ms)
+✔ camera samples stay continuous; first mural stop passes below the gallery beam (64.6054ms)
+✔ handoff is reversible from overview through fifth approach to close view (0.4641ms)
+✔ 45 and 58 second candidates share all camera/route milestones (14.0614ms)
+✔ route grows only along the frozen world paths and active trace outranks other states (9.3381ms)
+✔ local window follows travel, restores wall support at stops and returns to summary (1.1009ms)
+✔ label layout preserves anchors, avoids viewport edges and has only one current node (0.8066ms)
+✔ moving openings remain continuous and reveal the return destination without removing the opposite roof edge (0.602ms)
+✔ summary closes all windows and fifth approach reopens gradually and reversibly (0.6184ms)
+✔ fifth opening covers the complete main-hall roof including ridge/eave edges (0.4571ms)
+✔ A08 type waits for the wall and enters chapter/title/body/CTA in order (9.1481ms)
+✔ A01 and A02 contain the approved copy, without the superseded explanations (5.0207ms)
+✔ three guides match the final copy verbatim, with coherent natural paragraphs (1.5836ms)
+✔ local serif subset covers every rendered heading and body subset covers all new copy (3.0163ms)
+✔ A05 follows the unchanged A04 endpoint and has a stable reading interval (4.9879ms)
+✔ A05 and A06 have bounded lifetimes with only a short transition overlap (1.2204ms)
+✔ A07 follows A06 and remains at the left edge through the story end (0.3313ms)
+✔ the same scroll position restores the same viewing position in either direction (1.5709ms)
+✔ reading groups preserve every paragraph and finish before the scan begins (14.4857ms)
+✔ complete INTRO, text exit, expansion, then right-to-left scan are separate states (6.2524ms)
+✔ A08 preserves near scan scale while a projected aperture reveals the left-end pixels (26.532ms)
+✔ gallery scale is shared across all three murals and reduced motion (0.2638ms)
+✔ an image already narrower than the viewport remains centered without invented travel (0.3965ms)
+✔ mural image grows from the projected wall to its formal right-edge placement (0.8746ms)
+✔ each mural receives its own material while non-mural geometry keeps the palette (2.1641ms)
+✔ display resources map only murals 01, 02, and 05 to existing display files (11.2841ms)
+✔ display plane dimensions preserve image ratio and fit entirely within mural bounds (1.125ms)
+✔ photo-calibrated display planes fill their designed plaster spans without stretching (0.6245ms)
+✔ iframe mural projections map through the scaled model frame into stage coordinates (0.4798ms)
+✔ the model runtime uses the shared display mapping and keeps image textures out of GLB generation (64.6705ms)
+✔ anchors reach actual stable Hero, centered architecture, poster and fifth mural INTRO (3.4944ms)
+✔ A01 and recenter remain inaccessible; A02 waits for readable heading (0.9396ms)
+✔ forward and reverse chapter phases map to position, never accumulated completion (0.573ms)
+✔ exploration preflight uses B existing independent entry, no CORS dependency (0.9524ms)
+✔ unavailable B and timeout resolve without leaving A (23.8197ms)
+✔ chapter fonts are licensed, within the recorded budget, and cover Chinese states and errors (45.5315ms)
+✔ homography registers all four corners of the actual oblique mural, including perspective (1.9497ms)
+✔ iframe mapping and transfer keep corner registration through resize and reverse (2.2669ms)
+✔ director cannot affect frozen A01, including reverse restoration (2.7059ms)
+✔ markers unfold anchors before lines and labels, independently of core emphasis (0.4893ms)
+✔ trace states exist only after withdrawal; current route yields to past trace (0.3863ms)
+✔ theme lowers exposure but tour returns structure without moving the existing camera (0.2579ms)
+✖ isolated Windows launcher guards preserve files and refs (24310.0666ms)
+✔ terrain stays beneath the court, masks the plinth edge and falls continuously (5.3534ms)
+✔ environment discards color/depth and matching shadow fragments, then stops rendering (112.5281ms)
+✔ directional reveal and its shadow share uniforms and restore at A02 (2.4473ms)
+✔ normal strengths reset exactly after repeated A01 seeks (2.3037ms)
+✔ post shader failure restores the renderer callback and renders the healthy scene (3.5876ms)
+✔ three line brightness ranks preserve every actual contour segment (15.4392ms)
+✔ new offline visual modules match source and own no animation clock (12.2283ms)
+✔ V3 hierarchy completes before directional light; exits before Hero and A02 (3.0865ms)
+✔ forward/reverse, clamped input and reduced motion are deterministic (3.7207ms)
+✔ geometry remains allocated once across seek/resize and releases completely (8.656ms)
+✔ invalid contour releases partially allocated resources and leaves root usable (1.4285ms)
+✔ standalone line/data copies match modules; no timers, canvas or extra RAF (6.8338ms)
+✔ material and light arrive after structure, before the environmental climax (0.3264ms)
+✔ A01 restores camera, lighting and base materials at A02, without touching murals (16.8655ms)
+✔ near camera pulls back continuously and reduced motion retains the full compound (29.8267ms)
+✔ A04 shared windows keep every roof opaque and restore depths after arbitrary seeks (12.6669ms)
+✔ chapter states withdraw environment continuously and reverse exactly (5.4729ms)
+✔ headless fallback environment is separate, bounded, disposable and resizable (23.2106ms)
+✔ watercolor assets load once, stay grounded, withdraw and recover with chapters (16.2753ms)
+✔ failed or late assets cannot remove fallback trees or revive disposed scene (6.3497ms)
+✔ offline watercolor assets match local web assets within the resource budget (6.5603ms)
+✔ visual hierarchy never changes mural colors or geometry, and restores on reverse (1.9297ms)
+✔ offline environment module matches source (9.5555ms)
+✔ GLB, model statistics, and offline preview are the same shared model (60.2521ms)
+✔ five stable mural IDs and all duplicated metadata agree (0.6213ms)
+✔ first mural wall is free of enclosure pilasters and gallery columns (1.7367ms)
+✔ mural spans and wall bands reflect the design model, not surveyed dimensions (3.7682ms)
+✔ GLB exports valid UV and embedded PBR texture chains (0.6568ms)
+✔ closed perimeter wall faces are exterior brick and interior plaster in the exported GLB (144.9501ms)
+✔ interior plaster has a subtle height gradient, with COLOR_0 preserved for both previews (17.178ms)
+✔ one world remains visible in A01–A03 and exits for A04, including reverse and jumps (12.8311ms)
+✔ real moving DOM rectangles map into a resized, offset renderer viewport (0.3281ms)
+✔ selective cutaway hides the main roof while preserving entrance/stage and restores arbitrary seeks (3.2057ms)
+✔ controlled preview owns a single landscape and embeds current shared state for offline use (10.4812ms)
+✔ A04 inherits the shared material/light look without moving the camera or tinting murals (4.0294ms)
+✔ source comparison tolerates CRLF and mixed line endings only (1.4586ms)
+ℹ tests 114
+ℹ suites 0
+ℹ pass 113
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 27455.3558
+
+✖ failing tests:
+
+test at scripts\lofi-launcher.test.cjs:9:1
+✖ isolated Windows launcher guards preserve files and refs (24310.0666ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /occupied by an unverified process/. Input:
+
+  '\n' +
+    '==========================================\n' +
+    '  Shuilongci Module A - Lo-fi archive\n' +
+    '==========================================\n' +
+    '\n' +
+    'Archive commit verified: ad2cd9b4ecefb35658082ce5c112148b8fa2c4bc\n' +
+    '\n' +
+    '[ERROR] 拒绝访问 \n'
+
+      at TestContext.<anonymous> (D:\YJS\出兵入将-PC端页面\scripts\lofi-launcher.test.cjs:95:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1125:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:358:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '\n==========================================\n  Shuilongci Module A - Lo-fi archive\n==========================================\n\nArchive commit verified: ad2cd9b4ecefb35658082ce5c112148b8fa2c4bc\n\n[ERROR] 拒绝访问 \n',
+    expected: /occupied by an unverified process/,
+    operator: 'match',
+    diff: 'simple'
+  }

@@ -1,0 +1,15 @@
+1/3 before complete
+1/3 after complete
+2/3 after complete
+2/3 before complete
+3/3 before complete
+3/3 after complete
+settled allocation pairs [
+  { repeat: 0, mode: 'before', geometry: 66, textures: 22 },
+  { repeat: 0, mode: 'after', geometry: 66, textures: 22 },
+  { repeat: 1, mode: 'after', geometry: 66, textures: 22 },
+  { repeat: 1, mode: 'before', geometry: 66, textures: 22 },
+  { repeat: 2, mode: 'before', geometry: 66, textures: 22 },
+  { repeat: 2, mode: 'after', geometry: 66, textures: 22 }
+]
+PASS repeated timings, resource/canvas/renderer allocation checks

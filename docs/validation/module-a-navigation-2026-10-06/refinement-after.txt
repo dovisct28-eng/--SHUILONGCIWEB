@@ -1,0 +1,297 @@
+[
+  {
+    "viewport": "1920x1080",
+    "screen": 23,
+    "brandHidden": true,
+    "promptOpacity": 0,
+    "overlap": false
+  },
+  {
+    "viewport": "1920x1080",
+    "screen": 24.8,
+    "brandHidden": true,
+    "promptOpacity": 0.740741,
+    "overlap": false
+  },
+  {
+    "viewport": "1920x1080",
+    "screen": 29,
+    "brandHidden": true,
+    "promptOpacity": 0,
+    "overlap": false
+  },
+  {
+    "viewport": "1920x1080",
+    "screen": 31.8,
+    "brandHidden": true,
+    "promptOpacity": 0.740741,
+    "overlap": false
+  },
+  {
+    "viewport": "1920x1080",
+    "screen": 38,
+    "brandHidden": true,
+    "promptOpacity": 0,
+    "overlap": false
+  },
+  {
+    "viewport": "1920x1080",
+    "screen": 39.8,
+    "brandHidden": true,
+    "promptOpacity": 0.740741,
+    "overlap": false
+  },
+  {
+    "viewport": "1440x900",
+    "screen": 23,
+    "brandHidden": true,
+    "promptOpacity": 0,
+    "overlap": false
+  },
+  {
+    "viewport": "1440x900",
+    "screen": 24.8,
+    "brandHidden": true,
+    "promptOpacity": 0.740741,
+    "overlap": false
+  },
+  {
+    "viewport": "1440x900",
+    "screen": 29,
+    "brandHidden": true,
+    "promptOpacity": 0,
+    "overlap": false
+  },
+  {
+    "viewport": "1440x900",
+    "screen": 31.8,
+    "brandHidden": true,
+    "promptOpacity": 0.740741,
+    "overlap": false
+  },
+  {
+    "viewport": "1440x900",
+    "screen": 38,
+    "brandHidden": true,
+    "promptOpacity": 0,
+    "overlap": false
+  },
+  {
+    "viewport": "1440x900",
+    "screen": 39.8,
+    "brandHidden": true,
+    "promptOpacity": 0.740741,
+    "overlap": false
+  },
+  {
+    "viewport": "1366x768",
+    "screen": 23,
+    "brandHidden": true,
+    "promptOpacity": 0,
+    "overlap": false
+  },
+  {
+    "viewport": "1366x768",
+    "screen": 24.8,
+    "brandHidden": true,
+    "promptOpacity": 0.739583,
+    "overlap": false
+  },
+  {
+    "viewport": "1366x768",
+    "screen": 29,
+    "brandHidden": true,
+    "promptOpacity": 0,
+    "overlap": false
+  },
+  {
+    "viewport": "1366x768",
+    "screen": 31.8,
+    "brandHidden": true,
+    "promptOpacity": 0.739583,
+    "overlap": false
+  },
+  {
+    "viewport": "1366x768",
+    "screen": 38,
+    "brandHidden": true,
+    "promptOpacity": 0,
+    "overlap": false
+  },
+  {
+    "viewport": "1366x768",
+    "screen": 39.8,
+    "brandHidden": true,
+    "promptOpacity": 0.739583,
+    "overlap": false
+  },
+  {
+    "viewport": "1024x768",
+    "screen": 23,
+    "brandHidden": true,
+    "promptOpacity": 0,
+    "overlap": false
+  },
+  {
+    "viewport": "1024x768",
+    "screen": 24.8,
+    "brandHidden": true,
+    "promptOpacity": 0.739583,
+    "overlap": false
+  },
+  {
+    "viewport": "1024x768",
+    "screen": 29,
+    "brandHidden": true,
+    "promptOpacity": 0,
+    "overlap": false
+  },
+  {
+    "viewport": "1024x768",
+    "screen": 31.8,
+    "brandHidden": true,
+    "promptOpacity": 0.739583,
+    "overlap": false
+  },
+  {
+    "viewport": "1024x768",
+    "screen": 38,
+    "brandHidden": true,
+    "promptOpacity": 0,
+    "overlap": false
+  },
+  {
+    "viewport": "1024x768",
+    "screen": 39.8,
+    "brandHidden": true,
+    "promptOpacity": 0.739583,
+    "overlap": false
+  },
+  {
+    "viewport": "1440x650",
+    "screen": 23,
+    "brandHidden": true,
+    "promptOpacity": 0,
+    "overlap": false
+  },
+  {
+    "viewport": "1440x650",
+    "screen": 24.8,
+    "brandHidden": true,
+    "promptOpacity": 0.740741,
+    "overlap": false
+  },
+  {
+    "viewport": "1440x650",
+    "screen": 29,
+    "brandHidden": true,
+    "promptOpacity": 0,
+    "overlap": false
+  },
+  {
+    "viewport": "1440x650",
+    "screen": 31.8,
+    "brandHidden": true,
+    "promptOpacity": 0.740741,
+    "overlap": false
+  },
+  {
+    "viewport": "1440x650",
+    "screen": 38,
+    "brandHidden": true,
+    "promptOpacity": 0,
+    "overlap": false
+  },
+  {
+    "viewport": "1440x650",
+    "screen": 39.8,
+    "brandHidden": true,
+    "promptOpacity": 0.740741,
+    "overlap": false
+  },
+  {
+    "viewport": "760x768",
+    "screen": 23,
+    "brandHidden": true,
+    "promptOpacity": 0,
+    "overlap": false
+  },
+  {
+    "viewport": "760x768",
+    "screen": 24.8,
+    "brandHidden": true,
+    "promptOpacity": 0.739583,
+    "overlap": false
+  },
+  {
+    "viewport": "760x768",
+    "screen": 29,
+    "brandHidden": true,
+    "promptOpacity": 0,
+    "overlap": false
+  },
+  {
+    "viewport": "760x768",
+    "screen": 31.8,
+    "brandHidden": true,
+    "promptOpacity": 0.739583,
+    "overlap": false
+  },
+  {
+    "viewport": "760x768",
+    "screen": 38,
+    "brandHidden": true,
+    "promptOpacity": 0,
+    "overlap": false
+  },
+  {
+    "viewport": "760x768",
+    "screen": 39.8,
+    "brandHidden": true,
+    "promptOpacity": 0.739583,
+    "overlap": false
+  },
+  {
+    "viewport": "390x844",
+    "screen": 23,
+    "brandHidden": true,
+    "promptOpacity": 0,
+    "overlap": false
+  },
+  {
+    "viewport": "390x844",
+    "screen": 24.8,
+    "brandHidden": true,
+    "promptOpacity": 0.740214,
+    "overlap": false
+  },
+  {
+    "viewport": "390x844",
+    "screen": 29,
+    "brandHidden": true,
+    "promptOpacity": 0,
+    "overlap": false
+  },
+  {
+    "viewport": "390x844",
+    "screen": 31.8,
+    "brandHidden": true,
+    "promptOpacity": 0.740214,
+    "overlap": false
+  },
+  {
+    "viewport": "390x844",
+    "screen": 38,
+    "brandHidden": true,
+    "promptOpacity": 0,
+    "overlap": false
+  },
+  {
+    "viewport": "390x844",
+    "screen": 39.8,
+    "brandHidden": true,
+    "promptOpacity": 0.740214,
+    "overlap": false
+  }
+]
+PASS after user refinement captures

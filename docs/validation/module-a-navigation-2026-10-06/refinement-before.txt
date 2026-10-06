@@ -1,0 +1,45 @@
+[
+  {
+    "viewport": "1440x900",
+    "screen": 23,
+    "brandHidden": false,
+    "promptOpacity": 0,
+    "overlap": true
+  },
+  {
+    "viewport": "1440x900",
+    "screen": 24.8,
+    "brandHidden": false,
+    "promptOpacity": 0.740741,
+    "overlap": true
+  },
+  {
+    "viewport": "1440x900",
+    "screen": 29,
+    "brandHidden": false,
+    "promptOpacity": 0,
+    "overlap": true
+  },
+  {
+    "viewport": "1440x900",
+    "screen": 31.8,
+    "brandHidden": false,
+    "promptOpacity": 0.740741,
+    "overlap": true
+  },
+  {
+    "viewport": "1440x900",
+    "screen": 38,
+    "brandHidden": false,
+    "promptOpacity": 0,
+    "overlap": true
+  },
+  {
+    "viewport": "1440x900",
+    "screen": 39.8,
+    "brandHidden": false,
+    "promptOpacity": 0.740741,
+    "overlap": true
+  }
+]
+PASS before user refinement captures

@@ -1,0 +1,206 @@
+{
+  "baseline": "20e6cd6deadf73e0c4532205babafe3d48b177f9",
+  "frames": [
+    {
+      "name": "hero",
+      "screen": 5.6,
+      "phase": "reading",
+      "changedFraction": 0,
+      "significantFraction": 0,
+      "maxDelta": 0
+    },
+    {
+      "name": "a01-a02-start",
+      "screen": 6.2,
+      "phase": "reading",
+      "changedFraction": 0,
+      "significantFraction": 0,
+      "maxDelta": 0
+    },
+    {
+      "name": "recenter",
+      "screen": 6.7,
+      "phase": "a02-transition",
+      "changedFraction": 0.00002546296296296296,
+      "significantFraction": 0,
+      "maxDelta": 1
+    },
+    {
+      "name": "a02",
+      "screen": 7.5,
+      "phase": "a02-space",
+      "changedFraction": 0.00015046296296296297,
+      "significantFraction": 0,
+      "maxDelta": 2
+    },
+    {
+      "name": "a02-end",
+      "screen": 10.2,
+      "phase": "a02-reading",
+      "changedFraction": 0.00018055555555555555,
+      "significantFraction": 0,
+      "maxDelta": 2
+    },
+    {
+      "name": "a02-a03",
+      "screen": 10.7,
+      "phase": "a03-enter",
+      "changedFraction": 0.00017901234567901234,
+      "significantFraction": 0,
+      "maxDelta": 2
+    },
+    {
+      "name": "a03",
+      "screen": 11.2,
+      "phase": "a03-reading",
+      "changedFraction": 0.0006188271604938272,
+      "significantFraction": 0,
+      "maxDelta": 3
+    },
+    {
+      "name": "a03-exit",
+      "screen": 12.9,
+      "phase": "a03-handoff",
+      "changedFraction": 0.0001265432098765432,
+      "significantFraction": 0,
+      "maxDelta": 1
+    },
+    {
+      "name": "a04-entry",
+      "screen": 13.3,
+      "phase": "a04-completed",
+      "changedFraction": 0,
+      "significantFraction": 0,
+      "maxDelta": 0
+    },
+    {
+      "name": "a04",
+      "screen": 14.5,
+      "phase": "a04-completed",
+      "changedFraction": 0,
+      "significantFraction": 0,
+      "maxDelta": 0
+    },
+    {
+      "name": "a04-summary",
+      "screen": 16,
+      "phase": "a04-completed",
+      "changedFraction": 0,
+      "significantFraction": 0,
+      "maxDelta": 0
+    },
+    {
+      "name": "projection",
+      "screen": 17.65,
+      "phase": "a04-guide-start",
+      "changedFraction": 0,
+      "significantFraction": 0,
+      "maxDelta": 0
+    },
+    {
+      "name": "a05-entry",
+      "screen": 18,
+      "phase": "a04-guide-start",
+      "changedFraction": 0,
+      "significantFraction": 0,
+      "maxDelta": 0
+    },
+    {
+      "name": "a05",
+      "screen": 18.8,
+      "phase": "a05-introduction",
+      "changedFraction": 0,
+      "significantFraction": 0,
+      "maxDelta": 0
+    },
+    {
+      "name": "a05-scan",
+      "screen": 23,
+      "phase": "a05-scan",
+      "changedFraction": 0.0006172839506172839,
+      "significantFraction": 0,
+      "maxDelta": 1
+    },
+    {
+      "name": "a05-end",
+      "screen": 24.95,
+      "phase": "a05-handoff",
+      "changedFraction": 0.004079475308641976,
+      "significantFraction": 0,
+      "maxDelta": 1
+    },
+    {
+      "name": "a05-a06",
+      "screen": 25.2,
+      "phase": "a06-introduction",
+      "changedFraction": 0,
+      "significantFraction": 0,
+      "maxDelta": 0
+    },
+    {
+      "name": "a06",
+      "screen": 25.9,
+      "phase": "a06-introduction",
+      "changedFraction": 0,
+      "significantFraction": 0,
+      "maxDelta": 0
+    },
+    {
+      "name": "a06-end",
+      "screen": 31.95,
+      "phase": "a06-handoff",
+      "changedFraction": 0,
+      "significantFraction": 0,
+      "maxDelta": 0
+    },
+    {
+      "name": "a06-a07",
+      "screen": 32.2,
+      "phase": "a07-introduction",
+      "changedFraction": 0.0019012345679012346,
+      "significantFraction": 0,
+      "maxDelta": 1
+    },
+    {
+      "name": "a07",
+      "screen": 32.9,
+      "phase": "a07-introduction",
+      "changedFraction": 0,
+      "significantFraction": 0,
+      "maxDelta": 0
+    },
+    {
+      "name": "a07-scan",
+      "screen": 38,
+      "phase": "a07-scan",
+      "changedFraction": 0.0028896604938271606,
+      "significantFraction": 0,
+      "maxDelta": 2
+    },
+    {
+      "name": "a07-a08",
+      "screen": 40.3,
+      "phase": "a08",
+      "changedFraction": 0,
+      "significantFraction": 0,
+      "maxDelta": 0
+    },
+    {
+      "name": "a08-copy",
+      "screen": 41,
+      "phase": "a08",
+      "changedFraction": 0,
+      "significantFraction": 0,
+      "maxDelta": 0
+    },
+    {
+      "name": "a08",
+      "screen": 42,
+      "phase": "a08",
+      "changedFraction": 0,
+      "significantFraction": 0,
+      "maxDelta": 0
+    }
+  ],
+  "limit": "1440×900 same host Chrome. Baseline app served from Git; identical protected chapter sources and assets. A04 sampled in completed state for deterministic camera comparison; real automatic play separately tested. Pixel proof omits only new navigation and the handoff label elements explicitly moved by user review; actual screenshots retain both. Permits <0.1% pixels over 4/255 quantization; actual maxima recorded. Label visibility/copy/geometry separately checked."
+}

@@ -1,0 +1,54 @@
+/* Candidate navigation values; chapter artwork and typography stay intact. */
+.story-nav{position:absolute;inset:0;z-index:15;pointer-events:none;opacity:0;visibility:hidden;transition:opacity 160ms ease;color:#b8b6ac;font:400 12px/1.5 "Narrative Sans","Microsoft YaHei",sans-serif}
+.story-nav[data-visible="true"]{opacity:1;visibility:visible}
+.story-nav a,.story-nav button{pointer-events:auto;color:inherit;text-decoration:none}
+.story-nav a:focus-visible,.story-nav button:focus-visible{outline:2px solid #d8d2c5;outline-offset:2px}
+.story-nav__brand{position:absolute;left:32px;top:24px;min-height:44px;display:flex;flex-direction:column;justify-content:center;gap:2px}
+.story-nav__brand>span{font:500 17px/1.4 "Narrative Serif","A01 Serif",SimSun,serif;letter-spacing:.08em}
+.story-nav__brand small{font-size:10px;letter-spacing:.03em}
+.story-nav__tools{position:absolute;right:32px;top:24px;display:flex;align-items:center;gap:18px;min-height:44px}
+.story-nav__progress{display:flex;gap:5px}
+.story-nav__progress i{display:block;width:15px;height:2px;background:#666e70}
+.story-nav__progress i[data-current="true"]{background:#bbb5a8}
+.story-nav__toggle{min-width:54px;min-height:44px;padding:0 4px;background:none;border:0;border-radius:0;font:inherit;cursor:pointer;display:flex;align-items:center;gap:7px}
+.story-nav__toggle>span{font-size:14px}
+.story-nav__toggle[aria-expanded="true"]>span{transform:rotate(45deg)}
+.story-nav__directory{position:absolute;right:32px;top:76px;width:236px;padding:10px 16px;background:#10191ff5;border:1px solid #6b747535;max-height:calc(100% - 90px);overflow-y:auto}
+.story-nav__directory[hidden]{display:none}
+.story-nav__directory a{display:flex;align-items:center;justify-content:space-between;min-height:48px;font-size:13px;position:relative;padding:0 10px}
+.story-nav__directory a[aria-current]{color:#e0dacf}
+.story-nav__directory a[aria-current]::before{content:"";position:absolute;left:0;width:3px;height:3px;border-radius:50%;background:currentColor}
+.story-nav a:hover,.story-nav button:hover{color:#e0dacf}
+.story-nav__sr{position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden;white-space:nowrap}
+/* A04 keeps its existing controls: only the navigation tools move down. */
+.story-nav[data-layout="route"] .story-nav__tools{top:calc(4% + 52px)}
+.story-nav[data-layout="route"] .story-nav__directory{top:calc(4% + 100px)}
+/* INTRO already owns the top editorial band. Fit a single line above it. */
+.story-nav:is([data-layout="guide"],[data-layout="scan"]) .story-nav__brand{top:0;justify-content:flex-start;padding-top:2px}
+.story-nav:is([data-layout="guide"],[data-layout="scan"]) .story-nav__brand>span{font-size:16px;line-height:20px}
+.story-nav:is([data-layout="guide"],[data-layout="scan"]) .story-nav__brand small{display:none}
+.story-nav:is([data-layout="guide"],[data-layout="scan"]) .story-nav__tools{top:0}
+.story-nav:is([data-layout="guide"],[data-layout="scan"]) .story-nav__directory{top:48px}
+/* User review: SCAN gives the left edge completely back to the mural. */
+.story-nav__brand[hidden]{display:none}
+.story-nav[data-quiet="true"] .story-nav__progress{opacity:.78}
+/* All three existing handoff prompts collided with the 147px tool group.
+   Move only these auxiliary labels left; chapter art and copy stay intact. */
+.stage .mural-guide__next{right:max(var(--guide-gutter),203px)}
+.story-nav[data-layout="terminal"] .story-nav__brand{top:0;min-height:44px;padding-top:0;justify-content:flex-start}
+.story-nav[data-layout="terminal"] .story-nav__brand>span{font-size:16px;line-height:20px}
+.story-nav[data-layout="terminal"] .story-nav__brand small{display:none}
+.story-nav[data-layout="terminal"] .story-nav__tools{top:0}
+.story-nav[data-layout="terminal"] .story-nav__directory{top:48px}
+@media(max-width:760px){
+ .story-nav__brand{left:14px;top:0;justify-content:flex-start;padding-top:2px}
+ .story-nav__brand>span{font-size:16px;line-height:20px}.story-nav__brand small{display:none}
+ .story-nav__tools{right:12px;top:0;gap:10px}.story-nav__progress{gap:4px}.story-nav__progress i{width:12px}
+ .story-nav__directory{right:12px;top:48px;width:min(236px,calc(100vw - 24px))}
+ .story-nav[data-layout="route"] .story-nav__tools{top:calc(4% + 48px)}
+ .stage .mural-guide__next{right:160px;top:34px}
+}
+@media(prefers-reduced-motion:reduce){.story-nav{transition:none}}
+.exploration-notice{position:absolute;z-index:16;right:32px;top:80px;width:min(320px,calc(100% - 32px));padding:16px 18px;background:#10191ff5;border:1px solid #6b747550;color:#d8d2c5;font:14px/1.8 "Microsoft YaHei",sans-serif;pointer-events:auto}
+.exploration-notice[hidden]{display:none}.exploration-notice p{margin:0}.exploration-notice button{min-width:44px;min-height:44px;border:0;background:none;color:#d8d2c5;font:inherit;cursor:pointer;margin-top:8px}.exploration-notice button:focus-visible{outline:2px solid #d8d2c5}
+@media(max-width:760px){.exploration-notice{right:12px;top:60px}}

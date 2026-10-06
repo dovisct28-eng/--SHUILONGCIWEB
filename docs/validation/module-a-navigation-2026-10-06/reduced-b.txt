@@ -1,0 +1,1 @@
+PASS 390px touch reduced-motion: navigation and A08 entries to actual B, native return

@@ -13,6 +13,8 @@ import { createA08Controller } from '../a08/controller.mjs';
 import { directorFrame } from '../visual-director/state.mjs';
 import {architecturalRoom,roomFrame,createRoomField} from '../a02/spatial.mjs';
 import {normalizeTitleRects} from '../../shuilong-temple/shared-world.mjs';
+import {createNavigation} from '../navigation/controller.mjs';
+import {connectExploration} from '../navigation/exploration.mjs';
 
 const story = document.querySelector('[data-story]');
 const stage = document.querySelector('[data-stage]');
@@ -37,6 +39,8 @@ const renderA06 = createMuralGuide(stage, a06Guide, requestRender);
 const renderA07 = createMuralGuide(stage, a07Guide, requestRender);
 const renderA08 = createA08Controller(stage);
 const renderA03 = createA03View(stage);
+const renderNavigation = createNavigation(stage, requestRender);
+connectExploration(stage);
 let renderInkScene=()=>{};
 try{const ink=await import('./ink-scene.mjs');renderInkScene=ink.createInkScene(stage);}catch(error){stage.dataset.inkError=String(error);}
 const a03Styles = document.createElement('link');
@@ -142,6 +146,7 @@ function render() {
   renderA06(screens);
   renderA07(screens);
   renderA08(screens);
+  renderNavigation({phase:document.body.dataset.phase, room, transition:state.transition});
   if (debugEnabled) {
     debug.textContent = `${phase} · A01 ${(state.animation * 100).toFixed(1)}% · A02 ${(spatial.progress * 100).toFixed(1)}% · A03 ${(theme.progress * 100).toFixed(1)}%`;
   }
@@ -154,6 +159,7 @@ function requestRender() {
 }
 
 addEventListener('scroll', requestRender, { passive: true });
+addEventListener('pageshow', requestRender);
 reducedMotion.addEventListener('change', requestRender);
 addEventListener('resize', () => {
   scrollTo(0,lastScreens*innerHeight);

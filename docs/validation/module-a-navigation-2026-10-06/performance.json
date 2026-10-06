@@ -1,0 +1,778 @@
+{
+  "baseline": "20e6cd6deadf73e0c4532205babafe3d48b177f9",
+  "viewport": "1440x900",
+  "runs": [
+    {
+      "repeat": 0,
+      "mode": "before",
+      "modelReadyMs": 3726,
+      "firstResources": [
+        {
+          "name": "http://127.0.0.1:4175/module-a/a01/fonts/a01-serif.woff2",
+          "bytes": 29740
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/a01/fonts/a01-sans.woff2",
+          "bytes": 21068
+        }
+      ],
+      "scan": {
+        "frameIntervalMs": {
+          "samples": 89,
+          "median": 4.200000000000728,
+          "p95": 8.299999999999272,
+          "max": 12.5
+        },
+        "mainRenderScriptMs": {
+          "samples": 90,
+          "median": 2.099999999627471,
+          "p95": 3.199999999254942,
+          "max": 4.399999998509884
+        }
+      },
+      "handoff": {
+        "frameIntervalMs": {
+          "samples": 89,
+          "median": 8.299999999999272,
+          "p95": 29.100000000002183,
+          "max": 95.79999999999927
+        },
+        "mainRenderScriptMs": {
+          "samples": 90,
+          "median": 2,
+          "p95": 3,
+          "max": 3.900000000372529
+        }
+      },
+      "menuScriptAndForcedLayoutMs": null,
+      "heapBefore": 37440366,
+      "renderer": {
+        "geometries": 66,
+        "textures": 22,
+        "calls": 56,
+        "triangles": 83578,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1440,
+            900
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 4912,
+            "calls": 56,
+            "triangles": 83578,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15552000,
+          "multisampleBytes": 31104000,
+          "targetBytes": 46656000
+        }
+      },
+      "canvases": 1,
+      "heapAfter": 39968010,
+      "resources": [
+        {
+          "name": "http://127.0.0.1:4175/module-a/a01/fonts/a01-serif.woff2",
+          "bytes": 29740,
+          "encoded": 29440
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/a01/fonts/a01-sans.woff2",
+          "bytes": 21068,
+          "encoded": 20768
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/visual-director/fonts/narrative-sans.woff2",
+          "bytes": 80048,
+          "encoded": 79748
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/visual-director/fonts/narrative-serif.woff2",
+          "bytes": 48068,
+          "encoded": 47768
+        },
+        {
+          "name": "http://127.0.0.1:4175/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+          "bytes": 2842484,
+          "encoded": 2842184
+        },
+        {
+          "name": "http://127.0.0.1:4175/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-01-display.webp",
+          "bytes": 1351448,
+          "encoded": 1351148
+        },
+        {
+          "name": "http://127.0.0.1:4175/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+          "bytes": 3552914,
+          "encoded": 3552614
+        },
+        {
+          "name": "http://127.0.0.1:4175/shuilong-temple/shuilong-temple.glb",
+          "bytes": 3329300,
+          "encoded": 3329000
+        },
+        {
+          "name": "http://127.0.0.1:4175/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+          "bytes": 2842484,
+          "encoded": 2842184
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/visual-director/fonts/narrative-sans.woff2",
+          "bytes": 80048,
+          "encoded": 79748
+        }
+      ]
+    },
+    {
+      "repeat": 0,
+      "mode": "after",
+      "modelReadyMs": 1960,
+      "firstResources": [
+        {
+          "name": "http://127.0.0.1:4175/module-a/a01/fonts/a01-serif.woff2",
+          "bytes": 29740
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/a01/fonts/a01-sans.woff2",
+          "bytes": 21068
+        }
+      ],
+      "scan": {
+        "frameIntervalMs": {
+          "samples": 89,
+          "median": 4.199999999998909,
+          "p95": 8.399999999999636,
+          "max": 8.800000000001091
+        },
+        "mainRenderScriptMs": {
+          "samples": 90,
+          "median": 2.300000000745058,
+          "p95": 3.300000000745058,
+          "max": 3.700000001117587
+        }
+      },
+      "handoff": {
+        "frameIntervalMs": {
+          "samples": 89,
+          "median": 8.299999999999272,
+          "p95": 12.699999999998909,
+          "max": 16.700000000000728
+        },
+        "mainRenderScriptMs": {
+          "samples": 90,
+          "median": 2.099999999627471,
+          "p95": 2.900000000372529,
+          "max": 3.900000000372529
+        }
+      },
+      "menuScriptAndForcedLayoutMs": {
+        "samples": 20,
+        "median": 0.900000000372529,
+        "p95": 2.300000000745058,
+        "max": 2.300000000745058
+      },
+      "heapBefore": 38344620,
+      "renderer": {
+        "geometries": 66,
+        "textures": 22,
+        "calls": 56,
+        "triangles": 83578,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1440,
+            900
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 5048,
+            "calls": 56,
+            "triangles": 83578,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15552000,
+          "multisampleBytes": 31104000,
+          "targetBytes": 46656000
+        }
+      },
+      "canvases": 1,
+      "heapAfter": 53931499,
+      "resources": [
+        {
+          "name": "http://127.0.0.1:4175/module-a/a01/fonts/a01-serif.woff2",
+          "bytes": 29740,
+          "encoded": 29440
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/a01/fonts/a01-sans.woff2",
+          "bytes": 21068,
+          "encoded": 20768
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/visual-director/fonts/narrative-sans.woff2",
+          "bytes": 80048,
+          "encoded": 79748
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/visual-director/fonts/narrative-serif.woff2",
+          "bytes": 48068,
+          "encoded": 47768
+        },
+        {
+          "name": "http://127.0.0.1:4175/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+          "bytes": 2842484,
+          "encoded": 2842184
+        },
+        {
+          "name": "http://127.0.0.1:4175/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-01-display.webp",
+          "bytes": 1351448,
+          "encoded": 1351148
+        },
+        {
+          "name": "http://127.0.0.1:4175/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+          "bytes": 3552914,
+          "encoded": 3552614
+        },
+        {
+          "name": "http://127.0.0.1:4175/shuilong-temple/shuilong-temple.glb",
+          "bytes": 3329300,
+          "encoded": 3329000
+        },
+        {
+          "name": "http://127.0.0.1:4175/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+          "bytes": 2842484,
+          "encoded": 2842184
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/visual-director/fonts/narrative-sans.woff2",
+          "bytes": 80048,
+          "encoded": 79748
+        }
+      ]
+    },
+    {
+      "repeat": 1,
+      "mode": "after",
+      "modelReadyMs": 1951,
+      "firstResources": [
+        {
+          "name": "http://127.0.0.1:4175/module-a/a01/fonts/a01-serif.woff2",
+          "bytes": 29740
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/a01/fonts/a01-sans.woff2",
+          "bytes": 21068
+        }
+      ],
+      "scan": {
+        "frameIntervalMs": {
+          "samples": 89,
+          "median": 8.299999999999272,
+          "p95": 16.700000000000728,
+          "max": 33.30000000000109
+        },
+        "mainRenderScriptMs": {
+          "samples": 90,
+          "median": 3.699999999254942,
+          "p95": 6.099999999627471,
+          "max": 14
+        }
+      },
+      "handoff": {
+        "frameIntervalMs": {
+          "samples": 89,
+          "median": 8.300000000001091,
+          "p95": 16.700000000000728,
+          "max": 24.899999999999636
+        },
+        "mainRenderScriptMs": {
+          "samples": 90,
+          "median": 2.400000000372529,
+          "p95": 3.400000000372529,
+          "max": 4.600000001490116
+        }
+      },
+      "menuScriptAndForcedLayoutMs": {
+        "samples": 20,
+        "median": 1,
+        "p95": 2.799999998882413,
+        "max": 2.799999998882413
+      },
+      "heapBefore": 42650057,
+      "renderer": {
+        "geometries": 66,
+        "textures": 22,
+        "calls": 56,
+        "triangles": 83578,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1440,
+            900
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 4961,
+            "calls": 56,
+            "triangles": 83578,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15552000,
+          "multisampleBytes": 31104000,
+          "targetBytes": 46656000
+        }
+      },
+      "canvases": 1,
+      "heapAfter": 42225999,
+      "resources": [
+        {
+          "name": "http://127.0.0.1:4175/module-a/a01/fonts/a01-serif.woff2",
+          "bytes": 29740,
+          "encoded": 29440
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/a01/fonts/a01-sans.woff2",
+          "bytes": 21068,
+          "encoded": 20768
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/visual-director/fonts/narrative-sans.woff2",
+          "bytes": 80048,
+          "encoded": 79748
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/visual-director/fonts/narrative-serif.woff2",
+          "bytes": 48068,
+          "encoded": 47768
+        },
+        {
+          "name": "http://127.0.0.1:4175/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+          "bytes": 2842484,
+          "encoded": 2842184
+        },
+        {
+          "name": "http://127.0.0.1:4175/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-01-display.webp",
+          "bytes": 1351448,
+          "encoded": 1351148
+        },
+        {
+          "name": "http://127.0.0.1:4175/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+          "bytes": 3552914,
+          "encoded": 3552614
+        },
+        {
+          "name": "http://127.0.0.1:4175/shuilong-temple/shuilong-temple.glb",
+          "bytes": 3329300,
+          "encoded": 3329000
+        },
+        {
+          "name": "http://127.0.0.1:4175/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+          "bytes": 2842484,
+          "encoded": 2842184
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/visual-director/fonts/narrative-sans.woff2",
+          "bytes": 80048,
+          "encoded": 79748
+        }
+      ]
+    },
+    {
+      "repeat": 1,
+      "mode": "before",
+      "modelReadyMs": 2221,
+      "firstResources": [
+        {
+          "name": "http://127.0.0.1:4175/module-a/a01/fonts/a01-serif.woff2",
+          "bytes": 29740
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/a01/fonts/a01-sans.woff2",
+          "bytes": 21068
+        }
+      ],
+      "scan": {
+        "frameIntervalMs": {
+          "samples": 89,
+          "median": 4.200000000000728,
+          "p95": 8.399999999999636,
+          "max": 8.400000000001455
+        },
+        "mainRenderScriptMs": {
+          "samples": 90,
+          "median": 2.5,
+          "p95": 3.799999998882413,
+          "max": 4.600000001490116
+        }
+      },
+      "handoff": {
+        "frameIntervalMs": {
+          "samples": 89,
+          "median": 8.399999999999636,
+          "p95": 16.600000000000364,
+          "max": 20.899999999999636
+        },
+        "mainRenderScriptMs": {
+          "samples": 90,
+          "median": 2.599999999627471,
+          "p95": 4.300000000745058,
+          "max": 11.099999999627471
+        }
+      },
+      "menuScriptAndForcedLayoutMs": null,
+      "heapBefore": 38874233,
+      "renderer": {
+        "geometries": 66,
+        "textures": 22,
+        "calls": 56,
+        "triangles": 83578,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1440,
+            900
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 4966,
+            "calls": 56,
+            "triangles": 83578,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15552000,
+          "multisampleBytes": 31104000,
+          "targetBytes": 46656000
+        }
+      },
+      "canvases": 1,
+      "heapAfter": 43644778,
+      "resources": [
+        {
+          "name": "http://127.0.0.1:4175/module-a/a01/fonts/a01-serif.woff2",
+          "bytes": 29740,
+          "encoded": 29440
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/a01/fonts/a01-sans.woff2",
+          "bytes": 21068,
+          "encoded": 20768
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/visual-director/fonts/narrative-sans.woff2",
+          "bytes": 80048,
+          "encoded": 79748
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/visual-director/fonts/narrative-serif.woff2",
+          "bytes": 48068,
+          "encoded": 47768
+        },
+        {
+          "name": "http://127.0.0.1:4175/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+          "bytes": 2842484,
+          "encoded": 2842184
+        },
+        {
+          "name": "http://127.0.0.1:4175/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-01-display.webp",
+          "bytes": 1351448,
+          "encoded": 1351148
+        },
+        {
+          "name": "http://127.0.0.1:4175/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+          "bytes": 3552914,
+          "encoded": 3552614
+        },
+        {
+          "name": "http://127.0.0.1:4175/shuilong-temple/shuilong-temple.glb",
+          "bytes": 3329300,
+          "encoded": 3329000
+        },
+        {
+          "name": "http://127.0.0.1:4175/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+          "bytes": 2842484,
+          "encoded": 2842184
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/visual-director/fonts/narrative-sans.woff2",
+          "bytes": 80048,
+          "encoded": 79748
+        }
+      ]
+    },
+    {
+      "repeat": 2,
+      "mode": "before",
+      "modelReadyMs": 2117,
+      "firstResources": [
+        {
+          "name": "http://127.0.0.1:4175/module-a/a01/fonts/a01-serif.woff2",
+          "bytes": 29740
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/a01/fonts/a01-sans.woff2",
+          "bytes": 21068
+        }
+      ],
+      "scan": {
+        "frameIntervalMs": {
+          "samples": 89,
+          "median": 4.200000000000728,
+          "p95": 8.399999999999636,
+          "max": 8.5
+        },
+        "mainRenderScriptMs": {
+          "samples": 90,
+          "median": 2.5,
+          "p95": 3.699999999254942,
+          "max": 4.399999998509884
+        }
+      },
+      "handoff": {
+        "frameIntervalMs": {
+          "samples": 89,
+          "median": 8.300000000001091,
+          "p95": 12.600000000000364,
+          "max": 20.80000000000109
+        },
+        "mainRenderScriptMs": {
+          "samples": 90,
+          "median": 2.199999999254942,
+          "p95": 3.400000000372529,
+          "max": 4.700000001117587
+        }
+      },
+      "menuScriptAndForcedLayoutMs": null,
+      "heapBefore": 39468447,
+      "renderer": {
+        "geometries": 66,
+        "textures": 22,
+        "calls": 56,
+        "triangles": 83578,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1440,
+            900
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 4879,
+            "calls": 56,
+            "triangles": 83578,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15552000,
+          "multisampleBytes": 31104000,
+          "targetBytes": 46656000
+        }
+      },
+      "canvases": 1,
+      "heapAfter": 39106158,
+      "resources": [
+        {
+          "name": "http://127.0.0.1:4175/module-a/a01/fonts/a01-serif.woff2",
+          "bytes": 29740,
+          "encoded": 29440
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/a01/fonts/a01-sans.woff2",
+          "bytes": 21068,
+          "encoded": 20768
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/visual-director/fonts/narrative-sans.woff2",
+          "bytes": 80048,
+          "encoded": 79748
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/visual-director/fonts/narrative-serif.woff2",
+          "bytes": 48068,
+          "encoded": 47768
+        },
+        {
+          "name": "http://127.0.0.1:4175/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+          "bytes": 2842484,
+          "encoded": 2842184
+        },
+        {
+          "name": "http://127.0.0.1:4175/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-01-display.webp",
+          "bytes": 1351448,
+          "encoded": 1351148
+        },
+        {
+          "name": "http://127.0.0.1:4175/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+          "bytes": 3552914,
+          "encoded": 3552614
+        },
+        {
+          "name": "http://127.0.0.1:4175/shuilong-temple/shuilong-temple.glb",
+          "bytes": 3329300,
+          "encoded": 3329000
+        },
+        {
+          "name": "http://127.0.0.1:4175/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+          "bytes": 2842484,
+          "encoded": 2842184
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/visual-director/fonts/narrative-sans.woff2",
+          "bytes": 80048,
+          "encoded": 79748
+        }
+      ]
+    },
+    {
+      "repeat": 2,
+      "mode": "after",
+      "modelReadyMs": 2480,
+      "firstResources": [
+        {
+          "name": "http://127.0.0.1:4175/module-a/a01/fonts/a01-serif.woff2",
+          "bytes": 29740
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/a01/fonts/a01-sans.woff2",
+          "bytes": 21068
+        }
+      ],
+      "scan": {
+        "frameIntervalMs": {
+          "samples": 89,
+          "median": 4.200000000000728,
+          "p95": 8.399999999999636,
+          "max": 12.400000000001455
+        },
+        "mainRenderScriptMs": {
+          "samples": 90,
+          "median": 2.699999999254942,
+          "p95": 4.099999999627471,
+          "max": 4.599999999627471
+        }
+      },
+      "handoff": {
+        "frameIntervalMs": {
+          "samples": 89,
+          "median": 8.299999999999272,
+          "p95": 16.600000000000364,
+          "max": 20.299999999999272
+        },
+        "mainRenderScriptMs": {
+          "samples": 90,
+          "median": 2.199999999254942,
+          "p95": 2.900000000372529,
+          "max": 3.599999999627471
+        }
+      },
+      "menuScriptAndForcedLayoutMs": {
+        "samples": 20,
+        "median": 1,
+        "p95": 2.300000000745058,
+        "max": 2.300000000745058
+      },
+      "heapBefore": 43852639,
+      "renderer": {
+        "geometries": 66,
+        "textures": 22,
+        "calls": 56,
+        "triangles": 83578,
+        "lines": 0,
+        "post": {
+          "enabled": false,
+          "error": null,
+          "passes": 1,
+          "size": [
+            1440,
+            900
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 5030,
+            "calls": 56,
+            "triangles": 83578,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 15552000,
+          "multisampleBytes": 31104000,
+          "targetBytes": 46656000
+        }
+      },
+      "canvases": 1,
+      "heapAfter": 54661763,
+      "resources": [
+        {
+          "name": "http://127.0.0.1:4175/module-a/a01/fonts/a01-serif.woff2",
+          "bytes": 29740,
+          "encoded": 29440
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/a01/fonts/a01-sans.woff2",
+          "bytes": 21068,
+          "encoded": 20768
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/visual-director/fonts/narrative-sans.woff2",
+          "bytes": 80048,
+          "encoded": 79748
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/visual-director/fonts/narrative-serif.woff2",
+          "bytes": 48068,
+          "encoded": 47768
+        },
+        {
+          "name": "http://127.0.0.1:4175/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+          "bytes": 2842484,
+          "encoded": 2842184
+        },
+        {
+          "name": "http://127.0.0.1:4175/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-01-display.webp",
+          "bytes": 1351448,
+          "encoded": 1351148
+        },
+        {
+          "name": "http://127.0.0.1:4175/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+          "bytes": 3552914,
+          "encoded": 3552614
+        },
+        {
+          "name": "http://127.0.0.1:4175/shuilong-temple/shuilong-temple.glb",
+          "bytes": 3329300,
+          "encoded": 3329000
+        },
+        {
+          "name": "http://127.0.0.1:4175/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+          "bytes": 2842484,
+          "encoded": 2842184
+        },
+        {
+          "name": "http://127.0.0.1:4175/module-a/visual-director/fonts/narrative-sans.woff2",
+          "bytes": 80048,
+          "encoded": 79748
+        }
+      ]
+    }
+  ],
+  "limit": "Same host Chrome/headless, 1440×900; 3 fresh context pairs, alternating order, serial warmup and measurements. Main-render timings cover synchronous parent render only, not iframe renderer/GPU. rAF intervals include scheduling/render/composition, not script cost. Opaque preflight only tests B connectivity. JS heap snapshots are not proof of leak freedom or full browser/GPU memory. No cross-device conclusion."
+}
