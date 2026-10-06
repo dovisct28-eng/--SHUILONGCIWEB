@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node b01-check.cjs",
+    "test:browser": "node b01-browser-check.cjs"
   },
   "keywords": [],
   "author": "",

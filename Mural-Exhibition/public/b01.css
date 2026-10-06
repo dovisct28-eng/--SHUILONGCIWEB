@@ -1,0 +1,34 @@
+/* B01 only. The two existing exploration modes retain their own visual system. */
+#splash-screen { position:fixed; inset:0; z-index:9999; overflow:hidden; color:#d8d2c5; background:linear-gradient(120deg,#192027,#10191f 68%,#121c23); font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif; }
+#splash-screen[hidden] { display:none!important; }
+.b01-brand { position:absolute; top:clamp(28px,4.6vh,50px); left:5vw; font-family:SimSun,"Songti SC",serif; font-size:22px; letter-spacing:.12em; font-weight:400; }
+.b01-label { position:absolute; right:5vw; top:clamp(33px,5.1vh,55px); color:#a0a39c; font-size:11px; letter-spacing:.2em; }
+.b01-art { position:absolute; left:0; top:16vh; width:66vw; height:76vh; overflow:hidden; }
+.splash-image { width:100%; height:100%; object-fit:cover; object-position:left center; display:block; opacity:0; transition:opacity .4s ease; }
+.splash-image[data-ready] { opacity:1; }
+.b01-art::after { content:""; position:absolute; inset:0; pointer-events:none; background:linear-gradient(90deg,transparent 80%,#10191f),linear-gradient(0deg,rgba(16,25,31,.35),transparent 14%,transparent 88%,rgba(16,25,31,.25)); }
+.b01-copy { position:absolute; left:68vw; right:4vw; top:50%; transform:translateY(-44%); }
+.b01-kicker { font-size:14px; color:#c9b69a; letter-spacing:.13em; margin-bottom:24px; }
+.splash-title { font-family:SimSun,"Songti SC",serif; font-size:clamp(36px,3.1vw,60px); font-weight:400; line-height:1.35; letter-spacing:.02em; white-space:nowrap; margin:0 0 24px; }
+.b01-description { font-size:clamp(13px,1.02vw,18px); line-height:1.9; color:#b9bcb5; white-space:nowrap; }
+.splash-actions { display:flex; gap:12px; margin-top:40px; }
+.action-btn { min-height:52px; padding:0 clamp(17px,1.5vw,28px); border:1px solid #858b87; background:transparent; color:#d8d2c5; font:inherit; font-size:15px; white-space:nowrap; cursor:pointer; display:inline-flex; align-items:center; gap:22px; border-radius:2px; transition:background .16s,color .16s,border-color .16s; }
+.action-btn:first-child { color:#182026; background:#d8d2c5; border-color:#d8d2c5; }
+.action-btn:hover { background:#253139; border-color:#d8d2c5; }
+.action-btn:first-child:hover { background:#ebe5d8; border-color:#ebe5d8; }
+.action-btn span { font-size:20px; transition:transform .16s; }
+.action-btn:hover span { transform:translate(2px,-2px); }
+.action-btn:focus-visible, .b01-retry:focus-visible { outline:2px solid #eee7d7; outline-offset:5px; }
+.action-btn:active { background:#364148; }
+.action-btn:first-child:active { background:#c3bcaf; }
+.action-btn:disabled { opacity:.6; cursor:wait; }
+.b01-feedback { margin-top:22px; min-height:48px; font-size:13px; line-height:1.7; color:#b9bcb5; max-width:380px; }
+.b01-retry { color:inherit; background:transparent; border:0; border-bottom:1px solid currentColor; font:inherit; cursor:pointer; padding:8px 0; margin-right:18px; }
+#loading-indicator { position:absolute; bottom:18px; left:5vw; color:#b9bcb5; font-size:13px; line-height:1.7; }
+#entry-mode-notice { position:fixed; z-index:950; left:50%; top:110px; transform:translateX(-50%); width:min(480px,90vw); padding:20px 24px; background:#18232c; color:#d8d2c5; border:1px solid #858b87; font:14px/1.8 "Microsoft YaHei",sans-serif; }
+#entry-mode-notice button { font:inherit; margin-top:12px; padding:8px 16px; background:#d8d2c5; color:#182026; border:0; cursor:pointer; }
+#pano-switch-btn { position:absolute; right:30px; top:95px; z-index:900; min-height:44px; padding:10px 20px; color:#ddd; border:1px solid #666; background:#141a20; cursor:pointer; font:14px "Microsoft YaHei",sans-serif; }
+#pano-back-btn { font:14px "Microsoft YaHei",sans-serif; }
+@media(max-width:1300px) { .action-btn { gap:14px; font-size:14px; padding-inline:16px; } .splash-actions { gap:10px; } .b01-copy { left:67vw; right:3vw; } }
+@media(max-width:1000px) { .b01-art { width:100vw; height:48vh; top:13vh; } .b01-art::after { background:linear-gradient(0deg,#10191f,transparent 18%); } .b01-copy { left:7vw; right:7vw; top:65vh; transform:none; } .splash-title { font-size:34px; margin-bottom:12px; } .b01-kicker { margin-bottom:12px; } .splash-actions { margin-top:20px; } .b01-description { white-space:normal; } }
+@media(prefers-reduced-motion:reduce) { #splash-screen *,#panorama-view,#main-app { animation:none!important; transition:none!important; } }

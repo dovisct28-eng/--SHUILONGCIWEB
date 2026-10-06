@@ -1,0 +1,23 @@
+{
+  "source": "水龙祠壁画素材/网页展示图/mural-02-display.webp",
+  "sourceSHA256": "17864d02d97ccc8d208e15a0f4c5cff82088777b0ee1dcd1f04bf643ce3e0dae",
+  "sourceDimensions": [
+    6000,
+    1357
+  ],
+  "crop": [
+    0,
+    0,
+    2250,
+    1357
+  ],
+  "output": "Mural-Exhibition/public/b01/mural-02-left.webp",
+  "outputDimensions": [
+    1800,
+    1086
+  ],
+  "quality": 88,
+  "bytes": 820680,
+  "outputSHA256": "6ab0fbbdb9fbbe3c7b300a49319400447e97060b4c05598d63eada78ee79da23",
+  "processing": "left crop, proportional resampling, WebP compression; no mirroring, retouching or color filter"
+}

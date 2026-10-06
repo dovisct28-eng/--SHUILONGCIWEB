@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>水龙祠 - 全息考古展厅</title>
+    <title>走进《入将图》｜出兵入将</title>
     <style>
         /* --- 基础重置 --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -16,109 +16,8 @@
         ::-webkit-scrollbar-track { background: transparent; }
         ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 10px; }
 
-        /* --- 0. 载入监控 UI --- */
-        #loading-indicator {
-            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
-            color: rgba(250, 248, 245, 0.8); font-size: 1.2rem; letter-spacing: 8px;
-            font-weight: 300; z-index: 10000; transition: opacity 0.8s; pointer-events: none;
-            text-shadow: 0 0 15px rgba(255,255,255,0.3);
-        }
-        .is-loaded #loading-indicator { opacity: 0; }
-
-        /* --- 1. 殿堂级开屏动画 --- */
-        #splash-screen {
-            position: fixed; inset: 0; z-index: 9999; background: #000; 
-            transition: opacity 1.5s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .splash-image {
-            position: absolute; top: 0; left: 0; 
-            height: 100vh; width: auto; max-width: none !important; min-width: 100vw; 
-            will-change: transform; opacity: 0; transition: opacity 2s ease;
-        }
-        .is-loaded .splash-image { opacity: 1; animation: panMural 15s linear forwards; }
-
-        @keyframes panMural {
-            0% { transform: translate3d(0, 0, 0); }
-            100% { transform: translate3d(calc(-100% + 100vw), 0, 0); }
-        }
-
-        .splash-overlay {
-            position: absolute; inset: 0; 
-            background: rgba(0,0,0,0.65);
-            opacity: 0; pointer-events: none;
-        }
-        .is-loaded .splash-overlay { animation: fadeIn 3s ease forwards 7s; }
-
-        /* 还原解耦排版：右侧标题 */
-        .splash-title { 
-            position: absolute; right: 12vw; top: 15vh;
-            writing-mode: vertical-rl;
-            /* 弹性自适应字号：最小3rem，根据屏幕高度(vh)自动缩放，最大5rem */
-            font-size: clamp(3rem, 8vh, 5rem); 
-            font-weight: 400; letter-spacing: 0.5em; 
-            color: #FAF8F5; 
-            white-space: nowrap; /* 铁壁防御：绝对不允许因为屏幕矮而折行 */
-            text-shadow: 0 0 20px rgba(255,255,255,0.3), 0 5px 15px rgba(0,0,0,0.9);
-            opacity: 0; transform: translateX(30px);
-        }
-        .is-loaded .splash-title { animation: slideInLeft 3s cubic-bezier(0.2, 0.8, 0.2, 1) forwards 8.5s; }
-
-        /* 还原解耦排版：中右侧诗文 */
-        .splash-poem { 
-            position: absolute; right: 23vw; top: 20vh;
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-        }
-        .splash-poem p {
-            font-size: 1.4rem; font-weight: 300; letter-spacing: 0.6em; line-height: 2;
-            color: rgba(232, 230, 225, 0.9);
-            text-shadow: 0 0 10px rgba(255,255,255,0.2), 0 2px 5px rgba(0,0,0,0.8);
-            opacity: 0; transform: translateX(20px);
-            white-space: nowrap; 
-            margin-left: 35px; 
-        }
-        .is-loaded .splash-poem p:nth-child(1) { animation: slideInLeft 2s forwards 10.0s; }
-        .is-loaded .splash-poem p:nth-child(2) { animation: slideInLeft 2s forwards 10.3s; }
-        .is-loaded .splash-poem p:nth-child(3) { animation: slideInLeft 2s forwards 10.6s; }
-        .is-loaded .splash-poem p:nth-child(4) { animation: slideInLeft 2s forwards 10.9s; }
-        .is-loaded .splash-poem p:nth-child(5) { animation: slideInLeft 2s forwards 11.2s; }
-
-        /* 左下角双玉牌按钮 */
-        .splash-actions {
-            position: absolute; left: 12vw; bottom: 15vh;
-            display: flex; gap: 25px; z-index: 30; opacity: 0; pointer-events: auto;
-        }
-        .is-loaded .splash-actions { animation: fadeIn 2s forwards 12.5s; }
-        
-        .action-btn {
-            writing-mode: vertical-rl;
-            padding: 35px 12px; border-radius: 40px;
-            background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.4);
-            color: #fff; font-size: 1.1rem; letter-spacing: 6px;
-            display: flex; justify-content: center; align-items: center;
-            cursor: pointer; transition: all 0.4s ease; backdrop-filter: blur(8px);
-            position: relative;
-        }
-        .action-btn::after {
-            content: ''; position: absolute; inset: -2px; border-radius: 40px;
-            border: 1px solid rgba(212,175,55,0.5); opacity: 0; transition: opacity 0.4s;
-        }
-        .action-btn:hover { background: rgba(255,255,255,0.15); box-shadow: 0 0 25px rgba(255,255,255,0.3); transform: scale(1.05); border-color: #fff; }
-        .action-btn:hover::after { animation: pulseRing 2s infinite; }
-
-        /* 底部字幕 */
-        .splash-subtitle { 
-            position: absolute; bottom: 6vh; left: 50%; transform: translateX(-50%);
-            font-size: 0.9rem; letter-spacing: 2em; color: rgba(255,255,255,0.25); 
-            margin-left: 2em; opacity: 0; 
-        }
-        .is-loaded .splash-subtitle { animation: fadeIn 2s forwards 13s; }
-
-        @keyframes fadeIn { to { opacity: 1; } }
-        @keyframes slideInLeft { to { opacity: 1; transform: translateX(0); } }
+        /* Existing hotspot pulse remains part of the gallery map. */
         @keyframes pulseRing { 0% { transform: scale(0.9); opacity: 1; } 100% { transform: scale(1.3); opacity: 0; } }
-
 
         /* --- 2. 图鉴入口：全景探秘地图 (防断层铁壁引擎) --- */
         #panorama-view {
@@ -289,53 +188,49 @@
         .temp-dot { position: absolute; width: 20px; height: 20px; background: #ff4757; border-radius: 50%; transform: translate(-50%, -50%); z-index: 500; border: 2px solid #fff; box-shadow: 0 0 10px #ff4757; pointer-events: none; }
     </style>
 
-    <script src="https://unpkg.com/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
     <script type="importmap">
         { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
     </script>
+    <link rel="stylesheet" href="b01.css">
 </head>
 <body>
 
-    <!-- 0. 载入监控 -->
-    <div id="loading-indicator">壁画数据极速载入中...</div>
-
-    <!-- 1. 殿堂级开屏大厅 -->
-    <div id="splash-screen">
-        <img class="splash-image" id="splash-bg-img" src="assets/splash-bg.png" alt="水龙祠全景" onerror="this.src=''; this.alt='请在assets文件夹放置splash-bg.png'">
-        <div class="splash-overlay"></div>
-        
-        <h1 class="splash-title">水龙祠壁画</h1>
-        
-        <div class="splash-poem">
-            <p>湘南江永，勾蓝瑶寨。</p>
-            <p>水龙古祠，丹青映壁。</p>
-            <p>巫楚交融，梅山神启。</p>
-            <p>诸神列绘，护佑一方。</p>
-            <p>民俗瑰宝，岁月长存。</p>
+    <!-- B01: immediately available, independent of the exploration resources. -->
+    <section id="splash-screen" aria-labelledby="b01-title">
+        <p class="b01-brand">出兵入将</p>
+        <p class="b01-label">EXPLORATION</p>
+        <div class="b01-art">
+            <img class="splash-image" id="splash-bg-img" src="b01/mural-02-left.webp" alt="第二幅《入将图》左端局部" fetchpriority="high">
         </div>
-        
-        <div class="splash-actions">
-            <div class="action-btn" id="btn-cyber-track">体感交互</div>
-            <div class="action-btn" id="btn-gallery-track">图鉴入口</div>
+        <div class="b01-copy">
+            <p class="b01-kicker">壁画交互探索</p>
+            <h1 class="splash-title" id="b01-title">走进《入将图》</h1>
+            <p class="b01-description">选择一种方式，探索画中的人物与故事。</p>
+            <div class="splash-actions">
+                <button type="button" class="action-btn" id="btn-gallery-track">图鉴探索 <span aria-hidden="true">↗</span></button>
+                <button type="button" class="action-btn" id="btn-cyber-track">体感交互 <span aria-hidden="true">↗</span></button>
+            </div>
+            <div class="b01-feedback" role="status" aria-live="polite">
+                <p id="entry-status"></p>
+                <button type="button" class="b01-retry" id="entry-retry" hidden>重试</button>
+            </div>
         </div>
-        
-        <div class="splash-subtitle">全息交互数字复原</div>
-    </div>
+        <p id="loading-indicator" role="status">正在加载壁画图像…</p>
+    </section>
+    <div id="entry-mode-notice" role="alert" hidden><p></p><button type="button" onclick="window.returnToSplashFromPano()">返回选择</button></div>
 
     <!-- 2. 动线 B 前置：全景地图探秘区 -->
     <div id="panorama-view">
-        <div id="pano-back-btn" onclick="window.returnToSplashFromPano()">
+        <button type="button" id="pano-back-btn" onclick="window.returnToSplashFromPano()">
             <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
-            <span>返回大厅</span>
-        </div>
+            <span>返回选择</span>
+        </button>
+        <button type="button" id="pano-switch-btn" onclick="window.toggleTrack()">体感交互 ↗</button>
 
         <div id="admin-panel" onclick="window.togglePickerMode()">🛠️ 开启坐标采集器</div>
         
         <div id="panorama-wrapper">
-            <img class="panorama-bg" id="panorama-bg" src="assets/splash-bg.png" alt="全景底图" onerror="this.src=''">
+            <img class="panorama-bg" id="panorama-bg" data-src="assets/splash-bg.png" alt="《入将图》全景底图">
         </div>
         
         <div id="hotspots-container"></div>
@@ -398,7 +293,7 @@
     </div>
 
     <script type="module">
-        import * as THREE from 'three';
+        let THREE, threeAttempt = 0; // Loaded only when the user enters the existing cyber mode.
 
         /* ================= 坐标数据区 ================= */
         const ANCHORS_CONFIG = [
@@ -417,119 +312,146 @@
         let currentTrack = null;
         let currentItemData = null; 
 
-        // --- 0. 载入监控 ---
-        const splashImg = document.getElementById('splash-bg-img');
-        if (splashImg.complete) {
-            document.body.classList.add('is-loaded');
-        } else {
-            splashImg.onload = () => document.body.classList.add('is-loaded');
-            splashImg.onerror = () => document.body.classList.add('is-loaded');
+        // B01 entry lifecycle. No history mutation and no decorative opening timeline.
+        let entryBusy = false, entryVersion = 0, lastEntry = 'gallery';
+        let assetsReady = false, assetsPromise = null;
+        const entryStatus = document.getElementById('entry-status');
+        const entryRetry = document.getElementById('entry-retry');
+        const modeNotice = document.getElementById('entry-mode-notice');
+        function entryMessage(message, retry = false) {
+            entryStatus.textContent = message;
+            entryRetry.hidden = !retry;
         }
-        setTimeout(() => document.body.classList.add('is-loaded'), 5000);
-
-        // --- 1. 双动线入口分流 ---
-        document.getElementById('btn-cyber-track').addEventListener('click', () => {
-            currentTrack = 'cyber';
-            document.body.classList.remove('track-gallery');
-            document.body.classList.add('track-cyber');
-            document.getElementById('back-text').innerText = '返回大厅';
-            document.getElementById('quick-switch-btn').innerHTML = '🔍 切换至图鉴模式';
-            
-            hideSplash(() => {
-                const mainApp = document.getElementById('main-app');
-                mainApp.style.display = 'block';
-                void mainApp.offsetWidth; 
-                resizeWebGL();
-
-                setTimeout(() => {
-                    mainApp.style.opacity = '1';
-                    loadSeriesData(0); 
-                    startMediaPipe();  
-                }, 100);
-            });
-        });
-
-        document.getElementById('btn-gallery-track').addEventListener('click', () => {
-            currentTrack = 'gallery';
-            document.body.classList.remove('track-cyber');
-            document.body.classList.add('track-gallery');
-            document.getElementById('back-text').innerText = '返回全景地图';
-            document.getElementById('quick-switch-btn').innerHTML = '✋ 切换至体感模式';
-            
-            hideSplash(() => {
-                const panorama = document.getElementById('panorama-view');
-                panorama.style.display = 'block';
-                requestAnimationFrame(() => {
-                    initPanoramaTransform();
-                    panorama.style.opacity = '1';
+        function modeError(message) {
+            modeNotice.querySelector('p').textContent = message;
+            modeNotice.hidden = false;
+        }
+        function bounded(promise, ms, message) {
+            let timer;
+            return Promise.race([promise, new Promise((_, reject) => { timer = setTimeout(() => reject(new Error(message)), ms); })]).finally(() => clearTimeout(timer));
+        }
+        const cyberScripts = [
+            ['gsap', 'https://unpkg.com/gsap@3.12.5/dist/gsap.min.js'],
+            ['Camera', 'https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js'],
+            ['drawConnectors', 'https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js'],
+            ['Hands', 'https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js']
+        ];
+        let cyberDependencies;
+        function loadCyberDependencies() {
+            return cyberDependencies ||= Promise.all(cyberScripts.map(([name, src]) => {
+                if (window[name]) return Promise.resolve();
+                return new Promise((resolve, reject) => {
+                    const script = document.createElement('script');
+                    const timer = setTimeout(fail, 15000);
+                    function fail() { clearTimeout(timer); script.remove(); reject(new Error('体感组件加载失败，请检查网络后重试。')); }
+                    script.src = src; script.onload = () => { clearTimeout(timer); resolve(); }; script.onerror = fail;
+                    document.head.append(script);
                 });
-            });
-        });
-
-        function hideSplash(callback) {
-            const splash = document.getElementById('splash-screen');
-            splash.style.opacity = '0';
-            setTimeout(() => { splash.style.display = 'none'; callback(); }, 1000);
+            })).catch(error => { cyberDependencies = null; throw error; });
         }
-
-        // --- 动态返回逻辑 ---
+        function loadEntryImage(img, src, timeout = 20000) {
+            if (img.complete && img.naturalWidth && img.getAttribute('src') === src) return Promise.resolve();
+            return new Promise((resolve, reject) => {
+                const clean = () => { clearTimeout(timer); img.removeEventListener('load', done); img.removeEventListener('error', fail); };
+                const done = () => { clean(); resolve(); };
+                const fail = () => { clean(); reject(new Error('壁画图像加载失败，请检查本地素材后重试。')); };
+                const timer = setTimeout(() => { clean(); reject(new Error('壁画图像加载超时，请重试。')); }, timeout);
+                img.addEventListener('load', done); img.addEventListener('error', fail); img.src = src;
+            });
+        }
+        const splashImg = document.getElementById('splash-bg-img');
+        function loadSplashImage() {
+            const feedback = document.getElementById('loading-indicator');
+            feedback.textContent = '正在加载壁画图像…'; feedback.hidden = false;
+            loadEntryImage(splashImg, 'b01/mural-02-left.webp').then(() => {
+                splashImg.dataset.ready = ''; feedback.hidden = true;
+            }).catch(() => {
+                feedback.textContent = '首页壁画暂未载入，仍可选择探索方式。';
+                const retry = document.createElement('button'); retry.type = 'button'; retry.className = 'b01-retry'; retry.textContent = '重试图像'; retry.onclick = loadSplashImage; feedback.append(' ', retry);
+            });
+        }
+        loadSplashImage();
+        function setEntryBusy(busy) {
+            entryBusy = busy;
+            document.querySelectorAll('.action-btn').forEach(button => button.disabled = busy);
+            const panoSwitch = document.getElementById('pano-switch-btn');
+            panoSwitch.disabled = busy;
+            panoSwitch.textContent = busy ? '正在准备体感…' : '体感交互 ↗';
+            document.getElementById('quick-switch-btn').textContent = busy ? '正在准备体感…' : currentTrack === 'cyber' ? '🔍 切换至图鉴模式' : '✋ 切换至体感模式';
+            document.getElementById('splash-screen').setAttribute('aria-busy', String(busy));
+        }
+        function showScreen(state) {
+            document.body.dataset.explorationState = state;
+            const selected = state === 'selection';
+            const map = state === 'gallery-map';
+            for (const [id, visible] of [['splash-screen', selected], ['panorama-view', map], ['main-app', !selected && !map]]) {
+                const el = document.getElementById(id);
+                el.hidden = !visible; el.inert = !visible;
+                el.style.display = visible ? 'block' : 'none'; el.style.opacity = visible ? '1' : '0';
+            }
+            if (state !== 'cyber') { stopMediaPipe(); cancelAnimationFrame(glFrame); glFrame = null; }
+            document.getElementById('video-color').pause();
+            modeNotice.hidden = true;
+            document.body.classList.toggle('track-gallery', state.startsWith('gallery'));
+            document.body.classList.toggle('track-cyber', state === 'cyber');
+            currentTrack = selected ? null : state === 'cyber' ? 'cyber' : 'gallery';
+            document.getElementById('back-text').textContent = state === 'cyber' ? '返回选择' : '返回全景地图';
+            document.getElementById('quick-switch-btn').textContent = state === 'cyber' ? '🔍 切换至图鉴模式' : '✋ 切换至体感模式';
+        }
+        async function enterTrack(track) {
+            if (entryBusy) return;
+            const version = ++entryVersion; lastEntry = track;
+            setEntryBusy(true); entryMessage(track === 'gallery' ? '正在准备图鉴与全景地图…' : '正在准备体感资源…');
+            try {
+                await initAssetsData();
+                if (track === 'gallery') {
+                    await loadEntryImage(imgBg, imgBg.dataset.src);
+                    if (version !== entryVersion) return;
+                    showScreen('gallery-map'); initPanoramaTransform();
+                    document.getElementById('pano-back-btn').focus();
+                } else {
+                    if (!navigator.mediaDevices?.getUserMedia) throw new Error('浏览器不支持摄像头，请使用 localhost 或选择图鉴探索。');
+                    await loadCyberDependencies();
+                    if (typeof Hands === 'undefined' || typeof Camera === 'undefined') throw new Error('体感组件不可用，请检查网络后重试，或选择图鉴探索。');
+                    if (typeof gsap === 'undefined') throw new Error('体感动画组件未加载，请检查网络后重试。');
+                    // A failed ES module import is cached by the browser; a retry needs a fresh URL.
+                    THREE ||= await bounded(import(threeAttempt++ ? 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js?entry-retry=' + threeAttempt : 'three'), 15000, '体感渲染组件加载超时，请检查网络后重试。');
+                    const item = globalAssetsData[currentSeriesIndex];
+                    await Promise.all([item.linePath, item.colorPath].map(src => loadEntryImage(new Image(), src)));
+                    if (version !== entryVersion) return;
+                    showScreen('cyber');
+                    if (!renderer) initWebGL();
+                    else if (!glFrame) renderWebGL();
+                    resizeWebGL(); loadSeriesData(currentSeriesIndex); startMediaPipe();
+                }
+                entryMessage('');
+            } catch (error) {
+                if (version !== entryVersion) return;
+                returnToSelection(false); entryMessage(error.message, true);
+            } finally { if (version === entryVersion) setEntryBusy(false); }
+        }
+        function returnToSelection(reset = true) {
+            if (reset) ++entryVersion;
+            showScreen('selection'); setEntryBusy(false);
+            if (reset) entryMessage('');
+            document.getElementById(lastEntry === 'cyber' ? 'btn-cyber-track' : 'btn-gallery-track').focus();
+        }
+        document.getElementById('btn-gallery-track').onclick = () => enterTrack('gallery');
+        document.getElementById('btn-cyber-track').onclick = () => enterTrack('cyber');
+        entryRetry.onclick = () => enterTrack(lastEntry);
         window.goBack = () => {
-            if (currentTrack === 'cyber') {
-                stopMediaPipe();
-                document.getElementById('main-app').style.opacity = '0';
-                setTimeout(() => {
-                    document.getElementById('main-app').style.display = 'none';
-                    const splash = document.getElementById('splash-screen');
-                    splash.style.display = 'flex';
-                    setTimeout(() => splash.style.opacity = '1', 50);
-                }, 800);
-            } else if (currentTrack === 'gallery') {
-                document.getElementById('main-app').style.opacity = '0';
-                setTimeout(() => {
-                    document.getElementById('main-app').style.display = 'none';
-                    const panorama = document.getElementById('panorama-view');
-                    panorama.style.display = 'block';
-                    updatePanoramaTransform(); 
-                    setTimeout(() => panorama.style.opacity = '1', 50);
-                }, 800);
-            }
+            if (entryBusy) { returnToSelection(); return; }
+            if (currentTrack === 'cyber') returnToSelection();
+            else { showScreen('gallery-map'); updatePanoramaTransform(); document.getElementById('pano-back-btn').focus(); }
         };
-
-        window.returnToSplashFromPano = () => {
-            const panorama = document.getElementById('panorama-view');
-            panorama.style.opacity = '0';
-            setTimeout(() => {
-                panorama.style.display = 'none';
-                const splash = document.getElementById('splash-screen');
-                splash.style.display = 'flex';
-                void splash.offsetWidth; 
-                setTimeout(() => splash.style.opacity = '1', 50);
-            }, 800);
-        };
-
+        window.returnToSplashFromPano = () => returnToSelection();
         window.toggleTrack = () => {
-            const btn = document.getElementById('quick-switch-btn');
-            if (currentTrack === 'cyber') {
-                currentTrack = 'gallery';
-                document.body.classList.remove('track-cyber');
-                document.body.classList.add('track-gallery');
-                document.getElementById('back-text').innerText = '返回全景地图';
-                btn.innerHTML = '✋ 切换至体感模式';
-                stopMediaPipe(); 
-                loadSeriesData(currentSeriesIndex); 
-            } else {
-                currentTrack = 'cyber';
-                document.body.classList.remove('track-gallery');
-                document.body.classList.add('track-cyber');
-                document.getElementById('back-text').innerText = '返回大厅';
-                btn.innerHTML = '🔍 切换至图鉴模式';
-                startMediaPipe(); 
-                setTimeout(() => {
-                    resizeWebGL();
-                    loadSeriesData(currentSeriesIndex);
-                }, 50);
-            }
+            if (entryBusy) return;
+            if (currentTrack === 'cyber') { showScreen('gallery-detail'); loadSeriesData(currentSeriesIndex); }
+            else enterTrack('cyber');
         };
+        window.addEventListener('pagehide', () => { ++entryVersion; stopMediaPipe(); });
+        window.addEventListener('pageshow', event => { if (event.persisted) returnToSelection(); });
 
         // =========================================================
         // 【终极防穿帮地图引擎】
@@ -622,28 +544,22 @@
         const isPreviewEnv = window.location.protocol === 'file:' || window.location.protocol === 'blob:' || window.location.hostname.includes('usercontent');
 
         function initAssetsData() {
-            if (isPreviewEnv) {
-                console.warn("在线预览模式：加载演示数据");
-                globalAssetsData = [
-                    { folderName: "01_南门何五猖", orgPath: "https://picsum.photos/seed/mural1/1024/512", linePath: "https://picsum.photos/seed/mural1/1024/512", colorPath: "https://picsum.photos/seed/mural1/1024/512", infoPath: "" },
-                    { folderName: "02_东门陈五猖", orgPath: "https://picsum.photos/seed/mural2/1024/512", linePath: "https://picsum.photos/seed/mural2/1024/512", colorPath: "https://picsum.photos/seed/mural2/1024/512", infoPath: "" }
-                ];
-                document.getElementById('splash-bg-img').src = "https://picsum.photos/seed/muralbg/2048/1024";
-                document.getElementById('panorama-bg').src = "https://picsum.photos/seed/muralbg/2048/1024";
-                renderAssets();
-            } else {
+            if (assetsReady) return Promise.resolve();
+            if (assetsPromise) return assetsPromise;
+            assetsPromise = (async () => {
+                const controller = new AbortController();
+                const timer = setTimeout(() => controller.abort(), 12000);
                 try {
-                    fetch('/api/scan-assets').then(res => res.json()).then(result => {
-                        if (!result.success) throw new Error(result.message);
-                        globalAssetsData = result.data;
-                        renderAssets();
-                    }).catch(err => {
-                        console.error('本地服务未响应', err);
-                        const menu = document.getElementById('menu');
-                        if (menu) menu.innerHTML = '<li style="color:#ff4757; font-size:12px; padding:15px;">连接本地服务失败，请确保运行了 node server.js</li>';
-                    });
-                } catch(e) { console.error('Fetch 解析异常', e); }
-            }
+                    const response = await fetch('/api/scan-assets', { signal: controller.signal });
+                    if (!response.ok) throw new Error('资产接口未响应，请启动本地服务后重试。');
+                    const result = await response.json();
+                    if (!result.success || !Array.isArray(result.data) || !result.data.length) throw new Error('图鉴资源未准备好，请检查 assets 目录后重试。');
+                    globalAssetsData = result.data; renderAssets(); assetsReady = true;
+                } catch (error) {
+                    throw new Error(error.name === 'AbortError' ? '资产接口加载超时，请重试。' : error.message);
+                } finally { clearTimeout(timer); assetsPromise = null; }
+            })();
+            return assetsPromise;
         }
 
         function renderAssets() {
@@ -664,17 +580,8 @@
                     hotspot.innerHTML = `<div class="hotspot-ring"></div><div class="hotspot-core"></div><div class="hotspot-tooltip">${item.folderName}</div>`;
                     hotspot.addEventListener('click', (e) => {
                         if (isPickerMode || hasDragged) { e.preventDefault(); e.stopPropagation(); return; }
-                        document.getElementById('panorama-view').style.opacity = '0';
-                        setTimeout(() => {
-                            document.getElementById('panorama-view').style.display = 'none';
-                            const mainApp = document.getElementById('main-app');
-                            mainApp.style.display = 'block';
-                            document.getElementById('back-text').innerText = '返回全景地图';
-                            document.getElementById('quick-switch-btn').innerHTML = '✋ 切换至体感模式';
-                            void mainApp.offsetWidth; 
-                            resizeWebGL();
-                            setTimeout(() => { mainApp.style.opacity = '1'; loadSeriesData(index); }, 50);
-                        }, 800);
+                        if (entryBusy || currentTrack !== 'gallery') return;
+                        showScreen('gallery-detail'); loadSeriesData(index);
                     });
                     hotspotsContainer.appendChild(hotspot);
                 }
@@ -682,7 +589,9 @@
             updatePanoramaTransform();
         }
         
-        initAssetsData();
+        document.body.dataset.explorationState = 'selection';
+        document.getElementById('panorama-view').inert = true;
+        document.getElementById('main-app').inert = true;
 
         function loadSeriesData(index) {
             if (index < 0) index = globalAssetsData.length - 1;
@@ -846,6 +755,7 @@
         `;
 
         function initWebGL() {
+            clock ||= new THREE.Clock();
             scene = new THREE.Scene();
             const w = webglContainer.clientWidth || window.innerWidth;
             const h = webglContainer.clientHeight || window.innerHeight;
@@ -955,15 +865,16 @@
             }
         }
 
-        const clock = new THREE.Clock();
+        let clock;
+        let glFrame = null;
         function renderWebGL() {
-            requestAnimationFrame(renderWebGL);
+            glFrame = requestAnimationFrame(renderWebGL);
             if (currentTrack === 'cyber' && shaderMaterial) {
                 shaderMaterial.uniforms.uTime.value = clock.getElapsedTime();
                 renderer.render(scene, camera);
             }
         }
-        initWebGL();
+        // Renderer initialization is owned by the explicit cyber entry.
 
         // =======================================================
         // 【动线 A】 机器视觉交互：隔空切页 + 摇杆式隔空滚动阅读
@@ -986,6 +897,7 @@
             handsModel.setOptions({ maxNumHands: 2, modelComplexity: 1, minDetectionConfidence: 0.6, minTrackingConfidence: 0.6 });
             
             handsModel.onResults((results) => {
+                if (currentTrack !== 'cyber') return; // Ignore results already in flight when leaving the mode.
                 canvasCtx.save();
                 canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
                 canvasCtx.drawImage(results.image, 0, 0, canvasElement.width, canvasElement.height);
@@ -1006,51 +918,43 @@
             // 💡 修复：移除这里的老版实例化代码，因为 mpCamera 已经放到 startMediaPipe 里去动态创建了
         }
 
+        let cameraStart = null, cameraVersion = 0;
         function startMediaPipe() {
-            if(!handsModel) initMediaPipe();
-            
-            // 💡 核心修复点：动态实例化 Camera
-            // 每当点击"体感交互"进入此模式时，我们都确保重新创建一个全新的 Camera 实例
-            // 这样就彻底绕开了 track.stop() 后硬件无法再次唤醒的底层 Bug。
-            mpCamera = new Camera(videoElement, { 
-                onFrame: async () => { await handsModel.send({image: videoElement}); }, 
-                width: 320, height: 240 
-            });
-
-            mpCamera.start().then(() => { 
-                cameraStatus.innerText = "神识已连接"; 
-                cameraStatus.style.color = "#d4af37"; 
-                const switchBtn = document.getElementById('quick-switch-btn');
-                if(switchBtn) {
-                    switchBtn.style.borderColor = 'rgba(255,255,255,0.3)';
-                    switchBtn.style.boxShadow = 'none';
-                }
-            })
-            .catch((err) => { 
-                console.error("Camera Error:", err);
-                if (err.name === 'NotReadableError' || err.message.includes('in use')) {
-                    cameraStatus.innerHTML = "神识被占用<br><span style='font-size:10px'>请关闭其他占用摄像头的软件或网页</span>"; 
-                } else {
-                    cameraStatus.innerHTML = "调用失败<br><span style='font-size:10px'>请检查权限或使用localhost</span>"; 
-                }
-                cameraStatus.style.color = "#ff4757"; 
-                
-                const switchBtn = document.getElementById('quick-switch-btn');
-                if(switchBtn) {
-                    switchBtn.style.borderColor = '#ff4757';
-                    switchBtn.style.boxShadow = '0 0 20px rgba(255,71,87,0.4)';
-                    switchBtn.innerHTML = '⚠️ 推荐切换至图鉴模式';
-                }
-            });
+            if (cameraStart) { modeError('上一次摄像头请求仍在结束，请稍后返回选择并重试。'); return; }
+            const version = ++cameraVersion;
+            let activeCamera;
+            const stale = () => version !== cameraVersion || currentTrack !== 'cyber';
+            try {
+                if (!handsModel) initMediaPipe();
+                activeCamera = new Camera(videoElement, {
+                    onFrame: async () => {
+                        if (stale()) return;
+                        try { await handsModel.send({ image: videoElement }); }
+                        catch { stopMediaPipe(); modeError('手势资源初始化失败，请检查网络后重新进入，或选择图鉴探索。'); }
+                    }, width: 320, height: 240
+                });
+                mpCamera = activeCamera; cameraStatus.textContent = '等待摄像头权限…';
+                cameraStart = activeCamera.start();
+                const timer = setTimeout(() => {
+                    if (!stale()) { stopMediaPipe(); modeError('摄像头启动超时，请检查权限后重新进入，或选择图鉴探索。'); }
+                }, 15000);
+                cameraStart.then(() => {
+                    if (stale()) { activeCamera.stop(); if (videoElement.srcObject) { videoElement.srcObject.getTracks().forEach(t => t.stop()); videoElement.srcObject = null; } return; }
+                    cameraStatus.textContent = '摄像头已连接'; cameraStatus.style.color = '#d8d2c5';
+                }).catch(error => {
+                    if (stale()) return;
+                    const messages = { NotAllowedError:'摄像头权限被拒绝。', NotFoundError:'未找到摄像头。', NotReadableError:'摄像头被占用或无法读取。', SecurityError:'浏览器安全设置阻止了摄像头。' };
+                    stopMediaPipe(); modeError((messages[error.name] || '摄像头启动失败。') + '请检查设备与权限，或返回选择图鉴探索。');
+                }).finally(() => { clearTimeout(timer); cameraStart = null; });
+            } catch { stopMediaPipe(); modeError('体感组件初始化失败，请检查网络，或返回选择图鉴探索。'); }
         }
-
         function stopMediaPipe() {
-            if(mpCamera) mpCamera.stop();
+            ++cameraVersion;
+            if (mpCamera) { mpCamera.stop(); mpCamera = null; }
             if (videoElement && videoElement.srcObject) {
-                videoElement.srcObject.getTracks().forEach(track => track.stop());
-                videoElement.srcObject = null;
+                videoElement.srcObject.getTracks().forEach(track => track.stop()); videoElement.srcObject = null;
             }
-            cameraStatus.innerText = "已休眠"; cameraStatus.style.color = "#aaa";
+            cameraStatus.textContent = '摄像头已停止'; cameraStatus.style.color = '#aaa';
         }
 
         let continuousOpenFrames = 0;
