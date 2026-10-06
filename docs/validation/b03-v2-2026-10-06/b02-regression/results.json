@@ -1,0 +1,328 @@
+{
+  "environment": {
+    "browser": "Chrome headless",
+    "platform": "win32",
+    "node": "v24.14.1"
+  },
+  "views": [
+    {
+      "w": 1920,
+      "h": 1080,
+      "galleryReadyMs": 194,
+      "screenshotCompleteMs": 1567,
+      "left": 0,
+      "top": 80,
+      "height": 931.9999389648438,
+      "bottom": 1011.9999389648438,
+      "natural": [
+        8192,
+        1853
+      ],
+      "renderer": 0,
+      "resources": [
+        {
+          "url": "http://localhost:3005/b01.css",
+          "duration": 14.100000001490116,
+          "bytes": 4660
+        },
+        {
+          "url": "http://localhost:3005/gallery.css",
+          "duration": 18,
+          "bytes": 5245
+        },
+        {
+          "url": "http://localhost:3005/b03.css",
+          "duration": 18.400000002235174,
+          "bytes": 13649
+        },
+        {
+          "url": "http://localhost:3005/b01/mural-02-left.webp",
+          "duration": 41.900000002235174,
+          "bytes": 820980
+        },
+        {
+          "url": "http://localhost:3005/gallery-panorama.mjs",
+          "duration": 7.399999998509884,
+          "bytes": 1781
+        },
+        {
+          "url": "http://localhost:3005/gallery-admin.mjs",
+          "duration": 9.899999998509884,
+          "bytes": 5219
+        },
+        {
+          "url": "http://localhost:3005/character-study.mjs",
+          "duration": 9.800000000745058,
+          "bytes": 3982
+        },
+        {
+          "url": "http://localhost:3005/figure-stage.mjs",
+          "duration": 11,
+          "bytes": 5716
+        },
+        {
+          "url": "http://localhost:3005/favicon.ico",
+          "duration": 4,
+          "bytes": 450
+        },
+        {
+          "url": "http://localhost:3005/api/scan-assets",
+          "duration": 73.80000000074506,
+          "bytes": 9141
+        },
+        {
+          "url": "http://localhost:3005/gallery/mural-02-detail.webp",
+          "duration": 49.900000002235174,
+          "bytes": 8029332
+        }
+      ],
+      "memory": 2373421
+    },
+    {
+      "w": 1440,
+      "h": 900,
+      "galleryReadyMs": 165,
+      "screenshotCompleteMs": 1384,
+      "left": 0,
+      "top": 80,
+      "height": 752,
+      "bottom": 832,
+      "natural": [
+        8192,
+        1853
+      ],
+      "renderer": 0,
+      "resources": [
+        {
+          "url": "http://localhost:3005/b01.css",
+          "duration": 11.900000002235174,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3005/gallery.css",
+          "duration": 15.5,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3005/b03.css",
+          "duration": 16.199999999254942,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3005/b01/mural-02-left.webp",
+          "duration": 29.5,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3005/gallery-panorama.mjs",
+          "duration": 22.800000000745058,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3005/gallery-admin.mjs",
+          "duration": 23.899999998509884,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3005/character-study.mjs",
+          "duration": 24.299999997019768,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3005/figure-stage.mjs",
+          "duration": 24.5,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3005/api/scan-assets",
+          "duration": 109.5,
+          "bytes": 9141
+        },
+        {
+          "url": "http://localhost:3005/gallery/mural-02-detail.webp",
+          "duration": 2.099999997764826,
+          "bytes": 300
+        }
+      ],
+      "memory": 4447068
+    },
+    {
+      "w": 1366,
+      "h": 768,
+      "galleryReadyMs": 249,
+      "screenshotCompleteMs": 1323,
+      "left": 0,
+      "top": 80,
+      "height": 620,
+      "bottom": 700,
+      "natural": [
+        8192,
+        1853
+      ],
+      "renderer": 0,
+      "resources": [
+        {
+          "url": "http://localhost:3005/b01.css",
+          "duration": 11.399999998509884,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3005/gallery.css",
+          "duration": 15,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3005/b03.css",
+          "duration": 13.899999998509884,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3005/b01/mural-02-left.webp",
+          "duration": 13,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3005/gallery-panorama.mjs",
+          "duration": 4.100000001490116,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3005/gallery-admin.mjs",
+          "duration": 3.800000000745058,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3005/character-study.mjs",
+          "duration": 4.300000000745058,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3005/figure-stage.mjs",
+          "duration": 8.5,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3005/api/scan-assets",
+          "duration": 107.59999999776483,
+          "bytes": 9141
+        },
+        {
+          "url": "http://localhost:3005/gallery/mural-02-detail.webp",
+          "duration": 75.70000000298023,
+          "bytes": 8029332
+        }
+      ],
+      "memory": 4137993
+    },
+    {
+      "w": 1280,
+      "h": 800,
+      "galleryReadyMs": 134,
+      "screenshotCompleteMs": 1043,
+      "left": 0,
+      "top": 80,
+      "height": 652,
+      "bottom": 732,
+      "natural": [
+        8192,
+        1853
+      ],
+      "renderer": 0,
+      "resources": [
+        {
+          "url": "http://localhost:3005/b01.css",
+          "duration": 3.5,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3005/gallery.css",
+          "duration": 4.200000002980232,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3005/b03.css",
+          "duration": 5.400000002235174,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3005/b01/mural-02-left.webp",
+          "duration": 9.600000001490116,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3005/gallery-panorama.mjs",
+          "duration": 8.800000000745058,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3005/gallery-admin.mjs",
+          "duration": 8.300000000745058,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3005/character-study.mjs",
+          "duration": 9,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3005/figure-stage.mjs",
+          "duration": 9.5,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3005/api/scan-assets",
+          "duration": 80.60000000149012,
+          "bytes": 9141
+        },
+        {
+          "url": "http://localhost:3005/gallery/mural-02-detail.webp",
+          "duration": 2.100000001490116,
+          "bytes": 300
+        }
+      ],
+      "memory": 6158730
+    }
+  ],
+  "functional": [
+    "All eight named hotspots open their matching original resources; all hover screenshots recorded",
+    "Pan/zoom preserved through detail and character switching; line/color/video lazy; missing video never requested; video released on switch/return",
+    "Drag, wheel, middle, reset, fresh B01 entry at left",
+    "Real new folder auto-discovery; both click/select orders; draft/cancel/save/reload/edit/unbind; search; simulated save failure restores; progressive resources; original-only detail; fixture cleaned"
+  ],
+  "stress": [
+    {
+      "count": 30,
+      "frames": 184,
+      "medianMs": 4.2000000000000455,
+      "p95Ms": 4.5,
+      "heap": 2956835,
+      "renderer": 0
+    },
+    {
+      "count": 50,
+      "frames": 178,
+      "medianMs": 4.2000000000000455,
+      "p95Ms": 4.400000000000091,
+      "heap": 3927002,
+      "renderer": 0
+    }
+  ],
+  "errors": [],
+  "camera": "Real camera/gesture hardware requires author testing",
+  "memory": {
+    "visits": 30,
+    "start": {
+      "usedSize": 2546340,
+      "totalSize": 2998272,
+      "embedderHeapUsedSize": 1664456,
+      "backingStorageSize": 81059
+    },
+    "end": {
+      "usedSize": 2577348,
+      "totalSize": 3260416,
+      "embedderHeapUsedSize": 2106544,
+      "backingStorageSize": 82397
+    },
+    "scope": "JS heap after explicit GC; excludes decoded images/GPU/process RSS"
+  }
+}

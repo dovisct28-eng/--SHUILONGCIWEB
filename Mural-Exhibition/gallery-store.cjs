@@ -25,8 +25,9 @@ function scanAssets(root) {
     }
     return null;
    };
-   const resources = { org: asset('org', IMAGE_EXTENSIONS), line: asset('line', IMAGE_EXTENSIONS), color: asset('color', IMAGE_EXTENSIONS), video: asset('video', ['mp4']), info: asset('info', ['md', 'txt']) };
-   data.push({ ...meta, folderName, resources, orgPath: resources.org, linePath: resources.line, colorPath: resources.color, videoPath: resources.video, infoPath: resources.info, annotated: meta.position.x !== null, ready: !!resources.org, revision: revision(raw) });
+   const resources = { org: asset('org', IMAGE_EXTENSIONS), line: asset('line', IMAGE_EXTENSIONS), color: asset('color', IMAGE_EXTENSIONS), figure: asset('figure', IMAGE_EXTENSIONS), video: asset('video', ['mp4']), info: asset('info', ['md', 'txt']) };
+   const previews = Object.fromEntries(['org','line','color'].map(layer => [layer, fs.existsSync(path.join(root, '../b03/thumbs', `${meta.id}-${layer}.webp`)) ? `/b03/thumbs/${meta.id}-${layer}.webp` : null]));
+   data.push({ ...meta, folderName, resources, previews, orgPath: resources.org, linePath: resources.line, colorPath: resources.color, figurePath: resources.figure, videoPath: resources.video, infoPath: resources.info, annotated: meta.position.x !== null, ready: !!resources.org, revision: revision(raw) });
   } catch (error) { diagnostics.push({ folderName, message: `人物配置未载入：${error.message}` }); }
  }
  const counts = new Map(); data.forEach(item => counts.set(item.id, (counts.get(item.id) || 0) + 1));

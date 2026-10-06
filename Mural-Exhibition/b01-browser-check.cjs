@@ -1,7 +1,7 @@
 const {chromium}=require('playwright');
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const out=path.resolve(process.env.B01_VALIDATION_DIR || path.join(__dirname,'../docs/validation/b02-2026-10-06/b01-regression'));fs.mkdirSync(out,{recursive:true});
-const url='http://localhost:3000/index.html';
+const url=(process.env.B_VALIDATION_ORIGIN || 'http://localhost:3000')+'/index.html';
 const state=p=>p.evaluate(()=>document.body.dataset.explorationState);
 const shot=(p,n)=>p.screenshot({path:path.join(out,n+'.png')});
 (async()=>{
@@ -85,9 +85,9 @@ const shot=(p,n)=>p.screenshot({path:path.join(out,n+'.png')});
   const a=await browser.newPage({viewport:{width:1440,height:900}});a.on('pageerror',e=>report.errors.push('A: '+e.message));
   await a.goto('http://127.0.0.1:4175/module-a/a01/');await a.waitForFunction(()=>document.querySelector('iframe').contentWindow.modelReady);
   await a.evaluate(()=>scrollTo(0,42*innerHeight));await a.waitForFunction(()=>!document.querySelector('.a08').hidden&&document.querySelector('.mural-guide[data-chapter="07"] img').naturalWidth>0);await a.waitForTimeout(400);await shot(a,'a08-source');
-  await a.locator('.a08 a').click();await a.waitForURL(url);await a.waitForFunction(()=>document.body.dataset.explorationState==='selection');
+  await a.locator('.a08 a').click();await a.waitForURL('http://localhost:3000/index.html');await a.waitForFunction(()=>document.body.dataset.explorationState==='selection');
   await a.goBack();await a.waitForFunction(()=>document.querySelector('.a08')&&!document.querySelector('.a08').hidden);await a.waitForTimeout(400);assert.ok(Math.abs(await a.evaluate(()=>scrollY/innerHeight)-42)<.02);
-  await a.locator('.a08 a').click();await a.waitForURL(url);await a.reload();assert.equal(await state(a),'selection');report.functional.push('real A08→B01→native back restores A08 at 42 screens; direct refresh');await a.close();
+  await a.locator('.a08 a').click();await a.waitForURL('http://localhost:3000/index.html');await a.reload();assert.equal(await state(a),'selection');report.functional.push('real A08→B01→native back restores A08 at 42 screens; direct refresh');await a.close();
   assert.deepEqual(report.errors,[]);
  }finally{fs.writeFileSync(path.join(out,'results.json'),JSON.stringify(report,null,2));await browser.close();}
  console.log(JSON.stringify(report,null,2));

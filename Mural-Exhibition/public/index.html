@@ -279,6 +279,9 @@
                 </div>
             </div>
         </div>
+        <p class="image-caption">完整画框 · 三层图像研究</p>
+        <div id="stage-name" aria-live="polite"></div>
+        <p id="stage-disclaimer">数字化演绎内容</p>
 
         <!-- 机器视觉监控窗 -->
         <div id="camera-feed-container">
@@ -312,6 +315,18 @@
             <button type="button" id="reveal-toggle" aria-expanded="false" aria-controls="floating-info">查看人物档案</button>
             <button type="button" data-step="1">下一组 →</button>
         </nav>
+        <button type="button" id="calibration-toggle" hidden>人物构图校准</button>
+        <aside id="calibration" hidden aria-label="本地人物构图校准">
+            <div class="index-heading"><h2>构图校准</h2><button type="button" id="calibration-close">收起</button></div>
+            <label>人物 <select id="calibration-character"></select></label>
+            <div class="calibration-preview"><button type="button" id="preview-default">默认态</button><button type="button" id="preview-revealed">展开态</button></div>
+            <p id="calibration-measure"></p>
+            <div id="calibration-fields"></div>
+            <button type="button" id="calibration-reset">恢复自动适配</button>
+            <button type="button" id="calibration-copy">复制 cyber 配置</button>
+            <textarea id="calibration-json" readonly aria-label="可复制的 cyber JSON"></textarea>
+            <p>仅前端预览。复制 cyber 字段到对应 meta.json，保留其他字段。</p>
+        </aside>
         
         <div id="swipe-flash"></div>
     </div>
@@ -322,6 +337,7 @@
         import { initialView, clampView, imageToScreen, screenToImage, groupHotspots } from './gallery-panorama.mjs';
         import { createAdmin } from './gallery-admin.mjs';
         import { archiveBlocks, renderArchive, cameraFit } from './character-study.mjs';
+        import { measureFigure, cyberConfig, cyberDiagnostics, figureLayout, stageSafeArea, particleGrid, canEnterCyber } from './figure-stage.mjs';
         let globalAssetsData = [];
         let currentSeriesIndex = 0; 
         let currentTrack = null;
@@ -405,7 +421,7 @@
                 el.hidden = !visible; el.inert = !visible;
                 el.style.display = visible ? 'block' : 'none'; el.style.opacity = visible ? '1' : '0';
             }
-            if (state !== 'cyber') { stopMediaPipe(); cancelAnimationFrame(glFrame); glFrame = null; cancelMuralRequest(); }
+            if (state !== 'cyber') { stopMediaPipe(); cancelAnimationFrame(glFrame); glFrame = null; cancelMuralRequest(); document.getElementById('calibration').hidden = true; }
             ++detailVersion; infoRequest?.abort(); layerRequest?.abort();
             setIndexOpen(false);
             releaseGalleryVideo();
@@ -437,12 +453,14 @@
                     // A failed ES module import is cached by the browser; a retry needs a fresh URL.
                     THREE ||= await bounded(import(threeAttempt++ ? 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js?entry-retry=' + threeAttempt : 'three'), 15000, '体感渲染组件加载超时，请检查网络后重试。');
                     let item = globalAssetsData[currentSeriesIndex];
-                    if (!item?.linePath || !item?.colorPath) {
+                    if (!canEnterCyber(item)) {
                         if (currentItemData) throw new Error('当前人物缺少线稿或色稿，无法进入体感。请在人物索引主动选择素材完整的人物。');
-                        currentSeriesIndex = globalAssetsData.findIndex(i => i.linePath && i.colorPath); item = globalAssetsData[currentSeriesIndex];
+                        currentSeriesIndex = globalAssetsData.findIndex(canEnterCyber); item = globalAssetsData[currentSeriesIndex];
                     }
                     if (!item) throw new Error('体感所需线稿与色稿尚未就绪。');
-                    await Promise.all([item.linePath, item.colorPath].map(src => loadEntryImage(new Image(), src)));
+                    // The cancellable stage loader diagnoses optional figure failures and
+                    // falls back to legacy layers without changing the selected ID.
+                    if (!item.figurePath) await Promise.all([item.linePath, item.colorPath].map(src => loadEntryImage(new Image(), src)));
                     if (version !== entryVersion) return;
                     showScreen('cyber');
                     if (!renderer) initWebGL();
@@ -475,7 +493,7 @@
             if (entryBusy) return;
             if (currentTrack === 'cyber') { showScreen('gallery-detail'); loadSeriesData(currentSeriesIndex); }
             else {
-                if (currentItemData && (!currentItemData.linePath || !currentItemData.colorPath)) { modeError('当前人物缺少线稿或色稿。请在人物索引主动选择素材完整的人物，或继续图鉴阅读。'); return; }
+                if (currentItemData && !canEnterCyber(currentItemData)) { modeError('当前人物体感素材未就绪。请在人物索引主动选择素材完整的人物，或继续图鉴阅读。'); return; }
                 enterTrack('cyber');
             }
         };
@@ -608,7 +626,7 @@
                     const result = await response.json();
                     if (!result.success || !Array.isArray(result.data) || !result.data.length) throw new Error('图鉴资源未准备好，请检查 assets 目录后重试。');
                     globalAssetsData = result.data; renderAssets(); assetsReady = true;
-                    if (result.adminEnabled) galleryAdmin.enable();
+                    if (result.adminEnabled) { galleryAdmin.enable(); if (['localhost','127.0.0.1','[::1]'].includes(location.hostname)) document.getElementById('calibration-toggle').hidden = false; }
                     if (result.diagnostics?.length) entryMessage(result.diagnostics.map(d => `${d.folderName}：${d.message}`).join('；'));
                 } catch (error) {
                     throw new Error(error.name === 'AbortError' ? '资产接口加载超时，请重试。' : error.message);
@@ -625,7 +643,11 @@
             }
             globalAssetsData.forEach((item, index) => {
                 const li = document.createElement('li'); li.dataset.id = item.id;
-                const button = document.createElement('button'); button.type = 'button'; button.textContent = item.name;
+                const button = document.createElement('button'); button.type = 'button';
+                const id = document.createElement('span'); id.className = 'index-id'; id.textContent = item.id;
+                const name = document.createElement('span'); name.textContent = item.name; button.append(id);
+                if (item.previews?.org) { const thumb = new Image(); thumb.className = 'index-preview'; thumb.alt = ''; thumb.loading = 'lazy'; thumb.src = item.previews.org; thumb.onerror = () => thumb.remove(); button.append(thumb); }
+                button.append(name);
                 button.setAttribute('aria-current', String(item.id === currentItemData?.id));
                 button.onclick = () => { loadSeriesData(index); setIndexOpen(false, true); };
                 li.append(button); menu.append(li);
@@ -637,7 +659,7 @@
         document.getElementById('panorama-view').inert = true;
         document.getElementById('main-app').inert = true;
 
-        let detailVersion = 0, layerVersion = 0, infoRequest, layerRequest;
+        let detailVersion = 0, layerVersion = 0, infoRequest, layerRequest, galleryDimensions = {};
         const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
         function setIndexOpen(open, focus = false) {
             const panel = document.getElementById('floating-menu'); panel.hidden = !open;
@@ -658,13 +680,13 @@
             for (let offset = 1; offset <= globalAssetsData.length; offset++) {
                 const index = (currentSeriesIndex + delta * offset + globalAssetsData.length) % globalAssetsData.length;
                 const item = globalAssetsData[index];
-                if (currentTrack !== 'cyber' || (item.linePath && item.colorPath)) { loadSeriesData(index); return; }
+                if (currentTrack !== 'cyber' || canEnterCyber(item)) { loadSeriesData(index); return; }
             }
         }
         document.querySelectorAll('[data-step]').forEach(button => button.onclick = () => stepCharacter(Number(button.dataset.step)));
         document.getElementById('reveal-toggle').onclick = () => setRevealed(!isRevealed);
         document.addEventListener('keydown', e => {
-            if (currentTrack !== 'cyber' || entryBusy || e.target.closest('button,input,textarea,a')) return;
+            if (currentTrack !== 'cyber' || entryBusy || e.target.closest('button,input,textarea,select,a')) return;
             if (e.key === 'Escape') { e.preventDefault(); setRevealed(false); }
             if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { e.preventDefault(); stepCharacter(e.key === 'ArrowLeft' ? -1 : 1); }
             if (e.key.toLowerCase() === 'i') { e.preventDefault(); setRevealed(!isRevealed); }
@@ -678,7 +700,7 @@
             if (index < 0) index = globalAssetsData.length - 1;
             if (index >= globalAssetsData.length) index = 0;
             const item = globalAssetsData[index]; if (!item) return;
-            if (currentTrack === 'cyber' && (!item.linePath || !item.colorPath)) { stepCharacter(1); return; }
+            if (currentTrack === 'cyber' && !canEnterCyber(item)) { modeError('该人物体感素材未就绪，请返回图鉴。'); return; }
             currentSeriesIndex = index; currentItemData = item;
             const version = ++detailVersion; releaseGalleryVideo(); infoRequest?.abort(); infoRequest = new AbortController();
             layerRequest?.abort(); setRevealed(false, true);
@@ -691,7 +713,7 @@
             const english = document.getElementById('archive-english'); english.textContent = item.englishName || ''; english.hidden = !item.englishName;
             textEl.textContent = item.infoPath ? '正在读取人物档案…' : '人物档案待补充'; textEl.scrollTop = 0;
             if (currentTrack === 'gallery') infoPanel.classList.add('visible');
-            if (!item.infoPath) renderArchive(textEl, { blocks:[] }, item.sources);
+            if (currentTrack === 'gallery' && !item.infoPath) renderArchive(textEl, { blocks:[] }, item.sources);
             const archiveRequest = infoRequest;
             const archiveTimer = item.infoPath ? setTimeout(() => archiveRequest.abort(), 12000) : null;
             if (item.infoPath) fetch(item.infoPath, { signal: archiveRequest.signal }).then(res => { if (!res.ok) throw Error(); return res.text(); })
@@ -699,21 +721,26 @@
                     if (version !== detailVersion) return;
                     const archive = archiveBlocks(text, { markdown:/\.md$/.test(item.infoPath), name:item.name, englishName:item.englishName });
                     english.textContent = archive.englishName; english.hidden = !archive.englishName;
-                    renderArchive(textEl, archive, item.sources);
+                    if (currentTrack === 'gallery') renderArchive(textEl, archive, item.sources);
                 })
                 .catch(error => {
-                    if (version !== detailVersion) return;
+                    if (version !== detailVersion || currentTrack !== 'gallery') return;
                     textEl.textContent = '人物档案暂未载入。';
                     const retry = document.createElement('button'); retry.type = 'button'; retry.textContent = '重试档案'; retry.onclick = () => loadSeriesData(currentSeriesIndex); textEl.append(retry);
                 }).finally(() => clearTimeout(archiveTimer));
             if (currentTrack === 'gallery') {
                 for (const layer of ['org', 'line', 'color']) { const image = document.getElementById(`img-${layer}`); image.removeAttribute('src'); image.style.opacity = '0'; }
-                document.querySelectorAll('.layer-btn').forEach((button, i) => { button.disabled = !item.resources[['org','line','color'][i]]; button.classList.toggle('active', i === 0); button.setAttribute('aria-pressed', String(i === 0)); });
+                galleryDimensions = {};
+                document.querySelectorAll('.layer-btn').forEach((button, i) => { const old = button.querySelector('img'); old?.remove(); const src = item.previews?.[['org','line','color'][i]]; if (src) { const thumb = new Image(); thumb.alt = ''; thumb.className = 'layer-preview'; thumb.src = src; thumb.onerror = () => thumb.remove(); button.prepend(thumb); } button.disabled = !item.resources[['org','line','color'][i]]; button.classList.toggle('active', i === 0); button.setAttribute('aria-pressed', String(i === 0)); });
                 document.getElementById('study-retry').hidden = true;
                 document.getElementById('detail-asset-status').textContent = item.ready ? '' : '人物原图素材未就绪';
                 window.switchLayer('org');
             } else if (currentTrack === 'cyber') {
-                if (item.linePath && item.colorPath) updateWebGLMural(item.linePath, item.colorPath);
+                const config = cyberConfig(item.cyber);
+                textEl.replaceChildren(); const summary = document.createElement('p'); summary.textContent = config.summary.trim() ? config.summary : '人物介绍待补充'; textEl.append(summary);
+                const notice = document.createElement('p'); notice.className = 'archive-sources'; notice.textContent = '数字化演绎内容 · 完整档案及已有资料来源请在图鉴中阅读'; textEl.append(notice);
+                document.getElementById('stage-name').textContent = item.name;
+                if (canEnterCyber(item)) updateWebGLMural(item.linePath, item.colorPath, item.figurePath);
                 else modeError('该人物体感所需线稿或色稿尚未就绪，请选择已有完整素材的人物。');
             }
         }
@@ -728,12 +755,16 @@
                     const loaded = await loadStudyImage(src, request.signal);
                     if (version !== layerVersion || detail !== detailVersion || currentTrack !== 'gallery') return;
                     image.src = loaded.src;
+                    galleryDimensions[layerType] = { width:loaded.naturalWidth, height:loaded.naturalHeight };
+                    const dims = Object.values(galleryDimensions), first = dims[0];
+                    image.dataset.registration = dims.every(d => d.width === first.width && d.height === first.height) ? 'consistent' : 'mismatch';
                 }
                 if (version !== layerVersion || detail !== detailVersion || currentTrack !== 'gallery') return;
                 for (const layer of ['org','line','color']) document.getElementById(`img-${layer}`).style.opacity = layer === layerType ? '1' : '0';
                 document.querySelectorAll('.layer-btn').forEach((button, i) => { const active = ['org','line','color'][i] === layerType; button.classList.toggle('active', active); button.setAttribute('aria-pressed', String(active)); });
                 const missing = [['line','线稿'],['color','色稿']].filter(([key]) => !item.resources[key]).map(([,name]) => name);
                 feedback.textContent = layerType === 'color' ? '数字色稿 · 数字化演绎内容' : missing.length ? `${missing.join('、')}素材待补充` : '';
+                if (Object.values(galleryDimensions).some(d => d.width !== Object.values(galleryDimensions)[0].width || d.height !== Object.values(galleryDimensions)[0].height)) feedback.textContent += ' · 三层实际尺寸不一致，无法保证配准，请核对素材';
                 document.getElementById('study-retry').hidden = true;
                 if (layerType === 'color' && item.videoPath) {
                     const video = document.getElementById('video-color'); video.src = item.videoPath;
@@ -776,13 +807,15 @@
             uniform vec2 uMouse;
             uniform float uDispersion;
             uniform float uTime;
+            uniform float uFigure;
+            uniform float uFeedback;
             varying vec2 vUv;
             void main() {
                 vUv = uv;
                 vec3 pos = position;
                 float dist = distance(vUv, uMouse);
                 float localDisp = 1.0 - smoothstep(0.05, 0.15, dist);
-                float totalDisp = clamp(localDisp + uDispersion, 0.0, 1.0);
+                float totalDisp = clamp(localDisp + uDispersion, 0.0, 1.0) * (1.0 - uFigure);
                 
                 float scatterX = sin(position.y * 15.0 + uTime * 2.0) * 0.1;
                 float scatterY = cos(position.x * 15.0 + uTime * 2.0) * 0.1;
@@ -796,8 +829,11 @@
 
         const fragmentShader = `
             uniform sampler2D uColorTex;
+            uniform vec2 uTexel;
             uniform vec2 uMouse;
             uniform float uDispersion;
+            uniform float uFigure;
+            uniform float uFeedback;
             varying vec2 vUv;
             void main() {
                 vec4 color = texture2D(uColorTex, vUv);
@@ -805,7 +841,14 @@
                 float dist = distance(vUv, uMouse);
                 float localDisp = 1.0 - smoothstep(0.07, 0.15, dist);
                 float totalDisp = clamp(localDisp + uDispersion, 0.0, 1.0);
-                gl_FragColor = vec4(color.rgb, color.a * (1.0 - totalDisp));
+                gl_FragColor = vec4(color.rgb, color.a * mix(1.0 - totalDisp, uFeedback, uFigure));
+                // FIGURE_FEEDBACK_START
+                if (uFigure > 0.5) {
+                    float edge = 1.0 - min(min(texture2D(uColorTex, vUv + vec2(uTexel.x, 0.0)).a, texture2D(uColorTex, vUv - vec2(uTexel.x, 0.0)).a), min(texture2D(uColorTex, vUv + vec2(0.0, uTexel.y)).a, texture2D(uColorTex, vUv - vec2(0.0, uTexel.y)).a));
+                    if (edge < 0.05 || uFeedback < 0.001) discard;
+                    gl_FragColor = vec4(vec3(0.78, 0.64, 0.43), color.a * edge * uFeedback);
+                }
+                // FIGURE_FEEDBACK_END
             }
         `;
 
@@ -818,12 +861,12 @@
             camera = new THREE.PerspectiveCamera(45, w / h, 0.1, 100);
             renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
             renderer.setSize(w, h);
-            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
             webglContainer.appendChild(renderer.domElement);
 
             shaderMaterial = new THREE.ShaderMaterial({
                 vertexShader, fragmentShader, transparent: true, depthWrite: false,
-                uniforms: { uColorTex: { value: null }, uMouse: { value: new THREE.Vector2(-1, -1) }, uDispersion: { value: 0.0 }, uTime: { value: 0.0 } }
+                uniforms: { uColorTex: { value: null }, uTexel: { value: new THREE.Vector2(0,0) }, uMouse: { value: new THREE.Vector2(-1, -1) }, uDispersion: { value: 0.0 }, uTime: { value: 0.0 }, uFigure: { value: 0.0 }, uFeedback: { value: 0.0 } }
             });
             renderWebGL();
         }
@@ -840,12 +883,28 @@
             fitMuralCamera(true);
         }
 
-        let muralVersion = 0, muralRequest, muralPaths = '', muralSize;
+        let muralVersion = 0, muralRequest, muralPaths = '', muralSize, figureMeasurement, stageLayout;
+        const calibrationOverrides = new Map();
+        let figureMode = false;
         function cancelMuralRequest() { ++muralVersion; muralRequest?.abort(); muralRequest = null; }
         function fitMuralCamera(immediate = false) {
             if (!camera || !muralSize || currentTrack !== 'cyber') return;
             const panel = document.getElementById('floating-info'), css = getComputedStyle(panel);
             const width = webglContainer.clientWidth, height = webglContainer.clientHeight;
+            if (figureMode && figureMeasurement) {
+                camera.position.set(0,0,3); camera.updateMatrixWorld();
+                const config = calibrationOverrides.get(currentItemData.id) || cyberConfig(currentItemData.cyber);
+                const bounds = config.bounds || figureMeasurement.bounds;
+                stageLayout = figureLayout({width:figureMeasurement.width,height:figureMeasurement.height,bounds,safe:stageSafeArea(width,height,width-panel.offsetWidth-parseFloat(css.right),isRevealed),layout:config.layout});
+                const worldHeight=2*Math.tan(camera.fov*Math.PI/360)*3, unit=worldHeight/height;
+                const sw=figureMeasurement.width*stageLayout.scale,sh=figureMeasurement.height*stageLayout.scale;
+                const transform={x:(stageLayout.x+sw/2-width/2)*unit,y:(height/2-stageLayout.y-sh/2)*unit};
+                for (const object of [lineMesh,colorPoints]) if(object) {
+                    gsap.to(object.position,{...transform,z:0,duration:immediate||reducedMotion.matches?0:.75,ease:'power2.inOut',overwrite:true});
+                    gsap.to(object.scale,{x:sw*unit/muralSize.planeWidth,y:sh*unit/muralSize.planeHeight,z:1,duration:immediate||reducedMotion.matches?0:.75,ease:'power2.inOut',overwrite:true});
+                }
+                refreshCalibration(); return;
+            }
             const defaultFit = cameraFit({ width, height, ...muralSize });
             const revealFit = cameraFit({ width, height, ...muralSize, right:panel.offsetWidth + parseFloat(css.right) + 32 });
             defaultCameraZ = defaultFit.z; revealCameraZ = revealFit.z; revealCameraX = revealFit.x;
@@ -855,30 +914,33 @@
         function setRevealed(revealed, immediate = false) {
             if (revealed && (currentTrack !== 'cyber' || webglContainer.hasAttribute('data-loading') || !lineMesh)) return;
             isRevealed = revealed;
+            document.getElementById('main-app').dataset.revealed = String(revealed);
+            document.querySelector('.gesture-hint').textContent = revealed ? '双手收拢 · 返回完整人物　／　单手挥动 · 切换人物' : '双手展开 · 查看简介　／　单手挥动 · 切换人物';
             const panel = document.getElementById('floating-info'); panel.classList.toggle('visible', revealed);
             panel.inert = !revealed && currentTrack === 'cyber';
-            const button = document.getElementById('reveal-toggle'); button.textContent = revealed ? '收起人物档案' : '查看人物档案'; button.setAttribute('aria-expanded', String(revealed));
+            const button = document.getElementById('reveal-toggle'); button.textContent = revealed ? '收起人物简介' : '查看人物简介'; button.setAttribute('aria-expanded', String(revealed));
             if (revealed) document.getElementById('info-text').scrollTop = 0;
-            const duration = immediate || reducedMotion.matches ? 0 : 1.5;
+            const duration = immediate || reducedMotion.matches ? 0 : .75;
             fitMuralCamera();
-            if (shaderMaterial) {
+            if (shaderMaterial && !figureMode) {
                 gsap.to(shaderMaterial.uniforms.uDispersion, { value:revealed ? 1 : 0, duration, ease:'power2.inOut', overwrite:true });
                 gsap.to(shaderMaterial.uniforms.uMouse.value, { x:-10, y:-10, duration:0, overwrite:true });
             }
-            if (camera) gsap.to(camera.position, { x:revealed ? revealCameraX : 0, z:revealed ? revealCameraZ : defaultCameraZ, duration, ease:'power2.inOut', overwrite:true });
+            if (figureMode) pulseFigure();
+            if (camera && !figureMode) gsap.to(camera.position, { x:revealed ? revealCameraX : 0, z:revealed ? revealCameraZ : defaultCameraZ, duration, ease:'power2.inOut', overwrite:true });
         }
-        async function updateWebGLMural(linePath, colorPath) {
+        async function updateWebGLMural(linePath, colorPath, figurePath = null) {
             cancelMuralRequest();
-            const version = muralVersion, paths = JSON.stringify([linePath, colorPath]);
+            const version = muralVersion, paths = JSON.stringify([linePath, colorPath, figurePath]);
             const status = document.getElementById('cyber-asset-status');
             if (muralPaths === paths && lineMesh && colorPoints) {
-                webglContainer.removeAttribute('data-loading'); status.textContent = ''; fitMuralCamera(true); return;
+                webglContainer.removeAttribute('data-loading'); status.textContent = figureMode ? '' : '兼容展示 · 尚未提供专用人物抠图'; fitMuralCamera(true); return;
             }
             const request = muralRequest = new AbortController();
             webglContainer.dataset.loading = ''; status.textContent = '正在加载当前人物图像…';
             const urls = [], textures = []; let timedOut = false;
             const timer = setTimeout(() => { timedOut = true; request.abort(); }, 20000);
-            const pendingImages = [linePath, colorPath].map(async src => {
+            const pendingImages = (figurePath ? [figurePath] : [linePath, colorPath]).map(async src => {
                 const response = await fetch(src, { signal:request.signal }); if (!response.ok) throw new Error('图像不可用');
                 const url = URL.createObjectURL(await response.blob()); urls.push(url);
                 return loadStudyImage(url, request.signal);
@@ -886,35 +948,77 @@
             try {
                 const images = await Promise.all(pendingImages);
                 if (version !== muralVersion || currentTrack !== 'cyber') return;
-                const aspect = images[1].width / images[1].height;
+                let measurement;
+                if (figurePath) {
+                    try { measurement = measureFigure(images[0],figurePath); }
+                    catch (error) { const bounds = cyberConfig(currentItemData.cyber).bounds; if (!bounds) throw error; measurement = {bounds,width:images[0].width,height:images[0].height,scanMs:0,diagnostic:error.message}; }
+                }
+                const source = figurePath ? images[0] : images[1];
+                const aspect = source.width / source.height;
                 const planeHeight = 2.0, planeWidth = planeHeight * aspect;
-                for (const image of images) { const texture = new THREE.Texture(image); texture.needsUpdate = true; textures.push(texture); }
+                for (const image of (figurePath ? [images[0],images[0]] : images)) { const texture = new THREE.Texture(image); texture.needsUpdate = true; textures.push(texture); }
                 const [lineTex, colorTex] = textures; lineTex.colorSpace = THREE.SRGBColorSpace;
-                if (lineMesh) { scene.remove(lineMesh); lineMesh.geometry.dispose(); lineMesh.material.map.dispose(); lineMesh.material.dispose(); }
-                if (colorPoints) { scene.remove(colorPoints); colorPoints.geometry.dispose(); }
+                if (lineMesh) { gsap.killTweensOf(lineMesh.position); gsap.killTweensOf(lineMesh.scale); gsap.killTweensOf(lineMesh.material); scene.remove(lineMesh); lineMesh.geometry.dispose(); lineMesh.material.map.dispose(); lineMesh.material.dispose(); }
+                if (colorPoints) { gsap.killTweensOf(colorPoints.position); gsap.killTweensOf(colorPoints.scale); scene.remove(colorPoints); colorPoints.geometry.dispose(); }
                 shaderMaterial.uniforms.uColorTex.value?.dispose();
-                lineMesh = new THREE.Mesh(new THREE.PlaneGeometry(planeWidth, planeHeight), new THREE.MeshBasicMaterial({ map:lineTex }));
+                lineMesh = new THREE.Mesh(new THREE.PlaneGeometry(planeWidth, planeHeight), new THREE.MeshBasicMaterial({ map:lineTex, transparent:!!figurePath, alphaTest:figurePath ? .003 : 0, depthWrite:false }));
                 lineMesh.position.z = -0.05; scene.add(lineMesh);
                 shaderMaterial.uniforms.uColorTex.value = colorTex;
-                const segmentsY = Math.floor(800 / aspect);
-                colorPoints = new THREE.Points(new THREE.PlaneGeometry(planeWidth, planeHeight, 800, segmentsY), shaderMaterial);
+                const grid = particleGrid(aspect);
+                colorPoints = new THREE.Points(new THREE.PlaneGeometry(planeWidth, planeHeight, grid.x, grid.y), shaderMaterial);
                 scene.add(colorPoints);
+                figureMode = !!figurePath; figureMeasurement = measurement; shaderMaterial.uniforms.uFigure.value = figureMode ? 1 : 0; shaderMaterial.uniforms.uFeedback.value = 0;
+                shaderMaterial.uniforms.uTexel.value.set(4/source.width,4/source.height);
                 muralSize = { planeWidth, planeHeight }; muralPaths = paths; fitMuralCamera(true);
-                webglContainer.removeAttribute('data-loading'); status.textContent = '';
+                webglContainer.removeAttribute('data-loading'); status.textContent = figureMode ? measurement.diagnostic ? '手动边界预览 · ' + measurement.diagnostic : '' : '兼容展示 · 尚未提供专用人物抠图';
+                const diagnostics = cyberDiagnostics(currentItemData.cyber); if (diagnostics.length) status.append(' · ' + diagnostics.join('；'));
+                if (figureMode) { lineMesh.material.opacity = reducedMotion.matches ? 1 : 0; gsap.to(lineMesh.material,{opacity:1,duration:reducedMotion.matches ? 0 : (measurement.cacheHit ? .35 : 1.6),overwrite:true}); pulseFigure(); }
             } catch (error) {
                 request.abort();
                 if (version !== muralVersion || currentTrack !== 'cyber' || (error.name === 'AbortError' && !timedOut)) return;
-                status.textContent = timedOut ? '当前人物体感图像加载超时。' : '当前人物体感图像未载入。';
-                const retry = document.createElement('button'); retry.type = 'button'; retry.textContent = '重试图像'; retry.onclick = () => updateWebGLMural(linePath, colorPath); status.append(' ', retry);
+                if (figurePath && linePath && colorPath) { await updateWebGLMural(linePath,colorPath); if(version + 1 === muralVersion) status.prepend('专用人物抠图无效：' + error.message + ' · '); return; }
+                status.textContent = timedOut ? '当前人物体感图像加载超时。' : '当前人物体感图像未载入：' + error.message + '。可切换至图鉴。';
+                const retry = document.createElement('button'); retry.type = 'button'; retry.textContent = '重试图像'; retry.onclick = () => updateWebGLMural(linePath, colorPath, figurePath); status.append(' ', retry);
             } finally { clearTimeout(timer); await Promise.allSettled(pendingImages); urls.forEach(url => URL.revokeObjectURL(url)); }
         }
 
+        function pulseFigure() {
+            if (!shaderMaterial || !figureMode) return;
+            const feedback = shaderMaterial.uniforms.uFeedback; gsap.killTweensOf(feedback);
+            feedback.value = reducedMotion.matches ? 0 : .32;
+            gsap.to(feedback,{value:0,duration:reducedMotion.matches?0:.8,overwrite:true});
+        }
+        function refreshCalibration() {
+            if (!currentItemData) return;
+            const config = calibrationOverrides.get(currentItemData.id) || cyberConfig(currentItemData.cyber);
+            document.querySelectorAll('[data-calibration]').forEach(input => input.value = config.layout[input.dataset.calibration]);
+            document.getElementById('calibration-json').value = JSON.stringify({cyber:config},null,2);
+            document.getElementById('calibration-measure').textContent = figureMeasurement ? `原图 ${figureMeasurement.width} × ${figureMeasurement.height} · Alpha ${figureMeasurement.scanMs.toFixed(1)} ms · 有效边界 ${JSON.stringify(config.bounds || figureMeasurement.bounds)}${stageLayout ? ' · 适配 ' + stageLayout.scale.toFixed(3) : ''}` : '当前为旧素材兼容展示；校准需要透明 figure';
+            document.getElementById('calibration-character').value = currentItemData.id;
+        }
+        for (const [key,label,min,max,step] of [['scale','尺度',.2,2,.02],['anchorX','水平锚点',0,1,.02],['anchorY','垂直锚点',0,1,.02],['offsetX','左右偏移',-.5,.5,.01],['offsetY','上下偏移',-.5,.5,.01]]) {
+            const row=document.createElement('label'); row.textContent=label;
+            const input=document.createElement('input');input.type='number';input.min=min;input.max=max;input.step=step;input.dataset.calibration=key;
+            input.oninput=()=>{if(!currentItemData || !figureMode || input.value==='')return;const config=calibrationOverrides.get(currentItemData.id)||cyberConfig(currentItemData.cyber);config.layout[key]=Number(input.value);calibrationOverrides.set(currentItemData.id,cyberConfig(config));fitMuralCamera(true);};row.append(input);document.getElementById('calibration-fields').append(row);
+        }
+        document.getElementById('calibration-toggle').onclick=()=>{
+            const panel=document.getElementById('calibration');panel.hidden=!panel.hidden;
+            const select=document.getElementById('calibration-character');select.replaceChildren();
+            globalAssetsData.filter(canEnterCyber).forEach(item=>{const option=document.createElement('option');option.value=item.id;option.textContent=item.id+' · '+item.name;select.append(option);});refreshCalibration();
+        };
+        document.getElementById('calibration-close').onclick=()=>document.getElementById('calibration').hidden=true;
+        document.getElementById('calibration-character').onchange=e=>loadSeriesData(globalAssetsData.findIndex(item=>item.id===e.target.value));
+        document.getElementById('preview-default').onclick=()=>setRevealed(false);
+        document.getElementById('preview-revealed').onclick=()=>setRevealed(true);
+        document.getElementById('calibration-reset').onclick=()=>{const config=cyberConfig(currentItemData.cyber);config.layout=cyberConfig().layout;delete config.bounds;calibrationOverrides.set(currentItemData.id,config);fitMuralCamera(true);};
+        document.getElementById('calibration-copy').onclick=async()=>{const text=document.getElementById('calibration-json');try{await navigator.clipboard.writeText(text.value);}catch{text.focus();text.select();}};
         let clock;
         let glFrame = null;
         function renderWebGL() {
             glFrame = requestAnimationFrame(renderWebGL);
             if (currentTrack === 'cyber' && shaderMaterial) {
-                shaderMaterial.uniforms.uTime.value = clock.getElapsedTime();
+                if (figureMode && colorPoints) colorPoints.visible = shaderMaterial.uniforms.uFeedback.value > .001;
+                if (!figureMode) shaderMaterial.uniforms.uTime.value = clock.getElapsedTime();
                 renderer.render(scene, camera);
             }
         }

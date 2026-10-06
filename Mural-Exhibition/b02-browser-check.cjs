@@ -1,6 +1,7 @@
 const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const {createApp}=require('./server.js');
 const out=path.resolve(process.env.B02_VALIDATION_DIR || path.join(__dirname,'../docs/validation/b02-2026-10-06'));fs.mkdirSync(out,{recursive:true});
+const origin=process.env.B_VALIDATION_ORIGIN || 'http://localhost:3000';
 const assets=path.join(__dirname,'public/assets'),temp=path.join(assets,'99_B02_TEMP_TEST');
 const report={environment:{browser:'Chrome headless',platform:process.platform,node:process.version},views:[],functional:[],stress:[],errors:[],camera:'Real camera/gesture hardware requires author testing'};
 const state=p=>p.evaluate(()=>document.body.dataset.explorationState),shot=(p,n)=>p.screenshot({path:path.join(out,n+'.png')});
@@ -12,7 +13,7 @@ const status=async(p,pattern)=>p.waitForFunction(pattern=>document.querySelector
  try{
   const page=await browser.newPage({viewport:{width:1440,height:900}});page.on('pageerror',e=>report.errors.push(e.message));let requests=[];page.on('request',r=>requests.push(r.url()));
   for(const [w,h] of [[1920,1080],[1440,900],[1366,768],[1280,800]]){
-   await page.setViewportSize({width:w,height:h});requests=[];await page.goto('http://localhost:3000/index.html');await shot(page,`b01-${w}x${h}`);
+   await page.setViewportSize({width:w,height:h});requests=[];await page.goto(origin+'/index.html');await shot(page,`b01-${w}x${h}`);
    assert.ok(!requests.some(u=>/scan-assets|mural-02-detail|\/org\.|\/line\.|\/color\.|\/video\.|mediapipe|three/.test(u)));
    const start=Date.now();await enter(page);const galleryReadyMs=Date.now()-start;
    const metrics=await page.evaluate(()=>{const i=document.getElementById('panorama-bg'),r=i.getBoundingClientRect();return {left:r.left,top:r.top,height:r.height,bottom:r.bottom,natural:[i.naturalWidth,i.naturalHeight],renderer:document.querySelectorAll('#webgl-container canvas').length,resources:performance.getEntriesByType('resource').map(r=>({url:r.name,duration:r.duration,bytes:r.transferSize})),memory:performance.memory?.usedJSHeapSize};});
@@ -64,11 +65,11 @@ const status=async(p,pattern)=>p.waitForFunction(pattern=>document.querySelector
   // Rebind and enter original-only fixture after removing optional resources.
   for(const file of ['line.png','color.png','video.mp4','info.md'])fs.unlinkSync(path.join(temp,file));await author.locator('[data-refresh]').click();await status(author,'扫描完成');await author.locator('[data-list] button[data-id="99"]').click();await author.locator('#pano-reset-btn').click();await author.mouse.click(700,450);await author.locator('[data-save]').click();await status(author,'保存成功');await author.locator('#gallery-admin-toggle').click();await author.locator('.hotspot[data-ids="99"]').click();await author.waitForFunction(()=>document.getElementById('img-org').style.opacity==='1');assert.match(await author.locator('#info-text').textContent(),/人物档案待补充/);assert.ok(await author.getByRole('button',{name:'高清线稿',exact:true}).isDisabled());assert.ok(await author.getByRole('button',{name:'数字色稿',exact:true}).isDisabled());await shot(author,'original-only');
   await author.close();fs.rmSync(temp,{recursive:true});report.functional.push('Real new folder auto-discovery; both click/select orders; draft/cancel/save/reload/edit/unbind; search; simulated save failure restores; progressive resources; original-only detail; fixture cleaned');
-  const baseScan=await(await page.request.get('http://localhost:3000/api/scan-assets')).json();
+  const baseScan=await(await page.request.get(origin+'/api/scan-assets')).json();
   for(const count of [30,50]){
    const stress=await browser.newPage({viewport:{width:1440,height:900}});
    const data=Array.from({length:count},(_,i)=>({...baseScan.data[i%8],id:`stress-${i}`,name:`测试人物 ${i+1}`,position:{x:4+(i%10)*.35,y:20+Math.floor(i/10)*.7},annotated:true}));
-   await stress.route('**/api/scan-assets',r=>r.fulfill({contentType:'application/json',body:JSON.stringify({...baseScan,data})}));await stress.goto('http://localhost:3000/index.html');await enter(stress);
+   await stress.route('**/api/scan-assets',r=>r.fulfill({contentType:'application/json',body:JSON.stringify({...baseScan,data})}));await stress.goto(origin+'/index.html');await enter(stress);
    assert.equal(await stress.locator('.hotspot').evaluateAll(els=>els.reduce((n,e)=>n+e.dataset.ids.split(',').length,0)),count);
    await stress.locator('.hotspot').first().click();assert.ok(await stress.locator('#hotspot-chooser button').count()>1);await shot(stress,`stress-${count}`);await stress.keyboard.press('Escape');
    await stress.evaluate(()=>{window.__samples=[];window.__sampling=true;let last=performance.now();function frame(t){if(!__sampling)return;__samples.push(t-last);last=t;requestAnimationFrame(frame);}requestAnimationFrame(frame);});

@@ -1,0 +1,318 @@
+{
+  "baseline": "e9d297f3653afb719f9be4b3da4e28dde210e42e",
+  "formalResources": [
+    {
+      "id": "01",
+      "layer": "org",
+      "file": "Mural-Exhibition/public/assets/01_南门何五猖/org.png",
+      "sha256": "cf6de181d400d87572fa53fd8eb75b80f51fe862d179e505f595dd5ec2ae5109",
+      "baselineMatch": true,
+      "comparison": "exact bytes"
+    },
+    {
+      "id": "01",
+      "layer": "line",
+      "file": "Mural-Exhibition/public/assets/01_南门何五猖/line.png",
+      "sha256": "adbddf30bb1f19ebc60b95e05146af7f6540c97a79d0b1356072b0297856128d",
+      "baselineMatch": true,
+      "comparison": "exact bytes"
+    },
+    {
+      "id": "01",
+      "layer": "color",
+      "file": "Mural-Exhibition/public/assets/01_南门何五猖/color.png",
+      "sha256": "c4288e40ed9e786ffe9ce14a3da5ea041188b90599ce772026adfa986e59ca13",
+      "baselineMatch": true,
+      "comparison": "exact bytes"
+    },
+    {
+      "id": "01",
+      "layer": "video",
+      "file": "Mural-Exhibition/public/assets/01_南门何五猖/video.mp4",
+      "sha256": "daf28f180e253a48d06b6a08e776e8aba043588869dc9c4ee468f20527defd72",
+      "baselineMatch": true,
+      "comparison": "exact bytes"
+    },
+    {
+      "id": "01",
+      "layer": "info",
+      "file": "Mural-Exhibition/public/assets/01_南门何五猖/info.txt",
+      "sha256": "bd98b2f5bbfd3fe84df1f67997f9bf56289f8f1dfaf3a0a8a7657ba44bc5d7a5",
+      "baselineMatch": true,
+      "comparison": "text identical after checkout CRLF normalization"
+    },
+    {
+      "id": "02",
+      "layer": "org",
+      "file": "Mural-Exhibition/public/assets/02_东门陈五猖/org.png",
+      "sha256": "2c62249cbc5bf44da77c186ada8f06dfef5264d55253e3a7e30ae606893f39ce",
+      "baselineMatch": true,
+      "comparison": "exact bytes"
+    },
+    {
+      "id": "02",
+      "layer": "line",
+      "file": "Mural-Exhibition/public/assets/02_东门陈五猖/line.png",
+      "sha256": "48793c5e36931279c77482d7928f743ca57558214bcc190e3f414615f524c244",
+      "baselineMatch": true,
+      "comparison": "exact bytes"
+    },
+    {
+      "id": "02",
+      "layer": "color",
+      "file": "Mural-Exhibition/public/assets/02_东门陈五猖/color.png",
+      "sha256": "41fdea5dbbd6e8a726521cb4eeba421e0f12013374da5f191bf40dd2c8b5611a",
+      "baselineMatch": true,
+      "comparison": "exact bytes"
+    },
+    {
+      "id": "02",
+      "layer": "video",
+      "file": "Mural-Exhibition/public/assets/02_东门陈五猖/video.mp4",
+      "sha256": "f6b227b7109568674454ccd301f7e95019af29d901910047bb1478c7638a4467",
+      "baselineMatch": true,
+      "comparison": "exact bytes"
+    },
+    {
+      "id": "02",
+      "layer": "info",
+      "file": "Mural-Exhibition/public/assets/02_东门陈五猖/info.txt",
+      "sha256": "5bce7a77c0b1c75cb38ef2926429c13bce6c56584992baf7091c87fc049c9c4a",
+      "baselineMatch": true,
+      "comparison": "text identical after checkout CRLF normalization"
+    },
+    {
+      "id": "03",
+      "layer": "org",
+      "file": "Mural-Exhibition/public/assets/03_西门谢五猖/org.png",
+      "sha256": "0bdb980dd4dba72da1040073eb7baa7114f914cc2bf6487cab7e30ac1ad21ec0",
+      "baselineMatch": true,
+      "comparison": "exact bytes"
+    },
+    {
+      "id": "03",
+      "layer": "line",
+      "file": "Mural-Exhibition/public/assets/03_西门谢五猖/line.png",
+      "sha256": "b2d20037665790d7bad6369d6fc2801cdc4b68cb45b6ad5f8a641cd141305991",
+      "baselineMatch": true,
+      "comparison": "exact bytes"
+    },
+    {
+      "id": "03",
+      "layer": "color",
+      "file": "Mural-Exhibition/public/assets/03_西门谢五猖/color.png",
+      "sha256": "7dfed13f0cab90d5567a1be2cc5a6356160000dcfd993488d0288e60742b2541",
+      "baselineMatch": true,
+      "comparison": "exact bytes"
+    },
+    {
+      "id": "03",
+      "layer": "info",
+      "file": "Mural-Exhibition/public/assets/03_西门谢五猖/info.txt",
+      "sha256": "c941147a8bc98a6cf7043ae9051b5da39218b2193cb4bf7f94277a914a6f0e73",
+      "baselineMatch": true,
+      "comparison": "text identical after checkout CRLF normalization"
+    },
+    {
+      "id": "04",
+      "layer": "org",
+      "file": "Mural-Exhibition/public/assets/04_中门徐五猖/org.png",
+      "sha256": "6afccf169ec777b8befbd39d6fd6586f6ab35a4d04f161d176daabd22be92724",
+      "baselineMatch": true,
+      "comparison": "exact bytes"
+    },
+    {
+      "id": "04",
+      "layer": "line",
+      "file": "Mural-Exhibition/public/assets/04_中门徐五猖/line.png",
+      "sha256": "0638b516da3cda9b44d6792d8f916aa486a8f3e7dd148f1c44ea5d2015f6fb68",
+      "baselineMatch": true,
+      "comparison": "exact bytes"
+    },
+    {
+      "id": "04",
+      "layer": "color",
+      "file": "Mural-Exhibition/public/assets/04_中门徐五猖/color.png",
+      "sha256": "62bd67bcd395d7ea6effccf477f998726df34a29b19a662c9040eb33dea82214",
+      "baselineMatch": true,
+      "comparison": "exact bytes"
+    },
+    {
+      "id": "04",
+      "layer": "info",
+      "file": "Mural-Exhibition/public/assets/04_中门徐五猖/info.txt",
+      "sha256": "074797d387bd3cd67b776257477667ae838d95d5d33f051382b4ee16437a37c1",
+      "baselineMatch": true,
+      "comparison": "text identical after checkout CRLF normalization"
+    },
+    {
+      "id": "05",
+      "layer": "org",
+      "file": "Mural-Exhibition/public/assets/05_北门雷五猖/org.png",
+      "sha256": "c01da49cae91b8bdf828ded03db5e4c533463360287c365c0d786a2c2903de83",
+      "baselineMatch": true,
+      "comparison": "exact bytes"
+    },
+    {
+      "id": "05",
+      "layer": "line",
+      "file": "Mural-Exhibition/public/assets/05_北门雷五猖/line.png",
+      "sha256": "6db70aee151cea0f8f7c518e10675e5a10dd55aa74f84be496f7375e61b7e976",
+      "baselineMatch": true,
+      "comparison": "exact bytes"
+    },
+    {
+      "id": "05",
+      "layer": "color",
+      "file": "Mural-Exhibition/public/assets/05_北门雷五猖/color.png",
+      "sha256": "92b671957235df4c3ac3b564eb0e4c068a57091936ec5c8ceedb1be5e9bfd4ed",
+      "baselineMatch": true,
+      "comparison": "exact bytes"
+    },
+    {
+      "id": "05",
+      "layer": "info",
+      "file": "Mural-Exhibition/public/assets/05_北门雷五猖/info.txt",
+      "sha256": "037ef406d9be061490f6dba35e66d19e7eb4162677a74707a10ac785e5930f0b",
+      "baselineMatch": true,
+      "comparison": "text identical after checkout CRLF normalization"
+    },
+    {
+      "id": "06",
+      "layer": "org",
+      "file": "Mural-Exhibition/public/assets/06_翻坛张五郎/org.png",
+      "sha256": "5578554512b06ec8f61228557306a68c434fe0ef01030849a9b09fb11fe1a421",
+      "baselineMatch": true,
+      "comparison": "exact bytes"
+    },
+    {
+      "id": "06",
+      "layer": "line",
+      "file": "Mural-Exhibition/public/assets/06_翻坛张五郎/line.png",
+      "sha256": "28720e00a88d395a844e4e5e6b87587298e35ab85cc9b01d95493e8fe0a70a1a",
+      "baselineMatch": true,
+      "comparison": "exact bytes"
+    },
+    {
+      "id": "06",
+      "layer": "color",
+      "file": "Mural-Exhibition/public/assets/06_翻坛张五郎/color.png",
+      "sha256": "0ee9584f03d9977f9681f2948746550d1043fa1c8bd9008feb563a6412d558d0",
+      "baselineMatch": true,
+      "comparison": "exact bytes"
+    },
+    {
+      "id": "06",
+      "layer": "info",
+      "file": "Mural-Exhibition/public/assets/06_翻坛张五郎/info.txt",
+      "sha256": "0bc7ac6b25e4d1bed32b33bb1215c316a7cab7d086316de45706d991ceccaa61",
+      "baselineMatch": true,
+      "comparison": "text identical after checkout CRLF normalization"
+    },
+    {
+      "id": "07",
+      "layer": "org",
+      "file": "Mural-Exhibition/public/assets/07_梅山猖兵/org.png",
+      "sha256": "9daa15a25c5507333cbf60f53350f0b9120fe97872e36f2d052a54632086f104",
+      "baselineMatch": true,
+      "comparison": "exact bytes"
+    },
+    {
+      "id": "07",
+      "layer": "line",
+      "file": "Mural-Exhibition/public/assets/07_梅山猖兵/line.png",
+      "sha256": "4151b8ea02a1d69f02241b670ea32bb6086add188274a87bf0bf0fe704d79faa",
+      "baselineMatch": true,
+      "comparison": "exact bytes"
+    },
+    {
+      "id": "07",
+      "layer": "color",
+      "file": "Mural-Exhibition/public/assets/07_梅山猖兵/color.png",
+      "sha256": "52d1256c1c1e3ed3dff689182b0e232703e552655fb654834e37ffe92c6f1090",
+      "baselineMatch": true,
+      "comparison": "exact bytes"
+    },
+    {
+      "id": "07",
+      "layer": "info",
+      "file": "Mural-Exhibition/public/assets/07_梅山猖兵/info.txt",
+      "sha256": "b66d7fcecb379f16981628dcb7401cf088756d1c6554031eca77181a8c5a8954",
+      "baselineMatch": true,
+      "comparison": "text identical after checkout CRLF normalization"
+    },
+    {
+      "id": "10",
+      "layer": "org",
+      "file": "Mural-Exhibition/public/assets/08_上层猖兵/org.png",
+      "sha256": "694fad763575ff5d89e39b4150a13760c595d2d8c65159b8fcc093f11baefe0c",
+      "baselineMatch": true,
+      "comparison": "exact bytes"
+    },
+    {
+      "id": "10",
+      "layer": "line",
+      "file": "Mural-Exhibition/public/assets/08_上层猖兵/line.png",
+      "sha256": "30b522533cc977da50b8fba16cc002a883f198f57c49960331d2e06d8822bbf7",
+      "baselineMatch": true,
+      "comparison": "exact bytes"
+    },
+    {
+      "id": "10",
+      "layer": "color",
+      "file": "Mural-Exhibition/public/assets/08_上层猖兵/color.png",
+      "sha256": "2d072f4f168915ae9ce581a99950a7bb3f7027d55eef1bad6bbf24eeb0e2d011",
+      "baselineMatch": true,
+      "comparison": "exact bytes"
+    },
+    {
+      "id": "10",
+      "layer": "video",
+      "file": "Mural-Exhibition/public/assets/08_上层猖兵/video.mp4",
+      "sha256": "93d16ae52abd3b197a6279df07df047186f62c76b9bc2b45f0a454e5a846868f",
+      "baselineMatch": true,
+      "comparison": "exact bytes"
+    },
+    {
+      "id": "10",
+      "layer": "info",
+      "file": "Mural-Exhibition/public/assets/08_上层猖兵/info.txt",
+      "sha256": "de923ba43a8f0e1828d193e2e2de111b2f722ceaac5b271ba327a3cf34d4c5c3",
+      "baselineMatch": true,
+      "comparison": "text identical after checkout CRLF normalization"
+    }
+  ],
+  "background": {
+    "source": "shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+    "sha256": "9a4c0ded91822f6794dc22b1e1e6e80daf5ab4db188953fe01f9afa88aa3dba7",
+    "copySHA256": "9a4c0ded91822f6794dc22b1e1e6e80daf5ab4db188953fe01f9afa88aa3dba7"
+  },
+  "figure": {
+    "file": "Mural-Exhibition/public/assets/01_南门何五猖/figure.png",
+    "bytes": 122958,
+    "sha256": "cbc560184337186bde10faab00f28d0df78a0b9ccad7cb893d8daf3dc3ba3512",
+    "origin": "Author-provided existing figure.png, unchanged bytes; matches subject in formal color.png"
+  },
+  "references": [
+    {
+      "file": "provided-default.png",
+      "sha256": "0467189c9b01cfcbea6280dd7affdabeca6e995c343fda9a523c47ec507837e9",
+      "role": "AI visual reference only; not runtime heritage material"
+    },
+    {
+      "file": "provided-index.png",
+      "sha256": "0eb9558b7b8a990810f5abd6a309472269566174d93b790a8b1659e2fc340b0d",
+      "role": "AI visual reference only; not runtime heritage material"
+    },
+    {
+      "file": "provided-line.png",
+      "sha256": "f9ec8eec9460a8670b01761c5393271fe7e890814d4484e27d2f043d752c5414",
+      "role": "AI visual reference only; not runtime heritage material"
+    },
+    {
+      "file": "provided-theatre.png",
+      "sha256": "025dc60bae93f048bc22d2cc3b69646febbc081fecd4776cc48ad6855fe5ffd6",
+      "role": "AI visual reference only; not runtime heritage material"
+    }
+  ]
+}

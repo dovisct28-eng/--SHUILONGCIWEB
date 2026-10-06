@@ -1,0 +1,42 @@
+{
+  "functional": [
+    "Author-only preview, character selection, normalized scale/offset/anchor, copy JSON, reset, 8 fast reversals without drift, resize without texture reconstruction",
+    "Figure-only resources enter without legacy layers; synthetic tall/wide Alpha shapes fit 4 sizes in both states; long author summary scrolls and HTML stays text; one renderer and <=80000 vertices",
+    "Opaque/failed-decode figure falls back to legacy without ID change; empty Alpha remains diagnosed without showing stale art; explicit manual bounds allowed with warning; per-source Alpha cache reused; mismatched study dimensions diagnosed"
+  ],
+  "synthetic": "Colored rectangles are geometry fixtures, not heritage/person artwork. Only ID01 is an author-supplied transparent figure.",
+  "errors": [],
+  "realFigure": {
+    "id": "01",
+    "figureMode": true,
+    "revealed": false,
+    "measurement": {
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1,
+        "height": 1
+      },
+      "width": 1864,
+      "height": 1802,
+      "scanMs": 60.900000002235174,
+      "cacheHit": true
+    },
+    "layout": {
+      "scale": 0.28661487236403993,
+      "x": 372.8749389567148,
+      "y": 117.5200000000001,
+      "fitScale": 0.28661487236403993,
+      "effective": {
+        "x": 372.8749389567148,
+        "y": 117.5200000000001,
+        "width": 534.2501220865704,
+        "height": 516.4799999999999
+      }
+    },
+    "grid": 79776,
+    "rendererCount": 1,
+    "textures": 2,
+    "geometries": 2
+  }
+}

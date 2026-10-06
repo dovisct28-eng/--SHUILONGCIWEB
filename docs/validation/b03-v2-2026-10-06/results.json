@@ -1,0 +1,421 @@
+{
+  "environment": {
+    "browser": "Chrome headless; actual Three.js, GSAP and MediaPipe libraries",
+    "node": "v24.14.1",
+    "origin": "http://localhost:3005"
+  },
+  "views": [
+    {
+      "w": 1920,
+      "h": 1080,
+      "layout": {
+        "overflow": false,
+        "image": {
+          "x": 32,
+          "y": 86,
+          "right": 1248.40625,
+          "bottom": 918
+        },
+        "panel": {
+          "x": 1286.40625,
+          "y": 123,
+          "right": 1862.40625,
+          "bottom": 1034
+        },
+        "scrollHeight": 1191,
+        "clientHeight": 735
+      },
+      "cyber": {
+        "id": "01",
+        "index": 0,
+        "revealed": true,
+        "figureMode": true,
+        "opacity": 1,
+        "measurement": {
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+          },
+          "width": 1864,
+          "height": 1802,
+          "scanMs": 87.90000000223517,
+          "cacheHit": false
+        },
+        "stageLayout": {
+          "scale": 0.4357824639289678,
+          "x": 239.05074361820203,
+          "y": 128.72000000000003,
+          "fitScale": 0.4357824639289678,
+          "effective": {
+            "x": 239.05074361820203,
+            "y": 128.72000000000003,
+            "width": 812.298512763596,
+            "height": 785.28
+          }
+        },
+        "grid": 79776,
+        "glFrame": 2489,
+        "rendererCount": 1,
+        "textures": 2,
+        "geometries": 2,
+        "camera": {
+          "x": 0,
+          "z": 3
+        },
+        "projected": [
+          {
+            "x": 239.05089243209625,
+            "y": 914.0001150915054
+          },
+          {
+            "x": 239.05089243209625,
+            "y": 128.71998535249926
+          },
+          {
+            "x": 1051.3495393985265,
+            "y": 914.0001150915054
+          },
+          {
+            "x": 1051.3495393985265,
+            "y": 128.71998535249926
+          }
+        ]
+      }
+    },
+    {
+      "w": 1440,
+      "h": 900,
+      "layout": {
+        "overflow": false,
+        "image": {
+          "x": 32,
+          "y": 86,
+          "right": 926.8125,
+          "bottom": 738
+        },
+        "panel": {
+          "x": 964.8125,
+          "y": 123,
+          "right": 1396.8125,
+          "bottom": 854
+        },
+        "scrollHeight": 1428,
+        "clientHeight": 570
+      },
+      "cyber": {
+        "id": "01",
+        "index": 0,
+        "revealed": true,
+        "figureMode": true,
+        "opacity": 1,
+        "measurement": {
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+          },
+          "width": 1864,
+          "height": 1802,
+          "scanMs": 87.90000000223517,
+          "cacheHit": false
+        },
+        "stageLayout": {
+          "scale": 0.339889012208657,
+          "x": 167.62344062153164,
+          "y": 121.51999999999998,
+          "fitScale": 0.339889012208657,
+          "effective": {
+            "x": 167.62344062153164,
+            "y": 121.51999999999998,
+            "width": 633.5531187569367,
+            "height": 612.48
+          }
+        },
+        "grid": 79776,
+        "glFrame": 4711,
+        "rendererCount": 1,
+        "textures": 2,
+        "geometries": 2,
+        "camera": {
+          "x": 0,
+          "z": 3
+        },
+        "projected": [
+          {
+            "x": 167.62375144369173,
+            "y": 733.9998751514589
+          },
+          {
+            "x": 167.62375144369173,
+            "y": 121.52017133266675
+          },
+          {
+            "x": 801.176563828946,
+            "y": 733.9998751514589
+          },
+          {
+            "x": 801.176563828946,
+            "y": 121.52017133266675
+          }
+        ]
+      }
+    },
+    {
+      "w": 1366,
+      "h": 768,
+      "layout": {
+        "overflow": false,
+        "image": {
+          "x": 32,
+          "y": 86,
+          "right": 894.203125,
+          "bottom": 606
+        },
+        "panel": {
+          "x": 924.203125,
+          "y": 110,
+          "right": 1334,
+          "bottom": 722
+        },
+        "scrollHeight": 1368,
+        "clientHeight": 459
+      },
+      "cyber": {
+        "id": "01",
+        "index": 0,
+        "revealed": true,
+        "figureMode": true,
+        "opacity": 1,
+        "measurement": {
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+          },
+          "width": 1864,
+          "height": 1802,
+          "scanMs": 87.90000000223517,
+          "cacheHit": false
+        },
+        "stageLayout": {
+          "scale": 0.2695671476137625,
+          "x": 212.76341842397335,
+          "y": 116.24000000000001,
+          "fitScale": 0.2695671476137625,
+          "effective": {
+            "x": 212.76341842397335,
+            "y": 116.24000000000001,
+            "width": 502.4731631520533,
+            "height": 485.76
+          }
+        },
+        "grid": 79776,
+        "glFrame": 6938,
+        "rendererCount": 1,
+        "textures": 2,
+        "geometries": 2,
+        "camera": {
+          "x": 0,
+          "z": 3
+        },
+        "projected": [
+          {
+            "x": 212.76334411949054,
+            "y": 601.9998537050927
+          },
+          {
+            "x": 212.76334411949054,
+            "y": 116.23999869878705
+          },
+          {
+            "x": 715.2363572891653,
+            "y": 601.9998537050927
+          },
+          {
+            "x": 715.2363572891653,
+            "y": 116.23999869878705
+          }
+        ]
+      }
+    },
+    {
+      "w": 1280,
+      "h": 800,
+      "layout": {
+        "overflow": false,
+        "image": {
+          "x": 32,
+          "y": 86,
+          "right": 834,
+          "bottom": 638
+        },
+        "panel": {
+          "x": 864,
+          "y": 110,
+          "right": 1248,
+          "bottom": 754
+        },
+        "scrollHeight": 1451,
+        "clientHeight": 495
+      },
+      "cyber": {
+        "id": "01",
+        "index": 0,
+        "revealed": true,
+        "figureMode": true,
+        "opacity": 1,
+        "measurement": {
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+          },
+          "width": 1864,
+          "height": 1802,
+          "scanMs": 87.90000000223517,
+          "cacheHit": false
+        },
+        "stageLayout": {
+          "scale": 0.28661487236403993,
+          "x": 166.8749389567148,
+          "y": 117.5200000000001,
+          "fitScale": 0.28661487236403993,
+          "effective": {
+            "x": 166.8749389567148,
+            "y": 117.5200000000001,
+            "width": 534.2501220865704,
+            "height": 516.4799999999999
+          }
+        },
+        "grid": 79776,
+        "glFrame": 9078,
+        "rendererCount": 1,
+        "textures": 2,
+        "geometries": 2,
+        "camera": {
+          "x": 0,
+          "z": 3
+        },
+        "projected": [
+          {
+            "x": 166.8748667038595,
+            "y": 634.0000637465746
+          },
+          {
+            "x": 166.8748667038595,
+            "y": 117.51995275984042
+          },
+          {
+            "x": 701.1251035957976,
+            "y": 634.0000637465746
+          },
+          {
+            "x": 701.1251035957976,
+            "y": 117.51995275984042
+          }
+        ]
+      }
+    }
+  ],
+  "functional": [
+    "Eight existing stable IDs, names, original images and archives; unmodified ratios/colors",
+    "Four sizes: actual default/long/line/color/index and cyber default/revealed screenshots; projected plane avoids real panel; same person across modes",
+    "Panorama transform restored; failed layer retains original and retries; archive retries; fast switches keep final archive/image and release video",
+    "Actual decoded video playback and browser ended event restore color still; delayed archive and video completions cannot survive switch/exit",
+    "Dynamic ninth ID; original-only; provided English/sources; HTML remains text; unsafe source URL rejected; no silent switch to unrelated cyber character",
+    "Original synthetic two-hand reveal/scroll/close; interrupted transitions settle; resize keeps textures/geometries; original one-hand swipe advances ID and resets archive; exit stops camera boundary",
+    "Native keyboard reveal and shared I/Escape/arrow fallback; exit during actual new texture request cancels late upload and RAF"
+  ],
+  "errors": [],
+  "hardware": "Camera device boundary is simulated. Real camera and physical hand tracking NOT verified.",
+  "performance": {
+    "cyberVisits": 12,
+    "rendererMemory": [
+      {
+        "id": "01",
+        "textures": 1,
+        "geometries": 1
+      },
+      {
+        "id": "02",
+        "textures": 2,
+        "geometries": 2
+      },
+      {
+        "id": "03",
+        "textures": 2,
+        "geometries": 2
+      },
+      {
+        "id": "04",
+        "textures": 2,
+        "geometries": 2
+      },
+      {
+        "id": "05",
+        "textures": 2,
+        "geometries": 2
+      },
+      {
+        "id": "06",
+        "textures": 2,
+        "geometries": 2
+      },
+      {
+        "id": "07",
+        "textures": 2,
+        "geometries": 2
+      },
+      {
+        "id": "10",
+        "textures": 2,
+        "geometries": 2
+      },
+      {
+        "id": "01",
+        "textures": 1,
+        "geometries": 1
+      },
+      {
+        "id": "02",
+        "textures": 2,
+        "geometries": 2
+      },
+      {
+        "id": "03",
+        "textures": 2,
+        "geometries": 2
+      },
+      {
+        "id": "04",
+        "textures": 2,
+        "geometries": 2
+      }
+    ],
+    "heapStart": {
+      "usedSize": 5219768,
+      "totalSize": 6406144,
+      "embedderHeapUsedSize": 1812208,
+      "backingStorageSize": 5947082
+    },
+    "heapEnd": {
+      "usedSize": 5476824,
+      "totalSize": 6406144,
+      "embedderHeapUsedSize": 1734040,
+      "backingStorageSize": 5948503
+    },
+    "revealRequests": 0,
+    "scope": "Single Chrome headless process; explicit GC; JS heap and renderer object counts, excludes process RSS/decoded image and GPU bytes. No physical FPS claim."
+  },
+  "lifecycle": {
+    "starts": 8,
+    "stops": 8,
+    "active": 0,
+    "max": 1
+  }
+}
