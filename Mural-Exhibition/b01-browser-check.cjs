@@ -1,6 +1,6 @@
 const {chromium}=require('playwright');
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
-const out=path.resolve('docs/validation/b01-2026-10-06');fs.mkdirSync(out,{recursive:true});
+const out=path.resolve('docs/validation/b02-2026-10-06/b01-regression');fs.mkdirSync(out,{recursive:true});
 const url='http://localhost:3000/index.html';
 const state=p=>p.evaluate(()=>document.body.dataset.explorationState);
 const shot=(p,n)=>p.screenshot({path:path.join(out,n+'.png')});
@@ -35,8 +35,8 @@ const shot=(p,n)=>p.screenshot({path:path.join(out,n+'.png')});
   for(let i=0;i<12;i++){await page.mouse.move(300,500);await page.mouse.down();await page.mouse.move(1300,500,{steps:10});await page.mouse.up();}
   await shot(page,'gallery-map-hotspots');const first=page.locator('.hotspot').first();await first.click();await page.waitForFunction(()=>document.body.dataset.explorationState==='gallery-detail');
   await page.waitForFunction(()=>document.getElementById('img-org').naturalWidth>0);await shot(page,'gallery-detail');
-  await page.getByRole('button',{name:'高清线稿',exact:true}).click();assert.equal(await page.locator('#img-line').evaluate(e=>e.style.opacity),'1');
-  await page.getByRole('button',{name:'数字色稿',exact:true}).click();assert.equal(await page.locator('#img-color').evaluate(e=>e.style.opacity),'1');
+  await page.getByRole('button',{name:'高清线稿',exact:true}).click();await page.waitForFunction(()=>document.getElementById('img-line').style.opacity==='1');
+  await page.getByRole('button',{name:'数字色稿',exact:true}).click();await page.waitForFunction(()=>document.getElementById('img-color').style.opacity==='1');
   await page.getByRole('button',{name:'原壁画',exact:true}).click();await page.locator('#back-btn').click();assert.equal(await state(page),'gallery-map');
   await page.locator('#pano-back-btn').click();assert.equal(await state(page),'selection');assert.ok(await page.locator('#btn-gallery-track').isEnabled());
   report.functional.push('native keyboard Enter; map original image/8 hotspots; drag/wheel; hotspot to detail; org/line/color; detail→map→B01');
@@ -72,7 +72,7 @@ const shot=(p,n)=>p.screenshot({path:path.join(out,n+'.png')});
   await page.locator('#btn-cyber-track').click();await page.waitForFunction(()=>document.body.dataset.explorationState==='cyber');await page.locator('#back-btn').click();
   await page.evaluate(()=>window.__releaseCamera());await page.waitForTimeout(50);assert.equal(await state(page),'selection');assert.equal(await page.evaluate(()=>__lateStopped),2);report.functional.push('late camera startup after return is stopped');
   await page.locator('#btn-gallery-track').evaluate(e=>{for(let i=0;i<20;i++)e.click();});await page.waitForFunction(()=>document.body.dataset.explorationState==='gallery-map');await page.locator('#pano-back-btn').click();report.functional.push('20 rapid entry clicks serialize');
-  for(const [route,label] of [['**/api/scan-assets','asset-api-error'],['**/assets/splash-bg.png','map-image-error']]){
+  for(const [route,label] of [['**/api/scan-assets','asset-api-error'],['**/gallery/mural-02-detail.webp','map-image-error']]){
    const p=await browser.newPage();await p.route(route,r=>r.abort());await p.goto(url);await p.locator('#btn-gallery-track').click();await p.locator('#entry-retry').waitFor({state:'visible'});assert.equal(await state(p),'selection');assert.ok(await p.locator('#btn-gallery-track').isEnabled());await shot(p,label);await p.unroute(route);await p.locator('#entry-retry').click();await p.waitForFunction(()=>document.body.dataset.explorationState==='gallery-map',{},{timeout:30000});await p.close();report.functional.push(label+' recovery');
   }
   const missing=await browser.newPage();await missing.route('**/b01/mural-02-left.webp',r=>r.abort());await missing.goto(url);await missing.getByRole('button',{name:'重试图像'}).waitFor();assert.ok(await missing.locator('#btn-gallery-track').isEnabled());await shot(missing,'splash-image-error');await missing.unroute('**/b01/mural-02-left.webp');await missing.getByRole('button',{name:'重试图像'}).click();await missing.waitForFunction(()=>document.querySelector('.splash-image').dataset.ready!==undefined);await missing.close();

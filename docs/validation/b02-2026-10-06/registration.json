@@ -1,0 +1,74 @@
+{
+  "sizes": [
+    [
+      17507,
+      3960
+    ],
+    [
+      8192,
+      1853
+    ]
+  ],
+  "mode": "RGBA",
+  "bytes": 8029032,
+  "sourceHash": "bdb5b56026d6f8ce56e2bfccf9c8f5dafebf777d585e55c3f4fa367e2941caf3",
+  "deployedHash": "bdb5b56026d6f8ce56e2bfccf9c8f5dafebf777d585e55c3f4fa367e2941caf3",
+  "comparisonSize": [
+    2400,
+    543
+  ],
+  "rgbMeanDifference": [
+    1.3264732965009207,
+    1.009482044198895,
+    1.6739863413136893
+  ],
+  "bestShift": {
+    "dx": 0,
+    "dy": 0,
+    "rgb_mae": 1.3437329530715942
+  },
+  "boundary": "full image visually checked; no crop/padding/mirror/rotation observed",
+  "mapping": "normalized percentages retained",
+  "coordinates": [
+    {
+      "folderName": "01_南门何五猖",
+      "x": 5.82,
+      "y": 31.13
+    },
+    {
+      "folderName": "10_上层猖兵",
+      "x": 10.85,
+      "y": 17.68
+    },
+    {
+      "folderName": "02_东门陈五猖",
+      "x": 7.0,
+      "y": 28.73
+    },
+    {
+      "folderName": "03_西门谢五猖",
+      "x": 6.12,
+      "y": 22.8
+    },
+    {
+      "folderName": "04_中门徐五猖",
+      "x": 7.85,
+      "y": 22.1
+    },
+    {
+      "folderName": "05_北门雷五猖",
+      "x": 9.71,
+      "y": 23.65
+    },
+    {
+      "folderName": "06_翻坛张五郎",
+      "x": 8.78,
+      "y": 27.48
+    },
+    {
+      "folderName": "07_梅山猖兵",
+      "x": 12.21,
+      "y": 25.35
+    }
+  ]
+}

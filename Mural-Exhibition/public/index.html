@@ -192,6 +192,7 @@
         { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
     </script>
     <link rel="stylesheet" href="b01.css">
+    <link rel="stylesheet" href="gallery.css">
 </head>
 <body>
 
@@ -227,22 +228,28 @@
         </button>
         <button type="button" id="pano-switch-btn" onclick="window.toggleTrack()">体感交互 ↗</button>
 
-        <div id="admin-panel" onclick="window.togglePickerMode()">🛠️ 开启坐标采集器</div>
+        <div class="gallery-heading"><h1>《入将图》</h1><span>MURAL ATLAS</span></div>
+        <button type="button" id="pano-reset-btn">重置视野</button>
+        <button type="button" id="gallery-admin-toggle" hidden aria-expanded="false">标注管理</button>
+        <div class="gallery-footer">第二幅 · 自主探索</div>
+        <div id="gallery-hint">拖动浏览壁画 · 滚轮缩放 · 点击人物探索</div>
+        <div id="hotspot-chooser" hidden></div>
+        <aside id="gallery-admin" hidden aria-label="本地人物标注管理">
+            <h2>人物标注</h2><p data-count></p>
+            <input type="search" placeholder="搜索人物名称或 ID" aria-label="搜索人物">
+            <button type="button" data-refresh>重新扫描素材</button>
+            <div data-list></div><strong data-selected>尚未选择人物</strong><p data-position>未绑定坐标</p>
+            <div><button type="button" data-save>保存</button> <button type="button" data-cancel>取消</button> <button type="button" data-unbind>取消绑定</button></div>
+            <p data-status role="status" aria-live="polite">选择人物并点击壁画，或先点击壁画再选人物。</p>
+        </aside>
         
         <div id="panorama-wrapper">
-            <img class="panorama-bg" id="panorama-bg" data-src="assets/splash-bg.png" alt="《入将图》全景底图">
+            <img class="panorama-bg" id="panorama-bg" data-src="gallery/mural-02-detail.webp" alt="《入将图》全景底图">
         </div>
         
         <div id="hotspots-container"></div>
     </div>
     
-    <div id="coord-modal">
-        <h3>📍 坐标采集成功！</h3>
-        <p>请复制下方这行代码：</p>
-        <div id="coord-code"></div>
-        <button id="close-modal-btn" onclick="window.closeCoordModal()">关闭</button>
-    </div>
-
     <!-- 3. 主系统 (双轨共用) -->
     <div id="main-app">
         <div id="back-btn" onclick="window.goBack()">
@@ -267,7 +274,8 @@
                     <img id="img-line" class="layer-img" src="" alt="线稿">
                     <img id="img-color" class="layer-img" src="" alt="色稿">
                     
-                    <video id="video-color" class="layer-img" muted playsinline style="opacity: 0; pointer-events: none; z-index: 10; background: #000;"></video>
+                    <p id="detail-asset-status" role="status"></p>
+                    <video preload="none" id="video-color" class="layer-img" muted playsinline style="opacity: 0; pointer-events: none; z-index: 10; background: #000;"></video>
                 </div>
             </div>
         </div>
@@ -295,18 +303,8 @@
     <script type="module">
         let THREE, threeAttempt = 0; // Loaded only when the user enters the existing cyber mode.
 
-        /* ================= 坐标数据区 ================= */
-        const ANCHORS_CONFIG = [
-             { folderName: "01_南门何五猖", x: 5.82, y: 31.13 },
-             { folderName: "10_上层猖兵", x: 10.85, y: 17.68 },
-             { folderName: "02_东门陈五猖", x: 7.00, y: 28.73 },
-             { folderName: "03_西门谢五猖", x: 6.12, y: 22.80 },
-             { folderName: "04_中门徐五猖", x: 7.85, y: 22.10 },
-             { folderName: "05_北门雷五猖", x: 9.71, y: 23.65 },
-             { folderName: "06_翻坛张五郎", x: 8.78, y: 27.48 },
-             { folderName: "07_梅山猖兵", x: 12.21, y: 25.35 }
-        ];
-
+        import { initialView, clampView, imageToScreen, screenToImage, groupHotspots } from './gallery-panorama.mjs';
+        import { createAdmin } from './gallery-admin.mjs';
         let globalAssetsData = [];
         let currentSeriesIndex = 0; 
         let currentTrack = null;
@@ -390,7 +388,8 @@
                 el.style.display = visible ? 'block' : 'none'; el.style.opacity = visible ? '1' : '0';
             }
             if (state !== 'cyber') { stopMediaPipe(); cancelAnimationFrame(glFrame); glFrame = null; }
-            document.getElementById('video-color').pause();
+            releaseGalleryVideo();
+            if (state === 'selection') galleryAdmin.close();
             modeNotice.hidden = true;
             document.body.classList.toggle('track-gallery', state.startsWith('gallery'));
             document.body.classList.toggle('track-cyber', state === 'cyber');
@@ -403,11 +402,11 @@
             const version = ++entryVersion; lastEntry = track;
             setEntryBusy(true); entryMessage(track === 'gallery' ? '正在准备图鉴与全景地图…' : '正在准备体感资源…');
             try {
-                await initAssetsData();
+                await initAssetsData(true);
                 if (track === 'gallery') {
                     await loadEntryImage(imgBg, imgBg.dataset.src);
                     if (version !== entryVersion) return;
-                    showScreen('gallery-map'); initPanoramaTransform();
+                    showScreen('gallery-map'); initPanoramaTransform(); document.getElementById('gallery-hint').classList.remove('used');
                     document.getElementById('pano-back-btn').focus();
                 } else {
                     if (!navigator.mediaDevices?.getUserMedia) throw new Error('浏览器不支持摄像头，请使用 localhost 或选择图鉴探索。');
@@ -416,7 +415,9 @@
                     if (typeof gsap === 'undefined') throw new Error('体感动画组件未加载，请检查网络后重试。');
                     // A failed ES module import is cached by the browser; a retry needs a fresh URL.
                     THREE ||= await bounded(import(threeAttempt++ ? 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js?entry-retry=' + threeAttempt : 'three'), 15000, '体感渲染组件加载超时，请检查网络后重试。');
-                    const item = globalAssetsData[currentSeriesIndex];
+                    let item = globalAssetsData[currentSeriesIndex];
+                    if (!item?.linePath || !item?.colorPath) { currentSeriesIndex = globalAssetsData.findIndex(i => i.linePath && i.colorPath); item = globalAssetsData[currentSeriesIndex]; }
+                    if (!item) throw new Error('体感所需线稿与色稿尚未就绪。');
                     await Promise.all([item.linePath, item.colorPath].map(src => loadEntryImage(new Image(), src)));
                     if (version !== entryVersion) return;
                     showScreen('cyber');
@@ -459,92 +460,116 @@
         const panoramaView = document.getElementById('panorama-view');
         const panoramaWrapper = document.getElementById('panorama-wrapper');
         const imgBg = document.getElementById('panorama-bg');
+        const hotspotContainer = document.getElementById('hotspots-container');
+        const chooser = document.getElementById('hotspot-chooser');
         let panScale = 1, panX = 0, panY = 0, isDragging = false, startX = 0, startY = 0, hasDragged = false;
-
-        function getBaseDimensions() { 
-            return { w: imgBg.naturalWidth || window.innerWidth, h: imgBg.naturalHeight || window.innerHeight }; 
-        }
-        
-        if (imgBg.complete) { if(panoramaView.style.display === 'block') initPanoramaTransform(); } 
-        else { imgBg.onload = () => { if(panoramaView.style.display === 'block') initPanoramaTransform(); }; }
-
+        let draftPosition = null, hotspotSignature = '', selectedHotspot = null, transformFrame = null;
+        const galleryAdmin = createAdmin({ getData: () => globalAssetsData,
+            onData(data) { globalAssetsData = data; renderAssets(); },
+            onDraft(position) { draftPosition = position; updatePanoramaTransform(); }
+        });
+        function getBaseDimensions() { return { w: imgBg.naturalWidth || innerWidth, h: imgBg.naturalHeight || innerHeight }; }
+        function viewport() { return { w: innerWidth, h: innerHeight - 148 }; }
+        function view() { return { scale: panScale, x: panX, y: panY }; }
         function initPanoramaTransform() {
-            const { w, h } = getBaseDimensions();
+            const { w, h } = getBaseDimensions(), vp = viewport(), initial = initialView(w, h, vp.w, vp.h);
             panoramaWrapper.style.width = `${w}px`; panoramaWrapper.style.height = `${h}px`;
-            const minScale = Math.max(window.innerWidth / w, window.innerHeight / h);
-            panScale = minScale; 
-            panX = (window.innerWidth - (w * panScale)) / 2; panY = (window.innerHeight - (h * panScale)) / 2;
+            panScale = initial.scale; panX = initial.x; panY = initial.y;
             updatePanoramaTransform();
         }
-        
+        function openCharacter(item) {
+            if (entryBusy || currentTrack !== 'gallery') return;
+            selectedHotspot = item.id; chooser.hidden = true;
+            showScreen('gallery-detail'); loadSeriesData(globalAssetsData.findIndex(i => i.id === item.id));
+        }
         function updatePanoramaTransform() {
-            const { w, h } = getBaseDimensions();
-            if(!w || !h) return;
-            
-            const minScale = Math.max(window.innerWidth / w, window.innerHeight / h);
-            panScale = Math.max(minScale, Math.min(panScale, 6));
-            
-            const currentW = w * panScale, currentH = h * panScale;
-            const minPanX = window.innerWidth - currentW;
-            const minPanY = window.innerHeight - currentH;
-            
-            panX = Math.max(minPanX, Math.min(0, panX));
-            panY = Math.max(minPanY, Math.min(0, panY));
-            
+            const { w, h } = getBaseDimensions(), vp = viewport();
+            const clamped = clampView(view(), w, h, vp.w, vp.h);
+            panScale = clamped.scale; panX = clamped.x; panY = clamped.y;
             panoramaWrapper.style.transform = `translate(${panX}px, ${panY}px) scale(${panScale})`;
-
-            document.querySelectorAll('.hotspot, .temp-dot').forEach(el => {
-                const px = parseFloat(el.dataset.x), py = parseFloat(el.dataset.y);
-                if (!isNaN(px) && !isNaN(py)) {
-                    el.style.left = `${panX + (px / 100) * currentW}px`; el.style.top = `${panY + (py / 100) * currentH}px`;
+            const groups = groupHotspots(globalAssetsData.filter(i => i.annotated), view(), w, h);
+            const signature = groups.map(g => g.map(p => p.item.id).sort().join(',')).join('|');
+            if (signature !== hotspotSignature) {
+                hotspotSignature = signature; hotspotContainer.replaceChildren();
+                for (const group of groups) {
+                    const marker = document.createElement('button'); marker.type = 'button'; marker.className = 'hotspot';
+                    marker.dataset.ids = group.map(p => p.item.id).join(',');
+                    marker.setAttribute('aria-label', group.length === 1 ? group[0].item.name : `附近 ${group.length} 组人物，展开选择`);
+                    const core = document.createElement('span'); core.className = group.length === 1 ? 'hotspot-core' : 'hotspot-count';
+                    if (group.length > 1) core.textContent = group.length;
+                    const ring = document.createElement('span'); ring.className = 'hotspot-ring';
+                    const label = document.createElement('span'); label.className = 'hotspot-tooltip';
+                    label.textContent = group.length === 1 ? group[0].item.name : `${group.length} 组人物 · 展开选择`;
+                    marker.append(ring, core, label);
+                    marker.onclick = e => {
+                        e.stopPropagation(); if (hasDragged) return;
+                        if (galleryAdmin.active()) { galleryAdmin.click(screenToImage({ x: e.clientX, y: e.clientY - 80 }, view(), w, h)); return; }
+                        if (group.length === 1) openCharacter(group[0].item);
+                        else {
+                            chooser.replaceChildren(); chooser.hidden = false;
+                            chooser.style.left = `${Math.max(10, Math.min(innerWidth - 235, parseFloat(marker.style.left) + 20))}px`;
+                            chooser.style.top = `${Math.max(85, Math.min(innerHeight - 310, parseFloat(marker.style.top) + 80))}px`;
+                            for (const point of group) { const button = document.createElement('button'); button.type = 'button'; button.textContent = point.item.name; button.onclick = () => openCharacter(point.item); chooser.append(button); }
+                            chooser.firstChild.focus();
+                        }
+                    };
+                    hotspotContainer.append(marker);
                 }
+            }
+            groups.forEach((group, i) => {
+                const marker = hotspotContainer.children[i];
+                marker.style.left = `${group.reduce((n, p) => n + p.x, 0) / group.length}px`;
+                marker.style.top = `${group.reduce((n, p) => n + p.y, 0) / group.length}px`;
+                marker.classList.toggle('selected', group.some(p => p.item.id === selectedHotspot));
             });
+            hotspotContainer.querySelector('.temp-dot')?.remove();
+            if (draftPosition?.x != null) {
+                const dot = document.createElement('span'), point = imageToScreen(draftPosition, view(), w, h);
+                dot.className = 'temp-dot'; dot.style.left = `${point.x}px`; dot.style.top = `${point.y}px`; hotspotContainer.append(dot);
+            }
         }
-        
-        window.addEventListener('resize', () => { 
-            if(panoramaView.style.display === 'block') initPanoramaTransform(); 
-            if(document.getElementById('main-app').style.display === 'block') resizeWebGL(); 
+        function scheduleTransform() { if (!transformFrame) transformFrame = requestAnimationFrame(() => { transformFrame = null; updatePanoramaTransform(); }); }
+        window.addEventListener('resize', () => {
+            if (document.body.dataset.explorationState.startsWith('gallery')) updatePanoramaTransform();
+            if (currentTrack === 'cyber' && renderer) resizeWebGL();
         });
-        
-        panoramaView.addEventListener('mousedown', (e) => { if(isPickerMode) return; isDragging = true; hasDragged = false; startX = e.clientX - panX; startY = e.clientY - panY; panoramaView.style.cursor = 'grabbing'; });
-        window.addEventListener('mousemove', (e) => { if(!isDragging) return; hasDragged = true; panX = e.clientX - startX; panY = e.clientY - startY; updatePanoramaTransform(); });
-        window.addEventListener('mouseup', () => { isDragging = false; if(panoramaView.style.display === 'block' && !isPickerMode) panoramaView.style.cursor = 'grab'; });
-        panoramaView.addEventListener('wheel', (e) => {
-            if(isPickerMode) return; e.preventDefault(); 
+        document.getElementById('pano-reset-btn').onclick = initPanoramaTransform;
+        panoramaView.addEventListener('mousedown', e => {
+            hasDragged = false;
+            if (e.button !== 0 || e.target.closest('#gallery-admin, #hotspot-chooser, button')) return;
+            isDragging = true; hasDragged = false; startX = e.clientX; startY = e.clientY; chooser.hidden = true;
+        });
+        window.addEventListener('mousemove', e => {
+            if (!isDragging) return;
+            const dx = e.clientX - startX, dy = e.clientY - startY;
+            if (!hasDragged && Math.hypot(dx, dy) < 4) return;
+            hasDragged = true; panX += dx; panY += dy; startX = e.clientX; startY = e.clientY;
+            scheduleTransform(); document.getElementById('gallery-hint').classList.add('used');
+        });
+        window.addEventListener('mouseup', () => { if (isDragging) { isDragging = false; updatePanoramaTransform(); } });
+        panoramaView.addEventListener('wheel', e => {
+            if (e.target.closest('#gallery-admin, #hotspot-chooser')) return;
+            e.preventDefault(); chooser.hidden = true;
+            const { w, h } = getBaseDimensions(), vp = viewport(), minScale = Math.max(vp.w / w, vp.h / h);
+            const newScale = Math.max(minScale, Math.min(panScale * Math.exp(-e.deltaY * .0015), 6));
+            panX = e.clientX - (e.clientX - panX) * (newScale / panScale);
+            const y = e.clientY - 80; panY = y - (y - panY) * (newScale / panScale);
+            panScale = newScale; scheduleTransform(); document.getElementById('gallery-hint').classList.add('used');
+        }, { passive: false });
+        panoramaWrapper.addEventListener('click', e => {
+            if (hasDragged) return; chooser.hidden = true;
             const { w, h } = getBaseDimensions();
-            const minScale = Math.max(window.innerWidth / w, window.innerHeight / h);
-            let newScale = Math.max(minScale, Math.min(panScale * Math.exp(-e.deltaY * 0.0015), 6));
-            panX = e.clientX - (e.clientX - panX) * (newScale / panScale); panY = e.clientY - (e.clientY - panY) * (newScale / panScale);
-            panScale = newScale; updatePanoramaTransform(); 
-        }, {passive: false});
-
-        let isPickerMode = false;
-        window.togglePickerMode = () => {
-            isPickerMode = !isPickerMode;
-            const btn = document.getElementById('admin-panel'), wrapper = document.getElementById('panorama-wrapper');
-            if (isPickerMode) { btn.innerHTML = "🔴 采集进行中"; btn.classList.add('active'); wrapper.classList.add('picker-mode-active'); } 
-            else { btn.innerHTML = "🛠️ 开启坐标采集器"; btn.classList.remove('active'); wrapper.classList.remove('picker-mode-active'); document.querySelectorAll('.temp-dot').forEach(el=>el.remove()); }
-        };
-        panoramaWrapper.addEventListener('click', (e) => {
-            if(!isPickerMode) return;
-            const rect = panoramaWrapper.getBoundingClientRect();
-            const x = ((e.clientX - rect.left) / rect.width) * 100;
-            const y = ((e.clientY - rect.top) / rect.height) * 100;
-            const dot = document.createElement('div'); dot.className = 'temp-dot'; dot.dataset.x = x; dot.dataset.y = y;
-            document.getElementById('hotspots-container').appendChild(dot);
-            updatePanoramaTransform();
-            document.getElementById('coord-code').innerText = `{ folderName: "...", x: ${x.toFixed(2)}, y: ${y.toFixed(2)} },`;
-            document.getElementById('coord-modal').style.display = 'flex';
+            galleryAdmin.click(screenToImage({ x: e.clientX, y: e.clientY - 80 }, view(), w, h));
         });
-        window.closeCoordModal = () => { document.getElementById('coord-modal').style.display = 'none'; };
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') chooser.hidden = true; });
 
         // =======================================================
         // 【核心数据挂载与页面切换调度】
         // =======================================================
-        const isPreviewEnv = window.location.protocol === 'file:' || window.location.protocol === 'blob:' || window.location.hostname.includes('usercontent');
 
-        function initAssetsData() {
-            if (assetsReady) return Promise.resolve();
+
+        function initAssetsData(force = false) {
+            if (assetsReady && !force) return Promise.resolve();
             if (assetsPromise) return assetsPromise;
             assetsPromise = (async () => {
                 const controller = new AbortController();
@@ -555,6 +580,8 @@
                     const result = await response.json();
                     if (!result.success || !Array.isArray(result.data) || !result.data.length) throw new Error('图鉴资源未准备好，请检查 assets 目录后重试。');
                     globalAssetsData = result.data; renderAssets(); assetsReady = true;
+                    if (result.adminEnabled) galleryAdmin.enable();
+                    if (result.diagnostics?.length) entryMessage(result.diagnostics.map(d => `${d.folderName}：${d.message}`).join('；'));
                 } catch (error) {
                     throw new Error(error.name === 'AbortError' ? '资产接口加载超时，请重试。' : error.message);
                 } finally { clearTimeout(timer); assetsPromise = null; }
@@ -563,150 +590,71 @@
         }
 
         function renderAssets() {
-            const menu = document.getElementById('menu'), hotspotsContainer = document.getElementById('hotspots-container');
-            menu.innerHTML = ''; hotspotsContainer.innerHTML = '';
-            if(globalAssetsData.length === 0) return;
-
+            const menu = document.getElementById('menu'); menu.replaceChildren(); hotspotSignature = '';
             globalAssetsData.forEach((item, index) => {
-                const li = document.createElement('li');
-                li.textContent = item.folderName; li.dataset.folder = item.folderName; 
-                li.addEventListener('click', () => loadSeriesData(index));
-                menu.appendChild(li);
-
-                const anchorConfig = ANCHORS_CONFIG.find(a => a.folderName === item.folderName);
-                if (anchorConfig) {
-                    const hotspot = document.createElement('div'); hotspot.className = 'hotspot';
-                    hotspot.dataset.x = anchorConfig.x; hotspot.dataset.y = anchorConfig.y;
-                    hotspot.innerHTML = `<div class="hotspot-ring"></div><div class="hotspot-core"></div><div class="hotspot-tooltip">${item.folderName}</div>`;
-                    hotspot.addEventListener('click', (e) => {
-                        if (isPickerMode || hasDragged) { e.preventDefault(); e.stopPropagation(); return; }
-                        if (entryBusy || currentTrack !== 'gallery') return;
-                        showScreen('gallery-detail'); loadSeriesData(index);
-                    });
-                    hotspotsContainer.appendChild(hotspot);
-                }
+                const li = document.createElement('li'); li.textContent = item.name; li.dataset.folder = item.folderName;
+                li.addEventListener('click', () => loadSeriesData(index)); menu.append(li);
             });
             updatePanoramaTransform();
         }
-        
+
         document.body.dataset.explorationState = 'selection';
         document.getElementById('panorama-view').inert = true;
         document.getElementById('main-app').inert = true;
 
+        let detailVersion = 0, layerVersion = 0, infoRequest;
+        function releaseGalleryVideo() {
+            ++layerVersion;
+            const video = document.getElementById('video-color'); video.pause(); video.style.opacity = '0';
+            if (video.hasAttribute('src')) { video.removeAttribute('src'); video.load(); }
+        }
         function loadSeriesData(index) {
             if (index < 0) index = globalAssetsData.length - 1;
             if (index >= globalAssetsData.length) index = 0;
-            currentSeriesIndex = index;
-            const item = globalAssetsData[index];
-            currentItemData = item; 
-
+            const item = globalAssetsData[index]; if (!item) return;
+            currentSeriesIndex = index; currentItemData = item;
+            const version = ++detailVersion; releaseGalleryVideo(); infoRequest?.abort(); infoRequest = new AbortController();
             isRevealed = false;
             if (shaderMaterial) gsap.to(shaderMaterial.uniforms.uDispersion, { value: 0, duration: 0 });
             if (camera) gsap.to(camera.position, { x: 0, z: defaultCameraZ || 1.8, duration: 0 });
-            
-            const infoPanel = document.getElementById('floating-info');
-            infoPanel.classList.remove('visible'); 
-
+            const infoPanel = document.getElementById('floating-info'), textEl = document.getElementById('info-text');
+            infoPanel.classList.remove('visible');
             document.querySelectorAll('#menu li').forEach(el => el.classList.toggle('active', el.dataset.folder === item.folderName));
-            document.getElementById('info-title').innerText = item.folderName;
-            
-            const mockLongText = "【数字复原与考据】\n水龙祠壁画由于年代久远，表面覆盖了厚重的尘埃与氧化层。通过高光谱扫描技术与AI色彩还原算法，我们提取出了隐藏在斑驳之下的真实色彩。\n\n【上层：九天神将】\n画面上部描绘了天庭神祇与天兵天将，他们腾云驾雾，手持法器，神态威严，展现了瑶族先民对天界的想象。\n\n【中层：人间烟火】\n画面的中部刻画了极为丰富的生活场景。有集市的繁华、农耕的辛劳、以及盛大祭祀的仪式。这一层是研究古代湘南地区民俗生活的珍贵史料。\n\n【下层：幽冥使者】\n画面底部则进入了深渊幽冥，各种奇异的神话怪兽与阴间使者穿行其间，代表了生与死的轮回信仰。\n\n【技法分析】\n整幅壁画采用了传统的矿物颜料，线条遒劲有力，色彩对比强烈，是一幅融合了巫楚文化与梅山教信仰的集大成之作。";
-
-            if (item.infoPath) {
-                try {
-                    fetch(item.infoPath).then(res => res.ok ? res.text() : "考据加载失败").then(text => { 
-                        const textEl = document.getElementById('info-text');
-                        textEl.innerText = text; 
-                        textEl.scrollTop = 0;
-                        if (currentTrack === 'gallery') infoPanel.classList.add('visible'); 
-                    }).catch(() => {
-                        const textEl = document.getElementById('info-text');
-                        textEl.innerText = mockLongText;
-                        textEl.scrollTop = 0;
-                        if (currentTrack === 'gallery') infoPanel.classList.add('visible');
-                    }); 
-                } catch (e) {
-                    const textEl = document.getElementById('info-text');
-                    textEl.innerText = mockLongText;
-                    textEl.scrollTop = 0;
-                    if (currentTrack === 'gallery') infoPanel.classList.add('visible');
-                }
-            } else {
-                const textEl = document.getElementById('info-text');
-                textEl.innerText = mockLongText;
-                textEl.scrollTop = 0;
-                if (currentTrack === 'gallery') infoPanel.classList.add('visible');
-            }
-            
+            document.getElementById('info-title').textContent = item.name;
+            textEl.textContent = item.infoPath ? '正在读取人物档案…' : '人物档案待补充'; textEl.scrollTop = 0;
+            if (currentTrack === 'gallery') infoPanel.classList.add('visible');
+            if (item.infoPath) fetch(item.infoPath, { signal: infoRequest.signal }).then(res => { if (!res.ok) throw Error(); return res.text(); })
+                .then(text => { if (version === detailVersion) textEl.textContent = text.trim() || '人物档案待补充'; })
+                .catch(error => { if (version === detailVersion && error.name !== 'AbortError') textEl.textContent = '人物档案暂未载入，请重新选择人物。'; });
             if (currentTrack === 'gallery') {
-                document.getElementById('img-org').src = item.orgPath;
-                document.getElementById('img-line').src = item.linePath;
-                document.getElementById('img-color').src = item.colorPath;
+                for (const layer of ['org', 'line', 'color']) { const image = document.getElementById(`img-${layer}`); image.removeAttribute('src'); image.style.opacity = '0'; }
+                document.querySelectorAll('.layer-btn').forEach((button, i) => button.disabled = !item.resources[['org','line','color'][i]]);
+                document.getElementById('detail-asset-status').textContent = item.ready ? '' : '人物原图素材未就绪';
                 window.switchLayer('org');
             } else if (currentTrack === 'cyber') {
-                updateWebGLMural(item.linePath, item.colorPath);
+                if (item.linePath && item.colorPath) updateWebGLMural(item.linePath, item.colorPath);
+                else modeError('该人物体感所需线稿或色稿尚未就绪，请选择已有完整素材的人物。');
             }
         }
-
-        // =======================================================
-        // 【核心修复恢复】 全息视频黑幕转场 切换逻辑
-        // =======================================================
-        window.switchLayer = (layerType) => {
-            const imgOrg = document.getElementById('img-org');
-            const imgLine = document.getElementById('img-line');
-            const imgColor = document.getElementById('img-color');
-            const videoColor = document.getElementById('video-color');
-
-            document.querySelectorAll('.layer-btn').forEach(btn => btn.classList.remove('active'));
-            const buttons = document.querySelectorAll('.layer-btn');
-            if (layerType === 'org') buttons[0].classList.add('active');
-            else if (layerType === 'line') buttons[1].classList.add('active');
-            else if (layerType === 'color') buttons[2].classList.add('active');
-
-            // 无论切哪个图层，先强制重置视频状态，防止串场
-            videoColor.pause();
-            videoColor.style.transition = 'none'; // 瞬间隐藏视频幕布
-            videoColor.style.opacity = '0';
-
-            if (layerType === 'org') { 
-                imgLine.style.opacity = '0'; 
-                imgColor.style.opacity = '0'; 
-            } 
-            else if (layerType === 'line') { 
-                imgLine.style.opacity = '1'; 
-                imgColor.style.opacity = '0'; 
-            } 
-            else if (layerType === 'color') { 
-                imgLine.style.opacity = '1'; 
-                imgColor.style.opacity = '1'; 
-                
-                // 尝试加载当前系列的视频 (假设命名规则为 video.mp4)
-                const currentItem = globalAssetsData[currentSeriesIndex];
-                
-                // 在线预览环境保护机制：如果是在线预览环境，调用演示视频链接
-                let videoSrc = `/assets/${currentItem.folderName}/video.mp4`;
-                if (isPreviewEnv) {
-                    videoSrc = "https://www.w3schools.com/html/mov_bbb.mp4"; // 预览用小狗视频兜底
+        window.switchLayer = async layerType => {
+            const item = currentItemData, src = item?.resources[layerType]; if (!src) return;
+            releaseGalleryVideo(); const version = layerVersion, detail = detailVersion;
+            const image = document.getElementById(`img-${layerType}`), feedback = document.getElementById('detail-asset-status');
+            feedback.textContent = '正在加载图像…';
+            try {
+                await loadEntryImage(image, src);
+                if (version !== layerVersion || detail !== detailVersion || currentTrack !== 'gallery') return;
+                for (const layer of ['org','line','color']) document.getElementById(`img-${layer}`).style.opacity = layer === layerType ? '1' : '0';
+                document.querySelectorAll('.layer-btn').forEach((button, i) => button.classList.toggle('active', ['org','line','color'][i] === layerType));
+                feedback.textContent = '';
+                if (layerType === 'color' && item.videoPath) {
+                    const video = document.getElementById('video-color'); video.src = item.videoPath;
+                    try { await video.play(); if (version === layerVersion && detail === detailVersion && currentTrack === 'gallery') video.style.opacity = '1'; }
+                    catch { if (version === layerVersion) releaseGalleryVideo(); }
                 }
-
-                videoColor.src = videoSrc;
-
-                videoColor.play().then(() => {
-                    // 如果视频播放成功，瞬间显示纯黑底色的视频，作为完美的遮瑕幕布
-                    videoColor.style.opacity = '1'; 
-                }).catch(e => {
-                    // 如果没有视频文件，直接优雅降级，静默展示高清底图
-                });
-            }
+            } catch { if (version === layerVersion) feedback.textContent = '图像未载入，请重新选择图层。'; }
         };
-
-        // 独立监听器：视频播放完毕时的“幕布渐隐”
-        document.getElementById('video-color').addEventListener('ended', () => {
-            const videoColor = document.getElementById('video-color');
-            // 视频结束，黑色的视频幕布平滑淡出，露出底下的绝对高清静态色稿
-            videoColor.style.transition = 'opacity 1.5s ease-in-out';
-            videoColor.style.opacity = '0';
-        });
+        document.getElementById('video-color').addEventListener('ended', releaseGalleryVideo);
 
         // =======================================================
         // 【动线 A】 WebGL 赛博大厅 & 自适应视锥体算法
