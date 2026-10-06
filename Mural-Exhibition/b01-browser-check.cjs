@@ -1,6 +1,6 @@
 const {chromium}=require('playwright');
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
-const out=path.resolve('docs/validation/b02-2026-10-06/b01-regression');fs.mkdirSync(out,{recursive:true});
+const out=path.resolve(process.env.B01_VALIDATION_DIR || path.join(__dirname,'../docs/validation/b02-2026-10-06/b01-regression'));fs.mkdirSync(out,{recursive:true});
 const url='http://localhost:3000/index.html';
 const state=p=>p.evaluate(()=>document.body.dataset.explorationState);
 const shot=(p,n)=>p.screenshot({path:path.join(out,n+'.png')});

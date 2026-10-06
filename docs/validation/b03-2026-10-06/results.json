@@ -1,0 +1,312 @@
+{
+  "environment": {
+    "browser": "Chrome headless; actual Three.js, GSAP and MediaPipe libraries",
+    "node": "v24.14.1"
+  },
+  "views": [
+    {
+      "w": 1920,
+      "h": 1080,
+      "layout": {
+        "overflow": false,
+        "image": {
+          "x": 30,
+          "y": 100,
+          "right": 1254.40625,
+          "bottom": 925
+        },
+        "panel": {
+          "x": 1286.40625,
+          "y": 104,
+          "right": 1843.203125,
+          "bottom": 1040
+        },
+        "scrollHeight": 1221,
+        "clientHeight": 798
+      },
+      "cyber": {
+        "id": "01",
+        "index": 0,
+        "revealed": true,
+        "glFrame": 2527,
+        "rendererCount": 1,
+        "textures": 2,
+        "geometries": 2,
+        "camera": {
+          "x": 0.804555,
+          "z": 3.299396
+        },
+        "projected": [
+          {
+            "x": 72.59549968642183,
+            "y": 929.2269900846218
+          },
+          {
+            "x": 72.59549968642183,
+            "y": 150.7730099153783
+          },
+          {
+            "x": 1221.0954582985125,
+            "y": 929.2269900846218
+          },
+          {
+            "x": 1221.0954582985125,
+            "y": 150.7730099153783
+          }
+        ]
+      }
+    },
+    {
+      "w": 1440,
+      "h": 900,
+      "layout": {
+        "overflow": false,
+        "image": {
+          "x": 30,
+          "y": 100,
+          "right": 932.8125,
+          "bottom": 745
+        },
+        "panel": {
+          "x": 964.8125,
+          "y": 104,
+          "right": 1382.40625,
+          "bottom": 860
+        },
+        "scrollHeight": 1517,
+        "clientHeight": 627
+      },
+      "cyber": {
+        "id": "01",
+        "index": 0,
+        "revealed": true,
+        "glFrame": 4454,
+        "rendererCount": 1,
+        "textures": 2,
+        "geometries": 2,
+        "camera": {
+          "x": 0.819884,
+          "z": 3.72998
+        },
+        "projected": [
+          {
+            "x": 60.328713650819495,
+            "y": 737.4078971496921
+          },
+          {
+            "x": 60.328713650819495,
+            "y": 162.59210285030795
+          },
+          {
+            "x": 908.3890136558243,
+            "y": 737.4078971496921
+          },
+          {
+            "x": 908.3890136558243,
+            "y": 162.59210285030795
+          }
+        ]
+      }
+    },
+    {
+      "w": 1366,
+      "h": 768,
+      "layout": {
+        "overflow": false,
+        "image": {
+          "x": 30,
+          "y": 100,
+          "right": 874.890625,
+          "bottom": 613
+        },
+        "panel": {
+          "x": 898.890625,
+          "y": 104,
+          "right": 1336,
+          "bottom": 728
+        },
+        "scrollHeight": 1312,
+        "clientHeight": 497
+      },
+      "cyber": {
+        "id": "01",
+        "index": 0,
+        "revealed": true,
+        "glFrame": 6329,
+        "rendererCount": 1,
+        "textures": 2,
+        "geometries": 2,
+        "camera": {
+          "x": 0.93267,
+          "z": 3.687163
+        },
+        "projected": [
+          {
+            "x": 85.65286599948811,
+            "y": 632.064643675234
+          },
+          {
+            "x": 85.65286599948811,
+            "y": 135.93535632476596
+          },
+          {
+            "x": 817.6222315673508,
+            "y": 632.064643675234
+          },
+          {
+            "x": 817.6222315673508,
+            "y": 135.93535632476596
+          }
+        ]
+      }
+    },
+    {
+      "w": 1280,
+      "h": 800,
+      "layout": {
+        "overflow": false,
+        "image": {
+          "x": 30,
+          "y": 100,
+          "right": 816.40625,
+          "bottom": 645
+        },
+        "panel": {
+          "x": 840.40625,
+          "y": 104,
+          "right": 1250,
+          "bottom": 760
+        },
+        "scrollHeight": 1366,
+        "clientHeight": 531
+      },
+      "cyber": {
+        "id": "01",
+        "index": 0,
+        "revealed": true,
+        "glFrame": 8215,
+        "rendererCount": 1,
+        "textures": 2,
+        "geometries": 2,
+        "camera": {
+          "x": 0.880096,
+          "z": 3.845682
+        },
+        "projected": [
+          {
+            "x": 56.11516405837165,
+            "y": 647.8861018299847
+          },
+          {
+            "x": 56.11516405837165,
+            "y": 152.11389817001537
+          },
+          {
+            "x": 787.5577025893041,
+            "y": 647.8861018299847
+          },
+          {
+            "x": 787.5577025893041,
+            "y": 152.11389817001537
+          }
+        ]
+      }
+    }
+  ],
+  "functional": [
+    "Eight existing stable IDs, names, original images and archives; unmodified ratios/colors",
+    "Four sizes: actual default/long/line/color/index and cyber default/revealed screenshots; projected plane avoids real panel; same person across modes",
+    "Panorama transform restored; failed layer retains original and retries; archive retries; fast switches keep final archive/image and release video",
+    "Actual decoded video playback and browser ended event restore color still; delayed archive and video completions cannot survive switch/exit",
+    "Dynamic ninth ID; original-only; provided English/sources; HTML remains text; unsafe source URL rejected; no silent switch to unrelated cyber character",
+    "Original synthetic two-hand reveal/scroll/close; interrupted transitions settle; resize keeps textures/geometries; original one-hand swipe advances ID and resets archive; exit stops camera boundary",
+    "Native keyboard reveal and shared I/Escape/arrow fallback; exit during actual new texture request cancels late upload and RAF"
+  ],
+  "errors": [],
+  "hardware": "Camera device boundary is simulated. Real camera and physical hand tracking NOT verified.",
+  "performance": {
+    "cyberVisits": 12,
+    "rendererMemory": [
+      {
+        "id": "01",
+        "textures": 2,
+        "geometries": 2
+      },
+      {
+        "id": "02",
+        "textures": 2,
+        "geometries": 2
+      },
+      {
+        "id": "03",
+        "textures": 2,
+        "geometries": 2
+      },
+      {
+        "id": "04",
+        "textures": 2,
+        "geometries": 2
+      },
+      {
+        "id": "05",
+        "textures": 2,
+        "geometries": 2
+      },
+      {
+        "id": "06",
+        "textures": 2,
+        "geometries": 2
+      },
+      {
+        "id": "07",
+        "textures": 2,
+        "geometries": 2
+      },
+      {
+        "id": "10",
+        "textures": 2,
+        "geometries": 2
+      },
+      {
+        "id": "01",
+        "textures": 2,
+        "geometries": 2
+      },
+      {
+        "id": "02",
+        "textures": 2,
+        "geometries": 2
+      },
+      {
+        "id": "03",
+        "textures": 2,
+        "geometries": 2
+      },
+      {
+        "id": "04",
+        "textures": 2,
+        "geometries": 2
+      }
+    ],
+    "heapStart": {
+      "usedSize": 5129212,
+      "totalSize": 6144000,
+      "embedderHeapUsedSize": 1662104,
+      "backingStorageSize": 25799090
+    },
+    "heapEnd": {
+      "usedSize": 5354004,
+      "totalSize": 6406144,
+      "embedderHeapUsedSize": 1638792,
+      "backingStorageSize": 25800642
+    },
+    "revealRequests": 0,
+    "scope": "Single Chrome headless process; explicit GC; JS heap and renderer object counts, excludes process RSS/decoded image and GPU bytes. No physical FPS claim."
+  },
+  "lifecycle": {
+    "starts": 8,
+    "stops": 8,
+    "active": 0,
+    "max": 1
+  }
+}

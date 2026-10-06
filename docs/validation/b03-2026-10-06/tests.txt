@@ -1,0 +1,20 @@
+
+> mural-exhibition@1.0.0 test
+> node b01-check.cjs && node --test b02.test.cjs b03.test.cjs
+
+B01 syntax/composition, dependencies/shaders/camera lifecycle/gesture recognition and scroll math: PASS
+✔ scan grows progressively; absent resources, sorting, invalid metadata, duplicates and stable names (103.2741ms)
+✔ atomic persistence, invalid inputs, optimistic conflicts, failure preserves bytes, unbind preserves assets (57.7132ms)
+✔ coordinates roundtrip at all desktop sizes, zoom/pan and boundaries; dense 30/50 groups retain every ID (7.0954ms)
+✔ HTTP writes disabled by default; local origin/Host/token/JSON; invalid ID/position/traversal; persistence (248.5209ms)
+✔ archive keeps original content and explicit headings, without inventing identity (8.3178ms)
+✔ sources reject executable links (0.4481ms)
+✔ camera projection fits tall, wide and irregular ratios into actual layout (0.9671ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 950.3864

@@ -193,6 +193,7 @@
     </script>
     <link rel="stylesheet" href="b01.css">
     <link rel="stylesheet" href="gallery.css">
+    <link rel="stylesheet" href="b03.css">
 </head>
 <body>
 
@@ -252,19 +253,18 @@
     
     <!-- 3. 主系统 (双轨共用) -->
     <div id="main-app">
-        <div id="back-btn" onclick="window.goBack()">
+        <button type="button" id="back-btn" onclick="window.goBack()">
             <svg viewBox="0 0 24 24"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
             <span id="back-text">返回</span>
-        </div>
+        </button>
 
-        <div id="quick-switch-btn" onclick="window.toggleTrack()">
-            🔍 切换至图鉴模式
-        </div>
+        <button type="button" id="quick-switch-btn" onclick="window.toggleTrack()">切换至图鉴模式 ↗</button>
+        <p class="study-heading">《入将图》 · 人物档案</p>
 
-        <div id="floating-menu">
-            <h2>壁画图谱</h2>
+        <aside id="floating-menu" hidden aria-label="人物索引">
+            <div class="index-heading"><h2>人物索引</h2><button type="button" id="index-close">收起</button></div>
             <ul id="menu"></ul>
-        </div>
+        </aside>
 
         <div id="display-area">
             <div id="webgl-container"></div>
@@ -287,15 +287,31 @@
             <div id="camera-status">启动神识中...</div>
         </div>
 
-        <div id="floating-info">
+        <aside id="floating-info" aria-labelledby="info-title">
+            <p class="archive-label" id="archive-label">人物档案</p>
             <h1 id="info-title">系列名称</h1>
-            <div id="info-text">考据文字...</div>
-            <div class="layer-controls" id="layer-controls">
+            <p class="archive-english" id="archive-english" hidden></p>
+            <div id="info-text" tabindex="0" aria-label="人物档案正文">考据文字...</div>
+        </aside>
+        <div class="layer-controls" id="layer-controls" aria-label="图像图层">
                 <button class="layer-btn active" onclick="window.switchLayer('org')">原壁画</button>
                 <button class="layer-btn" onclick="window.switchLayer('line')">高清线稿</button>
                 <button class="layer-btn" onclick="window.switchLayer('color')">数字色稿</button>
-            </div>
         </div>
+        <button type="button" id="study-retry" hidden>重试图像</button>
+        <nav class="study-footer" aria-label="人物导航">
+            <button type="button" data-step="-1">← 上一组</button>
+            <span data-counter></span>
+            <button type="button" id="index-toggle" aria-expanded="false" aria-controls="floating-menu">人物索引</button>
+            <button type="button" data-step="1">下一组 →</button>
+        </nav>
+        <p id="cyber-asset-status" role="status"></p>
+        <p class="gesture-hint">双手展开 · 查看档案　／　单手挥动 · 切换人物</p>
+        <nav class="cyber-controls" aria-label="体感辅助操作">
+            <button type="button" data-step="-1">← 上一组</button>
+            <button type="button" id="reveal-toggle" aria-expanded="false" aria-controls="floating-info">查看人物档案</button>
+            <button type="button" data-step="1">下一组 →</button>
+        </nav>
         
         <div id="swipe-flash"></div>
     </div>
@@ -305,6 +321,7 @@
 
         import { initialView, clampView, imageToScreen, screenToImage, groupHotspots } from './gallery-panorama.mjs';
         import { createAdmin } from './gallery-admin.mjs';
+        import { archiveBlocks, renderArchive, cameraFit } from './character-study.mjs';
         let globalAssetsData = [];
         let currentSeriesIndex = 0; 
         let currentTrack = null;
@@ -375,7 +392,8 @@
             const panoSwitch = document.getElementById('pano-switch-btn');
             panoSwitch.disabled = busy;
             panoSwitch.textContent = busy ? '正在准备体感…' : '体感交互 ↗';
-            document.getElementById('quick-switch-btn').textContent = busy ? '正在准备体感…' : currentTrack === 'cyber' ? '🔍 切换至图鉴模式' : '✋ 切换至体感模式';
+            document.getElementById('quick-switch-btn').disabled = busy;
+            document.getElementById('quick-switch-btn').textContent = busy ? '正在准备体感…' : currentTrack === 'cyber' ? '切换至图鉴模式 ↗' : '切换至体感模式 ↗';
             document.getElementById('splash-screen').setAttribute('aria-busy', String(busy));
         }
         function showScreen(state) {
@@ -387,7 +405,9 @@
                 el.hidden = !visible; el.inert = !visible;
                 el.style.display = visible ? 'block' : 'none'; el.style.opacity = visible ? '1' : '0';
             }
-            if (state !== 'cyber') { stopMediaPipe(); cancelAnimationFrame(glFrame); glFrame = null; }
+            if (state !== 'cyber') { stopMediaPipe(); cancelAnimationFrame(glFrame); glFrame = null; cancelMuralRequest(); }
+            ++detailVersion; infoRequest?.abort(); layerRequest?.abort();
+            setIndexOpen(false);
             releaseGalleryVideo();
             if (state === 'selection') galleryAdmin.close();
             modeNotice.hidden = true;
@@ -395,7 +415,7 @@
             document.body.classList.toggle('track-cyber', state === 'cyber');
             currentTrack = selected ? null : state === 'cyber' ? 'cyber' : 'gallery';
             document.getElementById('back-text').textContent = state === 'cyber' ? '返回选择' : '返回全景地图';
-            document.getElementById('quick-switch-btn').textContent = state === 'cyber' ? '🔍 切换至图鉴模式' : '✋ 切换至体感模式';
+            document.getElementById('quick-switch-btn').textContent = state === 'cyber' ? '切换至图鉴模式 ↗' : '切换至体感模式 ↗';
         }
         async function enterTrack(track) {
             if (entryBusy) return;
@@ -409,6 +429,7 @@
                     showScreen('gallery-map'); initPanoramaTransform(); document.getElementById('gallery-hint').classList.remove('used');
                     document.getElementById('pano-back-btn').focus();
                 } else {
+                    if (currentItemData && !globalAssetsData.some(item => item.id === currentItemData.id)) throw new Error('当前人物已不在最新素材目录中，请先从图鉴主动选择人物。');
                     if (!navigator.mediaDevices?.getUserMedia) throw new Error('浏览器不支持摄像头，请使用 localhost 或选择图鉴探索。');
                     await loadCyberDependencies();
                     if (typeof Hands === 'undefined' || typeof Camera === 'undefined') throw new Error('体感组件不可用，请检查网络后重试，或选择图鉴探索。');
@@ -416,7 +437,10 @@
                     // A failed ES module import is cached by the browser; a retry needs a fresh URL.
                     THREE ||= await bounded(import(threeAttempt++ ? 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js?entry-retry=' + threeAttempt : 'three'), 15000, '体感渲染组件加载超时，请检查网络后重试。');
                     let item = globalAssetsData[currentSeriesIndex];
-                    if (!item?.linePath || !item?.colorPath) { currentSeriesIndex = globalAssetsData.findIndex(i => i.linePath && i.colorPath); item = globalAssetsData[currentSeriesIndex]; }
+                    if (!item?.linePath || !item?.colorPath) {
+                        if (currentItemData) throw new Error('当前人物缺少线稿或色稿，无法进入体感。请在人物索引主动选择素材完整的人物。');
+                        currentSeriesIndex = globalAssetsData.findIndex(i => i.linePath && i.colorPath); item = globalAssetsData[currentSeriesIndex];
+                    }
                     if (!item) throw new Error('体感所需线稿与色稿尚未就绪。');
                     await Promise.all([item.linePath, item.colorPath].map(src => loadEntryImage(new Image(), src)));
                     if (version !== entryVersion) return;
@@ -428,7 +452,8 @@
                 entryMessage('');
             } catch (error) {
                 if (version !== entryVersion) return;
-                returnToSelection(false); entryMessage(error.message, true);
+                if (document.body.dataset.explorationState === 'gallery-detail') modeError(error.message);
+                else { returnToSelection(false); entryMessage(error.message, true); }
             } finally { if (version === entryVersion) setEntryBusy(false); }
         }
         function returnToSelection(reset = true) {
@@ -449,9 +474,12 @@
         window.toggleTrack = () => {
             if (entryBusy) return;
             if (currentTrack === 'cyber') { showScreen('gallery-detail'); loadSeriesData(currentSeriesIndex); }
-            else enterTrack('cyber');
+            else {
+                if (currentItemData && (!currentItemData.linePath || !currentItemData.colorPath)) { modeError('当前人物缺少线稿或色稿。请在人物索引主动选择素材完整的人物，或继续图鉴阅读。'); return; }
+                enterTrack('cyber');
+            }
         };
-        window.addEventListener('pagehide', () => { ++entryVersion; stopMediaPipe(); });
+        window.addEventListener('pagehide', () => { ++entryVersion; ++detailVersion; infoRequest?.abort(); layerRequest?.abort(); releaseGalleryVideo(); cancelMuralRequest(); stopMediaPipe(); cancelAnimationFrame(glFrame); glFrame = null; });
         window.addEventListener('pageshow', event => { if (event.persisted) returnToSelection(); });
 
         // =========================================================
@@ -591,9 +619,16 @@
 
         function renderAssets() {
             const menu = document.getElementById('menu'); menu.replaceChildren(); hotspotSignature = '';
+            if (currentItemData) {
+                const stableIndex = globalAssetsData.findIndex(item => item.id === currentItemData.id);
+                if (stableIndex >= 0) currentSeriesIndex = stableIndex;
+            }
             globalAssetsData.forEach((item, index) => {
-                const li = document.createElement('li'); li.textContent = item.name; li.dataset.folder = item.folderName;
-                li.addEventListener('click', () => loadSeriesData(index)); menu.append(li);
+                const li = document.createElement('li'); li.dataset.id = item.id;
+                const button = document.createElement('button'); button.type = 'button'; button.textContent = item.name;
+                button.setAttribute('aria-current', String(item.id === currentItemData?.id));
+                button.onclick = () => { loadSeriesData(index); setIndexOpen(false, true); };
+                li.append(button); menu.append(li);
             });
             updatePanoramaTransform();
         }
@@ -602,7 +637,38 @@
         document.getElementById('panorama-view').inert = true;
         document.getElementById('main-app').inert = true;
 
-        let detailVersion = 0, layerVersion = 0, infoRequest;
+        let detailVersion = 0, layerVersion = 0, infoRequest, layerRequest;
+        const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+        function setIndexOpen(open, focus = false) {
+            const panel = document.getElementById('floating-menu'); panel.hidden = !open;
+            document.getElementById('index-toggle').setAttribute('aria-expanded', String(open));
+            if (focus) (open ? panel.querySelector('button[aria-current="true"]') || panel.querySelector('button') : document.getElementById('index-toggle'))?.focus();
+        }
+        document.getElementById('index-toggle').onclick = () => setIndexOpen(document.getElementById('floating-menu').hidden, true);
+        document.getElementById('index-close').onclick = () => setIndexOpen(false, true);
+        document.getElementById('floating-menu').addEventListener('keydown', e => {
+            const buttons = [...document.querySelectorAll('#floating-menu button')], index = buttons.indexOf(document.activeElement);
+            if (e.key === 'Escape') { e.preventDefault(); setIndexOpen(false, true); }
+            if (['ArrowDown','ArrowUp','Home','End'].includes(e.key)) {
+                e.preventDefault(); const next = e.key === 'Home' ? 1 : e.key === 'End' ? buttons.length - 1 : (index + (e.key === 'ArrowDown' ? 1 : -1) + buttons.length) % buttons.length; buttons[next]?.focus();
+            }
+        });
+        function stepCharacter(delta) {
+            if (entryBusy) return;
+            for (let offset = 1; offset <= globalAssetsData.length; offset++) {
+                const index = (currentSeriesIndex + delta * offset + globalAssetsData.length) % globalAssetsData.length;
+                const item = globalAssetsData[index];
+                if (currentTrack !== 'cyber' || (item.linePath && item.colorPath)) { loadSeriesData(index); return; }
+            }
+        }
+        document.querySelectorAll('[data-step]').forEach(button => button.onclick = () => stepCharacter(Number(button.dataset.step)));
+        document.getElementById('reveal-toggle').onclick = () => setRevealed(!isRevealed);
+        document.addEventListener('keydown', e => {
+            if (currentTrack !== 'cyber' || entryBusy || e.target.closest('button,input,textarea,a')) return;
+            if (e.key === 'Escape') { e.preventDefault(); setRevealed(false); }
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { e.preventDefault(); stepCharacter(e.key === 'ArrowLeft' ? -1 : 1); }
+            if (e.key.toLowerCase() === 'i') { e.preventDefault(); setRevealed(!isRevealed); }
+        });
         function releaseGalleryVideo() {
             ++layerVersion;
             const video = document.getElementById('video-color'); video.pause(); video.style.opacity = '0';
@@ -612,23 +678,38 @@
             if (index < 0) index = globalAssetsData.length - 1;
             if (index >= globalAssetsData.length) index = 0;
             const item = globalAssetsData[index]; if (!item) return;
+            if (currentTrack === 'cyber' && (!item.linePath || !item.colorPath)) { stepCharacter(1); return; }
             currentSeriesIndex = index; currentItemData = item;
             const version = ++detailVersion; releaseGalleryVideo(); infoRequest?.abort(); infoRequest = new AbortController();
-            isRevealed = false;
-            if (shaderMaterial) gsap.to(shaderMaterial.uniforms.uDispersion, { value: 0, duration: 0 });
-            if (camera) gsap.to(camera.position, { x: 0, z: defaultCameraZ || 1.8, duration: 0 });
+            layerRequest?.abort(); setRevealed(false, true);
             const infoPanel = document.getElementById('floating-info'), textEl = document.getElementById('info-text');
             infoPanel.classList.remove('visible');
-            document.querySelectorAll('#menu li').forEach(el => el.classList.toggle('active', el.dataset.folder === item.folderName));
+            document.querySelectorAll('#menu li').forEach(el => { el.classList.toggle('active', el.dataset.id === item.id); el.querySelector('button').setAttribute('aria-current', String(el.dataset.id === item.id)); });
+            document.querySelector('[data-counter]').textContent = `${index + 1} / ${globalAssetsData.length}`;
+            document.getElementById('archive-label').textContent = `人物档案 · ${item.id}${item.category ? ' · ' + item.category : ''}`;
             document.getElementById('info-title').textContent = item.name;
+            const english = document.getElementById('archive-english'); english.textContent = item.englishName || ''; english.hidden = !item.englishName;
             textEl.textContent = item.infoPath ? '正在读取人物档案…' : '人物档案待补充'; textEl.scrollTop = 0;
             if (currentTrack === 'gallery') infoPanel.classList.add('visible');
-            if (item.infoPath) fetch(item.infoPath, { signal: infoRequest.signal }).then(res => { if (!res.ok) throw Error(); return res.text(); })
-                .then(text => { if (version === detailVersion) textEl.textContent = text.trim() || '人物档案待补充'; })
-                .catch(error => { if (version === detailVersion && error.name !== 'AbortError') textEl.textContent = '人物档案暂未载入，请重新选择人物。'; });
+            if (!item.infoPath) renderArchive(textEl, { blocks:[] }, item.sources);
+            const archiveRequest = infoRequest;
+            const archiveTimer = item.infoPath ? setTimeout(() => archiveRequest.abort(), 12000) : null;
+            if (item.infoPath) fetch(item.infoPath, { signal: archiveRequest.signal }).then(res => { if (!res.ok) throw Error(); return res.text(); })
+                .then(text => {
+                    if (version !== detailVersion) return;
+                    const archive = archiveBlocks(text, { markdown:/\.md$/.test(item.infoPath), name:item.name, englishName:item.englishName });
+                    english.textContent = archive.englishName; english.hidden = !archive.englishName;
+                    renderArchive(textEl, archive, item.sources);
+                })
+                .catch(error => {
+                    if (version !== detailVersion) return;
+                    textEl.textContent = '人物档案暂未载入。';
+                    const retry = document.createElement('button'); retry.type = 'button'; retry.textContent = '重试档案'; retry.onclick = () => loadSeriesData(currentSeriesIndex); textEl.append(retry);
+                }).finally(() => clearTimeout(archiveTimer));
             if (currentTrack === 'gallery') {
                 for (const layer of ['org', 'line', 'color']) { const image = document.getElementById(`img-${layer}`); image.removeAttribute('src'); image.style.opacity = '0'; }
-                document.querySelectorAll('.layer-btn').forEach((button, i) => button.disabled = !item.resources[['org','line','color'][i]]);
+                document.querySelectorAll('.layer-btn').forEach((button, i) => { button.disabled = !item.resources[['org','line','color'][i]]; button.classList.toggle('active', i === 0); button.setAttribute('aria-pressed', String(i === 0)); });
+                document.getElementById('study-retry').hidden = true;
                 document.getElementById('detail-asset-status').textContent = item.ready ? '' : '人物原图素材未就绪';
                 window.switchLayer('org');
             } else if (currentTrack === 'cyber') {
@@ -638,23 +719,49 @@
         }
         window.switchLayer = async layerType => {
             const item = currentItemData, src = item?.resources[layerType]; if (!src) return;
+            layerRequest?.abort(); layerRequest = new AbortController(); const request = layerRequest;
             releaseGalleryVideo(); const version = layerVersion, detail = detailVersion;
             const image = document.getElementById(`img-${layerType}`), feedback = document.getElementById('detail-asset-status');
             feedback.textContent = '正在加载图像…';
             try {
-                await loadEntryImage(image, src);
+                if (image.getAttribute('src') !== src || !image.naturalWidth) {
+                    const loaded = await loadStudyImage(src, request.signal);
+                    if (version !== layerVersion || detail !== detailVersion || currentTrack !== 'gallery') return;
+                    image.src = loaded.src;
+                }
                 if (version !== layerVersion || detail !== detailVersion || currentTrack !== 'gallery') return;
                 for (const layer of ['org','line','color']) document.getElementById(`img-${layer}`).style.opacity = layer === layerType ? '1' : '0';
-                document.querySelectorAll('.layer-btn').forEach((button, i) => button.classList.toggle('active', ['org','line','color'][i] === layerType));
-                feedback.textContent = '';
+                document.querySelectorAll('.layer-btn').forEach((button, i) => { const active = ['org','line','color'][i] === layerType; button.classList.toggle('active', active); button.setAttribute('aria-pressed', String(active)); });
+                const missing = [['line','线稿'],['color','色稿']].filter(([key]) => !item.resources[key]).map(([,name]) => name);
+                feedback.textContent = layerType === 'color' ? '数字色稿 · 数字化演绎内容' : missing.length ? `${missing.join('、')}素材待补充` : '';
+                document.getElementById('study-retry').hidden = true;
                 if (layerType === 'color' && item.videoPath) {
                     const video = document.getElementById('video-color'); video.src = item.videoPath;
                     try { await video.play(); if (version === layerVersion && detail === detailVersion && currentTrack === 'gallery') video.style.opacity = '1'; }
-                    catch { if (version === layerVersion) releaseGalleryVideo(); }
+                    catch { if (version === layerVersion) { releaseGalleryVideo(); feedback.textContent = '动画暂不可用，当前展示静态数字色稿。'; } }
                 }
-            } catch { if (version === layerVersion) feedback.textContent = '图像未载入，请重新选择图层。'; }
+            } catch (error) {
+                if (version !== layerVersion || detail !== detailVersion || error.name === 'AbortError') return;
+                feedback.textContent = '图像未载入，已保留当前有效画面。';
+                const retry = document.getElementById('study-retry'); retry.hidden = false; retry.onclick = () => window.switchLayer(layerType);
+            }
         };
+        function loadStudyImage(src, signal) {
+            return new Promise((resolve, reject) => {
+                const image = new Image();
+                const clean = () => { clearTimeout(timer); signal.removeEventListener('abort', abort); image.onload = image.onerror = null; };
+                const abort = () => { clean(); image.src = ''; reject(new DOMException('Canceled', 'AbortError')); };
+                const fail = () => { clean(); reject(new Error('图像加载失败')); };
+                const timer = setTimeout(fail, 20000);
+                signal.addEventListener('abort', abort, { once:true });
+                image.onload = () => { clean(); resolve(image); }; image.onerror = fail;
+                if (signal.aborted) abort(); else image.src = src;
+            });
+        }
         document.getElementById('video-color').addEventListener('ended', releaseGalleryVideo);
+        document.getElementById('video-color').addEventListener('error', () => {
+            if (currentTrack === 'gallery' && currentItemData?.videoPath && document.getElementById('video-color').hasAttribute('src')) { releaseGalleryVideo(); document.getElementById('detail-asset-status').textContent = '动画暂不可用，当前展示静态数字色稿。'; }
+        });
 
         // =======================================================
         // 【动线 A】 WebGL 赛博大厅 & 自适应视锥体算法
@@ -730,87 +837,76 @@
             camera.aspect = w / h;
             camera.updateProjectionMatrix();
             renderer.setSize(w, h);
-            if(currentItemData) updateWebGLMural(currentItemData.linePath, currentItemData.colorPath);
+            fitMuralCamera(true);
         }
 
-        function updateWebGLMural(linePath, colorPath) {
-            const textureLoader = new THREE.TextureLoader();
-            textureLoader.setCrossOrigin('anonymous'); 
-            const img = new Image(); 
-            img.crossOrigin = 'anonymous';
-            img.src = colorPath;
-            
-            img.onload = () => {
-                const aspect = img.width / img.height;
-                const planeHeight = 2.0; 
-                const planeWidth = planeHeight * aspect;
-
-                const fovRad = camera.fov * (Math.PI / 180);
-                const distH = (planeHeight / 2) / Math.tan(fovRad / 2);
-                const camAspect = camera.aspect || (window.innerWidth / window.innerHeight);
-                const distW = (planeWidth / 2) / (Math.tan(fovRad / 2) * camAspect);
-                
-                defaultCameraZ = Math.max(distH, distW) * 1.05; 
-                
-                // --- 终极自适应避让算法：精准计算避让后的完美画幅 ---
-                const w = window.innerWidth;
-                const h = window.innerHeight; // 必须获取实时高度
-                
-                // 1. 计算右侧文字考据面板实际占用的物理像素宽度 (百分比占比或min-width兜底)
-                const rightUIPixelW = Math.max(w * 0.28, 300) + (w * 0.04); 
-                const rightUIRatio = rightUIPixelW / w; 
-
-                // 2. 计算左侧剩余的“纯净安全区”比例
-                const safeRatio = (w - rightUIPixelW) / w;
-                
-                // 3. 为了保证整张壁画 100% 完整地塞进左侧狭窄的安全区里，绝不裁切！
-                // 我们需要动态推算摄影机到底需要退多远（Z轴）
-                const requiredZ_W = (planeWidth / safeRatio / 2) / (Math.tan(fovRad / 2) * camAspect);
-                const requiredZ_H = (planeHeight / 2) / Math.tan(fovRad / 2);
-                revealCameraZ = Math.max(requiredZ_W, requiredZ_H) * 1.05; // 自动取最大值并留出 5% 呼吸空间
-
-                // 4. 精准测算：在摄影机后退后，它需要向右平移多少，才能恰好让壁画向左完美避开右侧文字
-                const worldWidthAtRevealZ = 2 * Math.tan(fovRad / 2) * revealCameraZ * camAspect;
-                revealCameraX = worldWidthAtRevealZ * (rightUIRatio / 2);
-
-                if (!isRevealed) {
-                    camera.position.z = defaultCameraZ;
-                    camera.position.x = 0;
-                } else {
-                    camera.position.z = revealCameraZ;
-                    camera.position.x = revealCameraX;
-                }
-
-                if(lineMesh) { scene.remove(lineMesh); lineMesh.geometry.dispose(); lineMesh.material.dispose(); }
-                if(colorPoints) { scene.remove(colorPoints); colorPoints.geometry.dispose(); }
-
-                textureLoader.load(linePath, (lineTex) => {
-                    lineTex.colorSpace = THREE.SRGBColorSpace; 
-                    lineMesh = new THREE.Mesh(
-                        new THREE.PlaneGeometry(planeWidth, planeHeight), 
-                        new THREE.MeshBasicMaterial({ map: lineTex })
-                    );
-                    lineMesh.position.z = -0.05; scene.add(lineMesh);
-                });
-
-                textureLoader.load(colorPath, (colorTex) => {
-                    shaderMaterial.uniforms.uColorTex.value = colorTex;
-                    const segmentsY = Math.floor(800 / aspect);
-                    colorPoints = new THREE.Points(new THREE.PlaneGeometry(planeWidth, planeHeight, 800, segmentsY), shaderMaterial);
-                    scene.add(colorPoints);
-                });
+        let muralVersion = 0, muralRequest, muralPaths = '', muralSize;
+        function cancelMuralRequest() { ++muralVersion; muralRequest?.abort(); muralRequest = null; }
+        function fitMuralCamera(immediate = false) {
+            if (!camera || !muralSize || currentTrack !== 'cyber') return;
+            const panel = document.getElementById('floating-info'), css = getComputedStyle(panel);
+            const width = webglContainer.clientWidth, height = webglContainer.clientHeight;
+            const defaultFit = cameraFit({ width, height, ...muralSize });
+            const revealFit = cameraFit({ width, height, ...muralSize, right:panel.offsetWidth + parseFloat(css.right) + 32 });
+            defaultCameraZ = defaultFit.z; revealCameraZ = revealFit.z; revealCameraX = revealFit.x;
+            gsap.killTweensOf(camera.position);
+            if (immediate) { camera.position.x = isRevealed ? revealCameraX : 0; camera.position.z = isRevealed ? revealCameraZ : defaultCameraZ; }
+        }
+        function setRevealed(revealed, immediate = false) {
+            if (revealed && (currentTrack !== 'cyber' || webglContainer.hasAttribute('data-loading') || !lineMesh)) return;
+            isRevealed = revealed;
+            const panel = document.getElementById('floating-info'); panel.classList.toggle('visible', revealed);
+            panel.inert = !revealed && currentTrack === 'cyber';
+            const button = document.getElementById('reveal-toggle'); button.textContent = revealed ? '收起人物档案' : '查看人物档案'; button.setAttribute('aria-expanded', String(revealed));
+            if (revealed) document.getElementById('info-text').scrollTop = 0;
+            const duration = immediate || reducedMotion.matches ? 0 : 1.5;
+            fitMuralCamera();
+            if (shaderMaterial) {
+                gsap.to(shaderMaterial.uniforms.uDispersion, { value:revealed ? 1 : 0, duration, ease:'power2.inOut', overwrite:true });
+                gsap.to(shaderMaterial.uniforms.uMouse.value, { x:-10, y:-10, duration:0, overwrite:true });
             }
-
-            img.onerror = () => {
-                const canvas = document.createElement('canvas');
-                canvas.width = 1024; canvas.height = 512;
-                const ctx = canvas.getContext('2d');
-                ctx.fillStyle = '#111'; ctx.fillRect(0, 0, 1024, 512);
-                ctx.fillStyle = '#d4af37'; ctx.font = '40px sans-serif'; ctx.textAlign = 'center';
-                ctx.fillText('图片加载失败 (可能受限于跨域)', 512, 256);
-                const fallbackData = canvas.toDataURL();
-                if (colorPath !== fallbackData) updateWebGLMural(fallbackData, fallbackData);
+            if (camera) gsap.to(camera.position, { x:revealed ? revealCameraX : 0, z:revealed ? revealCameraZ : defaultCameraZ, duration, ease:'power2.inOut', overwrite:true });
+        }
+        async function updateWebGLMural(linePath, colorPath) {
+            cancelMuralRequest();
+            const version = muralVersion, paths = JSON.stringify([linePath, colorPath]);
+            const status = document.getElementById('cyber-asset-status');
+            if (muralPaths === paths && lineMesh && colorPoints) {
+                webglContainer.removeAttribute('data-loading'); status.textContent = ''; fitMuralCamera(true); return;
             }
+            const request = muralRequest = new AbortController();
+            webglContainer.dataset.loading = ''; status.textContent = '正在加载当前人物图像…';
+            const urls = [], textures = []; let timedOut = false;
+            const timer = setTimeout(() => { timedOut = true; request.abort(); }, 20000);
+            const pendingImages = [linePath, colorPath].map(async src => {
+                const response = await fetch(src, { signal:request.signal }); if (!response.ok) throw new Error('图像不可用');
+                const url = URL.createObjectURL(await response.blob()); urls.push(url);
+                return loadStudyImage(url, request.signal);
+            });
+            try {
+                const images = await Promise.all(pendingImages);
+                if (version !== muralVersion || currentTrack !== 'cyber') return;
+                const aspect = images[1].width / images[1].height;
+                const planeHeight = 2.0, planeWidth = planeHeight * aspect;
+                for (const image of images) { const texture = new THREE.Texture(image); texture.needsUpdate = true; textures.push(texture); }
+                const [lineTex, colorTex] = textures; lineTex.colorSpace = THREE.SRGBColorSpace;
+                if (lineMesh) { scene.remove(lineMesh); lineMesh.geometry.dispose(); lineMesh.material.map.dispose(); lineMesh.material.dispose(); }
+                if (colorPoints) { scene.remove(colorPoints); colorPoints.geometry.dispose(); }
+                shaderMaterial.uniforms.uColorTex.value?.dispose();
+                lineMesh = new THREE.Mesh(new THREE.PlaneGeometry(planeWidth, planeHeight), new THREE.MeshBasicMaterial({ map:lineTex }));
+                lineMesh.position.z = -0.05; scene.add(lineMesh);
+                shaderMaterial.uniforms.uColorTex.value = colorTex;
+                const segmentsY = Math.floor(800 / aspect);
+                colorPoints = new THREE.Points(new THREE.PlaneGeometry(planeWidth, planeHeight, 800, segmentsY), shaderMaterial);
+                scene.add(colorPoints);
+                muralSize = { planeWidth, planeHeight }; muralPaths = paths; fitMuralCamera(true);
+                webglContainer.removeAttribute('data-loading'); status.textContent = '';
+            } catch (error) {
+                request.abort();
+                if (version !== muralVersion || currentTrack !== 'cyber' || (error.name === 'AbortError' && !timedOut)) return;
+                status.textContent = timedOut ? '当前人物体感图像加载超时。' : '当前人物体感图像未载入。';
+                const retry = document.createElement('button'); retry.type = 'button'; retry.textContent = '重试图像'; retry.onclick = () => updateWebGLMural(linePath, colorPath); status.append(' ', retry);
+            } finally { clearTimeout(timer); await Promise.allSettled(pendingImages); urls.forEach(url => URL.revokeObjectURL(url)); }
         }
 
         let clock;
@@ -972,22 +1068,11 @@
                 const dist = Math.hypot(f1.x - f2.x, f1.y - f2.y);
                 
                 if (dist > 0.35 && !isRevealed) {
-                    isRevealed = true;
                     gestureNeutralY = (f1.y + f2.y) / 2;
-
-                    gsap.to(shaderMaterial.uniforms.uDispersion, { value: 1.0, duration: 1.5, ease: "power2.inOut" });
-                    gsap.to(shaderMaterial.uniforms.uMouse.value, { x: -10, y: -10, duration: 0.2 });
-                    // 使用动态推算的满屏自适应避让坐标
-                    gsap.to(camera.position, { x: revealCameraX, z: revealCameraZ, duration: 1.5, ease: "power2.inOut" });
-                    infoPanel.classList.add('visible');
-                    infoText.scrollTop = 0; 
-                } 
+                    setRevealed(true);
+                }
                 else if (dist < 0.15 && isRevealed) {
-                    isRevealed = false;
-                    gsap.to(shaderMaterial.uniforms.uDispersion, { value: 0.0, duration: 1.5, ease: "power2.inOut" });
-                    // 恢复全屏居中
-                    gsap.to(camera.position, { x: 0, z: defaultCameraZ, duration: 1.5, ease: "power2.inOut" });
-                    infoPanel.classList.remove('visible');
+                    setRevealed(false);
                 }
 
             } else if (handsCountActive === 1 && !isRevealed) {
@@ -1072,6 +1157,7 @@
         }
 
         function triggerSwipeFlash() {
+            if (reducedMotion.matches) return;
             const flash = document.getElementById('swipe-flash');
             flash.style.transition = 'none';
             flash.style.opacity = '1';

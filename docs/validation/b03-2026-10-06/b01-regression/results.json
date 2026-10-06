@@ -1,0 +1,490 @@
+{
+  "visual": [
+    {
+      "w": 1440,
+      "h": 900,
+      "elapsed": 660,
+      "overflow": false,
+      "canvas": 1,
+      "rects": [
+        {
+          "s": ".b01-brand",
+          "x": 72,
+          "y": 41.390625,
+          "right": 170.5625,
+          "bottom": 66.390625,
+          "width": 98.5625,
+          "height": 25,
+          "scroll": 99,
+          "client": 99
+        },
+        {
+          "s": ".b01-label",
+          "x": 1268.15625,
+          "y": 45.890625,
+          "right": 1368,
+          "bottom": 60.890625,
+          "width": 99.84375,
+          "height": 15,
+          "scroll": 100,
+          "client": 100
+        },
+        {
+          "s": ".splash-title",
+          "x": 979.1875,
+          "y": 353.45123291015625,
+          "right": 1382.40625,
+          "bottom": 413.70123291015625,
+          "width": 403.21875,
+          "height": 60.25,
+          "scroll": 403,
+          "client": 403
+        },
+        {
+          "s": ".b01-description",
+          "x": 979.1875,
+          "y": 437.70123291015625,
+          "right": 1382.40625,
+          "bottom": 465.60748291015625,
+          "width": 403.21875,
+          "height": 27.90625,
+          "scroll": 403,
+          "client": 403
+        },
+        {
+          "s": "#btn-gallery-track",
+          "x": 979.1875,
+          "y": 505.60748291015625,
+          "right": 1126.375,
+          "bottom": 557.6074829101562,
+          "width": 147.1875,
+          "height": 52,
+          "scroll": 145,
+          "client": 145
+        },
+        {
+          "s": "#btn-cyber-track",
+          "x": 1138.375,
+          "y": 505.60748291015625,
+          "right": 1285.5625,
+          "bottom": 557.6074829101562,
+          "width": 147.1875,
+          "height": 52,
+          "scroll": 145,
+          "client": 145
+        }
+      ],
+      "resources": [
+        {
+          "url": "http://localhost:3000/b01.css",
+          "bytes": 4660,
+          "duration": 12.800000000745058
+        },
+        {
+          "url": "http://localhost:3000/gallery.css",
+          "bytes": 5245,
+          "duration": 16.899999998509884
+        },
+        {
+          "url": "http://localhost:3000/b03.css",
+          "bytes": 6607,
+          "duration": 16.199999999254942
+        },
+        {
+          "url": "http://localhost:3000/b01/mural-02-left.webp",
+          "bytes": 820980,
+          "duration": 21.800000000745058
+        },
+        {
+          "url": "http://localhost:3000/gallery-panorama.mjs",
+          "bytes": 1781,
+          "duration": 5.899999998509884
+        },
+        {
+          "url": "http://localhost:3000/gallery-admin.mjs",
+          "bytes": 5219,
+          "duration": 6.600000001490116
+        },
+        {
+          "url": "http://localhost:3000/character-study.mjs",
+          "bytes": 3982,
+          "duration": 7.399999998509884
+        },
+        {
+          "url": "http://localhost:3000/favicon.ico",
+          "bytes": 450,
+          "duration": 2.300000000745058
+        }
+      ],
+      "load": 45.70000000298023
+    },
+    {
+      "w": 1920,
+      "h": 1080,
+      "elapsed": 869,
+      "overflow": false,
+      "canvas": 1,
+      "rects": [
+        {
+          "s": ".b01-brand",
+          "x": 96,
+          "y": 49.671875,
+          "right": 194.5625,
+          "bottom": 74.671875,
+          "width": 98.5625,
+          "height": 25,
+          "scroll": 99,
+          "client": 99
+        },
+        {
+          "s": ".b01-label",
+          "x": 1724.15625,
+          "y": 55,
+          "right": 1824,
+          "bottom": 70,
+          "width": 99.84375,
+          "height": 15,
+          "scroll": 100,
+          "client": 100
+        },
+        {
+          "s": ".splash-title",
+          "x": 1305.59375,
+          "y": 431.84625244140625,
+          "right": 1843.203125,
+          "bottom": 512.1900024414062,
+          "width": 537.609375,
+          "height": 80.34375,
+          "scroll": 538,
+          "client": 538
+        },
+        {
+          "s": ".b01-description",
+          "x": 1305.59375,
+          "y": 536.1900024414062,
+          "right": 1843.203125,
+          "bottom": 570.3775024414062,
+          "width": 537.609375,
+          "height": 34.1875,
+          "scroll": 538,
+          "client": 538
+        },
+        {
+          "s": "#btn-gallery-track",
+          "x": 1305.59375,
+          "y": 610.3775024414062,
+          "right": 1465.59375,
+          "bottom": 662.3775024414062,
+          "width": 160,
+          "height": 52,
+          "scroll": 158,
+          "client": 158
+        },
+        {
+          "s": "#btn-cyber-track",
+          "x": 1477.59375,
+          "y": 610.3775024414062,
+          "right": 1637.59375,
+          "bottom": 662.3775024414062,
+          "width": 160,
+          "height": 52,
+          "scroll": 158,
+          "client": 158
+        }
+      ],
+      "resources": [
+        {
+          "url": "http://localhost:3000/b01.css",
+          "bytes": 300,
+          "duration": 4.5
+        },
+        {
+          "url": "http://localhost:3000/gallery.css",
+          "bytes": 300,
+          "duration": 4.800000000745058
+        },
+        {
+          "url": "http://localhost:3000/b03.css",
+          "bytes": 300,
+          "duration": 5.800000000745058
+        },
+        {
+          "url": "http://localhost:3000/b01/mural-02-left.webp",
+          "bytes": 300,
+          "duration": 6.5
+        },
+        {
+          "url": "http://localhost:3000/gallery-panorama.mjs",
+          "bytes": 300,
+          "duration": 2.5
+        },
+        {
+          "url": "http://localhost:3000/gallery-admin.mjs",
+          "bytes": 300,
+          "duration": 3
+        },
+        {
+          "url": "http://localhost:3000/character-study.mjs",
+          "bytes": 300,
+          "duration": 3.300000000745058
+        }
+      ],
+      "load": 29.699999999254942
+    },
+    {
+      "w": 1366,
+      "h": 768,
+      "elapsed": 692,
+      "overflow": false,
+      "canvas": 1,
+      "rects": [
+        {
+          "s": ".b01-brand",
+          "x": 68.296875,
+          "y": 35.3125,
+          "right": 166.859375,
+          "bottom": 60.3125,
+          "width": 98.5625,
+          "height": 25,
+          "scroll": 99,
+          "client": 99
+        },
+        {
+          "s": ".b01-label",
+          "x": 1197.859375,
+          "y": 39.15625,
+          "right": 1297.703125,
+          "bottom": 54.15625,
+          "width": 99.84375,
+          "height": 15,
+          "scroll": 100,
+          "client": 100
+        },
+        {
+          "s": ".splash-title",
+          "x": 928.875,
+          "y": 289.44500732421875,
+          "right": 1311.375,
+          "bottom": 346.60125732421875,
+          "width": 382.5,
+          "height": 57.15625,
+          "scroll": 383,
+          "client": 383
+        },
+        {
+          "s": ".b01-description",
+          "x": 928.875,
+          "y": 370.60125732421875,
+          "right": 1311.375,
+          "bottom": 397.07000732421875,
+          "width": 382.5,
+          "height": 26.46875,
+          "scroll": 383,
+          "client": 383
+        },
+        {
+          "s": "#btn-gallery-track",
+          "x": 928.875,
+          "y": 437.07000732421875,
+          "right": 1073.84375,
+          "bottom": 489.07000732421875,
+          "width": 144.96875,
+          "height": 52,
+          "scroll": 143,
+          "client": 143
+        },
+        {
+          "s": "#btn-cyber-track",
+          "x": 1085.84375,
+          "y": 437.07000732421875,
+          "right": 1230.8125,
+          "bottom": 489.07000732421875,
+          "width": 144.96875,
+          "height": 52,
+          "scroll": 143,
+          "client": 143
+        }
+      ],
+      "resources": [
+        {
+          "url": "http://localhost:3000/b01.css",
+          "bytes": 300,
+          "duration": 2.699999999254942
+        },
+        {
+          "url": "http://localhost:3000/gallery.css",
+          "bytes": 300,
+          "duration": 3.2999999970197678
+        },
+        {
+          "url": "http://localhost:3000/b03.css",
+          "bytes": 300,
+          "duration": 3.7999999970197678
+        },
+        {
+          "url": "http://localhost:3000/b01/mural-02-left.webp",
+          "bytes": 300,
+          "duration": 3.899999998509884
+        },
+        {
+          "url": "http://localhost:3000/gallery-panorama.mjs",
+          "bytes": 300,
+          "duration": 4.399999998509884
+        },
+        {
+          "url": "http://localhost:3000/gallery-admin.mjs",
+          "bytes": 300,
+          "duration": 3.900000002235174
+        },
+        {
+          "url": "http://localhost:3000/character-study.mjs",
+          "bytes": 300,
+          "duration": 8.599999997764826
+        }
+      ],
+      "load": 31.800000000745058
+    },
+    {
+      "w": 1280,
+      "h": 800,
+      "elapsed": 686,
+      "overflow": false,
+      "canvas": 1,
+      "rects": [
+        {
+          "s": ".b01-brand",
+          "x": 64,
+          "y": 36.796875,
+          "right": 162.5625,
+          "bottom": 61.796875,
+          "width": 98.5625,
+          "height": 25,
+          "scroll": 99,
+          "client": 99
+        },
+        {
+          "s": ".b01-label",
+          "x": 1116.15625,
+          "y": 40.796875,
+          "right": 1216,
+          "bottom": 55.796875,
+          "width": 99.84375,
+          "height": 15,
+          "scroll": 100,
+          "client": 100
+        },
+        {
+          "s": ".splash-title",
+          "x": 857.59375,
+          "y": 307.74810791015625,
+          "right": 1241.609375,
+          "bottom": 361.32623291015625,
+          "width": 384.015625,
+          "height": 53.578125,
+          "scroll": 384,
+          "client": 384
+        },
+        {
+          "s": ".b01-description",
+          "x": 857.59375,
+          "y": 385.32623291015625,
+          "right": 1241.609375,
+          "bottom": 410.13873291015625,
+          "width": 384.015625,
+          "height": 24.8125,
+          "scroll": 384,
+          "client": 384
+        },
+        {
+          "s": "#btn-gallery-track",
+          "x": 857.59375,
+          "y": 450.13873291015625,
+          "right": 981.59375,
+          "bottom": 502.13873291015625,
+          "width": 124,
+          "height": 52,
+          "scroll": 122,
+          "client": 122
+        },
+        {
+          "s": "#btn-cyber-track",
+          "x": 991.59375,
+          "y": 450.13873291015625,
+          "right": 1115.59375,
+          "bottom": 502.13873291015625,
+          "width": 124,
+          "height": 52,
+          "scroll": 122,
+          "client": 122
+        }
+      ],
+      "resources": [
+        {
+          "url": "http://localhost:3000/b01.css",
+          "bytes": 300,
+          "duration": 3.599999997764826
+        },
+        {
+          "url": "http://localhost:3000/gallery.css",
+          "bytes": 300,
+          "duration": 4.5
+        },
+        {
+          "url": "http://localhost:3000/b03.css",
+          "bytes": 300,
+          "duration": 4.699999999254942
+        },
+        {
+          "url": "http://localhost:3000/b01/mural-02-left.webp",
+          "bytes": 300,
+          "duration": 4.800000000745058
+        },
+        {
+          "url": "http://localhost:3000/gallery-panorama.mjs",
+          "bytes": 300,
+          "duration": 2.2000000029802322
+        },
+        {
+          "url": "http://localhost:3000/gallery-admin.mjs",
+          "bytes": 300,
+          "duration": 3.5
+        },
+        {
+          "url": "http://localhost:3000/character-study.mjs",
+          "bytes": 300,
+          "duration": 2.900000002235174
+        }
+      ],
+      "load": 26.699999999254942
+    }
+  ],
+  "functional": [
+    "native keyboard Enter; map original image/8 hotspots; drag/wheel; hotspot to detail; org/line/color; detail→map→B01",
+    "real cyber dependencies and renderer; injected NotAllowedError",
+    "6 simulated camera sessions; max 1; all stopped; single existing renderer; repeated cyber↔gallery↔selection",
+    "NotFoundError message and return",
+    "NotReadableError message and return",
+    "NotAllowedError message and return",
+    "late camera startup after return is stopped",
+    "20 rapid entry clicks serialize",
+    "asset-api-error recovery",
+    "map-image-error recovery",
+    "homepage image failure/retry; reduced motion; Space native entry",
+    "blocked CDN shows retry and gallery remains usable",
+    "failed cached Three ES module import recovers on retry",
+    "unsupported camera returns to selection",
+    "real A08→B01→native back restores A08 at 42 screens; direct refresh"
+  ],
+  "errors": [],
+  "camera": "Real camera and gesture hardware NOT verified",
+  "lifecycle": {
+    "starts": 6,
+    "stops": 6,
+    "active": 0,
+    "max": 1,
+    "renderers": 1,
+    "visible": [
+      "splash-screen"
+    ]
+  }
+}
