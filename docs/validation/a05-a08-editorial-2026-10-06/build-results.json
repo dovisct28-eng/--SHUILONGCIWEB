@@ -1,0 +1,64 @@
+{
+  "baseline": "ccd1481f134a3235af40dae467e498731811b1d5",
+  "syntaxFiles": [
+    "module-a/guide/ambient.mjs",
+    "module-a/guide/boards.cjs",
+    "module-a/guide/build-check.cjs",
+    "module-a/guide/composition-check.cjs",
+    "module-a/guide/controller.mjs",
+    "module-a/guide/delivery-check.cjs",
+    "module-a/guide/gallery-check.cjs",
+    "module-a/guide/multi-guide-check.cjs",
+    "module-a/guide/performance-check.cjs",
+    "module-a/guide/progress.mjs",
+    "module-a/guide/progress.test.mjs",
+    "module-a/guide/regression.cjs",
+    "module-a/guide/resilience-check.cjs",
+    "module-a/a05/browser-check.cjs",
+    "module-a/a05/content.mjs",
+    "module-a/a06/browser-check.cjs",
+    "module-a/a06/content.mjs",
+    "module-a/a07/browser-check.cjs",
+    "module-a/a07/content.mjs",
+    "module-a/a08/browser-check.cjs",
+    "module-a/a08/controller.mjs",
+    "module-a/a08/progress.mjs",
+    "module-a/a08/progress.test.mjs"
+  ],
+  "protectedPaths": [
+    "module-a/a01",
+    "module-a/a02",
+    "module-a/a03",
+    "module-a/a04",
+    "Mural-Exhibition",
+    "shuilong-temple",
+    "水龙祠壁画素材"
+  ],
+  "protectedDiffEmpty": true,
+  "resources": [
+    {
+      "file": "水龙祠壁画素材/网页展示图/mural-01-display.webp",
+      "bytes": 1351148,
+      "sha256": "afc5a15eebec4e430151795f73c1cb958496ca6c629552d23be62588766716ef",
+      "unchanged": true
+    },
+    {
+      "file": "水龙祠壁画素材/网页展示图/mural-02-display.webp",
+      "bytes": 3552614,
+      "sha256": "17864d02d97ccc8d208e15a0f4c5cff82088777b0ee1dcd1f04bf643ce3e0dae",
+      "unchanged": true
+    },
+    {
+      "file": "水龙祠壁画素材/网页展示图/mural-05-display.webp",
+      "bytes": 2842184,
+      "sha256": "a4a0adba234d933044d9d2fe4e703c44f2482cb792af398397344498559aedd3",
+      "unchanged": true
+    }
+  ],
+  "archiveRefs": [
+    "48f272497e86e4549c5bcd0dee275ff347171a3f",
+    "48f272497e86e4549c5bcd0dee275ff347171a3f"
+  ],
+  "noBundler": true,
+  "modelRebuilt": false
+}

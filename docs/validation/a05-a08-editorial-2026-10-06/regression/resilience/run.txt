@@ -1,0 +1,11 @@
+guide resilience passed {
+  refresh: [
+    'A06 intro',
+    'A06 center',
+    'A06 left',
+    'A07 intro',
+    'A07 center',
+    'A07 left'
+  ],
+  resize: [ 'A06', 'A07' ]
+}

@@ -1,0 +1,2 @@
+warning: unable to access 'C:\Users\dovis/.config/git/ignore': Permission denied
+PASS: native build/syntax, A01–A04/B/model protection, exact original display hashes and fixed archive refs

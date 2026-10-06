@@ -1,0 +1,38 @@
+performance before captured
+performance after captured
+visible overview counters {
+  geometries: 66,
+  textures: 22,
+  calls: 56,
+  triangles: 83578,
+  lines: 0,
+  post: {
+    enabled: false,
+    error: null,
+    passes: 1,
+    size: [ 1440, 900 ],
+    aoSamples: 12,
+    stats: { frame: 608, calls: 56, triangles: 83578, points: 0, lines: 0 },
+    colorDepthBytes: 15552000,
+    multisampleBytes: 31104000,
+    targetBytes: 46656000
+  }
+} {
+  geometries: 66,
+  textures: 22,
+  calls: 56,
+  triangles: 83578,
+  lines: 0,
+  post: {
+    enabled: false,
+    error: null,
+    passes: 1,
+    size: [ 1440, 900 ],
+    aoSamples: 12,
+    stats: { frame: 855, calls: 56, triangles: 83578, points: 0, lines: 0 },
+    colorDepthBytes: 15552000,
+    multisampleBytes: 31104000,
+    targetBytes: 46656000
+  }
+}
+PASS: same renderer/canvas, geometry and GPU texture counts; no new mural or first-screen font requests

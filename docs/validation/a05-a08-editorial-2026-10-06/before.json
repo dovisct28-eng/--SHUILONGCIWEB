@@ -1,0 +1,1114 @@
+[
+  {
+    "name": "a05-opening",
+    "state": {
+      "screens": 18.95,
+      "guides": [
+        {
+          "chapter": "05",
+          "phase": "introduction",
+          "scan": 0,
+          "stage": 0,
+          "image": {
+            "left": -1498.775390625,
+            "top": 54,
+            "right": 1439.990234375,
+            "bottom": 846,
+            "width": 2938.765625,
+            "height": 792
+          },
+          "canvas": {
+            "left": 576,
+            "top": 0,
+            "right": 1440,
+            "bottom": 900,
+            "width": 864,
+            "height": 900
+          },
+          "axis": {
+            "left": 600,
+            "top": 862,
+            "right": 1416,
+            "bottom": 892,
+            "width": 816,
+            "height": 30
+          },
+          "rail": {
+            "left": 634,
+            "top": 867,
+            "right": 1382,
+            "bottom": 868,
+            "width": 748,
+            "height": 1
+          },
+          "point": {
+            "left": 1380.5,
+            "top": 865.5,
+            "right": 1383.5,
+            "bottom": 868.5,
+            "width": 3,
+            "height": 3
+          },
+          "intro": 1,
+          "layers": [
+            {
+              "opacity": 1,
+              "rect": {
+                "left": 115.1875,
+                "top": 288,
+                "right": 532.78125,
+                "bottom": 495.609375,
+                "width": 417.59375,
+                "height": 207.609375
+              },
+              "text": "神灵出庙\n\n一场迎神赛会，\n由此开始",
+              "role": "opening"
+            },
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 129.59375,
+                "top": 253,
+                "right": 532.78125,
+                "bottom": 461.90625,
+                "width": 403.1875,
+                "height": 208.90625
+              },
+              "text": "所谓“出兵入将”，\n并不是一场战争。\n\n它描绘的是一次迎神赛会中，\n神灵从庙中出行、巡游，\n最后重新归庙的完整过程。",
+              "role": "lead"
+            },
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 93.59375,
+                "top": 343,
+                "right": 539.984375,
+                "bottom": 578.296875,
+                "width": 446.390625,
+                "height": 235.296875
+              },
+              "text": "第五幅位于这段叙事的开端。\n\n神灵离开水龙祠，\n赛会队伍由庙中向外展开。\n\n火炮发出信号，\n仪仗随行，\n一场迎神赛会由此开始。",
+              "role": "context"
+            },
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 129.59375,
+                "top": 451,
+                "right": 532.78125,
+                "bottom": 537.375,
+                "width": 403.1875,
+                "height": 86.375
+              },
+              "text": "从这里开始，\n我们跟随队伍走出水龙祠。",
+              "role": "closing"
+            }
+          ]
+        }
+      ],
+      "a08": {
+        "hidden": true
+      }
+    }
+  },
+  {
+    "name": "a05-body",
+    "state": {
+      "screens": 19.75,
+      "guides": [
+        {
+          "chapter": "05",
+          "phase": "introduction",
+          "scan": 0,
+          "stage": 2,
+          "image": {
+            "left": -1498.775390625,
+            "top": 54,
+            "right": 1439.990234375,
+            "bottom": 846,
+            "width": 2938.765625,
+            "height": 792
+          },
+          "canvas": {
+            "left": 576,
+            "top": 0,
+            "right": 1440,
+            "bottom": 900,
+            "width": 864,
+            "height": 900
+          },
+          "axis": {
+            "left": 600,
+            "top": 862,
+            "right": 1416,
+            "bottom": 892,
+            "width": 816,
+            "height": 30
+          },
+          "rail": {
+            "left": 634,
+            "top": 867,
+            "right": 1382,
+            "bottom": 868,
+            "width": 748,
+            "height": 1
+          },
+          "point": {
+            "left": 1380.5,
+            "top": 865.5,
+            "right": 1383.5,
+            "bottom": 868.5,
+            "width": 3,
+            "height": 3
+          },
+          "intro": 1,
+          "layers": [
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 115.1875,
+                "top": 278,
+                "right": 532.78125,
+                "bottom": 485.609375,
+                "width": 417.59375,
+                "height": 207.609375
+              },
+              "text": "神灵出庙\n\n一场迎神赛会，\n由此开始",
+              "role": "opening"
+            },
+            {
+              "opacity": 0.309103,
+              "rect": {
+                "left": 129.59375,
+                "top": 236.09103393554688,
+                "right": 532.78125,
+                "bottom": 444.9972839355469,
+                "width": 403.1875,
+                "height": 208.90625
+              },
+              "text": "所谓“出兵入将”，\n并不是一场战争。\n\n它描绘的是一次迎神赛会中，\n神灵从庙中出行、巡游，\n最后重新归庙的完整过程。",
+              "role": "lead"
+            },
+            {
+              "opacity": 0.690897,
+              "rect": {
+                "left": 93.59375,
+                "top": 336.0910339355469,
+                "right": 539.984375,
+                "bottom": 571.387939453125,
+                "width": 446.390625,
+                "height": 235.29690551757812
+              },
+              "text": "第五幅位于这段叙事的开端。\n\n神灵离开水龙祠，\n赛会队伍由庙中向外展开。\n\n火炮发出信号，\n仪仗随行，\n一场迎神赛会由此开始。",
+              "role": "context"
+            },
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 129.59375,
+                "top": 451,
+                "right": 532.78125,
+                "bottom": 537.375,
+                "width": 403.1875,
+                "height": 86.375
+              },
+              "text": "从这里开始，\n我们跟随队伍走出水龙祠。",
+              "role": "closing"
+            }
+          ]
+        }
+      ],
+      "a08": {
+        "hidden": true
+      }
+    }
+  },
+  {
+    "name": "a05-scan",
+    "state": {
+      "screens": 22.8,
+      "guides": [
+        {
+          "chapter": "05",
+          "phase": "scan",
+          "scan": 0.5,
+          "stage": 3,
+          "image": {
+            "left": -749.3877563476562,
+            "top": 54,
+            "right": 2189.3778686523438,
+            "bottom": 846,
+            "width": 2938.765625,
+            "height": 792
+          },
+          "canvas": {
+            "left": 0,
+            "top": 0,
+            "right": 1440,
+            "bottom": 900,
+            "width": 1440,
+            "height": 900
+          },
+          "axis": {
+            "left": 24,
+            "top": 862,
+            "right": 1416,
+            "bottom": 892,
+            "width": 1392,
+            "height": 30
+          },
+          "rail": {
+            "left": 58,
+            "top": 867,
+            "right": 1382,
+            "bottom": 868,
+            "width": 1324,
+            "height": 1
+          },
+          "point": {
+            "left": 718.5,
+            "top": 865.5,
+            "right": 721.5,
+            "bottom": 868.5,
+            "width": 3,
+            "height": 3
+          },
+          "intro": 0,
+          "layers": [
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 115.1875,
+                "top": 278,
+                "right": 532.78125,
+                "bottom": 485.609375,
+                "width": 417.59375,
+                "height": 207.609375
+              },
+              "text": "神灵出庙\n\n一场迎神赛会，\n由此开始",
+              "role": "opening"
+            },
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 129.59375,
+                "top": 233,
+                "right": 532.78125,
+                "bottom": 441.90625,
+                "width": 403.1875,
+                "height": 208.90625
+              },
+              "text": "所谓“出兵入将”，\n并不是一场战争。\n\n它描绘的是一次迎神赛会中，\n神灵从庙中出行、巡游，\n最后重新归庙的完整过程。",
+              "role": "lead"
+            },
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 93.59375,
+                "top": 323,
+                "right": 539.984375,
+                "bottom": 558.296875,
+                "width": 446.390625,
+                "height": 235.296875
+              },
+              "text": "第五幅位于这段叙事的开端。\n\n神灵离开水龙祠，\n赛会队伍由庙中向外展开。\n\n火炮发出信号，\n仪仗随行，\n一场迎神赛会由此开始。",
+              "role": "context"
+            },
+            {
+              "opacity": 1,
+              "rect": {
+                "left": 129.59375,
+                "top": 441,
+                "right": 532.78125,
+                "bottom": 527.375,
+                "width": 403.1875,
+                "height": 86.375
+              },
+              "text": "从这里开始，\n我们跟随队伍走出水龙祠。",
+              "role": "closing"
+            }
+          ]
+        }
+      ],
+      "a08": {
+        "hidden": true
+      }
+    }
+  },
+  {
+    "name": "a06-opening",
+    "state": {
+      "screens": 25.95,
+      "guides": [
+        {
+          "chapter": "06",
+          "phase": "introduction",
+          "scan": 0,
+          "stage": 0,
+          "image": {
+            "left": -864,
+            "top": 54,
+            "right": 1440,
+            "bottom": 846,
+            "width": 2304,
+            "height": 792
+          },
+          "canvas": {
+            "left": 576,
+            "top": 0,
+            "right": 1440,
+            "bottom": 900,
+            "width": 864,
+            "height": 900
+          },
+          "axis": {
+            "left": 600,
+            "top": 862,
+            "right": 1416,
+            "bottom": 892,
+            "width": 816,
+            "height": 30
+          },
+          "rail": {
+            "left": 634,
+            "top": 867,
+            "right": 1382,
+            "bottom": 868,
+            "width": 748,
+            "height": 1
+          },
+          "point": {
+            "left": 1380.5,
+            "top": 865.5,
+            "right": 1383.5,
+            "bottom": 868.5,
+            "width": 3,
+            "height": 3
+          },
+          "intro": 1,
+          "layers": [
+            {
+              "opacity": 1,
+              "rect": {
+                "left": 129.59375,
+                "top": 324,
+                "right": 547.1875,
+                "bottom": 519.875,
+                "width": 417.59375,
+                "height": 195.875
+              },
+              "text": "行进途中\n\n出庙之后，\n归庙之前",
+              "role": "opening"
+            },
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 129.59375,
+                "top": 307,
+                "right": 532.78125,
+                "bottom": 387.78125,
+                "width": 403.1875,
+                "height": 80.78125
+              },
+              "text": "离开水龙祠之后，\n赛会的队伍继续向前。",
+              "role": "lead"
+            },
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 100.796875,
+                "top": 388,
+                "right": 518.390625,
+                "bottom": 447.1875,
+                "width": 417.59375,
+                "height": 59.1875
+              },
+              "text": "从整组“出兵入将”的叙事来看，\n这一铺处在神灵出庙与最终归庙之间。",
+              "role": "body"
+            },
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 129.59375,
+                "top": 433,
+                "right": 532.78125,
+                "bottom": 562.5625,
+                "width": 403.1875,
+                "height": 129.5625
+              },
+              "text": "在这里，\n我们继续沿着壁画向前，\n跟随这场赛会走向归程。",
+              "role": "closing"
+            }
+          ]
+        }
+      ],
+      "a08": {
+        "hidden": true
+      }
+    }
+  },
+  {
+    "name": "a06-scan",
+    "state": {
+      "screens": 29.8,
+      "guides": [
+        {
+          "chapter": "06",
+          "phase": "scan",
+          "scan": 0.5,
+          "stage": 3,
+          "image": {
+            "left": -432,
+            "top": 54,
+            "right": 1872,
+            "bottom": 846,
+            "width": 2304,
+            "height": 792
+          },
+          "canvas": {
+            "left": 0,
+            "top": 0,
+            "right": 1440,
+            "bottom": 900,
+            "width": 1440,
+            "height": 900
+          },
+          "axis": {
+            "left": 24,
+            "top": 862,
+            "right": 1416,
+            "bottom": 892,
+            "width": 1392,
+            "height": 30
+          },
+          "rail": {
+            "left": 58,
+            "top": 867,
+            "right": 1382,
+            "bottom": 868,
+            "width": 1324,
+            "height": 1
+          },
+          "point": {
+            "left": 718.5,
+            "top": 865.5,
+            "right": 721.5,
+            "bottom": 868.5,
+            "width": 3,
+            "height": 3
+          },
+          "intro": 0,
+          "layers": [
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 129.59375,
+                "top": 314,
+                "right": 547.1875,
+                "bottom": 509.875,
+                "width": 417.59375,
+                "height": 195.875
+              },
+              "text": "行进途中\n\n出庙之后，\n归庙之前",
+              "role": "opening"
+            },
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 129.59375,
+                "top": 287,
+                "right": 532.78125,
+                "bottom": 367.78125,
+                "width": 403.1875,
+                "height": 80.78125
+              },
+              "text": "离开水龙祠之后，\n赛会的队伍继续向前。",
+              "role": "lead"
+            },
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 100.796875,
+                "top": 368,
+                "right": 518.390625,
+                "bottom": 427.1875,
+                "width": 417.59375,
+                "height": 59.1875
+              },
+              "text": "从整组“出兵入将”的叙事来看，\n这一铺处在神灵出庙与最终归庙之间。",
+              "role": "body"
+            },
+            {
+              "opacity": 1,
+              "rect": {
+                "left": 129.59375,
+                "top": 423,
+                "right": 532.78125,
+                "bottom": 552.5625,
+                "width": 403.1875,
+                "height": 129.5625
+              },
+              "text": "在这里，\n我们继续沿着壁画向前，\n跟随这场赛会走向归程。",
+              "role": "closing"
+            }
+          ]
+        }
+      ],
+      "a08": {
+        "hidden": true
+      }
+    }
+  },
+  {
+    "name": "a07-opening",
+    "state": {
+      "screens": 32.85,
+      "guides": [
+        {
+          "chapter": "07",
+          "phase": "introduction",
+          "scan": 0,
+          "stage": 0,
+          "image": {
+            "left": -2061.84228515625,
+            "top": 54,
+            "right": 1439.98583984375,
+            "bottom": 846,
+            "width": 3501.828125,
+            "height": 792
+          },
+          "canvas": {
+            "left": 576,
+            "top": 0,
+            "right": 1440,
+            "bottom": 900,
+            "width": 864,
+            "height": 900
+          },
+          "axis": {
+            "left": 600,
+            "top": 862,
+            "right": 1416,
+            "bottom": 892,
+            "width": 816,
+            "height": 30
+          },
+          "rail": {
+            "left": 634,
+            "top": 867,
+            "right": 1382,
+            "bottom": 868,
+            "width": 748,
+            "height": 1
+          },
+          "point": {
+            "left": 1380.5,
+            "top": 865.5,
+            "right": 1383.5,
+            "bottom": 868.5,
+            "width": 3,
+            "height": 3
+          },
+          "intro": 1,
+          "layers": [
+            {
+              "opacity": 1,
+              "rect": {
+                "left": 115.1875,
+                "top": 234,
+                "right": 532.78125,
+                "bottom": 518.921875,
+                "width": 417.59375,
+                "height": 284.921875
+              },
+              "text": "入将 ·\n神灵归庙\n\n出行的终点，\n也是赛会的结束",
+              "role": "opening"
+            },
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 115.1875,
+                "top": 244,
+                "right": 532.78125,
+                "bottom": 452.125,
+                "width": 417.59375,
+                "height": 208.125
+              },
+              "text": "巡游之后，\n队伍重新回到水龙祠。\n\n这就是“入将”。",
+              "role": "arrival"
+            },
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 100.796875,
+                "top": 370,
+                "right": 532.796875,
+                "bottom": 488.375,
+                "width": 432,
+                "height": 118.375
+              },
+              "text": "神灵、仪仗与随行人群\n从外部空间返回庙中，\n一场从出庙开始的迎神赛会，\n在这里走向结束。",
+              "role": "body"
+            },
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 115.1875,
+                "top": 325,
+                "right": 532.78125,
+                "bottom": 426.203125,
+                "width": 417.59375,
+                "height": 101.203125
+              },
+              "text": "于是，\n“出兵”与“入将”\n并不是彼此分开的场景。",
+              "role": "connection"
+            },
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 144,
+                "top": 298,
+                "right": 532.796875,
+                "bottom": 479.40625,
+                "width": 388.796875,
+                "height": 181.40625
+              },
+              "text": "一边是出发，\n一边是归来。",
+              "role": "climax"
+            },
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 100.796875,
+                "top": 352,
+                "right": 532.796875,
+                "bottom": 524,
+                "width": 432,
+                "height": 172
+              },
+              "text": "水龙祠两侧的壁画，\n把一次迎神赛会\n从开始到结束的过程，\n留在了庙宇的墙面之上。",
+              "role": "closing"
+            }
+          ]
+        }
+      ],
+      "a08": {
+        "hidden": true
+      }
+    }
+  },
+  {
+    "name": "a07-body",
+    "state": {
+      "screens": 34.65,
+      "guides": [
+        {
+          "chapter": "07",
+          "phase": "introduction",
+          "scan": 0,
+          "stage": 3,
+          "image": {
+            "left": -2061.84228515625,
+            "top": 54,
+            "right": 1439.98583984375,
+            "bottom": 846,
+            "width": 3501.828125,
+            "height": 792
+          },
+          "canvas": {
+            "left": 576,
+            "top": 0,
+            "right": 1440,
+            "bottom": 900,
+            "width": 864,
+            "height": 900
+          },
+          "axis": {
+            "left": 600,
+            "top": 862,
+            "right": 1416,
+            "bottom": 892,
+            "width": 816,
+            "height": 30
+          },
+          "rail": {
+            "left": 634,
+            "top": 867,
+            "right": 1382,
+            "bottom": 868,
+            "width": 748,
+            "height": 1
+          },
+          "point": {
+            "left": 1380.5,
+            "top": 865.5,
+            "right": 1383.5,
+            "bottom": 868.5,
+            "width": 3,
+            "height": 3
+          },
+          "intro": 1,
+          "layers": [
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 115.1875,
+                "top": 224,
+                "right": 532.78125,
+                "bottom": 508.921875,
+                "width": 417.59375,
+                "height": 284.921875
+              },
+              "text": "入将 ·\n神灵归庙\n\n出行的终点，\n也是赛会的结束",
+              "role": "opening"
+            },
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 115.1875,
+                "top": 224,
+                "right": 532.78125,
+                "bottom": 432.125,
+                "width": 417.59375,
+                "height": 208.125
+              },
+              "text": "巡游之后，\n队伍重新回到水龙祠。\n\n这就是“入将”。",
+              "role": "arrival"
+            },
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 100.796875,
+                "top": 350,
+                "right": 532.796875,
+                "bottom": 468.375,
+                "width": 432,
+                "height": 118.375
+              },
+              "text": "神灵、仪仗与随行人群\n从外部空间返回庙中，\n一场从出庙开始的迎神赛会，\n在这里走向结束。",
+              "role": "body"
+            },
+            {
+              "opacity": 1,
+              "rect": {
+                "left": 115.1875,
+                "top": 315,
+                "right": 532.78125,
+                "bottom": 416.203125,
+                "width": 417.59375,
+                "height": 101.203125
+              },
+              "text": "于是，\n“出兵”与“入将”\n并不是彼此分开的场景。",
+              "role": "connection"
+            },
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 144,
+                "top": 298,
+                "right": 532.796875,
+                "bottom": 479.40625,
+                "width": 388.796875,
+                "height": 181.40625
+              },
+              "text": "一边是出发，\n一边是归来。",
+              "role": "climax"
+            },
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 100.796875,
+                "top": 352,
+                "right": 532.796875,
+                "bottom": 524,
+                "width": 432,
+                "height": 172
+              },
+              "text": "水龙祠两侧的壁画，\n把一次迎神赛会\n从开始到结束的过程，\n留在了庙宇的墙面之上。",
+              "role": "closing"
+            }
+          ]
+        }
+      ],
+      "a08": {
+        "hidden": true
+      }
+    }
+  },
+  {
+    "name": "a07-scan",
+    "state": {
+      "screens": 37.3,
+      "guides": [
+        {
+          "chapter": "07",
+          "phase": "scan",
+          "scan": 0.2733,
+          "stage": 5,
+          "image": {
+            "left": -1498.434814453125,
+            "top": 54,
+            "right": 2003.393310546875,
+            "bottom": 846,
+            "width": 3501.828125,
+            "height": 792
+          },
+          "canvas": {
+            "left": 0,
+            "top": 0,
+            "right": 1440,
+            "bottom": 900,
+            "width": 1440,
+            "height": 900
+          },
+          "axis": {
+            "left": 24,
+            "top": 862,
+            "right": 1416,
+            "bottom": 892,
+            "width": 1392,
+            "height": 30
+          },
+          "rail": {
+            "left": 58,
+            "top": 867,
+            "right": 1382,
+            "bottom": 868,
+            "width": 1324,
+            "height": 1
+          },
+          "point": {
+            "left": 1018.703125,
+            "top": 865.5,
+            "right": 1021.703125,
+            "bottom": 868.5,
+            "width": 3,
+            "height": 3
+          },
+          "intro": 0,
+          "layers": [
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 115.1875,
+                "top": 224,
+                "right": 532.78125,
+                "bottom": 508.921875,
+                "width": 417.59375,
+                "height": 284.921875
+              },
+              "text": "入将 ·\n神灵归庙\n\n出行的终点，\n也是赛会的结束",
+              "role": "opening"
+            },
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 115.1875,
+                "top": 224,
+                "right": 532.78125,
+                "bottom": 432.125,
+                "width": 417.59375,
+                "height": 208.125
+              },
+              "text": "巡游之后，\n队伍重新回到水龙祠。\n\n这就是“入将”。",
+              "role": "arrival"
+            },
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 100.796875,
+                "top": 350,
+                "right": 532.796875,
+                "bottom": 468.375,
+                "width": 432,
+                "height": 118.375
+              },
+              "text": "神灵、仪仗与随行人群\n从外部空间返回庙中，\n一场从出庙开始的迎神赛会，\n在这里走向结束。",
+              "role": "body"
+            },
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 115.1875,
+                "top": 305,
+                "right": 532.78125,
+                "bottom": 406.203125,
+                "width": 417.59375,
+                "height": 101.203125
+              },
+              "text": "于是，\n“出兵”与“入将”\n并不是彼此分开的场景。",
+              "role": "connection"
+            },
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 144,
+                "top": 278,
+                "right": 532.796875,
+                "bottom": 459.40625,
+                "width": 388.796875,
+                "height": 181.40625
+              },
+              "text": "一边是出发，\n一边是归来。",
+              "role": "climax"
+            },
+            {
+              "opacity": 1,
+              "rect": {
+                "left": 100.796875,
+                "top": 342,
+                "right": 532.796875,
+                "bottom": 514,
+                "width": 432,
+                "height": 172
+              },
+              "text": "水龙祠两侧的壁画，\n把一次迎神赛会\n从开始到结束的过程，\n留在了庙宇的墙面之上。",
+              "role": "closing"
+            }
+          ]
+        }
+      ],
+      "a08": {
+        "hidden": true
+      }
+    }
+  },
+  {
+    "name": "a08",
+    "state": {
+      "screens": 42,
+      "guides": [
+        {
+          "chapter": "07",
+          "phase": "handoff",
+          "scan": 1,
+          "stage": 5,
+          "image": {
+            "left": 0,
+            "top": 54,
+            "right": 3501.828125,
+            "bottom": 846,
+            "width": 3501.828125,
+            "height": 792
+          },
+          "canvas": {
+            "left": 0,
+            "top": 0,
+            "right": 950.40625,
+            "bottom": 900,
+            "width": 950.40625,
+            "height": 900
+          },
+          "axis": {
+            "left": 24,
+            "top": 862,
+            "right": 926.390625,
+            "bottom": 892,
+            "width": 902.390625,
+            "height": 30
+          },
+          "rail": {
+            "left": 58,
+            "top": 867,
+            "right": 892.390625,
+            "bottom": 868,
+            "width": 834.390625,
+            "height": 1
+          },
+          "point": {
+            "left": 56.5,
+            "top": 865.5,
+            "right": 59.5,
+            "bottom": 868.5,
+            "width": 3,
+            "height": 3
+          },
+          "intro": 0,
+          "layers": [
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 115.1875,
+                "top": 224,
+                "right": 532.78125,
+                "bottom": 508.921875,
+                "width": 417.59375,
+                "height": 284.921875
+              },
+              "text": "入将 ·\n神灵归庙\n\n出行的终点，\n也是赛会的结束",
+              "role": "opening"
+            },
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 115.1875,
+                "top": 224,
+                "right": 532.78125,
+                "bottom": 432.125,
+                "width": 417.59375,
+                "height": 208.125
+              },
+              "text": "巡游之后，\n队伍重新回到水龙祠。\n\n这就是“入将”。",
+              "role": "arrival"
+            },
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 100.796875,
+                "top": 350,
+                "right": 532.796875,
+                "bottom": 468.375,
+                "width": 432,
+                "height": 118.375
+              },
+              "text": "神灵、仪仗与随行人群\n从外部空间返回庙中，\n一场从出庙开始的迎神赛会，\n在这里走向结束。",
+              "role": "body"
+            },
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 115.1875,
+                "top": 305,
+                "right": 532.78125,
+                "bottom": 406.203125,
+                "width": 417.59375,
+                "height": 101.203125
+              },
+              "text": "于是，\n“出兵”与“入将”\n并不是彼此分开的场景。",
+              "role": "connection"
+            },
+            {
+              "opacity": 0,
+              "rect": {
+                "left": 144,
+                "top": 278,
+                "right": 532.796875,
+                "bottom": 459.40625,
+                "width": 388.796875,
+                "height": 181.40625
+              },
+              "text": "一边是出发，\n一边是归来。",
+              "role": "climax"
+            },
+            {
+              "opacity": 1,
+              "rect": {
+                "left": 100.796875,
+                "top": 342,
+                "right": 532.796875,
+                "bottom": 514,
+                "width": 432,
+                "height": 172
+              },
+              "text": "水龙祠两侧的壁画，\n把一次迎神赛会\n从开始到结束的过程，\n留在了庙宇的墙面之上。",
+              "role": "closing"
+            }
+          ]
+        }
+      ],
+      "a08": {
+        "hidden": false
+      }
+    }
+  }
+]

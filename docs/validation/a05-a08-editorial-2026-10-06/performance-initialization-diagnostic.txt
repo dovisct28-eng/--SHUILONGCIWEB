@@ -1,0 +1,14 @@
+performance before captured
+performance after captured
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+50 !== 66
+
+    at D:\YJS\出兵入将-PC端页面\module-a\guide\performance-check.cjs:20:42 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 50,
+  expected: 66,
+  operator: 'strictEqual',
+  diff: 'simple'
+}

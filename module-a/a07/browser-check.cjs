@@ -16,7 +16,7 @@ const state=page=>page.evaluate(()=>[...document.querySelectorAll('.mural-guide'
       page.on('pageerror',e=>errors.push(e.message));
       await page.goto('http://127.0.0.1:4175/module-a/a01/');
       await page.waitForFunction(()=>document.querySelector('iframe')?.contentWindow?.modelReady);
-      for(const [name,point] of [['a06-left',31.4],['transition',32.2],['intro',32.85],['right',35.2],['center',37.3],['left',39.4],['end',40]]){
+      for(const [name,point] of [['a06-left',31.4],['transition',32.2],['intro',32.85],['right',36.2],['center',37.8],['left',39.4],['end',40]]){
         await scroll(page,point);await page.waitForFunction(()=>document.querySelectorAll('.mural-guide')[2]?.querySelector('img').naturalWidth>0);
         const [a05,a06,a07]=await state(page);
         if(name==='transition'){assert.equal(a05.hidden,true);assert.equal(a06.hidden,false);assert.equal(a07.hidden,false);assert.ok(a06.opacity>0&&a07.opacity>0);}
@@ -25,10 +25,10 @@ const state=page=>page.evaluate(()=>[...document.querySelectorAll('.mural-guide'
         if(name==='left'||name==='end'){assert.ok(Math.abs(a07.left)<2);assert.equal(a06.hidden,true);}
         if(width===1440||name==='intro')await page.screenshot({path:path.join(output,`${name}-${width}x${height}.png`)});
       }
-      await scroll(page,37.3);const center=(await state(page))[2];
+      await scroll(page,37.8);const center=(await state(page))[2];
       await scroll(page,31.4);assert.equal((await state(page))[1].hidden,false);
       await scroll(page,24.4);assert.equal((await state(page))[0].hidden,false);
-      await scroll(page,37.3);assert.ok(Math.abs((await state(page))[2].offset-center.offset)<2);
+      await scroll(page,37.8);assert.ok(Math.abs((await state(page))[2].offset-center.offset)<2);
       await page.reload();await page.waitForFunction(()=>document.querySelectorAll('.mural-guide')[2]?.querySelector('img').naturalWidth>0);
       assert.ok(Math.abs((await state(page))[2].offset-center.offset)<2);
       assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);

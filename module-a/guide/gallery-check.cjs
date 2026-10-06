@@ -1,46 +1,168 @@
-const {chromium}=require('playwright'),sharp=require('sharp'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
-const out=path.resolve('docs/validation/a05-a08-high-fidelity-2026-10-05'),url='http://127.0.0.1:4175/module-a/a01/';
-const sizes=process.env.GALLERY_VIEWPORTS?JSON.parse(process.env.GALLERY_VIEWPORTS):[[1920,1080],[1440,900],[1366,768],[1024,768]];
-const scenes=[['a04-wall',17.6],['a05-transfer',17.8],['a05-intro',18.95],['a05-reading-1',19.75],['a05-reading-2',20.55],['a05-right',21.2],['a05-center',22.8],['a05-left',24.4],['a05-handoff',24.8],['a06-transfer',25.2],['a06-intro',25.95],['a06-reading-1',26.75],['a06-reading-2',27.55],['a06-right',28.2],['a06-center',29.8],['a06-left',31.4],['a07-transfer',32.2],['a07-intro',32.85],['a07-reading-1',33.45],['a07-reading-2',34.05],['a07-reading-3',34.65],['a07-right',35.2],['a07-center',37.3],['a07-left',39.5],['a08-half',40.5],['a08',42]];
-const rect=e=>{const r=e.getBoundingClientRect();return{x:r.x,y:r.y,width:r.width,height:r.height,right:r.right,bottom:r.bottom}};
-async function read(page){return page.evaluate(()=>{
- const rect=e=>{const r=e.getBoundingClientRect();return{x:r.x,y:r.y,width:r.width,height:r.height,right:r.right,bottom:r.bottom}};
- const guide=[...document.querySelectorAll('.mural-guide')].filter(g=>!g.hidden).map(g=>({chapter:g.dataset.chapter,opacity:+getComputedStyle(g).opacity,phase:g.dataset.phase,scan:+g.dataset.scanProgress,stage:+g.dataset.introStage,image:rect(g.querySelector('img')),src:g.querySelector('img').currentSrc,transform:g.querySelector('img').style.transform,shadow:getComputedStyle(g.querySelector('img')).boxShadow,intro:+getComputedStyle(g.querySelector('.mural-guide__intro')).opacity,veil:+getComputedStyle(g.querySelector('.mural-guide__veil')).opacity,marker:{text:g.querySelector('.mural-guide__marker').textContent,size:parseFloat(getComputedStyle(g.querySelector('.mural-guide__marker')).fontSize),background:getComputedStyle(g.querySelector('.mural-guide__marker')).backgroundColor},axis:rect(g.querySelector('.mural-guide__axis')),rail:rect(g.querySelector('.mural-guide__rail')),point:rect(g.querySelector('.mural-guide__rail b')),layers:[...g.querySelectorAll('.mural-guide__reading')].map(l=>({opacity:+getComputedStyle(l).opacity,rect:rect(l),text:l.textContent,scroll:getComputedStyle(l).overflowY}))}));
- const a08=document.querySelector('.a08'),api=document.querySelector('iframe').contentWindow.shuilongTemple;
- return{screen:scrollY/innerHeight,overflow:document.documentElement.scrollWidth>innerWidth,guide,a08:{hidden:a08.hidden,opacity:+getComputedStyle(a08).opacity,inert:a08.inert,panel:rect(a08.querySelector('.a08__panel')),cta:rect(a08.querySelector('a')),href:a08.querySelector('a').href},stats:api.getA01RenderStats(),canvasCount:[...document.querySelectorAll('canvas'),...document.querySelector('iframe').contentDocument.querySelectorAll('canvas')].length};
- });}
-async function seek(page,point){await page.evaluate(p=>scrollTo(0,p*innerHeight),point);await page.waitForTimeout(170);if(point>=17.4)await page.waitForFunction(()=>[...document.querySelectorAll('.mural-guide')].filter(g=>!g.hidden).every(g=>g.querySelector('img').naturalWidth>0));await page.evaluate(()=>document.fonts.ready);await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));}
-async function shot(page,name,tag){const file=path.join(out,'after',`${name}-${tag}.webp`);await sharp(await page.screenshot()).webp({quality:92}).toFile(file);}
-async function contrast(page,selector){
- const el=page.locator(selector),data=await el.evaluate(e=>{const r=e.getBoundingClientRect();return{x:r.x,y:r.y,w:r.width,h:r.height,color:getComputedStyle(e).color.match(/[\d.]+/g).slice(0,3).map(Number)}});
- await el.evaluate(e=>e.style.visibility='hidden');const {data:pixels,info}=await sharp(await page.screenshot()).removeAlpha().raw().toBuffer({resolveWithObject:true});await el.evaluate(e=>e.style.visibility='');
- const lum=c=>c.map(v=>v/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4).reduce((s,v,i)=>s+v*[.2126,.7152,.0722][i],0),a=lum(data.color);let minimum=100;
- for(let y=Math.ceil(data.y+4);y<data.y+data.h-4;y+=4)for(let x=Math.ceil(data.x+2);x<data.x+data.w-2;x+=4){const i=(y*info.width+x)*info.channels,b=lum([...pixels.subarray(i,i+3)]);minimum=Math.min(minimum,(Math.max(a,b)+.05)/(Math.min(a,b)+.05));}return minimum;
+const {chromium}=require('playwright');
+const sharp=require('sharp');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const out=path.resolve('docs/validation/a05-a08-editorial-2026-10-06');
+const url='http://127.0.0.1:4175/module-a/a01/';
+const sizes=process.env.GALLERY_VIEWPORTS?JSON.parse(process.env.GALLERY_VIEWPORTS):[[1440,900],[1920,1080],[1366,768],[1024,768]];
+async function seek(page,point){
+  await page.evaluate(p=>scrollTo(0,p*innerHeight),point);
+  await page.waitForTimeout(180);
+  if(point>=17.4) await page.waitForFunction(()=>[...document.querySelectorAll('.mural-guide')].filter(g=>!g.hidden).every(g=>g.querySelector('img').naturalWidth>0));
+  await page.evaluate(()=>document.fonts.ready);
 }
-(async()=>{fs.mkdirSync(path.join(out,'after'),{recursive:true});const browser=await chromium.launch({channel:'chrome',headless:true});const report={sizes:[],resize:[],refresh:[],reduced:[],fontFallback:[],errors:[]};
+async function read(page){return page.evaluate(()=>{
+  const box=e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height,right:r.right,bottom:r.bottom}};
+  const css=e=>getComputedStyle(e);
+  const guides=[...document.querySelectorAll('.mural-guide')].filter(g=>!g.hidden).map(g=>{
+    const image=g.querySelector('img'),head=g.querySelector('header'),h2=g.querySelector('h2');
+    return {chapter:g.dataset.chapter,phase:g.dataset.phase,opacity:+css(g).opacity,scan:+g.dataset.scanProgress,stage:+g.dataset.introStage,expand:+g.dataset.galleryExpand,
+      image:box(image),ratio:image.naturalWidth/image.naturalHeight,src:image.currentSrc,transform:image.style.transform,filter:css(image).filter,shadow:css(image).boxShadow,border:css(image).borderWidth,
+      canvasClip:css(g.querySelector('.mural-guide__canvas')).clipPath,canvas:box(g.querySelector('.mural-guide__canvas')),background:css(g).backgroundColor,
+      intro:+css(head).opacity,veil:+css(g.querySelector('.mural-guide__veil')).opacity,headline:{box:box(h2),opacity:+css(h2).opacity,size:css(h2).fontSize},
+      marker:{text:g.querySelector('.mural-guide__marker').textContent,size:css(g.querySelector('.mural-guide__marker')).fontSize},
+      subtitle:{box:box(g.querySelector('.mural-guide__subtitle')),size:css(g.querySelector('.mural-guide__subtitle')).fontSize},
+      axis:box(g.querySelector('.mural-guide__axis')),axisOpacity:+css(g.querySelector('.mural-guide__axis')).opacity,rail:box(g.querySelector('.mural-guide__rail')),point:box(g.querySelector('.mural-guide__rail b')),
+      layers:[...g.querySelectorAll('.mural-guide__reading')].map(l=>({opacity:+css(l).opacity,box:box(l),text:l.textContent,scroll:css(l).overflowY,role:l.dataset.readingRole,
+        paragraphs:[...l.querySelectorAll('p')].map(p=>({role:p.dataset.typeRole,size:css(p).fontSize,font:css(p).fontFamily,box:box(p)}))}))};
+  });
+  const a08=document.querySelector('.a08'),link=a08.querySelector('a'),ambient=document.querySelector('.gallery-ambient');
+  return {screen:scrollY/innerHeight,overflow:document.documentElement.scrollWidth>innerWidth,guides,
+    a08:{hidden:a08.hidden,opacity:+css(a08).opacity,inert:a08.inert,background:css(a08).backgroundImage,panel:box(a08.querySelector('.a08__panel')),cta:box(link),href:link.href,tabIndex:link.tabIndex},
+    ambient:{count:document.querySelectorAll('.gallery-ambient').length,hidden:ambient.hidden,weight:+css(ambient).getPropertyValue('--ambient-weight'),opacity:+css(ambient).opacity,src:[...ambient.querySelectorAll('img')].map(i=>i.currentSrc)},
+    canvases:document.querySelector('iframe').contentDocument.querySelectorAll('canvas').length};
+});}
+async function shot(page,name,tag,folder='after'){
+  const file=path.join(out,folder,`${name}-${tag}.webp`);fs.mkdirSync(path.dirname(file),{recursive:true});
+  await sharp(await page.screenshot()).webp({quality:91}).toFile(file);return file;
+}
+async function contrast(page,selector){
+  const el=page.locator(selector),data=await el.evaluate(e=>{const r=e.getBoundingClientRect();return{x:r.x,y:r.y,w:r.width,h:r.height,color:getComputedStyle(e).color.match(/[\d.]+/g).slice(0,3).map(Number)}});
+  await el.evaluate(e=>e.style.visibility='hidden');const {data:pixels,info}=await sharp(await page.screenshot()).removeAlpha().raw().toBuffer({resolveWithObject:true});await el.evaluate(e=>e.style.visibility='');
+  const lum=c=>c.map(v=>v/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4).reduce((s,v,i)=>s+v*[.2126,.7152,.0722][i],0),a=lum(data.color);let minimum=100;
+  for(let y=Math.ceil(data.y+4);y<Math.min(info.height,data.y+data.h-4);y+=4)for(let x=Math.ceil(data.x+2);x<Math.min(info.width,data.x+data.w-2);x+=4){const i=(y*info.width+x)*info.channels,b=lum([...pixels.subarray(i,i+3)]);minimum=Math.min(minimum,(Math.max(a,b)+.05)/(Math.min(a,b)+.05));}return minimum;
+}
+const close=(a,b,message,tolerance=1)=>assert.ok(Math.abs(a-b)<tolerance,`${message}: ${a} / ${b}`);
+function check(state,scene,w,h,reduced=false){
+  assert.equal(state.overflow,false,scene.name);assert.equal(state.canvases,1);assert.equal(state.ambient.count,1);
+  for(const g of state.guides){
+    assert.equal(g.filter,'none');assert.equal(g.shadow,'none');assert.equal(g.border,'0px');assert.equal(g.veil,0);assert.equal(g.canvasClip,'none');assert.equal(g.background,'rgba(0, 0, 0, 0)');
+    assert.equal(g.marker.size,'13px');assert.ok(g.marker.text.startsWith('A'));assert.ok(g.image.width>0);
+    if(scene.point>=18) close(g.image.width/g.image.height,g.ratio,'native ratio',.001);
+    if(g.intro>.99){
+      assert.ok(g.image.x>=0&&g.image.right<=w+1,'complete original visible');close(g.image.x,w-g.image.right,'balanced gutters');
+      assert.ok(g.headline.box.bottom<g.image.y-16&&g.subtitle.box.bottom<g.image.y-16,'identity above mural');
+      for(const l of g.layers.filter(l=>l.opacity>.99)){
+        assert.ok(l.box.x>g.headline.box.right,'separate right column');
+        assert.ok(l.box.bottom<g.image.y-16,`${scene.name}: reading clears mural ${JSON.stringify(l.box)}`);
+        assert.notEqual(l.scroll,'auto');assert.ok(l.box.right<=w-20);
+        for(const p of l.paragraphs)assert.ok(p.box.right<=w-20);
+      }
+      if(g.stage>0)close(g.headline.opacity,.46,'headline de-emphasis',.001);
+    }
+    if(g.phase==='scan'){
+      assert.equal(g.intro,0);assert.equal(g.expand,1);assert.match(g.transform,/^translate3d\(/);
+      close(g.image.height/h,reduced?.82:w<=1100?.86:.88,'scan height',.001);
+      assert.ok(g.axis.bottom<=h&&g.axis.y>=g.image.bottom,'axis outside original');
+    }
+  }
+  const g=state.guides.at(-1);
+  if(scene.name.endsWith('-right')){close(g.image.right,w,'right edge');assert.equal(g.scan,0);close(g.point.x+g.point.width/2,g.rail.right,'axis right');}
+  if(scene.name.endsWith('-left')){close(g.image.x,0,'left edge');assert.equal(g.scan,1);close(g.point.x+g.point.width/2,g.rail.x,'axis left');}
+  if(scene.point>=40){
+    close(g.image.x,0,'A08 fixed left');close(g.image.y+g.image.height/2,h/2,'A08 fixed center');
+    assert.equal(state.a08.background,'none');assert.equal(g.axisOpacity,0);
+    if(state.a08.opacity>0)assert.ok(g.image.right<state.a08.panel.x-12,'type is entirely outside the original');
+    if(scene.point>=41){close(g.image.width,w*.7,'A08 full image width');assert.ok(state.a08.cta.height>=44&&!state.a08.inert&&state.a08.tabIndex===0);assert.ok(state.a08.panel.bottom<h);}
+    else if(state.a08.opacity<.8)assert.equal(state.a08.inert,true);
+  }
+}
+async function board(files,target,columns=2){
+  const tileW=640,tileH=422,tiles=[];
+  for(const [i,file]of files.entries())tiles.push({input:await sharp(file).resize(tileW,400,{fit:'contain',background:'#10191f'}).toBuffer(),left:i%columns*tileW,top:Math.floor(i/columns)*tileH});
+  await sharp({create:{width:columns*tileW,height:Math.ceil(files.length/columns)*tileH,channels:3,background:'#10191f'}}).composite(tiles).webp({quality:89}).toFile(target);
+}
+(async()=>{
+ const guides=await Promise.all(['05','06','07'].map(async id=>(await import(`../a${id}/content.mjs`))[`a${id}Guide`]));
+ const scenes=[{name:'a04-wall',point:17.6},{name:'a05-transfer',point:17.8}];
+ for(const guide of guides){
+   const weights=[1,...guide.introBeats.map(b=>b.weight)],total=weights.reduce((a,b)=>a+b,0),length=guide.introLength||3.2;let boundary=0;
+   for(let i=0;i<weights.length;i++){
+     const point=i===0?guide.start+.85:guide.start+.55+(boundary+weights[i]/2)/total*(length-1.1);
+     scenes.push({name:`a${guide.chapter}-${i===0?'opening':guide.introBeats[i-1].role}`,point});boundary+=weights[i];
+   }
+   scenes.push({name:`a${guide.chapter}-expand-half`,point:guide.start+length-.2},
+     {name:`a${guide.chapter}-right`,point:guide.start+length},{name:`a${guide.chapter}-center`,point:(guide.start+length+guide.end-.6)/2},
+     {name:`a${guide.chapter}-left`,point:guide.end-.6});
+ }
+ scenes.push({name:'a08-transition-50',point:40.325},{name:'a08-half',point:40.5},{name:'a08-text-enter',point:40.825},{name:'a08-stable',point:42});
+ fs.mkdirSync(out,{recursive:true});const browser=await chromium.launch({channel:'chrome',headless:true});
+ const report={scenes,sizes:[],resize:[],refresh:[],reduced:[],fontFallback:[],short:[],errors:[]};
  try{
-  for(const [width,height]of sizes){const page=await browser.newPage({viewport:{width,height}}),tag=`${width}x${height}`;page.on('pageerror',e=>report.errors.push(e.message));const requests=[];page.on('request',r=>requests.push(r.url()));await page.goto(url);await page.waitForFunction(()=>document.querySelector('iframe')?.contentWindow?.modelReady);await seek(page,14.5);await page.locator('[data-skip]').click();const rows=[];
-   for(const [name,point]of scenes){await seek(page,point);const state=await read(page);assert.equal(state.overflow,false,name);assert.equal(state.canvasCount,1);for(const g of state.guide){if(point>=18&&g.opacity>.99){assert.equal(g.shadow,'none');assert.ok(g.marker.size>=12&&g.marker.size<=14);assert.ok(g.marker.text.startsWith('A'));assert.equal(g.marker.background,'rgba(0, 0, 0, 0)');if(g.intro>.99)for(const l of g.layers.filter(l=>l.opacity>.99)){assert.ok(l.rect.x>=0&&l.rect.bottom<height*.9,`${name} text fits ${JSON.stringify(l.rect)}`);assert.notEqual(l.scroll,'auto');}if(g.phase==='scan'){assert.equal(g.intro,0);assert.equal(g.veil,0);assert.match(g.transform,/^translate3d\(/);assert.ok(Math.abs(g.image.height/height-.88)<.001||width<=1100&&Math.abs(g.image.height/height-.86)<.001);}}}
-    if(name.endsWith('-right')){const g=state.guide.at(-1);assert.ok(Math.abs(g.image.right-width)<1);assert.equal(g.scan,0);assert.ok(Math.abs((g.point.x+2.5)-g.rail.right)<1);}
-    if(name.endsWith('-left')){const g=state.guide.at(-1);assert.ok(Math.abs(g.image.x)<1);assert.equal(g.scan,1);assert.ok(Math.abs((g.point.x+2.5)-g.rail.x)<1);}
-    if(name==='a08-half'||name==='a08')assert.deepEqual(state.guide[0].image,rows.find(r=>r.name==='a07-left').state.guide[0].image,'same image bounding box throughout A08');
-    if(name==='a05-reading-2'||name==='a07-reading-3'){const chapter=name.startsWith('a05')?'05':'07',selector=`.mural-guide[data-chapter="${chapter}"] .mural-guide__description .mural-guide__reading:last-child`;const value=await contrast(page,selector);assert.ok(value>=4.5,name+' body contrast '+value);state.readingContrast=value;}
-    await shot(page,name,tag);rows.push({name,state});
+  for(const [width,height]of sizes){
+   const page=await browser.newPage({viewport:{width,height}}),tag=`${width}x${height}`,requests=[];
+   page.on('pageerror',e=>report.errors.push(e.message));page.on('request',r=>requests.push(r.url()));
+   await page.goto(url);await page.waitForFunction(()=>document.querySelector('iframe')?.contentWindow?.modelReady);
+   await seek(page,14.5);await page.locator('[data-skip]').click();const rows=[];
+   for(const scene of scenes){
+     await seek(page,scene.point);const state=await read(page);check(state,scene,width,height);
+     const file=await shot(page,scene.name,tag,width===1440?'after':'responsive');rows.push({name:scene.name,state,file});
    }
-   const textContrast={body:await contrast(page,'.a08__panel p:nth-of-type(2)'),cta:await contrast(page,'.a08 a')};assert.ok(textContrast.body>=4.5&&textContrast.cta>=4.5,JSON.stringify(textContrast));assert.ok((await read(page)).a08.cta.height>=44);
-   await page.locator('.a08 a').hover();await page.waitForTimeout(270);await shot(page,'a08-hover',tag);await page.mouse.move(2,2);await page.keyboard.press('Tab');await page.locator('.a08 a').focus();assert.ok(await page.locator('.a08 a').evaluate(e=>e.matches(':focus-visible')));assert.equal(await page.locator('.a08 a').evaluate(e=>getComputedStyle(e).outlineWidth),'2px');await shot(page,'a08-focus',tag);
-   for(const [name,point]of [...scenes].reverse()){await seek(page,point);const current=await read(page),previous=rows.find(r=>r.name===name).state;for(const g of current.guide){const old=previous.guide.find(o=>o.chapter===g.chapter);assert.equal(g.stage,old.stage);assert.ok(Math.abs(g.image.x-old.image.x)<1&&Math.abs(g.image.width-old.image.width)<1,name+' reverse '+JSON.stringify({before:old.image,after:g.image}));}if(point<40)assert.equal(current.a08.hidden,true);}
-   for(const point of [22.8,29.8,37.3]){await seek(page,point);const before=await read(page);await page.waitForTimeout(300);assert.deepEqual((await read(page)).guide.map(g=>g.image),before.guide.map(g=>g.image),'stop scroll is stable');}
-   if(width===1440){for(const point of [18.95,22.8,29.8,32.85,39.4,42]){await seek(page,point);const before=await read(page);await page.reload();await page.waitForFunction(()=>document.querySelector('iframe')?.contentWindow?.modelReady);await page.waitForFunction(()=>[...document.querySelectorAll('.mural-guide')].filter(g=>!g.hidden).every(g=>g.querySelector('img').naturalWidth>0));await page.waitForTimeout(170);const after=await read(page);assert.ok(Math.abs(after.screen-before.screen)<.002);assert.deepEqual(after.guide.map(g=>[g.stage,g.image]),before.guide.map(g=>[g.stage,g.image]));report.refresh.push(point);}
-    for(const point of [17.6,18.95,20.55,22.8,24.8,25.2,34.65,37.3,40.5,42]){await seek(page,point);const before=await read(page);await page.setViewportSize({width:1024,height:768});await page.waitForTimeout(250);const small=await read(page);assert.ok(Math.abs(small.screen-point)<.002);assert.deepEqual(small.guide.map(g=>[g.chapter,g.stage]),before.guide.map(g=>[g.chapter,g.stage]));for(let i=0;i<small.guide.length;i++)assert.ok(Math.abs(small.guide[i].scan-before.guide[i].scan)<.001,'integer scroll-pixel rounding');await page.setViewportSize({width,height});await page.waitForTimeout(250);const after=await read(page);assert.deepEqual(after.guide.map(g=>g.stage),before.guide.map(g=>g.stage));for(let i=0;i<after.guide.length;i++)assert.ok(Math.abs(after.guide[i].image.x-before.guide[i].image.x)<2&&Math.abs(after.guide[i].image.width-before.guide[i].image.width)<2);report.resize.push(point);}
-    await seek(page,42);await page.locator('.a08 a').click();await page.waitForURL('http://localhost:3000/index.html');await page.waitForSelector('canvas',{state:'attached'});await page.goBack();await page.waitForFunction(()=>!document.querySelector('.a08').hidden&&document.querySelector('iframe')?.contentWindow?.modelReady);assert.ok(Math.abs((await read(page)).screen-42)<.02);
+   const opening=rows.filter(r=>r.name.endsWith('-opening')).map(r=>r.state.guides.at(-1));
+   for(const g of opening){assert.equal(g.headline.size,opening[0].headline.size);assert.equal(g.subtitle.size,opening[0].subtitle.size);}
+   for(const guide of guides){
+     const text=await page.locator(`.mural-guide[data-chapter="${guide.chapter}"] .mural-guide__description`).textContent();
+     assert.equal(text.replace(/\s/g,''),guide.introduction.replace(/\s/g,''),'verbatim original copy');
    }
-   assert.equal(requests.filter(u=>/detail\.webp/.test(u)).length,0);report.sizes.push({tag,rows,textContrast,reverse:true,stopStable:true});await page.close();console.log('gallery '+tag+' PASS');
+   const textContrast={body:await contrast(page,'.a08__panel p:nth-of-type(3)'),cta:await contrast(page,'.a08 a')};
+   assert.ok(textContrast.body>=4.5&&textContrast.cta>=4.5,JSON.stringify(textContrast));
+   await page.locator('.a08 a').hover();await page.waitForTimeout(230);await shot(page,'a08-hover',tag,width===1440?'after':'responsive');
+   await page.mouse.move(2,2);await page.keyboard.press('Tab');await page.locator('.a08 a').focus();
+   assert.ok(await page.locator('.a08 a').evaluate(e=>e.matches(':focus-visible')));assert.equal(await page.locator('.a08 a').evaluate(e=>getComputedStyle(e).outlineWidth),'2px');
+   await shot(page,'a08-focus',tag,width===1440?'after':'responsive');
+   for(const scene of [...scenes].reverse()){
+     await seek(page,scene.point);const current=await read(page),previous=rows.find(r=>r.name===scene.name).state;
+     for(const g of current.guides){const old=previous.guides.find(o=>o.chapter===g.chapter);assert.equal(g.stage,old.stage);close(g.image.x,old.image.x,'reverse x');close(g.image.width,old.image.width,'reverse width');}
+     if(scene.point<40)assert.equal(current.a08.hidden,true);
+   }
+   for(const point of [22.8,29.8,37.8]){await seek(page,point);const before=await read(page);await page.waitForTimeout(250);assert.deepEqual((await read(page)).guides.map(g=>g.image),before.guides.map(g=>g.image));}
+   if(width===1440){
+     for(const point of [18.85,22.8,25.85,29.8,32.85,39.4,42]){
+       await seek(page,point);const before=await read(page);await page.reload();await page.waitForFunction(()=>document.querySelector('iframe')?.contentWindow?.modelReady);
+       await page.waitForFunction(()=>[...document.querySelectorAll('.mural-guide')].filter(g=>!g.hidden).every(g=>g.querySelector('img').naturalWidth>0));await page.waitForTimeout(180);
+       const after=await read(page);close(after.screen,before.screen,'reload screen',.002);assert.deepEqual(after.guides.map(g=>[g.stage,g.image]),before.guides.map(g=>[g.stage,g.image]));report.refresh.push(point);
+     }
+     for(const point of [17.6,18.85,20.3,21,22.8,25.2,34.5,37.8,40.325,42]){
+       await seek(page,point);const before=await read(page);await page.setViewportSize({width:1024,height:768});await page.waitForTimeout(250);const small=await read(page);
+       close(small.screen,point,'resize screen',.002);assert.deepEqual(small.guides.map(g=>[g.chapter,g.stage]),before.guides.map(g=>[g.chapter,g.stage]));
+       await page.setViewportSize({width,height});await page.waitForTimeout(250);const after=await read(page);
+       for(let i=0;i<after.guides.length;i++){close(after.guides[i].image.x,before.guides[i].image.x,'resize restore x',3);close(after.guides[i].image.width,before.guides[i].image.width,'resize restore width',3);}report.resize.push(point);
+     }
+     await seek(page,22.8);const start=(await read(page)).guides[0].image.x;await page.mouse.wheel(0,300);await page.waitForTimeout(250);assert.ok((await read(page)).guides[0].image.x>start);
+     await page.mouse.wheel(0,-300);await page.waitForTimeout(250);close((await read(page)).guides[0].image.x,start,'native wheel reverse',2);
+     await seek(page,42);await page.locator('.a08 a').click();await page.waitForURL('http://localhost:3000/index.html');await page.waitForSelector('canvas',{state:'attached'});
+     await page.goBack();await page.waitForFunction(()=>!document.querySelector('.a08').hidden&&document.querySelector('iframe')?.contentWindow?.modelReady);close((await read(page)).screen,42,'actual B return',.02);
+   }
+   assert.equal(requests.filter(u=>/detail\.webp/.test(u)).length,0);
+   const resources=await page.evaluate(()=>performance.getEntriesByType('resource').filter(r=>/karst-valley|mural-02-display/.test(r.name)).map(r=>({url:r.name,transfer:r.transferSize})));
+   report.sizes.push({tag,rows,textContrast,resources,reverse:true,stopStable:true});
+   fs.writeFileSync(path.join(out,'gallery-results.json'),JSON.stringify(report,null,2));await page.close();console.log('gallery '+tag+' PASS');
   }
-  for(const reduced of [true,false]){const page=await browser.newPage({viewport:{width:1024,height:768},reducedMotion:reduced?'reduce':'no-preference'});if(!reduced)await page.route('**/*.woff2',r=>r.abort());await page.goto(url);await page.waitForFunction(()=>document.querySelector('iframe')?.contentWindow?.modelReady);
-   for(const [name,point]of scenes.filter(([name])=>/intro|reading|right|left|^a08$/.test(name))){await seek(page,point);const state=await read(page);if(name.endsWith('-right'))assert.ok(Math.abs(state.guide.at(-1).image.right-1024)<1);if(name.endsWith('-left'))assert.ok(Math.abs(state.guide.at(-1).image.x)<1);for(const g of state.guide)if(g.intro>.99)for(const l of g.layers.filter(l=>l.opacity>.99))assert.ok(l.rect.bottom<720);if(name==='a08'){assert.ok(state.a08.cta.height>=44&&!state.a08.inert);await shot(page,reduced?'reduced':'font-fallback','1024x768');}report[reduced?'reduced':'fontFallback'].push(name);}
-   await page.close();
+  for(const mode of ['reduced','fontFallback','short']){
+   const width=mode==='short'?1440:1024,height=mode==='short'?650:768,page=await browser.newPage({viewport:{width,height},reducedMotion:mode==='reduced'?'reduce':'no-preference'});
+   if(mode==='fontFallback')await page.route('**/*.woff2',r=>r.abort());await page.goto(url);await page.waitForFunction(()=>document.querySelector('iframe')?.contentWindow?.modelReady);
+   for(const scene of scenes.filter(s=>s.point>=18&&!s.name.includes('expand'))){await seek(page,scene.point);const state=await read(page);check(state,scene,width,height,mode==='reduced');report[mode].push(scene.name);}
+   await shot(page,mode,`${width}x${height}`,'responsive');await page.close();console.log(mode+' PASS');
   }
-  assert.deepEqual(report.errors,[]);fs.writeFileSync(path.join(out,'gallery-results.json'),JSON.stringify(report,null,2));console.log('PASS: reading, direction, exact carry, reverse, resize, reload, focus, actual B return, fallback and reduced motion');
+  assert.deepEqual(report.errors,[]);fs.writeFileSync(path.join(out,'gallery-results.json'),JSON.stringify(report,null,2));
+  const primary=report.sizes.find(s=>s.tag==='1440x900');
+  if(primary){
+    fs.mkdirSync(path.join(out,'comparison'),{recursive:true});
+    await board(primary.rows.filter(r=>/opening|center|stable/.test(r.name)).map(r=>r.file),path.join(out,'comparison','editorial-and-scan.webp'));
+    const pairs=[];for(const name of ['a05-opening','a07-opening']){pairs.push(path.join(out,'before',name+'.webp'),primary.rows.find(r=>r.name===name).file);}pairs.push(path.join(out,'before','a08.webp'),primary.rows.find(r=>r.name==='a08-stable').file);
+    await board(pairs,path.join(out,'comparison','before-after.webp'));
+  }
+  console.log('PASS: full originals, editorial bounds, shared typography, sequential expansion/scan, A08 real space, native wheel, reverse, reload, resize, actual B return, reduced motion, fallback, short screen');
  }finally{await browser.close();}
-})().catch(e=>{console.error(e);process.exitCode=1});
+})().catch(error=>{console.error(error);process.exitCode=1});

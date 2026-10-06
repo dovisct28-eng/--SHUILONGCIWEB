@@ -21,7 +21,7 @@ const snapshot=page=>page.evaluate(()=>({
     await page.waitForFunction(()=>document.querySelector('iframe')?.contentWindow?.modelReady);
     await scroll(page,15);
     const before=(await snapshot(page)).materials;
-    await scroll(page,37.3);
+    await scroll(page,37.8);
     await page.waitForFunction(()=>document.querySelectorAll('.mural-guide')[2]?.querySelector('img').naturalWidth>0);
     let snap=await snapshot(page);
     assert.deepEqual(snap.sections.map(s=>s.hidden),[true,true,false]);
@@ -36,7 +36,7 @@ const snapshot=page=>page.evaluate(()=>({
     await scroll(page,22.8);snap=await snapshot(page);assert.deepEqual(snap.sections.map(s=>s.hidden),[false,true,true]);
     assert.ok(Object.values(snap.materials).flat().every(v=>v===1));
     await scroll(page,17.8);snap=await snapshot(page);assert.ok(snap.materials['mural-05'].some((v,i)=>v<before['mural-05'][i]));
-    await scroll(page,37.3);snap=await snapshot(page);assert.ok(Object.values(snap.materials).flat().every(v=>v===1));
+    await scroll(page,37.8);snap=await snapshot(page);assert.ok(Object.values(snap.materials).flat().every(v=>v===1));
     report.rapidReverseResize=true;
     report.requests=Object.fromEntries(['01','02','05'].map(id=>[id,requests.filter(u=>u.includes(`mural-${id}-display.webp`)).length]));
     report.detailRequests=requests.filter(u=>u.includes('detail.webp')).length;
@@ -50,7 +50,7 @@ const snapshot=page=>page.evaluate(()=>({
     const firstRight=(await snapshot(reduced)).sections[1];
     await scroll(reduced,31.4);const firstLeft=(await snapshot(reduced)).sections[1];
     assert.ok(firstRight.scan<.001&&firstLeft.scan>.999&&firstLeft.offset>firstRight.offset);
-    await scroll(reduced,35.2);await reduced.waitForFunction(()=>document.querySelectorAll('.mural-guide')[2]?.querySelector('img').naturalWidth>0);
+    await scroll(reduced,36.2);await reduced.waitForFunction(()=>document.querySelectorAll('.mural-guide')[2]?.querySelector('img').naturalWidth>0);
     const right=(await snapshot(reduced)).sections[2];
     await scroll(reduced,39.4);const left=(await snapshot(reduced)).sections[2];
     assert.ok(right.scan<.001);assert.ok(left.scan>.999);assert.ok(left.offset>right.offset);
