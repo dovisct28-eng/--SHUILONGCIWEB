@@ -16,6 +16,8 @@ export function createGalleryAmbient(stage) {
     layer.hidden = !state.visible;
     layer.style.opacity = state.opacity;
     layer.style.setProperty('--ambient-weight', state.weight);
+    const terminal = Math.max(0, Math.min(1, (screens - 40) / .65));
+    layer.style.setProperty('--ambient-terminal', terminal * terminal * (3 - 2 * terminal));
     if (!requested && screens >= 16) {
       requested = true;
       for (const name of ['ink-sky', 'ink-valley']) {

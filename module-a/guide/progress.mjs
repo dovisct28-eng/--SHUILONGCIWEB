@@ -40,7 +40,7 @@ export function introGeometry(width, height, ratio) {
   const narrow = width <= 760;
   const gutter = narrow ? width * .05 : Math.min(52, Math.max(40, width / 30));
   const editorialTop = height <= 700 ? 26 : height <= 800 ? 32 : 48;
-  const editorialHeight = narrow ? 330 : 216;
+  const editorialHeight = narrow ? 340 : height <= 700 ? 230 : 250;
   const areaTop = editorialTop + editorialHeight + 24;
   const areaBottom = height - 84;
   const imageHeight = Math.min((width - 2 * gutter) / ratio, height * .6, Math.max(80, areaBottom - areaTop));
@@ -58,14 +58,22 @@ export function galleryGeometry(width, height, ratio, state, reduced = false) {
     width: mix(intro.width, scanWidth, expand), height: mix(intro.height, scanHeight, expand), travel: placement.travel};
 }
 
-// Recompose the SAME image only after the complete left endpoint is reached.
-// With mural-02's 4.42:1 ratio, 70vw implies ~25vh at 1440x900, not 74vh.
+// Keep the left-end pixels at near SCAN scale. The aperture, not the original,
+// occupies 72vw. Project that aperture as a quiet wall receding to the right.
 export function explorationGeometry(width, height, ratio, screens, reduced = false) {
   const scanHeight = guideHeight(width, height, reduced);
-  const targetWidth = width * (width <= 760 ? .94 : .70);
+  const narrow = width <= 760;
   const progress = smooth((screens - 40) / .65);
-  const imageHeight = mix(scanHeight, targetWidth / ratio, progress);
-  return {left: 0, top: (height - imageHeight) / 2, width: imageHeight * ratio, height: imageHeight, progress};
+  const imageHeight = mix(scanHeight, height * (narrow ? .40 : reduced ? .84 : .90), progress);
+  const apertureWidth = mix(width, width * (narrow ? .94 : width <= 1100 ? .68 : .72), progress);
+  const startTop = (height - scanHeight) / 2;
+  const left = narrow ? mix(0, width * .03, progress) : 0;
+  const top = mix(startTop, height * (narrow ? .025 : .035), progress);
+  const rightTop = mix(startTop, height * (narrow ? .025 : .155), progress);
+  const rightBottom = mix(startTop + scanHeight, height * (narrow ? .425 : .875), progress);
+  return {left, top, width: imageHeight * ratio, height: imageHeight, apertureWidth, progress,
+    corners: [{x:left,y:top},{x:left+apertureWidth,y:rightTop},
+      {x:left+apertureWidth,y:rightBottom},{x:left,y:top+imageHeight}]};
 }
 
 export function ambientProgress(screens) {

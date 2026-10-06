@@ -1,5 +1,5 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),{execFileSync}=require('node:child_process'),{createHash}=require('node:crypto');
-const baseline='ccd1481f134a3235af40dae467e498731811b1d5',out=path.resolve('docs/validation/a05-a08-editorial-2026-10-06');
+const baseline='ac30175e3346ac5903cae0e0dc539c8dbb908c42',out=path.resolve('docs/validation/a05-a08-refinement-2026-10-06');
 const files=['module-a/guide','module-a/a05','module-a/a06','module-a/a07','module-a/a08'].flatMap(dir=>fs.readdirSync(dir).filter(f=>/\.(mjs|cjs)$/.test(f)).map(f=>dir+'/'+f));
 for(const file of files)execFileSync(process.execPath,['--check',file]);
 const protectedPaths=['module-a/a01','module-a/a02','module-a/a03','module-a/a04','Mural-Exhibition','shuilong-temple','水龙祠壁画素材'];

@@ -100,25 +100,28 @@ test('complete INTRO, text exit, expansion, then right-to-left scan are separate
   }
 });
 
-test('A08 creates actual right-side room with a fixed left-center anchor, never a crop', () => {
+test('A08 preserves near scan scale while a projected aperture reveals the left-end pixels', () => {
   const ratio=6000/1357;
-  for(const reduced of [false,true]) for(const [w,h] of [[1440,900],[1024,768]]) {
+  for(const reduced of [false,true]) for(const [w,h] of [[1920,1080],[1440,900],[1366,768],[1024,768],[1440,650],[390,844]]) {
     const start=explorationGeometry(w,h,ratio,40,reduced);
     assert.equal(start.height,guideHeight(w,h,reduced));
-    let previous=start.width;
+    assert.equal(start.apertureWidth,w);
+    assert.deepEqual(start.corners,[{x:0,y:(h-start.height)/2},{x:w,y:(h-start.height)/2},{x:w,y:(h+start.height)/2},{x:0,y:(h+start.height)/2}]);
     for(let p=40;p<=41;p+=.01) {
       const layout=explorationGeometry(w,h,ratio,p,reduced);
-      assert.equal(layout.left,0);
-      assert.ok(Math.abs(layout.top+layout.height/2-h/2)<1e-9);
       assert.ok(Math.abs(layout.width/layout.height-ratio)<1e-9);
-      assert.ok(layout.width<=previous+1e-9);previous=layout.width;
+      assert.deepEqual(layout,explorationGeometry(w,h,ratio,p,reduced),'reversal is deterministic');
+      assert.ok(layout.apertureWidth<=w && layout.width>layout.apertureWidth);
+      assert.ok(layout.corners.every(c=>c.x>=0&&c.x<=w&&c.y>=0&&c.y<=h));
     }
-    assert.ok(Math.abs(explorationGeometry(w,h,ratio,42,reduced).width-w*.7)<1e-9);
+    const end=explorationGeometry(w,h,ratio,42,reduced);
+    assert.equal(end.apertureWidth,w*(w<=760?.94:w<=1100?.68:.72));
+    assert.equal(end.height,h*(w<=760?.40:reduced?.84:.90));
+    if(w>760)assert.equal(end.left,0,'never resets to the right');
   }
   assert.equal(ambientProgress(18).weight,1);
   assert.equal(ambientProgress(26).weight,.8);
   assert.equal(ambientProgress(42).weight,.65);
-  for(const p of [17,18,25.2,32.2,42]) assert.deepEqual(ambientProgress(p),ambientProgress(p));
 });
 
 test('gallery scale is shared across all three murals and reduced motion',()=>{

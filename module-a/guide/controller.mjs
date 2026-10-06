@@ -33,7 +33,7 @@ export function createMuralGuide(stage, config, requestRender) {
   stage.append(section);
   const image = section.querySelector('img');
   section.querySelector('h2').textContent = config.title;
-  section.querySelector('.mural-guide__subtitle').textContent = config.subtitle.replace('，', '，\n');
+  section.querySelector('.mural-guide__subtitle').textContent = config.subtitle;
   for (const marker of section.querySelectorAll('.mural-guide__marker,.mural-guide__scan-marker')) marker.textContent = `A${config.chapter} / ${config.chapterLabel.split(' / ')[1]}`;
   section.querySelector('.mural-guide__next').textContent = config.next;
   const paragraphs = config.introduction.split('\n\n');
@@ -44,9 +44,7 @@ export function createMuralGuide(stage, config, requestRender) {
     layer.dataset.readingRole = beat.role || 'body';
     for (const [index, paragraphIndex] of beat.paragraphs.entries()) {
       const paragraph = document.createElement('p');
-      let text = paragraphs[paragraphIndex];
-      for (const after of beat.breaks?.[index] || []) text = text.replace(after, after + '\n');
-      paragraph.textContent = text;
+      paragraph.textContent = paragraphs[paragraphIndex];
       paragraph.dataset.typeRole = beat.roles?.[index] || 'body';
       layer.append(paragraph);
     }
@@ -91,9 +89,9 @@ export function createMuralGuide(stage, config, requestRender) {
     section.style.setProperty('--axis-position', `${(1 - state.scan) * 100}%`);
     const readings = introReading(state.introProgress, [1, ...beats.map(beat => beat.weight)]);
     const explanation = 1 - readings[0].opacity;
-    section.style.setProperty('--title-weight', 1 - .54 * explanation);
-    section.style.setProperty('--subtitle-weight', 1 - .60 * explanation);
-    section.style.setProperty('--chapter-weight', 1 - .28 * explanation);
+    section.style.setProperty('--title-weight', 1 - .18 * explanation);
+    section.style.setProperty('--subtitle-weight', 1 - .18 * explanation);
+    section.style.setProperty('--chapter-weight', 1 - .20 * explanation);
     layers.forEach((layer, index) => {
       const reading = readings[index + 1];
       layer.style.opacity = reading.opacity;
@@ -131,6 +129,17 @@ export function createMuralGuide(stage, config, requestRender) {
       }
       const layout = carried ? explorationGeometry(width, height, ratio, screens, reduced) : galleryGeometry(width, height, ratio, state, reduced);
       Object.assign(image.style, {left: '0px', top: `${layout.top}px`, width: `${layout.width}px`, height: `${layout.height}px`, opacity: '1', transformOrigin: 'left center', transform: `translate3d(${layout.left}px, 0, 0)`});
+      const canvas = section.querySelector('.mural-guide__canvas');
+      section.dataset.carried = String(carried);
+      if (carried) {
+        const matrix = quadTransform(layout.corners, layout.apertureWidth, layout.height);
+        Object.assign(canvas.style, {width: `${layout.apertureWidth}px`, height: `${layout.height}px`, transformOrigin: '0 0', transform: `matrix3d(${matrix.join(',')})`});
+        Object.assign(image.style, {top: '0px', transform: 'none'});
+        canvas.style.setProperty('--wall-presence', layout.progress);
+        canvas.style.maskImage = `linear-gradient(90deg,#000 ${100 - 10 * layout.progress}%,transparent 100%)`;
+      } else {
+        canvas.removeAttribute('style');
+      }
       section.dataset.travelPx = (layout.travel || 0).toFixed(2);
       section.dataset.offsetPx = layout.left.toFixed(2);
       status.textContent = '';

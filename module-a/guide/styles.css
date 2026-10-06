@@ -1,10 +1,10 @@
 /* Shared candidate type system. Scope is A05–A08; A01–A04 keep their own tokens. */
 .mural-guide,.a08{
  --guide-chapter-size:13px;
- --guide-title-size:clamp(42px,3.4vw,56px);
- --guide-subtitle-size:clamp(16px,1.25vw,18px);
- --guide-lead-size:clamp(20px,1.65vw,24px);
- --guide-body-size:clamp(15px,1.08vw,17px);
+ --guide-title-size:clamp(44px,4.17vw,64px);
+ --guide-subtitle-size:clamp(20px,1.46vw,22px);
+ --guide-lead-size:clamp(23px,1.67vw,25px);
+ --guide-body-size:clamp(16px,1.18vw,18px);
  --guide-caption-size:13px;
  --guide-gutter:5vw;
  --guide-accent:var(--director-accent,#c9b69a);
@@ -13,6 +13,7 @@
 /* A single fixed, weaker reuse of A01's ink field; it always paints BEHIND murals. */
 .gallery-ambient{position:absolute;inset:0;z-index:7;overflow:hidden;pointer-events:none;background:#10191f}
 .gallery-ambient[hidden]{display:none}
+.gallery-ambient::after{content:"";position:absolute;inset:0;background:#061725;opacity:calc(.48 * var(--ambient-terminal,0));pointer-events:none}
 .gallery-ambient .ink-landscape{--ink-valley-reveal:1;--ink-sky-reveal:1;--ink-parallax:0;opacity:calc(.24 * var(--ambient-weight,1))}
 .mural-guide{position:absolute;inset:0;z-index:8;overflow:hidden;background:transparent;pointer-events:none}
 .mural-guide[hidden]{display:none}
@@ -25,10 +26,10 @@
 .mural-guide__marker{opacity:var(--chapter-weight,1)}
 .mural-guide__rule{display:block;width:34px;height:1px;background:var(--guide-accent);margin:18px 0 18px;opacity:var(--chapter-weight,1)}
 .mural-guide h2{margin:0;font-size:var(--guide-title-size);line-height:1.16;letter-spacing:.035em;text-wrap:initial;opacity:var(--title-weight,1)}
-.mural-guide__subtitle{margin:14px 0 0;font-size:var(--guide-subtitle-size);line-height:1.6;letter-spacing:.025em;white-space:pre-line;color:var(--guide-accent);opacity:var(--subtitle-weight,1)}
-.mural-guide__copy{position:relative;min-width:0;margin-top:32px}
-.mural-guide__description{white-space:pre-line}
-.mural-guide__reading{position:absolute;inset:0 0 auto;opacity:0;white-space:pre-line;will-change:opacity,transform}
+.mural-guide__subtitle{margin:20px 0 0;font-size:var(--guide-subtitle-size);line-height:1.55;letter-spacing:.025em;white-space:normal;color:var(--guide-accent);opacity:var(--subtitle-weight,1)}
+.mural-guide__copy{position:relative;min-width:0;margin-top:clamp(62px,8vh,82px);max-width:520px}
+.mural-guide__description{white-space:normal}
+.mural-guide__reading{position:absolute;inset:0 0 auto;opacity:0;white-space:normal;will-change:opacity,transform}
 .mural-guide__description p{margin:0;font-size:var(--guide-body-size);line-height:1.8;letter-spacing:.01em;color:#c6c3b9;text-wrap:initial}
 .mural-guide__description p+p{margin-top:12px}
 .mural-guide__description p[data-type-role="lead"],.mural-guide__description p[data-type-role="secondary"],.mural-guide__description p[data-type-role="statement"],.mural-guide__description p[data-type-role="closing"],.mural-guide__description p[data-type-role="climax"]{font-family:"Narrative Sans","Microsoft YaHei","PingFang SC",system-ui,sans-serif;font-size:var(--guide-lead-size);line-height:1.6;color:var(--text-primary)}
@@ -45,9 +46,9 @@
 .stage:has(.a04:not([hidden])) .model-shell{opacity:calc(var(--model-opacity) * var(--a04-model-opacity,1))}
 .stage:has(.mural-guide[data-chapter="06"]:not([hidden])) .model-shell,.stage:has(.mural-guide[data-chapter="07"]:not([hidden])) .model-shell{opacity:0!important}
 .stage:has(.mural-guide[data-chapter="06"]:not([hidden])) .a04,.stage:has(.mural-guide[data-chapter="07"]:not([hidden])) .a04{opacity:0!important}
-@media(max-width:1100px){.mural-guide__editorial{grid-template-columns:43vw minmax(0,1fr);column-gap:5vw}.mural-guide__copy{margin-top:28px}}
-@media(max-height:800px){.mural-guide__rule{margin:14px 0}.mural-guide__subtitle{margin-top:12px}.mural-guide__copy{margin-top:24px}.mural-guide__description p+p{margin-top:10px}}
-@media(max-height:700px){.mural-guide__rule{margin:10px 0}.mural-guide__copy{margin-top:20px}.mural-guide__subtitle{margin-top:10px}.mural-guide__axis{bottom:16px}}
+@media(max-width:1100px){.mural-guide__editorial{grid-template-columns:43vw minmax(0,1fr);column-gap:5vw}}
+@media(max-height:800px){.mural-guide__rule{margin:14px 0}.mural-guide__subtitle{margin-top:16px}.mural-guide__copy{margin-top:68px}.mural-guide__description p+p{margin-top:10px}}
+@media(max-height:700px){.mural-guide__rule{margin:10px 0}.mural-guide__copy{margin-top:60px}.mural-guide__subtitle{margin-top:14px}.mural-guide__axis{bottom:16px}}
 @media(max-width:760px){
  .mural-guide,.a08{--guide-title-size:clamp(28px,6vw,42px);--guide-lead-size:18px;--guide-body-size:15px;--guide-caption-size:12px}
  .mural-guide__editorial{display:block}
@@ -60,3 +61,7 @@
  .mural-guide__next{max-width:58vw;white-space:normal;text-align:right}
 }
 @media(prefers-reduced-motion:reduce){.mural-guide__image,.mural-guide__reading{will-change:auto}.mural-guide__reading{transform:none!important}}
+
+.mural-guide[data-carried="true"] .mural-guide__canvas{inset:0 auto auto 0;will-change:transform}
+.mural-guide[data-carried="true"] .mural-guide__canvas::after{content:"";position:absolute;right:0;top:0;bottom:0;width:24%;background:linear-gradient(90deg,transparent,#0b1821b3);opacity:var(--wall-presence);pointer-events:none}
+.mural-guide[data-carried="true"] .mural-guide__canvas::before{content:"";position:absolute;z-index:1;left:0;top:0;width:46%;height:72%;background:radial-gradient(ellipse at 12% 25%,#f0bd7624,transparent 72%);mix-blend-mode:soft-light;opacity:var(--wall-presence);pointer-events:none}

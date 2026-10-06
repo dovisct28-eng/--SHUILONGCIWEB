@@ -4,7 +4,7 @@ setlocal
 cd /d "%~dp0"
 
 set "PORT=4173"
-set "URL=http://127.0.0.1:%PORT%/module-a/a01/?debug"
+set "URL=http://127.0.0.1:%PORT%/module-a/a01/"
 
 :: Start the Module A local server in a separate window.
 start "Module A prototype server" cmd /k "node module-a\a01\server.mjs"
