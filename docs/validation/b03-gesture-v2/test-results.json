@@ -1,0 +1,250 @@
+{
+  "date": "2026-10-07",
+  "baseline": "af582f5c0cff152bb1e28f6d57940b33361ce1f3",
+  "softwareStatus": "passed",
+  "unitTests": {
+    "total": 43,
+    "passed": 43,
+    "failed": 0
+  },
+  "build": "Main module parse and changed JavaScript syntax checks passed; no bundler build script exists",
+  "browser": {
+    "b01": {
+      "status": "passed",
+      "viewports": 4,
+      "errors": [],
+      "checks": [
+        "native keyboard Enter; map original image/8 hotspots; drag/wheel; hotspot to detail; org/line/color; detail→map→B01",
+        "real cyber dependencies and renderer; injected NotAllowedError",
+        "6 simulated camera sessions; max 1; all stopped; single existing renderer; repeated cyber↔gallery↔selection",
+        "NotFoundError message and return",
+        "NotReadableError message and return",
+        "NotAllowedError message and return",
+        "late camera startup after return is stopped",
+        "20 rapid entry clicks serialize",
+        "asset-api-error recovery",
+        "map-image-error recovery",
+        "homepage image failure/retry; reduced motion; Space native entry",
+        "blocked CDN shows retry and gallery remains usable",
+        "failed cached Three ES module import recovers on retry",
+        "unsupported camera returns to selection",
+        "real A08→B01→native back restores A08 at 42 screens; direct refresh"
+      ],
+      "localReport": "local/b01/results.json"
+    },
+    "b02": {
+      "status": "passed",
+      "viewports": 4,
+      "errors": [],
+      "checks": [
+        "All eight named hotspots open their matching original resources; all hover screenshots recorded",
+        "Pan/zoom preserved through detail and character switching; line/color/video lazy; missing video never requested; video released on switch/return",
+        "Drag, wheel, middle, reset, fresh B01 entry at left",
+        "Real new folder auto-discovery; both click/select orders; draft/cancel/save/reload/edit/unbind; search; simulated save failure restores; progressive resources; original-only detail; fixture cleaned"
+      ],
+      "localReport": "local/b02/results.json"
+    },
+    "b03Regression": {
+      "status": "passed",
+      "viewports": 4,
+      "errors": [],
+      "checks": [
+        "Eight existing stable IDs, names, original images and archives; unmodified ratios/colors",
+        "Four sizes: actual default/long/line/color/index and cyber default/revealed screenshots; projected plane avoids real panel; same person across modes",
+        "Panorama transform restored; failed layer retains original and retries; archive retries; fast switches keep final archive/image and release video",
+        "Actual decoded video playback and browser ended event restore color still; delayed archive and video completions cannot survive switch/exit",
+        "Dynamic ninth ID; original-only; provided English/sources; HTML remains text; unsafe source URL rejected; no silent switch to unrelated cyber character",
+        "Original synthetic two-hand reveal/scroll/close; interrupted transitions settle; resize keeps textures/geometries; intent-confirmed one-hand swipe advances ID and resets archive; exit stops camera boundary",
+        "Native keyboard reveal and shared I/Escape/arrow fallback; exit during actual new texture request cancels late upload and RAF"
+      ],
+      "localReport": "local/b03-regression/results.json"
+    },
+    "b03Gesture": {
+      "status": "passed",
+      "viewports": 4,
+      "errors": [],
+      "checks": [
+        "Edge pass without intent: zero NEXT",
+        {
+          "name": "left",
+          "before": 4,
+          "after": 5
+        },
+        {
+          "name": "right",
+          "before": 5,
+          "after": 6
+        },
+        {
+          "name": "up-left",
+          "before": 6,
+          "after": 7
+        },
+        {
+          "name": "down-left",
+          "before": 7,
+          "after": 0
+        },
+        {
+          "name": "up-right",
+          "before": 0,
+          "after": 1
+        },
+        {
+          "name": "down-right",
+          "before": 1,
+          "after": 2
+        },
+        "Production empty/omitted hand loss: grace, IDLE, fresh intent and successful NEXT",
+        "10 seconds stationary/jitter, timed cancellation and no NEXT",
+        "Held-open discontinuous motion cannot trigger without a new dwell",
+        "Two-hand open, vertical read, no single-hand NEXT during reading, two-hand close resets intent",
+        "Mouse PREVIOUS and keyboard NEXT preserved",
+        "Ten complete independent hold/swipe/transitions; bounded cache, textures and stage DOM",
+        "Reduced motion retains clear static ARMED feedback and NEXT"
+      ],
+      "localReport": "local/gesture/results.json",
+      "continuousTransitions": 10,
+      "cameraLifecycle": {
+        "starts": 1,
+        "stops": 1,
+        "max": 1,
+        "active": 0,
+        "models": 1
+      }
+    },
+    "b03Motion": {
+      "status": "passed",
+      "viewports": 4,
+      "errors": [],
+      "checks": [
+        "15s actual CSS/GSAP recording includes energy/drift/scan and synthetic one-hand NEXT to a rebuilt local figure stage; four animated views and exact drift/depth/focus peaks; reading slowdown; full-data A-F/diagonal gestures; fixed clockwise pulse; 30 completed transitions plus interrupted/late requests; bounded DOM/GL/cache/tweens; exact unchanged material alpha; reduced motion/visibility/degradation/exit."
+      ],
+      "localReport": "local/motion/results.json",
+      "completeTransitions": 30
+    }
+  },
+  "physicalCamera": {
+    "date": "2026-10-07",
+    "validation": "manual physical camera test",
+    "status": "deferred_by_user_after_activation_exit_guard",
+    "runs": [
+      {
+        "success": 6,
+        "total": 10,
+        "falseTriggers": null,
+        "doubleTriggers": null,
+        "speedGroups": null,
+        "distanceMeters": null,
+        "lighting": null,
+        "browser": null,
+        "source": "Direct user report in this chat",
+        "observation": "张开手掌后出现挥动提示，有时未切换便退回右侧停留文案",
+        "timing": "User reports both immediate (<1s) and delayed (around 2s or later) failures"
+      },
+      {
+        "revision": "120ms two-hand intent confirmation",
+        "success": 10,
+        "total": 10,
+        "source": "Direct user report in this chat: 10次都正常了",
+        "falseTriggers": null,
+        "doubleTriggers": null,
+        "speedGroups": null,
+        "distanceMeters": null,
+        "lighting": null,
+        "browser": null
+      },
+      {
+        "revision": "120ms two-hand confirmation, before activation exit guard",
+        "success": null,
+        "total": null,
+        "falseTriggers": 2,
+        "doubleTriggers": 0,
+        "observation": "User reports holding hand up; prompt reappeared after timeout/switch, then natural movement caused NEXT",
+        "source": "Direct user report in this chat",
+        "distanceMeters": null,
+        "lighting": null,
+        "browser": null
+      }
+    ],
+    "target": {
+      "success": 18,
+      "total": 20,
+      "doubleTriggers": 0,
+      "falseTriggersMax": 1
+    },
+    "remaining": [
+      "Capture immediate failure exit reason and frame interval",
+      "Apply evidence-based fix if needed",
+      "20 categorized attempts",
+      "1–2 minutes false-trigger observation",
+      "10 consecutive independent transitions",
+      "Distance and lighting observations"
+    ],
+    "diagnosis": {
+      "evidence": "selected/06-physical-failure-debug.png",
+      "confirmed": "ARMED -> IDLE: two-hands",
+      "unverified": "Whether the extra detected hand was physically present or a transient MediaPipe classification fluctuation",
+      "fix": "Suppress NEXT during candidate two-hand frames; preserve single-hand intent for <120ms; cancel sustained two hands; archive open/close unchanged",
+      "retest": "User reports corrected version 10/10 normal; additional 10 and false/double-trigger metrics pending"
+    },
+    "secondFix": {
+      "confirmedIssue": "Timeout/completion automatically accumulated another hold from the continuously raised palm",
+      "fix": "Require exit of activation zone or >=200ms no hands before a fresh hold after timeout/NEXT; observe release even during LOCKED",
+      "retest": "pending",
+      "confirmedByUser": "手一直举着，准备提示消失或切换后又出现，随后自然移动"
+    },
+    "userDirection": {
+      "message": "下个版本在测试",
+      "interpretation": "User defers final physical camera retest to the next round; deliver current software version with explicit pending physical acceptance"
+    }
+  },
+  "selected": [
+    {
+      "file": "selected/01-idle.webp",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 1071014,
+      "losslessPixelCheck": true
+    },
+    {
+      "file": "selected/02-hover.webp",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 1071678,
+      "losslessPixelCheck": true
+    },
+    {
+      "file": "selected/03-armed.webp",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 1072828,
+      "losslessPixelCheck": true
+    },
+    {
+      "file": "selected/04-fired.webp",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 1082096,
+      "losslessPixelCheck": true
+    },
+    {
+      "file": "selected/05-reading.webp",
+      "width": 1440,
+      "height": 900,
+      "bytes": 825148,
+      "losslessPixelCheck": true
+    },
+    {
+      "file": "selected/06-physical-failure-debug.png",
+      "bytes": 15724,
+      "source": "Unmodified user-provided physical failure screenshot"
+    }
+  ],
+  "selectedTotalBytes": 5138488,
+  "limits": [
+    "Final physical-camera acceptance deferred by user; latest success/false-trigger rate not yet measured",
+    "Speed group breakdown, distance, lighting and browser not provided",
+    "Software/synthetic validation does not prove exhibition hardware reliability"
+  ]
+}

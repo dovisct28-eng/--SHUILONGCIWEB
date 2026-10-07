@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-07",
+  "validation": "manual physical camera test",
+  "status": "deferred_by_user_after_activation_exit_guard",
+  "runs": [
+    {
+      "success": 6,
+      "total": 10,
+      "falseTriggers": null,
+      "doubleTriggers": null,
+      "speedGroups": null,
+      "distanceMeters": null,
+      "lighting": null,
+      "browser": null,
+      "source": "Direct user report in this chat",
+      "observation": "张开手掌后出现挥动提示，有时未切换便退回右侧停留文案",
+      "timing": "User reports both immediate (<1s) and delayed (around 2s or later) failures"
+    },
+    {
+      "revision": "120ms two-hand intent confirmation",
+      "success": 10,
+      "total": 10,
+      "source": "Direct user report in this chat: 10次都正常了",
+      "falseTriggers": null,
+      "doubleTriggers": null,
+      "speedGroups": null,
+      "distanceMeters": null,
+      "lighting": null,
+      "browser": null
+    },
+    {
+      "revision": "120ms two-hand confirmation, before activation exit guard",
+      "success": null,
+      "total": null,
+      "falseTriggers": 2,
+      "doubleTriggers": 0,
+      "observation": "User reports holding hand up; prompt reappeared after timeout/switch, then natural movement caused NEXT",
+      "source": "Direct user report in this chat",
+      "distanceMeters": null,
+      "lighting": null,
+      "browser": null
+    }
+  ],
+  "target": {
+    "success": 18,
+    "total": 20,
+    "doubleTriggers": 0,
+    "falseTriggersMax": 1
+  },
+  "remaining": [
+    "Capture immediate failure exit reason and frame interval",
+    "Apply evidence-based fix if needed",
+    "20 categorized attempts",
+    "1–2 minutes false-trigger observation",
+    "10 consecutive independent transitions",
+    "Distance and lighting observations"
+  ],
+  "diagnosis": {
+    "evidence": "selected/06-physical-failure-debug.png",
+    "confirmed": "ARMED -> IDLE: two-hands",
+    "unverified": "Whether the extra detected hand was physically present or a transient MediaPipe classification fluctuation",
+    "fix": "Suppress NEXT during candidate two-hand frames; preserve single-hand intent for <120ms; cancel sustained two hands; archive open/close unchanged",
+    "retest": "User reports corrected version 10/10 normal; additional 10 and false/double-trigger metrics pending"
+  },
+  "secondFix": {
+    "confirmedIssue": "Timeout/completion automatically accumulated another hold from the continuously raised palm",
+    "fix": "Require exit of activation zone or >=200ms no hands before a fresh hold after timeout/NEXT; observe release even during LOCKED",
+    "retest": "pending",
+    "confirmedByUser": "手一直举着，准备提示消失或切换后又出现，随后自然移动"
+  },
+  "userDirection": {
+    "message": "下个版本在测试",
+    "interpretation": "User defers final physical camera retest to the next round; deliver current software version with explicit pending physical acceptance"
+  }
+}

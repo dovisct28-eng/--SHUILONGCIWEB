@@ -310,7 +310,8 @@
             <button type="button" data-step="1">下一组 →</button>
         </nav>
         <p id="cyber-asset-status" role="status"></p>
-        <p class="gesture-hint">双手展开 · 查看档案　／　单手挥动 · 下一人物</p>
+        <p class="gesture-hint" data-state="IDLE"><svg class="gesture-confirm" viewBox="0 0 20 20" aria-hidden="true"><circle class="gesture-confirm-base" cx="10" cy="10" r="8"/><circle class="gesture-confirm-progress" cx="10" cy="10" r="8" pathLength="1"/></svg><span id="gesture-message" role="status">张开手掌 · 在右侧停留唤醒　／　双手展开 · 查看档案</span></p>
+        <pre id="gesture-debug" hidden aria-hidden="true"></pre>
         <nav class="cyber-controls" aria-label="体感辅助操作">
             <button type="button" data-step="-1">← 上一组</button>
             <button type="button" id="reveal-toggle" aria-expanded="false" aria-controls="floating-info">查看人物档案</button>
@@ -340,7 +341,7 @@
         import { archiveBlocks, renderArchive, cameraFit } from './character-study.mjs';
         import { measureFigure, cyberConfig, cyberDiagnostics, figureLayout, stageSafeArea, particleGrid, canEnterCyber } from './figure-stage.mjs';
         import { OrbitStage } from './orbit-stage.mjs';
-        import { NextGestureGate } from './next-gesture.mjs';
+        import { GestureController } from './next-gesture.mjs';
         import { attachSurface, applySurface, surfaceConfig, exhibitionTiming, DecorationBudget } from './mural-surface.mjs';
         let orbitStage;
         let globalAssetsData = [];
@@ -708,6 +709,7 @@
             const item = globalAssetsData[index]; if (!item) return;
             const keepRevealed = currentTrack === 'cyber' && isRevealed;
             if (currentTrack === 'cyber' && !canEnterCyber(item)) { modeError('该人物体感素材未就绪，请返回图鉴。'); return; }
+            if (currentTrack === 'cyber') { nextGesture.lock(); renderGestureFeedback(); }
             currentSeriesIndex = index; currentItemData = item;
             if(currentTrack === 'cyber') orbitStage?.leave(); else orbitStage?.reset();
             const version = ++detailVersion; releaseGalleryVideo(); infoRequest?.abort(); infoRequest = new AbortController();
@@ -964,9 +966,10 @@
         }
         function setRevealed(revealed, immediate = false, stateOnly = false) {
             if (revealed && (currentTrack !== 'cyber' || webglContainer.hasAttribute('data-loading') || !lineMesh)) return;
+            if (isRevealed !== revealed) nextGesture.resetGestureState();
             isRevealed = revealed;
+            renderGestureFeedback();
             document.getElementById('main-app').dataset.revealed = String(revealed);
-            document.querySelector('.gesture-hint').textContent = revealed ? '双手收拢 · 返回完整人物　／　单手挥动 · 下一人物' : '双手展开 · 查看档案　／　单手挥动 · 下一人物';
             const panel = document.getElementById('floating-info'); panel.classList.toggle('visible', revealed);
             panel.inert = !revealed && currentTrack === 'cyber';
             const button = document.getElementById('reveal-toggle'); button.textContent = revealed ? '收起人物简介' : '查看人物简介'; button.setAttribute('aria-expanded', String(revealed));
@@ -1122,6 +1125,7 @@
         function renderWebGL() {
             glFrame = requestAnimationFrame(renderWebGL);
             if (currentTrack === 'cyber' && shaderMaterial) {
+                nextGesture.tick(performance.now(), gestureContext()); renderGestureFeedback();
                 if(decorationBudget.sample(performance.now(),!document.hidden))applyStageSurface();
                 if (figureMode && colorPoints) colorPoints.visible = !decorationBudget.degraded && shaderMaterial.uniforms.uFeedback.value > .001;
                 if (!figureMode) shaderMaterial.uniforms.uTime.value = clock.getElapsedTime();
@@ -1139,8 +1143,7 @@
         const cameraStatus = document.getElementById('camera-status');
         let handsModel = null, mpCamera = null;
         
-        let pointerHistory = [];
-        const nextGesture = new NextGestureGate(1000);
+        const nextGesture = new GestureController();
         let isRevealed = false; 
         
         let gestureNeutralY = 0.5;
@@ -1160,12 +1163,9 @@
                         drawConnectors(canvasCtx, landmarks, HAND_CONNECTIONS, {color: 'rgba(212,175,55,0.8)', lineWidth: 2});
                         drawLandmarks(canvasCtx, landmarks, {color: '#fff', lineWidth: 1, radius: 2});
                     }
-                    handleGestureLogic(results.multiHandLandmarks);
-                } else {
-                    if(shaderMaterial) gsap.to(shaderMaterial.uniforms.uMouse.value, { x: -10, y: -10, duration: 0.3 });
-                    // 防呆机制：手如果只是瞬间离开屏幕 1 帧，我们不马上清空切页历史，保留一点容错
-                    // pointerHistory = []; 
                 }
+                // Production and tests share presence, loss grace and intent handling.
+                handleGestureLogic(results.multiHandLandmarks || []);
                 canvasCtx.restore();
             });
 
@@ -1203,6 +1203,7 @@
             } catch { stopMediaPipe(); modeError('体感组件初始化失败，请检查网络，或返回选择图鉴探索。'); }
         }
         function stopMediaPipe() {
+            nextGesture.resetGestureState(); renderGestureFeedback();
             ++cameraVersion;
             if (mpCamera) { mpCamera.stop(); mpCamera = null; }
             if (videoElement && videoElement.srcObject) {
@@ -1210,10 +1211,6 @@
             }
             cameraStatus.textContent = '摄像头已停止'; cameraStatus.style.color = '#aaa';
         }
-
-        let continuousOpenFrames = 0;
-        let continuousClosedFrames = 0;
-        let currentHandState = 'closed';
 
         function isHandOpen(landmarks) {
             const getDist = (p1, p2) => Math.hypot(p1.x - p2.x, p1.y - p2.y);
@@ -1232,22 +1229,59 @@
             return openCount >= 3; 
         }
 
+        // Only NEXT uses this controller. Existing two-hand/archive reading math stays independent.
+        function gestureContext() {
+            const phase = webglContainer.dataset.phase;
+            return {
+                blocked:currentTrack !== 'cyber' || isRevealed || document.hidden || phase === 'error',
+                locked:entryBusy || webglContainer.hasAttribute('data-loading') || !lineMesh
+                    || (phase && phase !== 'stable') || (orbitStage?.active && orbitStage.phase !== 'stable')
+            };
+        }
+        let gestureFeedbackKey = '';
+        const gestureDebugEnabled = new URLSearchParams(location.search).get('gestureDebug') === '1';
+        function renderGestureFeedback(now = performance.now()) {
+            const snapshot = nextGesture.snapshot(now), state = snapshot.state;
+            const progress = Math.round(snapshot.progress * 50) / 50;
+            const key = `${state}:${progress}:${isRevealed}:${snapshot.releaseRequired}`;
+            if (key !== gestureFeedbackKey) {
+                gestureFeedbackKey = key;
+                const hint = document.querySelector('.gesture-hint'); hint.dataset.state = state;
+                hint.style.setProperty('--gesture-progress', progress);
+                document.getElementById('main-app').dataset.gesture = state;
+                document.getElementById('gesture-message').textContent = isRevealed ? '上下移动 · 阅读档案　／　双手收拢 · 返回人物'
+                    : state === 'ARMED' ? '挥动 · 下一人物'
+                    : state === 'HOVER' ? '正在识别 · 请稍作停留'
+                    : snapshot.releaseRequired ? '放下手掌 · 再停留唤醒　／　双手展开 · 查看档案'
+                    : '张开手掌 · 在右侧停留唤醒　／　双手展开 · 查看档案';
+            }
+            if (gestureDebugEnabled) {
+                const debug = document.getElementById('gesture-debug'); debug.hidden = currentTrack !== 'cyber';
+                debug.textContent = `STATE: ${state}\nhold: ${Math.round(snapshot.holdMs)}ms\ntrajectory: ${snapshot.points}\ndistance: ${snapshot.distance.toFixed(3)}\npath: ${snapshot.path.toFixed(3)}\nmissing: ${Math.round(snapshot.missingMs)}ms\nframe: ${Math.round(snapshot.frameMs)}ms\ntwo hands: ${Math.round(snapshot.twoHandMs)}ms\nrelease: ${snapshot.releaseRequired}\nreject: ${snapshot.rejection || 'none'}\n${nextGesture.events.slice(-4).map(e => `${e.from} → ${e.to}: ${e.reason}`).join('\n')}`;
+            }
+        }
+        document.addEventListener('visibilitychange', () => {
+            nextGesture.resetGestureState(); renderGestureFeedback();
+        });
+
         function handleGestureLogic(rawLandmarksList) {
             if(currentTrack !== 'cyber' || !shaderMaterial) return;
 
-            const now = Date.now();
-            const infoPanel = document.getElementById('floating-info');
+            const now = performance.now();
             const infoText = document.getElementById('info-text');
-
-            if (!rawLandmarksList || rawLandmarksList.length === 0) {
-                gsap.to(shaderMaterial.uniforms.uMouse.value, { x: -10, y: -10, duration: 0.3 });
-                pointerHistory = [];
-                continuousOpenFrames = 0;
-                continuousClosedFrames = 0; currentHandState = 'closed'; nextGesture.rearm();
+            const rawHands = rawLandmarksList || [];
+            const fired = nextGesture.updateGestureState({
+                hands:rawHands.map(lm => ({x:1-lm[9].x,y:lm[9].y,open:isHandOpen(lm)})),
+                now,...gestureContext()
+            });
+            renderGestureFeedback(now);
+            if (fired) goToNextCharacterFromGesture();
+            if (rawHands.length === 0) {
+                shaderMaterial.uniforms.uMouse.value.x = shaderMaterial.uniforms.uMouse.value.y = -10;
                 return;
             }
 
-            const handsWithSize = rawLandmarksList.map(lm => {
+            const handsWithSize = rawHands.map(lm => {
                 const size = Math.hypot(lm[0].x - lm[9].x, lm[0].y - lm[9].y);
                 return { landmarks: lm, size: size };
             });
@@ -1263,18 +1297,7 @@
 
             const handsCountActive = activeHands.length;
 
-            if (handsCountActive === 0) {
-                gsap.to(shaderMaterial.uniforms.uMouse.value, { x: -10, y: -10, duration: 0.3 });
-                pointerHistory = [];
-                continuousOpenFrames = 0;
-                continuousClosedFrames = 0; currentHandState = 'closed'; nextGesture.rearm();
-                return;
-            }
-
             if (handsCountActive === 2) {
-                pointerHistory = []; 
-                continuousOpenFrames = 0; 
-                
                 const f1 = activeHands[0][8];
                 const f2 = activeHands[1][8];
                 const dist = Math.hypot(f1.x - f2.x, f1.y - f2.y);
@@ -1289,24 +1312,11 @@
 
             } else if (handsCountActive === 1 && !isRevealed) {
                 const handMarks = activeHands[0];
-                const handOpen = isHandOpen(handMarks);
-                
-                if (handOpen) {
-                    continuousOpenFrames++;
-                    continuousClosedFrames = 0;
-                    if (continuousOpenFrames > 3) currentHandState = 'open';
-                } else {
-                    continuousClosedFrames++;
-                    continuousOpenFrames = 0;
-                    if (continuousClosedFrames > 2) { currentHandState = 'closed'; nextGesture.rearm(); }
-                }
-                
                 const trackPoint = handMarks[9]; 
                 const targetX = 1.0 - trackPoint.x;
                 const targetY = 1.0 - trackPoint.y;
                 
-                if (currentHandState === 'closed') {
-                    pointerHistory = []; 
+                if (!nextGesture.open) {
                     const currentU = shaderMaterial.uniforms.uMouse.value;
                     
                     if (currentU.x < -1 || Math.hypot(targetX - currentU.x, targetY - currentU.y) > 0.4) {
@@ -1317,25 +1327,6 @@
                 } else {
                     gsap.to(shaderMaterial.uniforms.uMouse.value, { x: -10, y: -10, duration: 0.2 });
 
-                    if (nextGesture.ready(now)) {
-                        pointerHistory.push({ x: targetX, y: targetY, t: now });
-                        if(pointerHistory.length > 10) pointerHistory.shift(); 
-
-                        // 极致灵敏度优化：只要抓到连续 3 帧（防由于挥手太快导致的运动模糊掉帧）
-                        if (pointerHistory.length >= 3) {
-                            const oldest = pointerHistory[0];
-                            const newest = pointerHistory[pointerHistory.length - 1];
-                            
-                            const distMove = Math.hypot(newest.x - oldest.x, newest.y - oldest.y);
-                            const dt = newest.t - oldest.t;
-                            
-                            // 大幅降低距离和速度门槛，即使是很轻微、很随意的挥动也能瞬间触发！
-                            if (dt > 0 && distMove > 0.10 && (distMove/dt) > 0.0002) {
-                                goToNextCharacterFromGesture(now);
-                                pointerHistory = [];
-                            }
-                        }
-                    }
                 }
             }
 
@@ -1366,9 +1357,10 @@
             }
         }
 
-        function goToNextCharacterFromGesture(now = Date.now()) {
-            if(currentTrack !== 'cyber' || entryBusy || !nextGesture.trigger(now)) return;
+        function goToNextCharacterFromGesture() {
+            if(currentTrack !== 'cyber' || isRevealed || gestureContext().locked || nextGesture.state !== 'FIRED') return;
             triggerSwipeFlash();
+            nextGesture.lock(); renderGestureFeedback();
             loadSeriesData(currentSeriesIndex + 1);
         }
         function triggerSwipeFlash() {

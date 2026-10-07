@@ -91,12 +91,13 @@ window.__b03={ gesture:handleGestureLogic, select:loadSeriesData,
   await gesture(.1);await page.waitForTimeout(1650);assert.ok(!await page.evaluate(()=>__b03.snapshot().revealed));assert.equal(await page.evaluate(()=>__b03.snapshot().camera.x),0);
   const beforeRevealRequests=resources.length;await gesture(.5);await gesture(.1);await gesture(.5);await page.waitForTimeout(1650);assert.ok(await page.evaluate(()=>__b03.snapshot().revealed));assert.equal(resources.length,beforeRevealRequests);
   const counts=await page.evaluate(()=>__b03.snapshot());await page.setViewportSize({width:1440,height:900});await page.waitForTimeout(100);assert.equal(await page.evaluate(()=>__b03.snapshot().textures),counts.textures);assert.equal(await page.evaluate(()=>__b03.snapshot().geometries),counts.geometries);
-  await gesture(.1);await page.evaluate(()=>{
-   const original=Date.now;let time=original()+2000;
-   try{Date.now=()=>time;for(let frame=0;frame<8;frame++){time+=45;const x=.2+frame*.05;const hand=Array.from({length:21},()=>({x,y:.5,z:0}));hand[0].y=.65;hand[5].x=x-.04;hand[17].x=x+.04;for(const i of [8,12,16,20])hand[i].y=.25;__b03.gesture([hand]);}}finally{Date.now=original;}
-  });await cyberReady(page);assert.equal(await page.evaluate(()=>__b03.snapshot().id),'02');assert.equal(await page.locator('#info-title').textContent(),data[1].name);assert.ok(!await page.evaluate(()=>__b03.snapshot().revealed));
+  await gesture(.1);await page.waitForTimeout(1000);
+  const single=async x=>page.evaluate(x=>{const raw=1-x,lm=Array.from({length:21},()=>({x:raw,y:.5,z:0}));lm[0].y=.65;lm[5].x=raw-.04;lm[17].x=raw+.04;for(const i of [8,12,16,20])lm[i].y=.25;__b03.gesture([lm]);},x);
+  for(let i=0;i<24;i++){await single(.7);await page.waitForTimeout(35);}
+  for(let i=1;i<=8;i++){await single(.7+i*.04);await page.waitForTimeout(40);}
+  await cyberReady(page);assert.equal(await page.evaluate(()=>__b03.snapshot().id),'02');assert.equal(await page.locator('#info-title').textContent(),data[1].name);assert.ok(!await page.evaluate(()=>__b03.snapshot().revealed));
   await page.locator('#back-btn').click();assert.equal(await state(page),'selection');assert.equal(await page.evaluate(()=>__camera.active),0);
-  report.functional.push('Original synthetic two-hand reveal/scroll/close; interrupted transitions settle; resize keeps textures/geometries; original one-hand swipe advances ID and resets archive; exit stops camera boundary');
+  report.functional.push('Original synthetic two-hand reveal/scroll/close; interrupted transitions settle; resize keeps textures/geometries; intent-confirmed one-hand swipe advances ID and resets archive; exit stops camera boundary');
   await page.locator('#btn-cyber-track').click();await cyberReady(page);await page.locator('#reveal-toggle').focus();await page.keyboard.press('Enter');await page.waitForFunction(()=>document.getElementById('reveal-toggle').getAttribute('aria-expanded')==='true');await page.locator('#info-text').focus();await page.keyboard.press('Escape');assert.ok(!await page.evaluate(()=>__b03.snapshot().revealed));await page.keyboard.press('i');assert.ok(await page.evaluate(()=>__b03.snapshot().revealed));await page.keyboard.press('Escape');await page.keyboard.press('ArrowRight');await cyberReady(page);assert.equal(await page.evaluate(()=>__b03.snapshot().id),'03');await page.locator('#back-btn').click();
   // Existing renderer + delayed new texture request, then leave before completion.
   await page.locator('#btn-cyber-track').click();await cyberReady(page);await page.route('**/'+encodeURIComponent(data[3].folderName)+'/color.png',async r=>{await new Promise(resolve=>setTimeout(resolve,600));await r.continue().catch(()=>{});});

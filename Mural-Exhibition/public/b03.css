@@ -217,3 +217,19 @@ body.track-cyber #main-app::after { background:radial-gradient(ellipse at 48% 43
 body.track-cyber #main-app[data-decorations="reduced"] #webgl-container > canvas { animation:none; }
 #orbit-stage[data-motion="paused"] *,#orbit-stage[data-degraded="true"] * { animation:none!important; }
 @media(prefers-reduced-motion:reduce) { #orbit-stage * { animation:none!important; } }
+
+/* Gesture intent feedback reuses the existing footer safe area and orbit paths. */
+.gesture-confirm { display:inline-block;position:absolute;left:-26px;top:50%;transform:translateY(-50%);opacity:0;transition:opacity .18s;width:18px;height:18px;fill:none;stroke:#d5b57c;stroke-width:1.2; }
+.gesture-confirm-base { opacity:.25; }
+.gesture-confirm-progress { stroke-dasharray:1;stroke-dashoffset:calc(1 - var(--gesture-progress,0));transform:rotate(-90deg);transform-origin:center; }
+.gesture-hint[data-state="HOVER"] .gesture-confirm,.gesture-hint[data-state="ARMED"] .gesture-confirm { opacity:1; }
+body.track-cyber .gesture-hint { transition:opacity .2s,color .2s;animation:b03-hint-rest 5s forwards; }
+body.track-cyber .gesture-hint[data-state="HOVER"],body.track-cyber .gesture-hint[data-state="ARMED"] { animation:none;opacity:1;color:#dfc493; }
+body.track-cyber .gesture-hint[data-state="LOCKED"],body.track-cyber .gesture-hint[data-state="FIRED"] { opacity:0;animation:none; }
+#main-app[data-gesture="HOVER"] .orbit-energy { filter:drop-shadow(0 0 3px #d5b57c88); }
+#main-app[data-gesture="ARMED"] .orbit-energy { stroke:#e2c18e;stroke-width:1.6;filter:drop-shadow(0 0 4px #d5b57c99); }
+@keyframes b03-hint-rest { from { opacity:1; } to { opacity:.48; } }
+#gesture-debug { position:absolute;right:24px;top:88px;z-index:300;color:#d8c39e;background:#131713e8;font:12px/1.5 monospace;pointer-events:none; }
+@media(prefers-reduced-motion:reduce) { body.track-cyber .gesture-hint,.gesture-confirm { animation:none;transition:none; } }
+
+body:not(.track-cyber) #gesture-debug { display:none; }

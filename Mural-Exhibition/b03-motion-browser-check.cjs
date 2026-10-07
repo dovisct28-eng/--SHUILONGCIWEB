@@ -11,9 +11,9 @@ const instrument=`window.__motion={select:loadSeriesData,reveal:setRevealed,gest
  restore(){for(const p of orbitStage.panels){p.motion.style.removeProperty('animation-delay');for(const a of p.motion.getAnimations())a.play();}orbitStage.stopMotion();orbitStage.resumeMotion();},
  preset(preset){const c=calibrationOverrides.get(currentItemData.id)||cyberConfig(currentItemData.cyber);c.surface={preset};calibrationOverrides.set(currentItemData.id,c);applyStageSurface();},
  degrade(){decorationBudget.degraded=true;applyStageSurface();},clear(){releaseMuralStage(true);orbitStage.reset();},
- swipe(delta){pointerHistory=[{x:0,y:0,t:Date.now()-100},{x:delta,y:0,t:Date.now()}];triggerSwipeFlash();},
+ swipe(){triggerSwipeFlash();},
  snapshot(){const stage=orbitStage;const targets=stage?[stage.geometry,stage.presentation,stage.rings,stage.travel,stage.swipe,...stage.panels.flatMap(p=>[p.entry,p.position,p.emphasis])]:[];return {
- id:currentItemData?.id,index:currentSeriesIndex,total:globalAssetsData.length,armed:nextGesture.armed,lastTrigger:nextGesture.lastTrigger,revealed:isRevealed,phase:webglContainer.dataset.phase,orbitPhase:stage?.phase,active:stage?.active,motion:stage?.root.dataset.motion,
+ id:currentItemData?.id,index:currentSeriesIndex,total:globalAssetsData.length,armed:nextGesture.state==='ARMED',gestureState:nextGesture.state,lastTrigger:nextGesture.lastTrigger,revealed:isRevealed,phase:webglContainer.dataset.phase,orbitPhase:stage?.phase,active:stage?.active,motion:stage?.root.dataset.motion,
  scheduler:Number(!!stage?.focusCall),focusTween:Number(!!stage?.focusTween),ack:Number(!!stage?.ackTween),ready:Number(!!stage?.readyCall),focus:stage?.root.dataset.focus,
  ownedTweens:typeof gsap==='undefined'?0:gsap.getTweensOf(targets).length,panels:document.querySelectorAll('.orbit-panel').length,svgs:document.querySelectorAll('#orbit-stage svg').length,textures:renderer?.info.memory.textures,geometries:renderer?.info.memory.geometries,cache:muralCache.size,
  dash:stage?getComputedStyle(stage.main).strokeDashoffset:null,auxDash:stage?getComputedStyle(stage.aux).strokeDashoffset:null,mainAnimation:stage?getComputedStyle(stage.main).animationName:null,energy:stage?getComputedStyle(stage.energy).strokeDashoffset:null,energyAnimation:stage?getComputedStyle(stage.energy).animationName:null,mainPeriod:stage?getComputedStyle(stage.main).animationDuration:null,auxPeriod:stage?getComputedStyle(stage.aux).animationDuration:null,mainDirection:stage?getComputedStyle(stage.main).animationDirection:null,auxDirection:stage?getComputedStyle(stage.aux).animationDirection:null,float:renderer?getComputedStyle(renderer.domElement).animationName:null,dom:document.querySelectorAll('*').length,opacity:lineMesh?.material.opacity,
@@ -34,15 +34,17 @@ function safe(s){for(const p of s.items){const e=p.envelope;assert.ok(p.x>=e.x-1
 const hands=(distance)=>[.5-distance/2,.5+distance/2].map(x=>Array.from({length:21},(_,i)=>({x,y:i===0?.65:i===9?.48:.4,z:0})));
 // Drive production classification, history/velocity threshold and NEXT latch.
 async function stroke(p,dx=.065,dy=0,{held=0,close=false,loss=false}={}){
- return p.evaluate(({dx,dy,held,close,loss})=>{
-  const hand=(x,y=.5,open=true)=>{const lm=Array.from({length:21},()=>({x,y,z:0}));lm[0].y=y+.15;lm[5].x=x-.04;lm[17].x=x+.04;for(const i of [8,12,16,20])lm[i].y=y-(open?.25:.02);return lm;};
-  const original=Date.now;let time=Math.max(original(),__motion.snapshot().lastTrigger+1100);
-  try{Date.now=()=>time;if(loss)__motion.gesture([]);if(close)for(let i=0;i<3;i++){time+=50;__motion.gesture([hand(.5,.5,false)]);}
-   for(let i=0;i<9;i++){time+=50;__motion.gesture([hand(dx>0?.2+i*dx:.8+i*dx,.5+i*dy)]);}
-   for(let i=0;i<held;i++){time+=50;__motion.gesture([hand(i%2?.2:.8)]);}
-   return __motion.snapshot();
-  }finally{Date.now=original;}
- },{dx,dy,held,close,loss});
+ const deliver=(x=.7,y=.5,open=true,empty=false)=>p.evaluate(({x,y,open,empty})=>{
+  const raw=1-x,lm=Array.from({length:21},()=>({x:raw,y,z:0}));lm[0].y=y+.15;lm[5].x=raw-.04;lm[17].x=raw+.04;
+  for(const i of [8,12,16,20])lm[i].y=y-(open?.25:.02);__motion.gesture(empty?[]:[lm]);
+ },{x,y,open,empty});
+ if(loss){await deliver(.7,.5,true,true);await p.waitForTimeout(240);}
+ if(close)for(let i=0;i<5;i++){await deliver(.7,.5,false);await p.waitForTimeout(30);}
+ if(!held){await deliver(.3);await p.waitForFunction(()=>__motion.snapshot().gestureState==='IDLE'&&__motion.snapshot().phase==='stable'&&!document.getElementById('webgl-container').hasAttribute('data-loading'),null,{timeout:40000});for(let i=0;i<24;i++){await deliver();await p.waitForTimeout(35);}}
+ const before=(await state(p)).index;
+ for(let i=1;i<=9;i++){await deliver(.7+i*dx,.5+i*dy);if((await state(p)).index!==before)break;await p.waitForTimeout(50);}
+ for(let i=0;i<held;i++){await deliver(i%2?.2:.8);await p.waitForTimeout(30);}
+ return state(p);
 }
 (async()=>{
  const server=createApp({admin:true}).listen(0,'localhost');await new Promise(r=>server.once('listening',r));
