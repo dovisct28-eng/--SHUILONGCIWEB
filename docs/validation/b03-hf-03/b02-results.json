@@ -1,0 +1,388 @@
+{
+  "environment": {
+    "browser": "Chrome headless",
+    "platform": "win32",
+    "node": "v24.14.1"
+  },
+  "views": [
+    {
+      "w": 1920,
+      "h": 1080,
+      "galleryReadyMs": 3846,
+      "screenshotCompleteMs": 7090,
+      "left": 0,
+      "top": 80,
+      "height": 931.9999389648438,
+      "bottom": 1011.9999389648438,
+      "natural": [
+        8192,
+        1853
+      ],
+      "renderer": 0,
+      "resources": [
+        {
+          "url": "http://localhost:3000/b01.css",
+          "duration": 125.29999999981374,
+          "bytes": 4660
+        },
+        {
+          "url": "http://localhost:3000/gallery.css",
+          "duration": 125.29999999981374,
+          "bytes": 5245
+        },
+        {
+          "url": "http://localhost:3000/b03.css",
+          "duration": 121.70000000018626,
+          "bytes": 19498
+        },
+        {
+          "url": "http://localhost:3000/b01/mural-02-left.webp",
+          "duration": 865.7999999998137,
+          "bytes": 820980
+        },
+        {
+          "url": "http://localhost:3000/gallery-panorama.mjs",
+          "duration": 178.09999999962747,
+          "bytes": 1781
+        },
+        {
+          "url": "http://localhost:3000/gallery-admin.mjs",
+          "duration": 362.29999999981374,
+          "bytes": 5219
+        },
+        {
+          "url": "http://localhost:3000/character-study.mjs",
+          "duration": 426,
+          "bytes": 3982
+        },
+        {
+          "url": "http://localhost:3000/figure-stage.mjs",
+          "duration": 465.19999999925494,
+          "bytes": 8022
+        },
+        {
+          "url": "http://localhost:3000/orbit-stage.mjs",
+          "duration": 540.3000000007451,
+          "bytes": 11043
+        },
+        {
+          "url": "http://localhost:3000/mural-surface.mjs",
+          "duration": 540.2999999998137,
+          "bytes": 5633
+        },
+        {
+          "url": "http://localhost:3000/orbit-layout.mjs",
+          "duration": 115,
+          "bytes": 9686
+        },
+        {
+          "url": "http://localhost:3000/favicon.ico",
+          "duration": 207.5,
+          "bytes": 450
+        },
+        {
+          "url": "http://localhost:3000/api/scan-assets",
+          "duration": 1399.300000000745,
+          "bytes": 9271
+        },
+        {
+          "url": "http://localhost:3000/gallery/mural-02-detail.webp",
+          "duration": 2023,
+          "bytes": 8029332
+        }
+      ],
+      "memory": 3246120
+    },
+    {
+      "w": 1440,
+      "h": 900,
+      "galleryReadyMs": 311,
+      "screenshotCompleteMs": 1959,
+      "left": 0,
+      "top": 80,
+      "height": 752,
+      "bottom": 832,
+      "natural": [
+        8192,
+        1853
+      ],
+      "renderer": 0,
+      "resources": [
+        {
+          "url": "http://localhost:3000/b01.css",
+          "duration": 11.099999999627471,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/gallery.css",
+          "duration": 13.5,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/b03.css",
+          "duration": 12.900000000372529,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/b01/mural-02-left.webp",
+          "duration": 17,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/gallery-panorama.mjs",
+          "duration": 23,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/gallery-admin.mjs",
+          "duration": 32.09999999962747,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/character-study.mjs",
+          "duration": 33.10000000055879,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/figure-stage.mjs",
+          "duration": 34.40000000037253,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/orbit-stage.mjs",
+          "duration": 39,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/mural-surface.mjs",
+          "duration": 39.5,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/orbit-layout.mjs",
+          "duration": 150.3999999994412,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/api/scan-assets",
+          "duration": 197.6000000005588,
+          "bytes": 9271
+        },
+        {
+          "url": "http://localhost:3000/gallery/mural-02-detail.webp",
+          "duration": 4.400000000372529,
+          "bytes": 300
+        }
+      ],
+      "memory": 4838710
+    },
+    {
+      "w": 1366,
+      "h": 768,
+      "galleryReadyMs": 225,
+      "screenshotCompleteMs": 1944,
+      "left": 0,
+      "top": 80,
+      "height": 620,
+      "bottom": 700,
+      "natural": [
+        8192,
+        1853
+      ],
+      "renderer": 0,
+      "resources": [
+        {
+          "url": "http://localhost:3000/b01.css",
+          "duration": 5.7999999998137355,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/gallery.css",
+          "duration": 6,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/b03.css",
+          "duration": 7.2999999998137355,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/b01/mural-02-left.webp",
+          "duration": 8,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/gallery-panorama.mjs",
+          "duration": 3.2000000001862645,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/gallery-admin.mjs",
+          "duration": 6,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/character-study.mjs",
+          "duration": 7.599999999627471,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/figure-stage.mjs",
+          "duration": 8.099999999627471,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/orbit-stage.mjs",
+          "duration": 6.5,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/mural-surface.mjs",
+          "duration": 8.299999999813735,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/orbit-layout.mjs",
+          "duration": 2.7999999998137355,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/api/scan-assets",
+          "duration": 123.80000000074506,
+          "bytes": 9271
+        },
+        {
+          "url": "http://localhost:3000/gallery/mural-02-detail.webp",
+          "duration": 16.100000000558794,
+          "bytes": 300
+        }
+      ],
+      "memory": 6577884
+    },
+    {
+      "w": 1280,
+      "h": 800,
+      "galleryReadyMs": 441,
+      "screenshotCompleteMs": 2727,
+      "left": 0,
+      "top": 80,
+      "height": 652,
+      "bottom": 732,
+      "natural": [
+        8192,
+        1853
+      ],
+      "renderer": 0,
+      "resources": [
+        {
+          "url": "http://localhost:3000/b01.css",
+          "duration": 5.400000000372529,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/gallery.css",
+          "duration": 13,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/b03.css",
+          "duration": 18.600000000558794,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/b01/mural-02-left.webp",
+          "duration": 17.90000000037253,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/gallery-panorama.mjs",
+          "duration": 17,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/gallery-admin.mjs",
+          "duration": 17.200000000186265,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/character-study.mjs",
+          "duration": 18.600000000558794,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/figure-stage.mjs",
+          "duration": 29.299999999813735,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/orbit-stage.mjs",
+          "duration": 40.40000000037253,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/mural-surface.mjs",
+          "duration": 42.700000000186265,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/orbit-layout.mjs",
+          "duration": 5,
+          "bytes": 300
+        },
+        {
+          "url": "http://localhost:3000/api/scan-assets",
+          "duration": 154.8999999994412,
+          "bytes": 9271
+        },
+        {
+          "url": "http://localhost:3000/gallery/mural-02-detail.webp",
+          "duration": 119.69999999925494,
+          "bytes": 300
+        }
+      ],
+      "memory": 8154034
+    }
+  ],
+  "functional": [
+    "All eight named hotspots open their matching original resources; all hover screenshots recorded",
+    "Pan/zoom preserved through detail and character switching; line/color/video lazy; missing video never requested; video released on switch/return",
+    "Drag, wheel, middle, reset, fresh B01 entry at left",
+    "Real new folder auto-discovery; both click/select orders; draft/cancel/save/reload/edit/unbind; search; simulated save failure restores; progressive resources; original-only detail; fixture cleaned"
+  ],
+  "stress": [
+    {
+      "count": 30,
+      "frames": 384,
+      "medianMs": 4.199999999999818,
+      "p95Ms": 4.5,
+      "heap": 3540677,
+      "renderer": 0
+    },
+    {
+      "count": 50,
+      "frames": 258,
+      "medianMs": 4.199999999999818,
+      "p95Ms": 4.300000000000182,
+      "heap": 3818591,
+      "renderer": 0
+    }
+  ],
+  "errors": [],
+  "camera": "Real camera/gesture hardware requires author testing",
+  "memory": {
+    "visits": 30,
+    "start": {
+      "usedSize": 2601052,
+      "totalSize": 3260416,
+      "embedderHeapUsedSize": 1826320,
+      "backingStorageSize": 118961
+    },
+    "end": {
+      "usedSize": 2637920,
+      "totalSize": 3260416,
+      "embedderHeapUsedSize": 2156112,
+      "backingStorageSize": 120299
+    },
+    "scope": "JS heap after explicit GC; excludes decoded images/GPU/process RSS"
+  }
+}

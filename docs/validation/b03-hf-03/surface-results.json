@@ -1,0 +1,2022 @@
+{
+  "environment": "Actual Chrome/Three.js/GSAP, Camera boundary stub. Formal ID01 only; ID05 is preexisting untracked local author material.",
+  "views": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "before": {
+        "id": "01",
+        "figureMode": true,
+        "revealed": false,
+        "phase": "stable",
+        "pigment": 1,
+        "edge": 0.028,
+        "cracks": 0,
+        "preset": "standard",
+        "degraded": false,
+        "cacheSize": 1,
+        "cacheKeys": [
+          "[\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/line.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/color.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/figure.png\"]"
+        ],
+        "opacity": 1,
+        "entry": [
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.7024623404117302
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.8085274718422443
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.6856279843347147
+          }
+        ],
+        "arc": 1,
+        "active": true,
+        "layout": {
+          "version": "b03-hf-02-v1",
+          "seed": "01|b03-hf-02-v1|default",
+          "template": "horizontal",
+          "panels": [
+            {
+              "id": "crop-0",
+              "content": "crop-0",
+              "x": 1655.1160032651387,
+              "y": 688.9670111252926,
+              "width": 186.26968027297406,
+              "height": 186.26968027297406,
+              "angle": 4.537227490916848,
+              "opacity": 0.7024623404117302
+            },
+            {
+              "id": "crop-3",
+              "content": "crop-3",
+              "x": 58.97709835292771,
+              "y": 688.7227519207634,
+              "width": 201.37179111968726,
+              "height": 201.37179111968726,
+              "angle": -1.486401337198913,
+              "opacity": 0.8085274718422443
+            },
+            {
+              "id": "contour",
+              "content": "contour",
+              "x": 1345.4934395234095,
+              "y": 120.65054527119814,
+              "width": 208.342345261015,
+              "height": 201.41250330490828,
+              "angle": -0.8238152973353863,
+              "opacity": 0.6856279843347147
+            }
+          ],
+          "center": {
+            "x": 940.8,
+            "y": 507.52000000000004
+          },
+          "radius": {
+            "x": 601.2961402885683,
+            "y": 283.0848
+          },
+          "floor": {
+            "x": 940.8,
+            "y": 878,
+            "rx": 140,
+            "ry": 12
+          },
+          "score": 4.652602810160189,
+          "degraded": "none",
+          "intensity": 1,
+          "arcStart": 12,
+          "arcSpan": 172,
+          "attempts": 8,
+          "candidateCount": 168,
+          "safe": {
+            "x": 36,
+            "y": 110,
+            "width": 1848,
+            "height": 790
+          }
+        },
+        "effective": {
+          "x": 555.5043729189789,
+          "y": 135.04000000000008,
+          "width": 770.5912541620421,
+          "height": 744.9599999999999
+        },
+        "textures": 1,
+        "geometries": 2,
+        "points": 5925,
+        "rendererCount": 1
+      },
+      "after": {
+        "id": "01",
+        "figureMode": true,
+        "revealed": true,
+        "phase": "stable",
+        "pigment": 1,
+        "edge": 0.028,
+        "cracks": 0,
+        "preset": "standard",
+        "degraded": false,
+        "cacheSize": 1,
+        "cacheKeys": [
+          "[\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/line.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/color.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/figure.png\"]"
+        ],
+        "opacity": 1,
+        "entry": [
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.703165
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.80683
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.790331
+          }
+        ],
+        "arc": 1,
+        "active": true,
+        "layout": {
+          "version": "b03-hf-02-v1",
+          "seed": "01|b03-hf-02-v1|revealed",
+          "template": "horizontal",
+          "panels": [
+            {
+              "id": "contour",
+              "content": "contour",
+              "x": 176.70744766214546,
+              "y": 694.8521744494274,
+              "width": 189.3962601358071,
+              "height": 183.09659912270624,
+              "angle": -3.1809740010648966,
+              "opacity": 0.7903311944473534
+            },
+            {
+              "id": "crop-3",
+              "content": "crop-3",
+              "x": 1023.1769413135945,
+              "y": 127.36703498456626,
+              "width": 193.7131302550435,
+              "height": 193.7131302550435,
+              "angle": -2.39014551602304,
+              "opacity": 0.8068303086422384
+            },
+            {
+              "id": "crop-0",
+              "content": "crop-0",
+              "x": 1024.7051923984511,
+              "y": 717.8795875504464,
+              "width": 170.1470552292019,
+              "height": 170.1470552292019,
+              "angle": 1.4580394579097629,
+              "opacity": 0.7031648171832785
+            }
+          ],
+          "center": {
+            "x": 756.0999999999999,
+            "y": 485.68
+          },
+          "radius": {
+            "x": 565.88,
+            "y": 267.7632
+          },
+          "floor": {
+            "x": 756.0999999999999,
+            "y": 836,
+            "rx": 140,
+            "ry": 12
+          },
+          "score": 4.688695836751933,
+          "degraded": "none",
+          "intensity": 1,
+          "arcStart": 97,
+          "arcSpan": 249,
+          "attempts": 8,
+          "candidateCount": 106,
+          "safe": {
+            "x": 36,
+            "y": 110,
+            "width": 1204,
+            "height": 790
+          }
+        },
+        "effective": {
+          "x": 391.65800221975576,
+          "y": 133.36,
+          "width": 728.8839955604883,
+          "height": 704.64
+        },
+        "textures": 1,
+        "geometries": 2,
+        "points": 5925,
+        "rendererCount": 1
+      },
+      "restored": {
+        "id": "01",
+        "figureMode": true,
+        "revealed": false,
+        "phase": "stable",
+        "pigment": 1,
+        "edge": 0.028,
+        "cracks": 0,
+        "preset": "standard",
+        "degraded": false,
+        "cacheSize": 1,
+        "cacheKeys": [
+          "[\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/line.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/color.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/figure.png\"]"
+        ],
+        "opacity": 1,
+        "entry": [
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.702462
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.808527
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.685628
+          }
+        ],
+        "arc": 1,
+        "active": true,
+        "layout": {
+          "version": "b03-hf-02-v1",
+          "seed": "01|b03-hf-02-v1|default",
+          "template": "horizontal",
+          "panels": [
+            {
+              "id": "crop-0",
+              "content": "crop-0",
+              "x": 1655.1160032651387,
+              "y": 688.9670111252926,
+              "width": 186.26968027297406,
+              "height": 186.26968027297406,
+              "angle": 4.537227490916848,
+              "opacity": 0.7024623404117302
+            },
+            {
+              "id": "crop-3",
+              "content": "crop-3",
+              "x": 58.97709835292771,
+              "y": 688.7227519207634,
+              "width": 201.37179111968726,
+              "height": 201.37179111968726,
+              "angle": -1.486401337198913,
+              "opacity": 0.8085274718422443
+            },
+            {
+              "id": "contour",
+              "content": "contour",
+              "x": 1345.4934395234095,
+              "y": 120.65054527119814,
+              "width": 208.342345261015,
+              "height": 201.41250330490828,
+              "angle": -0.8238152973353863,
+              "opacity": 0.6856279843347147
+            }
+          ],
+          "center": {
+            "x": 940.8,
+            "y": 507.52000000000004
+          },
+          "radius": {
+            "x": 601.2961402885683,
+            "y": 283.0848
+          },
+          "floor": {
+            "x": 940.8,
+            "y": 878,
+            "rx": 140,
+            "ry": 12
+          },
+          "score": 4.652602810160189,
+          "degraded": "none",
+          "intensity": 1,
+          "arcStart": 12,
+          "arcSpan": 172,
+          "attempts": 8,
+          "candidateCount": 168,
+          "safe": {
+            "x": 36,
+            "y": 110,
+            "width": 1848,
+            "height": 790
+          }
+        },
+        "effective": {
+          "x": 555.5043729189789,
+          "y": 135.04000000000008,
+          "width": 770.5912541620421,
+          "height": 744.9599999999999
+        },
+        "textures": 1,
+        "geometries": 2,
+        "points": 5925,
+        "rendererCount": 1
+      }
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "before": {
+        "id": "01",
+        "figureMode": true,
+        "revealed": false,
+        "phase": "stable",
+        "pigment": 1,
+        "edge": 0.028,
+        "cracks": 0,
+        "preset": "standard",
+        "degraded": false,
+        "cacheSize": 1,
+        "cacheKeys": [
+          "[\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/line.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/color.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/figure.png\"]"
+        ],
+        "opacity": 1,
+        "entry": [
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.7024623404117302
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.8085274718422443
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.6856279843347147
+          }
+        ],
+        "arc": 1,
+        "active": true,
+        "layout": {
+          "version": "b03-hf-02-v1",
+          "seed": "01|b03-hf-02-v1|default",
+          "template": "horizontal",
+          "panels": [
+            {
+              "id": "crop-0",
+              "content": "crop-0",
+              "x": 1213.2633360542823,
+              "y": 544.1391759377439,
+              "width": 155.22473356081173,
+              "height": 155.22473356081173,
+              "angle": 4.537227490916848,
+              "opacity": 0.7024623404117302
+            },
+            {
+              "id": "crop-3",
+              "content": "crop-3",
+              "x": 55.147581960773095,
+              "y": 543.9356266006362,
+              "width": 167.80982593307272,
+              "height": 167.80982593307272,
+              "angle": -1.486401337198913,
+              "opacity": 0.8085274718422443
+            },
+            {
+              "id": "contour",
+              "content": "contour",
+              "x": 1017.6877737796817,
+              "y": 118.87545439266512,
+              "width": 173.61862105084583,
+              "height": 167.84375275409025,
+              "angle": -0.8238152973353863,
+              "opacity": 0.6856279843347147
+            }
+          ],
+          "center": {
+            "x": 705.5999999999999,
+            "y": 413.92
+          },
+          "radius": {
+            "x": 481.53672630410654,
+            "y": 217.42079999999999
+          },
+          "floor": {
+            "x": 705.5999999999999,
+            "y": 698,
+            "rx": 140,
+            "ry": 10
+          },
+          "score": 4.625576554047311,
+          "degraded": "none",
+          "intensity": 1,
+          "arcStart": 12,
+          "arcSpan": 172,
+          "attempts": 8,
+          "candidateCount": 168,
+          "safe": {
+            "x": 36,
+            "y": 110,
+            "width": 1368,
+            "height": 610
+          }
+        },
+        "effective": {
+          "x": 409.6770699223085,
+          "y": 127.84000000000003,
+          "width": 591.8458601553829,
+          "height": 572.16
+        },
+        "textures": 1,
+        "geometries": 2,
+        "points": 5925,
+        "rendererCount": 1
+      },
+      "after": {
+        "id": "01",
+        "figureMode": true,
+        "revealed": true,
+        "phase": "stable",
+        "pigment": 1,
+        "edge": 0.028,
+        "cracks": 0,
+        "preset": "standard",
+        "degraded": false,
+        "cacheSize": 1,
+        "cacheKeys": [
+          "[\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/line.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/color.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/figure.png\"]"
+        ],
+        "opacity": 1,
+        "entry": [
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.750677
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.873183
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.677735
+          }
+        ],
+        "arc": 1,
+        "active": true,
+        "layout": {
+          "version": "b03-hf-02-v1",
+          "seed": "01|b03-hf-02-v1|revealed",
+          "template": "horizontal",
+          "panels": [
+            {
+              "id": "crop-0",
+              "content": "crop-0",
+              "x": 88.99090366129877,
+              "y": 534.8694456992671,
+              "width": 168.70848927181214,
+              "height": 168.70848927181214,
+              "angle": -0.32347849756479263,
+              "opacity": 0.7506770260026678
+            },
+            {
+              "id": "contour",
+              "content": "contour",
+              "x": 737.5289769785013,
+              "y": 129.20060707057416,
+              "width": 162.66444613831118,
+              "height": 157.25393344486952,
+              "angle": 1.205646090209484,
+              "opacity": 0.6777345222048462
+            },
+            {
+              "id": "crop-1",
+              "content": "crop-1",
+              "x": 770.5064088993147,
+              "y": 566.0107085795514,
+              "width": 121.26801277652383,
+              "height": 121.26801277652383,
+              "angle": 4.463036773726344,
+              "opacity": 0.8731829477241263
+            }
+          ],
+          "center": {
+            "x": 558.2,
+            "y": 392.08000000000004
+          },
+          "radius": {
+            "x": 417.83,
+            "y": 202.09919999999997
+          },
+          "floor": {
+            "x": 558.2,
+            "y": 656,
+            "rx": 140,
+            "ry": 10
+          },
+          "score": 4.535378469650985,
+          "degraded": "smaller-panels",
+          "intensity": 1,
+          "arcStart": 92,
+          "arcSpan": 263,
+          "attempts": 8,
+          "candidateCount": 99,
+          "safe": {
+            "x": 36,
+            "y": 110,
+            "width": 889,
+            "height": 610
+          }
+        },
+        "effective": {
+          "x": 283.1306992230855,
+          "y": 126.16000000000008,
+          "width": 550.1386015538291,
+          "height": 531.8399999999999
+        },
+        "textures": 1,
+        "geometries": 2,
+        "points": 5925,
+        "rendererCount": 1
+      },
+      "restored": {
+        "id": "01",
+        "figureMode": true,
+        "revealed": false,
+        "phase": "stable",
+        "pigment": 1,
+        "edge": 0.028,
+        "cracks": 0,
+        "preset": "standard",
+        "degraded": false,
+        "cacheSize": 1,
+        "cacheKeys": [
+          "[\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/line.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/color.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/figure.png\"]"
+        ],
+        "opacity": 1,
+        "entry": [
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.702462
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.808527
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.685628
+          }
+        ],
+        "arc": 1,
+        "active": true,
+        "layout": {
+          "version": "b03-hf-02-v1",
+          "seed": "01|b03-hf-02-v1|default",
+          "template": "horizontal",
+          "panels": [
+            {
+              "id": "crop-0",
+              "content": "crop-0",
+              "x": 1213.2633360542823,
+              "y": 544.1391759377439,
+              "width": 155.22473356081173,
+              "height": 155.22473356081173,
+              "angle": 4.537227490916848,
+              "opacity": 0.7024623404117302
+            },
+            {
+              "id": "crop-3",
+              "content": "crop-3",
+              "x": 55.147581960773095,
+              "y": 543.9356266006362,
+              "width": 167.80982593307272,
+              "height": 167.80982593307272,
+              "angle": -1.486401337198913,
+              "opacity": 0.8085274718422443
+            },
+            {
+              "id": "contour",
+              "content": "contour",
+              "x": 1017.6877737796817,
+              "y": 118.87545439266512,
+              "width": 173.61862105084583,
+              "height": 167.84375275409025,
+              "angle": -0.8238152973353863,
+              "opacity": 0.6856279843347147
+            }
+          ],
+          "center": {
+            "x": 705.5999999999999,
+            "y": 413.92
+          },
+          "radius": {
+            "x": 481.53672630410654,
+            "y": 217.42079999999999
+          },
+          "floor": {
+            "x": 705.5999999999999,
+            "y": 698,
+            "rx": 140,
+            "ry": 10
+          },
+          "score": 4.625576554047311,
+          "degraded": "none",
+          "intensity": 1,
+          "arcStart": 12,
+          "arcSpan": 172,
+          "attempts": 8,
+          "candidateCount": 168,
+          "safe": {
+            "x": 36,
+            "y": 110,
+            "width": 1368,
+            "height": 610
+          }
+        },
+        "effective": {
+          "x": 409.6770699223085,
+          "y": 127.84000000000003,
+          "width": 591.8458601553829,
+          "height": 572.16
+        },
+        "textures": 1,
+        "geometries": 2,
+        "points": 5925,
+        "rendererCount": 1
+      }
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "before": {
+        "id": "01",
+        "figureMode": true,
+        "revealed": false,
+        "phase": "stable",
+        "pigment": 1,
+        "edge": 0.028,
+        "cracks": 0,
+        "preset": "standard",
+        "degraded": false,
+        "cacheSize": 1,
+        "cacheKeys": [
+          "[\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/line.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/color.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/figure.png\"]"
+        ],
+        "opacity": 1,
+        "entry": [
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.6605258515896276
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.8085274718422443
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.6639734010817483
+          }
+        ],
+        "arc": 1,
+        "active": true,
+        "layout": {
+          "version": "b03-hf-02-v1",
+          "seed": "01|b03-hf-02-v1|default",
+          "template": "horizontal",
+          "panels": [
+            {
+              "id": "contour",
+              "content": "contour",
+              "x": 1172.9217854750157,
+              "y": 430.2852148588059,
+              "width": 147.40342083851496,
+              "height": 142.50051735568883,
+              "angle": -2.6058109318837523,
+              "opacity": 0.6639734010817483
+            },
+            {
+              "id": "crop-3",
+              "content": "crop-3",
+              "x": 52.33926993985971,
+              "y": 437.7584013658762,
+              "width": 143.1977181295554,
+              "height": 143.1977181295554,
+              "angle": -1.486401337198913,
+              "opacity": 0.8085274718422443
+            },
+            {
+              "id": "crop-1",
+              "content": "crop-1",
+              "x": 907.0653689334524,
+              "y": 123.3500608819723,
+              "width": 141.89895315686863,
+              "height": 141.89895315686863,
+              "angle": -2.1234947377815843,
+              "opacity": 0.6605258515896276
+            }
+          ],
+          "center": {
+            "x": 669.3399999999999,
+            "y": 345.28000000000003
+          },
+          "radius": {
+            "x": 393.7131560488346,
+            "y": 169.26719999999997
+          },
+          "floor": {
+            "x": 669.3399999999999,
+            "y": 566,
+            "rx": 140,
+            "ry": 8.533333333333333
+          },
+          "score": 4.500425362167835,
+          "degraded": "none",
+          "intensity": 1,
+          "arcStart": 43,
+          "arcSpan": 248,
+          "attempts": 8,
+          "candidateCount": 166,
+          "safe": {
+            "x": 36,
+            "y": 110,
+            "width": 1294,
+            "height": 478
+          }
+        },
+        "effective": {
+          "x": 438.9570477247502,
+          "y": 122.56000000000006,
+          "width": 460.7659045504994,
+          "height": 445.43999999999994
+        },
+        "textures": 1,
+        "geometries": 2,
+        "points": 5925,
+        "rendererCount": 1
+      },
+      "after": {
+        "id": "01",
+        "figureMode": true,
+        "revealed": true,
+        "phase": "stable",
+        "pigment": 1,
+        "edge": 0.028,
+        "cracks": 0,
+        "preset": "standard",
+        "degraded": false,
+        "cacheSize": 1,
+        "cacheKeys": [
+          "[\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/line.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/color.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/figure.png\"]"
+        ],
+        "opacity": 1,
+        "entry": [
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.82313
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.809916
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.841561
+          }
+        ],
+        "arc": 1,
+        "active": true,
+        "layout": {
+          "version": "b03-hf-02-v1",
+          "seed": "01|b03-hf-02-v1|revealed",
+          "template": "horizontal",
+          "panels": [
+            {
+              "id": "crop-2",
+              "content": "crop-2",
+              "x": 730.5325819510222,
+              "y": 433.81882390518984,
+              "width": 137.76685112277667,
+              "height": 137.76685112277667,
+              "angle": -0.7908213855698705,
+              "opacity": 0.8099156529596075
+            },
+            {
+              "id": "crop-1",
+              "content": "crop-1",
+              "x": 64.42013920051258,
+              "y": 463.92335865440367,
+              "width": 101.60362168823877,
+              "height": 101.60362168823877,
+              "angle": 0.30563401244580746,
+              "opacity": 0.8231298943283036
+            },
+            {
+              "id": "contour",
+              "content": "contour",
+              "x": 722.8746047516664,
+              "y": 117.80739309938637,
+              "width": 132.90877250115076,
+              "height": 128.48798714971764,
+              "angle": -0.7458368679508567,
+              "opacity": 0.8415612589055672
+            }
+          ],
+          "center": {
+            "x": 528.61,
+            "y": 323.44
+          },
+          "radius": {
+            "x": 365.7692927857936,
+            "y": 153.9456
+          },
+          "floor": {
+            "x": 528.61,
+            "y": 524,
+            "rx": 140,
+            "ry": 8.533333333333333
+          },
+          "score": 4.529012996119024,
+          "degraded": "smaller-panels",
+          "intensity": 1,
+          "arcStart": 0,
+          "arcSpan": 217,
+          "attempts": 8,
+          "candidateCount": 105,
+          "safe": {
+            "x": 36,
+            "y": 110,
+            "width": 843,
+            "height": 478
+          }
+        },
+        "effective": {
+          "x": 319.08067702552717,
+          "y": 120.88,
+          "width": 419.05864594894564,
+          "height": 405.12
+        },
+        "textures": 1,
+        "geometries": 2,
+        "points": 5925,
+        "rendererCount": 1
+      },
+      "restored": {
+        "id": "01",
+        "figureMode": true,
+        "revealed": false,
+        "phase": "stable",
+        "pigment": 1,
+        "edge": 0.028,
+        "cracks": 0,
+        "preset": "standard",
+        "degraded": false,
+        "cacheSize": 1,
+        "cacheKeys": [
+          "[\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/line.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/color.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/figure.png\"]"
+        ],
+        "opacity": 1,
+        "entry": [
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.660526
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.808527
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.663973
+          }
+        ],
+        "arc": 1,
+        "active": true,
+        "layout": {
+          "version": "b03-hf-02-v1",
+          "seed": "01|b03-hf-02-v1|default",
+          "template": "horizontal",
+          "panels": [
+            {
+              "id": "contour",
+              "content": "contour",
+              "x": 1172.9217854750157,
+              "y": 430.2852148588059,
+              "width": 147.40342083851496,
+              "height": 142.50051735568883,
+              "angle": -2.6058109318837523,
+              "opacity": 0.6639734010817483
+            },
+            {
+              "id": "crop-3",
+              "content": "crop-3",
+              "x": 52.33926993985971,
+              "y": 437.7584013658762,
+              "width": 143.1977181295554,
+              "height": 143.1977181295554,
+              "angle": -1.486401337198913,
+              "opacity": 0.8085274718422443
+            },
+            {
+              "id": "crop-1",
+              "content": "crop-1",
+              "x": 907.0653689334524,
+              "y": 123.3500608819723,
+              "width": 141.89895315686863,
+              "height": 141.89895315686863,
+              "angle": -2.1234947377815843,
+              "opacity": 0.6605258515896276
+            }
+          ],
+          "center": {
+            "x": 669.3399999999999,
+            "y": 345.28000000000003
+          },
+          "radius": {
+            "x": 393.7131560488346,
+            "y": 169.26719999999997
+          },
+          "floor": {
+            "x": 669.3399999999999,
+            "y": 566,
+            "rx": 140,
+            "ry": 8.533333333333333
+          },
+          "score": 4.500425362167835,
+          "degraded": "none",
+          "intensity": 1,
+          "arcStart": 43,
+          "arcSpan": 248,
+          "attempts": 8,
+          "candidateCount": 166,
+          "safe": {
+            "x": 36,
+            "y": 110,
+            "width": 1294,
+            "height": 478
+          }
+        },
+        "effective": {
+          "x": 438.9570477247502,
+          "y": 122.56000000000006,
+          "width": 460.7659045504994,
+          "height": 445.43999999999994
+        },
+        "textures": 1,
+        "geometries": 2,
+        "points": 5925,
+        "rendererCount": 1
+      }
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "before": {
+        "id": "01",
+        "figureMode": true,
+        "revealed": false,
+        "phase": "stable",
+        "pigment": 1,
+        "edge": 0.028,
+        "cracks": 0,
+        "preset": "standard",
+        "degraded": false,
+        "cacheSize": 1,
+        "cacheKeys": [
+          "[\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/line.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/color.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/figure.png\"]"
+        ],
+        "opacity": 1,
+        "entry": [
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.7024623404117302
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.8085274718422443
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.6856279843347147
+          }
+        ],
+        "arc": 1,
+        "active": true,
+        "layout": {
+          "version": "b03-hf-02-v1",
+          "seed": "01|b03-hf-02-v1|default",
+          "template": "horizontal",
+          "panels": [
+            {
+              "id": "crop-0",
+              "content": "crop-0",
+              "x": 1074.4562987149175,
+              "y": 463.6792675002168,
+              "width": 137.97754094294376,
+              "height": 137.97754094294376,
+              "angle": 4.537227490916848,
+              "opacity": 0.7024623404117302
+            },
+            {
+              "id": "crop-3",
+              "content": "crop-3",
+              "x": 53.020072854020526,
+              "y": 463.49833475612104,
+              "width": 149.16428971828685,
+              "height": 149.16428971828685,
+              "angle": -1.486401337198913,
+              "opacity": 0.8085274718422443
+            },
+            {
+              "id": "contour",
+              "content": "contour",
+              "x": 887.8401816998331,
+              "y": 117.88929279348012,
+              "width": 154.3276631563074,
+              "height": 149.19444689252467,
+              "angle": -0.8238152973353863,
+              "opacity": 0.6856279843347147
+            }
+          ],
+          "center": {
+            "x": 627.2,
+            "y": 361.92
+          },
+          "radius": {
+            "x": 415.00371853496114,
+            "y": 180.9408
+          },
+          "floor": {
+            "x": 627.2,
+            "y": 598,
+            "rx": 140,
+            "ry": 8.88888888888889
+          },
+          "score": 4.570530781399132,
+          "degraded": "none",
+          "intensity": 1,
+          "arcStart": 12,
+          "arcSpan": 172,
+          "attempts": 8,
+          "candidateCount": 168,
+          "safe": {
+            "x": 36,
+            "y": 110,
+            "width": 1208,
+            "height": 510
+          }
+        },
+        "effective": {
+          "x": 380.92856825749175,
+          "y": 123.84000000000003,
+          "width": 492.5428634850166,
+          "height": 476.15999999999997
+        },
+        "textures": 1,
+        "geometries": 2,
+        "points": 5925,
+        "rendererCount": 1
+      },
+      "after": {
+        "id": "01",
+        "figureMode": true,
+        "revealed": true,
+        "phase": "stable",
+        "pigment": 1,
+        "edge": 0.028,
+        "cracks": 0,
+        "preset": "standard",
+        "degraded": false,
+        "cacheSize": 1,
+        "cacheKeys": [
+          "[\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/line.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/color.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/figure.png\"]"
+        ],
+        "opacity": 1,
+        "entry": [
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.870414
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.809916
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.876176
+          }
+        ],
+        "arc": 1,
+        "active": true,
+        "layout": {
+          "version": "b03-hf-02-v1",
+          "seed": "01|b03-hf-02-v1|revealed",
+          "template": "horizontal",
+          "panels": [
+            {
+              "id": "crop-2",
+              "content": "crop-2",
+              "x": 665.3464395323148,
+              "y": 459.39460823457273,
+              "width": 143.5071365862257,
+              "height": 143.5071365862257,
+              "angle": -0.7908213855698705,
+              "opacity": 0.8099156529596075
+            },
+            {
+              "id": "crop-1",
+              "content": "crop-1",
+              "x": 43.558714941557916,
+              "y": 453.11706090304585,
+              "width": 155.2889930051234,
+              "height": 155.2889930051234,
+              "angle": -1.1328803971409798,
+              "opacity": 0.870413546198979
+            },
+            {
+              "id": "contour",
+              "content": "contour",
+              "x": 644.7998513678709,
+              "y": 142.90666043786024,
+              "width": 154.1975790725814,
+              "height": 149.0686896399097,
+              "angle": 3.9033413948491216,
+              "opacity": 0.8761758597334848
+            }
+          ],
+          "center": {
+            "x": 491.79999999999995,
+            "y": 340.08
+          },
+          "radius": {
+            "x": 368.47999999999996,
+            "y": 165.6192
+          },
+          "floor": {
+            "x": 491.79999999999995,
+            "y": 556,
+            "rx": 140,
+            "ry": 8.88888888888889
+          },
+          "score": 4.696708624992772,
+          "degraded": "none",
+          "intensity": 1,
+          "arcStart": 57,
+          "arcSpan": 166,
+          "attempts": 8,
+          "candidateCount": 100,
+          "safe": {
+            "x": 36,
+            "y": 110,
+            "width": 784,
+            "height": 510
+          }
+        },
+        "effective": {
+          "x": 266.38219755826856,
+          "y": 122.15999999999997,
+          "width": 450.83560488346285,
+          "height": 435.84000000000003
+        },
+        "textures": 1,
+        "geometries": 2,
+        "points": 5925,
+        "rendererCount": 1
+      },
+      "restored": {
+        "id": "01",
+        "figureMode": true,
+        "revealed": false,
+        "phase": "stable",
+        "pigment": 1,
+        "edge": 0.028,
+        "cracks": 0,
+        "preset": "standard",
+        "degraded": false,
+        "cacheSize": 1,
+        "cacheKeys": [
+          "[\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/line.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/color.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/figure.png\"]"
+        ],
+        "opacity": 1,
+        "entry": [
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.702462
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.808527
+          },
+          {
+            "panel": 1,
+            "link": 1,
+            "node": 1,
+            "opacity": 0.685628
+          }
+        ],
+        "arc": 1,
+        "active": true,
+        "layout": {
+          "version": "b03-hf-02-v1",
+          "seed": "01|b03-hf-02-v1|default",
+          "template": "horizontal",
+          "panels": [
+            {
+              "id": "crop-0",
+              "content": "crop-0",
+              "x": 1074.4562987149175,
+              "y": 463.6792675002168,
+              "width": 137.97754094294376,
+              "height": 137.97754094294376,
+              "angle": 4.537227490916848,
+              "opacity": 0.7024623404117302
+            },
+            {
+              "id": "crop-3",
+              "content": "crop-3",
+              "x": 53.020072854020526,
+              "y": 463.49833475612104,
+              "width": 149.16428971828685,
+              "height": 149.16428971828685,
+              "angle": -1.486401337198913,
+              "opacity": 0.8085274718422443
+            },
+            {
+              "id": "contour",
+              "content": "contour",
+              "x": 887.8401816998331,
+              "y": 117.88929279348012,
+              "width": 154.3276631563074,
+              "height": 149.19444689252467,
+              "angle": -0.8238152973353863,
+              "opacity": 0.6856279843347147
+            }
+          ],
+          "center": {
+            "x": 627.2,
+            "y": 361.92
+          },
+          "radius": {
+            "x": 415.00371853496114,
+            "y": 180.9408
+          },
+          "floor": {
+            "x": 627.2,
+            "y": 598,
+            "rx": 140,
+            "ry": 8.88888888888889
+          },
+          "score": 4.570530781399132,
+          "degraded": "none",
+          "intensity": 1,
+          "arcStart": 12,
+          "arcSpan": 172,
+          "attempts": 8,
+          "candidateCount": 168,
+          "safe": {
+            "x": 36,
+            "y": 110,
+            "width": 1208,
+            "height": 510
+          }
+        },
+        "effective": {
+          "x": 380.92856825749175,
+          "y": 123.84000000000003,
+          "width": 492.5428634850166,
+          "height": 476.15999999999997
+        },
+        "textures": 1,
+        "geometries": 2,
+        "points": 5925,
+        "rendererCount": 1
+      }
+    }
+  ],
+  "functional": [
+    {
+      "keyframe": "pigment-forming",
+      "state": {
+        "id": "01",
+        "figureMode": true,
+        "revealed": false,
+        "phase": "entering",
+        "pigment": 0.647106,
+        "edge": 0.028,
+        "cracks": 0,
+        "preset": "standard",
+        "degraded": false,
+        "cacheSize": 1,
+        "cacheKeys": [
+          "[\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/line.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/color.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/figure.png\"]"
+        ],
+        "opacity": 0.739278,
+        "entry": [
+          {
+            "panel": 0,
+            "link": 0,
+            "node": 0,
+            "opacity": 0.7024623404117302
+          },
+          {
+            "panel": 0,
+            "link": 0,
+            "node": 0,
+            "opacity": 0
+          },
+          {
+            "panel": 0,
+            "link": 0,
+            "node": 0,
+            "opacity": 0
+          },
+          {
+            "panel": 0,
+            "link": 0,
+            "node": 0,
+            "opacity": 0.8085274718422443
+          },
+          {
+            "panel": 0,
+            "link": 0,
+            "node": 0,
+            "opacity": 0.6856279843347147
+          }
+        ],
+        "arc": 0.119977,
+        "active": true,
+        "layout": {
+          "version": "b03-hf-02-v1",
+          "seed": "01|b03-hf-02-v1|default",
+          "template": "horizontal",
+          "panels": [
+            {
+              "id": "crop-0",
+              "content": "crop-0",
+              "x": 1213.2633360542823,
+              "y": 544.1391759377439,
+              "width": 155.22473356081173,
+              "height": 155.22473356081173,
+              "angle": 4.537227490916848,
+              "opacity": 0.7024623404117302
+            },
+            {
+              "id": "crop-3",
+              "content": "crop-3",
+              "x": 55.147581960773095,
+              "y": 543.9356266006362,
+              "width": 167.80982593307272,
+              "height": 167.80982593307272,
+              "angle": -1.486401337198913,
+              "opacity": 0.8085274718422443
+            },
+            {
+              "id": "contour",
+              "content": "contour",
+              "x": 1017.6877737796817,
+              "y": 118.87545439266512,
+              "width": 173.61862105084583,
+              "height": 167.84375275409025,
+              "angle": -0.8238152973353863,
+              "opacity": 0.6856279843347147
+            }
+          ],
+          "center": {
+            "x": 705.5999999999999,
+            "y": 413.92
+          },
+          "radius": {
+            "x": 481.53672630410654,
+            "y": 217.42079999999999
+          },
+          "floor": {
+            "x": 705.5999999999999,
+            "y": 698,
+            "rx": 140,
+            "ry": 10
+          },
+          "score": 4.625576554047311,
+          "degraded": "none",
+          "intensity": 1,
+          "arcStart": 12,
+          "arcSpan": 172,
+          "attempts": 8,
+          "candidateCount": 168,
+          "safe": {
+            "x": 36,
+            "y": 110,
+            "width": 1368,
+            "height": 610
+          }
+        },
+        "effective": {
+          "x": 409.6770699223085,
+          "y": 127.84000000000003,
+          "width": 591.8458601553829,
+          "height": 572.16
+        },
+        "textures": 1,
+        "geometries": 2,
+        "points": 5925,
+        "rendererCount": 1
+      }
+    },
+    {
+      "keyframe": "orbit-forming",
+      "state": {
+        "id": "01",
+        "figureMode": true,
+        "revealed": false,
+        "phase": "entering",
+        "pigment": 0.718682,
+        "edge": 0.028,
+        "cracks": 0,
+        "preset": "standard",
+        "degraded": false,
+        "cacheSize": 1,
+        "cacheKeys": [
+          "[\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/line.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/color.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/figure.png\"]"
+        ],
+        "opacity": 0.78952,
+        "entry": [
+          {
+            "panel": 0,
+            "link": 0,
+            "node": 0,
+            "opacity": 0.7024623404117302
+          },
+          {
+            "panel": 0,
+            "link": 0,
+            "node": 0,
+            "opacity": 0
+          },
+          {
+            "panel": 0,
+            "link": 0,
+            "node": 0,
+            "opacity": 0
+          },
+          {
+            "panel": 0,
+            "link": 0,
+            "node": 0,
+            "opacity": 0.8085274718422443
+          },
+          {
+            "panel": 0,
+            "link": 0,
+            "node": 0,
+            "opacity": 0.6856279843347147
+          }
+        ],
+        "arc": 0.252422,
+        "active": true,
+        "layout": {
+          "version": "b03-hf-02-v1",
+          "seed": "01|b03-hf-02-v1|default",
+          "template": "horizontal",
+          "panels": [
+            {
+              "id": "crop-0",
+              "content": "crop-0",
+              "x": 1213.2633360542823,
+              "y": 544.1391759377439,
+              "width": 155.22473356081173,
+              "height": 155.22473356081173,
+              "angle": 4.537227490916848,
+              "opacity": 0.7024623404117302
+            },
+            {
+              "id": "crop-3",
+              "content": "crop-3",
+              "x": 55.147581960773095,
+              "y": 543.9356266006362,
+              "width": 167.80982593307272,
+              "height": 167.80982593307272,
+              "angle": -1.486401337198913,
+              "opacity": 0.8085274718422443
+            },
+            {
+              "id": "contour",
+              "content": "contour",
+              "x": 1017.6877737796817,
+              "y": 118.87545439266512,
+              "width": 173.61862105084583,
+              "height": 167.84375275409025,
+              "angle": -0.8238152973353863,
+              "opacity": 0.6856279843347147
+            }
+          ],
+          "center": {
+            "x": 705.5999999999999,
+            "y": 413.92
+          },
+          "radius": {
+            "x": 481.53672630410654,
+            "y": 217.42079999999999
+          },
+          "floor": {
+            "x": 705.5999999999999,
+            "y": 698,
+            "rx": 140,
+            "ry": 10
+          },
+          "score": 4.625576554047311,
+          "degraded": "none",
+          "intensity": 1,
+          "arcStart": 12,
+          "arcSpan": 172,
+          "attempts": 8,
+          "candidateCount": 168,
+          "safe": {
+            "x": 36,
+            "y": 110,
+            "width": 1368,
+            "height": 610
+          }
+        },
+        "effective": {
+          "x": 409.6770699223085,
+          "y": 127.84000000000003,
+          "width": 591.8458601553829,
+          "height": 572.16
+        },
+        "textures": 1,
+        "geometries": 2,
+        "points": 5925,
+        "rendererCount": 1
+      }
+    },
+    {
+      "keyframe": "switching",
+      "state": {
+        "id": "01",
+        "figureMode": true,
+        "revealed": false,
+        "phase": "entering",
+        "pigment": 0.364659,
+        "edge": 0.028,
+        "cracks": 0,
+        "preset": "standard",
+        "degraded": false,
+        "cacheSize": 2,
+        "cacheKeys": [
+          "[\"/assets/05_%E5%8C%97%E9%97%A8%E9%9B%B7%E4%BA%94%E7%8C%96/line.png\",\"/assets/05_%E5%8C%97%E9%97%A8%E9%9B%B7%E4%BA%94%E7%8C%96/color.png\",\"/assets/05_%E5%8C%97%E9%97%A8%E9%9B%B7%E4%BA%94%E7%8C%96/figure.png\"]",
+          "[\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/line.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/color.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/figure.png\"]"
+        ],
+        "opacity": 0.558026,
+        "entry": [
+          {
+            "panel": 0,
+            "link": 0,
+            "node": 0,
+            "opacity": 0.7024623404117302
+          },
+          {
+            "panel": 0,
+            "link": 0,
+            "node": 0,
+            "opacity": 0
+          },
+          {
+            "panel": 0,
+            "link": 0,
+            "node": 0,
+            "opacity": 0
+          },
+          {
+            "panel": 0,
+            "link": 0,
+            "node": 0,
+            "opacity": 0.8085274718422443
+          },
+          {
+            "panel": 0,
+            "link": 0,
+            "node": 0,
+            "opacity": 0.6856279843347147
+          }
+        ],
+        "arc": 0,
+        "active": true,
+        "layout": {
+          "version": "b03-hf-02-v1",
+          "seed": "01|b03-hf-02-v1|default",
+          "template": "horizontal",
+          "panels": [
+            {
+              "id": "crop-0",
+              "content": "crop-0",
+              "x": 1213.2633360542823,
+              "y": 544.1391759377439,
+              "width": 155.22473356081173,
+              "height": 155.22473356081173,
+              "angle": 4.537227490916848,
+              "opacity": 0.7024623404117302
+            },
+            {
+              "id": "crop-3",
+              "content": "crop-3",
+              "x": 55.147581960773095,
+              "y": 543.9356266006362,
+              "width": 167.80982593307272,
+              "height": 167.80982593307272,
+              "angle": -1.486401337198913,
+              "opacity": 0.8085274718422443
+            },
+            {
+              "id": "contour",
+              "content": "contour",
+              "x": 1017.6877737796817,
+              "y": 118.87545439266512,
+              "width": 173.61862105084583,
+              "height": 167.84375275409025,
+              "angle": -0.8238152973353863,
+              "opacity": 0.6856279843347147
+            }
+          ],
+          "center": {
+            "x": 705.5999999999999,
+            "y": 413.92
+          },
+          "radius": {
+            "x": 481.53672630410654,
+            "y": 217.42079999999999
+          },
+          "floor": {
+            "x": 705.5999999999999,
+            "y": 698,
+            "rx": 140,
+            "ry": 10
+          },
+          "score": 4.625576554047311,
+          "degraded": "none",
+          "intensity": 1,
+          "arcStart": 12,
+          "arcSpan": 172,
+          "attempts": 8,
+          "candidateCount": 168,
+          "safe": {
+            "x": 36,
+            "y": 110,
+            "width": 1368,
+            "height": 610
+          }
+        },
+        "effective": {
+          "x": 409.6770699223085,
+          "y": 127.84000000000003,
+          "width": 591.8458601553829,
+          "height": 572.16
+        },
+        "textures": 2,
+        "geometries": 2,
+        "points": 5925,
+        "rendererCount": 1
+      }
+    },
+    "Entry pigment/arc/panel/node/link complete; exact off GPU comparison captured; 4 viewports default/reveal/reverse; author controls; interrupted reading; cached/rapid/late switching; decoration degradation preserves image and interactions; exit frees GL resources; gallery filter none; reduced motion immediate. Legacy/invalid alpha and permission errors remain covered by original suites."
+  ],
+  "errors": [],
+  "limits": "Software simulation completed; real camera, physical gestures and exhibition hardware pending.",
+  "cachedSwitchMs": 621,
+  "resources": {
+    "id": "01",
+    "figureMode": true,
+    "revealed": false,
+    "phase": "stable",
+    "pigment": 1,
+    "edge": 0.028,
+    "cracks": 0,
+    "preset": "standard",
+    "degraded": false,
+    "cacheSize": 2,
+    "cacheKeys": [
+      "[\"/assets/05_%E5%8C%97%E9%97%A8%E9%9B%B7%E4%BA%94%E7%8C%96/line.png\",\"/assets/05_%E5%8C%97%E9%97%A8%E9%9B%B7%E4%BA%94%E7%8C%96/color.png\",\"/assets/05_%E5%8C%97%E9%97%A8%E9%9B%B7%E4%BA%94%E7%8C%96/figure.png\"]",
+      "[\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/line.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/color.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/figure.png\"]"
+    ],
+    "opacity": 1,
+    "entry": [
+      {
+        "panel": 1,
+        "link": 1,
+        "node": 1,
+        "opacity": 0.7024623404117302
+      },
+      {
+        "panel": 1,
+        "link": 1,
+        "node": 1,
+        "opacity": 0
+      },
+      {
+        "panel": 1,
+        "link": 1,
+        "node": 1,
+        "opacity": 0
+      },
+      {
+        "panel": 1,
+        "link": 1,
+        "node": 1,
+        "opacity": 0.8085274718422443
+      },
+      {
+        "panel": 1,
+        "link": 1,
+        "node": 1,
+        "opacity": 0.6856279843347147
+      }
+    ],
+    "arc": 1,
+    "active": true,
+    "layout": {
+      "version": "b03-hf-02-v1",
+      "seed": "01|b03-hf-02-v1|default",
+      "template": "horizontal",
+      "panels": [
+        {
+          "id": "crop-0",
+          "content": "crop-0",
+          "x": 1213.2633360542823,
+          "y": 544.1391759377439,
+          "width": 155.22473356081173,
+          "height": 155.22473356081173,
+          "angle": 4.537227490916848,
+          "opacity": 0.7024623404117302
+        },
+        {
+          "id": "crop-3",
+          "content": "crop-3",
+          "x": 55.147581960773095,
+          "y": 543.9356266006362,
+          "width": 167.80982593307272,
+          "height": 167.80982593307272,
+          "angle": -1.486401337198913,
+          "opacity": 0.8085274718422443
+        },
+        {
+          "id": "contour",
+          "content": "contour",
+          "x": 1017.6877737796817,
+          "y": 118.87545439266512,
+          "width": 173.61862105084583,
+          "height": 167.84375275409025,
+          "angle": -0.8238152973353863,
+          "opacity": 0.6856279843347147
+        }
+      ],
+      "center": {
+        "x": 705.5999999999999,
+        "y": 413.92
+      },
+      "radius": {
+        "x": 481.53672630410654,
+        "y": 217.42079999999999
+      },
+      "floor": {
+        "x": 705.5999999999999,
+        "y": 698,
+        "rx": 140,
+        "ry": 10
+      },
+      "score": 4.625576554047311,
+      "degraded": "none",
+      "intensity": 1,
+      "arcStart": 12,
+      "arcSpan": 172,
+      "attempts": 8,
+      "candidateCount": 168,
+      "safe": {
+        "x": 36,
+        "y": 110,
+        "width": 1368,
+        "height": 610
+      }
+    },
+    "effective": {
+      "x": 409.6770699223085,
+      "y": 127.84000000000003,
+      "width": 591.8458601553829,
+      "height": 572.16
+    },
+    "textures": 2,
+    "geometries": 2,
+    "points": 5925,
+    "rendererCount": 1
+  }
+}

@@ -1,0 +1,2008 @@
+{
+  "baseline": "2cae6f06e4055cebf48b3bdd241906ef88a0b161",
+  "protected": [
+    {
+      "path": "Mural-Exhibition/public/assets/01_南门何五猖/color.png",
+      "baselinePath": "Mural-Exhibition/public/assets/01_南门何五猖/color.png",
+      "bytes": 1709754,
+      "sha256": "c4288e40ed9e786ffe9ce14a3da5ea041188b90599ce772026adfa986e59ca13",
+      "gitBlob": "444a246a4163c391176a68c5b8c3a07c5752dafa",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/01_南门何五猖/figure.png",
+      "baselinePath": "Mural-Exhibition/public/assets/01_南门何五猖/figure.png",
+      "bytes": 122958,
+      "sha256": "cbc560184337186bde10faab00f28d0df78a0b9ccad7cb893d8daf3dc3ba3512",
+      "gitBlob": "b0b52a576fa152a15dd5f4aad6a6762f2d375567",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/01_南门何五猖/info.txt",
+      "baselinePath": "Mural-Exhibition/public/assets/01_南门何五猖/info.txt",
+      "bytes": 1953,
+      "sha256": "bd98b2f5bbfd3fe84df1f67997f9bf56289f8f1dfaf3a0a8a7657ba44bc5d7a5",
+      "gitBlob": "e1784c1501de0ef0a180e0b255d27cb6b7c59796",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/01_南门何五猖/line.png",
+      "baselinePath": "Mural-Exhibition/public/assets/01_南门何五猖/line.png",
+      "bytes": 1905759,
+      "sha256": "adbddf30bb1f19ebc60b95e05146af7f6540c97a79d0b1356072b0297856128d",
+      "gitBlob": "32b181b2e687f41d6a177d3373bf4a652937368b",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/01_南门何五猖/meta.json",
+      "baselinePath": "Mural-Exhibition/public/assets/01_南门何五猖/meta.json",
+      "bytes": 157,
+      "sha256": "eea24e55ee1929da4b81784c51512bdb863cbaaa4bb1f6ab425e5cfd40eca237",
+      "gitBlob": "4d68e9863f2d0de4e0981dae213fc06a32417cd1",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/01_南门何五猖/org.png",
+      "baselinePath": "Mural-Exhibition/public/assets/01_南门何五猖/org.png",
+      "bytes": 1894507,
+      "sha256": "cf6de181d400d87572fa53fd8eb75b80f51fe862d179e505f595dd5ec2ae5109",
+      "gitBlob": "498c6a18362635add88b5c749a35e08087e3a2f9",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/01_南门何五猖/video.mp4",
+      "baselinePath": "Mural-Exhibition/public/assets/01_南门何五猖/video.mp4",
+      "bytes": 1842286,
+      "sha256": "daf28f180e253a48d06b6a08e776e8aba043588869dc9c4ee468f20527defd72",
+      "gitBlob": "3450f478fb89cee2e51a8cba193ddd6435f081bf",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/02_东门陈五猖/color.png",
+      "baselinePath": "Mural-Exhibition/public/assets/02_东门陈五猖/color.png",
+      "bytes": 1625901,
+      "sha256": "41fdea5dbbd6e8a726521cb4eeba421e0f12013374da5f191bf40dd2c8b5611a",
+      "gitBlob": "f19e8349884bb7f55cc3756fff5d90892f6f58be",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/02_东门陈五猖/info.txt",
+      "baselinePath": "Mural-Exhibition/public/assets/02_东门陈五猖/info.txt",
+      "bytes": 1966,
+      "sha256": "5bce7a77c0b1c75cb38ef2926429c13bce6c56584992baf7091c87fc049c9c4a",
+      "gitBlob": "8ff40917c5fe12e6d75af3a299f01e592cf97022",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/02_东门陈五猖/line.png",
+      "baselinePath": "Mural-Exhibition/public/assets/02_东门陈五猖/line.png",
+      "bytes": 1828665,
+      "sha256": "48793c5e36931279c77482d7928f743ca57558214bcc190e3f414615f524c244",
+      "gitBlob": "cd557122a4e7c0c39ef3db1a7e40e2967ce66c2b",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/02_东门陈五猖/meta.json",
+      "baselinePath": "Mural-Exhibition/public/assets/02_东门陈五猖/meta.json",
+      "bytes": 156,
+      "sha256": "0a2d7691c97d727f70e0bea1fe0628394d13688711e587e14213cf3585a78837",
+      "gitBlob": "b5b833817d1c5079421e59e7039dec8f2b1c17e3",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/02_东门陈五猖/org.png",
+      "baselinePath": "Mural-Exhibition/public/assets/02_东门陈五猖/org.png",
+      "bytes": 1827810,
+      "sha256": "2c62249cbc5bf44da77c186ada8f06dfef5264d55253e3a7e30ae606893f39ce",
+      "gitBlob": "0bc9f5ae1b0527259cff6bffaf64fa81cf1fe91b",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/02_东门陈五猖/video.mp4",
+      "baselinePath": "Mural-Exhibition/public/assets/02_东门陈五猖/video.mp4",
+      "bytes": 854065,
+      "sha256": "f6b227b7109568674454ccd301f7e95019af29d901910047bb1478c7638a4467",
+      "gitBlob": "8faf4cd12e454d1cfc3fd8c9003cf77604971b04",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/03_西门谢五猖/color.png",
+      "baselinePath": "Mural-Exhibition/public/assets/03_西门谢五猖/color.png",
+      "bytes": 1615836,
+      "sha256": "7dfed13f0cab90d5567a1be2cc5a6356160000dcfd993488d0288e60742b2541",
+      "gitBlob": "4ba1d812bfce4ba2d7eea44e9825d52fa4634164",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/03_西门谢五猖/info.txt",
+      "baselinePath": "Mural-Exhibition/public/assets/03_西门谢五猖/info.txt",
+      "bytes": 2224,
+      "sha256": "c941147a8bc98a6cf7043ae9051b5da39218b2193cb4bf7f94277a914a6f0e73",
+      "gitBlob": "e504163519e888eaa7711e2a364eea1bbfda0c3e",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/03_西门谢五猖/line.png",
+      "baselinePath": "Mural-Exhibition/public/assets/03_西门谢五猖/line.png",
+      "bytes": 1856922,
+      "sha256": "b2d20037665790d7bad6369d6fc2801cdc4b68cb45b6ad5f8a641cd141305991",
+      "gitBlob": "176ab0abd06e791aefc8be4f61dc6dd092b9395c",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/03_西门谢五猖/meta.json",
+      "baselinePath": "Mural-Exhibition/public/assets/03_西门谢五猖/meta.json",
+      "bytes": 156,
+      "sha256": "f8c7f32071b7d3e2fe7e06be6256ebded1c73f7d2ae026b7525ac385f23c4892",
+      "gitBlob": "11681408a46689fbc6af0a4ced8f5e1cd59966c1",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/03_西门谢五猖/org.png",
+      "baselinePath": "Mural-Exhibition/public/assets/03_西门谢五猖/org.png",
+      "bytes": 1855962,
+      "sha256": "0bdb980dd4dba72da1040073eb7baa7114f914cc2bf6487cab7e30ac1ad21ec0",
+      "gitBlob": "45fc22ca6bf5afd4d14aa7766d3daef513474689",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/04_中门徐五猖/color.png",
+      "baselinePath": "Mural-Exhibition/public/assets/04_中门徐五猖/color.png",
+      "bytes": 1611900,
+      "sha256": "62bd67bcd395d7ea6effccf477f998726df34a29b19a662c9040eb33dea82214",
+      "gitBlob": "34a92070e153fd60fec688bc13a0af228028c003",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/04_中门徐五猖/info.txt",
+      "baselinePath": "Mural-Exhibition/public/assets/04_中门徐五猖/info.txt",
+      "bytes": 2236,
+      "sha256": "074797d387bd3cd67b776257477667ae838d95d5d33f051382b4ee16437a37c1",
+      "gitBlob": "eb24f80dee2a0a8352429ec0700e3d2affe2e7e4",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/04_中门徐五猖/line.png",
+      "baselinePath": "Mural-Exhibition/public/assets/04_中门徐五猖/line.png",
+      "bytes": 1825667,
+      "sha256": "0638b516da3cda9b44d6792d8f916aa486a8f3e7dd148f1c44ea5d2015f6fb68",
+      "gitBlob": "30fc8e154cae8044e98e9c014fb720a9451f88db",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/04_中门徐五猖/meta.json",
+      "baselinePath": "Mural-Exhibition/public/assets/04_中门徐五猖/meta.json",
+      "bytes": 156,
+      "sha256": "d393930e3bc9998d2de3908e86af0d78382663510c2fd72625e2fa6c3644dc22",
+      "gitBlob": "5f5c4d287e0297cd4566dc47cf161236ecf75ca8",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/04_中门徐五猖/org.png",
+      "baselinePath": "Mural-Exhibition/public/assets/04_中门徐五猖/org.png",
+      "bytes": 1820723,
+      "sha256": "6afccf169ec777b8befbd39d6fd6586f6ab35a4d04f161d176daabd22be92724",
+      "gitBlob": "3c079ae2fbf00e69cf52386fe346b9cdc4b9bdf8",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/05_北门雷五猖/color.png",
+      "baselinePath": "Mural-Exhibition/public/assets/05_北门雷五猖/color.png",
+      "bytes": 1603963,
+      "sha256": "92b671957235df4c3ac3b564eb0e4c068a57091936ec5c8ceedb1be5e9bfd4ed",
+      "gitBlob": "1ca20ec824a7acbd8775dafbde729b050dde46ec",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/05_北门雷五猖/info.txt",
+      "baselinePath": "Mural-Exhibition/public/assets/05_北门雷五猖/info.txt",
+      "bytes": 2217,
+      "sha256": "037ef406d9be061490f6dba35e66d19e7eb4162677a74707a10ac785e5930f0b",
+      "gitBlob": "a810b8d862e0c6f2e48b7348252e88fd72743703",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/05_北门雷五猖/line.png",
+      "baselinePath": "Mural-Exhibition/public/assets/05_北门雷五猖/line.png",
+      "bytes": 1834379,
+      "sha256": "6db70aee151cea0f8f7c518e10675e5a10dd55aa74f84be496f7375e61b7e976",
+      "gitBlob": "e62b12af7dab6bb0cd56c51030fbc7707f548fad",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/05_北门雷五猖/meta.json",
+      "baselinePath": "Mural-Exhibition/public/assets/05_北门雷五猖/meta.json",
+      "bytes": 157,
+      "sha256": "511af05f1af7a7c3787a416995916974a8d4aec3409c8491c0ddbe933166d671",
+      "gitBlob": "95468f7d7e1a954305bfdf6eee8ddfd7dee7e6b1",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/05_北门雷五猖/org.png",
+      "baselinePath": "Mural-Exhibition/public/assets/05_北门雷五猖/org.png",
+      "bytes": 1865808,
+      "sha256": "c01da49cae91b8bdf828ded03db5e4c533463360287c365c0d786a2c2903de83",
+      "gitBlob": "030b57351bd70bbb6cb505898850e83792ca0fe9",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/06_翻坛张五郎/color.png",
+      "baselinePath": "Mural-Exhibition/public/assets/06_翻坛张五郎/color.png",
+      "bytes": 1620176,
+      "sha256": "0ee9584f03d9977f9681f2948746550d1043fa1c8bd9008feb563a6412d558d0",
+      "gitBlob": "3c34a48c2ff747629d4d877b3c1e0fe27d2fee8e",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/06_翻坛张五郎/info.txt",
+      "baselinePath": "Mural-Exhibition/public/assets/06_翻坛张五郎/info.txt",
+      "bytes": 2228,
+      "sha256": "0bc7ac6b25e4d1bed32b33bb1215c316a7cab7d086316de45706d991ceccaa61",
+      "gitBlob": "43edc2cd6e3c7b2b1aa6df2a535569ee3952c45b",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/06_翻坛张五郎/line.png",
+      "baselinePath": "Mural-Exhibition/public/assets/06_翻坛张五郎/line.png",
+      "bytes": 1835268,
+      "sha256": "28720e00a88d395a844e4e5e6b87587298e35ab85cc9b01d95493e8fe0a70a1a",
+      "gitBlob": "4188dd44e80a55c4a2bee150bd75b97eeb04d6c5",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/06_翻坛张五郎/meta.json",
+      "baselinePath": "Mural-Exhibition/public/assets/06_翻坛张五郎/meta.json",
+      "bytes": 157,
+      "sha256": "7fea580b571d2fcc74eab16eb039c4506aa9d33b65632a06acfb663644bf1790",
+      "gitBlob": "26d9b65e77826c528ab05d96e97de0795ba488bc",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/06_翻坛张五郎/org.png",
+      "baselinePath": "Mural-Exhibition/public/assets/06_翻坛张五郎/org.png",
+      "bytes": 1824445,
+      "sha256": "5578554512b06ec8f61228557306a68c434fe0ef01030849a9b09fb11fe1a421",
+      "gitBlob": "8a697b29e8d09aee913f3bc8e56db8483e48f304",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/07_梅山猖兵/color.png",
+      "baselinePath": "Mural-Exhibition/public/assets/07_梅山猖兵/color.png",
+      "bytes": 1491748,
+      "sha256": "52d1256c1c1e3ed3dff689182b0e232703e552655fb654834e37ffe92c6f1090",
+      "gitBlob": "6badd2dbc141c38fb848a0ea85f463cf97f4286b",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/07_梅山猖兵/info.txt",
+      "baselinePath": "Mural-Exhibition/public/assets/07_梅山猖兵/info.txt",
+      "bytes": 1814,
+      "sha256": "b66d7fcecb379f16981628dcb7401cf088756d1c6554031eca77181a8c5a8954",
+      "gitBlob": "9e6f2af4c50ab78bae061b753b42660df45bba9a",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/07_梅山猖兵/line.png",
+      "baselinePath": "Mural-Exhibition/public/assets/07_梅山猖兵/line.png",
+      "bytes": 1779267,
+      "sha256": "4151b8ea02a1d69f02241b670ea32bb6086add188274a87bf0bf0fe704d79faa",
+      "gitBlob": "ddaf7869a522fdbaf29fcb9d4746c4b33a57e90c",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/07_梅山猖兵/meta.json",
+      "baselinePath": "Mural-Exhibition/public/assets/07_梅山猖兵/meta.json",
+      "bytes": 155,
+      "sha256": "190875d9e1b40aec3a763756baa44da96d1e79ad05ba713950eb5b3d7d06a230",
+      "gitBlob": "7765f9ef7083180044def71d5ee8547e1b640775",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/07_梅山猖兵/org.png",
+      "baselinePath": "Mural-Exhibition/public/assets/07_梅山猖兵/org.png",
+      "bytes": 1780210,
+      "sha256": "9daa15a25c5507333cbf60f53350f0b9120fe97872e36f2d052a54632086f104",
+      "gitBlob": "e66dae49588444b675f5eb2433499b079d90c1eb",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/08_上层猖兵/color.png",
+      "baselinePath": "Mural-Exhibition/public/assets/10_上层猖兵/color.png",
+      "bytes": 16579049,
+      "sha256": "2d072f4f168915ae9ce581a99950a7bb3f7027d55eef1bad6bbf24eeb0e2d011",
+      "gitBlob": "55c9f54445b43cfecbdc28517a73680ba08521d5",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/08_上层猖兵/info.txt",
+      "baselinePath": "Mural-Exhibition/public/assets/10_上层猖兵/info.txt",
+      "bytes": 1366,
+      "sha256": "de923ba43a8f0e1828d193e2e2de111b2f722ceaac5b271ba327a3cf34d4c5c3",
+      "gitBlob": "87e58ebcbcc6fd9d1dc5a4cf9a64e027914ee75d",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/08_上层猖兵/line.png",
+      "baselinePath": "Mural-Exhibition/public/assets/10_上层猖兵/line.png",
+      "bytes": 1154049,
+      "sha256": "30b522533cc977da50b8fba16cc002a883f198f57c49960331d2e06d8822bbf7",
+      "gitBlob": "1628921ed5eb4a2bb808ec13ebb76f898b85ac87",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/08_上层猖兵/meta.json",
+      "baselinePath": "Mural-Exhibition/public/assets/10_上层猖兵/meta.json",
+      "bytes": 156,
+      "sha256": "e3ddfeaed533e1ded1651e06d96f7c35a11eaf904c3d2312c043bab6f342376e",
+      "gitBlob": "249e79be166cb3ef4a28d8b961ff07c50e6b3a42",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/08_上层猖兵/org.png",
+      "baselinePath": "Mural-Exhibition/public/assets/10_上层猖兵/org.png",
+      "bytes": 22911978,
+      "sha256": "694fad763575ff5d89e39b4150a13760c595d2d8c65159b8fcc093f11baefe0c",
+      "gitBlob": "6bc7e9a2e172a8802dcc8592422128fb0f9e7cce",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/08_上层猖兵/video.mp4",
+      "baselinePath": "Mural-Exhibition/public/assets/10_上层猖兵/video.mp4",
+      "bytes": 6010634,
+      "sha256": "93d16ae52abd3b197a6279df07df047186f62c76b9bc2b45f0a454e5a846868f",
+      "gitBlob": "130e279db04b59fd26d0d74c769b7f166d61dc37",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b01/manifest.json",
+      "baselinePath": "Mural-Exhibition/public/b01/manifest.json",
+      "bytes": 631,
+      "sha256": "5fd722e3c498b8be3a1855137b765066f77c6a2e3afbc1bd9e1124a16665c4d3",
+      "gitBlob": "b3d3cc6e056766ffab1609c72bd2977d699d6d33",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b01/mural-02-left.webp",
+      "baselinePath": "Mural-Exhibition/public/b01/mural-02-left.webp",
+      "bytes": 820680,
+      "sha256": "6ab0fbbdb9fbbe3c7b300a49319400447e97060b4c05598d63eada78ee79da23",
+      "gitBlob": "e59c79f640981e4c89f757fc7bc451ed786a903e",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b03/OFL-Serif.txt",
+      "baselinePath": "Mural-Exhibition/public/b03/OFL-Serif.txt",
+      "bytes": 4301,
+      "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+      "gitBlob": "d952d62c065f3f35fb83a173496e90b21525aef3",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b03/README.md",
+      "baselinePath": "Mural-Exhibition/public/b03/README.md",
+      "bytes": 1339,
+      "sha256": "cdbd8967371854b0a4be0261eb37e4a0b75fddd602ad4a3b896ace3de5472249",
+      "gitBlob": "bcd003ac81a624abcd87d2998dd82dfe80d140cd",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b03/font-manifest.json",
+      "baselinePath": "Mural-Exhibition/public/b03/font-manifest.json",
+      "bytes": 2795,
+      "sha256": "7644b68ceca590da40702a15a40b0adc88832f2f1976146b6c4896f0b3cebf4f",
+      "gitBlob": "57d130e625300d0d3880969dc408896bc7c6126c",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b03/karst-valley.webp",
+      "baselinePath": "Mural-Exhibition/public/b03/karst-valley.webp",
+      "bytes": 102818,
+      "sha256": "9a4c0ded91822f6794dc22b1e1e6e80daf5ab4db188953fe01f9afa88aa3dba7",
+      "gitBlob": "b86961ed2760c0d37e0bad6421d0ab51cd775db0",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b03/narrative-serif.woff2",
+      "baselinePath": "Mural-Exhibition/public/b03/narrative-serif.woff2",
+      "bytes": 347652,
+      "sha256": "72103eb33ce4874d1aae61dd2cf7e5ae7f68c2c576c5f68b48041e6aace83094",
+      "gitBlob": "8744e72b834c02535bbfe6e421e5a7106bf636f8",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b03/thumbs/01-color.webp",
+      "baselinePath": "Mural-Exhibition/public/b03/thumbs/01-color.webp",
+      "bytes": 3076,
+      "sha256": "cf17ab45b5e8a4e4b8cff3d917b5656f327a02888ea7b31bf2d162f0d68ed8d5",
+      "gitBlob": "4297866b54bed5c504d6e69d1534d751f8ebe32d",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b03/thumbs/01-line.webp",
+      "baselinePath": "Mural-Exhibition/public/b03/thumbs/01-line.webp",
+      "bytes": 3038,
+      "sha256": "eb8e93dcd228a262048a31bff8fc3151fe4fccdd8d52c648d6040cf293117d30",
+      "gitBlob": "b052b3a0dfeb0e027a0b2b9f730195074749ad03",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b03/thumbs/01-org.webp",
+      "baselinePath": "Mural-Exhibition/public/b03/thumbs/01-org.webp",
+      "bytes": 2682,
+      "sha256": "608891d4ee1bc44b5bee5f4b48e1459024c1b664913f451d3a072d46c9ed2a5c",
+      "gitBlob": "8d1bca8c669f74e86e8f9c16fc82633646b276ba",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b03/thumbs/02-color.webp",
+      "baselinePath": "Mural-Exhibition/public/b03/thumbs/02-color.webp",
+      "bytes": 2664,
+      "sha256": "5cb186e2be1a21ba024a15855766eb04e795c45df318773e7ee2aa910a570895",
+      "gitBlob": "c646a9334af8845b58810c15e707ae37491b7131",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b03/thumbs/02-line.webp",
+      "baselinePath": "Mural-Exhibition/public/b03/thumbs/02-line.webp",
+      "bytes": 2606,
+      "sha256": "8c9e2785f3f44af86cb069db6163213c7a7623b8cd5fdad7f9524eb8fd074897",
+      "gitBlob": "03269c99c6f9da2d82827789a3d5b296a2a6ba08",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b03/thumbs/02-org.webp",
+      "baselinePath": "Mural-Exhibition/public/b03/thumbs/02-org.webp",
+      "bytes": 2064,
+      "sha256": "c6be22b5ae746a96d37176dcad8e90c13790e79b6e21e9b5a51a8416da994d20",
+      "gitBlob": "d8e7ff8057120945227e59559bb65fd87fc82441",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b03/thumbs/03-color.webp",
+      "baselinePath": "Mural-Exhibition/public/b03/thumbs/03-color.webp",
+      "bytes": 2738,
+      "sha256": "4279accd7089667fa2e0cc168de99a814817ff8c7162793eca132ceee0edd0a0",
+      "gitBlob": "9995d6517d93b8089f9027add0d04e5496633d61",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b03/thumbs/03-line.webp",
+      "baselinePath": "Mural-Exhibition/public/b03/thumbs/03-line.webp",
+      "bytes": 2612,
+      "sha256": "042c23e614c1807d3b1dfbecc6aa9924413a50ccbc64bb7af990f33190099ddb",
+      "gitBlob": "8bd74b1b2a194156ecd28b9d8e508df9f147ee2e",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b03/thumbs/03-org.webp",
+      "baselinePath": "Mural-Exhibition/public/b03/thumbs/03-org.webp",
+      "bytes": 2062,
+      "sha256": "3c5c3b6b909e4d37d96001d711bd622f415bfda9e0bf0878cb450c92bce7bb89",
+      "gitBlob": "4d72908fb76c15a4acd2bbf832c5107d74164186",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b03/thumbs/04-color.webp",
+      "baselinePath": "Mural-Exhibition/public/b03/thumbs/04-color.webp",
+      "bytes": 2812,
+      "sha256": "bcd34734a316f910fb12f004a162fc86380e880f9f509380242717d420b17da8",
+      "gitBlob": "23e437966613ced0c41a5392b3a2d78575f79540",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b03/thumbs/04-line.webp",
+      "baselinePath": "Mural-Exhibition/public/b03/thumbs/04-line.webp",
+      "bytes": 2658,
+      "sha256": "b3c8448b8fd1d96d3c823b907784190b6e286d090e3655432768e357410ea58c",
+      "gitBlob": "13d2657d196179ec54810727c12c3c1d61d791a5",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b03/thumbs/04-org.webp",
+      "baselinePath": "Mural-Exhibition/public/b03/thumbs/04-org.webp",
+      "bytes": 2218,
+      "sha256": "5420e6a474346324eea2c3e2b7a841fbd3e1c9585c5ffa8c7cd5504353f99307",
+      "gitBlob": "6fad7a91d9a5bcdb506fca3e4dfaef759f0f5b51",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b03/thumbs/05-color.webp",
+      "baselinePath": "Mural-Exhibition/public/b03/thumbs/05-color.webp",
+      "bytes": 2646,
+      "sha256": "90438801f785fc50cf0e61401671b3502f5c103a1d41d0fe63d45c63b173185f",
+      "gitBlob": "978a467427cb7a3671d59578435d452014bdfb6c",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b03/thumbs/05-line.webp",
+      "baselinePath": "Mural-Exhibition/public/b03/thumbs/05-line.webp",
+      "bytes": 2560,
+      "sha256": "88da8cdb6a81abfe3358aa6910caf4acd90d340fd42bb8401638661d872b18dd",
+      "gitBlob": "fa11a5b843e862a363f366b0434d66ecf352a4d1",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b03/thumbs/05-org.webp",
+      "baselinePath": "Mural-Exhibition/public/b03/thumbs/05-org.webp",
+      "bytes": 2090,
+      "sha256": "c20122b03fbddc9b6fad1b29cfba62e015a267cbccff67d1d100712609922656",
+      "gitBlob": "b572fdc55fe2d1684fc3137bb94dbd134b7460c0",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b03/thumbs/06-color.webp",
+      "baselinePath": "Mural-Exhibition/public/b03/thumbs/06-color.webp",
+      "bytes": 2698,
+      "sha256": "a158032f46eb82b7caa44fd6cc249b280f1f55989dd997a1841de12bef17434e",
+      "gitBlob": "de60f9fc74403e10e65752a379714f86cb0440dc",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b03/thumbs/06-line.webp",
+      "baselinePath": "Mural-Exhibition/public/b03/thumbs/06-line.webp",
+      "bytes": 2614,
+      "sha256": "68f4e6549b7674567e276c38c328047372a8f835295bfa99bdcbb50057174b54",
+      "gitBlob": "e9c7dd9a3e55af79efc4a806a3cc8b7e4936f7c1",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b03/thumbs/06-org.webp",
+      "baselinePath": "Mural-Exhibition/public/b03/thumbs/06-org.webp",
+      "bytes": 2052,
+      "sha256": "d2d27e8233cbe46379cd11b1a11dd85173d2a88dba3ab7e12c9164d080484cea",
+      "gitBlob": "cc10b49c334432f8361e9ee97e89d6f92664ee28",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b03/thumbs/07-color.webp",
+      "baselinePath": "Mural-Exhibition/public/b03/thumbs/07-color.webp",
+      "bytes": 3282,
+      "sha256": "1a5596aa4f3c5ce258c075dd617ecc34174447059e9c0b247207c705eae1c92e",
+      "gitBlob": "2b1fc161c081012bf12e0617ba8d449badb6d519",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b03/thumbs/07-line.webp",
+      "baselinePath": "Mural-Exhibition/public/b03/thumbs/07-line.webp",
+      "bytes": 3226,
+      "sha256": "526d6730860b551cec47beee461d44ccba7d132f1ed086dc4413a1783c29a3ee",
+      "gitBlob": "cf60c65e207b338160bd0e95557744313b4e19dc",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b03/thumbs/07-org.webp",
+      "baselinePath": "Mural-Exhibition/public/b03/thumbs/07-org.webp",
+      "bytes": 2676,
+      "sha256": "307906b690a156beb5ad41e1949f504271f8b71cede12140fda80d7fdb754812",
+      "gitBlob": "1045e9b19f92b68333583f93195886c6da7c13cc",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b03/thumbs/10-color.webp",
+      "baselinePath": "Mural-Exhibition/public/b03/thumbs/10-color.webp",
+      "bytes": 4804,
+      "sha256": "5757963f707ac421a145853ba5a0273e27ff777eb09f6688efbde20f8f86d344",
+      "gitBlob": "ff0f01d6fcb850ae02fa31372e78b077c24cc466",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b03/thumbs/10-line.webp",
+      "baselinePath": "Mural-Exhibition/public/b03/thumbs/10-line.webp",
+      "bytes": 1364,
+      "sha256": "f2cba1bf9e30da264aae0487b3c62d0101babecc8fb3e38eb8ed01d17384c9b6",
+      "gitBlob": "320f72769f245ef0bd9d2c9b14da92b0a5dbfdfb",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b03/thumbs/10-org.webp",
+      "baselinePath": "Mural-Exhibition/public/b03/thumbs/10-org.webp",
+      "bytes": 3856,
+      "sha256": "318d123e2ebc26ceb3b7774ba33223e7d43e22e013ec208423d048f517b0c04b",
+      "gitBlob": "9ef1b5ece5b8a802c77593c0b724de452b4df217",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/gallery/manifest.json",
+      "baselinePath": "Mural-Exhibition/public/gallery/manifest.json",
+      "bytes": 1307,
+      "sha256": "adcc26e0dcf78f1042143ff7deee7e770b0870bbd5232b2f9fd70f671109988a",
+      "gitBlob": "6e0b6a1320d2189093961502751d201a996924a4",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/gallery/mural-02-detail.webp",
+      "baselinePath": "Mural-Exhibition/public/gallery/mural-02-detail.webp",
+      "bytes": 8029032,
+      "sha256": "bdb5b56026d6f8ce56e2bfccf9c8f5dafebf777d585e55c3f4fa367e2941caf3",
+      "gitBlob": "2636c1e97ee93c1f1be65f51d433330a3572b60d",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/README.md",
+      "baselinePath": "module-a/a01/README.md",
+      "bytes": 5216,
+      "sha256": "bb730a0525c13a8474d19d026455db8ebac9e387a578311035bd91cf65cb2050",
+      "gitBlob": "ae2a823afdcb288f0ef8c1cefd155503d53eab71",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/app.mjs",
+      "baselinePath": "module-a/a01/app.mjs",
+      "bytes": 10278,
+      "sha256": "822c2633bbeaf94af46e8c6f22b39a3ccdad3bd509deeb220d40310331734ca9",
+      "gitBlob": "0c5bd6e957fd4d96137a7164e2534a1ab2e28d7e",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/cinematic-browser-check.cjs",
+      "baselinePath": "module-a/a01/cinematic-browser-check.cjs",
+      "bytes": 5671,
+      "sha256": "f9ed30c53b4ce3cb028d4688f00a5cade6edd08a98fee662b2f09cd7fff9ebf9",
+      "gitBlob": "1f9c1112f7b4550bce730ec3f8e56a0832de3882",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/cinematic-contact.cjs",
+      "baselinePath": "module-a/a01/cinematic-contact.cjs",
+      "bytes": 2579,
+      "sha256": "47ca8292b30ed43800513017851050e08d8f93222202bc1f324f81c45e67c25c",
+      "gitBlob": "f70b9a835a885a1c8434d224942fb246136cac61",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/cinematic-pass-check.cjs",
+      "baselinePath": "module-a/a01/cinematic-pass-check.cjs",
+      "bytes": 1812,
+      "sha256": "da182e039e7d3c50b10365dbe70b67419c321e5a3bd094c382333da09087e564",
+      "gitBlob": "b74d50e839f1bd1b5bcde2284bf81fb382d91506",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/cinematic-performance-check.cjs",
+      "baselinePath": "module-a/a01/cinematic-performance-check.cjs",
+      "bytes": 4727,
+      "sha256": "19958ca7e42454e79adf9357bee08c06b4b5ec83dacea30ceaeb78c6e3f2cdf3",
+      "gitBlob": "9b0351c26b8f8955dc85c15d1fb3286415439260",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/cinematic-protection-check.cjs",
+      "baselinePath": "module-a/a01/cinematic-protection-check.cjs",
+      "bytes": 1204,
+      "sha256": "865cbef6cf29dd0c43df992da90acb03ea9ac864f868370a936aae5ed409ed6d",
+      "gitBlob": "fce4a2d6b388910c27d739b719c19d21eee8daa4",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/cinematic-state.mjs",
+      "baselinePath": "module-a/a01/cinematic-state.mjs",
+      "bytes": 1088,
+      "sha256": "1e34fc092b5959f02d1a3c1a831d62fdc8848a775cea2c7782234a72dad18d60",
+      "gitBlob": "1f413c4121a6b78b9f0311ef160cf4ddf3518295",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/cinematic-state.test.mjs",
+      "baselinePath": "module-a/a01/cinematic-state.test.mjs",
+      "bytes": 1280,
+      "sha256": "e79716ddb7401c95d9653e3c90777404fef0639faa2b6d059246e7649ea83f48",
+      "gitBlob": "72447d11c6ee8c7c440354f52863b25815d877eb",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/dark-before-check.cjs",
+      "baselinePath": "module-a/a01/dark-before-check.cjs",
+      "bytes": 1057,
+      "sha256": "6fa32ed1b8577021115a97208174eb81b8241409ba01c52485094166b2372326",
+      "gitBlob": "32144604b7b1440aa3ab3f95879b94335bf2544a",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/dark-browser-check.cjs",
+      "baselinePath": "module-a/a01/dark-browser-check.cjs",
+      "bytes": 7355,
+      "sha256": "8dc30848de7af6af7026ab18c170eac3ab15b25da18a1661f37bee20eb5b66e9",
+      "gitBlob": "71ced9aa38a458058ab5ca4f04c509261c939e01",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/dark-contact.cjs",
+      "baselinePath": "module-a/a01/dark-contact.cjs",
+      "bytes": 3351,
+      "sha256": "0868d9794026381f666761b6258387b106ffe6e64afb5a0fbf670ed770aac670",
+      "gitBlob": "8359a018a3dde6532e392b7efa97eb137d4da06b",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/dark-regression-check.cjs",
+      "baselinePath": "module-a/a01/dark-regression-check.cjs",
+      "bytes": 1239,
+      "sha256": "98d9cd5c8bbcb113ce33fc8e864ebdb9a6ff43933cebc18972ad4c749d2c8b45",
+      "gitBlob": "20822c199a9995d53d4c3832692e4645cf1b6b9f",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/font-browser-check.cjs",
+      "baselinePath": "module-a/a01/font-browser-check.cjs",
+      "bytes": 1692,
+      "sha256": "fcd0e2704c7ec860d7f2cd1c798e0676e8ccb25f8d5cf2a01d21b1cc5bb1a9b5",
+      "gitBlob": "754d3608b392da2185f464a34e3e84b65ad6f43c",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/fonts.test.mjs",
+      "baselinePath": "module-a/a01/fonts.test.mjs",
+      "bytes": 988,
+      "sha256": "2fa230c8d47ccee886ba0e6b7cfc1ddd6966df11fb2ad5ecc814f99bf4c7f5ce",
+      "gitBlob": "4f897f94a370f9c1edfb987d69d3ca77cb138047",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/fonts/OFL-Sans.txt",
+      "baselinePath": "module-a/a01/fonts/OFL-Sans.txt",
+      "bytes": 4301,
+      "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+      "gitBlob": "d952d62c065f3f35fb83a173496e90b21525aef3",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/fonts/OFL-Serif.txt",
+      "baselinePath": "module-a/a01/fonts/OFL-Serif.txt",
+      "bytes": 4301,
+      "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+      "gitBlob": "d952d62c065f3f35fb83a173496e90b21525aef3",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/fonts/README.md",
+      "baselinePath": "module-a/a01/fonts/README.md",
+      "bytes": 1334,
+      "sha256": "9fb541e70c0d50f71a3fb5f335c780d07031db90edb03f4d9345174b3b81ad14",
+      "gitBlob": "802563095efdcf18119f8b325aae82f32212dc56",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/fonts/a01-sans.woff2",
+      "baselinePath": "module-a/a01/fonts/a01-sans.woff2",
+      "bytes": 20768,
+      "sha256": "968cde0999848ba84f7f4b0a572e1788c12f45353663fe2ab5fe6efd368501c0",
+      "gitBlob": "2463fb53f586ebe94f301c497512dc2d8b358593",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/fonts/a01-serif.woff2",
+      "baselinePath": "module-a/a01/fonts/a01-serif.woff2",
+      "bytes": 29440,
+      "sha256": "36b417eab4d95d2415be86122efef45e29fefece899385cd6e8f0b27ed696301",
+      "gitBlob": "654bb189f1d891b7a49bcda44d374e14a779fe8b",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/fonts/manifest.json",
+      "baselinePath": "module-a/a01/fonts/manifest.json",
+      "bytes": 967,
+      "sha256": "27fc0231ad2aa9306f480776ca08d9419f9450f2de58192af21cc0063458a75e",
+      "gitBlob": "029bed7737deda6be515cc00624e6235e11056f9",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/fonts/subset-fonts.py",
+      "baselinePath": "module-a/a01/fonts/subset-fonts.py",
+      "bytes": 1824,
+      "sha256": "36bd430c436031e44d21e85f731ccac7084179ecbbc14dfd77cf81a24dff9536",
+      "gitBlob": "f10680440353b6d0407d3e6641c6e5b3a3dab8af",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/index.html",
+      "baselinePath": "module-a/a01/index.html",
+      "bytes": 1486,
+      "sha256": "2644c40ae7066315b54a0b2553338e7457b6c80e37d3b623e42f994c319ab0a7",
+      "gitBlob": "256d9b29fd4ae183e2ac9f63e69e38edcd2a44e6",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/ink-color-check.cjs",
+      "baselinePath": "module-a/a01/ink-color-check.cjs",
+      "bytes": 2621,
+      "sha256": "ca010835b0d22a149602bff31dee96f1b7864700444352f7948f97b5506edd1f",
+      "gitBlob": "48ab3629f61ac67980a79949e44fca343d1766f5",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/ink-pass-check.cjs",
+      "baselinePath": "module-a/a01/ink-pass-check.cjs",
+      "bytes": 2840,
+      "sha256": "de22e07066b91d8d97b6ba9b83f6b8e50fe69b1ac0594d61280037abe80d65d1",
+      "gitBlob": "0e8820c113620aa6338cc998d6088570efaaf01a",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/ink-scene.mjs",
+      "baselinePath": "module-a/a01/ink-scene.mjs",
+      "bytes": 2907,
+      "sha256": "a5c88707d99b482720ef2d4bdca695bd8b52bc54c4b77df31af3ee2541d84e97",
+      "gitBlob": "a6c1d0bf68cdae023fd16c561aa8aa46a399018f",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/ink-scene.test.mjs",
+      "baselinePath": "module-a/a01/ink-scene.test.mjs",
+      "bytes": 894,
+      "sha256": "835a2d808a5387c9faa0a9dd59f93990b55dc69890b54902eec884b73286ba19",
+      "gitBlob": "27cb5d7b964aee881028fa7f0eb250dec0bff7d2",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/line-browser-check.cjs",
+      "baselinePath": "module-a/a01/line-browser-check.cjs",
+      "bytes": 8604,
+      "sha256": "dd9805de89bf6d6c86b8ad517a49eda1491525b2c4fee716a56abd8ab38ecc61",
+      "gitBlob": "1ca7597cbefb918f8078a8d18f86945f87f50534",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/line-performance-check.cjs",
+      "baselinePath": "module-a/a01/line-performance-check.cjs",
+      "bytes": 3981,
+      "sha256": "306e49068e4cb3fa0eb3d1d31ed18657ebd40cef452146002d8dc7f494ce2fd1",
+      "gitBlob": "dc9671ac2a1af4c36a75a6bac2b5098b71b3a67a",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/progress.mjs",
+      "baselinePath": "module-a/a01/progress.mjs",
+      "bytes": 2093,
+      "sha256": "90d1d86fb61f7a1a9ad13096dfe2e8fbde40634383448bbae9292a531ed29d29",
+      "gitBlob": "5efa9df27a98c3623043c7987861ff4c6db264fe",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/progress.test.mjs",
+      "baselinePath": "module-a/a01/progress.test.mjs",
+      "bytes": 1826,
+      "sha256": "8bcd4b311e4fa90fce5f879ae58c97874670d1c4e7adfd26befa50616dd9b1fe",
+      "gitBlob": "157888d6d2ba9f5eaed1a234e26940dfe21a8f94",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/server.mjs",
+      "baselinePath": "module-a/a01/server.mjs",
+      "bytes": 1318,
+      "sha256": "3b54b5567c0ecf234249bf4e74bb692ef5179aabd34b2b611c7457b0c0dc1d48",
+      "gitBlob": "3edecbb7dade210c0aa794c9d7f382fff4753462",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/styles.css",
+      "baselinePath": "module-a/a01/styles.css",
+      "bytes": 5706,
+      "sha256": "6fc11f26ea75d849970b0188f44dc5d627a5f70ac2951dce66ab4aa35e42f0bc",
+      "gitBlob": "3dea9e8d3dfdfb5af73e5326d1674e753528004d",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/v3-browser-check.cjs",
+      "baselinePath": "module-a/a01/v3-browser-check.cjs",
+      "bytes": 8994,
+      "sha256": "7aefa4681b64a3e02704c1b225d01d538e017222ffc271b282788416747be980",
+      "gitBlob": "085d7883dd5dd2005e8b814a1c1fdeb7e5f50c5e",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/v3-contact.cjs",
+      "baselinePath": "module-a/a01/v3-contact.cjs",
+      "bytes": 2643,
+      "sha256": "797de02baced68520b6016746739d1be2918d9ed41f0816d66e22560b643a97d",
+      "gitBlob": "ae5b467c5e6a6ab19b4ec9fc4811f2507c16a565",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/v3-pass-check.cjs",
+      "baselinePath": "module-a/a01/v3-pass-check.cjs",
+      "bytes": 3003,
+      "sha256": "b34baadeb100ab2f717f1c4a9158a9ef5a732259ce26d964c853e8ac626b1643",
+      "gitBlob": "5437d572e14eecd69e6c6dde3994d588e2a228af",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/v3-performance-check.cjs",
+      "baselinePath": "module-a/a01/v3-performance-check.cjs",
+      "bytes": 3920,
+      "sha256": "08e2ba8e5c7eea75ee352f19818760fbd6eef6454e3117de45c538a4a7e098a5",
+      "gitBlob": "b8a0711b46f55427c606bbfcbf2ab8cfc5c1e767",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/v3-regression-check.cjs",
+      "baselinePath": "module-a/a01/v3-regression-check.cjs",
+      "bytes": 1142,
+      "sha256": "9798f911ddff8d7a250cb2e9c0dfa747080fc14a7030bfa694fc54b298b9725d",
+      "gitBlob": "b4943932f6be47c098a3314a1b343f3f61ec6970",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/visual-integration.test.mjs",
+      "baselinePath": "module-a/a01/visual-integration.test.mjs",
+      "bytes": 732,
+      "sha256": "20eaf364d11e6a1e75a7b488f74f4871dcb714c32a9b38e051bb96d5fa9a4b12",
+      "gitBlob": "cab6df3d6f13d9b3402415c6bd6f52f4ab733ca2",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/visual-remaster-browser-check.cjs",
+      "baselinePath": "module-a/a01/visual-remaster-browser-check.cjs",
+      "bytes": 6986,
+      "sha256": "920706fb9cce603e3c28b1063cdc18078ecf8867e759c5e9b835e4c8430f0da7",
+      "gitBlob": "fb030450d7dc46c5e6f8312649542bfb92ddf801",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/visual-remaster-contact.cjs",
+      "baselinePath": "module-a/a01/visual-remaster-contact.cjs",
+      "bytes": 2086,
+      "sha256": "4127e07d11a9784d02bb40da601f5b850d5969cccd82d79f8c91fb8533db44e6",
+      "gitBlob": "0e51a720ad5b78f5374ec1ae02234a2ace6d3ae5",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a01/visual-remaster-performance-check.cjs",
+      "baselinePath": "module-a/a01/visual-remaster-performance-check.cjs",
+      "bytes": 4885,
+      "sha256": "d82bbef5879594e77924b7991bf36eaff72f1d596459a1812a8d5b676d11bd30",
+      "gitBlob": "148d42720f761e7608a3c42c423590f3b00ba86d",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a02/boards.cjs",
+      "baselinePath": "module-a/a02/boards.cjs",
+      "bytes": 2343,
+      "sha256": "52591bdb8901462daca04ffa333453bacfae05030bf57f485229f4362f0d2048",
+      "gitBlob": "8d1be24d028ad3814515c1d26b7726f0816c04f1",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a02/browser-check.cjs",
+      "baselinePath": "module-a/a02/browser-check.cjs",
+      "bytes": 4598,
+      "sha256": "bd49142a2e527824e896164bc852d15ce5924b8fd66914776e98fdc34ea809b1",
+      "gitBlob": "d63154613efa78f078cacf4f3879be216ee3c0fb",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a02/build-check.cjs",
+      "baselinePath": "module-a/a02/build-check.cjs",
+      "bytes": 2425,
+      "sha256": "7a9ae50a47c1bedeb52fdc7226928468b7e4b4791dffaff13fb1d52653f9cc02",
+      "gitBlob": "eb04feb0fda2a405edb42b113890890ad4ec7fac",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a02/capture.cjs",
+      "baselinePath": "module-a/a02/capture.cjs",
+      "bytes": 2264,
+      "sha256": "8887c65413f5608b79eb4d7b01c94544c3e76d6baf15f139d59ea6cb4ba23805",
+      "gitBlob": "06201d417905a03d6d26936f6d64afcab0be8589",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a02/markers.mjs",
+      "baselinePath": "module-a/a02/markers.mjs",
+      "bytes": 995,
+      "sha256": "1709f497e76cc225474dbaa078dc893d2d7f802d4b2dade2e5ebe401c2024639",
+      "gitBlob": "573dc3d2fa9efd73679b3de49ff0076be1d529bf",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a02/pack-evidence.cjs",
+      "baselinePath": "module-a/a02/pack-evidence.cjs",
+      "bytes": 1129,
+      "sha256": "cd091e7b851df01c68f451da2b627831712a4d4e3728669d412f24a849f579bb",
+      "gitBlob": "8d5648ac381e16db68c72c1977e991fa0c7b285c",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a02/pass-check.cjs",
+      "baselinePath": "module-a/a02/pass-check.cjs",
+      "bytes": 1035,
+      "sha256": "23537447d9b945965878f333bddc04ab8a513c1c13ae02f5a07115796ffba8a8",
+      "gitBlob": "17c31cb5d8c2c8d3ce65dc5013ad401a92e6a936",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a02/performance-check.cjs",
+      "baselinePath": "module-a/a02/performance-check.cjs",
+      "bytes": 4275,
+      "sha256": "4d924a024fb73df050c44ea9afec2cd4c273e6b07d814a2070a1060770663f82",
+      "gitBlob": "e886e7199e042173c59998f4143262f461575582",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a02/progress.mjs",
+      "baselinePath": "module-a/a02/progress.mjs",
+      "bytes": 902,
+      "sha256": "9de0ecc14bcc072c7b3e1ad2b8593ae4817e5c3b378227a40c3e3c6fae81ae2f",
+      "gitBlob": "71a9d3eefe2e7917d97cefb8149d2653592358a3",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a02/progress.test.mjs",
+      "baselinePath": "module-a/a02/progress.test.mjs",
+      "bytes": 2175,
+      "sha256": "56e33037add0aedf9df903c0f0e9de50de1c78f4a47fc48356e23ba1858725ff",
+      "gitBlob": "f6662c66eb55ba63f8527eef815810e4e6bfc845",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a02/remaster.test.mjs",
+      "baselinePath": "module-a/a02/remaster.test.mjs",
+      "bytes": 2444,
+      "sha256": "cf4d96f0472c8f5510be45721a4d53f2c2f0599f7a5c29f9d9cdf2d505522359",
+      "gitBlob": "1c8bcc70e2fed7bca79f3e18b2bc0005e1eb3965",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a02/review-evidence.cjs",
+      "baselinePath": "module-a/a02/review-evidence.cjs",
+      "bytes": 1241,
+      "sha256": "2dc9e8b50e7045ae6a81ccbc839f220261862a78f3ad28a0c9b2bf69239fb220",
+      "gitBlob": "451f0e7686c5158ed08fd26946ee5c4a68940cc6",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a02/room-browser-check.cjs",
+      "baselinePath": "module-a/a02/room-browser-check.cjs",
+      "bytes": 6466,
+      "sha256": "ceecdd1c7c27e0fede3def2570276b9a19880a7cf98c9de4b0b1d3632be3cf0d",
+      "gitBlob": "8280b0cb59dfb48aed8ffafbb45f01f94ddb499a",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a02/shared-regression-check.cjs",
+      "baselinePath": "module-a/a02/shared-regression-check.cjs",
+      "bytes": 2864,
+      "sha256": "c9c8fab91025f4ed35088f7f8ba70a45eb80c694ac00b17f03561a323fc8aaa6",
+      "gitBlob": "acc917e3ce1a0392575aa3f7c5b4b7f3a3abb6ca",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a02/spatial.mjs",
+      "baselinePath": "module-a/a02/spatial.mjs",
+      "bytes": 1490,
+      "sha256": "81d3edeb6f024d0f8706549ed2b76f8ad0ae271d26941f913fee6fa0133b77d7",
+      "gitBlob": "eaef3a2cebabd1ea62924469318f20a3c1bad5cf",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a02/spatial.test.mjs",
+      "baselinePath": "module-a/a02/spatial.test.mjs",
+      "bytes": 3254,
+      "sha256": "51be31fbefb752d67df6e4b89cf2aff6f028ec0c509109964abdcbddb722f3ba",
+      "gitBlob": "e0c57d2de9ba8fd3f08653a7efaf2515031632b1",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a02/styles.css",
+      "baselinePath": "module-a/a02/styles.css",
+      "bytes": 2269,
+      "sha256": "64ee933f709213f9556ae018c450a7f2d85d538906bca7d70d090103d62a22a3",
+      "gitBlob": "718166516e23fa14d7dfe25dee8866718bc85440",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a03/boards-check.cjs",
+      "baselinePath": "module-a/a03/boards-check.cjs",
+      "bytes": 2522,
+      "sha256": "55fa30d8c4975912b60615c68450ec1659b2eb4333f203a12432a005471cffdf",
+      "gitBlob": "e244fc40b37949662180e24eced8fa05078a3cfa",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a03/browser-check.cjs",
+      "baselinePath": "module-a/a03/browser-check.cjs",
+      "bytes": 8811,
+      "sha256": "7ffae2cd27e2b0f0224de3253ffec210d6959625f89ad29a6994eead347f4b1a",
+      "gitBlob": "04a527026b7c925ee89920ec6e62f7570cb47d18",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a03/build-check.cjs",
+      "baselinePath": "module-a/a03/build-check.cjs",
+      "bytes": 3111,
+      "sha256": "a9887d0939e40f23aa1f0e8766b6499bac0ab8f08c79946ae486cab9f1608082",
+      "gitBlob": "6aae50ec8e57e8b13566b08ecadbf87388159e96",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a03/composition.mjs",
+      "baselinePath": "module-a/a03/composition.mjs",
+      "bytes": 2237,
+      "sha256": "ccfb552652b2a400fc1b3a76e8d9d5ceb1f4658ff8b2e696d55718022ab331dc",
+      "gitBlob": "872376a07c4cbb7a17d5ee67cdb14b9e91f58df9",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a03/composition.test.mjs",
+      "baselinePath": "module-a/a03/composition.test.mjs",
+      "bytes": 7475,
+      "sha256": "dfaf7fa8e90c87feff09dfc5e94eef9511f647069f59f007682ad440793be22f",
+      "gitBlob": "9a3131fd2e03c0e66ec7d827ac2460b009c78653",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a03/cutaway-check.cjs",
+      "baselinePath": "module-a/a03/cutaway-check.cjs",
+      "bytes": 2152,
+      "sha256": "b0eda61c17468882afc9eab51e133d78d93e65a04c86beaaf3dd41a28e74d906",
+      "gitBlob": "e9fc9028a9667d124837cbe9905579f18fce3700",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a03/cutaway.mjs",
+      "baselinePath": "module-a/a03/cutaway.mjs",
+      "bytes": 5224,
+      "sha256": "333caeb33b5efaad7a0de59afb4771dd1e4406eacfee30eea50691f86e21ec21",
+      "gitBlob": "896407cab2a2fa706052eba3a4bd231c8d361a57",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a03/lighting.mjs",
+      "baselinePath": "module-a/a03/lighting.mjs",
+      "bytes": 1381,
+      "sha256": "09b181dbc4e52d17b443f668a82999eb26735c019395ff8bb443f22585ca3ef8",
+      "gitBlob": "e6df97e95d74ed831289304d3e8ced6e60a4d520",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a03/performance-check.cjs",
+      "baselinePath": "module-a/a03/performance-check.cjs",
+      "bytes": 161,
+      "sha256": "a86bb487e121db7b1d7b3494c62ba27c2c05ac5110caa163d39e5f53743b38e1",
+      "gitBlob": "9444b3e91a162d8c5f93f33a1068608137e54a32",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a03/progress.mjs",
+      "baselinePath": "module-a/a03/progress.mjs",
+      "bytes": 1697,
+      "sha256": "4ca22b46c6568a8f191a7527615e056761f4bacc02f34db617af7a83db678459",
+      "gitBlob": "fdf1abb2d9c62c32c99c3467acc8b1589777af72",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a03/progress.test.mjs",
+      "baselinePath": "module-a/a03/progress.test.mjs",
+      "bytes": 3477,
+      "sha256": "0e4f53e741b03407126f6a03f6e85a5d81efa8c1fd44e6c964b580f236ee2b8b",
+      "gitBlob": "0b26e54e0d6d3b045a18ea9f12f08433f5734803",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a03/regression-check.cjs",
+      "baselinePath": "module-a/a03/regression-check.cjs",
+      "bytes": 1834,
+      "sha256": "9c29df380648ad7f982c5e973ab93c92892470fdab87606cbb5676a1b88d7387",
+      "gitBlob": "9015462b7aa392b945aa68b699589da791e1d974",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a03/remaster-check.cjs",
+      "baselinePath": "module-a/a03/remaster-check.cjs",
+      "bytes": 10858,
+      "sha256": "616bdf470f8e05acafddd61a88ba2a6fe191e547b3f67de5708f614500a5553e",
+      "gitBlob": "8b0cfcd660f4987c09424617c231b386ba8d9312",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a03/styles.css",
+      "baselinePath": "module-a/a03/styles.css",
+      "bytes": 2593,
+      "sha256": "6cb5bb4152579d8ed7eea0d84b1530b5117a2bad7ff89cf74602e1b57e41ad22",
+      "gitBlob": "0bb1dd38cc29e35c21735deb221d3e13ff8edb4b",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a03/sync-preview.mjs",
+      "baselinePath": "module-a/a03/sync-preview.mjs",
+      "bytes": 128,
+      "sha256": "3008dc2f24880bd8d17fd037c377a54cf511c48536d516b009f4148186609d86",
+      "gitBlob": "9f58e042080a9ad0d12648248ca0d9e6744fd198",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a03/view.mjs",
+      "baselinePath": "module-a/a03/view.mjs",
+      "bytes": 1826,
+      "sha256": "76be1631cc9b73364e97ecfe61d1c6a8a2ef61216313fe400389b3ec218fd8e4",
+      "gitBlob": "d87ddf689a17fb47e4ba829203e7de9f8667cf84",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a04/boards.cjs",
+      "baselinePath": "module-a/a04/boards.cjs",
+      "bytes": 2277,
+      "sha256": "d1c3adf623b53a6d09fbbd4b23c52e4204bb00f4e783c3464a6f4451445d305b",
+      "gitBlob": "75c7ea23f30cfec2ef10e9355949c5dbef2d89ca",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a04/browser-check.cjs",
+      "baselinePath": "module-a/a04/browser-check.cjs",
+      "bytes": 10613,
+      "sha256": "9baae01784e923e9af78d3f81cf993506e8d3dafd602050374a00c84de5e3160",
+      "gitBlob": "1ecd6cf720fd730688796952aeb4d5c0f520d2ed",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a04/build-check.cjs",
+      "baselinePath": "module-a/a04/build-check.cjs",
+      "bytes": 1835,
+      "sha256": "076dc8d0009221c0d2adf244734dcf46743ca3378a71d1e956cddbc0b41e564f",
+      "gitBlob": "8422d1ea8a7f534e15bee2af80335a662e5c3d01",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a04/capture.cjs",
+      "baselinePath": "module-a/a04/capture.cjs",
+      "bytes": 2567,
+      "sha256": "0cb202cb59466cc5cd40d0dcec34d7f47c0a92a557a76760f32131bff23e0ed0",
+      "gitBlob": "206a5823b3dbc1bafbe479d5855dc853d5ccdc15",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a04/composition.mjs",
+      "baselinePath": "module-a/a04/composition.mjs",
+      "bytes": 649,
+      "sha256": "849b38b5b8a8c31b3b336d1be08e98620d4202a64869c2e86ec57e539d66ba86",
+      "gitBlob": "4475a59b12138d9eb890aad678adc701d40a1683",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a04/controller.mjs",
+      "baselinePath": "module-a/a04/controller.mjs",
+      "bytes": 7071,
+      "sha256": "676cb8cf16e686f48467e4f19e890e22ce3ddaf9008893e2a4357d5a44148039",
+      "gitBlob": "994b2b8e8a43e801a144c622de65be8d896e45a7",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a04/copy.mjs",
+      "baselinePath": "module-a/a04/copy.mjs",
+      "bytes": 935,
+      "sha256": "1ab2943e4023013a587e43a012f69f23330d2d11fa6b94be52d366f6a50322ee",
+      "gitBlob": "6d605cb2c41fc10685f9c57158cc2a53feab94e6",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a04/cutaway-state.mjs",
+      "baselinePath": "module-a/a04/cutaway-state.mjs",
+      "bytes": 2003,
+      "sha256": "428452bd6be08bae2b5c83bb4dba5102d9bd678307591fbcf272addc96eecefc",
+      "gitBlob": "2aa14cb619e59e4e969ea21292ac88c9a3e3493e",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a04/full-roof-build-check.cjs",
+      "baselinePath": "module-a/a04/full-roof-build-check.cjs",
+      "bytes": 2463,
+      "sha256": "da3f72efa91597c5c60a0bec86b5d1b9e710a156d2c5ae7b669f4b5f156d593c",
+      "gitBlob": "056405e2187bd652e4c84bc44f49b1fb9e209f83",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a04/full-roof-check.cjs",
+      "baselinePath": "module-a/a04/full-roof-check.cjs",
+      "bytes": 8303,
+      "sha256": "88cf44b1e3e2766445c5c4f1e5d252bdc89fbd424da8b35031ad570e856d642b",
+      "gitBlob": "4cef7d86bcc24883011ae7f8894b1399bcb6265b",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a04/path.mjs",
+      "baselinePath": "module-a/a04/path.mjs",
+      "bytes": 3160,
+      "sha256": "79ba7694376131e727f5cd0dc4474d1395e2bd22c12018ee78cdc60f4b2831d6",
+      "gitBlob": "253d42dbd985b82c585392d52240860aef8a649e",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a04/path.test.mjs",
+      "baselinePath": "module-a/a04/path.test.mjs",
+      "bytes": 2774,
+      "sha256": "794c849898e00a7882e1ccb00002a37cd497eb4dcefaf9760dae7d8b07fcb73a",
+      "gitBlob": "f6c3db29fd05722f205000f1dfd7b851fb0b7f0d",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a04/performance-check.cjs",
+      "baselinePath": "module-a/a04/performance-check.cjs",
+      "bytes": 4609,
+      "sha256": "bdde048cb54854dd27fd9d4b88e04890ae70137b5d26ecdcf789072d87d940f3",
+      "gitBlob": "bc28999379d960ef851f49be3a092b018dbc6187",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a04/regression-check.cjs",
+      "baselinePath": "module-a/a04/regression-check.cjs",
+      "bytes": 1081,
+      "sha256": "8043f24e5f18e8cdc0dcfb38f8ec402c16c6e55b7518cc7f27ff50e89660c32b",
+      "gitBlob": "28e41e2bfa43a859f0f3e5cc37d0fb5ea847109a",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a04/resilience-check.cjs",
+      "baselinePath": "module-a/a04/resilience-check.cjs",
+      "bytes": 3424,
+      "sha256": "c63d762a559e48aacb8fe09b384c621c0f78b522b655542d0e690f8bfa194d5d",
+      "gitBlob": "fd2d970056d6ad9b8fe5bbab68fc886a91058762",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a04/review-check.cjs",
+      "baselinePath": "module-a/a04/review-check.cjs",
+      "bytes": 5642,
+      "sha256": "6b18100b88e07b4730949021b41f6a07f6e49108e7e25933753ec18850d020e2",
+      "gitBlob": "75631f39aaca491a5d42a9b0ca345f59828ceaff",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a04/roof-summary-check.cjs",
+      "baselinePath": "module-a/a04/roof-summary-check.cjs",
+      "bytes": 4401,
+      "sha256": "0f0f3dbf1b3cf0b099cbeb230402efda0df76682e7015d52fb258c2867abf3d5",
+      "gitBlob": "1d2b6c1d43901a9599bbac41dfc534ae48310430",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a04/state.test.mjs",
+      "baselinePath": "module-a/a04/state.test.mjs",
+      "bytes": 4053,
+      "sha256": "6421a552f3981b8eb67b4d9ebb1937916091e9ff8d1549ee8e59aece24e3f43a",
+      "gitBlob": "045aa8db8226a31d31ef2b5847d301217ad6a083",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a04/styles.css",
+      "baselinePath": "module-a/a04/styles.css",
+      "bytes": 2247,
+      "sha256": "539dacd9d417146565ee8625f33f421986233cad1e27bca509a58b71e686cb6e",
+      "gitBlob": "cb1d7f35f0393660ae93c891d7c88591d8306ffe",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a04/sync-preview.mjs",
+      "baselinePath": "module-a/a04/sync-preview.mjs",
+      "bytes": 843,
+      "sha256": "15cfd79083667aa8a77bf3d6c8718301da6e190659263187c22835b9391d727d",
+      "gitBlob": "5e4bb7c232e91406132d31c73b3c55cbda6e49c4",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a04/timing.mjs",
+      "baselinePath": "module-a/a04/timing.mjs",
+      "bytes": 347,
+      "sha256": "f32766f39254779382b8394fdc10296ea3d9e6350521824b34ef8352b2a68857",
+      "gitBlob": "4586e8c1661b7499269997e96eeaa8dde7f722c9",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a04/transition-check.cjs",
+      "baselinePath": "module-a/a04/transition-check.cjs",
+      "bytes": 6483,
+      "sha256": "c36ac64039dea2b2dfdb5e3d7bf46260a655275d674102a5468ba476e0c7f366",
+      "gitBlob": "aad4430120d54e3a058789ef8b181767eee13eed",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a05/browser-check.cjs",
+      "baselinePath": "module-a/a05/browser-check.cjs",
+      "bytes": 7154,
+      "sha256": "abe713fa44bafc02431a7d2b5bc6cdf741913b8e55ebbe7626e661639e1080cc",
+      "gitBlob": "779efc4d87bdeab3f049eea9afc3dc0c888f52f3",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a05/content.mjs",
+      "baselinePath": "module-a/a05/content.mjs",
+      "bytes": 981,
+      "sha256": "69fe710ea15847e6ffb7ac8e1725925d206bbdad8116aaba78bcda57dba331dd",
+      "gitBlob": "ba87a0be6f0ddf0e020ddc52fc48747001551ed6",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a06/browser-check.cjs",
+      "baselinePath": "module-a/a06/browser-check.cjs",
+      "bytes": 3180,
+      "sha256": "942493f05dc452855767f682eaea5c795de37735ce57fd1a4801f7bd29fdba01",
+      "gitBlob": "15d92efe2fcda5db1a65149c5f18a1d743701a58",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a06/content.mjs",
+      "baselinePath": "module-a/a06/content.mjs",
+      "bytes": 892,
+      "sha256": "c1cbad840deaf6bc89608e09f8cd9cf00db79d82bdb85d6005248343fbbe0252",
+      "gitBlob": "8838703cea84a9acf009fdf5d1649ca7f31180c1",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a07/browser-check.cjs",
+      "baselinePath": "module-a/a07/browser-check.cjs",
+      "bytes": 3298,
+      "sha256": "3fb7f56856c1923967e3bb6742eb4b4e185c5954107691faf71b7fd10ef8d42b",
+      "gitBlob": "1e8646542f09d0b2e87811cdb64e3bda9c1a5c7b",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a07/content.mjs",
+      "baselinePath": "module-a/a07/content.mjs",
+      "bytes": 1230,
+      "sha256": "74a690ee68447dd3ded54161dc95c3a162badcb7e10f6c8762da913e959d7843",
+      "gitBlob": "337b31ba812afd3d0c8e6b3d6b172c924760b48b",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a08/browser-check.cjs",
+      "baselinePath": "module-a/a08/browser-check.cjs",
+      "bytes": 3502,
+      "sha256": "1084426929797f6d50d76ffdf5bf3f8d6a31f9e9f11a031c87369b7aae04cb57",
+      "gitBlob": "e47187ec61d7c2461f2cb332669911f98372a67a",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a08/controller.mjs",
+      "baselinePath": "module-a/a08/controller.mjs",
+      "bytes": 1392,
+      "sha256": "70ab3297fc51eaa4cfa61bcd6b610d751eac875f17ad54a1112c0f0d0c6b6753",
+      "gitBlob": "1863275bedc6d198266ddc936dbbc9b602299a62",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a08/progress.mjs",
+      "baselinePath": "module-a/a08/progress.mjs",
+      "bytes": 371,
+      "sha256": "2044f7f6ce4f3a230de621b8a281e5916796ced4788e908edd6520fb568c4381",
+      "gitBlob": "d9ffcd247a4d1875936cf2a29194c21d531e4f4c",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a08/progress.test.mjs",
+      "baselinePath": "module-a/a08/progress.test.mjs",
+      "bytes": 629,
+      "sha256": "1a2520c305494ddd4a6c0473b6e6abf349180ef9a4aa8c51199ac9340f02c71b",
+      "gitBlob": "a8d390584b10a2b32f860a790a76ec834a4b2864",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/a08/styles.css",
+      "baselinePath": "module-a/a08/styles.css",
+      "bytes": 2868,
+      "sha256": "3baacd25702fe5806043d69d9cac5df15c7418230cd2efe35f61e5bc75f50586",
+      "gitBlob": "01f3d23b0c4a3eecea84ea8fef2a04587523fbf2",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/copy-browser-check.cjs",
+      "baselinePath": "module-a/copy-browser-check.cjs",
+      "bytes": 9112,
+      "sha256": "cb0195a1e2ef6f9d74a83e14f17a597ac732c63aba304d69bc80488cdbc381c4",
+      "gitBlob": "fd81ce61534359e8b82ac6b68ad4519b9d93817e",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/copy.test.mjs",
+      "baselinePath": "module-a/copy.test.mjs",
+      "bytes": 4616,
+      "sha256": "e8518c2d3fd1f371ca06e1468aee48db2aef1b03569f816b59f1cb482993b4f6",
+      "gitBlob": "e705efcd4c56521a1a14768aa2d08a1cd964c651",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/guide/ambient.mjs",
+      "baselinePath": "module-a/guide/ambient.mjs",
+      "bytes": 1342,
+      "sha256": "47c7e0cd76c4bd6406de28f01bfc2da12e0f55f72926f19804aed915a58a5041",
+      "gitBlob": "c8e30bc3e72ee7f1c99260f9b709825ae1f037c4",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/guide/boards.cjs",
+      "baselinePath": "module-a/guide/boards.cjs",
+      "bytes": 2662,
+      "sha256": "bb2b86f48635c14d57c5e537339531859c46ec935a05fb8ae65d9fa512b6dca3",
+      "gitBlob": "c31016182779b1600e5a4ba9d9368446abe63ce2",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/guide/build-check.cjs",
+      "baselinePath": "module-a/guide/build-check.cjs",
+      "bytes": 2405,
+      "sha256": "133b3c6ff7dfc5fafc3127058ff9f54b2e27da6869c6bd1d73b9021142915f31",
+      "gitBlob": "735fbc6d153d7f972bb8d431f2fb7a42b8e9a2a7",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/guide/controller.mjs",
+      "baselinePath": "module-a/guide/controller.mjs",
+      "bytes": 10071,
+      "sha256": "62500aab0d952c30ad95f24d551d012b67ee423e2c42677f08edfc1c5bbd5969",
+      "gitBlob": "ab2a4cf8ea3dabe831756ad973139bca2a0d969d",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/guide/delivery-check.cjs",
+      "baselinePath": "module-a/guide/delivery-check.cjs",
+      "bytes": 2218,
+      "sha256": "63ade1eea860f8aea0895e83f82c4f4c5f19dba023762ab2ab70e14497d77441",
+      "gitBlob": "3dab9a5d30bce3815cd67ba35bbf0525c848fb26",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/guide/gallery-check.cjs",
+      "baselinePath": "module-a/guide/gallery-check.cjs",
+      "bytes": 18704,
+      "sha256": "63c3e4587082c7b4a5dedc7e6d44ee093307df590d2ba1971614baebf3a4ff55",
+      "gitBlob": "634bcd0ef5f0a9ccf1faa49b57f8ad8fc9e59d5a",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/guide/multi-guide-check.cjs",
+      "baselinePath": "module-a/guide/multi-guide-check.cjs",
+      "bytes": 8111,
+      "sha256": "836e15043c3fb61d28dbd6cd72481f2c334fee3d7936c5989ad12ac827d4fcd7",
+      "gitBlob": "f12ab58811e3794bc9d742d0bca4deb0b20fc5a6",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/guide/performance-check.cjs",
+      "baselinePath": "module-a/guide/performance-check.cjs",
+      "bytes": 6687,
+      "sha256": "be2ce7df51c88517c0ba38c14e9842929af0d8e8d8ba8035cd7afdd1469bce08",
+      "gitBlob": "d355270819635dc9c4804cd4e7c9c8bfdac23607",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/guide/progress.mjs",
+      "baselinePath": "module-a/guide/progress.mjs",
+      "bytes": 7087,
+      "sha256": "cb1397458b0d00ce3a41c753c2300d59c59f7a7f703ac3c7e9575779d0d1e875",
+      "gitBlob": "04d11753c27cc113018a77b93262d86946849252",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/guide/progress.test.mjs",
+      "baselinePath": "module-a/guide/progress.test.mjs",
+      "bytes": 8182,
+      "sha256": "a2dcf5413d09aaecca8dd365d175c67a99707f3c93b06fd3f82511db9f4ce32e",
+      "gitBlob": "85bc7aa276f6631534a811b272d7879f9fbe385e",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/guide/regression.cjs",
+      "baselinePath": "module-a/guide/regression.cjs",
+      "bytes": 1359,
+      "sha256": "bc22733b5cde69da4cd1aa0e1cd7ee7c5837049a39b014ea13bcac9665410171",
+      "gitBlob": "1c1f78e96fada9abce6cec13902665b8fd673d82",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/guide/resilience-check.cjs",
+      "baselinePath": "module-a/guide/resilience-check.cjs",
+      "bytes": 3141,
+      "sha256": "555e01fe83dabfb426f0e675c38511142b4817cc141ee5f197db5d35cf4a7f06",
+      "gitBlob": "0459cd3d596dbcd4e1324a41f09611194d91dbed",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/guide/styles.css",
+      "baselinePath": "module-a/guide/styles.css",
+      "bytes": 6818,
+      "sha256": "829aac3e9fc54de5a32732e9137528b6fa0e4d027bd3890dec030bfe92dc5426",
+      "gitBlob": "7f38ada87b206f45e037b4eb88ab29312e4ff2e9",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/material-isolation-check.cjs",
+      "baselinePath": "module-a/material-isolation-check.cjs",
+      "bytes": 1987,
+      "sha256": "71185b60bfad05b6ae6ac5a175c9e43b77f9d98645713c0097bb13ba717cabba",
+      "gitBlob": "52b2299a1a8e69d09c48ca0630831cc3841a77b5",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/material-isolation.mjs",
+      "baselinePath": "module-a/material-isolation.mjs",
+      "bytes": 273,
+      "sha256": "7ccf808597db360444b6005e74e1a621b7a6917412032aa2f1be01903d420e09",
+      "gitBlob": "dacfeabc0d5d681d7431b717600d1d374492eed9",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/material-isolation.test.mjs",
+      "baselinePath": "module-a/material-isolation.test.mjs",
+      "bytes": 694,
+      "sha256": "9fd9354bfa729b11a14b8c93bb919117442fc27e4585a88ee66ea274f9cd70df",
+      "gitBlob": "2b675d93de9b9df42f6e49bbd17a005d1558081e",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/mural-resources.mjs",
+      "baselinePath": "module-a/mural-resources.mjs",
+      "bytes": 1416,
+      "sha256": "49074d887d06650913d82d57c09be21e3dfd4a47415f3d5b84783405e69b5809",
+      "gitBlob": "c54ce5ec70a1620d984ae6e21434f22f6409e87f",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/mural-resources.test.mjs",
+      "baselinePath": "module-a/mural-resources.test.mjs",
+      "bytes": 3652,
+      "sha256": "85430ab4c8aaa511117ef6cb9d0d7dcd00ba6baa619a7c34d5a03cbd4a6b49b5",
+      "gitBlob": "e62d8d3d222cab2d429e7a40df03552916c6c21a",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/navigation/browser-check.cjs",
+      "baselinePath": "module-a/navigation/browser-check.cjs",
+      "bytes": 13632,
+      "sha256": "4a66e669d932e284a72f10f748d8491e7729c03d0f7ae93b3ebdb04bba81ac67",
+      "gitBlob": "290171b0373d92ce1bb2d26188d84b954fe9a6d1",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/navigation/comparison-check.cjs",
+      "baselinePath": "module-a/navigation/comparison-check.cjs",
+      "bytes": 5152,
+      "sha256": "d7f575a99ae7661c0ad28804298852563c5b89f9fef1987249befb026557871b",
+      "gitBlob": "12d2c0b0c3b94aa39cd7912160f1226d573c669e",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/navigation/controller.mjs",
+      "baselinePath": "module-a/navigation/controller.mjs",
+      "bytes": 5196,
+      "sha256": "29a3ae709f0d75b32302b7a9f8c4dd51d14fad09ee8cba29b36cdca2c17b719d",
+      "gitBlob": "2f6c30b03e283eed46443e1d5f2685908a687ee2",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/navigation/exploration.mjs",
+      "baselinePath": "module-a/navigation/exploration.mjs",
+      "bytes": 2173,
+      "sha256": "cf4e87928067a2dec104a01fb6d19150926e03d2c835a335da99b94b8e33f020",
+      "gitBlob": "3fe00f7ddc445cf233400fd7d2396c6047ec107f",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/navigation/pack-evidence.cjs",
+      "baselinePath": "module-a/navigation/pack-evidence.cjs",
+      "bytes": 2172,
+      "sha256": "e6cdabfb6d86876ed8c6677dd737f4227570b9dc71d881308100d4c06d9aa02a",
+      "gitBlob": "71a0eb0f756ad9e36986f2030e353e26c5d8d695",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/navigation/performance-check.cjs",
+      "baselinePath": "module-a/navigation/performance-check.cjs",
+      "bytes": 6362,
+      "sha256": "3e12baadaff7871c4adca349ccfa15a44652c0989f6960239fd8ff5547a1d638",
+      "gitBlob": "093b7415276dff7134515189e582d58c42932b1c",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/navigation/refinement-check.cjs",
+      "baselinePath": "module-a/navigation/refinement-check.cjs",
+      "bytes": 2872,
+      "sha256": "3399dc717d215e627b5dfd64a3acdc08fef6e3ce456ffef2ab350fa74070edca",
+      "gitBlob": "b5d81b62d497128ad9414bd784cc84bfb10471e4",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/navigation/regression.cjs",
+      "baselinePath": "module-a/navigation/regression.cjs",
+      "bytes": 1376,
+      "sha256": "a49b9d5e781241c378d6bc261e6846d75cc94cc6fb70c3a47e567a23051ca08d",
+      "gitBlob": "029d4c010096680aee6a4dfb19ab814cde2b48f6",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/navigation/state.mjs",
+      "baselinePath": "module-a/navigation/state.mjs",
+      "bytes": 2475,
+      "sha256": "3fbb9d251eba9dcd2027ea901c4ecd465423f3e1913317d96c2c0060c66c81ca",
+      "gitBlob": "1c3ea7d8c578f2d9353f6dd113f265e84acdd5c7",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/navigation/state.test.mjs",
+      "baselinePath": "module-a/navigation/state.test.mjs",
+      "bytes": 3565,
+      "sha256": "9a1a963d5d03ec4a45c6005cb06775fca32f58ecc6f742a527e1612d56c5710d",
+      "gitBlob": "c56d51bf68ce7ea623ed17f3189af8934791d7e2",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/navigation/styles.css",
+      "baselinePath": "module-a/navigation/styles.css",
+      "bytes": 4958,
+      "sha256": "fde524fe26c1f9133be1cc6bcc74d486da4f0b61a87b672a31637c3ef20b17b5",
+      "gitBlob": "64a7bce71f2db90bde342540a3dc168e01419c82",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/visual-director/boards.cjs",
+      "baselinePath": "module-a/visual-director/boards.cjs",
+      "bytes": 2829,
+      "sha256": "0152fd4fe47b76efa04ee8ad080a759d74e01557dca76c19ff89889f0021f0f3",
+      "gitBlob": "5c8fc55d5fb3566cabacc75861b10917ea37d1e1",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/visual-director/capture.cjs",
+      "baselinePath": "module-a/visual-director/capture.cjs",
+      "bytes": 3176,
+      "sha256": "5d6d4e661c97955cb9cc6bd14d53d4dc169a6cdf28086350a7ed4d21daf9bc2c",
+      "gitBlob": "d9eda391dde8741a16c6d637f4c05841a61066bb",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/visual-director/delivery-check.cjs",
+      "baselinePath": "module-a/visual-director/delivery-check.cjs",
+      "bytes": 1977,
+      "sha256": "dcc59b9ec46bbc432883ee1419d32a2e16efcb46a4428d924def3520db8d20bc",
+      "gitBlob": "168bc552f5a83820ec39540e0aff293aaff582ee",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/visual-director/font-fallback-check.cjs",
+      "baselinePath": "module-a/visual-director/font-fallback-check.cjs",
+      "bytes": 1661,
+      "sha256": "6105487e370da2e27928abcb27b80432b6b09258e669472e01535ee3046615c9",
+      "gitBlob": "df26c3edf8e097d21442828eff6c56f848b83cae",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/visual-director/fonts.test.mjs",
+      "baselinePath": "module-a/visual-director/fonts.test.mjs",
+      "bytes": 1213,
+      "sha256": "d6261c5907e1e417d6b14cc5c8928f2fb05406315107c6078a9644b5d99dcb9f",
+      "gitBlob": "31cfd83497f2d2f3214604c6695b993dd01de876",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/visual-director/fonts/OFL-Sans.txt",
+      "baselinePath": "module-a/visual-director/fonts/OFL-Sans.txt",
+      "bytes": 4301,
+      "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+      "gitBlob": "d952d62c065f3f35fb83a173496e90b21525aef3",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/visual-director/fonts/OFL-Serif.txt",
+      "baselinePath": "module-a/visual-director/fonts/OFL-Serif.txt",
+      "bytes": 4301,
+      "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2",
+      "gitBlob": "d952d62c065f3f35fb83a173496e90b21525aef3",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/visual-director/fonts/README.md",
+      "baselinePath": "module-a/visual-director/fonts/README.md",
+      "bytes": 3033,
+      "sha256": "26652b3f66fbac3b5728c28c692d50ec7644ae557a94a685e13cc8d97dbfffe7",
+      "gitBlob": "0764c233d81231b55463538f2cb250a37beb4aff",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/visual-director/fonts/fonts.css",
+      "baselinePath": "module-a/visual-director/fonts/fonts.css",
+      "bytes": 288,
+      "sha256": "3e1d6c07df39ce2cf00c8aefa7936c90850caed65fdaae3e98900232cb30f800",
+      "gitBlob": "c435af6cbc10d77d737273c3c4bd3f52034d0b70",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/visual-director/fonts/manifest.json",
+      "baselinePath": "module-a/visual-director/fonts/manifest.json",
+      "bytes": 1944,
+      "sha256": "730c1f931adc54ab159b863cc5dd5acc910c5279da55bb70147a79c883979717",
+      "gitBlob": "91195a1e775837840e11f15e32c68f71859a2ed5",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/visual-director/fonts/narrative-sans.woff2",
+      "baselinePath": "module-a/visual-director/fonts/narrative-sans.woff2",
+      "bytes": 79748,
+      "sha256": "21b8a3d8cf9efe89dc71ebec77bee1632e26360c9e57dc543eee917cdc573de7",
+      "gitBlob": "59cc87af51730b7e57e8d2abf8a328ab66f55492",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/visual-director/fonts/narrative-serif.woff2",
+      "baselinePath": "module-a/visual-director/fonts/narrative-serif.woff2",
+      "bytes": 47768,
+      "sha256": "0022abf04d8aeaf6e95ace9adb3a11843a1135d5e7cf47ee3f8560de927b7f5c",
+      "gitBlob": "63f6db2169a7c5de3569b24ed1163f98221090f4",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/visual-director/fonts/subset.py",
+      "baselinePath": "module-a/visual-director/fonts/subset.py",
+      "bytes": 2526,
+      "sha256": "269ca870db20c982970d6fc63d8c8b2af3bf5c065d0386908217141d4f3b71b8",
+      "gitBlob": "662eb95f0befc7edd487f82e598c1dc3f6758896",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/visual-director/integrity.cjs",
+      "baselinePath": "module-a/visual-director/integrity.cjs",
+      "bytes": 2004,
+      "sha256": "91aad9aba0d324dc01808b5a8e5567af5daba46b77c1908286634a361f2d801f",
+      "gitBlob": "20891ad00b3b1cf02676667681c57f5498c77121",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/visual-director/performance-report.cjs",
+      "baselinePath": "module-a/visual-director/performance-report.cjs",
+      "bytes": 1928,
+      "sha256": "13ce6eaad84061cc32890407b5994275bb6a73d7bf09f6c20ace8e90e5cef265",
+      "gitBlob": "5d643be0cac3e86e11bc4fd37ad049c0b32375c5",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/visual-director/projection.mjs",
+      "baselinePath": "module-a/visual-director/projection.mjs",
+      "bytes": 646,
+      "sha256": "34da0fcaef756387dc8714ca3ce39f40c3577ca72e81d9161aed30fc55ba0e22",
+      "gitBlob": "2ce20d450b5926c73792ac4c3a1c0f9ed8fee108",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/visual-director/projection.test.mjs",
+      "baselinePath": "module-a/visual-director/projection.test.mjs",
+      "bytes": 1310,
+      "sha256": "57fa47f91aa75eb0072c0204c7cbe5612c3acc8fc48b14c21df2a93f5b869cac",
+      "gitBlob": "4f167f1ccf17302791dbd58b64e316d9867cbc74",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/visual-director/regression.cjs",
+      "baselinePath": "module-a/visual-director/regression.cjs",
+      "bytes": 1433,
+      "sha256": "d63135e60cf3cbc259ff25f14c73b300f3f7774a7fab56017bc23957087f4a16",
+      "gitBlob": "f151f9ed2740445bd02f134b8f82eabf82f9bedc",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/visual-director/review.cjs",
+      "baselinePath": "module-a/visual-director/review.cjs",
+      "bytes": 6794,
+      "sha256": "eb183b132007430906b0ac5de05bf956a447306c65b59a9b69e11888ac6343ff",
+      "gitBlob": "63f991be2baa2c209f3d3053fbee1749c6ea701f",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/visual-director/state.mjs",
+      "baselinePath": "module-a/visual-director/state.mjs",
+      "bytes": 1873,
+      "sha256": "ca9054a7b1e3ebe2888e04138921a6a5b0492eb9e38cf69a018bfc28b802017f",
+      "gitBlob": "872bd2f5c87cfc68a50b428153727e2df062aa56",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/visual-director/state.test.mjs",
+      "baselinePath": "module-a/visual-director/state.test.mjs",
+      "bytes": 1404,
+      "sha256": "0658e2d0c6810c646cc80f68ca4db2bd0c9b431c816a2a934017239d5d905453",
+      "gitBlob": "764d04aed55ee6154b4ce3496796c74a39494c45",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/visual-director/styles.css",
+      "baselinePath": "module-a/visual-director/styles.css",
+      "bytes": 1475,
+      "sha256": "0a91a04196a44401c32b4cc5b9bf0a3773312280ec4b07dddd1f1a3d17311a71",
+      "gitBlob": "62c3082eb01ba59ac021f1ffa010afae28383c91",
+      "unchanged": true
+    },
+    {
+      "path": "module-a/visual-director/tour-capture.cjs",
+      "baselinePath": "module-a/visual-director/tour-capture.cjs",
+      "bytes": 1811,
+      "sha256": "85f82518a6671cb96443e62a34e7d7a916e513a8706899c9ac75b96f6a54fdbf",
+      "gitBlob": "a1bb7460ea1aeea53e200b6fa343bab6a672ab9c",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/server.js",
+      "baselinePath": "Mural-Exhibition/server.js",
+      "bytes": 2690,
+      "sha256": "d8951ec7d007d45c17895c93baa5c02299273841240634637fc3dfec08412dc1",
+      "gitBlob": "0cf9d955263f492e0553a365d41362c8d245d418",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/gallery-store.cjs",
+      "baselinePath": "Mural-Exhibition/gallery-store.cjs",
+      "bytes": 4515,
+      "sha256": "f7d608bf5c6e694452641d5b04b4cea3277e7d89a1e75636f8c3ea65c3c114cf",
+      "gitBlob": "81dc2c294e49325d1d6d0054713bf87d88a25069",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/character-study.mjs",
+      "baselinePath": "Mural-Exhibition/public/character-study.mjs",
+      "bytes": 3682,
+      "sha256": "30d9cfbaa77cef098902849e3d209051289ddcbf562e19aa1ef401a4636c8cae",
+      "gitBlob": "2925fee24d76204db8ca4f4e42c7c229663a1b6c",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b01.css",
+      "baselinePath": "Mural-Exhibition/public/b01.css",
+      "bytes": 4360,
+      "sha256": "81fd54725c8b9ae6c6da6755dc48be90f156421ae763d164f89b4394a60451e9",
+      "gitBlob": "263b4343458757b7bc5c0f0e7c56a63f2a39261b",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/gallery.css",
+      "baselinePath": "Mural-Exhibition/public/gallery.css",
+      "bytes": 4945,
+      "sha256": "6b2466e2f9235a6f59e771808ec9c4bbfa25587aec2270b60c634600ee10547c",
+      "gitBlob": "002fed9a96aef156147cd211291efc45f7f711ee",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/gallery.html",
+      "baselinePath": "Mural-Exhibition/public/gallery.html",
+      "bytes": 35179,
+      "sha256": "a3bbc328e5a57e8c54389d962bc18ddeab49ee5d0ea8317d0870c42936dac6c6",
+      "gitBlob": "66f1550c544ecf6cc2ad9ffd076cc1be1f741408",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/gallery-admin.mjs",
+      "baselinePath": "Mural-Exhibition/public/gallery-admin.mjs",
+      "bytes": 4919,
+      "sha256": "c099b3bc51a1c8afa07dde26950e50e91ce96cbeb893ec906332dfaa1d355cb7",
+      "gitBlob": "c9a3e0d0da34511c3e07d4c3e9244fcd683682b7",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/gallery-panorama.mjs",
+      "baselinePath": "Mural-Exhibition/public/gallery-panorama.mjs",
+      "bytes": 1481,
+      "sha256": "0212790d9777514e53c7dd5fd4ef28d69a1fc866513c6244000588ec3092b4ce",
+      "gitBlob": "c29e5033455309eb8816356674c770915c58496d",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/figure-stage.mjs",
+      "baselinePath": "Mural-Exhibition/public/figure-stage.mjs",
+      "bytes": 7722,
+      "sha256": "b4ac7eab979383604a93947b330a14590f7b1dc00d510cef9d94f854d9abb8f6",
+      "gitBlob": "7314780aa4d22ef0de06c7efd55bf3ed733239ad",
+      "unchanged": true
+    },
+    {
+      "path": "Mural-Exhibition/public/orbit-layout.mjs",
+      "baselinePath": "Mural-Exhibition/public/orbit-layout.mjs",
+      "bytes": 9386,
+      "sha256": "b4ed49ce034e9f64938a21330280986aba749fff23c20a3180e5d1ccad876fe8",
+      "gitBlob": "e1c3dcf0c8337efb14193d0e0d1e6fc2455f8763",
+      "unchanged": true
+    }
+  ],
+  "preexistingRenamedFolder": "Local 08_上层猖兵 maps to baseline 10_上层猖兵; exact bytes compared. No rename is included in this task.",
+  "localOnlyFigure": {
+    "path": "Mural-Exhibition/public/assets/05_北门雷五猖/figure.png",
+    "bytes": 190717,
+    "sha256": "94965a3deebe342ddc32be2ad263a11e0ba1b85190d6d16ef962976d4524e657",
+    "status": "Preexisting untracked author resource; tested locally, excluded from delivery"
+  },
+  "archiveRefs": {
+    "refs/tags/module-a-lofi-final-v1.0": "48f272497e86e4549c5bcd0dee275ff347171a3f",
+    "refs/heads/archive/module-a-lofi": "48f272497e86e4549c5bcd0dee275ff347171a3f"
+  }
+}

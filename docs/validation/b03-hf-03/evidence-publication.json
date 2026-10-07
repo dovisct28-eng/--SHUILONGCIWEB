@@ -1,0 +1,172 @@
+{
+  "type": "Actual Chrome screenshots; camera boundary stubbed",
+  "screenshots": [
+    {
+      "file": "selected/formal-01-default-1920x1080.webp",
+      "source": "local/surface/default-1920x1080.png",
+      "status": "Tracked formal figure ID01",
+      "size": [
+        1920,
+        1080
+      ],
+      "bytes": 1064092,
+      "sha256": "d30901a151a06907a7965e2b7b76e7993ee7699339ca9bdd74f00e8fffa726ec",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/formal-01-revealed-1920x1080.webp",
+      "source": "local/surface/revealed-1920x1080.png",
+      "status": "Tracked formal figure ID01",
+      "size": [
+        1920,
+        1080
+      ],
+      "bytes": 1014464,
+      "sha256": "0442b43ffea22a57f746102b0e1e9bd4b45164d94713a01b45f0cc690def2ef5",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/formal-01-default-1440x900.webp",
+      "source": "local/surface/material-standard.png",
+      "status": "Tracked formal figure ID01",
+      "size": [
+        1440,
+        900
+      ],
+      "bytes": 757894,
+      "sha256": "88231efb548b8158ede6a8a90e3b06f46cde3a4233c59407bdf1f7f21520539c",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/formal-01-revealed-1440x900.webp",
+      "source": "local/surface/revealed-1440x900.png",
+      "status": "Tracked formal figure ID01",
+      "size": [
+        1440,
+        900
+      ],
+      "bytes": 679512,
+      "sha256": "8170b64510cfa4694c0d5539c9abf36e8dd5c51f4cd3ec6af6d4a4003cf99066",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/formal-01-default-1366x768.webp",
+      "source": "local/surface/default-1366x768.png",
+      "status": "Tracked formal figure ID01",
+      "size": [
+        1366,
+        768
+      ],
+      "bytes": 630128,
+      "sha256": "4e47ae9bad4fe3a9ff1ab2d1b8a5244b989405709b86224f1c3d1e03c52ffe45",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/formal-01-revealed-1366x768.webp",
+      "source": "local/surface/revealed-1366x768.png",
+      "status": "Tracked formal figure ID01",
+      "size": [
+        1366,
+        768
+      ],
+      "bytes": 568006,
+      "sha256": "9500bf16700fbb955002d916227ba80be2602721cc3b2e4a42ddf68eb90efc2f",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/formal-01-default-1280x800.webp",
+      "source": "local/surface/default-1280x800.png",
+      "status": "Tracked formal figure ID01",
+      "size": [
+        1280,
+        800
+      ],
+      "bytes": 616708,
+      "sha256": "8d8f0f5597efa6cc2d7cf2c15c725c2ae3b6e611f0ce08134919c1aac3ecf01b",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/formal-01-revealed-1280x800.webp",
+      "source": "local/surface/revealed-1280x800.png",
+      "status": "Tracked formal figure ID01",
+      "size": [
+        1280,
+        800
+      ],
+      "bytes": 596632,
+      "sha256": "db6bfafc6803616388957fda31f08592644eed8efde8556610becdc281206d2f",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/material-off.webp",
+      "source": "local/surface/material-off.png",
+      "status": "Actual formal ID01, exhibition layer only",
+      "size": [
+        1440,
+        900
+      ],
+      "bytes": 741886,
+      "sha256": "52997a3958a6a44f6154d2a219a0b7bcde9f497c08e93c4150bc481dbe220504",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/material-subtle.webp",
+      "source": "local/surface/material-subtle.png",
+      "status": "Actual formal ID01, exhibition layer only",
+      "size": [
+        1440,
+        900
+      ],
+      "bytes": 751742,
+      "sha256": "7518d5bb047fae69338ddf368db138ee51bea7563557f1d65f9cb41184137669",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/pigment-forming.webp",
+      "source": "local/surface/pigment-forming.png",
+      "status": "Actual formal ID01, exhibition layer only",
+      "size": [
+        1440,
+        900
+      ],
+      "bytes": 787082,
+      "sha256": "3e5d0500029c0fd8337f652da50c65af94cedb04142f85da02834270220cef1d",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/orbit-forming.webp",
+      "source": "local/surface/orbit-forming.png",
+      "status": "Actual formal ID01, exhibition layer only",
+      "size": [
+        1440,
+        900
+      ],
+      "bytes": 740420,
+      "sha256": "cd31c5bef34cf82c1382fac24fc7b163490d5170abfe1fc0561e83c0d4616334",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/switching.webp",
+      "source": "local/surface/switching.png",
+      "status": "Actual formal ID01, exhibition layer only",
+      "size": [
+        1440,
+        900
+      ],
+      "bytes": 766728,
+      "sha256": "24462d140e285d72dd955706865bd065d7787c2cc9e5949e51cf50284b875350",
+      "rgbaIdentical": true
+    }
+  ],
+  "offComparison": {
+    "originalMaterial": "Three.js MeshBasicMaterial without surface hook",
+    "sameRGBA": true,
+    "differentPixels": 0,
+    "size": [
+      1440,
+      900
+    ]
+  },
+  "count": 13,
+  "totalBytes": 9715294
+}

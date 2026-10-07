@@ -1,0 +1,239 @@
+{
+  "label": "candidate",
+  "browser": "154.0.8037.98",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "limits": "Headless Chrome with camera boundary stub, no real camera/GPU/exhibition acceptance",
+  "errors": [],
+  "start": {
+    "id": "01",
+    "opacity": 1,
+    "textures": 1,
+    "geometries": 2,
+    "rendererCount": 1,
+    "heap": 30873794
+  },
+  "timing": {
+    "samples": 2399,
+    "elapsed": 10001.000000000373,
+    "fps": 239.92399239923992,
+    "mean": 4.167986661108795,
+    "p95": 4.600000000000364,
+    "max": 8.399999999999636
+  },
+  "switches": [
+    {
+      "index": 4,
+      "resourceMs": 201,
+      "stableMs": 828,
+      "id": "05",
+      "opacity": 0.999057,
+      "textures": 2,
+      "geometries": 2,
+      "rendererCount": 1,
+      "heap": 28771663
+    },
+    {
+      "index": 0,
+      "resourceMs": 82,
+      "stableMs": 481,
+      "id": "01",
+      "opacity": 0.999236,
+      "textures": 2,
+      "geometries": 2,
+      "rendererCount": 1,
+      "heap": 18956539
+    },
+    {
+      "index": 4,
+      "resourceMs": 69,
+      "stableMs": 479,
+      "id": "05",
+      "opacity": 0.999236,
+      "textures": 2,
+      "geometries": 2,
+      "rendererCount": 1,
+      "heap": 19013667
+    },
+    {
+      "index": 0,
+      "resourceMs": 45,
+      "stableMs": 480,
+      "id": "01",
+      "opacity": 0.999324,
+      "textures": 2,
+      "geometries": 2,
+      "rendererCount": 1,
+      "heap": 19662828
+    },
+    {
+      "index": 4,
+      "resourceMs": 59,
+      "stableMs": 480,
+      "id": "05",
+      "opacity": 0.999324,
+      "textures": 2,
+      "geometries": 2,
+      "rendererCount": 1,
+      "heap": 28378490
+    },
+    {
+      "index": 0,
+      "resourceMs": 51,
+      "stableMs": 480,
+      "id": "01",
+      "opacity": 0.999236,
+      "textures": 2,
+      "geometries": 2,
+      "rendererCount": 1,
+      "heap": 27195099
+    },
+    {
+      "index": 4,
+      "resourceMs": 58,
+      "stableMs": 480,
+      "id": "05",
+      "opacity": 0.999236,
+      "textures": 2,
+      "geometries": 2,
+      "rendererCount": 1,
+      "heap": 19555219
+    },
+    {
+      "index": 0,
+      "resourceMs": 46,
+      "stableMs": 479,
+      "id": "01",
+      "opacity": 0.999236,
+      "textures": 2,
+      "geometries": 2,
+      "rendererCount": 1,
+      "heap": 19756603
+    },
+    {
+      "index": 4,
+      "resourceMs": 54,
+      "stableMs": 480,
+      "id": "05",
+      "opacity": 0.999324,
+      "textures": 2,
+      "geometries": 2,
+      "rendererCount": 1,
+      "heap": 21500785
+    },
+    {
+      "index": 0,
+      "resourceMs": 49,
+      "stableMs": 478,
+      "id": "01",
+      "opacity": 0.999324,
+      "textures": 2,
+      "geometries": 2,
+      "rendererCount": 1,
+      "heap": 29260419
+    },
+    {
+      "index": 4,
+      "resourceMs": 50,
+      "stableMs": 479,
+      "id": "05",
+      "opacity": 0.999236,
+      "textures": 2,
+      "geometries": 2,
+      "rendererCount": 1,
+      "heap": 22307095
+    },
+    {
+      "index": 0,
+      "resourceMs": 46,
+      "stableMs": 480,
+      "id": "01",
+      "opacity": 0.999236,
+      "textures": 2,
+      "geometries": 2,
+      "rendererCount": 1,
+      "heap": 20151091
+    }
+  ],
+  "end": {
+    "id": "01",
+    "opacity": 1,
+    "textures": 2,
+    "geometries": 2,
+    "rendererCount": 1,
+    "heap": 11958536
+  },
+  "soak": {
+    "seconds": 120,
+    "samples": [
+      {
+        "elapsed": 20,
+        "id": "01",
+        "opacity": 1,
+        "textures": 2,
+        "geometries": 2,
+        "rendererCount": 1,
+        "heap": 10929852
+      },
+      {
+        "elapsed": 40,
+        "id": "01",
+        "opacity": 1,
+        "textures": 2,
+        "geometries": 2,
+        "rendererCount": 1,
+        "heap": 10989016
+      },
+      {
+        "elapsed": 60,
+        "id": "01",
+        "opacity": 1,
+        "textures": 2,
+        "geometries": 2,
+        "rendererCount": 1,
+        "heap": 10968700
+      },
+      {
+        "elapsed": 80,
+        "id": "01",
+        "opacity": 1,
+        "textures": 2,
+        "geometries": 2,
+        "rendererCount": 1,
+        "heap": 10953528
+      },
+      {
+        "elapsed": 100,
+        "id": "01",
+        "opacity": 1,
+        "textures": 2,
+        "geometries": 2,
+        "rendererCount": 1,
+        "heap": 10930692
+      },
+      {
+        "elapsed": 120,
+        "id": "01",
+        "opacity": 1,
+        "textures": 2,
+        "geometries": 2,
+        "rendererCount": 1,
+        "heap": 10917760
+      }
+    ],
+    "start": {
+      "usedSize": 5544900,
+      "totalSize": 7192576,
+      "embedderHeapUsedSize": 2056984,
+      "backingStorageSize": 5254108
+    },
+    "end": {
+      "usedSize": 5595936,
+      "totalSize": 6930432,
+      "embedderHeapUsedSize": 2163808,
+      "backingStorageSize": 5254108
+    }
+  }
+}
