@@ -3,7 +3,7 @@
 export const SURFACE_PRESETS=Object.freeze({
  off:Object.freeze({grain:0,erosion:0,cracks:0,edge:0,blend:0}),
  subtle:Object.freeze({grain:.018,erosion:.025,cracks:0,edge:.018,blend:.006}),
- standard:Object.freeze({grain:.032,erosion:.045,cracks:0,edge:.028,blend:.01}),
+ standard:Object.freeze({grain:.042,erosion:.062,cracks:.0025,edge:.026,blend:.012}),
  strong:Object.freeze({grain:.052,erosion:.07,cracks:.006,edge:.038,blend:.015})
 });
 const limits={grain:.06,erosion:.08,cracks:.01,edge:.04,blend:.02};
@@ -14,7 +14,7 @@ export function surfaceConfig(value={}) {
  for(const [key,max] of Object.entries(limits))result[key]=preset==='off'?0:typeof source[key]==='number'&&Number.isFinite(source[key])?Math.max(0,Math.min(max,source[key])):SURFACE_PRESETS[preset][key];
  return result;
 }
-export const exhibitionTiming=Object.freeze({first:1.05,cached:.62,move:.65,exit:.12});
+export const exhibitionTiming=Object.freeze({first:1.05,cached:.82,move:.65,exit:.22});
 export function hashNoise(x,y) {const n=Math.sin(x*127.1+y*311.7)*43758.5453123;return n-Math.floor(n);}
 export function valueNoise(x,y) {
  const ix=Math.floor(x),iy=Math.floor(y),fx=x-ix,fy=y-iy,sx=fx*fx*(3-2*fx),sy=fy*fy*(3-2*fy);
@@ -31,7 +31,7 @@ function sharedPanelNoise() {
   const i=y*edge+x,ix=Math.floor(x/14),iy=Math.floor(y/14),fx=x/14-ix,fy=y/14-iy,sx=fx*fx*(3-2*fx),sy=fy*fy*(3-2*fy);
   grain[i]=hashNoise(x,y)-.5;
   const n=(grid[iy][ix]*(1-sx)+grid[iy][ix+1]*sx)*(1-sy)+(grid[iy+1][ix]*(1-sx)+grid[iy+1][ix+1]*sx)*sy;
-  wear[i]=Math.max(0,(n-.64)/.36);
+  wear[i]=Math.max(0,(n-.54)/.46)*.45+valueNoise(x/54,y/54)*.35+valueNoise(x/150,y/150)*.2;
  }
  return panelNoise={edge,grain,wear};
 }
@@ -43,8 +43,10 @@ export function treatPanel(raw,width,height,value) {
  for(let y=0;y<height;y++)for(let x=0;x<width;x++){
   const i=(y*width+x)*4;if(!raw[i+3])continue;
   const j=y*shared.edge+x;
-  const grain=shared.grain[j]*c.grain*.55;
-  const wear=shared.wear[j]*c.erosion*.5;
+  const luma=(raw[i]*.2126+raw[i+1]*.7152+raw[i+2]*.0722)/255;
+  const protect=.2+.8*Math.max(0,Math.min(1,(luma-.08)/.32));
+  const grain=shared.grain[j]*c.grain*.55*protect;
+  const wear=shared.wear[j]*c.erosion*.55*protect;
   const factor=1+grain-wear;
   for(let k=0;k<3;k++)out[i+k]=raw[i+k]*factor;
  }
@@ -66,13 +68,17 @@ const treatment=`
  if(uSurface.x+uSurface.y+uSurface.z+uSurface.w+uEnvironment+uEdgePulse>0.0){
   float neighbor=min(min(texture2D(map,vMapUv+vec2(uSurfaceTexel.x,0)).a,texture2D(map,vMapUv-vec2(uSurfaceTexel.x,0)).a),min(texture2D(map,vMapUv+vec2(0,uSurfaceTexel.y)).a,texture2D(map,vMapUv-vec2(0,uSurfaceTexel.y)).a));
   float interior=smoothstep(0.2,0.9,neighbor);
+  float luminance=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));
+  float protection=mix(.18,1.0,smoothstep(.015,.18,luminance));
   float grain=(muralHash(floor(muralP))-.5)*uSurface.x;
   float field=muralNoise(muralP/18.0);
-  float wear=smoothstep(.64,.94,field)*uSurface.y;
-  float crack=(1.0-smoothstep(.0,.035,abs(sin(muralP.y*.11+field*8.0))))*smoothstep(.78,.94,muralNoise(muralP/31.0))*uSurface.z;
-  diffuseColor.rgb*=1.0+(grain-wear-crack-uEnvironment*.25)*interior;
-  // A restrained neutral light follows actual alpha, with no rectangular glow.
-  diffuseColor.rgb+=vec3(.72,.69,.62)*(1.0-neighbor)*diffuseColor.a*(uSurface.w+uEdgePulse);
+  float middle=muralNoise(muralP/62.0),wall=muralNoise(muralP/180.0);
+  float wear=(smoothstep(.54,.94,field)*.45+middle*.35+wall*.2)*uSurface.y;
+  float crack=(1.0-smoothstep(.0,.022,abs(sin(muralP.y*.11+field*8.0))))*smoothstep(.82,.96,muralNoise(muralP/31.0))*uSurface.z;
+  // Neutral RGB modulation only. Original alpha and dark drawn lines survive.
+  float edgeWear=(1.0-interior)*(.3+.7*middle)*uSurface.w;
+  diffuseColor.rgb*=1.0+((grain-wear-crack-uEnvironment*.25)*interior-edgeWear)*protection;
+  diffuseColor.rgb+=vec3(1.0)*(1.0-neighbor)*diffuseColor.a*uEdgePulse*protection;
  }
  if(uPigment<.9999){
   float field=muralNoise(muralP/24.0);
@@ -89,7 +95,7 @@ export function attachSurface(material,THREE,image) {
   Object.assign(shader.uniforms,uniforms);
   shader.fragmentShader=declarations+shader.fragmentShader.replace('#include <map_fragment>','#include <map_fragment>'+treatment);
  };
- material.customProgramCacheKey=()=> 'b03-mural-surface-v1';
+ material.customProgramCacheKey=()=> 'b03-mural-surface-v2';
  material.userData.surface={uniforms,config:surfaceConfig()};
  return material.userData.surface;
 }

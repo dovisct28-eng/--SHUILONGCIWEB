@@ -8,8 +8,15 @@ test('Surface defaults preserve recognizability, strong requires explicit choice
  assert.equal(surfaceConfig({erosion:9}).erosion,.08);
  assert.equal(surfaceConfig({cracks:-1}).cracks,0);
  assert.equal(surfaceConfig({preset:'off',grain:1}).grain,0);
- assert.equal(surfaceConfig().cracks,0);
+ assert.ok(surfaceConfig().cracks>=.0015&&surfaceConfig().cracks<=.0035);
  assert.ok(exhibitionTiming.first<=1.2&&exhibitionTiming.cached<exhibitionTiming.first);
+});
+test('Dark source lines have lower modulation than pigment fields; transparent RGB stays exact',()=>{
+ const make=v=>{const a=new Uint8ClampedArray(64*64*4);for(let i=0;i<a.length;i+=4)a.set([v,v,v,i%12?255:0],i);return a;};
+ const dark=make(18),light=make(180),d=treatPanel(dark,64,64,{}),l=treatPanel(light,64,64,{});
+ let darkDelta=0,lightDelta=0;
+ for(let i=0;i<d.length;i+=4){if(!dark[i+3]){assert.deepEqual(d.slice(i,i+4),dark.slice(i,i+4));assert.deepEqual(l.slice(i,i+4),light.slice(i,i+4));}else{darkDelta+=Math.abs(d[i]-dark[i]);lightDelta+=Math.abs(l[i]-light[i]);}assert.equal(d[i+3],dark[i+3]);}
+ assert.ok(darkDelta<lightDelta*.15);
 });
 test('Panel treatment never changes alpha, preserves source bytes, restores exactly and does not accumulate',()=>{
  const raw=new Uint8ClampedArray(64*64*4);

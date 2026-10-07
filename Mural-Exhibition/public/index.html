@@ -708,9 +708,9 @@
             const keepRevealed = currentTrack === 'cyber' && isRevealed;
             if (currentTrack === 'cyber' && !canEnterCyber(item)) { modeError('该人物体感素材未就绪，请返回图鉴。'); return; }
             currentSeriesIndex = index; currentItemData = item;
-            orbitStage?.reset();
+            if(currentTrack === 'cyber') orbitStage?.leave(); else orbitStage?.reset();
             const version = ++detailVersion; releaseGalleryVideo(); infoRequest?.abort(); infoRequest = new AbortController();
-            layerRequest?.abort(); if (!keepRevealed) setRevealed(false, true);
+            layerRequest?.abort(); if (!keepRevealed) setRevealed(false, true, currentTrack === 'cyber');
             const infoPanel = document.getElementById('floating-info'), textEl = document.getElementById('info-text');
             infoPanel.classList.toggle('visible', keepRevealed);
             document.querySelectorAll('#menu li').forEach(el => { el.classList.toggle('active', el.dataset.id === item.id); el.querySelector('button').setAttribute('aria-current', String(el.dataset.id === item.id)); });
@@ -915,7 +915,7 @@
         }
         function enterFigure(cached) {
             if(!figureSurface)return;
-            const duration=reducedMotion.matches?0:cached?exhibitionTiming.cached:exhibitionTiming.first;
+            const duration=reducedMotion.matches||decorationBudget.degraded?0:cached?exhibitionTiming.cached:exhibitionTiming.first;
             const u=figureSurface.uniforms;webglContainer.dataset.phase=duration?'entering':'stable';
             u.uPigment.value=duration?0:1;lineMesh.material.opacity=duration?.35:1;
             gsap.to(u.uPigment,{value:1,duration,ease:'power2.out',overwrite:true,onComplete:()=>{webglContainer.dataset.phase='stable';}});
@@ -960,7 +960,7 @@
             gsap.killTweensOf(camera.position);
             if (immediate) { camera.position.x = isRevealed ? revealCameraX : 0; camera.position.z = isRevealed ? revealCameraZ : defaultCameraZ; }
         }
-        function setRevealed(revealed, immediate = false) {
+        function setRevealed(revealed, immediate = false, stateOnly = false) {
             if (revealed && (currentTrack !== 'cyber' || webglContainer.hasAttribute('data-loading') || !lineMesh)) return;
             isRevealed = revealed;
             document.getElementById('main-app').dataset.revealed = String(revealed);
@@ -969,9 +969,12 @@
             panel.inert = !revealed && currentTrack === 'cyber';
             const button = document.getElementById('reveal-toggle'); button.textContent = revealed ? '收起人物简介' : '查看人物简介'; button.setAttribute('aria-expanded', String(revealed));
             if (revealed) document.getElementById('info-text').scrollTop = 0;
+            // Selection resets UI while its existing stage continues retiring.
+            if(stateOnly)return;
             const duration = immediate || reducedMotion.matches ? 0 : exhibitionTiming.move;
             orbitStage?.settle();
             fitMuralCamera(immediate);
+            if(!immediate) orbitStage?.acknowledge(revealed);
             if (shaderMaterial && !figureMode) {
                 gsap.to(shaderMaterial.uniforms.uDispersion, { value:revealed ? 1 : 0, duration, ease:'power2.inOut', overwrite:true });
                 gsap.to(shaderMaterial.uniforms.uMouse.value, { x:-10, y:-10, duration:0, overwrite:true });
@@ -989,7 +992,8 @@
             }
             const request = muralRequest = new AbortController();
             webglContainer.dataset.loading = ''; status.textContent = '正在加载当前人物图像…';
-            if(lineMesh){webglContainer.dataset.phase='leaving';gsap.to(lineMesh.material,{opacity:0,duration:reducedMotion.matches?0:exhibitionTiming.exit,overwrite:true});if(figureSurface)for(const u of [figureSurface.uniforms.uPigment,figureSurface.uniforms.uEdgePulse])gsap.killTweensOf(u);}
+            const exitDelay=(lineMesh&&!reducedMotion.matches) ? .2 : 0;
+            if(lineMesh){webglContainer.dataset.phase='leaving';gsap.to(lineMesh.material,{opacity:0,delay:reducedMotion.matches?0:.08,duration:reducedMotion.matches?0:exhibitionTiming.exit,overwrite:true});if(figureSurface){for(const u of [figureSurface.uniforms.uPigment,figureSurface.uniforms.uEdgePulse])gsap.killTweensOf(u);gsap.to(figureSurface.uniforms.uPigment,{value:.25,duration:exitDelay,overwrite:true});}}
             const urls = [], textures = []; let timedOut = false;
             const timer = setTimeout(() => { timedOut = true; request.abort(); }, 20000);
             const cachedEntry=muralCache.get(paths);
@@ -998,9 +1002,15 @@
                 const url = URL.createObjectURL(await response.blob()); urls.push(url);
                 return loadStudyImage(url, request.signal);
             });
+            // Fetch/decode above runs in parallel with a cancelable old-stage exit.
+            const retirement=new Promise(resolve=>{
+                const finish=()=>{clearTimeout(exitTimer);request.signal.removeEventListener('abort',finish);resolve();};
+                const exitTimer=setTimeout(finish,exitDelay*1000);request.signal.addEventListener('abort',finish,{once:true});
+            });
             try {
                 const images = cachedEntry?.images || await Promise.all(pendingImages);
-                if (version !== muralVersion || currentTrack !== 'cyber') return;
+                await retirement;
+                if (version !== muralVersion || currentTrack !== 'cyber' || request.signal.aborted) return;
                 let measurement=cachedEntry?.measurement?{...cachedEntry.measurement,cacheHit:true}:undefined;
                 if (figurePath) {
                     try { measurement ||= measureFigure(images[0],figurePath); }
@@ -1041,7 +1051,7 @@
                 if (version !== muralVersion || currentTrack !== 'cyber' || (error.name === 'AbortError' && !timedOut)) return;
                 if (figurePath && linePath && colorPath) { await updateWebGLMural(linePath,colorPath); if(version + 1 === muralVersion) status.prepend('专用人物抠图无效：' + error.message + ' · '); return; }
                 status.textContent = timedOut ? '当前人物体感图像加载超时。' : '当前人物体感图像未载入：' + error.message + '。可切换至图鉴。';
-                releaseMuralStage();webglContainer.removeAttribute('data-has-art');webglContainer.dataset.phase='error';
+                releaseMuralStage();orbitStage?.reset();webglContainer.removeAttribute('data-has-art');webglContainer.dataset.phase='error';
                 const retry = document.createElement('button'); retry.type = 'button'; retry.textContent = '重试图像'; retry.onclick = () => updateWebGLMural(linePath, colorPath, figurePath); status.append(' ', retry);
             } finally { clearTimeout(timer); await Promise.allSettled(pendingImages); urls.forEach(url => URL.revokeObjectURL(url)); }
         }
@@ -1051,7 +1061,7 @@
             const feedback = shaderMaterial.uniforms.uFeedback; gsap.killTweensOf(feedback);
             feedback.value = reducedMotion.matches || decorationBudget.degraded ? 0 : .18;
             gsap.to(feedback,{value:0,duration:reducedMotion.matches?0:.8,overwrite:true});
-            if(figureSurface){const pulse=figureSurface.uniforms.uEdgePulse;gsap.killTweensOf(pulse);pulse.value=reducedMotion.matches||decorationBudget.degraded?0:.05;gsap.to(pulse,{value:0,duration:reducedMotion.matches?0:.55,overwrite:true});}
+            if(figureSurface){const pulse=figureSurface.uniforms.uEdgePulse;gsap.killTweensOf(pulse);pulse.value=reducedMotion.matches||decorationBudget.degraded||figureSurface.config.preset==='off'?0:.025;gsap.to(pulse,{value:0,duration:reducedMotion.matches?0:.55,overwrite:true});}
         }
         function refreshCalibration() {
             if (!currentItemData) return;
@@ -1354,6 +1364,7 @@
         }
 
         function triggerSwipeFlash() {
+            if(figureMode){orbitStage?.acknowledgeSwipe((pointerHistory.at(-1)?.x||0)-(pointerHistory[0]?.x||0));return;}
             if (reducedMotion.matches) return;
             const flash = document.getElementById('swipe-flash');
             flash.style.transition = 'none';

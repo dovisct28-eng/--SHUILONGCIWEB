@@ -1,4 +1,4 @@
-import { orbitLayout, cropWindows, LAYOUT_VERSION } from './orbit-layout.mjs';
+import { orbitLayout, cropWindows, LAYOUT_VERSION, seededRandom, panelBounds, projectOccupancy, intersects } from './orbit-layout.mjs';
 import { surfaceConfig, treatPanel } from './mural-surface.mjs';
 export { orbitLayout } from './orbit-layout.mjs';
 
@@ -10,6 +10,31 @@ export function detailWindows(pixels,width,height,bounds) {
 }
 const ns='http://www.w3.org/2000/svg';
 const svgEl=(tag,attrs={})=>{const el=document.createElementNS(ns,tag);for(const [k,v] of Object.entries(attrs))el.setAttribute(k,v);return el;};
+// Presentation uses the HF-02 result as a reservation, never changes its search.
+export function panelPresentation(layout,input) {
+ const random=seededRandom(input.id+'|hf04'),ranked=layout.panels.filter(p=>p.content!=='contour').map(p=>({id:p.content,rank:random()})).sort((a,b)=>a.rank-b.rank);
+ const occupied=projectOccupancy(input.geometry,input.projection,input.effective);
+ occupied.push({x:input.effective.x+input.effective.width*.3,y:input.effective.y+input.effective.height*.28,width:input.effective.width*.4,height:input.effective.height*.44});
+ const safe=layout.safe;
+ return layout.panels.map(p=>{
+  const index=ranked.findIndex(r=>r.id===p.content),tier=p.content==='contour'?'contour':index===0?'primary':index<3?'secondary':'tertiary';
+  const scale=(tier==='primary'?1.12:tier==='secondary'?.96:.86)*(1+(random()-.5)*.08),angle=(random()-.5)*2.4;
+  const driftX=Math.min(10,Math.max(4,input.width*.004))*(random()>.5?1:-1),driftY=Math.min(14,Math.max(5,input.height*.008))*(random()>.5?1:-1);
+  let result;
+  // Reserve the complete focus + drift envelope, rotated corners and connectors.
+  // In tight space reduce decoration first; never shrink the main figure.
+  for(const fit of [1,.96,.92,.88,.82,.76]){
+   const width=p.width*scale*fit,height=p.height*scale*fit;
+   const candidate={...p,width,height,x:p.x+(p.width-width)/2,y:p.y+(p.height-height)/2,angle};
+   const envelope=panelBounds({...candidate,width:width*1.04,height:height*1.04,x:candidate.x-width*.02,y:candidate.y-height*.02,angle:Math.abs(angle)+.5},4);
+   envelope.x-=Math.abs(driftX);envelope.y-=Math.abs(driftY);envelope.width+=Math.abs(driftX)*2;envelope.height+=Math.abs(driftY)*2;
+   if(safe&&envelope.x>=safe.x&&envelope.y>=safe.y&&envelope.x+envelope.width<=safe.x+safe.width&&envelope.y+envelope.height<=safe.y+safe.height&&!occupied.some(r=>intersects(envelope,r,10))&&!input.forbidden?.some(r=>intersects(envelope,r,12))&&!layout.panels.some(q=>q!==p&&intersects(envelope,panelBounds(q),16))){result={...candidate,envelope,driftX,driftY};break;}
+  }
+  // Original reservation is proven safe; fit within it when no extra margin exists.
+  result ||= {...p,angle:0,driftX:0,driftY:0,envelope:panelBounds(p)};
+  return {...result,tier,opacity:tier==='primary'?.94:tier==='secondary'?.73:tier==='tertiary'?.49:.40,period:9+random()*9,phase:-random()*18,focusRank:random()};
+ });
+}
 export class OrbitStage {
  constructor(root,tween,reduced) {
   this.root=root;this.tween=tween;this.reduced=reduced;this.panels=[];this.cache=new Map();this.sourceVersion=0;
@@ -19,21 +44,77 @@ export class OrbitStage {
   this.rings=svgEl('g',{'class':'orbit-rings'});this.svg.append(this.rings);
   this.main=svgEl('ellipse',{'class':'orbit-main'});this.aux=svgEl('ellipse',{'class':'orbit-aux'});this.floor=svgEl('ellipse',{'class':'orbit-floor'});
   this.rings.append(this.main,this.aux,this.floor);this.links=svgEl('g',{'class':'orbit-links'});this.svg.append(this.links);
+  this.travel=svgEl('path',{'class':'orbit-travel',pathLength:1});this.links.append(this.travel);
+  this.swipe=svgEl('path',{'class':'orbit-swipe',pathLength:1});this.rings.append(this.swipe);
   this.rings.setAttribute('mask','url(#b03-orbit-safe-mask)');this.links.setAttribute('mask','url(#b03-orbit-safe-mask)');
   // Reuse a fixed pool; no DOM churn, GL textures or extra animation loop.
   for(let i=0;i<5;i++) {
    const el=document.createElement('div');el.className=`orbit-panel orbit-${['detail-a','fragment','detail-b','contour','detail-a'][i]}`;el.dataset.panel=String(i);
-   const canvas=document.createElement('canvas');el.append(canvas);root.append(el);
+   const motion=document.createElement('div');motion.className='orbit-panel-motion';
+   const focus=document.createElement('div');focus.className='orbit-panel-focus';
+   const canvas=document.createElement('canvas');focus.append(canvas);motion.append(focus);el.append(motion);root.append(el);
    const line=svgEl('path'),node=svgEl('circle',{r:3});this.links.append(line,node);
-   this.panels.push({el,canvas,line,node,entry:{panel:1,link:1,node:1},position:{x:0,y:0,width:1,height:1,angle:0,opacity:0}});
+   this.panels.push({el,motion,focus,canvas,line,node,emphasis:{value:0},entry:{panel:1,link:1,node:1,retreat:0},position:{x:0,y:0,width:1,height:1,angle:0,opacity:0}});
   }
   this.geometry={cx:0,cy:0,rx:1,ry:1,fx:0,fy:0,frx:1,fry:1};this.presentation={arc:1};this.reset();
+  this.onVisibility=()=>{if(document.hidden)this.settle();else this.resumeMotion();};document.addEventListener('visibilitychange',this.onVisibility);
+  reduced.addEventListener('change',()=>{if(reduced.matches)this.settle();else this.resumeMotion();});
+ }
+ stopMotion(preserveAck=false) {
+  this.focusCall?.kill();this.focusCall=null;this.focusTween?.kill();this.focusTween=null;this.readyCall?.kill();this.readyCall=null;
+  if(!preserveAck){this.ackTween?.kill();this.ackTween=null;this.swipe.style.opacity='0';this.tween.set(this.rings,{scale:1});}
+  this.root.dataset.motion='paused';delete this.root.dataset.focus;this.travel.style.opacity='0';
+  for(const p of this.panels){p.emphasis.value=0;p.focus.style.transform='';p.focus.style.filter='';this.drawPanel(p);}
+ }
+ resumeMotion() {
+  if(!this.active||!this.currentLayout||this.phase!=='stable'||this.reduced.matches||this.degraded||document.hidden)return;
+  this.root.dataset.motion='stable';
+  if(this.focusCall||this.focusTween)return;
+  const random=seededRandom(this.characterId+'|cadence');
+  this.focusCall=this.tween.delayedCall(6+random()*3,()=>{this.focusCall=null;this.focusNext();});
+ }
+ focusNext() {
+  if(this.root.dataset.motion!=='stable')return;
+  const available=this.panels.filter(p=>p.position.opacity>0).sort((a,b)=>a.position.focusRank-b.position.focusRank);
+  if(!available.length)return;
+  const p=available[this.focusIndex++%available.length];this.root.dataset.focus=p.el.dataset.panel;
+  // One owned event combines focus and connector travel; never two strong events.
+  this.travel.setAttribute('d',p.line.getAttribute('d'));this.travel.style.strokeDashoffset='1';
+  this.focusTween=this.tween.timeline({onComplete:()=>{this.focusTween=null;delete this.root.dataset.focus;this.travel.style.opacity='0';this.resumeMotion();}})
+   .to(p.emphasis,{value:1,duration:.28,onUpdate:()=>this.drawRings()},0)
+   .to(this.travel,{opacity:.62,duration:.15},0)
+   .to(this.travel,{strokeDashoffset:0,duration:1.1,ease:'power1.inOut'},0)
+   .to(p.emphasis,{value:0,duration:.35,onUpdate:()=>this.drawRings()},.95)
+   .to(this.travel,{opacity:0,duration:.2},1.1);
+ }
+ acknowledge(revealed) {
+  this.stopMotion();if(!this.active||this.reduced.matches||this.degraded)return;
+  this.rings.style.transformOrigin=`${this.geometry.cx}px ${this.geometry.cy}px`;
+  this.ackTween=this.tween.timeline({onComplete:()=>{this.ackTween=null;this.rings.style.transform='';}})
+   .to(this.rings,{scale:revealed?1.03:.98,duration:.22,ease:'power2.out'})
+   .to(this.rings,{scale:1,duration:.24,ease:'power2.inOut',onComplete:()=>this.resumeMotion()});
+ }
+ acknowledgeSwipe(delta) {
+  this.stopMotion();if(!this.active||this.reduced.matches||this.degraded)return;
+  const g=this.geometry,sign=delta<0?-1:1;
+  this.swipe.setAttribute('d',`M ${g.cx-sign*g.rx*.65} ${g.cy-g.ry*.55} Q ${g.cx} ${g.cy-g.ry} ${g.cx+sign*g.rx*.65} ${g.cy-g.ry*.55}`);
+  this.swipe.style.strokeDashoffset='1';
+  this.ackTween=this.tween.timeline({onComplete:()=>{this.ackTween=null;this.swipe.style.opacity='0';}}).to(this.swipe,{opacity:.62,strokeDashoffset:0,duration:.2,ease:'power1.out'}).to(this.swipe,{opacity:0,duration:.06});
+ }
+ leave() {
+  if(!this.active)return;
+  // Preserve an already acknowledged swipe during the short old-figure exit.
+  this.stopMotion(true);
+  this.phase='leaving';this.tween.killTweensOf(this.presentation);
+  this.tween.to(this.presentation,{arc:.82,duration:.18,onUpdate:()=>this.drawRings()});
+  for(const p of this.panels){this.tween.killTweensOf(p.entry);this.tween.to(p.entry,{panel:0,link:0,node:0,retreat:1,duration:.18,onUpdate:()=>this.drawPanel(p)});}
  }
  reset() {
+  this.stopMotion();this.phase='idle';this.focusIndex=0;
   this.sourceVersion++;this.active=false;this.root.hidden=true;this.contents=[];this.cache.clear();this.layouts={};this.currentLayout=null;
   this.tween.killTweensOf(this.geometry);
   this.tween.killTweensOf(this.presentation);this.presentation.arc=1;
-  for(const p of this.panels){this.tween.killTweensOf(p.position);this.tween.killTweensOf(p.entry);Object.assign(p.entry,{panel:1,link:1,node:1});p.raw=null;p.position.opacity=0;p.canvas.width=p.canvas.height=0;p.el.style.opacity='0';p.line.style.opacity=p.node.style.opacity='0';delete p.el.dataset.content;delete p.el.dataset.character;}
+  for(const p of this.panels){this.tween.killTweensOf(p.position);this.tween.killTweensOf(p.entry);Object.assign(p.entry,{panel:1,link:1,node:1});p.raw=null;p.position.opacity=0;p.canvas.width=p.canvas.height=0;p.el.style.opacity='0';p.line.style.opacity=p.node.style.opacity='0';p.motion.style.cssText='';delete p.el.dataset.content;delete p.el.dataset.character;}
  }
  setSource(image,bounds,measurement,item={}) {
   this.reset();this.characterId=item.id||'';
@@ -66,7 +147,8 @@ export class OrbitStage {
    cc.putImageData(dst,0,0);
    this.contents.push({id:'contour',aspect:ratio,maxEdge:Math.max(c.width,c.height),registration:'same-source-alpha'});
    this.contents.forEach((content,i)=>{this.panels[i].el.dataset.content=content.id;this.panels[i].el.dataset.character=this.characterId;this.panels[i].el.classList.toggle('orbit-contour',content.id==='contour');});
-   this.active=true;this.root.hidden=false;
+   this.active=true;this.phase='ready';this.root.hidden=false;
+   const random=seededRandom(this.characterId+'|direction');this.root.style.setProperty('--orbit-direction',random()>.5?'normal':'reverse');this.root.style.setProperty('--aux-direction',this.root.style.getPropertyValue('--orbit-direction')==='normal'?'reverse':'normal');
   } catch { this.reset(); } // Decorations cannot interrupt the main figure.
  }
  layout(input,immediate=false) {
@@ -77,6 +159,10 @@ export class OrbitStage {
   let layout=this.cache.get(key);
   if(!layout){layout=orbitLayout(args);this.cache.set(key,layout);if(this.cache.size>16)this.cache.delete(this.cache.keys().next().value);}
   this.layoutMs=performance.now()-start;this.currentLayout=layout;this.layouts[input.revealed?'revealedLayout':'defaultLayout']=layout;
+  const wasStable=this.phase==='stable',enteringCall=this.phase==='entering'?this.readyCall:null;
+  if(enteringCall)this.readyCall=null;
+  this.stopMotion();if(enteringCall)this.readyCall=enteringCall;
+  const presentation=panelPresentation(layout,args);
   const duration=immediate||this.reduced.matches?0:.65;
   this.root.dataset.revealed=String(input.revealed);this.root.dataset.template=layout.template;this.svg.setAttribute('viewBox',`0 0 ${input.width} ${input.height}`);
   for(const [k,v]of Object.entries({x:0,y:0,width:input.width,height:input.height}))this.mask.setAttribute(k,v);
@@ -86,30 +172,33 @@ export class OrbitStage {
   const g=this.geometry;
   this.tween.to(g,{cx:layout.center.x,cy:layout.center.y,rx:layout.radius.x,ry:layout.radius.y,fx:layout.floor.x,fy:layout.floor.y,frx:layout.floor.rx,fry:layout.floor.ry,duration,ease:'power2.inOut',overwrite:true,onUpdate:()=>this.drawRings()});
   for(let i=0;i<this.panels.length;i++){
-   const node=this.panels[i],p=layout.panels.find(p=>p.content===this.contents[i]?.id);
+   const node=this.panels[i],p=presentation.find(p=>p.content===this.contents[i]?.id);
    this.tween.killTweensOf(node.position);
    // Fade in at safe endpoints after the figure move. No visible crossing paths.
    node.position.opacity=0;
-   if(p){Object.assign(node.position,p,{opacity:duration?0:p.opacity});this.drawPanel(node);if(duration)this.tween.to(node.position,{opacity:p.opacity,delay:duration,duration:.15,overwrite:true,onUpdate:()=>this.drawPanel(node)});}
+   if(p){Object.assign(node.position,p,{opacity:duration?0:p.opacity});node.el.dataset.tier=p.tier;node.motion.style.cssText=`--drift-x:${p.driftX}px;--drift-y:${p.driftY}px;--drift-period:${p.period}s;--drift-phase:${p.phase}s;`;this.drawPanel(node);if(duration)this.tween.to(node.position,{opacity:p.opacity,delay:duration,duration:.15,overwrite:true,onUpdate:()=>this.drawPanel(node)});}
    else this.drawPanel(node);
   }
+  if(wasStable){if(duration)this.readyCall=this.tween.delayedCall(duration+.15,()=>{this.readyCall=null;this.resumeMotion();});else this.resumeMotion();}
   return layout;
  }
  drawRings() {
   const g=this.geometry;
   const progress=this.presentation.arc,layout=this.currentLayout;
-  if(layout){this.main.style.strokeDasharray=`${Math.max(8,layout.arcSpan*progress)} ${layout.arcStart+74} ${118*progress} ${134+(1-progress)*400}`;this.aux.style.opacity=String(.16*progress);this.floor.style.opacity=String(.35*progress);}
+  if(layout){const pattern=[Math.max(8,layout.arcSpan*progress),layout.arcStart+74,118*progress,134+(1-progress)*400];this.main.style.strokeDasharray=pattern.join(' ');this.main.style.setProperty('--main-flow-length',pattern.reduce((a,b)=>a+b,0)+'px');this.aux.style.opacity=String(.16*progress);this.floor.style.opacity=String(.24*progress);}
   for(const [el,rx,ry] of [[this.main,g.rx,g.ry],[this.aux,g.rx*1.09,g.ry*.87]])for(const [k,v] of Object.entries({cx:g.cx,cy:g.cy,rx,ry}))el.setAttribute(k,v);
   this.aux.setAttribute('transform',`rotate(-18 ${g.cx} ${g.cy})`);
   for(const [k,v] of Object.entries({cx:g.fx,cy:g.fy,rx:g.frx,ry:g.fry}))this.floor.setAttribute(k,v);
   for(const p of this.panels)this.drawPanel(p);
  }
- drawPanel({el,position:p,line,node,entry}) {
-  el.style.cssText=`width:${p.width}px;height:${p.height}px;transform:translate(${p.x}px,${p.y}px) rotate(${p.angle}deg);opacity:${p.opacity*entry.panel}`;
+ drawPanel({el,focus,emphasis,position:p,line,node,entry}) {
+  const active=emphasis.value,quiet=(this.root.dataset.focus&&this.root.dataset.focus!==el.dataset.panel) ? .94 : 1;
+  el.style.cssText=`width:${p.width}px;height:${p.height}px;transform:translate(${p.x}px,${p.y}px) rotate(${p.angle}deg) scale(${1-(entry.retreat||0)*.06});opacity:${Math.min(1,p.opacity*(1+active*.12))*entry.panel*quiet}`;
+  focus.style.transform=`scale(${1+active*.03})`;focus.style.filter=`brightness(${1+active*.08})`;
   const g=this.geometry,left=p.x+p.width/2<g.cx,x=left?p.x+p.width:p.x,y=p.y+p.height*.52;
   const endX=g.cx+(left?-1:1)*g.rx*.68,endY=g.cy+(y-g.cy)*.62;
-  line.setAttribute('d',`M ${x} ${y} L ${(x+endX)/2} ${y} L ${endX} ${endY}`);
-  node.setAttribute('cx',x);node.setAttribute('cy',y);line.style.opacity=String(p.opacity*entry.link*.58);node.style.opacity=String(p.opacity*entry.node*.58);
+  line.setAttribute('d',`M ${endX} ${endY} L ${(x+endX)/2} ${y} L ${x} ${y}`);
+  node.setAttribute('cx',endX);node.setAttribute('cy',endY);line.style.opacity=String(entry.link*(p.opacity*.36+active*.32));node.style.opacity=String(entry.node*(p.opacity*.45+active*.28));
  }
  setSurface(value) {
   this.surface=surfaceConfig(value);
@@ -118,16 +207,20 @@ export class OrbitStage {
  enter(duration) {
   if(!this.active)return;
   const d=this.reduced.matches||this.degraded?0:duration;
+  this.stopMotion();this.phase=d?'entering':'stable';
   this.tween.killTweensOf(this.presentation);this.presentation.arc=d?0:1;
   if(d)this.tween.to(this.presentation,{arc:1,delay:d*.25,duration:d*.7,overwrite:true,onUpdate:()=>this.drawRings()});
-  this.panels.forEach((p,i)=>{
-   this.tween.killTweensOf(p.entry);Object.assign(p.entry,{panel:d?0:1,link:d?0:1,node:d?0:1});
+  const ordered=[...this.panels].sort((a,b)=>Math.atan2(a.position.y-this.geometry.cy,a.position.x-this.geometry.cx)-Math.atan2(b.position.y-this.geometry.cy,b.position.x-this.geometry.cx));
+  ordered.forEach((p,i)=>{
+   this.tween.killTweensOf(p.entry);Object.assign(p.entry,{panel:d?0:1,link:d?0:1,node:d?0:1,retreat:0});
    if(d){this.tween.to(p.entry,{node:1,delay:d*.36+i*.025,duration:d*.16,onUpdate:()=>this.drawPanel(p)});this.tween.to(p.entry,{panel:1,delay:d*.48+i*.025,duration:d*.22,onUpdate:()=>this.drawPanel(p)});this.tween.to(p.entry,{link:1,delay:d*.7+i*.025,duration:d*.18,onUpdate:()=>this.drawPanel(p)});}
   });this.drawRings();
+  if(d)this.readyCall=this.tween.delayedCall(d,()=>{this.readyCall=null;this.phase='stable';this.resumeMotion();});else this.resumeMotion();
  }
  settle() {
+  this.stopMotion();this.phase=this.active?'stable':'idle';
   this.tween.killTweensOf(this.presentation);this.presentation.arc=1;
-  for(const p of this.panels){this.tween.killTweensOf(p.entry);Object.assign(p.entry,{panel:1,link:1,node:1});}this.drawRings();
+  for(const p of this.panels){this.tween.killTweensOf(p.entry);Object.assign(p.entry,{panel:1,link:1,node:1,retreat:0});}this.drawRings();this.resumeMotion();
  }
  setDegraded(value) {this.degraded=value;this.root.dataset.degraded=String(value);if(value)this.settle();}
 }

@@ -1,0 +1,552 @@
+{
+  "baseline": "94e30cebe8ae7ca39235afd8513c86436c0a4bf8",
+  "unitTests": 25,
+  "build": "Native static modules + Express; no bundler. npm test includes HTML/module syntax and protected legacy equations.",
+  "suites": {
+    "core": {
+      "pass": true,
+      "views": 4,
+      "checks": [
+        "Eight existing stable IDs, names, original images and archives; unmodified ratios/colors",
+        "Four sizes: actual default/long/line/color/index and cyber default/revealed screenshots; projected plane avoids real panel; same person across modes",
+        "Panorama transform restored; failed layer retains original and retries; archive retries; fast switches keep final archive/image and release video",
+        "Actual decoded video playback and browser ended event restore color still; delayed archive and video completions cannot survive switch/exit",
+        "Dynamic ninth ID; original-only; provided English/sources; HTML remains text; unsafe source URL rejected; no silent switch to unrelated cyber character",
+        "Original synthetic two-hand reveal/scroll/close; interrupted transitions settle; resize keeps textures/geometries; original one-hand swipe advances ID and resets archive; exit stops camera boundary",
+        "Native keyboard reveal and shared I/Escape/arrow fallback; exit during actual new texture request cancels late upload and RAF"
+      ],
+      "source": "local/core/results.json"
+    },
+    "stage": {
+      "pass": true,
+      "checks": [
+        "Author-only preview, character selection, normalized scale/offset/anchor, copy JSON, reset, 8 fast reversals without drift, resize without texture reconstruction",
+        "Figure-only resources enter without legacy layers; synthetic tall/wide Alpha shapes fit 4 sizes in both states; long author summary scrolls and HTML stays text; one renderer and <=80000 vertices",
+        "Opaque/failed-decode figure falls back to legacy without ID change; empty Alpha remains diagnosed without showing stale art; explicit manual bounds allowed with warning; per-source Alpha cache reused; mismatched study dimensions diagnosed"
+      ],
+      "source": "local/core/stage-results.json"
+    },
+    "b01": {
+      "pass": true,
+      "checks": [
+        "native keyboard Enter; map original image/8 hotspots; drag/wheel; hotspot to detail; org/line/color; detail→map→B01",
+        "real cyber dependencies and renderer; injected NotAllowedError",
+        "6 simulated camera sessions; max 1; all stopped; single existing renderer; repeated cyber↔gallery↔selection",
+        "NotFoundError message and return",
+        "NotReadableError message and return",
+        "NotAllowedError message and return",
+        "late camera startup after return is stopped",
+        "20 rapid entry clicks serialize",
+        "asset-api-error recovery",
+        "map-image-error recovery",
+        "homepage image failure/retry; reduced motion; Space native entry",
+        "blocked CDN shows retry and gallery remains usable",
+        "failed cached Three ES module import recovers on retry",
+        "unsupported camera returns to selection",
+        "real A08→B01→native back restores A08 at 42 screens; direct refresh"
+      ],
+      "source": "local/b01/results.json"
+    },
+    "b02": {
+      "pass": true,
+      "views": 4,
+      "checks": [
+        "All eight named hotspots open their matching original resources; all hover screenshots recorded",
+        "Pan/zoom preserved through detail and character switching; line/color/video lazy; missing video never requested; video released on switch/return",
+        "Drag, wheel, middle, reset, fresh B01 entry at left",
+        "Real new folder auto-discovery; both click/select orders; draft/cancel/save/reload/edit/unbind; search; simulated save failure restores; progressive resources; original-only detail; fixture cleaned"
+      ],
+      "source": "local/b02/results.json"
+    },
+    "theatre": {
+      "pass": true,
+      "views": 4,
+      "checks": [
+        "Four sizes × default, revealed, restored; actual rotated panel rectangles avoid conservative alpha occupancy cells; rapid keyboard reversals restore identical layout without image requests or additional GL resources",
+        "Additional local uncommitted author ID05 figure tested; excluded from this code delivery and clean tracked-resource checks",
+        "Legacy fallback hides figure-specific image devices; mode exit clears canvases; long author summary scrolls and HTML stays plain text; reduced motion reaches the same safe composition"
+      ],
+      "source": "local/theatre-final/results.json"
+    },
+    "layout": {
+      "pass": true,
+      "views": 12,
+      "checks": [
+        "Actual navigation reload restores identical ID01 default layout at the same viewport",
+        "12 quick reversals, resize while revealed and return, no reloads/GL growth; visible transition panels avoid the moving actual projected silhouette",
+        "All eight scanned IDs preserve revealed state through switches; figure/legacy composition clears old canvases; optional author orbit preview/copy/reset works",
+        "Nine valid synthetic silhouettes at four viewports in both modes plus restore; empty/opaque Alpha safe diagnostics; delayed old image cannot replace current source; mode exit clears all panel bitmaps"
+      ],
+      "source": "local/layout-final/results.json"
+    },
+    "surface": {
+      "pass": true,
+      "views": 4,
+      "checks": [
+        {
+          "keyframe": "pigment-forming",
+          "state": {
+            "id": "01",
+            "figureMode": true,
+            "revealed": false,
+            "phase": "entering",
+            "pigment": 0.57571,
+            "edge": 0.026,
+            "cracks": 0.0025,
+            "preset": "standard",
+            "degraded": false,
+            "cacheSize": 1,
+            "cacheKeys": [
+              "[\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/line.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/color.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/figure.png\"]"
+            ],
+            "opacity": 0.691175,
+            "entry": [
+              {
+                "panel": 0,
+                "link": 0,
+                "node": 0,
+                "opacity": 0.94
+              },
+              {
+                "panel": 0,
+                "link": 0,
+                "node": 0,
+                "opacity": 0
+              },
+              {
+                "panel": 0,
+                "link": 0,
+                "node": 0,
+                "opacity": 0
+              },
+              {
+                "panel": 0,
+                "link": 0,
+                "node": 0,
+                "opacity": 0.73
+              },
+              {
+                "panel": 0,
+                "link": 0,
+                "node": 0,
+                "opacity": 0.4
+              }
+            ],
+            "arc": 0,
+            "active": true,
+            "layout": {
+              "version": "b03-hf-02-v1",
+              "seed": "01|b03-hf-02-v1|default",
+              "template": "horizontal",
+              "panels": [
+                {
+                  "id": "crop-0",
+                  "content": "crop-0",
+                  "x": 1213.2633360542823,
+                  "y": 544.1391759377439,
+                  "width": 155.22473356081173,
+                  "height": 155.22473356081173,
+                  "angle": 4.537227490916848,
+                  "opacity": 0.7024623404117302
+                },
+                {
+                  "id": "crop-3",
+                  "content": "crop-3",
+                  "x": 55.147581960773095,
+                  "y": 543.9356266006362,
+                  "width": 167.80982593307272,
+                  "height": 167.80982593307272,
+                  "angle": -1.486401337198913,
+                  "opacity": 0.8085274718422443
+                },
+                {
+                  "id": "contour",
+                  "content": "contour",
+                  "x": 1017.6877737796817,
+                  "y": 118.87545439266512,
+                  "width": 173.61862105084583,
+                  "height": 167.84375275409025,
+                  "angle": -0.8238152973353863,
+                  "opacity": 0.6856279843347147
+                }
+              ],
+              "center": {
+                "x": 705.5999999999999,
+                "y": 413.92
+              },
+              "radius": {
+                "x": 481.53672630410654,
+                "y": 217.42079999999999
+              },
+              "floor": {
+                "x": 705.5999999999999,
+                "y": 698,
+                "rx": 140,
+                "ry": 10
+              },
+              "score": 4.625576554047311,
+              "degraded": "none",
+              "intensity": 1,
+              "arcStart": 12,
+              "arcSpan": 172,
+              "attempts": 8,
+              "candidateCount": 168,
+              "safe": {
+                "x": 36,
+                "y": 110,
+                "width": 1368,
+                "height": 610
+              }
+            },
+            "effective": {
+              "x": 409.6770699223085,
+              "y": 127.84000000000003,
+              "width": 591.8458601553829,
+              "height": 572.16
+            },
+            "textures": 1,
+            "geometries": 2,
+            "points": 5925,
+            "rendererCount": 1
+          }
+        },
+        {
+          "keyframe": "orbit-forming",
+          "state": {
+            "id": "01",
+            "figureMode": true,
+            "revealed": false,
+            "phase": "entering",
+            "pigment": 0.718682,
+            "edge": 0.026,
+            "cracks": 0.0025,
+            "preset": "standard",
+            "degraded": false,
+            "cacheSize": 1,
+            "cacheKeys": [
+              "[\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/line.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/color.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/figure.png\"]"
+            ],
+            "opacity": 0.78952,
+            "entry": [
+              {
+                "panel": 0,
+                "link": 0,
+                "node": 0,
+                "opacity": 0.94
+              },
+              {
+                "panel": 0,
+                "link": 0,
+                "node": 0,
+                "opacity": 0
+              },
+              {
+                "panel": 0,
+                "link": 0,
+                "node": 0,
+                "opacity": 0
+              },
+              {
+                "panel": 0,
+                "link": 0,
+                "node": 0,
+                "opacity": 0.73
+              },
+              {
+                "panel": 0,
+                "link": 0,
+                "node": 0,
+                "opacity": 0.4
+              }
+            ],
+            "arc": 0.252422,
+            "active": true,
+            "layout": {
+              "version": "b03-hf-02-v1",
+              "seed": "01|b03-hf-02-v1|default",
+              "template": "horizontal",
+              "panels": [
+                {
+                  "id": "crop-0",
+                  "content": "crop-0",
+                  "x": 1213.2633360542823,
+                  "y": 544.1391759377439,
+                  "width": 155.22473356081173,
+                  "height": 155.22473356081173,
+                  "angle": 4.537227490916848,
+                  "opacity": 0.7024623404117302
+                },
+                {
+                  "id": "crop-3",
+                  "content": "crop-3",
+                  "x": 55.147581960773095,
+                  "y": 543.9356266006362,
+                  "width": 167.80982593307272,
+                  "height": 167.80982593307272,
+                  "angle": -1.486401337198913,
+                  "opacity": 0.8085274718422443
+                },
+                {
+                  "id": "contour",
+                  "content": "contour",
+                  "x": 1017.6877737796817,
+                  "y": 118.87545439266512,
+                  "width": 173.61862105084583,
+                  "height": 167.84375275409025,
+                  "angle": -0.8238152973353863,
+                  "opacity": 0.6856279843347147
+                }
+              ],
+              "center": {
+                "x": 705.5999999999999,
+                "y": 413.92
+              },
+              "radius": {
+                "x": 481.53672630410654,
+                "y": 217.42079999999999
+              },
+              "floor": {
+                "x": 705.5999999999999,
+                "y": 698,
+                "rx": 140,
+                "ry": 10
+              },
+              "score": 4.625576554047311,
+              "degraded": "none",
+              "intensity": 1,
+              "arcStart": 12,
+              "arcSpan": 172,
+              "attempts": 8,
+              "candidateCount": 168,
+              "safe": {
+                "x": 36,
+                "y": 110,
+                "width": 1368,
+                "height": 610
+              }
+            },
+            "effective": {
+              "x": 409.6770699223085,
+              "y": 127.84000000000003,
+              "width": 591.8458601553829,
+              "height": 572.16
+            },
+            "textures": 1,
+            "geometries": 2,
+            "points": 5925,
+            "rendererCount": 1
+          }
+        },
+        {
+          "keyframe": "switching",
+          "state": {
+            "id": "01",
+            "figureMode": true,
+            "revealed": false,
+            "phase": "entering",
+            "pigment": 0.253075,
+            "edge": 0.026,
+            "cracks": 0.0025,
+            "preset": "standard",
+            "degraded": false,
+            "cacheSize": 2,
+            "cacheKeys": [
+              "[\"/assets/05_%E5%8C%97%E9%97%A8%E9%9B%B7%E4%BA%94%E7%8C%96/line.png\",\"/assets/05_%E5%8C%97%E9%97%A8%E9%9B%B7%E4%BA%94%E7%8C%96/color.png\",\"/assets/05_%E5%8C%97%E9%97%A8%E9%9B%B7%E4%BA%94%E7%8C%96/figure.png\"]",
+              "[\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/line.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/color.png\",\"/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/figure.png\"]"
+            ],
+            "opacity": 0.491885,
+            "entry": [
+              {
+                "panel": 0,
+                "link": 0,
+                "node": 0,
+                "opacity": 0.94
+              },
+              {
+                "panel": 0,
+                "link": 0,
+                "node": 0,
+                "opacity": 0
+              },
+              {
+                "panel": 0,
+                "link": 0,
+                "node": 0,
+                "opacity": 0
+              },
+              {
+                "panel": 0,
+                "link": 0,
+                "node": 0,
+                "opacity": 0.73
+              },
+              {
+                "panel": 0,
+                "link": 0,
+                "node": 0,
+                "opacity": 0.4
+              }
+            ],
+            "arc": 0,
+            "active": true,
+            "layout": {
+              "version": "b03-hf-02-v1",
+              "seed": "01|b03-hf-02-v1|default",
+              "template": "horizontal",
+              "panels": [
+                {
+                  "id": "crop-0",
+                  "content": "crop-0",
+                  "x": 1213.2633360542823,
+                  "y": 544.1391759377439,
+                  "width": 155.22473356081173,
+                  "height": 155.22473356081173,
+                  "angle": 4.537227490916848,
+                  "opacity": 0.7024623404117302
+                },
+                {
+                  "id": "crop-3",
+                  "content": "crop-3",
+                  "x": 55.147581960773095,
+                  "y": 543.9356266006362,
+                  "width": 167.80982593307272,
+                  "height": 167.80982593307272,
+                  "angle": -1.486401337198913,
+                  "opacity": 0.8085274718422443
+                },
+                {
+                  "id": "contour",
+                  "content": "contour",
+                  "x": 1017.6877737796817,
+                  "y": 118.87545439266512,
+                  "width": 173.61862105084583,
+                  "height": 167.84375275409025,
+                  "angle": -0.8238152973353863,
+                  "opacity": 0.6856279843347147
+                }
+              ],
+              "center": {
+                "x": 705.5999999999999,
+                "y": 413.92
+              },
+              "radius": {
+                "x": 481.53672630410654,
+                "y": 217.42079999999999
+              },
+              "floor": {
+                "x": 705.5999999999999,
+                "y": 698,
+                "rx": 140,
+                "ry": 10
+              },
+              "score": 4.625576554047311,
+              "degraded": "none",
+              "intensity": 1,
+              "arcStart": 12,
+              "arcSpan": 172,
+              "attempts": 8,
+              "candidateCount": 168,
+              "safe": {
+                "x": 36,
+                "y": 110,
+                "width": 1368,
+                "height": 610
+              }
+            },
+            "effective": {
+              "x": 409.6770699223085,
+              "y": 127.84000000000003,
+              "width": 591.8458601553829,
+              "height": 572.16
+            },
+            "textures": 2,
+            "geometries": 2,
+            "points": 5925,
+            "rendererCount": 1
+          }
+        },
+        "Entry pigment/arc/panel/node/link complete; exact off GPU comparison captured; 4 viewports default/reveal/reverse; author controls; interrupted reading; cached/rapid/late switching; decoration degradation preserves image and interactions; exit frees GL resources; gallery filter none; reduced motion immediate. Legacy/invalid alpha and permission errors remain covered by original suites."
+      ],
+      "source": "local/surface-final/results.json"
+    },
+    "motion": {
+      "pass": true,
+      "views": 4,
+      "checks": [
+        "15s actual CSS/GSAP sampling and video; moving dash/drift; single deterministic focus event; real inner-frame safety at four viewports; original two-hand handler; reversible layouts; directional visual feedback; 30 interrupted selections and late response; unchanged GL/DOM pools; exact GPU OFF recovery and unchanged alpha; reduced motion including live preference toggles; degraded interactions; exit releases all owned work."
+      ],
+      "source": "local/motion/results.json"
+    }
+  },
+  "material": {
+    "alphaChanges": 0,
+    "offChanges": 0,
+    "transparentChanges": 0,
+    "changed": 38709,
+    "darkMean": 0.07580592640833604,
+    "lightMean": 4.060451024666305,
+    "darkN": 46065,
+    "lightN": 34987
+  },
+  "motion": {
+    "sampleCount": 54,
+    "observedMs": 15223,
+    "firstDash": "3.71876px",
+    "lastDash": "214.598px",
+    "focusObserved": true,
+    "exit": {
+      "id": "01",
+      "revealed": false,
+      "phase": "idle",
+      "orbitPhase": "idle",
+      "active": false,
+      "motion": "paused",
+      "scheduler": 0,
+      "focusTween": 0,
+      "ack": 0,
+      "ready": 0,
+      "ownedTweens": 0,
+      "panels": 5,
+      "svgs": 1,
+      "textures": 0,
+      "geometries": 0,
+      "cache": 0,
+      "dash": "0px",
+      "mainAnimation": "none",
+      "layout": null,
+      "forbidden": [
+        {
+          "x": 32,
+          "y": 22,
+          "width": 144.6875,
+          "height": 56
+        },
+        {
+          "x": 1247.125,
+          "y": 22,
+          "width": 160.875,
+          "height": 40
+        },
+        {
+          "x": 480.8125,
+          "y": 31,
+          "width": 478.375,
+          "height": 28
+        }
+      ],
+      "effective": {
+        "x": 283.1306992230855,
+        "y": 126.16000000000008,
+        "width": 550.1386015538291,
+        "height": 531.8399999999999
+      },
+      "items": []
+    },
+    "switchResources": {
+      "textures": 2,
+      "cache": 2,
+      "panels": 5,
+      "svgs": 1
+    }
+  }
+}

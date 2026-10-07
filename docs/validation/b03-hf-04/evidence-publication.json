@@ -1,0 +1,60 @@
+{
+  "files": [
+    {
+      "file": "selected/formal-01-default-1920x1080.webp",
+      "source": "local/motion/default-1920x1080.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 1081290,
+      "sha256": "b7cbc24cef4ebc4683ebcf2958a2e1e6c1703e2d36bcc5e908ceef7930d44fd3",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/formal-01-default-1440x900.webp",
+      "source": "local/motion/default-1440x900.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 724366,
+      "sha256": "387e0041d8cf5f61c0a7a34b6c9accdc7e7baaa6150df39ddb85620645f87478",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/formal-01-panel-focus.webp",
+      "source": "local/motion/formal-01-panel-focus.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 1078852,
+      "sha256": "1a61d75337993d2d1b38d99d3c266a928c803e1b525cdb520263b13a8d8b9f49",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/formal-01-switching.webp",
+      "source": "local/motion/formal-01-switching.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 744156,
+      "sha256": "5814de800051b94d4d1c86d6e7cb02bfadeb3337ffabeb33584c5a15bcaa91c9",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/formal-01-revealed.webp",
+      "source": "local/motion/revealed-1440x900.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 701100,
+      "sha256": "60d03478eedd107fd0d07416b9ba1822c7bdcf061845ed67dc37328048b5bb87",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/material-off.webp",
+      "source": "local/motion/material-off.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 712572,
+      "sha256": "e8cf56a61450edfaeced33162f098abca208bdfdfb1e5ea3f06af9bfd341720b",
+      "rgbaIdentical": true
+    }
+  ],
+  "totalBytes": 5042336,
+  "standard": "Standard reuses formal-01-default-1440x900.webp; no duplicate screenshot. Video and all repeated captures remain local."
+}
