@@ -1,7 +1,7 @@
 import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import {cameraHarness,hand,hold,swipe} from './b03-gesture-harness.mjs';
+import {cameraHarness,hand,hold,swipe,openReading,closeReading,releaseReading,pair,idle} from './b03-gesture-harness.mjs';
 
 test('A/B: ordinary movement, edge pass, pointing and 200ms hold cannot NEXT',()=>{
  for(const x of [.2,.7]) {
@@ -42,7 +42,7 @@ test('Presence: production empty AND omitted results preserve short HOVER/ARMED 
  hold(h,400);assert.equal(h.snapshot().state,'ARMED');h.result(undefined,h.time+20);h.result([],h.time+20);
  assert.equal(h.snapshot().state,'ARMED');h.result([hand(.66)],h.time+40);swipe(h,-.04);
  assert.equal(h.snapshot().calls,1);
- h.tick(h.time+1100);hold(h);assert.equal(h.snapshot().state,'ARMED');h.result([],h.time+20);h.result(undefined,h.time+220);
+ idle(h);hold(h);assert.equal(h.snapshot().state,'ARMED');h.result([],h.time+20);h.result(undefined,h.time+220);
  assert.equal(h.snapshot().state,'IDLE');assert.equal(h.snapshot().points,0);
  hold(h);swipe(h);assert.equal(h.snapshot().calls,2);
 });
@@ -62,16 +62,16 @@ test('Open hysteresis tolerates one closed frame; sustained closed cancels, with
  for(let i=0;i<8;i++)h.result([hand(.7,.5,false)],h.time+20);
  assert.equal(h.snapshot().state,'IDLE');hold(h);swipe(h);assert.equal(h.snapshot().calls,1);
 });
-test('Two hands including a distant second hand cannot NEXT; reading scroll and close retain production math',()=>{
+test('Owned two hands cancel NEXT; deliberate open/read/close requires release before NEXT',()=>{
  const h=cameraHarness();hold(h);
  const small=hand(.73);small[0].y=.51;
  for(let i=0;i<8;i++)h.result([hand(),small],h.time+20);assert.equal(h.snapshot().state,'IDLE');assert.equal(h.snapshot().calls,0);
- h.result([hand(.2),hand(.8)],h.time+20);assert.equal(h.snapshot().reading,true);
- h.result([hand(.2,.8),hand(.8,.8)],h.time+20);assert.ok(h.snapshot().scrollTop>0);
+ releaseReading(h);openReading(h);assert.equal(h.snapshot().reading,true);
+ pair(h,.48,.7,120);assert.ok(h.snapshot().scrollTop>0);
  for(let i=0;i<30;i++)h.result([hand(.7+i%2*.2,.8)],h.time+40);
  assert.equal(h.snapshot().calls,0);
- h.result([hand(.45),hand(.55)],h.time+20);assert.equal(h.snapshot().reading,false);assert.equal(h.snapshot().state,'IDLE');
- swipe(h);assert.equal(h.snapshot().calls,0);hold(h);swipe(h);assert.equal(h.snapshot().calls,1);
+ closeReading(h);assert.equal(h.snapshot().reading,false);assert.equal(h.snapshot().state,'IDLE');
+ swipe(h);assert.equal(h.snapshot().calls,0);releaseReading(h);hold(h);swipe(h);assert.equal(h.snapshot().calls,1);
 });
 test('600ms intent is independent of frame rate; normal, fast and slow trajectory windows',()=>{
  for(const step of [16,33,66,100]) {
@@ -106,11 +106,12 @@ test('Physical failure regression: a transient second detection pauses NEXT; sus
  const h=cameraHarness();hold(h);const extra=hand(.72);extra[0].y=.51;
  h.result([hand(),extra],h.time+30);h.result([hand(.65),extra],h.time+30);
  assert.equal(h.snapshot().state,'ARMED');assert.equal(h.snapshot().calls,0);
- h.result([hand(.66)],h.time+30);swipe(h,-.04);assert.equal(h.snapshot().calls,1);
- h.tick(h.time+1100);hold(h);
+ h.result([hand(.66)],h.time+30);swipe(h,-.04);assert.equal(h.snapshot().calls,0);
+ releaseReading(h);hold(h);swipe(h,-.04);assert.equal(h.snapshot().calls,1);
+ idle(h);hold(h);
  for(let i=0;i<7;i++)h.result([hand(.7+i*.04),extra],h.time+30);
  assert.equal(h.snapshot().state,'IDLE');assert.equal(h.snapshot().calls,1);
- assert.equal(h.snapshot().reason,'two-hands');
+ assert.equal(h.snapshot().reading,false);
 });
 
 test('False-trigger regression: a held palm cannot silently arm again after timeout or NEXT',()=>{
@@ -118,12 +119,12 @@ test('False-trigger regression: a held palm cannot silently arm again after time
  for(let i=0;i<200;i++)h.result([hand()],h.time+20);
  assert.equal(h.snapshot().state,'IDLE');assert.equal(h.snapshot().releaseRequired,true);
  swipe(h,.015,0,40,8);assert.equal(h.snapshot().calls,0);
- h.result([hand(.3)],h.time+20);hold(h);swipe(h);
+ h.result([hand(.55)],h.time+20);hold(h);swipe(h);
  assert.equal(h.snapshot().calls,1);
- h.tick(h.time+1100);
+ idle(h);
  // Deliberately keep a palm inside the activation area; do not use hold()'s return helper.
  for(let i=0;i<200;i++)h.result([hand()],h.time+20);
  assert.equal(h.snapshot().state,'IDLE');assert.equal(h.snapshot().releaseRequired,true);
  swipe(h,.015,0,40,8);assert.equal(h.snapshot().calls,1);
- h.result([hand(.3)],h.time+20);hold(h);swipe(h,-.04);assert.equal(h.snapshot().calls,2);
+ h.result([hand(.55)],h.time+20);hold(h);swipe(h,-.04);assert.equal(h.snapshot().calls,2);
 });

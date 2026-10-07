@@ -342,6 +342,9 @@
         import { measureFigure, cyberConfig, cyberDiagnostics, figureLayout, stageSafeArea, particleGrid, canEnterCyber } from './figure-stage.mjs';
         import { OrbitStage } from './orbit-stage.mjs';
         import { GestureController } from './next-gesture.mjs';
+        import { OperatorTracker } from './operator-tracker.mjs';
+        import { InteractionController } from './interaction-controller.mjs';
+        import { PosePipeline } from './pose-pipeline.mjs';
         import { attachSurface, applySurface, surfaceConfig, exhibitionTiming, DecorationBudget } from './mural-surface.mjs';
         let orbitStage;
         let globalAssetsData = [];
@@ -690,13 +693,13 @@
             }
         }
         document.querySelectorAll('[data-step]').forEach(button => button.onclick = () => stepCharacter(Number(button.dataset.step)));
-        document.getElementById('reveal-toggle').onclick = () => setRevealed(!isRevealed);
+        document.getElementById('reveal-toggle').onclick = () => requestReading(!isRevealed);
         document.addEventListener('keydown', e => {
             if (currentTrack !== 'cyber' || entryBusy || e.target.closest('input,textarea,select')) return;
-            if (e.key === 'Escape') { e.preventDefault(); setRevealed(false); return; }
+            if (e.key === 'Escape') { e.preventDefault(); requestReading(false); return; }
             if (e.target.closest('button,a')) return;
             if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { e.preventDefault(); stepCharacter(e.key === 'ArrowLeft' ? -1 : 1); }
-            if (e.key.toLowerCase() === 'i') { e.preventDefault(); setRevealed(!isRevealed); }
+            if (e.key.toLowerCase() === 'i') { e.preventDefault(); requestReading(!isRevealed); }
         });
         function releaseGalleryVideo() {
             ++layerVersion;
@@ -713,7 +716,7 @@
             currentSeriesIndex = index; currentItemData = item;
             if(currentTrack === 'cyber') orbitStage?.leave(); else orbitStage?.reset();
             const version = ++detailVersion; releaseGalleryVideo(); infoRequest?.abort(); infoRequest = new AbortController();
-            layerRequest?.abort(); if (!keepRevealed) setRevealed(false, true, currentTrack === 'cyber');
+            layerRequest?.abort(); if (!keepRevealed) { interactionController.setReading(false, performance.now()); setRevealed(false, true, currentTrack === 'cyber'); }
             const infoPanel = document.getElementById('floating-info'), textEl = document.getElementById('info-text');
             infoPanel.classList.toggle('visible', keepRevealed);
             document.querySelectorAll('#menu li').forEach(el => { el.classList.toggle('active', el.dataset.id === item.id); el.querySelector('button').setAttribute('aria-current', String(el.dataset.id === item.id)); });
@@ -966,7 +969,6 @@
         }
         function setRevealed(revealed, immediate = false, stateOnly = false) {
             if (revealed && (currentTrack !== 'cyber' || webglContainer.hasAttribute('data-loading') || !lineMesh)) return;
-            if (isRevealed !== revealed) nextGesture.resetGestureState();
             isRevealed = revealed;
             renderGestureFeedback();
             document.getElementById('main-app').dataset.revealed = String(revealed);
@@ -1116,8 +1118,8 @@
         };
         document.getElementById('calibration-close').onclick=()=>document.getElementById('calibration').hidden=true;
         document.getElementById('calibration-character').onchange=e=>loadSeriesData(globalAssetsData.findIndex(item=>item.id===e.target.value));
-        document.getElementById('preview-default').onclick=()=>setRevealed(false);
-        document.getElementById('preview-revealed').onclick=()=>setRevealed(true);
+        document.getElementById('preview-default').onclick=()=>requestReading(false);
+        document.getElementById('preview-revealed').onclick=()=>requestReading(true);
         document.getElementById('calibration-reset').onclick=()=>{const config=cyberConfig(currentItemData.cyber);config.layout={...config.layout,...cyberConfig().layout};config.orbit={...config.orbit,...cyberConfig().orbit};config.surface=surfaceConfig();delete config.bounds;calibrationOverrides.set(currentItemData.id,config);fitMuralCamera(true);applyStageSurface();};
         document.getElementById('calibration-copy').onclick=async()=>{const text=document.getElementById('calibration-json');try{await navigator.clipboard.writeText(text.value);}catch{text.focus();text.select();}};
         let clock;
@@ -1125,7 +1127,7 @@
         function renderWebGL() {
             glFrame = requestAnimationFrame(renderWebGL);
             if (currentTrack === 'cyber' && shaderMaterial) {
-                nextGesture.tick(performance.now(), gestureContext()); renderGestureFeedback();
+                interactionController.tick(performance.now(), gestureContext()); renderGestureFeedback();
                 if(decorationBudget.sample(performance.now(),!document.hidden))applyStageSurface();
                 if (figureMode && colorPoints) colorPoints.visible = !decorationBudget.degraded && shaderMaterial.uniforms.uFeedback.value > .001;
                 if (!figureMode) shaderMaterial.uniforms.uTime.value = clock.getElapsedTime();
@@ -1144,6 +1146,15 @@
         let handsModel = null, mpCamera = null;
         
         const nextGesture = new GestureController();
+        const operatorTracker = new OperatorTracker();
+        const interactionController = new InteractionController(nextGesture);
+        const posePipeline = new PosePipeline();
+        const inferenceCanvas = document.createElement('canvas'); inferenceCanvas.width = 320; inferenceCanvas.height = 240;
+        const inferenceCtx = inferenceCanvas.getContext('2d');
+        let ownership = {operatorState:'SEARCHING',activeOperator:null,assignedHands:[],diagnostics:{}};
+        let handsFrameAt = -Infinity, handsFrameVersion = -1;
+        let handsInFlight = false;
+        const gesturePerformance = {callbacks:0,firstAt:null,lastAt:null,maxActiveCameras:0,activeCameras:0};
         let isRevealed = false; 
         
         let gestureNeutralY = 0.5;
@@ -1151,25 +1162,24 @@
         function initMediaPipe() {
             cameraStatus.innerText = "神识加载中...";
             handsModel = new Hands({locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`});
-            handsModel.setOptions({ maxNumHands: 2, modelComplexity: 1, minDetectionConfidence: 0.6, minTrackingConfidence: 0.6 });
+            handsModel.setOptions({ maxNumHands: 4, modelComplexity: 1, minDetectionConfidence: 0.6, minTrackingConfidence: 0.6 });
             
             handsModel.onResults((results) => {
-                if (currentTrack !== 'cyber') return; // Ignore results already in flight when leaving the mode.
+                if (currentTrack !== 'cyber' || handsFrameVersion !== cameraVersion || document.hidden) return;
                 canvasCtx.save();
                 canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
                 canvasCtx.drawImage(results.image, 0, 0, canvasElement.width, canvasElement.height);
-                if (results.multiHandLandmarks && results.multiHandLandmarks.length > 0) {
+                if (gestureDebugEnabled && results.multiHandLandmarks && results.multiHandLandmarks.length > 0) {
                     for (const landmarks of results.multiHandLandmarks) {
                         drawConnectors(canvasCtx, landmarks, HAND_CONNECTIONS, {color: 'rgba(212,175,55,0.8)', lineWidth: 2});
                         drawLandmarks(canvasCtx, landmarks, {color: '#fff', lineWidth: 1, radius: 2});
                     }
                 }
-                // Production and tests share presence, loss grace and intent handling.
-                handleGestureLogic(results.multiHandLandmarks || []);
+                // Ownership precedes every gesture; stale model results cannot revive intent.
+                handleGestureLogic(results.multiHandLandmarks || [], handsFrameAt);
                 canvasCtx.restore();
             });
 
-            // 💡 修复：移除这里的老版实例化代码，因为 mpCamera 已经放到 startMediaPipe 里去动态创建了
         }
 
         let cameraStart = null, cameraVersion = 0;
@@ -1178,34 +1188,51 @@
             const version = ++cameraVersion;
             let activeCamera;
             const stale = () => version !== cameraVersion || currentTrack !== 'cyber';
-            try {
+            cameraStart = (async () => { try {
                 if (!handsModel) initMediaPipe();
+                cameraStatus.textContent = '体感资源加载中…';
+                await posePipeline.initialize();
+                if (stale()) return;
+                posePipeline.start();
                 activeCamera = new Camera(videoElement, {
                     onFrame: async () => {
-                        if (stale()) return;
-                        try { await handsModel.send({ image: videoElement }); }
-                        catch { stopMediaPipe(); modeError('手势资源初始化失败，请检查网络后重新进入，或选择图鉴探索。'); }
+                        if (stale() || document.hidden || handsInFlight) return;
+                        handsInFlight = true;
+                        try {
+                            if (posePipeline.error) throw posePipeline.error;
+                            // Same immutable 320x240 capture for Hands and the asynchronous Pose worker.
+                            const at = performance.now(); inferenceCtx.drawImage(videoElement, 0, 0, 320, 240);
+                            await posePipeline.submit(inferenceCanvas, at);
+                            handsFrameAt = at; handsFrameVersion = version;
+                            await handsModel.send({ image: inferenceCanvas });
+                        }
+                        catch { if (!stale()) { stopMediaPipe(); modeError('手势资源初始化失败，请检查网络后重新进入，或选择图鉴探索。'); } }
+                        finally { handsInFlight = false; }
                     }, width: 320, height: 240
                 });
                 mpCamera = activeCamera; cameraStatus.textContent = '等待摄像头权限…';
-                cameraStart = activeCamera.start();
+                gesturePerformance.activeCameras = 1; gesturePerformance.maxActiveCameras = Math.max(gesturePerformance.maxActiveCameras, 1);
                 const timer = setTimeout(() => {
                     if (!stale()) { stopMediaPipe(); modeError('摄像头启动超时，请检查权限后重新进入，或选择图鉴探索。'); }
                 }, 15000);
-                cameraStart.then(() => {
+                try { await activeCamera.start();
                     if (stale()) { activeCamera.stop(); if (videoElement.srcObject) { videoElement.srcObject.getTracks().forEach(t => t.stop()); videoElement.srcObject = null; } return; }
                     cameraStatus.textContent = '摄像头已连接'; cameraStatus.style.color = '#d8d2c5';
-                }).catch(error => {
+                } catch(error) {
                     if (stale()) return;
                     const messages = { NotAllowedError:'摄像头权限被拒绝。', NotFoundError:'未找到摄像头。', NotReadableError:'摄像头被占用或无法读取。', SecurityError:'浏览器安全设置阻止了摄像头。' };
                     stopMediaPipe(); modeError((messages[error.name] || '摄像头启动失败。') + '请检查设备与权限，或返回选择图鉴探索。');
-                }).finally(() => { clearTimeout(timer); cameraStart = null; });
-            } catch { stopMediaPipe(); modeError('体感组件初始化失败，请检查网络，或返回选择图鉴探索。'); }
+                } finally { clearTimeout(timer); }
+            } catch { if (!stale()) { stopMediaPipe(); modeError('体感组件初始化失败，请检查网络，或返回选择图鉴探索。'); } }
+            })().finally(() => { cameraStart = null; });
         }
         function stopMediaPipe() {
-            nextGesture.resetGestureState(); renderGestureFeedback();
+            operatorTracker.reset(); interactionController.reset(); posePipeline.stop();
+            ownership = {operatorState:'SEARCHING',activeOperator:null,assignedHands:[],diagnostics:{}};
+            renderGestureFeedback();
             ++cameraVersion;
             if (mpCamera) { mpCamera.stop(); mpCamera = null; }
+            gesturePerformance.activeCameras = 0;
             if (videoElement && videoElement.srcObject) {
                 videoElement.srcObject.getTracks().forEach(track => track.stop()); videoElement.srcObject = null;
             }
@@ -1229,11 +1256,11 @@
             return openCount >= 3; 
         }
 
-        // Only NEXT uses this controller. Existing two-hand/archive reading math stays independent.
+        // Highest-priority page locks apply before ownership and interaction arbitration.
         function gestureContext() {
             const phase = webglContainer.dataset.phase;
             return {
-                blocked:currentTrack !== 'cyber' || isRevealed || document.hidden || phase === 'error',
+                blocked:currentTrack !== 'cyber' || document.hidden || phase === 'error',
                 locked:entryBusy || webglContainer.hasAttribute('data-loading') || !lineMesh
                     || (phase && phase !== 'stable') || (orbitStage?.active && orbitStage.phase !== 'stable')
             };
@@ -1242,75 +1269,67 @@
         const gestureDebugEnabled = new URLSearchParams(location.search).get('gestureDebug') === '1';
         function renderGestureFeedback(now = performance.now()) {
             const snapshot = nextGesture.snapshot(now), state = snapshot.state;
+            const interaction = interactionController.snapshot(now), person = ownership.diagnostics;
             const progress = Math.round(snapshot.progress * 50) / 50;
-            const key = `${state}:${progress}:${isRevealed}:${snapshot.releaseRequired}`;
+            const postReading = ['READING_EXIT','POST_READING_LOCK'].includes(interaction.mode);
+            const key = `${state}:${progress}:${isRevealed}:${snapshot.releaseRequired}:${interaction.mode}:${ownership.operatorState}`;
             if (key !== gestureFeedbackKey) {
                 gestureFeedbackKey = key;
                 const hint = document.querySelector('.gesture-hint'); hint.dataset.state = state;
                 hint.style.setProperty('--gesture-progress', progress);
                 document.getElementById('main-app').dataset.gesture = state;
-                document.getElementById('gesture-message').textContent = isRevealed ? '上下移动 · 阅读档案　／　双手收拢 · 返回人物'
+                document.getElementById('gesture-message').textContent = postReading ? '放下双手 · 继续探索'
+                    : isRevealed ? '上下移动 · 阅读档案　／　双手收拢 · 返回人物'
+                    : ownership.operatorState !== 'PERSON_LOCKED' ? '站到画面中央 · 开始体验'
                     : state === 'ARMED' ? '挥动 · 下一人物'
                     : state === 'HOVER' ? '正在识别 · 请稍作停留'
                     : snapshot.releaseRequired ? '放下手掌 · 再停留唤醒　／　双手展开 · 查看档案'
-                    : '张开手掌 · 在右侧停留唤醒　／　双手展开 · 查看档案';
+                    : '单手停留 · 唤醒下一人物　／　双手展开 · 查看档案';
             }
             if (gestureDebugEnabled) {
                 const debug = document.getElementById('gesture-debug'); debug.hidden = currentTrack !== 'cyber';
-                debug.textContent = `STATE: ${state}\nhold: ${Math.round(snapshot.holdMs)}ms\ntrajectory: ${snapshot.points}\ndistance: ${snapshot.distance.toFixed(3)}\npath: ${snapshot.path.toFixed(3)}\nmissing: ${Math.round(snapshot.missingMs)}ms\nframe: ${Math.round(snapshot.frameMs)}ms\ntwo hands: ${Math.round(snapshot.twoHandMs)}ms\nrelease: ${snapshot.releaseRequired}\nreject: ${snapshot.rejection || 'none'}\n${nextGesture.events.slice(-4).map(e => `${e.from} → ${e.to}: ${e.reason}`).join('\n')}`;
+                debug.textContent = `PERSON: ${ownership.operatorState}\noperator: ${ownership.activeOperator?.id || 'none'}\ncandidate: ${Math.round(person.candidateHoldMs || 0)}ms / loss: ${Math.round(person.operatorLossMs || 0)}ms\nhands detected: ${person.handsDetected || 0} / assigned: ${person.handsAssigned || 0}\nL: ${!!person.leftAssigned} / R: ${!!person.rightAssigned}\npose age: ${Math.round(person.poseAgeMs || 0)}ms\nINTERACTION: ${interaction.mode}\ntwo-hand: ${interaction.twoHandDistance?.toFixed(3) || '-'} / ${interaction.twoHandPhase}\npost release: ${Math.round(interaction.postReadingReleaseMs)}ms\nNEXT: ${state} / hold: ${Math.round(snapshot.holdMs)}ms\ntrajectory: ${snapshot.points} / release: ${snapshot.releaseRequired}\nreject: ${snapshot.rejection || 'none'}`;
             }
         }
         document.addEventListener('visibilitychange', () => {
-            nextGesture.resetGestureState(); renderGestureFeedback();
+            operatorTracker.reset(); interactionController.reset(); posePipeline.stop();
+            if (!document.hidden && currentTrack === 'cyber') posePipeline.start();
+            ownership = {operatorState:'SEARCHING',activeOperator:null,assignedHands:[],diagnostics:{}};
+            if (isRevealed) setRevealed(false);
+            renderGestureFeedback();
         });
 
-        function handleGestureLogic(rawLandmarksList) {
+        window.addEventListener('pagehide', () => posePipeline.dispose());
+
+        function requestReading(value) {
+            // Intentional mouse/keyboard toggles retain the existing reversible UI animation.
+            if (value && (currentTrack !== 'cyber' || webglContainer.hasAttribute('data-loading') || !lineMesh)) return;
+            interactionController.setReading(value, performance.now());
+            setRevealed(value);
+        }
+
+        function handleGestureLogic(rawLandmarksList, frameAt = performance.now()) {
             if(currentTrack !== 'cyber' || !shaderMaterial) return;
 
             const now = performance.now();
             const infoText = document.getElementById('info-text');
-            const rawHands = rawLandmarksList || [];
-            const fired = nextGesture.updateGestureState({
-                hands:rawHands.map(lm => ({x:1-lm[9].x,y:lm[9].y,open:isHandOpen(lm)})),
-                now,...gestureContext()
-            });
-            renderGestureFeedback(now);
-            if (fired) goToNextCharacterFromGesture();
-            if (rawHands.length === 0) {
-                shaderMaterial.uniforms.uMouse.value.x = shaderMaterial.uniforms.uMouse.value.y = -10;
-                return;
-            }
-
-            const handsWithSize = rawHands.map(lm => {
-                const size = Math.hypot(lm[0].x - lm[9].x, lm[0].y - lm[9].y);
-                return { landmarks: lm, size: size };
-            });
-            handsWithSize.sort((a, b) => b.size - a.size);
-
-            let activeHands = [];
-            if (handsWithSize.length > 0) {
-                activeHands.push(handsWithSize[0].landmarks); 
-                if (handsWithSize.length > 1 && (handsWithSize[1].size / handsWithSize[0].size) > 0.55) {
-                    activeHands.push(handsWithSize[1].landmarks);
-                }
-            }
-
+            gesturePerformance.callbacks++; gesturePerformance.firstAt ??= now; gesturePerformance.lastAt = now;
+            const pose = posePipeline.latest;
+            const frameFresh = frameAt <= now && now - frameAt <= operatorTracker.config.poseMaxAgeMs;
+            ownership = operatorTracker.update({poses:pose.poses,poseAt:frameFresh ? pose.at : -Infinity,
+                hands:frameFresh ? rawLandmarksList || [] : [],now});
+            const action = interactionController.update({ownership,now,...gestureContext(),isOpen:isHandOpen});
+            const activeHands = action.hands.map(hand => hand.landmarks);
             const handsCountActive = activeHands.length;
+            if (action.reveal !== null) {
+                if (action.reveal && handsCountActive === 2) gestureNeutralY = (activeHands[0][8].y + activeHands[1][8].y) / 2;
+                setRevealed(action.reveal);
+            }
+            renderGestureFeedback(now);
+            if (action.fired) goToNextCharacterFromGesture();
+            if (handsCountActive === 0) shaderMaterial.uniforms.uMouse.value.x = shaderMaterial.uniforms.uMouse.value.y = -10;
 
-            if (handsCountActive === 2) {
-                const f1 = activeHands[0][8];
-                const f2 = activeHands[1][8];
-                const dist = Math.hypot(f1.x - f2.x, f1.y - f2.y);
-                
-                if (dist > 0.35 && !isRevealed) {
-                    gestureNeutralY = (f1.y + f2.y) / 2;
-                    setRevealed(true);
-                }
-                else if (dist < 0.15 && isRevealed) {
-                    setRevealed(false);
-                }
-
-            } else if (handsCountActive === 1 && !isRevealed) {
+            if (handsCountActive === 1 && interactionController.mode === 'NAVIGATION' && !isRevealed) {
                 const handMarks = activeHands[0];
                 const trackPoint = handMarks[9]; 
                 const targetX = 1.0 - trackPoint.x;
@@ -1330,7 +1349,7 @@
                 }
             }
 
-            if (isRevealed && handsCountActive > 0) {
+            if (isRevealed && interactionController.mode === 'READING' && handsCountActive > 0) {
                 const maxScroll = infoText.scrollHeight - infoText.clientHeight;
                 
                 if (maxScroll > 0) {
@@ -1358,7 +1377,7 @@
         }
 
         function goToNextCharacterFromGesture() {
-            if(currentTrack !== 'cyber' || isRevealed || gestureContext().locked || nextGesture.state !== 'FIRED') return;
+            if(currentTrack !== 'cyber' || isRevealed || ownership.operatorState !== 'PERSON_LOCKED' || interactionController.mode !== 'NAVIGATION' || gestureContext().locked || nextGesture.state !== 'FIRED') return;
             triggerSwipeFlash();
             nextGesture.lock(); renderGestureFeedback();
             loadSeriesData(currentSeriesIndex + 1);

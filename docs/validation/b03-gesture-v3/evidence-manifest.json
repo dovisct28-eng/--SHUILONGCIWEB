@@ -1,0 +1,36 @@
+{
+  "count": 5,
+  "totalBytes": 5084916.0,
+  "files": [
+    {
+      "file": "01-operator-locked.png",
+      "bytes": 898585,
+      "sha256": "C57A221537F704FE0C4A0FCAA10465087EEE41EFE000DBAABC41266BA4612200",
+      "source": "Actual Chrome screenshot, synthetic camera/landmarks, not physical acceptance"
+    },
+    {
+      "file": "02-navigation-armed.png",
+      "bytes": 897446,
+      "sha256": "63E6BC596C24403D16D883A287D41A52EA5338CC9D065BEA9BDAC2C9DA2C63B7",
+      "source": "Actual Chrome screenshot, synthetic camera/landmarks, not physical acceptance"
+    },
+    {
+      "file": "03-reading.png",
+      "bytes": 1184243,
+      "sha256": "B44420915FAB81C95E0C5DDDA97FCE30B4260C57E7FA8CFF4A689582DBCC4130",
+      "source": "Actual Chrome screenshot, synthetic camera/landmarks, not physical acceptance"
+    },
+    {
+      "file": "04-post-reading-lock.png",
+      "bytes": 1196076,
+      "sha256": "15648476531E5F45A4826BD8BEFCBE8E53AAD9EA28A06D21B890A175B6F7DAEF",
+      "source": "Actual Chrome screenshot, synthetic camera/landmarks, not physical acceptance"
+    },
+    {
+      "file": "05-multi-person-lock.png",
+      "bytes": 908566,
+      "sha256": "79DAD35871B389C3E24BE9F5A9EB528FD99D3A231E2F0989D3041FC22B5ECE6E",
+      "source": "Actual Chrome screenshot, synthetic camera/landmarks, not physical acceptance"
+    }
+  ]
+}

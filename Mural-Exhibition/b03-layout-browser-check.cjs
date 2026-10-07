@@ -1,3 +1,4 @@
+const {stubPose,fixtureInstrument}=require('./b03-gesture-fixtures.cjs');
 const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const {createApp}=require('./server.js');
 const out=path.resolve(process.env.B03_LAYOUT_VALIDATION_DIR||path.join(__dirname,'../docs/validation/b03-hf-02/local/layout'));fs.mkdirSync(out,{recursive:true});
@@ -35,7 +36,7 @@ async function verify(p,transition=false){
  try{
   p=await browser.newPage({viewport:{width:1440,height:900}});p.on('pageerror',e=>report.errors.push(e.message));const requests=[];p.on('request',r=>requests.push(r.url()));
   await p.route('**/index.html',async r=>{const response=await r.fetch();await r.fulfill({response,body:(await response.text()).replace(/\r?\n    <\/script>\r?\n<\/body>/,instrument+'\n    </script>\n</body>')});});
-  await p.addInitScript(()=>window.Camera=class{async start(){}stop(){}});
+  await stubPose(p);await p.addInitScript(()=>window.Camera=class{async start(){}stop(){}});
   const enter=async()=>{await p.goto(origin+'/index.html');await p.locator('#btn-gallery-track').click();await p.locator('.hotspot[data-ids="01"]').click();await p.waitForFunction(()=>document.getElementById('img-org').style.opacity==='1');await p.locator('#quick-switch-btn').click();await ready(p);};
   await enter();const data=(await(await p.request.get(origin+'/api/scan-assets')).json()).data;
   assert.deepEqual(data.map(x=>x.id).sort(),['01','02','03','04','05','06','07','10']);

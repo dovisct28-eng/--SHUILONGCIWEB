@@ -1,3 +1,4 @@
+const {stubPose,fixtureInstrument}=require('./b03-gesture-fixtures.cjs');
 const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const {createApp}=require('./server.js');
 const out=path.resolve(process.env.B03_HF_VALIDATION_DIR || path.join(__dirname,'../docs/validation/b03-hf-01/local/theatre'));fs.mkdirSync(out,{recursive:true});
@@ -26,7 +27,7 @@ async function verify(p) {
  try {
   const p=await browser.newPage({viewport:{width:1440,height:900}});p.on('pageerror',e=>report.errors.push(e.message));const requests=[];p.on('request',r=>requests.push(r.url()));
   await p.route('**/index.html',async r=>{const response=await r.fetch();await r.fulfill({response,body:(await response.text()).replace(/\r?\n    <\/script>\r?\n<\/body>/,instrument+'\n    </script>\n</body>')});});
-  await p.addInitScript(()=>window.Camera=class{async start(){}stop(){}});
+  await stubPose(p);await p.addInitScript(()=>window.Camera=class{async start(){}stop(){}});
   await p.goto(origin+'/index.html');await p.locator('#btn-gallery-track').click();await p.locator('.hotspot[data-ids="01"]').click();await p.waitForFunction(()=>document.getElementById('img-org').style.opacity==='1');await p.locator('#quick-switch-btn').click();await ready(p);
   for(const [width,height] of [[1920,1080],[1440,900],[1366,768],[1280,800]]) {
    await p.setViewportSize({width,height});await p.waitForTimeout(180);

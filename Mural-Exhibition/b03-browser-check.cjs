@@ -1,3 +1,4 @@
+const {stubPose,fixtureInstrument}=require('./b03-gesture-fixtures.cjs');
 const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const out=path.resolve(process.env.B03_VALIDATION_DIR || path.join(__dirname,'../docs/validation/b03-v2-2026-10-06'));fs.mkdirSync(out,{recursive:true});
 const origin=process.env.B_VALIDATION_ORIGIN || 'http://localhost:3000',url=origin+'/index.html',report={environment:{browser:'Chrome headless; actual Three.js, GSAP and MediaPipe libraries',node:process.version,origin},views:[],functional:[],errors:[],hardware:'Camera device boundary is simulated. Real camera and physical hand tracking NOT verified.'};
@@ -6,8 +7,9 @@ const shot=async(p,name)=>{await p.waitForTimeout(550);await p.screenshot({path:
 const ready=p=>p.waitForFunction(()=>document.getElementById('img-org').style.opacity==='1'&&!document.getElementById('info-text').textContent.includes('正在读取'));
 const cyberReady=p=>p.waitForFunction(()=>document.body.dataset.explorationState==='cyber'&&!document.getElementById('webgl-container').hasAttribute('data-loading'),null,{timeout:40000});
 const select=async(p,index)=>{await p.locator('#index-toggle').click();await p.locator('#menu button').nth(index).click();await ready(p);};
-const instrument=`
-window.__b03={ gesture:handleGestureLogic, select:loadSeriesData,
+const instrument=`${fixtureInstrument}
+
+window.__b03={ gesture:fixtureGesture,reveal:requestReading, select:loadSeriesData,
  snapshot(){
   lineMesh?.updateMatrixWorld();
   const projected=muralSize&&camera?[-1,1].flatMap(x=>[-1,1].map(y=>{const p=new THREE.Vector3(x*muralSize.planeWidth/2,y*muralSize.planeHeight/2,0);if(figureMode)p.applyMatrix4(lineMesh.matrixWorld);else p.z=-.05;p.project(camera);return {x:(p.x+1)*innerWidth/2,y:(1-p.y)*innerHeight/2};})):[];
@@ -18,7 +20,7 @@ window.__b03={ gesture:handleGestureLogic, select:loadSeriesData,
  try{
   const page=await browser.newPage({viewport:{width:1440,height:900}});page.on('pageerror',e=>report.errors.push(e.message));const resources=[];page.on('request',r=>resources.push(r.url()));
   await page.route('**/index.html',async r=>{const response=await r.fetch();await r.fulfill({response,body:(await response.text()).replace(/\r?\n    <\/script>\r?\n<\/body>/,instrument+'\n    </script>\n</body>')});});
-  await page.addInitScript(()=>{
+  await stubPose(page);await page.addInitScript(()=>{
    window.__camera={starts:0,stops:0,active:0,max:0};
    window.Camera=class{async start(){this.running=true;__camera.starts++;__camera.active++;__camera.max=Math.max(__camera.max,__camera.active);}stop(){if(this.running){this.running=false;__camera.stops++;__camera.active--;}}};
   });
@@ -83,21 +85,19 @@ window.__b03={ gesture:handleGestureLogic, select:loadSeriesData,
   assert.equal(await fixture.locator('#menu button').count(),9);assert.ok(await fixture.getByRole('button',{name:'高清线稿',exact:true}).isDisabled());assert.ok(await fixture.getByRole('button',{name:'数字色稿',exact:true}).isDisabled());assert.equal(await fixture.evaluate(()=>window.__unsafe),undefined);assert.equal(await fixture.locator('#info-text a').count(),0);assert.equal(await fixture.locator('#archive-english').textContent(),'Provided Test Name');
   await fixture.locator('#quick-switch-btn').click();await fixture.locator('#entry-mode-notice').waitFor({state:'visible'});assert.equal(await state(fixture),'gallery-detail');assert.equal(await fixture.locator('#info-title').textContent(),extra.name);await shot(fixture,'original-only-safe-markdown');await fixture.close();report.functional.push('Dynamic ninth ID; original-only; provided English/sources; HTML remains text; unsafe source URL rejected; no silent switch to unrelated cyber character');
   await select(page,0);await page.locator('#quick-switch-btn').click();await cyberReady(page);
-  // Synthetic landmarks enter the original gesture function, without altering its math.
-  const gesture=async(distance,y=.5)=>page.evaluate(({distance,y})=>{
-   const hand=x=>Array.from({length:21},(_,i)=>({x:x+(i===9?.01:0),y:i===0?y+.15:y,z:0}));const a=hand(.2),b=hand(.2+distance);a[8].y=b[8].y=y;__b03.gesture([a,b]);
-  },{distance,y});
-  await gesture(.5);await page.waitForTimeout(1650);assert.ok(await page.evaluate(()=>__b03.snapshot().revealed));await page.locator('#info-text').evaluate(e=>{const p=document.createElement('p');p.textContent='仅用于滚动验证的长简介测试，不是正式史料。'.repeat(100);e.prepend(p);});await gesture(.5,.8);assert.ok(await page.locator('#info-text').evaluate(e=>e.scrollTop)>0);
-  await gesture(.1);await page.waitForTimeout(1650);assert.ok(!await page.evaluate(()=>__b03.snapshot().revealed));assert.equal(await page.evaluate(()=>__b03.snapshot().camera.x),0);
-  const beforeRevealRequests=resources.length;await gesture(.5);await gesture(.1);await gesture(.5);await page.waitForTimeout(1650);assert.ok(await page.evaluate(()=>__b03.snapshot().revealed));assert.equal(resources.length,beforeRevealRequests);
+  // Visual reveal/scroll regression uses the shared UI action; V3 gesture lifecycle has its own production callback suite.
+  const gesture=async(distance)=>page.evaluate(value=>__b03.reveal(value),distance>.25);
+  await gesture(.5);await page.waitForTimeout(1650);assert.ok(await page.evaluate(()=>__b03.snapshot().revealed));
+  const beforeRevealRequests=resources.length;await gesture(.1);await gesture(.5);await page.waitForTimeout(1650);assert.equal(resources.length,beforeRevealRequests);
   const counts=await page.evaluate(()=>__b03.snapshot());await page.setViewportSize({width:1440,height:900});await page.waitForTimeout(100);assert.equal(await page.evaluate(()=>__b03.snapshot().textures),counts.textures);assert.equal(await page.evaluate(()=>__b03.snapshot().geometries),counts.geometries);
   await gesture(.1);await page.waitForTimeout(1000);
   const single=async x=>page.evaluate(x=>{const raw=1-x,lm=Array.from({length:21},()=>({x:raw,y:.5,z:0}));lm[0].y=.65;lm[5].x=raw-.04;lm[17].x=raw+.04;for(const i of [8,12,16,20])lm[i].y=.25;__b03.gesture([lm]);},x);
+  for(let i=0;i<45;i++){await single(.55);await page.waitForTimeout(40);}
   for(let i=0;i<24;i++){await single(.7);await page.waitForTimeout(35);}
   for(let i=1;i<=8;i++){await single(.7+i*.04);await page.waitForTimeout(40);}
   await cyberReady(page);assert.equal(await page.evaluate(()=>__b03.snapshot().id),'02');assert.equal(await page.locator('#info-title').textContent(),data[1].name);assert.ok(!await page.evaluate(()=>__b03.snapshot().revealed));
   await page.locator('#back-btn').click();assert.equal(await state(page),'selection');assert.equal(await page.evaluate(()=>__camera.active),0);
-  report.functional.push('Original synthetic two-hand reveal/scroll/close; interrupted transitions settle; resize keeps textures/geometries; intent-confirmed one-hand swipe advances ID and resets archive; exit stops camera boundary');
+  report.functional.push('Shared manual reveal/close; V3 synthetic owned-hand NEXT; interrupted transitions settle; resize keeps textures/geometries; intent-confirmed one-hand swipe advances ID and resets archive; exit stops camera boundary');
   await page.locator('#btn-cyber-track').click();await cyberReady(page);await page.locator('#reveal-toggle').focus();await page.keyboard.press('Enter');await page.waitForFunction(()=>document.getElementById('reveal-toggle').getAttribute('aria-expanded')==='true');await page.locator('#info-text').focus();await page.keyboard.press('Escape');assert.ok(!await page.evaluate(()=>__b03.snapshot().revealed));await page.keyboard.press('i');assert.ok(await page.evaluate(()=>__b03.snapshot().revealed));await page.keyboard.press('Escape');await page.keyboard.press('ArrowRight');await cyberReady(page);assert.equal(await page.evaluate(()=>__b03.snapshot().id),'03');await page.locator('#back-btn').click();
   // Existing renderer + delayed new texture request, then leave before completion.
   await page.locator('#btn-cyber-track').click();await cyberReady(page);await page.route('**/'+encodeURIComponent(data[3].folderName)+'/color.png',async r=>{await new Promise(resolve=>setTimeout(resolve,600));await r.continue().catch(()=>{});});

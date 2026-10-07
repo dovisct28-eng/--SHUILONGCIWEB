@@ -1,0 +1,56 @@
+[
+  {
+    "check": "functional",
+    "status": "PASS",
+    "errors": 0,
+    "views": 4,
+    "scope": "Actual Chrome visual and software regression; camera/model boundaries simulated; no physical validation",
+    "source": "local/functional/results.json",
+    "sha256": "4153E355C72A0DF21F0D8FFC7BDB5ED64C2283E10DF65A1A6AE2CDDC003E29DA"
+  },
+  {
+    "check": "stage",
+    "status": "PASS",
+    "errors": 0,
+    "views": 1,
+    "scope": "Actual Chrome visual and software regression; camera/model boundaries simulated; no physical validation",
+    "source": "local/stage/stage-results.json",
+    "sha256": "B7B10CE75AAB94B511B3B50EEECC536376640F259CD29F6E0BA97EEE98D4E3A6"
+  },
+  {
+    "check": "visual",
+    "status": "PASS",
+    "errors": 0,
+    "views": 4,
+    "scope": "Actual Chrome visual and software regression; camera/model boundaries simulated; no physical validation",
+    "source": "local/visual/results.json",
+    "sha256": "CAE444A7C77AF1B83E4A588AEF31A932056DCB870442F3C3DA9E89CB8EE82F7A"
+  },
+  {
+    "check": "layout",
+    "status": "PASS",
+    "errors": 0,
+    "views": 1,
+    "scope": "Actual Chrome visual and software regression; camera/model boundaries simulated; no physical validation",
+    "source": "local/layout/results.json",
+    "sha256": "BCABEE097C2D2B0BB1CCD94A3E264D1C4A0E8841EDB804BC1F056F373D7C1E8B"
+  },
+  {
+    "check": "surface",
+    "status": "PASS",
+    "errors": 0,
+    "views": 4,
+    "scope": "Actual Chrome visual and software regression; camera/model boundaries simulated; no physical validation",
+    "source": "local/surface/results.json",
+    "sha256": "8A83CEDA8D2C3F138A9DC80C3EA7B6D6F226523E7ECFB55618E6C41E73C45F2D"
+  },
+  {
+    "check": "motion",
+    "status": "PASS",
+    "errors": 0,
+    "views": 4,
+    "scope": "Actual Chrome visual and software regression; camera/model boundaries simulated; no physical validation",
+    "source": "local/motion/results.json",
+    "sha256": "EE740B5F1396800D44CACF4A702CE1975D4042BC39E82B4C4C0C07779AA150D7"
+  }
+]

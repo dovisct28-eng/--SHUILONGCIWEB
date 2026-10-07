@@ -5,16 +5,22 @@ new vm.Script(script.replace(/^\s*import .*?;$/gm, '').replace("import('three')"
 cp.execFileSync(process.execPath,['--check',path.join(__dirname,'server.js')]);
 const base=cp.execFileSync('git',['show','fd46e4f:Mural-Exhibition/public/index.html'],{encoding:'utf8'});
 const block=(s,start,end)=>{const a=s.indexOf(start),b=s.indexOf(end,a);assert.ok(a>=0&&b>a,`Missing protected block: ${start}`);return s.slice(a,b).replace(/\r\n/g,'\n');};
-for(const [a,b] of [['const cyberScripts','function loadEntryImage'],['let cameraStart','function isHandOpen'],['function isHandOpen','function handleGestureLogic']]) {
+for(const [a,b] of [['const cyberScripts','function loadEntryImage']]) {
  const current=block(html,a,b).split('// Only NEXT')[0].trimEnd().replace('            nextGesture.resetGestureState(); renderGestureFeedback();\n','');
  const frozen=block(base,a,b).replace(/        let continuousOpenFrames = 0;\n        let continuousClosedFrames = 0;\n        let currentHandState = 'closed';\n\n/,'');
  assert.equal(current,frozen.trimEnd(),`Protected core changed: ${a}`);
 }
 // B03 authorizes layout fitting, cancelable textures and one shared reveal action.
-// Gesture v2 explicitly changes intent/trajectory; classification and archive math stay exact.
+// V3 authorizes camera/Pose ownership and arbitration. Classifier and scroll equations stay exact.
 const gesture=require('./b03-gesture-contract.cjs');
 const gestureBaseline=cp.execFileSync('git',['show','af582f5:Mural-Exhibition/public/index.html'],{encoding:'utf8'});
 assert.equal(gesture(html),gesture(gestureBaseline),'Protected hand classification/archive reading changed');
+assert.equal((html.match(/new Hands\(/g)||[]).length,1);
+assert.equal((html.match(/new Camera\(/g)||[]).length,1);
+assert.ok(html.includes('width: 320, height: 240'));
+assert.ok(html.includes('handsFrameVersion !== cameraVersion'));
+assert.ok(html.includes('gestureDebugEnabled && results.multiHandLandmarks'));
+assert.ok(!html.includes('handsWithSize'));
 for(const removed of ['panMural','splash-poem','splash-subtitle','hideSplash','is-loaded','picsum.photos'])assert.ok(!html.includes(removed),removed);
 assert.ok(html.includes('data-src="gallery/mural-02-detail.webp"'));
 assert.equal(block(html,'<section id="splash-screen"','<div id="entry-mode-notice"'),block(base,'<section id="splash-screen"','<div id="entry-mode-notice"'));

@@ -1,0 +1,135 @@
+{
+  "scope": "Real pinned Tasks Vision CPU PoseLandmarker/WASM in Chrome Worker, real legacy Hands inference, actual B03/WebGL/Camera.onFrame/Hands.onResults. Synthetic blank 320x240 camera image only. Checks deployment/cadence/lifecycle under the real stage; no person recognition or exhibition CPU/GPU acceptance claim.",
+  "start": {
+    "pose": {
+      "models": 1,
+      "frames": 5,
+      "inferenceTotalMs": 497.80000000447035,
+      "inferenceMaxMs": 287.80000000074506,
+      "staleResults": 0,
+      "active": 1,
+      "inFlight": 0,
+      "averageInferenceMs": 99.56000000089406
+    },
+    "notice": "返回选择",
+    "cameraStatus": "摄像头已连接",
+    "handsModels": 1,
+    "performance": {
+      "callbacks": 13,
+      "firstAt": 28905.10000000149,
+      "lastAt": 29265.60000000149,
+      "maxActiveCameras": 1,
+      "activeCameras": 1,
+      "raf": 1
+    },
+    "person": "SEARCHING",
+    "phase": "stable",
+    "textures": 1,
+    "geometries": 2,
+    "poseMaxPeople": 4
+  },
+  "raf": {
+    "samples": 846,
+    "averageMs": 5.9172576832142525,
+    "maxMs": 33.30000000000291
+  },
+  "end": {
+    "pose": {
+      "models": 1,
+      "frames": 55,
+      "inferenceTotalMs": 3053.6000000312924,
+      "inferenceMaxMs": 287.80000000074506,
+      "staleResults": 0,
+      "active": 1,
+      "inFlight": 0,
+      "averageInferenceMs": 55.520000000568956
+    },
+    "notice": "返回选择",
+    "cameraStatus": "摄像头已连接",
+    "handsModels": 1,
+    "performance": {
+      "callbacks": 165,
+      "firstAt": 28905.10000000149,
+      "lastAt": 34284.10000000149,
+      "maxActiveCameras": 1,
+      "activeCameras": 1,
+      "raf": 1
+    },
+    "person": "SEARCHING",
+    "phase": "stable",
+    "textures": 1,
+    "geometries": 2,
+    "poseMaxPeople": 4
+  },
+  "runtime": {
+    "models": 1,
+    "frames": 55,
+    "inferenceTotalMs": 3053.6000000312924,
+    "inferenceMaxMs": 287.80000000074506,
+    "staleResults": 0,
+    "active": 1,
+    "inFlight": 0,
+    "averageInferenceMs": 55.520000000568956,
+    "poseFps": 9.963136395337251,
+    "handsCallbackFps": 30.287934641825245,
+    "numPoses": 4
+  },
+  "exit": {
+    "pose": {
+      "models": 1,
+      "frames": 55,
+      "inferenceTotalMs": 3053.6000000312924,
+      "inferenceMaxMs": 287.80000000074506,
+      "staleResults": 0,
+      "active": 0,
+      "inFlight": 1,
+      "averageInferenceMs": 55.520000000568956
+    },
+    "notice": "返回选择",
+    "cameraStatus": "摄像头已停止",
+    "handsModels": 1,
+    "performance": {
+      "callbacks": 166,
+      "firstAt": 28905.10000000149,
+      "lastAt": 34317.5,
+      "maxActiveCameras": 1,
+      "activeCameras": 0,
+      "raf": 0
+    },
+    "person": "SEARCHING",
+    "phase": "idle",
+    "textures": 0,
+    "geometries": 0,
+    "poseMaxPeople": 4
+  },
+  "reentry": {
+    "pose": {
+      "models": 1,
+      "frames": 67,
+      "inferenceTotalMs": 3604.300000023097,
+      "inferenceMaxMs": 287.80000000074506,
+      "staleResults": 1,
+      "active": 1,
+      "inFlight": 0,
+      "averageInferenceMs": 53.79552238840443
+    },
+    "notice": "返回选择",
+    "cameraStatus": "摄像头已连接",
+    "handsModels": 1,
+    "performance": {
+      "callbacks": 199,
+      "firstAt": 28905.10000000149,
+      "lastAt": 35615,
+      "maxActiveCameras": 1,
+      "activeCameras": 1,
+      "raf": 1
+    },
+    "person": "SEARCHING",
+    "phase": "stable",
+    "textures": 1,
+    "geometries": 2,
+    "poseMaxPeople": 4
+  },
+  "errors": [],
+  "status": "PASS"
+}
