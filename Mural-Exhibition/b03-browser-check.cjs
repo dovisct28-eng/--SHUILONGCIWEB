@@ -1,5 +1,5 @@
 const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
-const out=path.resolve(__dirname,'../docs/validation/b03-v2-2026-10-06');fs.mkdirSync(out,{recursive:true});
+const out=path.resolve(process.env.B03_VALIDATION_DIR || path.join(__dirname,'../docs/validation/b03-v2-2026-10-06'));fs.mkdirSync(out,{recursive:true});
 const origin=process.env.B_VALIDATION_ORIGIN || 'http://localhost:3000',url=origin+'/index.html',report={environment:{browser:'Chrome headless; actual Three.js, GSAP and MediaPipe libraries',node:process.version,origin},views:[],functional:[],errors:[],hardware:'Camera device boundary is simulated. Real camera and physical hand tracking NOT verified.'};
 const state=p=>p.evaluate(()=>document.body.dataset.explorationState);
 const shot=async(p,name)=>{await p.waitForTimeout(550);await p.screenshot({path:path.join(out,name+'.png')});};

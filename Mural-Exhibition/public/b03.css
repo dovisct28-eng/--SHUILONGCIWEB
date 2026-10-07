@@ -120,3 +120,42 @@ body:not(.track-cyber) #calibration-toggle { display:none; }
 #calibration p { font-size:12px;line-height:1.7;margin:10px 0; }
 .calibration-preview { display:flex;gap:8px; }
 @media(max-width:1400px) { #main-app { --study-width:30vw;--study-right:32px;--study-gap:30px; } #main-app #floating-info { padding:0;top:110px; } body.track-cyber #main-app #floating-info { top:26%; } #main-app #info-text { font-size:15px; } #main-app .layer-btn { min-width:136px;gap:10px; } #main-app #layer-controls { gap:14px; } .archive-english { font-size:17px; } }
+
+/* HF-01: one figure theatre; every added surface is confined to cyber mode. */
+body.track-cyber #main-app { --study-width:31vw;--study-right:3.5vw; }
+body.track-cyber #main-app::before { opacity:.32;background:linear-gradient(0deg,#071119 2%,#09151b38 52%,#09131b88),linear-gradient(90deg,#07121b88,transparent 55%,#07121b33),url('./b03/karst-valley.webp') center/cover; }
+body.track-cyber #main-app::after { background:radial-gradient(ellipse at 48% 43%,#c2a17514,transparent 49%),radial-gradient(ellipse at 48% 77%,#030b118c,transparent 44%); }
+#orbit-stage { position:absolute;inset:0;z-index:1;pointer-events:none;overflow:hidden; }
+body:not(.track-cyber) #orbit-stage { display:none; }
+#orbit-stage * { pointer-events:none; }
+.orbit-lines { position:absolute;inset:0;width:100%;height:100%;overflow:visible;fill:none;stroke:#b39a6a;stroke-width:1; }
+.orbit-main { opacity:.43;stroke-dasharray:290 96 118 134; }
+.orbit-aux { opacity:.16;stroke-dasharray:3 8; }
+.orbit-floor { opacity:.35;stroke-width:.8;stroke-dasharray:170 24 92 28; }
+.orbit-links { stroke:#bba174;stroke-width:.65; }
+.orbit-links circle { fill:#c5a575;stroke:none; }
+.orbit-panel { position:absolute;left:0;top:0;transform-origin:center;border:1px solid #b69b6266;padding:9px;background:linear-gradient(140deg,#b99b6809,transparent 60%);box-sizing:border-box; }
+.orbit-panel::before,.orbit-panel::after { content:"";position:absolute;width:22px;height:22px;border-color:#d1b07a;border-style:solid;opacity:.68; }
+.orbit-panel::before { top:-3px;left:-3px;border-width:1px 0 0 1px; }
+.orbit-panel::after { bottom:-3px;right:-3px;border-width:0 1px 1px 0; }
+.orbit-panel canvas { width:100%;height:100%;object-fit:contain;display:block; }
+.orbit-fragment { border-right:0;border-top-color:transparent;padding:5px; }
+.orbit-detail-b { border-left-color:transparent;border-bottom-color:transparent;padding:8px; }
+.orbit-contour { background:none;border-style:dashed;border-color:#b69b6240; }
+body.track-cyber #stage-name { left:49%;bottom:121px;font-size:clamp(32px,3vw,46px);line-height:1.4;letter-spacing:.16em;color:#ead8ba; }
+body.track-cyber #stage-name::before,body.track-cyber #stage-name::after { content:"";position:absolute;width:50px;height:1px;top:50%;background:linear-gradient(90deg,transparent,#b1966470); }
+body.track-cyber #stage-name::before { right:calc(100% + 24px); }
+body.track-cyber #stage-name::after { left:calc(100% + 24px);transform:rotate(180deg); }
+body.track-cyber .gesture-hint { font-size:15px;bottom:79px;letter-spacing:.04em; }
+body.track-cyber .cyber-controls { bottom:22px;gap:22px; }
+body.track-cyber #main-app .cyber-controls button { font-size:15px;min-height:44px;padding:10px 24px;border-color:#96815e70;border-radius:0; }
+body.track-cyber #main-app #reveal-toggle { min-width:196px;border-color:#c7a06c;background:linear-gradient(110deg,#bb965b20,#bb965b06); }
+body.track-cyber #main-app #floating-info { top:clamp(156px,24vh,270px);bottom:auto;max-height:calc(100vh - 370px);padding:26px 28px 16px;border:1px solid #b0976355;border-left-color:#c6a36e8c;background:linear-gradient(130deg,#0e1c24b3,#0b161b55);backdrop-filter:blur(8px);box-sizing:border-box;transition:opacity .4s,transform .75s; }
+body.track-cyber #main-app #floating-info::before { content:"";position:absolute;left:0;top:0;width:42px;height:2px;background:#c8a675; }
+body.track-cyber #main-app #floating-info:not(.visible) { transition:opacity .18s,transform .75s; }
+body.track-cyber #main-app #info-title { font-size:clamp(34px,3vw,52px); }
+body.track-cyber #main-app #info-text { flex:1 1 auto;font-size:18px;line-height:1.85;padding-bottom:0; }
+body.track-cyber #info-text .archive-sources { margin-top:20px;padding-top:16px;font-size:13px;line-height:1.8;border-top:1px solid #b49a6d33; }
+body.track-cyber #main-app #camera-feed-container { width:110px;height:74px;opacity:.76;border-color:#96815e60; }
+body.track-cyber #stage-disclaimer { bottom:32px;font-size:13px;color:#aaa391; }
+@media(max-width:1400px) { body.track-cyber #main-app { --study-width:32vw;--study-right:32px; } body.track-cyber #main-app #floating-info { padding:22px 24px 14px; } body.track-cyber #main-app #info-text { font-size:17px; } }

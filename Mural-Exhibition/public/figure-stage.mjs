@@ -46,7 +46,8 @@ export function measureFigure(image, key) {
  } finally { canvas.width=canvas.height=0; }
 }
 export function stageSafeArea(width, height, panelLeft = width, revealed = false) {
- return {x:40,y:96,width:Math.max(1,(revealed?panelLeft-36:width-40)-40),height:Math.max(1,height-96-166)};
+ const x=width*(revealed?.17:.24),right=revealed?panelLeft-72:width*.74;
+ return {x,y:104,width:Math.max(1,right-x),height:Math.max(1,height-104-(revealed?242:200))};
 }
 export function figureLayout({width,height,bounds,safe,layout = defaultLayout}) {
  if (![width,height,safe.width,safe.height].every(n=>Number.isFinite(n)&&n>0) || !validBounds(bounds)) throw Error('人物构图边界异常');

@@ -1,0 +1,63 @@
+{
+  "type": "Actual Chrome screenshots, no concept renders",
+  "screenshots": [
+    {
+      "file": "selected\\default-1920x1080.webp",
+      "source": "local\\theatre\\default-1920x1080.png",
+      "bytes": 1032530,
+      "sha256": "ced19cbe122cc664ae5ea2ee524447757aaeed771030bf74844cf0e11d6eed55",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected\\revealed-1920x1080.webp",
+      "source": "local\\theatre\\revealed-1920x1080.png",
+      "bytes": 988970,
+      "sha256": "49b6d9f7bb75d1d2add7402a9cebdb834981a24ef01b1607b49b797389680495",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected\\default-1440x900.webp",
+      "source": "local\\theatre\\default-1440x900.png",
+      "bytes": 697702,
+      "sha256": "15670247dc686bdd0a4fc7938c7b68b0a8415e54f2bfc9a76992e717f75f54d9",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected\\revealed-1440x900.webp",
+      "source": "local\\theatre\\revealed-1440x900.png",
+      "bytes": 667190,
+      "sha256": "58a434bc02413fb656ea4fc52274ebba110e4e37881849e924b294e8a2c9ba5e",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected\\default-1366x768.webp",
+      "source": "local\\theatre\\default-1366x768.png",
+      "bytes": 627018,
+      "sha256": "6dfdc897123232e9c221adaa911f3e0b5efb98987538b1fa3ddaa0557609dff9",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected\\revealed-1366x768.webp",
+      "source": "local\\theatre\\revealed-1366x768.png",
+      "bytes": 600170,
+      "sha256": "01063cbbc316477307c4ceaf5359a6f30efae64c6f896ba074de60974a5aeac1",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected\\default-1280x800.webp",
+      "source": "local\\theatre\\default-1280x800.png",
+      "bytes": 606278,
+      "sha256": "e5a485496ae7726db96948ed64fb1df771bb6375b03040adc7ec3bf49e21fac9",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected\\revealed-1280x800.webp",
+      "source": "local\\theatre\\revealed-1280x800.png",
+      "bytes": 580376,
+      "sha256": "f5ea9932580384d604e3cdfc0321244c66bbf4d52b51a7b39dc2b3e7ee56d844",
+      "rgbaIdentical": true
+    }
+  ],
+  "count": 8,
+  "totalBytes": 5800234
+}

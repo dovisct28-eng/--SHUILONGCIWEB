@@ -267,6 +267,7 @@
         </aside>
 
         <div id="display-area">
+            <div id="orbit-stage" aria-hidden="true" hidden></div>
             <div id="webgl-container"></div>
             <div id="gallery-container">
                 <div id="image-wrapper">
@@ -338,6 +339,8 @@
         import { createAdmin } from './gallery-admin.mjs';
         import { archiveBlocks, renderArchive, cameraFit } from './character-study.mjs';
         import { measureFigure, cyberConfig, cyberDiagnostics, figureLayout, stageSafeArea, particleGrid, canEnterCyber } from './figure-stage.mjs';
+        import { OrbitStage } from './orbit-stage.mjs';
+        let orbitStage;
         let globalAssetsData = [];
         let currentSeriesIndex = 0; 
         let currentTrack = null;
@@ -421,7 +424,7 @@
                 el.hidden = !visible; el.inert = !visible;
                 el.style.display = visible ? 'block' : 'none'; el.style.opacity = visible ? '1' : '0';
             }
-            if (state !== 'cyber') { stopMediaPipe(); cancelAnimationFrame(glFrame); glFrame = null; cancelMuralRequest(); document.getElementById('calibration').hidden = true; }
+            if (state !== 'cyber') { stopMediaPipe(); cancelAnimationFrame(glFrame); glFrame = null; cancelMuralRequest(); orbitStage?.reset(); document.getElementById('calibration').hidden = true; }
             ++detailVersion; infoRequest?.abort(); layerRequest?.abort();
             setIndexOpen(false);
             releaseGalleryVideo();
@@ -686,8 +689,9 @@
         document.querySelectorAll('[data-step]').forEach(button => button.onclick = () => stepCharacter(Number(button.dataset.step)));
         document.getElementById('reveal-toggle').onclick = () => setRevealed(!isRevealed);
         document.addEventListener('keydown', e => {
-            if (currentTrack !== 'cyber' || entryBusy || e.target.closest('button,input,textarea,select,a')) return;
-            if (e.key === 'Escape') { e.preventDefault(); setRevealed(false); }
+            if (currentTrack !== 'cyber' || entryBusy || e.target.closest('input,textarea,select')) return;
+            if (e.key === 'Escape') { e.preventDefault(); setRevealed(false); return; }
+            if (e.target.closest('button,a')) return;
             if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') { e.preventDefault(); stepCharacter(e.key === 'ArrowLeft' ? -1 : 1); }
             if (e.key.toLowerCase() === 'i') { e.preventDefault(); setRevealed(!isRevealed); }
         });
@@ -702,6 +706,7 @@
             const item = globalAssetsData[index]; if (!item) return;
             if (currentTrack === 'cyber' && !canEnterCyber(item)) { modeError('该人物体感素材未就绪，请返回图鉴。'); return; }
             currentSeriesIndex = index; currentItemData = item;
+            orbitStage?.reset();
             const version = ++detailVersion; releaseGalleryVideo(); infoRequest?.abort(); infoRequest = new AbortController();
             layerRequest?.abort(); setRevealed(false, true);
             const infoPanel = document.getElementById('floating-info'), textEl = document.getElementById('info-text');
@@ -896,6 +901,7 @@
                 const config = calibrationOverrides.get(currentItemData.id) || cyberConfig(currentItemData.cyber);
                 const bounds = config.bounds || figureMeasurement.bounds;
                 stageLayout = figureLayout({width:figureMeasurement.width,height:figureMeasurement.height,bounds,safe:stageSafeArea(width,height,width-panel.offsetWidth-parseFloat(css.right),isRevealed),layout:config.layout});
+                orbitStage?.layout({width,height,effective:stageLayout.effective,revealed:isRevealed,panelLeft:width-panel.offsetWidth-parseFloat(css.right)},immediate);
                 const worldHeight=2*Math.tan(camera.fov*Math.PI/360)*3, unit=worldHeight/height;
                 const sw=figureMeasurement.width*stageLayout.scale,sh=figureMeasurement.height*stageLayout.scale;
                 const transform={x:(stageLayout.x+sw/2-width/2)*unit,y:(height/2-stageLayout.y-sh/2)*unit};
@@ -921,7 +927,7 @@
             const button = document.getElementById('reveal-toggle'); button.textContent = revealed ? '收起人物简介' : '查看人物简介'; button.setAttribute('aria-expanded', String(revealed));
             if (revealed) document.getElementById('info-text').scrollTop = 0;
             const duration = immediate || reducedMotion.matches ? 0 : .75;
-            fitMuralCamera();
+            fitMuralCamera(immediate);
             if (shaderMaterial && !figureMode) {
                 gsap.to(shaderMaterial.uniforms.uDispersion, { value:revealed ? 1 : 0, duration, ease:'power2.inOut', overwrite:true });
                 gsap.to(shaderMaterial.uniforms.uMouse.value, { x:-10, y:-10, duration:0, overwrite:true });
@@ -934,6 +940,7 @@
             const version = muralVersion, paths = JSON.stringify([linePath, colorPath, figurePath]);
             const status = document.getElementById('cyber-asset-status');
             if (muralPaths === paths && lineMesh && colorPoints) {
+                if(figureMode) { orbitStage ||= new OrbitStage(document.getElementById('orbit-stage'),gsap,reducedMotion); orbitStage.setSource(lineMesh.material.map.image,cyberConfig(currentItemData.cyber).bounds || figureMeasurement.bounds); }
                 webglContainer.removeAttribute('data-loading'); status.textContent = figureMode ? '' : '兼容展示 · 尚未提供专用人物抠图'; fitMuralCamera(true); return;
             }
             const request = muralRequest = new AbortController();
@@ -968,6 +975,8 @@
                 colorPoints = new THREE.Points(new THREE.PlaneGeometry(planeWidth, planeHeight, grid.x, grid.y), shaderMaterial);
                 scene.add(colorPoints);
                 figureMode = !!figurePath; figureMeasurement = measurement; shaderMaterial.uniforms.uFigure.value = figureMode ? 1 : 0; shaderMaterial.uniforms.uFeedback.value = 0;
+                if(figureMode) { orbitStage ||= new OrbitStage(document.getElementById('orbit-stage'),gsap,reducedMotion); orbitStage.setSource(source,cyberConfig(currentItemData.cyber).bounds || measurement.bounds); }
+                else orbitStage?.reset();
                 shaderMaterial.uniforms.uTexel.value.set(4/source.width,4/source.height);
                 muralSize = { planeWidth, planeHeight }; muralPaths = paths; fitMuralCamera(true);
                 webglContainer.removeAttribute('data-loading'); status.textContent = figureMode ? measurement.diagnostic ? '手动边界预览 · ' + measurement.diagnostic : '' : '兼容展示 · 尚未提供专用人物抠图';

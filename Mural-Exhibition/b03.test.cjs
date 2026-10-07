@@ -54,3 +54,31 @@ test('camera projection fits tall, wide and irregular ratios into actual layout'
   assert.ok(leftPx>=30-1e-6);assert.ok(rightPx<=w-right+1e-6);assert.ok(h/2-h/worldH>=120-1e-6);
  }
 });
+
+test('HF orbit template avoids the full figure rectangle and reading UI at four sizes',async()=>{
+ const {orbitLayout}=await import('./public/orbit-stage.mjs');
+ const {figureLayout,stageSafeArea}=await import('./public/figure-stage.mjs');
+ for(const [width,height] of [[1920,1080],[1440,900],[1366,768],[1280,800]])for(const revealed of [false,true])for(const ratio of [.02,.44,1.034,3,20]){
+  const panelLeft=width-(width<=1400?width*.32+32:width*.345);
+  const effective=figureLayout({width:1000*ratio,height:1000,bounds:{x:0,y:0,width:1,height:1},safe:stageSafeArea(width,height,panelLeft,revealed)}).effective;
+  const input={width,height,effective,revealed,panelLeft},a=orbitLayout(input);assert.deepEqual(a,orbitLayout(input));
+  for(const p of a.panels.filter(p=>p.opacity>0)) {
+   // Include rotated corners, border and padding in the separation guarantee.
+   const angle=Math.abs(p.angle)*Math.PI/180,rx=(p.width*Math.cos(angle)+p.height*Math.sin(angle))/2,ry=(p.width*Math.sin(angle)+p.height*Math.cos(angle))/2;
+   const cx=p.x+p.width/2,cy=p.y+p.height/2;
+   assert.ok(cx+rx<=effective.x || cx-rx>=effective.x+effective.width,JSON.stringify({p,effective}));
+   assert.ok(cx-rx>=20&&cx+rx<=width-20&&cy-ry>=96&&cy+ry<=height-170);
+   if(revealed)assert.ok(cx+rx<panelLeft-16);
+  }
+  if(ratio===1.034)assert.equal(a.panels.filter(p=>p.opacity>0).length,revealed?2:4);
+ }
+});
+
+test('HF image windows select occupied source rectangles without semantic labels or out-of-bounds crops',async()=>{
+ const {detailWindows}=await import('./public/orbit-stage.mjs');
+ const width=100,height=100,pixels=new Uint8ClampedArray(width*height*4);
+ for(let y=10;y<90;y++)for(let x=30;x<70;x++)pixels[(y*width+x)*4+3]=255;
+ const bounds={x:.1,y:.1,width:.8,height:.8},windows=detailWindows(pixels,width,height,bounds);
+ assert.equal(windows.length,3);
+ for(const w of windows){assert.ok(w.score>0);assert.ok(w.x>=bounds.x&&w.y>=bounds.y&&w.x+w.width<=bounds.x+bounds.width&&w.y+w.height<=bounds.y+bounds.height);assert.equal(w.label,undefined);}
+});

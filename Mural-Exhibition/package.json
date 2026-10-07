@@ -9,7 +9,8 @@
     "test": "node b01-check.cjs && node --test b02.test.cjs b03.test.cjs",
     "test:browser": "node b01-browser-check.cjs",
     "test:b02-browser": "node b02-browser-check.cjs",
-    "test:b03-browser": "node b03-browser-check.cjs && node b03-stage-browser-check.cjs"
+    "test:b03-browser": "node b03-browser-check.cjs && node b03-stage-browser-check.cjs",
+    "test:b03-hf-browser": "node b03-hf-browser-check.cjs"
   },
   "keywords": [],
   "author": "",

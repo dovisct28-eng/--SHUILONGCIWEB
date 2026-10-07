@@ -1,7 +1,7 @@
 const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const {createApp}=require('./server.js');
-const out=path.resolve(__dirname,'../docs/validation/b03-v2-2026-10-06');
-const report={functional:[],synthetic:'Colored rectangles are geometry fixtures, not heritage/person artwork. Only ID01 is an author-supplied transparent figure.',errors:[]};
+const out=path.resolve(process.env.B03_VALIDATION_DIR || path.join(__dirname,'../docs/validation/b03-v2-2026-10-06'));fs.mkdirSync(out,{recursive:true});
+const report={functional:[],synthetic:'Colored rectangles are geometry fixtures, not heritage/person artwork. Formal stage cases here use author ID01; additional local figures are outside this synthetic suite.',errors:[]};
 const instrument=`window.__stage={select(index){if(currentTrack==='gallery')showScreen('gallery-detail');loadSeriesData(index)},reveal:setRevealed,snapshot(){return {id:currentItemData?.id,figureMode,revealed:isRevealed,measurement:figureMeasurement,layout:stageLayout,grid:colorPoints?.geometry.attributes.position.count,rendererCount:document.querySelectorAll('#webgl-container canvas').length,config:calibrationOverrides.get(currentItemData?.id),textures:renderer?.info.memory.textures,geometries:renderer?.info.memory.geometries}}};`;
 const ready=p=>p.waitForFunction(()=>document.body.dataset.explorationState==='cyber'&&!document.getElementById('webgl-container').hasAttribute('data-loading'),null,{timeout:40000});
 const shot=(p,n)=>p.screenshot({path:path.join(out,n+'.png')});
