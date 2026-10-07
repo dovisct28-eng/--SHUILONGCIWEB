@@ -1,0 +1,187 @@
+{
+  "type": "Actual Chrome screenshots; synthetic cases explicitly labeled",
+  "screenshots": [
+    {
+      "file": "selected/formal-01-default-1920x1080.webp",
+      "source": "local/layout/formal-01-default-1920x1080.png",
+      "status": "Tracked formal figure ID01",
+      "size": [
+        1920,
+        1080
+      ],
+      "bytes": 1027598,
+      "sha256": "a2b884c4c00255f7734a3f08dc78eeb1093dd3b77d9ab710f5b2da6db768bfd9",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/formal-01-revealed-1920x1080.webp",
+      "source": "local/layout/formal-01-revealed-1920x1080.png",
+      "status": "Tracked formal figure ID01",
+      "size": [
+        1920,
+        1080
+      ],
+      "bytes": 988760,
+      "sha256": "c27c5533e220619ca6612f9441b87670d2fcce164af7b79c965f7eccbe86fa23",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/formal-01-default-1440x900.webp",
+      "source": "local/layout/formal-01-default-1440x900.png",
+      "status": "Tracked formal figure ID01",
+      "size": [
+        1440,
+        900
+      ],
+      "bytes": 740172,
+      "sha256": "3ac724a652f4a0d2cac381e5585faf1d965c97f322f4ae947c579d06979f90ba",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/formal-01-revealed-1440x900.webp",
+      "source": "local/layout/formal-01-revealed-1440x900.png",
+      "status": "Tracked formal figure ID01",
+      "size": [
+        1440,
+        900
+      ],
+      "bytes": 666194,
+      "sha256": "1f9550fc86d4a6969c509fce5ef491b579404cd5af8bc86d5addb6fcb8814a4b",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/formal-01-default-1366x768.webp",
+      "source": "local/layout/formal-01-default-1366x768.png",
+      "status": "Tracked formal figure ID01",
+      "size": [
+        1366,
+        768
+      ],
+      "bytes": 617656,
+      "sha256": "fcc2ed4a75e83e88cc8d47b56d03b97006c30208f8dceb1d4b2e005a3edd017d",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/formal-01-revealed-1366x768.webp",
+      "source": "local/layout/formal-01-revealed-1366x768.png",
+      "status": "Tracked formal figure ID01",
+      "size": [
+        1366,
+        768
+      ],
+      "bytes": 561916,
+      "sha256": "ede6757f864fc63e37b147468a9a5c9d2e2668df49e72f08d3f9258441152a9f",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/formal-01-default-1280x800.webp",
+      "source": "local/layout/formal-01-default-1280x800.png",
+      "status": "Tracked formal figure ID01",
+      "size": [
+        1280,
+        800
+      ],
+      "bytes": 602814,
+      "sha256": "d593d3aa147afc2aa21a8063cfce2cba50d16d19610a0aa174863fb3c100ba10",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/formal-01-revealed-1280x800.webp",
+      "source": "local/layout/formal-01-revealed-1280x800.png",
+      "status": "Tracked formal figure ID01",
+      "size": [
+        1280,
+        800
+      ],
+      "bytes": 590728,
+      "sha256": "fdb02909578cdbda3b35e2549c70ab5bac25f06cc5118a7ca5749e51d93a1cb2",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/local-author-05-default.webp",
+      "source": "local/layout/local-author-05-default-1440x900.png",
+      "status": "Preexisting local uncommitted ID05 figure, excluded from asset delivery",
+      "size": [
+        1440,
+        900
+      ],
+      "bytes": 729080,
+      "sha256": "b7af227d19b104e43f779bda3490d968ad7d2f8610984e9f62a07bbd0bd52fd3",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/local-author-05-revealed.webp",
+      "source": "local/layout/local-author-05-revealed-1440x900.png",
+      "status": "Preexisting local uncommitted ID05 figure, excluded from asset delivery",
+      "size": [
+        1440,
+        900
+      ],
+      "bytes": 692834,
+      "sha256": "3490435b999d1846ab82933c4f72f18cfa4cad6cea791294215afe2016662651",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/synthetic-tall-default.webp",
+      "source": "local/layout/synthetic-tall-default.png",
+      "status": "Synthetic algorithm fixture, not a heritage image",
+      "size": [
+        1440,
+        900
+      ],
+      "bytes": 734424,
+      "sha256": "5b13df9ec0eb0b4b815158bab55b01deb34e77b079425271189c33a6d426b3d0",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/synthetic-wide-default.webp",
+      "source": "local/layout/synthetic-wide-default.png",
+      "status": "Synthetic algorithm fixture, not a heritage image",
+      "size": [
+        1440,
+        900
+      ],
+      "bytes": 715652,
+      "sha256": "5e4acf5c5f707a1222636e3b958180a92674cb1ca9e2ae024de786635ddb95ff",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/synthetic-left-default.webp",
+      "source": "local/layout/synthetic-left-default.png",
+      "status": "Synthetic algorithm fixture, not a heritage image",
+      "size": [
+        1440,
+        900
+      ],
+      "bytes": 672134,
+      "sha256": "364f91b4208d454c2f21645e511f67995a8b0ee19ba8245bee1b16e1cde755cd",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/synthetic-thin-revealed.webp",
+      "source": "local/layout/synthetic-thin-revealed.png",
+      "status": "Synthetic faint thin structure; algorithm fixture only",
+      "size": [
+        1440,
+        900
+      ],
+      "bytes": 628856,
+      "sha256": "9a8d5d6b17efda144935f5a45d9aff231b915076583a36cdde1d75f9b88a2ebd",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/legacy-02.webp",
+      "source": "local/theatre/legacy-02.png",
+      "status": "Legacy line/color compatibility, no formal cutout acceptance",
+      "size": [
+        1440,
+        900
+      ],
+      "bytes": 782124,
+      "sha256": "e689dcc3fc8ac03dad78adffdbe719c77939af99dcc66614fd270345f2001399",
+      "rgbaIdentical": true
+    }
+  ],
+  "count": 15,
+  "totalBytes": 10750942
+}

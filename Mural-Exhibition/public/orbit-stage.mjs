@@ -1,57 +1,27 @@
-// HF-01: deterministic negative-space template. No semantic image recognition.
-// This pure interface is the extension point for later contour occupancy layouts.
-export function orbitLayout({width,height,effective,revealed=false,panelLeft=width}) {
- const e=effective, edge=36, gap=38, bottom=height-188;
- const leftRoom=Math.max(0,e.x-edge-gap),rightStart=e.x+e.width+gap;
- const rightRoom=Math.max(0,(revealed?panelLeft-32:width-edge)-rightStart);
- const panel=(id,side,y,w,h,angle,opacity)=>{
-  const room=side==='left'?leftRoom:rightRoom;
-  const pw=Math.min(w,room*.86),ph=h*pw/w;
-  return {id,x:side==='left'?edge+(room-pw)*.42:rightStart+(room-pw)*.34,
-   y:Math.max(122,Math.min(bottom-ph,y)),width:Math.max(1,pw),height:Math.max(1,ph),angle,
-   opacity:room<76 || (revealed&&side==='right')?0:opacity};
- };
- const k=Math.min(1.25,width/1440),cy=e.y+e.height*.5;
- return {center:{x:e.x+e.width/2,y:cy},radius:{x:Math.min(width*.32,e.width*.64+85),y:Math.min((height-280)/2,e.height*.51)},
-  floor:{x:e.x+e.width/2,y:e.y+e.height-2,rx:Math.max(90,e.width*.42),ry:10*k},
-  panels:[panel('detail-a','left',cy-205*k,176*k,156*k,-5,.86),
-   panel('fragment','left',cy+66*k,139*k,174*k,6,.68),
-   panel('detail-b','right',cy-235*k,196*k,128*k,5,.78),
-   panel('contour','right',cy+8*k,146*k,204*k,-6,.62)]};
-}
+import { orbitLayout, cropWindows, LAYOUT_VERSION } from './orbit-layout.mjs';
+export { orbitLayout } from './orbit-layout.mjs';
 
-// Pick occupied geometric windows only. Labels never infer face/clothing/objects.
+// Compatibility helper for existing test/tool callers; runtime uses the shared scan.
 export function detailWindows(pixels,width,height,bounds) {
- const result=[];
- for(const [lo,hi] of [[0,.28],[.32,.72],[.62,1]]) {
-  let best=null;
-  for(const size of [.34,.48])for(let y=Math.min(lo,1-size);y<=Math.min(1-size,hi-size*.45);y+=.1)for(let x=0;x<=1-size;x+=.12) {
-   const r={x:bounds.x+x*bounds.width,y:bounds.y+y*bounds.height,width:bounds.width*size,height:bounds.height*size};
-   let occupied=0,total=0;
-   for(let iy=0;iy<14;iy++)for(let ix=0;ix<14;ix++){
-    const px=Math.min(width-1,Math.floor((r.x+r.width*(ix+.5)/14)*width));
-    const py=Math.min(height-1,Math.floor((r.y+r.height*(iy+.5)/14)*height));
-    occupied+=pixels[(py*width+px)*4+3]>8?1:0;total++;
-   }
-   const score=occupied/total;
-   if(!best||score>best.score)best={...r,score};
-  }
-  result.push(best);
- }
- return result;
+ const n=24,counts=Array(n*n).fill(0);
+ for(let y=0;y<height;y++)for(let x=0;x<width;x++)if(pixels[(y*width+x)*4+3]>=1)counts[Math.min(n-1,Math.floor(y/height*n))*n+Math.min(n-1,Math.floor(x/width*n))]++;
+ return cropWindows({grid:{size:n,counts}},width,height,bounds).slice(0,3);
 }
-
 const ns='http://www.w3.org/2000/svg';
 const svgEl=(tag,attrs={})=>{const el=document.createElementNS(ns,tag);for(const [k,v] of Object.entries(attrs))el.setAttribute(k,v);return el;};
 export class OrbitStage {
  constructor(root,tween,reduced) {
-  this.root=root;this.tween=tween;this.reduced=reduced;this.panels=[];
+  this.root=root;this.tween=tween;this.reduced=reduced;this.panels=[];this.cache=new Map();this.sourceVersion=0;
   this.svg=svgEl('svg',{'class':'orbit-lines',preserveAspectRatio:'none'});root.append(this.svg);
+  const defs=svgEl('defs');this.mask=svgEl('mask',{id:'b03-orbit-safe-mask',maskUnits:'userSpaceOnUse',maskContentUnits:'userSpaceOnUse'});this.maskSafe=svgEl('rect',{fill:'white'});this.mask.append(this.maskSafe);defs.append(this.mask);this.svg.append(defs);
+  this.maskBlocks=Array.from({length:12},()=>{const el=svgEl('rect',{fill:'black'});this.mask.append(el);return el;});
   this.rings=svgEl('g',{'class':'orbit-rings'});this.svg.append(this.rings);
   this.main=svgEl('ellipse',{'class':'orbit-main'});this.aux=svgEl('ellipse',{'class':'orbit-aux'});this.floor=svgEl('ellipse',{'class':'orbit-floor'});
   this.rings.append(this.main,this.aux,this.floor);this.links=svgEl('g',{'class':'orbit-links'});this.svg.append(this.links);
-  for(const id of ['detail-a','fragment','detail-b','contour']) {
-   const el=document.createElement('div');el.className=`orbit-panel orbit-${id}`;el.dataset.panel=id;
+  this.rings.setAttribute('mask','url(#b03-orbit-safe-mask)');this.links.setAttribute('mask','url(#b03-orbit-safe-mask)');
+  // Reuse a fixed pool; no DOM churn, GL textures or extra animation loop.
+  for(let i=0;i<5;i++) {
+   const el=document.createElement('div');el.className=`orbit-panel orbit-${['detail-a','fragment','detail-b','contour','detail-a'][i]}`;el.dataset.panel=String(i);
    const canvas=document.createElement('canvas');el.append(canvas);root.append(el);
    const line=svgEl('path'),node=svgEl('circle',{r:3});this.links.append(line,node);
    this.panels.push({el,canvas,line,node,position:{x:0,y:0,width:1,height:1,angle:0,opacity:0}});
@@ -59,45 +29,67 @@ export class OrbitStage {
   this.geometry={cx:0,cy:0,rx:1,ry:1,fx:0,fy:0,frx:1,fry:1};this.reset();
  }
  reset() {
-  this.active=false;this.root.hidden=true;
+  this.sourceVersion++;this.active=false;this.root.hidden=true;this.contents=[];this.cache.clear();this.layouts={};this.currentLayout=null;
   this.tween.killTweensOf(this.geometry);
-  for(const p of this.panels){this.tween.killTweensOf(p.position);p.canvas.width=p.canvas.height=0;}
+  for(const p of this.panels){this.tween.killTweensOf(p.position);p.position.opacity=0;p.canvas.width=p.canvas.height=0;p.el.style.opacity='0';delete p.el.dataset.content;delete p.el.dataset.character;}
  }
- setSource(image,bounds) {
-  this.reset();
+ setSource(image,bounds,measurement,item={}) {
+  this.reset();this.characterId=item.id||'';
   try {
-   const sample=document.createElement('canvas');sample.width=192;sample.height=192;
-   const ctx=sample.getContext('2d',{willReadFrequently:true});ctx.drawImage(image,0,0,192,192);
-   const windows=detailWindows(ctx.getImageData(0,0,192,192).data,192,192,bounds);
    const iw=image.naturalWidth||image.width,ih=image.naturalHeight||image.height;
-   for(let i=0;i<3;i++) {
-    const r=windows[i],c=this.panels[[0,2,1][i]].canvas;
-    c.width=Math.round(380*Math.min(1,r.width*iw/(r.height*ih)));c.height=Math.round(380*Math.min(1,r.height*ih/(r.width*iw)));
-    c.getContext('2d').drawImage(image,r.x*iw,r.y*ih,r.width*iw,r.height*ih,0,0,c.width,c.height);
+   const windows=cropWindows(measurement?.geometry,iw,ih,bounds);
+   this.contourGeometry=measurement?.geometry;
+   for(const r of windows) {
+    const i=this.contents.length,c=this.panels[i].canvas;
+    // Do not magnify low-resolution source snippets into large panel bitmaps.
+    c.width=c.height=Math.max(1,Math.floor(Math.min(380,r.sourceEdge)));
+    const ctx=c.getContext('2d',{willReadFrequently:true});ctx.drawImage(image,r.x*iw,r.y*ih,r.width*iw,r.height*ih,0,0,c.width,c.height);
+    const rgba=ctx.getImageData(0,0,c.width,c.height).data;let occupied=0;for(let j=3;j<rgba.length;j+=4)if(rgba[j]>=1)occupied++;
+    const actualCoverage=occupied/(c.width*c.height);
+    if(actualCoverage<.04){c.width=c.height=0;continue;}
+    this.contents.push({id:'crop-'+i,aspect:1,maxEdge:c.width,coverage:r.score,actualCoverage,window:r});
    }
-   // Abstract alpha boundary: trace only existing occupied pixels; no invented detail.
-   const c=this.panels[3].canvas,ratio=bounds.width*iw/(bounds.height*ih);c.width=Math.max(1,Math.round(320*Math.min(1,ratio)));c.height=Math.max(1,Math.round(320*Math.min(1,1/ratio)));
+   // Unregistered line/color sources never inherit figure crop coordinates.
+   // The abstract contour is traced from this same figure's existing alpha.
+   const i=this.contents.length,c=this.panels[i].canvas,ratio=bounds.width*iw/(bounds.height*ih);
+   const contourScale=Math.min(1,320/(bounds.width*iw),320/(bounds.height*ih));
+   c.width=Math.max(1,Math.round(bounds.width*iw*contourScale));c.height=Math.max(1,Math.round(bounds.height*ih*contourScale));
    const cc=c.getContext('2d',{willReadFrequently:true});cc.drawImage(image,bounds.x*iw,bounds.y*ih,bounds.width*iw,bounds.height*ih,0,0,c.width,c.height);
    const src=cc.getImageData(0,0,c.width,c.height),dst=cc.createImageData(c.width,c.height);
    const alpha=(x,y)=>x<0||y<0||x>=c.width||y>=c.height?0:src.data[(y*c.width+x)*4+3];
-   for(let y=0;y<c.height;y++)for(let x=0;x<c.width;x++)if(alpha(x,y)>8&&[alpha(x-1,y),alpha(x+1,y),alpha(x,y-1),alpha(x,y+1)].some(a=>a<=8)) {
+   for(let y=0;y<c.height;y++)for(let x=0;x<c.width;x++)if(alpha(x,y)>=1&&[alpha(x-1,y),alpha(x+1,y),alpha(x,y-1),alpha(x,y+1)].some(a=>a<1)) {
     const j=(y*c.width+x)*4;dst.data.set([198,164,111,210],j);
    }
-   cc.putImageData(dst,0,0);sample.width=sample.height=0;
+   cc.putImageData(dst,0,0);
+   this.contents.push({id:'contour',aspect:ratio,maxEdge:Math.max(c.width,c.height),registration:'same-source-alpha'});
+   this.contents.forEach((content,i)=>{this.panels[i].el.dataset.content=content.id;this.panels[i].el.dataset.character=this.characterId;this.panels[i].el.classList.toggle('orbit-contour',content.id==='contour');});
    this.active=true;this.root.hidden=false;
-  } catch { this.reset(); } // Decorative decoding never interrupts the main figure.
+  } catch { this.reset(); } // Decorations cannot interrupt the main figure.
  }
  layout(input,immediate=false) {
   if(!this.active)return;
-  const layout=orbitLayout(input),duration=immediate||this.reduced.matches?0:.75;
-  this.root.dataset.revealed=String(input.revealed);this.svg.setAttribute('viewBox',`0 0 ${input.width} ${input.height}`);
+  const start=performance.now();
+  const args={...input,id:this.characterId,geometry:this.contourGeometry,contents:this.contents};
+  const key=JSON.stringify([LAYOUT_VERSION,this.sourceVersion,args.width,args.height,args.effective,args.projection,args.revealed,args.panelLeft,args.forbidden,args.orbit]);
+  let layout=this.cache.get(key);
+  if(!layout){layout=orbitLayout(args);this.cache.set(key,layout);if(this.cache.size>16)this.cache.delete(this.cache.keys().next().value);}
+  this.layoutMs=performance.now()-start;this.currentLayout=layout;this.layouts[input.revealed?'revealedLayout':'defaultLayout']=layout;
+  const duration=immediate||this.reduced.matches?0:.75;
+  this.root.dataset.revealed=String(input.revealed);this.root.dataset.template=layout.template;this.svg.setAttribute('viewBox',`0 0 ${input.width} ${input.height}`);
+  for(const [k,v]of Object.entries({x:0,y:0,width:input.width,height:input.height}))this.mask.setAttribute(k,v);
+  for(const [k,v]of Object.entries(layout.safe||{x:0,y:0,width:0,height:0}))this.maskSafe.setAttribute(k,v);
+  this.maskBlocks.forEach((el,i)=>{const r=input.forbidden?.[i];for(const [k,v]of Object.entries(r?{x:r.x-12,y:r.y-12,width:r.width+24,height:r.height+24}:{x:0,y:0,width:0,height:0}))el.setAttribute(k,v);});
+  this.rings.style.opacity=String(layout.intensity);this.main.style.strokeDasharray=`${layout.arcSpan} ${layout.arcStart+74} 118 134`;
   const g=this.geometry;
   this.tween.to(g,{cx:layout.center.x,cy:layout.center.y,rx:layout.radius.x,ry:layout.radius.y,fx:layout.floor.x,fy:layout.floor.y,frx:layout.floor.rx,fry:layout.floor.ry,duration,ease:'power2.inOut',overwrite:true,onUpdate:()=>this.drawRings()});
-  layout.panels.forEach((p,i)=>{
-   const node=this.panels[i];
-   const {id,...target}=p;
-   this.tween.to(node.position,{...target,duration:p.opacity===0?Math.min(.18,duration):duration,ease:'power2.inOut',overwrite:true,onUpdate:()=>this.drawPanel(node)});
-  });
+  for(let i=0;i<this.panels.length;i++){
+   const node=this.panels[i],p=layout.panels.find(p=>p.content===this.contents[i]?.id);
+   this.tween.killTweensOf(node.position);
+   // Fade in at safe endpoints after the figure move. No visible crossing paths.
+   node.position.opacity=0;
+   if(p){Object.assign(node.position,p,{opacity:duration?0:p.opacity});this.drawPanel(node);if(duration)this.tween.to(node.position,{opacity:p.opacity,delay:duration,duration:.15,overwrite:true,onUpdate:()=>this.drawPanel(node)});}
+   else this.drawPanel(node);
+  }
   return layout;
  }
  drawRings() {

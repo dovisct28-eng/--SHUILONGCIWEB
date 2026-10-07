@@ -1,0 +1,357 @@
+{
+  "samples": 142,
+  "layoutMs": {
+    "mean": 0.6084507042345342,
+    "p95": 2.900000000372529,
+    "max": 5.800000000279397
+  },
+  "limits": "Headless browser timing, not physical camera/gesture or exhibition FPS acceptance",
+  "formal": [
+    {
+      "id": "01",
+      "resourceStatus": "tracked formal figure",
+      "defaultTemplate": "horizontal",
+      "defaultPanels": 3,
+      "revealedPanels": 3
+    },
+    {
+      "id": "02",
+      "resourceStatus": "legacy line/color compatibility, no formal cutout acceptance",
+      "defaultTemplate": null,
+      "defaultPanels": 0,
+      "revealedPanels": 0
+    },
+    {
+      "id": "03",
+      "resourceStatus": "legacy line/color compatibility, no formal cutout acceptance",
+      "defaultTemplate": null,
+      "defaultPanels": 0,
+      "revealedPanels": 0
+    },
+    {
+      "id": "04",
+      "resourceStatus": "legacy line/color compatibility, no formal cutout acceptance",
+      "defaultTemplate": null,
+      "defaultPanels": 0,
+      "revealedPanels": 0
+    },
+    {
+      "id": "05",
+      "resourceStatus": "preexisting local uncommitted figure",
+      "defaultTemplate": "vertical",
+      "defaultPanels": 5,
+      "revealedPanels": 3
+    },
+    {
+      "id": "06",
+      "resourceStatus": "legacy line/color compatibility, no formal cutout acceptance",
+      "defaultTemplate": null,
+      "defaultPanels": 0,
+      "revealedPanels": 0
+    },
+    {
+      "id": "07",
+      "resourceStatus": "legacy line/color compatibility, no formal cutout acceptance",
+      "defaultTemplate": null,
+      "defaultPanels": 0,
+      "revealedPanels": 0
+    },
+    {
+      "id": "10",
+      "resourceStatus": "legacy line/color compatibility, no formal cutout acceptance",
+      "defaultTemplate": null,
+      "defaultPanels": 0,
+      "revealedPanels": 0
+    }
+  ],
+  "synthetic": [
+    {
+      "name": "synthetic-tall",
+      "width": 1920,
+      "height": 1080,
+      "template": "vertical",
+      "defaultPanels": 1,
+      "revealedPanels": 1
+    },
+    {
+      "name": "synthetic-tall",
+      "width": 1440,
+      "height": 900,
+      "template": "vertical",
+      "defaultPanels": 1,
+      "revealedPanels": 1
+    },
+    {
+      "name": "synthetic-tall",
+      "width": 1366,
+      "height": 768,
+      "template": "vertical",
+      "defaultPanels": 1,
+      "revealedPanels": 1
+    },
+    {
+      "name": "synthetic-tall",
+      "width": 1280,
+      "height": 800,
+      "template": "vertical",
+      "defaultPanels": 1,
+      "revealedPanels": 1
+    },
+    {
+      "name": "synthetic-wide",
+      "width": 1920,
+      "height": 1080,
+      "template": "horizontal",
+      "defaultPanels": 3,
+      "revealedPanels": 3
+    },
+    {
+      "name": "synthetic-wide",
+      "width": 1440,
+      "height": 900,
+      "template": "horizontal",
+      "defaultPanels": 3,
+      "revealedPanels": 3
+    },
+    {
+      "name": "synthetic-wide",
+      "width": 1366,
+      "height": 768,
+      "template": "horizontal",
+      "defaultPanels": 3,
+      "revealedPanels": 3
+    },
+    {
+      "name": "synthetic-wide",
+      "width": 1280,
+      "height": 800,
+      "template": "horizontal",
+      "defaultPanels": 3,
+      "revealedPanels": 3
+    },
+    {
+      "name": "synthetic-left",
+      "width": 1920,
+      "height": 1080,
+      "template": "asymmetric",
+      "defaultPanels": 5,
+      "revealedPanels": 3
+    },
+    {
+      "name": "synthetic-left",
+      "width": 1440,
+      "height": 900,
+      "template": "asymmetric",
+      "defaultPanels": 5,
+      "revealedPanels": 3
+    },
+    {
+      "name": "synthetic-left",
+      "width": 1366,
+      "height": 768,
+      "template": "asymmetric",
+      "defaultPanels": 5,
+      "revealedPanels": 3
+    },
+    {
+      "name": "synthetic-left",
+      "width": 1280,
+      "height": 800,
+      "template": "asymmetric",
+      "defaultPanels": 5,
+      "revealedPanels": 3
+    },
+    {
+      "name": "synthetic-right",
+      "width": 1920,
+      "height": 1080,
+      "template": "asymmetric",
+      "defaultPanels": 5,
+      "revealedPanels": 3
+    },
+    {
+      "name": "synthetic-right",
+      "width": 1440,
+      "height": 900,
+      "template": "asymmetric",
+      "defaultPanels": 5,
+      "revealedPanels": 2
+    },
+    {
+      "name": "synthetic-right",
+      "width": 1366,
+      "height": 768,
+      "template": "asymmetric",
+      "defaultPanels": 5,
+      "revealedPanels": 2
+    },
+    {
+      "name": "synthetic-right",
+      "width": 1280,
+      "height": 800,
+      "template": "asymmetric",
+      "defaultPanels": 5,
+      "revealedPanels": 2
+    },
+    {
+      "name": "synthetic-thin",
+      "width": 1920,
+      "height": 1080,
+      "template": "horizontal",
+      "defaultPanels": 3,
+      "revealedPanels": 3
+    },
+    {
+      "name": "synthetic-thin",
+      "width": 1440,
+      "height": 900,
+      "template": "horizontal",
+      "defaultPanels": 3,
+      "revealedPanels": 3
+    },
+    {
+      "name": "synthetic-thin",
+      "width": 1366,
+      "height": 768,
+      "template": "horizontal",
+      "defaultPanels": 3,
+      "revealedPanels": 3
+    },
+    {
+      "name": "synthetic-thin",
+      "width": 1280,
+      "height": 800,
+      "template": "horizontal",
+      "defaultPanels": 3,
+      "revealedPanels": 3
+    },
+    {
+      "name": "synthetic-irregular",
+      "width": 1920,
+      "height": 1080,
+      "template": "horizontal",
+      "defaultPanels": 3,
+      "revealedPanels": 3
+    },
+    {
+      "name": "synthetic-irregular",
+      "width": 1440,
+      "height": 900,
+      "template": "horizontal",
+      "defaultPanels": 3,
+      "revealedPanels": 3
+    },
+    {
+      "name": "synthetic-irregular",
+      "width": 1366,
+      "height": 768,
+      "template": "horizontal",
+      "defaultPanels": 3,
+      "revealedPanels": 3
+    },
+    {
+      "name": "synthetic-irregular",
+      "width": 1280,
+      "height": 800,
+      "template": "horizontal",
+      "defaultPanels": 3,
+      "revealedPanels": 3
+    },
+    {
+      "name": "synthetic-holes",
+      "width": 1920,
+      "height": 1080,
+      "template": "horizontal",
+      "defaultPanels": 3,
+      "revealedPanels": 3
+    },
+    {
+      "name": "synthetic-holes",
+      "width": 1440,
+      "height": 900,
+      "template": "horizontal",
+      "defaultPanels": 3,
+      "revealedPanels": 3
+    },
+    {
+      "name": "synthetic-holes",
+      "width": 1366,
+      "height": 768,
+      "template": "horizontal",
+      "defaultPanels": 3,
+      "revealedPanels": 3
+    },
+    {
+      "name": "synthetic-holes",
+      "width": 1280,
+      "height": 800,
+      "template": "horizontal",
+      "defaultPanels": 3,
+      "revealedPanels": 2
+    },
+    {
+      "name": "synthetic-edge",
+      "width": 1920,
+      "height": 1080,
+      "template": "vertical",
+      "defaultPanels": 4,
+      "revealedPanels": 3
+    },
+    {
+      "name": "synthetic-edge",
+      "width": 1440,
+      "height": 900,
+      "template": "vertical",
+      "defaultPanels": 4,
+      "revealedPanels": 3
+    },
+    {
+      "name": "synthetic-edge",
+      "width": 1366,
+      "height": 768,
+      "template": "vertical",
+      "defaultPanels": 4,
+      "revealedPanels": 3
+    },
+    {
+      "name": "synthetic-edge",
+      "width": 1280,
+      "height": 800,
+      "template": "vertical",
+      "defaultPanels": 4,
+      "revealedPanels": 3
+    },
+    {
+      "name": "synthetic-opaque",
+      "width": 1920,
+      "height": 1080,
+      "template": "vertical",
+      "defaultPanels": 4,
+      "revealedPanels": 3
+    },
+    {
+      "name": "synthetic-opaque",
+      "width": 1440,
+      "height": 900,
+      "template": "vertical",
+      "defaultPanels": 4,
+      "revealedPanels": 3
+    },
+    {
+      "name": "synthetic-opaque",
+      "width": 1366,
+      "height": 768,
+      "template": "vertical",
+      "defaultPanels": 4,
+      "revealedPanels": 3
+    },
+    {
+      "name": "synthetic-opaque",
+      "width": 1280,
+      "height": 800,
+      "template": "vertical",
+      "defaultPanels": 4,
+      "revealedPanels": 3
+    }
+  ]
+}

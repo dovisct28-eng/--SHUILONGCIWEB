@@ -704,13 +704,14 @@
             if (index < 0) index = globalAssetsData.length - 1;
             if (index >= globalAssetsData.length) index = 0;
             const item = globalAssetsData[index]; if (!item) return;
+            const keepRevealed = currentTrack === 'cyber' && isRevealed;
             if (currentTrack === 'cyber' && !canEnterCyber(item)) { modeError('该人物体感素材未就绪，请返回图鉴。'); return; }
             currentSeriesIndex = index; currentItemData = item;
             orbitStage?.reset();
             const version = ++detailVersion; releaseGalleryVideo(); infoRequest?.abort(); infoRequest = new AbortController();
-            layerRequest?.abort(); setRevealed(false, true);
+            layerRequest?.abort(); if (!keepRevealed) setRevealed(false, true);
             const infoPanel = document.getElementById('floating-info'), textEl = document.getElementById('info-text');
-            infoPanel.classList.remove('visible');
+            infoPanel.classList.toggle('visible', keepRevealed);
             document.querySelectorAll('#menu li').forEach(el => { el.classList.toggle('active', el.dataset.id === item.id); el.querySelector('button').setAttribute('aria-current', String(el.dataset.id === item.id)); });
             document.querySelector('[data-counter]').textContent = `${index + 1} / ${globalAssetsData.length}`;
             document.getElementById('archive-label').textContent = `人物档案 · ${item.id}${item.category ? ' · ' + item.category : ''}`;
@@ -892,6 +893,15 @@
         const calibrationOverrides = new Map();
         let figureMode = false;
         function cancelMuralRequest() { ++muralVersion; muralRequest?.abort(); muralRequest = null; }
+        function orbitProtectedAreas(revealed) {
+            const rects = ['#back-btn','#quick-switch-btn','.study-heading','#stage-name','.gesture-hint','.cyber-controls','#camera-feed-container','#stage-disclaimer','#cyber-asset-status'].map(selector => {
+                const el=document.querySelector(selector),css=getComputedStyle(el);
+                if(css.display==='none'||el.hidden||(selector==='#stage-name'&&revealed))return null;
+                const r=el.getBoundingClientRect();return {x:r.x,y:r.y,width:r.width,height:r.height};
+            }).filter(Boolean);
+            if(revealed){const el=document.getElementById('floating-info');rects.push({x:el.offsetLeft,y:el.offsetTop,width:el.offsetWidth,height:el.offsetHeight});}
+            return rects;
+        }
         function fitMuralCamera(immediate = false) {
             if (!camera || !muralSize || currentTrack !== 'cyber') return;
             const panel = document.getElementById('floating-info'), css = getComputedStyle(panel);
@@ -901,7 +911,7 @@
                 const config = calibrationOverrides.get(currentItemData.id) || cyberConfig(currentItemData.cyber);
                 const bounds = config.bounds || figureMeasurement.bounds;
                 stageLayout = figureLayout({width:figureMeasurement.width,height:figureMeasurement.height,bounds,safe:stageSafeArea(width,height,width-panel.offsetWidth-parseFloat(css.right),isRevealed),layout:config.layout});
-                orbitStage?.layout({width,height,effective:stageLayout.effective,revealed:isRevealed,panelLeft:width-panel.offsetWidth-parseFloat(css.right)},immediate);
+                orbitStage?.layout({width,height,effective:stageLayout.effective,projection:{x:stageLayout.x,y:stageLayout.y,width:figureMeasurement.width*stageLayout.scale,height:figureMeasurement.height*stageLayout.scale},revealed:isRevealed,panelLeft:panel.offsetLeft,forbidden:orbitProtectedAreas(isRevealed),orbit:config.orbit},immediate);
                 const worldHeight=2*Math.tan(camera.fov*Math.PI/360)*3, unit=worldHeight/height;
                 const sw=figureMeasurement.width*stageLayout.scale,sh=figureMeasurement.height*stageLayout.scale;
                 const transform={x:(stageLayout.x+sw/2-width/2)*unit,y:(height/2-stageLayout.y-sh/2)*unit};
@@ -940,7 +950,7 @@
             const version = muralVersion, paths = JSON.stringify([linePath, colorPath, figurePath]);
             const status = document.getElementById('cyber-asset-status');
             if (muralPaths === paths && lineMesh && colorPoints) {
-                if(figureMode) { orbitStage ||= new OrbitStage(document.getElementById('orbit-stage'),gsap,reducedMotion); orbitStage.setSource(lineMesh.material.map.image,cyberConfig(currentItemData.cyber).bounds || figureMeasurement.bounds); }
+                if(figureMode) { orbitStage ||= new OrbitStage(document.getElementById('orbit-stage'),gsap,reducedMotion); orbitStage.setSource(lineMesh.material.map.image,cyberConfig(currentItemData.cyber).bounds || figureMeasurement.bounds,figureMeasurement,currentItemData); }
                 webglContainer.removeAttribute('data-loading'); status.textContent = figureMode ? '' : '兼容展示 · 尚未提供专用人物抠图'; fitMuralCamera(true); return;
             }
             const request = muralRequest = new AbortController();
@@ -975,13 +985,14 @@
                 colorPoints = new THREE.Points(new THREE.PlaneGeometry(planeWidth, planeHeight, grid.x, grid.y), shaderMaterial);
                 scene.add(colorPoints);
                 figureMode = !!figurePath; figureMeasurement = measurement; shaderMaterial.uniforms.uFigure.value = figureMode ? 1 : 0; shaderMaterial.uniforms.uFeedback.value = 0;
-                if(figureMode) { orbitStage ||= new OrbitStage(document.getElementById('orbit-stage'),gsap,reducedMotion); orbitStage.setSource(source,cyberConfig(currentItemData.cyber).bounds || measurement.bounds); }
+                if(figureMode) { orbitStage ||= new OrbitStage(document.getElementById('orbit-stage'),gsap,reducedMotion); orbitStage.setSource(source,cyberConfig(currentItemData.cyber).bounds || measurement.bounds,measurement,currentItemData); }
                 else orbitStage?.reset();
                 shaderMaterial.uniforms.uTexel.value.set(4/source.width,4/source.height);
                 muralSize = { planeWidth, planeHeight }; muralPaths = paths; fitMuralCamera(true);
                 webglContainer.removeAttribute('data-loading'); status.textContent = figureMode ? measurement.diagnostic ? '手动边界预览 · ' + measurement.diagnostic : '' : '兼容展示 · 尚未提供专用人物抠图';
                 const diagnostics = cyberDiagnostics(currentItemData.cyber); if (diagnostics.length) status.append(' · ' + diagnostics.join('；'));
                 if (figureMode) { lineMesh.material.opacity = reducedMotion.matches ? 1 : 0; gsap.to(lineMesh.material,{opacity:1,duration:reducedMotion.matches ? 0 : (measurement.cacheHit ? .35 : 1.6),overwrite:true}); pulseFigure(); }
+                if(figureMode)fitMuralCamera(true);
             } catch (error) {
                 request.abort();
                 if (version !== muralVersion || currentTrack !== 'cyber' || (error.name === 'AbortError' && !timedOut)) return;
@@ -1001,6 +1012,7 @@
             if (!currentItemData) return;
             const config = calibrationOverrides.get(currentItemData.id) || cyberConfig(currentItemData.cyber);
             document.querySelectorAll('[data-calibration]').forEach(input => input.value = config.layout[input.dataset.calibration]);
+            document.querySelectorAll('[data-orbit]').forEach(input => input.value = config.orbit[input.dataset.orbit]);
             document.getElementById('calibration-json').value = JSON.stringify({cyber:config},null,2);
             document.getElementById('calibration-measure').textContent = figureMeasurement ? `原图 ${figureMeasurement.width} × ${figureMeasurement.height} · Alpha ${figureMeasurement.scanMs.toFixed(1)} ms · 有效边界 ${JSON.stringify(config.bounds || figureMeasurement.bounds)}${stageLayout ? ' · 适配 ' + stageLayout.scale.toFixed(3) : ''}` : '当前为旧素材兼容展示；校准需要透明 figure';
             document.getElementById('calibration-character').value = currentItemData.id;
@@ -1010,6 +1022,17 @@
             const input=document.createElement('input');input.type='number';input.min=min;input.max=max;input.step=step;input.dataset.calibration=key;
             input.oninput=()=>{if(!currentItemData || !figureMode || input.value==='')return;const config=calibrationOverrides.get(currentItemData.id)||cyberConfig(currentItemData.cyber);config.layout[key]=Number(input.value);calibrationOverrides.set(currentItemData.id,cyberConfig(config));fitMuralCamera(true);};row.append(input);document.getElementById('calibration-fields').append(row);
         }
+        for(const [key,label,min,max,step] of [['maxPanels','面板上限',0,5,1],['bias','环绕偏向',-1,1,.1],['intensity','轨道强度',0,1,.1],['offsetX','环绕左右',-.25,.25,.01],['offsetY','环绕上下',-.25,.25,.01],['template','构图模板']]) {
+            const row=document.createElement('label');row.textContent=label;
+            const input=document.createElement(key==='template'?'select':'input');input.dataset.orbit=key;
+            if(key==='template')for(const [value,text] of [['auto','自动'],['vertical','纵向'],['horizontal','横向'],['asymmetric','不对称']]){const option=document.createElement('option');option.value=value;option.textContent=text;input.append(option);}
+            else {input.type='number';input.min=min;input.max=max;input.step=step;}
+            input.oninput=()=>{if(!currentItemData||!figureMode||input.value==='')return;const config=calibrationOverrides.get(currentItemData.id)||cyberConfig(currentItemData.cyber);config.orbit[key]=key==='template'?input.value:Number(input.value);calibrationOverrides.set(currentItemData.id,cyberConfig(config));fitMuralCamera(true);};row.append(input);document.getElementById('calibration-fields').append(row);
+        }
+        // Content/font dimensions can settle after a fetch. Re-layout from target
+        // DOM boxes, never the archive's animated transform or a new alpha scan.
+        new ResizeObserver(()=>{if(currentTrack==='cyber'&&figureMode&&!webglContainer.hasAttribute('data-loading'))fitMuralCamera(true);}).observe(document.getElementById('floating-info'));
+        document.fonts.ready.then(()=>{if(currentTrack==='cyber'&&figureMode)fitMuralCamera(true);});
         document.getElementById('calibration-toggle').onclick=()=>{
             const panel=document.getElementById('calibration');panel.hidden=!panel.hidden;
             const select=document.getElementById('calibration-character');select.replaceChildren();
@@ -1019,7 +1042,7 @@
         document.getElementById('calibration-character').onchange=e=>loadSeriesData(globalAssetsData.findIndex(item=>item.id===e.target.value));
         document.getElementById('preview-default').onclick=()=>setRevealed(false);
         document.getElementById('preview-revealed').onclick=()=>setRevealed(true);
-        document.getElementById('calibration-reset').onclick=()=>{const config=cyberConfig(currentItemData.cyber);config.layout=cyberConfig().layout;delete config.bounds;calibrationOverrides.set(currentItemData.id,config);fitMuralCamera(true);};
+        document.getElementById('calibration-reset').onclick=()=>{const config=cyberConfig(currentItemData.cyber);config.layout={...config.layout,...cyberConfig().layout};config.orbit={...config.orbit,...cyberConfig().orbit};delete config.bounds;calibrationOverrides.set(currentItemData.id,config);fitMuralCamera(true);};
         document.getElementById('calibration-copy').onclick=async()=>{const text=document.getElementById('calibration-json');try{await navigator.clipboard.writeText(text.value);}catch{text.focus();text.select();}};
         let clock;
         let glFrame = null;

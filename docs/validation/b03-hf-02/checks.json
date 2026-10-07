@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-07",
+  "baseline": "6220d742143568ddd96f219bac715cdc3ef8a77d",
+  "unit": { "command": "npm test", "passed": 19, "failed": 0, "log": "local/unit-tests.txt" },
+  "browser": [
+    { "command": "npm run test:b03-browser", "passed": true, "reports": ["b03-results.json", "stage-results.json"] },
+    { "command": "npm run test:b03-layout-browser", "passed": true, "reports": ["layout-results.json"] },
+    { "command": "npm run test:b03-hf-browser", "passed": true, "reports": ["theatre-results.json"] },
+    { "command": "npm run test:browser", "passed": true, "reports": ["b01-results.json"] },
+    { "command": "npm run test:b02-browser", "passed": true, "reports": ["b02-results.json"] }
+  ],
+  "syntax": { "htmlModule": "B01 checker parses the main module", "nodeCheck": ["public/figure-stage.mjs", "public/orbit-layout.mjs", "public/orbit-stage.mjs", "b03-layout-browser-check.cjs", "b03-hf-browser-check.cjs"], "passed": true },
+  "build": "Native static frontend and Express: no bundling/build script configured",
+  "integrity": { "protectedFiles": 247, "passed": true, "report": "asset-integrity.json" },
+  "limits": ["Camera boundary simulated; physical camera and gesture hardware not accepted", "Formal tracked figure: ID01; ID05 is a preexisting uncommitted local author resource", "Synthetic geometry fixtures are not heritage images", "Author final visual approval pending"]
+}
