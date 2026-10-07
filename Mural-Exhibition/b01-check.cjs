@@ -10,7 +10,7 @@ for(const [a,b] of [['const cyberScripts','function loadEntryImage'],['function 
 }
 // B03 authorizes layout fitting, cancelable textures and one shared reveal action.
 // The hand classification, thresholds, cooldown, pointer and scroll math stay exact.
-const gesture=s=>block(s,'function handleGestureLogic','function triggerSwipeFlash').replace(/if \(dist > 0\.35 && !isRevealed\) \{[\s\S]*?(?=\n            \} else if)/,'REVEAL_ACTION');
+const gesture=require('./b03-gesture-contract.cjs');
 assert.equal(gesture(html),gesture(base),'Gesture recognition/scrolling algorithm changed');
 for(const removed of ['panMural','splash-poem','splash-subtitle','hideSplash','is-loaded','picsum.photos'])assert.ok(!html.includes(removed),removed);
 assert.ok(html.includes('data-src="gallery/mural-02-detail.webp"'));

@@ -1,0 +1,60 @@
+{
+  "files": [
+    {
+      "file": "selected/01-default.webp",
+      "source": "local/motion/01-default.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 1071036,
+      "sha256": "7cd3ee4c594e6ea9f62bffcc9d7f56656b42ed9b51bf8157e99ba2ba422be395",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/01-focus.webp",
+      "source": "local/motion/01-focus.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 1072610,
+      "sha256": "1f5cd163eccb9c5df73150f13d54964552579e6f497c776a769cb3912061f891",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/01-switching.webp",
+      "source": "local/motion/01-switching.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 1113662,
+      "sha256": "b3b73296afff215d5d8bc7c69521717d667b8c36b0085d4d4414f4542dfd8cd6",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/01-revealed.webp",
+      "source": "local/motion/01-revealed.png",
+      "width": 1440,
+      "height": 900,
+      "bytes": 694652,
+      "sha256": "e9875ffc21a1a5b4ea917926f20ef87b15327311a164e26791a1232b54d8231d",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/01-peak-1366x768.webp",
+      "source": "local/motion/peak-1366x768.png",
+      "width": 1366,
+      "height": 768,
+      "bytes": 595806,
+      "sha256": "bf8f6786db182254f3d165753b71f225a0b0ebcd4fa65936f52fab9869cecf6f",
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/01-default-1280x800.webp",
+      "source": "local/motion/default-1280x800.png",
+      "width": 1280,
+      "height": 800,
+      "bytes": 585380,
+      "sha256": "484b31fe2a4e75689a8d04583555657d48331cb48e4115fe97ed4a3a7971da93",
+      "rgbaIdentical": true
+    }
+  ],
+  "totalBytes": 5133146,
+  "video": "Only local; browser-only 01/05 sequence and synthetic hand input are explicitly documented."
+}

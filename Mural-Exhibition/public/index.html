@@ -310,7 +310,7 @@
             <button type="button" data-step="1">下一组 →</button>
         </nav>
         <p id="cyber-asset-status" role="status"></p>
-        <p class="gesture-hint">双手展开 · 查看档案　／　单手挥动 · 切换人物</p>
+        <p class="gesture-hint">双手展开 · 查看档案　／　单手挥动 · 下一人物</p>
         <nav class="cyber-controls" aria-label="体感辅助操作">
             <button type="button" data-step="-1">← 上一组</button>
             <button type="button" id="reveal-toggle" aria-expanded="false" aria-controls="floating-info">查看人物档案</button>
@@ -340,6 +340,7 @@
         import { archiveBlocks, renderArchive, cameraFit } from './character-study.mjs';
         import { measureFigure, cyberConfig, cyberDiagnostics, figureLayout, stageSafeArea, particleGrid, canEnterCyber } from './figure-stage.mjs';
         import { OrbitStage } from './orbit-stage.mjs';
+        import { NextGestureGate } from './next-gesture.mjs';
         import { attachSurface, applySurface, surfaceConfig, exhibitionTiming, DecorationBudget } from './mural-surface.mjs';
         let orbitStage;
         let globalAssetsData = [];
@@ -920,6 +921,7 @@
             u.uPigment.value=duration?0:1;lineMesh.material.opacity=duration?.35:1;
             gsap.to(u.uPigment,{value:1,duration,ease:'power2.out',overwrite:true,onComplete:()=>{webglContainer.dataset.phase='stable';}});
             gsap.to(lineMesh.material,{opacity:1,duration:duration*.8,overwrite:true});
+            if(duration){const target={x:lineMesh.scale.x,y:lineMesh.scale.y};gsap.fromTo(lineMesh.scale,{x:target.x*1.025,y:target.y*1.025},{...target,duration:duration*.65,ease:'power2.out',overwrite:true});}
             orbitStage?.enter(duration);pulseFigure();
         }
         const calibrationOverrides = new Map();
@@ -964,7 +966,7 @@
             if (revealed && (currentTrack !== 'cyber' || webglContainer.hasAttribute('data-loading') || !lineMesh)) return;
             isRevealed = revealed;
             document.getElementById('main-app').dataset.revealed = String(revealed);
-            document.querySelector('.gesture-hint').textContent = revealed ? '双手收拢 · 返回完整人物　／　单手挥动 · 切换人物' : '双手展开 · 查看简介　／　单手挥动 · 切换人物';
+            document.querySelector('.gesture-hint').textContent = revealed ? '双手收拢 · 返回完整人物　／　单手挥动 · 下一人物' : '双手展开 · 查看档案　／　单手挥动 · 下一人物';
             const panel = document.getElementById('floating-info'); panel.classList.toggle('visible', revealed);
             panel.inert = !revealed && currentTrack === 'cyber';
             const button = document.getElementById('reveal-toggle'); button.textContent = revealed ? '收起人物简介' : '查看人物简介'; button.setAttribute('aria-expanded', String(revealed));
@@ -992,8 +994,8 @@
             }
             const request = muralRequest = new AbortController();
             webglContainer.dataset.loading = ''; status.textContent = '正在加载当前人物图像…';
-            const exitDelay=(lineMesh&&!reducedMotion.matches) ? .2 : 0;
-            if(lineMesh){webglContainer.dataset.phase='leaving';gsap.to(lineMesh.material,{opacity:0,delay:reducedMotion.matches?0:.08,duration:reducedMotion.matches?0:exhibitionTiming.exit,overwrite:true});if(figureSurface){for(const u of [figureSurface.uniforms.uPigment,figureSurface.uniforms.uEdgePulse])gsap.killTweensOf(u);gsap.to(figureSurface.uniforms.uPigment,{value:.25,duration:exitDelay,overwrite:true});}}
+            const exitDelay=(lineMesh&&!reducedMotion.matches) ? .32 : 0;
+            if(lineMesh){webglContainer.dataset.phase='leaving';gsap.to(lineMesh.material,{opacity:.16,delay:reducedMotion.matches?0:.1,duration:reducedMotion.matches?0:exhibitionTiming.exit,overwrite:true});if(figureMode)gsap.to(lineMesh.scale,{x:lineMesh.scale.x*.97,y:lineMesh.scale.y*.97,duration:exitDelay,ease:'power2.inOut',overwrite:true});if(figureSurface){for(const u of [figureSurface.uniforms.uPigment,figureSurface.uniforms.uEdgePulse])gsap.killTweensOf(u);gsap.to(figureSurface.uniforms.uPigment,{value:.25,duration:exitDelay,overwrite:true});}}
             const urls = [], textures = []; let timedOut = false;
             const timer = setTimeout(() => { timedOut = true; request.abort(); }, 20000);
             const cachedEntry=muralCache.get(paths);
@@ -1036,6 +1038,7 @@
                 colorPoints = new THREE.Points(new THREE.PlaneGeometry(planeWidth, planeHeight, grid.x, grid.y), shaderMaterial);
                 scene.add(colorPoints);
                 figureMode = !!figurePath; figureMeasurement = measurement; shaderMaterial.uniforms.uFigure.value = figureMode ? 1 : 0; shaderMaterial.uniforms.uFeedback.value = 0;
+                webglContainer.dataset.figure=String(figureMode);
                 if(figureMode) { orbitStage ||= new OrbitStage(document.getElementById('orbit-stage'),gsap,reducedMotion); orbitStage.setSource(source,cyberConfig(currentItemData.cyber).bounds || measurement.bounds,measurement,currentItemData); }
                 else orbitStage?.reset();
                 applyStageSurface();
@@ -1137,7 +1140,7 @@
         let handsModel = null, mpCamera = null;
         
         let pointerHistory = [];
-        let swipeCooldown = 0;
+        const nextGesture = new NextGestureGate(1000);
         let isRevealed = false; 
         
         let gestureNeutralY = 0.5;
@@ -1240,6 +1243,7 @@
                 gsap.to(shaderMaterial.uniforms.uMouse.value, { x: -10, y: -10, duration: 0.3 });
                 pointerHistory = [];
                 continuousOpenFrames = 0;
+                continuousClosedFrames = 0; currentHandState = 'closed'; nextGesture.rearm();
                 return;
             }
 
@@ -1263,6 +1267,7 @@
                 gsap.to(shaderMaterial.uniforms.uMouse.value, { x: -10, y: -10, duration: 0.3 });
                 pointerHistory = [];
                 continuousOpenFrames = 0;
+                continuousClosedFrames = 0; currentHandState = 'closed'; nextGesture.rearm();
                 return;
             }
 
@@ -1293,7 +1298,7 @@
                 } else {
                     continuousClosedFrames++;
                     continuousOpenFrames = 0;
-                    if (continuousClosedFrames > 2) currentHandState = 'closed';
+                    if (continuousClosedFrames > 2) { currentHandState = 'closed'; nextGesture.rearm(); }
                 }
                 
                 const trackPoint = handMarks[9]; 
@@ -1312,7 +1317,7 @@
                 } else {
                     gsap.to(shaderMaterial.uniforms.uMouse.value, { x: -10, y: -10, duration: 0.2 });
 
-                    if (now - swipeCooldown > 1000) {
+                    if (nextGesture.ready(now)) {
                         pointerHistory.push({ x: targetX, y: targetY, t: now });
                         if(pointerHistory.length > 10) pointerHistory.shift(); 
 
@@ -1326,9 +1331,7 @@
                             
                             // 大幅降低距离和速度门槛，即使是很轻微、很随意的挥动也能瞬间触发！
                             if (dt > 0 && distMove > 0.10 && (distMove/dt) > 0.0002) {
-                                triggerSwipeFlash();
-                                loadSeriesData(currentSeriesIndex + 1); 
-                                swipeCooldown = now;
+                                goToNextCharacterFromGesture(now);
                                 pointerHistory = [];
                             }
                         }
@@ -1363,17 +1366,14 @@
             }
         }
 
+        function goToNextCharacterFromGesture(now = Date.now()) {
+            if(currentTrack !== 'cyber' || entryBusy || !nextGesture.trigger(now)) return;
+            triggerSwipeFlash();
+            loadSeriesData(currentSeriesIndex + 1);
+        }
         function triggerSwipeFlash() {
-            if(figureMode){orbitStage?.acknowledgeSwipe((pointerHistory.at(-1)?.x||0)-(pointerHistory[0]?.x||0));return;}
-            if (reducedMotion.matches) return;
-            const flash = document.getElementById('swipe-flash');
-            flash.style.transition = 'none';
-            flash.style.opacity = '1';
-            
-            setTimeout(() => { 
-                flash.style.transition = 'opacity 1s ease-out'; 
-                flash.style.opacity = '0'; 
-            }, 100);
+            // All accepted directions use the same clockwise theatre pulse.
+            orbitStage?.acknowledgeSwipe();
         }
 
     </script>
