@@ -11,10 +11,10 @@ for(const [a,b] of [['const cyberScripts','function loadEntryImage']]) {
  assert.equal(current,frozen.trimEnd(),`Protected core changed: ${a}`);
 }
 // B03 authorizes layout fitting, cancelable textures and one shared reveal action.
-// V3 authorizes camera/Pose ownership and arbitration. Classifier and scroll equations stay exact.
-const gesture=require('./b03-gesture-contract.cjs');
-const gestureBaseline=cp.execFileSync('git',['show','af582f5:Mural-Exhibition/public/index.html'],{encoding:'utf8'});
-assert.equal(gesture(html),gesture(gestureBaseline),'Protected hand classification/archive reading changed');
+// V4 explicitly replaces classification and callback-count scroll equations.
+// B01, dependency startup, shaders and camera lifecycle protections remain exact.
+assert.ok(!/import.*(next-gesture|interaction-controller)/.test(html));
+assert.ok(html.includes('readingVelocity(controlPointer.point,dwellFeedback.region)*dt/1000'));
 assert.equal((html.match(/new Hands\(/g)||[]).length,1);
 assert.equal((html.match(/new Camera\(/g)||[]).length,1);
 assert.ok(html.includes('width: 320, height: 240'));
@@ -30,4 +30,4 @@ assert.ok(fs.statSync(path.join(__dirname,'public/b01/mural-02-left.webp')).size
 const legacyShader=s=>block(s,'const vertexShader','function initWebGL').replace(/\s*uniform float uFigure;\s*uniform float uFeedback;/g,'').replace(/\s*uniform vec2 uTexel;/g,'').replace(/\s*\/\/ FIGURE_FEEDBACK_START[\s\S]*?\/\/ FIGURE_FEEDBACK_END/g,'').replace(' * (1.0 - uFigure)','').replace('mix(1.0 - totalDisp, uFeedback, uFigure)','(1.0 - totalDisp)').replace(/\s+/g,' ');
 assert.equal(legacyShader(html),legacyShader(base),'Legacy shader equations changed outside authorized figure feedback');
 assert.equal((html.match(/new THREE.WebGLRenderer/g)||[]).length,1);
-console.log('B01 syntax/composition, dependencies, legacy shader equations, camera lifecycle, classification and archive scroll math: PASS');
+console.log('B01 syntax/composition, dependencies, legacy shader equations, camera lifecycle and V4 exclusive production path: PASS');

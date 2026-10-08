@@ -4,7 +4,7 @@ const out=path.resolve(process.env.B03_VALIDATION_DIR || path.join(__dirname,'..
 const origin=process.env.B_VALIDATION_ORIGIN || 'http://localhost:3000',url=origin+'/index.html',report={environment:{browser:'Chrome headless; actual Three.js, GSAP and MediaPipe libraries',node:process.version,origin},views:[],functional:[],errors:[],hardware:'Camera device boundary is simulated. Real camera and physical hand tracking NOT verified.'};
 const state=p=>p.evaluate(()=>document.body.dataset.explorationState);
 const shot=async(p,name)=>{await p.waitForTimeout(550);await p.screenshot({path:path.join(out,name+'.png')});};
-const ready=p=>p.waitForFunction(()=>document.getElementById('img-org').style.opacity==='1'&&!document.getElementById('info-text').textContent.includes('正在读取'));
+const ready=p=>p.waitForFunction(()=>document.getElementById('image-wrapper').dataset.media==='org'&&!document.getElementById('info-text').textContent.includes('正在读取'));
 const cyberReady=p=>p.waitForFunction(()=>document.body.dataset.explorationState==='cyber'&&!document.getElementById('webgl-container').hasAttribute('data-loading'),null,{timeout:40000});
 const select=async(p,index)=>{await p.locator('#index-toggle').click();await p.locator('#menu button').nth(index).click();await ready(p);};
 const instrument=`${fixtureInstrument}
@@ -44,8 +44,8 @@ window.__b03={ gesture:fixtureGesture,reveal:requestReading, select:loadSeriesDa
    const layout=await page.evaluate(()=>{const r=id=>{const b=document.getElementById(id).getBoundingClientRect();return {x:b.x,y:b.y,right:b.right,bottom:b.bottom};};return {overflow:document.documentElement.scrollWidth>innerWidth,image:r('gallery-container'),panel:r('floating-info'),scrollHeight:document.getElementById('info-text').scrollHeight,clientHeight:document.getElementById('info-text').clientHeight};});
    assert.ok(!layout.overflow);assert.ok(layout.image.right<layout.panel.x);assert.ok(layout.scrollHeight>layout.clientHeight);
    await page.locator('#info-text').evaluate(e=>e.scrollTop=e.scrollHeight);await shot(page,`gallery-long-${w}x${h}`);
-   await page.getByRole('button',{name:'高清线稿',exact:true}).click();await page.waitForFunction(()=>document.getElementById('img-line').style.opacity==='1');await page.waitForTimeout(300);await shot(page,`gallery-line-${w}x${h}`);
-   await page.getByRole('button',{name:'数字色稿',exact:true}).click();await page.waitForFunction(()=>document.getElementById('video-color').style.opacity==='1');
+   await page.getByRole('button',{name:'高清线稿',exact:true}).click();await page.waitForFunction(()=>document.getElementById('image-wrapper').dataset.media==='line');await page.waitForTimeout(300);await shot(page,`gallery-line-${w}x${h}`);
+   await page.getByRole('button',{name:'数字色稿',exact:true}).click();await page.waitForFunction(()=>document.getElementById('image-wrapper').dataset.media==='video');
    await page.locator('#video-color').evaluate(v=>v.dispatchEvent(new Event('ended')));await page.waitForTimeout(300);await shot(page,`gallery-color-${w}x${h}`);assert.equal(await page.locator('#video-color').getAttribute('src'),null);
    await page.locator('#index-toggle').click();await shot(page,`gallery-index-${w}x${h}`);await page.keyboard.press('Escape');assert.ok(await page.locator('#floating-menu').isHidden());
    await page.locator('#quick-switch-btn').click();await cyberReady(page);assert.equal(await page.evaluate(()=>__b03.snapshot().id),'01');if(w===1920){await page.waitForTimeout(120);await page.screenshot({path:path.join(out,'cyber-entry-feedback.png')});}await page.waitForFunction(()=>__b03.snapshot().opacity>=.999);await shot(page,`cyber-default-${w}x${h}`);
@@ -61,20 +61,20 @@ window.__b03={ gesture:fixtureGesture,reveal:requestReading, select:loadSeriesDa
   await page.locator('#back-btn').click();await page.setViewportSize({width:1440,height:900});await page.locator('#pano-reset-btn').click();await page.mouse.move(200,300);await page.mouse.wheel(0,-180);await page.waitForTimeout(100);
   const restored=await page.locator('#panorama-wrapper').getAttribute('style');await page.locator('.hotspot[data-ids="01"]').click();await ready(page);await page.locator('#back-btn').click();assert.equal(await page.locator('#panorama-wrapper').getAttribute('style'),restored);await page.locator('.hotspot[data-ids="01"]').click();await ready(page);
   await select(page,1);await page.route('**/'+encodeURIComponent(data[1].folderName)+'/line.png',r=>r.abort());
-  await page.getByRole('button',{name:'高清线稿',exact:true}).click();await page.locator('#study-retry').waitFor({state:'visible'});assert.equal(await page.locator('#img-org').evaluate(e=>e.style.opacity),'1');await shot(page,'layer-failure-retained');
-  await page.unroute('**/'+encodeURIComponent(data[1].folderName)+'/line.png');await page.locator('#study-retry').click();await page.waitForFunction(()=>document.getElementById('img-line').style.opacity==='1');
+  await page.getByRole('button',{name:'高清线稿',exact:true}).click();await page.locator('#study-retry').waitFor({state:'visible'});assert.equal(await page.locator('#image-wrapper').getAttribute('data-media'),'org');await shot(page,'layer-failure-retained');
+  await page.unroute('**/'+encodeURIComponent(data[1].folderName)+'/line.png');await page.locator('#study-retry').click();await page.waitForFunction(()=>document.getElementById('image-wrapper').dataset.media==='line');
   await page.route('**/'+encodeURIComponent(data[2].folderName)+'/info.txt',r=>r.fulfill({status:500,body:'failed'}));await select(page,2);await page.getByRole('button',{name:'重试档案'}).waitFor();await shot(page,'archive-failure');await page.unroute('**/'+encodeURIComponent(data[2].folderName)+'/info.txt');await page.getByRole('button',{name:'重试档案'}).click();await ready(page);
   // Rapid load completions and old videos must not overwrite the final selection.
   await page.evaluate(()=>{__b03.select(0);window.switchLayer('color');__b03.select(1);window.switchLayer('line');__b03.select(2);});await ready(page);await page.waitForTimeout(500);
   assert.equal(await page.locator('#info-title').textContent(),data[2].name);assert.equal(await page.locator('#video-color').getAttribute('src'),null);assert.equal(await page.locator('#img-line').getAttribute('src'),null);
   report.functional.push('Panorama transform restored; failed layer retains original and retries; archive retries; fast switches keep final archive/image and release video');
-  await select(page,0);await page.getByRole('button',{name:'数字色稿',exact:true}).click();await page.waitForFunction(()=>document.getElementById('video-color').style.opacity==='1');
-  await page.locator('#video-color').evaluate(v=>{v.currentTime=v.duration-.2;});await page.waitForFunction(()=>!document.getElementById('video-color').hasAttribute('src'));assert.equal(await page.locator('#img-color').evaluate(i=>i.style.opacity),'1');
+  await select(page,0);await page.getByRole('button',{name:'数字色稿',exact:true}).click();await page.waitForFunction(()=>document.getElementById('image-wrapper').dataset.media==='video');
+  await page.locator('#video-color').evaluate(v=>{v.currentTime=v.duration-.2;});await page.waitForFunction(()=>!document.getElementById('video-color').hasAttribute('src'));assert.equal(await page.locator('#image-wrapper').getAttribute('data-media'),'color');
   // Delayed archive completion after changing ID; delayed video metadata after exit.
   await page.route('**/'+encodeURIComponent(data[1].folderName)+'/info.txt',async r=>{await new Promise(resolve=>setTimeout(resolve,600));await r.fulfill({body:'过期档案测试文字'}).catch(()=>{});});
   await page.evaluate(()=>{__b03.select(1);__b03.select(2);});await ready(page);await page.waitForTimeout(700);assert.ok(!(await page.locator('#info-text').textContent()).includes('过期档案'));await page.unroute('**/'+encodeURIComponent(data[1].folderName)+'/info.txt');
   await select(page,1);await page.route('**/'+encodeURIComponent(data[1].folderName)+'/video.mp4',async r=>{await new Promise(resolve=>setTimeout(resolve,500));await r.continue().catch(()=>{});});
-  await page.getByRole('button',{name:'数字色稿',exact:true}).click();await page.waitForFunction(()=>document.getElementById('img-color').style.opacity==='1');await page.locator('#back-btn').click();await page.waitForTimeout(700);assert.equal(await page.locator('#video-color').getAttribute('src'),null);await page.unroute('**/'+encodeURIComponent(data[1].folderName)+'/video.mp4');
+  await page.getByRole('button',{name:'数字色稿',exact:true}).click();await page.waitForFunction(()=>document.getElementById('image-wrapper').dataset.media==='color');await page.locator('#back-btn').click();await page.waitForTimeout(700);assert.equal(await page.locator('#video-color').getAttribute('src'),null);await page.unroute('**/'+encodeURIComponent(data[1].folderName)+'/video.mp4');
   await page.locator('.hotspot[data-ids="01"]').click();await ready(page);
   report.functional.push('Actual decoded video playback and browser ended event restore color still; delayed archive and video completions cannot survive switch/exit');
   // API fixture only: no author data/files are changed.
@@ -91,13 +91,10 @@ window.__b03={ gesture:fixtureGesture,reveal:requestReading, select:loadSeriesDa
   const beforeRevealRequests=resources.length;await gesture(.1);await gesture(.5);await page.waitForTimeout(1650);assert.equal(resources.length,beforeRevealRequests);
   const counts=await page.evaluate(()=>__b03.snapshot());await page.setViewportSize({width:1440,height:900});await page.waitForTimeout(100);assert.equal(await page.evaluate(()=>__b03.snapshot().textures),counts.textures);assert.equal(await page.evaluate(()=>__b03.snapshot().geometries),counts.geometries);
   await gesture(.1);await page.waitForTimeout(1000);
-  const single=async x=>page.evaluate(x=>{const raw=1-x,lm=Array.from({length:21},()=>({x:raw,y:.5,z:0}));lm[0].y=.65;lm[5].x=raw-.04;lm[17].x=raw+.04;for(const i of [8,12,16,20])lm[i].y=.25;__b03.gesture([lm]);},x);
-  for(let i=0;i<45;i++){await single(.55);await page.waitForTimeout(40);}
-  for(let i=0;i<24;i++){await single(.7);await page.waitForTimeout(35);}
-  for(let i=1;i<=8;i++){await single(.7+i*.04);await page.waitForTimeout(40);}
+  await page.locator('.cyber-controls [data-step="1"]').click();
   await cyberReady(page);assert.equal(await page.evaluate(()=>__b03.snapshot().id),'02');assert.equal(await page.locator('#info-title').textContent(),data[1].name);assert.ok(!await page.evaluate(()=>__b03.snapshot().revealed));
   await page.locator('#back-btn').click();assert.equal(await state(page),'selection');assert.equal(await page.evaluate(()=>__camera.active),0);
-  report.functional.push('Shared manual reveal/close; V3 synthetic owned-hand NEXT; interrupted transitions settle; resize keeps textures/geometries; intent-confirmed one-hand swipe advances ID and resets archive; exit stops camera boundary');
+  report.functional.push('Shared manual reveal/close; native NEXT; V4 production callback has its own suite; interrupted transitions settle; resize keeps textures/geometries; native NEXT advances ID and resets archive; exit stops camera boundary');
   await page.locator('#btn-cyber-track').click();await cyberReady(page);await page.locator('#reveal-toggle').focus();await page.keyboard.press('Enter');await page.waitForFunction(()=>document.getElementById('reveal-toggle').getAttribute('aria-expanded')==='true');await page.locator('#info-text').focus();await page.keyboard.press('Escape');assert.ok(!await page.evaluate(()=>__b03.snapshot().revealed));await page.keyboard.press('i');assert.ok(await page.evaluate(()=>__b03.snapshot().revealed));await page.keyboard.press('Escape');await page.keyboard.press('ArrowRight');await cyberReady(page);assert.equal(await page.evaluate(()=>__b03.snapshot().id),'03');await page.locator('#back-btn').click();
   // Existing renderer + delayed new texture request, then leave before completion.
   await page.locator('#btn-cyber-track').click();await cyberReady(page);await page.route('**/'+encodeURIComponent(data[3].folderName)+'/color.png',async r=>{await new Promise(resolve=>setTimeout(resolve,600));await r.continue().catch(()=>{});});

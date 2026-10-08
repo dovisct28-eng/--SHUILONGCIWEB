@@ -5,7 +5,6 @@ import {execFileSync} from 'node:child_process';
 import vm from 'node:vm';
 import {createRequire} from 'node:module';
 
-const gestureContract=createRequire(import.meta.url)('./b03-gesture-contract.cjs');
 import {panelPresentation} from './public/orbit-stage.mjs';
 import {orbitLayout,intersects,projectOccupancy} from './public/orbit-layout.mjs';
 import {figureLayout,stageSafeArea,alphaGeometry} from './public/figure-stage.mjs';
@@ -26,14 +25,16 @@ test('Presentation reserves the entire drift/focus envelope at four sizes and bo
   for(let i=0;i<a.length;i++)assert.ok(!a.slice(i+1).some(p=>intersects(a[i].envelope,p.envelope,12)));
  }
 });
-test('Gesture v2 freezes camera preview, archive/classifier math and stage algorithms; no new RAF',()=>{
+test('V4 freezes camera preview and stage algorithms; no new RAF or legacy production state machines',()=>{
  const baseline='9bf45d4e9d9d911a603d40fc590f41563fcdc874';
  const old=p=>execFileSync('git',['show',baseline+':Mural-Exhibition/'+p],{encoding:'utf8',maxBuffer:8e6}).replace(/\r\n/g,'\n');
  const now=p=>fs.readFileSync(new URL(p,import.meta.url),'utf8').replace(/\r\n/g,'\n');
  const html=now('public/index.html'),base=old('public/index.html');
  const block=(s,a,b)=>s.slice(s.indexOf(a),s.indexOf(b,s.indexOf(a)));
  for(const [a,b]of [['<div id="camera-feed-container">','<aside id="floating-info"']]){assert.ok(block(base,a,b).length>20);assert.equal(block(html,a,b),block(base,a,b));}
- assert.equal(gestureContract(html),gestureContract(base));
+ assert.ok(!/import.*(next-gesture|interaction-controller)/.test(html));
+ assert.match(html,/loadSeriesData\(currentSeriesIndex \+ 1\)/);
+ assert.match(html,/readingVelocity\(controlPointer.point,dwellFeedback.region\)\*dt\/1000/);
  const cameraRules=s=>s.match(/[^{}]*#camera-feed-container[^{}]*\{[^{}]*\}/g);
  assert.deepEqual(cameraRules(now('public/b03.css')),cameraRules(old('public/b03.css')));
  assert.deepEqual(cameraRules(html),cameraRules(base));

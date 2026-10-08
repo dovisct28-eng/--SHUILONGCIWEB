@@ -35,8 +35,8 @@ const shot=(p,n)=>p.screenshot({path:path.join(out,n+'.png')});
   for(let i=0;i<12;i++){await page.mouse.move(300,500);await page.mouse.down();await page.mouse.move(1300,500,{steps:10});await page.mouse.up();}
   await shot(page,'gallery-map-hotspots');const first=page.locator('.hotspot').first();await first.click();await page.waitForFunction(()=>document.body.dataset.explorationState==='gallery-detail');
   await page.waitForFunction(()=>document.getElementById('img-org').naturalWidth>0);await shot(page,'gallery-detail');
-  await page.getByRole('button',{name:'高清线稿',exact:true}).click();await page.waitForFunction(()=>document.getElementById('img-line').style.opacity==='1');
-  await page.getByRole('button',{name:'数字色稿',exact:true}).click();await page.waitForFunction(()=>document.getElementById('img-color').style.opacity==='1');
+  await page.getByRole('button',{name:'高清线稿',exact:true}).click();await page.waitForFunction(()=>document.getElementById('image-wrapper').dataset.media==='line');
+  await page.getByRole('button',{name:'数字色稿',exact:true}).click();await page.waitForFunction(()=>['color','video'].includes(document.getElementById('image-wrapper').dataset.media));
   await page.getByRole('button',{name:'原壁画',exact:true}).click();await page.locator('#back-btn').click();assert.equal(await state(page),'gallery-map');
   await page.locator('#pano-back-btn').click();assert.equal(await state(page),'selection');assert.ok(await page.locator('#btn-gallery-track').isEnabled());
   report.functional.push('native keyboard Enter; map original image/8 hotspots; drag/wheel; hotspot to detail; org/line/color; detail→map→B01');

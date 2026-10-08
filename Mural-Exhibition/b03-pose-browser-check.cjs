@@ -21,7 +21,8 @@ try{
    return Promise.all(urls.map(async url=>{const at=performance.now(),r=await fetch(url);if(!r.ok)throw new Error('Prewarm HTTP '+r.status);const bytes=(await r.arrayBuffer()).byteLength;return {url,bytes,elapsedMs:performance.now()-at};}));
   });
  }
- await p.locator('#btn-cyber-track').click();await p.waitForFunction(()=>window.__runtime&&__runtime.snapshot().pose.models===1&&__runtime.snapshot().phase==='stable',null,{timeout:25000});
+ const initializationStart=Date.now();await p.locator('#btn-cyber-track').click();await p.waitForFunction(()=>window.__runtime&&__runtime.snapshot().pose.models===1&&__runtime.snapshot().phase==='stable',null,{timeout:25000});
+ report.initializationElapsedMs=Date.now()-initializationStart;
  await p.waitForFunction(()=>__runtime.snapshot().pose.frames>=5,null,{timeout:30000});
  report.start=await p.evaluate(()=>__runtime.snapshot());
  report.raf=await p.evaluate(async()=>{const samples=[],start=performance.now();let last=start;return new Promise(resolve=>{function tick(t){samples.push(t-last);last=t;if(t-start<5000)requestAnimationFrame(tick);else resolve({samples:samples.length,averageMs:samples.reduce((a,b)=>a+b,0)/samples.length,maxMs:Math.max(...samples)});}requestAnimationFrame(tick);});});

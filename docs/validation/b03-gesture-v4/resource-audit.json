@@ -1,0 +1,98 @@
+{
+  "checkedAt": "2026-10-08T04:17:18.066Z",
+  "scope": "Read-only metadata and HTTP HEAD; no runtime/model replacement or offline claim.",
+  "results": [
+    {
+      "name": "Tasks Vision package",
+      "url": "https://registry.npmjs.org/@mediapipe/tasks-vision/0.10.21",
+      "status": 200,
+      "elapsedMs": 1109,
+      "bytes": null,
+      "version": "0.10.21",
+      "license": "Apache-2.0",
+      "unpackedBytes": 20529652,
+      "integrity": "sha512-TuhKH+credq4zLksGbYrnvJ1aLIWMc5r0UHwzxzql4BHECJwIAoBR61ZrqwGOW6ZmSBIzU1t4VtKj8hbxFaKeA=="
+    },
+    {
+      "name": "Legacy Hands package",
+      "url": "https://registry.npmjs.org/@mediapipe/hands/0.4.1675469240",
+      "status": 200,
+      "elapsedMs": 1649,
+      "bytes": null,
+      "version": "0.4.1675469240",
+      "license": "Apache-2.0",
+      "unpackedBytes": 24433035,
+      "integrity": "sha512-GxoZvL1mmhJxFxjuyj7vnC++JIuInGznHBin5c7ZSq/RbcnGyfEcJrkM/bMu5K1Mz/2Ko+vEX6/+wewmEHPrHg=="
+    },
+    {
+      "name": "Pose JS",
+      "url": "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.21/vision_bundle.mjs",
+      "status": 200,
+      "elapsedMs": 811,
+      "bytes": 39886
+    },
+    {
+      "name": "Pose WASM SIMD",
+      "url": "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.21/wasm/vision_wasm_internal.wasm",
+      "status": 200,
+      "elapsedMs": 1885,
+      "bytes": 2653484
+    },
+    {
+      "name": "Pose WASM fallback",
+      "url": "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.21/wasm/vision_wasm_nosimd_internal.wasm",
+      "status": 200,
+      "elapsedMs": 811,
+      "bytes": 2649353
+    },
+    {
+      "name": "Pose lite model",
+      "url": "https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_lite/float16/1/pose_landmarker_lite.task",
+      "status": 200,
+      "elapsedMs": 1548,
+      "bytes": 5777746
+    },
+    {
+      "name": "Hands files",
+      "url": "https://data.jsdelivr.com/v1/package/npm/@mediapipe/hands@0.4.1675469240/flat",
+      "status": 200,
+      "elapsedMs": 1572,
+      "bytes": 846,
+      "files": [
+        {
+          "name": "/hand_landmark_full.tflite",
+          "bytes": 5478688
+        },
+        {
+          "name": "/hand_landmark_lite.tflite",
+          "bytes": 2071408
+        },
+        {
+          "name": "/hands.binarypb",
+          "bytes": 550
+        },
+        {
+          "name": "/hands.js",
+          "bytes": 45581
+        },
+        {
+          "name": "/hands_solution_packed_assets.data",
+          "bytes": 4326731
+        },
+        {
+          "name": "/hands_solution_simd_wasm_bin.data",
+          "bytes": 0
+        },
+        {
+          "name": "/hands_solution_simd_wasm_bin.wasm",
+          "bytes": 6026259
+        },
+        {
+          "name": "/hands_solution_wasm_bin.wasm",
+          "bytes": 5917209
+        }
+      ],
+      "allFileBytes": 24433035
+    }
+  ]
+}

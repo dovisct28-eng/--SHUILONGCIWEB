@@ -1,0 +1,2408 @@
+{
+  "scope": "Actual browser page capture; dwell pixels and model coordinates synthetic. No physical-camera evidence. Lossless WebP conversion, full-frame dimensions and decoded RGBA preserved.",
+  "count": 13,
+  "totalBytes": 9246474,
+  "entries": [
+    {
+      "file": "01-ready.webp",
+      "original": "local/dwell/01-ready-1440.png",
+      "purpose": "READY, neutral pointer",
+      "width": 1440,
+      "height": 900,
+      "sourceBytes": 898589,
+      "bytes": 722372,
+      "sourceSha256": "e83b5586e0fd568e0998f0a88688909b57d430019850efaf639f8a8532f87178",
+      "sha256": "3828c6eff6cf24b1e63d29a564bba03877bde5f9efe2ace249529716a70751d7",
+      "rgbaSha256": "b19cb2e85898d43afa96fb9a555162fbbeb42caa5f716a91a6017625339dbf8d",
+      "losslessPixelIdentity": true,
+      "capture": {
+        "name": "01-ready-1440",
+        "elapsedMs": 399,
+        "before": {
+          "state": "READY",
+          "progress": 0,
+          "reading": false
+        },
+        "after": {
+          "index": 0,
+          "total": 8,
+          "id": "01",
+          "reading": false,
+          "state": "READY",
+          "mode": "NAVIGATION",
+          "target": null,
+          "progress": 0,
+          "releaseRequired": false,
+          "blockedReason": "TARGET_OUTSIDE",
+          "lastAction": {
+            "action": "NEXT",
+            "at": 38954.5,
+            "operatorId": "visitor-1",
+            "hand": "visitor-1:left"
+          },
+          "handKey": "visitor-1:left",
+          "nextTrace": [
+            {
+              "at": 20707.099999999627,
+              "index": 0,
+              "state": "TRIGGERED",
+              "reading": false,
+              "person": "PERSON_LOCKED",
+              "context": {
+                "blocked": false,
+                "locked": false
+              },
+              "firstReady": true,
+              "afterIndex": 1,
+              "afterState": "ACTION_TRANSITION"
+            },
+            {
+              "at": 38954.59999999963,
+              "index": 0,
+              "state": "TRIGGERED",
+              "reading": false,
+              "person": "PERSON_LOCKED",
+              "context": {
+                "blocked": false,
+                "locked": false
+              },
+              "firstReady": true,
+              "afterIndex": 1,
+              "afterState": "ACTION_TRANSITION"
+            }
+          ],
+          "pointer": {
+            "valid": true,
+            "visible": true,
+            "point": {
+              "x": 719.9999996501122,
+              "y": 449.99999937587586
+            },
+            "key": "visitor-1:left",
+            "changed": false,
+            "stable": true,
+            "side": "left",
+            "source": "pose",
+            "reason": "READY",
+            "gapMs": 0,
+            "paused": false,
+            "at": 43775.59999999963
+          },
+          "ownership": {
+            "operatorState": "PERSON_LOCKED",
+            "activeOperator": {
+              "center": {
+                "x": 0.5,
+                "y": 0.35
+              },
+              "shoulderWidth": 0.30000000000000004,
+              "leftShoulder": {
+                "x": 0.65,
+                "y": 0.35
+              },
+              "rightShoulder": {
+                "x": 0.35,
+                "y": 0.35
+              },
+              "leftWrist": {
+                "x": 0.5,
+                "y": 0.59
+              },
+              "rightWrist": null,
+              "leftHip": null,
+              "rightHip": null,
+              "torsoComplete": false,
+              "bodyMode": "upper",
+              "confidence": 1,
+              "torsoCenter": null,
+              "id": "visitor-1",
+              "firstSeenAt": 4233.699999999255,
+              "lastSeenAt": 43742.699999999255,
+              "lockedSince": 5066.699999999255
+            },
+            "assignedHands": [
+              {
+                "side": "left",
+                "d": 0,
+                "landmarks": "[synthetic coordinates omitted; original retained locally]",
+                "wrist": {
+                  "x": 0.5,
+                  "y": 0.59
+                },
+                "x": 0.5,
+                "y": 0.5,
+                "operatorId": "visitor-1",
+                "lastSeenAt": 43775.59999999963,
+                "fresh": true,
+                "source": "pose",
+                "index": 0
+              }
+            ],
+            "released": false,
+            "diagnostics": {
+              "poseFresh": true,
+              "operatorObservable": true,
+              "poseAgeMs": 32.90000000037253,
+              "candidateHoldMs": 0,
+              "operatorLossMs": 32.90000000037253,
+              "handsDetected": 1,
+              "handsAssigned": 1,
+              "leftAssigned": true,
+              "rightAssigned": false,
+              "leftSource": "pose",
+              "rightSource": null,
+              "posePeople": 1,
+              "bodyMode": "upper",
+              "shoulderWidth": 0.30000000000000004,
+              "hipsVisible": false,
+              "leftWristVisible": true,
+              "rightWristVisible": false,
+              "assignmentRejections": [],
+              "assignmentBlocked": false,
+              "assignmentStatus": "OK"
+            }
+          },
+          "targets": [
+            {
+              "id": "view",
+              "x": 123.1875,
+              "y": 511,
+              "width": 128,
+              "height": 76,
+              "disabled": false,
+              "dwellMs": 1000
+            },
+            {
+              "id": "next",
+              "x": 1188.796875,
+              "y": 511,
+              "width": 128,
+              "height": 76,
+              "disabled": false,
+              "dwellMs": 1000
+            }
+          ],
+          "region": null,
+          "loading": false,
+          "phase": "stable",
+          "orbitPhase": "stable",
+          "orbitActive": true,
+          "figure": {
+            "x": 409.6770699223085,
+            "y": 127.84000000000003,
+            "width": 591.8458601553829,
+            "height": 572.16
+          },
+          "figureMode": true,
+          "panels": 5,
+          "rendererCount": 1,
+          "textures": 3,
+          "geometries": 2,
+          "cache": 2,
+          "pose": {
+            "models": 1,
+            "frames": 397,
+            "inferenceTotalMs": 0,
+            "inferenceMaxMs": 0,
+            "staleResults": 0,
+            "active": 1,
+            "inFlight": 0,
+            "averageInferenceMs": 0
+          },
+          "performance": {
+            "callbacks": 1188,
+            "firstAt": 4234.5999999996275,
+            "lastAt": 43775.59999999963,
+            "maxActiveCameras": 1,
+            "activeCameras": 1,
+            "stalePoseFrames": 2,
+            "inputFrames": 1188,
+            "raf": 1
+          }
+        }
+      }
+    },
+    {
+      "file": "02-target-hover.webp",
+      "original": "local/dwell/02-target-hover-1440.png",
+      "purpose": "Target entry / early dwell",
+      "width": 1440,
+      "height": 900,
+      "sourceBytes": 901839,
+      "bytes": 723012,
+      "sourceSha256": "73a9cf5ebf58147de32fad16632c2c17da6ecde506d2299217e28c20c56e448f",
+      "sha256": "f25ccb80a497970c218961a5843277697ed2849f4a7f9b0966cf17e97923bf93",
+      "rgbaSha256": "d558b6d70bf68225cd97239858dbc806309e0e5ffbc0f4a2d3ee4e4ee9556541",
+      "losslessPixelIdentity": true,
+      "capture": {
+        "name": "02-target-hover-1440",
+        "elapsedMs": 389,
+        "before": {
+          "state": "DWELLING",
+          "progress": 0.09839999999850989,
+          "reading": false
+        },
+        "after": {
+          "index": 0,
+          "total": 8,
+          "id": "01",
+          "reading": false,
+          "state": "DWELLING",
+          "mode": "NAVIGATION",
+          "target": "view",
+          "progress": 0.46229999999888244,
+          "releaseRequired": false,
+          "blockedReason": "DWELLING",
+          "lastAction": {
+            "action": "NEXT",
+            "at": 38954.5,
+            "operatorId": "visitor-1",
+            "hand": "visitor-1:left"
+          },
+          "handKey": "visitor-1:left",
+          "nextTrace": [
+            {
+              "at": 20707.099999999627,
+              "index": 0,
+              "state": "TRIGGERED",
+              "reading": false,
+              "person": "PERSON_LOCKED",
+              "context": {
+                "blocked": false,
+                "locked": false
+              },
+              "firstReady": true,
+              "afterIndex": 1,
+              "afterState": "ACTION_TRANSITION"
+            },
+            {
+              "at": 38954.59999999963,
+              "index": 0,
+              "state": "TRIGGERED",
+              "reading": false,
+              "person": "PERSON_LOCKED",
+              "context": {
+                "blocked": false,
+                "locked": false
+              },
+              "firstReady": true,
+              "afterIndex": 1,
+              "afterState": "ACTION_TRANSITION"
+            }
+          ],
+          "pointer": {
+            "valid": true,
+            "visible": true,
+            "point": {
+              "x": 187.31170393580558,
+              "y": 548.976922107251
+            },
+            "key": "visitor-1:left",
+            "changed": false,
+            "stable": true,
+            "side": "left",
+            "source": "pose",
+            "reason": "READY",
+            "gapMs": 0,
+            "paused": false,
+            "at": 44434.699999999255
+          },
+          "ownership": {
+            "operatorState": "PERSON_LOCKED",
+            "activeOperator": {
+              "center": {
+                "x": 0.5,
+                "y": 0.35
+              },
+              "shoulderWidth": 0.30000000000000004,
+              "leftShoulder": {
+                "x": 0.65,
+                "y": 0.35
+              },
+              "rightShoulder": {
+                "x": 0.35,
+                "y": 0.35
+              },
+              "leftWrist": {
+                "x": 0.7220052083333333,
+                "y": 0.656
+              },
+              "rightWrist": null,
+              "leftHip": null,
+              "rightHip": null,
+              "torsoComplete": false,
+              "bodyMode": "upper",
+              "confidence": 1,
+              "torsoCenter": null,
+              "id": "visitor-1",
+              "firstSeenAt": 4233.699999999255,
+              "lastSeenAt": 44333.09999999963,
+              "lockedSince": 5066.699999999255
+            },
+            "assignedHands": [
+              {
+                "side": "left",
+                "d": 0,
+                "landmarks": "[synthetic coordinates omitted; original retained locally]",
+                "wrist": {
+                  "x": 0.7220052083333333,
+                  "y": 0.656
+                },
+                "x": 0.27799479166666674,
+                "y": 0.5660000000000001,
+                "operatorId": "visitor-1",
+                "lastSeenAt": 44434.699999999255,
+                "fresh": true,
+                "source": "pose",
+                "index": 0
+              }
+            ],
+            "released": false,
+            "diagnostics": {
+              "poseFresh": true,
+              "operatorObservable": true,
+              "poseAgeMs": 101.59999999962747,
+              "candidateHoldMs": 0,
+              "operatorLossMs": 101.59999999962747,
+              "handsDetected": 1,
+              "handsAssigned": 1,
+              "leftAssigned": true,
+              "rightAssigned": false,
+              "leftSource": "pose",
+              "rightSource": null,
+              "posePeople": 1,
+              "bodyMode": "upper",
+              "shoulderWidth": 0.30000000000000004,
+              "hipsVisible": false,
+              "leftWristVisible": true,
+              "rightWristVisible": false,
+              "assignmentRejections": [],
+              "assignmentBlocked": false,
+              "assignmentStatus": "OK"
+            }
+          },
+          "targets": [
+            {
+              "id": "view",
+              "x": 123.1875,
+              "y": 511,
+              "width": 128,
+              "height": 76,
+              "disabled": false,
+              "dwellMs": 1000
+            },
+            {
+              "id": "next",
+              "x": 1188.796875,
+              "y": 511,
+              "width": 128,
+              "height": 76,
+              "disabled": false,
+              "dwellMs": 1000
+            }
+          ],
+          "region": null,
+          "loading": false,
+          "phase": "stable",
+          "orbitPhase": "stable",
+          "orbitActive": true,
+          "figure": {
+            "x": 409.6770699223085,
+            "y": 127.84000000000003,
+            "width": 591.8458601553829,
+            "height": 572.16
+          },
+          "figureMode": true,
+          "panels": 5,
+          "rendererCount": 1,
+          "textures": 3,
+          "geometries": 2,
+          "cache": 2,
+          "pose": {
+            "models": 1,
+            "frames": 404,
+            "inferenceTotalMs": 0,
+            "inferenceMaxMs": 0,
+            "staleResults": 0,
+            "active": 1,
+            "inFlight": 0,
+            "averageInferenceMs": 0
+          },
+          "performance": {
+            "callbacks": 1208,
+            "firstAt": 4234.5999999996275,
+            "lastAt": 44434.699999999255,
+            "maxActiveCameras": 1,
+            "activeCameras": 1,
+            "stalePoseFrames": 2,
+            "inputFrames": 1208,
+            "raf": 1
+          }
+        }
+      }
+    },
+    {
+      "file": "03-dwelling.webp",
+      "original": "local/dwell/03-dwelling-1440.png",
+      "purpose": "Real progress during dwell",
+      "width": 1440,
+      "height": 900,
+      "sourceBytes": 896188,
+      "bytes": 720570,
+      "sourceSha256": "2b80dc753b55bc7ab2319bc445fe1ea631466a5799d44fe63aadb9a5c2594a2a",
+      "sha256": "75e4fe05c3e204057965d77f55ff6d680fe221af0e71209008f1f038e4482da6",
+      "rgbaSha256": "dabdbd6702a3ebe130df1ec17ae0d2bbeaad46c59dab1b7b057838d632533815",
+      "losslessPixelIdentity": true,
+      "capture": {
+        "name": "03-dwelling-1440",
+        "elapsedMs": 377,
+        "before": {
+          "state": "DWELLING",
+          "progress": 0.3981999999992549,
+          "reading": false
+        },
+        "after": {
+          "index": 0,
+          "total": 8,
+          "id": "01",
+          "reading": false,
+          "state": "DWELLING",
+          "mode": "NAVIGATION",
+          "target": "view",
+          "progress": 0.7595,
+          "releaseRequired": false,
+          "blockedReason": "DWELLING",
+          "lastAction": {
+            "action": "NEXT",
+            "at": 38954.5,
+            "operatorId": "visitor-1",
+            "hand": "visitor-1:left"
+          },
+          "handKey": "visitor-1:left",
+          "nextTrace": [
+            {
+              "at": 20707.099999999627,
+              "index": 0,
+              "state": "TRIGGERED",
+              "reading": false,
+              "person": "PERSON_LOCKED",
+              "context": {
+                "blocked": false,
+                "locked": false
+              },
+              "firstReady": true,
+              "afterIndex": 1,
+              "afterState": "ACTION_TRANSITION"
+            },
+            {
+              "at": 38954.59999999963,
+              "index": 0,
+              "state": "TRIGGERED",
+              "reading": false,
+              "person": "PERSON_LOCKED",
+              "context": {
+                "blocked": false,
+                "locked": false
+              },
+              "firstReady": true,
+              "afterIndex": 1,
+              "afterState": "ACTION_TRANSITION"
+            }
+          ],
+          "pointer": {
+            "valid": true,
+            "visible": true,
+            "point": {
+              "x": 187.18989949474496,
+              "y": 548.9995541583958
+            },
+            "key": "visitor-1:left",
+            "changed": false,
+            "stable": true,
+            "side": "left",
+            "source": "pose",
+            "reason": "READY",
+            "gapMs": 0,
+            "paused": false,
+            "at": 46940.59999999963
+          },
+          "ownership": {
+            "operatorState": "PERSON_LOCKED",
+            "activeOperator": {
+              "center": {
+                "x": 0.5,
+                "y": 0.35
+              },
+              "shoulderWidth": 0.30000000000000004,
+              "leftShoulder": {
+                "x": 0.65,
+                "y": 0.35
+              },
+              "rightShoulder": {
+                "x": 0.35,
+                "y": 0.35
+              },
+              "leftWrist": {
+                "x": 0.7220052083333333,
+                "y": 0.656
+              },
+              "rightWrist": null,
+              "leftHip": null,
+              "rightHip": null,
+              "torsoComplete": false,
+              "bodyMode": "upper",
+              "confidence": 1,
+              "torsoCenter": null,
+              "id": "visitor-1",
+              "firstSeenAt": 4233.699999999255,
+              "lastSeenAt": 46907.09999999963,
+              "lockedSince": 5066.699999999255
+            },
+            "assignedHands": [
+              {
+                "side": "left",
+                "d": 0,
+                "landmarks": "[synthetic coordinates omitted; original retained locally]",
+                "wrist": {
+                  "x": 0.7220052083333333,
+                  "y": 0.656
+                },
+                "x": 0.27799479166666674,
+                "y": 0.5660000000000001,
+                "operatorId": "visitor-1",
+                "lastSeenAt": 46940.59999999963,
+                "fresh": true,
+                "source": "pose",
+                "index": 0
+              }
+            ],
+            "released": false,
+            "diagnostics": {
+              "poseFresh": true,
+              "operatorObservable": true,
+              "poseAgeMs": 33.5,
+              "candidateHoldMs": 0,
+              "operatorLossMs": 33.5,
+              "handsDetected": 1,
+              "handsAssigned": 1,
+              "leftAssigned": true,
+              "rightAssigned": false,
+              "leftSource": "pose",
+              "rightSource": null,
+              "posePeople": 1,
+              "bodyMode": "upper",
+              "shoulderWidth": 0.30000000000000004,
+              "hipsVisible": false,
+              "leftWristVisible": true,
+              "rightWristVisible": false,
+              "assignmentRejections": [],
+              "assignmentBlocked": false,
+              "assignmentStatus": "OK"
+            }
+          },
+          "targets": [
+            {
+              "id": "view",
+              "x": 123.1875,
+              "y": 511,
+              "width": 128,
+              "height": 76,
+              "disabled": false,
+              "dwellMs": 1000
+            },
+            {
+              "id": "next",
+              "x": 1188.796875,
+              "y": 511,
+              "width": 128,
+              "height": 76,
+              "disabled": false,
+              "dwellMs": 1000
+            }
+          ],
+          "region": null,
+          "loading": false,
+          "phase": "stable",
+          "orbitPhase": "stable",
+          "orbitActive": true,
+          "figure": {
+            "x": 409.6770699223085,
+            "y": 127.84000000000003,
+            "width": 591.8458601553829,
+            "height": 572.16
+          },
+          "figureMode": true,
+          "panels": 5,
+          "rendererCount": 1,
+          "textures": 3,
+          "geometries": 2,
+          "cache": 2,
+          "pose": {
+            "models": 1,
+            "frames": 429,
+            "inferenceTotalMs": 0,
+            "inferenceMaxMs": 0,
+            "staleResults": 0,
+            "active": 1,
+            "inFlight": 0,
+            "averageInferenceMs": 0
+          },
+          "performance": {
+            "callbacks": 1284,
+            "firstAt": 4234.5999999996275,
+            "lastAt": 46940.59999999963,
+            "maxActiveCameras": 1,
+            "activeCameras": 1,
+            "stalePoseFrames": 2,
+            "inputFrames": 1284,
+            "raf": 1
+          }
+        }
+      }
+    },
+    {
+      "file": "04-triggered.webp",
+      "original": "local/dwell/04-triggered-1440.png",
+      "purpose": "Presentation after OPEN; transient TRIGGERED event verified in callback records",
+      "width": 1440,
+      "height": 900,
+      "sourceBytes": 839187,
+      "bytes": 637618,
+      "sourceSha256": "4c7bc495fbceb67ccf6096ebf7c91253cb3107b5aec69f29312dcb1450079f1d",
+      "sha256": "3f4c673b75d0a6c59be24d5cc0ac187f693547e416487c5442fff08bb71f016a",
+      "rgbaSha256": "7116a22f6c973161aea8d90b3aa6e37c43f80276483b5245b8265cb072106a07",
+      "losslessPixelIdentity": true,
+      "capture": {
+        "name": "04-triggered-1440",
+        "elapsedMs": 376,
+        "before": {
+          "state": "ACTION_TRANSITION",
+          "progress": 0,
+          "reading": true
+        },
+        "after": {
+          "index": 0,
+          "total": 8,
+          "id": "01",
+          "reading": true,
+          "state": "WAIT_RELEASE",
+          "mode": "READING",
+          "target": null,
+          "progress": 0,
+          "releaseRequired": true,
+          "blockedReason": "WAIT_RELEASE",
+          "lastAction": {
+            "action": "OPEN",
+            "at": 47204.90000000037,
+            "operatorId": "visitor-1",
+            "hand": "visitor-1:left"
+          },
+          "handKey": "visitor-1:left",
+          "nextTrace": [
+            {
+              "at": 20707.099999999627,
+              "index": 0,
+              "state": "TRIGGERED",
+              "reading": false,
+              "person": "PERSON_LOCKED",
+              "context": {
+                "blocked": false,
+                "locked": false
+              },
+              "firstReady": true,
+              "afterIndex": 1,
+              "afterState": "ACTION_TRANSITION"
+            },
+            {
+              "at": 38954.59999999963,
+              "index": 0,
+              "state": "TRIGGERED",
+              "reading": false,
+              "person": "PERSON_LOCKED",
+              "context": {
+                "blocked": false,
+                "locked": false
+              },
+              "firstReady": true,
+              "afterIndex": 1,
+              "afterState": "ACTION_TRANSITION"
+            }
+          ],
+          "pointer": {
+            "valid": true,
+            "visible": true,
+            "point": {
+              "x": 187.1875000004811,
+              "y": 548.9999999999106
+            },
+            "key": "visitor-1:left",
+            "changed": false,
+            "stable": true,
+            "side": "left",
+            "source": "pose",
+            "reason": "READY",
+            "gapMs": 0,
+            "paused": false,
+            "at": 48097.29999999888
+          },
+          "ownership": {
+            "operatorState": "PERSON_LOCKED",
+            "activeOperator": {
+              "center": {
+                "x": 0.5,
+                "y": 0.35
+              },
+              "shoulderWidth": 0.30000000000000004,
+              "leftShoulder": {
+                "x": 0.65,
+                "y": 0.35
+              },
+              "rightShoulder": {
+                "x": 0.35,
+                "y": 0.35
+              },
+              "leftWrist": {
+                "x": 0.7220052083333333,
+                "y": 0.656
+              },
+              "rightWrist": null,
+              "leftHip": null,
+              "rightHip": null,
+              "torsoComplete": false,
+              "bodyMode": "upper",
+              "confidence": 1,
+              "torsoCenter": null,
+              "id": "visitor-1",
+              "firstSeenAt": 4233.699999999255,
+              "lastSeenAt": 47996,
+              "lockedSince": 5066.699999999255
+            },
+            "assignedHands": [
+              {
+                "side": "left",
+                "d": 0,
+                "landmarks": "[synthetic coordinates omitted; original retained locally]",
+                "wrist": {
+                  "x": 0.7220052083333333,
+                  "y": 0.656
+                },
+                "x": 0.27799479166666674,
+                "y": 0.5660000000000001,
+                "operatorId": "visitor-1",
+                "lastSeenAt": 48097.29999999888,
+                "fresh": true,
+                "source": "pose",
+                "index": 0
+              }
+            ],
+            "released": false,
+            "diagnostics": {
+              "poseFresh": true,
+              "operatorObservable": true,
+              "poseAgeMs": 101.29999999888241,
+              "candidateHoldMs": 0,
+              "operatorLossMs": 101.29999999888241,
+              "handsDetected": 1,
+              "handsAssigned": 1,
+              "leftAssigned": true,
+              "rightAssigned": false,
+              "leftSource": "pose",
+              "rightSource": null,
+              "posePeople": 1,
+              "bodyMode": "upper",
+              "shoulderWidth": 0.30000000000000004,
+              "hipsVisible": false,
+              "leftWristVisible": true,
+              "rightWristVisible": false,
+              "assignmentRejections": [],
+              "assignmentBlocked": false,
+              "assignmentStatus": "OK"
+            }
+          },
+          "targets": [
+            {
+              "id": "view",
+              "x": 123.1875,
+              "y": 511,
+              "width": 128,
+              "height": 76,
+              "disabled": false,
+              "dwellMs": 1000
+            },
+            {
+              "id": "next",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "disabled": true,
+              "dwellMs": 1000
+            }
+          ],
+          "region": null,
+          "loading": false,
+          "phase": "stable",
+          "orbitPhase": "stable",
+          "orbitActive": true,
+          "figure": {
+            "x": 283.1306992230855,
+            "y": 126.16000000000008,
+            "width": 550.1386015538291,
+            "height": 531.8399999999999
+          },
+          "figureMode": true,
+          "panels": 5,
+          "rendererCount": 1,
+          "textures": 3,
+          "geometries": 2,
+          "cache": 2,
+          "pose": {
+            "models": 1,
+            "frames": 441,
+            "inferenceTotalMs": 0,
+            "inferenceMaxMs": 0,
+            "staleResults": 0,
+            "active": 1,
+            "inFlight": 0,
+            "averageInferenceMs": 0
+          },
+          "performance": {
+            "callbacks": 1319,
+            "firstAt": 4234.5999999996275,
+            "lastAt": 48097.29999999888,
+            "maxActiveCameras": 1,
+            "activeCameras": 1,
+            "stalePoseFrames": 2,
+            "inputFrames": 1319,
+            "raf": 1
+          }
+        }
+      }
+    },
+    {
+      "file": "05-reading.webp",
+      "original": "local/dwell/05-reading-1440.png",
+      "purpose": "Reading, NEXT hidden",
+      "width": 1440,
+      "height": 900,
+      "sourceBytes": 868379,
+      "bytes": 652222,
+      "sourceSha256": "99b52c8ae5ad4b666299b65e97236c91fef8aea7d4abb4eca37ab31a91b81aba",
+      "sha256": "79fd2f156acc73d275862fa560a99db2a653ba587e7bdb11b7de4120add5e3f9",
+      "rgbaSha256": "1c56c82f2ffd0cff0ab5146ab07bc0346e1c914d96c33363cc4663f17e5bd62a",
+      "losslessPixelIdentity": true,
+      "capture": {
+        "name": "05-reading-1440",
+        "elapsedMs": 375,
+        "before": {
+          "state": "WAIT_RELEASE",
+          "progress": 0,
+          "reading": true
+        },
+        "after": {
+          "index": 0,
+          "total": 8,
+          "id": "01",
+          "reading": true,
+          "state": "WAIT_RELEASE",
+          "mode": "READING",
+          "target": null,
+          "progress": 0,
+          "releaseRequired": true,
+          "blockedReason": "WAIT_RELEASE",
+          "lastAction": {
+            "action": "OPEN",
+            "at": 47204.90000000037,
+            "operatorId": "visitor-1",
+            "hand": "visitor-1:left"
+          },
+          "handKey": "visitor-1:left",
+          "nextTrace": [
+            {
+              "at": 20707.099999999627,
+              "index": 0,
+              "state": "TRIGGERED",
+              "reading": false,
+              "person": "PERSON_LOCKED",
+              "context": {
+                "blocked": false,
+                "locked": false
+              },
+              "firstReady": true,
+              "afterIndex": 1,
+              "afterState": "ACTION_TRANSITION"
+            },
+            {
+              "at": 38954.59999999963,
+              "index": 0,
+              "state": "TRIGGERED",
+              "reading": false,
+              "person": "PERSON_LOCKED",
+              "context": {
+                "blocked": false,
+                "locked": false
+              },
+              "firstReady": true,
+              "afterIndex": 1,
+              "afterState": "ACTION_TRANSITION"
+            }
+          ],
+          "pointer": {
+            "valid": true,
+            "visible": true,
+            "point": {
+              "x": 187.18750000000014,
+              "y": 548.9999999999999
+            },
+            "key": "visitor-1:left",
+            "changed": false,
+            "stable": true,
+            "side": "left",
+            "source": "pose",
+            "reason": "READY",
+            "gapMs": 0,
+            "paused": false,
+            "at": 49284.29999999888
+          },
+          "ownership": {
+            "operatorState": "PERSON_LOCKED",
+            "activeOperator": {
+              "center": {
+                "x": 0.5,
+                "y": 0.35
+              },
+              "shoulderWidth": 0.30000000000000004,
+              "leftShoulder": {
+                "x": 0.65,
+                "y": 0.35
+              },
+              "rightShoulder": {
+                "x": 0.35,
+                "y": 0.35
+              },
+              "leftWrist": {
+                "x": 0.7220052083333333,
+                "y": 0.656
+              },
+              "rightWrist": null,
+              "leftHip": null,
+              "rightHip": null,
+              "torsoComplete": false,
+              "bodyMode": "upper",
+              "confidence": 1,
+              "torsoCenter": null,
+              "id": "visitor-1",
+              "firstSeenAt": 4233.699999999255,
+              "lastSeenAt": 49184.5,
+              "lockedSince": 5066.699999999255
+            },
+            "assignedHands": [
+              {
+                "side": "left",
+                "d": 0,
+                "landmarks": "[synthetic coordinates omitted; original retained locally]",
+                "wrist": {
+                  "x": 0.7220052083333333,
+                  "y": 0.656
+                },
+                "x": 0.27799479166666674,
+                "y": 0.5660000000000001,
+                "operatorId": "visitor-1",
+                "lastSeenAt": 49284.29999999888,
+                "fresh": true,
+                "source": "pose",
+                "index": 0
+              }
+            ],
+            "released": false,
+            "diagnostics": {
+              "poseFresh": true,
+              "operatorObservable": true,
+              "poseAgeMs": 99.79999999888241,
+              "candidateHoldMs": 0,
+              "operatorLossMs": 99.79999999888241,
+              "handsDetected": 1,
+              "handsAssigned": 1,
+              "leftAssigned": true,
+              "rightAssigned": false,
+              "leftSource": "pose",
+              "rightSource": null,
+              "posePeople": 1,
+              "bodyMode": "upper",
+              "shoulderWidth": 0.30000000000000004,
+              "hipsVisible": false,
+              "leftWristVisible": true,
+              "rightWristVisible": false,
+              "assignmentRejections": [],
+              "assignmentBlocked": false,
+              "assignmentStatus": "OK"
+            }
+          },
+          "targets": [
+            {
+              "id": "view",
+              "x": 123.1875,
+              "y": 511,
+              "width": 128,
+              "height": 76,
+              "disabled": false,
+              "dwellMs": 1000
+            },
+            {
+              "id": "next",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "disabled": true,
+              "dwellMs": 1000
+            }
+          ],
+          "region": null,
+          "loading": false,
+          "phase": "stable",
+          "orbitPhase": "stable",
+          "orbitActive": true,
+          "figure": {
+            "x": 283.1306992230855,
+            "y": 126.16000000000008,
+            "width": 550.1386015538291,
+            "height": 531.8399999999999
+          },
+          "figureMode": true,
+          "panels": 5,
+          "rendererCount": 1,
+          "textures": 3,
+          "geometries": 2,
+          "cache": 2,
+          "pose": {
+            "models": 1,
+            "frames": 453,
+            "inferenceTotalMs": 0,
+            "inferenceMaxMs": 0,
+            "staleResults": 0,
+            "active": 1,
+            "inFlight": 0,
+            "averageInferenceMs": 0
+          },
+          "performance": {
+            "callbacks": 1355,
+            "firstAt": 4234.5999999996275,
+            "lastAt": 49284.29999999888,
+            "maxActiveCameras": 1,
+            "activeCameras": 1,
+            "stalePoseFrames": 2,
+            "inputFrames": 1355,
+            "raf": 1
+          }
+        }
+      }
+    },
+    {
+      "file": "06-wait-release.webp",
+      "original": "local/dwell/06-wait-release-1440.png",
+      "purpose": "Holding return does not retrigger",
+      "width": 1440,
+      "height": 900,
+      "sourceBytes": 867258,
+      "bytes": 650796,
+      "sourceSha256": "2131f45942a27d5be401ce679d43a02ebbe30b4b8239ce4fd249ac68bbd32db8",
+      "sha256": "921b89246fa0a7353d1c9a4eb3dfdf90b396a71ef2bc47222160cf8da7dcc719",
+      "rgbaSha256": "81ad31fbe4f0e8395d1344f2674c0d4be545028b11ca40e431e1e13f28b16f40",
+      "losslessPixelIdentity": true,
+      "capture": {
+        "name": "06-wait-release-1440",
+        "elapsedMs": 369,
+        "before": {
+          "state": "WAIT_RELEASE",
+          "progress": 0,
+          "reading": true
+        },
+        "after": {
+          "index": 0,
+          "total": 8,
+          "id": "01",
+          "reading": true,
+          "state": "WAIT_RELEASE",
+          "mode": "READING",
+          "target": null,
+          "progress": 0,
+          "releaseRequired": true,
+          "blockedReason": "WAIT_RELEASE",
+          "lastAction": {
+            "action": "OPEN",
+            "at": 47204.90000000037,
+            "operatorId": "visitor-1",
+            "hand": "visitor-1:left"
+          },
+          "handKey": "visitor-1:left",
+          "nextTrace": [
+            {
+              "at": 20707.099999999627,
+              "index": 0,
+              "state": "TRIGGERED",
+              "reading": false,
+              "person": "PERSON_LOCKED",
+              "context": {
+                "blocked": false,
+                "locked": false
+              },
+              "firstReady": true,
+              "afterIndex": 1,
+              "afterState": "ACTION_TRANSITION"
+            },
+            {
+              "at": 38954.59999999963,
+              "index": 0,
+              "state": "TRIGGERED",
+              "reading": false,
+              "person": "PERSON_LOCKED",
+              "context": {
+                "blocked": false,
+                "locked": false
+              },
+              "firstReady": true,
+              "afterIndex": 1,
+              "afterState": "ACTION_TRANSITION"
+            }
+          ],
+          "pointer": {
+            "valid": true,
+            "visible": true,
+            "point": {
+              "x": 187.18750000000014,
+              "y": 548.9999999999999
+            },
+            "key": "visitor-1:left",
+            "changed": false,
+            "stable": true,
+            "side": "left",
+            "source": "pose",
+            "reason": "READY",
+            "gapMs": 0,
+            "paused": false,
+            "at": 51000
+          },
+          "ownership": {
+            "operatorState": "PERSON_LOCKED",
+            "activeOperator": {
+              "center": {
+                "x": 0.5,
+                "y": 0.35
+              },
+              "shoulderWidth": 0.30000000000000004,
+              "leftShoulder": {
+                "x": 0.65,
+                "y": 0.35
+              },
+              "rightShoulder": {
+                "x": 0.35,
+                "y": 0.35
+              },
+              "leftWrist": {
+                "x": 0.7220052083333333,
+                "y": 0.656
+              },
+              "rightWrist": null,
+              "leftHip": null,
+              "rightHip": null,
+              "torsoComplete": false,
+              "bodyMode": "upper",
+              "confidence": 1,
+              "torsoCenter": null,
+              "id": "visitor-1",
+              "firstSeenAt": 4233.699999999255,
+              "lastSeenAt": 50968.79999999888,
+              "lockedSince": 5066.699999999255
+            },
+            "assignedHands": [
+              {
+                "side": "left",
+                "d": 0,
+                "landmarks": "[synthetic coordinates omitted; original retained locally]",
+                "wrist": {
+                  "x": 0.7220052083333333,
+                  "y": 0.656
+                },
+                "x": 0.27799479166666674,
+                "y": 0.5660000000000001,
+                "operatorId": "visitor-1",
+                "lastSeenAt": 51000,
+                "fresh": true,
+                "source": "pose",
+                "index": 0
+              }
+            ],
+            "released": false,
+            "diagnostics": {
+              "poseFresh": true,
+              "operatorObservable": true,
+              "poseAgeMs": 31.200000001117587,
+              "candidateHoldMs": 0,
+              "operatorLossMs": 31.200000001117587,
+              "handsDetected": 1,
+              "handsAssigned": 1,
+              "leftAssigned": true,
+              "rightAssigned": false,
+              "leftSource": "pose",
+              "rightSource": null,
+              "posePeople": 1,
+              "bodyMode": "upper",
+              "shoulderWidth": 0.30000000000000004,
+              "hipsVisible": false,
+              "leftWristVisible": true,
+              "rightWristVisible": false,
+              "assignmentRejections": [],
+              "assignmentBlocked": false,
+              "assignmentStatus": "OK"
+            }
+          },
+          "targets": [
+            {
+              "id": "view",
+              "x": 123.1875,
+              "y": 511,
+              "width": 128,
+              "height": 76,
+              "disabled": false,
+              "dwellMs": 1000
+            },
+            {
+              "id": "next",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "disabled": true,
+              "dwellMs": 1000
+            }
+          ],
+          "region": null,
+          "loading": false,
+          "phase": "stable",
+          "orbitPhase": "stable",
+          "orbitActive": true,
+          "figure": {
+            "x": 283.1306992230855,
+            "y": 126.16000000000008,
+            "width": 550.1386015538291,
+            "height": 531.8399999999999
+          },
+          "figureMode": true,
+          "panels": 5,
+          "rendererCount": 1,
+          "textures": 3,
+          "geometries": 2,
+          "cache": 2,
+          "pose": {
+            "models": 1,
+            "frames": 470,
+            "inferenceTotalMs": 0,
+            "inferenceMaxMs": 0,
+            "staleResults": 0,
+            "active": 1,
+            "inFlight": 0,
+            "averageInferenceMs": 0
+          },
+          "performance": {
+            "callbacks": 1407,
+            "firstAt": 4234.5999999996275,
+            "lastAt": 51000,
+            "maxActiveCameras": 1,
+            "activeCameras": 1,
+            "stalePoseFrames": 2,
+            "inputFrames": 1407,
+            "raf": 1
+          }
+        }
+      }
+    },
+    {
+      "file": "07-reading-scroll.webp",
+      "original": "local/dwell/07-reading-scroll.png",
+      "purpose": "Synthetic long-text scroll fixture",
+      "width": 1440,
+      "height": 900,
+      "sourceBytes": 901587,
+      "bytes": 659674,
+      "sourceSha256": "a6a8c0a5d037c7836ee1621970f1d5b2ca66c422eeb33b8b1a95b84f0ab4c422",
+      "sha256": "41b1e650db5a7063f5d5cc467d778b757a69401c4b0c58155bd651ac53d3bbd5",
+      "rgbaSha256": "1fa793edd1d2bac741d2a5d93a34d58e8ebed46017581265295e5f438bc1060a",
+      "losslessPixelIdentity": true,
+      "capture": {
+        "name": "07-reading-scroll",
+        "elapsedMs": 387,
+        "before": {
+          "state": "READY",
+          "progress": 0,
+          "reading": true
+        },
+        "after": {
+          "index": 0,
+          "total": 8,
+          "id": "01",
+          "reading": true,
+          "state": "READY",
+          "mode": "READING",
+          "target": null,
+          "progress": 0,
+          "releaseRequired": false,
+          "blockedReason": "TARGET_OUTSIDE",
+          "lastAction": {
+            "action": "OPEN",
+            "at": 93273.59999999963,
+            "operatorId": "visitor-3",
+            "hand": "visitor-3:left"
+          },
+          "handKey": "visitor-3:left",
+          "nextTrace": [
+            {
+              "at": 20707.099999999627,
+              "index": 0,
+              "state": "TRIGGERED",
+              "reading": false,
+              "person": "PERSON_LOCKED",
+              "context": {
+                "blocked": false,
+                "locked": false
+              },
+              "firstReady": true,
+              "afterIndex": 1,
+              "afterState": "ACTION_TRANSITION"
+            },
+            {
+              "at": 38954.59999999963,
+              "index": 0,
+              "state": "TRIGGERED",
+              "reading": false,
+              "person": "PERSON_LOCKED",
+              "context": {
+                "blocked": false,
+                "locked": false
+              },
+              "firstReady": true,
+              "afterIndex": 1,
+              "afterState": "ACTION_TRANSITION"
+            },
+            {
+              "at": 57236.40000000037,
+              "index": 0,
+              "state": "TRIGGERED",
+              "reading": false,
+              "person": "PERSON_LOCKED",
+              "context": {
+                "blocked": false,
+                "locked": false
+              },
+              "firstReady": true,
+              "afterIndex": 1,
+              "afterState": "ACTION_TRANSITION"
+            },
+            {
+              "at": 76678.09999999963,
+              "index": 0,
+              "state": "TRIGGERED",
+              "reading": false,
+              "person": "PERSON_LOCKED",
+              "context": {
+                "blocked": false,
+                "locked": false
+              },
+              "firstReady": true,
+              "afterIndex": 1,
+              "afterState": "ACTION_TRANSITION"
+            }
+          ],
+          "pointer": {
+            "valid": true,
+            "visible": true,
+            "point": {
+              "x": 1166.4140625,
+              "y": 466.6128194037908
+            },
+            "key": "visitor-3:left",
+            "changed": false,
+            "stable": true,
+            "side": "left",
+            "source": "pose",
+            "reason": "READY",
+            "gapMs": 0,
+            "paused": false,
+            "at": 97170
+          },
+          "ownership": {
+            "operatorState": "PERSON_LOCKED",
+            "activeOperator": {
+              "center": {
+                "x": 0.5,
+                "y": 0.35
+              },
+              "shoulderWidth": 0.30000000000000004,
+              "leftShoulder": {
+                "x": 0.65,
+                "y": 0.35
+              },
+              "rightShoulder": {
+                "x": 0.35,
+                "y": 0.35
+              },
+              "leftWrist": {
+                "x": 0.313994140625,
+                "y": 0.6010749999999999
+              },
+              "rightWrist": null,
+              "leftHip": null,
+              "rightHip": null,
+              "torsoComplete": false,
+              "bodyMode": "upper",
+              "confidence": 1,
+              "torsoCenter": null,
+              "id": "visitor-3",
+              "firstSeenAt": 90335.5,
+              "lastSeenAt": 97068.19999999925,
+              "lockedSince": 91197
+            },
+            "assignedHands": [
+              {
+                "side": "left",
+                "d": 0,
+                "landmarks": "[synthetic coordinates omitted; original retained locally]",
+                "wrist": {
+                  "x": 0.313994140625,
+                  "y": 0.6010749999999999
+                },
+                "x": 0.686005859375,
+                "y": 0.511075,
+                "operatorId": "visitor-3",
+                "lastSeenAt": 97170,
+                "fresh": true,
+                "source": "pose",
+                "index": 0
+              }
+            ],
+            "released": false,
+            "diagnostics": {
+              "poseFresh": true,
+              "operatorObservable": true,
+              "poseAgeMs": 101.80000000074506,
+              "candidateHoldMs": 0,
+              "operatorLossMs": 101.80000000074506,
+              "handsDetected": 1,
+              "handsAssigned": 1,
+              "leftAssigned": true,
+              "rightAssigned": false,
+              "leftSource": "pose",
+              "rightSource": null,
+              "posePeople": 1,
+              "bodyMode": "upper",
+              "shoulderWidth": 0.30000000000000004,
+              "hipsVisible": false,
+              "leftWristVisible": true,
+              "rightWristVisible": false,
+              "assignmentRejections": [],
+              "assignmentBlocked": false,
+              "assignmentStatus": "OK"
+            }
+          },
+          "targets": [
+            {
+              "id": "view",
+              "x": 123.1875,
+              "y": 511,
+              "width": 128,
+              "height": 76,
+              "disabled": false,
+              "dwellMs": 1000
+            },
+            {
+              "id": "next",
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "disabled": true,
+              "dwellMs": 1000
+            }
+          ],
+          "region": {
+            "id": "reading",
+            "x": 972.21875,
+            "y": 401.015625,
+            "width": 388.390625,
+            "height": 327.984375
+          },
+          "loading": false,
+          "phase": "stable",
+          "orbitPhase": "stable",
+          "orbitActive": true,
+          "figure": {
+            "x": 283.1306992230855,
+            "y": 126.16000000000008,
+            "width": 550.1386015538291,
+            "height": 531.8399999999999
+          },
+          "figureMode": true,
+          "panels": 5,
+          "rendererCount": 1,
+          "textures": 3,
+          "geometries": 2,
+          "cache": 2,
+          "pose": {
+            "models": 1,
+            "frames": 937,
+            "inferenceTotalMs": 0,
+            "inferenceMaxMs": 0,
+            "staleResults": 0,
+            "active": 1,
+            "inFlight": 0,
+            "averageInferenceMs": 0
+          },
+          "performance": {
+            "callbacks": 2804,
+            "firstAt": 4234.5999999996275,
+            "lastAt": 97170,
+            "maxActiveCameras": 1,
+            "activeCameras": 1,
+            "stalePoseFrames": 2,
+            "inputFrames": 2804,
+            "raf": 1
+          }
+        }
+      }
+    },
+    {
+      "file": "08-diagnostics.webp",
+      "original": "local/dwell/08-diagnostics.png",
+      "purpose": "Debug-only production-chain fields",
+      "width": 1440,
+      "height": 900,
+      "sourceBytes": 877690,
+      "bytes": 692050,
+      "sourceSha256": "fa22e4cbeeb725e2f3a2b619ea2f6a13997ecd52f0d5964af682db85075b1b65",
+      "sha256": "4ed67c88deb894e068086dddd5578c3c748c00c3b73a067c232a9fadfa4ac25f",
+      "rgbaSha256": "8104e9456ba03b8fae35f28d2094e62253c005b3f406a6077e087cee60161c9f",
+      "losslessPixelIdentity": true,
+      "capture": {
+        "name": "08-diagnostics",
+        "elapsedMs": 424,
+        "before": {
+          "state": "DWELLING",
+          "progress": 0.3316999999992549,
+          "reading": false
+        },
+        "after": {
+          "index": 0,
+          "total": 8,
+          "id": "01",
+          "reading": false,
+          "state": "DWELLING",
+          "mode": "NAVIGATION",
+          "target": "view",
+          "progress": 0.7598000000007451,
+          "releaseRequired": false,
+          "blockedReason": "DWELLING",
+          "lastAction": null,
+          "handKey": "visitor-1:left",
+          "nextTrace": [],
+          "pointer": {
+            "valid": true,
+            "visible": true,
+            "point": {
+              "x": 187.1875000000001,
+              "y": 549
+            },
+            "key": "visitor-1:left",
+            "changed": false,
+            "stable": true,
+            "side": "left",
+            "source": "pose",
+            "reason": "READY",
+            "gapMs": 0,
+            "paused": false,
+            "at": 6219.200000001118
+          },
+          "ownership": {
+            "operatorState": "PERSON_LOCKED",
+            "activeOperator": {
+              "center": {
+                "x": 0.5,
+                "y": 0.35
+              },
+              "shoulderWidth": 0.30000000000000004,
+              "leftShoulder": {
+                "x": 0.65,
+                "y": 0.35
+              },
+              "rightShoulder": {
+                "x": 0.35,
+                "y": 0.35
+              },
+              "leftWrist": {
+                "x": 0.7220052083333333,
+                "y": 0.656
+              },
+              "rightWrist": null,
+              "leftHip": null,
+              "rightHip": null,
+              "torsoComplete": false,
+              "bodyMode": "upper",
+              "confidence": 1,
+              "torsoCenter": null,
+              "id": "visitor-1",
+              "firstSeenAt": 3351.800000000745,
+              "lastSeenAt": 6121.5999999996275,
+              "lockedSince": 4206.5
+            },
+            "assignedHands": [
+              {
+                "side": "left",
+                "d": 0,
+                "landmarks": "[synthetic coordinates omitted; original retained locally]",
+                "wrist": {
+                  "x": 0.7220052083333333,
+                  "y": 0.656
+                },
+                "x": 0.27799479166666674,
+                "y": 0.5660000000000001,
+                "operatorId": "visitor-1",
+                "lastSeenAt": 6219.200000001118,
+                "fresh": true,
+                "source": "pose",
+                "index": 0
+              }
+            ],
+            "released": false,
+            "diagnostics": {
+              "poseFresh": true,
+              "operatorObservable": true,
+              "poseAgeMs": 97.60000000149012,
+              "candidateHoldMs": 0,
+              "operatorLossMs": 97.60000000149012,
+              "handsDetected": 1,
+              "handsAssigned": 1,
+              "leftAssigned": true,
+              "rightAssigned": false,
+              "leftSource": "pose",
+              "rightSource": null,
+              "posePeople": 1,
+              "bodyMode": "upper",
+              "shoulderWidth": 0.30000000000000004,
+              "hipsVisible": false,
+              "leftWristVisible": true,
+              "rightWristVisible": false,
+              "assignmentRejections": [],
+              "assignmentBlocked": false,
+              "assignmentStatus": "OK"
+            }
+          },
+          "targets": [
+            {
+              "id": "view",
+              "x": 123.1875,
+              "y": 511,
+              "width": 128,
+              "height": 76,
+              "disabled": false,
+              "dwellMs": 1000
+            },
+            {
+              "id": "next",
+              "x": 1188.796875,
+              "y": 511,
+              "width": 128,
+              "height": 76,
+              "disabled": false,
+              "dwellMs": 1000
+            }
+          ],
+          "region": null,
+          "loading": false,
+          "phase": "stable",
+          "orbitPhase": "stable",
+          "orbitActive": true,
+          "figure": {
+            "x": 409.6770699223085,
+            "y": 127.84000000000003,
+            "width": 591.8458601553829,
+            "height": 572.16
+          },
+          "figureMode": true,
+          "panels": 5,
+          "rendererCount": 1,
+          "textures": 1,
+          "geometries": 2,
+          "cache": 1,
+          "pose": {
+            "models": 1,
+            "frames": 30,
+            "inferenceTotalMs": 0,
+            "inferenceMaxMs": 0,
+            "staleResults": 0,
+            "active": 1,
+            "inFlight": 0,
+            "averageInferenceMs": 0
+          },
+          "performance": {
+            "callbacks": 88,
+            "firstAt": 3352.7000000011176,
+            "lastAt": 6219.200000001118,
+            "maxActiveCameras": 1,
+            "activeCameras": 1,
+            "stalePoseFrames": 1,
+            "inputFrames": 88,
+            "raf": 1
+          }
+        }
+      }
+    },
+    {
+      "file": "09-ready-1280.webp",
+      "original": "local/dwell/01-ready-1280.png",
+      "purpose": "Representative 1280x800",
+      "width": 1280,
+      "height": 800,
+      "sourceBytes": 738789,
+      "bytes": 586214,
+      "sourceSha256": "a12dcdf5e2dd43be9eff738ac744cd6a0bf7feb72ce89bd53fe38051346b67e4",
+      "sha256": "24c53f5ce5389ff1e60f168349c9da0d4e176c81ff6f6bd7818bdb49f09d4293",
+      "rgbaSha256": "07479561300b69ef67778e60a99596394094ef8447b3bf547eadfe81876b62ae",
+      "losslessPixelIdentity": true,
+      "capture": {
+        "name": "01-ready-1280",
+        "elapsedMs": 331,
+        "before": {
+          "state": "READY",
+          "progress": 0,
+          "reading": false
+        },
+        "after": {
+          "index": 0,
+          "total": 8,
+          "id": "01",
+          "reading": false,
+          "state": "READY",
+          "mode": "NAVIGATION",
+          "target": null,
+          "progress": 0,
+          "releaseRequired": false,
+          "blockedReason": "TARGET_OUTSIDE",
+          "lastAction": null,
+          "handKey": "visitor-1:left",
+          "nextTrace": [],
+          "pointer": {
+            "valid": true,
+            "visible": true,
+            "point": {
+              "x": 639.9999999999999,
+              "y": 399.9999999999999
+            },
+            "key": "visitor-1:left",
+            "changed": false,
+            "stable": true,
+            "side": "left",
+            "source": "pose",
+            "reason": "READY",
+            "gapMs": 0,
+            "paused": false,
+            "at": 7310.9000000003725
+          },
+          "ownership": {
+            "operatorState": "PERSON_LOCKED",
+            "activeOperator": {
+              "center": {
+                "x": 0.5,
+                "y": 0.35
+              },
+              "shoulderWidth": 0.30000000000000004,
+              "leftShoulder": {
+                "x": 0.65,
+                "y": 0.35
+              },
+              "rightShoulder": {
+                "x": 0.35,
+                "y": 0.35
+              },
+              "leftWrist": {
+                "x": 0.5,
+                "y": 0.59
+              },
+              "rightWrist": null,
+              "leftHip": null,
+              "rightHip": null,
+              "torsoComplete": false,
+              "bodyMode": "upper",
+              "confidence": 1,
+              "torsoCenter": null,
+              "id": "visitor-1",
+              "firstSeenAt": 4233.699999999255,
+              "lastSeenAt": 7208.0999999996275,
+              "lockedSince": 5066.699999999255
+            },
+            "assignedHands": [
+              {
+                "side": "left",
+                "d": 0,
+                "landmarks": "[synthetic coordinates omitted; original retained locally]",
+                "wrist": {
+                  "x": 0.5,
+                  "y": 0.59
+                },
+                "x": 0.5,
+                "y": 0.5,
+                "operatorId": "visitor-1",
+                "lastSeenAt": 7310.9000000003725,
+                "fresh": true,
+                "source": "pose",
+                "index": 0
+              }
+            ],
+            "released": false,
+            "diagnostics": {
+              "poseFresh": true,
+              "operatorObservable": true,
+              "poseAgeMs": 102.80000000074506,
+              "candidateHoldMs": 0,
+              "operatorLossMs": 102.80000000074506,
+              "handsDetected": 1,
+              "handsAssigned": 1,
+              "leftAssigned": true,
+              "rightAssigned": false,
+              "leftSource": "pose",
+              "rightSource": null,
+              "posePeople": 1,
+              "bodyMode": "upper",
+              "shoulderWidth": 0.30000000000000004,
+              "hipsVisible": false,
+              "leftWristVisible": true,
+              "rightWristVisible": false,
+              "assignmentRejections": [],
+              "assignmentBlocked": false,
+              "assignmentStatus": "OK"
+            }
+          },
+          "targets": [
+            {
+              "id": "view",
+              "x": 102.390625,
+              "y": 450,
+              "width": 128,
+              "height": 76,
+              "disabled": false,
+              "dwellMs": 1000
+            },
+            {
+              "id": "next",
+              "x": 1049.59375,
+              "y": 450,
+              "width": 128,
+              "height": 76,
+              "disabled": false,
+              "dwellMs": 1000
+            }
+          ],
+          "region": null,
+          "loading": false,
+          "phase": "stable",
+          "orbitPhase": "stable",
+          "orbitActive": true,
+          "figure": {
+            "x": 380.92856825749175,
+            "y": 123.84000000000003,
+            "width": 492.5428634850166,
+            "height": 476.15999999999997
+          },
+          "figureMode": true,
+          "panels": 5,
+          "rendererCount": 1,
+          "textures": 1,
+          "geometries": 2,
+          "cache": 1,
+          "pose": {
+            "models": 1,
+            "frames": 31,
+            "inferenceTotalMs": 0,
+            "inferenceMaxMs": 0,
+            "staleResults": 0,
+            "active": 1,
+            "inFlight": 1,
+            "averageInferenceMs": 0
+          },
+          "performance": {
+            "callbacks": 94,
+            "firstAt": 4234.5999999996275,
+            "lastAt": 7310.9000000003725,
+            "maxActiveCameras": 1,
+            "activeCameras": 1,
+            "stalePoseFrames": 1,
+            "inputFrames": 94,
+            "raf": 1
+          }
+        }
+      }
+    },
+    {
+      "file": "10-ready-1366.webp",
+      "original": "local/dwell/01-ready-1366.png",
+      "purpose": "Representative 1366x768",
+      "width": 1366,
+      "height": 768,
+      "sourceBytes": 744351,
+      "bytes": 596382,
+      "sourceSha256": "9bafe390445ed3d58eaf3ffbe0129ea11a6466901dd98b15f940c25d97a88bd0",
+      "sha256": "1cdbdb51d0b29367ef6d64f6785525a7fbe73b193008c0624739a52318bdde2b",
+      "rgbaSha256": "4456febf441abce9ec31639ef3bd631555eace97bf35d8eb4c9b703433f667a8",
+      "losslessPixelIdentity": true,
+      "capture": {
+        "name": "01-ready-1366",
+        "elapsedMs": 326,
+        "before": {
+          "state": "READY",
+          "progress": 0,
+          "reading": false
+        },
+        "after": {
+          "index": 0,
+          "total": 8,
+          "id": "01",
+          "reading": false,
+          "state": "READY",
+          "mode": "NAVIGATION",
+          "target": null,
+          "progress": 0,
+          "releaseRequired": false,
+          "blockedReason": "TARGET_OUTSIDE",
+          "lastAction": {
+            "action": "NEXT",
+            "at": 20706.900000000373,
+            "operatorId": "visitor-1",
+            "hand": "visitor-1:left"
+          },
+          "handKey": "visitor-1:left",
+          "nextTrace": [
+            {
+              "at": 20707.099999999627,
+              "index": 0,
+              "state": "TRIGGERED",
+              "reading": false,
+              "person": "PERSON_LOCKED",
+              "context": {
+                "blocked": false,
+                "locked": false
+              },
+              "firstReady": true,
+              "afterIndex": 1,
+              "afterState": "ACTION_TRANSITION"
+            }
+          ],
+          "pointer": {
+            "valid": true,
+            "visible": true,
+            "point": {
+              "x": 682.9999988322905,
+              "y": 384.00000043449637
+            },
+            "key": "visitor-1:left",
+            "changed": false,
+            "stable": true,
+            "side": "left",
+            "source": "pose",
+            "reason": "READY",
+            "gapMs": 0,
+            "paused": false,
+            "at": 25559.5
+          },
+          "ownership": {
+            "operatorState": "PERSON_LOCKED",
+            "activeOperator": {
+              "center": {
+                "x": 0.5,
+                "y": 0.35
+              },
+              "shoulderWidth": 0.30000000000000004,
+              "leftShoulder": {
+                "x": 0.65,
+                "y": 0.35
+              },
+              "rightShoulder": {
+                "x": 0.35,
+                "y": 0.35
+              },
+              "leftWrist": {
+                "x": 0.5,
+                "y": 0.59
+              },
+              "rightWrist": null,
+              "leftHip": null,
+              "rightHip": null,
+              "torsoComplete": false,
+              "bodyMode": "upper",
+              "confidence": 1,
+              "torsoCenter": null,
+              "id": "visitor-1",
+              "firstSeenAt": 4233.699999999255,
+              "lastSeenAt": 25460.699999999255,
+              "lockedSince": 5066.699999999255
+            },
+            "assignedHands": [
+              {
+                "side": "left",
+                "d": 0,
+                "landmarks": "[synthetic coordinates omitted; original retained locally]",
+                "wrist": {
+                  "x": 0.5,
+                  "y": 0.59
+                },
+                "x": 0.5,
+                "y": 0.5,
+                "operatorId": "visitor-1",
+                "lastSeenAt": 25559.5,
+                "fresh": true,
+                "source": "pose",
+                "index": 0
+              }
+            ],
+            "released": false,
+            "diagnostics": {
+              "poseFresh": true,
+              "operatorObservable": true,
+              "poseAgeMs": 98.80000000074506,
+              "candidateHoldMs": 0,
+              "operatorLossMs": 98.80000000074506,
+              "handsDetected": 1,
+              "handsAssigned": 1,
+              "leftAssigned": true,
+              "rightAssigned": false,
+              "leftSource": "pose",
+              "rightSource": null,
+              "posePeople": 1,
+              "bodyMode": "upper",
+              "shoulderWidth": 0.30000000000000004,
+              "hipsVisible": false,
+              "leftWristVisible": true,
+              "rightWristVisible": false,
+              "assignmentRejections": [],
+              "assignmentBlocked": false,
+              "assignmentStatus": "OK"
+            }
+          },
+          "targets": [
+            {
+              "id": "view",
+              "x": 113.578125,
+              "y": 430.46875,
+              "width": 128,
+              "height": 76,
+              "disabled": false,
+              "dwellMs": 1000
+            },
+            {
+              "id": "next",
+              "x": 1124.40625,
+              "y": 430.46875,
+              "width": 128,
+              "height": 76,
+              "disabled": false,
+              "dwellMs": 1000
+            }
+          ],
+          "region": null,
+          "loading": false,
+          "phase": "stable",
+          "orbitPhase": "stable",
+          "orbitActive": true,
+          "figure": {
+            "x": 438.9570477247502,
+            "y": 122.56000000000006,
+            "width": 460.7659045504994,
+            "height": 445.43999999999994
+          },
+          "figureMode": true,
+          "panels": 5,
+          "rendererCount": 1,
+          "textures": 3,
+          "geometries": 2,
+          "cache": 2,
+          "pose": {
+            "models": 1,
+            "frames": 215,
+            "inferenceTotalMs": 0,
+            "inferenceMaxMs": 0,
+            "staleResults": 0,
+            "active": 1,
+            "inFlight": 0,
+            "averageInferenceMs": 0
+          },
+          "performance": {
+            "callbacks": 645,
+            "firstAt": 4234.5999999996275,
+            "lastAt": 25559.5,
+            "maxActiveCameras": 1,
+            "activeCameras": 1,
+            "stalePoseFrames": 1,
+            "inputFrames": 645,
+            "raf": 1
+          }
+        }
+      }
+    },
+    {
+      "file": "11-ready-1920.webp",
+      "original": "local/dwell/01-ready-1920.png",
+      "purpose": "Representative 1920x1080",
+      "width": 1920,
+      "height": 1080,
+      "sourceBytes": 1304695,
+      "bytes": 1068212,
+      "sourceSha256": "71c4832642677795e73f0d70391b6f6510979026d6d89de2504ee9d1f2e23f1f",
+      "sha256": "d7708a2b4d43dcac19ff3a67a054a2ffaa1b0570caae3bc9af841b7d91c514b2",
+      "rgbaSha256": "c67d2f26e1d10ac4a007360290ac2300c40a67f8121edccc88952cf7f33e2b0b",
+      "losslessPixelIdentity": true,
+      "capture": {
+        "name": "01-ready-1920",
+        "elapsedMs": 563,
+        "before": {
+          "state": "READY",
+          "progress": 0,
+          "reading": false
+        },
+        "after": {
+          "index": 0,
+          "total": 8,
+          "id": "01",
+          "reading": false,
+          "state": "READY",
+          "mode": "NAVIGATION",
+          "target": null,
+          "progress": 0,
+          "releaseRequired": false,
+          "blockedReason": "TARGET_OUTSIDE",
+          "lastAction": {
+            "action": "NEXT",
+            "at": 57236.199999999255,
+            "operatorId": "visitor-1",
+            "hand": "visitor-1:left"
+          },
+          "handKey": "visitor-1:left",
+          "nextTrace": [
+            {
+              "at": 20707.099999999627,
+              "index": 0,
+              "state": "TRIGGERED",
+              "reading": false,
+              "person": "PERSON_LOCKED",
+              "context": {
+                "blocked": false,
+                "locked": false
+              },
+              "firstReady": true,
+              "afterIndex": 1,
+              "afterState": "ACTION_TRANSITION"
+            },
+            {
+              "at": 38954.59999999963,
+              "index": 0,
+              "state": "TRIGGERED",
+              "reading": false,
+              "person": "PERSON_LOCKED",
+              "context": {
+                "blocked": false,
+                "locked": false
+              },
+              "firstReady": true,
+              "afterIndex": 1,
+              "afterState": "ACTION_TRANSITION"
+            },
+            {
+              "at": 57236.40000000037,
+              "index": 0,
+              "state": "TRIGGERED",
+              "reading": false,
+              "person": "PERSON_LOCKED",
+              "context": {
+                "blocked": false,
+                "locked": false
+              },
+              "firstReady": true,
+              "afterIndex": 1,
+              "afterState": "ACTION_TRANSITION"
+            }
+          ],
+          "pointer": {
+            "valid": true,
+            "visible": true,
+            "point": {
+              "x": 959.9999997930007,
+              "y": 539.9999999223753
+            },
+            "key": "visitor-1:left",
+            "changed": false,
+            "stable": true,
+            "side": "left",
+            "source": "pose",
+            "reason": "READY",
+            "gapMs": 0,
+            "paused": false,
+            "at": 62253.90000000037
+          },
+          "ownership": {
+            "operatorState": "PERSON_LOCKED",
+            "activeOperator": {
+              "center": {
+                "x": 0.5,
+                "y": 0.35
+              },
+              "shoulderWidth": 0.30000000000000004,
+              "leftShoulder": {
+                "x": 0.65,
+                "y": 0.35
+              },
+              "rightShoulder": {
+                "x": 0.35,
+                "y": 0.35
+              },
+              "leftWrist": {
+                "x": 0.5,
+                "y": 0.59
+              },
+              "rightWrist": null,
+              "leftHip": null,
+              "rightHip": null,
+              "torsoComplete": false,
+              "bodyMode": "upper",
+              "confidence": 1,
+              "torsoCenter": null,
+              "id": "visitor-1",
+              "firstSeenAt": 4233.699999999255,
+              "lastSeenAt": 62188.699999999255,
+              "lockedSince": 5066.699999999255
+            },
+            "assignedHands": [
+              {
+                "side": "left",
+                "d": 0,
+                "landmarks": "[synthetic coordinates omitted; original retained locally]",
+                "wrist": {
+                  "x": 0.5,
+                  "y": 0.59
+                },
+                "x": 0.5,
+                "y": 0.5,
+                "operatorId": "visitor-1",
+                "lastSeenAt": 62253.90000000037,
+                "fresh": true,
+                "source": "pose",
+                "index": 0
+              }
+            ],
+            "released": false,
+            "diagnostics": {
+              "poseFresh": true,
+              "operatorObservable": true,
+              "poseAgeMs": 65.20000000111759,
+              "candidateHoldMs": 0,
+              "operatorLossMs": 65.20000000111759,
+              "handsDetected": 1,
+              "handsAssigned": 1,
+              "leftAssigned": true,
+              "rightAssigned": false,
+              "leftSource": "pose",
+              "rightSource": null,
+              "posePeople": 1,
+              "bodyMode": "upper",
+              "shoulderWidth": 0.30000000000000004,
+              "hipsVisible": false,
+              "leftWristVisible": true,
+              "rightWristVisible": false,
+              "assignmentRejections": [],
+              "assignmentBlocked": false,
+              "assignmentStatus": "OK"
+            }
+          },
+          "targets": [
+            {
+              "id": "view",
+              "x": 185.59375,
+              "y": 620.796875,
+              "width": 128,
+              "height": 76,
+              "disabled": false,
+              "dwellMs": 1000
+            },
+            {
+              "id": "next",
+              "x": 1606.390625,
+              "y": 620.796875,
+              "width": 128,
+              "height": 76,
+              "disabled": false,
+              "dwellMs": 1000
+            }
+          ],
+          "region": null,
+          "loading": false,
+          "phase": "stable",
+          "orbitPhase": "stable",
+          "orbitActive": true,
+          "figure": {
+            "x": 555.5043729189789,
+            "y": 135.04000000000008,
+            "width": 770.5912541620421,
+            "height": 744.9599999999999
+          },
+          "figureMode": true,
+          "panels": 5,
+          "rendererCount": 1,
+          "textures": 3,
+          "geometries": 2,
+          "cache": 2,
+          "pose": {
+            "models": 1,
+            "frames": 584,
+            "inferenceTotalMs": 0,
+            "inferenceMaxMs": 0,
+            "staleResults": 0,
+            "active": 1,
+            "inFlight": 0,
+            "averageInferenceMs": 0
+          },
+          "performance": {
+            "callbacks": 1748,
+            "firstAt": 4234.5999999996275,
+            "lastAt": 62253.90000000037,
+            "maxActiveCameras": 1,
+            "activeCameras": 1,
+            "stalePoseFrames": 2,
+            "inputFrames": 1748,
+            "raf": 1
+          }
+        }
+      }
+    },
+    {
+      "file": "12-earlier-failure.webp",
+      "original": "local/dwell/failure.png",
+      "purpose": "Earlier failure: focused previous button suppresses ArrowRight; actual dwell wrap succeeded",
+      "width": 1440,
+      "height": 900,
+      "sourceBytes": 1234330,
+      "bytes": 985176,
+      "sourceSha256": "f04667aa43487bac6bec9ac3bc10d576a90102692634428e48a2f4ca709c66c8",
+      "sha256": "130362f6372c166edffa7b9f10c333f7e3fa9d4c5355d316fd2cbc853e20ebc4",
+      "rgbaSha256": "befdd99934df699839eeb635c90b22c9be9566090eaab4c5f9e4f2f12fb4f5b0",
+      "losslessPixelIdentity": true
+    },
+    {
+      "file": "13-extreme-alpha.webp",
+      "original": "local/core/empty-alpha-diagnostic.png",
+      "purpose": "Synthetic empty alpha refuses stale artwork",
+      "width": 1280,
+      "height": 800,
+      "sourceBytes": 659620,
+      "bytes": 552176,
+      "sourceSha256": "102c0a1e8afed76359f2af67a279bb76c32daf6d6c1e339e4fcd507f78cc4d7e",
+      "sha256": "82d671cb9bf956817f50188be856464921eb1fb660d81b62a16c63089cd3cce8",
+      "rgbaSha256": "23eb5d33db035af767a6795c3ebb33f3b3c956bcb33d9d42c09141b61fee4978",
+      "losslessPixelIdentity": true
+    }
+  ]
+}

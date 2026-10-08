@@ -28,7 +28,7 @@ async function verify(p) {
   const p=await browser.newPage({viewport:{width:1440,height:900}});p.on('pageerror',e=>report.errors.push(e.message));const requests=[];p.on('request',r=>requests.push(r.url()));
   await p.route('**/index.html',async r=>{const response=await r.fetch();await r.fulfill({response,body:(await response.text()).replace(/\r?\n    <\/script>\r?\n<\/body>/,instrument+'\n    </script>\n</body>')});});
   await stubPose(p);await p.addInitScript(()=>window.Camera=class{async start(){}stop(){}});
-  await p.goto(origin+'/index.html');await p.locator('#btn-gallery-track').click();await p.locator('.hotspot[data-ids="01"]').click();await p.waitForFunction(()=>document.getElementById('img-org').style.opacity==='1');await p.locator('#quick-switch-btn').click();await ready(p);
+  await p.goto(origin+'/index.html');await p.locator('#btn-gallery-track').click();await p.locator('.hotspot[data-ids="01"]').click();await p.waitForFunction(()=>document.getElementById('image-wrapper').dataset.media==='org');await p.locator('#quick-switch-btn').click();await ready(p);
   for(const [width,height] of [[1920,1080],[1440,900],[1366,768],[1280,800]]) {
    await p.setViewportSize({width,height});await p.waitForTimeout(180);
    const before=await verify(p);await shot(p,`default-${width}x${height}`);
@@ -51,7 +51,7 @@ async function verify(p) {
   await p.evaluate(()=>__hf.select(0));await ready(p);
   // Only author summary in an API fixture; never writes author metadata.
   await p.route('**/api/scan-assets',r=>r.fulfill({json:{success:true,data:data.map((x,i)=>i===0?{...x,cyber:{summary:'仅用于测试长简介排版，不是人物史料。'.repeat(100)+'<script>window.__unsafe=true</script>'}}:x),diagnostics:[]}}));
-  await p.goto(origin+'/index.html');await p.locator('#btn-gallery-track').click();await p.locator('.hotspot[data-ids="01"]').click();await p.waitForFunction(()=>document.getElementById('img-org').style.opacity==='1');await p.locator('#quick-switch-btn').click();await ready(p);await p.locator('#reveal-toggle').click();await p.waitForTimeout(900);
+  await p.goto(origin+'/index.html');await p.locator('#btn-gallery-track').click();await p.locator('.hotspot[data-ids="01"]').click();await p.waitForFunction(()=>document.getElementById('image-wrapper').dataset.media==='org');await p.locator('#quick-switch-btn').click();await ready(p);await p.locator('#reveal-toggle').click();await p.waitForTimeout(900);
   assert.ok(await p.locator('#info-text').evaluate(e=>e.scrollHeight>e.clientHeight));assert.equal(await p.evaluate(()=>window.__unsafe),undefined);await shot(p,'synthetic-long-summary');
   await p.unroute('**/api/scan-assets');await p.locator('#quick-switch-btn').click();await p.waitForFunction(()=>document.body.dataset.explorationState==='gallery-detail');assert.equal(await p.locator('#orbit-stage').isHidden(),true);
   await p.emulateMedia({reducedMotion:'reduce'});await p.locator('#quick-switch-btn').click();await ready(p);await p.locator('#reveal-toggle').click();await verify(p);await shot(p,'reduced-motion');

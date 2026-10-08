@@ -1,5 +1,5 @@
 // Exhibition calibration starting points, not physical-camera acceptance values.
-// Pose/Hands use unmirrored image coordinates; NEXT alone uses mirrored preview x.
+// Pose/Hands use raw coordinates; OperatorTracker mirrors palm x exactly once.
 export const INTERACTION_CONFIG = Object.freeze({
  primaryZone:Object.freeze({left:.25,right:.75,top:.12,bottom:.90}),
  gestureZone:Object.freeze({left:.08,right:.92,top:.18,bottom:.80}),
@@ -19,4 +19,11 @@ export const INTERACTION_CONFIG = Object.freeze({
  twoHandNeutralHoldMs:120, nextTwoHandConfirmMs:120,
  releaseOutsideMs:300, releaseAbsentMs:300, releaseSingleMs:500,
  imageAspect:320/240
+ ,dwellMs:1000, dwellReleaseMs:250, trackingPauseMs:200, dwellMaxStepMs:120,
+ pointerTauMs:75, pointerFastTauMs:28, pointerFastSpeed:.35,
+ pointerStableSpeed:.65, pointerSettleMs:140, pointerJump:.24,
+ pointerInput:Object.freeze({left:.2,right:.8,top:.2,bottom:.8}),
+ targetWidth:128, targetHeight:76, targetY:.61, targetLeft:.13, targetRight:.87,
+ readingDeadzone:.08, readingMaxSpeed:420, readingScrollMaxStepMs:200,
+ readingTransitionMs:750
 });
