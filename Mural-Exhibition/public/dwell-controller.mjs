@@ -10,7 +10,7 @@ export class DwellController {
  tick(now,{blocked=false,locked=false}={}) {
   if(blocked){this.cancel();this.releaseSince=null;this.state='BLOCKED';this.reason='ACTION_LOCKED';}
   else if(locked||now<this.transitionUntil){this.cancel();this.releaseSince=null;this.state='ACTION_TRANSITION';this.reason='ACTION_LOCKED';}
-  else if(this.lastAt!==null&&now-this.lastAt>this.config.trackingPauseMs){this.cancel();this.releaseSince=null;this.state='TRACKING_PAUSED';this.reason='HAND_NOT_DETECTED';}
+  else if((this.gapAt!==null&&now-this.gapAt>this.config.trackingPauseMs)||(this.lastAt!==null&&now-this.lastAt>this.config.trackingPauseMs)){this.cancel();this.releaseSince=null;this.state='TRACKING_PAUSED';this.reason='HAND_NOT_DETECTED';}
  }
  update({now,operatorId,pointer,targets=[],mode=this.mode,blocked=false,locked=false}) {
   const c=this.config;
@@ -19,10 +19,11 @@ export class DwellController {
   if(!operatorId){this.cancel();this.releaseSince=null;this.state='NO_OPERATOR';this.reason=pointer?.reason||'NO_PERSON';return null;}
   if(blocked||locked||now<this.transitionUntil){this.cancel();this.releaseSince=null;this.state=blocked?'BLOCKED':'ACTION_TRANSITION';this.reason='ACTION_LOCKED';return null;}
   if(!pointer?.valid){
-   this.releaseSince=null;this.gapAt??=now;this.lastAt=null;
-   // Every invalid observation cancels dwell; the release latch survives hand loss.
-   this.cancel();
-   this.state=pointer?.paused?'TRACKING_PAUSED':'BLOCKED';this.reason=pointer?.reason||'HAND_NOT_DETECTED';return null;
+   this.releaseSince=null;
+   const safePause=pointer?.paused&&['HAND_LOCKED_PAUSED','POSE_STALE','HAND_NOT_DETECTED'].includes(pointer.reason)&&pointer.key===this.handKey;
+   if(safePause&&this.target){this.gapAt??=now;if(now-this.gapAt>c.trackingPauseMs)this.cancel();else this.lastAt=null;}
+   else this.cancel();
+   this.state=safePause?'TRACKING_PAUSED':'BLOCKED';this.reason=pointer?.reason||'HAND_NOT_DETECTED';return null;
   }
   if(pointer.key!==this.handKey||pointer.changed){this.cancel();this.handKey=pointer.key;this.releaseSince=null;}
   const target=hitTarget(pointer.point,targets),eligible=target&&((mode==='NAVIGATION'&&(target==='view'||target==='next'))||(mode==='READING'&&target==='view'));
@@ -33,7 +34,7 @@ export class DwellController {
    else this.releaseSince=null;
    return null;
   }
-  if(!pointer.stable){this.lastAt=null;this.state='TRACKING_PAUSED';this.reason='HAND_UNSTABLE';this.cancel();return null;}
+  if(!pointer.stable){this.lastAt=null;this.state='TRACKING_PAUSED';this.reason='HAND_UNSTABLE';if(!(pointer.resuming&&this.gapAt!==null&&now-this.gapAt<=c.trackingPauseMs))this.cancel();return null;}
   if(!eligible){this.cancel();this.state='READY';this.reason=target?'ACTION_LOCKED':'TARGET_OUTSIDE';return null;}
   if(this.target!==target||(this.lastAt!==null&&now-this.lastAt>c.trackingPauseMs)){this.cancel();this.target=target;this.duration=targets.find(t=>t.id===target)?.dwellMs??c.dwellMs;this.lastAt=now;this.state='TARGET_HOVER';this.reason='DWELLING';return null;}
   if(this.gapAt!==null&&now-this.gapAt>c.trackingPauseMs){this.cancel();return null;}

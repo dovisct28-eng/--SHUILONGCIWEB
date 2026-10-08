@@ -18,8 +18,8 @@ test('Phase 1: near/middle/far upper-body and missing wrists produce one owned, 
 });
 test('Phase 1: resting second hand and detection reorder preserve control; locked hand ignores competing target hands',()=>{
  const r=rig(),a=hand(.3,.55),b=hand(.65,.8),poses=[person({hands:[a,b]})];
- const first=r.frame(1000,[a,b],poses);assert.equal(first.valid,true);
- assert.equal(r.frame(1040,[b,a],poses).key,first.key);
+ const first=r.frame(1000,[a],poses);assert.equal(first.valid,true);
+ assert.equal(r.frame(1040,[a,b],poses).key,first.key);assert.equal(r.frame(1080,[b,a],poses).key,first.key);
  const c=hand(.7,.55);assert.equal(r.frame(1100,[a,c],[person({hands:[a,c]})]).key,first.key);
  const unowned=rig();assert.equal(unowned.frame(1000,[a,c],[person({hands:[a,c]})]).reason,'AMBIGUOUS_HAND');
 });

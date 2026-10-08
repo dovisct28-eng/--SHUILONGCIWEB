@@ -12,10 +12,10 @@ async function stubPose(page){
   const body=Function('return ('+source+')')();
   const NativeWorker=window.Worker;
   window.Worker=class{
-   constructor(url,options){if(!String(url).includes('pose-worker.js'))return new NativeWorker(url,options);this.isPose=true;}
-   postMessage(data){if(data.type==='init'){setTimeout(()=>this.onmessage?.({data:{type:'ready'}}),0);return;}
-    if(data.type==='frame'){const poses=window.__camera?.current?.poses??[body()];data.image.close();setTimeout(()=>this.onmessage?.({data:{type:'poses',at:data.at,session:data.session,poses,inferenceMs:0}}),0);}}
-   terminate(){}
+   constructor(url,options){if(!String(url).includes('pose-worker.js'))return new NativeWorker(url,options);this.isPose=true;window.__poseTest||={active:0,max:0,created:0};__poseTest.active++;__poseTest.created++;__poseTest.max=Math.max(__poseTest.max,__poseTest.active);}
+   postMessage(data){if(data.type==='init'){if(window.__camera?.failPoseInit){__camera.failPoseInit=false;setTimeout(()=>this.onmessage?.({data:{type:'error',code:'POSE_WORKER_ERROR',source:'pose-worker',message:'Synthetic init fault'}}),0);}else setTimeout(()=>this.onmessage?.({data:{type:'ready'}}),0);return;}
+    if(data.type==='frame'){if(window.__camera?.failPoseRuntime){__camera.failPoseRuntime=false;data.image.close();setTimeout(()=>this.onmessage?.({data:{type:'error',code:'POSE_RUNTIME_ERROR',source:'pose-inference',message:'Synthetic runtime fault'}}),0);return;}const poses=window.__camera?.current?.poses??[body()];data.image.close();setTimeout(()=>this.onmessage?.({data:{type:'poses',at:data.at,session:data.session,poses,inferenceMs:window.__camera?.poseDelayMs||0}}),window.__camera?.poseDelayMs||0);}}
+   terminate(){if(!this.closed){this.closed=true;__poseTest.active--;}}
   };
  },{source:person.toString()});
 }
@@ -28,10 +28,11 @@ async function syntheticCamera(page,{realPose=false,realHands=false,realDrawing=
   CanvasRenderingContext2D.prototype.drawImage=function(input,...args){return draw.call(this,input instanceof HTMLVideoElement?image:input,...args);};
   window.__camera={starts:0,stops:0,models:0,active:0,max:0,options:null,latest:{hands:[],poses:[body()]},current:null,callback:null,
    deliver(value){this.latest=value;},resolve:null};
-  if(!realHands)window.Hands=class{constructor(){__camera.models++;}setOptions(o){__camera.options=o;}onResults(cb){__camera.callback=cb;}
-   async send(){__camera.callback({image,multiHandLandmarks:__camera.current.hands});__camera.resolve?.();__camera.resolve=null;}};
-  window.Camera=class{constructor(video,options){this.options=options;this.busy=false;}
-   async start(){this.running=true;__camera.starts++;__camera.active++;__camera.max=Math.max(__camera.max,__camera.active);
+  if(!realHands)window.Hands=class{constructor(){__camera.models++;}setOptions(o){__camera.options=o;}onResults(cb){this.callback=cb;__camera.callback=cb;}
+   async initialize(){if(__camera.failHandsInit){__camera.failHandsInit=false;throw Error('Synthetic Hands model init fault');}}async close(){if(!this.closed){this.closed=true;__camera.models--;}}
+   async send(){const hands=__camera.current.hands;await new Promise(r=>setTimeout(r,__camera.handsDelayMs||0));this.callback({image,multiHandLandmarks:hands});__camera.resolve?.();__camera.resolve=null;}};
+  window.Camera=class{constructor(video,options){this.video=video;this.options=options;this.busy=false;}
+   async start(){if(__camera.waitPermission)await new Promise(r=>__camera.permissionResolve=r);this.video.srcObject=image.captureStream(30);if(__camera.cameraFailure)throw new DOMException('Synthetic device failure',__camera.cameraFailure);this.running=true;__camera.starts++;__camera.active++;__camera.max=Math.max(__camera.max,__camera.active);
     this.timer=setInterval(async()=>{if(!this.running||this.busy)return;this.busy=true;__camera.current=__camera.latest;try{await this.options.onFrame();}finally{this.busy=false;}},33);}
    stop(){clearInterval(this.timer);if(this.running){this.running=false;__camera.stops++;__camera.active--;}}
   };

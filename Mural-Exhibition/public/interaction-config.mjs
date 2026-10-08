@@ -4,6 +4,7 @@ export const INTERACTION_CONFIG = Object.freeze({
  primaryZone:Object.freeze({left:.25,right:.75,top:.12,bottom:.90}),
  gestureZone:Object.freeze({left:.08,right:.92,top:.18,bottom:.80}),
  operatorAcquireMs:800, operatorLossGraceMs:1000, poseMaxAgeMs:220,
+ poseFreshnessCapMs:360, handsMaxAgeMs:160, poseTimingMarginMs:35,
  poseIntervalMs:80, poseMaxPeople:4, landmarkConfidence:.55,
  minShoulderWidth:.08, personMatchDistance:.65, personMatchAmbiguity:.18,
  personMinScaleRatio:.65, personMaxScaleRatio:1.55, personScaleCostWeight:.25,
@@ -19,7 +20,8 @@ export const INTERACTION_CONFIG = Object.freeze({
  twoHandNeutralHoldMs:120, nextTwoHandConfirmMs:120,
  releaseOutsideMs:300, releaseAbsentMs:300, releaseSingleMs:500,
  imageAspect:320/240
- ,controlHandAcquireMs:350, controlHandLossGraceMs:650, controlHandRearmMs:250,
+ ,controlHandAcquireMs:350, controlHandCandidateJump:.12, controlHandCandidateDrift:.08, pointerRecoverySettleMs:60,
+ controlHandLossGraceMs:650, controlHandRearmMs:250,
  dwellMs:1000, dwellReleaseMs:250, trackingPauseMs:200, dwellMaxStepMs:120,
  pointerTauMs:75, pointerFastTauMs:28, pointerFastSpeed:.35,
  pointerStableSpeed:.65, pointerSettleMs:140, pointerJump:.24,

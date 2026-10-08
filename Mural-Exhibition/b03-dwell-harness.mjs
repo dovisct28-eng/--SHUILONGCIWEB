@@ -4,19 +4,23 @@ import {OperatorTracker} from './public/operator-tracker.mjs';
 import {GesturePointer} from './public/gesture-pointer.mjs';
 import {HandOwnership} from './public/hand-ownership.mjs';
 import {DwellController,readingVelocity} from './public/dwell-controller.mjs';
+import {GestureDiagnostics,poseFreshnessBudget} from './public/gesture-diagnostics.mjs';
 import {INTERACTION_CONFIG} from './public/interaction-config.mjs';
 import {person,hand} from './b03-gesture-harness.mjs';
 export {person,hand};
 export function cameraHarness(index=0) {
  const html=fs.readFileSync(new URL('public/index.html',import.meta.url),'utf8');
  const init=html.slice(html.indexOf('function initMediaPipe'),html.indexOf('let cameraStart'));
+ const reset=html.slice(html.indexOf('        function resetGestureInput'),html.indexOf('        function stopMediaPipe()'));
  const stop=html.slice(html.indexOf('function stopMediaPipe()'),html.indexOf('// Page locks are shared'));
  const handler=html.slice(html.indexOf('// Page locks are shared'),html.indexOf('\n    </script>',html.indexOf('// Page locks are shared')));
  const targets=[{id:'view',x:100,y:400,width:140,height:120},{id:'next',x:1040,y:400,width:140,height:120}];
- const ctx=vm.createContext({OperatorTracker,GesturePointer,HandOwnership,DwellController,readingVelocity,INTERACTION_CONFIG,Math,URLSearchParams,time:0,location:{search:''},performance:{now:()=>ctx.time}});
+ const ctx=vm.createContext({OperatorTracker,GesturePointer,HandOwnership,DwellController,readingVelocity,INTERACTION_CONFIG,GestureDiagnostics,poseFreshnessBudget,Math,URLSearchParams,time:0,location:{search:''},performance:{now:()=>ctx.time}});
  vm.runInContext(`let currentTrack='cyber',entryBusy=false,currentSeriesIndex=${index},isRevealed=false;
  const operatorTracker=new OperatorTracker(),gesturePointer=new GesturePointer(),handOwnership=new HandOwnership(),dwellController=new DwellController();
  let controlPointer={valid:false,visible:false},readingScrollAt=null;
+ const gestureDiagnostics=new GestureDiagnostics();
+ const cameraLifecycle={result(){},stop(){gesturePerformance.activeCameras=0;posePipeline.stop();},snapshot(){return {state:'RUNNING',events:[]};}};function startMediaPipe(){gesturePerformance.activeCameras=1;posePipeline.start();handsFrameVersion=cameraVersion;initMediaPipe();}
  const posePipeline={latest:{poses:[],at:-Infinity},start(){},stop(){},dispose(){},snapshot(){return {frames:0};}};
  let ownership={operatorState:'SEARCHING',assignedHands:[],diagnostics:{}},cameraVersion=1,handsFrameVersion=1,handsFrameAt=0;
  const gesturePerformance={callbacks:0,firstAt:null,lastAt:null,activeCameras:1,stalePoseFrames:0};
@@ -35,11 +39,14 @@ export function cameraHarness(index=0) {
  class DwellFeedback {constructor(){this.width=1280;this.height=800;this.targets=${JSON.stringify(targets)};this.region={x:800,y:150,width:400,height:400};}render(){}layout(){}measure(){return {targets:this.targets.map(t=>({...t,disabled:isRevealed&&t.id==='next'})),controlRegions:isRevealed?[this.region]:[]};}}
  function loadSeriesData(i){currentSeriesIndex=(i+8)%8;calls++;dwellController.lock();}
  function setRevealed(v){if(v!==isRevealed){if(v)reveals++;else closes++;}isRevealed=v;}
+ ${reset}
  ${stop}
  ${init}
  ${handler}
  initMediaPipe();
  this.deliver=(hands,poses,at,poseAt=at)=>{time=at;handsFrameAt=at;posePipeline.latest={poses,at:poseAt};callback(hands===undefined?{image:{}}:{image:{},multiHandLandmarks:hands});};
+ this.timing=metrics=>posePipeline.snapshot=()=>metrics;
+ this.deliverCaptured=(hands,poses,captured,returned,poseAt)=>{time=returned;handsFrameAt=captured;posePipeline.latest={poses,at:poseAt,receivedAt:returned};callback({image:{},multiHandLandmarks:hands});};
  this.snapshot=()=>({index:currentSeriesIndex,calls,reading:isRevealed,reveals,closes,scrollTop:info.scrollTop,...dwellController.snapshot(),person:ownership.operatorState,operator:ownership.activeOperator?.id,assigned:ownership.assignedHands.length,diagnostics:ownership.diagnostics,handLock:handOwnership.snapshot(time),pointer:controlPointer,previewLines,previewPoints,previewClears});
  this.busy=v=>entryBusy=v;
  this.stop=()=>stopMediaPipe();

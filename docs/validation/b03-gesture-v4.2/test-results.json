@@ -1,0 +1,191 @@
+{
+  "version": "B03 V4.2",
+  "date": "2026-10-08",
+  "baselineCommit": "7a0e2947269529854787edcb0d0fd25f82be9562",
+  "testedSoftware": "Uncommitted V4.2 on baseline; source hashes identify tested files. Release SHA supplied after commit/push, no self-referential SHA invented.",
+  "physicalCamera": "PENDING",
+  "statusDefinitions": {
+    "PASS": "Completed within stated scope",
+    "FAIL": "Observed failure, including retained prior attempt",
+    "PENDING": "Target-device acceptance not yet performed",
+    "NOT_TESTED": "Explicitly unexecuted measurement"
+  },
+  "status": "PASS",
+  "command": "npm test (cwd Mural-Exhibition)",
+  "node": "v24.14.1",
+  "tests": 107,
+  "passed": 107,
+  "failed": 0,
+  "cancelled": 0,
+  "skipped": 0,
+  "durationMs": 2633.2556,
+  "evidence": {
+    "path": "local/test-output.txt",
+    "sha256": "e8e8db8e4b71b7e30916ebdf15b5abd39e042d06a2a97e1f849fadb5bf720834"
+  },
+  "physicalLauncher": {
+    "status": "PASS",
+    "scope": "Real Node/Express server and CLI record preparation with --no-open; Chrome/hardware not invoked.",
+    "physicalCamera": "PENDING",
+    "runtime": {
+      "commitSha": "7a0e2947269529854787edcb0d0fd25f82be9562",
+      "workingTreeChanged": true,
+      "version": "B03 V4.2"
+    },
+    "recordPath": "local\\physical\\2026-10-08T09-23-43-281Z-physical-results.json",
+    "tests": 12
+  },
+  "testedFiles": [
+    {
+      "path": "Mural-Exhibition/b01-browser-check.cjs",
+      "sha256": "ae190b272f9f2cb97f3a66a243a610dbf13ecaa02dbb206e0015dc106171f32d"
+    },
+    {
+      "path": "Mural-Exhibition/b01-check.cjs",
+      "sha256": "2486c66e95820bfa85149162c3d54b861e58c4432e72b42d7eedb054de6769a8"
+    },
+    {
+      "path": "Mural-Exhibition/b03-dwell-browser-check.cjs",
+      "sha256": "b8c680753dc57041a747555afefc51fc9ffefe9bd0b0b52696931402e65cc175"
+    },
+    {
+      "path": "Mural-Exhibition/b03-dwell-harness.mjs",
+      "sha256": "e3afb53df9c4141861ecd3e6092cf7b20a2322cb95ab4d96890a71671fe1a008"
+    },
+    {
+      "path": "Mural-Exhibition/b03-dwell-production.test.mjs",
+      "sha256": "6ee9dcbdfc9a36f5dda64b417e1dc057c6d4b92b5118dd6de01999ff5cecdcbe"
+    },
+    {
+      "path": "Mural-Exhibition/b03-gesture-fixtures.cjs",
+      "sha256": "5622b23e81bef81fa9ce854b7c18fea613af999ccde018dcf7a0d4d34e613b06"
+    },
+    {
+      "path": "Mural-Exhibition/b03-pose-browser-check.cjs",
+      "sha256": "e19657f0aa57e9549095f6d1d92540773f5f87f7e4422c167112dbfbf79e60ba"
+    },
+    {
+      "path": "Mural-Exhibition/b03-v42-browser-check.cjs",
+      "sha256": "04985beb481c734b94f6713a0aa580675f717e865ec4fcaafb9265836c13cd42"
+    },
+    {
+      "path": "Mural-Exhibition/b03-v42-launcher.test.cjs",
+      "sha256": "dcc55b03a53a88e32ce54a008e75e042ab49e582455f47788c036bf9ab49a3d3"
+    },
+    {
+      "path": "Mural-Exhibition/camera-lifecycle.test.mjs",
+      "sha256": "ce4a7ffcc36bed4e3eb8b6639411ac6aa99354693969f01f8fdcc969cfc70b63"
+    },
+    {
+      "path": "Mural-Exhibition/gesture-pointer.test.mjs",
+      "sha256": "f8c8e95fe8330bb7e5ec600d1c5c0b64fd2c9cbac538cda783ffdc287da0b64e"
+    },
+    {
+      "path": "Mural-Exhibition/gesture-timing.test.mjs",
+      "sha256": "be6f6effdd57fbd6f1c6c390763a81ddba9e56d25aaa76a63c275e3d25905592"
+    },
+    {
+      "path": "Mural-Exhibition/hand-ownership.test.mjs",
+      "sha256": "1debc3484fb8ad35596186a0a9fde21128843dad47d7bbdaa011bfb808db0407"
+    },
+    {
+      "path": "Mural-Exhibition/package.json",
+      "sha256": "709b7e98aee5415e7ec3dc05b136fe2eab5bac197c6a7fe156ed6e322d2ccd4c"
+    },
+    {
+      "path": "Mural-Exhibition/pose-pipeline.test.mjs",
+      "sha256": "22b5dcbf7dc5840695739068cf5b2ac452c46b22c0b04ff433cc52026ea4d2f0"
+    },
+    {
+      "path": "Mural-Exhibition/public/b03.css",
+      "sha256": "8f0d073d50dc8aaed310f421bd038c6c698ad735b673f9f808e560512666b786"
+    },
+    {
+      "path": "Mural-Exhibition/public/camera-lifecycle.mjs",
+      "sha256": "50f3072722eb34c7f9e604ec89ace46eb2d4d5d469cd116f0a7cc7b802329bc9"
+    },
+    {
+      "path": "Mural-Exhibition/public/dwell-controller.mjs",
+      "sha256": "ff4267db745df22a585027560875dbb5e492a4f10ee6837f531829e999f1e9f4"
+    },
+    {
+      "path": "Mural-Exhibition/public/dwell-feedback.mjs",
+      "sha256": "418c787db47276505b7ded0d54eca66b26124ed1d59906d912e006313b0857cc"
+    },
+    {
+      "path": "Mural-Exhibition/public/gesture-diagnostics.mjs",
+      "sha256": "e16962587e338f9e232b83f5d221fb255e4abeb61506da7397ad2c3d4909c30f"
+    },
+    {
+      "path": "Mural-Exhibition/public/gesture-pointer.mjs",
+      "sha256": "a9f1083dd138149fde08bd0183f27588ce91c13adb0ff0c80b531e6f8b7d4288"
+    },
+    {
+      "path": "Mural-Exhibition/public/hand-ownership.mjs",
+      "sha256": "a2afaea92c145c47493f3160f919ec34bf57e5682c7cef66ca0199f55925cdcb"
+    },
+    {
+      "path": "Mural-Exhibition/public/index.html",
+      "sha256": "5247b8753ea5c34b5a1ed5cb46e09a00fc9499d9e5f6f9f1e1eb5a8775d43fb2"
+    },
+    {
+      "path": "Mural-Exhibition/public/interaction-config.mjs",
+      "sha256": "087c5d3869aa9a076806e8cbf87f9286d0e86303fa8d2b4cee275f69a0c05dd2"
+    },
+    {
+      "path": "Mural-Exhibition/public/operator-tracker.mjs",
+      "sha256": "0c984dbddf9adca0cc91439af4744d3d745497a2e52e78a262869f5ed49789b1"
+    },
+    {
+      "path": "Mural-Exhibition/public/pose-pipeline.mjs",
+      "sha256": "23d55ed73759befede1ad9a6623f15d39edec1f03aab86fd3c67f482d93d23da"
+    },
+    {
+      "path": "Mural-Exhibition/public/pose-worker.js",
+      "sha256": "af9b644e1bd93bc0b785458236e964789753374741f2236411e1163059a8f0f9"
+    },
+    {
+      "path": "Mural-Exhibition/server.js",
+      "sha256": "3f568fe4becb4cfa98fd45155a89425955a65ed71344ab753d5cff9232c6eba0"
+    }
+  ],
+  "retainedEarlierFailures": [
+    {
+      "status": "FAIL",
+      "evidence": {
+        "path": "local/dwell/results-attempt-1791448988388.json",
+        "sha256": "bc7aff0ba129033edd89040d62b307fe2f73036d4d8fe58baddccbdea6010181"
+      },
+      "note": "Prior run retained; root-cause.md records resolution or remaining limitation."
+    },
+    {
+      "status": "FAIL",
+      "evidence": {
+        "path": "local/pose-runtime/results-attempt-1791448223743.json",
+        "sha256": "540e823e2a5db171c70a819a68bc22336e7bd778dfcb5e9120dc66efe1e569e3"
+      },
+      "note": "Prior run retained; root-cause.md records resolution or remaining limitation."
+    },
+    {
+      "status": "FAIL",
+      "evidence": {
+        "path": "local/stability/results-attempt-1791448974788.json",
+        "sha256": "5350830a4574d8c1afcbe8c00be37631e1d90b2f2bf9bd0c0cf84480e3d3e306"
+      },
+      "note": "Prior run retained; root-cause.md records resolution or remaining limitation."
+    }
+  ],
+  "notTested": [
+    "Target-device human camera, occlusion, lighting, multiperson exhibition acceptance",
+    "Process/GPU memory, 10-minute accidental actions",
+    "Offline models"
+  ],
+  "scope": [
+    "Existing B01/shader guards and B02/B03/stage tests",
+    "Actual inline onResults → OperatorTracker → HandOwnership → Pointer → Dwell",
+    "Camera permission waits, error codes, cleanup failures, concurrent/late callbacks",
+    "Pose capture time, Worker disposal/rebuild, watchdog/hidden reentry",
+    "Hands30/Pose15,10,8, delayed/lost frames, raw1 filtered0 and independent stale Hands",
+    "Off-button candidate, ambiguous acquisition, same-side lock, short pause zero accumulation and release latch"
+  ]
+}

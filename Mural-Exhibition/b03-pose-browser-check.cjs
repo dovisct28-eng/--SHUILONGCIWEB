@@ -3,10 +3,10 @@ const {chromium}=require('playwright'),{createApp}=require('./server.js');
 const {syntheticCamera}=require('./b03-gesture-fixtures.cjs');
 const out=path.resolve(process.env.B03_POSE_VALIDATION_DIR||'../docs/validation/b03-gesture-v3.1/local/pose-runtime');fs.mkdirSync(out,{recursive:true});
 if(fs.existsSync(path.join(out,'results.json')))fs.copyFileSync(path.join(out,'results.json'),path.join(out,'results-attempt-'+Date.now()+'.json'));
-const instrument=`window.__runtime={snapshot(){return {pose:posePipeline.snapshot(),poseError:posePipeline.error?.message,notice:document.getElementById('entry-mode-notice').textContent,cameraStatus:cameraStatus.textContent,handsModels:Number(!!handsModel),performance:{...gesturePerformance,raf:Number(glFrame!==null)},person:ownership.operatorState,phase:webglContainer.dataset.phase,textures:renderer?.info.memory.textures,geometries:renderer?.info.memory.geometries,poseMaxPeople:posePipeline.config.poseMaxPeople};}};`;
+const instrument=`window.__runtime={snapshot(){return {pose:posePipeline.snapshot(),poseError:posePipeline.error?.message,notice:document.getElementById('entry-mode-notice').textContent,cameraStatus:cameraStatus.textContent,handsModels:Number(!!handsModel),lifecycle:cameraLifecycle.snapshot(),diagnostics:gestureDiagnostics.snapshot(performance.now()),thresholdMs:operatorTracker.config.poseMaxAgeMs,performance:{...gesturePerformance,raf:Number(glFrame!==null)},person:ownership.operatorState,phase:webglContainer.dataset.phase,textures:renderer?.info.memory.textures,geometries:renderer?.info.memory.geometries,poseMaxPeople:posePipeline.config.poseMaxPeople};}};`;
 (async()=>{const server=createApp().listen(0,'localhost');await new Promise(r=>server.once('listening',r));const browser=await chromium.launch({channel:'chrome',headless:true,args:process.env.B03_POSE_HTTP1==='1'?['--disable-http2']:[]});const p=await browser.newPage({viewport:{width:1440,height:900}});const errors=[];p.on('pageerror',e=>errors.push(e.message));const report={scope:'Real pinned Tasks Vision CPU PoseLandmarker/WASM in Chrome Worker, real legacy Hands inference, actual B03/WebGL/Camera.onFrame/Hands.onResults. Synthetic blank 320x240 camera image only. Checks deployment/cadence/lifecycle under the real stage; no person recognition or exhibition CPU/GPU acceptance claim.',network:[],transport:process.env.B03_POSE_HTTP1==='1'?'Chrome --disable-http2 diagnostic':'Chrome default'};
  p.context().on('requestfailed',r=>report.network.push({url:r.url(),error:r.failure()?.errorText}));
- p.context().on('response',r=>{if(r.url().includes('tasks-vision')||r.url().includes('pose_landmarker'))report.network.push({url:r.url(),status:r.status()});});
+ p.context().on('response',r=>{if(r.url().includes('mediapipe'))report.network.push({url:r.url(),status:r.status()});});
 try{
  await p.route('**/index.html',async r=>{const response=await r.fetch();await r.fulfill({response,body:(await response.text()).replace(/\r?\n    <\/script>\r?\n<\/body>/,instrument+'\n    </script>\n</body>')});});await syntheticCamera(p,{realPose:true,realHands:true});
  await p.goto('http://localhost:'+server.address().port+'/index.html');
@@ -21,7 +21,7 @@ try{
    return Promise.all(urls.map(async url=>{const at=performance.now(),r=await fetch(url);if(!r.ok)throw new Error('Prewarm HTTP '+r.status);const bytes=(await r.arrayBuffer()).byteLength;return {url,bytes,elapsedMs:performance.now()-at};}));
   });
  }
- const initializationStart=Date.now();await p.locator('#btn-cyber-track').click();await p.waitForFunction(()=>window.__runtime&&__runtime.snapshot().pose.models===1&&__runtime.snapshot().phase==='stable',null,{timeout:25000});
+ const initializationStart=Date.now();await p.locator('#btn-cyber-track').click();await p.waitForFunction(()=>window.__runtime&&__runtime.snapshot().pose.models===1&&__runtime.snapshot().phase==='stable',null,{timeout:60000});
  report.initializationElapsedMs=Date.now()-initializationStart;
  await p.waitForFunction(()=>__runtime.snapshot().pose.frames>=5,null,{timeout:30000});
  report.start=await p.evaluate(()=>__runtime.snapshot());

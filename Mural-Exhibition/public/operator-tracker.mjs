@@ -158,7 +158,7 @@ export class OperatorTracker {
  assign(hands,now) {
   const c=this.config,a=this.active,choices=[];
   for(let i=0;i<hands.length;i++){
-   const lm=hands[i],w=lm?.[0];if(!finite(w)||!finite(lm[9])||lm.length!==21){this.reject(i,'INVALID_HAND');continue;}
+   const lm=hands[i],w=lm?.[0];if(!finite(w)||!finite(lm[9])||lm.length!==21||!lm.every(finite)){this.reject(i,'INVALID_HAND');continue;}
    let best=this.matchHandToPoseWrist(w,i,now);if(best?.fallback)best=this.matchHandToOperatorEnvelope(w,i,now,best.reason);
    if(!best)continue;
    const prior=this.assignments[best.side];

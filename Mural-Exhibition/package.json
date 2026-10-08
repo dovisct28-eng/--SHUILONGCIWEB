@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "start:admin": "node start-gallery-admin.cjs",
-    "test": "node b01-check.cjs && node --test b02.test.cjs b03.test.cjs orbit-layout.test.mjs mural-surface.test.mjs b03-motion.test.mjs operator-tracker.test.mjs hand-ownership.test.mjs gesture-pointer.test.mjs dwell-controller.test.mjs b03-dwell-production.test.mjs pose-pipeline.test.mjs",
+    "test": "node b01-check.cjs && node --test b02.test.cjs b03.test.cjs orbit-layout.test.mjs mural-surface.test.mjs b03-motion.test.mjs operator-tracker.test.mjs hand-ownership.test.mjs gesture-pointer.test.mjs dwell-controller.test.mjs b03-dwell-production.test.mjs pose-pipeline.test.mjs camera-lifecycle.test.mjs gesture-timing.test.mjs b03-v42-launcher.test.cjs",
     "test:browser": "node b01-browser-check.cjs",
     "test:b02-browser": "node b02-browser-check.cjs",
     "test:b03-browser": "node b03-browser-check.cjs && node b03-stage-browser-check.cjs",
@@ -17,6 +17,7 @@
     "test:b03-gesture-browser": "node b03-dwell-browser-check.cjs",
     "test:b03-hand-lock-browser": "node b03-hand-lock-browser-check.cjs",
     "test:b03-dwell-browser": "node b03-dwell-browser-check.cjs",
+    "test:b03-v42-browser": "node b03-v42-browser-check.cjs",
     "test:b03-pose-browser": "node b03-pose-browser-check.cjs"
   },
   "keywords": [],

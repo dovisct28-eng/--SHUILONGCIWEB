@@ -1,0 +1,201 @@
+{
+  "version": "B03 V4.2",
+  "status": "PASS",
+  "checks": [
+    {
+      "path": "Mural-Exhibition/b01-browser-check.cjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "errors": ""
+    },
+    {
+      "path": "Mural-Exhibition/b01-check.cjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "errors": ""
+    },
+    {
+      "path": "Mural-Exhibition/b03-dwell-browser-check.cjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "errors": ""
+    },
+    {
+      "path": "Mural-Exhibition/b03-dwell-harness.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "errors": ""
+    },
+    {
+      "path": "Mural-Exhibition/b03-dwell-production.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "errors": ""
+    },
+    {
+      "path": "Mural-Exhibition/b03-gesture-fixtures.cjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "errors": ""
+    },
+    {
+      "path": "Mural-Exhibition/b03-pose-browser-check.cjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "errors": ""
+    },
+    {
+      "path": "Mural-Exhibition/b03-v42-browser-check.cjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "errors": ""
+    },
+    {
+      "path": "Mural-Exhibition/b03-v42-launcher.test.cjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "errors": ""
+    },
+    {
+      "path": "Mural-Exhibition/camera-lifecycle.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "errors": ""
+    },
+    {
+      "path": "Mural-Exhibition/gesture-pointer.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "errors": ""
+    },
+    {
+      "path": "Mural-Exhibition/gesture-timing.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "errors": ""
+    },
+    {
+      "path": "Mural-Exhibition/hand-ownership.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "errors": ""
+    },
+    {
+      "path": "Mural-Exhibition/pose-pipeline.test.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "errors": ""
+    },
+    {
+      "path": "Mural-Exhibition/public/camera-lifecycle.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "errors": ""
+    },
+    {
+      "path": "Mural-Exhibition/public/dwell-controller.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "errors": ""
+    },
+    {
+      "path": "Mural-Exhibition/public/dwell-feedback.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "errors": ""
+    },
+    {
+      "path": "Mural-Exhibition/public/gesture-diagnostics.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "errors": ""
+    },
+    {
+      "path": "Mural-Exhibition/public/gesture-pointer.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "errors": ""
+    },
+    {
+      "path": "Mural-Exhibition/public/hand-ownership.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "errors": ""
+    },
+    {
+      "path": "Mural-Exhibition/public/interaction-config.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "errors": ""
+    },
+    {
+      "path": "Mural-Exhibition/public/operator-tracker.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "errors": ""
+    },
+    {
+      "path": "Mural-Exhibition/public/pose-pipeline.mjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "errors": ""
+    },
+    {
+      "path": "Mural-Exhibition/public/pose-worker.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "errors": ""
+    },
+    {
+      "path": "Mural-Exhibition/server.js",
+      "status": "PASS",
+      "exitCode": 0,
+      "errors": ""
+    },
+    {
+      "path": "docs/validation/b03-gesture-v4.2/start-physical-acceptance.cjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "errors": ""
+    },
+    {
+      "path": "public/index.html inline script 0",
+      "status": "PASS",
+      "exitCode": 0,
+      "errors": "",
+      "type": "Import map JSON parsed as JSON, not executed as JavaScript",
+      "imports": {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+        }
+      }
+    },
+    {
+      "path": "public/index.html inline script 1",
+      "status": "PASS",
+      "exitCode": 0,
+      "errors": ""
+    },
+    {
+      "path": "Task allowlist diff whitespace",
+      "status": "PASS",
+      "exitCode": 0,
+      "errors": ""
+    },
+    {
+      "path": "Frozen low fidelity archive refs",
+      "status": "PASS",
+      "values": {
+        "module-a-lofi-final-v1.0^{commit}": "48f272497e86e4549c5bcd0dee275ff347171a3f",
+        "archive/module-a-lofi": "48f272497e86e4549c5bcd0dee275ff347171a3f"
+      }
+    },
+    {
+      "path": "JSON reports and tested source hashes",
+      "status": "PASS"
+    }
+  ],
+  "build": "Native Express and browser ES modules; package has no bundler/build command. Syntax/inline HTML, runtime WebGL and existing frozen shader/source guards are checked.",
+  "physicalCamera": "PENDING",
+  "validationToolCorrection": "Initial check incorrectly parsed the import-map JSON as JS. Retained local/build-attempt-importmap.json; final check uses JSON parsing. No product syntax failure."
+}

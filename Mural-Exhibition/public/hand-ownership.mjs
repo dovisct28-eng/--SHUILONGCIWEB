@@ -1,5 +1,5 @@
 import {INTERACTION_CONFIG} from './interaction-config.mjs';
-import {hitTarget,mapHandPoint,ownershipBlockReason} from './gesture-pointer.mjs';
+import {ownershipBlockReason} from './gesture-pointer.mjs';
 
 // The only source of control-hand identity. Person assignment remains upstream.
 export class HandOwnership {
@@ -38,7 +38,7 @@ export class HandOwnership {
    if(now-this.lastSeenAt>c.controlHandLossGraceMs){this.release();return this.snapshot(now);}
    const selected=hands.filter(h=>`${h.operatorId}:${h.side}`===this.lockedHandKey);
    if(safety||selected.length!==1){this.pause(now,safety||'HAND_LOCKED_PAUSED');return this.snapshot(now);}
-   const recovering=this.state==='HAND_PAUSED'||now-this.lastSeenAt>c.trackingPauseMs;
+   const gap=now-this.lastSeenAt,recovering=(this.state==='HAND_PAUSED'&&gap>c.trackingPauseMs)||this.rearmSince!==null||gap>c.trackingPauseMs;
    this.lastSeenAt=now;
    if(recovering){
     this.rearmSince??=now;this.state='HAND_PAUSED';this.reason='HAND_LOCKED_PAUSED';
@@ -51,16 +51,14 @@ export class HandOwnership {
   }
   this.state='WAIT_HAND';
   if(safety||blocked||locked){this.clearEvidence();this.reason=safety||'ACTION_LOCKED';return this.snapshot(now);}
-  const requests=hands.filter(h=>{
-   const p=mapHandPoint(h,width,height,c.pointerInput);
-   return hitTarget(p,targets)||controlRegions.some(r=>!r.disabled&&contains(p,r));
-  });
+  const requests=hands.filter(h=>{const z=c.gestureZone;return h.x>=z.left&&h.x<=z.right&&h.y>=z.top&&h.y<=z.bottom;});
   if(requests.length!==1){
    this.clearEvidence();this.reason=requests.length>1?'AMBIGUOUS_HAND':hands.length?'WAIT_HAND':d.handsDetected?'HAND_NOT_ASSIGNED':'HAND_NOT_DETECTED';
    return this.snapshot(now);
   }
   const selected=requests[0],key=`${selected.operatorId}:${selected.side}`;
-  if(this.candidate?.key!==key||now-this.candidate.lastAt>c.trackingPauseMs)this.candidate={key,since:now,lastAt:now};
+  if(this.candidate?.key!==key||now-this.candidate.lastAt>c.trackingPauseMs||Math.hypot(selected.x-this.candidate.x,selected.y-this.candidate.y)>c.controlHandCandidateJump||Math.hypot(selected.x-this.candidate.startX,selected.y-this.candidate.startY)>c.controlHandCandidateDrift)this.candidate={key,since:now,lastAt:now,startX:selected.x,startY:selected.y};
+  this.candidate.x=selected.x;this.candidate.y=selected.y;this.selectedHand=selected;
   this.candidate.lastAt=now;this.state='HAND_CANDIDATE';this.reason='HAND_ACQUIRING';
   if(now-this.candidate.since>=c.controlHandAcquireMs){
    this.lockedHandKey=key;this.lockedAt=now;this.lastSeenAt=now;this.candidate=null;

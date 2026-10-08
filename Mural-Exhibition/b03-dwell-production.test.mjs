@@ -14,6 +14,7 @@ test('production omitted/empty frames, stale session and stale pose never replay
 });
 test('production preview skeleton is preserved, both-hand target competition blocks, resting hand and reordered detection retain control',()=>{
  const h=cameraHarness(),a=hand(.28,.545),b=hand(.65,.75),poses=[person({hands:[a,b],upper:true})];
+ sustain(h,.28,.545,650);
  for(let n=0;n<40;n++)h.result(n%2?[a,b]:[b,a],h.time+40,{poses});assert.equal(h.snapshot().reveals,1);assert.ok(h.snapshot().previewLines>=80);
  const c=cameraHarness(),other=hand(.72,.545),both=[a,other],body=person({hands:both,upper:true});for(let n=0;n<50;n++)c.result(both,c.time+40,{poses:[body]});assert.equal(c.snapshot().calls+c.snapshot().reveals,0);assert.equal(c.snapshot().blockedReason,'AMBIGUOUS_HAND');
 });
@@ -23,7 +24,7 @@ test('production rejects bystanders behind/side, extra hands, overlap and replac
 });
 test('production hidden/manual/reading scroll lifecycle preserves exclusive UI state and stops on invalid input',()=>{
  const h=cameraHarness();h.manual(true);sustain(h,.62,.57,1200);const sc=h.snapshot().scrollTop;assert.ok(sc>0);sustain(h,null,.5,400);assert.equal(h.snapshot().scrollTop,sc);sustain(h,.72,.545,1700);assert.equal(h.snapshot().calls,0);
- h.manual(false);sustain(h,.28,.545,1200);assert.equal(h.snapshot().reveals,1);h.hidden(true);assert.equal(h.snapshot().person,'SEARCHING');h.hidden(false);assert.equal(h.snapshot().releaseRequired,false);assert.equal(h.snapshot().reading,false);
+ h.manual(false);sustain(h,.28,.545,1200);assert.equal(h.snapshot().reveals,1);h.hidden(true);assert.equal(h.snapshot().person,'SEARCHING');h.hidden(false);assert.equal(h.snapshot().releaseRequired,true);assert.equal(h.snapshot().reading,false);
 });
 test('production ten full cycles, ownership stays stable and actions remain exactly once',()=>{
  const h=cameraHarness();const id=h.snapshot().operator;let key;for(let n=0;n<10;n++){release(h);sustain(h,.28,.545,1700);assert.equal(h.snapshot().reveals,n+1);key??=h.snapshot().handLock.lockedHandKey;assert.equal(h.snapshot().handLock.lockedHandKey,key);release(h);sustain(h,.28,.545,1700);assert.equal(h.snapshot().closes,n+1);assert.equal(h.snapshot().handLock.lockedHandKey,key);release(h);sustain(h,.72,.545,1700);assert.equal(h.snapshot().calls,n+1);assert.equal(h.snapshot().handLock.lockedHandKey,key);assert.equal(h.snapshot().operator,id);}
@@ -45,7 +46,8 @@ test('V4.1 production locked left ignores right NEXT, reordered targets and keep
 });
 test('V4.1 production right control ignores left VIEW and keeps right identity across OPEN CLOSE NEXT',()=>{
  const h=cameraHarness(),rest=hand(.6,.75);const hold=(x,y,ms)=>{const control=hand(x,y),poses=[person({hands:[rest,control],upper:true})];for(let t=0;t<ms;t+=40)h.result([control,rest],h.time+40,{poses});};
- hold(.72,.545,600);const key=h.snapshot().handLock.lockedHandKey;assert.match(key,/:right$/);assert.equal(h.snapshot().calls,0);
+ const initialControl=hand(.72,.545),initialPose=person({hands:[rest,initialControl],upper:true});for(let t=0;t<400;t+=40)h.result([initialControl],h.time+40,{poses:[initialPose]});
+ hold(.72,.545,200);const key=h.snapshot().handLock.lockedHandKey;assert.match(key,/:right$/);assert.equal(h.snapshot().calls,0);
  const neutral=hand(.5,.55),view=hand(.28,.545),poses=[person({hands:[view,neutral],upper:true})];
  for(let n=0;n<45;n++)h.result([view,neutral],h.time+40,{poses});assert.equal(h.snapshot().reveals,0);assert.equal(h.snapshot().handLock.lockedHandKey,key);
  hold(.28,.545,1700);assert.equal(h.snapshot().reveals,1);hold(.5,.55,1200);hold(.28,.545,1700);assert.equal(h.snapshot().closes,1);hold(.5,.55,1200);hold(.72,.545,1700);assert.equal(h.snapshot().calls,1);assert.equal(h.snapshot().handLock.lockedHandKey,key);
@@ -56,8 +58,8 @@ test('V4.1 non-control reading movement cannot scroll, but controlling hand stil
  for(let n=0;n<45;n++)h.result([b,a],h.time+40,{poses});assert.equal(h.snapshot().scrollTop,start);assert.equal(h.snapshot().handLock.lockedHandKey,key);
  sustain(h,.62,.57,1000);assert.ok(h.snapshot().scrollTop>start);
 });
-test('V4.1 every gap cancels dwell and maintains the release latch until fresh outside evidence',()=>{
- for(const ms of [100,300,500]){const h=cameraHarness();sustain(h,.28,.545,1000);const key=h.snapshot().handLock.lockedHandKey;h.result([],h.time+ms);assert.equal(h.snapshot().handLock.lockedHandKey,key);assert.equal(h.snapshot().progress,0);sustain(h,.28,.545,700);assert.equal(h.snapshot().reveals,0);}
+test('V4.2 short gaps pause without accumulation; longer gaps cancel and preserve release latch',()=>{
+ for(const ms of [100,300,500]){const h=cameraHarness();sustain(h,.28,.545,1000);const key=h.snapshot().handLock.lockedHandKey,before=h.snapshot().progress;h.result([],h.time+ms);assert.equal(h.snapshot().handLock.lockedHandKey,key);assert.equal(h.snapshot().progress,ms<=200?before:0);h.result([hand(.28,.545)],h.time+40);assert.equal(h.snapshot().reveals,0);assert.equal(h.snapshot().progress,ms<=200?before:0);}
  const h=cameraHarness();sustain(h,.28,.545,1700);sustain(h,null,.5,800);assert.equal(h.snapshot().handLock.lockedHandKey,null);assert.equal(h.snapshot().releaseRequired,true);sustain(h,.28,.545,2000);assert.equal(h.snapshot().closes,0);release(h);sustain(h,.28,.545,1700);assert.equal(h.snapshot().closes,1);
 });
 test('V4.1 stop/leave/hidden clear ownership; animation blocks action while preserving the hand',()=>{

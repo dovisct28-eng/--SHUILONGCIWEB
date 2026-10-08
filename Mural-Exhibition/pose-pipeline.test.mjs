@@ -41,3 +41,19 @@ test('bounded initialization timeout terminates the worker; late readiness canno
  old.onerror({message:'late old-worker error'});assert.equal(p.ready,true);
  assert.equal(p.worker,next);assert.equal(p.snapshot().models,1);p.dispose();assert.equal(terminated,2);
 });
+
+test('runtime worker failure destroys poisoned instance; concurrent retry reinitializes and rejects old error/result',async()=>{
+ let workers=[],terminated=0;const p=new PosePipeline({workerFactory:()=>{const w={postMessage(d){if(d.type==='init')queueMicrotask(()=>w.onmessage({data:{type:'ready'}}));else this.frame=d;},terminate(){terminated++;}};workers.push(w);return w;},bitmapFactory:async()=>({close(){}})});
+ await p.initialize();p.start();await p.submit({},100);const old=workers[0];old.onmessage({data:{type:'error',message:'runtime failure',code:'POSE_RUNTIME_ERROR'}});
+ assert.equal(p.ready,false);assert.equal(p.worker,null);assert.equal(terminated,1);await Promise.all([p.initialize(),p.initialize()]);assert.equal(workers.length,2);assert.equal(p.ready,true);
+ old.onmessage({data:{type:'poses',at:100,session:1,poses:[[]],inferenceMs:1}});old.onerror({message:'late failure'});assert.equal(p.error,null);assert.equal(p.latest.at,-Infinity);p.dispose();
+});
+test('dispose while initializing settles promise and rejects late ready; conversion error requires actual reinitialize',async()=>{
+ const w={postMessage(){},terminate(){}};const p=new PosePipeline({workerFactory:()=>w});const start=p.initialize(),rejected=assert.rejects(start,/disposed/);p.dispose();await rejected;w.onmessage({data:{type:'ready'}});assert.equal(p.ready,false);
+ const {pipeline:q,worker:r}=fixture();await q.initialize();q.start();q.bitmapFactory=async()=>{throw new DOMException('bitmap fail','InvalidStateError');};await q.submit({},100);assert.equal(q.error.code,'FRAME_CONVERSION_ERROR');assert.equal(q.worker,null);assert.equal(q.ready,false);q.dispose();
+});
+
+test('reentry with a healthy in-flight old frame does not use reset submit time as a timeout',async()=>{
+ const {pipeline:p,worker:w}=fixture();await p.initialize();p.start();await p.submit({},100);const old=w.frame;p.stop();p.start();await p.submit({},200);assert.equal(p.error,null);assert.equal(p.inFlight,true);
+ w.onmessage({data:{type:'poses',at:old.at,session:old.session,poses:[],inferenceMs:10}});assert.equal(p.inFlight,false);assert.equal(p.latest.at,-Infinity);await p.submit({},300);assert.equal(w.frame.at,300);p.dispose();
+});

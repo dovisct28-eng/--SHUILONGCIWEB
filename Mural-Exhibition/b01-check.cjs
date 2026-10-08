@@ -7,12 +7,12 @@ const base=cp.execFileSync('git',['show','fd46e4f:Mural-Exhibition/public/index.
 const block=(s,start,end)=>{const a=s.indexOf(start),b=s.indexOf(end,a);assert.ok(a>=0&&b>a,`Missing protected block: ${start}`);return s.slice(a,b).replace(/\r\n/g,'\n');};
 for(const [a,b] of [['const cyberScripts','function loadEntryImage']]) {
  const current=block(html,a,b).split('// Only NEXT')[0].trimEnd().replace('            nextGesture.resetGestureState(); renderGestureFeedback();\n','');
- const frozen=block(base,a,b).replace(/        let continuousOpenFrames = 0;\n        let continuousClosedFrames = 0;\n        let currentHandState = 'closed';\n\n/,'');
+ const frozen=block(base,a,b).replace("function fail() { clearTimeout(timer); script.remove(); reject(new Error('体感组件加载失败，请检查网络后重试。')); }","function fail() { clearTimeout(timer); script.remove(); reject(Object.assign(new Error(name+' 体感组件加载失败，请检查资源网络后重试。'),{code:name==='Hands'?'HANDS_SCRIPT_DOWNLOAD':'RESOURCE_LOAD_ERROR',source:'resource:'+name})); }").replace(/        let continuousOpenFrames = 0;\n        let continuousClosedFrames = 0;\n        let currentHandState = 'closed';\n\n/,'');
  assert.equal(current,frozen.trimEnd(),`Protected core changed: ${a}`);
 }
 // B03 authorizes layout fitting, cancelable textures and one shared reveal action.
 // V4 explicitly replaces classification and callback-count scroll equations.
-// B01, dependency startup, shaders and camera lifecycle protections remain exact.
+// B03 V4.2 authorizes the camera lifecycle; B01/dependencies/shaders stay protected.
 assert.ok(!/import.*(next-gesture|interaction-controller)/.test(html));
 assert.ok(html.includes('readingVelocity(controlPointer.point,dwellFeedback.region)*dt/1000'));
 assert.equal((html.match(/new Hands\(/g)||[]).length,1);

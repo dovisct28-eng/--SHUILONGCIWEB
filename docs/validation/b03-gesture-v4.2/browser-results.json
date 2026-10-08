@@ -1,0 +1,389 @@
+{
+  "version": "B03 V4.2",
+  "date": "2026-10-08",
+  "baselineCommit": "7a0e2947269529854787edcb0d0fd25f82be9562",
+  "testedSoftware": "Uncommitted V4.2 on baseline; source hashes identify tested files. Release SHA supplied after commit/push, no self-referential SHA invented.",
+  "physicalCamera": "PENDING",
+  "statusDefinitions": {
+    "PASS": "Completed within stated scope",
+    "FAIL": "Observed failure, including retained prior attempt",
+    "PENDING": "Target-device acceptance not yet performed",
+    "NOT_TESTED": "Explicitly unexecuted measurement"
+  },
+  "status": "PASS",
+  "b03Stability": {
+    "status": "PASS",
+    "scope": "Actual Chrome, WebGL and production Camera.onFrame/Hands.onResults. Synthetic camera stream and mocked model results/faults. Physical camera PENDING.",
+    "cases": [
+      {
+        "name": "Button-free candidate → locked visible cursor, zero actions",
+        "status": "PASS"
+      },
+      {
+        "name": "Raw Hands count remains one when stale Hands input is rejected",
+        "status": "PASS"
+      },
+      {
+        "name": "NotAllowedError residual stream cleanup and visible retry",
+        "status": "PASS"
+      },
+      {
+        "name": "NotFoundError residual stream cleanup and visible retry",
+        "status": "PASS"
+      },
+      {
+        "name": "NotReadableError residual stream cleanup and visible retry",
+        "status": "PASS"
+      },
+      {
+        "name": "SecurityError residual stream cleanup and visible retry",
+        "status": "PASS"
+      },
+      {
+        "name": "HANDS_MODEL_INIT_ERROR → new initialization succeeds",
+        "status": "PASS"
+      },
+      {
+        "name": "POSE_WORKER_ERROR → new initialization succeeds",
+        "status": "PASS"
+      },
+      {
+        "name": "Runtime Pose fault destroys Worker; retry creates exactly one new Worker",
+        "status": "PASS"
+      },
+      {
+        "name": "Real callback delay, approximately 8 FPS Pose, same hand remains active",
+        "status": "PASS"
+      },
+      {
+        "name": "Hidden stops stream/inference; visible creates one fresh camera session",
+        "status": "PASS"
+      },
+      {
+        "name": "Ten gallery/cyber transitions, bounded camera/model counts",
+        "status": "PASS"
+      },
+      {
+        "name": "Late permission + queued retry + second exit cannot reopen camera",
+        "status": "PASS"
+      },
+      {
+        "name": "Debug-only JSON export has verified software SHA and no image/landmarks",
+        "status": "PASS"
+      }
+    ],
+    "errors": [],
+    "evidence": {
+      "path": "local/stability/results.json",
+      "sha256": "dce8c03e9f208e5163038609216839d21d787b30d3cee79d1d9959f1b28b0dde"
+    }
+  },
+  "b03Dwell": {
+    "status": "PASS",
+    "scope": "Actual installed Chrome, Three.js, GSAP, production Camera.onFrame → Hands.onResults → OperatorTracker → HandOwnership → GesturePointer → DwellController. Camera pixels, Hands and Pose outputs SYNTHETIC. Physical camera PENDING.",
+    "viewports": [
+      [
+        1280,
+        800
+      ],
+      [
+        1366,
+        768
+      ],
+      [
+        1440,
+        900
+      ],
+      [
+        1920,
+        1080
+      ]
+    ],
+    "cases": [
+      "Four viewport DOM hitboxes match visible targets; target rectangles avoid whole figure, orbit panels, native controls, archive and original camera preview; true progress and reading release locks",
+      "Resting visible second hand and detection reorder permit one control; unlocked competing hands and three bystander positions block actions; locked hand ignores other target requests; leaving/reacquisition clears ownership",
+      "Production reading scroll uses only #info-text, real elapsed time, directional velocity and central dead zone; short content hides guidance; missing hand stops immediately",
+      "Ten complete cycles, final forward wrap, manual previous/next/I/Escape, hidden/reset, three reentries and bounded one camera/model/renderer/RAF; ordinary preview draws actual skeleton; gated diagnostics"
+    ],
+    "cycles": [
+      {
+        "n": 1,
+        "before": 0,
+        "after": 1,
+        "handBefore": "visitor-3:left",
+        "handAfter": "visitor-3:left",
+        "operatorBefore": "visitor-3",
+        "operatorAfter": "visitor-3",
+        "trackingReleasedDuringLoad": false,
+        "releaseRequiredAfterLoad": true,
+        "reacquired": false
+      },
+      {
+        "n": 2,
+        "before": 1,
+        "after": 2,
+        "handBefore": "visitor-3:left",
+        "handAfter": "visitor-3:left",
+        "operatorBefore": "visitor-3",
+        "operatorAfter": "visitor-3",
+        "trackingReleasedDuringLoad": false,
+        "releaseRequiredAfterLoad": true,
+        "reacquired": false
+      },
+      {
+        "n": 3,
+        "before": 2,
+        "after": 3,
+        "handBefore": "visitor-3:left",
+        "handAfter": "visitor-3:left",
+        "operatorBefore": "visitor-3",
+        "operatorAfter": "visitor-3",
+        "trackingReleasedDuringLoad": false,
+        "releaseRequiredAfterLoad": true,
+        "reacquired": false
+      },
+      {
+        "n": 4,
+        "before": 3,
+        "after": 4,
+        "handBefore": "visitor-3:left",
+        "handAfter": "visitor-3:left",
+        "operatorBefore": "visitor-3",
+        "operatorAfter": "visitor-3",
+        "trackingReleasedDuringLoad": false,
+        "releaseRequiredAfterLoad": true,
+        "reacquired": false
+      },
+      {
+        "n": 5,
+        "before": 4,
+        "after": 5,
+        "handBefore": "visitor-3:left",
+        "handAfter": "visitor-3:left",
+        "operatorBefore": "visitor-3",
+        "operatorAfter": "visitor-3",
+        "trackingReleasedDuringLoad": false,
+        "releaseRequiredAfterLoad": true,
+        "reacquired": false
+      },
+      {
+        "n": 6,
+        "before": 5,
+        "after": 6,
+        "handBefore": "visitor-3:left",
+        "handAfter": "visitor-3:left",
+        "operatorBefore": "visitor-3",
+        "operatorAfter": "visitor-3",
+        "trackingReleasedDuringLoad": false,
+        "releaseRequiredAfterLoad": true,
+        "reacquired": false
+      },
+      {
+        "n": 7,
+        "before": 6,
+        "after": 7,
+        "handBefore": "visitor-3:left",
+        "handAfter": null,
+        "operatorBefore": "visitor-3",
+        "operatorAfter": "visitor-3",
+        "trackingReleasedDuringLoad": false,
+        "releaseRequiredAfterLoad": true,
+        "reacquired": true
+      },
+      {
+        "n": 8,
+        "before": 7,
+        "after": 0,
+        "handBefore": "visitor-3:left",
+        "handAfter": "visitor-3:left",
+        "operatorBefore": "visitor-3",
+        "operatorAfter": "visitor-3",
+        "trackingReleasedDuringLoad": false,
+        "releaseRequiredAfterLoad": true,
+        "reacquired": false
+      },
+      {
+        "n": 9,
+        "before": 0,
+        "after": 1,
+        "handBefore": "visitor-3:left",
+        "handAfter": "visitor-3:left",
+        "operatorBefore": "visitor-3",
+        "operatorAfter": "visitor-3",
+        "trackingReleasedDuringLoad": false,
+        "releaseRequiredAfterLoad": true,
+        "reacquired": false
+      },
+      {
+        "n": 10,
+        "before": 1,
+        "after": 2,
+        "handBefore": "visitor-3:left",
+        "handAfter": "visitor-3:left",
+        "operatorBefore": "visitor-3",
+        "operatorAfter": "visitor-3",
+        "trackingReleasedDuringLoad": false,
+        "releaseRequiredAfterLoad": true,
+        "reacquired": false
+      }
+    ],
+    "safeReleaseRecoveries": 1,
+    "errors": [],
+    "evidence": {
+      "path": "local/dwell/results.json",
+      "sha256": "9dfb514540b244dbc229d5f0d80c3580848d30200f103bcd984d3bc81645a291"
+    }
+  },
+  "b01": {
+    "status": "PASS",
+    "viewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        1920,
+        1080
+      ],
+      [
+        1366,
+        768
+      ],
+      [
+        1280,
+        800
+      ]
+    ],
+    "functional": [
+      "native keyboard Enter; map original image/8 hotspots; drag/wheel; hotspot to detail; org/line/color; detail→map→B01",
+      "real cyber dependencies and renderer; injected NotAllowedError",
+      "6 simulated camera sessions; max 1; all stopped; single existing renderer; repeated cyber↔gallery↔selection",
+      "NotFoundError message and return",
+      "NotReadableError message and return",
+      "NotAllowedError message and return",
+      "late camera startup after return is stopped",
+      "20 rapid entry clicks serialize",
+      "asset-api-error recovery",
+      "map-image-error recovery",
+      "homepage image failure/retry; reduced motion; Space native entry",
+      "blocked CDN shows retry and gallery remains usable",
+      "failed cached Three ES module import recovers on retry",
+      "unsupported camera returns to selection",
+      "real A08→B01→native back restores A08 at 42 screens; direct refresh"
+    ],
+    "lifecycle": {
+      "starts": 6,
+      "stops": 6,
+      "active": 0,
+      "max": 1,
+      "renderers": 1,
+      "visible": [
+        "splash-screen"
+      ]
+    },
+    "errors": [],
+    "evidence": {
+      "path": "local/b01-final/results.json",
+      "sha256": "7d0c967a43ece6658020552f476db942f621b7f9f329d211a89ed8c807278e78"
+    }
+  },
+  "b02": {
+    "status": "PASS",
+    "viewports": [
+      [
+        1920,
+        1080
+      ],
+      [
+        1440,
+        900
+      ],
+      [
+        1366,
+        768
+      ],
+      [
+        1280,
+        800
+      ]
+    ],
+    "functional": [
+      "All eight named hotspots open their matching original resources; all hover screenshots recorded",
+      "Pan/zoom preserved through detail and character switching; line/color/video lazy; missing video never requested; video released on switch/return",
+      "Drag, wheel, middle, reset, fresh B01 entry at left",
+      "Real new folder auto-discovery; both click/select orders; draft/cancel/save/reload/edit/unbind; search; simulated save failure restores; progressive resources; original-only detail; fixture cleaned"
+    ],
+    "stress": [
+      {
+        "count": 30,
+        "frames": 183,
+        "medianMs": 4.2000000000000455,
+        "p95Ms": 4.600000000000136,
+        "heap": 4727357,
+        "renderer": 0
+      },
+      {
+        "count": 50,
+        "frames": 187,
+        "medianMs": 4.2000000000000455,
+        "p95Ms": 4.599999999999909,
+        "heap": 4274130,
+        "renderer": 0
+      }
+    ],
+    "memory": {
+      "visits": 30,
+      "start": {
+        "usedSize": 2740892,
+        "totalSize": 3260416,
+        "embedderHeapUsedSize": 1802920,
+        "backingStorageSize": 190028
+      },
+      "end": {
+        "usedSize": 2776612,
+        "totalSize": 3260416,
+        "embedderHeapUsedSize": 2160472,
+        "backingStorageSize": 191366
+      },
+      "scope": "JS heap after explicit GC; excludes decoded images/GPU/process RSS"
+    },
+    "errors": [],
+    "evidence": {
+      "path": "local/b02/results.json",
+      "sha256": "002fae7bcd8a19b4bc0905166cacab3365e2765aec4023f984e5951d98e25e01"
+    }
+  },
+  "b02Media": {
+    "status": "PASS",
+    "cases": [
+      "36 real static screenshots: three author figures × three layers × four desktop sizes; computed fit, center, no stretch/upscale/crop/frame; index navigation",
+      "Temporary tall/wide/square PNGs with unequal alpha margins and pixel dimensions; internal diagnostics only; repeat layer selections cause no new image requests",
+      "Small canvas remains 120×160 with no enlargement; only original/missing line/missing color never retain another visible layer",
+      "Per-frame rapid org→line→color→org, org→color→line, pending load retention, late response cancellation, character change during pending load",
+      "Returning to a downloaded but still decoding layer waits for decoding and does not treat naturalWidth as readiness",
+      "404 image preserves decoded original and pressed button; no broken visible img; retry commits line",
+      "Real MP4 plays with all static layers hidden; natural end restores static color; ten playback/release loops keep four media nodes, paused video, no src or callbacks; character change releases video",
+      "Video 404, unsupported format, rejected play automatically retain static color; delayed video cannot reappear after selecting line"
+    ],
+    "monitoredFrames": 3633,
+    "screenshots": 36,
+    "violations": [],
+    "errors": [],
+    "expectedConsole": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "limits": "JS heap/DOM lifecycle checks do not measure process/GPU memory. Physical camera is outside B02 scope.",
+    "evidence": {
+      "path": "local/b02-media/results.json",
+      "sha256": "51354226eb1e5c8a631345b01380ecc85507d4abeb09cfe84f6b28858200cf07"
+    }
+  },
+  "limits": [
+    "Full-page faults/dwell use synthetic camera/model input through actual Chrome production callbacks and WebGL.",
+    "One safety release during final ten rounds; fresh reacquisition and release latch verified, no uninterrupted tracking claim.",
+    "B01/B02 use current user local asset additions/deletions, neither changed nor included in release.",
+    "Human recognition, exhibition hardware, process/GPU memory and long-term false triggers remain unverified."
+  ]
+}

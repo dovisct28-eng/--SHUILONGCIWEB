@@ -47,7 +47,7 @@ const shot=(p,n)=>p.screenshot({path:path.join(out,n+'.png')});
   if(await state(page)==='cyber'){
    await page.locator('#entry-mode-notice').waitFor({state:'visible',timeout:25000});await shot(page,'cyber-permission');
    report.functional.push('real cyber dependencies and renderer; injected NotAllowedError');
-   await page.locator('#entry-mode-notice button').click();assert.equal(await state(page),'selection');
+   await page.locator('#entry-mode-notice').getByRole('button',{name:'返回选择',exact:true}).click();assert.equal(await state(page),'selection');
   }else{await shot(page,'cyber-dependency-error');report.functional.push('external cyber dependency error reported, return/retry available');}
   // Deterministic lifecycle: use real renderer/gsap/Hands, replace only Camera hardware boundary.
   await page.evaluate(()=>{
@@ -55,9 +55,9 @@ const shot=(p,n)=>p.screenshot({path:path.join(out,n+'.png')});
    window.Camera=class{constructor(v,o){this.v=v;this.o=o;} async start(){window.__starts++;window.__active++;window.__max=Math.max(window.__max,window.__active);this.running=true;} stop(){if(this.running){window.__stops++;window.__active--;this.running=false;}}};
   });
   for(let i=0;i<3;i++){
-   await page.locator('#btn-cyber-track').click();await page.waitForFunction(()=>document.body.dataset.explorationState==='cyber');
+   await page.locator('#btn-cyber-track').click();await page.waitForFunction(()=>document.body.dataset.explorationState==='cyber');await page.waitForFunction(()=>window.__active===1);
    await page.locator('#quick-switch-btn').click();assert.equal(await state(page),'gallery-detail');
-   await page.locator('#quick-switch-btn').click();await page.waitForFunction(()=>document.body.dataset.explorationState==='cyber');
+   await page.locator('#quick-switch-btn').click();await page.waitForFunction(()=>document.body.dataset.explorationState==='cyber');await page.waitForFunction(()=>window.__active===1);
    await page.locator('#back-btn').click();assert.equal(await state(page),'selection');
   }
   report.lifecycle=await page.evaluate(()=>({starts:__starts,stops:__stops,active:__active,max:__max,renderers:document.querySelectorAll('#webgl-container canvas').length,visible:['splash-screen','main-app','panorama-view'].filter(id=>!document.getElementById(id).hidden)}));
@@ -66,10 +66,10 @@ const shot=(p,n)=>p.screenshot({path:path.join(out,n+'.png')});
   for(const name of ['NotFoundError','NotReadableError','NotAllowedError']){
    await page.evaluate(name=>{window.Camera=class{start(){return Promise.reject(new DOMException('device failure',name));}stop(){}};},name);
    await page.locator('#btn-cyber-track').click();await page.locator('#entry-mode-notice').waitFor({state:'visible'});assert.equal(await state(page),'cyber');
-   await page.locator('#entry-mode-notice button').click();assert.equal(await state(page),'selection');report.functional.push(name+' message and return');
+   await page.locator('#entry-mode-notice').getByRole('button',{name:'返回选择',exact:true}).click();assert.equal(await state(page),'selection');report.functional.push(name+' message and return');
   }
   await page.evaluate(()=>{window.__lateStopped=0;window.Camera=class{start(){return new Promise(r=>window.__releaseCamera=r);}stop(){window.__lateStopped++;}};});
-  await page.locator('#btn-cyber-track').click();await page.waitForFunction(()=>document.body.dataset.explorationState==='cyber');await page.locator('#back-btn').click();
+  await page.locator('#btn-cyber-track').click();await page.waitForFunction(()=>document.body.dataset.explorationState==='cyber');await page.waitForFunction(()=>typeof window.__releaseCamera==='function');await page.locator('#back-btn').click();
   await page.evaluate(()=>window.__releaseCamera());await page.waitForTimeout(50);assert.equal(await state(page),'selection');assert.equal(await page.evaluate(()=>__lateStopped),2);report.functional.push('late camera startup after return is stopped');
   await page.locator('#btn-gallery-track').evaluate(e=>{for(let i=0;i<20;i++)e.click();});await page.waitForFunction(()=>document.body.dataset.explorationState==='gallery-map');await page.locator('#pano-back-btn').click();report.functional.push('20 rapid entry clicks serialize');
   for(const [route,label] of [['**/api/scan-assets','asset-api-error'],['**/gallery/mural-02-detail.webp','map-image-error']]){

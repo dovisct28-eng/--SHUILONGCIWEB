@@ -1,0 +1,837 @@
+{
+  "version": "B03 V4.2",
+  "date": "2026-10-08",
+  "baselineCommit": "7a0e2947269529854787edcb0d0fd25f82be9562",
+  "testedSoftware": "Uncommitted V4.2 on baseline; source hashes identify tested files. Release SHA supplied after commit/push, no self-referential SHA invented.",
+  "physicalCamera": "PENDING",
+  "statusDefinitions": {
+    "PASS": "Completed within stated scope",
+    "FAIL": "Observed failure, including retained prior attempt",
+    "PENDING": "Target-device acceptance not yet performed",
+    "NOT_TESTED": "Explicitly unexecuted measurement"
+  },
+  "status": "PASS",
+  "scope": "Real pinned Tasks Vision CPU PoseLandmarker/WASM in Chrome Worker, real legacy Hands inference, actual B03/WebGL/Camera.onFrame/Hands.onResults. Synthetic blank 320x240 camera image only. Checks deployment/cadence/lifecycle under the real stage; no person recognition or exhibition CPU/GPU acceptance claim.",
+  "realModelRuntime": {
+    "status": "PASS",
+    "modelPreparationElapsedMs": 13543,
+    "lifecycleEvents": [
+      {
+        "at": 579.3999999985099,
+        "state": "LOADING_RESOURCES",
+        "version": 0
+      },
+      {
+        "at": 3834.5,
+        "state": "INITIALIZING_MODELS",
+        "version": 1
+      },
+      {
+        "at": 13772.699999999255,
+        "state": "REQUESTING_PERMISSION",
+        "version": 1
+      },
+      {
+        "at": 13773.800000000745,
+        "state": "STARTING_VIDEO",
+        "version": 1
+      },
+      {
+        "at": 13810.89999999851,
+        "state": "WARMING_UP",
+        "version": 1
+      },
+      {
+        "at": 19371.60000000149,
+        "state": "RUNNING",
+        "version": 1
+      }
+    ],
+    "metrics": {
+      "models": 1,
+      "frames": 55,
+      "submitted": 56,
+      "inferenceTotalMs": 4710.399999972433,
+      "inferenceMaxMs": 568.0999999977648,
+      "staleResults": 0,
+      "active": 1,
+      "inFlight": 1,
+      "ready": true,
+      "submitFps": 4.9767900608974776,
+      "successFps": 9.859052070402276,
+      "capturedAt": 24766,
+      "receivedAt": 24857,
+      "latencyP50Ms": 88.69999999925494,
+      "latencyP95Ms": 114.89999999850988,
+      "inferenceP50Ms": 74.89999999850988,
+      "inferenceP95Ms": 101.19999999925494,
+      "intervalP95Ms": 127.30000000074506,
+      "samples": 55,
+      "averageInferenceMs": 85.64363636313514,
+      "poseFps": 9.901970492127933,
+      "handsCallbackFps": 30.300029705911477,
+      "stalePoseRatio": 0.026143790849673203,
+      "numPoses": 4
+    },
+    "measuredFreshnessBudgetMs": 277.19999999925494,
+    "steadyWindowStalePoseRatio": 0.026143790849673203,
+    "allCallbacksStalePoseRatio": 0.06547619047619048,
+    "maxActiveCameras": 1,
+    "exit": {
+      "activeCamera": 0,
+      "handsModels": 0,
+      "poseEnabled": 0,
+      "raf": 0,
+      "textures": 0,
+      "geometries": 0,
+      "healthyIdlePoseWorker": "one healthy retained instance, not enabled"
+    },
+    "reentry": {
+      "pose": {
+        "models": 1,
+        "frames": 64,
+        "submitted": 65,
+        "inferenceTotalMs": 5425.899999979883,
+        "inferenceMaxMs": 568.0999999977648,
+        "staleResults": 0,
+        "active": 1,
+        "inFlight": 1,
+        "ready": true,
+        "submitFps": 6.945650286503581,
+        "successFps": 10.037281330624555,
+        "capturedAt": 27853.60000000149,
+        "receivedAt": 27941.60000000149,
+        "latencyP50Ms": 88.60000000149012,
+        "latencyP95Ms": 114.89999999850988,
+        "inferenceP50Ms": 75.30000000074506,
+        "inferenceP95Ms": 96.39999999850988,
+        "intervalP95Ms": 102.70000000298023,
+        "samples": 64,
+        "averageInferenceMs": 84.77968749968568
+      },
+      "notice": "返回选择",
+      "cameraStatus": "摄像头已连接",
+      "handsModels": 1,
+      "lifecycle": {
+        "state": "RUNNING",
+        "version": 2,
+        "error": null,
+        "events": [
+          {
+            "at": 579.3999999985099,
+            "state": "LOADING_RESOURCES",
+            "version": 0
+          },
+          {
+            "at": 3834.5,
+            "state": "INITIALIZING_MODELS",
+            "version": 1
+          },
+          {
+            "at": 13772.699999999255,
+            "state": "REQUESTING_PERMISSION",
+            "version": 1
+          },
+          {
+            "at": 13773.800000000745,
+            "state": "STARTING_VIDEO",
+            "version": 1
+          },
+          {
+            "at": 13810.89999999851,
+            "state": "WARMING_UP",
+            "version": 1
+          },
+          {
+            "at": 19371.60000000149,
+            "state": "RUNNING",
+            "version": 1
+          },
+          {
+            "at": 24962.5,
+            "state": "STOPPING",
+            "version": 1
+          },
+          {
+            "at": 24972.5,
+            "state": "IDLE",
+            "version": 1
+          },
+          {
+            "at": 25096,
+            "state": "LOADING_RESOURCES",
+            "version": 1
+          },
+          {
+            "at": 25100.699999999255,
+            "state": "INITIALIZING_MODELS",
+            "version": 2
+          },
+          {
+            "at": 26760.199999999255,
+            "state": "REQUESTING_PERMISSION",
+            "version": 2
+          },
+          {
+            "at": 26760.89999999851,
+            "state": "STARTING_VIDEO",
+            "version": 2
+          },
+          {
+            "at": 26797.39999999851,
+            "state": "WARMING_UP",
+            "version": 2
+          },
+          {
+            "at": 27235.39999999851,
+            "state": "RUNNING",
+            "version": 2
+          }
+        ],
+        "pending": false,
+        "waitingForPrevious": false,
+        "active": 1
+      },
+      "diagnostics": {
+        "inputFps": 19.968744573697794,
+        "handsFps": 30.913978494623656,
+        "inputCapturedAt": 27949.199999999255,
+        "inputIntervalP50Ms": 32.600000001490116,
+        "inputIntervalP95Ms": 37.19999999925494,
+        "handsCapturedAt": 27949.199999999255,
+        "handsReceivedAt": 27979.800000000745,
+        "handsIntervalP95Ms": 42.80000000074506,
+        "handsLatencyP50Ms": 19.600000001490116,
+        "handsLatencyP95Ms": 30.600000001490116,
+        "rawHands": 0,
+        "freshHands": 0,
+        "filteredHands": 0,
+        "validLandmarks": true,
+        "filteredReason": null,
+        "poseStaleRatio": 0.20833333333333334,
+        "noValidPoseMs": 746.8000000007451,
+        "states": [
+          {
+            "state": "WAIT_HAND/NO_OPERATOR",
+            "at": 19372.10000000149
+          }
+        ]
+      },
+      "thresholdMs": 252.60000000149012,
+      "performance": {
+        "callbacks": 24,
+        "firstAt": 27235.800000000745,
+        "lastAt": 27979.800000000745,
+        "maxActiveCameras": 1,
+        "activeCameras": 1,
+        "stalePoseFrames": 5,
+        "inputFrames": 24,
+        "raf": 1
+      },
+      "person": "SEARCHING",
+      "phase": "stable",
+      "textures": 1,
+      "geometries": 2,
+      "poseMaxPeople": 4
+    },
+    "errors": [],
+    "evidence": {
+      "path": "local/pose-runtime-release/results.json",
+      "sha256": "39ffa33d90f5cc0ccb590c32f34bf6a701f877ed6ec38e367d81630e21e934b2"
+    }
+  },
+  "baselineReference": {
+    "status": "PASS",
+    "metrics": {
+      "models": 1,
+      "frames": 54,
+      "inferenceTotalMs": 3761.0999999903142,
+      "inferenceMaxMs": 366.9000000022352,
+      "staleResults": 0,
+      "active": 1,
+      "inFlight": 1,
+      "averageInferenceMs": 69.64999999982064,
+      "poseFps": 9.692989397057925,
+      "handsCallbackFps": 30.26586485203801,
+      "stalePoseRatio": 0.0392156862745098,
+      "numPoses": 4
+    },
+    "evidence": {
+      "path": "local/baseline-pose/results.json",
+      "sha256": "ad0bbde60ed23e6dc19f15e9227708ef8d1bcb3072048037a2b323368e635e12"
+    }
+  },
+  "comparisonLimit": "Different load/warmup/windows; no statistical performance or human success-rate improvement claim. FPS/stale ratios measure model return timing even with no person present.",
+  "retainedEarlierAttempts": [
+    {
+      "status": "FAIL",
+      "evidence": {
+        "path": "local/dwell/results-attempt-1791448988388.json",
+        "sha256": "bc7aff0ba129033edd89040d62b307fe2f73036d4d8fe58baddccbdea6010181"
+      },
+      "note": "Prior run retained; root-cause.md records resolution or remaining limitation."
+    },
+    {
+      "status": "FAIL",
+      "evidence": {
+        "path": "local/pose-runtime/results-attempt-1791448223743.json",
+        "sha256": "540e823e2a5db171c70a819a68bc22336e7bd778dfcb5e9120dc66efe1e569e3"
+      },
+      "note": "Prior run retained; root-cause.md records resolution or remaining limitation."
+    },
+    {
+      "status": "FAIL",
+      "evidence": {
+        "path": "local/stability/results-attempt-1791448974788.json",
+        "sha256": "5350830a4574d8c1afcbe8c00be37631e1d90b2f2bf9bd0c0cf84480e3d3e306"
+      },
+      "note": "Prior run retained; root-cause.md records resolution or remaining limitation."
+    }
+  ],
+  "debugExportExample": {
+    "commitSha": "7a0e2947269529854787edcb0d0fd25f82be9562",
+    "workingTreeChanged": true,
+    "version": "B03 V4.2",
+    "createdAt": "2026-10-08T09:01:47.003Z",
+    "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/154.0.0.0 Safari/537.36",
+    "secureContext": true,
+    "camera": {
+      "state": "RUNNING",
+      "version": 16,
+      "error": null,
+      "events": [
+        {
+          "at": 9628.89999999851,
+          "state": "IDLE",
+          "version": 6
+        },
+        {
+          "at": 9749.199999999255,
+          "state": "LOADING_RESOURCES",
+          "version": 6
+        },
+        {
+          "at": 9755.89999999851,
+          "state": "INITIALIZING_MODELS",
+          "version": 7
+        },
+        {
+          "at": 9756,
+          "state": "REQUESTING_PERMISSION",
+          "version": 7
+        },
+        {
+          "at": 9756.39999999851,
+          "state": "STARTING_VIDEO",
+          "version": 7
+        },
+        {
+          "at": 9907.39999999851,
+          "state": "WARMING_UP",
+          "version": 7
+        },
+        {
+          "at": 9910.800000000745,
+          "state": "RUNNING",
+          "version": 7
+        },
+        {
+          "at": 10634.300000000745,
+          "state": "STOPPING",
+          "version": 7
+        },
+        {
+          "at": 10641,
+          "state": "IDLE",
+          "version": 7
+        },
+        {
+          "at": 10764.60000000149,
+          "state": "LOADING_RESOURCES",
+          "version": 7
+        },
+        {
+          "at": 10770.199999999255,
+          "state": "INITIALIZING_MODELS",
+          "version": 8
+        },
+        {
+          "at": 10770.39999999851,
+          "state": "REQUESTING_PERMISSION",
+          "version": 8
+        },
+        {
+          "at": 10771.699999999255,
+          "state": "STARTING_VIDEO",
+          "version": 8
+        },
+        {
+          "at": 10939.300000000745,
+          "state": "WARMING_UP",
+          "version": 8
+        },
+        {
+          "at": 10943.89999999851,
+          "state": "RUNNING",
+          "version": 8
+        },
+        {
+          "at": 11647,
+          "state": "STOPPING",
+          "version": 8
+        },
+        {
+          "at": 11653.300000000745,
+          "state": "IDLE",
+          "version": 8
+        },
+        {
+          "at": 11775.39999999851,
+          "state": "LOADING_RESOURCES",
+          "version": 8
+        },
+        {
+          "at": 11782.800000000745,
+          "state": "INITIALIZING_MODELS",
+          "version": 9
+        },
+        {
+          "at": 11783,
+          "state": "REQUESTING_PERMISSION",
+          "version": 9
+        },
+        {
+          "at": 11783.89999999851,
+          "state": "STARTING_VIDEO",
+          "version": 9
+        },
+        {
+          "at": 11818.800000000745,
+          "state": "WARMING_UP",
+          "version": 9
+        },
+        {
+          "at": 11977.60000000149,
+          "state": "RUNNING",
+          "version": 9
+        },
+        {
+          "at": 12696.199999999255,
+          "state": "STOPPING",
+          "version": 9
+        },
+        {
+          "at": 12701.800000000745,
+          "state": "IDLE",
+          "version": 9
+        },
+        {
+          "at": 12815.699999999255,
+          "state": "LOADING_RESOURCES",
+          "version": 9
+        },
+        {
+          "at": 12822.199999999255,
+          "state": "INITIALIZING_MODELS",
+          "version": 10
+        },
+        {
+          "at": 12822.300000000745,
+          "state": "REQUESTING_PERMISSION",
+          "version": 10
+        },
+        {
+          "at": 12822.60000000149,
+          "state": "STARTING_VIDEO",
+          "version": 10
+        },
+        {
+          "at": 12986,
+          "state": "WARMING_UP",
+          "version": 10
+        },
+        {
+          "at": 12990.89999999851,
+          "state": "RUNNING",
+          "version": 10
+        },
+        {
+          "at": 13704.699999999255,
+          "state": "STOPPING",
+          "version": 10
+        },
+        {
+          "at": 13711.300000000745,
+          "state": "IDLE",
+          "version": 10
+        },
+        {
+          "at": 13842.60000000149,
+          "state": "LOADING_RESOURCES",
+          "version": 10
+        },
+        {
+          "at": 13850.5,
+          "state": "INITIALIZING_MODELS",
+          "version": 11
+        },
+        {
+          "at": 13850.60000000149,
+          "state": "REQUESTING_PERMISSION",
+          "version": 11
+        },
+        {
+          "at": 13851.10000000149,
+          "state": "STARTING_VIDEO",
+          "version": 11
+        },
+        {
+          "at": 14012.10000000149,
+          "state": "WARMING_UP",
+          "version": 11
+        },
+        {
+          "at": 14015,
+          "state": "RUNNING",
+          "version": 11
+        },
+        {
+          "at": 14738,
+          "state": "STOPPING",
+          "version": 11
+        },
+        {
+          "at": 14743.10000000149,
+          "state": "IDLE",
+          "version": 11
+        },
+        {
+          "at": 14834.699999999255,
+          "state": "LOADING_RESOURCES",
+          "version": 11
+        },
+        {
+          "at": 14839.10000000149,
+          "state": "INITIALIZING_MODELS",
+          "version": 12
+        },
+        {
+          "at": 14839.199999999255,
+          "state": "REQUESTING_PERMISSION",
+          "version": 12
+        },
+        {
+          "at": 14839.5,
+          "state": "STARTING_VIDEO",
+          "version": 12
+        },
+        {
+          "at": 14956.10000000149,
+          "state": "WARMING_UP",
+          "version": 12
+        },
+        {
+          "at": 14959.300000000745,
+          "state": "RUNNING",
+          "version": 12
+        },
+        {
+          "at": 15703,
+          "state": "STOPPING",
+          "version": 12
+        },
+        {
+          "at": 15709.5,
+          "state": "IDLE",
+          "version": 12
+        },
+        {
+          "at": 15814,
+          "state": "LOADING_RESOURCES",
+          "version": 12
+        },
+        {
+          "at": 15818.300000000745,
+          "state": "INITIALIZING_MODELS",
+          "version": 13
+        },
+        {
+          "at": 15818.5,
+          "state": "REQUESTING_PERMISSION",
+          "version": 13
+        },
+        {
+          "at": 15818.699999999255,
+          "state": "STARTING_VIDEO",
+          "version": 13
+        },
+        {
+          "at": 15938.10000000149,
+          "state": "WARMING_UP",
+          "version": 13
+        },
+        {
+          "at": 15941.5,
+          "state": "RUNNING",
+          "version": 13
+        },
+        {
+          "at": 16690.300000000745,
+          "state": "STOPPING",
+          "version": 13
+        },
+        {
+          "at": 16694.60000000149,
+          "state": "IDLE",
+          "version": 13
+        },
+        {
+          "at": 16792.39999999851,
+          "state": "LOADING_RESOURCES",
+          "version": 13
+        },
+        {
+          "at": 16796.60000000149,
+          "state": "INITIALIZING_MODELS",
+          "version": 14
+        },
+        {
+          "at": 16796.699999999255,
+          "state": "REQUESTING_PERMISSION",
+          "version": 14
+        },
+        {
+          "at": 16797.10000000149,
+          "state": "STARTING_VIDEO",
+          "version": 14
+        },
+        {
+          "at": 16911.89999999851,
+          "state": "WARMING_UP",
+          "version": 14
+        },
+        {
+          "at": 16913.39999999851,
+          "state": "RUNNING",
+          "version": 14
+        },
+        {
+          "at": 17670,
+          "state": "STOPPING",
+          "version": 14
+        },
+        {
+          "at": 17673.10000000149,
+          "state": "IDLE",
+          "version": 14
+        },
+        {
+          "at": 17764.199999999255,
+          "state": "LOADING_RESOURCES",
+          "version": 14
+        },
+        {
+          "at": 17767.699999999255,
+          "state": "INITIALIZING_MODELS",
+          "version": 15
+        },
+        {
+          "at": 17767.89999999851,
+          "state": "REQUESTING_PERMISSION",
+          "version": 15
+        },
+        {
+          "at": 17892.800000000745,
+          "state": "STOPPING",
+          "version": 15
+        },
+        {
+          "at": 17895.5,
+          "state": "IDLE",
+          "version": 15
+        },
+        {
+          "at": 17979.699999999255,
+          "state": "LOADING_RESOURCES",
+          "version": 15
+        },
+        {
+          "at": 17983.39999999851,
+          "state": "STOPPING",
+          "version": 15
+        },
+        {
+          "at": 18080.300000000745,
+          "state": "STOPPING",
+          "version": 15
+        },
+        {
+          "at": 18082.89999999851,
+          "state": "IDLE",
+          "version": 15
+        },
+        {
+          "at": 18430.60000000149,
+          "state": "LOADING_RESOURCES",
+          "version": 15
+        },
+        {
+          "at": 18434.199999999255,
+          "state": "INITIALIZING_MODELS",
+          "version": 16
+        },
+        {
+          "at": 18434.199999999255,
+          "state": "REQUESTING_PERMISSION",
+          "version": 16
+        },
+        {
+          "at": 18434.60000000149,
+          "state": "STARTING_VIDEO",
+          "version": 16
+        },
+        {
+          "at": 18548.39999999851,
+          "state": "WARMING_UP",
+          "version": 16
+        },
+        {
+          "at": 18551.300000000745,
+          "state": "RUNNING",
+          "version": 16
+        }
+      ],
+      "pending": false,
+      "waitingForPrevious": false,
+      "active": 1
+    },
+    "performance": {
+      "inputFps": 30.452988199457472,
+      "handsFps": 30.4208213621672,
+      "inputCapturedAt": 20912.800000000745,
+      "inputIntervalP50Ms": 32.80000000074506,
+      "inputIntervalP95Ms": 36.599999997764826,
+      "handsCapturedAt": 20912.800000000745,
+      "handsReceivedAt": 20918.300000000745,
+      "handsIntervalP95Ms": 37.29999999701977,
+      "handsLatencyP50Ms": 5.5,
+      "handsLatencyP95Ms": 7.5,
+      "rawHands": 1,
+      "freshHands": 1,
+      "filteredHands": 0,
+      "validLandmarks": true,
+      "filteredReason": null,
+      "poseStaleRatio": 0,
+      "noValidPoseMs": 0,
+      "states": [
+        {
+          "state": "WAIT_HAND/NO_OPERATOR",
+          "at": 1813.8999999985099
+        },
+        {
+          "state": "WAIT_HAND/BLOCKED",
+          "at": 2614.10000000149
+        },
+        {
+          "state": "WAIT_HAND/NO_OPERATOR",
+          "at": 3026.5
+        },
+        {
+          "state": "HAND_CANDIDATE/BLOCKED",
+          "at": 3855.60000000149
+        },
+        {
+          "state": "HAND_LOCKED/TRACKING_PAUSED",
+          "at": 4216.300000000745
+        },
+        {
+          "state": "HAND_LOCKED/READY",
+          "at": 4383.699999999255
+        },
+        {
+          "state": "HAND_PAUSED/TRACKING_PAUSED",
+          "at": 4648.699999999255
+        },
+        {
+          "state": "HAND_LOCKED/TRACKING_PAUSED",
+          "at": 4714
+        },
+        {
+          "state": "HAND_LOCKED/READY",
+          "at": 4778.60000000149
+        },
+        {
+          "state": "WAIT_HAND/NO_OPERATOR",
+          "at": 7468.199999999255
+        },
+        {
+          "state": "HAND_CANDIDATE/BLOCKED",
+          "at": 19365
+        },
+        {
+          "state": "HAND_LOCKED/TRACKING_PAUSED",
+          "at": 19728.5
+        },
+        {
+          "state": "HAND_LOCKED/READY",
+          "at": 19896.800000000745
+        }
+      ]
+    },
+    "pose": {
+      "models": 1,
+      "frames": 145,
+      "submitted": 146,
+      "inferenceTotalMs": 2250,
+      "inferenceMaxMs": 125,
+      "staleResults": 1,
+      "active": 1,
+      "inFlight": 0,
+      "ready": true,
+      "submitFps": 10.150996066485826,
+      "successFps": 10.139845367364531,
+      "capturedAt": 20912.800000000745,
+      "receivedAt": 20918.199999999255,
+      "latencyP50Ms": 5.599999997764826,
+      "latencyP95Ms": 133.60000000149012,
+      "inferenceP50Ms": 0,
+      "inferenceP95Ms": 125,
+      "intervalP95Ms": 102.80000000074506,
+      "samples": 120,
+      "averageInferenceMs": 15.517241379310345
+    },
+    "ownership": {
+      "state": "PERSON_LOCKED",
+      "operatorId": "visitor-13",
+      "handState": "HAND_LOCKED",
+      "handReason": "READY",
+      "assignedFreshHands": 1
+    },
+    "interaction": {
+      "state": "READY",
+      "mode": "NAVIGATION",
+      "target": null,
+      "progress": 0,
+      "releaseRequired": false,
+      "blockedReason": "TARGET_OUTSIDE",
+      "lastAction": null,
+      "handKey": "visitor-13:left"
+    },
+    "physicalCameraAcceptance": "PENDING: software diagnostics do not certify physical acceptance"
+  },
+  "coldStartRisk": {
+    "status": "FAIL",
+    "stage": "Hands model initialization",
+    "timeoutMs": 15000,
+    "evidence": {
+      "path": "local/pose-runtime/results-attempt-1791448223743.json",
+      "sha256": "540e823e2a5db171c70a819a68bc22336e7bd778dfcb5e9120dc66efe1e569e3"
+    },
+    "subsequent": "Later blank-frame runtime PASS does not erase timeout or prove CDN cause."
+  },
+  "localization": {
+    "status": "NOT_TESTED",
+    "reason": "Model versions unchanged; offline deployment and licence/NOTICE audit separately scoped."
+  },
+  "privacy": "No images, video or landmark arrays in diagnostic export; no automatic upload."
+}

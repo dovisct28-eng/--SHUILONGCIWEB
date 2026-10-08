@@ -17,11 +17,16 @@ export function ownershipBlockReason(ownership) {
 // Coordinate history belongs to the selected control hand; this class never selects.
 export class GesturePointer {
  constructor(config={}) {this.config={...INTERACTION_CONFIG,...config};this.reset();}
- reset() {this.key=null;this.point=null;this.raw=null;this.lastAt=null;this.missingAt=null;this.unstableUntil=0;}
+ reset() {this.key=null;this.point=null;this.raw=null;this.lastAt=null;this.missingAt=null;this.unstableUntil=0;this.recoveryUntil=0;}
  update({handOwnership,now,width,height}) {
   const c=this.config,lock=handOwnership;
   const selected=lock?.selectedHand;
   const key=selected?`${selected.operatorId}:${selected.side}`:null;
+  if(lock?.state==='HAND_CANDIDATE'&&selected?.fresh&&selected.operatorId===lock.operatorId){
+   const raw=mapHandPoint(selected,width,height,c.pointerInput),dt=this.lastAt===null?0:Math.max(0,now-this.lastAt);
+   if(this.key!==key||!this.point)this.point=raw;else{const alpha=1-Math.exp(-dt/c.pointerTauMs);this.point={x:this.point.x+(raw.x-this.point.x)*alpha,y:this.point.y+(raw.y-this.point.y)*alpha};}
+   this.key=key;this.raw=raw;this.lastAt=now;return {valid:false,visible:true,candidate:true,stable:false,point:this.point,key,reason:'HAND_ACQUIRING',gapMs:0};
+  }
   if(!lock?.valid||!lock.lockedHandKey||key!==lock.lockedHandKey||!selected?.fresh||selected.operatorId!==lock.operatorId) {
    this.missingAt??=now;
    const gap=this.lastAt===null?Infinity:now-this.lastAt;
@@ -30,7 +35,8 @@ export class GesturePointer {
    return {valid:false,visible:!!this.point,point:this.point,key:this.key,stable:false,reason:lock?.reason||'WAIT_HAND',gapMs:gap,paused};
   }
   const raw=mapHandPoint(selected,width,height,c.pointerInput);
-  const changed=lock.changed||key!==this.key||this.lastAt===null||this.missingAt!==null||now-this.lastAt>c.trackingPauseMs;
+  const changed=lock.changed||key!==this.key||this.lastAt===null||now-this.lastAt>c.trackingPauseMs;
+  if(!changed&&this.missingAt!==null)this.recoveryUntil=now+c.pointerRecoverySettleMs;
   const dt=this.lastAt===null?0:Math.max(0,now-this.lastAt);
   const delta=this.raw?Math.hypot(raw.x-this.raw.x,raw.y-this.raw.y)/Math.min(width,height):0;
   if(changed){this.point=raw;this.unstableUntil=now+c.pointerSettleMs;}
@@ -43,7 +49,7 @@ export class GesturePointer {
    this.point={x:this.point.x+(raw.x-this.point.x)*alpha,y:this.point.y+(raw.y-this.point.y)*alpha};
   }
   this.key=key;this.raw=raw;this.lastAt=now;this.missingAt=null;
-  const stable=now>=this.unstableUntil;
-  return {valid:true,visible:true,point:this.point,key,changed,stable,side:selected.side,source:selected.source,reason:stable?'READY':'HAND_UNSTABLE',gapMs:0,paused:false};
+  const stable=now>=this.unstableUntil&&now>=this.recoveryUntil;
+  return {valid:true,visible:true,point:this.point,key,changed,stable,resuming:now<this.recoveryUntil,side:selected.side,source:selected.source,reason:stable?'READY':'HAND_UNSTABLE',gapMs:0,paused:false};
  }
 }

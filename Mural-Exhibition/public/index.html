@@ -311,7 +311,7 @@
         <p id="cyber-asset-status" role="status"></p>
         <p class="gesture-hint" data-state="IDLE"><svg class="gesture-confirm" viewBox="0 0 20 20" aria-hidden="true"><circle class="gesture-confirm-base" cx="10" cy="10" r="8"/><circle class="gesture-confirm-progress" cx="10" cy="10" r="8" pathLength="1"/></svg><span id="gesture-message" role="status">站到画面中央 · 开始体验</span></p>
         <div id="dwell-controls" hidden><button type="button" class="dwell-target" data-dwell-target="view" aria-label="查看人物"><svg viewBox="0 0 44 44" aria-hidden="true"><circle class="dwell-base" cx="22" cy="22" r="20"/><circle class="dwell-progress" cx="22" cy="22" r="20" pathLength="1"/><path d="M15 14h14v16H15z M19 19h6 M19 23h6"/></svg><span>查看人物</span></button><button type="button" class="dwell-target" data-dwell-target="next" aria-label="下一人物"><svg viewBox="0 0 44 44" aria-hidden="true"><circle class="dwell-base" cx="22" cy="22" r="20"/><circle class="dwell-progress" cx="22" cy="22" r="20" pathLength="1"/><path d="M13 22h18 M24 15l7 7-7 7"/></svg><span>下一人物</span></button><div class="dwell-pointer" hidden aria-hidden="true"></div><div class="dwell-reading-zone" hidden aria-hidden="true"><span>上移 · 向上阅读</span><i>静止区</i><span>下移 · 向下阅读</span></div></div>
-        <pre id="gesture-debug" hidden aria-hidden="true"></pre>
+        <button id="gesture-export" type="button" hidden>导出识别诊断 JSON</button><pre id="gesture-debug" hidden aria-hidden="true"></pre>
         <nav class="cyber-controls" aria-label="体感辅助操作">
             <button type="button" data-step="-1">← 上一组</button>
             <button type="button" id="reveal-toggle" aria-expanded="false" aria-controls="floating-info">查看人物档案</button>
@@ -336,6 +336,8 @@
     <script type="module">
         let THREE, threeAttempt = 0; // Loaded only when the user enters the existing cyber mode.
 
+        import {CameraLifecycle,cameraError} from './camera-lifecycle.mjs';
+        import {GestureDiagnostics,poseFreshnessBudget} from './gesture-diagnostics.mjs';
         import { initialView, clampView, imageToScreen, screenToImage, groupHotspots } from './gallery-panorama.mjs';
         import { createAdmin } from './gallery-admin.mjs';
         import { archiveBlocks, renderArchive, cameraFit } from './character-study.mjs';
@@ -386,7 +388,7 @@
                 return new Promise((resolve, reject) => {
                     const script = document.createElement('script');
                     const timer = setTimeout(fail, 15000);
-                    function fail() { clearTimeout(timer); script.remove(); reject(new Error('体感组件加载失败，请检查网络后重试。')); }
+                    function fail() { clearTimeout(timer); script.remove(); reject(Object.assign(new Error(name+' 体感组件加载失败，请检查资源网络后重试。'),{code:name==='Hands'?'HANDS_SCRIPT_DOWNLOAD':'RESOURCE_LOAD_ERROR',source:'resource:'+name})); }
                     script.src = src; script.onload = () => { clearTimeout(timer); resolve(); }; script.onerror = fail;
                     document.head.append(script);
                 });
@@ -459,6 +461,7 @@
                 } else {
                     if (currentItemData && !globalAssetsData.some(item => item.id === currentItemData.id)) throw new Error('当前人物已不在最新素材目录中，请先从图鉴主动选择人物。');
                     if (!navigator.mediaDevices?.getUserMedia) throw new Error('浏览器不支持摄像头，请使用 localhost 或选择图鉴探索。');
+                    cameraLifecycle.setState('LOADING_RESOURCES');
                     await loadCyberDependencies();
                     if (typeof Hands === 'undefined' || typeof Camera === 'undefined') throw new Error('体感组件不可用，请检查网络后重试，或选择图鉴探索。');
                     if (typeof gsap === 'undefined') throw new Error('体感动画组件未加载，请检查网络后重试。');
@@ -482,6 +485,7 @@
                 entryMessage('');
             } catch (error) {
                 if (version !== entryVersion) return;
+                if(track==='cyber'){cameraLifecycle.error={code:error.code||'RESOURCE_LOAD_ERROR',source:error.source||'entry',message:error.message};cameraLifecycle.setState('ERROR');}
                 if (document.body.dataset.explorationState === 'gallery-detail') modeError(error.message);
                 else { returnToSelection(false); entryMessage(error.message, true); }
             } finally { if (version === entryVersion) setEntryBusy(false); }
@@ -1169,6 +1173,7 @@
         function renderWebGL() {
             glFrame = requestAnimationFrame(renderWebGL);
             if (currentTrack === 'cyber' && shaderMaterial) {
+                cameraLifecycle.tick();
                 const now=performance.now(),handLock=handOwnership.tick(now);
                 if(!handLock.valid){controlPointer=gesturePointer.update({handOwnership:handLock,now,width:dwellFeedback.width,height:dwellFeedback.height});readingScrollAt=null;}
                 dwellController.tick(now, gestureContext()); renderGestureFeedback();
@@ -1199,19 +1204,22 @@
         let ownership = {operatorState:'SEARCHING',activeOperator:null,assignedHands:[],diagnostics:{}};
         let handsFrameAt = -Infinity, handsFrameVersion = -1;
         let handsInFlight = false;
+        const gestureDiagnostics = new GestureDiagnostics();
         const gesturePerformance = {callbacks:0,firstAt:null,lastAt:null,maxActiveCameras:0,activeCameras:0,stalePoseFrames:0};
         let isRevealed = false; 
         
         let controlPointer = {valid:false,visible:false,reason:'NO_PERSON'};
         let readingScrollAt = null;
 
-        function initMediaPipe() {
+        function initMediaPipe(session = {version:cameraVersion,live:true}) {
             cameraStatus.innerText = "神识加载中...";
             handsModel = new Hands({locateFile: (file) => `https://cdn.jsdelivr.net/npm/@mediapipe/hands/${file}`});
+            const model=handsModel;session.hands=model;
             handsModel.setOptions({ maxNumHands: 4, modelComplexity: 1, minDetectionConfidence: 0.6, minTrackingConfidence: 0.6 });
             
             handsModel.onResults((results) => {
-                if (currentTrack !== 'cyber' || handsFrameVersion !== cameraVersion || document.hidden) return;
+                if (!session.live || model !== handsModel || currentTrack !== 'cyber' || handsFrameVersion !== cameraVersion || document.hidden) return;
+                cameraLifecycle.result(session);
                 canvasCtx.save();
                 canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
                 canvasCtx.drawImage(results.image, 0, 0, canvasElement.width, canvasElement.height);
@@ -1223,67 +1231,80 @@
                 }
                 // Ownership precedes every gesture; stale model results cannot revive intent.
                 handleGestureLogic(results.multiHandLandmarks || [], handsFrameAt);
-                canvasCtx.restore();
+                canvasCtx.restore();session.resolveHands?.();session.resolveHands=null;
             });
 
         }
 
         let cameraStart = null, cameraVersion = 0;
-        function startMediaPipe() {
-            if (cameraStart) { modeError('上一次摄像头请求仍在结束，请稍后返回选择并重试。'); return; }
-            const version = ++cameraVersion;
-            let activeCamera;
-            const stale = () => version !== cameraVersion || currentTrack !== 'cyber';
-            cameraStart = (async () => { try {
-                if (!handsModel) initMediaPipe();
-                cameraStatus.textContent = '体感资源加载中…';
-                await posePipeline.initialize();
-                if (stale()) return;
+        const cameraLifecycle = new CameraLifecycle({
+            video:videoElement,canStart:()=>currentTrack==='cyber'&&!document.hidden,
+            prepare:async (session,wait)=>{
+                cameraVersion=session.version;
+                initMediaPipe(session);
+                try{await wait(Promise.resolve(handsModel.initialize?.()),'HANDS_MODEL_INIT_TIMEOUT','hands-model');}catch(error){throw cameraError(typeof error.code==='string'?error.code:'HANDS_MODEL_INIT_ERROR','hands-model',error.message);}
+                if(!session.live)return;
+                await wait(posePipeline.initialize(),'POSE_INIT_TIMEOUT','pose-model');
+                if(!session.live)return;
+                gestureDiagnostics.resetTiming();Object.assign(gesturePerformance,{callbacks:0,firstAt:null,lastAt:null,inputFrames:0,stalePoseFrames:0});
                 posePipeline.start();
-                activeCamera = new Camera(videoElement, {
-                    onFrame: async () => {
-                        if (stale() || document.hidden || handsInFlight) return;
-                        handsInFlight = true;
-                        try {
-                            if (posePipeline.error) throw posePipeline.error;
-                            // Same immutable 320x240 capture for Hands and the asynchronous Pose worker.
-                            const at = performance.now(); gesturePerformance.inputFrames=(gesturePerformance.inputFrames||0)+1; inferenceCtx.drawImage(videoElement, 0, 0, 320, 240);
-                            await posePipeline.submit(inferenceCanvas, at);
-                            handsFrameAt = at; handsFrameVersion = version;
-                            await handsModel.send({ image: inferenceCanvas });
-                        }
-                        catch { if (!stale()) { stopMediaPipe(); modeError('手势资源初始化失败，请检查网络后重新进入，或选择图鉴探索。'); } }
-                        finally { handsInFlight = false; }
+            },
+            createCamera:session=>{
+                const activeCamera=new Camera(videoElement,{
+                    onFrame:async()=>{
+                        if(!session.live||currentTrack!=='cyber'||document.hidden||session.inFlight)return;
+                        if(!cameraLifecycle.frame(session))return;
+                        session.inFlight=true;handsInFlight=true;
+                        try{
+                            if(posePipeline.error)throw posePipeline.error;
+                            const at=performance.now();gestureDiagnostics.capture(at);
+                            gesturePerformance.inputFrames=(gesturePerformance.inputFrames||0)+1;
+                            try{inferenceCtx.drawImage(videoElement,0,0,320,240);}catch(error){throw cameraError('FRAME_CONVERSION_ERROR','video-frame',error.message);}
+                            await cameraLifecycle.bounded(posePipeline.submit(inferenceCanvas,at),session,'FRAME_CONVERSION_TIMEOUT','video-frame');
+                            if(!session.live)return;
+                            if(posePipeline.error)throw posePipeline.error;
+                            handsFrameAt=at;handsFrameVersion=session.version;
+                            const resultReceived=new Promise(resolve=>session.resolveHands=resolve);
+                            await cameraLifecycle.bounded(Promise.all([session.hands.send({image:inferenceCanvas}),resultReceived]),session,'HANDS_INFERENCE_TIMEOUT','hands-inference');
+                        }catch(error){cameraLifecycle.fail(cameraError(typeof error.code==='string'?error.code:'HANDS_INFERENCE_ERROR',error.source||'hands-inference',error.message),session);}
+                        finally{session.inFlight=false;if(session===cameraLifecycle.session)handsInFlight=false;}
                     }, width: 320, height: 240
                 });
-                mpCamera = activeCamera; cameraStatus.textContent = '等待摄像头权限…';
-                gesturePerformance.activeCameras = 1; gesturePerformance.maxActiveCameras = Math.max(gesturePerformance.maxActiveCameras, 1);
-                const timer = setTimeout(() => {
-                    if (!stale()) { stopMediaPipe(); modeError('摄像头启动超时，请检查权限后重新进入，或选择图鉴探索。'); }
-                }, 15000);
-                try { await activeCamera.start();
-                    if (stale()) { activeCamera.stop(); if (videoElement.srcObject) { videoElement.srcObject.getTracks().forEach(t => t.stop()); videoElement.srcObject = null; } return; }
-                    cameraStatus.textContent = '摄像头已连接'; cameraStatus.style.color = '#d8d2c5';
-                } catch(error) {
-                    if (stale()) return;
-                    const messages = { NotAllowedError:'摄像头权限被拒绝。', NotFoundError:'未找到摄像头。', NotReadableError:'摄像头被占用或无法读取。', SecurityError:'浏览器安全设置阻止了摄像头。' };
-                    stopMediaPipe(); modeError((messages[error.name] || '摄像头启动失败。') + '请检查设备与权限，或返回选择图鉴探索。');
-                } finally { clearTimeout(timer); }
-            } catch { if (!stale()) { stopMediaPipe(); modeError('体感组件初始化失败，请检查网络，或返回选择图鉴探索。'); } }
-            })().finally(() => { cameraStart = null; });
+                mpCamera=activeCamera;gesturePerformance.activeCameras=1;gesturePerformance.maxActiveCameras=Math.max(gesturePerformance.maxActiveCameras,1);return activeCamera;
+            },
+            cleanup:async session=>{
+                gesturePerformance.activeCameras=0;mpCamera=null;handsInFlight=false;session.resolveHands=null;
+                if(handsModel===session.hands)handsModel=null;
+                if(posePipeline.pending||posePipeline.error)posePipeline.dispose();else posePipeline.stop();
+                resetGestureInput(true);
+                await session.hands?.close?.();
+            },
+            onState:state=>{
+                const text={IDLE:'摄像头已停止',LOADING_RESOURCES:'体感资源加载中…',INITIALIZING_MODELS:'识别模型加载中…',REQUESTING_PERMISSION:'等待摄像头权限…',STARTING_VIDEO:'正在启动视频…',WARMING_UP:'正在准备识别…',RUNNING:'摄像头已连接',DEGRADED:'识别暂时不可用',ERROR:'体感启动失败',STOPPING:'正在停止摄像头…'};
+                cameraStatus.textContent=state==='STOPPING'&&cameraLifecycle.waitingForPrevious?'等待上一次权限请求结束，请完成浏览器权限选择…':text[state];cameraStatus.style.color=state==='ERROR'?'#aaa':'#d8d2c5';
+            },
+            onError:error=>{
+                const text={CAMERA_STREAM_ENDED:'摄像头连接已中断。',NotAllowedError:'摄像头权限被拒绝。',NotFoundError:'未找到摄像头。',NotReadableError:'摄像头被占用或无法读取。',SecurityError:'浏览器安全设置阻止了摄像头。',VIDEO_NO_FRAMES:'视频流已建立，但没有收到画面。',HANDS_MODEL_INIT_TIMEOUT:'手部模型加载超时，请检查资源网络。',HANDS_MODEL_INIT_ERROR:'手部模型下载或初始化失败。',VIDEO_START_TIMEOUT:'摄像头视频启动超时。',MODEL_CLEANUP_ERROR:'识别资源无法清理，请刷新页面后重试。',HANDS_INFERENCE_TIMEOUT:'手部识别未返回结果。',POSE_INIT_TIMEOUT:'人体模型加载超时，请检查资源网络。',POSE_WORKER_ERROR:'人体识别线程发生故障。',POSE_RUNTIME_ERROR:'人体识别运行失败。',POSE_RUNTIME_DOWNLOAD:'人体识别资源下载失败。',POSE_MODEL_DOWNLOAD_OR_INIT:'人体模型下载或初始化失败。',FRAME_CONVERSION_ERROR:'摄像头画面转换失败。',FRAME_CONVERSION_TIMEOUT:'摄像头画面转换超时。',HANDS_INFERENCE_ERROR:'手部识别运行失败。'};
+                modeError((text[error.code]||'体感识别启动失败。')+'可重试或使用页面按钮。');
+                let retry=modeNotice.querySelector('[data-camera-retry]');
+                if(!retry){retry=document.createElement('button');retry.type='button';retry.dataset.cameraRetry='';retry.textContent='重试体感识别';modeNotice.append(retry);}
+                retry.onclick=()=>{modeNotice.hidden=true;startMediaPipe();};
+            }
+        });
+        function startMediaPipe() {
+            if(currentTrack!=='cyber'||document.hidden)return;
+            cameraStart=cameraLifecycle.start();cameraStart.finally(()=>{cameraStart=null;});return cameraStart;
+        }
+        function resetGestureInput(preserveRelease=false) {
+            const release=dwellController.releaseRequired;
+            operatorTracker.reset();handOwnership.reset();dwellController.reset();gesturePointer.reset();
+            if(preserveRelease&&release)dwellController.releaseRequired=true;
+            controlPointer={valid:false,visible:false,reason:'NO_PERSON'};readingScrollAt=null;
+            ownership={operatorState:'SEARCHING',activeOperator:null,assignedHands:[],diagnostics:{}};
         }
         function stopMediaPipe() {
-            operatorTracker.reset(); handOwnership.reset(); dwellController.reset(); gesturePointer.reset(); posePipeline.stop();
-            controlPointer = {valid:false,visible:false,reason:'NO_PERSON'}; readingScrollAt = null;
-            ownership = {operatorState:'SEARCHING',activeOperator:null,assignedHands:[],diagnostics:{}};
-            renderGestureFeedback();
-            ++cameraVersion;
-            if (mpCamera) { mpCamera.stop(); mpCamera = null; }
-            gesturePerformance.activeCameras = 0;
-            if (videoElement && videoElement.srcObject) {
-                videoElement.srcObject.getTracks().forEach(track => track.stop()); videoElement.srcObject = null;
-            }
-            cameraStatus.textContent = '摄像头已停止'; cameraStatus.style.color = '#aaa';
+            ++cameraVersion;resetGestureInput(true);
+            void cameraLifecycle.stop();renderGestureFeedback();
         }
 
         // Page locks are shared by manual presentation and dwell actions.
@@ -1297,12 +1318,23 @@
         }
         const dwellFeedback = new DwellFeedback(document.getElementById('dwell-controls'));
         const gestureDebugEnabled = new URLSearchParams(location.search).get('gestureDebug') === '1';
+        document.getElementById('gesture-export').onclick=async()=>{
+            if(!gestureDebugEnabled)return;
+            const runtime=await fetch('/api/b03-runtime').then(r=>r.json()).catch(()=>({commitSha:null,workingTreeChanged:null}));
+            const report={...runtime,createdAt:new Date().toISOString(),browser:navigator.userAgent,secureContext:isSecureContext,
+                camera:cameraLifecycle.snapshot(),performance:gestureDiagnostics.snapshot(performance.now()),pose:posePipeline.snapshot(),
+                ownership:{state:ownership.operatorState,operatorId:ownership.activeOperator?.id??null,handState:handOwnership.state,handReason:handOwnership.reason,assignedFreshHands:ownership.assignedHands.filter(h=>h.fresh).length},
+                interaction:dwellController.snapshot(),physicalCameraAcceptance:'PENDING: software diagnostics do not certify physical acceptance'};
+            const url=URL.createObjectURL(new Blob([JSON.stringify(report,null,2)],{type:'application/json'})),link=document.createElement('a');
+            link.href=url;link.download='b03-v4.2-diagnostics.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+        };
         function layoutDwellFeedback() {
             dwellFeedback.layout(webglContainer.clientWidth, webglContainer.clientHeight, isRevealed, document.getElementById('info-text'));
         }
         function renderGestureFeedback(now = performance.now()) {
             const s = dwellController.snapshot(), d = ownership.diagnostics, handLock=handOwnership.snapshot(now);
             dwellFeedback.render(s,controlPointer,currentTrack === 'cyber',now);
+            document.getElementById('gesture-export').hidden=!gestureDebugEnabled||currentTrack!=='cyber';
             const hint = document.querySelector('.gesture-hint'); hint.dataset.state=s.state;
             hint.style.setProperty('--gesture-progress',s.progress);
             document.getElementById('main-app').dataset.gesture=s.state;
@@ -1312,12 +1344,20 @@
             if (gestureDebugEnabled) {
                 const debug=document.getElementById('gesture-debug'); debug.hidden=currentTrack!=='cyber';
                 const elapsed=Math.max(1,(gesturePerformance.lastAt||now)-(gesturePerformance.firstAt||now))/1000;
-                const pose=posePipeline.snapshot();
+                const pose=posePipeline.snapshot(),diag=gestureDiagnostics.snapshot(now),life=cameraLifecycle.snapshot();
                 debug.textContent=[
-                    'CAMERA', 'status: '+cameraStatus.textContent,
-                    'input fps: '+((gesturePerformance.inputFrames||0)/elapsed).toFixed(1),
-                    'hands callback fps: '+(gesturePerformance.callbacks/elapsed).toFixed(1),
-                    'pose fps: '+(pose.frames/elapsed).toFixed(1)+' / age: '+Math.round(d.poseAgeMs||0)+'ms',
+                    'CAMERA', 'status: '+cameraStatus.textContent+' / '+life.state,
+                    'input captured at: '+diag.inputCapturedAt+' / interval p50/p95: '+diag.inputIntervalP50Ms+' / '+diag.inputIntervalP95Ms,
+                    'video readyState: '+videoElement.readyState+' / stream active: '+!!videoElement.srcObject?.active,
+                    'MODEL PERFORMANCE', 'pose submits: '+pose.submitted+' / submit fps: '+(pose.submitFps||0).toFixed(1)+' / successful: '+pose.frames+' / inFlight: '+pose.inFlight,
+                    'pose inference p50/p95: '+pose.inferenceP50Ms+' / '+pose.inferenceP95Ms,
+                    'pose capture/return: '+pose.capturedAt+' / '+pose.receivedAt+' / threshold: '+operatorTracker.config.poseMaxAgeMs+'ms',
+                    'pose stale ratio: '+diag.poseStaleRatio.toFixed(3)+' / no valid pose: '+Math.round(diag.noValidPoseMs)+'ms',
+                    'hands capture/return: '+diag.handsCapturedAt+' / '+diag.handsReceivedAt+' / latency p50/p95: '+diag.handsLatencyP50Ms+' / '+diag.handsLatencyP95Ms,
+                    'hands interval p95: '+diag.handsIntervalP95Ms+' / valid landmarks: '+diag.validLandmarks+' / filter: '+(diag.filteredReason||'none'),
+                    'input fps: '+diag.inputFps.toFixed(1),
+                    'hands callback fps: '+diag.handsFps.toFixed(1),
+                    'pose fps: '+(pose.successFps||0).toFixed(1)+' / age: '+Math.round(d.poseAgeMs||0)+'ms',
                     'PERSON: '+ownership.operatorState, 'operator: '+(ownership.activeOperator?.id||'none'),
                     'body mode: '+(d.bodyMode||'-')+' / shoulder width: '+(d.shoulderWidth?.toFixed(3)||'-'),
                     'pose people: '+(d.posePeople||0)+' / candidate duration: '+Math.round(d.candidateHoldMs||0)+'ms',
@@ -1325,23 +1365,23 @@
                     'candidate: '+(handLock.candidate||'none')+' / acquisition: '+Math.round(handLock.candidateDurationMs)+'ms',
                     'lock duration: '+Math.round(handLock.lockDurationMs)+'ms / loss duration: '+Math.round(handLock.lossDurationMs)+'ms',
                     'ownership reason: '+handLock.reason+' / other hand: '+(handLock.ignoredHands?'ignored ('+handLock.ignoredHands+')':'none'),
-                    'HAND DETECTION', 'detected hands: '+(d.handsDetected||0)+' / assigned hands: '+(d.handsAssigned||0),
+                    'HAND DETECTION', 'detected hands: '+(d.handsRaw||0)+' / fresh hands: '+(d.handsFresh||0)+' / assigned hands: '+(d.handsAssignedFresh||0)+' / filtered: '+Math.max(0,(d.handsRaw||0)-(d.handsAssignedFresh||0)),
                     'active control hand: '+(controlPointer.key||'none')+' / hand source: '+(controlPointer.source||'-'),
                     'pointer x/y: '+(controlPointer.point?controlPointer.point.x.toFixed(1)+' / '+controlPointer.point.y.toFixed(1):'none'),
                     'pointer stable: '+!!controlPointer.stable+' / tracking gap: '+Math.round(controlPointer.gapMs||0)+'ms',
                     'assignment rejection: '+((d.assignmentRejections||[]).map(r=>r.hand+':'+r.reason).join(', ')||'none'),
                     'INTERACTION: '+s.mode+' / '+s.state,'active target: '+(s.target||'none')+' / dwell progress: '+s.progress.toFixed(2),
                     'release required: '+s.releaseRequired+' / blocked reason: '+s.blockedReason,
-                    'last action: '+(s.lastAction?.action||'none')
+                    'last action: '+(s.lastAction?.action||'none'),
+                    'ERROR / RECOVERY', 'error: '+(life.error?life.error.source+' / '+life.error.code+' / '+life.error.message:'none')
                 ].join('\n');
             }
         }
         document.addEventListener('visibilitychange', () => {
-            operatorTracker.reset(); handOwnership.reset(); dwellController.reset(); gesturePointer.reset(); posePipeline.stop();
-            controlPointer={valid:false,visible:false,reason:'NO_PERSON'}; readingScrollAt=null;
-            if (!document.hidden && currentTrack === 'cyber') posePipeline.start();
-            ownership={operatorState:'SEARCHING',activeOperator:null,assignedHands:[],diagnostics:{}};
-            if (isRevealed) setRevealed(false);
+            resetGestureInput(true);
+            if(document.hidden)stopMediaPipe();
+            else if(currentTrack==='cyber')startMediaPipe();
+            if(isRevealed)setRevealed(false);
             renderGestureFeedback();
         });
         window.addEventListener('pagehide', () => {stopMediaPipe();posePipeline.dispose();});
@@ -1356,9 +1396,13 @@
             if(currentTrack !== 'cyber' || !shaderMaterial) return;
             const now=performance.now(),infoText=document.getElementById('info-text');
             gesturePerformance.callbacks++; gesturePerformance.firstAt??=now; gesturePerformance.lastAt=now;
-            const pose=posePipeline.latest,frameFresh=frameAt<=now&&now-frameAt<=operatorTracker.config.poseMaxAgeMs;
-            ownership=operatorTracker.update({poses:pose.poses,poseAt:frameFresh?pose.at:-Infinity,hands:frameFresh?rawLandmarksList||[]:[],now});
+            const pose=posePipeline.latest,frameFresh=frameAt<=now&&now-frameAt<=INTERACTION_CONFIG.handsMaxAgeMs;
+            operatorTracker.config.poseMaxAgeMs=poseFreshnessBudget(posePipeline.snapshot());
+            gestureDiagnostics.callback(rawLandmarksList||[],now,frameAt,frameFresh);
+            ownership=operatorTracker.update({poses:pose.poses,poseAt:pose.at,hands:frameFresh?rawLandmarksList||[]:[],now});
             if(!ownership.diagnostics.poseFresh)gesturePerformance.stalePoseFrames++;
+            gestureDiagnostics.pose(ownership.diagnostics.poseFresh,now,ownership.diagnostics.operatorObservable);
+            Object.assign(ownership.diagnostics,{handsAssignedFresh:ownership.assignedHands.filter(h=>h.fresh).length,handsRaw:(rawLandmarksList||[]).length,handsFresh:frameFresh?(rawLandmarksList||[]).length:0,handsCapturedAt:frameAt,handsAgeMs:now-frameAt,poseReceivedAt:pose.receivedAt,poseThresholdMs:operatorTracker.config.poseMaxAgeMs,poseHandsSkewMs:frameAt-pose.at});
             const geometry=dwellFeedback.measure(isRevealed,infoText);
             const handLock=handOwnership.update({ownership,now,width:dwellFeedback.width,height:dwellFeedback.height,...geometry,...gestureContext()});
             controlPointer=gesturePointer.update({handOwnership:handLock,now,width:dwellFeedback.width,height:dwellFeedback.height});controlPointer.at=now;
@@ -1371,6 +1415,7 @@
             const canScroll=isRevealed&&dwellController.state!=='ACTION_TRANSITION'&&!gestureContext().blocked&&!gestureContext().locked&&controlPointer.valid&&!target&&now>=dwellController.transitionUntil;
             const dt=readingScrollAt===null?0:Math.min(INTERACTION_CONFIG.readingScrollMaxStepMs,Math.max(0,now-readingScrollAt));
             if(canScroll){infoText.scrollTop+=readingVelocity(controlPointer.point,dwellFeedback.region)*dt/1000;readingScrollAt=now;}else readingScrollAt=null;
+            gestureDiagnostics.transition(handLock.state+'/'+dwellController.state,now);
             renderGestureFeedback(now);
         }
         function goToNextCharacterFromGesture() {

@@ -258,3 +258,10 @@ body.track-cyber .gesture-hint { animation:none;opacity:.75; }
 body.track-cyber .gesture-hint[data-state="DWELLING"],body.track-cyber .gesture-hint[data-state="TARGET_HOVER"],body.track-cyber .gesture-hint[data-state="WAIT_RELEASE"] { opacity:1;color:#dfc493; }
 .gesture-hint[data-state="DWELLING"] .gesture-confirm,.gesture-hint[data-state="TARGET_HOVER"] .gesture-confirm { opacity:1; }
 @media(prefers-reduced-motion:reduce) { .dwell-target { transition:none; } }
+
+/* Acquisition feedback shares the formal pointer and existing stage scheduler. */
+body.track-cyber .dwell-pointer[data-candidate="true"] { opacity:.45; transform-origin:center; }
+
+#gesture-debug { max-height:calc(100vh - 160px);max-width:calc(100vw - 48px);overflow:auto;pointer-events:auto; }
+#gesture-export { position:absolute;right:24px;top:56px;z-index:301; }
+body:not(.track-cyber) #gesture-export { display:none; }

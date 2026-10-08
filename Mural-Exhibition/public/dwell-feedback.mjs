@@ -21,7 +21,7 @@ export class DwellFeedback {
   this.root.hidden=!enabled;this.root.dataset.state=snapshot.state;
   for(const el of this.buttons){const active=el.dataset.dwellTarget===snapshot.target,confirm=snapshot.lastAction&&now-snapshot.lastAction.at<450&&el.dataset.dwellTarget===(snapshot.lastAction.action==='NEXT'?'next':'view');el.dataset.active=String(active);el.dataset.confirm=String(!!confirm);el.style.setProperty('--dwell-progress',confirm?1:active?snapshot.progress:0);el.setAttribute('aria-busy',String(active&&snapshot.state==='DWELLING'));}
   const stale=pointer?.gapMs>c.trackingPauseMs||pointer?.at&&now-pointer.at>c.trackingPauseMs;
-  this.cursor.hidden=!pointer?.visible||stale;this.cursor.dataset.paused=String(!pointer?.valid||!pointer?.stable);
+  this.cursor.hidden=!pointer?.visible||stale;this.cursor.dataset.candidate=String(!!pointer?.candidate);this.cursor.dataset.paused=String(!pointer?.valid||!pointer?.stable);
   if(pointer?.point)this.cursor.style.transform=`translate(${pointer.point.x}px,${pointer.point.y}px)`;
  }
 }

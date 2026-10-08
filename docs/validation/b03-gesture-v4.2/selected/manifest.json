@@ -1,0 +1,63 @@
+{
+  "count": 5,
+  "totalBytes": 3111640,
+  "conversion": "Lossless WebP, no crop, resize, recolor or pixel changes; decoded RGBA equality verified.",
+  "physicalCamera": "PENDING",
+  "entries": [
+    {
+      "file": "selected/candidate-outside-buttons.webp",
+      "source": "local/stability/candidate-outside-buttons.png",
+      "scope": "Synthetic hand; visible candidate HAND_CANDIDATE at 163ms, no target, zero dwell/actions.",
+      "width": 1440,
+      "height": 900,
+      "bytes": 508536,
+      "sha256": "70f8af743e9864d30140c2045d618b35f3f57db34bc0576108c19f5e2c63d0e0",
+      "rgbaSha256": "8f3efa05217fa9892750aa6e28a486dc71933775ae9e0d1d5d0d6fbe1543a41d",
+      "exactPixels": true
+    },
+    {
+      "file": "selected/locked-diagnostics.webp",
+      "source": "local/stability/diagnostics.png",
+      "scope": "Synthetic models; formal single locked hand, pointer ready, timing diagnostics and JSON export.",
+      "width": 1440,
+      "height": 900,
+      "bytes": 527026,
+      "sha256": "2faed2790032993fe9c3469bb5bb121e07cd7e0616d9d74c0af862ff2ae2c9c2",
+      "rgbaSha256": "75df2f6029a1f480c3dc63d56a9e2613e1e14c7599fa9fae1a393124e4b56436",
+      "exactPixels": true
+    },
+    {
+      "file": "selected/pose-runtime-error.webp",
+      "source": "local/stability/pose-runtime-error.png",
+      "scope": "Injected Worker inference failure; visible retry and error source; no physical camera.",
+      "width": 1440,
+      "height": 900,
+      "bytes": 502792,
+      "sha256": "088393fd905cba8e16c152117fea08edca998d871939842de10ffba7937b76f6",
+      "rgbaSha256": "09e26247624d8d2de154aa596ebfb0942db74137857225d315afb2ff008125db",
+      "exactPixels": true
+    },
+    {
+      "file": "selected/stage-ready-1366.webp",
+      "source": "local/dwell/01-ready-1366.png",
+      "scope": "Actual B03 WebGL normal view at 1366x768 with synthetic control hand.",
+      "width": 1366,
+      "height": 768,
+      "bytes": 593276,
+      "sha256": "a77b1f2b6d60fa62a0faf8eb846f59edad562d70a1f553a58124845c8a33ff99",
+      "rgbaSha256": "07b893c7e821b38177c358555b35688f4e100d833f888c4edf5e1fa7c28e67cf",
+      "exactPixels": true
+    },
+    {
+      "file": "selected/load-release-first-attempt.webp",
+      "source": "local/dwell/load-release-failure.png",
+      "scope": "Preserved earlier failed assertion frame: safety hand-lock release during heavy character loading, before fixture gained explicit safe reacquisition checks.",
+      "width": 1440,
+      "height": 900,
+      "bytes": 980010,
+      "sha256": "53f9693b2b40af61f324d46ba858f8475b8ada7026677a52710cee0196473f08",
+      "rgbaSha256": "2c402aef2e618bc453b0f19744d77419c6d6bac06cf34433f6712d3f2dde1912",
+      "exactPixels": true
+    }
+  ]
+}

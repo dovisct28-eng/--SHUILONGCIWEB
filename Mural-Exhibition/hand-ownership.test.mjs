@@ -8,8 +8,8 @@ const hand=(side='left',x=.23,y=.23,id='A')=>({operatorId:id,side,x,y,fresh:true
 const owned=(hands=[],extra={})=>({activeOperator:{id:'A'},operatorState:'PERSON_LOCKED',assignedHands:hands,diagnostics:{poseFresh:true,operatorObservable:true,handsDetected:hands.length},...extra});
 function rig(){const owner=new HandOwnership(),pointer=new GesturePointer(),dwell=new DwellController();return {owner,pointer,dwell,frame(now,hands=[],extra={},context={}){const lock=owner.update({ownership:owned(hands,extra),now,width:1000,height:800,targets,...context});const p=pointer.update({handOwnership:lock,now,width:1000,height:800});const action=dwell.update({now,operatorId:lock.operatorId,pointer:p,targets,...context});return {lock,p,action};}};}
 function acquire(r,h=hand(),at=0){let s;for(let now=at;now<=at+350;now+=50)s=r.frame(now,[h]);return s;}
-test('350ms acquisition is independent of 1000ms dwell; resting hand never acquires',()=>{
- const r=rig();assert.equal(r.frame(0,[hand('left',.5,.5)]).lock.state,'WAIT_HAND');
+test('350ms acquisition is independent of 1000ms dwell; hands outside the body operation zone never acquire',()=>{
+ const r=rig();assert.equal(r.frame(0,[hand('left',.5,.85)]).lock.state,'WAIT_HAND');
  r.frame(50,[hand()]);assert.equal(r.frame(399,[hand()]).lock.lockedHandKey,null); // callback gap restarts evidence
  for(let now=400;now<750;now+=50)assert.equal(r.frame(now,[hand()]).lock.valid,false);
  const s=r.frame(750,[hand()]);assert.equal(s.lock.lockedHandKey,'A:left');assert.equal(s.p.valid,true);assert.equal(s.action,null);assert.equal(r.dwell.elapsed,0);
@@ -28,7 +28,7 @@ test('left/right are semantic identities; right control ignores left VIEW and no
  const r2=rig(),a=hand('left',.5,.5);acquire(r2,hand());for(let now=400;now<=1000;now+=50)r2.frame(now,[a,hand('right',.71,.79)]);
  assert.equal(readingVelocity(r2.pointer.point,{x:0,y:0,width:1000,height:800}),0);
 });
-for(const gap of [100,300,500])test(`loss ${gap}ms preserves identity, blocks takeover and rearms for 250ms`,()=>{
+for(const gap of [300,500])test(`loss ${gap}ms preserves identity, blocks takeover and rearms for 250ms`,()=>{
  const r=rig(),a=hand(),b=hand('right',.71);acquire(r,a);const last=350;
  const paused=r.frame(last+gap,[b]);assert.equal(paused.lock.state,'HAND_PAUSED');assert.equal(paused.lock.lockedHandKey,'A:left');assert.equal(paused.p.valid,false);
  const start=last+gap+1;assert.equal(r.frame(start,[a,b]).lock.valid,false);
@@ -67,4 +67,17 @@ test('action release latch survives hand loss/change; newly acquired hand cannot
 test('render scheduler expires stalled input without another inference loop; resets are idempotent',()=>{
  const r=rig();acquire(r);assert.equal(r.owner.tick(600).state,'HAND_PAUSED');assert.equal(r.owner.tick(1001).state,'HAND_RELEASED');
  r.owner.reset();r.owner.reset();assert.equal(r.owner.lockedHandKey,null);assert.equal(r.owner.snapshot().candidate,null);
+});
+
+test('short 100ms occlusion resumes the same hand without changing identity or counting lost time',()=>{
+ const r=rig();acquire(r);for(let now=400;now<=900;now+=50)r.frame(now,[hand()]);const elapsed=r.dwell.elapsed;
+ assert.equal(r.frame(950,[]).p.valid,false);assert.equal(r.dwell.elapsed,elapsed);
+ const s=r.frame(1000,[hand()]);assert.equal(s.lock.lockedHandKey,'A:left');assert.equal(s.p.valid,true);assert.equal(r.dwell.elapsed,elapsed);assert.equal(s.action,null);
+});
+test('button-free acquisition shows one candidate but cannot trigger, including noise and two candidates',()=>{
+ const r=rig(),neutral=hand('left',.5,.5);
+ for(let now=0;now<350;now+=50){const s=r.frame(now,[neutral]);assert.equal(s.p.candidate,true);assert.equal(s.p.visible,true);assert.equal(s.p.valid,false);assert.equal(s.action,null);assert.equal(r.dwell.elapsed,0);}
+ const s=r.frame(350,[neutral]);assert.equal(s.lock.lockedHandKey,'A:left');assert.equal(s.p.valid,true);assert.equal(s.action,null);
+ const r2=rig();r2.frame(0,[neutral]);assert.equal(r2.frame(100,[hand('left',.7,.5)]).lock.candidateDurationMs,0);
+ assert.equal(r2.frame(150,[neutral,hand('right',.7,.5)]).p.visible,false);
 });
