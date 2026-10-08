@@ -1,0 +1,4020 @@
+{
+  "environment": "Real Chrome rendering; synthetic ratio/alpha fixtures are isolated in OS temp and browser routes",
+  "views": [
+    {
+      "id": "01",
+      "layer": "org",
+      "w": 1280,
+      "h": 800,
+      "file": "real-01-org-1280x800.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": true,
+            "width": 801.984375,
+            "height": 543.59375,
+            "left": 32.0078125,
+            "top": 90.203125,
+            "right": 833.9921875,
+            "bottom": 633.796875,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "img-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "org",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 834,
+          "bottom": 638,
+          "width": 802,
+          "height": 552
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "true",
+          "false",
+          "false"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "01",
+      "layer": "line",
+      "w": 1280,
+      "h": 800,
+      "file": "real-01-line-1280x800.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": true,
+            "width": 801.984375,
+            "height": 543.59375,
+            "left": 32.0078125,
+            "top": 90.203125,
+            "right": 833.9921875,
+            "bottom": 633.796875,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/line.png"
+          },
+          {
+            "id": "img-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "line",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 834,
+          "bottom": 638,
+          "width": 802,
+          "height": 552
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "false",
+          "true",
+          "false"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "01",
+      "layer": "color",
+      "w": 1280,
+      "h": 800,
+      "file": "real-01-color-1280x800.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/line.png"
+          },
+          {
+            "id": "img-color",
+            "visible": true,
+            "width": 801.984375,
+            "height": 543.59375,
+            "left": 32.0078125,
+            "top": 90.203125,
+            "right": 833.9921875,
+            "bottom": 633.796875,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/color.png"
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "color",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 834,
+          "bottom": 638,
+          "width": 802,
+          "height": 552
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "false",
+          "false",
+          "true"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "06",
+      "layer": "org",
+      "w": 1280,
+      "h": 800,
+      "file": "real-06-org-1280x800.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": true,
+            "width": 801.984375,
+            "height": 543.59375,
+            "left": 32.0078125,
+            "top": 90.203125,
+            "right": 833.9921875,
+            "bottom": 633.796875,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/06_%E7%BF%BB%E5%9D%9B%E5%BC%A0%E4%BA%94%E9%83%8E/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "img-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "org",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 834,
+          "bottom": 638,
+          "width": 802,
+          "height": 552
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "true",
+          "false",
+          "false"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "06",
+      "layer": "line",
+      "w": 1280,
+      "h": 800,
+      "file": "real-06-line-1280x800.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/06_%E7%BF%BB%E5%9D%9B%E5%BC%A0%E4%BA%94%E9%83%8E/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": true,
+            "width": 801.984375,
+            "height": 543.59375,
+            "left": 32.0078125,
+            "top": 90.203125,
+            "right": 833.9921875,
+            "bottom": 633.796875,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/06_%E7%BF%BB%E5%9D%9B%E5%BC%A0%E4%BA%94%E9%83%8E/line.png"
+          },
+          {
+            "id": "img-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "line",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 834,
+          "bottom": 638,
+          "width": 802,
+          "height": 552
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "false",
+          "true",
+          "false"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "06",
+      "layer": "color",
+      "w": 1280,
+      "h": 800,
+      "file": "real-06-color-1280x800.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/06_%E7%BF%BB%E5%9D%9B%E5%BC%A0%E4%BA%94%E9%83%8E/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/06_%E7%BF%BB%E5%9D%9B%E5%BC%A0%E4%BA%94%E9%83%8E/line.png"
+          },
+          {
+            "id": "img-color",
+            "visible": true,
+            "width": 801.984375,
+            "height": 543.59375,
+            "left": 32.0078125,
+            "top": 90.203125,
+            "right": 833.9921875,
+            "bottom": 633.796875,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/06_%E7%BF%BB%E5%9D%9B%E5%BC%A0%E4%BA%94%E9%83%8E/color.png"
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "color",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 834,
+          "bottom": 638,
+          "width": 802,
+          "height": 552
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "false",
+          "false",
+          "true"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "10",
+      "layer": "org",
+      "w": 1280,
+      "h": 800,
+      "file": "real-10-org-1280x800.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": true,
+            "width": 801.96875,
+            "height": 513.03125,
+            "left": 32.015625,
+            "top": 105.484375,
+            "right": 833.984375,
+            "bottom": 618.515625,
+            "natural": [
+              7974,
+              5101
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/08_%E4%B8%8A%E5%B1%82%E7%8C%96%E5%85%B5/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "img-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "org",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 834,
+          "bottom": 638,
+          "width": 802,
+          "height": 552
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "true",
+          "false",
+          "false"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "10",
+      "layer": "line",
+      "w": 1280,
+      "h": 800,
+      "file": "real-10-line-1280x800.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              7974,
+              5101
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/08_%E4%B8%8A%E5%B1%82%E7%8C%96%E5%85%B5/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": true,
+            "width": 801.96875,
+            "height": 513.03125,
+            "left": 32.015625,
+            "top": 105.484375,
+            "right": 833.984375,
+            "bottom": 618.515625,
+            "natural": [
+              7974,
+              5101
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/08_%E4%B8%8A%E5%B1%82%E7%8C%96%E5%85%B5/line.png"
+          },
+          {
+            "id": "img-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "line",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 834,
+          "bottom": 638,
+          "width": 802,
+          "height": 552
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "false",
+          "true",
+          "false"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "10",
+      "layer": "color",
+      "w": 1280,
+      "h": 800,
+      "file": "real-10-color-1280x800.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              7974,
+              5101
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/08_%E4%B8%8A%E5%B1%82%E7%8C%96%E5%85%B5/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              7974,
+              5101
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/08_%E4%B8%8A%E5%B1%82%E7%8C%96%E5%85%B5/line.png"
+          },
+          {
+            "id": "img-color",
+            "visible": true,
+            "width": 801.96875,
+            "height": 513.03125,
+            "left": 32.015625,
+            "top": 105.484375,
+            "right": 833.984375,
+            "bottom": 618.515625,
+            "natural": [
+              7974,
+              5101
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/08_%E4%B8%8A%E5%B1%82%E7%8C%96%E5%85%B5/color.png"
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "color",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 834,
+          "bottom": 638,
+          "width": 802,
+          "height": 552
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "false",
+          "false",
+          "true"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "01",
+      "layer": "org",
+      "w": 1366,
+      "h": 768,
+      "file": "real-01-org-1366x768.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": true,
+            "width": 767.171875,
+            "height": 520,
+            "left": 79.5078125,
+            "top": 86,
+            "right": 846.6796875,
+            "bottom": 606,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "img-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "org",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 894.203125,
+          "bottom": 606,
+          "width": 862.203125,
+          "height": 520
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "true",
+          "false",
+          "false"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "01",
+      "layer": "line",
+      "w": 1366,
+      "h": 768,
+      "file": "real-01-line-1366x768.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": true,
+            "width": 767.171875,
+            "height": 520,
+            "left": 79.5078125,
+            "top": 86,
+            "right": 846.6796875,
+            "bottom": 606,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/line.png"
+          },
+          {
+            "id": "img-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "line",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 894.203125,
+          "bottom": 606,
+          "width": 862.203125,
+          "height": 520
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "false",
+          "true",
+          "false"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "01",
+      "layer": "color",
+      "w": 1366,
+      "h": 768,
+      "file": "real-01-color-1366x768.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/line.png"
+          },
+          {
+            "id": "img-color",
+            "visible": true,
+            "width": 767.171875,
+            "height": 520,
+            "left": 79.5078125,
+            "top": 86,
+            "right": 846.6796875,
+            "bottom": 606,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/color.png"
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "color",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 894.203125,
+          "bottom": 606,
+          "width": 862.203125,
+          "height": 520
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "false",
+          "false",
+          "true"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "06",
+      "layer": "org",
+      "w": 1366,
+      "h": 768,
+      "file": "real-06-org-1366x768.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": true,
+            "width": 767.171875,
+            "height": 520,
+            "left": 79.5078125,
+            "top": 86,
+            "right": 846.6796875,
+            "bottom": 606,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/06_%E7%BF%BB%E5%9D%9B%E5%BC%A0%E4%BA%94%E9%83%8E/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "img-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "org",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 894.203125,
+          "bottom": 606,
+          "width": 862.203125,
+          "height": 520
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "true",
+          "false",
+          "false"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "06",
+      "layer": "line",
+      "w": 1366,
+      "h": 768,
+      "file": "real-06-line-1366x768.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/06_%E7%BF%BB%E5%9D%9B%E5%BC%A0%E4%BA%94%E9%83%8E/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": true,
+            "width": 767.171875,
+            "height": 520,
+            "left": 79.5078125,
+            "top": 86,
+            "right": 846.6796875,
+            "bottom": 606,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/06_%E7%BF%BB%E5%9D%9B%E5%BC%A0%E4%BA%94%E9%83%8E/line.png"
+          },
+          {
+            "id": "img-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "line",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 894.203125,
+          "bottom": 606,
+          "width": 862.203125,
+          "height": 520
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "false",
+          "true",
+          "false"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "06",
+      "layer": "color",
+      "w": 1366,
+      "h": 768,
+      "file": "real-06-color-1366x768.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/06_%E7%BF%BB%E5%9D%9B%E5%BC%A0%E4%BA%94%E9%83%8E/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/06_%E7%BF%BB%E5%9D%9B%E5%BC%A0%E4%BA%94%E9%83%8E/line.png"
+          },
+          {
+            "id": "img-color",
+            "visible": true,
+            "width": 767.171875,
+            "height": 520,
+            "left": 79.5078125,
+            "top": 86,
+            "right": 846.6796875,
+            "bottom": 606,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/06_%E7%BF%BB%E5%9D%9B%E5%BC%A0%E4%BA%94%E9%83%8E/color.png"
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "color",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 894.203125,
+          "bottom": 606,
+          "width": 862.203125,
+          "height": 520
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "false",
+          "false",
+          "true"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "10",
+      "layer": "org",
+      "w": 1366,
+      "h": 768,
+      "file": "real-10-org-1366x768.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": true,
+            "width": 812.875,
+            "height": 520,
+            "left": 56.65625,
+            "top": 86,
+            "right": 869.53125,
+            "bottom": 606,
+            "natural": [
+              7974,
+              5101
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/08_%E4%B8%8A%E5%B1%82%E7%8C%96%E5%85%B5/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "img-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "org",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 894.203125,
+          "bottom": 606,
+          "width": 862.203125,
+          "height": 520
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "true",
+          "false",
+          "false"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "10",
+      "layer": "line",
+      "w": 1366,
+      "h": 768,
+      "file": "real-10-line-1366x768.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              7974,
+              5101
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/08_%E4%B8%8A%E5%B1%82%E7%8C%96%E5%85%B5/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": true,
+            "width": 812.875,
+            "height": 520,
+            "left": 56.65625,
+            "top": 86,
+            "right": 869.53125,
+            "bottom": 606,
+            "natural": [
+              7974,
+              5101
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/08_%E4%B8%8A%E5%B1%82%E7%8C%96%E5%85%B5/line.png"
+          },
+          {
+            "id": "img-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "line",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 894.203125,
+          "bottom": 606,
+          "width": 862.203125,
+          "height": 520
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "false",
+          "true",
+          "false"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "10",
+      "layer": "color",
+      "w": 1366,
+      "h": 768,
+      "file": "real-10-color-1366x768.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              7974,
+              5101
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/08_%E4%B8%8A%E5%B1%82%E7%8C%96%E5%85%B5/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              7974,
+              5101
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/08_%E4%B8%8A%E5%B1%82%E7%8C%96%E5%85%B5/line.png"
+          },
+          {
+            "id": "img-color",
+            "visible": true,
+            "width": 812.875,
+            "height": 520,
+            "left": 56.65625,
+            "top": 86,
+            "right": 869.53125,
+            "bottom": 606,
+            "natural": [
+              7974,
+              5101
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/08_%E4%B8%8A%E5%B1%82%E7%8C%96%E5%85%B5/color.png"
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "color",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 894.203125,
+          "bottom": 606,
+          "width": 862.203125,
+          "height": 520
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "false",
+          "false",
+          "true"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "01",
+      "layer": "org",
+      "w": 1440,
+      "h": 900,
+      "file": "real-01-org-1440x900.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": true,
+            "width": 894.796875,
+            "height": 606.5,
+            "left": 32.0078125,
+            "top": 108.75,
+            "right": 926.8046875,
+            "bottom": 715.25,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "img-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "org",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 926.8125,
+          "bottom": 738,
+          "width": 894.8125,
+          "height": 652
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "true",
+          "false",
+          "false"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "01",
+      "layer": "line",
+      "w": 1440,
+      "h": 900,
+      "file": "real-01-line-1440x900.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": true,
+            "width": 894.796875,
+            "height": 606.5,
+            "left": 32.0078125,
+            "top": 108.75,
+            "right": 926.8046875,
+            "bottom": 715.25,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/line.png"
+          },
+          {
+            "id": "img-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "line",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 926.8125,
+          "bottom": 738,
+          "width": 894.8125,
+          "height": 652
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "false",
+          "true",
+          "false"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "01",
+      "layer": "color",
+      "w": 1440,
+      "h": 900,
+      "file": "real-01-color-1440x900.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/line.png"
+          },
+          {
+            "id": "img-color",
+            "visible": true,
+            "width": 894.796875,
+            "height": 606.5,
+            "left": 32.0078125,
+            "top": 108.75,
+            "right": 926.8046875,
+            "bottom": 715.25,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/color.png"
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "color",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 926.8125,
+          "bottom": 738,
+          "width": 894.8125,
+          "height": 652
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "false",
+          "false",
+          "true"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "06",
+      "layer": "org",
+      "w": 1440,
+      "h": 900,
+      "file": "real-06-org-1440x900.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": true,
+            "width": 894.796875,
+            "height": 606.5,
+            "left": 32.0078125,
+            "top": 108.75,
+            "right": 926.8046875,
+            "bottom": 715.25,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/06_%E7%BF%BB%E5%9D%9B%E5%BC%A0%E4%BA%94%E9%83%8E/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "img-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "org",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 926.8125,
+          "bottom": 738,
+          "width": 894.8125,
+          "height": 652
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "true",
+          "false",
+          "false"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "06",
+      "layer": "line",
+      "w": 1440,
+      "h": 900,
+      "file": "real-06-line-1440x900.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/06_%E7%BF%BB%E5%9D%9B%E5%BC%A0%E4%BA%94%E9%83%8E/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": true,
+            "width": 894.796875,
+            "height": 606.5,
+            "left": 32.0078125,
+            "top": 108.75,
+            "right": 926.8046875,
+            "bottom": 715.25,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/06_%E7%BF%BB%E5%9D%9B%E5%BC%A0%E4%BA%94%E9%83%8E/line.png"
+          },
+          {
+            "id": "img-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "line",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 926.8125,
+          "bottom": 738,
+          "width": 894.8125,
+          "height": 652
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "false",
+          "true",
+          "false"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "06",
+      "layer": "color",
+      "w": 1440,
+      "h": 900,
+      "file": "real-06-color-1440x900.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/06_%E7%BF%BB%E5%9D%9B%E5%BC%A0%E4%BA%94%E9%83%8E/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/06_%E7%BF%BB%E5%9D%9B%E5%BC%A0%E4%BA%94%E9%83%8E/line.png"
+          },
+          {
+            "id": "img-color",
+            "visible": true,
+            "width": 894.796875,
+            "height": 606.5,
+            "left": 32.0078125,
+            "top": 108.75,
+            "right": 926.8046875,
+            "bottom": 715.25,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/06_%E7%BF%BB%E5%9D%9B%E5%BC%A0%E4%BA%94%E9%83%8E/color.png"
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "color",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 926.8125,
+          "bottom": 738,
+          "width": 894.8125,
+          "height": 652
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "false",
+          "false",
+          "true"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "10",
+      "layer": "org",
+      "w": 1440,
+      "h": 900,
+      "file": "real-10-org-1440x900.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": true,
+            "width": 894.796875,
+            "height": 572.40625,
+            "left": 32.0078125,
+            "top": 125.796875,
+            "right": 926.8046875,
+            "bottom": 698.203125,
+            "natural": [
+              7974,
+              5101
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/08_%E4%B8%8A%E5%B1%82%E7%8C%96%E5%85%B5/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "img-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "org",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 926.8125,
+          "bottom": 738,
+          "width": 894.8125,
+          "height": 652
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "true",
+          "false",
+          "false"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "10",
+      "layer": "line",
+      "w": 1440,
+      "h": 900,
+      "file": "real-10-line-1440x900.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              7974,
+              5101
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/08_%E4%B8%8A%E5%B1%82%E7%8C%96%E5%85%B5/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": true,
+            "width": 894.796875,
+            "height": 572.40625,
+            "left": 32.0078125,
+            "top": 125.796875,
+            "right": 926.8046875,
+            "bottom": 698.203125,
+            "natural": [
+              7974,
+              5101
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/08_%E4%B8%8A%E5%B1%82%E7%8C%96%E5%85%B5/line.png"
+          },
+          {
+            "id": "img-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "line",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 926.8125,
+          "bottom": 738,
+          "width": 894.8125,
+          "height": 652
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "false",
+          "true",
+          "false"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "10",
+      "layer": "color",
+      "w": 1440,
+      "h": 900,
+      "file": "real-10-color-1440x900.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              7974,
+              5101
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/08_%E4%B8%8A%E5%B1%82%E7%8C%96%E5%85%B5/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              7974,
+              5101
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/08_%E4%B8%8A%E5%B1%82%E7%8C%96%E5%85%B5/line.png"
+          },
+          {
+            "id": "img-color",
+            "visible": true,
+            "width": 894.796875,
+            "height": 572.40625,
+            "left": 32.0078125,
+            "top": 125.796875,
+            "right": 926.8046875,
+            "bottom": 698.203125,
+            "natural": [
+              7974,
+              5101
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/08_%E4%B8%8A%E5%B1%82%E7%8C%96%E5%85%B5/color.png"
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "color",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 926.8125,
+          "bottom": 738,
+          "width": 894.8125,
+          "height": 652
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "false",
+          "false",
+          "true"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "01",
+      "layer": "org",
+      "w": 1920,
+      "h": 1080,
+      "file": "real-01-org-1920x1080.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": true,
+            "width": 1216.375,
+            "height": 824.46875,
+            "left": 32.015625,
+            "top": 89.765625,
+            "right": 1248.390625,
+            "bottom": 914.234375,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "img-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "org",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 1248.40625,
+          "bottom": 918,
+          "width": 1216.40625,
+          "height": 832
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "true",
+          "false",
+          "false"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "01",
+      "layer": "line",
+      "w": 1920,
+      "h": 1080,
+      "file": "real-01-line-1920x1080.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": true,
+            "width": 1216.375,
+            "height": 824.46875,
+            "left": 32.015625,
+            "top": 89.765625,
+            "right": 1248.390625,
+            "bottom": 914.234375,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/line.png"
+          },
+          {
+            "id": "img-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "line",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 1248.40625,
+          "bottom": 918,
+          "width": 1216.40625,
+          "height": 832
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "false",
+          "true",
+          "false"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "01",
+      "layer": "color",
+      "w": 1920,
+      "h": 1080,
+      "file": "real-01-color-1920x1080.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/line.png"
+          },
+          {
+            "id": "img-color",
+            "visible": true,
+            "width": 1216.375,
+            "height": 824.46875,
+            "left": 32.015625,
+            "top": 89.765625,
+            "right": 1248.390625,
+            "bottom": 914.234375,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/color.png"
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "color",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 1248.40625,
+          "bottom": 918,
+          "width": 1216.40625,
+          "height": 832
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "false",
+          "false",
+          "true"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "06",
+      "layer": "org",
+      "w": 1920,
+      "h": 1080,
+      "file": "real-06-org-1920x1080.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": true,
+            "width": 1216.375,
+            "height": 824.46875,
+            "left": 32.015625,
+            "top": 89.765625,
+            "right": 1248.390625,
+            "bottom": 914.234375,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/06_%E7%BF%BB%E5%9D%9B%E5%BC%A0%E4%BA%94%E9%83%8E/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "img-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "org",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 1248.40625,
+          "bottom": 918,
+          "width": 1216.40625,
+          "height": 832
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "true",
+          "false",
+          "false"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "06",
+      "layer": "line",
+      "w": 1920,
+      "h": 1080,
+      "file": "real-06-line-1920x1080.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/06_%E7%BF%BB%E5%9D%9B%E5%BC%A0%E4%BA%94%E9%83%8E/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": true,
+            "width": 1216.375,
+            "height": 824.46875,
+            "left": 32.015625,
+            "top": 89.765625,
+            "right": 1248.390625,
+            "bottom": 914.234375,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/06_%E7%BF%BB%E5%9D%9B%E5%BC%A0%E4%BA%94%E9%83%8E/line.png"
+          },
+          {
+            "id": "img-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "line",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 1248.40625,
+          "bottom": 918,
+          "width": 1216.40625,
+          "height": 832
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "false",
+          "true",
+          "false"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "06",
+      "layer": "color",
+      "w": 1920,
+      "h": 1080,
+      "file": "real-06-color-1920x1080.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/06_%E7%BF%BB%E5%9D%9B%E5%BC%A0%E4%BA%94%E9%83%8E/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/06_%E7%BF%BB%E5%9D%9B%E5%BC%A0%E4%BA%94%E9%83%8E/line.png"
+          },
+          {
+            "id": "img-color",
+            "visible": true,
+            "width": 1216.375,
+            "height": 824.46875,
+            "left": 32.015625,
+            "top": 89.765625,
+            "right": 1248.390625,
+            "bottom": 914.234375,
+            "natural": [
+              1946,
+              1319
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/06_%E7%BF%BB%E5%9D%9B%E5%BC%A0%E4%BA%94%E9%83%8E/color.png"
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "color",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 1248.40625,
+          "bottom": 918,
+          "width": 1216.40625,
+          "height": 832
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "false",
+          "false",
+          "true"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "10",
+      "layer": "org",
+      "w": 1920,
+      "h": 1080,
+      "file": "real-10-org-1920x1080.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": true,
+            "width": 1216.375,
+            "height": 778.125,
+            "left": 32.015625,
+            "top": 112.9375,
+            "right": 1248.390625,
+            "bottom": 891.0625,
+            "natural": [
+              7974,
+              5101
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/08_%E4%B8%8A%E5%B1%82%E7%8C%96%E5%85%B5/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "img-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "org",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 1248.40625,
+          "bottom": 918,
+          "width": 1216.40625,
+          "height": 832
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "true",
+          "false",
+          "false"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "10",
+      "layer": "line",
+      "w": 1920,
+      "h": 1080,
+      "file": "real-10-line-1920x1080.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              7974,
+              5101
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/08_%E4%B8%8A%E5%B1%82%E7%8C%96%E5%85%B5/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": true,
+            "width": 1216.375,
+            "height": 778.125,
+            "left": 32.015625,
+            "top": 112.9375,
+            "right": 1248.390625,
+            "bottom": 891.0625,
+            "natural": [
+              7974,
+              5101
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/08_%E4%B8%8A%E5%B1%82%E7%8C%96%E5%85%B5/line.png"
+          },
+          {
+            "id": "img-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              null,
+              null
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "line",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 1248.40625,
+          "bottom": 918,
+          "width": 1216.40625,
+          "height": 832
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "false",
+          "true",
+          "false"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    },
+    {
+      "id": "10",
+      "layer": "color",
+      "w": 1920,
+      "h": 1080,
+      "file": "real-10-color-1920x1080.png",
+      "state": {
+        "media": [
+          {
+            "id": "img-org",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              7974,
+              5101
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/08_%E4%B8%8A%E5%B1%82%E7%8C%96%E5%85%B5/org.png"
+          },
+          {
+            "id": "img-line",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              7974,
+              5101
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/08_%E4%B8%8A%E5%B1%82%E7%8C%96%E5%85%B5/line.png"
+          },
+          {
+            "id": "img-color",
+            "visible": true,
+            "width": 1216.375,
+            "height": 778.125,
+            "left": 32.015625,
+            "top": 112.9375,
+            "right": 1248.390625,
+            "bottom": 891.0625,
+            "natural": [
+              7974,
+              5101
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": "/assets/08_%E4%B8%8A%E5%B1%82%E7%8C%96%E5%85%B5/color.png"
+          },
+          {
+            "id": "video-color",
+            "visible": false,
+            "width": 0,
+            "height": 0,
+            "left": 0,
+            "top": 0,
+            "right": 0,
+            "bottom": 0,
+            "natural": [
+              0,
+              0
+            ],
+            "fit": "contain",
+            "transition": "0s",
+            "src": null
+          }
+        ],
+        "type": "color",
+        "box": {
+          "left": 32,
+          "top": 86,
+          "right": 1248.40625,
+          "bottom": 918,
+          "width": 1216.40625,
+          "height": 832
+        },
+        "border": [
+          "0px",
+          "0px",
+          "0px",
+          "0px"
+        ],
+        "background": "rgba(0, 0, 0, 0)",
+        "shadow": "none",
+        "outline": "0px",
+        "pseudo": [
+          "none",
+          "none"
+        ],
+        "pressed": [
+          "false",
+          "false",
+          "true"
+        ],
+        "busy": [
+          "false",
+          "false",
+          "false"
+        ]
+      }
+    }
+  ],
+  "cases": [
+    "36 real static screenshots: three author figures × three layers × four desktop sizes; computed fit, center, no stretch/upscale/crop/frame; index navigation",
+    "Temporary tall/wide/square PNGs with unequal alpha margins and pixel dimensions; internal diagnostics only; repeat layer selections cause no new image requests",
+    "Small canvas remains 120×160 with no enlargement; only original/missing line/missing color never retain another visible layer",
+    "Per-frame rapid org→line→color→org, org→color→line, pending load retention, late response cancellation, character change during pending load",
+    "Returning to a downloaded but still decoding layer waits for decoding and does not treat naturalWidth as readiness",
+    "404 image preserves decoded original and pressed button; no broken visible img; retry commits line",
+    "Real MP4 plays with all static layers hidden; natural end restores static color; ten playback/release loops keep four media nodes, paused video, no src or callbacks; character change releases video",
+    "Video 404, unsupported format, rejected play automatically retain static color; delayed video cannot reappear after selecting line"
+  ],
+  "frames": 3546,
+  "violations": [],
+  "errors": [],
+  "console": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)",
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "limits": "JS heap/DOM lifecycle checks do not measure process/GPU memory. Physical camera is outside B02 scope.",
+  "passed": true
+}

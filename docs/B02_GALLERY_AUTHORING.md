@@ -52,6 +52,18 @@
 
 统一检测规则（小写文件名）：图片 **webp → png → jpg → jpeg**；档案 **info.md → info.txt**；动画只检测 `video.mp4`。多版本时按上述优先级，前端不会猜测文件路径。Markdown 档案当前按纯文本显示，避免执行 HTML；B03 后续可以在同一资源结构上扩展排版。只有原图也可进入详情；线稿/色稿缺失时按钮禁用；无视频不请求；无档案显示「人物档案待补充」；原图未就绪明确提示，不设置破损图片 src。
 
+## 桌面图鉴详情的独立媒体展示（2026-10-08）
+
+人物详情保留左侧显示容器和现有两栏位置，取消固定矩形边框、底板及画框装饰。每张原图、线稿、色稿以完整作者画板独立居中显示，使用自然宽高比、`object-fit: contain` 和最大宽高约束；小画板不强制放大。PNG 的透明边距属于画板内容，照原样保留，不自动裁剪、移动、配准或按人物 ID 设置缩放。
+
+三张静态图与视频由局部 `commitGalleryMedia(org|line|color|video|none)` 管理 `hidden`，同一时刻最多一个媒体可见，不使用 opacity 叠层或交叉淡化。图像在不可见状态加载并解码，校验 `layerVersion`、`detailVersion` 和请求取消状态后才提交；加载中保留上一张有效图像及其选中按钮，目标按钮使用 `aria-busy` 标识等待。加载失败保留当前图像，提供“重试图像”；切换人物清空旧图源、就绪标记和尺寸诊断。
+
+三种素材不要求相同像素尺寸、宽高比、透明边距或人物位置。尺寸差异仅写入 `#image-wrapper` 的 `data-dimensions` / `data-dimension-match` 内部诊断，不阻止观看，也不提示“无法保证配准”。左下说明为“原图 · 线稿 · 色稿”，有加载/失败状态时沿用优先显示状态文字的规则。
+
+数字色稿先显示成功解码的静态图。有 `video.mp4` 时，视频开始播放并具备画面数据后独占展示；自然结束后恢复静态色稿。视频文件缺失、格式不支持或播放被拒绝时自动回退静态色稿并提示；切换图层、人物或离开详情时暂停、清空视频源、移除旧回调，版本校验阻止旧播放结果重新显示。
+
+验证：`node --test Mural-Exhibition/b02.test.cjs`、`node Mural-Exhibition/b02-browser-check.cjs`。后者包含 `b02-media-browser-check.cjs` 的逐帧互斥、延迟请求/解码、错误重试、视频及四视口检查；该媒体脚本也可单独运行。比例/透明边距素材只生成在操作系统临时目录，通过测试浏览器路由提供，不进入正式人物目录。详见 [本次验收记录](validation/b02-media-switch-2026-10-08/README.md)。
+
 ## 接口与本地管理约束
 
 - `GET /api/scan-assets`：`{success, adminEnabled, data, diagnostics}`。每个人物包含元数据、folderName、resources（org/line/color/video/info）、annotated、ready、revision。继续返回 orgPath/linePath/colorPath/infoPath 等兼容别名，移动页沿用原接口。

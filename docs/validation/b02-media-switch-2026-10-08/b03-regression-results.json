@@ -1,0 +1,379 @@
+{
+  "environment": "Actual Chrome / production Camera.onFrame, Hands.onResults, Pose worker messaging, Three.js and GSAP; synthetic model outputs and camera image. Physical camera acceptance PENDING.",
+  "status": "PASS",
+  "views": [
+    {
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "width": 1366,
+      "height": 768
+    }
+  ],
+  "cases": [
+    "V3.1 A/C/D: near/middle/far upper-body and hips in/out preserve one operator",
+    "Preview 1440: real MediaPipe drawing helper / visible skeleton and points / clears when hands absent / box unchanged (1187 changed channels)",
+    "Preview 1920: real MediaPipe drawing helper / visible skeleton and points / clears when hands absent / box unchanged (1187 changed channels)",
+    "Preview 1366: real MediaPipe drawing helper / visible skeleton and points / clears when hands absent / box unchanged (1187 changed channels)",
+    "B/C/D: eight larger-bystander/cross-person hand attempts, no control steal or gesture",
+    "L: same-person second hand cancels ARMED without revealing",
+    "K: ARMED ownership survives a bystander",
+    "Mouse previous/next and keyboard arrows/I/Escape preserved"
+  ],
+  "metrics": {
+    "nextAttempts": 36,
+    "nextSuccess": 36,
+    "falseNext": 0,
+    "doubleNext": 0,
+    "readingAttempts": 14,
+    "readingSuccess": 14,
+    "falseReopen": 0,
+    "interferenceAttempts": 8,
+    "wrongPersonNext": 0,
+    "wrongPersonReading": 0,
+    "operatorSwitchAttempts": 10,
+    "wrongOperatorSwitch": 0
+  },
+  "errors": [],
+  "physicalCamera": {
+    "status": "PENDING"
+  },
+  "resources": [
+    {
+      "id": "02",
+      "phase": "stable",
+      "loading": false,
+      "orbitPhase": "idle",
+      "orbitActive": false,
+      "panels": 5,
+      "svg": 1,
+      "textures": 5,
+      "cache": 3,
+      "pose": {
+        "models": 1,
+        "frames": 1153,
+        "inferenceTotalMs": 0,
+        "inferenceMaxMs": 0,
+        "staleResults": 0,
+        "active": 1,
+        "inFlight": 0,
+        "averageInferenceMs": 0
+      },
+      "performance": {
+        "callbacks": 3438,
+        "firstAt": 4644.299999999814,
+        "lastAt": 120231.5,
+        "maxActiveCameras": 1,
+        "activeCameras": 1,
+        "stalePoseFrames": 4,
+        "raf": 1
+      }
+    },
+    {
+      "id": "05",
+      "phase": "stable",
+      "loading": false,
+      "orbitPhase": "stable",
+      "orbitActive": true,
+      "panels": 5,
+      "svg": 1,
+      "textures": 5,
+      "cache": 3,
+      "pose": {
+        "models": 1,
+        "frames": 1336,
+        "inferenceTotalMs": 0,
+        "inferenceMaxMs": 0,
+        "staleResults": 0,
+        "active": 1,
+        "inFlight": 0,
+        "averageInferenceMs": 0
+      },
+      "performance": {
+        "callbacks": 3989,
+        "firstAt": 4644.299999999814,
+        "lastAt": 138745.2999999998,
+        "maxActiveCameras": 1,
+        "activeCameras": 1,
+        "stalePoseFrames": 5,
+        "raf": 1
+      }
+    },
+    {
+      "id": "10",
+      "phase": "stable",
+      "loading": false,
+      "orbitPhase": "idle",
+      "orbitActive": false,
+      "panels": 5,
+      "svg": 1,
+      "textures": 6,
+      "cache": 3,
+      "pose": {
+        "models": 1,
+        "frames": 1512,
+        "inferenceTotalMs": 0,
+        "inferenceMaxMs": 0,
+        "staleResults": 0,
+        "active": 1,
+        "inFlight": 0,
+        "averageInferenceMs": 0
+      },
+      "performance": {
+        "callbacks": 4514,
+        "firstAt": 4644.299999999814,
+        "lastAt": 157028.5,
+        "maxActiveCameras": 1,
+        "activeCameras": 1,
+        "stalePoseFrames": 7,
+        "raf": 1
+      }
+    },
+    {
+      "id": "03",
+      "phase": "stable",
+      "loading": false,
+      "orbitPhase": "idle",
+      "orbitActive": false,
+      "panels": 5,
+      "svg": 1,
+      "textures": 5,
+      "cache": 3,
+      "pose": {
+        "models": 1,
+        "frames": 1695,
+        "inferenceTotalMs": 0,
+        "inferenceMaxMs": 0,
+        "staleResults": 0,
+        "active": 1,
+        "inFlight": 0,
+        "averageInferenceMs": 0
+      },
+      "performance": {
+        "callbacks": 5061,
+        "firstAt": 4644.299999999814,
+        "lastAt": 175343.1000000001,
+        "maxActiveCameras": 1,
+        "activeCameras": 1,
+        "stalePoseFrames": 8,
+        "raf": 1
+      }
+    },
+    {
+      "id": "06",
+      "phase": "stable",
+      "loading": false,
+      "orbitPhase": "idle",
+      "orbitActive": false,
+      "panels": 5,
+      "svg": 1,
+      "textures": 5,
+      "cache": 3,
+      "pose": {
+        "models": 1,
+        "frames": 1878,
+        "inferenceTotalMs": 0,
+        "inferenceMaxMs": 0,
+        "staleResults": 0,
+        "active": 1,
+        "inFlight": 0,
+        "averageInferenceMs": 0
+      },
+      "performance": {
+        "callbacks": 5607,
+        "firstAt": 4644.299999999814,
+        "lastAt": 193527.8999999999,
+        "maxActiveCameras": 1,
+        "activeCameras": 1,
+        "stalePoseFrames": 8,
+        "raf": 1
+      }
+    },
+    {
+      "id": "01",
+      "phase": "stable",
+      "loading": false,
+      "orbitPhase": "stable",
+      "orbitActive": true,
+      "panels": 5,
+      "svg": 1,
+      "textures": 5,
+      "cache": 3,
+      "pose": {
+        "models": 1,
+        "frames": 2061,
+        "inferenceTotalMs": 0,
+        "inferenceMaxMs": 0,
+        "staleResults": 0,
+        "active": 1,
+        "inFlight": 0,
+        "averageInferenceMs": 0
+      },
+      "performance": {
+        "callbacks": 6152,
+        "firstAt": 4644.299999999814,
+        "lastAt": 212205.6000000001,
+        "maxActiveCameras": 1,
+        "activeCameras": 1,
+        "stalePoseFrames": 9,
+        "raf": 1
+      }
+    },
+    {
+      "id": "04",
+      "phase": "stable",
+      "loading": false,
+      "orbitPhase": "idle",
+      "orbitActive": false,
+      "panels": 5,
+      "svg": 1,
+      "textures": 6,
+      "cache": 3,
+      "pose": {
+        "models": 1,
+        "frames": 2238,
+        "inferenceTotalMs": 0,
+        "inferenceMaxMs": 0,
+        "staleResults": 0,
+        "active": 1,
+        "inFlight": 0,
+        "averageInferenceMs": 0
+      },
+      "performance": {
+        "callbacks": 6678,
+        "firstAt": 4644.299999999814,
+        "lastAt": 229727.2999999998,
+        "maxActiveCameras": 1,
+        "activeCameras": 1,
+        "stalePoseFrames": 9,
+        "raf": 1
+      }
+    },
+    {
+      "id": "07",
+      "phase": "stable",
+      "loading": false,
+      "orbitPhase": "idle",
+      "orbitActive": false,
+      "panels": 5,
+      "svg": 1,
+      "textures": 5,
+      "cache": 3,
+      "pose": {
+        "models": 1,
+        "frames": 2422,
+        "inferenceTotalMs": 0,
+        "inferenceMaxMs": 0,
+        "staleResults": 0,
+        "active": 1,
+        "inFlight": 0,
+        "averageInferenceMs": 0
+      },
+      "performance": {
+        "callbacks": 7228,
+        "firstAt": 4644.299999999814,
+        "lastAt": 248141.6000000001,
+        "maxActiveCameras": 1,
+        "activeCameras": 1,
+        "stalePoseFrames": 10,
+        "raf": 1
+      }
+    },
+    {
+      "id": "02",
+      "phase": "stable",
+      "loading": false,
+      "orbitPhase": "idle",
+      "orbitActive": false,
+      "panels": 5,
+      "svg": 1,
+      "textures": 5,
+      "cache": 3,
+      "pose": {
+        "models": 1,
+        "frames": 2606,
+        "inferenceTotalMs": 0,
+        "inferenceMaxMs": 0,
+        "staleResults": 0,
+        "active": 1,
+        "inFlight": 0,
+        "averageInferenceMs": 0
+      },
+      "performance": {
+        "callbacks": 7780,
+        "firstAt": 4644.299999999814,
+        "lastAt": 267214.2999999998,
+        "maxActiveCameras": 1,
+        "activeCameras": 1,
+        "stalePoseFrames": 12,
+        "raf": 1
+      }
+    },
+    {
+      "id": "05",
+      "phase": "stable",
+      "loading": false,
+      "orbitPhase": "stable",
+      "orbitActive": true,
+      "panels": 5,
+      "svg": 1,
+      "textures": 5,
+      "cache": 3,
+      "pose": {
+        "models": 1,
+        "frames": 2792,
+        "inferenceTotalMs": 0,
+        "inferenceMaxMs": 0,
+        "staleResults": 0,
+        "active": 1,
+        "inFlight": 0,
+        "averageInferenceMs": 0
+      },
+      "performance": {
+        "callbacks": 8334,
+        "firstAt": 4644.299999999814,
+        "lastAt": 285761.5,
+        "maxActiveCameras": 1,
+        "activeCameras": 1,
+        "stalePoseFrames": 12,
+        "raf": 1
+      }
+    }
+  ],
+  "exit": {
+    "id": "05",
+    "phase": "idle",
+    "loading": false,
+    "orbitPhase": "idle",
+    "orbitActive": false,
+    "panels": 5,
+    "svg": 1,
+    "textures": 0,
+    "cache": 0,
+    "pose": {
+      "models": 1,
+      "frames": 2875,
+      "inferenceTotalMs": 0,
+      "inferenceMaxMs": 0,
+      "staleResults": 1,
+      "active": 0,
+      "inFlight": 0,
+      "averageInferenceMs": 0
+    },
+    "performance": {
+      "callbacks": 8576,
+      "firstAt": 4644.299999999814,
+      "lastAt": 294519.2999999998,
+      "maxActiveCameras": 1,
+      "activeCameras": 0,
+      "stalePoseFrames": 15,
+      "raf": 0
+    }
+  },
+  "scope": "Compact counters; full per-frame ownership traces retained in local/b03-gesture/results.json"
+}

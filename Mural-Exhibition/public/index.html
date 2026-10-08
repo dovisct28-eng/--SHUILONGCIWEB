@@ -67,8 +67,7 @@
             padding-left: 80px; padding-right: 34%; padding-top: 40px; padding-bottom: 40px; 
         }
         #image-wrapper { position: relative; width: 100%; height: 100%; }
-        .layer-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; transition: opacity 0.5s ease-in-out; pointer-events: none; }
-        #img-line, #img-color { opacity: 0; }
+        .layer-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
 
         /* 摄像机监控小窗 (彻底让出画幅路权，仅作角落状态指示灯) */
         #camera-feed-container {
@@ -271,16 +270,16 @@
             <div id="webgl-container"></div>
             <div id="gallery-container">
                 <div id="image-wrapper">
-                    <img id="img-org" class="layer-img" src="" alt="原图">
-                    <img id="img-line" class="layer-img" src="" alt="线稿">
-                    <img id="img-color" class="layer-img" src="" alt="色稿">
+                    <img id="img-org" class="layer-img" hidden alt="原图">
+                    <img id="img-line" class="layer-img" hidden alt="线稿">
+                    <img id="img-color" class="layer-img" hidden alt="色稿">
                     
                     <p id="detail-asset-status" role="status"></p>
-                    <video preload="none" id="video-color" class="layer-img" muted playsinline style="opacity: 0; pointer-events: none; z-index: 10; background: #000;"></video>
+                    <video preload="none" id="video-color" class="layer-img" hidden muted playsinline></video>
                 </div>
             </div>
         </div>
-        <p class="image-caption">完整画框 · 三层图像研究</p>
+        <p class="image-caption">原图 · 线稿 · 色稿</p>
         <div id="stage-name" aria-live="polite"></div>
         <p id="stage-disclaimer">数字化演绎内容</p>
 
@@ -669,6 +668,21 @@
         document.getElementById('main-app').inert = true;
 
         let detailVersion = 0, layerVersion = 0, infoRequest, layerRequest, galleryDimensions = {};
+        let galleryMedia = 'none';
+        const galleryLayers = ['org', 'line', 'color'];
+        function commitGalleryMedia(type) {
+            if (![...galleryLayers, 'video', 'none'].includes(type)) throw new TypeError('Invalid gallery media');
+            // Hide everything before revealing one decoded image or playable video.
+            for (const key of [...galleryLayers, 'video']) document.getElementById(key === 'video' ? 'video-color' : `img-${key}`).hidden = true;
+            if (type !== 'none') document.getElementById(type === 'video' ? 'video-color' : `img-${type}`).hidden = false;
+            galleryMedia = type;
+            document.getElementById('image-wrapper').dataset.media = type;
+            const active = type === 'video' ? 'color' : type;
+            document.querySelectorAll('.layer-btn').forEach((button, i) => {
+                button.classList.toggle('active', galleryLayers[i] === active);
+                button.setAttribute('aria-pressed', String(galleryLayers[i] === active));
+            });
+        }
         const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
         function setIndexOpen(open, focus = false) {
             const panel = document.getElementById('floating-menu'); panel.hidden = !open;
@@ -703,7 +717,10 @@
         });
         function releaseGalleryVideo() {
             ++layerVersion;
-            const video = document.getElementById('video-color'); video.pause(); video.style.opacity = '0';
+            const video = document.getElementById('video-color');
+            video.onended = video.onerror = null;
+            video.pause(); video.hidden = true;
+            if (galleryMedia === 'video') commitGalleryMedia('color');
             if (video.hasAttribute('src')) { video.removeAttribute('src'); video.load(); }
         }
         function loadSeriesData(index) {
@@ -742,9 +759,15 @@
                     const retry = document.createElement('button'); retry.type = 'button'; retry.textContent = '重试档案'; retry.onclick = () => loadSeriesData(currentSeriesIndex); textEl.append(retry);
                 }).finally(() => clearTimeout(archiveTimer));
             if (currentTrack === 'gallery') {
-                for (const layer of ['org', 'line', 'color']) { const image = document.getElementById(`img-${layer}`); image.removeAttribute('src'); image.style.opacity = '0'; }
+                commitGalleryMedia('none');
+                for (const layer of galleryLayers) {
+                    const image = document.getElementById(`img-${layer}`);
+                    image.removeAttribute('src'); delete image.dataset.readySrc;
+                }
                 galleryDimensions = {};
-                document.querySelectorAll('.layer-btn').forEach((button, i) => { const old = button.querySelector('img'); old?.remove(); const src = item.previews?.[['org','line','color'][i]]; if (src) { const thumb = new Image(); thumb.alt = ''; thumb.className = 'layer-preview'; thumb.src = src; thumb.onerror = () => thumb.remove(); button.prepend(thumb); } button.disabled = !item.resources[['org','line','color'][i]]; button.classList.toggle('active', i === 0); button.setAttribute('aria-pressed', String(i === 0)); });
+                delete document.getElementById('image-wrapper').dataset.dimensions;
+                delete document.getElementById('image-wrapper').dataset.dimensionMatch;
+                document.querySelectorAll('.layer-btn').forEach((button, i) => { const old = button.querySelector('img'); old?.remove(); const src = item.previews?.[galleryLayers[i]]; if (src) { const thumb = new Image(); thumb.alt = ''; thumb.className = 'layer-preview'; thumb.src = src; thumb.onerror = () => thumb.remove(); button.prepend(thumb); } button.disabled = !item.resources[galleryLayers[i]]; button.setAttribute('aria-busy', 'false'); });
                 document.getElementById('study-retry').hidden = true;
                 document.getElementById('detail-asset-status').textContent = item.ready ? '' : '人物原图素材未就绪';
                 window.switchLayer('org');
@@ -759,36 +782,53 @@
             }
         }
         window.switchLayer = async layerType => {
-            const item = currentItemData, src = item?.resources[layerType]; if (!src) return;
+            const item = currentItemData, src = item?.resources[layerType];
+            if (currentTrack !== 'gallery' || !galleryLayers.includes(layerType) || !src) return;
             layerRequest?.abort(); layerRequest = new AbortController(); const request = layerRequest;
             releaseGalleryVideo(); const version = layerVersion, detail = detailVersion;
+            const valid = () => version === layerVersion && detail === detailVersion && currentTrack === 'gallery' && !request.signal.aborted;
             const image = document.getElementById(`img-${layerType}`), feedback = document.getElementById('detail-asset-status');
+            document.querySelectorAll('.layer-btn').forEach((button, i) => button.setAttribute('aria-busy', String(galleryLayers[i] === layerType)));
+            document.getElementById('study-retry').hidden = true;
             feedback.textContent = '正在加载图像…';
             try {
-                if (image.getAttribute('src') !== src || !image.naturalWidth) {
+                if (image.dataset.readySrc !== src || !image.naturalWidth) {
                     const loaded = await loadStudyImage(src, request.signal);
-                    if (version !== layerVersion || detail !== detailVersion || currentTrack !== 'gallery') return;
-                    image.src = loaded.src;
+                    await loaded.decode();
+                    if (!valid()) return;
+                    image.src = src;
+                    await image.decode();
+                    if (!valid()) return;
+                    image.dataset.readySrc = src;
                     galleryDimensions[layerType] = { width:loaded.naturalWidth, height:loaded.naturalHeight };
                     const dims = Object.values(galleryDimensions), first = dims[0];
-                    image.dataset.registration = dims.every(d => d.width === first.width && d.height === first.height) ? 'consistent' : 'mismatch';
+                    document.getElementById('image-wrapper').dataset.dimensions = JSON.stringify(galleryDimensions);
+                    document.getElementById('image-wrapper').dataset.dimensionMatch = String(dims.every(d => d.width === first.width && d.height === first.height));
                 }
-                if (version !== layerVersion || detail !== detailVersion || currentTrack !== 'gallery') return;
-                for (const layer of ['org','line','color']) document.getElementById(`img-${layer}`).style.opacity = layer === layerType ? '1' : '0';
-                document.querySelectorAll('.layer-btn').forEach((button, i) => { const active = ['org','line','color'][i] === layerType; button.classList.toggle('active', active); button.setAttribute('aria-pressed', String(active)); });
+                if (!valid()) return;
+                commitGalleryMedia(layerType);
                 const missing = [['line','线稿'],['color','色稿']].filter(([key]) => !item.resources[key]).map(([,name]) => name);
                 feedback.textContent = layerType === 'color' ? '数字色稿 · 数字化演绎内容' : missing.length ? `${missing.join('、')}素材待补充` : '';
-                if (Object.values(galleryDimensions).some(d => d.width !== Object.values(galleryDimensions)[0].width || d.height !== Object.values(galleryDimensions)[0].height)) feedback.textContent += ' · 三层实际尺寸不一致，无法保证配准，请核对素材';
                 document.getElementById('study-retry').hidden = true;
+                document.querySelectorAll('.layer-btn').forEach(button => button.setAttribute('aria-busy', 'false'));
                 if (layerType === 'color' && item.videoPath) {
-                    const video = document.getElementById('video-color'); video.src = item.videoPath;
-                    try { await video.play(); if (version === layerVersion && detail === detailVersion && currentTrack === 'gallery') video.style.opacity = '1'; }
-                    catch { if (version === layerVersion) { releaseGalleryVideo(); feedback.textContent = '动画暂不可用，当前展示静态数字色稿。'; } }
+                    const video = document.getElementById('video-color');
+                    const restore = failed => {
+                        if (!valid()) return;
+                        releaseGalleryVideo(); commitGalleryMedia('color');
+                        if (failed) feedback.textContent = '动画暂不可用，当前展示静态数字色稿。';
+                    };
+                    video.onended = () => restore(false); video.onerror = () => restore(true);
+                    video.src = item.videoPath;
+                    try { await video.play(); if (valid() && video.readyState >= 2 && !video.ended) commitGalleryMedia('video'); }
+                    catch { restore(true); }
                 }
             } catch (error) {
-                if (version !== layerVersion || detail !== detailVersion || error.name === 'AbortError') return;
+                if (!valid() || error.name === 'AbortError') return;
                 feedback.textContent = '图像未载入，已保留当前有效画面。';
                 const retry = document.getElementById('study-retry'); retry.hidden = false; retry.onclick = () => window.switchLayer(layerType);
+            } finally {
+                if (version === layerVersion && detail === detailVersion) document.querySelectorAll('.layer-btn').forEach(button => button.setAttribute('aria-busy', 'false'));
             }
         };
         function loadStudyImage(src, signal) {
@@ -803,10 +843,6 @@
                 if (signal.aborted) abort(); else image.src = src;
             });
         }
-        document.getElementById('video-color').addEventListener('ended', releaseGalleryVideo);
-        document.getElementById('video-color').addEventListener('error', () => {
-            if (currentTrack === 'gallery' && currentItemData?.videoPath && document.getElementById('video-color').hasAttribute('src')) { releaseGalleryVideo(); document.getElementById('detail-asset-status').textContent = '动画暂不可用，当前展示静态数字色稿。'; }
-        });
 
         // =======================================================
         // 【动线 A】 WebGL 赛博大厅 & 自适应视锥体算法

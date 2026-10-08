@@ -1,5 +1,24 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),os=require('node:os');
 const {scanAssets,savePosition}=require('./gallery-store.cjs'),{createApp}=require('./server.js');
+test('gallery commits hide old media first and keep pressed buttons truthful, including video/none',()=>{
+ const html=fs.readFileSync(path.join(__dirname,'public/index.html'),'utf8');
+ const source=html.slice(html.indexOf("        let galleryMedia = 'none';"),html.indexOf('        const reducedMotion'));
+ const media={},buttons=Array.from({length:3},()=>({active:false,pressed:'false',classList:{toggle(key,value){this.owner.active=value;}},setAttribute(key,value){if(key==='aria-pressed')this.pressed=value;}}));
+ buttons.forEach(b=>b.classList.owner=b);
+ const counts=[];
+ for(const id of ['img-org','img-line','img-color','video-color']){
+  let hidden=true;media[id]={};Object.defineProperty(media[id],'hidden',{get:()=>hidden,set:value=>{hidden=value;counts.push(Object.values(media).filter(i=>Object.hasOwn(i,'hidden')&&!i.hidden).length);}});
+ }
+ media['image-wrapper']={dataset:{}};
+ const context=require('node:vm').createContext({document:{getElementById:id=>media[id],querySelectorAll:()=>buttons}});
+ require('node:vm').runInContext(source,context);
+ for(const type of ['org','line','color','video','org','none']){
+  context.commitGalleryMedia(type);
+  assert.equal(Object.values(media).filter(i=>Object.hasOwn(i,'hidden')&&!i.hidden).length,type==='none'?0:1);
+  assert.deepEqual(buttons.map(b=>b.pressed),['org','line','color'].map(k=>String(k===(type==='video'?'color':type))));
+ }
+ assert.ok(counts.every(n=>n<=1));assert.throws(()=>context.commitGalleryMedia('invalid'));
+});
 function fixture(){const root=fs.mkdtempSync(path.join(os.tmpdir(),'b02-test-'));return {root,cleanup:()=>fs.rmSync(root,{recursive:true,force:true})};}
 function character(root,folder='11_测试'){const dir=path.join(root,folder);fs.mkdirSync(dir);fs.writeFileSync(path.join(dir,'org.png'),'test');return dir;}
 test('scan grows progressively; absent resources, sorting, invalid metadata, duplicates and stable names',()=>{

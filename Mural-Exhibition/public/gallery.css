@@ -40,4 +40,11 @@
 #gallery-admin [data-position] { color:#b9c1be; font-variant-numeric:tabular-nums; }
 #panorama-view .temp-dot { position:absolute; width:20px; height:20px; border:2px solid #fff3d7; border-radius:50%; transform:translate(-50%,-50%); background:#24333b80; pointer-events:none; box-shadow:none; }
 #detail-asset-status { position:absolute; left:80px; bottom:18px; color:#b9bcb5; font-size:13px; }
+/* B02 uses each author's full canvas independently, without a visible frame. */
+body.track-gallery #image-wrapper { border:0; background:transparent; box-shadow:none; outline:0; }
+body.track-gallery #image-wrapper::before,body.track-gallery #image-wrapper::after { content:none; }
+body.track-gallery #main-app .layer-img { top:50%; left:50%; width:auto; height:auto; max-width:100%; max-height:100%; transform:translate(-50%,-50%); object-fit:contain; object-position:center; transition:none; }
+body.track-gallery #main-app .layer-img[hidden] { display:none!important; }
+body.track-gallery #main-app .layer-btn[aria-busy="true"] { border-style:dashed; }
+body.track-gallery #main-app #detail-asset-status { bottom:-27px; min-height:20px; }
 @media(prefers-reduced-motion:reduce) { #panorama-view * { transition:none!important; animation:none!important; } }

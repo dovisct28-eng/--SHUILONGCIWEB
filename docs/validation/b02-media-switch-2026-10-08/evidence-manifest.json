@@ -1,0 +1,55 @@
+{
+  "screenshots": [
+    {
+      "file": "selected/real-01-org-1440x900.png",
+      "bytes": 1311727
+    },
+    {
+      "file": "selected/real-01-line-1440x900.png",
+      "bytes": 1366996
+    },
+    {
+      "file": "selected/real-01-color-1440x900.png",
+      "bytes": 1305416
+    },
+    {
+      "file": "selected/real-01-org-1280x800.png",
+      "bytes": 1059500
+    },
+    {
+      "file": "selected/real-06-line-1366x768.png",
+      "bytes": 1016622
+    },
+    {
+      "file": "selected/real-10-color-1920x1080.png",
+      "bytes": 2031112
+    },
+    {
+      "file": "selected/fixture-org.png",
+      "bytes": 650473
+    },
+    {
+      "file": "selected/fixture-line.png",
+      "bytes": 524797
+    },
+    {
+      "file": "selected/fixture-color.png",
+      "bytes": 587159
+    },
+    {
+      "file": "selected/fixture-small-original-only.png",
+      "bytes": 592646
+    },
+    {
+      "file": "selected/real-video-exclusive.png",
+      "bytes": 630325
+    },
+    {
+      "file": "selected/image-failure-retained.png",
+      "bytes": 655725
+    }
+  ],
+  "count": 12,
+  "totalBytes": 11732498,
+  "scope": "Original browser PNG captures; full regression and attempts retained in ignored local/"
+}

@@ -1,14 +1,22 @@
 const {chromium}=require('playwright'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const {createApp}=require('./server.js');
-const out=path.resolve(process.env.B02_VALIDATION_DIR || path.join(__dirname,'../docs/validation/b02-2026-10-06'));fs.mkdirSync(out,{recursive:true});
+const out=path.resolve(process.env.B02_VALIDATION_DIR || path.join(__dirname,'../docs/validation/b02-media-switch-2026-10-08/local/gallery'));fs.mkdirSync(out,{recursive:true});
 const origin=process.env.B_VALIDATION_ORIGIN || 'http://localhost:3000';
-const assets=path.join(__dirname,'public/assets'),temp=path.join(assets,'99_B02_TEMP_TEST');
+const assets=path.join(__dirname,'public/assets');
+const fixtureRoot=fs.mkdtempSync(path.join(require('node:os').tmpdir(),'b02-authoring-'));
+const temp=path.join(fixtureRoot,'99_B02_TEMP_TEST');
 const report={environment:{browser:'Chrome headless',platform:process.platform,node:process.version},views:[],functional:[],stress:[],errors:[],camera:'Real camera/gesture hardware requires author testing'};
 const state=p=>p.evaluate(()=>document.body.dataset.explorationState),shot=(p,n)=>p.screenshot({path:path.join(out,n+'.png')});
 const enter=async p=>{await p.locator('#btn-gallery-track').click();await p.waitForFunction(()=>document.body.dataset.explorationState==='gallery-map');};
 const status=async(p,pattern)=>p.waitForFunction(pattern=>document.querySelector('[data-status]').textContent.includes(pattern),pattern);
 (async()=>{
- const admin=createApp({admin:true}).listen(0,'localhost');await new Promise(r=>admin.once('listening',r));
+ // Existing resources remain read-only; authored test data lives outside public/assets.
+ for(const entry of fs.readdirSync(assets,{withFileTypes:true}).filter(e=>e.isDirectory()&&/^\d+_/.test(e.name))){
+  const dir=path.join(fixtureRoot,entry.name);fs.mkdirSync(dir);
+  for(const file of fs.readdirSync(path.join(assets,entry.name))){const src=path.join(assets,entry.name,file);if(fs.statSync(src).isFile())fs.copyFileSync(src,path.join(dir,file));}
+ }
+ const adminApp=createApp({admin:true,assetsDirectory:fixtureRoot});adminApp.use('/assets',require('express').static(fixtureRoot));
+ const admin=adminApp.listen(0,'localhost');await new Promise(r=>admin.once('listening',r));
  const browser=await chromium.launch({channel:'chrome',headless:true,args:['--enable-precise-memory-info']});let createdFixture=false;
  try{
   const page=await browser.newPage({viewport:{width:1440,height:900}});page.on('pageerror',e=>report.errors.push(e.message));let requests=[];page.on('request',r=>requests.push(r.url()));
@@ -24,7 +32,7 @@ const status=async(p,pattern)=>p.waitForFunction(pattern=>document.querySelector
   await page.setViewportSize({width:1440,height:900});await page.locator('#pano-reset-btn').click();await shot(page,'hotspots-default');
   for(const id of ['01','02','03','04','05','06','07','10']){
    const marker=page.locator(`.hotspot[data-ids="${id}"]`);await marker.hover();await shot(page,`hotspot-${id}`);
-   await marker.click();await page.waitForFunction(()=>document.getElementById('img-org').style.opacity==='1');
+   await marker.click();await page.waitForFunction(()=>getComputedStyle(document.getElementById('img-org')).display!=='none' && document.getElementById('img-org').naturalWidth>0);
    const title=await page.locator('#info-title').textContent();assert.ok(title.length>1);await page.locator('#back-btn').click();assert.equal(await state(page),'gallery-map');
   }
   report.functional.push('All eight named hotspots open their matching original resources; all hover screenshots recorded');await shot(page,'hotspot-selected');
@@ -32,13 +40,13 @@ const status=async(p,pattern)=>p.waitForFunction(pattern=>document.querySelector
   await page.mouse.down();await page.mouse.move(300,450,{steps:15});await page.mouse.up();
   const before=await page.locator('#panorama-wrapper').getAttribute('style');
   await page.locator('#pano-reset-btn').click();await page.mouse.move(200,300);await page.mouse.wheel(0,-300);await page.waitForTimeout(100);
-  const preserved=await page.locator('#panorama-wrapper').getAttribute('style');await page.locator('.hotspot[data-ids="01"]').click();await page.waitForFunction(()=>document.getElementById('img-org').style.opacity==='1');
+  const preserved=await page.locator('#panorama-wrapper').getAttribute('style');await page.locator('.hotspot[data-ids="01"]').click();await page.waitForFunction(()=>getComputedStyle(document.getElementById('img-org')).display!=='none' && document.getElementById('img-org').naturalWidth>0);
   assert.equal(await page.locator('#img-line').getAttribute('src'),null);assert.equal(await page.locator('#img-color').getAttribute('src'),null);assert.equal(await page.locator('#video-color').getAttribute('src'),null);
-  await page.getByRole('button',{name:'高清线稿',exact:true}).click();await page.waitForFunction(()=>document.getElementById('img-line').style.opacity==='1');
-  await page.getByRole('button',{name:'数字色稿',exact:true}).click();await page.waitForFunction(()=>document.getElementById('img-color').style.opacity==='1');
-  await page.waitForFunction(()=>document.getElementById('video-color').getAttribute('src')!==null);await shot(page,'detail-compatible');
-  await page.locator('#index-toggle').click();await page.locator('#menu li button').nth(2).click();await page.waitForFunction(()=>document.getElementById('img-org').style.opacity==='1');assert.equal(await page.locator('#video-color').getAttribute('src'),null);
-  await page.getByRole('button',{name:'数字色稿',exact:true}).click();await page.waitForFunction(()=>document.getElementById('img-color').style.opacity==='1');assert.equal(await page.locator('#video-color').getAttribute('src'),null);
+  await page.getByRole('button',{name:'高清线稿',exact:true}).click();await page.waitForFunction(()=>getComputedStyle(document.getElementById('img-line')).display!=='none' && document.getElementById('img-line').naturalWidth>0);
+  await page.getByRole('button',{name:'数字色稿',exact:true}).click();await page.waitForFunction(()=>getComputedStyle(document.getElementById('img-color')).display!=='none'||getComputedStyle(document.getElementById('video-color')).display!=='none');
+  await page.waitForFunction(()=>getComputedStyle(document.getElementById('video-color')).display!=='none');await shot(page,'detail-compatible');
+  await page.locator('#index-toggle').click();await page.locator('#menu li button').nth(2).click();await page.waitForFunction(()=>getComputedStyle(document.getElementById('img-org')).display!=='none' && document.getElementById('img-org').naturalWidth>0);assert.equal(await page.locator('#video-color').getAttribute('src'),null);
+  await page.getByRole('button',{name:'数字色稿',exact:true}).click();await page.waitForFunction(()=>getComputedStyle(document.getElementById('img-color')).display!=='none' && document.getElementById('img-color').naturalWidth>0);assert.equal(await page.locator('#video-color').getAttribute('src'),null);
   await page.locator('#back-btn').click();assert.equal(await page.locator('#panorama-wrapper').getAttribute('style'),preserved);report.functional.push('Pan/zoom preserved through detail and character switching; line/color/video lazy; missing video never requested; video released on switch/return');
   await page.locator('#pano-reset-btn').click();await page.mouse.move(1200,500);await page.mouse.down();await page.mouse.move(100,500,{steps:15});await page.mouse.up();await shot(page,'middle');
   await page.locator('#pano-back-btn').click();await enter(page);assert.equal(await page.locator('#panorama-bg').evaluate(e=>e.getBoundingClientRect().left),0);report.functional.push('Drag, wheel, middle, reset, fresh B01 entry at left');
@@ -63,7 +71,7 @@ const status=async(p,pattern)=>p.waitForFunction(pattern=>document.querySelector
   }
   await author.locator('input[type="search"]').fill('B02_TEMP');assert.equal(await author.locator('[data-list] button').count(),1);await author.locator('[data-unbind]').click();assert.deepEqual(JSON.parse(fs.readFileSync(path.join(temp,'meta.json'))).position,second.position);await author.locator('[data-save]').click();await status(author,'已取消绑定');assert.ok(fs.existsSync(path.join(temp,'org.png')));assert.equal(await author.locator('.hotspot').count(),8);
   // Rebind and enter original-only fixture after removing optional resources.
-  for(const file of ['line.png','color.png','video.mp4','info.md'])fs.unlinkSync(path.join(temp,file));await author.locator('[data-refresh]').click();await status(author,'扫描完成');await author.locator('[data-list] button[data-id="99"]').click();await author.locator('#pano-reset-btn').click();await author.mouse.click(700,450);await author.locator('[data-save]').click();await status(author,'保存成功');await author.locator('#gallery-admin-toggle').click();await author.locator('.hotspot[data-ids="99"]').click();await author.waitForFunction(()=>document.getElementById('img-org').style.opacity==='1');assert.match(await author.locator('#info-text').textContent(),/人物档案待补充/);assert.ok(await author.getByRole('button',{name:'高清线稿',exact:true}).isDisabled());assert.ok(await author.getByRole('button',{name:'数字色稿',exact:true}).isDisabled());await shot(author,'original-only');
+  for(const file of ['line.png','color.png','video.mp4','info.md'])fs.unlinkSync(path.join(temp,file));await author.locator('[data-refresh]').click();await status(author,'扫描完成');await author.locator('[data-list] button[data-id="99"]').click();await author.locator('#pano-reset-btn').click();await author.mouse.click(700,450);await author.locator('[data-save]').click();await status(author,'保存成功');await author.locator('#gallery-admin-toggle').click();await author.locator('.hotspot[data-ids="99"]').click();await author.waitForFunction(()=>getComputedStyle(document.getElementById('img-org')).display!=='none' && document.getElementById('img-org').naturalWidth>0);assert.match(await author.locator('#info-text').textContent(),/人物档案待补充/);assert.ok(await author.getByRole('button',{name:'高清线稿',exact:true}).isDisabled());assert.ok(await author.getByRole('button',{name:'数字色稿',exact:true}).isDisabled());await shot(author,'original-only');
   await author.close();fs.rmSync(temp,{recursive:true});report.functional.push('Real new folder auto-discovery; both click/select orders; draft/cancel/save/reload/edit/unbind; search; simulated save failure restores; progressive resources; original-only detail; fixture cleaned');
   const baseScan=await(await page.request.get(origin+'/api/scan-assets')).json();
   for(const count of [30,50]){
@@ -78,11 +86,12 @@ const status=async(p,pattern)=>p.waitForFunction(pattern=>document.querySelector
   }
   // Observe repeated static detail visits with collection, not process/GPU memory.
   const client=await page.context().newCDPSession(page);await page.locator('#pano-reset-btn').click();await client.send('HeapProfiler.collectGarbage');const memoryStart=await client.send('Runtime.getHeapUsage');
-  for(let i=0;i<30;i++){await page.locator(`.hotspot[data-ids="${baseScan.data[i%8].id}"]`).click();await page.waitForFunction(()=>document.getElementById('img-org').style.opacity==='1');await page.locator('#back-btn').click();}
+  for(let i=0;i<30;i++){await page.locator(`.hotspot[data-ids="${baseScan.data[i%8].id}"]`).click();await page.waitForFunction(()=>getComputedStyle(document.getElementById('img-org')).display!=='none' && document.getElementById('img-org').naturalWidth>0);await page.locator('#back-btn').click();}
   await client.send('HeapProfiler.collectGarbage');const memoryEnd=await client.send('Runtime.getHeapUsage');report.memory={visits:30,start:memoryStart,end:memoryEnd,scope:'JS heap after explicit GC; excludes decoded images/GPU/process RSS'};
+  report.media=await require('./b02-media-browser-check.cjs').runMediaChecks(browser,origin,path.resolve(out,'../media'));
   assert.deepEqual(report.errors,[]);
  }finally{
-  if(createdFixture&&fs.existsSync(temp))fs.rmSync(temp,{recursive:true});fs.writeFileSync(path.join(out,'results.json'),JSON.stringify(report,null,2));await browser.close();admin.closeAllConnections();await new Promise(r=>admin.close(r));
+  fs.rmSync(fixtureRoot,{recursive:true,force:true});fs.writeFileSync(path.join(out,'results.json'),JSON.stringify(report,null,2));await browser.close();admin.closeAllConnections();await new Promise(r=>admin.close(r));
  }
  console.log(JSON.stringify({views:report.views.map(v=>({w:v.w,h:v.h,enterMs:v.enterMs})),functional:report.functional,stress:report.stress,memory:report.memory,errors:report.errors},null,2));
 })().catch(e=>{console.error(e);process.exitCode=1;});
