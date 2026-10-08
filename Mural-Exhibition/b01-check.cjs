@@ -19,7 +19,7 @@ assert.equal((html.match(/new Hands\(/g)||[]).length,1);
 assert.equal((html.match(/new Camera\(/g)||[]).length,1);
 assert.ok(html.includes('width: 320, height: 240'));
 assert.ok(html.includes('handsFrameVersion !== cameraVersion'));
-assert.ok(html.includes('gestureDebugEnabled && results.multiHandLandmarks'));
+assert.ok(html.includes('if (results.multiHandLandmarks && results.multiHandLandmarks.length > 0)'));
 assert.ok(!html.includes('handsWithSize'));
 for(const removed of ['panMural','splash-poem','splash-subtitle','hideSplash','is-loaded','picsum.photos'])assert.ok(!html.includes(removed),removed);
 assert.ok(html.includes('data-src="gallery/mural-02-detail.webp"'));

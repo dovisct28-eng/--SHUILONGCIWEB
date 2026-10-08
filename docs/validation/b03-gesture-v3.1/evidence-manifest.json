@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-08",
+  "selected": [
+    {
+      "file": "selected/02-navigation-armed-1440.png",
+      "state": "Ordinary mode ARMED; restored skeleton/points in unchanged preview",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bytes": 893926,
+      "sha256": "b366387208257742733fa41e89fdf96f56712c3a8a1d97c68c7fb676d58c1d7b",
+      "input": "Synthetic camera image and landmark outputs; never physical acceptance"
+    },
+    {
+      "file": "selected/03-reading-1440.png",
+      "state": "Ordinary reading; same operator, missing right Pose wrist falls back",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bytes": 1184588,
+      "sha256": "c216466d5cd1562d0b1a177725fd5c253bcf199ebbed37c3f583c809ab481fee",
+      "input": "Synthetic camera image and landmark outputs; never physical acceptance"
+    },
+    {
+      "file": "selected/06-upper-fallback-reading.png",
+      "state": "Debug telemetry: UPPER, hips false, detected/assigned 2, right FALLBACK; debug image drawing is stubbed",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "bytes": 850308,
+      "sha256": "daf6f996b104b290da9dc25f419ef55c100dd597749a7f97c40e434189bdcc63",
+      "input": "Synthetic camera image and landmark outputs; never physical acceptance"
+    }
+  ],
+  "totalBytes": 2928822
+}

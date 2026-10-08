@@ -29,7 +29,7 @@ export class InteractionController {
   if(this.mode==='READING_ENTER')this.mode='READING';
   if(this.mode==='READING_EXIT'){this.mode='POST_READING_LOCK';this.releaseSince=null;this.releaseKind=null;}
   const hands=ownership.assignedHands;
-  if(blocked||locked||ownership.operatorState!=='PERSON_LOCKED'||!ownership.diagnostics.poseFresh){
+  if(blocked||locked||ownership.operatorState!=='PERSON_LOCKED'||!ownership.diagnostics.poseFresh||ownership.diagnostics.operatorObservable===false||ownership.diagnostics.assignmentBlocked){
    this.clearAction();this.twoSince=null;this.releaseSince=null;this.releaseKind=null;
    this.next.tick(now,{blocked:blocked||ownership.operatorState!=='PERSON_LOCKED',locked});
    // A disappeared person cannot leave ARMED intent usable during the grace interval.

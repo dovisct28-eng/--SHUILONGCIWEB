@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "file": "Mural-Exhibition/public/operator-tracker.mjs",
+      "status": "PASS"
+    },
+    {
+      "file": "Mural-Exhibition/public/interaction-config.mjs",
+      "status": "PASS"
+    },
+    {
+      "file": "Mural-Exhibition/public/interaction-controller.mjs",
+      "status": "PASS"
+    },
+    {
+      "file": "Mural-Exhibition/public/pose-pipeline.mjs",
+      "status": "PASS"
+    },
+    {
+      "file": "Mural-Exhibition/public/pose-worker.js",
+      "status": "PASS"
+    },
+    {
+      "file": "Mural-Exhibition/b03-gesture-browser-check.cjs",
+      "status": "PASS"
+    },
+    {
+      "file": "Mural-Exhibition/b03-pose-browser-check.cjs",
+      "status": "PASS"
+    },
+    {
+      "file": "Mural-Exhibition/b03-gesture-harness.mjs",
+      "status": "PASS"
+    },
+    {
+      "file": "Mural-Exhibition/b03-gesture-fixtures.cjs",
+      "status": "PASS"
+    }
+  ],
+  "productionEntry": "npm test runs b01-check.cjs which compiles production index module and protects classifier, scroll equations, shader, single Camera/Hands constructors and 320x240 capture.",
+  "bundler": "No separate build script in package.json"
+}

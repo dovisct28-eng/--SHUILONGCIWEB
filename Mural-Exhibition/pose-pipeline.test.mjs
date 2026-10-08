@@ -26,3 +26,18 @@ test('synchronous worker construction failure does not poison future retries',as
  p.workerFactory=()=>{if(attempts++===0)throw Error('temporary startup failure');return w;};
  await assert.rejects(p.initialize(),/temporary/);await p.initialize();assert.equal(p.ready,true);p.dispose();
 });
+test('bounded initialization timeout terminates the worker; late readiness cannot resurrect it; retry creates one model',async(t)=>{
+ t.mock.timers.enable({apis:['setTimeout']});
+ let terminated=0;
+ const old={postMessage(){},terminate(){terminated++;}};
+ const p=new PosePipeline({workerFactory:()=>old});
+ const pending=p.initialize(),rejection=assert.rejects(pending,/Pose initialization timeout/);
+ t.mock.timers.tick(14999);assert.equal(p.worker,old);assert.equal(p.ready,false);
+ t.mock.timers.tick(1);await rejection;
+ assert.equal(terminated,1);assert.equal(p.worker,null);assert.equal(p.snapshot().models,0);
+ old.onmessage({data:{type:'ready'}});assert.equal(p.ready,false);
+ const next={postMessage(){queueMicrotask(()=>this.onmessage({data:{type:'ready'}}));},terminate(){terminated++;}};
+ p.workerFactory=()=>next;await Promise.all([p.initialize(),p.initialize()]);
+ old.onerror({message:'late old-worker error'});assert.equal(p.ready,true);
+ assert.equal(p.worker,next);assert.equal(p.snapshot().models,1);p.dispose();assert.equal(terminated,2);
+});

@@ -46,6 +46,12 @@ test('late Hands callback from an earlier camera session cannot mutate interacti
  h.staleResult([hand(.2),hand(.8)],h.time+20);
  assert.equal(h.snapshot().assigned,before.assigned);assert.equal(h.snapshot().state,'ARMED');assert.equal(h.snapshot().reveals,0);
 });
+test('ordinary preview draws detected hand skeleton and points; missing hands clear it and old callbacks cannot draw',()=>{
+ const h=cameraHarness(),before=h.snapshot();h.result([hand(.25),hand(.75)],h.time+40);
+ const drawn=h.snapshot();assert.equal(drawn.previewLines-before.previewLines,2);assert.equal(drawn.previewPoints-before.previewPoints,2);
+ h.result([],h.time+40);assert.equal(h.snapshot().previewClears,drawn.previewClears+1);
+ const cleared=h.snapshot();h.staleResult([hand()],h.time+40);assert.equal(h.snapshot().previewClears,cleared.previewClears);assert.equal(h.snapshot().previewLines,cleared.previewLines);
+});
 test('Manual I/Escape uses the same reading lifecycle; person loss closes and clears every intent',()=>{
  const h=cameraHarness();h.manual(true);assert.equal(h.snapshot().mode,'READING_ENTER');h.manual(false);
  hold(h);assert.equal(h.snapshot().mode,'POST_READING_LOCK');assert.equal(h.snapshot().calls,0);
@@ -62,4 +68,39 @@ test('M: ten complete lock/NEXT/NEXT/read/close/release/NEXT/exit/reacquire cycl
   for(let i=0;i<25;i++)h.result([],h.time+40,{poses:[person({x:.65})]});assert.equal(h.snapshot().person,'PERSON_LOCKED');
   assert.equal(h.snapshot().reveals,1);assert.equal(h.snapshot().closes,1);
  }assert.equal(attempts,30);
+});
+
+test('V3.1 K: ten cycles each with left/right/both missing wrists; upper-body reading and NEXT never relock',()=>{
+ for(const missingWrists of [['left'],['right'],['left','right']]){
+ const h=cameraHarness(2,{upper:true,missingWrists}),id=h.snapshot().operator;
+ for(let n=0;n<10;n++){
+  openReading(h);assert.equal(h.snapshot().reading,true);
+  for(const side of missingWrists)assert.equal(h.snapshot().diagnostics[side+'Source'],'fallback');
+  const scroll=h.snapshot().scrollTop;pair(h,.48,.7,160);assert.ok(h.snapshot().scrollTop>scroll);
+  closeReading(h);assert.equal(h.snapshot().mode,'POST_READING_LOCK');
+  pair(h,.5,.5,400);assert.equal(h.snapshot().reading,false);assert.equal(h.snapshot().reveals,n+1);
+  assert.equal(h.snapshot().calls,n);releaseReading(h);assert.equal(h.snapshot().mode,'NAVIGATION');
+  hold(h);swipe(h);assert.equal(h.snapshot().calls,n+1);idle(h);
+  assert.equal(h.snapshot().operator,id);assert.equal(h.snapshot().person,'PERSON_LOCKED');
+  assert.equal(h.snapshot().index,(3+n)%8);assert.equal(h.snapshot().closes,n+1);
+ }
+ }
+});
+test('V3.1: ambiguous body observations cannot count as hands-absent post-reading release',()=>{
+ const h=cameraHarness(2,{upper:true}),id=h.snapshot().operator;openReading(h);closeReading(h);
+ for(let n=0;n<18;n++)h.result([],h.time+40,{poses:[person({upper:true}),person({x:.52,upper:true})]});
+ assert.equal(h.snapshot().operator,id);assert.equal(h.snapshot().mode,'POST_READING_LOCK');
+ assert.equal(h.snapshot().diagnostics.operatorObservable,false);
+ releaseReading(h);assert.equal(h.snapshot().mode,'NAVIGATION');
+});
+test('V3.1 H: ambiguous ownership cancels NEXT and freezes open, close, scrolling and post-reading release',()=>{
+ const h=cameraHarness(2,{upper:true}),id=h.snapshot().operator;
+ const blocked=(hands,ms=600)=>{for(let n=0;n<=ms;n+=40)h.result(hands,h.time+40,{poses:[person({upper:true,hands}),person({x:.82,width:.4,upper:true,hands})]});};
+ hold(h);blocked([hand()]);assert.equal(h.snapshot().calls,0);assert.equal(h.snapshot().state,'IDLE');
+ blocked([hand(.25),hand(.75)]);assert.equal(h.snapshot().reveals,0);assert.equal(h.snapshot().operator,id);
+ idle(h);openReading(h);const scroll=h.snapshot().scrollTop;blocked([hand(.45,.7),hand(.55,.7)]);
+ assert.equal(h.snapshot().reading,true);assert.equal(h.snapshot().scrollTop,scroll);assert.equal(h.snapshot().operator,id);
+ closeReading(h);blocked([hand(.45),hand(.55)]);assert.equal(h.snapshot().mode,'POST_READING_LOCK');
+ assert.equal(h.snapshot().reveals,1);assert.equal(h.snapshot().closes,1);
+ releaseReading(h);assert.equal(h.snapshot().mode,'NAVIGATION');
 });

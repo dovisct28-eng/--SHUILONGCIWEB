@@ -1,0 +1,282 @@
+{
+  "date": "2026-10-08",
+  "baseline": "11cb02238a87aba9d6c5bfaf18b26e758dab9f76",
+  "nodeTests": {
+    "total": 74,
+    "pass": 74,
+    "fail": 0,
+    "status": "PASS",
+    "source": "tests.txt",
+    "sha256": "5d629553d3dc7624fc74b7362fbd437671b26076d5000f7c94ce05ef5e8921dc"
+  },
+  "build": {
+    "status": "PASS",
+    "checks": [
+      {
+        "file": "Mural-Exhibition/public/operator-tracker.mjs",
+        "status": "PASS"
+      },
+      {
+        "file": "Mural-Exhibition/public/interaction-config.mjs",
+        "status": "PASS"
+      },
+      {
+        "file": "Mural-Exhibition/public/interaction-controller.mjs",
+        "status": "PASS"
+      },
+      {
+        "file": "Mural-Exhibition/public/pose-pipeline.mjs",
+        "status": "PASS"
+      },
+      {
+        "file": "Mural-Exhibition/public/pose-worker.js",
+        "status": "PASS"
+      },
+      {
+        "file": "Mural-Exhibition/b03-gesture-browser-check.cjs",
+        "status": "PASS"
+      },
+      {
+        "file": "Mural-Exhibition/b03-pose-browser-check.cjs",
+        "status": "PASS"
+      },
+      {
+        "file": "Mural-Exhibition/b03-gesture-harness.mjs",
+        "status": "PASS"
+      },
+      {
+        "file": "Mural-Exhibition/b03-gesture-fixtures.cjs",
+        "status": "PASS"
+      }
+    ],
+    "productionEntry": "npm test runs b01-check.cjs which compiles production index module and protects classifier, scroll equations, shader, single Camera/Hands constructors and 320x240 capture.",
+    "bundler": "No separate build script in package.json"
+  },
+  "browser": {
+    "gesture": {
+      "status": "PASS",
+      "source": "local/gesture/results.json",
+      "sha256": "010f70574089f20ad0b801b023a0c9e349ce705ee5dba9a37f17be763ef5d959",
+      "errors": 0,
+      "views": 3,
+      "scope": "Actual Chrome / production Camera.onFrame, Hands.onResults, Pose worker messaging, Three.js and GSAP; synthetic model outputs and camera image. Physical camera acceptance PENDING."
+    },
+    "functional": {
+      "status": "PASS",
+      "source": "local/functional/results.json",
+      "sha256": "245213e285f54effe196d5632430ac55d355915df476120640fc37e2cf8a2aaa",
+      "errors": 0,
+      "views": 4,
+      "scope": {
+        "browser": "Chrome headless; actual Three.js, GSAP and MediaPipe libraries",
+        "node": "v24.14.1",
+        "origin": "http://localhost:3000"
+      }
+    },
+    "stage": {
+      "status": "PASS",
+      "source": "local/functional/stage-results.json",
+      "sha256": "cfc1f9b1b05c9a04d74dd512cecf08e9ef53f5198b8eeb4bf446e41a3432de4a",
+      "errors": 0,
+      "views": null,
+      "scope": null
+    },
+    "hf": {
+      "status": "PASS",
+      "source": "local/hf/results.json",
+      "sha256": "cae444a7c77af1b83e4a588aef31a932056dcb870442f3c3da9e89cb8ee82f7a",
+      "errors": 0,
+      "views": 4,
+      "scope": "Actual Chrome / Three.js / GSAP. Camera boundary stubbed; physical camera and gestures not verified."
+    },
+    "layout": {
+      "status": "PASS",
+      "source": "local/layout/results.json",
+      "sha256": "6fc3de487c1cf7017dd790e1c0b235fe421465b8aa321b9b92c970fa3614060c",
+      "errors": 0,
+      "views": null,
+      "scope": "Actual Chrome, Three.js and GSAP; device boundary stubbed. Synthetic shapes are algorithm fixtures, never heritage images."
+    },
+    "surface": {
+      "status": "PASS",
+      "source": "local/surface/results.json",
+      "sha256": "eeb97c77c07ea688ee8aa718e34ef233340be78719a17a9c8459e3b53d68a835",
+      "errors": 0,
+      "views": 4,
+      "scope": "Actual Chrome/Three.js/GSAP, Camera boundary stub. Formal ID01 only; ID05 is preexisting untracked local author material."
+    },
+    "motion": {
+      "status": "PASS",
+      "source": "local/motion/results.json",
+      "sha256": "7b03a87cd75fe3e2c65f6918b93a989a22890e841cb0ccf57e592799f5edc768",
+      "errors": 0,
+      "views": 4,
+      "scope": "Actual Chrome / Three.js / GSAP. Camera boundary stub; real handler with synthetic MediaPipe landmarks. Recording uses a browser-only 01/05 sequence (05 is preexisting local author material); full-data navigation is tested separately."
+    },
+    "pose": {
+      "status": "PASS",
+      "source": "local/pose-runtime/results.json",
+      "sha256": "66a6bcfb24d25e6c8bcbe18940eef109c7deb3cc557bfa1d89620a6c73e25069",
+      "errors": 0,
+      "views": null,
+      "scope": "Real pinned Tasks Vision CPU PoseLandmarker/WASM in Chrome Worker, real legacy Hands inference, actual B03/WebGL/Camera.onFrame/Hands.onResults. Synthetic blank 320x240 camera image only. Checks deployment/cadence/lifecycle under the real stage; no person recognition or exhibition CPU/GPU acceptance claim."
+    }
+  },
+  "syntheticMetrics": {
+    "nextAttempts": 36,
+    "nextSuccess": 36,
+    "falseNext": 0,
+    "doubleNext": 0,
+    "readingAttempts": 14,
+    "readingSuccess": 14,
+    "falseReopen": 0,
+    "interferenceAttempts": 8,
+    "wrongPersonNext": 0,
+    "wrongPersonReading": 0,
+    "operatorSwitchAttempts": 10,
+    "wrongOperatorSwitch": 0
+  },
+  "syntheticUpperBodyUsageCycles": 10,
+  "unitMissingWristCycles": {
+    "left": 10,
+    "right": 10,
+    "both": 10
+  },
+  "preview": {
+    "status": "PASS",
+    "scope": "Real MediaPipe drawing helper, synthetic Hands points; actual Canvas pixels appear/clear; box unchanged at three sizes",
+    "checks": [
+      "Preview 1440: real MediaPipe drawing helper / visible skeleton and points / clears when hands absent / box unchanged (1187 changed channels)",
+      "Preview 1920: real MediaPipe drawing helper / visible skeleton and points / clears when hands absent / box unchanged (1187 changed channels)",
+      "Preview 1366: real MediaPipe drawing helper / visible skeleton and points / clears when hands absent / box unchanged (1187 changed channels)"
+    ]
+  },
+  "physicalCamera": {
+    "status": "PENDING PHYSICAL ACCEPTANCE",
+    "checklist": "PHYSICAL_CAMERA_CHECKLIST.md"
+  },
+  "performance": {
+    "assignment": {
+      "scope": "OperatorTracker.assign only; 4 observed bodies, 4 Hands detections, one missing operator Pose wrist. In-memory synthetic inputs. Excludes neural inference, rendering, camera and physical FPS.",
+      "frames": 10000,
+      "meanMs": 0.007681009999999964,
+      "p95Ms": 0.009700000000009368,
+      "maxMs": 0.7084999999999866,
+      "node": "v24.14.1"
+    },
+    "realModels": {
+      "models": 1,
+      "frames": 56,
+      "inferenceTotalMs": 3373.899999999674,
+      "inferenceMaxMs": 388.5,
+      "staleResults": 0,
+      "active": 1,
+      "inFlight": 0,
+      "averageInferenceMs": 60.248214285708464,
+      "poseFps": 10.10541333121969,
+      "handsCallbackFps": 30.31623999365907,
+      "stalePoseRatio": 0,
+      "numPoses": 4
+    },
+    "raf": {
+      "samples": 787,
+      "averageMs": 6.355781448538843,
+      "maxMs": 37.600000000000364
+    },
+    "scope": "Independent headless Chrome smoke; blank synthetic image, real models, transport Chrome --disable-http2 diagnostic. Not exhibition performance or human recognition."
+  },
+  "networkLimit": "Default Chrome CDN cold-start attempts timed out. Warm HTTP cache and HTTP/1.1 diagnostic runs passed; production network/15s initialization settings remain unchanged. Do not infer universal startup reliability.",
+  "attempts": [
+    {
+      "source": "local/gesture/results-attempt-1791376011858.json",
+      "sha256": "270a3782bd3671b14e33bc1bee19eb4f7d1e435e62b2fe96ecd7fa2f1cde438e",
+      "status": "FAIL",
+      "reason": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:"
+    },
+    {
+      "source": "local/gesture/results-attempt-1791376163760.json",
+      "sha256": "66bd3d9389797225384eee0a8347164e5df0239d66fac884a5e764f0a0924fad",
+      "status": "FAIL",
+      "reason": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:"
+    },
+    {
+      "source": "local/gesture/results-attempt-1791376783147.json",
+      "sha256": "fb416c1f7c64b51dcd5278e84207acbcdf5301465f9351bb06579a78afdf7d67",
+      "status": "FAIL",
+      "reason": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:"
+    },
+    {
+      "source": "local/gesture/results-attempt-1791377012707.json",
+      "sha256": "d4a7a303e6719d217789180b98598bca2e659f1e444126040550c508c05555ce",
+      "status": "FAIL",
+      "reason": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:"
+    },
+    {
+      "source": "local/gesture/results-attempt-1791424388955.json",
+      "sha256": "c22f09b7d353e9f8a336ef6d035d2e4f2d78171306309a2608f0ee0d6b8efab5",
+      "status": "FAIL",
+      "reason": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:"
+    },
+    {
+      "source": "local/pose-runtime/results-attempt-1791376144689.json",
+      "sha256": "27360765255b5663f97b9c4411368c5b9d9108d7b935f27715751aaed7ddd0c7",
+      "status": "FAIL",
+      "reason": "page.waitForFunction: Timeout 25000ms exceeded."
+    },
+    {
+      "source": "local/pose-runtime/results-attempt-1791376297288.json",
+      "sha256": "27360765255b5663f97b9c4411368c5b9d9108d7b935f27715751aaed7ddd0c7",
+      "status": "FAIL",
+      "reason": "page.waitForFunction: Timeout 25000ms exceeded."
+    },
+    {
+      "source": "local/pose-runtime/results-attempt-1791376421694.json",
+      "sha256": "e2c7b302496019e5ce82e4993f7056618227074d7b1af4a8ad0bf2a0fc42d92e",
+      "status": "FAIL",
+      "reason": "page.waitForFunction: Timeout 25000ms exceeded."
+    },
+    {
+      "source": "local/pose-runtime/results-attempt-1791376788647.json",
+      "sha256": "596e44471ca05a341f0ad94f804f02d040f6e91798473c44e07c0cb492af8c9d",
+      "status": "PASS",
+      "reason": null
+    },
+    {
+      "source": "local/pose-runtime/results-attempt-1791377098870.json",
+      "sha256": "ee9e49a11d02b037dafb6da88375844ff91114d4702249c733a0c48694f9c882",
+      "status": "FAIL",
+      "reason": "page.waitForFunction: Timeout 55000ms exceeded."
+    },
+    {
+      "source": "local/pose-runtime/results-attempt-1791424708470.json",
+      "sha256": "8604a6a4006701441a7562a35a9b72bf97a28ed3ef60ad77640f75f860c90ed0",
+      "status": "PASS",
+      "reason": null
+    }
+  ],
+  "protectedFilesUnchanged": [
+    "Mural-Exhibition/public/b03.css",
+    "Mural-Exhibition/public/character-study.mjs",
+    "Mural-Exhibition/public/next-gesture.mjs",
+    "Mural-Exhibition/public/pose-worker.js"
+  ],
+  "sourceHashes": {
+    "Mural-Exhibition/b01-check.cjs": "8efd71b567df105680fc6aab010b6325c3e7fa0b2e67e0d0181dcc983db8e26f",
+    "Mural-Exhibition/b03-gesture-browser-check.cjs": "f6c76efb7528e9693258910aacb01b24e03e051ee6c2a67f76cdd5a36f565a76",
+    "Mural-Exhibition/b03-gesture-fixtures.cjs": "1815bb2cfb6921fff07fbb3cf64aee08fee551040157af5b753b100ea4f28765",
+    "Mural-Exhibition/b03-gesture-harness.mjs": "2b8ca9b2b6f11b067595426b0e3ec6151d66033cb370de945f36d33466bd3bff",
+    "Mural-Exhibition/b03-pose-browser-check.cjs": "1a05c59902cbcb10b8a6fcab82904d33bf77de5071e085872a28c9d50d6e3c99",
+    "Mural-Exhibition/interaction-controller.test.mjs": "2108491b8c00087529b4c79ea96586393bc98d6a9474de4ddc32fa6f666feeb8",
+    "Mural-Exhibition/operator-tracker.test.mjs": "65e8f82c3a8a1b4740d258303f4c396014138351dccfb0f8a6f0ab4710096843",
+    "Mural-Exhibition/pose-pipeline.test.mjs": "785dc8294e08ab815fc81de0e4da174b376a8291f192200a52ccee6d05af9948",
+    "Mural-Exhibition/public/index.html": "c187a3b68d63ed2a5a54573905f7203f273f3eba15f90e93913d1c8ed357f0f6",
+    "Mural-Exhibition/public/interaction-config.mjs": "23855a03e4cc443464be78610ae2e29d6df35b80641c7b619b75af91eb435fbd",
+    "Mural-Exhibition/public/interaction-controller.mjs": "15050186704270c0693863b92e5c257db31230fe4d6e2abd001347d090befdf5",
+    "Mural-Exhibition/public/operator-tracker.mjs": "0beebf2ff776c41a16d3d29f21262cca2b15dd9342955d8330103002c8b2d3fd",
+    "Mural-Exhibition/public/pose-pipeline.mjs": "edfca03cec43a7cdd8032f72acb72f2d81e4bfe4b92b615268b07140c39faae0"
+  },
+  "screenshots": {
+    "completeLocalGesturePngCount": 13,
+    "selectedCount": 3
+  }
+}

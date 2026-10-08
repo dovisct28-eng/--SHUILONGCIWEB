@@ -5,14 +5,16 @@ import {OperatorTracker} from './public/operator-tracker.mjs';
 import {InteractionController} from './public/interaction-controller.mjs';
 
 // Explicit synthetic bodies: only shoulders, hips and wrists are visible.
-export function person({x=.5,width=.3,hands=[],y=.52}={}) {
+export function person({x=.5,width=.3,hands=[],y=.52,upper=false,missingWrists=[]}={}) {
  const lm=Array.from({length:33},()=>({x,y,z:0,visibility:0,presence:1}));
- for(const [i,px,py]of [[11,x-width/2,y-.17],[12,x+width/2,y-.17],[23,x-width*.35,y+.17],[24,x+width*.35,y+.17]])lm[i]={x:px,y:py,z:0,visibility:1,presence:1};
+ for(const [i,px,py]of [[11,x+width/2,y-.17],[12,x-width/2,y-.17],[23,x+width*.35,y+.17],[24,x-width*.35,y+.17]])lm[i]={x:px,y:py,z:0,visibility:1,presence:1};
  // Fixture ownership is explicit: first hand = left, second = right.
  for(let i=0;i<2;i++){const w=hands[i]?.[0];lm[15+i]={x:w?.x??(x+(i===0?-.22:.22)),y:w?.y??.7,z:0,visibility:1,presence:1};}
+ if(upper)for(const i of [23,24])lm[i].visibility=0;
+ for(const side of missingWrists)lm[side==='left'?15:16].visibility=0;
  return lm;
 }
-export function cameraHarness(index=2,{acquire=true}={}) {
+export function cameraHarness(index=2,{acquire=true,upper=false,missingWrists=[]}={}) {
  const html=fs.readFileSync(new URL('public/index.html',import.meta.url),'utf8');
  const init=html.slice(html.indexOf('function initMediaPipe'),html.indexOf('let cameraStart'));
  const handler=html.slice(html.indexOf('function isHandOpen'),html.indexOf('\n    </script>',html.indexOf('function isHandOpen')));
@@ -29,8 +31,9 @@ export function cameraHarness(index=2,{acquire=true}={}) {
  const nodes=new Map();const node=id=>{if(!nodes.has(id))nodes.set(id,{dataset:{},style:{setProperty(){}},textContent:''});return nodes.get(id);};
  const document={hidden:false,getElementById:id=>id==='info-text'?info:node(id),querySelector:()=>node('hint'),addEventListener(){}};
  const window={addEventListener(){}};
- const canvasElement={width:320,height:240},canvasCtx={save(){},clearRect(){},drawImage(){},restore(){}},cameraStatus={};
- const HAND_CONNECTIONS=[],drawConnectors=()=>{},drawLandmarks=()=>{},gsap={to(){}};
+ let previewLines=0,previewPoints=0,previewClears=0;
+ const canvasElement={width:320,height:240},canvasCtx={save(){},clearRect(){previewClears++;},drawImage(){},restore(){}},cameraStatus={};
+ const HAND_CONNECTIONS=[],drawConnectors=()=>{previewLines++;},drawLandmarks=()=>{previewPoints++;},gsap={to(){}};
  let callback,calls=0,reveals=0,closes=0;
  class Hands {setOptions(o){this.options=o;}onResults(cb){callback=cb;}}
  function loadSeriesData(i){currentSeriesIndex=(i+8)%8;calls++;}
@@ -40,13 +43,13 @@ export function cameraHarness(index=2,{acquire=true}={}) {
  initMediaPipe();
  this.deliver=(hands,poses,at,poseAt=at)=>{time=at;handsFrameAt=at;posePipeline.latest={poses,at:poseAt};callback(hands===undefined?{image:{}}:{image:{},multiHandLandmarks:hands});};
  this.snapshot=()=>({index:currentSeriesIndex,calls,reading:isRevealed,reveals,closes,scrollTop:info.scrollTop,...nextGesture.snapshot(time),
-  ...interactionController.snapshot(time),person:ownership.operatorState,operator:ownership.activeOperator?.id,assigned:ownership.assignedHands.length,diagnostics:ownership.diagnostics});
+  ...interactionController.snapshot(time),person:ownership.operatorState,operator:ownership.activeOperator?.id,assigned:ownership.assignedHands.length,diagnostics:ownership.diagnostics,previewLines,previewPoints,previewClears});
  this.busy=v=>entryBusy=v;
  this.tick=at=>{time=at;interactionController.tick(time,gestureContext());};
  this.manual=value=>requestReading(value);
  this.staleResult=(hands,at)=>{time=at;handsFrameAt=at;handsFrameVersion=cameraVersion-1;callback({image:{},multiHandLandmarks:hands});handsFrameVersion=cameraVersion;};
  `,context);
- context.result=(hands,at,options={})=>context.deliver(hands,options.poses??[person({hands:hands??[]})],at,options.poseAt??at);
+ context.result=(hands,at,options={})=>context.deliver(hands,options.poses??[person({hands:hands??[],upper,missingWrists})],at,options.poseAt??at);
  if(acquire)for(let at=0;at<=900;at+=100)context.result([],at);
  return context;
 }

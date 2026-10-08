@@ -10,6 +10,9 @@ export const INTERACTION_CONFIG = Object.freeze({
  bodySizeReference:.4, candidateWeights:Object.freeze({center:.6,size:.12,visibility:.18,stability:.1}),
  handAssignmentMaxDistance:.55, handAssignmentAmbiguity:.18,
  handAssignmentGraceMs:200, handMaxJump:.8, recentTwoHandMs:220,
+ // Shoulder-relative upper-body envelope; physical calibration remains pending.
+ handEnvelopeHalfWidth:1.35, handEnvelopeAbove:1.1, handEnvelopeBelow:1.6,
+ handPersonAmbiguity:.25, handSideAmbiguity:.18, handFallbackContinuity:.45,
  twoHandNeutralMax:.25, twoHandOpenThreshold:.38, twoHandOpenHoldMs:400,
  twoHandCloseThreshold:.16, twoHandCloseHoldMs:300,
  twoHandMinTravel:.10, twoHandTrendTolerance:.035, twoHandActionMaxMs:2400,

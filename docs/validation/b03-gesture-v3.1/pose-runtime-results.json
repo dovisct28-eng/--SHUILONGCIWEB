@@ -1,0 +1,159 @@
+{
+  "scope": "Real pinned Tasks Vision CPU PoseLandmarker/WASM in Chrome Worker, real legacy Hands inference, actual B03/WebGL/Camera.onFrame/Hands.onResults. Synthetic blank 320x240 camera image only. Checks deployment/cadence/lifecycle under the real stage; no person recognition or exhibition CPU/GPU acceptance claim.",
+  "network": [
+    {
+      "url": "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.21/vision_bundle.mjs",
+      "status": 200
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.21/wasm/vision_wasm_internal.js",
+      "status": 200
+    },
+    {
+      "url": "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.21/wasm/vision_wasm_internal.wasm",
+      "status": 200
+    },
+    {
+      "url": "https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_lite/float16/1/pose_landmarker_lite.task",
+      "status": 200
+    }
+  ],
+  "transport": "Chrome --disable-http2 diagnostic",
+  "start": {
+    "pose": {
+      "models": 1,
+      "frames": 5,
+      "inferenceTotalMs": 624,
+      "inferenceMaxMs": 388.5,
+      "staleResults": 0,
+      "active": 1,
+      "inFlight": 0,
+      "averageInferenceMs": 124.8
+    },
+    "notice": "返回选择",
+    "cameraStatus": "摄像头已连接",
+    "handsModels": 1,
+    "performance": {
+      "callbacks": 12,
+      "firstAt": 10703.899999999907,
+      "lastAt": 11053.79999999993,
+      "maxActiveCameras": 1,
+      "activeCameras": 1,
+      "stalePoseFrames": 4,
+      "raf": 1
+    },
+    "person": "SEARCHING",
+    "phase": "stable",
+    "textures": 1,
+    "geometries": 2,
+    "poseMaxPeople": 4
+  },
+  "raf": {
+    "samples": 787,
+    "averageMs": 6.355781448538843,
+    "maxMs": 37.600000000000364
+  },
+  "end": {
+    "pose": {
+      "models": 1,
+      "frames": 56,
+      "inferenceTotalMs": 3373.899999999674,
+      "inferenceMaxMs": 388.5,
+      "staleResults": 0,
+      "active": 1,
+      "inFlight": 0,
+      "averageInferenceMs": 60.248214285708464
+    },
+    "notice": "返回选择",
+    "cameraStatus": "摄像头已连接",
+    "handsModels": 1,
+    "performance": {
+      "callbacks": 165,
+      "firstAt": 10703.899999999907,
+      "lastAt": 16100.599999999977,
+      "maxActiveCameras": 1,
+      "activeCameras": 1,
+      "stalePoseFrames": 4,
+      "raf": 1
+    },
+    "person": "SEARCHING",
+    "phase": "stable",
+    "textures": 1,
+    "geometries": 2,
+    "poseMaxPeople": 4
+  },
+  "runtime": {
+    "models": 1,
+    "frames": 56,
+    "inferenceTotalMs": 3373.899999999674,
+    "inferenceMaxMs": 388.5,
+    "staleResults": 0,
+    "active": 1,
+    "inFlight": 0,
+    "averageInferenceMs": 60.248214285708464,
+    "poseFps": 10.10541333121969,
+    "handsCallbackFps": 30.31623999365907,
+    "stalePoseRatio": 0,
+    "numPoses": 4
+  },
+  "exit": {
+    "pose": {
+      "models": 1,
+      "frames": 56,
+      "inferenceTotalMs": 3373.899999999674,
+      "inferenceMaxMs": 388.5,
+      "staleResults": 0,
+      "active": 0,
+      "inFlight": 1,
+      "averageInferenceMs": 60.248214285708464
+    },
+    "notice": "返回选择",
+    "cameraStatus": "摄像头已停止",
+    "handsModels": 1,
+    "performance": {
+      "callbacks": 167,
+      "firstAt": 10703.899999999907,
+      "lastAt": 16165.899999999907,
+      "maxActiveCameras": 1,
+      "activeCameras": 0,
+      "stalePoseFrames": 4,
+      "raf": 0
+    },
+    "person": "SEARCHING",
+    "phase": "idle",
+    "textures": 0,
+    "geometries": 0,
+    "poseMaxPeople": 4
+  },
+  "reentry": {
+    "pose": {
+      "models": 1,
+      "frames": 68,
+      "inferenceTotalMs": 4002.2999999998137,
+      "inferenceMaxMs": 388.5,
+      "staleResults": 1,
+      "active": 1,
+      "inFlight": 0,
+      "averageInferenceMs": 58.85735294117373
+    },
+    "notice": "返回选择",
+    "cameraStatus": "摄像头已连接",
+    "handsModels": 1,
+    "performance": {
+      "callbacks": 200,
+      "firstAt": 10703.899999999907,
+      "lastAt": 17466,
+      "maxActiveCameras": 1,
+      "activeCameras": 1,
+      "stalePoseFrames": 7,
+      "raf": 1
+    },
+    "person": "SEARCHING",
+    "phase": "stable",
+    "textures": 1,
+    "geometries": 2,
+    "poseMaxPeople": 4
+  },
+  "errors": [],
+  "status": "PASS"
+}

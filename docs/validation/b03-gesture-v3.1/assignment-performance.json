@@ -1,0 +1,8 @@
+{
+  "scope": "OperatorTracker.assign only; 4 observed bodies, 4 Hands detections, one missing operator Pose wrist. In-memory synthetic inputs. Excludes neural inference, rendering, camera and physical FPS.",
+  "frames": 10000,
+  "meanMs": 0.007681009999999964,
+  "p95Ms": 0.009700000000009368,
+  "maxMs": 0.7084999999999866,
+  "node": "v24.14.1"
+}

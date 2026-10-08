@@ -1154,7 +1154,7 @@
         let ownership = {operatorState:'SEARCHING',activeOperator:null,assignedHands:[],diagnostics:{}};
         let handsFrameAt = -Infinity, handsFrameVersion = -1;
         let handsInFlight = false;
-        const gesturePerformance = {callbacks:0,firstAt:null,lastAt:null,maxActiveCameras:0,activeCameras:0};
+        const gesturePerformance = {callbacks:0,firstAt:null,lastAt:null,maxActiveCameras:0,activeCameras:0,stalePoseFrames:0};
         let isRevealed = false; 
         
         let gestureNeutralY = 0.5;
@@ -1169,7 +1169,7 @@
                 canvasCtx.save();
                 canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
                 canvasCtx.drawImage(results.image, 0, 0, canvasElement.width, canvasElement.height);
-                if (gestureDebugEnabled && results.multiHandLandmarks && results.multiHandLandmarks.length > 0) {
+                if (results.multiHandLandmarks && results.multiHandLandmarks.length > 0) {
                     for (const landmarks of results.multiHandLandmarks) {
                         drawConnectors(canvasCtx, landmarks, HAND_CONNECTIONS, {color: 'rgba(212,175,55,0.8)', lineWidth: 2});
                         drawLandmarks(canvasCtx, landmarks, {color: '#fff', lineWidth: 1, radius: 2});
@@ -1288,7 +1288,7 @@
             }
             if (gestureDebugEnabled) {
                 const debug = document.getElementById('gesture-debug'); debug.hidden = currentTrack !== 'cyber';
-                debug.textContent = `PERSON: ${ownership.operatorState}\noperator: ${ownership.activeOperator?.id || 'none'}\ncandidate: ${Math.round(person.candidateHoldMs || 0)}ms / loss: ${Math.round(person.operatorLossMs || 0)}ms\nhands detected: ${person.handsDetected || 0} / assigned: ${person.handsAssigned || 0}\nL: ${!!person.leftAssigned} / R: ${!!person.rightAssigned}\npose age: ${Math.round(person.poseAgeMs || 0)}ms\nINTERACTION: ${interaction.mode}\ntwo-hand: ${interaction.twoHandDistance?.toFixed(3) || '-'} / ${interaction.twoHandPhase}\npost release: ${Math.round(interaction.postReadingReleaseMs)}ms\nNEXT: ${state} / hold: ${Math.round(snapshot.holdMs)}ms\ntrajectory: ${snapshot.points} / release: ${snapshot.releaseRequired}\nreject: ${snapshot.rejection || 'none'}`;
+                debug.textContent = `PERSON: ${ownership.operatorState}\noperator: ${ownership.activeOperator?.id || 'none'}\ncandidate: ${Math.round(person.candidateHoldMs || 0)}ms / loss: ${Math.round(person.operatorLossMs || 0)}ms\nhands detected: ${person.handsDetected || 0} / assigned: ${person.handsAssigned || 0}\nL: ${!!person.leftAssigned} ${person.leftSource || '-'} / R: ${!!person.rightAssigned} ${person.rightSource || '-'}\nperson mode: ${person.bodyMode || '-'} / shoulder: ${person.shoulderWidth?.toFixed(3) || '-'} / hips: ${!!person.hipsVisible}\npose age: ${Math.round(person.poseAgeMs || 0)}ms / people: ${person.posePeople || 0}\nwrists L: ${!!person.leftWristVisible} / R: ${!!person.rightWristVisible}\nassignment: ${person.assignmentStatus || '-'} ${(person.assignmentRejections || []).map(r => r.hand + ':' + r.reason).join(', ') || 'none'}\nINTERACTION: ${interaction.mode}\ntwo-hand: ${interaction.twoHandDistance?.toFixed(3) || '-'} / ${interaction.twoHandPhase}\npost release: ${Math.round(interaction.postReadingReleaseMs)}ms\nNEXT: ${state} / hold: ${Math.round(snapshot.holdMs)}ms\ntrajectory: ${snapshot.points} / release: ${snapshot.releaseRequired}\nreject: ${snapshot.rejection || 'none'}`;
             }
         }
         document.addEventListener('visibilitychange', () => {
@@ -1318,6 +1318,7 @@
             const frameFresh = frameAt <= now && now - frameAt <= operatorTracker.config.poseMaxAgeMs;
             ownership = operatorTracker.update({poses:pose.poses,poseAt:frameFresh ? pose.at : -Infinity,
                 hands:frameFresh ? rawLandmarksList || [] : [],now});
+            if (!ownership.diagnostics.poseFresh) gesturePerformance.stalePoseFrames = (gesturePerformance.stalePoseFrames || 0) + 1;
             const action = interactionController.update({ownership,now,...gestureContext(),isOpen:isHandOpen});
             const activeHands = action.hands.map(hand => hand.landmarks);
             const handsCountActive = activeHands.length;

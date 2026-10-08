@@ -1,7 +1,9 @@
-function person({x=.5,width=.3,hands=[],y=.52}={}) {
+function person({x=.5,width=.3,hands=[],y=.52,upper=false,missingWrists=[]}={}) {
  const lm=Array.from({length:33},()=>({x,y,z:0,visibility:0,presence:1}));
- for(const [i,px,py]of [[11,x-width/2,y-.17],[12,x+width/2,y-.17],[23,x-width*.35,y+.17],[24,x+width*.35,y+.17]])lm[i]={x:px,y:py,z:0,visibility:1,presence:1};
+ for(const [i,px,py]of [[11,x+width/2,y-.17],[12,x-width/2,y-.17],[23,x+width*.35,y+.17],[24,x-width*.35,y+.17]])lm[i]={x:px,y:py,z:0,visibility:1,presence:1};
  for(let i=0;i<2;i++){const w=hands[i]?.[0];lm[15+i]={x:w?.x??(x+(i===0?-.22:.22)),y:w?.y??.7,z:0,visibility:1,presence:1};}
+ if(upper)for(const i of [23,24])lm[i].visibility=0;
+ for(const side of missingWrists)lm[side==='left'?15:16].visibility=0;
  return lm;
 }
 const fixtureInstrument=`function fixtureGesture(hands){posePipeline.latest={poses:[(${person.toString()})({hands})],at:performance.now()};handleGestureLogic(hands);}`;
@@ -17,9 +19,9 @@ async function stubPose(page){
   };
  },{source:person.toString()});
 }
-async function syntheticCamera(page,{realPose=false,realHands=false}={}){
+async function syntheticCamera(page,{realPose=false,realHands=false,realDrawing=false}={}){
  if(!realPose)await stubPose(page);
- await page.addInitScript(({source,realHands})=>{
+ await page.addInitScript(({source,realHands,realDrawing})=>{
   const body=Function('return ('+source+')')(),image=document.createElement('canvas');image.width=320;image.height=240;
   const ctx=image.getContext('2d');ctx.fillStyle='#242822';ctx.fillRect(0,0,320,240);ctx.fillStyle='#a4a99f';ctx.font='12px monospace';ctx.fillText('SYNTHETIC INPUT',90,125);
   const draw=CanvasRenderingContext2D.prototype.drawImage;
@@ -33,7 +35,10 @@ async function syntheticCamera(page,{realPose=false,realHands=false}={}){
     this.timer=setInterval(async()=>{if(!this.running||this.busy)return;this.busy=true;__camera.current=__camera.latest;try{await this.options.onFrame();}finally{this.busy=false;}},33);}
    stop(){clearInterval(this.timer);if(this.running){this.running=false;__camera.stops++;__camera.active--;}}
   };
-  window.HAND_CONNECTIONS=[];window.drawConnectors=()=>{};window.drawLandmarks=()=>{};
- },{source:person.toString(),realHands});
+  if(realDrawing){
+   // Synthetic input uses the standard 21-point topology, with the real drawing helper.
+   window.HAND_CONNECTIONS=[[0,1],[1,2],[2,3],[3,4],[0,5],[5,6],[6,7],[7,8],[5,9],[9,10],[10,11],[11,12],[9,13],[13,14],[14,15],[15,16],[13,17],[0,17],[17,18],[18,19],[19,20]];
+  }else{window.HAND_CONNECTIONS=[];window.drawConnectors=()=>{};window.drawLandmarks=()=>{};}
+ },{source:person.toString(),realHands,realDrawing});
 }
 module.exports={person,fixtureInstrument,stubPose,syntheticCamera};

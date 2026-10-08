@@ -15,8 +15,9 @@ export class PosePipeline {
    const fail=error=>{clearTimeout(timer);this.error=error;this.ready=false;this.inFlight=false;worker?.terminate();this.worker=null;this.metrics.models=0;this.pending=null;reject(error);};
    try {
     worker=this.workerFactory();this.worker=worker;
-    worker.onerror=event=>fail(new Error(event.message||'Pose worker failed'));
+    worker.onerror=event=>{if(this.worker===worker)fail(new Error(event.message||'Pose worker failed'));};
     worker.onmessage=({data})=>{
+     if(this.worker!==worker)return;
      if(data.type==='ready'){clearTimeout(timer);this.ready=true;this.metrics.models=1;resolve();}
      else if(data.type==='error')fail(new Error(data.message));
      else if(data.type==='poses'){
