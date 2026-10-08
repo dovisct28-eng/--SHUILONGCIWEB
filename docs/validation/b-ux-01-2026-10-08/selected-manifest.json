@@ -1,0 +1,142 @@
+{
+  "count": 15,
+  "totalBytes": 13727714,
+  "compression": "Lossless WebP; exact decoded RGBA equality checked for every capture",
+  "files": [
+    {
+      "file": "selected/01-b01-before-1440.webp",
+      "source": "local/before/b01-1440x900.png",
+      "state": "B01 修改前，1440×900",
+      "bytes": 983488,
+      "width": 1440,
+      "height": 900,
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/02-b01-after-1440.webp",
+      "source": "local/final/ux/b01-1440x900.png",
+      "state": "B01 模式说明，1440×900",
+      "bytes": 1033516,
+      "width": 1440,
+      "height": 900,
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/03-b02-focus-before-1440.webp",
+      "source": "local/before/b02-focus-1440x900.png",
+      "state": "B02 聚焦修改前，1440×900",
+      "bytes": 1997484,
+      "width": 1440,
+      "height": 900,
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/04-b02-focus-after-1440.webp",
+      "source": "local/final/ux/b02-focus-1440x900.png",
+      "state": "B02 聚焦反馈，1440×900",
+      "bytes": 1997336,
+      "width": 1440,
+      "height": 900,
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/05-b03-before-1440.webp",
+      "source": "local/before/b03-1440x900.png",
+      "state": "B03 引导修改前，1440×900，合成摄像头",
+      "bytes": 718902,
+      "width": 1440,
+      "height": 900,
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/06-b03-after-1440.webp",
+      "source": "local/final/ux/b03-1440x900.png",
+      "state": "B03 状态引导，1440×900，合成摄像头",
+      "bytes": 721762,
+      "width": 1440,
+      "height": 900,
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/07-reading-1280.webp",
+      "source": "local/final/ux/reading-1280x800.png",
+      "state": "阅读态，1280×800，正式 summary 尚缺，合成摄像头",
+      "bytes": 561892,
+      "width": 1280,
+      "height": 800,
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/08-interrupted-1366.webp",
+      "source": "local/final/ux/interrupted-1366x768.png",
+      "state": "短暂识别中断，1366×768，合成输入缺帧",
+      "bytes": 550526,
+      "width": 1366,
+      "height": 768,
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/09-mode-switch-before-1440.webp",
+      "source": "local/ux/mode-switch-1440x900.png",
+      "state": "修复前旧 WebGL 淡出帧叠到图鉴，1440×900",
+      "bytes": 823472,
+      "width": 1440,
+      "height": 900,
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/10-mode-switch-after-1440.webp",
+      "source": "local/final/ux/mode-switch-1440x900.png",
+      "state": "修复后 ID02 返回图鉴，1440×900",
+      "bytes": 867090,
+      "width": 1440,
+      "height": 900,
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/11-camera-unavailable.webp",
+      "source": "local/final/ux/camera-unavailable.png",
+      "state": "摄像头拒绝与后备操作，1280×800，模拟拒绝",
+      "bytes": 552398,
+      "width": 1280,
+      "height": 800,
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/12-missing-content.webp",
+      "source": "local/final/ux/missing-content.png",
+      "state": "缺档案/缺线稿，1280×800，只读 API 测试响应",
+      "bytes": 721386,
+      "width": 1280,
+      "height": 800,
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/13-author-04.webp",
+      "source": "local/final/hf-confirmed/figure-04-default.png",
+      "state": "作者新增 ID04 默认展示，1440×900，合成识别",
+      "bytes": 757912,
+      "width": 1440,
+      "height": 900,
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/14-author-07.webp",
+      "source": "local/final/hf-confirmed/figure-07-reading.png",
+      "state": "作者新增 ID07 阅读展示，1440×900，合成识别",
+      "bytes": 723102,
+      "width": 1440,
+      "height": 900,
+      "rgbaIdentical": true
+    },
+    {
+      "file": "selected/15-real-model-timeout.webp",
+      "source": "local/final/hf/figure-04-default.png",
+      "state": "真实 Hands 模型资源超时的原有错误提示；Camera 边界模拟，真实模型冷启动 PENDING",
+      "bytes": 717448,
+      "width": 1440,
+      "height": 900,
+      "rgbaIdentical": true
+    }
+  ]
+}

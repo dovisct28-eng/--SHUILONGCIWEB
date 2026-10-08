@@ -208,8 +208,12 @@
             <h1 class="splash-title" id="b01-title">走进《入将图》</h1>
             <p class="b01-description">选择一种方式，探索画中的人物与故事。</p>
             <div class="splash-actions">
-                <button type="button" class="action-btn" id="btn-gallery-track">图鉴探索 <span aria-hidden="true">↗</span></button>
-                <button type="button" class="action-btn" id="btn-cyber-track">体感交互 <span aria-hidden="true">↗</span></button>
+                <button type="button" class="action-btn" id="btn-gallery-track" aria-describedby="b01-gallery-help">图鉴探索 <span aria-hidden="true">↗</span></button>
+                <button type="button" class="action-btn" id="btn-cyber-track" aria-describedby="b01-cyber-help">体感交互 <span aria-hidden="true">↗</span></button>
+            </div>
+            <div class="b01-mode-help">
+                <p id="b01-gallery-help">图鉴：鼠标拖动、缩放、点选人物</p>
+                <p id="b01-cyber-help">体感：摄像头识别，单手驻留确认</p>
             </div>
             <div class="b01-feedback" role="status" aria-live="polite">
                 <p id="entry-status"></p>
@@ -279,7 +283,7 @@
                 </div>
             </div>
         </div>
-        <p class="image-caption">原图 · 线稿 · 色稿</p>
+        <p class="image-caption">切换图层查看 · 人物索引换人 · 返回全景看位置</p>
         <div id="stage-name" aria-live="polite"></div>
         <p id="stage-disclaimer">数字化演绎内容</p>
 
@@ -309,7 +313,7 @@
             <button type="button" data-step="1">下一组 →</button>
         </nav>
         <p id="cyber-asset-status" role="status"></p>
-        <p class="gesture-hint" data-state="IDLE"><svg class="gesture-confirm" viewBox="0 0 20 20" aria-hidden="true"><circle class="gesture-confirm-base" cx="10" cy="10" r="8"/><circle class="gesture-confirm-progress" cx="10" cy="10" r="8" pathLength="1"/></svg><span id="gesture-message" role="status">站到画面中央 · 开始体验</span></p>
+        <p class="gesture-hint" data-state="IDLE"><svg class="gesture-confirm" viewBox="0 0 20 20" aria-hidden="true"><circle class="gesture-confirm-base" cx="10" cy="10" r="8"/><circle class="gesture-confirm-progress" cx="10" cy="10" r="8" pathLength="1"/></svg><span id="gesture-message" role="status" aria-live="polite" aria-atomic="true">① 站到中央 · 让上半身进入画面</span></p>
         <div id="dwell-controls" hidden><button type="button" class="dwell-target" data-dwell-target="view" aria-label="查看人物"><svg viewBox="0 0 44 44" aria-hidden="true"><circle class="dwell-base" cx="22" cy="22" r="20"/><circle class="dwell-progress" cx="22" cy="22" r="20" pathLength="1"/><path d="M15 14h14v16H15z M19 19h6 M19 23h6"/></svg><span>查看人物</span></button><button type="button" class="dwell-target" data-dwell-target="next" aria-label="下一人物"><svg viewBox="0 0 44 44" aria-hidden="true"><circle class="dwell-base" cx="22" cy="22" r="20"/><circle class="dwell-progress" cx="22" cy="22" r="20" pathLength="1"/><path d="M13 22h18 M24 15l7 7-7 7"/></svg><span>下一人物</span></button><div class="dwell-pointer" hidden aria-hidden="true"></div><div class="dwell-reading-zone" hidden aria-hidden="true"><span>上移 · 向上阅读</span><i>静止区</i><span>下移 · 向下阅读</span></div></div>
         <button id="gesture-export" type="button" hidden>导出识别诊断 JSON</button><pre id="gesture-debug" hidden aria-hidden="true"></pre>
         <nav class="cyber-controls" aria-label="体感辅助操作">
@@ -347,6 +351,7 @@
         import { GesturePointer } from './gesture-pointer.mjs';
         import { HandOwnership } from './hand-ownership.mjs';
         import { DwellFeedback } from './dwell-feedback.mjs';
+        import { gestureGuidance } from './experience-guidance.mjs';
         import { INTERACTION_CONFIG } from './interaction-config.mjs';
         import { OperatorTracker } from './operator-tracker.mjs';
         import { PosePipeline } from './pose-pipeline.mjs';
@@ -456,7 +461,7 @@
                 if (track === 'gallery') {
                     await loadEntryImage(imgBg, imgBg.dataset.src);
                     if (version !== entryVersion) return;
-                    showScreen('gallery-map'); initPanoramaTransform(); document.getElementById('gallery-hint').classList.remove('used');
+                    showScreen('gallery-map'); initPanoramaTransform(); document.getElementById('gallery-hint').classList.toggle('used', galleryExperienced);
                     document.getElementById('pano-back-btn').focus();
                 } else {
                     if (currentItemData && !globalAssetsData.some(item => item.id === currentItemData.id)) throw new Error('当前人物已不在最新素材目录中，请先从图鉴主动选择人物。');
@@ -526,6 +531,10 @@
         const chooser = document.getElementById('hotspot-chooser');
         let panScale = 1, panX = 0, panY = 0, isDragging = false, startX = 0, startY = 0, hasDragged = false;
         let draftPosition = null, hotspotSignature = '', selectedHotspot = null, transformFrame = null;
+        let galleryExperienced = false;
+        function markGalleryUsed() {
+            galleryExperienced = true; document.getElementById('gallery-hint').classList.add('used');
+        }
         const galleryAdmin = createAdmin({ getData: () => globalAssetsData,
             onData(data) { globalAssetsData = data; renderAssets(); },
             onDraft(position) { draftPosition = position; updatePanoramaTransform(); }
@@ -542,6 +551,7 @@
         function openCharacter(item) {
             if (entryBusy || currentTrack !== 'gallery') return;
             selectedHotspot = item.id; chooser.hidden = true;
+            markGalleryUsed();
             showScreen('gallery-detail'); loadSeriesData(globalAssetsData.findIndex(i => i.id === item.id));
         }
         function updatePanoramaTransform() {
@@ -565,6 +575,7 @@
                     marker.append(ring, core, label);
                     marker.onclick = e => {
                         e.stopPropagation(); if (hasDragged) return;
+                        if (!galleryAdmin.active()) markGalleryUsed();
                         if (galleryAdmin.active()) { galleryAdmin.click(screenToImage({ x: e.clientX, y: e.clientY - 80 }, view(), w, h)); return; }
                         if (group.length === 1) openCharacter(group[0].item);
                         else {
@@ -583,6 +594,7 @@
                 marker.style.left = `${group.reduce((n, p) => n + p.x, 0) / group.length}px`;
                 marker.style.top = `${group.reduce((n, p) => n + p.y, 0) / group.length}px`;
                 marker.classList.toggle('selected', group.some(p => p.item.id === selectedHotspot));
+                marker.setAttribute('aria-pressed', String(group.some(p => p.item.id === selectedHotspot)));
             });
             hotspotContainer.querySelector('.temp-dot')?.remove();
             if (draftPosition?.x != null) {
@@ -606,7 +618,7 @@
             const dx = e.clientX - startX, dy = e.clientY - startY;
             if (!hasDragged && Math.hypot(dx, dy) < 4) return;
             hasDragged = true; panX += dx; panY += dy; startX = e.clientX; startY = e.clientY;
-            scheduleTransform(); document.getElementById('gallery-hint').classList.add('used');
+            scheduleTransform(); markGalleryUsed();
         });
         window.addEventListener('mouseup', () => { if (isDragging) { isDragging = false; updatePanoramaTransform(); } });
         panoramaView.addEventListener('wheel', e => {
@@ -616,7 +628,7 @@
             const newScale = Math.max(minScale, Math.min(panScale * Math.exp(-e.deltaY * .0015), 6));
             panX = e.clientX - (e.clientX - panX) * (newScale / panScale);
             const y = e.clientY - 80; panY = y - (y - panY) * (newScale / panScale);
-            panScale = newScale; scheduleTransform(); document.getElementById('gallery-hint').classList.add('used');
+            panScale = newScale; scheduleTransform(); markGalleryUsed();
         }, { passive: false });
         panoramaWrapper.addEventListener('click', e => {
             if (hasDragged) return; chooser.hidden = true;
@@ -739,6 +751,7 @@
             if (currentTrack === 'cyber' && !canEnterCyber(item)) { modeError('该人物体感素材未就绪，请返回图鉴。'); return; }
             if (currentTrack === 'cyber') { dwellController.lock(); renderGestureFeedback(); }
             currentSeriesIndex = index; currentItemData = item;
+            if (currentTrack === 'gallery') selectedHotspot = item.id;
             if(currentTrack === 'cyber') orbitStage?.leave(); else orbitStage?.reset();
             const version = ++detailVersion; releaseGalleryVideo(); infoRequest?.abort(); infoRequest = new AbortController();
             layerRequest?.abort(); if (!keepRevealed) { setRevealed(false, true, currentTrack === 'cyber'); }
@@ -1317,6 +1330,7 @@
             };
         }
         const dwellFeedback = new DwellFeedback(document.getElementById('dwell-controls'));
+        let gestureExperienced = false;
         const gestureDebugEnabled = new URLSearchParams(location.search).get('gestureDebug') === '1';
         document.getElementById('gesture-export').onclick=async()=>{
             if(!gestureDebugEnabled)return;
@@ -1339,8 +1353,11 @@
             hint.style.setProperty('--gesture-progress',s.progress);
             document.getElementById('main-app').dataset.gesture=s.state;
             const reason=!handLock.valid&&ownership.activeOperator?handLock.reason:s.blockedReason;
-            const messages={WAIT_HAND:'伸出一只手 · 开始操作',HAND_ACQUIRING:'正在确认控制手…',HAND_LOCKED_PAUSED:'正在恢复手部识别…',HAND_LOCK_RELEASED:'请重新伸手操作',NO_PERSON:'站到画面中央 · 开始体验',PERSON_ACQUIRING:'正在识别观众…',POSE_STALE:'请调整站位或使用页面按钮',HAND_NOT_DETECTED:'伸出一只手 · 开始操作',HAND_NOT_ASSIGNED:'请调整手掌位置或使用页面按钮',AMBIGUOUS_PERSON:'请保持单人操作',AMBIGUOUS_HAND:'请先使用一只手',HAND_UNSTABLE:'请稳住手掌',DWELLING:'保持手掌 · 即将确认',WAIT_RELEASE:'移开手掌 · 准备下一次操作',ACTION_LOCKED:'正在呈现人物…'};
-            document.getElementById('gesture-message').textContent=s.lastAction&&now-s.lastAction.at<450?'已确认':!gesturePerformance.activeCameras&&cameraStatus.textContent.includes('停止')?'请调整站位或使用页面按钮':messages[reason] || (isRevealed && dwellFeedback.region?'上下移动 · 阅读档案':controlPointer.valid?'控制手已锁定':'举起一只手 · 选择操作');
+            if (s.lastAction || isRevealed) gestureExperienced = true;
+            const guidance = gestureGuidance({ cameraState:cameraLifecycle.state, reason, pointer:controlPointer, reading:isRevealed, overflow:!!dwellFeedback.region, lastAction:s.lastAction, now, experienced:gestureExperienced });
+            hint.dataset.tone = guidance.tone;
+            const message = document.getElementById('gesture-message');
+            if (message.textContent !== guidance.message) message.textContent = guidance.message;
             if (gestureDebugEnabled) {
                 const debug=document.getElementById('gesture-debug'); debug.hidden=currentTrack!=='cyber';
                 const elapsed=Math.max(1,(gesturePerformance.lastAt||now)-(gesturePerformance.firstAt||now))/1000;

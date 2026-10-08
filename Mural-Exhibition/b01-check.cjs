@@ -23,7 +23,11 @@ assert.ok(html.includes('if (results.multiHandLandmarks && results.multiHandLand
 assert.ok(!html.includes('handsWithSize'));
 for(const removed of ['panMural','splash-poem','splash-subtitle','hideSplash','is-loaded','picsum.photos'])assert.ok(!html.includes(removed),removed);
 assert.ok(html.includes('data-src="gallery/mural-02-detail.webp"'));
-assert.equal(block(html,'<section id="splash-screen"','<div id="entry-mode-notice"'),block(base,'<section id="splash-screen"','<div id="entry-mode-notice"'));
+// B-UX-01 adds only low-weight descriptions and their accessible associations.
+const entryComposition = s => block(s,'<section id="splash-screen"','<div id="entry-mode-notice"')
+ .replace(/ aria-describedby="b01-(gallery|cyber)-help"/g,'')
+ .replace(/            <div class="b01-mode-help">[\s\S]*?<\/div>\n/,'');
+assert.equal(entryComposition(html),entryComposition(base));
 assert.ok(!html.includes("        initWebGL();"));
 assert.ok(fs.statSync(path.join(__dirname,'public/b01/mural-02-left.webp')).size<1024*1024);
 // V2 explicitly authorizes Alpha feedback, bounded point density and capped DPR.

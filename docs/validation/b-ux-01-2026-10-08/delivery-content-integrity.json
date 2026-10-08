@@ -1,0 +1,273 @@
+{
+  "ref": "98d8d6362858681ff904ffe022af6d68eee96f71",
+  "scope": "已推送基线 + 用户明确授权原样提交的六个 figure；未纳入 10→08 目录调整",
+  "additions": [
+    {
+      "id": "02",
+      "name": "东门陈五猖",
+      "path": "Mural-Exhibition/public/assets/02_东门陈五猖/figure.png",
+      "bytes": 275309,
+      "sha256": "ef0c70190bbea84611a4ef523955f4d8d5e1a635fa4d893be67c78d5ee315880",
+      "width": 1395,
+      "height": 2444,
+      "hasAlpha": true,
+      "alphaMin": 0,
+      "alphaMax": 255
+    },
+    {
+      "id": "03",
+      "name": "西门谢五猖",
+      "path": "Mural-Exhibition/public/assets/03_西门谢五猖/figure.png",
+      "bytes": 277497,
+      "sha256": "f4d52635cf7563a7ff2c5e09e9da9d118713c8031e3660243850d0cf6a6948ef",
+      "width": 1883,
+      "height": 2453,
+      "hasAlpha": true,
+      "alphaMin": 0,
+      "alphaMax": 255
+    },
+    {
+      "id": "04",
+      "name": "中门徐五猖",
+      "path": "Mural-Exhibition/public/assets/04_中门徐五猖/figure.png",
+      "bytes": 504905,
+      "sha256": "6d34cb2945c2c489980a0b2f424953200bdc00ec95577fe4c255e0e0fafc7def",
+      "width": 1912,
+      "height": 3197,
+      "hasAlpha": true,
+      "alphaMin": 0,
+      "alphaMax": 255
+    },
+    {
+      "id": "05",
+      "name": "北门雷五猖",
+      "path": "Mural-Exhibition/public/assets/05_北门雷五猖/figure.png",
+      "bytes": 190717,
+      "sha256": "94965a3deebe342ddc32be2ad263a11e0ba1b85190d6d16ef962976d4524e657",
+      "width": 1100,
+      "height": 2514,
+      "hasAlpha": true,
+      "alphaMin": 0,
+      "alphaMax": 255
+    },
+    {
+      "id": "06",
+      "name": "翻坛张五郎",
+      "path": "Mural-Exhibition/public/assets/06_翻坛张五郎/figure.png",
+      "bytes": 248428,
+      "sha256": "82a8224391869ccc999cd79588a2d74a401307f5b50f78193e73b6541444953b",
+      "width": 1629,
+      "height": 2421,
+      "hasAlpha": true,
+      "alphaMin": 0,
+      "alphaMax": 255
+    },
+    {
+      "id": "07",
+      "name": "梅山猖兵",
+      "path": "Mural-Exhibition/public/assets/07_梅山猖兵/figure.png",
+      "bytes": 1220740,
+      "sha256": "b09ad1ec725882b3e9a20ece150341aa1ff52600db3eb1f0fe000351dc945245",
+      "width": 3862,
+      "height": 4333,
+      "hasAlpha": true,
+      "alphaMin": 0,
+      "alphaMax": 255
+    }
+  ],
+  "rows": [
+    {
+      "id": "01",
+      "name": "南门何五猖",
+      "folder": "01_南门何五猖",
+      "resources": {
+        "org": "org.png",
+        "line": "line.png",
+        "color": "color.png",
+        "figure": "figure.png",
+        "info": "info.txt"
+      },
+      "infoNonEmpty": true,
+      "summaryFilled": false,
+      "sourcesFilled": false,
+      "position": {
+        "x": 5.82,
+        "y": 31.13
+      },
+      "cyberDisplay": "专用 figure（本轮浏览器验收）",
+      "needsAuthor": [
+        "cyber.summary",
+        "资料来源"
+      ]
+    },
+    {
+      "id": "02",
+      "name": "东门陈五猖",
+      "folder": "02_东门陈五猖",
+      "resources": {
+        "org": "org.png",
+        "line": "line.png",
+        "color": "color.png",
+        "figure": "figure.png",
+        "info": "info.txt"
+      },
+      "infoNonEmpty": true,
+      "summaryFilled": false,
+      "sourcesFilled": false,
+      "position": {
+        "x": 7,
+        "y": 28.73
+      },
+      "cyberDisplay": "专用 figure（本轮浏览器验收）",
+      "needsAuthor": [
+        "cyber.summary",
+        "资料来源"
+      ]
+    },
+    {
+      "id": "03",
+      "name": "西门谢五猖",
+      "folder": "03_西门谢五猖",
+      "resources": {
+        "org": "org.png",
+        "line": "line.png",
+        "color": "color.png",
+        "figure": "figure.png",
+        "info": "info.txt"
+      },
+      "infoNonEmpty": true,
+      "summaryFilled": false,
+      "sourcesFilled": false,
+      "position": {
+        "x": 6.12,
+        "y": 22.8
+      },
+      "cyberDisplay": "专用 figure（本轮浏览器验收）",
+      "needsAuthor": [
+        "cyber.summary",
+        "资料来源"
+      ]
+    },
+    {
+      "id": "04",
+      "name": "中门徐五猖",
+      "folder": "04_中门徐五猖",
+      "resources": {
+        "org": "org.png",
+        "line": "line.png",
+        "color": "color.png",
+        "figure": "figure.png",
+        "info": "info.txt"
+      },
+      "infoNonEmpty": true,
+      "summaryFilled": false,
+      "sourcesFilled": false,
+      "position": {
+        "x": 7.85,
+        "y": 22.1
+      },
+      "cyberDisplay": "专用 figure（本轮浏览器验收）",
+      "needsAuthor": [
+        "cyber.summary",
+        "资料来源"
+      ]
+    },
+    {
+      "id": "05",
+      "name": "北门雷五猖",
+      "folder": "05_北门雷五猖",
+      "resources": {
+        "org": "org.png",
+        "line": "line.png",
+        "color": "color.png",
+        "figure": "figure.png",
+        "info": "info.txt"
+      },
+      "infoNonEmpty": true,
+      "summaryFilled": false,
+      "sourcesFilled": false,
+      "position": {
+        "x": 9.71,
+        "y": 23.65
+      },
+      "cyberDisplay": "专用 figure（本轮浏览器验收）",
+      "needsAuthor": [
+        "cyber.summary",
+        "资料来源"
+      ]
+    },
+    {
+      "id": "06",
+      "name": "翻坛张五郎",
+      "folder": "06_翻坛张五郎",
+      "resources": {
+        "org": "org.png",
+        "line": "line.png",
+        "color": "color.png",
+        "figure": "figure.png",
+        "info": "info.txt"
+      },
+      "infoNonEmpty": true,
+      "summaryFilled": false,
+      "sourcesFilled": false,
+      "position": {
+        "x": 8.78,
+        "y": 27.48
+      },
+      "cyberDisplay": "专用 figure（本轮浏览器验收）",
+      "needsAuthor": [
+        "cyber.summary",
+        "资料来源"
+      ]
+    },
+    {
+      "id": "07",
+      "name": "梅山猖兵",
+      "folder": "07_梅山猖兵",
+      "resources": {
+        "org": "org.png",
+        "line": "line.png",
+        "color": "color.png",
+        "figure": "figure.png",
+        "info": "info.txt"
+      },
+      "infoNonEmpty": true,
+      "summaryFilled": false,
+      "sourcesFilled": false,
+      "position": {
+        "x": 12.21,
+        "y": 25.35
+      },
+      "cyberDisplay": "专用 figure（本轮浏览器验收）",
+      "needsAuthor": [
+        "cyber.summary",
+        "资料来源"
+      ]
+    },
+    {
+      "id": "10",
+      "name": "上层猖兵",
+      "folder": "10_上层猖兵",
+      "resources": {
+        "org": "org.png",
+        "line": "line.png",
+        "color": "color.png",
+        "figure": null,
+        "info": "info.txt"
+      },
+      "infoNonEmpty": true,
+      "summaryFilled": false,
+      "sourcesFilled": false,
+      "position": {
+        "x": 10.85,
+        "y": 17.68
+      },
+      "cyberDisplay": "线稿/色稿兼容回退",
+      "needsAuthor": [
+        "专用人物抠图（可继续兼容展示）",
+        "cyber.summary",
+        "资料来源"
+      ]
+    }
+  ]
+}

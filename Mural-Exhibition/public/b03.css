@@ -257,6 +257,11 @@ body.track-cyber #main-app .dwell-target:focus-visible { outline:1px solid #c5a5
 body.track-cyber .gesture-hint { animation:none;opacity:.75; }
 body.track-cyber .gesture-hint[data-state="DWELLING"],body.track-cyber .gesture-hint[data-state="TARGET_HOVER"],body.track-cyber .gesture-hint[data-state="WAIT_RELEASE"] { opacity:1;color:#dfc493; }
 .gesture-hint[data-state="DWELLING"] .gesture-confirm,.gesture-hint[data-state="TARGET_HOVER"] .gesture-confirm { opacity:1; }
+/* B-UX-01: same footer location; emphasis follows actual controller feedback. */
+body.track-cyber .gesture-hint[data-tone] { max-width:calc(100vw - 300px); text-align:center; white-space:normal; line-height:1.5; animation:none; opacity:.85; }
+body.track-cyber .gesture-hint[data-tone="quiet"] { opacity:.48; }
+body.track-cyber .gesture-hint[data-tone="active"] { opacity:1; color:#dfc493; }
+body.track-gallery .image-caption { font-size:11px; letter-spacing:.02em; }
 @media(prefers-reduced-motion:reduce) { .dwell-target { transition:none; } }
 
 /* Acquisition feedback shares the formal pointer and existing stage scheduler. */

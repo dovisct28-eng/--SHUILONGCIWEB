@@ -45,12 +45,18 @@ const shot=(p,n)=>p.screenshot({path:path.join(out,n+'.png')});
   await page.reload();await page.locator('#btn-cyber-track').click();
   await page.waitForFunction(()=>document.body.dataset.explorationState==='cyber'||!document.getElementById('entry-retry').hidden,{},{timeout:60000});
   if(await state(page)==='cyber'){
-   await page.locator('#entry-mode-notice').waitFor({state:'visible',timeout:25000});await shot(page,'cyber-permission');
-   report.functional.push('real cyber dependencies and renderer; injected NotAllowedError');
+   // V4.2 initializes Hands and Pose sequentially before requesting the camera.
+   await page.locator('#entry-mode-notice').waitFor({state:'visible',timeout:45000});await shot(page,'cyber-permission');
+   const startupMessage=await page.locator('#entry-mode-notice').textContent();
+   report.realModelStartup={status:startupMessage.includes('摄像头权限被拒绝')?'PASS':'PENDING',message:startupMessage,scope:'Real CDN/model startup with denied getUserMedia; no physical camera acceptance'};
+   report.functional.push('real cyber dependencies and renderer; startup outcome recorded separately');
    await page.locator('#entry-mode-notice').getByRole('button',{name:'返回选择',exact:true}).click();assert.equal(await state(page),'selection');
-  }else{await shot(page,'cyber-dependency-error');report.functional.push('external cyber dependency error reported, return/retry available');}
-  // Deterministic lifecycle: use real renderer/gsap/Hands, replace only Camera hardware boundary.
+  }else{await shot(page,'cyber-dependency-error');report.realModelStartup={status:'PENDING',message:await page.locator('#entry-status').textContent()};report.functional.push('external cyber dependency error reported, return/retry available');}
+  // Navigation lifecycle does not run model inference. Keep the loaded Hands JS,
+  // renderer and GSAP; avoid re-downloading unused model weights for each fake camera.
   await page.evaluate(()=>{
+   const LoadedHands=window.Hands;
+   window.Hands=class extends LoadedHands{async initialize(){}async close(){}};
    window.__starts=0;window.__stops=0;window.__active=0;window.__max=0;
    window.Camera=class{constructor(v,o){this.v=v;this.o=o;} async start(){window.__starts++;window.__active++;window.__max=Math.max(window.__max,window.__active);this.running=true;} stop(){if(this.running){window.__stops++;window.__active--;this.running=false;}}};
   });
@@ -61,7 +67,7 @@ const shot=(p,n)=>p.screenshot({path:path.join(out,n+'.png')});
    await page.locator('#back-btn').click();assert.equal(await state(page),'selection');
   }
   report.lifecycle=await page.evaluate(()=>({starts:__starts,stops:__stops,active:__active,max:__max,renderers:document.querySelectorAll('#webgl-container canvas').length,visible:['splash-screen','main-app','panorama-view'].filter(id=>!document.getElementById(id).hidden)}));
-  assert.deepEqual(report.lifecycle,{starts:6,stops:6,active:0,max:1,renderers:1,visible:['splash-screen']});report.functional.push('6 simulated camera sessions; max 1; all stopped; single existing renderer; repeated cyber↔gallery↔selection');
+  assert.deepEqual(report.lifecycle,{starts:6,stops:6,active:0,max:1,renderers:1,visible:['splash-screen']});report.functional.push('6 simulated camera sessions; unused Hands model initialization stubbed; max 1; all stopped; single existing renderer; repeated cyber↔gallery↔selection');
   // Distinct device failures and late permission completion after navigation away.
   for(const name of ['NotFoundError','NotReadableError','NotAllowedError']){
    await page.evaluate(name=>{window.Camera=class{start(){return Promise.reject(new DOMException('device failure',name));}stop(){}};},name);
@@ -79,7 +85,7 @@ const shot=(p,n)=>p.screenshot({path:path.join(out,n+'.png')});
   const reduced=await browser.newPage({reducedMotion:'reduce'});await reduced.goto(url);assert.equal(await reduced.locator('.splash-image').evaluate(e=>getComputedStyle(e).transitionDuration),'0s');await reduced.locator('#btn-gallery-track').focus();await reduced.keyboard.press('Space');await reduced.waitForFunction(()=>document.body.dataset.explorationState==='gallery-map');await reduced.close();report.functional.push('homepage image failure/retry; reduced motion; Space native entry');
   const offline=await browser.newPage();await offline.route('**/*',r=>r.request().url().startsWith('https:')?r.abort():r.continue());await offline.goto(url);await offline.locator('#btn-cyber-track').click();await offline.locator('#entry-retry').waitFor({state:'visible'});assert.equal(await state(offline),'selection');assert.ok(await offline.locator('#btn-gallery-track').isEnabled());await shot(offline,'cyber-dependency-error');report.functional.push('blocked CDN shows retry and gallery remains usable');await offline.close();
   const threeFailed=await browser.newPage();await threeFailed.addInitScript(()=>{navigator.mediaDevices.getUserMedia=async()=>{throw new DOMException('denied','NotAllowedError');};window.alert=()=>{};});
-  await threeFailed.route('**/three.module.js',r=>r.abort());await threeFailed.goto(url);await threeFailed.locator('#btn-cyber-track').click();await threeFailed.locator('#entry-retry').waitFor({state:'visible'});await threeFailed.unroute('**/three.module.js');await threeFailed.locator('#entry-retry').click();await threeFailed.waitForFunction(()=>document.body.dataset.explorationState==='cyber',{},{timeout:30000});await threeFailed.locator('#entry-mode-notice').waitFor({state:'visible'});await threeFailed.close();report.functional.push('failed cached Three ES module import recovers on retry');
+  await threeFailed.route('**/three.module.js',r=>r.abort());await threeFailed.goto(url);await threeFailed.locator('#entry-retry').waitFor({state:'hidden'});await threeFailed.locator('#btn-cyber-track').click();await threeFailed.locator('#entry-retry').waitFor({state:'visible'});await threeFailed.unroute('**/three.module.js');await threeFailed.locator('#entry-retry').click();await threeFailed.waitForFunction(()=>document.body.dataset.explorationState==='cyber',{},{timeout:30000});await threeFailed.locator('#entry-mode-notice').waitFor({state:'visible',timeout:45000});await threeFailed.close();report.functional.push('failed cached Three ES module import recovers on retry');
   const unsupported=await browser.newPage();await unsupported.addInitScript(()=>{navigator.mediaDevices.getUserMedia=undefined;});await unsupported.goto(url);await unsupported.locator('#btn-cyber-track').click();await unsupported.locator('#entry-retry').waitFor({state:'visible'});assert.match(await unsupported.locator('#entry-status').textContent(),/不支持摄像头/);await unsupported.close();report.functional.push('unsupported camera returns to selection');
   // A08 uses its real link and native history. Module A files are read-only.
   const a=await browser.newPage({viewport:{width:1440,height:900}});a.on('pageerror',e=>report.errors.push('A: '+e.message));

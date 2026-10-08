@@ -1,0 +1,272 @@
+{
+  "baseline": "98d8d6362858681ff904ffe022af6d68eee96f71",
+  "softwareAcceptance": "PASS",
+  "unit": {
+    "command": "npm test",
+    "tests": 110,
+    "pass": 110,
+    "fail": 0
+  },
+  "build": "PASS: existing b01-check parses inline module and checks server syntax; browser executes module imports. No separate build script in this static project.",
+  "suites": [
+    {
+      "suite": "test:browser",
+      "code": 0,
+      "status": "PASS"
+    },
+    {
+      "suite": "test:b02-browser",
+      "code": 0,
+      "status": "PASS"
+    },
+    {
+      "suite": "test:b03-v42-browser",
+      "code": 0,
+      "status": "PASS"
+    },
+    {
+      "suite": "test:b03-dwell-browser",
+      "code": 0,
+      "status": "PASS"
+    },
+    {
+      "suite": "test:b03-hf-browser",
+      "code": 0,
+      "status": "PASS"
+    },
+    {
+      "suite": "test:b-ux-browser",
+      "code": 0,
+      "status": "PASS"
+    }
+  ],
+  "viewports": [
+    [
+      1920,
+      1080
+    ],
+    [
+      1440,
+      900
+    ],
+    [
+      1366,
+      768
+    ],
+    [
+      1280,
+      800
+    ]
+  ],
+  "b01": {
+    "views": 4,
+    "functional": [
+      "native keyboard Enter; map original image/8 hotspots; drag/wheel; hotspot to detail; org/line/color; detail→map→B01",
+      "real cyber dependencies and renderer; startup outcome recorded separately",
+      "6 simulated camera sessions; unused Hands model initialization stubbed; max 1; all stopped; single existing renderer; repeated cyber↔gallery↔selection",
+      "NotFoundError message and return",
+      "NotReadableError message and return",
+      "NotAllowedError message and return",
+      "late camera startup after return is stopped",
+      "20 rapid entry clicks serialize",
+      "asset-api-error recovery",
+      "map-image-error recovery",
+      "homepage image failure/retry; reduced motion; Space native entry",
+      "blocked CDN shows retry and gallery remains usable",
+      "failed cached Three ES module import recovers on retry",
+      "unsupported camera returns to selection",
+      "real A08→B01→native back restores A08 at 42 screens; direct refresh"
+    ],
+    "errors": [],
+    "realModelStartup": {
+      "status": "PENDING",
+      "message": "手部模型加载超时，请检查资源网络。可重试或使用页面按钮。返回选择重试体感识别",
+      "scope": "Real CDN/model startup with denied getUserMedia; no physical camera acceptance"
+    }
+  },
+  "b02": {
+    "views": 4,
+    "stress": [
+      {
+        "count": 30,
+        "frames": 213,
+        "medianMs": 4.199999999999818,
+        "p95Ms": 4.300000000000182,
+        "heap": 3380697,
+        "renderer": 0
+      },
+      {
+        "count": 50,
+        "frames": 220,
+        "medianMs": 4.199999999999818,
+        "p95Ms": 4.2999999999999545,
+        "heap": 4121364,
+        "renderer": 0
+      }
+    ],
+    "mediaPassed": true,
+    "errors": []
+  },
+  "v42": {
+    "status": "PASS",
+    "cases": [
+      {
+        "name": "Button-free candidate → locked visible cursor, zero actions",
+        "status": "PASS"
+      },
+      {
+        "name": "Raw Hands count remains one when stale Hands input is rejected",
+        "status": "PASS"
+      },
+      {
+        "name": "NotAllowedError residual stream cleanup and visible retry",
+        "status": "PASS"
+      },
+      {
+        "name": "NotFoundError residual stream cleanup and visible retry",
+        "status": "PASS"
+      },
+      {
+        "name": "NotReadableError residual stream cleanup and visible retry",
+        "status": "PASS"
+      },
+      {
+        "name": "SecurityError residual stream cleanup and visible retry",
+        "status": "PASS"
+      },
+      {
+        "name": "HANDS_MODEL_INIT_ERROR → new initialization succeeds",
+        "status": "PASS"
+      },
+      {
+        "name": "POSE_WORKER_ERROR → new initialization succeeds",
+        "status": "PASS"
+      },
+      {
+        "name": "Runtime Pose fault destroys Worker; retry creates exactly one new Worker",
+        "status": "PASS"
+      },
+      {
+        "name": "Real callback delay, approximately 8 FPS Pose, same hand remains active",
+        "status": "PASS"
+      },
+      {
+        "name": "Hidden stops stream/inference; visible creates one fresh camera session",
+        "status": "PASS"
+      },
+      {
+        "name": "Ten gallery/cyber transitions, bounded camera/model counts",
+        "status": "PASS"
+      },
+      {
+        "name": "Late permission + queued retry + second exit cannot reopen camera",
+        "status": "PASS"
+      },
+      {
+        "name": "Debug-only JSON export has verified software SHA and no image/landmarks",
+        "status": "PASS"
+      }
+    ],
+    "errors": []
+  },
+  "dwell": {
+    "views": 4,
+    "cases": [
+      {},
+      {},
+      {},
+      {}
+    ],
+    "cycles": 10,
+    "errors": []
+  },
+  "hf": {
+    "views": 4,
+    "figureViewportCases": 28,
+    "figureStates": 84,
+    "ids": [
+      "01",
+      "02",
+      "03",
+      "04",
+      "05",
+      "06",
+      "07"
+    ],
+    "errors": [],
+    "scope": "Actual Chrome / Three.js / GSAP. Camera stream and Hands/Pose model outputs synthetic; physical camera and real-model cold start not certified."
+  },
+  "ux": {
+    "status": "PASS",
+    "views": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "status": "PASS"
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "status": "PASS"
+      },
+      {
+        "width": 1366,
+        "height": 768,
+        "status": "PASS"
+      },
+      {
+        "width": 1280,
+        "height": 800,
+        "status": "PASS"
+      }
+    ],
+    "cases": [
+      "Index → matching selected map hotspot PASS",
+      "Reduced motion, focused Enter, page buttons and mode switches PASS",
+      "Camera denied → graphically accurate error + usable gallery PASS",
+      "Empty archive + missing layer + source-needed placeholders PASS",
+      "Reading instructions enabled only for actual overflow; test-only summary PASS",
+      "Return during character image loading rejects late completion PASS"
+    ],
+    "errors": []
+  },
+  "limitations": {
+    "physicalCamera": "PENDING",
+    "realModelColdStart": "PENDING: real Hands initialization timed out; simulation does not resolve this startup issue",
+    "mobile": "NOT_TESTED: outside desktop task",
+    "scholarlyContent": "Eight cyber.summary and sources remain unfilled; author verification required",
+    "sourceIntegrity": "Six new author figures copied unchanged; original material, metadata and eight coordinates preserved"
+  },
+  "priorAttempts": [
+    {
+      "scope": "B01 A08 handoff",
+      "result": "FAIL",
+      "reason": "localhost:3000 service not available during first run; complete rerun passed after starting required service",
+      "localEvidence": "local/b01-test.log"
+    },
+    {
+      "scope": "B01 initial startup",
+      "result": "FAIL",
+      "reason": "Old 25-second wait shorter than sequential Hands/Pose bounded setup; test wait updated, production unchanged",
+      "localEvidence": "local/b01-final.log"
+    },
+    {
+      "scope": "B01 deterministic navigation",
+      "result": "FAIL",
+      "reason": "Repeated fake camera navigation unnecessarily initialized real Hands model; unused inference startup stubbed only in deterministic test. Real startup separately remains PENDING",
+      "localEvidence": "local/final/test-browser.log"
+    },
+    {
+      "scope": "UX harness",
+      "result": "FAIL",
+      "reason": "Focus transition checked before opacity settled; short fixed acquisition wait replaced by real READY/stable state wait",
+      "localEvidence": "local/ux/results-attempt-*.json"
+    },
+    {
+      "scope": "HF live-model startup during geometry run",
+      "result": "PENDING",
+      "reason": "Real Hands download/init timeout displayed original error panel. Preserved selected/15; final geometry run uses synthetic camera/model boundary and asserts no error overlay",
+      "localEvidence": "local/final/hf/figure-04-default.png"
+    }
+  ]
+}

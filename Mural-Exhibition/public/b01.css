@@ -23,6 +23,8 @@
 .action-btn:first-child:active { background:#c3bcaf; }
 .action-btn:disabled { opacity:.6; cursor:wait; }
 .b01-feedback { margin-top:22px; min-height:48px; font-size:13px; line-height:1.7; color:#b9bcb5; max-width:380px; }
+.b01-mode-help { margin-top:16px; color:#a0a39c; font-size:12px; line-height:1.8; }
+.b01-mode-help p { margin:0; }
 .b01-retry { color:inherit; background:transparent; border:0; border-bottom:1px solid currentColor; font:inherit; cursor:pointer; padding:8px 0; margin-right:18px; }
 #loading-indicator { position:absolute; bottom:18px; left:5vw; color:#b9bcb5; font-size:13px; line-height:1.7; }
 #entry-mode-notice { position:fixed; z-index:950; left:50%; top:110px; transform:translateX(-50%); width:min(480px,90vw); padding:20px 24px; background:#18232c; color:#d8d2c5; border:1px solid #858b87; font:14px/1.8 "Microsoft YaHei",sans-serif; }

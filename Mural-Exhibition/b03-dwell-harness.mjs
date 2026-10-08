@@ -6,6 +6,7 @@ import {HandOwnership} from './public/hand-ownership.mjs';
 import {DwellController,readingVelocity} from './public/dwell-controller.mjs';
 import {GestureDiagnostics,poseFreshnessBudget} from './public/gesture-diagnostics.mjs';
 import {INTERACTION_CONFIG} from './public/interaction-config.mjs';
+import {gestureGuidance} from './public/experience-guidance.mjs';
 import {person,hand} from './b03-gesture-harness.mjs';
 export {person,hand};
 export function cameraHarness(index=0) {
@@ -15,7 +16,7 @@ export function cameraHarness(index=0) {
  const stop=html.slice(html.indexOf('function stopMediaPipe()'),html.indexOf('// Page locks are shared'));
  const handler=html.slice(html.indexOf('// Page locks are shared'),html.indexOf('\n    </script>',html.indexOf('// Page locks are shared')));
  const targets=[{id:'view',x:100,y:400,width:140,height:120},{id:'next',x:1040,y:400,width:140,height:120}];
- const ctx=vm.createContext({OperatorTracker,GesturePointer,HandOwnership,DwellController,readingVelocity,INTERACTION_CONFIG,GestureDiagnostics,poseFreshnessBudget,Math,URLSearchParams,time:0,location:{search:''},performance:{now:()=>ctx.time}});
+ const ctx=vm.createContext({OperatorTracker,GesturePointer,HandOwnership,DwellController,readingVelocity,INTERACTION_CONFIG,GestureDiagnostics,poseFreshnessBudget,gestureGuidance,Math,URLSearchParams,time:0,location:{search:''},performance:{now:()=>ctx.time}});
  vm.runInContext(`let currentTrack='cyber',entryBusy=false,currentSeriesIndex=${index},isRevealed=false;
  const operatorTracker=new OperatorTracker(),gesturePointer=new GesturePointer(),handOwnership=new HandOwnership(),dwellController=new DwellController();
  let controlPointer={valid:false,visible:false},readingScrollAt=null;

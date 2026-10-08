@@ -22,7 +22,9 @@
 #panorama-view .hotspot:hover .hotspot-tooltip,#panorama-view .hotspot:focus-visible .hotspot-tooltip { opacity:1; top:-29px; box-shadow:none; }
 #panorama-view .hotspot:hover .hotspot-core { background:#f4e9d5; transform:translate(-50%,-50%) scale(1.2); box-shadow:0 0 0 4px #17202790; }
 #panorama-view .hotspot:hover .hotspot-ring { border-color:#f4e9d5; }
+#panorama-view .hotspot:focus-visible .hotspot-core { background:#fff2d7; transform:translate(-50%,-50%) scale(1.25); }
 #panorama-view .hotspot.selected .hotspot-ring { border-color:#fff2d7; border-width:2px; }
+#panorama-view .hotspot.selected .hotspot-core { background:#fff2d7; }
 .hotspot-count { position:absolute; inset:2px; display:grid; place-items:center; background:#18242a; border:1px solid #d0c4af; border-radius:50%; font:11px system-ui; }
 #hotspot-chooser { position:absolute; z-index:920; width:220px; max-height:230px; overflow:auto; background:#18232bed; border:1px solid #647178; padding:8px; }
 #hotspot-chooser button { display:block; width:100%; padding:9px; background:transparent; color:#d8d2c5; border:0; text-align:left; cursor:pointer; }
@@ -42,6 +44,8 @@
 #detail-asset-status { position:absolute; left:80px; bottom:18px; color:#b9bcb5; font-size:13px; }
 /* B02 uses each author's full canvas independently, without a visible frame. */
 body.track-gallery #image-wrapper { border:0; background:transparent; box-shadow:none; outline:0; }
+/* Retired canvas frames must not cross-fade over the other mode's author image. */
+body.track-gallery #webgl-container,body.track-cyber #gallery-container { visibility:hidden; pointer-events:none; }
 body.track-gallery #image-wrapper::before,body.track-gallery #image-wrapper::after { content:none; }
 body.track-gallery #main-app .layer-img { top:50%; left:50%; width:auto; height:auto; max-width:100%; max-height:100%; transform:translate(-50%,-50%); object-fit:contain; object-position:center; transition:none; }
 body.track-gallery #main-app .layer-img[hidden] { display:none!important; }
