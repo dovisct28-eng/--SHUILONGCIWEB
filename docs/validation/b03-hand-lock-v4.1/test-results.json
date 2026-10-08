@@ -1,0 +1,91 @@
+{
+  "status": "PASS",
+  "date": "2026-10-08",
+  "baseline": "485e26baef3140df298d64cd9779083079bd9847",
+  "unit": {
+    "command": "cd Mural-Exhibition; npm test",
+    "tests": 80,
+    "pass": 80,
+    "fail": 0,
+    "newHandOwnershipTests": 12,
+    "newProductionOwnershipTests": 5,
+    "rawLocalLog": "local/unit-tests.txt"
+  },
+  "build": {
+    "status": "PASS",
+    "architecture": "Express + native modules; no bundled build command",
+    "checks": [
+      "Mural-Exhibition/public/hand-ownership.mjs",
+      "Mural-Exhibition/public/gesture-pointer.mjs",
+      "Mural-Exhibition/public/dwell-controller.mjs",
+      "Mural-Exhibition/public/interaction-config.mjs",
+      "Mural-Exhibition/hand-ownership.test.mjs",
+      "Mural-Exhibition/gesture-pointer.test.mjs",
+      "Mural-Exhibition/dwell-controller.test.mjs",
+      "Mural-Exhibition/b03-dwell-production.test.mjs",
+      "Mural-Exhibition/b03-dwell-harness.mjs",
+      "Mural-Exhibition/b03-dwell-browser-check.cjs",
+      "Mural-Exhibition/b03-hand-lock-browser-check.cjs",
+      "docs/validation/b03-hand-lock-v4.1/local/inline-module.mjs"
+    ],
+    "inlineModule": "PASS",
+    "packageJson": "PASS"
+  },
+  "parameters": {
+    "controlHandAcquireMs": 350,
+    "controlHandLossGraceMs": 650,
+    "controlHandRearmMs": 250,
+    "status": "Initial calibration, physical camera PENDING"
+  },
+  "browsers": {
+    "dwell": "PASS, four viewports and ten consecutive complete cycles",
+    "ownership": "PASS, synthetic production camera chain",
+    "b01": "PASS",
+    "b02": "PASS",
+    "b03": "PASS",
+    "stage": "PASS",
+    "motion": "PASS, 30 transitions",
+    "realModel": "PASS, blank synthetic pixels"
+  },
+  "physicalCamera": {
+    "status": "PENDING",
+    "items": 10
+  },
+  "files": {
+    "production": [
+      "Mural-Exhibition/public/hand-ownership.mjs",
+      "Mural-Exhibition/public/gesture-pointer.mjs",
+      "Mural-Exhibition/public/dwell-controller.mjs",
+      "Mural-Exhibition/public/interaction-config.mjs",
+      "Mural-Exhibition/public/index.html"
+    ],
+    "tests": [
+      "Mural-Exhibition/hand-ownership.test.mjs",
+      "Mural-Exhibition/gesture-pointer.test.mjs",
+      "Mural-Exhibition/dwell-controller.test.mjs",
+      "Mural-Exhibition/b03-dwell-production.test.mjs",
+      "Mural-Exhibition/b03-dwell-harness.mjs",
+      "Mural-Exhibition/b03-dwell-browser-check.cjs",
+      "Mural-Exhibition/b03-hand-lock-browser-check.cjs",
+      "Mural-Exhibition/package.json"
+    ],
+    "docs": [
+      "docs/B03_CHARACTER_STUDY.md",
+      "docs/validation/b03-hand-lock-v4.1/architecture.md",
+      "docs/validation/b03-hand-lock-v4.1/browser-results.json",
+      "docs/validation/b03-hand-lock-v4.1/build-results.json",
+      "docs/validation/b03-hand-lock-v4.1/PHYSICAL_CAMERA_CHECKLIST.md",
+      "docs/validation/b03-hand-lock-v4.1/README.md",
+      "docs/validation/b03-hand-lock-v4.1/selected/01-unlocked-competition.webp",
+      "docs/validation/b03-hand-lock-v4.1/selected/02-left-locked.webp",
+      "docs/validation/b03-hand-lock-v4.1/selected/03-non-control-ignored.webp",
+      "docs/validation/b03-hand-lock-v4.1/selected/04-hand-released.webp",
+      "docs/validation/b03-hand-lock-v4.1/selected/05-right-locked.webp",
+      "docs/validation/b03-hand-lock-v4.1/selected/06-fixture-ambiguity-failure.webp",
+      "docs/validation/b03-hand-lock-v4.1/selected/07-ready-1366.webp",
+      "docs/validation/b03-hand-lock-v4.1/selected/08-release-wait-failure.webp",
+      "docs/validation/b03-hand-lock-v4.1/selected/manifest.json"
+    ]
+  },
+  "protectedScope": "No Module A/B01/B02 production, camera preview, OperatorTracker/Pose, stage/material/asset changes; pre-existing uncommitted files preserved"
+}

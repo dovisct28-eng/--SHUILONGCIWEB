@@ -19,7 +19,8 @@ export const INTERACTION_CONFIG = Object.freeze({
  twoHandNeutralHoldMs:120, nextTwoHandConfirmMs:120,
  releaseOutsideMs:300, releaseAbsentMs:300, releaseSingleMs:500,
  imageAspect:320/240
- ,dwellMs:1000, dwellReleaseMs:250, trackingPauseMs:200, dwellMaxStepMs:120,
+ ,controlHandAcquireMs:350, controlHandLossGraceMs:650, controlHandRearmMs:250,
+ dwellMs:1000, dwellReleaseMs:250, trackingPauseMs:200, dwellMaxStepMs:120,
  pointerTauMs:75, pointerFastTauMs:28, pointerFastSpeed:.35,
  pointerStableSpeed:.65, pointerSettleMs:140, pointerJump:.24,
  pointerInput:Object.freeze({left:.2,right:.8,top:.2,bottom:.8}),

@@ -1,0 +1,3144 @@
+{
+  "status": "PASS",
+  "date": "2026-10-08",
+  "dwell": {
+    "status": "PASS",
+    "scope": "Actual installed Chrome, Three.js, GSAP, production Camera.onFrame → Hands.onResults → OperatorTracker → HandOwnership → GesturePointer → DwellController. Camera pixels, Hands and Pose outputs SYNTHETIC. Physical camera PENDING.",
+    "views": [
+      {
+        "width": 1280,
+        "height": 800,
+        "before": {
+          "index": 0,
+          "reading": false,
+          "state": "READY",
+          "mode": "NAVIGATION",
+          "progress": 0,
+          "releaseRequired": false,
+          "blockedReason": "TARGET_OUTSIDE",
+          "handKey": "visitor-1:left",
+          "handLock": {
+            "state": "HAND_LOCKED",
+            "lockedHandKey": "visitor-1:left",
+            "operatorId": "visitor-1",
+            "selectedHand": {
+              "operatorId": "visitor-1",
+              "side": "left",
+              "fresh": true,
+              "source": "pose"
+            },
+            "valid": true,
+            "reason": "READY",
+            "changed": false,
+            "candidate": null,
+            "candidateDurationMs": 0,
+            "lockDurationMs": 1050.300000000745,
+            "lossDurationMs": 0,
+            "ignoredHands": 0,
+            "diagnostic": null
+          },
+          "pointer": {
+            "valid": true,
+            "key": "visitor-1:left",
+            "stable": true,
+            "reason": "READY"
+          },
+          "operator": "visitor-1",
+          "diagnostics": {
+            "poseFresh": true,
+            "operatorObservable": true,
+            "poseAgeMs": 98.10000000149012,
+            "candidateHoldMs": 0,
+            "operatorLossMs": 98.10000000149012,
+            "handsDetected": 1,
+            "handsAssigned": 1,
+            "leftAssigned": true,
+            "rightAssigned": false,
+            "leftSource": "pose",
+            "rightSource": null,
+            "posePeople": 1,
+            "bodyMode": "upper",
+            "shoulderWidth": 0.30000000000000004,
+            "hipsVisible": false,
+            "leftWristVisible": true,
+            "rightWristVisible": false,
+            "assignmentRejections": [],
+            "assignmentBlocked": false,
+            "assignmentStatus": "OK"
+          }
+        },
+        "dwelling": {
+          "index": 0,
+          "reading": false,
+          "state": "DWELLING",
+          "mode": "NAVIGATION",
+          "progress": 0.3286999999992549,
+          "releaseRequired": false,
+          "blockedReason": "DWELLING",
+          "handKey": "visitor-1:left",
+          "handLock": {
+            "state": "HAND_LOCKED",
+            "lockedHandKey": "visitor-1:left",
+            "operatorId": "visitor-1",
+            "selectedHand": {
+              "operatorId": "visitor-1",
+              "side": "left",
+              "fresh": true,
+              "source": "pose"
+            },
+            "valid": true,
+            "reason": "READY",
+            "changed": false,
+            "candidate": null,
+            "candidateDurationMs": 0,
+            "lockDurationMs": 4845.5,
+            "lossDurationMs": 0,
+            "ignoredHands": 0,
+            "diagnostic": null
+          },
+          "pointer": {
+            "valid": true,
+            "key": "visitor-1:left",
+            "stable": true,
+            "reason": "READY"
+          },
+          "operator": "visitor-1",
+          "diagnostics": {
+            "poseFresh": true,
+            "operatorObservable": true,
+            "poseAgeMs": 33.600000001490116,
+            "candidateHoldMs": 0,
+            "operatorLossMs": 33.600000001490116,
+            "handsDetected": 1,
+            "handsAssigned": 1,
+            "leftAssigned": true,
+            "rightAssigned": false,
+            "leftSource": "pose",
+            "rightSource": null,
+            "posePeople": 1,
+            "bodyMode": "upper",
+            "shoulderWidth": 0.30000000000000004,
+            "hipsVisible": false,
+            "leftWristVisible": true,
+            "rightWristVisible": false,
+            "assignmentRejections": [],
+            "assignmentBlocked": false,
+            "assignmentStatus": "OK"
+          }
+        },
+        "next": {
+          "index": 1,
+          "reading": false,
+          "state": "ACTION_TRANSITION",
+          "mode": "TRANSITION",
+          "progress": 0,
+          "releaseRequired": true,
+          "blockedReason": "ACTION_LOCKED",
+          "handKey": "visitor-1:left",
+          "handLock": {
+            "state": "HAND_LOCKED",
+            "lockedHandKey": "visitor-1:left",
+            "operatorId": "visitor-1",
+            "selectedHand": {
+              "operatorId": "visitor-1",
+              "side": "left",
+              "fresh": true,
+              "source": "pose"
+            },
+            "valid": false,
+            "reason": "ACTION_LOCKED",
+            "changed": false,
+            "candidate": null,
+            "candidateDurationMs": 0,
+            "lockDurationMs": 17518.10000000149,
+            "lossDurationMs": 0,
+            "ignoredHands": 0,
+            "diagnostic": null
+          },
+          "pointer": {
+            "valid": false,
+            "key": null,
+            "stable": false,
+            "reason": "ACTION_LOCKED"
+          },
+          "operator": "visitor-1",
+          "diagnostics": {
+            "poseFresh": true,
+            "operatorObservable": true,
+            "poseAgeMs": 34,
+            "candidateHoldMs": 0,
+            "operatorLossMs": 34,
+            "handsDetected": 1,
+            "handsAssigned": 1,
+            "leftAssigned": true,
+            "rightAssigned": false,
+            "leftSource": "pose",
+            "rightSource": null,
+            "posePeople": 1,
+            "bodyMode": "upper",
+            "shoulderWidth": 0.30000000000000004,
+            "hipsVisible": false,
+            "leftWristVisible": true,
+            "rightWristVisible": false,
+            "assignmentRejections": [],
+            "assignmentBlocked": false,
+            "assignmentStatus": "OK"
+          }
+        }
+      },
+      {
+        "width": 1366,
+        "height": 768,
+        "before": {
+          "index": 0,
+          "reading": false,
+          "state": "READY",
+          "mode": "NAVIGATION",
+          "progress": 0,
+          "releaseRequired": false,
+          "blockedReason": "TARGET_OUTSIDE",
+          "handKey": "visitor-1:left",
+          "handLock": {
+            "state": "HAND_LOCKED",
+            "lockedHandKey": "visitor-1:left",
+            "operatorId": "visitor-1",
+            "selectedHand": {
+              "operatorId": "visitor-1",
+              "side": "left",
+              "fresh": true,
+              "source": "pose"
+            },
+            "valid": true,
+            "reason": "READY",
+            "changed": false,
+            "candidate": null,
+            "candidateDurationMs": 0,
+            "lockDurationMs": 22371.89999999851,
+            "lossDurationMs": 0,
+            "ignoredHands": 0,
+            "diagnostic": null
+          },
+          "pointer": {
+            "valid": true,
+            "key": "visitor-1:left",
+            "stable": true,
+            "reason": "READY"
+          },
+          "operator": "visitor-1",
+          "diagnostics": {
+            "poseFresh": true,
+            "operatorObservable": true,
+            "poseAgeMs": 99.5,
+            "candidateHoldMs": 0,
+            "operatorLossMs": 99.5,
+            "handsDetected": 1,
+            "handsAssigned": 1,
+            "leftAssigned": true,
+            "rightAssigned": false,
+            "leftSource": "pose",
+            "rightSource": null,
+            "posePeople": 1,
+            "bodyMode": "upper",
+            "shoulderWidth": 0.30000000000000004,
+            "hipsVisible": false,
+            "leftWristVisible": true,
+            "rightWristVisible": false,
+            "assignmentRejections": [],
+            "assignmentBlocked": false,
+            "assignmentStatus": "OK"
+          }
+        },
+        "dwelling": {
+          "index": 0,
+          "reading": false,
+          "state": "DWELLING",
+          "mode": "NAVIGATION",
+          "progress": 0.39579999999701976,
+          "releaseRequired": false,
+          "blockedReason": "DWELLING",
+          "handKey": "visitor-1:left",
+          "handLock": {
+            "state": "HAND_LOCKED",
+            "lockedHandKey": "visitor-1:left",
+            "operatorId": "visitor-1",
+            "selectedHand": {
+              "operatorId": "visitor-1",
+              "side": "left",
+              "fresh": true,
+              "source": "pose"
+            },
+            "valid": true,
+            "reason": "READY",
+            "changed": false,
+            "candidate": null,
+            "candidateDurationMs": 0,
+            "lockDurationMs": 26110.199999999255,
+            "lossDurationMs": 0,
+            "ignoredHands": 0,
+            "diagnostic": null
+          },
+          "pointer": {
+            "valid": true,
+            "key": "visitor-1:left",
+            "stable": true,
+            "reason": "READY"
+          },
+          "operator": "visitor-1",
+          "diagnostics": {
+            "poseFresh": true,
+            "operatorObservable": true,
+            "poseAgeMs": 99.89999999850988,
+            "candidateHoldMs": 0,
+            "operatorLossMs": 99.89999999850988,
+            "handsDetected": 1,
+            "handsAssigned": 1,
+            "leftAssigned": true,
+            "rightAssigned": false,
+            "leftSource": "pose",
+            "rightSource": null,
+            "posePeople": 1,
+            "bodyMode": "upper",
+            "shoulderWidth": 0.30000000000000004,
+            "hipsVisible": false,
+            "leftWristVisible": true,
+            "rightWristVisible": false,
+            "assignmentRejections": [],
+            "assignmentBlocked": false,
+            "assignmentStatus": "OK"
+          }
+        },
+        "next": {
+          "index": 1,
+          "reading": false,
+          "state": "ACTION_TRANSITION",
+          "mode": "TRANSITION",
+          "progress": 0,
+          "releaseRequired": true,
+          "blockedReason": "ACTION_LOCKED",
+          "handKey": "visitor-1:left",
+          "handLock": {
+            "state": "HAND_LOCKED",
+            "lockedHandKey": "visitor-1:left",
+            "operatorId": "visitor-1",
+            "selectedHand": {
+              "operatorId": "visitor-1",
+              "side": "left",
+              "fresh": true,
+              "source": "pose"
+            },
+            "valid": false,
+            "reason": "ACTION_LOCKED",
+            "changed": false,
+            "candidate": null,
+            "candidateDurationMs": 0,
+            "lockDurationMs": 38918.39999999851,
+            "lossDurationMs": 0,
+            "ignoredHands": 0,
+            "diagnostic": null
+          },
+          "pointer": {
+            "valid": false,
+            "key": null,
+            "stable": false,
+            "reason": "ACTION_LOCKED"
+          },
+          "operator": "visitor-1",
+          "diagnostics": {
+            "poseFresh": true,
+            "operatorObservable": true,
+            "poseAgeMs": 199.60000000149012,
+            "candidateHoldMs": 0,
+            "operatorLossMs": 199.60000000149012,
+            "handsDetected": 1,
+            "handsAssigned": 1,
+            "leftAssigned": true,
+            "rightAssigned": false,
+            "leftSource": "pose",
+            "rightSource": null,
+            "posePeople": 1,
+            "bodyMode": "upper",
+            "shoulderWidth": 0.30000000000000004,
+            "hipsVisible": false,
+            "leftWristVisible": true,
+            "rightWristVisible": false,
+            "assignmentRejections": [],
+            "assignmentBlocked": false,
+            "assignmentStatus": "OK"
+          }
+        }
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "before": {
+          "index": 0,
+          "reading": false,
+          "state": "READY",
+          "mode": "NAVIGATION",
+          "progress": 0,
+          "releaseRequired": false,
+          "blockedReason": "TARGET_OUTSIDE",
+          "handKey": "visitor-1:left",
+          "handLock": {
+            "state": "HAND_LOCKED",
+            "lockedHandKey": "visitor-1:left",
+            "operatorId": "visitor-1",
+            "selectedHand": {
+              "operatorId": "visitor-1",
+              "side": "left",
+              "fresh": true,
+              "source": "pose"
+            },
+            "valid": true,
+            "reason": "READY",
+            "changed": false,
+            "candidate": null,
+            "candidateDurationMs": 0,
+            "lockDurationMs": 43686.10000000149,
+            "lossDurationMs": 0,
+            "ignoredHands": 0,
+            "diagnostic": null
+          },
+          "pointer": {
+            "valid": true,
+            "key": "visitor-1:left",
+            "stable": true,
+            "reason": "READY"
+          },
+          "operator": "visitor-1",
+          "diagnostics": {
+            "poseFresh": true,
+            "operatorObservable": true,
+            "poseAgeMs": 33.399999998509884,
+            "candidateHoldMs": 0,
+            "operatorLossMs": 33.399999998509884,
+            "handsDetected": 1,
+            "handsAssigned": 1,
+            "leftAssigned": true,
+            "rightAssigned": false,
+            "leftSource": "pose",
+            "rightSource": null,
+            "posePeople": 1,
+            "bodyMode": "upper",
+            "shoulderWidth": 0.30000000000000004,
+            "hipsVisible": false,
+            "leftWristVisible": true,
+            "rightWristVisible": false,
+            "assignmentRejections": [],
+            "assignmentBlocked": false,
+            "assignmentStatus": "OK"
+          }
+        },
+        "dwelling": {
+          "index": 0,
+          "reading": false,
+          "state": "DWELLING",
+          "mode": "NAVIGATION",
+          "progress": 0.363,
+          "releaseRequired": false,
+          "blockedReason": "DWELLING",
+          "handKey": "visitor-1:left",
+          "handLock": {
+            "state": "HAND_LOCKED",
+            "lockedHandKey": "visitor-1:left",
+            "operatorId": "visitor-1",
+            "selectedHand": {
+              "operatorId": "visitor-1",
+              "side": "left",
+              "fresh": true,
+              "source": "pose"
+            },
+            "valid": true,
+            "reason": "READY",
+            "changed": false,
+            "candidate": null,
+            "candidateDurationMs": 0,
+            "lockDurationMs": 47677.89999999851,
+            "lossDurationMs": 0,
+            "ignoredHands": 0,
+            "diagnostic": null
+          },
+          "pointer": {
+            "valid": true,
+            "key": "visitor-1:left",
+            "stable": true,
+            "reason": "READY"
+          },
+          "operator": "visitor-1",
+          "diagnostics": {
+            "poseFresh": true,
+            "operatorObservable": true,
+            "poseAgeMs": 66.29999999701977,
+            "candidateHoldMs": 0,
+            "operatorLossMs": 66.29999999701977,
+            "handsDetected": 1,
+            "handsAssigned": 1,
+            "leftAssigned": true,
+            "rightAssigned": false,
+            "leftSource": "pose",
+            "rightSource": null,
+            "posePeople": 1,
+            "bodyMode": "upper",
+            "shoulderWidth": 0.30000000000000004,
+            "hipsVisible": false,
+            "leftWristVisible": true,
+            "rightWristVisible": false,
+            "assignmentRejections": [],
+            "assignmentBlocked": false,
+            "assignmentStatus": "OK"
+          }
+        },
+        "next": {
+          "index": 1,
+          "reading": false,
+          "state": "ACTION_TRANSITION",
+          "mode": "TRANSITION",
+          "progress": 0,
+          "releaseRequired": true,
+          "blockedReason": "ACTION_LOCKED",
+          "handKey": "visitor-1:left",
+          "handLock": {
+            "state": "HAND_LOCKED",
+            "lockedHandKey": "visitor-1:left",
+            "operatorId": "visitor-1",
+            "selectedHand": {
+              "operatorId": "visitor-1",
+              "side": "left",
+              "fresh": true,
+              "source": "pose"
+            },
+            "valid": false,
+            "reason": "ACTION_LOCKED",
+            "changed": false,
+            "candidate": null,
+            "candidateDurationMs": 0,
+            "lockDurationMs": 60949.10000000149,
+            "lossDurationMs": 0,
+            "ignoredHands": 0,
+            "diagnostic": null
+          },
+          "pointer": {
+            "valid": false,
+            "key": null,
+            "stable": false,
+            "reason": "ACTION_LOCKED"
+          },
+          "operator": "visitor-1",
+          "diagnostics": {
+            "poseFresh": true,
+            "operatorObservable": true,
+            "poseAgeMs": 97.59999999776483,
+            "candidateHoldMs": 0,
+            "operatorLossMs": 97.59999999776483,
+            "handsDetected": 1,
+            "handsAssigned": 1,
+            "leftAssigned": true,
+            "rightAssigned": false,
+            "leftSource": "pose",
+            "rightSource": null,
+            "posePeople": 1,
+            "bodyMode": "upper",
+            "shoulderWidth": 0.30000000000000004,
+            "hipsVisible": false,
+            "leftWristVisible": true,
+            "rightWristVisible": false,
+            "assignmentRejections": [],
+            "assignmentBlocked": false,
+            "assignmentStatus": "OK"
+          }
+        }
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "before": {
+          "index": 0,
+          "reading": false,
+          "state": "READY",
+          "mode": "NAVIGATION",
+          "progress": 0,
+          "releaseRequired": false,
+          "blockedReason": "TARGET_OUTSIDE",
+          "handKey": "visitor-1:left",
+          "handLock": {
+            "state": "HAND_LOCKED",
+            "lockedHandKey": "visitor-1:left",
+            "operatorId": "visitor-1",
+            "selectedHand": {
+              "operatorId": "visitor-1",
+              "side": "left",
+              "fresh": true,
+              "source": "pose"
+            },
+            "valid": true,
+            "reason": "READY",
+            "changed": false,
+            "candidate": null,
+            "candidateDurationMs": 0,
+            "lockDurationMs": 65791.89999999851,
+            "lossDurationMs": 0,
+            "ignoredHands": 0,
+            "diagnostic": null
+          },
+          "pointer": {
+            "valid": true,
+            "key": "visitor-1:left",
+            "stable": true,
+            "reason": "READY"
+          },
+          "operator": "visitor-1",
+          "diagnostics": {
+            "poseFresh": true,
+            "operatorObservable": true,
+            "poseAgeMs": 33.30000000074506,
+            "candidateHoldMs": 0,
+            "operatorLossMs": 33.30000000074506,
+            "handsDetected": 1,
+            "handsAssigned": 1,
+            "leftAssigned": true,
+            "rightAssigned": false,
+            "leftSource": "pose",
+            "rightSource": null,
+            "posePeople": 1,
+            "bodyMode": "upper",
+            "shoulderWidth": 0.30000000000000004,
+            "hipsVisible": false,
+            "leftWristVisible": true,
+            "rightWristVisible": false,
+            "assignmentRejections": [],
+            "assignmentBlocked": false,
+            "assignmentStatus": "OK"
+          }
+        },
+        "dwelling": {
+          "index": 0,
+          "reading": false,
+          "state": "DWELLING",
+          "mode": "NAVIGATION",
+          "progress": 0.36370000000298025,
+          "releaseRequired": false,
+          "blockedReason": "DWELLING",
+          "handKey": "visitor-1:left",
+          "handLock": {
+            "state": "HAND_LOCKED",
+            "lockedHandKey": "visitor-1:left",
+            "operatorId": "visitor-1",
+            "selectedHand": {
+              "operatorId": "visitor-1",
+              "side": "left",
+              "fresh": true,
+              "source": "pose"
+            },
+            "valid": true,
+            "reason": "READY",
+            "changed": false,
+            "candidate": null,
+            "candidateDurationMs": 0,
+            "lockDurationMs": 70065.80000000075,
+            "lossDurationMs": 0,
+            "ignoredHands": 0,
+            "diagnostic": null
+          },
+          "pointer": {
+            "valid": true,
+            "key": "visitor-1:left",
+            "stable": true,
+            "reason": "READY"
+          },
+          "operator": "visitor-1",
+          "diagnostics": {
+            "poseFresh": true,
+            "operatorObservable": true,
+            "poseAgeMs": 67.70000000298023,
+            "candidateHoldMs": 0,
+            "operatorLossMs": 67.70000000298023,
+            "handsDetected": 1,
+            "handsAssigned": 1,
+            "leftAssigned": true,
+            "rightAssigned": false,
+            "leftSource": "pose",
+            "rightSource": null,
+            "posePeople": 1,
+            "bodyMode": "upper",
+            "shoulderWidth": 0.30000000000000004,
+            "hipsVisible": false,
+            "leftWristVisible": true,
+            "rightWristVisible": false,
+            "assignmentRejections": [],
+            "assignmentBlocked": false,
+            "assignmentStatus": "OK"
+          }
+        },
+        "next": {
+          "index": 1,
+          "reading": false,
+          "state": "ACTION_TRANSITION",
+          "mode": "TRANSITION",
+          "progress": 0,
+          "releaseRequired": true,
+          "blockedReason": "ACTION_LOCKED",
+          "handKey": "visitor-1:left",
+          "handLock": {
+            "state": "HAND_LOCKED",
+            "lockedHandKey": "visitor-1:left",
+            "operatorId": "visitor-1",
+            "selectedHand": {
+              "operatorId": "visitor-1",
+              "side": "left",
+              "fresh": true,
+              "source": "pose"
+            },
+            "valid": false,
+            "reason": "ACTION_LOCKED",
+            "changed": false,
+            "candidate": null,
+            "candidateDurationMs": 0,
+            "lockDurationMs": 83618.60000000149,
+            "lossDurationMs": 0,
+            "ignoredHands": 0,
+            "diagnostic": null
+          },
+          "pointer": {
+            "valid": false,
+            "key": null,
+            "stable": false,
+            "reason": "ACTION_LOCKED"
+          },
+          "operator": "visitor-1",
+          "diagnostics": {
+            "poseFresh": true,
+            "operatorObservable": true,
+            "poseAgeMs": 32.900000002235174,
+            "candidateHoldMs": 0,
+            "operatorLossMs": 32.900000002235174,
+            "handsDetected": 1,
+            "handsAssigned": 1,
+            "leftAssigned": true,
+            "rightAssigned": false,
+            "leftSource": "pose",
+            "rightSource": null,
+            "posePeople": 1,
+            "bodyMode": "upper",
+            "shoulderWidth": 0.30000000000000004,
+            "hipsVisible": false,
+            "leftWristVisible": true,
+            "rightWristVisible": false,
+            "assignmentRejections": [],
+            "assignmentBlocked": false,
+            "assignmentStatus": "OK"
+          }
+        }
+      }
+    ],
+    "cases": [
+      "Four viewport DOM hitboxes match visible targets; target rectangles avoid whole figure, orbit panels, native controls, archive and original camera preview; true progress and reading release locks",
+      "Resting visible second hand and detection reorder permit one control; unlocked competing hands and three bystander positions block actions; locked hand ignores other target requests; leaving/reacquisition clears ownership",
+      "Production reading scroll uses only #info-text, real elapsed time, directional velocity and central dead zone; short content hides guidance; missing hand stops immediately",
+      "Ten complete cycles, final forward wrap, manual previous/next/I/Escape, hidden/reset, three reentries and bounded one camera/model/renderer/RAF; ordinary preview draws actual skeleton; gated diagnostics"
+    ],
+    "cycles": [
+      {
+        "n": 1,
+        "before": 0,
+        "after": 1,
+        "handBefore": "visitor-3:left",
+        "handAfter": "visitor-3:left",
+        "operatorBefore": "visitor-3",
+        "operatorAfter": "visitor-3",
+        "trackingReleasedDuringLoad": false,
+        "cache": 2,
+        "textures": 3
+      },
+      {
+        "n": 2,
+        "before": 1,
+        "after": 2,
+        "handBefore": "visitor-3:left",
+        "handAfter": "visitor-3:left",
+        "operatorBefore": "visitor-3",
+        "operatorAfter": "visitor-3",
+        "trackingReleasedDuringLoad": false,
+        "cache": 3,
+        "textures": 5
+      },
+      {
+        "n": 3,
+        "before": 2,
+        "after": 3,
+        "handBefore": "visitor-3:left",
+        "handAfter": "visitor-3:left",
+        "operatorBefore": "visitor-3",
+        "operatorAfter": "visitor-3",
+        "trackingReleasedDuringLoad": false,
+        "cache": 3,
+        "textures": 6
+      },
+      {
+        "n": 4,
+        "before": 3,
+        "after": 4,
+        "handBefore": "visitor-3:left",
+        "handAfter": "visitor-3:left",
+        "operatorBefore": "visitor-3",
+        "operatorAfter": "visitor-3",
+        "trackingReleasedDuringLoad": false,
+        "cache": 3,
+        "textures": 5
+      },
+      {
+        "n": 5,
+        "before": 4,
+        "after": 5,
+        "handBefore": "visitor-3:left",
+        "handAfter": "visitor-3:left",
+        "operatorBefore": "visitor-3",
+        "operatorAfter": "visitor-3",
+        "trackingReleasedDuringLoad": false,
+        "cache": 3,
+        "textures": 5
+      },
+      {
+        "n": 6,
+        "before": 5,
+        "after": 6,
+        "handBefore": "visitor-3:left",
+        "handAfter": "visitor-3:left",
+        "operatorBefore": "visitor-3",
+        "operatorAfter": "visitor-3",
+        "trackingReleasedDuringLoad": false,
+        "cache": 3,
+        "textures": 5
+      },
+      {
+        "n": 7,
+        "before": 6,
+        "after": 7,
+        "handBefore": "visitor-3:left",
+        "handAfter": "visitor-3:left",
+        "operatorBefore": "visitor-3",
+        "operatorAfter": "visitor-3",
+        "trackingReleasedDuringLoad": false,
+        "cache": 3,
+        "textures": 6
+      },
+      {
+        "n": 8,
+        "before": 7,
+        "after": 0,
+        "handBefore": "visitor-3:left",
+        "handAfter": "visitor-3:left",
+        "operatorBefore": "visitor-3",
+        "operatorAfter": "visitor-3",
+        "trackingReleasedDuringLoad": false,
+        "cache": 3,
+        "textures": 5
+      },
+      {
+        "n": 9,
+        "before": 0,
+        "after": 1,
+        "handBefore": "visitor-3:left",
+        "handAfter": "visitor-3:left",
+        "operatorBefore": "visitor-3",
+        "operatorAfter": "visitor-3",
+        "trackingReleasedDuringLoad": false,
+        "cache": 3,
+        "textures": 5
+      },
+      {
+        "n": 10,
+        "before": 1,
+        "after": 2,
+        "handBefore": "visitor-3:left",
+        "handAfter": "visitor-3:left",
+        "operatorBefore": "visitor-3",
+        "operatorAfter": "visitor-3",
+        "trackingReleasedDuringLoad": false,
+        "cache": 3,
+        "textures": 5
+      }
+    ],
+    "allHandEventsBeforeWrap": [
+      {
+        "at": 7443.39999999851,
+        "from": null,
+        "to": "visitor-1:left",
+        "reason": "READY",
+        "gapMs": null,
+        "context": {
+          "blocked": false,
+          "locked": false
+        }
+      },
+      {
+        "at": 101781.89999999851,
+        "from": "visitor-1:left",
+        "to": null,
+        "reason": "HAND_LOCK_RELEASED",
+        "gapMs": 653.3999999985099,
+        "context": {
+          "blocked": false,
+          "locked": false
+        }
+      },
+      {
+        "at": 102977.39999999851,
+        "from": null,
+        "to": "visitor-1:left",
+        "reason": "READY",
+        "gapMs": null,
+        "context": {
+          "blocked": false,
+          "locked": false
+        }
+      },
+      {
+        "at": 104619.89999999851,
+        "from": "visitor-1:left",
+        "to": null,
+        "reason": "HAND_LOCK_RELEASED",
+        "gapMs": 654.3999999985099,
+        "context": {
+          "blocked": false,
+          "locked": false
+        }
+      },
+      {
+        "at": 109443.39999999851,
+        "from": null,
+        "to": "visitor-3:left",
+        "reason": "READY",
+        "gapMs": null,
+        "context": {
+          "blocked": false,
+          "locked": false
+        }
+      },
+      {
+        "at": 200058.3999999985,
+        "from": "visitor-3:left",
+        "to": null,
+        "reason": "HAND_LOCK_RELEASED",
+        "gapMs": 656.1000000014901,
+        "context": {
+          "blocked": false,
+          "locked": false
+        }
+      },
+      {
+        "at": 200492.5,
+        "from": null,
+        "to": "visitor-3:left",
+        "reason": "READY",
+        "gapMs": null,
+        "context": {
+          "blocked": false,
+          "locked": false
+        }
+      }
+    ],
+    "cycleOperatorSafetyReleases": [
+      {
+        "at": 200058.3999999985,
+        "from": "visitor-3:left",
+        "to": null,
+        "reason": "HAND_LOCK_RELEASED",
+        "gapMs": 656.1000000014901,
+        "context": {
+          "blocked": false,
+          "locked": false
+        }
+      }
+    ],
+    "continuityConclusion": "Ten complete cycles use the same semantic hand. One 656.1ms valid-observation gap caused compliant release and reacquisition; uninterrupted lock across all ten cycles is not claimed.",
+    "lifecycle": {
+      "starts": 4,
+      "stops": 4,
+      "models": 1,
+      "active": 0,
+      "max": 1,
+      "options": {
+        "maxNumHands": 4,
+        "modelComplexity": 1,
+        "minDetectionConfidence": 0.6,
+        "minTrackingConfidence": 0.6
+      },
+      "latest": {
+        "hands": [],
+        "poses": [
+          [
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.65,
+              "y": 0.35,
+              "z": 0,
+              "visibility": 1,
+              "presence": 1
+            },
+            {
+              "x": 0.35,
+              "y": 0.35,
+              "z": 0,
+              "visibility": 1,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.28,
+              "y": 0.7,
+              "z": 0,
+              "visibility": 1,
+              "presence": 1
+            },
+            {
+              "x": 0.72,
+              "y": 0.7,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.605,
+              "y": 0.6900000000000001,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.395,
+              "y": 0.6900000000000001,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            }
+          ]
+        ]
+      },
+      "current": {
+        "hands": [],
+        "poses": [
+          [
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.65,
+              "y": 0.35,
+              "z": 0,
+              "visibility": 1,
+              "presence": 1
+            },
+            {
+              "x": 0.35,
+              "y": 0.35,
+              "z": 0,
+              "visibility": 1,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.28,
+              "y": 0.7,
+              "z": 0,
+              "visibility": 1,
+              "presence": 1
+            },
+            {
+              "x": 0.72,
+              "y": 0.7,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.605,
+              "y": 0.6900000000000001,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.395,
+              "y": 0.6900000000000001,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            },
+            {
+              "x": 0.5,
+              "y": 0.52,
+              "z": 0,
+              "visibility": 0,
+              "presence": 1
+            }
+          ]
+        ]
+      },
+      "resolve": null
+    },
+    "exit": {
+      "index": 0,
+      "reading": false,
+      "state": "NO_OPERATOR",
+      "mode": "NAVIGATION",
+      "progress": 0,
+      "releaseRequired": false,
+      "blockedReason": "NO_PERSON",
+      "handKey": null,
+      "handLock": {
+        "state": "WAIT_HAND",
+        "lockedHandKey": null,
+        "operatorId": null,
+        "selectedHand": null,
+        "valid": false,
+        "reason": "WAIT_HAND",
+        "changed": false,
+        "candidate": null,
+        "candidateDurationMs": 0,
+        "lockDurationMs": 0,
+        "lossDurationMs": 0,
+        "ignoredHands": 0,
+        "diagnostic": null
+      },
+      "pointer": {
+        "valid": false,
+        "reason": "NO_PERSON"
+      },
+      "diagnostics": {}
+    },
+    "errors": []
+  },
+  "ownership": {
+    "environment": "Actual Chrome and production Camera → Hands.onResults → OperatorTracker → HandOwnership → GesturePointer → DwellController. Camera pixels and landmark inference are synthetic.",
+    "cases": [
+      "No arbitrary selection from two simultaneous requests",
+      "Separate acquisition and dwell; left OPEN continues through competing right NEXT and array reorder",
+      "Non-control right hand in reading scroll region produces zero scroll",
+      "Loss 100ms: same key, no fallback, zero dwell",
+      "Loss 300ms: same key, no fallback, zero dwell",
+      "Loss 500ms: same key, no fallback, zero dwell",
+      "CLOSE and NEXT preserve left control across real stage transition",
+      "Long loss releases left; right requires new acquisition and cannot bypass prior action release",
+      "Hidden and B03 exit reset control hand and camera ownership"
+    ],
+    "errors": [],
+    "physicalCamera": "PENDING",
+    "status": "PASS"
+  },
+  "b01": {
+    "status": "PASS",
+    "processExitCode": 0,
+    "views": [
+      {
+        "width": 1440,
+        "height": 900,
+        "overflow": false
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "overflow": false
+      },
+      {
+        "width": 1366,
+        "height": 768,
+        "overflow": false
+      },
+      {
+        "width": 1280,
+        "height": 800,
+        "overflow": false
+      }
+    ],
+    "functional": [
+      "native keyboard Enter; map original image/8 hotspots; drag/wheel; hotspot to detail; org/line/color; detail→map→B01",
+      "real cyber dependencies and renderer; injected NotAllowedError",
+      "6 simulated camera sessions; max 1; all stopped; single existing renderer; repeated cyber↔gallery↔selection",
+      "NotFoundError message and return",
+      "NotReadableError message and return",
+      "NotAllowedError message and return",
+      "late camera startup after return is stopped",
+      "20 rapid entry clicks serialize",
+      "asset-api-error recovery",
+      "map-image-error recovery",
+      "homepage image failure/retry; reduced motion; Space native entry",
+      "blocked CDN shows retry and gallery remains usable",
+      "failed cached Three ES module import recovers on retry",
+      "unsupported camera returns to selection",
+      "real A08→B01→native back restores A08 at 42 screens; direct refresh"
+    ],
+    "errors": [],
+    "lifecycle": {
+      "starts": 6,
+      "stops": 6,
+      "active": 0,
+      "max": 1,
+      "renderers": 1,
+      "visible": [
+        "splash-screen"
+      ]
+    }
+  },
+  "b02": {
+    "status": "PASS",
+    "processExitCode": 0,
+    "views": [
+      {
+        "w": 1920,
+        "h": 1080,
+        "galleryReadyMs": 214,
+        "screenshotCompleteMs": 1493,
+        "left": 0,
+        "top": 80,
+        "height": 931.9999389648438,
+        "bottom": 1011.9999389648438,
+        "natural": [
+          8192,
+          1853
+        ],
+        "renderer": 0,
+        "resources": [
+          {
+            "url": "http://localhost:3000/b01.css",
+            "duration": 13.699999999254942,
+            "bytes": 4660
+          },
+          {
+            "url": "http://localhost:3000/gallery.css",
+            "duration": 17.900000002235174,
+            "bytes": 5984
+          },
+          {
+            "url": "http://localhost:3000/b03.css",
+            "duration": 18.800000000745058,
+            "bytes": 28902
+          },
+          {
+            "url": "http://localhost:3000/b01/mural-02-left.webp",
+            "duration": 52.399999998509884,
+            "bytes": 820980
+          },
+          {
+            "url": "http://localhost:3000/gallery-panorama.mjs",
+            "duration": 14.699999999254942,
+            "bytes": 1781
+          },
+          {
+            "url": "http://localhost:3000/gallery-admin.mjs",
+            "duration": 14.700000002980232,
+            "bytes": 5219
+          },
+          {
+            "url": "http://localhost:3000/character-study.mjs",
+            "duration": 16.899999998509884,
+            "bytes": 3982
+          },
+          {
+            "url": "http://localhost:3000/figure-stage.mjs",
+            "duration": 17.600000001490116,
+            "bytes": 8022
+          },
+          {
+            "url": "http://localhost:3000/orbit-stage.mjs",
+            "duration": 23.299999997019768,
+            "bytes": 20846
+          },
+          {
+            "url": "http://localhost:3000/dwell-controller.mjs",
+            "duration": 28.199999999254942,
+            "bytes": 5327
+          },
+          {
+            "url": "http://localhost:3000/gesture-pointer.mjs",
+            "duration": 30.699999999254942,
+            "bytes": 3492
+          },
+          {
+            "url": "http://localhost:3000/hand-ownership.mjs",
+            "duration": 31,
+            "bytes": 5250
+          },
+          {
+            "url": "http://localhost:3000/dwell-feedback.mjs",
+            "duration": 31.800000000745058,
+            "bytes": 2734
+          },
+          {
+            "url": "http://localhost:3000/interaction-config.mjs",
+            "duration": 41.79999999701977,
+            "bytes": 2263
+          },
+          {
+            "url": "http://localhost:3000/pose-pipeline.mjs",
+            "duration": 42,
+            "bytes": 3391
+          },
+          {
+            "url": "http://localhost:3000/operator-tracker.mjs",
+            "duration": 42.19999999925494,
+            "bytes": 12175
+          },
+          {
+            "url": "http://localhost:3000/mural-surface.mjs",
+            "duration": 50.69999999925494,
+            "bytes": 6949
+          },
+          {
+            "url": "http://localhost:3000/orbit-layout.mjs",
+            "duration": 25.100000001490116,
+            "bytes": 9686
+          },
+          {
+            "url": "http://localhost:3000/favicon.ico",
+            "duration": 3.600000001490116,
+            "bytes": 450
+          },
+          {
+            "url": "http://localhost:3000/api/scan-assets",
+            "duration": 79.60000000149012,
+            "bytes": 9271
+          },
+          {
+            "url": "http://localhost:3000/gallery/mural-02-detail.webp",
+            "duration": 59.30000000074506,
+            "bytes": 8029332
+          }
+        ],
+        "memory": 3382604
+      },
+      {
+        "w": 1440,
+        "h": 900,
+        "galleryReadyMs": 123,
+        "screenshotCompleteMs": 1158,
+        "left": 0,
+        "top": 80,
+        "height": 752,
+        "bottom": 832,
+        "natural": [
+          8192,
+          1853
+        ],
+        "renderer": 0,
+        "resources": [
+          {
+            "url": "http://localhost:3000/b01.css",
+            "duration": 4.899999998509884,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/gallery.css",
+            "duration": 5.099999997764826,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/b03.css",
+            "duration": 5.5,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/b01/mural-02-left.webp",
+            "duration": 5.699999999254942,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/gallery-panorama.mjs",
+            "duration": 8.5,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/gallery-admin.mjs",
+            "duration": 10.199999999254942,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/character-study.mjs",
+            "duration": 11,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/figure-stage.mjs",
+            "duration": 11.399999998509884,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/orbit-stage.mjs",
+            "duration": 11.799999997019768,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/dwell-controller.mjs",
+            "duration": 12.800000000745058,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/gesture-pointer.mjs",
+            "duration": 15,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/hand-ownership.mjs",
+            "duration": 15.800000000745058,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/dwell-feedback.mjs",
+            "duration": 16.300000000745058,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/interaction-config.mjs",
+            "duration": 17.100000001490116,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/operator-tracker.mjs",
+            "duration": 18,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/pose-pipeline.mjs",
+            "duration": 21.600000001490116,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/mural-surface.mjs",
+            "duration": 22.399999998509884,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/orbit-layout.mjs",
+            "duration": 9,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/api/scan-assets",
+            "duration": 73.70000000298023,
+            "bytes": 9271
+          },
+          {
+            "url": "http://localhost:3000/gallery/mural-02-detail.webp",
+            "duration": 2.099999997764826,
+            "bytes": 300
+          }
+        ],
+        "memory": 4800142
+      },
+      {
+        "w": 1366,
+        "h": 768,
+        "galleryReadyMs": 153,
+        "screenshotCompleteMs": 1191,
+        "left": 0,
+        "top": 80,
+        "height": 620,
+        "bottom": 700,
+        "natural": [
+          8192,
+          1853
+        ],
+        "renderer": 0,
+        "resources": [
+          {
+            "url": "http://localhost:3000/b01.css",
+            "duration": 4.800000000745058,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/b03.css",
+            "duration": 6.600000001490116,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/gallery.css",
+            "duration": 7.100000001490116,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/b01/mural-02-left.webp",
+            "duration": 8.899999998509884,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/gallery-panorama.mjs",
+            "duration": 6.199999999254942,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/gallery-admin.mjs",
+            "duration": 8,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/character-study.mjs",
+            "duration": 8.300000000745058,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/orbit-stage.mjs",
+            "duration": 8.5,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/figure-stage.mjs",
+            "duration": 9.399999998509884,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/dwell-controller.mjs",
+            "duration": 9.800000000745058,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/gesture-pointer.mjs",
+            "duration": 10.099999997764826,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/hand-ownership.mjs",
+            "duration": 13.400000002235174,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/dwell-feedback.mjs",
+            "duration": 14.399999998509884,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/interaction-config.mjs",
+            "duration": 13.300000000745058,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/operator-tracker.mjs",
+            "duration": 13.800000000745058,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/pose-pipeline.mjs",
+            "duration": 13.300000000745058,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/mural-surface.mjs",
+            "duration": 13.400000002235174,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/orbit-layout.mjs",
+            "duration": 4.900000002235174,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/api/scan-assets",
+            "duration": 95.40000000223517,
+            "bytes": 9271
+          },
+          {
+            "url": "http://localhost:3000/gallery/mural-02-detail.webp",
+            "duration": 4.300000000745058,
+            "bytes": 300
+          }
+        ],
+        "memory": 6939444
+      },
+      {
+        "w": 1280,
+        "h": 800,
+        "galleryReadyMs": 122,
+        "screenshotCompleteMs": 1109,
+        "left": 0,
+        "top": 80,
+        "height": 652,
+        "bottom": 732,
+        "natural": [
+          8192,
+          1853
+        ],
+        "renderer": 0,
+        "resources": [
+          {
+            "url": "http://localhost:3000/b01.css",
+            "duration": 3.2000000029802322,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/gallery.css",
+            "duration": 3.899999998509884,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/b03.css",
+            "duration": 6.600000001490116,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/b01/mural-02-left.webp",
+            "duration": 8.700000002980232,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/gallery-panorama.mjs",
+            "duration": 4.699999999254942,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/gallery-admin.mjs",
+            "duration": 6,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/character-study.mjs",
+            "duration": 7.599999997764826,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/figure-stage.mjs",
+            "duration": 6.900000002235174,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/orbit-stage.mjs",
+            "duration": 11.099999997764826,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/dwell-controller.mjs",
+            "duration": 11.600000001490116,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/gesture-pointer.mjs",
+            "duration": 16.100000001490116,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/hand-ownership.mjs",
+            "duration": 16.300000000745058,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/dwell-feedback.mjs",
+            "duration": 16.700000002980232,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/interaction-config.mjs",
+            "duration": 16.899999998509884,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/operator-tracker.mjs",
+            "duration": 18.300000000745058,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/pose-pipeline.mjs",
+            "duration": 18.599999997764826,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/mural-surface.mjs",
+            "duration": 18.900000002235174,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/orbit-layout.mjs",
+            "duration": 5.400000002235174,
+            "bytes": 300
+          },
+          {
+            "url": "http://localhost:3000/api/scan-assets",
+            "duration": 74.19999999925494,
+            "bytes": 9271
+          },
+          {
+            "url": "http://localhost:3000/gallery/mural-02-detail.webp",
+            "duration": 2.399999998509884,
+            "bytes": 300
+          }
+        ],
+        "memory": 9064658
+      }
+    ],
+    "functional": [
+      "All eight named hotspots open their matching original resources; all hover screenshots recorded",
+      "Pan/zoom preserved through detail and character switching; line/color/video lazy; missing video never requested; video released on switch/return",
+      "Drag, wheel, middle, reset, fresh B01 entry at left",
+      "Real new folder auto-discovery; both click/select orders; draft/cancel/save/reload/edit/unbind; search; simulated save failure restores; progressive resources; original-only detail; fixture cleaned"
+    ],
+    "errors": [],
+    "media": {
+      "passed": true,
+      "frames": 4057,
+      "violations": [],
+      "errors": []
+    }
+  },
+  "b03": {
+    "status": "PASS",
+    "processExitCode": 0,
+    "functional": [
+      "Eight existing stable IDs, names, original images and archives; unmodified ratios/colors",
+      "Four sizes: actual default/long/line/color/index and cyber default/revealed screenshots; projected plane avoids real panel; same person across modes",
+      "Panorama transform restored; failed layer retains original and retries; archive retries; fast switches keep final archive/image and release video",
+      "Actual decoded video playback and browser ended event restore color still; delayed archive and video completions cannot survive switch/exit",
+      "Dynamic ninth ID; original-only; provided English/sources; HTML remains text; unsafe source URL rejected; no silent switch to unrelated cyber character",
+      "Shared manual reveal/close; native NEXT; V4 production callback has its own suite; interrupted transitions settle; resize keeps textures/geometries; native NEXT advances ID and resets archive; exit stops camera boundary",
+      "Native keyboard reveal and shared I/Escape/arrow fallback; exit during actual new texture request cancels late upload and RAF"
+    ],
+    "errors": [],
+    "lifecycle": {
+      "starts": 8,
+      "stops": 8,
+      "active": 0,
+      "max": 1
+    }
+  },
+  "stage": {
+    "status": "PASS",
+    "processExitCode": 0,
+    "functional": [
+      "Author-only preview, character selection, normalized scale/offset/anchor, copy JSON, reset, 8 fast reversals without drift, resize without texture reconstruction",
+      "Figure-only resources enter without legacy layers; synthetic tall/wide Alpha shapes fit 4 sizes in both states; long author summary scrolls and HTML stays text; one renderer and <=80000 vertices",
+      "Opaque/failed-decode figure falls back to legacy without ID change; empty Alpha remains diagnosed without showing stale art; explicit manual bounds allowed with warning; per-source Alpha cache reused; mismatched study dimensions retained in internal diagnostics while correct single media is displayed"
+    ],
+    "synthetic": "Colored rectangles are geometry fixtures, not heritage/person artwork. Formal stage cases here use author ID01; additional local figures are outside this synthetic suite.",
+    "errors": [],
+    "realFigure": {
+      "id": "01",
+      "figureMode": true,
+      "revealed": true,
+      "measurement": {
+        "bounds": {
+          "x": 0,
+          "y": 0,
+          "width": 1,
+          "height": 1
+        },
+        "geometry": {
+          "bounds": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+          },
+          "raw": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 1
+          },
+          "centroid": {
+            "x": 0.46056026022810603,
+            "y": 0.4931339950951094
+          },
+          "aspect": 1.0344062153163152,
+          "distribution": {
+            "left": 0.5474369931150622,
+            "right": 0.4525630068849377,
+            "upper": 0.47225814692404733,
+            "lower": 0.5277418530759529
+          },
+          "coverage": 0.35427642390667496,
+          "grid": {
+            "size": 24,
+            "counts": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1032,
+              4831,
+              5717,
+              3824,
+              171,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              4208,
+              5850,
+              5775,
+              5850,
+              2047,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              5356,
+              5850,
+              5775,
+              5850,
+              5465,
+              3154,
+              2429,
+              180,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              4348,
+              5850,
+              5775,
+              5850,
+              5850,
+              5775,
+              5850,
+              4569,
+              288,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              2843,
+              5791,
+              5775,
+              5850,
+              5850,
+              5775,
+              5850,
+              5850,
+              3669,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              3078,
+              5775,
+              5850,
+              5850,
+              5775,
+              5850,
+              5850,
+              5775,
+              4459,
+              3167,
+              276,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              2899,
+              5775,
+              5850,
+              5850,
+              5775,
+              5850,
+              5850,
+              5775,
+              5850,
+              5850,
+              4763,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              547,
+              5457,
+              5775,
+              5621,
+              5850,
+              5775,
+              5850,
+              5850,
+              5775,
+              5850,
+              5850,
+              2995,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              2827,
+              5850,
+              5503,
+              1529,
+              5780,
+              5775,
+              5850,
+              5850,
+              5775,
+              5850,
+              5850,
+              5003,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              4721,
+              5850,
+              2761,
+              0,
+              4030,
+              5775,
+              5850,
+              5850,
+              5775,
+              5850,
+              5850,
+              5756,
+              222,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              190,
+              5527,
+              3511,
+              49,
+              0,
+              1839,
+              5712,
+              5850,
+              5850,
+              5775,
+              5850,
+              5850,
+              5775,
+              740,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              2980,
+              5134,
+              328,
+              0,
+              0,
+              1860,
+              5752,
+              5850,
+              5850,
+              5775,
+              5850,
+              5850,
+              5775,
+              969,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              4,
+              1210,
+              3170,
+              4723,
+              833,
+              0,
+              0,
+              2197,
+              5668,
+              5852,
+              5928,
+              5928,
+              5852,
+              5928,
+              5928,
+              5852,
+              2882,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              2119,
+              5850,
+              5612,
+              577,
+              0,
+              0,
+              1576,
+              5807,
+              5850,
+              5775,
+              5850,
+              5850,
+              5775,
+              5850,
+              5850,
+              5775,
+              5805,
+              2094,
+              28,
+              0,
+              0,
+              2,
+              0,
+              876,
+              4637,
+              5850,
+              4313,
+              0,
+              0,
+              0,
+              4220,
+              5850,
+              5850,
+              5468,
+              4907,
+              5850,
+              5775,
+              5850,
+              5850,
+              5775,
+              5850,
+              5850,
+              5512,
+              4535,
+              3397,
+              1502,
+              1162,
+              5531,
+              5775,
+              5850,
+              5849,
+              2765,
+              0,
+              0,
+              4270,
+              5850,
+              5652,
+              534,
+              1584,
+              5615,
+              5775,
+              5850,
+              5850,
+              5775,
+              5850,
+              4166,
+              4340,
+              3488,
+              1108,
+              0,
+              4511,
+              5850,
+              5775,
+              5850,
+              5850,
+              5667,
+              567,
+              0,
+              4458,
+              5843,
+              2169,
+              0,
+              0,
+              1961,
+              3708,
+              5850,
+              5850,
+              4821,
+              2968,
+              352,
+              0,
+              0,
+              0,
+              0,
+              5774,
+              5850,
+              5775,
+              5850,
+              5850,
+              5775,
+              1794,
+              0,
+              4224,
+              4915,
+              0,
+              0,
+              0,
+              0,
+              3,
+              1354,
+              5841,
+              5033,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              5270,
+              5850,
+              5775,
+              5850,
+              5850,
+              5775,
+              2137,
+              18,
+              3678,
+              3441,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              4030,
+              5775,
+              626,
+              0,
+              0,
+              0,
+              0,
+              0,
+              2958,
+              5850,
+              5775,
+              5850,
+              5850,
+              4453,
+              3233,
+              3286,
+              3301,
+              2226,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              519,
+              4904,
+              1946,
+              0,
+              0,
+              0,
+              0,
+              0,
+              62,
+              3425,
+              5750,
+              5850,
+              4524,
+              472,
+              6,
+              2984,
+              5056,
+              2568,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              2425,
+              5093,
+              1741,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              729,
+              1120,
+              31,
+              0,
+              0,
+              0,
+              742,
+              1355,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              2595,
+              4983,
+              216,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              4258,
+              2713,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              228,
+              4470,
+              1941,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "width": 1864,
+            "height": 1802
+          }
+        },
+        "width": 1864,
+        "height": 1802,
+        "scanMs": 82.70000000298023,
+        "cacheHit": true
+      },
+      "layout": {
+        "scale": 0.2418645948945616,
+        "x": 266.38219755826856,
+        "y": 122.15999999999997,
+        "fitScale": 0.2418645948945616,
+        "effective": {
+          "x": 266.38219755826856,
+          "y": 122.15999999999997,
+          "width": 450.83560488346285,
+          "height": 435.84000000000003
+        }
+      },
+      "grid": 5925,
+      "rendererCount": 1,
+      "textures": 3,
+      "geometries": 2
+    }
+  },
+  "motion": {
+    "status": "PASS",
+    "processExitCode": 0,
+    "views": 4,
+    "completedTransitions": 30,
+    "checks": [
+      "V4 recognition is covered by b03-dwell-browser-check; this suite drives native NEXT. 15s actual CSS/GSAP recording includes energy/drift/scan and native NEXT to a rebuilt local figure stage; four animated views and exact drift/depth/focus peaks; reading slowdown; full-data native NEXT/wrap; fixed clockwise pulse; 30 completed transitions plus interrupted/late requests; bounded DOM/GL/cache/tweens; exact unchanged material alpha; reduced motion/visibility/degradation/exit."
+    ],
+    "errors": [],
+    "limits": "Author visual approval and physical exhibition camera/gesture acceptance remain pending."
+  },
+  "realModel": {
+    "scope": "Real pinned Tasks Vision CPU PoseLandmarker/WASM in Chrome Worker, real legacy Hands inference, actual B03/WebGL/Camera.onFrame/Hands.onResults. Synthetic blank 320x240 camera image only. Checks deployment/cadence/lifecycle under the real stage; no person recognition or exhibition CPU/GPU acceptance claim.",
+    "network": [
+      {
+        "url": "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.21/vision_bundle.mjs",
+        "status": 200
+      },
+      {
+        "url": "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.21/wasm/vision_wasm_internal.js",
+        "status": 200
+      },
+      {
+        "url": "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.21/wasm/vision_wasm_internal.wasm",
+        "status": 200
+      },
+      {
+        "url": "https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_lite/float16/1/pose_landmarker_lite.task",
+        "status": 200
+      }
+    ],
+    "transport": "Chrome default",
+    "initializationElapsedMs": 5702,
+    "start": {
+      "pose": {
+        "models": 1,
+        "frames": 5,
+        "inferenceTotalMs": 531.6000000014901,
+        "inferenceMaxMs": 315.69999999925494,
+        "staleResults": 0,
+        "active": 1,
+        "inFlight": 0,
+        "averageInferenceMs": 106.32000000029802
+      },
+      "notice": "返回选择",
+      "cameraStatus": "摄像头已连接",
+      "handsModels": 1,
+      "performance": {
+        "callbacks": 12,
+        "firstAt": 11178.60000000149,
+        "lastAt": 11514.900000002235,
+        "maxActiveCameras": 1,
+        "activeCameras": 1,
+        "stalePoseFrames": 4,
+        "inputFrames": 12,
+        "raf": 1
+      },
+      "person": "SEARCHING",
+      "phase": "stable",
+      "textures": 1,
+      "geometries": 2,
+      "poseMaxPeople": 4
+    },
+    "raf": {
+      "samples": 782,
+      "averageMs": 6.399104859334088,
+      "maxMs": 37.29999999999927
+    },
+    "end": {
+      "pose": {
+        "models": 1,
+        "frames": 55,
+        "inferenceTotalMs": 3062.9000000171363,
+        "inferenceMaxMs": 315.69999999925494,
+        "staleResults": 0,
+        "active": 1,
+        "inFlight": 0,
+        "averageInferenceMs": 55.68909090940248
+      },
+      "notice": "返回选择",
+      "cameraStatus": "摄像头已连接",
+      "handsModels": 1,
+      "performance": {
+        "callbacks": 164,
+        "firstAt": 11178.60000000149,
+        "lastAt": 16529.699999999255,
+        "maxActiveCameras": 1,
+        "activeCameras": 1,
+        "stalePoseFrames": 5,
+        "inputFrames": 164,
+        "raf": 1
+      },
+      "person": "SEARCHING",
+      "phase": "stable",
+      "textures": 1,
+      "geometries": 2,
+      "poseMaxPeople": 4
+    },
+    "runtime": {
+      "models": 1,
+      "frames": 55,
+      "inferenceTotalMs": 3062.9000000171363,
+      "inferenceMaxMs": 315.69999999925494,
+      "staleResults": 0,
+      "active": 1,
+      "inFlight": 0,
+      "averageInferenceMs": 55.68909090940248,
+      "poseFps": 9.970487357427956,
+      "handsCallbackFps": 30.31028156658099,
+      "stalePoseRatio": 0.006578947368421052,
+      "numPoses": 4
+    },
+    "exit": {
+      "pose": {
+        "models": 1,
+        "frames": 55,
+        "inferenceTotalMs": 3062.9000000171363,
+        "inferenceMaxMs": 315.69999999925494,
+        "staleResults": 0,
+        "active": 0,
+        "inFlight": 1,
+        "averageInferenceMs": 55.68909090940248
+      },
+      "notice": "返回选择",
+      "cameraStatus": "摄像头已停止",
+      "handsModels": 1,
+      "performance": {
+        "callbacks": 165,
+        "firstAt": 11178.60000000149,
+        "lastAt": 16574.300000000745,
+        "maxActiveCameras": 1,
+        "activeCameras": 0,
+        "stalePoseFrames": 5,
+        "inputFrames": 165,
+        "raf": 0
+      },
+      "person": "SEARCHING",
+      "phase": "idle",
+      "textures": 0,
+      "geometries": 0,
+      "poseMaxPeople": 4
+    },
+    "reentry": {
+      "pose": {
+        "models": 1,
+        "frames": 67,
+        "inferenceTotalMs": 3692.500000011176,
+        "inferenceMaxMs": 315.69999999925494,
+        "staleResults": 1,
+        "active": 1,
+        "inFlight": 0,
+        "averageInferenceMs": 55.11194029867427
+      },
+      "notice": "返回选择",
+      "cameraStatus": "摄像头已连接",
+      "handsModels": 1,
+      "performance": {
+        "callbacks": 198,
+        "firstAt": 11178.60000000149,
+        "lastAt": 17882.199999999255,
+        "maxActiveCameras": 1,
+        "activeCameras": 1,
+        "stalePoseFrames": 8,
+        "inputFrames": 198,
+        "raf": 1
+      },
+      "person": "SEARCHING",
+      "phase": "stable",
+      "textures": 1,
+      "geometries": 2,
+      "poseMaxPeople": 4
+    },
+    "errors": [],
+    "status": "PASS"
+  },
+  "failedAttempts": [
+    {
+      "suite": "dwell",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n0 !== 1\n\n    at D:\\YJS\\出兵入将-PC端页面\\Mural-Exhibition\\b03-dwell-browser-check.cjs:46:102",
+      "state": {
+        "index": 0,
+        "reading": false,
+        "state": "DWELLING",
+        "mode": "NAVIGATION",
+        "progress": 0.9226999999992549,
+        "releaseRequired": false,
+        "blockedReason": "DWELLING",
+        "handKey": "visitor-1:left",
+        "handLock": {
+          "state": "HAND_LOCKED",
+          "lockedHandKey": "visitor-1:left",
+          "operatorId": "visitor-1",
+          "selectedHand": {
+            "operatorId": "visitor-1",
+            "side": "left",
+            "fresh": true,
+            "source": "pose"
+          },
+          "valid": true,
+          "reason": "READY",
+          "changed": false,
+          "candidate": null,
+          "candidateDurationMs": 0,
+          "lockDurationMs": 15246.29999999702,
+          "lossDurationMs": 0,
+          "ignoredHands": 0,
+          "diagnostic": null
+        },
+        "pointer": {
+          "valid": true,
+          "key": "visitor-1:left",
+          "stable": true,
+          "reason": "READY"
+        },
+        "operator": "visitor-1",
+        "diagnostics": {
+          "poseFresh": true,
+          "operatorObservable": true,
+          "poseAgeMs": 99.10000000149012,
+          "candidateHoldMs": 0,
+          "operatorLossMs": 99.10000000149012,
+          "handsDetected": 1,
+          "handsAssigned": 1,
+          "leftAssigned": true,
+          "rightAssigned": false,
+          "leftSource": "pose",
+          "rightSource": null,
+          "posePeople": 1,
+          "bodyMode": "upper",
+          "shoulderWidth": 0.30000000000000004,
+          "hipsVisible": false,
+          "leftWristVisible": true,
+          "rightWristVisible": false,
+          "assignmentRejections": [],
+          "assignmentBlocked": false,
+          "assignmentStatus": "OK"
+        }
+      },
+      "rawLocalReport": "local/dwell/results-attempt-1791441324817.json"
+    },
+    {
+      "suite": "dwell",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n0 !== 1\n\n    at D:\\YJS\\出兵入将-PC端页面\\Mural-Exhibition\\b03-dwell-browser-check.cjs:46:102",
+      "state": {
+        "index": 0,
+        "reading": false,
+        "state": "DWELLING",
+        "mode": "NAVIGATION",
+        "progress": 0.9226999999992549,
+        "releaseRequired": false,
+        "blockedReason": "DWELLING",
+        "handKey": "visitor-1:left",
+        "handLock": {
+          "state": "HAND_LOCKED",
+          "lockedHandKey": "visitor-1:left",
+          "operatorId": "visitor-1",
+          "selectedHand": {
+            "operatorId": "visitor-1",
+            "side": "left",
+            "fresh": true,
+            "source": "pose"
+          },
+          "valid": true,
+          "reason": "READY",
+          "changed": false,
+          "candidate": null,
+          "candidateDurationMs": 0,
+          "lockDurationMs": 15246.29999999702,
+          "lossDurationMs": 0,
+          "ignoredHands": 0,
+          "diagnostic": null
+        },
+        "pointer": {
+          "valid": true,
+          "key": "visitor-1:left",
+          "stable": true,
+          "reason": "READY"
+        },
+        "operator": "visitor-1",
+        "diagnostics": {
+          "poseFresh": true,
+          "operatorObservable": true,
+          "poseAgeMs": 99.10000000149012,
+          "candidateHoldMs": 0,
+          "operatorLossMs": 99.10000000149012,
+          "handsDetected": 1,
+          "handsAssigned": 1,
+          "leftAssigned": true,
+          "rightAssigned": false,
+          "leftSource": "pose",
+          "rightSource": null,
+          "posePeople": 1,
+          "bodyMode": "upper",
+          "shoulderWidth": 0.30000000000000004,
+          "hipsVisible": false,
+          "leftWristVisible": true,
+          "rightWristVisible": false,
+          "assignmentRejections": [],
+          "assignmentBlocked": false,
+          "assignmentStatus": "OK"
+        }
+      },
+      "rawLocalReport": "local/dwell/results-attempt-1791441345030.json"
+    },
+    {
+      "suite": "dwell",
+      "status": "FAIL",
+      "error": "page.waitForFunction: Timeout 8000ms exceeded.\n    at release (D:\\YJS\\出兵入将-PC端页面\\Mural-Exhibition\\b03-dwell-browser-check.cjs:14:140)\n    at async D:\\YJS\\出兵入将-PC端页面\\Mural-Exhibition\\b03-dwell-browser-check.cjs:71:4",
+      "state": {
+        "index": 7,
+        "reading": false,
+        "state": "BLOCKED",
+        "mode": "NAVIGATION",
+        "progress": 0,
+        "releaseRequired": true,
+        "blockedReason": "WAIT_HAND",
+        "handKey": "visitor-3:left",
+        "handLock": {
+          "state": "WAIT_HAND",
+          "lockedHandKey": null,
+          "operatorId": "visitor-3",
+          "selectedHand": null,
+          "valid": false,
+          "reason": "WAIT_HAND",
+          "changed": false,
+          "candidate": null,
+          "candidateDurationMs": 0,
+          "lockDurationMs": 0,
+          "lossDurationMs": 0,
+          "ignoredHands": 0,
+          "diagnostic": null
+        },
+        "pointer": {
+          "valid": false,
+          "key": null,
+          "stable": false,
+          "reason": "WAIT_HAND"
+        },
+        "operator": "visitor-3",
+        "diagnostics": {
+          "poseFresh": true,
+          "operatorObservable": true,
+          "poseAgeMs": 67.29999999701977,
+          "candidateHoldMs": 0,
+          "operatorLossMs": 67.29999999701977,
+          "handsDetected": 1,
+          "handsAssigned": 1,
+          "leftAssigned": true,
+          "rightAssigned": false,
+          "leftSource": "pose",
+          "rightSource": null,
+          "posePeople": 1,
+          "bodyMode": "upper",
+          "shoulderWidth": 0.30000000000000004,
+          "hipsVisible": false,
+          "leftWristVisible": true,
+          "rightWristVisible": false,
+          "assignmentRejections": [],
+          "assignmentBlocked": false,
+          "assignmentStatus": "OK"
+        }
+      },
+      "rawLocalReport": "local/dwell/results-attempt-1791442405765.json"
+    },
+    {
+      "suite": "ownership",
+      "status": "FAIL",
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ null\n- 'visitor-1:left'\n\n    at D:\\YJS\\出兵入将-PC端页面\\Mural-Exhibition\\b03-hand-lock-browser-check.cjs:20:193",
+      "state": {
+        "hand": {
+          "state": "WAIT_HAND",
+          "lockedHandKey": null,
+          "operatorId": "visitor-1",
+          "selectedHand": null,
+          "valid": false,
+          "reason": "AMBIGUOUS_HAND",
+          "changed": false,
+          "candidate": null,
+          "candidateDurationMs": 0,
+          "lockDurationMs": 0,
+          "lossDurationMs": 0,
+          "ignoredHands": 0,
+          "diagnostic": null
+        },
+        "pointer": {
+          "valid": false,
+          "visible": false,
+          "point": null,
+          "key": null,
+          "stable": false,
+          "reason": "AMBIGUOUS_HAND",
+          "gapMs": null,
+          "paused": false
+        },
+        "diagnostics": {
+          "poseFresh": true,
+          "operatorObservable": true,
+          "poseAgeMs": 62.69999999925494,
+          "candidateHoldMs": 0,
+          "operatorLossMs": 62.69999999925494,
+          "handsDetected": 1,
+          "handsAssigned": 0,
+          "leftAssigned": false,
+          "rightAssigned": false,
+          "leftSource": null,
+          "rightSource": null,
+          "posePeople": 1,
+          "bodyMode": "upper",
+          "shoulderWidth": 0.30000000000000004,
+          "hipsVisible": false,
+          "leftWristVisible": true,
+          "rightWristVisible": true,
+          "assignmentRejections": [
+            {
+              "hand": 0,
+              "reason": "AMBIGUOUS_SIDE"
+            }
+          ],
+          "assignmentBlocked": true,
+          "assignmentStatus": "REJECTED"
+        }
+      },
+      "rawLocalReport": "local/ownership/results-attempt-1791441657822.json"
+    }
+  ],
+  "physicalCamera": "PENDING; synthetic detection and blank-image real inference are not person/hand hardware acceptance"
+}

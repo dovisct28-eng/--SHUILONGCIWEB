@@ -1,0 +1,86 @@
+{
+  "scope": "Actual browser rendering, synthetic landmarks, no real camera claim",
+  "items": [
+    {
+      "file": "01-unlocked-competition.webp",
+      "source": "local/ownership/01-unlocked-competition.png",
+      "state": "Unowned simultaneous requests; no selection",
+      "width": 1440,
+      "height": 900,
+      "bytes": 681768,
+      "losslessRgbaEqual": true,
+      "sha256": "053c4e513bcbee54435f97a465ae90992633bf1a1cee614bfb8c565f13458f98"
+    },
+    {
+      "file": "02-left-locked.webp",
+      "source": "local/ownership/02-left-locked.png",
+      "state": "Left hand acquired; acquisition did not trigger action",
+      "width": 1440,
+      "height": 900,
+      "bytes": 682780,
+      "losslessRgbaEqual": true,
+      "sha256": "2d88c3852ae38cdb432c7b1870bed240ad40b873b08309252031d3f75fe27cc2"
+    },
+    {
+      "file": "03-non-control-ignored.webp",
+      "source": "local/ownership/03-non-control-ignored.png",
+      "state": "Left OPEN maintained; right target request ignored",
+      "width": 1440,
+      "height": 900,
+      "bytes": 617606,
+      "losslessRgbaEqual": true,
+      "sha256": "1e4e6fc5eaa15edc2297e1eafdd57e03eaeddda27406bedbc07e639f3638e633"
+    },
+    {
+      "file": "04-hand-released.webp",
+      "source": "local/ownership/04-hand-released.png",
+      "state": "Long loss releases hand and hides pointer",
+      "width": 1440,
+      "height": 900,
+      "bytes": 735694,
+      "losslessRgbaEqual": true,
+      "sha256": "1a2695544d6f318ddee227910ff1384f53142ccfee36da674f169efc2e55f9db"
+    },
+    {
+      "file": "05-right-locked.webp",
+      "source": "local/ownership/05-right-locked-release-required.png",
+      "state": "New right ownership and ignored non-control left",
+      "width": 1440,
+      "height": 900,
+      "bytes": 740236,
+      "losslessRgbaEqual": true,
+      "sha256": "fc6c59153b7b4643f74dba3889e949e0e63ee6c4092a8856a0d60a32c7738626"
+    },
+    {
+      "file": "06-fixture-ambiguity-failure.webp",
+      "source": "local/ownership/failure.png",
+      "state": "Retained first failed synthetic Pose case; ambiguous side blocked safely",
+      "width": 1440,
+      "height": 900,
+      "bytes": 680154,
+      "losslessRgbaEqual": true,
+      "sha256": "0d1974783b71274555ae57aac5a27add6ecfb297bb134219e595747eb1fe2fcb"
+    },
+    {
+      "file": "08-release-wait-failure.webp",
+      "source": "local/dwell/failure.png",
+      "state": "Retained stronger continuous-cycle attempt: control ownership safely released and neutral input could not reacquire",
+      "width": 1440,
+      "height": 900,
+      "bytes": 985294,
+      "losslessRgbaEqual": true,
+      "sha256": "beec0bf4af41c651015fe43f0067b020e4ab19e029d0d6afd99dec65a8e7d70d"
+    },
+    {
+      "file": "07-ready-1366.webp",
+      "source": "local/dwell/01-ready-1366.png",
+      "state": "Normal presentation at 1366x768; control locked without debug overlay",
+      "width": 1366,
+      "height": 768,
+      "bytes": 596752,
+      "losslessRgbaEqual": true,
+      "sha256": "fe993b8cc91296f47ac2b59fb20b576ae8b1a58f90e41f9356c305041a28a425"
+    }
+  ],
+  "totalBytes": 5720284
+}

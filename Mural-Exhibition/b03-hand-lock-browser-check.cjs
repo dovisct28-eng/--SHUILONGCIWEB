@@ -1,0 +1,42 @@
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const {chromium}=require('playwright'),{createApp}=require('./server.js');
+const {person,syntheticCamera}=require('./b03-gesture-fixtures.cjs');
+const out=path.resolve(process.env.B03_HAND_LOCK_VALIDATION_DIR||'../docs/validation/b03-hand-lock-v4.1/local/ownership');fs.mkdirSync(out,{recursive:true});
+if(fs.existsSync(path.join(out,'results.json')))fs.copyFileSync(path.join(out,'results.json'),path.join(out,'results-attempt-'+Date.now()+'.json'));
+const report={environment:'Actual Chrome and production Camera → Hands.onResults → OperatorTracker → HandOwnership → GesturePointer → DwellController. Camera pixels and landmark inference are synthetic.',cases:[],errors:[],physicalCamera:'PENDING'};
+const instrument=`window.__lock={snapshot(){return {hand:handOwnership.snapshot(performance.now()),pointer:controlPointer,person:ownership,reading:isRevealed,index:currentSeriesIndex,dwell:dwellController.snapshot(),targets:dwellFeedback.targets,region:dwellFeedback.region,scroll:document.getElementById('info-text').scrollTop,context:gestureContext(),phase:webglContainer.dataset.phase,pose:posePipeline.snapshot(),cameras:gesturePerformance.activeCameras};}};`;
+const hand=(x,y)=>{const raw=1-x,lm=Array.from({length:21},()=>({x:raw,y,z:0}));lm[0].y=y+.09;lm[5].x=raw-.035;lm[17].x=raw+.035;return lm;};
+const snap=p=>p.evaluate(()=>__lock.snapshot());
+const ready=p=>p.waitForFunction(()=>window.__lock&&!__lock.snapshot().context.locked&&!__lock.snapshot().context.blocked,null,{timeout:40000});
+const target=(s,id,v)=>{const r=s.targets.find(t=>t.id===id);return hand(.2+.6*(r.x+r.width/2)/v.width,.2+.6*(r.y+r.height/2)/v.height);};
+async function hold(p,hands,ms,poses){await p.evaluate(v=>__camera.deliver(v),{hands,poses:poses||[person({hands,upper:true})]});await p.waitForTimeout(ms);}
+async function shot(p,name){const client=await p.context().newCDPSession(p);const {data}=await client.send('Page.captureScreenshot',{format:'png',fromSurface:true});fs.writeFileSync(path.join(out,name+'.png'),Buffer.from(data,'base64'));await client.detach();}
+(async()=>{const server=createApp().listen(0,'localhost');await new Promise(r=>server.once('listening',r));const browser=await chromium.launch({channel:'chrome',headless:true});let p;
+try{
+ p=await browser.newPage({viewport:{width:1440,height:900}});p.on('pageerror',e=>report.errors.push(e.message));
+ await p.route('**/index.html*',async r=>{const response=await r.fetch();await r.fulfill({response,body:(await response.text()).replace(/\r?\n    <\/script>\r?\n<\/body>/,instrument+'\n    </script>\n</body>')});});await syntheticCamera(p,{realDrawing:true});await p.goto('http://localhost:'+server.address().port+'/index.html?gestureDebug=1');await p.locator('#btn-cyber-track').click();await ready(p);await hold(p,[],1100);
+ const initial=await snap(p),id=initial.person.activeOperator.id,v=p.viewportSize(),a=target(initial,'view',v),b=target(initial,'next',v),rest=hand(.5,.5),body=()=>[person({hands:[a,b],upper:true})];
+ await hold(p,[a,b],650,body());assert.equal((await snap(p)).hand.lockedHandKey,null);assert.equal((await snap(p)).hand.reason,'AMBIGUOUS_HAND');await shot(p,'01-unlocked-competition');report.cases.push('No arbitrary selection from two simultaneous requests');
+ await hold(p,[a],200,[person({hands:[a],upper:true,missingWrists:['right']})]);assert.equal((await snap(p)).hand.lockedHandKey,null);await hold(p,[a],400,[person({hands:[a],upper:true,missingWrists:['right']})]);let s=await snap(p);assert.equal(s.hand.lockedHandKey,id+':left');assert.equal(s.reading,false);assert.ok(s.dwell.progress<.5);await shot(p,'02-left-locked');const key=s.hand.lockedHandKey;
+ await hold(p,[b,a],500,body());s=await snap(p);assert.equal(s.hand.lockedHandKey,key);assert.equal(s.hand.valid,true);assert.equal(s.hand.ignoredHands,1);assert.equal(s.index,initial.index);await hold(p,[a,b],800,body());assert.equal((await snap(p)).reading,true);assert.equal((await snap(p)).hand.lockedHandKey,key);await shot(p,'03-non-control-ignored');report.cases.push('Separate acquisition and dwell; left OPEN continues through competing right NEXT and array reorder');
+ await ready(p);await p.waitForTimeout(850);
+ await p.locator('#info-text').evaluate(e=>{const para=document.createElement('p');para.textContent='合成滚动测试。'.repeat(450);e.append(para);});
+ await hold(p,[rest,b],900,[person({hands:[rest,b],upper:true})]);s=await snap(p);const region=s.region;assert.ok(region);const scrollHand=hand(.2+.6*(region.x+region.width/2)/v.width,.2+.6*(region.y+region.height*.8)/v.height);
+ const before=s.scroll;await hold(p,[scrollHand,rest],900,[person({hands:[rest,scrollHand],upper:true})]);assert.equal((await snap(p)).scroll,before);assert.equal((await snap(p)).hand.lockedHandKey,key);report.cases.push('Non-control right hand in reading scroll region produces zero scroll');
+ for(const gap of [100,300,500]){
+  await hold(p,[b],gap,body());s=await snap(p);assert.equal(s.hand.lockedHandKey,key);assert.equal(s.pointer.valid,false);assert.equal(s.dwell.progress,0);report.cases.push('Loss '+gap+'ms: same key, no fallback, zero dwell');
+  await hold(p,[rest,b],700,[person({hands:[rest,b],upper:true})]);assert.equal((await snap(p)).hand.lockedHandKey,key);assert.equal((await snap(p)).hand.valid,true);
+ }
+ // Restore left to VIEW with its correct semantic body wrist, independent of array order.
+ await hold(p,[a,b],1850,body());s=await snap(p);if(s.reading){await hold(p,[rest,b],900,[person({hands:[rest,b],upper:true})]);await hold(p,[a,b],1850,body());}
+ assert.equal((await snap(p)).reading,false);assert.equal((await snap(p)).hand.lockedHandKey,key);await ready(p);await p.waitForTimeout(850);
+ await hold(p,[rest,b],900,[person({hands:[rest,b],upper:true})]);await hold(p,[target(await snap(p),'next',v),hand(.6,.75)],1850,[person({hands:[b,hand(.6,.75)],upper:true})]);await ready(p);s=await snap(p);assert.equal(s.hand.lockedHandKey,key);assert.equal(s.index,initial.index+1);report.cases.push('CLOSE and NEXT preserve left control across real stage transition');
+ // Keep pose observable but remove the control hand; only right requests a target.
+ const current=await snap(p),right=target(current,'view',v),leftRest=hand(.6,.75),rightBody=[person({hands:[leftRest,right],upper:true})];
+ await hold(p,[],800,rightBody);assert.equal((await snap(p)).hand.lockedHandKey,null);await shot(p,'04-hand-released');
+ await hold(p,[right],200,rightBody);assert.equal((await snap(p)).hand.lockedHandKey,null);await hold(p,[right],400,rightBody);s=await snap(p);assert.equal(s.hand.lockedHandKey,id+':right');assert.equal(s.reading,false);assert.equal(s.dwell.releaseRequired,true);
+ await hold(p,[right],1200,rightBody);assert.equal((await snap(p)).dwell.releaseRequired,true);await hold(p,[a,rest],1200,[person({hands:[a,rest],upper:true})]);assert.equal((await snap(p)).reading,false);assert.equal((await snap(p)).hand.lockedHandKey,id+':right');await shot(p,'05-right-locked-release-required');report.cases.push('Long loss releases left; right requires new acquisition and cannot bypass prior action release');
+ await p.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,value:true});document.dispatchEvent(new Event('visibilitychange'));});assert.equal((await snap(p)).hand.lockedHandKey,null);await p.evaluate(()=>{delete document.hidden;document.dispatchEvent(new Event('visibilitychange'));});await hold(p,[],1100);assert.equal((await snap(p)).hand.lockedHandKey,null);
+ await p.locator('#back-btn').click();assert.equal((await snap(p)).hand.lockedHandKey,null);assert.equal((await snap(p)).cameras,0);report.cases.push('Hidden and B03 exit reset control hand and camera ownership');assert.deepEqual(report.errors,[]);report.status='PASS';console.log('V4.1 ownership-focused production browser checks PASS');
+}catch(e){report.status='FAIL';report.failure=e.stack;report.failureState=p?await snap(p).catch(()=>null):null;if(p)await shot(p,'failure').catch(()=>{});throw e;}
+finally{fs.writeFileSync(path.join(out,'results.json'),JSON.stringify(report,null,2));await browser.close();server.closeAllConnections();await new Promise(r=>server.close(r));}})().catch(e=>{console.error(e);process.exitCode=1;});

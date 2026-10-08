@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "architecture": "Express + native modules; no bundled build command",
+  "checks": [
+    "Mural-Exhibition/public/hand-ownership.mjs",
+    "Mural-Exhibition/public/gesture-pointer.mjs",
+    "Mural-Exhibition/public/dwell-controller.mjs",
+    "Mural-Exhibition/public/interaction-config.mjs",
+    "Mural-Exhibition/hand-ownership.test.mjs",
+    "Mural-Exhibition/gesture-pointer.test.mjs",
+    "Mural-Exhibition/dwell-controller.test.mjs",
+    "Mural-Exhibition/b03-dwell-production.test.mjs",
+    "Mural-Exhibition/b03-dwell-harness.mjs",
+    "Mural-Exhibition/b03-dwell-browser-check.cjs",
+    "Mural-Exhibition/b03-hand-lock-browser-check.cjs",
+    "docs/validation/b03-hand-lock-v4.1/local/inline-module.mjs"
+  ],
+  "inlineModule": "PASS",
+  "packageJson": "PASS"
+}

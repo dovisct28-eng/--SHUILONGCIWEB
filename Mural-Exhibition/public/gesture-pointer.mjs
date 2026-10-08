@@ -2,36 +2,35 @@ import {INTERACTION_CONFIG} from './interaction-config.mjs';
 
 const contains=(p,r)=>p.x>=r.x&&p.x<=r.x+r.width&&p.y>=r.y&&p.y<=r.y+r.height;
 export const hitTarget=(p,targets=[])=>p&&targets.find(t=>!t.disabled&&contains(p,t))?.id||null;
+// OperatorTracker has already mirrored palm x. Never infer semantic side here.
+export function mapHandPoint(h,width,height,input=INTERACTION_CONFIG.pointerInput) {
+ return {x:Math.max(0,Math.min(1,(h.x-input.left)/(input.right-input.left)))*width,y:Math.max(0,Math.min(1,(h.y-input.top)/(input.bottom-input.top)))*height};
+}
+export function ownershipBlockReason(ownership) {
+ const d=ownership.diagnostics||{};
+ if(!ownership.activeOperator)return ownership.operatorState==='CANDIDATE'?'PERSON_ACQUIRING':'NO_PERSON';
+ if(!d.poseFresh)return 'POSE_STALE';
+ if(!d.operatorObservable||d.assignmentBlocked)return !d.operatorObservable||d.assignmentRejections?.some(r=>r.reason==='AMBIGUOUS_PERSON')?'AMBIGUOUS_PERSON':'AMBIGUOUS_HAND';
+ return null;
+}
 
-// OperatorTracker mirrors landmark 9 once. Everything below uses screen x/y.
+// Coordinate history belongs to the selected control hand; this class never selects.
 export class GesturePointer {
  constructor(config={}) {this.config={...INTERACTION_CONFIG,...config};this.reset();}
  reset() {this.key=null;this.point=null;this.raw=null;this.lastAt=null;this.missingAt=null;this.unstableUntil=0;}
- update({ownership,now,width,height,targets=[],controlRegions=[]}) {
-  const c=this.config,d=ownership.diagnostics||{},hands=ownership.assignedHands||[];
-  let reason=null;
-  if(!ownership.activeOperator)reason=ownership.operatorState==='CANDIDATE'?'PERSON_ACQUIRING':'NO_PERSON';
-  else if(!d.poseFresh)reason='POSE_STALE';
-  else if(!d.operatorObservable||d.assignmentBlocked)reason=d.assignmentRejections?.some(r=>r.reason==='AMBIGUOUS_PERSON')||!d.operatorObservable?'AMBIGUOUS_PERSON':'AMBIGUOUS_HAND';
-  const fresh=hands.filter(h=>h.fresh&&h.operatorId===ownership.activeOperator?.id);
-  const input=c.pointerInput;
-  const map=h=>({x:Math.max(0,Math.min(1,(h.x-input.left)/(input.right-input.left)))*width,y:Math.max(0,Math.min(1,(h.y-input.top)/(input.bottom-input.top)))*height});
-  const intent=h=>hitTarget(map(h),targets)||controlRegions.find(r=>contains(map(h),r))?.id;
-  const candidates=fresh.filter(h=>intent(h));
-  // Visible resting hands are harmless. Two hands requesting controls are not.
-  if(!reason&&candidates.length>1)reason='AMBIGUOUS_HAND';
-  const prior=fresh.find(h=>`${h.operatorId}:${h.side}`===this.key);
-  let selected=(prior&&intent(prior)?prior:null)||candidates[0]||prior||(fresh.length===1?fresh[0]:null);
-  if(!reason&&!selected)reason=d.handsDetected?'HAND_NOT_ASSIGNED':'HAND_NOT_DETECTED';
-  if(reason) {
+ update({handOwnership,now,width,height}) {
+  const c=this.config,lock=handOwnership;
+  const selected=lock?.selectedHand;
+  const key=selected?`${selected.operatorId}:${selected.side}`:null;
+  if(!lock?.valid||!lock.lockedHandKey||key!==lock.lockedHandKey||!selected?.fresh||selected.operatorId!==lock.operatorId) {
    this.missingAt??=now;
    const gap=this.lastAt===null?Infinity:now-this.lastAt;
-   const paused=reason==='HAND_NOT_DETECTED'||reason==='POSE_STALE';
-   if(!paused||gap>c.trackingPauseMs){this.point=null;this.key=null;this.raw=null;this.lastAt=null;}
-   return {valid:false,visible:!!this.point,point:this.point,key:this.key,stable:false,reason,gapMs:gap,paused};
+   const paused=lock?.state==='HAND_PAUSED';
+   if(!paused||gap>c.trackingPauseMs)this.reset();
+   return {valid:false,visible:!!this.point,point:this.point,key:this.key,stable:false,reason:lock?.reason||'WAIT_HAND',gapMs:gap,paused};
   }
-  const key=`${selected.operatorId}:${selected.side}`,raw=map(selected);
-  const changed=key!==this.key||this.lastAt===null||now-this.lastAt>c.trackingPauseMs;
+  const raw=mapHandPoint(selected,width,height,c.pointerInput);
+  const changed=lock.changed||key!==this.key||this.lastAt===null||this.missingAt!==null||now-this.lastAt>c.trackingPauseMs;
   const dt=this.lastAt===null?0:Math.max(0,now-this.lastAt);
   const delta=this.raw?Math.hypot(raw.x-this.raw.x,raw.y-this.raw.y)/Math.min(width,height):0;
   if(changed){this.point=raw;this.unstableUntil=now+c.pointerSettleMs;}

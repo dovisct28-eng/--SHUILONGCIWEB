@@ -14,9 +14,9 @@ test('reading open/close require release, NEXT is mutually exclusive; transition
  r.c.setReading(false,r.now);assert.deepEqual(r.hold(point(),1200),[]);r.hold(point(150),300);assert.deepEqual(r.hold(point(250),1100),['NEXT']);
  assert.deepEqual(r.hold(point(250),1600,{locked:true}),[]);assert.equal(r.c.state,'ACTION_TRANSITION');assert.deepEqual(r.hold(point(250),1400),[]);
 });
-test('short gap pauses time; long gap, instability, ambiguous ownership and new hand cancel',()=>{
+test('every tracking gap, instability, ambiguous ownership and new hand cancel',()=>{
  for(const invalid of [{valid:false,reason:'HAND_NOT_DETECTED',paused:true},{valid:false,reason:'POSE_STALE',paused:true}]){
-  const r=rig();r.hold(point(),600);r.step(invalid,50);r.step(point(),50);assert.deepEqual(r.hold(point(),300),[]);assert.deepEqual(r.hold(point(),300),['OPEN']);
+  const r=rig();r.hold(point(),600);r.step(invalid,50);r.step(point(),50);assert.deepEqual(r.hold(point(),300),[]);assert.deepEqual(r.hold(point(),300),[]);assert.deepEqual(r.hold(point(),500),['OPEN']);
  }
  for(const p of [{valid:false,reason:'AMBIGUOUS_HAND'}, {...point(),stable:false}, point(50,'A:right')]){
   const r=rig();r.hold(point(),900);r.step(p);assert.deepEqual(r.hold(point(),200),[]);

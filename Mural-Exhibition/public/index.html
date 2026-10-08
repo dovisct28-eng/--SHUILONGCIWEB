@@ -343,6 +343,7 @@
         import { OrbitStage } from './orbit-stage.mjs';
         import { DwellController, readingVelocity } from './dwell-controller.mjs';
         import { GesturePointer } from './gesture-pointer.mjs';
+        import { HandOwnership } from './hand-ownership.mjs';
         import { DwellFeedback } from './dwell-feedback.mjs';
         import { INTERACTION_CONFIG } from './interaction-config.mjs';
         import { OperatorTracker } from './operator-tracker.mjs';
@@ -1168,7 +1169,9 @@
         function renderWebGL() {
             glFrame = requestAnimationFrame(renderWebGL);
             if (currentTrack === 'cyber' && shaderMaterial) {
-                dwellController.tick(performance.now(), gestureContext()); renderGestureFeedback();
+                const now=performance.now(),handLock=handOwnership.tick(now);
+                if(!handLock.valid){controlPointer=gesturePointer.update({handOwnership:handLock,now,width:dwellFeedback.width,height:dwellFeedback.height});readingScrollAt=null;}
+                dwellController.tick(now, gestureContext()); renderGestureFeedback();
                 if(decorationBudget.sample(performance.now(),!document.hidden))applyStageSurface();
                 if (figureMode && colorPoints) colorPoints.visible = !decorationBudget.degraded && shaderMaterial.uniforms.uFeedback.value > .001;
                 if (!figureMode) shaderMaterial.uniforms.uTime.value = clock.getElapsedTime();
@@ -1188,6 +1191,7 @@
         
         const dwellController = new DwellController();
         const gesturePointer = new GesturePointer();
+        const handOwnership = new HandOwnership();
         const operatorTracker = new OperatorTracker();
         const posePipeline = new PosePipeline();
         const inferenceCanvas = document.createElement('canvas'); inferenceCanvas.width = 320; inferenceCanvas.height = 240;
@@ -1269,7 +1273,7 @@
             })().finally(() => { cameraStart = null; });
         }
         function stopMediaPipe() {
-            operatorTracker.reset(); dwellController.reset(); gesturePointer.reset(); posePipeline.stop();
+            operatorTracker.reset(); handOwnership.reset(); dwellController.reset(); gesturePointer.reset(); posePipeline.stop();
             controlPointer = {valid:false,visible:false,reason:'NO_PERSON'}; readingScrollAt = null;
             ownership = {operatorState:'SEARCHING',activeOperator:null,assignedHands:[],diagnostics:{}};
             renderGestureFeedback();
@@ -1297,14 +1301,14 @@
             dwellFeedback.layout(webglContainer.clientWidth, webglContainer.clientHeight, isRevealed, document.getElementById('info-text'));
         }
         function renderGestureFeedback(now = performance.now()) {
-            const s = dwellController.snapshot(), d = ownership.diagnostics;
+            const s = dwellController.snapshot(), d = ownership.diagnostics, handLock=handOwnership.snapshot(now);
             dwellFeedback.render(s,controlPointer,currentTrack === 'cyber',now);
             const hint = document.querySelector('.gesture-hint'); hint.dataset.state=s.state;
             hint.style.setProperty('--gesture-progress',s.progress);
             document.getElementById('main-app').dataset.gesture=s.state;
-            const reason=s.blockedReason;
-            const messages={NO_PERSON:'站到画面中央 · 开始体验',PERSON_ACQUIRING:'正在识别观众…',POSE_STALE:'请调整站位或使用页面按钮',HAND_NOT_DETECTED:'举起一只手 · 选择操作',HAND_NOT_ASSIGNED:'请调整手掌位置或使用页面按钮',AMBIGUOUS_PERSON:'请保持单人操作',AMBIGUOUS_HAND:'请只用一只手选择操作',HAND_UNSTABLE:'请稳住手掌',DWELLING:'保持手掌 · 即将确认',WAIT_RELEASE:'移开手掌 · 准备下一次操作',ACTION_LOCKED:'正在呈现人物…'};
-            document.getElementById('gesture-message').textContent=s.lastAction&&now-s.lastAction.at<450?'已确认':!gesturePerformance.activeCameras&&cameraStatus.textContent.includes('停止')?'请调整站位或使用页面按钮':messages[reason] || (isRevealed && dwellFeedback.region?'上下移动 · 阅读档案':controlPointer.valid?'移动手掌 · 停留确认':'举起一只手 · 选择操作');
+            const reason=!handLock.valid&&ownership.activeOperator?handLock.reason:s.blockedReason;
+            const messages={WAIT_HAND:'伸出一只手 · 开始操作',HAND_ACQUIRING:'正在确认控制手…',HAND_LOCKED_PAUSED:'正在恢复手部识别…',HAND_LOCK_RELEASED:'请重新伸手操作',NO_PERSON:'站到画面中央 · 开始体验',PERSON_ACQUIRING:'正在识别观众…',POSE_STALE:'请调整站位或使用页面按钮',HAND_NOT_DETECTED:'伸出一只手 · 开始操作',HAND_NOT_ASSIGNED:'请调整手掌位置或使用页面按钮',AMBIGUOUS_PERSON:'请保持单人操作',AMBIGUOUS_HAND:'请先使用一只手',HAND_UNSTABLE:'请稳住手掌',DWELLING:'保持手掌 · 即将确认',WAIT_RELEASE:'移开手掌 · 准备下一次操作',ACTION_LOCKED:'正在呈现人物…'};
+            document.getElementById('gesture-message').textContent=s.lastAction&&now-s.lastAction.at<450?'已确认':!gesturePerformance.activeCameras&&cameraStatus.textContent.includes('停止')?'请调整站位或使用页面按钮':messages[reason] || (isRevealed && dwellFeedback.region?'上下移动 · 阅读档案':controlPointer.valid?'控制手已锁定':'举起一只手 · 选择操作');
             if (gestureDebugEnabled) {
                 const debug=document.getElementById('gesture-debug'); debug.hidden=currentTrack!=='cyber';
                 const elapsed=Math.max(1,(gesturePerformance.lastAt||now)-(gesturePerformance.firstAt||now))/1000;
@@ -1317,7 +1321,11 @@
                     'PERSON: '+ownership.operatorState, 'operator: '+(ownership.activeOperator?.id||'none'),
                     'body mode: '+(d.bodyMode||'-')+' / shoulder width: '+(d.shoulderWidth?.toFixed(3)||'-'),
                     'pose people: '+(d.posePeople||0)+' / candidate duration: '+Math.round(d.candidateHoldMs||0)+'ms',
-                    'HAND', 'detected hands: '+(d.handsDetected||0)+' / assigned hands: '+(d.handsAssigned||0),
+                    'HAND OWNERSHIP', 'state: '+handLock.state, 'locked hand: '+(handLock.lockedHandKey||'none'),
+                    'candidate: '+(handLock.candidate||'none')+' / acquisition: '+Math.round(handLock.candidateDurationMs)+'ms',
+                    'lock duration: '+Math.round(handLock.lockDurationMs)+'ms / loss duration: '+Math.round(handLock.lossDurationMs)+'ms',
+                    'ownership reason: '+handLock.reason+' / other hand: '+(handLock.ignoredHands?'ignored ('+handLock.ignoredHands+')':'none'),
+                    'HAND DETECTION', 'detected hands: '+(d.handsDetected||0)+' / assigned hands: '+(d.handsAssigned||0),
                     'active control hand: '+(controlPointer.key||'none')+' / hand source: '+(controlPointer.source||'-'),
                     'pointer x/y: '+(controlPointer.point?controlPointer.point.x.toFixed(1)+' / '+controlPointer.point.y.toFixed(1):'none'),
                     'pointer stable: '+!!controlPointer.stable+' / tracking gap: '+Math.round(controlPointer.gapMs||0)+'ms',
@@ -1329,7 +1337,7 @@
             }
         }
         document.addEventListener('visibilitychange', () => {
-            operatorTracker.reset(); dwellController.reset(); gesturePointer.reset(); posePipeline.stop();
+            operatorTracker.reset(); handOwnership.reset(); dwellController.reset(); gesturePointer.reset(); posePipeline.stop();
             controlPointer={valid:false,visible:false,reason:'NO_PERSON'}; readingScrollAt=null;
             if (!document.hidden && currentTrack === 'cyber') posePipeline.start();
             ownership={operatorState:'SEARCHING',activeOperator:null,assignedHands:[],diagnostics:{}};
@@ -1352,7 +1360,8 @@
             ownership=operatorTracker.update({poses:pose.poses,poseAt:frameFresh?pose.at:-Infinity,hands:frameFresh?rawLandmarksList||[]:[],now});
             if(!ownership.diagnostics.poseFresh)gesturePerformance.stalePoseFrames++;
             const geometry=dwellFeedback.measure(isRevealed,infoText);
-            controlPointer=gesturePointer.update({ownership,now,width:dwellFeedback.width,height:dwellFeedback.height,...geometry});controlPointer.at=now;
+            const handLock=handOwnership.update({ownership,now,width:dwellFeedback.width,height:dwellFeedback.height,...geometry,...gestureContext()});
+            controlPointer=gesturePointer.update({handOwnership:handLock,now,width:dwellFeedback.width,height:dwellFeedback.height});controlPointer.at=now;
             const action=dwellController.update({now,operatorId:ownership.activeOperator?.id,pointer:controlPointer,targets:geometry.targets,mode:isRevealed?'READING':'NAVIGATION',...gestureContext()});
             if(action==='OPEN'||action==='CLOSE')requestReading(action==='OPEN');
             if(action==='NEXT')goToNextCharacterFromGesture();

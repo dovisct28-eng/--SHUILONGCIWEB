@@ -20,7 +20,8 @@ export class DwellController {
   if(blocked||locked||now<this.transitionUntil){this.cancel();this.releaseSince=null;this.state=blocked?'BLOCKED':'ACTION_TRANSITION';this.reason='ACTION_LOCKED';return null;}
   if(!pointer?.valid){
    this.releaseSince=null;this.gapAt??=now;this.lastAt=null;
-   if(!pointer?.paused||now-this.gapAt>c.trackingPauseMs)this.cancel();
+   // Every invalid observation cancels dwell; the release latch survives hand loss.
+   this.cancel();
    this.state=pointer?.paused?'TRACKING_PAUSED':'BLOCKED';this.reason=pointer?.reason||'HAND_NOT_DETECTED';return null;
   }
   if(pointer.key!==this.handKey||pointer.changed){this.cancel();this.handKey=pointer.key;this.releaseSince=null;}
