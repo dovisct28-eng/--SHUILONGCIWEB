@@ -1217,7 +1217,7 @@
         let ownership = {operatorState:'SEARCHING',activeOperator:null,assignedHands:[],diagnostics:{}};
         let handsFrameAt = -Infinity, handsFrameVersion = -1;
         let handsInFlight = false;
-        const gestureDiagnostics = new GestureDiagnostics();
+        const gestureDiagnostics = new GestureDiagnostics({enabled:new URLSearchParams(location.search).get('gestureDebug')==='1'});
         const gesturePerformance = {callbacks:0,firstAt:null,lastAt:null,maxActiveCameras:0,activeCameras:0,stalePoseFrames:0};
         let isRevealed = false; 
         
@@ -1338,15 +1338,16 @@
             const report={...runtime,createdAt:new Date().toISOString(),browser:navigator.userAgent,secureContext:isSecureContext,
                 camera:cameraLifecycle.snapshot(),performance:gestureDiagnostics.snapshot(performance.now()),pose:posePipeline.snapshot(),
                 ownership:{state:ownership.operatorState,operatorId:ownership.activeOperator?.id??null,handState:handOwnership.state,handReason:handOwnership.reason,assignedFreshHands:ownership.assignedHands.filter(h=>h.fresh).length},
-                interaction:dwellController.snapshot(),physicalCameraAcceptance:'PENDING: software diagnostics do not certify physical acceptance'};
+                interaction:dwellController.snapshot(),tracking:gestureDiagnostics.trackingSnapshot(),physicalCameraAcceptance:'PHYSICAL_CAMERA_PENDING: software diagnostics do not certify physical acceptance'};
             const url=URL.createObjectURL(new Blob([JSON.stringify(report,null,2)],{type:'application/json'})),link=document.createElement('a');
-            link.href=url;link.download='b03-v4.2-diagnostics.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+            link.href=url;link.download='b03-v4.3-diagnostics.json';link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
         };
         function layoutDwellFeedback() {
             dwellFeedback.layout(webglContainer.clientWidth, webglContainer.clientHeight, isRevealed, document.getElementById('info-text'));
         }
         function renderGestureFeedback(now = performance.now()) {
             const s = dwellController.snapshot(), d = ownership.diagnostics, handLock=handOwnership.snapshot(now);
+            if(gestureDebugEnabled)gestureDiagnostics.track({ownership,handLock,pointer:controlPointer,dwell:s,targets:dwellFeedback.targets,now});
             dwellFeedback.render(s,controlPointer,currentTrack === 'cyber',now);
             document.getElementById('gesture-export').hidden=!gestureDebugEnabled||currentTrack!=='cyber';
             const hint = document.querySelector('.gesture-hint'); hint.dataset.state=s.state;
@@ -1416,7 +1417,7 @@
             const pose=posePipeline.latest,frameFresh=frameAt<=now&&now-frameAt<=INTERACTION_CONFIG.handsMaxAgeMs;
             operatorTracker.config.poseMaxAgeMs=poseFreshnessBudget(posePipeline.snapshot());
             gestureDiagnostics.callback(rawLandmarksList||[],now,frameAt,frameFresh);
-            ownership=operatorTracker.update({poses:pose.poses,poseAt:pose.at,hands:frameFresh?rawLandmarksList||[]:[],now});
+            ownership=operatorTracker.update({poses:pose.poses,poseAt:pose.at,hands:frameFresh?rawLandmarksList||[]:[],now,handAt:frameAt,controlHandKey:handOwnership.lockedHandKey});
             if(!ownership.diagnostics.poseFresh)gesturePerformance.stalePoseFrames++;
             gestureDiagnostics.pose(ownership.diagnostics.poseFresh,now,ownership.diagnostics.operatorObservable);
             Object.assign(ownership.diagnostics,{handsAssignedFresh:ownership.assignedHands.filter(h=>h.fresh).length,handsRaw:(rawLandmarksList||[]).length,handsFresh:frameFresh?(rawLandmarksList||[]).length:0,handsCapturedAt:frameAt,handsAgeMs:now-frameAt,poseReceivedAt:pose.receivedAt,poseThresholdMs:operatorTracker.config.poseMaxAgeMs,poseHandsSkewMs:frameAt-pose.at});
@@ -1424,6 +1425,7 @@
             const handLock=handOwnership.update({ownership,now,width:dwellFeedback.width,height:dwellFeedback.height,...geometry,...gestureContext()});
             controlPointer=gesturePointer.update({handOwnership:handLock,now,width:dwellFeedback.width,height:dwellFeedback.height});controlPointer.at=now;
             const action=dwellController.update({now,operatorId:ownership.activeOperator?.id,pointer:controlPointer,targets:geometry.targets,mode:isRevealed?'READING':'NAVIGATION',...gestureContext()});
+            if(action&&gestureDebugEnabled)gestureDiagnostics.track({ownership,handLock,pointer:controlPointer,dwell:dwellController.snapshot(),targets:geometry.targets,now,action});
             if(action==='OPEN'||action==='CLOSE')requestReading(action==='OPEN');
             if(action==='NEXT')goToNextCharacterFromGesture();
             if(ownership.released&&isRevealed)requestReading(false);

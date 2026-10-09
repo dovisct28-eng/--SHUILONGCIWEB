@@ -17,19 +17,19 @@ test('350ms acquisition is independent of 1000ms dwell; hands outside the body o
  assert.equal(r.frame(1900,[hand()]).action,'OPEN');
 });
 test('both requests block before lock; second hand and array reorder do not disturb a locked controller',()=>{
- const r=rig(),a=hand(),b=hand('right',.71);
+ const r=rig(),a=hand(),b=hand('right',.65);
  for(let now=0;now<500;now+=50)assert.equal(r.frame(now,[a,b]).lock.reason,'AMBIGUOUS_HAND');
  acquire(r,a,500);
  for(let now=900;now<=1800;now+=50){const s=r.frame(now,now%100?[a,b]:[b,a]);assert.equal(s.lock.lockedHandKey,'A:left');assert.equal(s.lock.valid,true);assert.equal(s.lock.diagnostic,'NON_CONTROL_HAND_IGNORED');}
 });
 test('left/right are semantic identities; right control ignores left VIEW and non-control scroll',()=>{
- const r=rig(),b=hand('right',.71);acquire(r,b);
+ const r=rig(),b=hand('right',.65);acquire(r,b);
  const s=r.frame(400,[hand(),b]);assert.equal(s.p.key,'A:right');assert.ok(s.p.point.x>800);
- const r2=rig(),a=hand('left',.5,.5);acquire(r2,hand());for(let now=400;now<=1000;now+=50)r2.frame(now,[a,hand('right',.71,.79)]);
+ const r2=rig(),a=hand('left',.5,.5);acquire(r2,hand());for(let now=400;now<=1000;now+=50)r2.frame(now,[a,hand('right',.65,.79)]);
  assert.equal(readingVelocity(r2.pointer.point,{x:0,y:0,width:1000,height:800}),0);
 });
 for(const gap of [300,500])test(`loss ${gap}ms preserves identity, blocks takeover and rearms for 250ms`,()=>{
- const r=rig(),a=hand(),b=hand('right',.71);acquire(r,a);const last=350;
+ const r=rig(),a=hand(),b=hand('right',.65);acquire(r,a);const last=350;
  const paused=r.frame(last+gap,[b]);assert.equal(paused.lock.state,'HAND_PAUSED');assert.equal(paused.lock.lockedHandKey,'A:left');assert.equal(paused.p.valid,false);
  const start=last+gap+1;assert.equal(r.frame(start,[a,b]).lock.valid,false);
  for(let now=start+50;now<start+250;now+=50)assert.equal(r.frame(now,[a,b]).lock.valid,false);
@@ -37,10 +37,10 @@ for(const gap of [300,500])test(`loss ${gap}ms preserves identity, blocks takeov
 });
 test('loss over 650ms releases; another hand needs complete acquisition and zero old dwell',()=>{
  const r=rig();acquire(r);for(let now=400;now<=1100;now+=50)r.frame(now,[hand()]);assert.ok(r.dwell.elapsed>0);
- let s=r.frame(1751,[hand('right',.71)]);assert.equal(s.lock.state,'HAND_RELEASED');assert.equal(s.p.visible,false);assert.equal(r.dwell.elapsed,0);
- s=r.frame(1800,[hand('right',.71)]);assert.equal(s.lock.state,'HAND_CANDIDATE');assert.equal(s.lock.lockedHandKey,null);
- for(let now=1850;now<2150;now+=50)r.frame(now,[hand('right',.71)]);
- s=r.frame(2150,[hand('right',.71)]);assert.equal(s.p.key,'A:right');assert.equal(r.dwell.elapsed,0);
+ let s=r.frame(1751,[hand('right',.65)]);assert.equal(s.lock.state,'HAND_RELEASED');assert.equal(s.p.visible,false);assert.equal(r.dwell.elapsed,0);
+ s=r.frame(1800,[hand('right',.65)]);assert.equal(s.lock.state,'HAND_CANDIDATE');assert.equal(s.lock.lockedHandKey,null);
+ for(let now=1850;now<2150;now+=50)r.frame(now,[hand('right',.65)]);
+ s=r.frame(2150,[hand('right',.65)]);assert.equal(s.p.key,'A:right');assert.equal(r.dwell.elapsed,0);
 });
 test('cached grace, wrong operator, duplicate semantic side and ambiguity are never effective input',()=>{
  for(const hands of [[{...hand(),fresh:false}],[hand('left',.23,.23,'B')],[hand(),hand()]]){const r=rig();acquire(r);assert.equal(r.frame(400,hands).lock.valid,false);assert.equal(r.owner.lockedHandKey,'A:left');}
@@ -58,8 +58,8 @@ test('OPEN/CLOSE/NEXT, reading and loading retain hand identity while cancelling
 });
 test('action release latch survives hand loss/change; newly acquired hand cannot trigger until fresh release',()=>{
  const r=rig();acquire(r);let actions=[];for(let now=400;now<=1900;now+=50){const s=r.frame(now,[hand()]);if(s.action)actions.push(s.action);}assert.deepEqual(actions,['OPEN']);
- r.frame(2600,[]);acquire(r,hand('right',.71),2650);
- for(let now=3050;now<4500;now+=50)assert.equal(r.frame(now,[hand('right',.71)]).action,null);
+ r.frame(2600,[]);acquire(r,hand('right',.65),2650);
+ for(let now=3050;now<4500;now+=50)assert.equal(r.frame(now,[hand('right',.65)]).action,null);
  assert.equal(r.dwell.releaseRequired,true);
  for(let now=4500;now<=5150;now+=50)r.frame(now,[hand('right',.5,.5)]);
  assert.equal(r.dwell.releaseRequired,false);
@@ -69,10 +69,10 @@ test('render scheduler expires stalled input without another inference loop; res
  r.owner.reset();r.owner.reset();assert.equal(r.owner.lockedHandKey,null);assert.equal(r.owner.snapshot().candidate,null);
 });
 
-test('short 100ms occlusion resumes the same hand without changing identity or counting lost time',()=>{
+test('short 100ms occlusion preserves identity and starts a fresh dwell after recovery',()=>{
  const r=rig();acquire(r);for(let now=400;now<=900;now+=50)r.frame(now,[hand()]);const elapsed=r.dwell.elapsed;
- assert.equal(r.frame(950,[]).p.valid,false);assert.equal(r.dwell.elapsed,elapsed);
- const s=r.frame(1000,[hand()]);assert.equal(s.lock.lockedHandKey,'A:left');assert.equal(s.p.valid,true);assert.equal(r.dwell.elapsed,elapsed);assert.equal(s.action,null);
+ assert.ok(elapsed>0);assert.equal(r.frame(950,[]).p.valid,false);assert.equal(r.dwell.elapsed,0);
+ const s=r.frame(1000,[hand()]);assert.equal(s.lock.lockedHandKey,'A:left');assert.equal(s.p.valid,true);assert.equal(r.dwell.elapsed,0);assert.equal(s.action,null);
 });
 test('button-free acquisition shows one candidate but cannot trigger, including noise and two candidates',()=>{
  const r=rig(),neutral=hand('left',.5,.5);

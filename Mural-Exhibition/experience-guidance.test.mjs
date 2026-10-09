@@ -20,17 +20,22 @@ test('Reading instructions appear only with an actual overflowing reading region
  assert.ok(gestureGuidance({...base,reading:true,overflow:true}).message.includes('上下移动'));
  assert.equal(gestureGuidance({...base,lastAction:{at:1900}}).tone,'active');
 });
-test('V4.2 algorithms, camera timing, callback path and stage timeline remain identical to reference', () => {
+test('V4.3 preserves camera, inference, pointer filtering, target layout and stage timeline', () => {
  const ref = '98d8d6362858681ff904ffe022af6d68eee96f71';
- for (const file of ['interaction-config.mjs','dwell-controller.mjs','hand-ownership.mjs','operator-tracker.mjs','gesture-pointer.mjs','camera-lifecycle.mjs','pose-pipeline.mjs','pose-worker.js','dwell-feedback.mjs','figure-stage.mjs','orbit-stage.mjs','orbit-layout.mjs','mural-surface.mjs']) {
+ // V4.3 explicitly changes ownership, dwell cancellation and horizontal calibration.
+ // Their behavioral safety remains covered by the ownership/dwell/trajectory suites.
+ for (const file of ['gesture-pointer.mjs','camera-lifecycle.mjs','pose-pipeline.mjs','pose-worker.js','dwell-feedback.mjs','figure-stage.mjs','orbit-stage.mjs','orbit-layout.mjs','mural-surface.mjs']) {
   const expected = execFileSync('git',['show',`${ref}:Mural-Exhibition/public/${file}`],{encoding:'utf8'});
   assert.equal(fs.readFileSync(new URL(`./public/${file}`,import.meta.url),'utf8').replace(/\r\n/g,'\n'),expected.replace(/\r\n/g,'\n'),file);
  }
  const html=fs.readFileSync(new URL('./public/index.html',import.meta.url),'utf8').replace(/\r\n/g,'\n');
  const original=execFileSync('git',['show',`${ref}:Mural-Exhibition/public/index.html`],{encoding:'utf8'}).replace(/\r\n/g,'\n');
- for (const [start,end] of [['function initMediaPipe','const dwellFeedback ='],['function handleGestureLogic','</script>'],['function setRevealed','const cameraStatus =']]) {
+ for (const [start,end] of [['function initMediaPipe','const dwellFeedback ='],['function setRevealed','const cameraStatus =']]) {
   const slice=s=>s.slice(s.indexOf(start),s.indexOf(end,s.indexOf(start)));
   assert.ok(original.includes(start)&&original.includes(end));assert.equal(slice(html),slice(original),start);
  }
+ const config=fs.readFileSync(new URL('./public/interaction-config.mjs',import.meta.url),'utf8').replace(/\r\n/g,'\n');
+ const oldConfig=execFileSync('git',['show',`${ref}:Mural-Exhibition/public/interaction-config.mjs`],{encoding:'utf8'}).replace(/\r\n/g,'\n');
+ assert.equal(config.replace('left:.28,right:.72','left:.2,right:.8'),oldConfig);
  assert.ok(!/requestAnimationFrame|setInterval|setTimeout/.test(fs.readFileSync(new URL('./public/experience-guidance.mjs',import.meta.url),'utf8')));
 });

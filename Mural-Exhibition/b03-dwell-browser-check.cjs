@@ -8,12 +8,19 @@ const instrument=`const handTrace=[];const actualHandTick=handOwnership.tick.bin
 const hand=(x,y)=>{const raw=1-x,lm=Array.from({length:21},()=>({x:raw,y,z:0}));lm[0].y=y+.09;lm[5].x=raw-.035;lm[17].x=raw+.035;return lm;};
 const snap=p=>p.evaluate(()=>__dwell.snapshot());
 const ready=p=>p.waitForFunction(()=>window.__dwell&&!__dwell.snapshot().loading&&__dwell.snapshot().phase==='stable'&&(!__dwell.snapshot().orbitActive||__dwell.snapshot().orbitPhase==='stable'),null,{timeout:40000});
-const inputFor=(s,target)=>{const r=s.targets.find(t=>t.id===target);return hand(.2+.6*(r.x+r.width/2)/s.viewportWidth,.2+.6*(r.y+r.height/2)/s.viewportHeight);};
+const inputFor=(s,target)=>{const r=s.targets.find(t=>t.id===target);return hand(.28+.44*(r.x+r.width/2)/s.viewportWidth,.2+.6*(r.y+r.height/2)/s.viewportHeight);};
 const deliver=(p,hands=[],poses=[person({hands,upper:true,missingWrists:['right']})])=>p.evaluate(value=>new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(new Error('Camera callback timeout')),4000);__camera.deliver(value);__camera.resolve=()=>{clearTimeout(timer);resolve();};}),{hands,poses});
 async function sustain(p,hands,ms,poses){const start=Date.now();do{await deliver(p,hands,poses);await p.waitForTimeout(25);}while(Date.now()-start<ms);}
 async function release(p){const until=Date.now()+8000;do{await sustain(p,[hand(.5,.5)],700);const s=await snap(p);if(s.ownership.operatorState==='PERSON_LOCKED'&&s.pointer.valid&&s.pointer.stable&&!s.releaseRequired&&s.state==='READY')return;}while(Date.now()<until);throw Error('Fresh control hand release could not complete');}
 async function acquire(p){const start=Date.now();while((await snap(p)).ownership.operatorState!=='PERSON_LOCKED'){if(Date.now()-start>8000)throw Error('Operator could not reacquire after resource load');await sustain(p,[],200);} }
-async function target(p,id,ms=1800){const s=await snap(p),v=p.viewportSize();return sustain(p,[inputFor({...s,viewportWidth:v.width,viewportHeight:v.height},id)],ms);}
+async function target(p,id,ms=1800){
+ const s=await snap(p),v=p.viewportSize(),hands=[inputFor({...s,viewportWidth:v.width,viewportHeight:v.height},id)],start=Date.now();
+ await sustain(p,hands,ms);
+ if(ms!==1800)return; // Negative and partial dwell timing assertions stay exact.
+ const expected=id==='next'?'NEXT':s.reading?'CLOSE':'OPEN';
+ while(Date.now()-start<5000){const after=await snap(p);if(after.lastAction?.action===expected&&after.lastAction.at!==s.lastAction?.at)return;await sustain(p,hands,250);}
+ throw Error('Fresh stable '+expected+' dwell did not complete within 5s');
+}
 const screenshotSessions=new WeakMap();
 async function shot(p,name){let client=screenshotSessions.get(p);if(!client){client=await p.context().newCDPSession(p);screenshotSessions.set(p,client);}const at=Date.now(),before=await snap(p);const {data}=await client.send('Page.captureScreenshot',{format:'png',fromSurface:true});fs.writeFileSync(path.join(out,name+'.png'),Buffer.from(data,'base64'));report.captures??=[];report.captures.push({name,elapsedMs:Date.now()-at,before:{state:before.state,progress:before.progress,reading:before.reading},after:await snap(p)});}
 const overlap=(a,b)=>a.x<b.x+b.width&&a.x+a.width>b.x&&a.y<b.y+b.height&&a.y+a.height>b.y;
@@ -39,7 +46,7 @@ async function setup(browser,origin,debug=false) {
    // Start an independent fresh attempt for the progress assertion after capture.
    await p.evaluate(()=>__dwell.manual(false));await p.waitForTimeout(850);await release(p);
    await target(p,'view',550);const {dwelling,progress}=await p.evaluate(()=>({dwelling:__dwell.snapshot(),progress:parseFloat(document.querySelector('[data-dwell-target="view"]').style.getPropertyValue('--dwell-progress'))}));assert.equal(dwelling.state,'DWELLING');assert.ok(dwelling.progress>0&&dwelling.progress<1);assert.ok(dwelling.pointer.stable);const t=dwelling.targets.find(t=>t.id==='view');assert.ok(dwelling.pointer.point.x>=t.x&&dwelling.pointer.point.x<=t.x+t.width);assert.ok(Math.abs(progress-dwelling.progress)<.08);await shot(p,'03-dwelling-'+width);
-   await target(p,'view',700);assert.equal((await snap(p)).reading,true);await shot(p,'04-triggered-'+width);await ready(p);await p.waitForTimeout(800);await shot(p,'05-reading-'+width);assert.ok(await p.locator('[data-dwell-target="next"]').isHidden());assert.ok(await p.locator('.dwell-reading-zone').isHidden());
+   if(!(await snap(p)).reading)await target(p,'view');assert.equal((await snap(p)).reading,true);await shot(p,'04-triggered-'+width);await ready(p);await p.waitForTimeout(800);await shot(p,'05-reading-'+width);assert.ok(await p.locator('[data-dwell-target="next"]').isHidden());assert.ok(await p.locator('.dwell-reading-zone').isHidden());
    await target(p,'view',1300);assert.equal((await snap(p)).reading,true);assert.equal((await snap(p)).releaseRequired,true);await shot(p,'06-wait-release-'+width);
    const reading=await geometry(p);assert.deepEqual(reading.preview,before.preview);assert.ok(!overlap(reading.state.targets[0],reading.archive));assert.ok(!overlap(reading.state.targets[0],reading.state.figure));
    await release(p);await target(p,'view');assert.equal((await snap(p)).reading,false);await ready(p);await p.waitForTimeout(800);await target(p,'view',1300);assert.equal((await snap(p)).reading,false);
@@ -60,7 +67,7 @@ async function setup(browser,origin,debug=false) {
   report.cases.push('Resting visible second hand and detection reorder permit one control; unlocked competing hands and three bystander positions block actions; locked hand ignores other target requests; leaving/reacquisition clears ownership');
   await release(p);await target(p,'view');await p.waitForTimeout(850);
   await p.locator('#info-text').evaluate(e=>{const para=document.createElement('p');para.id='dwell-scroll-fixture';para.textContent='合成阅读滚动测试段落。'.repeat(350);e.append(para);});await deliver(p,[hand(.5,.5)]);
-  const region=(await snap(p)).region;assert.ok(region);const raw=(x,y)=>hand(.2+.6*x/v.width,.2+.6*y/v.height);
+  const region=(await snap(p)).region;assert.ok(region);const raw=(x,y)=>hand(.28+.44*x/v.width,.2+.6*y/v.height);
   await sustain(p,[raw(region.x+region.width*.5,region.y+region.height*.8)],550);const scroll=await p.locator('#info-text').evaluate(e=>e.scrollTop);assert.ok(scroll>0);
   await sustain(p,[],350);assert.equal(await p.locator('#info-text').evaluate(e=>e.scrollTop),scroll);
   await sustain(p,[raw(region.x+region.width*.5,region.y+region.height*.5)],450);const neutral=await p.locator('#info-text').evaluate(e=>e.scrollTop);await sustain(p,[raw(region.x+region.width*.5,region.y+region.height*.5)],400);assert.ok(Math.abs(await p.locator('#info-text').evaluate(e=>e.scrollTop)-neutral)<2);

@@ -1,0 +1,89 @@
+{
+  "status": "PASS",
+  "baseline": "d61b145881d05aaa80e3562ae8f98a889b4505f7",
+  "syntax": [
+    "public/operator-tracker.mjs",
+    "public/hand-ownership.mjs",
+    "public/gesture-pointer.mjs",
+    "public/dwell-controller.mjs",
+    "public/dwell-feedback.mjs",
+    "public/gesture-diagnostics.mjs",
+    "public/interaction-config.mjs",
+    "public/camera-lifecycle.mjs",
+    "public/pose-pipeline.mjs",
+    "public/experience-guidance.mjs",
+    "server.js",
+    "b03-v43-continuity.test.mjs",
+    "b03-v43-browser-check.cjs",
+    "b03-v43-build-check.cjs",
+    "public/index.html inline module"
+  ],
+  "protectedFiles": [
+    {
+      "path": "Mural-Exhibition/public/b03.css",
+      "sha256": "f33ce8b57bdacd2d396aa8dfda017dd81e0d043c702970d660292ffb92b6491f",
+      "baselineMatch": true
+    },
+    {
+      "path": "Mural-Exhibition/public/character-study.mjs",
+      "sha256": "30d9cfbaa77cef098902849e3d209051289ddcbf562e19aa1ef401a4636c8cae",
+      "baselineMatch": true
+    },
+    {
+      "path": "Mural-Exhibition/public/figure-stage.mjs",
+      "sha256": "b4ac7eab979383604a93947b330a14590f7b1dc00d510cef9d94f854d9abb8f6",
+      "baselineMatch": true
+    },
+    {
+      "path": "Mural-Exhibition/public/orbit-stage.mjs",
+      "sha256": "6e7b59d2d17b6b2b2863f268a71ac445f82781f5ce5334986919b3e69e59a4c4",
+      "baselineMatch": true
+    },
+    {
+      "path": "Mural-Exhibition/public/orbit-layout.mjs",
+      "sha256": "b4ed49ce034e9f64938a21330280986aba749fff23c20a3180e5d1ccad876fe8",
+      "baselineMatch": true
+    },
+    {
+      "path": "Mural-Exhibition/public/mural-surface.mjs",
+      "sha256": "469081a210459da82f7e444c7bdac75bacdbdbe19642e4628fd0e72a130196e6",
+      "baselineMatch": true
+    },
+    {
+      "path": "Mural-Exhibition/public/b01.css",
+      "sha256": "5774183bf67956d55c789fe3dd3c44d5f842199e2ee88a95ee234dadbbc8c5a3",
+      "baselineMatch": true
+    },
+    {
+      "path": "Mural-Exhibition/public/gallery.css",
+      "sha256": "abb390e752931b01ded86619a7574f3a1d19a3f5b277572cd249580e8d588a74",
+      "baselineMatch": true
+    },
+    {
+      "path": "Mural-Exhibition/public/gallery.html",
+      "sha256": "5b14597eae878cf47f773a53f849bd726dd35efb54248fc560193712c04a0a97",
+      "baselineMatch": true
+    },
+    {
+      "path": "Mural-Exhibition/public/gallery-admin.mjs",
+      "sha256": "64d6ae5e27c624d9b840967abed31868a54273ece5c71b2b6364406b425904d8",
+      "baselineMatch": true
+    },
+    {
+      "path": "Mural-Exhibition/public/gallery-panorama.mjs",
+      "sha256": "ced8f9626d3eaacfc6d5ed74efa7e6057b0787cea349cd817299d5c11b52ed55",
+      "baselineMatch": true
+    },
+    {
+      "path": "Mural-Exhibition/gallery-store.cjs",
+      "sha256": "07f893c4241f9ffd06a8d54a56baa580a02fef1a1961cb8400afbfcfa37f770e",
+      "baselineMatch": true
+    }
+  ],
+  "moduleA": "No tracked code differences",
+  "cameraPreview": "Exact markup and stylesheet preserved",
+  "archiveRefs": {
+    "refs/tags/module-a-lofi-final-v1.0": "48f272497e86e4549c5bcd0dee275ff347171a3f",
+    "refs/heads/archive/module-a-lofi": "48f272497e86e4549c5bcd0dee275ff347171a3f"
+  }
+}

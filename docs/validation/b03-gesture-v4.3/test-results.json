@@ -1,0 +1,308 @@
+{
+  "date": "2026-10-09",
+  "baseline": "d61b145881d05aaa80e3562ae8f98a889b4505f7",
+  "softwareStatus": "PASS_WITH_RECORDED_LIMITATIONS",
+  "physicalCamera": "PHYSICAL_CAMERA_PENDING",
+  "unit": {
+    "command": "npm test",
+    "tests": 126,
+    "pass": 126,
+    "fail": 0,
+    "skipped": 0,
+    "log": "local/final-unit-tests.txt"
+  },
+  "continuityUnit": {
+    "tests": 16,
+    "status": "PASS",
+    "preFixTargetedReproduction": {
+      "tests": 2,
+      "pass": 0,
+      "fail": 2
+    }
+  },
+  "build": {
+    "command": "node b03-v43-build-check.cjs",
+    "status": "PASS"
+  },
+  "browser": {
+    "command": "node b03-v43-browser-check.cjs",
+    "status": "PASS",
+    "viewports": [
+      [
+        1280,
+        800
+      ],
+      [
+        1366,
+        768
+      ],
+      [
+        1440,
+        900
+      ],
+      [
+        1920,
+        1080
+      ]
+    ],
+    "cycles": 10,
+    "adverseCases": 4,
+    "actualStageReleases": 1,
+    "freshnessPauseSamples": 0,
+    "unexpectedActions": 0,
+    "errors": [],
+    "detail": "browser-results.json"
+  },
+  "regression": [
+    {
+      "name": "lifecycle",
+      "command": "node b03-v42-browser-check.cjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 43453,
+      "log": "lifecycle\\run-1791522485199.txt"
+    },
+    {
+      "name": "ownership",
+      "command": "node b03-hand-lock-browser-check.cjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 30505,
+      "log": "ownership\\run-1791523337355.txt"
+    },
+    {
+      "name": "dwell",
+      "command": "node b03-dwell-browser-check.cjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 233212,
+      "log": "dwell\\run-1791523367865.txt"
+    },
+    {
+      "name": "b01",
+      "command": "node b01-browser-check.cjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 52248,
+      "log": "b01\\run-1791523878418.txt"
+    },
+    {
+      "name": "b02",
+      "command": "node b02-browser-check.cjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 114510,
+      "log": "b02\\run-1791522840075.txt"
+    },
+    {
+      "name": "real-models",
+      "command": "node b03-pose-browser-check.cjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 24985,
+      "log": "real-models\\run-1791523637960.txt"
+    }
+  ],
+  "changes": {
+    "parameters": {
+      "pointerInput": {
+        "before": {
+          "left": 0.2,
+          "right": 0.8
+        },
+        "after": {
+          "left": 0.28,
+          "right": 0.72
+        },
+        "reason": "降低中心到侧目标的输入位移约26.7%；真人舒适度待验证"
+      }
+    },
+    "preserved": "1000ms驻留、200ms暂停、650ms释放、250ms恢复/移开，单人单手隔离，视觉/预览/手动输入"
+  },
+  "failuresAndAdjustments": [
+    "修改前两项复现失败，修复后通过；不能据此断言用户真实日志的唯一根因。",
+    "旧映射/短暂停留进度断言按新标定及暂停清零要求更新；副手瞬间替换夹具改成连续移动，保留身份隔离。",
+    "早期大探针/截图将交叉延长；减少测试开销。固定正向驻留等待改为有上限等待实际新动作，短时负向断言不变。",
+    "最新早期专项在Pose年龄366.8ms超过337.7ms预算时暂停；测试改为要求同手身份、无有效光标、零驻留及有界恢复，仍禁止移动中释放或接管。",
+    "B01依赖夹具与A08静态服务环境失败均留存；补齐后回归通过。",
+    "并发重浏览器导致启动器本地API查询2.5s超时；闲置最终126/126通过。",
+    "实际模型冷启动Hands15s超时；预热同固定资源和HTTP/1诊断条件复测通过，冷启动失败保留。"
+  ],
+  "limitations": [
+    "人物重资源切换导致长回调停顿时仍安全释放并完整重新获取；次数见浏览器报告，未解决该负载风险。",
+    "真人10轮、左右手舒适度、多人遮挡、光照/站距和目标设备性能未验证。",
+    "真实V4.2日志缺少逐帧拒绝原因，不能确定所有现场失锁根因。",
+    "合成浏览器和真实模型空白帧不能外推真人识别成功率。"
+  ],
+  "files": [
+    {
+      "path": "Mural-Exhibition/b01-browser-check.cjs",
+      "sha256": "0de72d80995ad8d6359a085b00cd364e0d303c26b6f81634f8625141b6165684",
+      "role": "test or test command"
+    },
+    {
+      "path": "Mural-Exhibition/b03-dwell-browser-check.cjs",
+      "sha256": "4cbbf51bcb8c93e952b42218ce0079ec66982f177b7faa718246fa6f0314b73e",
+      "role": "test or test command"
+    },
+    {
+      "path": "Mural-Exhibition/b03-dwell-harness.mjs",
+      "sha256": "a313ce8269c70e9f8167bfcb15ea607d3d8732b33afcc730c07d8c4e69512246",
+      "role": "test or test command"
+    },
+    {
+      "path": "Mural-Exhibition/b03-dwell-production.test.mjs",
+      "sha256": "48b7d8f3f99b37f8e73cf20ec075c4279bb1fea15db45ebb052f3893740cad7d",
+      "role": "test or test command"
+    },
+    {
+      "path": "Mural-Exhibition/b03-hand-lock-browser-check.cjs",
+      "sha256": "c76e7e413d86b3905da47b8a5d052f2ba156333bea1033bde12c23630212b9a8",
+      "role": "test or test command"
+    },
+    {
+      "path": "Mural-Exhibition/b03-v42-browser-check.cjs",
+      "sha256": "899a6c6c66d5902c0063ad159e2c6450ae834305f68e060d2385cb7f6933e14b",
+      "role": "test or test command"
+    },
+    {
+      "path": "Mural-Exhibition/b03-v42-launcher.test.cjs",
+      "sha256": "d204fa60917379563aa28d2cdf8818090bf8d90396631a2cb88cbf83b7b6f07f",
+      "role": "test or test command"
+    },
+    {
+      "path": "Mural-Exhibition/experience-guidance.test.mjs",
+      "sha256": "b95f125f2121a9c2d932a23b27ceb0c70f955308060f990f3bbde87b826c0ec9",
+      "role": "test or test command"
+    },
+    {
+      "path": "Mural-Exhibition/gesture-pointer.test.mjs",
+      "sha256": "82b8fd53ff2a3970a067a7bfe02181c42a020884d75a8b57ee8bc4da760a447d",
+      "role": "test or test command"
+    },
+    {
+      "path": "Mural-Exhibition/gesture-timing.test.mjs",
+      "sha256": "6554c248eec858b3d2cd1851c534b2f2caff4ee03b54fe10b42a9b0953a8f5f9",
+      "role": "test or test command"
+    },
+    {
+      "path": "Mural-Exhibition/hand-ownership.test.mjs",
+      "sha256": "32473ee2a0da81768e8ca822ab75f3af03e38f7e65e7d95991f41fee81a3defe",
+      "role": "test or test command"
+    },
+    {
+      "path": "Mural-Exhibition/package.json",
+      "sha256": "0a024de202ead1bb95b44f4938d2cd94d94c5dd705caec628c572157723d9d40",
+      "role": "test or test command"
+    },
+    {
+      "path": "Mural-Exhibition/public/dwell-controller.mjs",
+      "sha256": "e0f2d8df294479bdba20bbeea02fc50c28a65f204587bea858926689820172ff",
+      "role": "production"
+    },
+    {
+      "path": "Mural-Exhibition/public/gesture-diagnostics.mjs",
+      "sha256": "74b4bf31925aab5b4943dca8dcfcbde630790ab107a9550a728bab51088c1258",
+      "role": "production"
+    },
+    {
+      "path": "Mural-Exhibition/public/hand-ownership.mjs",
+      "sha256": "d1e1660a531294ededb0ca76d0ace14b63ca4590ed6157c8fa2eaae9ed8d2c19",
+      "role": "production"
+    },
+    {
+      "path": "Mural-Exhibition/public/index.html",
+      "sha256": "e5afd8585f8fed3f210fb43f203f0d206d5f8468e9e4a5ce8498841e5a1b1989",
+      "role": "production"
+    },
+    {
+      "path": "Mural-Exhibition/public/interaction-config.mjs",
+      "sha256": "021a89299ea6d4577d07590ec363a37f63c51a4422aa07994637306d024af44c",
+      "role": "production"
+    },
+    {
+      "path": "Mural-Exhibition/public/operator-tracker.mjs",
+      "sha256": "2adc1886629d864d5cf86c9a98d320aea40f62bec25f7c086d50c8af57ce790d",
+      "role": "production"
+    },
+    {
+      "path": "Mural-Exhibition/server.js",
+      "sha256": "d71493de11e5171d9712c5bb7a32d24d9df08e7b1f8ad5e78f81321c6e264f57",
+      "role": "production"
+    },
+    {
+      "path": "Mural-Exhibition/b03-v43-continuity.test.mjs",
+      "sha256": "e5b180040d29c9bfcb8869b7b380c9476557649cfc726b63dede472a43692cdf",
+      "role": "test or test command"
+    },
+    {
+      "path": "Mural-Exhibition/b03-v43-browser-check.cjs",
+      "sha256": "1edf4419da25b96eb804f3bf424c33c509f5833be850f28687920877187ed59a",
+      "role": "test or test command"
+    },
+    {
+      "path": "Mural-Exhibition/b03-v43-build-check.cjs",
+      "sha256": "dccdaec8938f2f1d3d6b086844eaa70c1a9b62c1eac5d95a801e148bf92c7737",
+      "role": "test or test command"
+    },
+    {
+      "path": "Mural-Exhibition/b03-v43-regression-browser.cjs",
+      "sha256": "b7fdf0266506a9b9b575b9e7f44e08e4ac3829170bbe769a6305994fabb3a4e7",
+      "role": "test or test command"
+    },
+    {
+      "path": "docs/B03_CHARACTER_STUDY.md",
+      "role": "documentation or selected evidence"
+    },
+    {
+      "path": "docs/validation/b03-gesture-v4.3/README.md",
+      "role": "documentation or selected evidence"
+    },
+    {
+      "path": "docs/validation/b03-gesture-v4.3/root-cause.md",
+      "role": "documentation or selected evidence"
+    },
+    {
+      "path": "docs/validation/b03-gesture-v4.3/PHYSICAL_CAMERA_CHECKLIST.md",
+      "role": "documentation or selected evidence"
+    },
+    {
+      "path": "docs/validation/b03-gesture-v4.3/start-physical-acceptance.cjs",
+      "role": "documentation or selected evidence"
+    },
+    {
+      "path": "docs/validation/b03-gesture-v4.3/test-results.json",
+      "role": "documentation or selected evidence"
+    },
+    {
+      "path": "docs/validation/b03-gesture-v4.3/browser-results.json",
+      "role": "documentation or selected evidence"
+    },
+    {
+      "path": "docs/validation/b03-gesture-v4.3/build-results.json",
+      "role": "documentation or selected evidence"
+    },
+    {
+      "path": "docs/validation/b03-gesture-v4.3/selected/manifest.json",
+      "role": "documentation or selected evidence"
+    },
+    {
+      "path": "docs/validation/b03-gesture-v4.3/selected/dwell-1440.webp",
+      "role": "documentation or selected evidence"
+    },
+    {
+      "path": "docs/validation/b03-gesture-v4.3/selected/reading-1440.webp",
+      "role": "documentation or selected evidence"
+    },
+    {
+      "path": "docs/validation/b03-gesture-v4.3/selected/continuity-diagnostics-1440.webp",
+      "role": "documentation or selected evidence"
+    }
+  ],
+  "selected": {
+    "count": 3,
+    "totalBytes": 1991178,
+    "manifest": "selected/manifest.json"
+  },
+  "excludedExistingChanges": "用户素材重命名/删除、低保真归档文件、历史未跟踪证据和其他模块既有修改未纳入任务提交。"
+}

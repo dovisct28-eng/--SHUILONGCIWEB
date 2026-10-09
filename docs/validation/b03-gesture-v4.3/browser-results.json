@@ -1,0 +1,669 @@
+{
+  "continuity": {
+    "status": "PASS",
+    "scope": "Actual Chrome/WebGL, production asynchronous Camera → Hands → Pose/ownership → pointer/dwell. Synthetic camera and model output, not physical acceptance.",
+    "physicalCamera": "PHYSICAL_CAMERA_PENDING",
+    "views": [
+      {
+        "width": 1280,
+        "height": 800,
+        "status": "PASS",
+        "preview": {
+          "x": 32,
+          "y": 704,
+          "width": 110,
+          "height": 74
+        },
+        "view": {
+          "x": 0.33719677734375003,
+          "y": 0.5660000000000001
+        },
+        "next": {
+          "x": 0.6627978515624999,
+          "y": 0.5660000000000001
+        },
+        "key": "visitor-1:left",
+        "continuousMotion": true
+      },
+      {
+        "width": 1366,
+        "height": 768,
+        "status": "PASS",
+        "preview": {
+          "x": 32,
+          "y": 672,
+          "width": 110,
+          "height": 74
+        },
+        "view": {
+          "x": 0.3371993960468521,
+          "y": 0.5659912109375
+        },
+        "next": {
+          "x": 0.6627955710102489,
+          "y": 0.5659912109375
+        },
+        "key": "visitor-1:left",
+        "continuousMotion": true
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "status": "PASS",
+        "preview": {
+          "x": 32,
+          "y": 804,
+          "width": 110,
+          "height": 74
+        },
+        "view": {
+          "x": 0.33719618055555556,
+          "y": 0.5660000000000001
+        },
+        "next": {
+          "x": 0.6627990451388889,
+          "y": 0.5660000000000001
+        },
+        "key": "visitor-1:left",
+        "continuousMotion": true
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "status": "PASS",
+        "preview": {
+          "x": 32,
+          "y": 984,
+          "width": 110,
+          "height": 74
+        },
+        "view": {
+          "x": 0.33719856770833334,
+          "y": 0.565998263888889
+        },
+        "next": {
+          "x": 0.6627978515624999,
+          "y": 0.565998263888889
+        },
+        "key": "visitor-1:left",
+        "continuousMotion": true
+      }
+    ],
+    "cases": [
+      {
+        "name": "Missing wrists / spare hand / order reversal during cross-midline control",
+        "status": "PASS"
+      },
+      {
+        "name": "Crossing pauses identity and cancels dwell; same hand resumes",
+        "status": "PASS"
+      },
+      {
+        "name": "Distant bystander cannot take over; overlapping identity pauses input",
+        "status": "PASS"
+      },
+      {
+        "name": "300ms occlusion retains / 850ms absence releases and reacquires",
+        "status": "PASS"
+      }
+    ],
+    "cycles": [
+      {
+        "round": 1,
+        "openCloseNext": "PASS",
+        "key": "visitor-1:left",
+        "index": 5,
+        "unexpectedActions": 0
+      },
+      {
+        "round": 2,
+        "openCloseNext": "PASS",
+        "key": "visitor-1:left",
+        "index": 6,
+        "unexpectedActions": 0
+      },
+      {
+        "round": 3,
+        "openCloseNext": "PASS",
+        "key": "visitor-1:left",
+        "index": 7,
+        "unexpectedActions": 0
+      },
+      {
+        "round": 4,
+        "openCloseNext": "PASS",
+        "key": "visitor-1:left",
+        "index": 0,
+        "unexpectedActions": 0
+      },
+      {
+        "round": 5,
+        "openCloseNext": "PASS",
+        "key": "visitor-1:left",
+        "index": 1,
+        "unexpectedActions": 0
+      },
+      {
+        "round": 6,
+        "openCloseNext": "PASS",
+        "key": "visitor-1:left",
+        "index": 2,
+        "unexpectedActions": 0
+      },
+      {
+        "round": 7,
+        "openCloseNext": "PASS",
+        "key": "visitor-1:left",
+        "index": 3,
+        "unexpectedActions": 0
+      },
+      {
+        "round": 8,
+        "openCloseNext": "PASS",
+        "key": "visitor-1:left",
+        "index": 4,
+        "unexpectedActions": 0
+      },
+      {
+        "round": 9,
+        "openCloseNext": "PASS",
+        "key": "visitor-1:left",
+        "index": 5,
+        "unexpectedActions": 0
+      },
+      {
+        "round": 10,
+        "openCloseNext": "PASS",
+        "key": "visitor-1:left",
+        "index": 6,
+        "unexpectedActions": 0
+      }
+    ],
+    "errors": [],
+    "stageRecoveries": [
+      {
+        "index": 1,
+        "trackingReleased": false,
+        "hand": {
+          "key": "visitor-1:left",
+          "state": "HAND_LOCKED",
+          "valid": false,
+          "reason": "ACTION_LOCKED",
+          "pauseCause": null,
+          "recovering": false
+        },
+        "operator": "visitor-1",
+        "releases": []
+      },
+      {
+        "index": 2,
+        "trackingReleased": false,
+        "hand": {
+          "key": "visitor-1:left",
+          "state": "HAND_LOCKED",
+          "valid": false,
+          "reason": "ACTION_LOCKED",
+          "pauseCause": null,
+          "recovering": false
+        },
+        "operator": "visitor-1",
+        "releases": []
+      },
+      {
+        "index": 3,
+        "trackingReleased": false,
+        "hand": {
+          "key": "visitor-1:left",
+          "state": "HAND_LOCKED",
+          "valid": false,
+          "reason": "ACTION_LOCKED",
+          "pauseCause": null,
+          "recovering": false
+        },
+        "operator": "visitor-1",
+        "releases": []
+      },
+      {
+        "index": 4,
+        "trackingReleased": false,
+        "hand": {
+          "key": "visitor-1:left",
+          "state": "HAND_LOCKED",
+          "valid": false,
+          "reason": "ACTION_LOCKED",
+          "pauseCause": null,
+          "recovering": false
+        },
+        "operator": "visitor-1",
+        "releases": []
+      },
+      {
+        "index": 5,
+        "trackingReleased": false,
+        "hand": {
+          "key": "visitor-1:left",
+          "state": "HAND_LOCKED",
+          "valid": false,
+          "reason": "ACTION_LOCKED",
+          "pauseCause": null,
+          "recovering": false
+        },
+        "operator": "visitor-1",
+        "releases": [
+          {
+            "atMs": 94478,
+            "reason": "CONTROL_HAND_NOT_DETECTED"
+          }
+        ]
+      },
+      {
+        "index": 6,
+        "trackingReleased": true,
+        "hand": {
+          "key": null,
+          "state": "WAIT_HAND",
+          "valid": false,
+          "reason": "ACTION_LOCKED",
+          "pauseCause": null,
+          "recovering": false
+        },
+        "operator": "visitor-1",
+        "releases": [
+          {
+            "atMs": 94478,
+            "reason": "CONTROL_HAND_NOT_DETECTED"
+          },
+          {
+            "atMs": 131040,
+            "reason": "POSE_STALE"
+          }
+        ]
+      },
+      {
+        "index": 7,
+        "trackingReleased": false,
+        "hand": {
+          "key": "visitor-1:left",
+          "state": "HAND_PAUSED",
+          "valid": false,
+          "reason": "HAND_LOCKED_PAUSED",
+          "pauseCause": "CALLBACK_STALL",
+          "recovering": false
+        },
+        "operator": "visitor-1",
+        "releases": [
+          {
+            "atMs": 94478,
+            "reason": "CONTROL_HAND_NOT_DETECTED"
+          },
+          {
+            "atMs": 131040,
+            "reason": "POSE_STALE"
+          }
+        ]
+      },
+      {
+        "index": 0,
+        "trackingReleased": false,
+        "hand": {
+          "key": "visitor-1:left",
+          "state": "HAND_LOCKED",
+          "valid": false,
+          "reason": "ACTION_LOCKED",
+          "pauseCause": null,
+          "recovering": false
+        },
+        "operator": "visitor-1",
+        "releases": [
+          {
+            "atMs": 94478,
+            "reason": "CONTROL_HAND_NOT_DETECTED"
+          },
+          {
+            "atMs": 131040,
+            "reason": "POSE_STALE"
+          },
+          {
+            "atMs": 150280,
+            "reason": "CALLBACK_STALL"
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "trackingReleased": false,
+        "hand": {
+          "key": "visitor-1:left",
+          "state": "HAND_LOCKED",
+          "valid": false,
+          "reason": "ACTION_LOCKED",
+          "pauseCause": null,
+          "recovering": false
+        },
+        "operator": "visitor-1",
+        "releases": [
+          {
+            "atMs": 94478,
+            "reason": "CONTROL_HAND_NOT_DETECTED"
+          },
+          {
+            "atMs": 131040,
+            "reason": "POSE_STALE"
+          },
+          {
+            "atMs": 150280,
+            "reason": "CALLBACK_STALL"
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "trackingReleased": false,
+        "hand": {
+          "key": "visitor-1:left",
+          "state": "HAND_LOCKED",
+          "valid": false,
+          "reason": "ACTION_LOCKED",
+          "pauseCause": null,
+          "recovering": false
+        },
+        "operator": "visitor-1",
+        "releases": [
+          {
+            "atMs": 94478,
+            "reason": "CONTROL_HAND_NOT_DETECTED"
+          },
+          {
+            "atMs": 131040,
+            "reason": "POSE_STALE"
+          },
+          {
+            "atMs": 150280,
+            "reason": "CALLBACK_STALL"
+          }
+        ]
+      },
+      {
+        "index": 3,
+        "trackingReleased": false,
+        "hand": {
+          "key": "visitor-1:left",
+          "state": "HAND_LOCKED",
+          "valid": false,
+          "reason": "ACTION_LOCKED",
+          "pauseCause": null,
+          "recovering": false
+        },
+        "operator": "visitor-1",
+        "releases": [
+          {
+            "atMs": 94478,
+            "reason": "CONTROL_HAND_NOT_DETECTED"
+          },
+          {
+            "atMs": 131040,
+            "reason": "POSE_STALE"
+          },
+          {
+            "atMs": 150280,
+            "reason": "CALLBACK_STALL"
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "trackingReleased": false,
+        "hand": {
+          "key": "visitor-1:left",
+          "state": "HAND_LOCKED",
+          "valid": false,
+          "reason": "ACTION_LOCKED",
+          "pauseCause": null,
+          "recovering": false
+        },
+        "operator": "visitor-1",
+        "releases": [
+          {
+            "atMs": 131040,
+            "reason": "POSE_STALE"
+          },
+          {
+            "atMs": 150280,
+            "reason": "CALLBACK_STALL"
+          }
+        ]
+      },
+      {
+        "index": 5,
+        "trackingReleased": false,
+        "hand": {
+          "key": "visitor-1:left",
+          "state": "HAND_LOCKED",
+          "valid": false,
+          "reason": "ACTION_LOCKED",
+          "pauseCause": null,
+          "recovering": false
+        },
+        "operator": "visitor-1",
+        "releases": [
+          {
+            "atMs": 131040,
+            "reason": "POSE_STALE"
+          },
+          {
+            "atMs": 150280,
+            "reason": "CALLBACK_STALL"
+          }
+        ]
+      },
+      {
+        "index": 6,
+        "trackingReleased": false,
+        "hand": {
+          "key": "visitor-1:left",
+          "state": "HAND_LOCKED",
+          "valid": false,
+          "reason": "ACTION_LOCKED",
+          "pauseCause": null,
+          "recovering": false
+        },
+        "operator": "visitor-1",
+        "releases": [
+          {
+            "atMs": 150280,
+            "reason": "CALLBACK_STALL"
+          }
+        ]
+      }
+    ],
+    "exportSummary": {
+      "version": "B03 V4.3",
+      "frames": 240,
+      "events": 160,
+      "physical": "PHYSICAL_CAMERA_PENDING: software diagnostics do not certify physical acceptance"
+    },
+    "actualStageReleases": 1
+  },
+  "regression": [
+    {
+      "name": "lifecycle",
+      "command": "node b03-v42-browser-check.cjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 43453,
+      "log": "lifecycle\\run-1791522485199.txt"
+    },
+    {
+      "name": "ownership",
+      "command": "node b03-hand-lock-browser-check.cjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 30505,
+      "log": "ownership\\run-1791523337355.txt"
+    },
+    {
+      "name": "dwell",
+      "command": "node b03-dwell-browser-check.cjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 233212,
+      "log": "dwell\\run-1791523367865.txt"
+    },
+    {
+      "name": "b01",
+      "command": "node b01-browser-check.cjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 52248,
+      "log": "b01\\run-1791523878418.txt"
+    },
+    {
+      "name": "b02",
+      "command": "node b02-browser-check.cjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 114510,
+      "log": "b02\\run-1791522840075.txt"
+    },
+    {
+      "name": "real-models",
+      "command": "node b03-pose-browser-check.cjs",
+      "status": "PASS",
+      "exitCode": 0,
+      "elapsedMs": 24985,
+      "log": "real-models\\run-1791523637960.txt"
+    }
+  ],
+  "realModels": {
+    "status": "PASS",
+    "scope": "Real pinned Tasks Vision CPU PoseLandmarker/WASM in Chrome Worker, real legacy Hands inference, actual B03/WebGL/Camera.onFrame/Hands.onResults. Synthetic blank 320x240 camera image only. Checks deployment/cadence/lifecycle under the real stage; no person recognition or exhibition CPU/GPU acceptance claim.",
+    "transport": "Chrome --disable-http2 diagnostic",
+    "prewarm": [
+      {
+        "url": "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.21/vision_bundle.mjs",
+        "bytes": 137735,
+        "elapsedMs": 1317.5
+      },
+      {
+        "url": "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.21/wasm/vision_wasm_internal.js",
+        "bytes": 204284,
+        "elapsedMs": 1262.199999999255
+      },
+      {
+        "url": "https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.21/wasm/vision_wasm_internal.wasm",
+        "bytes": 9574032,
+        "elapsedMs": 1912.5
+      },
+      {
+        "url": "https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_lite/float16/1/pose_landmarker_lite.task",
+        "bytes": 5777746,
+        "elapsedMs": 4676.299999998882
+      }
+    ],
+    "initializationElapsedMs": 5161,
+    "runtime": {
+      "models": 1,
+      "frames": 54,
+      "submitted": 55,
+      "inferenceTotalMs": 3049.9999999981374,
+      "inferenceMaxMs": 384.59999999962747,
+      "staleResults": 0,
+      "active": 1,
+      "inFlight": 1,
+      "ready": true,
+      "submitFps": 5.400864138261921,
+      "successFps": 10.055399559841247,
+      "capturedAt": 20007.800000000745,
+      "receivedAt": 20056.099999999627,
+      "latencyP50Ms": 49.09999999962747,
+      "latencyP95Ms": 84.19999999925494,
+      "inferenceP50Ms": 48,
+      "inferenceP95Ms": 68.80000000074506,
+      "intervalP95Ms": 107,
+      "samples": 54,
+      "averageInferenceMs": 56.48148148144699,
+      "poseFps": 9.776146203265489,
+      "handsCallbackFps": 30.326004548905193,
+      "stalePoseRatio": 0.013157894736842105,
+      "numPoses": 4
+    },
+    "raf": {
+      "samples": 823,
+      "averageMs": 6.079708383961116,
+      "maxMs": 54.099999999998545
+    },
+    "errors": [],
+    "exit": {
+      "cameras": 0,
+      "raf": 0,
+      "poseActive": 0
+    },
+    "reentry": {
+      "models": 1,
+      "activeCameras": 1
+    }
+  },
+  "priorFailures": [
+    {
+      "group": "continuity-browser",
+      "file": "local/continuity-browser/results-attempt-1791521588765.json",
+      "status": "FAIL",
+      "completedCycles": 0,
+      "failure": "AssertionError [ERR_ASSERTION]: {\"hand\":{\"key\":null,\"state\":\"HAND_CANDIDATE\",\"valid\":false,\"reason\":\"HAND_ACQUIRING\"},\"diagnostics\":{\"poseFresh\":true,\"operatorObservable\":true,\"poseObservedAt\":47166.70000000112,\"poseAgeMs\":203,\"controlMatch\":null,\"candidateHoldMs\":0,\"operatorLossMs\":203,\"handsDetected\":1,\"handsAssigned\":1,\"leftAssigned\":true,\"rightAssigned\":false,\"leftSource\":\"pose\",\"rightSource\":null,\"posePeople\":1,\"bodyMode\":\"upper\",\"shoulderWidth\":0.30000000000000004,\"hipsVisible\":false,\"leftWristVisible\":true,\"rightWristVisible\":false,\"assignmentRejections\":[],\"assignmentBlocked\":false,\"assignmentStatus\":\"OK\",\"handsAssignedFresh\":1,\"handsRaw\":1,\"handsFresh\":1,\"handsCapturedAt\":47365.40000000037,\"handsAgeMs\":4.300000000745058,\"poseReceivedAt\":47313.10000000149,\"poseThresholdMs\":360,\"poseHandsSkewMs\":198.69999999925494}}",
+      "hand": {
+        "key": null,
+        "state": "HAND_CANDIDATE",
+        "valid": false
+      },
+      "poseAgeMs": 169.90000000037253
+    },
+    {
+      "group": "continuity-browser",
+      "file": "local/continuity-browser/results-attempt-1791521835432.json",
+      "status": "FAIL",
+      "completedCycles": 0,
+      "failure": "AssertionError [ERR_ASSERTION]: {\"hand\":{\"key\":\"visitor-1:right\",\"state\":\"HAND_LOCKED\",\"valid\":true,\"reason\":\"READY\"},\"diagnostics\":{\"poseFresh\":true,\"operatorObservable\":true,\"poseObservedAt\":102386,\"poseAgeMs\":136,\"controlMatch\":\"CONTINUOUS_LOCKED_HAND\",\"candidateHoldMs\":0,\"operatorLossMs\":136,\"handsDetected\":1,\"handsAssigned\":1,\"leftAssigned\":false,\"rightAssigned\":true,\"leftSource\":null,\"rightSource\":\"continuity\",\"posePeople\":1,\"bodyMode\":\"upper\",\"shoulderWidth\":0.30000000000000004,\"hipsVisible\":false,\"leftWristVisible\":false,\"rightWristVisible\":false,\"assignmentRejections\":[],\"assignmentBlocked\":false,\"assignmentStatus\":\"OK\",\"handsAssignedFresh\":1,\"handsRaw\":1,\"handsFresh\":1,\"handsCapturedAt\":102515.40000000037,\"handsAgeMs\":6.599999999627471,\"poseReceivedAt\":102515.60000000149,\"poseThresholdMs\":360,\"poseHandsSkewMs\":129.40000000037253}}",
+      "hand": {
+        "key": "visitor-1:right",
+        "state": "HAND_LOCKED",
+        "valid": true
+      },
+      "poseAgeMs": 300.7000000011176
+    },
+    {
+      "group": "continuity-browser",
+      "file": "local/continuity-browser/results-attempt-1791522107779.json",
+      "status": "FAIL",
+      "completedCycles": 0,
+      "failure": "AssertionError [ERR_ASSERTION]: {\"hand\":{\"key\":\"visitor-1:right\",\"state\":\"HAND_LOCKED\",\"valid\":true,\"reason\":\"READY\"},\"diagnostics\":{\"poseFresh\":true,\"operatorObservable\":true,\"poseObservedAt\":100470.09999999963,\"poseAgeMs\":236.80000000074506,\"controlMatch\":\"CONTINUOUS_LOCKED_HAND\",\"candidateHoldMs\":0,\"operatorLossMs\":236.80000000074506,\"handsDetected\":1,\"handsAssigned\":1,\"leftAssigned\":false,\"rightAssigned\":true,\"leftSource\":null,\"rightSource\":\"continuity\",\"posePeople\":1,\"bodyMode\":\"upper\",\"shoulderWidth\":0.30000000000000004,\"hipsVisible\":false,\"leftWristVisible\":false,\"rightWristVisible\":false,\"assignmentRejections\":[],\"assignmentBlocked\":false,\"assignmentStatus\":\"OK\",\"handsAssignedFresh\":1,\"handsRaw\":1,\"handsFresh\":1,\"handsCapturedAt\":100702.30000000075,\"handsAgeMs\":4.599999999627471,\"poseReceivedAt\":100602.40000000037,\"poseThresholdMs\":360,\"poseHandsSkewMs\":232.2000000011176}}",
+      "hand": {
+        "key": "visitor-1:right",
+        "state": "HAND_LOCKED",
+        "valid": true
+      },
+      "poseAgeMs": 233.40000000037253
+    },
+    {
+      "group": "continuity-browser",
+      "file": "local/continuity-browser/results-attempt-1791523957935.json",
+      "status": "FAIL",
+      "completedCycles": 3,
+      "failure": "AssertionError [ERR_ASSERTION]: {\"poseFresh\":false,\"operatorObservable\":false,\"poseObservedAt\":159961.80000000075,\"poseAgeMs\":366.7999999988824,\"controlMatch\":null,\"continuityCandidates\":0,\"candidateHoldMs\":0,\"operatorLossMs\":366.7999999988824,\"handsDetected\":1,\"handsAssigned\":0,\"leftAssigned\":false,\"rightAssigned\":false,\"leftSource\":null,\"rightSource\":null,\"posePeople\":1,\"bodyMode\":\"upper\",\"shoulderWidth\":0.30000000000000004,\"hipsVisible\":false,\"leftWristVisible\":true,\"rightWristVisible\":false,\"assignmentRejections\":[],\"assignmentBlocked\":false,\"assignmentStatus\":\"STALE\",\"handsAssignedFresh\":0,\"handsRaw\":1,\"handsFresh\":1,\"handsCapturedAt\":160324.20000000112,\"handsAgeMs\":4.399999998509884,\"poseReceivedAt\":160200.30000000075,\"poseThresholdMs\":337.69999999925494,\"poseHandsSkewMs\":362.40000000037253}",
+      "hand": {
+        "key": "visitor-1:left",
+        "state": "HAND_PAUSED",
+        "valid": false
+      },
+      "poseAgeMs": 366.7999999988824
+    },
+    {
+      "group": "real-models",
+      "file": "local/real-models/results-attempt-1791523638840.json",
+      "status": "FAIL",
+      "completedCycles": null,
+      "failure": "page.waitForFunction: Timeout 60000ms exceeded.",
+      "hand": null,
+      "poseAgeMs": null
+    }
+  ]
+}

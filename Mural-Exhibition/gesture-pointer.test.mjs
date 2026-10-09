@@ -12,7 +12,7 @@ function rig({width=.3,missingWrists=[]}={}) {
 }
 test('Phase 1: near/middle/far upper-body and missing wrists produce one owned, once-mirrored pointer',()=>{
  for(const width of [.18,.3,.6])for(const missingWrists of [[],['left'],['right'],['left','right']]){
-  const r=rig({width,missingWrists}),s=r.frame(1000,[hand(.3,.55)]);
+  const r=rig({width,missingWrists}),s=r.frame(1000,[hand(.35333333333333333,.55)]);
   assert.equal(s.valid,true);assert.ok(Math.abs(s.point.x-1000/6)<1e-8);assert.ok(Math.abs(s.point.y-800*7/12)<1e-8);assert.equal(hitTarget(s.point,targets),'view');
  }
 });
@@ -34,5 +34,5 @@ test('Phase 1: ambiguous person, stale pose, jumps and hand identity changes can
  assert.equal(update(80,owned('right',.8)).valid,false);
 });
 test('Phase 1: time smoothing, jitter and coordinates remain bounded at variable FPS',()=>{
- for(const step of [16,33,100]){const p=new GesturePointer();let s;for(let now=0;now<=1200;now+=step)s=p.update({now,width:1000,height:800,targets,handOwnership:{valid:true,operatorId:'A',lockedHandKey:'A:left',selectedHand:{operatorId:'A',side:'left',x:.32+Math.sin(now)*.002,y:.55,fresh:true}}});assert.ok(Math.abs(s.point.x-200)<4);assert.equal(s.stable,true);}
+ for(const step of [16,33,100]){const p=new GesturePointer();let s;for(let now=0;now<=1200;now+=step)s=p.update({now,width:1000,height:800,targets,handOwnership:{valid:true,operatorId:'A',lockedHandKey:'A:left',selectedHand:{operatorId:'A',side:'left',x:.368+Math.sin(now)*.0014,y:.55,fresh:true}}});assert.ok(Math.abs(s.point.x-200)<4);assert.equal(s.stable,true);}
 });

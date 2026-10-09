@@ -1,0 +1,40 @@
+{
+  "screenshots": [
+    {
+      "file": "selected/dwell-1440.webp",
+      "source": "local/dwell/03-dwelling-1440.png",
+      "state": "普通模式，实际目标驻留进度",
+      "width": 1440,
+      "height": 900,
+      "bytes": 721230,
+      "sha256": "225caefa27bdae03d5445a306fd3e36bac204f444ea9b09e8ff9c638b1d61a13",
+      "losslessPixelMatch": true,
+      "scope": "实际 Chrome/WebGL，合成摄像头/模型输出；非真人摄像头验收"
+    },
+    {
+      "file": "selected/reading-1440.webp",
+      "source": "local/dwell/05-reading-1440.png",
+      "state": "普通模式，人物简介与动作移开锁",
+      "width": 1440,
+      "height": 900,
+      "bytes": 652350,
+      "sha256": "32156417c3ffceb1c3b23478c173efb7de28ed376452d7d831559a5d52816c3a",
+      "losslessPixelMatch": true,
+      "scope": "实际 Chrome/WebGL，合成摄像头/模型输出；非真人摄像头验收"
+    },
+    {
+      "file": "selected/continuity-diagnostics-1440.webp",
+      "source": "local/continuity-browser/locked-diagnostics.png",
+      "state": "Debug 连续追踪与有界诊断",
+      "width": 1440,
+      "height": 900,
+      "bytes": 617598,
+      "sha256": "f88463b7249f58d54c0b073acbe286bf828f3f380bb3dd7f3fd105769d681bc8",
+      "losslessPixelMatch": true,
+      "scope": "实际 Chrome/WebGL，合成摄像头/模型输出；非真人摄像头验收"
+    }
+  ],
+  "totalBytes": 1991178,
+  "originalsRetained": "local/",
+  "physicalCamera": "PHYSICAL_CAMERA_PENDING"
+}

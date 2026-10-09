@@ -6,7 +6,7 @@ export class OperatorTracker {
  constructor(config={}) {this.config={...INTERACTION_CONFIG,...config};this.serial=0;this.reset();}
  reset() {
   this.state='SEARCHING';this.tracks=[];this.active=null;this.candidate=null;
-  this.assignments={};this.lastPoseAt=-Infinity;this.poses=[];this.bodies=[];this.released=false;this.rejections=[];
+  this.assignments={};this.controlHistory=null;this.lastPoseAt=-Infinity;this.poses=[];this.bodies=[];this.released=false;this.rejections=[];
  }
  distance(a,b) {return Math.hypot(a.x-b.x,(a.y-b.y)/this.config.imageAspect);}
  point(lm,i) {
@@ -63,7 +63,7 @@ export class OperatorTracker {
   const size=Math.min(1,t.shoulderWidth/c.bodySizeReference),stability=Math.min(1,(now-t.firstSeenAt)/c.operatorAcquireMs);
   return center*w.center+size*w.size+t.confidence*w.visibility+stability*w.stability;
  }
- update({poses=[],poseAt, hands=[],now}) {
+ update({poses=[],poseAt, hands=[],now,controlHandKey=null,handAt=now}) {
   this.released=false;
   this.rejections=[];
   if(this.state==='PERSON_RELEASE'){this.state='SEARCHING';this.candidate=null;}
@@ -93,11 +93,16 @@ export class OperatorTracker {
    }
   }
   const observable=this.active&&visible.some(t=>t.id===this.active.id);
+  if(this.controlHistory&&(!controlHandKey||controlHandKey!==this.controlHistory.key||this.active?.id!==this.controlHistory.operatorId))this.controlHistory=null;
+  this.controlHandKey=controlHandKey;this.handAt=handAt;this.controlMatch=null;this.controlCandidates=0;
   const assignedHands=observable?this.assign(hands,now):[];
+  const controlled=assignedHands.find(h=>h.fresh&&`${h.operatorId}:${h.side}`===controlHandKey);
+  if(controlled)this.controlHistory={...controlled,key:controlHandKey,center:{...this.active.center},shoulderWidth:this.active.shoulderWidth,
+   otherWrist:assignedHands.find(h=>h.fresh&&h.side!==controlled.side)?.wrist??null,handAt};
   if(!observable)this.assignments={};
   const source=side=>assignedHands.find(h=>h.side===side)?.source??null;
   return {operatorState:this.state,activeOperator:this.active,assignedHands,released:this.released,
-   diagnostics:{poseFresh:fresh,operatorObservable:!!observable,poseAgeMs:Number.isFinite(poseAt)?now-poseAt:null,
+   diagnostics:{poseFresh:fresh,operatorObservable:!!observable,poseObservedAt:poseAt,poseAgeMs:Number.isFinite(poseAt)?now-poseAt:null,controlMatch:this.controlMatch,continuityCandidates:this.controlCandidates,
     candidateHoldMs:this.candidate?now-this.candidate.since:0,
     operatorLossMs:this.active?Math.max(0,now-this.active.lastSeenAt):0,
     handsDetected:hands.length,handsAssigned:assignedHands.length,
@@ -105,7 +110,7 @@ export class OperatorTracker {
     leftSource:source('left'),rightSource:source('right'),posePeople:this.bodies.length,
     bodyMode:this.active?.bodyMode??null,shoulderWidth:this.active?.shoulderWidth??null,
     hipsVisible:!!this.active?.torsoComplete,leftWristVisible:!!this.active?.leftWrist,rightWristVisible:!!this.active?.rightWrist,
-    assignmentRejections:this.rejections,assignmentBlocked:this.rejections.some(r=>['AMBIGUOUS_PERSON','AMBIGUOUS_SIDE','HAND_JUMP'].includes(r.reason)),
+    assignmentRejections:this.rejections,assignmentBlocked:this.rejections.some(r=>r.affectsControl!==false&&['AMBIGUOUS_PERSON','AMBIGUOUS_SIDE','HAND_JUMP','CONTROL_IDENTITY_CONFLICT'].includes(r.reason)),
     assignmentStatus:!fresh?'STALE':!observable?'NO_OPERATOR':this.rejections.length?'REJECTED':'OK'}};
  }
  reject(index,reason) {this.rejections.push({hand:index,reason});return null;}
@@ -155,14 +160,50 @@ export class OperatorTracker {
   const side=this.resolveHandSide(w,now);if(!side)return this.reject(index,'AMBIGUOUS_SIDE');
   return {side:side.side,d,source:'fallback',fallbackReason:reason};
  }
+ matchLockedHand(hands,now) {
+  const c=this.config,a=this.active,key=this.controlHandKey;
+  if(!key?.startsWith(a.id+':'))return null;
+  const side=key.slice(a.id.length+1),prior=this.controlHistory??this.assignments[side];
+  if(!prior||now-prior.lastSeenAt>c.controlHandLossGraceMs)return null;
+  // Transport confirmed identity with the body; no extrapolation of pointer motion.
+  const ratio=a.shoulderWidth/(prior.shoulderWidth??a.shoulderWidth),center=prior.center??a.center;
+  const transport=w=>({x:a.center.x+(w.x-center.x)*ratio,y:a.center.y+(w.y-center.y)*ratio});
+  const previous=transport(prior.wrist),other=prior.otherWrist?transport(prior.otherWrist):null;
+  const candidates=hands.map((lm,index)=>({lm,index,w:lm?.[0]})).filter(h=>h.lm?.length===21&&h.lm.every(finite))
+   .map(h=>({...h,d:this.distance(h.w,previous)/a.shoulderWidth})).filter(h=>h.d<=c.handFallbackContinuity&&Number.isFinite(this.envelopeScore(h.w,a))).sort((x,y)=>x.d-y.d);
+  this.controlCandidates=candidates.length;
+  if(!candidates.length){this.controlMatch='NO_CONTINUOUS_OBSERVATION';return null;}
+  const chosen=candidates[0],crossing=hands.some((lm,i)=>i!==chosen.index&&finite(lm?.[0])&&this.distance(lm[0],chosen.w)/a.shoulderWidth<c.handAssignmentAmbiguity);
+  if(crossing||candidates[1]&&candidates[1].d-chosen.d<c.handAssignmentAmbiguity||other&&this.distance(chosen.w,other)/a.shoulderWidth<=chosen.d+c.handAssignmentAmbiguity){
+   this.reject(chosen.index,'AMBIGUOUS_SIDE');this.controlMatch='CONTROL_TRAJECTORY_COMPETITION';return {blocked:true};
+  }
+  if(this.personCompetition(chosen.w)||this.bodies.some(p=>p.id!==a.id&&['left','right'].some(s=>p[s+'Wrist']&&this.distance(chosen.w,p[s+'Wrist'])/p.shoulderWidth<=c.handAssignmentMaxDistance))){
+   this.reject(chosen.index,'AMBIGUOUS_PERSON');this.controlMatch='CONTROL_PERSON_COMPETITION';return {blocked:true};
+  }
+  const opposite=a[(side==='left'?'right':'left')+'Wrist'],own=a[side+'Wrist'];
+  // Explicit opposing-wrist evidence must not be overridden by proximity alone.
+  const oppositeDistance=opposite?this.distance(chosen.w,opposite)/a.shoulderWidth:Infinity;
+  if(oppositeDistance<c.handAssignmentAmbiguity&&(!own||this.distance(chosen.w,own)/a.shoulderWidth-oppositeDistance>=c.handAssignmentAmbiguity)){
+   this.reject(chosen.index,'CONTROL_IDENTITY_CONFLICT');this.controlMatch='OPPOSING_WRIST';return {blocked:true};
+  }
+  this.controlMatch='CONTINUOUS_LOCKED_HAND';return {...chosen,side,source:'continuity'};
+ }
  assign(hands,now) {
   const c=this.config,a=this.active,choices=[];
+  const locked=this.matchLockedHand(hands,now);
+  if(locked?.blocked){this.assignments={};return [];}
   for(let i=0;i<hands.length;i++){
    const lm=hands[i],w=lm?.[0];if(!finite(w)||!finite(lm[9])||lm.length!==21||!lm.every(finite)){this.reject(i,'INVALID_HAND');continue;}
-   let best=this.matchHandToPoseWrist(w,i,now);if(best?.fallback)best=this.matchHandToOperatorEnvelope(w,i,now,best.reason);
+   const rejectionStart=this.rejections.length;
+   let best=locked?.index===i?locked:this.matchHandToPoseWrist(w,i,now);if(best?.fallback)best=this.matchHandToOperatorEnvelope(w,i,now,best.reason);
+   if(locked&&i!==locked.index){
+    // A distinct spare hand is not control competition. Person ambiguity remains global.
+    for(const r of this.rejections.slice(rejectionStart))if(r.reason==='AMBIGUOUS_SIDE')r.affectsControl=false;
+    if(best?.side===locked.side){this.rejections.push({hand:i,reason:'NON_CONTROL_SIDE_CONFLICT',affectsControl:false});continue;}
+   }
    if(!best)continue;
    const prior=this.assignments[best.side];
-   if(prior&&this.distance(w,prior.wrist)/a.shoulderWidth>c.handMaxJump){delete this.assignments[best.side];this.reject(i,'HAND_JUMP');continue;}
+   if(best.source!=='continuity'&&prior&&this.distance(w,prior.wrist)/a.shoulderWidth>c.handMaxJump){delete this.assignments[best.side];this.reject(i,'HAND_JUMP');if(locked&&i!==locked.index)this.rejections.at(-1).affectsControl=false;continue;}
    choices.push({side:best.side,d:best.d,landmarks:lm,wrist:{x:w.x,y:w.y},x:1-lm[9].x,y:lm[9].y,
     operatorId:a.id,lastSeenAt:now,fresh:true,source:best.source,fallbackReason:best.fallbackReason,index:i});
   }
@@ -180,7 +221,7 @@ export class OperatorTracker {
     }
    }
   }
-  if(this.rejections.some(r=>['AMBIGUOUS_PERSON','AMBIGUOUS_SIDE','HAND_JUMP'].includes(r.reason))){this.assignments={};return [];}
+  if(this.rejections.some(r=>r.affectsControl!==false&&['AMBIGUOUS_PERSON','AMBIGUOUS_SIDE','HAND_JUMP','CONTROL_IDENTITY_CONFLICT'].includes(r.reason))){this.assignments={};return [];}
   this.assignments=current;return Object.values(current);
  }
 }

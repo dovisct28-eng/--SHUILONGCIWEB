@@ -54,6 +54,12 @@ const shot=(p,n)=>p.screenshot({path:path.join(out,n+'.png')});
   }else{await shot(page,'cyber-dependency-error');report.realModelStartup={status:'PENDING',message:await page.locator('#entry-status').textContent()};report.functional.push('external cyber dependency error reported, return/retry available');}
   // Navigation lifecycle does not run model inference. Keep the loaded Hands JS,
   // renderer and GSAP; avoid re-downloading unused model weights for each fake camera.
+  // Pose initialization belongs to the separate real-model check; a network fault
+  // must not prevent this synthetic navigation lifecycle from reaching Camera.start.
+  await require('./b03-gesture-fixtures.cjs').stubPose(page);
+  await page.route('**/index.html*',async route=>{const response=await route.fetch();await route.fulfill({response,body:(await response.text()).replace(/\r?\n    <\/script>\r?\n<\/body>/,'\nwindow.__b01LoadDependencies=loadCyberDependencies;\n    </script>\n</body>')});});
+  await page.reload();
+  await page.waitForFunction(()=>typeof __b01LoadDependencies==='function');await page.evaluate(()=>__b01LoadDependencies());
   await page.evaluate(()=>{
    const LoadedHands=window.Hands;
    window.Hands=class extends LoadedHands{async initialize(){}async close(){}};

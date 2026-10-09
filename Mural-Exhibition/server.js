@@ -9,7 +9,7 @@ function createApp({ admin = process.env.GALLERY_ADMIN === '1', assetsDirectory 
   let commitSha=null,workingTreeChanged=null;
   const cp=require('node:child_process');
   try{commitSha=cp.execFileSync('git',['rev-parse','HEAD'],{cwd:__dirname,encoding:'utf8',windowsHide:true}).trim();workingTreeChanged=!!cp.execFileSync('git',['status','--porcelain','--','public/index.html','public/camera-lifecycle.mjs','public/pose-pipeline.mjs','public/pose-worker.js','public/operator-tracker.mjs','public/dwell-feedback.mjs','public/hand-ownership.mjs','public/gesture-pointer.mjs','public/dwell-controller.mjs','public/gesture-diagnostics.mjs','public/interaction-config.mjs','public/b03.css','server.js'],{cwd:__dirname,encoding:'utf8',windowsHide:true}).trim();}catch{}
-  res.set('Cache-Control','no-store').json({commitSha,workingTreeChanged,version:'B03 V4.2'});
+  res.set('Cache-Control','no-store').json({commitSha,workingTreeChanged,version:'B03 V4.3'});
  });
  app.get('/m', (req, res) => res.sendFile(path.join(__dirname, 'public/gallery.html')));
  app.get('/api/scan-assets', (req, res) => {

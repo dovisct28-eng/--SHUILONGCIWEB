@@ -16,11 +16,11 @@ export function cameraHarness(index=0) {
  const stop=html.slice(html.indexOf('function stopMediaPipe()'),html.indexOf('// Page locks are shared'));
  const handler=html.slice(html.indexOf('// Page locks are shared'),html.indexOf('\n    </script>',html.indexOf('// Page locks are shared')));
  const targets=[{id:'view',x:100,y:400,width:140,height:120},{id:'next',x:1040,y:400,width:140,height:120}];
- const ctx=vm.createContext({OperatorTracker,GesturePointer,HandOwnership,DwellController,readingVelocity,INTERACTION_CONFIG,GestureDiagnostics,poseFreshnessBudget,gestureGuidance,Math,URLSearchParams,time:0,location:{search:''},performance:{now:()=>ctx.time}});
+ const ctx=vm.createContext({OperatorTracker,GesturePointer,HandOwnership,DwellController,readingVelocity,INTERACTION_CONFIG,GestureDiagnostics,poseFreshnessBudget,gestureGuidance,Math,URLSearchParams,time:0,location:{search:'?gestureDebug=1'},performance:{now:()=>ctx.time}});
  vm.runInContext(`let currentTrack='cyber',entryBusy=false,currentSeriesIndex=${index},isRevealed=false;
  const operatorTracker=new OperatorTracker(),gesturePointer=new GesturePointer(),handOwnership=new HandOwnership(),dwellController=new DwellController();
  let controlPointer={valid:false,visible:false},readingScrollAt=null;
- const gestureDiagnostics=new GestureDiagnostics();
+ const gestureDiagnostics=new GestureDiagnostics({enabled:true});
  const cameraLifecycle={result(){},stop(){gesturePerformance.activeCameras=0;posePipeline.stop();},snapshot(){return {state:'RUNNING',events:[]};}};function startMediaPipe(){gesturePerformance.activeCameras=1;posePipeline.start();handsFrameVersion=cameraVersion;initMediaPipe();}
  const posePipeline={latest:{poses:[],at:-Infinity},start(){},stop(){},dispose(){},snapshot(){return {frames:0};}};
  let ownership={operatorState:'SEARCHING',assignedHands:[],diagnostics:{}},cameraVersion=1,handsFrameVersion=1,handsFrameAt=0;
@@ -48,7 +48,7 @@ export function cameraHarness(index=0) {
  this.deliver=(hands,poses,at,poseAt=at)=>{time=at;handsFrameAt=at;posePipeline.latest={poses,at:poseAt};callback(hands===undefined?{image:{}}:{image:{},multiHandLandmarks:hands});};
  this.timing=metrics=>posePipeline.snapshot=()=>metrics;
  this.deliverCaptured=(hands,poses,captured,returned,poseAt)=>{time=returned;handsFrameAt=captured;posePipeline.latest={poses,at:poseAt,receivedAt:returned};callback({image:{},multiHandLandmarks:hands});};
- this.snapshot=()=>({index:currentSeriesIndex,calls,reading:isRevealed,reveals,closes,scrollTop:info.scrollTop,...dwellController.snapshot(),person:ownership.operatorState,operator:ownership.activeOperator?.id,assigned:ownership.assignedHands.length,diagnostics:ownership.diagnostics,handLock:handOwnership.snapshot(time),pointer:controlPointer,previewLines,previewPoints,previewClears});
+ this.snapshot=()=>({index:currentSeriesIndex,calls,reading:isRevealed,reveals,closes,scrollTop:info.scrollTop,...dwellController.snapshot(),person:ownership.operatorState,operator:ownership.activeOperator?.id,assigned:ownership.assignedHands.length,diagnostics:ownership.diagnostics,tracking:gestureDiagnostics.trackingSnapshot(),handLock:handOwnership.snapshot(time),pointer:controlPointer,previewLines,previewPoints,previewClears});
  this.busy=v=>entryBusy=v;
  this.stop=()=>stopMediaPipe();
  this.leave=()=>{currentTrack='gallery';stopMediaPipe();};
@@ -61,5 +61,5 @@ export function cameraHarness(index=0) {
  for(let at=0;at<=900;at+=40)ctx.result([],at);
  return ctx;
 }
-export function sustain(h,x=.28,y=.545,ms=1400,opts={}) {let actions=[];const before=h.snapshot();for(let t=0;t<ms;t+=40)h.result(x===null?[]:[hand(x,y)],h.time+40,opts);const s=h.snapshot();return {before,after:s};}
+export function sustain(h,x=.34,y=.545,ms=1400,opts={}) {let actions=[];const before=h.snapshot();for(let t=0;t<ms;t+=40)h.result(x===null?[]:[hand(x,y)],h.time+40,opts);const s=h.snapshot();return {before,after:s};}
 export const release=h=>sustain(h,.5,.55,1200);

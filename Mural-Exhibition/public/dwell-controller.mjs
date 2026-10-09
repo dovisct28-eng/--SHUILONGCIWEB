@@ -21,8 +21,7 @@ export class DwellController {
   if(!pointer?.valid){
    this.releaseSince=null;
    const safePause=pointer?.paused&&['HAND_LOCKED_PAUSED','POSE_STALE','HAND_NOT_DETECTED'].includes(pointer.reason)&&pointer.key===this.handKey;
-   if(safePause&&this.target){this.gapAt??=now;if(now-this.gapAt>c.trackingPauseMs)this.cancel();else this.lastAt=null;}
-   else this.cancel();
+   this.cancel();
    this.state=safePause?'TRACKING_PAUSED':'BLOCKED';this.reason=pointer?.reason||'HAND_NOT_DETECTED';return null;
   }
   if(pointer.key!==this.handKey||pointer.changed){this.cancel();this.handKey=pointer.key;this.releaseSince=null;}
@@ -34,7 +33,7 @@ export class DwellController {
    else this.releaseSince=null;
    return null;
   }
-  if(!pointer.stable){this.lastAt=null;this.state='TRACKING_PAUSED';this.reason='HAND_UNSTABLE';if(!(pointer.resuming&&this.gapAt!==null&&now-this.gapAt<=c.trackingPauseMs))this.cancel();return null;}
+  if(!pointer.stable){this.cancel();this.state='TRACKING_PAUSED';this.reason='HAND_UNSTABLE';return null;}
   if(!eligible){this.cancel();this.state='READY';this.reason=target?'ACTION_LOCKED':'TARGET_OUTSIDE';return null;}
   if(this.target!==target||(this.lastAt!==null&&now-this.lastAt>c.trackingPauseMs)){this.cancel();this.target=target;this.duration=targets.find(t=>t.id===target)?.dwellMs??c.dwellMs;this.lastAt=now;this.state='TARGET_HOVER';this.reason='DWELLING';return null;}
   if(this.gapAt!==null&&now-this.gapAt>c.trackingPauseMs){this.cancel();return null;}

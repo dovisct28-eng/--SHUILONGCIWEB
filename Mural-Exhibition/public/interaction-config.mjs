@@ -25,7 +25,7 @@ export const INTERACTION_CONFIG = Object.freeze({
  dwellMs:1000, dwellReleaseMs:250, trackingPauseMs:200, dwellMaxStepMs:120,
  pointerTauMs:75, pointerFastTauMs:28, pointerFastSpeed:.35,
  pointerStableSpeed:.65, pointerSettleMs:140, pointerJump:.24,
- pointerInput:Object.freeze({left:.2,right:.8,top:.2,bottom:.8}),
+ pointerInput:Object.freeze({left:.28,right:.72,top:.2,bottom:.8}),
  targetWidth:128, targetHeight:76, targetY:.61, targetLeft:.13, targetRight:.87,
  readingDeadzone:.08, readingMaxSpeed:420, readingScrollMaxStepMs:200,
  readingTransitionMs:750
