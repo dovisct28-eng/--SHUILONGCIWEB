@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "start:admin": "node start-gallery-admin.cjs",
-    "test": "node b01-check.cjs && node --test b02.test.cjs b03.test.cjs orbit-layout.test.mjs mural-surface.test.mjs b03-motion.test.mjs operator-tracker.test.mjs hand-ownership.test.mjs gesture-pointer.test.mjs dwell-controller.test.mjs b03-dwell-production.test.mjs b03-v43-continuity.test.mjs pose-pipeline.test.mjs camera-lifecycle.test.mjs gesture-timing.test.mjs b03-v42-launcher.test.cjs experience-guidance.test.mjs",
+    "test": "node b01-check.cjs && node --test b02.test.cjs b03.test.cjs orbit-layout.test.mjs mural-surface.test.mjs b03-motion.test.mjs operator-tracker.test.mjs hand-ownership.test.mjs gesture-pointer.test.mjs dwell-controller.test.mjs b03-dwell-production.test.mjs b03-v43-continuity.test.mjs pose-pipeline.test.mjs camera-lifecycle.test.mjs gesture-timing.test.mjs b03-v42-launcher.test.cjs exhibition-launcher.test.cjs experience-guidance.test.mjs",
     "test:b-ux-browser": "node b-ux-01-browser-check.cjs",
     "audit:b-ux-content": "node b-ux-01-content-audit.cjs",
     "test:browser": "node b01-browser-check.cjs",

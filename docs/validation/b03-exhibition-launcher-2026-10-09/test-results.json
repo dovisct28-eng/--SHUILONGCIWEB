@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-09",
+  "baseline": "4956d71dd2b3b6819d09762e036d14973b1848a8",
+  "status": "PASS",
+  "batchDefaultPort": 3002,
+  "directServerDefaultPort": 3000,
+  "unit": {"command": "npm test", "tests": 130, "pass": 130, "fail": 0, "log": "local/unit-tests.txt"},
+  "launcherTests": {"tests": 4, "pass": 4, "fail": 0, "log": "local/launcher-tests.txt"},
+  "syntax": {"status": "PASS", "files": ["start-exhibition.cjs", "server.js", "exhibition-launcher.test.cjs"]},
+  "actualRun": {
+    "batch": "cmd.exe invocation from another working directory",
+    "reusedExistingV43": true,
+    "url": "http://localhost:3002/index.html",
+    "browser": "Chrome",
+    "viewport": [1440, 900],
+    "httpStatus": 200,
+    "runtimeVersion": "B03 V4.3",
+    "selectionButtonsVisible": true,
+    "pageErrors": [],
+    "record": "local/smoke-results.json"
+  },
+  "physicalCamera": "NOT_INVOKED",
+  "priorFailure": "Initial new fixture used fetch port 0 and called address on the Express app instead of its HTTP server; corrected before final passing run.",
+  "files": [
+    "Mural-Exhibition/启动展厅.bat",
+    "Mural-Exhibition/start-exhibition.cjs",
+    "Mural-Exhibition/server.js",
+    "Mural-Exhibition/exhibition-launcher.test.cjs",
+    "Mural-Exhibition/package.json",
+    "docs/validation/b03-exhibition-launcher-2026-10-09/README.md",
+    "docs/validation/b03-exhibition-launcher-2026-10-09/test-results.json"
+  ]
+}

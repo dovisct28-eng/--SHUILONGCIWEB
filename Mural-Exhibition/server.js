@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('node:path');
 const crypto = require('node:crypto');
 const { scanAssets, savePosition } = require('./gallery-store.cjs');
+const RUNTIME_VERSION = 'B03 V4.3';
 function createApp({ admin = process.env.GALLERY_ADMIN === '1', assetsDirectory = path.join(__dirname, 'public/assets') } = {}) {
  const app = express(), token = crypto.randomBytes(32).toString('hex');
  app.use(express.static(path.join(__dirname, 'public')));
@@ -9,7 +10,7 @@ function createApp({ admin = process.env.GALLERY_ADMIN === '1', assetsDirectory 
   let commitSha=null,workingTreeChanged=null;
   const cp=require('node:child_process');
   try{commitSha=cp.execFileSync('git',['rev-parse','HEAD'],{cwd:__dirname,encoding:'utf8',windowsHide:true}).trim();workingTreeChanged=!!cp.execFileSync('git',['status','--porcelain','--','public/index.html','public/camera-lifecycle.mjs','public/pose-pipeline.mjs','public/pose-worker.js','public/operator-tracker.mjs','public/dwell-feedback.mjs','public/hand-ownership.mjs','public/gesture-pointer.mjs','public/dwell-controller.mjs','public/gesture-diagnostics.mjs','public/interaction-config.mjs','public/b03.css','server.js'],{cwd:__dirname,encoding:'utf8',windowsHide:true}).trim();}catch{}
-  res.set('Cache-Control','no-store').json({commitSha,workingTreeChanged,version:'B03 V4.3'});
+  res.set('Cache-Control','no-store').json({commitSha,workingTreeChanged,version:RUNTIME_VERSION});
  });
  app.get('/m', (req, res) => res.sendFile(path.join(__dirname, 'public/gallery.html')));
  app.get('/api/scan-assets', (req, res) => {
@@ -39,4 +40,4 @@ if (require.main === module) {
  const port = Number(process.env.PORT || 3000);
  createApp().listen(port, () => console.log(`水龙祠： http://localhost:${port}/index.html\n本地标注管理：${process.env.GALLERY_ADMIN === '1' ? '已启用' : '关闭'}`));
 }
-module.exports = { createApp };
+module.exports = { createApp, RUNTIME_VERSION };
