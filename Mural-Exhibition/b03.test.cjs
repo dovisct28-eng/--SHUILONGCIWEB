@@ -33,10 +33,19 @@ test('Optional figure scan preserves old fields and metadata through position sa
   savePosition(root,'01',{x:1,y:2},item.revision);item=scanAssets(root).data[0];assert.deepEqual(item.cyber,meta.cyber);assert.deepEqual(item.custom,meta.custom);
  }finally{fs.rmSync(root,{recursive:true,force:true});}
 });
-test('sources reject executable links',async()=>{
- const {safeSourceURL}=await import('./public/character-study.mjs');
- for(const s of ['javascript:alert(1)','data:text/html,test','file:///secret','/relative',undefined])assert.equal(safeSourceURL(s),null);
- assert.equal(safeSourceURL('https://example.com/book'),'https://example.com/book');
+test('archive renders the complete body as text without appended sources or source placeholders',async()=>{
+ const {archiveBlocks,renderArchive}=await import('./public/character-study.mjs');
+ const previous=global.document;
+ global.document={createElement:tag=>({tag,textContent:''})};
+ try {
+  const container={children:[],scrollTop:99,replaceChildren(){this.children=[];},append(el){this.children.push(el);}};
+  const archive=archiveBlocks('一、 人物介绍\n正文 <script>window.__unsafe=true</script>\n二、 English Summary\nFull original paragraph');
+  renderArchive(container,archive,[{title:'不应显示的资料来源',url:'https://example.com'}]);
+  assert.deepEqual(container.children.map(el=>({type:el.tag,text:el.textContent})),archive.blocks);
+  assert.equal(container.scrollTop,0);
+  renderArchive(container,{blocks:[]});
+  assert.deepEqual(container.children,[{tag:'p',textContent:'人物档案待补充'}]);
+ } finally {global.document=previous;}
 });
 test('B03 title subset has recorded bytes/hash and covers current formal names',()=>{
  const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');

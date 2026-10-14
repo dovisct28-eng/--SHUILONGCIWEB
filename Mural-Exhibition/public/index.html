@@ -764,7 +764,8 @@
             const english = document.getElementById('archive-english'); english.textContent = item.englishName || ''; english.hidden = !item.englishName;
             textEl.textContent = item.infoPath ? '正在读取人物档案…' : '人物档案待补充'; textEl.scrollTop = 0;
             if (currentTrack === 'gallery') infoPanel.classList.add('visible');
-            if (currentTrack === 'gallery' && !item.infoPath) renderArchive(textEl, { blocks:[] }, item.sources);
+            infoPanel.dataset.empty = String(!item.infoPath);
+            if (!item.infoPath) renderArchive(textEl, { blocks:[] });
             const archiveRequest = infoRequest;
             const archiveTimer = item.infoPath ? setTimeout(() => archiveRequest.abort(), 12000) : null;
             if (item.infoPath) fetch(item.infoPath, { signal: archiveRequest.signal }).then(res => { if (!res.ok) throw Error(); return res.text(); })
@@ -772,10 +773,11 @@
                     if (version !== detailVersion) return;
                     const archive = archiveBlocks(text, { markdown:/\.md$/.test(item.infoPath), name:item.name, englishName:item.englishName });
                     english.textContent = archive.englishName; english.hidden = !archive.englishName;
-                    if (currentTrack === 'gallery') renderArchive(textEl, archive, item.sources);
+                    infoPanel.dataset.empty = String(!archive.blocks.length);
+                    renderArchive(textEl, archive);
                 })
                 .catch(error => {
-                    if (version !== detailVersion || currentTrack !== 'gallery') return;
+                    if (version !== detailVersion) return;
                     textEl.textContent = '人物档案暂未载入。';
                     const retry = document.createElement('button'); retry.type = 'button'; retry.textContent = '重试档案'; retry.onclick = () => loadSeriesData(currentSeriesIndex); textEl.append(retry);
                 }).finally(() => clearTimeout(archiveTimer));
@@ -793,10 +795,6 @@
                 document.getElementById('detail-asset-status').textContent = item.ready ? '' : '人物原图素材未就绪';
                 window.switchLayer('org');
             } else if (currentTrack === 'cyber') {
-                const config = cyberConfig(item.cyber);
-                infoPanel.dataset.empty=String(!config.summary.trim());
-                textEl.replaceChildren(); const summary = document.createElement('p'); summary.textContent = config.summary.trim() ? config.summary : '人物介绍待补充'; textEl.append(summary);
-                const notice = document.createElement('p'); notice.className = 'archive-sources'; notice.textContent = '数字化演绎内容 · 完整档案及已有资料来源请在图鉴中阅读'; textEl.append(notice);
                 document.getElementById('stage-name').textContent = item.name;
                 if (canEnterCyber(item)) updateWebGLMural(item.linePath, item.colorPath, item.figurePath);
                 else modeError('该人物体感所需线稿或色稿尚未就绪，请选择已有完整素材的人物。');

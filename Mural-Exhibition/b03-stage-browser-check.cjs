@@ -36,6 +36,7 @@ const shot=(p,n)=>p.screenshot({path:path.join(out,n+'.png')});
   const fixture=(id,name,figure,cyber={},legacy=false)=>({...data[0],id,name,englishName:'Provided fixture name',position:{x:null,y:null},order:99,previews:{},resources:{org:null,line:legacy?data[0].linePath:null,color:legacy?data[0].colorPath:null,figure,info:null,video:null},orgPath:null,linePath:legacy?data[0].linePath:null,colorPath:legacy?data[0].colorPath:null,figurePath:figure,infoPath:null,videoPath:null,ready:false,annotated:false,cyber});
   const longSummary='合成测试简介，仅用于验证滚动与安全文字，不是史料。'.repeat(80)+'<script>window.__unsafe=true</script>';
   const fixtures=[fixture('tall','合成边界测试 · 细长矩形','/fixture-tall.png',{summary:longSummary}),fixture('wide','合成边界测试 · 宽矩形','/fixture-wide.png'),fixture('opaque','不透明 Alpha 测试','/fixture-opaque.png',{},true),fixture('empty','空 Alpha 测试','/fixture-empty.png'),fixture('decode','解码失败测试','/fixture-broken.png',{},true),fixture('manual','手动边界测试','/fixture-opaque.png',{bounds:{x:0,y:0,width:1,height:1},layout:{scale:.7}})];
+  fixtures[0].infoPath='/test-long-info.txt';await p.route('**/test-long-info.txt',r=>r.fulfill({body:longSummary}));
   await p.route('**/fixture-broken.png',r=>r.fulfill({contentType:'image/png',body:'not an image'}));
   await p.route('**/api/scan-assets',r=>r.fulfill({json:{success:true,adminEnabled:true,data:[...data,...fixtures],diagnostics:[]}}));
   await p.goto(origin+'/index.html');await p.locator('#btn-gallery-track').click();await p.waitForFunction(()=>document.body.dataset.explorationState==='gallery-map');
@@ -49,7 +50,7 @@ const shot=(p,n)=>p.screenshot({path:path.join(out,n+'.png')});
     if(index===8&&revealed){assert.ok(await p.locator('#info-text').evaluate(e=>e.scrollHeight>e.clientHeight));assert.equal(await p.evaluate(()=>window.__unsafe),undefined);}
    }
   }
-  report.functional.push('Figure-only resources enter without legacy layers; synthetic tall/wide Alpha shapes fit 4 sizes in both states; long author summary scrolls and HTML stays text; one renderer and <=80000 vertices');
+  report.functional.push('Figure-only resources enter without legacy layers; synthetic tall/wide Alpha shapes fit 4 sizes in both states; long shared archive body scrolls and HTML stays text; one renderer and <=80000 vertices');
   await p.evaluate(()=>__stage.select(10));await ready(p);assert.ok(!(await p.evaluate(()=>__stage.snapshot())).figureMode);assert.match(await p.locator('#cyber-asset-status').textContent(),/不透明/);await shot(p,'invalid-alpha-legacy-fallback');
   await p.evaluate(()=>__stage.select(11));await p.waitForFunction(()=>document.getElementById('cyber-asset-status').textContent.includes('为空'));assert.equal((await p.evaluate(()=>__stage.snapshot())).id,'empty');assert.ok(await p.locator('#webgl-container').evaluate(e=>e.hasAttribute('data-loading')));await shot(p,'empty-alpha-diagnostic');
   await p.evaluate(()=>__stage.select(12));await ready(p);assert.ok(!(await p.evaluate(()=>__stage.snapshot())).figureMode);assert.match(await p.locator('#cyber-asset-status').textContent(),/无效/);

@@ -20,11 +20,7 @@ export function archiveBlocks(text, { markdown = false, name = '', englishName =
  flush(); return { englishName, blocks };
 }
 
-export function safeSourceURL(value) {
- try { const u = new URL(value); return ['http:', 'https:'].includes(u.protocol) ? u.href : null; } catch { return null; }
-}
-
-export function renderArchive(container, archive, sources = []) {
+export function renderArchive(container, archive) {
  container.replaceChildren();
  for (const block of archive.blocks) {
   const el = document.createElement(block.type === 'li' ? 'p' : block.type);
@@ -32,18 +28,7 @@ export function renderArchive(container, archive, sources = []) {
   container.append(el);
  }
  if (!archive.blocks.length) { const p = document.createElement('p'); p.textContent = '人物档案待补充'; container.append(p); }
- const section = document.createElement('section'); section.className = 'archive-sources';
- const title = document.createElement('h2'); title.textContent = '资料来源'; section.append(title);
- for (const source of sources) {
-  const text = typeof source === 'string' ? source : source && typeof source === 'object' ? ['author', 'title', 'year', 'pages'].map(k => source[k]).filter(v => typeof v === 'string' || typeof v === 'number').join(' · ') : '';
-  if (!text) continue;
-  const p = document.createElement('p'); p.textContent = text;
-  const url = typeof source === 'object' && safeSourceURL(source.url);
-  if (url) { const a = document.createElement('a'); a.href = url; a.textContent = '查看来源 ↗'; a.target = '_blank'; a.rel = 'noopener noreferrer'; p.append(' ', a); }
-  section.append(p);
- }
- if (section.children.length === 1) { const p = document.createElement('p'); p.textContent = '资料来源待补充。原档案保留，相关解释尚未在本轮核验。'; section.append(p); }
- container.append(section); container.scrollTop = 0;
+ container.scrollTop = 0;
 }
 
 // Camera remains parallel to the original plane. CSS transforms are intentionally

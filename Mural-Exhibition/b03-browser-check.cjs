@@ -52,7 +52,7 @@ window.__b03={ gesture:fixtureGesture,reveal:requestReading, select:loadSeriesDa
    assert.ok(await page.locator('#floating-info').evaluate(e=>e.inert));assert.ok(await page.locator('#layer-controls').isHidden());
    await page.locator('#reveal-toggle').click();await page.waitForFunction(()=>getComputedStyle(document.getElementById('floating-info')).opacity==='1');await page.waitForTimeout(100);await shot(page,`cyber-revealed-${w}x${h}`);
    const snapshot=await page.evaluate(()=>__b03.snapshot()),panel=await page.locator('#floating-info').boundingBox();
-   assert.ok(snapshot.projected.every(p=>p.x>=29&&p.x<=panel.x-20&&p.y>=90&&p.y<=h-110),JSON.stringify({snapshot,panel}));assert.equal(snapshot.rendererCount,1);assert.ok(snapshot.figureMode);assert.ok(snapshot.grid<=80000);assert.ok(!(await page.locator('#info-text').textContent()).includes('一、'));assert.match(await page.locator('#info-text').textContent(),/人物介绍待补充/);
+   assert.ok(snapshot.projected.every(p=>p.x>=29&&p.x<=panel.x-20&&p.y>=90&&p.y<=h-110),JSON.stringify({snapshot,panel}));assert.equal(snapshot.rendererCount,1);assert.ok(snapshot.figureMode);assert.ok(snapshot.grid<=80000);await page.waitForFunction(()=>document.querySelector('#info-text h2'));assert.match(await page.locator('#info-text').textContent(),/一、/);assert.equal(await page.locator('#info-text .archive-sources').count(),0);
    await page.locator('#reveal-toggle').click();await page.waitForTimeout(850);await shot(page,`cyber-closed-${w}x${h}`);await page.locator('#quick-switch-btn').click();await ready(page);assert.equal(await page.evaluate(()=>__b03.snapshot().id),'01');assert.equal(await page.evaluate(()=>__b03.snapshot().glFrame),null);
    report.views.push({w,h,layout,cyber:snapshot});
   }

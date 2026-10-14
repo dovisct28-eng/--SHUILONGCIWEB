@@ -63,13 +63,14 @@ async function verify(p) {
   }
   report.functional.push('Every supplied figure tested at four viewports in default/reading/restored states, with alpha-aware panel collision checks; remaining legacy fallback tested by available data');
   await p.evaluate(()=>__hf.select(0));await ready(p);
-  // Only author summary in an API fixture; never writes author metadata.
-  await p.route('**/api/scan-assets',r=>r.fulfill({json:{success:true,data:data.map((x,i)=>i===0?{...x,cyber:{summary:'仅用于测试长简介排版，不是人物史料。'.repeat(100)+'<script>window.__unsafe=true</script>'}}:x),diagnostics:[]}}));
+  // Shared archive body fixture only; never writes author metadata.
+  await p.route('**/api/scan-assets',r=>r.fulfill({json:{success:true,data:data.map((x,i)=>i===0?{...x,infoPath:'/test-long-info.txt'}:x),diagnostics:[]}}));
+  await p.route('**/test-long-info.txt',r=>r.fulfill({body:'仅用于测试长简介排版，不是人物史料。'.repeat(100)+'<script>window.__unsafe=true</script>'}));
   await p.goto(origin+'/index.html');await p.locator('#btn-gallery-track').click();await p.locator('.hotspot[data-ids="01"]').click();await p.waitForFunction(()=>document.getElementById('image-wrapper').dataset.media==='org');await p.locator('#quick-switch-btn').click();await ready(p);await p.locator('#reveal-toggle').click();await p.waitForTimeout(900);
   assert.ok(await p.locator('#info-text').evaluate(e=>e.scrollHeight>e.clientHeight));assert.equal(await p.evaluate(()=>window.__unsafe),undefined);await shot(p,'synthetic-long-summary');
   await p.unroute('**/api/scan-assets');await p.locator('#quick-switch-btn').click();await p.waitForFunction(()=>document.body.dataset.explorationState==='gallery-detail');assert.equal(await p.locator('#orbit-stage').isHidden(),true);
   await p.emulateMedia({reducedMotion:'reduce'});await p.locator('#quick-switch-btn').click();await ready(p);await p.locator('#reveal-toggle').click();await verify(p);await shot(p,'reduced-motion');
-  report.functional.push('Legacy fallback hides figure-specific image devices; mode exit clears canvases; long author summary scrolls and HTML stays plain text; reduced motion reaches the same safe composition');assert.deepEqual(report.errors,[]);
+  report.functional.push('Legacy fallback hides figure-specific image devices; mode exit clears canvases; long shared archive body scrolls and HTML stays plain text; reduced motion reaches the same safe composition');assert.deepEqual(report.errors,[]);
  } finally {try {fs.writeFileSync(path.join(out,'results.json'),JSON.stringify(report,null,2));}finally {await browser.close();server.closeAllConnections();await new Promise(r=>server.close(r));}}
  console.log('B03 HF theatre browser: PASS');
 })().catch(e=>{console.error(e);process.exitCode=1;});

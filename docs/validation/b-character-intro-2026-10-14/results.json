@@ -1,0 +1,154 @@
+{
+  "status": "PASS",
+  "views": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "gallery": {
+        "width": 1920,
+        "height": 1080,
+        "x": 1286.40625,
+        "y": 252.09375,
+        "right": 1862.40625,
+        "bottom": 1034,
+        "scroll": true,
+        "overflow": false
+      },
+      "cyber": {
+        "width": 1920,
+        "height": 1080,
+        "x": 1288.625,
+        "y": 411.28125,
+        "right": 1821.8125,
+        "bottom": 948.1875,
+        "scroll": true,
+        "overflow": false
+      },
+      "status": "PASS"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "gallery": {
+        "width": 1440,
+        "height": 900,
+        "x": 964.829833984375,
+        "y": 236.703125,
+        "right": 1396.829833984375,
+        "bottom": 854,
+        "scroll": true,
+        "overflow": false
+      },
+      "cyber": {
+        "width": 1440,
+        "height": 900,
+        "x": 974.21875,
+        "y": 355.015625,
+        "right": 1358.609375,
+        "bottom": 725,
+        "scroll": true,
+        "overflow": false
+      },
+      "status": "PASS"
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "gallery": {
+        "width": 1366,
+        "height": 768,
+        "x": 924.203125,
+        "y": 220.5,
+        "right": 1334,
+        "bottom": 722,
+        "scroll": true,
+        "overflow": false
+      },
+      "cyber": {
+        "width": 1366,
+        "height": 768,
+        "x": 923.890625,
+        "y": 316.53125,
+        "right": 1307,
+        "bottom": 563.3125,
+        "scroll": true,
+        "overflow": false
+      },
+      "status": "PASS"
+    },
+    {
+      "width": 1280,
+      "height": 800,
+      "gallery": {
+        "width": 1280,
+        "height": 800,
+        "x": 864.0174560546875,
+        "y": 216.78125,
+        "right": 1248.0174560546875,
+        "bottom": 754,
+        "scroll": true,
+        "overflow": false
+      },
+      "cyber": {
+        "width": 1280,
+        "height": 800,
+        "x": 865.40625,
+        "y": 320.96875,
+        "right": 1221,
+        "bottom": 603,
+        "scroll": true,
+        "overflow": false
+      },
+      "status": "PASS"
+    }
+  ],
+  "characters": [
+    {
+      "id": "01",
+      "name": "南门何五猖",
+      "status": "PASS"
+    },
+    {
+      "id": "02",
+      "name": "东门陈五猖",
+      "status": "PASS"
+    },
+    {
+      "id": "03",
+      "name": "西门谢五猖",
+      "status": "PASS"
+    },
+    {
+      "id": "04",
+      "name": "中门徐五猖",
+      "status": "PASS"
+    },
+    {
+      "id": "05",
+      "name": "北门雷五猖",
+      "status": "PASS"
+    },
+    {
+      "id": "06",
+      "name": "翻坛张五郎",
+      "status": "PASS"
+    },
+    {
+      "id": "07",
+      "name": "梅山猖兵",
+      "status": "PASS"
+    },
+    {
+      "id": "10",
+      "name": "上层猖兵",
+      "status": "PASS"
+    }
+  ],
+  "cases": [
+    "gallery: load failure/retry and stale response PASS",
+    "cyber: load failure/retry and stale response PASS",
+    "Shared markdown body, supplied sources hidden, legacy summary ignored, HTML remains text, missing cyber archive placeholder PASS"
+  ],
+  "errors": [],
+  "limits": "Actual Chrome, local assets, Three.js and GSAP; synthetic camera and model outputs. Physical camera NOT_TESTED."
+}

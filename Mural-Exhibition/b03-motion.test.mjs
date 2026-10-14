@@ -38,7 +38,10 @@ test('V4 freezes camera preview and stage algorithms; no new RAF or legacy produ
  const cameraRules=s=>s.match(/[^{}]*#camera-feed-container[^{}]*\{[^{}]*\}/g);
  assert.deepEqual(cameraRules(now('public/b03.css')),cameraRules(old('public/b03.css')));
  assert.deepEqual(cameraRules(html),cameraRules(base));
- for(const p of ['public/figure-stage.mjs','public/orbit-layout.mjs','public/character-study.mjs'])assert.equal(now(p),old(p));
+ for(const p of ['public/figure-stage.mjs','public/orbit-layout.mjs'])assert.equal(now(p),old(p));
+ // Character text presentation may change; the projection algorithm remains frozen.
+ const cameraFit=s=>s.slice(s.indexOf('export function cameraFit('));
+ assert.equal(cameraFit(now('public/character-study.mjs')),cameraFit(old('public/character-study.mjs')));
  assert.equal((html.match(/requestAnimationFrame\(/g)||[]).length,(base.match(/requestAnimationFrame\(/g)||[]).length);
  assert.ok(!/requestAnimationFrame|setInterval/.test(now('public/orbit-stage.mjs')));
 });
