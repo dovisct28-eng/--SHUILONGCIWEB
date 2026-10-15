@@ -3,16 +3,18 @@
   "status": "PASS",
   "checks": [
     "format and fixed source",
-    "six chapters cover exactly 120 seconds",
-    "30 shots are continuous and belong to chapters",
+    "six chapters cover the full planned duration",
+    "shots are continuous and belong to chapters",
+    "A03 has six independent seconds between A02 and A04",
     "every referenced source exists in the audited remote baseline",
     "captions are independent, legible in duration, and nonoverlapping",
     "simulation disclosure covers every simulated frame",
-    "gesture dwell, action order, transition, and release are causal"
+    "gesture dwell, action order, transition, and release are causal",
+    "music has a recurring theme, complete arrangement, and aligned cues"
   ],
-  "shots": 30,
+  "shots": 31,
   "chapters": 6,
-  "captions": 19,
-  "frames": 3600,
+  "captions": 20,
+  "frames": 3900,
   "limits": "Planning invariants only. No rendered media, visual review, export, rights, or real-camera acceptance."
 }

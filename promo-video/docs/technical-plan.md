@@ -2,6 +2,8 @@
 
 2026-10-15，Phase 1。事实、建议和未验证状态在下文分别注明。本轮没有安装剪辑软件、创建ChatCut项目、改时间轴、上传素材、调用生成服务或导出视频。
 
+P1.1修订：用户允许延长并指定A03独立6秒；当前主片130秒、3900帧、31镜，A03位于23–29秒。音乐新增可编辑分段、六组配器和主题回归方案，见[music-direction.md](music-direction.md)。下列ChatCut与渲染依赖状态来自首次审查，本次仅修改分镜与音乐规划，没有重新认证连接或启动制作。
+
 ## 1. ChatCut能力核查
 
 检索并打开ChatCut官方Agent Plugin、Desktop、Timeline、Transcript and Captions、Versions及Releases文档。产品文档可以证明产品声明，不能证明本会话已具备对应工具和权限。
@@ -33,15 +35,15 @@
 | Remotion/CLI/React | 本轮Node可解析环境中NOT_FOUND；仓库无已有Remotion项目 | 需要独立子工程安装、锁版本、启动Studio和测试渲染；并非已就绪 |
 | FFmpeg/ffprobe | PATH未发现；Python imageio_ffmpeg也未发现 | 不排除其他软件内带副本；正式使用前明确路径、版本和许可，不能写成已可编码 |
 
-建议架构：网页保持原样；Playwright采集真实A/B02操作；独立Remotion场景制作片头、手部示意及合成；JSON统一镜头/字幕/动作时码。ChatCut连接且20秒测试通过时用它做主剪辑装配和混音。若ChatCut工具仍缺失或测试失败，则以Remotion为主时间轴，FFmpeg做规范化和技术QA。切换时间轴不降低字幕可编辑性和匿名检查要求。
+建议架构：网页保持原样；Playwright采集真实A（含A03稳定主题海报）/B02操作；独立Remotion场景制作片头、手部示意及合成；JSON统一镜头/字幕/动作/音乐时码。ChatCut连接且20秒测试通过时用它做主剪辑装配和混音。若ChatCut工具仍缺失或测试失败，则以Remotion为主时间轴，FFmpeg做规范化和技术QA。切换时间轴不降低字幕可编辑性和匿名检查要求。
 
-Remotion使用建议来自已读取的remotion-best-practices/remotion-create技能及[Composition文档](https://www.remotion.dev/docs/composition)：独立composition固定1920×1080、30fps、3600帧，每个可独立调整镜头都有独立序列；不把网页iframe实时播放当作可重复渲染的素材。程序动画依整数帧确定，不依赖Date.now或实时setInterval。转场重叠会影响总时长，需在规划区间内分配handle，不能叠加后把影片缩成119秒。参见[组合与转场说明](https://www.remotion.dev/docs/miscellaneous/snippets/combine-compositions)。
+Remotion使用建议来自已读取的remotion-best-practices/remotion-create技能及[Composition文档](https://www.remotion.dev/docs/composition)：独立composition当前配置1920×1080、30fps、3900帧，每个可独立调整镜头都有独立序列；不把网页iframe实时播放当作可重复渲染的素材。程序动画依整数帧确定，不依赖Date.now或实时setInterval。转场重叠会影响总时长，需在规划区间内分配handle，不能叠加后丢失规划时长。参见[组合与转场说明](https://www.remotion.dev/docs/miscellaneous/snippets/combine-compositions)。
 
 本轮仅规划，没有scaffold、依赖安装、Studio或渲染。下一阶段若采用Remotion，新建`promo-video/editor/`、固定包版本和lockfile；不得在已有网页项目根目录运行脚手架覆盖文件。
 
 ## 3. 20秒技术测试片：进入制作后的第一项
 
-任务书第06节要求正式制作前先做15–30秒测试片，第11节又限定首次只做Phase1。本轮按更具体的首次边界，**只完成测试设计；测试片NOT_PRODUCED**。确认分镜进入制作后，先做以下20秒测试，再扩大到120秒。
+任务书第06节要求正式制作前先做15–30秒测试片，第11节又限定首次只做Phase1。本轮按更具体的首次边界，**只完成测试设计；测试片NOT_PRODUCED**。确认分镜进入制作后，先做以下20秒测试，再扩大到当前130秒方案。
 
 | 测试时间 | 内容 | 验证对象 |
 | --- | --- | --- |
@@ -67,6 +69,7 @@ Remotion使用建议来自已读取的remotion-best-practices/remotion-create技
 | 对象 | 操作与采集 | 裁切和失败处理 |
 | --- | --- | --- |
 | A01–A03 | 启动A服务，等待iframe modelReady；沿0–13.2屏既有阶段连续推进 | 片头独立制作，不直接照搬滚屏；不含debug参数 |
+| A03独立镜头 | 录入场、约11.8屏稳定主题海报及末端交接；剪出23–29秒共6秒，其中稳定4秒 | 按实际CSS保留左上入庙/右下出庙和建筑遮挡，不提前播放路线；字幕避开原正文 |
 | A04 | 真实进入约14.5屏，录满45秒＋handle；按停靠、转向、全景标记取片 | 保存原速全段；不修改TOUR_DURATION或测试seek伪装真实播放 |
 | A05–A07 | 各记录整体介绍→右端到左端完整巡视，保留原幅名 | 原序列存本地；影片仅节选，三幅各可辨 |
 | A08 | A服务配合B的3000端口；主动点击进入探索，再点B01图鉴 | 不把3002直接硬接为当前A08地址；端口占用先核实，不杀未知服务 |
@@ -77,15 +80,15 @@ A04快进、A05局部聚焦或B03新增手势都不通过修改业务实现。�
 
 ## 5. 模拟动画与同步
 
-55–90秒所有模拟镜头由同一个timeline帧驱动。匿名21点骨骼与连接线是设计示意，不注入真人摄像头，不保存个人图像或真实关键点。上身操作人/同手锁定只作状态表达，不画可识别面孔，也不声称人脸识别。
+65–100秒所有模拟镜头由同一个timeline帧驱动。匿名21点骨骼与连接线是设计示意，不注入真人摄像头，不保存个人图像或真实关键点。上身操作人/同手锁定只作状态表达，不画可识别面孔，也不声称人脸识别。
 
-按照`gestureEvents`演示约1秒驻留、至少250ms稳定移出、阅读过渡至少750ms。NEXT、OPEN、CLOSE触发帧分别F1950/F2310/F2610；语义遵循现行控制器，READING不NEXT。帧级合成可以复用现有纯布局函数或静态样式，但不得修改保护的OperatorTracker/HandOwnership/DwellController。
+按照`gestureEvents`演示约1秒驻留、至少250ms稳定移出、阅读过渡至少750ms。NEXT、OPEN、CLOSE触发帧分别F2250/F2610/F2910；语义遵循现行控制器，READING不NEXT。帧级合成可以复用现有纯布局函数或静态样式，但不得修改保护的OperatorTracker/HandOwnership/DwellController。
 
 画面同时呈现手部→光标→环形进度→目标选中→人物/面板变化；确认音落在触发或明确过渡首帧，不先响后触发。source manifest记录模拟/真实UI/艺术合成三类，任何合成片段不能出现在“实时模型验收”证据里。
 
 ## 6. 字幕、工程与文件管理
 
-当前`timeline.json`独立保存caption、overlay、gestureEvents；脚本可生成规划SRT和shot-list。正式阶段把它作为唯一时码源，避免在ChatCut和Remotion分别手抄。SRT仅含主字幕，不包含角标；角标为独立可编辑层，不能只导出SRT就丢失模拟披露。
+当前`timeline.json`独立保存caption、overlay、gestureEvents以及audio分段/配器/重音点；脚本可生成规划SRT和shot-list。正式阶段把它作为唯一时码源，避免在ChatCut和Remotion分别手抄。SRT仅含主字幕，不包含角标；角标为独立可编辑层，不能只导出SRT就丢失模拟披露。音乐按六组分轨保留主题与对答，SFX独立；自动校验分段覆盖、A03主题点及三次确认声和触发帧对齐，但不认证音乐听感。
 
 字幕使用简体中文；最多两行，正文通常3–5秒。字体cmap检查、逐条人工校对、实际画面遮挡检查是三项不同验收。对白识别不是本片无对白说明字幕的必需步骤；若ChatCut不能稳定创建独立说明字幕层，Remotion负责字幕内嵌并保留外部SRT。
 
@@ -96,12 +99,12 @@ A04快进、A05局部聚焦或B03新增手势都不通过修改业务实现。�
 目标编码建议H.264、yuv420p、CFR30、1920×1080、AAC48kHz双声道、faststart、剥离作者/账户/路径相关元数据。质量参数在20秒测试后确定；不承诺固定码率就等于高质量。FFmpeg/ffprobe准备好后使用明确可执行文件路径和脚本参数数组，禁止把原素材当输出路径。
 
 ```text
-ffprobe -v error -count_frames -show_streams -show_format -of json chubingrujiang-final-120s.mp4
-ffmpeg -i chubingrujiang-final-120s.mp4 -vf blackdetect=d=0.2:pix_th=0.10,freezedetect=n=-50dB:d=1.5 -an -f null -
-ffmpeg -i chubingrujiang-final-120s.mp4 -filter_complex ebur128=peak=true -f null -
+ffprobe -v error -count_frames -show_streams -show_format -of json chubingrujiang-final-130s.mp4
+ffmpeg -i chubingrujiang-final-130s.mp4 -vf blackdetect=d=0.2:pix_th=0.10,freezedetect=n=-50dB:d=1.5 -an -f null -
+ffmpeg -i chubingrujiang-final-130s.mp4 -filter_complex ebur128=peak=true -f null -
 ```
 
-以上是未来检查命令示意，本轮未运行。以实际视频流3600解码帧、30/1帧率、视频120秒为核心；AAC封装时长可能有小幅填充，分别报告视频/音频/容器时长，不能只读文件属性。对检测到的首尾有意淡黑、定格标题和正文阅读静止逐项注明；检测阈值不能代替审片。
+以上是未来检查命令示意，本轮未运行。当前方案以3900解码帧、30/1帧率、视频130秒为核心；若粗剪延长，先更新timeline及目标文件名，再重生成字幕、音乐分段和检查值。AAC封装时长可能有小幅填充，分别报告视频/音频/容器时长，不能只读文件属性。对检测到的首尾有意淡黑、定格标题和正文阅读静止逐项注明；检测阈值不能代替审片。
 
 静音完整观看一次核对逻辑，有声完整观看一次核对音乐与反馈；重点逐帧看三图对齐、手势触发前后、正文面板遮挡、六段切点。模拟段逐帧检查角标持续性。用OCR/文本检查辅助匿名审查，再人工看浏览器界面、内嵌署名、图像水印、路径、软件账户和文件tags；不能只用一次关键词搜索认证匿名。
 
@@ -113,8 +116,8 @@ ffmpeg -i chubingrujiang-final-120s.mp4 -filter_complex ebur128=peak=true -f nul
 2. 新阶段先重新fetch基准、登记用户最新差异；只在`promo-video/`准备工程与依赖，不提交用户其他修改。
 3. 接通ChatCut并读回目标项目，或直接准备独立Remotion工程；明确FFmpeg/ffprobe来源及路径。
 4. 先做上文20秒技术测试并出结果；不通过就切换/修复，禁止批量生产后才发现无法导出或重开。
-5. 录制完整A关键阶段与B02操作，制作S01/S04/S05程序镜头；按30镜manifest逐镜预览，登记素材来源。
-6. 建120秒时间轴、导入独立字幕、选择合法音乐/音效，输出preview-v1并保存可编辑工程。
+5. 录制完整A关键阶段（含A03独立6秒镜头的源片）与B02操作，制作S01/S04/S05程序镜头；按31镜manifest逐镜预览，登记素材来源。
+6. 先制作并试听主题/编曲候选；建立当前130秒时间轴、导入独立字幕、合法音乐分轨/音效，输出preview-v1并保存可编辑工程；按粗剪节奏决定是否继续延长。
 7. 按实际审片意见精修，保存preview-v2及对比记录，不覆盖源片和第一版。
 8. 全片技术、视觉、文化表述、匿名、许可核对通过后，导出最终MP4/SRT、production-report和qa-report；只提交必要工程及精选证据并核实远程。
 
