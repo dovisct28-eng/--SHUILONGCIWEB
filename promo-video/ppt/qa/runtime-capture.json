@@ -1,0 +1,18 @@
+{
+  "kind": "Current unmodified local B02, actual Chrome screenshots",
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  },
+  "deviceScaleFactor": 1.5,
+  "states": [
+    "b02-panorama",
+    "b02-panorama-zoom",
+    "b02-detail",
+    "b02-index"
+  ],
+  "errors": [],
+  "camera": "NOT_REQUESTED",
+  "browser": "154.0.8037.98",
+  "status": "PASS"
+}

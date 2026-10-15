@@ -1,0 +1,14 @@
+test_all_previews_and_anonymous_pdf (__main__.Acceptance.test_all_previews_and_anonymous_pdf) ... ok
+test_anonymity_and_no_hidden_slides (__main__.Acceptance.test_anonymity_and_no_hidden_slides) ... ok
+test_content_coverage_and_current_components (__main__.Acceptance.test_content_coverage_and_current_components) ... ok
+test_editable_text_and_native_diagrams (__main__.Acceptance.test_editable_text_and_native_diagrams) ... ok
+test_exact_slide_count_and_canvas (__main__.Acceptance.test_exact_slide_count_and_canvas) ... ok
+test_frame_geometry_inside_slide (__main__.Acceptance.test_frame_geometry_inside_slide) ... ok
+test_no_image_mirroring_or_recolor_filters (__main__.Acceptance.test_no_image_mirroring_or_recolor_filters) ... ok
+test_original_asset_hashes_unchanged (__main__.Acceptance.test_original_asset_hashes_unchanged) ... ok
+test_renderer_and_runtime_records (__main__.Acceptance.test_renderer_and_runtime_records) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.189s
+
+OK

@@ -1,0 +1,357 @@
+[
+  {
+    "name": "gesture-before",
+    "source": "promo-video/renders/v4-final/chubing-rujiang-v4-master.mp4 at 123 seconds",
+    "slides": [
+      9
+    ],
+    "sourceWidth": 1920,
+    "sourceHeight": 1080,
+    "crop": "Full actual final frame; no overlay",
+    "nature": "Preset gesture flow animation, not physical camera footage",
+    "license": "Competition permission not independently verified"
+  },
+  {
+    "name": "mural-05",
+    "source": "水龙祠壁画素材/网页展示图/mural-05-display.webp",
+    "slides": [
+      6
+    ],
+    "sourceWidth": 6000,
+    "sourceHeight": 1617,
+    "outputWidth": 6000,
+    "outputHeight": 1617,
+    "crop": "Full image; no crop",
+    "nature": "authentic mural display derivative",
+    "sha256": "a4a0adba234d933044d9d2fe4e703c44f2482cb792af398397344498559aedd3",
+    "license": "Project-supplied asset; competition permission not independently verified",
+    "watermark": "No watermark removed; no animation frames used for P08"
+  },
+  {
+    "name": "mural-01",
+    "source": "水龙祠壁画素材/网页展示图/mural-01-display.webp",
+    "slides": [
+      6
+    ],
+    "sourceWidth": 2880,
+    "sourceHeight": 990,
+    "outputWidth": 2880,
+    "outputHeight": 990,
+    "crop": "Full image; no crop",
+    "nature": "authentic mural display derivative",
+    "sha256": "afc5a15eebec4e430151795f73c1cb958496ca6c629552d23be62588766716ef",
+    "license": "Project-supplied asset; competition permission not independently verified",
+    "watermark": "No watermark removed; no animation frames used for P08"
+  },
+  {
+    "name": "mural-02",
+    "source": "水龙祠壁画素材/网页展示图/mural-02-display.webp",
+    "slides": [
+      1,
+      2,
+      6,
+      12
+    ],
+    "sourceWidth": 6000,
+    "sourceHeight": 1357,
+    "outputWidth": 6000,
+    "outputHeight": 1357,
+    "crop": "Full image; no crop",
+    "nature": "authentic mural display derivative",
+    "sha256": "17864d02d97ccc8d208e15a0f4c5cff82088777b0ee1dcd1f04bf643ce3e0dae",
+    "license": "Project-supplied asset; competition permission not independently verified",
+    "watermark": "No watermark removed; no animation frames used for P08"
+  },
+  {
+    "name": "architecture",
+    "source": "docs/validation/promo-video-v4-final/selected/architecture-master-f530.webp",
+    "slides": [
+      2,
+      3,
+      4,
+      5,
+      11
+    ],
+    "sourceWidth": 1920,
+    "sourceHeight": 1080,
+    "outputWidth": 1920,
+    "outputHeight": 1080,
+    "crop": "Full screenshot",
+    "nature": "actual final video frame of project model",
+    "sha256": "c56d74856e6cba078386b7db988b7a14d00d8e64d24337ca956cc045ce5eabe4",
+    "license": "Project-supplied asset; competition permission not independently verified",
+    "watermark": "No watermark removed; no animation frames used for P08"
+  },
+  {
+    "name": "architecture-crop",
+    "source": "docs/validation/promo-video-v4-final/selected/architecture-master-f530.webp",
+    "slides": [
+      5
+    ],
+    "sourceWidth": 1920,
+    "sourceHeight": 1080,
+    "outputWidth": 1280,
+    "outputHeight": 740,
+    "crop": {
+      "left": 270,
+      "top": 210,
+      "width": 1280,
+      "height": 740
+    },
+    "nature": "actual final video model frame; cropped",
+    "sha256": "c56d74856e6cba078386b7db988b7a14d00d8e64d24337ca956cc045ce5eabe4",
+    "license": "Project-supplied asset; competition permission not independently verified",
+    "watermark": "No watermark removed; no animation frames used for P08"
+  },
+  {
+    "name": "route",
+    "source": "docs/validation/promo-video-v4-final/selected/route-second-master-f1600.webp",
+    "slides": [
+      3,
+      4,
+      11
+    ],
+    "sourceWidth": 1920,
+    "sourceHeight": 1080,
+    "outputWidth": 1920,
+    "outputHeight": 1080,
+    "crop": "Full screenshot",
+    "nature": "actual final video frame",
+    "sha256": "ff4e033266526fc5a1bd6be559cf62b08f8ec8356f2196d8420257f80c03f6af",
+    "license": "Project-supplied asset; competition permission not independently verified",
+    "watermark": "No watermark removed; no animation frames used for P08"
+  },
+  {
+    "name": "theme",
+    "source": "docs/validation/promo-video-v4-final/selected/theme-master-f780.webp",
+    "slides": [
+      2
+    ],
+    "sourceWidth": 1920,
+    "sourceHeight": 1080,
+    "outputWidth": 1920,
+    "outputHeight": 1080,
+    "crop": "Full screenshot",
+    "nature": "actual final video frame",
+    "sha256": "d2dcb2bc186cb7711c68795b5920e0e99195d1b01a62d6d6e745eac25dbad30a",
+    "license": "Project-supplied asset; competition permission not independently verified",
+    "watermark": "No watermark removed; no animation frames used for P08"
+  },
+  {
+    "name": "gesture-dwell",
+    "source": "docs/validation/promo-video-v4-final/local/gesture-dwell-master-f3839.png",
+    "slides": [
+      9
+    ],
+    "sourceWidth": 1920,
+    "sourceHeight": 1080,
+    "outputWidth": 1920,
+    "outputHeight": 1080,
+    "crop": "Full frame",
+    "nature": "preset gesture demonstration; not real camera test",
+    "sha256": "ebd8231a341eee36d131e838266acae8589c96c02be30706c82c04dec783e0a1",
+    "license": "Project-supplied asset; competition permission not independently verified",
+    "watermark": "No watermark removed; no animation frames used for P08"
+  },
+  {
+    "name": "gesture-select",
+    "source": "docs/validation/promo-video-v4-final/local/gesture-close-master-f4480.png",
+    "slides": [
+      3,
+      4,
+      9
+    ],
+    "sourceWidth": 1920,
+    "sourceHeight": 1080,
+    "outputWidth": 1920,
+    "outputHeight": 1080,
+    "crop": "Full frame",
+    "nature": "preset gesture demonstration; not real camera test",
+    "sha256": "26323ebefd6741821b6314cc40990752e0b512f599c08c349bf59496f3959033",
+    "license": "Project-supplied asset; competition permission not independently verified",
+    "watermark": "No watermark removed; no animation frames used for P08"
+  },
+  {
+    "name": "gesture-open",
+    "source": "docs/validation/promo-video-v4-final/selected/gesture-open-master-f4200.webp",
+    "slides": [
+      9,
+      11
+    ],
+    "sourceWidth": 1920,
+    "sourceHeight": 1080,
+    "outputWidth": 1920,
+    "outputHeight": 1080,
+    "crop": "Full frame",
+    "nature": "preset gesture demonstration; not real camera test",
+    "sha256": "dc451013457c03d4637de424bd9b66d0f6c10f1c3ba0a051f5af32a66f7c78ad",
+    "license": "Project-supplied asset; competition permission not independently verified",
+    "watermark": "No watermark removed; no animation frames used for P08"
+  },
+  {
+    "name": "recap",
+    "source": "docs/validation/promo-video-v4-final/local/recap-gallery-master-f4760.png",
+    "slides": [
+      11
+    ],
+    "sourceWidth": 1920,
+    "sourceHeight": 1080,
+    "outputWidth": 1920,
+    "outputHeight": 1080,
+    "crop": "Full frame",
+    "nature": "actual final video frame",
+    "sha256": "c88478e26953f6e4e722d0e46672cc16aa4b7e7aa3e30d55a437f0062cdab26e",
+    "license": "Project-supplied asset; competition permission not independently verified",
+    "watermark": "No watermark removed; no animation frames used for P08"
+  },
+  {
+    "name": "ending",
+    "source": "docs/validation/promo-video-v4-final/selected/ending-master-f5115.webp",
+    "slides": [
+      11
+    ],
+    "sourceWidth": 1920,
+    "sourceHeight": 1080,
+    "outputWidth": 1920,
+    "outputHeight": 1080,
+    "crop": "Full frame",
+    "nature": "actual final video frame",
+    "sha256": "2fa48f686c49d1e147c05bc9518cda58d5d021a7e4f7a751a4291de58f5f130a",
+    "license": "Project-supplied asset; competition permission not independently verified",
+    "watermark": "No watermark removed; no animation frames used for P08"
+  },
+  {
+    "name": "person-org",
+    "source": "Mural-Exhibition/public/assets/01_南门何五猖/org.png",
+    "slides": [
+      8
+    ],
+    "sourceWidth": 1946,
+    "sourceHeight": 1319,
+    "outputWidth": 570,
+    "outputHeight": 599,
+    "crop": {
+      "left": 0,
+      "top": 720,
+      "width": 570,
+      "height": 599
+    },
+    "nature": "authentic mural detail; matching crop for comparison",
+    "sha256": "cf6de181d400d87572fa53fd8eb75b80f51fe862d179e505f595dd5ec2ae5109",
+    "license": "Project-supplied asset; competition permission not independently verified",
+    "watermark": "No watermark removed; no animation frames used for P08"
+  },
+  {
+    "name": "person-line",
+    "source": "Mural-Exhibition/public/assets/01_南门何五猖/line.png",
+    "slides": [
+      8
+    ],
+    "sourceWidth": 1946,
+    "sourceHeight": 1319,
+    "outputWidth": 570,
+    "outputHeight": 599,
+    "crop": {
+      "left": 0,
+      "top": 720,
+      "width": 570,
+      "height": 599
+    },
+    "nature": "project line interpretation on source mural",
+    "sha256": "adbddf30bb1f19ebc60b95e05146af7f6540c97a79d0b1356072b0297856128d",
+    "license": "Project-supplied asset; competition permission not independently verified",
+    "watermark": "No watermark removed; no animation frames used for P08"
+  },
+  {
+    "name": "person-color",
+    "source": "Mural-Exhibition/public/assets/01_南门何五猖/color.png",
+    "slides": [
+      8
+    ],
+    "sourceWidth": 1946,
+    "sourceHeight": 1319,
+    "outputWidth": 570,
+    "outputHeight": 599,
+    "crop": {
+      "left": 0,
+      "top": 720,
+      "width": 570,
+      "height": 599
+    },
+    "nature": "digital design interpretation; not historic color restoration",
+    "sha256": "c4288e40ed9e786ffe9ce14a3da5ea041188b90599ce772026adfa986e59ca13",
+    "license": "Project-supplied asset; competition permission not independently verified",
+    "watermark": "No watermark removed; no animation frames used for P08"
+  },
+  {
+    "name": "figure",
+    "source": "Mural-Exhibition/public/assets/01_南门何五猖/figure.png",
+    "slides": [
+      12
+    ],
+    "sourceWidth": 1864,
+    "sourceHeight": 1802,
+    "outputWidth": 1864,
+    "outputHeight": 1802,
+    "crop": "Full transparent image",
+    "nature": "digital design interpretation",
+    "sha256": "cbc560184337186bde10faab00f28d0df78a0b9ccad7cb893d8daf3dc3ba3512",
+    "license": "Project-supplied asset; competition permission not independently verified",
+    "watermark": "No watermark removed; no animation frames used for P08"
+  },
+  {
+    "name": "b02-panorama",
+    "source": "Current local B02 via source/capture.cjs",
+    "slides": [
+      3,
+      4,
+      7
+    ],
+    "sourceWidth": 2880,
+    "sourceHeight": 1620,
+    "crop": "Full browser content, no tool chrome",
+    "nature": "Actual current UI screenshot; local user-edited copy retained",
+    "license": "Competition permission not independently verified"
+  },
+  {
+    "name": "b02-panorama-zoom",
+    "source": "Current local B02 via source/capture.cjs",
+    "slides": [
+      3,
+      4,
+      7
+    ],
+    "sourceWidth": 2880,
+    "sourceHeight": 1620,
+    "crop": "Full browser content, no tool chrome",
+    "nature": "Actual current UI screenshot; local user-edited copy retained",
+    "license": "Competition permission not independently verified"
+  },
+  {
+    "name": "b02-detail",
+    "source": "Current local B02 via source/capture.cjs",
+    "slides": [
+      4,
+      7
+    ],
+    "sourceWidth": 2880,
+    "sourceHeight": 1620,
+    "crop": "Full browser content, no tool chrome",
+    "nature": "Actual current UI screenshot; local user-edited copy retained",
+    "license": "Competition permission not independently verified"
+  },
+  {
+    "name": "b02-index",
+    "source": "Current local B02 via source/capture.cjs",
+    "slides": [
+      3,
+      4,
+      7
+    ],
+    "sourceWidth": 2880,
+    "sourceHeight": 1620,
+    "crop": "Full browser content, no tool chrome",
+    "nature": "Actual current UI screenshot; local user-edited copy retained",
+    "license": "Competition permission not independently verified"
+  }
+]

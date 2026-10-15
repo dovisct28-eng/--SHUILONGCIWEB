@@ -1,0 +1,6 @@
+local/
+assets/processed/
+preview/slides/
+output/
+source/probe.mjs
+__pycache__/

@@ -1,0 +1,174 @@
+{
+  "date": "2026-10-15",
+  "baseline": "1374d3c25be6d62c44abbbf63bb4f8618d614503",
+  "slideCount": 12,
+  "files": [
+    {
+      "file": "output/chubing-rujiang-e-category.pptx",
+      "bytes": 15466110,
+      "sha256": "a398bbaf7a9eb5d5b4a32a5f30df29ac5535c465920433473f2948d6aa8017e2",
+      "gitArchive": "local only"
+    },
+    {
+      "file": "output/chubing-rujiang-e-category.pdf",
+      "bytes": 16405258,
+      "sha256": "b7d5cde71d8546983f91c403ac6fa32931e8f2bf8cc67266631446bbdf8d339e",
+      "gitArchive": "local only"
+    },
+    {
+      "file": "preview/contact-sheet.png",
+      "bytes": 1464316,
+      "sha256": "7672fdd61c0cc895337c8637a409931523281cbd6c4ceff544e86299c50e64cc",
+      "gitArchive": "tracked selected overview"
+    },
+    {
+      "file": "preview/slides/slide-01.png",
+      "bytes": 2029362,
+      "sha256": "ba11509f168d154948cab1dad78d8dced39c107a1476909ce0c0f98270cfa1fd",
+      "gitArchive": "local only"
+    },
+    {
+      "file": "preview/slides/slide-02.png",
+      "bytes": 779609,
+      "sha256": "d519d7fd64f6db9d2984d615d0aea0d6d861d4f53238197ff0fa9d1d03365ee2",
+      "gitArchive": "local only"
+    },
+    {
+      "file": "preview/slides/slide-03.png",
+      "bytes": 625426,
+      "sha256": "28eac15bf6c3632a572ada7d56a1fa6eb8152f18f433763fcbbfb9a34816d8ed",
+      "gitArchive": "local only"
+    },
+    {
+      "file": "preview/slides/slide-04.png",
+      "bytes": 458531,
+      "sha256": "6669a0ffcb76d8144b50f5e755a0423632ea1b5bf7149f6060a33d7512b04421",
+      "gitArchive": "local only"
+    },
+    {
+      "file": "preview/slides/slide-05.png",
+      "bytes": 785545,
+      "sha256": "30edce2cd99b3a1d95607e61cbe303ee1d25c7988945250bc760b4fd04a34a9a",
+      "gitArchive": "local only"
+    },
+    {
+      "file": "preview/slides/slide-06.png",
+      "bytes": 1258776,
+      "sha256": "b85c96d3039e995b9f78d9792a06398ea5f7f3a15ab2a5827e3f2c760b56d560",
+      "gitArchive": "local only"
+    },
+    {
+      "file": "preview/slides/slide-07.png",
+      "bytes": 1802316,
+      "sha256": "3a173a83c348dda53fff05dc65bd6f30006eeed64bafa21f010aae79b0e09551",
+      "gitArchive": "local only"
+    },
+    {
+      "file": "preview/slides/slide-08.png",
+      "bytes": 1648424,
+      "sha256": "c8bbe96d7b4fb6d9f070efc75406eb4eaf4bc9809f8050c244748825246dfa08",
+      "gitArchive": "local only"
+    },
+    {
+      "file": "preview/slides/slide-09.png",
+      "bytes": 469168,
+      "sha256": "a508500c6cfe32032f885d4efa8c66e241574cefe657534cb0b1b425982da586",
+      "gitArchive": "local only"
+    },
+    {
+      "file": "preview/slides/slide-10.png",
+      "bytes": 164951,
+      "sha256": "89f31f7bb301e20e49452b9b364533f2ce93f05b9605d2885322e2b992db525c",
+      "gitArchive": "local only"
+    },
+    {
+      "file": "preview/slides/slide-11.png",
+      "bytes": 393538,
+      "sha256": "3d387ce85dc25ba6af68cf4bd2062d5f44af2b9f7eedf05340c1b087c52941a2",
+      "gitArchive": "local only"
+    },
+    {
+      "file": "preview/slides/slide-12.png",
+      "bytes": 1711553,
+      "sha256": "ed17aad35799a5e4c841d3c84c9c47be229066aca73c807e33f46515bb56a132",
+      "gitArchive": "local only"
+    }
+  ],
+  "editability": [
+    {
+      "slide": 1,
+      "nativeTextBoxes": 5,
+      "nativeShapes": 5,
+      "replaceableImages": 1
+    },
+    {
+      "slide": 2,
+      "nativeTextBoxes": 14,
+      "nativeShapes": 14,
+      "replaceableImages": 2
+    },
+    {
+      "slide": 3,
+      "nativeTextBoxes": 13,
+      "nativeShapes": 15,
+      "replaceableImages": 3
+    },
+    {
+      "slide": 4,
+      "nativeTextBoxes": 21,
+      "nativeShapes": 36,
+      "replaceableImages": 5
+    },
+    {
+      "slide": 5,
+      "nativeTextBoxes": 14,
+      "nativeShapes": 14,
+      "replaceableImages": 1
+    },
+    {
+      "slide": 6,
+      "nativeTextBoxes": 16,
+      "nativeShapes": 19,
+      "replaceableImages": 3
+    },
+    {
+      "slide": 7,
+      "nativeTextBoxes": 8,
+      "nativeShapes": 8,
+      "replaceableImages": 2
+    },
+    {
+      "slide": 8,
+      "nativeTextBoxes": 10,
+      "nativeShapes": 10,
+      "replaceableImages": 3
+    },
+    {
+      "slide": 9,
+      "nativeTextBoxes": 8,
+      "nativeShapes": 8,
+      "replaceableImages": 3
+    },
+    {
+      "slide": 10,
+      "nativeTextBoxes": 21,
+      "nativeShapes": 32,
+      "replaceableImages": 0
+    },
+    {
+      "slide": 11,
+      "nativeTextBoxes": 31,
+      "nativeShapes": 36,
+      "replaceableImages": 6
+    },
+    {
+      "slide": 12,
+      "nativeTextBoxes": 12,
+      "nativeShapes": 12,
+      "replaceableImages": 1
+    }
+  ],
+  "pdfPreview": "static image PDF; no selectable text",
+  "powerPointNativeExecution": "not tested",
+  "materialCompetitionPermission": "pending verification"
+}
