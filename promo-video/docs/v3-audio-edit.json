@@ -1,0 +1,25 @@
+{
+  "durationSeconds": 150.0,
+  "sampleRate": 48000,
+  "channels": 2,
+  "sourceSegmentsSeconds": [
+    [
+      0,
+      130.8
+    ],
+    [
+      177.59004166666668,
+      197.59004166666668
+    ]
+  ],
+  "crossfadeTimelineSeconds": [
+    130,
+    130.8
+  ],
+  "gain": 0.72,
+  "status": "EXISTING_INSTRUMENTAL_LISTENING_CANDIDATE",
+  "limits": [
+    "Mixed original, not separable instrument stems.",
+    "No new generation; listening and music-join approval remain pending."
+  ]
+}

@@ -29,7 +29,7 @@ runs=[];start=None
 for i,x in enumerate(list(black)+[False]):
  if x and start is None:start=i
  if not x and start is not None:runs.append({'startFrame':start,'endFrame':i});start=None
-checks['noInternalBlackRuns']=all(r['endFrame']-r['startFrame']<4 or r['startFrame']>=target_frames-12 for r in runs)
+checks['noInternalBlackRuns']=all(r['startFrame']>=target_frames-12 for r in runs)
 tags={**metadata['format'].get('tags',{}),**v.get('tags',{}),**a.get('tags',{})};checks['noIdentityTags']=not any(k.lower() in ['artist','author','copyright','comment','title'] for k in tags)
 report={'source':source.name,'status':'PASS' if all(checks.values()) else 'NEEDS_REVIEW','checks':checks,'videoFrames':len(means),'videoDuration':float(v['duration']),'audioDuration':float(a['duration']),'containerDuration':float(metadata['format']['duration']),'sizeBytes':source.stat().st_size,'peakDbFS':20*math.log10(max(peak,1e-12)),'rmsDbFS':20*math.log10(max(rms,1e-12)),'blackRuns':runs,'metadataTags':tags,'limits':['Automated encoding/PCM/pixel checks do not certify listening preference, cultural-source rights, all text pixels, or physical-camera recognition.','No LUFS or true-peak claim; measurements are decoded PCM peak and RMS.']}
 (base/'docs'/f'{source.stem}-verification.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8');print(json.dumps(report,indent=2));sys.exit(0 if report['status']=='PASS' else 1)

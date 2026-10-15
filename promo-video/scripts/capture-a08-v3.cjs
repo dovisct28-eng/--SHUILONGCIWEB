@@ -1,0 +1,11 @@
+const fs=require('node:fs'),path=require('node:path'),{spawn}=require('node:child_process'),{once}=require('node:events');
+const {chromium}=require('playwright'),{createApp}=require('../../Mural-Exhibition/server.js'),{capture,step,pause,port}=require('./capture-v3.cjs');
+const root=path.resolve(__dirname,'../..');
+async function main(){let a,b,browser;const r={errors:[],kind:'real-A08-click-navigation-recovery'};try{
+ const n=await port();a=spawn(process.execPath,['module-a/a01/server.mjs'],{cwd:root,env:{...process.env,A01_PORT:String(n)},windowsHide:true,stdio:['ignore','pipe','pipe']});await once(a.stdout,'data');b=createApp().listen(3000,'127.0.0.1');await once(b,'listening');browser=await chromium.launch({channel:'chrome',headless:true});const c=await browser.newContext({viewport:{width:1920,height:1080},deviceScaleFactor:1,permissions:[]});const p=await c.newPage();p.on('pageerror',e=>r.errors.push(e.message));await p.clock.install();await p.goto(`http://127.0.0.1:${n}/module-a/a01/`);await p.waitForFunction(()=>document.querySelector('iframe')?.contentWindow.modelReady);await p.evaluate(()=>scrollTo(0,41.4*innerHeight));await p.waitForTimeout(2000);await p.evaluate(()=>document.fonts.ready);await pause(p);await step(p,100);
+ const box=await p.locator('.a08 a').boundingBox();if(!box)throw Error('A08 button missing');const x=box.x+box.width/2,y=box.y+box.height/2;
+ await p.evaluate(({x,y})=>{const e=document.createElement('div');e.style.cssText=`position:fixed;left:${x}px;top:${y}px;width:16px;height:16px;border:2px solid #f4e9cd;border-radius:50%;z-index:2147483647;pointer-events:none`;document.body.append(e);},{x,y});
+ r.capture=await capture(p,'a08-entry-r2',65,async f=>{if(f===64){await p.mouse.move(x,y);await p.mouse.down();r.mouseDownFrame=f;}});
+ await p.mouse.up();await p.waitForURL('http://localhost:3000/index.html');r.clickReleaseAtExclusiveFrame=65;r.urlAfterClick=p.url();r.status=r.errors.length?'PAGE_ERRORS':'CAPTURED';
+ }finally{if(browser)await browser.close();if(a)a.kill();if(b)await new Promise(x=>b.close(x));fs.writeFileSync(path.join(root,'promo-video/recordings/v3/capture-a08-recovery-report.json'),JSON.stringify(r,null,2));}}
+main().catch(e=>{console.error(e);process.exitCode=1;});

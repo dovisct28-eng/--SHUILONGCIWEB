@@ -1,0 +1,62 @@
+{
+  "source": "preview-v3-150s.mp4",
+  "sha256": "cb8543c797ba795c2721ffaa8bb4ff5a2a32360303e3471c58623f812f50808f",
+  "allDecodedFrames": 4500,
+  "ptsDeltaMs": {
+    "min": 33.333,
+    "max": 33.334,
+    "median": 33.333
+  },
+  "fullFrameNearDuplicateCandidates": 2483,
+  "candidatePercent": 55.19,
+  "classifiedMotionRegions": [
+    {
+      "region": "A04 moving",
+      "pairCount": 410,
+      "nearDuplicatePairs": 0,
+      "minimumDifference": 0.35315972566604614,
+      "medianDifference": 12.037439346313477
+    },
+    {
+      "region": "B02 drag",
+      "pairCount": 65,
+      "nearDuplicatePairs": 0,
+      "minimumDifference": 2.1004340648651123,
+      "medianDifference": 10.302708625793457
+    },
+    {
+      "region": "OPEN geometry",
+      "pairCount": 22,
+      "nearDuplicatePairs": 0,
+      "minimumDifference": 1.6269097328186035,
+      "medianDifference": 3.3831944465637207
+    },
+    {
+      "region": "CLOSE geometry",
+      "pairCount": 22,
+      "nearDuplicatePairs": 0,
+      "minimumDifference": 1.6355903148651123,
+      "medianDifference": 3.4158507585525513
+    },
+    {
+      "region": "next dwell ring ROI",
+      "pairCount": 29,
+      "nearDuplicatePairs": 0
+    },
+    {
+      "region": "open dwell ring ROI",
+      "pairCount": 29,
+      "nearDuplicatePairs": 0
+    },
+    {
+      "region": "close dwell ring ROI",
+      "pairCount": 29,
+      "nearDuplicatePairs": 0
+    }
+  ],
+  "interpretation": "Full-frame candidates include designed reading holds, spatial docks and small-area motion. They are not an abnormal-drop percentage.",
+  "limits": [
+    "Luma differences at 320x180 identify candidates, not optical-flow or semantic acceptance.",
+    "Static reading holds and intentional cuts require manual classification; native PTS are retained."
+  ]
+}

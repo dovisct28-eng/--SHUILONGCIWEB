@@ -1,0 +1,45 @@
+[
+  {
+    "region": "A04 moving",
+    "pairCount": 410,
+    "nearDuplicatePairs": 0,
+    "minimumDifference": 0.35315972566604614,
+    "medianDifference": 12.037439346313477
+  },
+  {
+    "region": "B02 drag",
+    "pairCount": 65,
+    "nearDuplicatePairs": 0,
+    "minimumDifference": 2.1004340648651123,
+    "medianDifference": 10.302708625793457
+  },
+  {
+    "region": "OPEN geometry",
+    "pairCount": 22,
+    "nearDuplicatePairs": 0,
+    "minimumDifference": 1.6269097328186035,
+    "medianDifference": 3.3831944465637207
+  },
+  {
+    "region": "CLOSE geometry",
+    "pairCount": 22,
+    "nearDuplicatePairs": 0,
+    "minimumDifference": 1.6355903148651123,
+    "medianDifference": 3.4158507585525513
+  },
+  {
+    "region": "next dwell ring ROI",
+    "pairCount": 29,
+    "nearDuplicatePairs": 0
+  },
+  {
+    "region": "open dwell ring ROI",
+    "pairCount": 29,
+    "nearDuplicatePairs": 0
+  },
+  {
+    "region": "close dwell ring ROI",
+    "pairCount": 29,
+    "nearDuplicatePairs": 0
+  }
+]

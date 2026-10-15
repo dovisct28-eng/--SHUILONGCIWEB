@@ -1,4 +1,8 @@
-# 《出兵入将》130 秒竞赛宣传片
+# 《出兵入将》参赛演示视频
+
+**V3更新：150秒审片候选**，文件 `previews/preview-v3-150s.mp4`；ChatCut独立时间线“出兵入将｜150秒参赛演示 V3”，五轨可编辑。V1/V2保留。详见[制作记录](docs/v3-production-report.md)、[运动诊断](docs/v3-motion-audit.md)、[画质验收](docs/v3-quality-report.md)、[实际时间线](planning/production-state-v3.json)及[独立字幕](subtitles/chubingrujiang-v3-150s.srt)。当前为审片候选，音乐和最终参赛版尚待用户认可；不提前生成final命名文件。
+
+V3：`node promo-video/scripts/validate-production.cjs v3`；运动/验证器测试 `node --test promo-video/scripts/v3-motion.test.mjs promo-video/scripts/v3-validation.test.cjs`。原生MG属性另见 `planning/motion-graphics-properties-v3.json`。Studio `/V3Review`为新增监看器，母工程继续在ChatCut。以下保留V2与更早制作记录。
 
 **2026-10-15制作更新：130秒粗剪v2已导出并通过技术检查。** 最新审片文件为`previews/preview-v2-130s-revised.mp4`，可编辑母工程在ChatCut Desktop的“130秒粗剪 v2”。A03保留23–29秒；音乐为新生成的纯器乐候选，听感尚待确认。
 

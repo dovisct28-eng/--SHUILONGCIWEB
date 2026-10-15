@@ -1,0 +1,16 @@
+{
+  "version": "v3",
+  "status": "EDITORIAL_STRUCTURE_PASS",
+  "durationFrames": 4500,
+  "fps": 30,
+  "shots": 16,
+  "captions": 9,
+  "sfxFrames": [
+    3240,
+    3600,
+    3870
+  ],
+  "limits": [
+    "Native timeline structure is verified; pixel motion, source resource readiness and music listening require actual output verification."
+  ]
+}

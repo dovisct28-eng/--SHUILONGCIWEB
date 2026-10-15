@@ -7,3 +7,4 @@ renders/
 node_modules/
 .cache/
 local/
+scripts/__pycache__/

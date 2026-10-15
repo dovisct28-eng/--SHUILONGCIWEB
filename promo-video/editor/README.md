@@ -1,5 +1,7 @@
 # 出兵入将 · 审片监看器
 
+V3审片使用 `/V3Review`（4500帧），本地文件 `public/preview-review-v3.mp4`；原 `/MyComp` 和V2副本保留。两者都是视频监看器，原生五轨V3工程在ChatCut独立时间线“出兵入将｜150秒参赛演示 V3”。
+
 本工程在Remotion Studio播放ChatCut导出的最新130秒粗剪。五轨可编辑母工程在ChatCut Desktop，实际状态和MG源码位于上层`planning/production-state-v2.json`及`motion-graphics/`。本播放器中的视频不支持独立修改内部字幕或人物动画。
 
 运行`npm run dev -- --no-open --port=4195`；`public/preview-review-v2.mp4`为本地审片副本，不进入Git。`npm run lint`及`npm run build`检查播放器工程。下方保留脚手架工具说明。

@@ -2,6 +2,7 @@ import { AbsoluteFill, Composition, OffthreadVideo, staticFile } from "remotion"
 
 export const MyComposition = () => {
   return (
+    <>
     <Composition
       id="MyComp"
       component={MyComponent}
@@ -10,6 +11,15 @@ export const MyComposition = () => {
       width={1920}
       height={1080}
     />
+    <Composition
+      id="V3Review"
+      component={V3Review}
+      durationInFrames={4500}
+      fps={30}
+      width={1920}
+      height={1080}
+    />
+    </>
   );
 };
 
@@ -18,5 +28,11 @@ export const MyComposition = () => {
 export const MyComponent: React.FC = () => {
   return <AbsoluteFill style={{backgroundColor: "#0b151a"}}>
     <OffthreadVideo src={staticFile("preview-review-v2.mp4")} />
+  </AbsoluteFill>;
+};
+
+export const V3Review: React.FC = () => {
+  return <AbsoluteFill style={{backgroundColor: "#0b151a"}}>
+    <OffthreadVideo src={staticFile("preview-review-v3.mp4")} />
   </AbsoluteFill>;
 };
