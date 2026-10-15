@@ -1,0 +1,684 @@
+[
+  {
+    "slide": 1,
+    "name": "mural-portrait",
+    "source": "promo-video/ppt/revision-v2/assets/mural-portrait.png",
+    "sha256": "22eaec8915fdef62203930d8c251d18b563887c12769d47001849ef2304a90b0",
+    "sourceSize": [
+      1750,
+      1357
+    ],
+    "embeddedSize": [
+      1750,
+      1357
+    ],
+    "fit": "cover",
+    "box": [
+      7.65,
+      0,
+      5.683333,
+      7.5
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 1,
+    "name": "mural-02",
+    "source": "promo-video/ppt/assets/processed/mural-02.png",
+    "sha256": "7fa176a4546e751ce48fa3b3389aa1d5087d233ac949c571c44af2da6c88edac",
+    "sourceSize": [
+      6000,
+      1357
+    ],
+    "embeddedSize": [
+      1168,
+      264
+    ],
+    "fit": "contain",
+    "box": [
+      0.72,
+      5.72,
+      6.15,
+      1.39
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 2,
+    "name": "mural-portrait",
+    "source": "promo-video/ppt/revision-v2/assets/mural-portrait.png",
+    "sha256": "22eaec8915fdef62203930d8c251d18b563887c12769d47001849ef2304a90b0",
+    "sourceSize": [
+      1750,
+      1357
+    ],
+    "embeddedSize": [
+      1607,
+      1246
+    ],
+    "fit": "cover",
+    "box": [
+      0,
+      0.94,
+      5.1,
+      6.56
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 2,
+    "name": "architecture-crop",
+    "source": "promo-video/ppt/assets/processed/architecture-crop.png",
+    "sha256": "f36eef2b638e5fafa496bc308969f33fd27fce934a078f981b68e6ad3df16716",
+    "sourceSize": [
+      1280,
+      740
+    ],
+    "embeddedSize": [
+      674,
+      390
+    ],
+    "fit": "contain",
+    "box": [
+      6,
+      4.58,
+      6.45,
+      2.05
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 3,
+    "name": "model",
+    "source": "promo-video/ppt/revision-v2/assets/model.png",
+    "sha256": "8bff93e30a3a268d42265f389c61e8018940e036a03beb3bf36b6bb9de692eca",
+    "sourceSize": [
+      1607,
+      1105
+    ],
+    "embeddedSize": [
+      746,
+      513
+    ],
+    "fit": "contain",
+    "box": [
+      0.65,
+      2.25,
+      4,
+      2.7
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 3,
+    "name": "mural-02",
+    "source": "promo-video/ppt/assets/processed/mural-02.png",
+    "sha256": "7fa176a4546e751ce48fa3b3389aa1d5087d233ac949c571c44af2da6c88edac",
+    "sourceSize": [
+      6000,
+      1357
+    ],
+    "embeddedSize": [
+      1435,
+      325
+    ],
+    "fit": "contain",
+    "box": [
+      5.12,
+      2.39,
+      7.55,
+      1.71
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 3,
+    "name": "figure",
+    "source": "promo-video/ppt/assets/processed/figure.png",
+    "sha256": "b5ae300ed252fecae76ac1abd7df5c39ccf282b0080887a08969b2254c8d06ba",
+    "sourceSize": [
+      1864,
+      1802
+    ],
+    "embeddedSize": [
+      562,
+      543
+    ],
+    "fit": "contain",
+    "box": [
+      9.1,
+      4.03,
+      3.45,
+      2.86
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 4,
+    "name": "architecture-crop",
+    "source": "promo-video/ppt/assets/processed/architecture-crop.png",
+    "sha256": "f36eef2b638e5fafa496bc308969f33fd27fce934a078f981b68e6ad3df16716",
+    "sourceSize": [
+      1280,
+      740
+    ],
+    "embeddedSize": [
+      378,
+      219
+    ],
+    "fit": "contain",
+    "box": [
+      0.65,
+      2.7,
+      2.05,
+      1.15
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 4,
+    "name": "route",
+    "source": "promo-video/ppt/assets/processed/route.png",
+    "sha256": "d0b011a29b7e22edddc03c77a6310afbdee4c386c6ecabcb6c96def692a250c9",
+    "sourceSize": [
+      1920,
+      1080
+    ],
+    "embeddedSize": [
+      388,
+      218
+    ],
+    "fit": "contain",
+    "box": [
+      0.65,
+      4.07,
+      2.05,
+      1.15
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 4,
+    "name": "mural-02",
+    "source": "promo-video/ppt/assets/processed/mural-02.png",
+    "sha256": "7fa176a4546e751ce48fa3b3389aa1d5087d233ac949c571c44af2da6c88edac",
+    "sourceSize": [
+      6000,
+      1357
+    ],
+    "embeddedSize": [
+      389,
+      88
+    ],
+    "fit": "contain",
+    "box": [
+      0.65,
+      5.44,
+      2.05,
+      1.15
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 4,
+    "name": "b02-panorama",
+    "source": "promo-video/ppt/assets/processed/b02-panorama.png",
+    "sha256": "7b9443763e6a5dcaa866b64a4af4058d73ee84e3ae4da08f1c6c82911c4c8ef2",
+    "sourceSize": [
+      2880,
+      1620
+    ],
+    "embeddedSize": [
+      834,
+      469
+    ],
+    "fit": "contain",
+    "box": [
+      8.3,
+      2.73,
+      4.39,
+      2.47
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 4,
+    "name": "gesture-open",
+    "source": "promo-video/ppt/assets/processed/gesture-open.png",
+    "sha256": "88c4be0422fea303e8b22f9b962777d5be83688a829d0391bd183809e6035318",
+    "sourceSize": [
+      1920,
+      1080
+    ],
+    "embeddedSize": [
+      510,
+      287
+    ],
+    "fit": "contain",
+    "box": [
+      10,
+      5.64,
+      2.69,
+      1.51
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 5,
+    "name": "model",
+    "source": "promo-video/ppt/revision-v2/assets/model.png",
+    "sha256": "8bff93e30a3a268d42265f389c61e8018940e036a03beb3bf36b6bb9de692eca",
+    "sourceSize": [
+      1607,
+      1105
+    ],
+    "embeddedSize": [
+      1492,
+      1026
+    ],
+    "fit": "contain",
+    "box": [
+      3.5,
+      1.66,
+      9.45,
+      5.4
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 6,
+    "name": "mural-05",
+    "source": "promo-video/ppt/assets/processed/mural-05.png",
+    "sha256": "f8eae9a44a02504bdb703b38d81da1378fca94f03f5fb8c066db5edb504df9ec",
+    "sourceSize": [
+      6000,
+      1617
+    ],
+    "embeddedSize": [
+      1598,
+      431
+    ],
+    "fit": "cover",
+    "box": [
+      4.28,
+      2.04,
+      8.41,
+      1.04
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 6,
+    "name": "mural-01",
+    "source": "promo-video/ppt/assets/processed/mural-01.png",
+    "sha256": "5874d9c70a42c58cd91665b74f9f85178b207d5ab1290b127b3362bf2dec4562",
+    "sourceSize": [
+      2880,
+      990
+    ],
+    "embeddedSize": [
+      1598,
+      549
+    ],
+    "fit": "cover",
+    "box": [
+      4.28,
+      3.59,
+      8.41,
+      1.04
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 6,
+    "name": "mural-02",
+    "source": "promo-video/ppt/assets/processed/mural-02.png",
+    "sha256": "7fa176a4546e751ce48fa3b3389aa1d5087d233ac949c571c44af2da6c88edac",
+    "sourceSize": [
+      6000,
+      1357
+    ],
+    "embeddedSize": [
+      1737,
+      393
+    ],
+    "fit": "cover",
+    "box": [
+      3.55,
+      5.140000000000001,
+      9.14,
+      1.04
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 7,
+    "name": "b02-panorama",
+    "source": "promo-video/ppt/assets/processed/b02-panorama.png",
+    "sha256": "7b9443763e6a5dcaa866b64a4af4058d73ee84e3ae4da08f1c6c82911c4c8ef2",
+    "sourceSize": [
+      2880,
+      1620
+    ],
+    "embeddedSize": [
+      1735,
+      976
+    ],
+    "fit": "contain",
+    "box": [
+      0.65,
+      2.25,
+      9.13,
+      5.14
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 7,
+    "name": "b02-detail",
+    "source": "promo-video/ppt/assets/processed/b02-detail.png",
+    "sha256": "437c7ae85da85badc1f1a2eab73e01a4e9ce09924866bc1f7cf95979fa71a0ba",
+    "sourceSize": [
+      2880,
+      1620
+    ],
+    "embeddedSize": [
+      780,
+      439
+    ],
+    "fit": "contain",
+    "box": [
+      8.57,
+      3.86,
+      4.11,
+      2.31
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 8,
+    "name": "person-org",
+    "source": "promo-video/ppt/assets/processed/person-org.png",
+    "sha256": "abbfbc573f1d87fdc5ba084f04fe7c0d60634a50de2774bb6a3f9547861bd8da",
+    "sourceSize": [
+      570,
+      599
+    ],
+    "embeddedSize": [
+      570,
+      599
+    ],
+    "fit": "contain",
+    "box": [
+      0.65,
+      2.25,
+      3.59,
+      3.77
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 8,
+    "name": "person-line",
+    "source": "promo-video/ppt/assets/processed/person-line.png",
+    "sha256": "a0770bf4b368c1fe3597b5589790f410197855d2d1170d8ce69d1d2f0aa4735f",
+    "sourceSize": [
+      570,
+      599
+    ],
+    "embeddedSize": [
+      570,
+      599
+    ],
+    "fit": "contain",
+    "box": [
+      4.87,
+      2.25,
+      3.59,
+      3.77
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 8,
+    "name": "person-color",
+    "source": "promo-video/ppt/assets/processed/person-color.png",
+    "sha256": "9c74a178d4e5b7fc08540ce02c4975420ccb3957833a1a0542d1e8f68d6992ba",
+    "sourceSize": [
+      570,
+      599
+    ],
+    "embeddedSize": [
+      570,
+      599
+    ],
+    "fit": "contain",
+    "box": [
+      9.09,
+      2.25,
+      3.59,
+      3.77
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 9,
+    "name": "figure",
+    "source": "promo-video/ppt/assets/processed/figure.png",
+    "sha256": "b5ae300ed252fecae76ac1abd7df5c39ccf282b0080887a08969b2254c8d06ba",
+    "sourceSize": [
+      1864,
+      1802
+    ],
+    "embeddedSize": [
+      808,
+      781
+    ],
+    "fit": "contain",
+    "box": [
+      4.55,
+      1.15,
+      4.25,
+      4.75
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 9,
+    "name": "dwell-detail",
+    "source": "promo-video/ppt/revision-v2/assets/dwell-detail.png",
+    "sha256": "912cea9c9d2331272ad8e865f85080aa90c95b7c9f536549e7e205bd26c674b3",
+    "sourceSize": [
+      280,
+      280
+    ],
+    "embeddedSize": [
+      257,
+      257
+    ],
+    "fit": "contain",
+    "box": [
+      0.7,
+      5.15,
+      1.35,
+      1.35
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 9,
+    "name": "gesture-open",
+    "source": "promo-video/ppt/assets/processed/gesture-open.png",
+    "sha256": "88c4be0422fea303e8b22f9b962777d5be83688a829d0391bd183809e6035318",
+    "sourceSize": [
+      1920,
+      1080
+    ],
+    "embeddedSize": [
+      680,
+      383
+    ],
+    "fit": "contain",
+    "box": [
+      9.1,
+      1.62,
+      3.58,
+      2.02
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 11,
+    "name": "architecture",
+    "source": "promo-video/ppt/assets/processed/architecture.png",
+    "sha256": "e874c9f08aac3a8b3a69bd35d0cfdfdeebc385f7e1af1a703694e1039990b22e",
+    "sourceSize": [
+      1920,
+      1080
+    ],
+    "embeddedSize": [
+      503,
+      283
+    ],
+    "fit": "contain",
+    "box": [
+      4.25,
+      2.36,
+      2.65,
+      1.49
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 11,
+    "name": "route",
+    "source": "promo-video/ppt/assets/processed/route.png",
+    "sha256": "d0b011a29b7e22edddc03c77a6310afbdee4c386c6ecabcb6c96def692a250c9",
+    "sourceSize": [
+      1920,
+      1080
+    ],
+    "embeddedSize": [
+      503,
+      283
+    ],
+    "fit": "contain",
+    "box": [
+      7.26,
+      2.36,
+      2.65,
+      1.49
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 11,
+    "name": "recap",
+    "source": "promo-video/ppt/assets/processed/recap.png",
+    "sha256": "a0a91a3bc4650b603a3e2699fb07ca8fd4cb1d41de636f0c540e62b025258d67",
+    "sourceSize": [
+      1920,
+      1080
+    ],
+    "embeddedSize": [
+      503,
+      283
+    ],
+    "fit": "contain",
+    "box": [
+      10.27,
+      2.36,
+      2.65,
+      1.49
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 11,
+    "name": "gesture-open",
+    "source": "promo-video/ppt/assets/processed/gesture-open.png",
+    "sha256": "88c4be0422fea303e8b22f9b962777d5be83688a829d0391bd183809e6035318",
+    "sourceSize": [
+      1920,
+      1080
+    ],
+    "embeddedSize": [
+      503,
+      283
+    ],
+    "fit": "contain",
+    "box": [
+      4.25,
+      4.98,
+      2.65,
+      1.49
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 11,
+    "name": "architecture-crop",
+    "source": "promo-video/ppt/assets/processed/architecture-crop.png",
+    "sha256": "f36eef2b638e5fafa496bc308969f33fd27fce934a078f981b68e6ad3df16716",
+    "sourceSize": [
+      1280,
+      740
+    ],
+    "embeddedSize": [
+      490,
+      283
+    ],
+    "fit": "contain",
+    "box": [
+      7.26,
+      4.98,
+      2.65,
+      1.49
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 11,
+    "name": "ending",
+    "source": "promo-video/ppt/assets/processed/ending.png",
+    "sha256": "0db01306651cbff09625b914a617dc43277af9bf0b01199157680ea5cd9a77b6",
+    "sourceSize": [
+      1920,
+      1080
+    ],
+    "embeddedSize": [
+      503,
+      283
+    ],
+    "fit": "contain",
+    "box": [
+      10.27,
+      4.98,
+      2.65,
+      1.49
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  },
+  {
+    "slide": 12,
+    "name": "mural-02",
+    "source": "promo-video/ppt/assets/processed/mural-02.png",
+    "sha256": "7fa176a4546e751ce48fa3b3389aa1d5087d233ac949c571c44af2da6c88edac",
+    "sourceSize": [
+      6000,
+      1357
+    ],
+    "embeddedSize": [
+      2533,
+      573
+    ],
+    "fit": "contain",
+    "box": [
+      0,
+      4.33,
+      13.333333,
+      3.015
+    ],
+    "treatment": "Crop/aspect-preserving downsample only; no repaint, filter, flip or recolor"
+  }
+]
