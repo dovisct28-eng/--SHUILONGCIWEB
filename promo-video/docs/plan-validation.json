@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-15",
+  "status": "PASS",
+  "checks": [
+    "format and fixed source",
+    "six chapters cover exactly 120 seconds",
+    "30 shots are continuous and belong to chapters",
+    "every referenced source exists in the audited remote baseline",
+    "captions are independent, legible in duration, and nonoverlapping",
+    "simulation disclosure covers every simulated frame",
+    "gesture dwell, action order, transition, and release are causal"
+  ],
+  "shots": 30,
+  "chapters": 6,
+  "captions": 19,
+  "frames": 3600,
+  "limits": "Planning invariants only. No rendered media, visual review, export, rights, or real-camera acceptance."
+}

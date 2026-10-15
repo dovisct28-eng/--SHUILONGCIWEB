@@ -1,0 +1,9 @@
+# Planning stays in Git; source copies and generated media stay local.
+assets/
+recordings/
+animations/
+previews/
+renders/
+node_modules/
+.cache/
+local/
