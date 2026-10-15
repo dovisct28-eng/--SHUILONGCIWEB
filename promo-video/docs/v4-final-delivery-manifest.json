@@ -1,0 +1,34 @@
+{
+  "status": "SELECTED_SUBMISSION_COPY_TECHNICAL_AND_SAMPLED_VISUAL_PASS",
+  "selection": "master",
+  "reason": "Preserves mural fine texture better than 48 MB copy; no stated upload size ceiling.",
+  "files": [
+    {
+      "file": "chubing-rujiang-v4-master.mp4",
+      "sha256": "bf17b7968a333f16a3924a53bde998bd0d147a505d497ba9758e52c7f6d8a6df",
+      "bytes": 121367033,
+      "MB": 121.367033
+    },
+    {
+      "file": "chubing-rujiang-v4-50mb.mp4",
+      "sha256": "28bd57036d94affc7c10a6ec688057ffd15df35f8d80fe1d16a225dff9ce41c9",
+      "bytes": 48005394,
+      "MB": 48.005394
+    },
+    {
+      "file": "chubing-rujiang-final-submission.mp4",
+      "sha256": "bf17b7968a333f16a3924a53bde998bd0d147a505d497ba9758e52c7f6d8a6df",
+      "bytes": 121367033,
+      "MB": 121.367033
+    }
+  ],
+  "nativeExportTaskId": "8e70d1bf-32f6-41fb-aaec-d4564dcae766",
+  "sourceTimelineId": "4d3d4a82-0b81-4c59-bc4f-5fb15969224a",
+  "watermark": "Original Veo mark retained; no compliant replacement available, per user.",
+  "continuousHumanAV": "NOT_PERFORMED; automated browser playback was muted.",
+  "limits": [
+    "No Windows Media Player/VLC visual acceptance.",
+    "No full-frame identity/text OCR certification.",
+    "Selection does not certify source-media licensing or physical-camera performance."
+  ]
+}

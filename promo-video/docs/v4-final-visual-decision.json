@@ -1,0 +1,18 @@
+{
+  "status": "SAMPLED_VISUAL_PASS",
+  "selectedVersion": "master",
+  "masterSurveyPagesReviewed": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+  "compressedSurveyPagesReviewed": [3, 4, 6, 9, 11],
+  "sameFrameComparisons": 18,
+  "detailCropsReviewed": ["opening", "mural-second", "gallery-line", "gallery-animation", "gesture-open", "ending"],
+  "closingOverlay": "Correct three text levels, staged entry at 168/169/170 seconds, outside mural details; final fade preserved.",
+  "removedText": "Requested two phrases absent from active final graph and capture response; gallery control labels retained. Historical versions/documents preserved.",
+  "compressionAssessment": "48 MB copy remains readable, but dense mural texture and fine lines visibly soften at 100 percent. Not visually lossless. No extra sharpening/denoise/interpolation applied.",
+  "reasonForMaster": "Quality takes priority over the approximate 50 MB goal; direct editor master selected as submission copy.",
+  "watermark": "Visible Veo source mark retained without blur, crop or removal. User confirmed no known watermark-free source.",
+  "limits": [
+    "Sampled still-frame review and automated playback, not continuous human audiovisual listening acceptance.",
+    "No claim of every-frame identity or text OCR.",
+    "Original 24 fps character animation and existing A04 flat wall markers retained as baseline content."
+  ]
+}

@@ -1,5 +1,7 @@
 # 《出兵入将》参赛演示视频
 
+**V4局部精修与参赛文件（2026-10-15）**：已完成片尾三层点题、图鉴提示删除，实际输出母版121.37MB、双遍优化版48.01MB，并选择母版生成 `renders/v4-final/chubing-rujiang-final-submission.mp4`。编码/完整解码、Chrome与Edge完整播放、相关测试及抽样画质复核通过。Veo源标识按本轮用户确认保留；没有代替连续人工听审或许可认证。详见[修订与交付报告](docs/v4-final-delivery.md)、[PPT完整材料](docs/v4-final-ppt-materials.md)、[最终剧本](docs/v4-final-script.md)、[精选证据](../docs/validation/promo-video-v4-final/README.md)。完整视频本地保留，不进入普通Git。以下V4/V3及早期内容是历史记录，本轮任务书覆盖其旧提示保留决定。
+
 **V4更新：173秒审片候选已实际导出**，文件 `previews/preview-v4-173s.mp4`。ChatCut独立时间线“出兵入将｜E类参赛演示 V4”，ID `9bf5f59a-8f3a-4d46-896b-7c03e53223fa`；V1/V2/V3保留，网页业务代码未改。片头标题前移、主题卡点补录、空间与壁画观看扩展、B03两处浮动标识移除，回顾统一分区。用户明确确认保留B02真实网页自带的数字内容提示。
 
 交付与边界见 [V4制作记录](docs/v4-production-report.md)、[修改记录](docs/v4-edit-decisions.md)、[质量报告](docs/v4-quality-report.md)、[实际原生时间线](planning/production-state-v4.json)、[字幕](subtitles/chubingrujiang-v4.srt)、[精选证据](../docs/validation/promo-video-v4/README.md)。技术检测与抽样画面复查已执行，**全片连续人工视听、音乐听感与最终参赛认可仍待审片**，不命名为final。
