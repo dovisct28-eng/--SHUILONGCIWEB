@@ -1,0 +1,63 @@
+{
+  "source": "preview-v4-173s.mp4",
+  "sfxCorrelation": [
+    {
+      "frame": 3840,
+      "offsetMilliseconds": 0.0,
+      "withinOneFrame": true
+    },
+    {
+      "frame": 4170,
+      "offsetMilliseconds": 0.0,
+      "withinOneFrame": true
+    },
+    {
+      "frame": 4440,
+      "offsetMilliseconds": 0.0,
+      "withinOneFrame": true
+    },
+    {
+      "frame": 4890,
+      "offsetMilliseconds": 0.0,
+      "withinOneFrame": true
+    }
+  ],
+  "musicCorrelation": [
+    {
+      "timeSeconds": 1,
+      "offsetMilliseconds": 13.58333333333328,
+      "withinTwoFrames": true
+    },
+    {
+      "timeSeconds": 24,
+      "offsetMilliseconds": 0.0,
+      "withinTwoFrames": true
+    },
+    {
+      "timeSeconds": 58,
+      "offsetMilliseconds": 0.0,
+      "withinTwoFrames": true
+    },
+    {
+      "timeSeconds": 90,
+      "offsetMilliseconds": 0.0,
+      "withinTwoFrames": true
+    },
+    {
+      "timeSeconds": 145,
+      "offsetMilliseconds": 0.0,
+      "withinTwoFrames": true
+    },
+    {
+      "timeSeconds": 168,
+      "offsetMilliseconds": 0.0,
+      "withinTwoFrames": true
+    }
+  ],
+  "interior100msSilenceWindowCount": 0,
+  "silenceWindowSeconds": [],
+  "listeningAcceptance": "PENDING_HUMAN_LISTENING",
+  "limits": [
+    "AAC correlation verifies timing, not subjective music transitions, true peak or loudness compliance."
+  ]
+}

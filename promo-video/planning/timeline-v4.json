@@ -1,0 +1,566 @@
+{
+  "version": "v4",
+  "status": "PREVIEW_CANDIDATE_TECHNICAL_AND_SAMPLED_REVIEW_PASS_HUMAN_AV_PENDING",
+  "sourceCommit": "08370d6347cfb5a245b8cd55724089a81888655a",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "durationFrames": 5190,
+  "durationSeconds": 173,
+  "frameRanges": "inclusive start, exclusive end",
+  "chapters": [
+    {
+      "id": "A01",
+      "startFrame": 0,
+      "endFrame": 270
+    },
+    {
+      "id": "A02",
+      "startFrame": 270,
+      "endFrame": 660
+    },
+    {
+      "id": "A03",
+      "startFrame": 660,
+      "endFrame": 1020
+    },
+    {
+      "id": "A04",
+      "startFrame": 1020,
+      "endFrame": 1710
+    },
+    {
+      "id": "A05-A08",
+      "startFrame": 1710,
+      "endFrame": 2340
+    },
+    {
+      "id": "B02",
+      "startFrame": 2340,
+      "endFrame": 3510
+    },
+    {
+      "id": "B03",
+      "startFrame": 3510,
+      "endFrame": 4530
+    },
+    {
+      "id": "recap",
+      "startFrame": 4530,
+      "endFrame": 5010
+    },
+    {
+      "id": "ending",
+      "startFrame": 5010,
+      "endFrame": 5190
+    }
+  ],
+  "shots": [
+    {
+      "id": "A01",
+      "startFrame": 0,
+      "endFrame": 270,
+      "source": "recordings/v4/a01-a03.mp4",
+      "sourceInFrame": 0,
+      "sourceOutFrame": 270,
+      "kind": "real-web-capture",
+      "transition": {
+        "type": "cut",
+        "frames": 0
+      },
+      "assetId": "f99bc65d-7058-4237-8ffe-4eff415d2f27"
+    },
+    {
+      "id": "A02",
+      "startFrame": 270,
+      "endFrame": 660,
+      "source": "recordings/v4/a01-a03.mp4",
+      "sourceInFrame": 270,
+      "sourceOutFrame": 660,
+      "kind": "real-web-capture",
+      "transition": {
+        "type": "cut",
+        "frames": 0
+      },
+      "assetId": "f99bc65d-7058-4237-8ffe-4eff415d2f27"
+    },
+    {
+      "id": "A03",
+      "startFrame": 660,
+      "endFrame": 1020,
+      "source": "recordings/v4/a03-theme-r2.mp4",
+      "sourceInFrame": 0,
+      "sourceOutFrame": 360,
+      "kind": "real-web-capture",
+      "transition": {
+        "type": "cut",
+        "frames": 0
+      },
+      "assetId": "4d3b6bd2-cb9c-4c81-9c54-8e9e1a7bc112"
+    },
+    {
+      "id": "A04",
+      "startFrame": 1020,
+      "endFrame": 1710,
+      "source": "recordings/v4/a04-complete.mp4",
+      "sourceInFrame": 0,
+      "sourceOutFrame": 690,
+      "kind": "real-web-capture",
+      "transition": {
+        "type": "cut",
+        "frames": 0
+      },
+      "assetId": "7e9c868d-0645-4807-9307-d8ec14ddcf72"
+    },
+    {
+      "id": "A05",
+      "startFrame": 1710,
+      "endFrame": 1890,
+      "source": "recordings/v4/a05.mp4",
+      "sourceInFrame": 0,
+      "sourceOutFrame": 180,
+      "kind": "real-web-capture",
+      "transition": {
+        "type": "cut",
+        "frames": 0
+      },
+      "assetId": "1e0e4501-6a2f-4550-bd1d-f065883f4de3"
+    },
+    {
+      "id": "A06",
+      "startFrame": 1890,
+      "endFrame": 2070,
+      "source": "recordings/v4/a06.mp4",
+      "sourceInFrame": 0,
+      "sourceOutFrame": 180,
+      "kind": "real-web-capture",
+      "transition": {
+        "type": "cut",
+        "frames": 0
+      },
+      "assetId": "5aa8751e-41c4-4b9b-a980-b07ba8ab15cc"
+    },
+    {
+      "id": "A07",
+      "startFrame": 2070,
+      "endFrame": 2275,
+      "source": "recordings/v4/a07.mp4",
+      "sourceInFrame": 0,
+      "sourceOutFrame": 205,
+      "kind": "real-web-capture",
+      "transition": {
+        "type": "cut",
+        "frames": 0
+      },
+      "assetId": "887b5a8b-c251-4871-a904-869d38c9bc6c"
+    },
+    {
+      "id": "A08",
+      "startFrame": 2275,
+      "endFrame": 2340,
+      "source": "recordings/v3/a08-entry-r2.mp4",
+      "sourceInFrame": 0,
+      "sourceOutFrame": 65,
+      "kind": "real-web-capture",
+      "transition": {
+        "type": "cut",
+        "frames": 0
+      },
+      "assetId": "62701102-ecea-4ff1-83b5-45a7344acc65"
+    },
+    {
+      "id": "B02-panorama-selection",
+      "startFrame": 2340,
+      "endFrame": 2700,
+      "source": "recordings/v4/b02-full.mp4",
+      "sourceInFrame": 0,
+      "sourceOutFrame": 360,
+      "kind": "real-web-capture",
+      "transition": {
+        "type": "cut",
+        "frames": 0
+      },
+      "assetId": "674431d4-736f-426e-9c0d-4fbde3d5f2d3"
+    },
+    {
+      "id": "B02-loaded-character",
+      "startFrame": 2700,
+      "endFrame": 3509,
+      "source": "recordings/v4/b02-full.mp4",
+      "sourceInFrame": 361,
+      "sourceOutFrame": 1170,
+      "kind": "real-web-capture",
+      "transition": {
+        "type": "cut",
+        "frames": 0
+      },
+      "editReason": "Exclude one asynchronous empty-image loading frame at source F360",
+      "assetId": "674431d4-736f-426e-9c0d-4fbde3d5f2d3"
+    },
+    {
+      "id": "B02-reading-hold",
+      "startFrame": 3509,
+      "endFrame": 3510,
+      "source": "assets/v4-reading-hold.png",
+      "sourceInFrame": 0,
+      "sourceOutFrame": 1,
+      "kind": "actual-source-frame-hold",
+      "transition": {
+        "type": "cut",
+        "frames": 0
+      },
+      "originSource": "recordings/v4/b02-full.mp4",
+      "originFrame": 1169,
+      "assetId": "b232176a-1879-4d2d-b637-a6bb17934563"
+    },
+    {
+      "id": "B03",
+      "startFrame": 3510,
+      "endFrame": 4530,
+      "source": "motion-graphics/GestureStageV4.tsx",
+      "sourceInFrame": 0,
+      "sourceOutFrame": 1020,
+      "kind": "preset-gesture-simulation",
+      "transition": {
+        "type": "cut",
+        "frames": 0
+      },
+      "assetId": "64837463-6aa6-4616-909c-d1871dbb5d0a"
+    },
+    {
+      "id": "recap-space",
+      "startFrame": 4530,
+      "endFrame": 4680,
+      "source": "recordings/v4/a01-a03.mp4",
+      "sourceInFrame": 480,
+      "sourceOutFrame": 630,
+      "kind": "real-web-capture",
+      "transition": {
+        "type": "cut",
+        "frames": 0
+      },
+      "rectangle": {
+        "left": 154,
+        "top": 3,
+        "width": 1612,
+        "height": 906.75
+      },
+      "assetId": "f99bc65d-7058-4237-8ffe-4eff415d2f27"
+    },
+    {
+      "id": "recap-gallery",
+      "startFrame": 4680,
+      "endFrame": 4830,
+      "source": "recordings/v4/b02-full.mp4",
+      "sourceInFrame": 500,
+      "sourceOutFrame": 650,
+      "kind": "real-web-capture",
+      "transition": {
+        "type": "cut",
+        "frames": 0
+      },
+      "rectangle": {
+        "left": 154,
+        "top": 3,
+        "width": 1612,
+        "height": 906.75
+      },
+      "assetId": "674431d4-736f-426e-9c0d-4fbde3d5f2d3"
+    },
+    {
+      "id": "recap-gesture",
+      "startFrame": 4830,
+      "endFrame": 5010,
+      "source": "motion-graphics/GestureStageV4.tsx",
+      "sourceInFrame": 600,
+      "sourceOutFrame": 780,
+      "kind": "preset-gesture-simulation",
+      "transition": {
+        "type": "cut",
+        "frames": 0
+      },
+      "rectangle": {
+        "left": 154,
+        "top": 3,
+        "width": 1612,
+        "height": 906.75
+      },
+      "frameOffset": 600,
+      "assetId": "64837463-6aa6-4616-909c-d1871dbb5d0a"
+    },
+    {
+      "id": "ending",
+      "startFrame": 5010,
+      "endFrame": 5190,
+      "source": "motion-graphics/FilmPanelV4.tsx",
+      "sourceInFrame": 0,
+      "sourceOutFrame": 180,
+      "kind": "traceable-mural-composite",
+      "transition": {
+        "type": "cut",
+        "frames": 0
+      },
+      "assetId": "f1a4d3a9-c830-402d-a268-e13774becd5b"
+    }
+  ],
+  "captions": [
+    {
+      "id": "title-open",
+      "start": 45,
+      "end": 150,
+      "text": "出兵 · 入将",
+      "left": 0,
+      "top": 0,
+      "width": 1920,
+      "height": 1080,
+      "kind": "title",
+      "assetId": "fcdeec1b-9bad-4f93-8acc-327052b690d6",
+      "srtText": "出兵 · 入将\n水龙祠壁画数字交互设计"
+    },
+    {
+      "id": "space",
+      "start": 300,
+      "end": 390,
+      "text": "走近水龙祠",
+      "left": 300,
+      "top": 900,
+      "width": 1320,
+      "height": 90,
+      "kind": "caption",
+      "assetId": "a26e98a9-2160-42c2-ba46-adee6232352c"
+    },
+    {
+      "id": "route",
+      "start": 1065,
+      "end": 1155,
+      "text": "第五幅 → 第一幅 → 第二幅",
+      "left": 300,
+      "top": 40,
+      "width": 1320,
+      "height": 90,
+      "kind": "caption",
+      "assetId": "a26e98a9-2160-42c2-ba46-adee6232352c"
+    },
+    {
+      "id": "gallery",
+      "start": 2340,
+      "end": 2430,
+      "text": "壁画人物数字图鉴",
+      "left": 300,
+      "top": 50,
+      "width": 1320,
+      "height": 90,
+      "kind": "caption",
+      "assetId": "a26e98a9-2160-42c2-ba46-adee6232352c"
+    },
+    {
+      "id": "variants",
+      "start": 2880,
+      "end": 2970,
+      "text": "切换原图、线稿与数字色稿",
+      "left": 300,
+      "top": 50,
+      "width": 1320,
+      "height": 90,
+      "kind": "caption",
+      "assetId": "a26e98a9-2160-42c2-ba46-adee6232352c"
+    },
+    {
+      "id": "recap-space",
+      "start": 4530,
+      "end": 4680,
+      "text": "01 / 建筑空间\n在三维空间中了解壁画位置",
+      "left": 0,
+      "top": 910,
+      "width": 1920,
+      "height": 170,
+      "kind": "recap",
+      "assetId": "adb4c1c4-f51b-44f5-b36a-05d587d2af37"
+    },
+    {
+      "id": "recap-gallery",
+      "start": 4680,
+      "end": 4830,
+      "text": "02 / 图鉴探索\n从原图到线稿，探索壁画人物",
+      "left": 0,
+      "top": 910,
+      "width": 1920,
+      "height": 170,
+      "kind": "recap",
+      "assetId": "adb4c1c4-f51b-44f5-b36a-05d587d2af37"
+    },
+    {
+      "id": "recap-gesture",
+      "start": 4830,
+      "end": 5010,
+      "text": "03 / 体感交互\n通过手势输入探索人物信息",
+      "left": 0,
+      "top": 910,
+      "width": 1920,
+      "height": 170,
+      "kind": "recap",
+      "assetId": "adb4c1c4-f51b-44f5-b36a-05d587d2af37"
+    }
+  ],
+  "recaps": [
+    {
+      "id": "recap-space",
+      "startFrame": 4530,
+      "endFrame": 4680,
+      "title": "01 / 建筑空间",
+      "description": "在三维空间中了解壁画位置"
+    },
+    {
+      "id": "recap-gallery",
+      "startFrame": 4680,
+      "endFrame": 4830,
+      "title": "02 / 图鉴探索",
+      "description": "从原图到线稿，探索壁画人物"
+    },
+    {
+      "id": "recap-gesture",
+      "startFrame": 4830,
+      "endFrame": 5010,
+      "title": "03 / 体感交互",
+      "description": "通过手势输入探索人物信息"
+    }
+  ],
+  "themeAnchorFrame": 747,
+  "galleryEvents": [
+    {
+      "action": "drag",
+      "localFrame": 120,
+      "frame": 2460
+    },
+    {
+      "action": "dragEnd",
+      "localFrame": 195,
+      "frame": 2535
+    },
+    {
+      "action": "zoom",
+      "localFrame": 195,
+      "frame": 2535
+    },
+    {
+      "action": "reset",
+      "localFrame": 300,
+      "frame": 2640
+    },
+    {
+      "action": "select1",
+      "localFrame": 360,
+      "frame": 2700
+    },
+    {
+      "action": "line",
+      "localFrame": 540,
+      "frame": 2879
+    },
+    {
+      "action": "color",
+      "localFrame": 660,
+      "frame": 2999
+    },
+    {
+      "action": "index",
+      "localFrame": 900,
+      "frame": 3239
+    },
+    {
+      "action": "select2",
+      "localFrame": 930,
+      "frame": 3269
+    },
+    {
+      "action": "read",
+      "localFrame": 1000,
+      "frame": 3339
+    }
+  ],
+  "gestureEvents": [
+    {
+      "action": "NEXT",
+      "approachFrame": 3780,
+      "dwellStartFrame": 3810,
+      "triggerFrame": 3840,
+      "releaseFrame": 3900,
+      "releaseCompleteFrame": 3912
+    },
+    {
+      "action": "OPEN",
+      "approachFrame": 4110,
+      "dwellStartFrame": 4140,
+      "triggerFrame": 4170,
+      "releaseFrame": 4230,
+      "releaseCompleteFrame": 4242
+    },
+    {
+      "action": "CLOSE",
+      "approachFrame": 4380,
+      "dwellStartFrame": 4410,
+      "triggerFrame": 4440,
+      "releaseFrame": 4480,
+      "releaseCompleteFrame": 4492
+    }
+  ],
+  "audio": {
+    "music": "assets/music-edit-173s-v4.wav",
+    "sfxFrames": [
+      3840,
+      4170,
+      4440
+    ],
+    "recapSfxFrames": [
+      4890
+    ],
+    "listeningAcceptance": "PENDING_HUMAN_LISTENING"
+  },
+  "limits": [
+    "Preset hand animation, not camera-recognition test.",
+    "Continuous human viewing and listening acceptance must be recorded separately from technical checks."
+  ],
+  "userDecisions": [
+    {
+      "topic": "B02 existing digital-content notice",
+      "decision": "Retain the original website notice; remove only the two B03 floating labels",
+      "source": "Direct user reply in this V4 task"
+    }
+  ],
+  "themeSourceKeys": [
+    [
+      660,
+      10.1
+    ],
+    [
+      690,
+      10.3
+    ],
+    [
+      729,
+      10.63
+    ],
+    [
+      747,
+      11.2
+    ],
+    [
+      810,
+      11.2
+    ],
+    [
+      900,
+      12.3
+    ],
+    [
+      1019,
+      13.2
+    ]
+  ],
+  "delivery": {
+    "video": "previews/preview-v4-173s.mp4",
+    "sha256": "02f6aeb34b1b2dfea8d4be346b0ead48d79ff5b940a09c3e62682052e435a690",
+    "continuousHumanAV": "PENDING",
+    "finalApproval": "PENDING"
+  }
+}

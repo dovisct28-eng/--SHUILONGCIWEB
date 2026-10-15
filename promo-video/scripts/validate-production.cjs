@@ -1,6 +1,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const base=path.resolve(__dirname,'..'),version=process.argv[2]||'v1',manifest=JSON.parse(fs.readFileSync(path.join(base,`planning/production-state-${version}.json`))),plan=JSON.parse(fs.readFileSync(path.join(base,'planning/timeline.json')));
 const state=manifest.state,items=state.timeline.entries.filter(e=>e.kind==='item'),visual=items.filter(e=>e.trackId===state.timeline.tracks[0].id).sort((a,b)=>a.startFrame-b.startFrame);
+if(version==='v4'){const r=require('./validate-v4.cjs').check(manifest,JSON.parse(fs.readFileSync(path.join(base,'planning/timeline-v4.json'))));fs.writeFileSync(path.join(base,'docs/production-validation-v4.json'),JSON.stringify(r,null,2)+'\n');console.log(JSON.stringify(r));process.exit(0);}
 if(version==='v3'){require('./validate-v3.cjs').validate(manifest,JSON.parse(fs.readFileSync(path.join(base,'planning/timeline-v3-150s.json'))));process.exit(0);}
 assert.equal(state.state.durationFrames,3900);assert.equal(state.state.fps,30);assert.deepEqual(state.state.canvas,{width:1920,height:1080});
 let end=0;for(const item of visual){assert.equal(item.timelineRange.fromFrame,end,'visual gap/overlap');end=item.timelineRange.toFrame;}assert.equal(end,3900);

@@ -1,5 +1,11 @@
 # 《出兵入将》参赛演示视频
 
+**V4更新：173秒审片候选已实际导出**，文件 `previews/preview-v4-173s.mp4`。ChatCut独立时间线“出兵入将｜E类参赛演示 V4”，ID `9bf5f59a-8f3a-4d46-896b-7c03e53223fa`；V1/V2/V3保留，网页业务代码未改。片头标题前移、主题卡点补录、空间与壁画观看扩展、B03两处浮动标识移除，回顾统一分区。用户明确确认保留B02真实网页自带的数字内容提示。
+
+交付与边界见 [V4制作记录](docs/v4-production-report.md)、[修改记录](docs/v4-edit-decisions.md)、[质量报告](docs/v4-quality-report.md)、[实际原生时间线](planning/production-state-v4.json)、[字幕](subtitles/chubingrujiang-v4.srt)、[精选证据](../docs/validation/promo-video-v4/README.md)。技术检测与抽样画面复查已执行，**全片连续人工视听、音乐听感与最终参赛认可仍待审片**，不命名为final。
+
+V4检查：`node promo-video/scripts/validate-production.cjs v4`；`node --test promo-video/scripts/v4-validation.test.mjs promo-video/scripts/v3-motion.test.mjs promo-video/scripts/v3-validation.test.cjs`。Remotion新增 `/V4Review` 监看实际输出，时长5190帧。完整媒体仅本地保留，Git不含完整MP4及无损录屏。
+
 **V3更新：150秒审片候选**，文件 `previews/preview-v3-150s.mp4`；ChatCut独立时间线“出兵入将｜150秒参赛演示 V3”，五轨可编辑。V1/V2保留。详见[制作记录](docs/v3-production-report.md)、[运动诊断](docs/v3-motion-audit.md)、[画质验收](docs/v3-quality-report.md)、[实际时间线](planning/production-state-v3.json)及[独立字幕](subtitles/chubingrujiang-v3-150s.srt)。当前为审片候选，音乐和最终参赛版尚待用户认可；不提前生成final命名文件。
 
 V3：`node promo-video/scripts/validate-production.cjs v3`；运动/验证器测试 `node --test promo-video/scripts/v3-motion.test.mjs promo-video/scripts/v3-validation.test.cjs`。原生MG属性另见 `planning/motion-graphics-properties-v3.json`。Studio `/V3Review`为新增监看器，母工程继续在ChatCut。以下保留V2与更早制作记录。

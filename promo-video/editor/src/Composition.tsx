@@ -19,6 +19,14 @@ export const MyComposition = () => {
       width={1920}
       height={1080}
     />
+    <Composition
+      id="V4Review"
+      component={V4Review}
+      durationInFrames={5190}
+      fps={30}
+      width={1920}
+      height={1080}
+    />
     </>
   );
 };
@@ -34,5 +42,12 @@ export const MyComponent: React.FC = () => {
 export const V3Review: React.FC = () => {
   return <AbsoluteFill style={{backgroundColor: "#0b151a"}}>
     <OffthreadVideo src={staticFile("preview-review-v3.mp4")} />
+  </AbsoluteFill>;
+};
+
+// Actual native V4 export only. Copied locally after export verification.
+export const V4Review: React.FC = () => {
+  return <AbsoluteFill style={{backgroundColor: "#0b151a"}}>
+    <OffthreadVideo src={staticFile("preview-review-v4.mp4")} />
   </AbsoluteFill>;
 };

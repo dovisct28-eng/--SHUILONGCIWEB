@@ -1,0 +1,2090 @@
+{
+  "projectId": "050726e1-fb18-4c5b-beb0-851c06f616fe",
+  "timelineId": "9bf5f59a-8f3a-4d46-896b-7c03e53223fa",
+  "sourceTimelineId": "43b9d733-c0e8-4b41-b2de-e15e57437a83",
+  "stage": "PREVIEW_CANDIDATE_TECHNICAL_AND_SAMPLED_REVIEW_COMPLETE_HUMAN_AV_PENDING",
+  "state": {
+    "state": {
+      "canvas": {
+        "height": 1080,
+        "width": 1920
+      },
+      "durationFrames": 5190,
+      "editor": {
+        "activeTimelineId": "9bf5f59a-8f3a-4d46-896b-7c03e53223fa",
+        "asOf": "turn-start",
+        "selectedItemIds": [],
+        "trackLocks": [
+          {
+            "hidden": false,
+            "id": "10144f90-9b80-46e4-9575-d113cfb8c353",
+            "locked": false,
+            "muted": false
+          },
+          {
+            "hidden": false,
+            "id": "397502bf-c0e2-49ad-a88e-f53cee2e02e1",
+            "locked": false,
+            "muted": false
+          },
+          {
+            "hidden": false,
+            "id": "d1438b8a-728c-4683-a7b6-714cb70dbabf",
+            "locked": false,
+            "muted": false
+          },
+          {
+            "hidden": false,
+            "id": "5d770bdf-25e5-4d47-b85f-cbd026d09047",
+            "locked": false,
+            "muted": false
+          },
+          {
+            "hidden": false,
+            "id": "c4582241-27df-4fe8-80d2-51bb30c49d06",
+            "locked": false,
+            "muted": false
+          }
+        ]
+      },
+      "fps": 30,
+      "id": "9bf5f59a-8f3a-4d46-896b-7c03e53223fa",
+      "name": "出兵入将｜E类参赛演示 V4",
+      "range": {
+        "fromFrame": 0,
+        "toFrame": 5190
+      }
+    },
+    "views": [
+      "timeline"
+    ],
+    "timeline": {
+      "entries": [
+        {
+          "asset": {
+            "id": "f99bc65d-7058-4237-8ffe-4eff415d2f27",
+            "name": "a01-a03",
+            "type": "video"
+          },
+          "startFrame": 0,
+          "id": "a4f4d4f6-93db-42af-a873-a8bc4eafb7e8",
+          "itemType": "video",
+          "kind": "item",
+          "sourceRange": {
+            "end": 9000000,
+            "start": 0
+          },
+          "timelineRange": {
+            "fromFrame": 0,
+            "toFrame": 270
+          },
+          "trackAlias": "V1",
+          "trackId": "10144f90-9b80-46e4-9575-d113cfb8c353"
+        },
+        {
+          "fromFrame": 0,
+          "kind": "gap",
+          "timelineRange": {
+            "fromFrame": 0,
+            "toFrame": 45
+          },
+          "trackAlias": "V2",
+          "trackId": "397502bf-c0e2-49ad-a88e-f53cee2e02e1"
+        },
+        {
+          "fromFrame": 0,
+          "kind": "gap",
+          "timelineRange": {
+            "fromFrame": 0,
+            "toFrame": 5190
+          },
+          "trackAlias": "V3",
+          "trackId": "d1438b8a-728c-4683-a7b6-714cb70dbabf"
+        },
+        {
+          "asset": {
+            "id": "8b414d3e-cec7-4cff-b7c2-a01441b4c326",
+            "name": "music-edit-173s-v4",
+            "type": "audio"
+          },
+          "startFrame": 0,
+          "id": "1fbe187a-61e5-483e-a399-017c56d33042",
+          "itemType": "audio",
+          "kind": "item",
+          "sourceRange": {
+            "end": 173000000,
+            "start": 0
+          },
+          "timelineRange": {
+            "fromFrame": 0,
+            "toFrame": 5190
+          },
+          "trackAlias": "A1",
+          "trackId": "5d770bdf-25e5-4d47-b85f-cbd026d09047"
+        },
+        {
+          "fromFrame": 0,
+          "kind": "gap",
+          "timelineRange": {
+            "fromFrame": 0,
+            "toFrame": 3840
+          },
+          "trackAlias": "A2",
+          "trackId": "c4582241-27df-4fe8-80d2-51bb30c49d06"
+        },
+        {
+          "asset": {
+            "id": "fcdeec1b-9bad-4f93-8acc-327052b690d6",
+            "name": "V4 · title",
+            "type": "motion-graphic"
+          },
+          "startFrame": 45,
+          "id": "7dd9a964-d54e-44fa-aa87-97ac2d761468",
+          "itemType": "motion-graphic",
+          "kind": "item",
+          "timelineRange": {
+            "fromFrame": 45,
+            "toFrame": 150
+          },
+          "trackAlias": "V2",
+          "trackId": "397502bf-c0e2-49ad-a88e-f53cee2e02e1"
+        },
+        {
+          "fromFrame": 150,
+          "kind": "gap",
+          "timelineRange": {
+            "fromFrame": 150,
+            "toFrame": 300
+          },
+          "trackAlias": "V2",
+          "trackId": "397502bf-c0e2-49ad-a88e-f53cee2e02e1"
+        },
+        {
+          "asset": {
+            "id": "f99bc65d-7058-4237-8ffe-4eff415d2f27",
+            "name": "a01-a03",
+            "type": "video"
+          },
+          "startFrame": 270,
+          "id": "e3af513b-05d1-46f7-b11a-619e0be6c2d1",
+          "itemType": "video",
+          "kind": "item",
+          "sourceRange": {
+            "end": 22000000,
+            "start": 9000000
+          },
+          "timelineRange": {
+            "fromFrame": 270,
+            "toFrame": 660
+          },
+          "trackAlias": "V1",
+          "trackId": "10144f90-9b80-46e4-9575-d113cfb8c353"
+        },
+        {
+          "asset": {
+            "id": "a26e98a9-2160-42c2-ba46-adee6232352c",
+            "name": "V4 · caption",
+            "type": "motion-graphic"
+          },
+          "startFrame": 300,
+          "id": "f47ee7dc-d6a0-4668-b410-547c46dae10e",
+          "itemType": "motion-graphic",
+          "kind": "item",
+          "timelineRange": {
+            "fromFrame": 300,
+            "toFrame": 390
+          },
+          "trackAlias": "V2",
+          "trackId": "397502bf-c0e2-49ad-a88e-f53cee2e02e1"
+        },
+        {
+          "fromFrame": 390,
+          "kind": "gap",
+          "timelineRange": {
+            "fromFrame": 390,
+            "toFrame": 1065
+          },
+          "trackAlias": "V2",
+          "trackId": "397502bf-c0e2-49ad-a88e-f53cee2e02e1"
+        },
+        {
+          "asset": {
+            "id": "4d3b6bd2-cb9c-4c81-9c54-8e9e1a7bc112",
+            "name": "a03-theme-r2",
+            "type": "video"
+          },
+          "startFrame": 660,
+          "id": "1deb6816-818b-4f4f-8293-66f86455897c",
+          "itemType": "video",
+          "kind": "item",
+          "sourceRange": {
+            "end": 12000000,
+            "start": 0
+          },
+          "timelineRange": {
+            "fromFrame": 660,
+            "toFrame": 1020
+          },
+          "trackAlias": "V1",
+          "trackId": "10144f90-9b80-46e4-9575-d113cfb8c353"
+        },
+        {
+          "asset": {
+            "id": "7e9c868d-0645-4807-9307-d8ec14ddcf72",
+            "name": "a04-complete",
+            "type": "video"
+          },
+          "startFrame": 1020,
+          "id": "b2476a2a-4310-47d4-9d31-12eabe072c92",
+          "itemType": "video",
+          "kind": "item",
+          "sourceRange": {
+            "end": 23000000,
+            "start": 0
+          },
+          "timelineRange": {
+            "fromFrame": 1020,
+            "toFrame": 1710
+          },
+          "trackAlias": "V1",
+          "trackId": "10144f90-9b80-46e4-9575-d113cfb8c353"
+        },
+        {
+          "asset": {
+            "id": "a26e98a9-2160-42c2-ba46-adee6232352c",
+            "name": "V4 · caption",
+            "type": "motion-graphic"
+          },
+          "startFrame": 1065,
+          "id": "cca68fb8-6729-4fa5-ba6b-8fe5ca36723b",
+          "itemType": "motion-graphic",
+          "kind": "item",
+          "timelineRange": {
+            "fromFrame": 1065,
+            "toFrame": 1155
+          },
+          "trackAlias": "V2",
+          "trackId": "397502bf-c0e2-49ad-a88e-f53cee2e02e1"
+        },
+        {
+          "fromFrame": 1155,
+          "kind": "gap",
+          "timelineRange": {
+            "fromFrame": 1155,
+            "toFrame": 2340
+          },
+          "trackAlias": "V2",
+          "trackId": "397502bf-c0e2-49ad-a88e-f53cee2e02e1"
+        },
+        {
+          "asset": {
+            "id": "1e0e4501-6a2f-4550-bd1d-f065883f4de3",
+            "name": "a05",
+            "type": "video"
+          },
+          "startFrame": 1710,
+          "id": "2686aeea-bb05-4bd9-9dd6-a57f94146e20",
+          "itemType": "video",
+          "kind": "item",
+          "sourceRange": {
+            "end": 6000000,
+            "start": 0
+          },
+          "timelineRange": {
+            "fromFrame": 1710,
+            "toFrame": 1890
+          },
+          "trackAlias": "V1",
+          "trackId": "10144f90-9b80-46e4-9575-d113cfb8c353"
+        },
+        {
+          "asset": {
+            "id": "5aa8751e-41c4-4b9b-a980-b07ba8ab15cc",
+            "name": "a06",
+            "type": "video"
+          },
+          "startFrame": 1890,
+          "id": "b034ce42-31e4-4389-8af6-34de510bc917",
+          "itemType": "video",
+          "kind": "item",
+          "sourceRange": {
+            "end": 6000000,
+            "start": 0
+          },
+          "timelineRange": {
+            "fromFrame": 1890,
+            "toFrame": 2070
+          },
+          "trackAlias": "V1",
+          "trackId": "10144f90-9b80-46e4-9575-d113cfb8c353"
+        },
+        {
+          "asset": {
+            "id": "887b5a8b-c251-4871-a904-869d38c9bc6c",
+            "name": "a07",
+            "type": "video"
+          },
+          "startFrame": 2070,
+          "id": "877a4dd1-874d-4037-99b0-5af1b98f7b5d",
+          "itemType": "video",
+          "kind": "item",
+          "sourceRange": {
+            "end": 6833333,
+            "start": 0
+          },
+          "timelineRange": {
+            "fromFrame": 2070,
+            "toFrame": 2275
+          },
+          "trackAlias": "V1",
+          "trackId": "10144f90-9b80-46e4-9575-d113cfb8c353"
+        },
+        {
+          "asset": {
+            "id": "62701102-ecea-4ff1-83b5-45a7344acc65",
+            "name": "a08-entry-r2",
+            "type": "video"
+          },
+          "startFrame": 2275,
+          "id": "db6a7318-ed94-4a85-9820-e85303ca5cc6",
+          "itemType": "video",
+          "kind": "item",
+          "sourceRange": {
+            "end": 2166667,
+            "start": 0
+          },
+          "timelineRange": {
+            "fromFrame": 2275,
+            "toFrame": 2340
+          },
+          "trackAlias": "V1",
+          "trackId": "10144f90-9b80-46e4-9575-d113cfb8c353"
+        },
+        {
+          "asset": {
+            "id": "674431d4-736f-426e-9c0d-4fbde3d5f2d3",
+            "name": "b02-full",
+            "type": "video"
+          },
+          "startFrame": 2340,
+          "id": "ca7f8ba2-3009-4c35-9302-838f317d439b",
+          "itemType": "video",
+          "kind": "item",
+          "sourceRange": {
+            "end": 12000000,
+            "start": 0
+          },
+          "timelineRange": {
+            "fromFrame": 2340,
+            "toFrame": 2700
+          },
+          "trackAlias": "V1",
+          "trackId": "10144f90-9b80-46e4-9575-d113cfb8c353"
+        },
+        {
+          "asset": {
+            "id": "a26e98a9-2160-42c2-ba46-adee6232352c",
+            "name": "V4 · caption",
+            "type": "motion-graphic"
+          },
+          "startFrame": 2340,
+          "id": "4ba0e417-3547-4f68-9b2e-a1ca68386372",
+          "itemType": "motion-graphic",
+          "kind": "item",
+          "timelineRange": {
+            "fromFrame": 2340,
+            "toFrame": 2430
+          },
+          "trackAlias": "V2",
+          "trackId": "397502bf-c0e2-49ad-a88e-f53cee2e02e1"
+        },
+        {
+          "fromFrame": 2430,
+          "kind": "gap",
+          "timelineRange": {
+            "fromFrame": 2430,
+            "toFrame": 2880
+          },
+          "trackAlias": "V2",
+          "trackId": "397502bf-c0e2-49ad-a88e-f53cee2e02e1"
+        },
+        {
+          "asset": {
+            "id": "674431d4-736f-426e-9c0d-4fbde3d5f2d3",
+            "name": "b02-full",
+            "type": "video"
+          },
+          "startFrame": 2700,
+          "id": "a4b48610-28c0-43d7-99bc-1526514eb449",
+          "itemType": "video",
+          "kind": "item",
+          "sourceRange": {
+            "end": 39000000,
+            "start": 12033333
+          },
+          "timelineRange": {
+            "fromFrame": 2700,
+            "toFrame": 3509
+          },
+          "trackAlias": "V1",
+          "trackId": "10144f90-9b80-46e4-9575-d113cfb8c353"
+        },
+        {
+          "asset": {
+            "id": "a26e98a9-2160-42c2-ba46-adee6232352c",
+            "name": "V4 · caption",
+            "type": "motion-graphic"
+          },
+          "startFrame": 2880,
+          "id": "b8b1e560-7295-490b-8f6c-4d98c83ff4e4",
+          "itemType": "motion-graphic",
+          "kind": "item",
+          "timelineRange": {
+            "fromFrame": 2880,
+            "toFrame": 2970
+          },
+          "trackAlias": "V2",
+          "trackId": "397502bf-c0e2-49ad-a88e-f53cee2e02e1"
+        },
+        {
+          "fromFrame": 2970,
+          "kind": "gap",
+          "timelineRange": {
+            "fromFrame": 2970,
+            "toFrame": 4530
+          },
+          "trackAlias": "V2",
+          "trackId": "397502bf-c0e2-49ad-a88e-f53cee2e02e1"
+        },
+        {
+          "asset": {
+            "id": "b232176a-1879-4d2d-b637-a6bb17934563",
+            "name": "v4-reading-hold",
+            "type": "image"
+          },
+          "startFrame": 3509,
+          "id": "82573a55-c80f-4fa2-b1f6-f1cddc831a94",
+          "itemType": "image",
+          "kind": "item",
+          "timelineRange": {
+            "fromFrame": 3509,
+            "toFrame": 3510
+          },
+          "trackAlias": "V1",
+          "trackId": "10144f90-9b80-46e4-9575-d113cfb8c353"
+        },
+        {
+          "asset": {
+            "id": "64837463-6aa6-4616-909c-d1871dbb5d0a",
+            "name": "V4 · gesture",
+            "type": "motion-graphic"
+          },
+          "startFrame": 3510,
+          "id": "dc0acdca-1c7c-4e8d-9113-31c0604f2ad6",
+          "itemType": "motion-graphic",
+          "kind": "item",
+          "timelineRange": {
+            "fromFrame": 3510,
+            "toFrame": 4530
+          },
+          "trackAlias": "V1",
+          "trackId": "10144f90-9b80-46e4-9575-d113cfb8c353"
+        },
+        {
+          "asset": {
+            "id": "b019fd72-55a5-4495-b5c8-bb0b5fc5bfbd",
+            "name": "驻留确认音 · 自制",
+            "type": "audio"
+          },
+          "startFrame": 3840,
+          "id": "28289468-a04d-4b9a-9f78-835b8226fe9c",
+          "itemType": "audio",
+          "kind": "item",
+          "sourceRange": {
+            "end": 633333,
+            "start": 0
+          },
+          "timelineRange": {
+            "fromFrame": 3840,
+            "toFrame": 3859
+          },
+          "trackAlias": "A2",
+          "trackId": "c4582241-27df-4fe8-80d2-51bb30c49d06"
+        },
+        {
+          "fromFrame": 3859,
+          "kind": "gap",
+          "timelineRange": {
+            "fromFrame": 3859,
+            "toFrame": 4170
+          },
+          "trackAlias": "A2",
+          "trackId": "c4582241-27df-4fe8-80d2-51bb30c49d06"
+        },
+        {
+          "asset": {
+            "id": "b019fd72-55a5-4495-b5c8-bb0b5fc5bfbd",
+            "name": "驻留确认音 · 自制",
+            "type": "audio"
+          },
+          "startFrame": 4170,
+          "id": "6f4a941b-89cd-400f-91d0-a89d14c68660",
+          "itemType": "audio",
+          "kind": "item",
+          "sourceRange": {
+            "end": 633333,
+            "start": 0
+          },
+          "timelineRange": {
+            "fromFrame": 4170,
+            "toFrame": 4189
+          },
+          "trackAlias": "A2",
+          "trackId": "c4582241-27df-4fe8-80d2-51bb30c49d06"
+        },
+        {
+          "fromFrame": 4189,
+          "kind": "gap",
+          "timelineRange": {
+            "fromFrame": 4189,
+            "toFrame": 4440
+          },
+          "trackAlias": "A2",
+          "trackId": "c4582241-27df-4fe8-80d2-51bb30c49d06"
+        },
+        {
+          "asset": {
+            "id": "b019fd72-55a5-4495-b5c8-bb0b5fc5bfbd",
+            "name": "驻留确认音 · 自制",
+            "type": "audio"
+          },
+          "startFrame": 4440,
+          "id": "22f49b80-e4f4-42f4-a430-00c50b748d99",
+          "itemType": "audio",
+          "kind": "item",
+          "sourceRange": {
+            "end": 633333,
+            "start": 0
+          },
+          "timelineRange": {
+            "fromFrame": 4440,
+            "toFrame": 4459
+          },
+          "trackAlias": "A2",
+          "trackId": "c4582241-27df-4fe8-80d2-51bb30c49d06"
+        },
+        {
+          "fromFrame": 4459,
+          "kind": "gap",
+          "timelineRange": {
+            "fromFrame": 4459,
+            "toFrame": 4890
+          },
+          "trackAlias": "A2",
+          "trackId": "c4582241-27df-4fe8-80d2-51bb30c49d06"
+        },
+        {
+          "asset": {
+            "id": "f99bc65d-7058-4237-8ffe-4eff415d2f27",
+            "name": "a01-a03",
+            "type": "video"
+          },
+          "startFrame": 4530,
+          "id": "da64c6e0-63d7-4e6e-a5f7-4ce3286f3196",
+          "itemType": "video",
+          "kind": "item",
+          "sourceRange": {
+            "end": 21000000,
+            "start": 16000000
+          },
+          "timelineRange": {
+            "fromFrame": 4530,
+            "toFrame": 4680
+          },
+          "trackAlias": "V1",
+          "trackId": "10144f90-9b80-46e4-9575-d113cfb8c353"
+        },
+        {
+          "asset": {
+            "id": "adb4c1c4-f51b-44f5-b36a-05d587d2af37",
+            "name": "V4 · recap",
+            "type": "motion-graphic"
+          },
+          "startFrame": 4530,
+          "id": "f94eca0a-f3b6-4a28-b103-dc0bf4bd73f2",
+          "itemType": "motion-graphic",
+          "kind": "item",
+          "timelineRange": {
+            "fromFrame": 4530,
+            "toFrame": 4680
+          },
+          "trackAlias": "V2",
+          "trackId": "397502bf-c0e2-49ad-a88e-f53cee2e02e1"
+        },
+        {
+          "asset": {
+            "id": "674431d4-736f-426e-9c0d-4fbde3d5f2d3",
+            "name": "b02-full",
+            "type": "video"
+          },
+          "startFrame": 4680,
+          "id": "149dac73-c480-458a-b33b-68235ac405d0",
+          "itemType": "video",
+          "kind": "item",
+          "sourceRange": {
+            "end": 21666667,
+            "start": 16666667
+          },
+          "timelineRange": {
+            "fromFrame": 4680,
+            "toFrame": 4830
+          },
+          "trackAlias": "V1",
+          "trackId": "10144f90-9b80-46e4-9575-d113cfb8c353"
+        },
+        {
+          "asset": {
+            "id": "adb4c1c4-f51b-44f5-b36a-05d587d2af37",
+            "name": "V4 · recap",
+            "type": "motion-graphic"
+          },
+          "startFrame": 4680,
+          "id": "da416fb9-5284-410d-a81e-a48280fcdcdb",
+          "itemType": "motion-graphic",
+          "kind": "item",
+          "timelineRange": {
+            "fromFrame": 4680,
+            "toFrame": 4830
+          },
+          "trackAlias": "V2",
+          "trackId": "397502bf-c0e2-49ad-a88e-f53cee2e02e1"
+        },
+        {
+          "asset": {
+            "id": "64837463-6aa6-4616-909c-d1871dbb5d0a",
+            "name": "V4 · gesture",
+            "type": "motion-graphic"
+          },
+          "startFrame": 4830,
+          "id": "481f6a8d-9912-4942-8ab8-58c1a19700a0",
+          "itemType": "motion-graphic",
+          "kind": "item",
+          "timelineRange": {
+            "fromFrame": 4830,
+            "toFrame": 5010
+          },
+          "trackAlias": "V1",
+          "trackId": "10144f90-9b80-46e4-9575-d113cfb8c353"
+        },
+        {
+          "asset": {
+            "id": "adb4c1c4-f51b-44f5-b36a-05d587d2af37",
+            "name": "V4 · recap",
+            "type": "motion-graphic"
+          },
+          "startFrame": 4830,
+          "id": "ed4a70b7-c688-4fd7-8f49-bb20a33ebf26",
+          "itemType": "motion-graphic",
+          "kind": "item",
+          "timelineRange": {
+            "fromFrame": 4830,
+            "toFrame": 5010
+          },
+          "trackAlias": "V2",
+          "trackId": "397502bf-c0e2-49ad-a88e-f53cee2e02e1"
+        },
+        {
+          "asset": {
+            "id": "b019fd72-55a5-4495-b5c8-bb0b5fc5bfbd",
+            "name": "驻留确认音 · 自制",
+            "type": "audio"
+          },
+          "startFrame": 4890,
+          "id": "2f59e9b0-3a9e-441d-a280-9e30b0c59b7a",
+          "itemType": "audio",
+          "kind": "item",
+          "sourceRange": {
+            "end": 633333,
+            "start": 0
+          },
+          "timelineRange": {
+            "fromFrame": 4890,
+            "toFrame": 4909
+          },
+          "trackAlias": "A2",
+          "trackId": "c4582241-27df-4fe8-80d2-51bb30c49d06"
+        },
+        {
+          "fromFrame": 4909,
+          "kind": "gap",
+          "timelineRange": {
+            "fromFrame": 4909,
+            "toFrame": 5190
+          },
+          "trackAlias": "A2",
+          "trackId": "c4582241-27df-4fe8-80d2-51bb30c49d06"
+        },
+        {
+          "asset": {
+            "id": "f1a4d3a9-c830-402d-a268-e13774becd5b",
+            "name": "V4 · 壁画收束",
+            "type": "motion-graphic"
+          },
+          "startFrame": 5010,
+          "id": "e7a70a3d-71b7-4c2b-a555-201c9f7cb45e",
+          "itemType": "motion-graphic",
+          "kind": "item",
+          "timelineRange": {
+            "fromFrame": 5010,
+            "toFrame": 5190
+          },
+          "trackAlias": "V1",
+          "trackId": "10144f90-9b80-46e4-9575-d113cfb8c353"
+        },
+        {
+          "fromFrame": 5010,
+          "kind": "gap",
+          "timelineRange": {
+            "fromFrame": 5010,
+            "toFrame": 5190
+          },
+          "trackAlias": "V2",
+          "trackId": "397502bf-c0e2-49ad-a88e-f53cee2e02e1"
+        }
+      ],
+      "totalEntries": 42,
+      "tracks": [
+        {
+          "alias": "V1",
+          "hidden": false,
+          "id": "10144f90-9b80-46e4-9575-d113cfb8c353",
+          "locked": false,
+          "muted": false,
+          "name": "真实网页与主要画面",
+          "order": 0,
+          "trackType": "video"
+        },
+        {
+          "alias": "V2",
+          "hidden": false,
+          "id": "397502bf-c0e2-49ad-a88e-f53cee2e02e1",
+          "locked": false,
+          "muted": false,
+          "name": "中文字幕与作品标题",
+          "order": 1,
+          "trackType": "video"
+        },
+        {
+          "alias": "V3",
+          "hidden": false,
+          "id": "d1438b8a-728c-4683-a7b6-714cb70dbabf",
+          "locked": false,
+          "muted": false,
+          "name": "来源与路径标注",
+          "order": 2,
+          "trackType": "video"
+        },
+        {
+          "alias": "A1",
+          "hidden": false,
+          "id": "5d770bdf-25e5-4d47-b85f-cbd026d09047",
+          "locked": false,
+          "muted": false,
+          "name": "纯器乐配乐 · V4剪辑",
+          "order": 3,
+          "trackType": "audio"
+        },
+        {
+          "alias": "A2",
+          "hidden": false,
+          "id": "c4582241-27df-4fe8-80d2-51bb30c49d06",
+          "locked": false,
+          "muted": false,
+          "name": "交互确认音",
+          "order": 4,
+          "trackType": "audio"
+        }
+      ]
+    }
+  },
+  "itemDetails": [
+    {
+      "asset": {
+        "id": "f99bc65d70",
+        "name": "a01-a03",
+        "type": "video"
+      },
+      "attachedEffects": [],
+      "item": {
+        "blendingMode": "normal",
+        "durationFrames": 270,
+        "fadeInDurationFrames": 0,
+        "fadeOutDurationFrames": 0,
+        "height": 1080,
+        "id": "a4f4d4f693",
+        "left": 0,
+        "opacity": 1,
+        "rotation": 0,
+        "startFrame": 0,
+        "top": 0,
+        "width": 1920,
+        "assetId": "f99bc65d70",
+        "borderRadius": 0,
+        "cropBottom": 0,
+        "cropLeft": 0,
+        "cropRight": 0,
+        "cropTop": 0,
+        "keepAspectRatio": true,
+        "audioPitchMode": "preservePitch",
+        "sourceIn": 0,
+        "type": "video",
+        "decibelAdjustment": -60
+      },
+      "timeline": {
+        "id": "9bf5f59a8f",
+        "name": "出兵入将｜E类参赛演示 V4"
+      },
+      "track": {
+        "id": "10144f909b",
+        "name": "真实网页与主要画面",
+        "trackType": "video"
+      },
+      "transitions": []
+    },
+    {
+      "asset": {
+        "id": "8b414d3ece",
+        "name": "music-edit-173s-v4",
+        "type": "audio"
+      },
+      "attachedEffects": [],
+      "item": {
+        "assetId": "8b414d3ece",
+        "audioPitchMode": "preservePitch",
+        "audioStreamId": "default",
+        "decibelAdjustment": 0,
+        "durationFrames": 5190,
+        "fadeInDurationFrames": 0,
+        "fadeOutDurationFrames": 0,
+        "id": "1fbe187a61",
+        "sourceIn": 0,
+        "startFrame": 0,
+        "type": "audio"
+      },
+      "timeline": {
+        "id": "9bf5f59a8f",
+        "name": "出兵入将｜E类参赛演示 V4"
+      },
+      "track": {
+        "id": "5d770bdf25",
+        "name": "纯器乐配乐 · V4剪辑",
+        "trackType": "audio"
+      },
+      "transitions": []
+    },
+    {
+      "asset": {
+        "id": "fcdeec1b9b",
+        "name": "V4 · title",
+        "type": "motion-graphic"
+      },
+      "attachedEffects": [],
+      "item": {
+        "blendingMode": "normal",
+        "durationFrames": 105,
+        "fadeInDurationFrames": 0,
+        "fadeOutDurationFrames": 0,
+        "height": 1080,
+        "id": "7dd9a964d5",
+        "left": 0,
+        "opacity": 1,
+        "rotation": 0,
+        "startFrame": 45,
+        "top": 0,
+        "width": 1920,
+        "assetId": "fcdeec1b9b",
+        "attributeOverrides": null,
+        "cropBottom": 0,
+        "cropLeft": 0,
+        "cropRight": 0,
+        "cropTop": 0,
+        "keepAspectRatio": true,
+        "playbackRate": 1,
+        "propertyOverrides": null,
+        "type": "motion-graphic"
+      },
+      "timeline": {
+        "id": "9bf5f59a8f",
+        "name": "出兵入将｜E类参赛演示 V4"
+      },
+      "track": {
+        "id": "397502bfc0",
+        "name": "中文字幕与作品标题",
+        "trackType": "video"
+      },
+      "transitions": []
+    },
+    {
+      "asset": {
+        "id": "f99bc65d70",
+        "name": "a01-a03",
+        "type": "video"
+      },
+      "attachedEffects": [],
+      "item": {
+        "blendingMode": "normal",
+        "durationFrames": 390,
+        "fadeInDurationFrames": 0,
+        "fadeOutDurationFrames": 0,
+        "height": 1080,
+        "id": "e3af513b05",
+        "left": 0,
+        "opacity": 1,
+        "rotation": 0,
+        "startFrame": 270,
+        "top": 0,
+        "width": 1920,
+        "assetId": "f99bc65d70",
+        "borderRadius": 0,
+        "cropBottom": 0,
+        "cropLeft": 0,
+        "cropRight": 0,
+        "cropTop": 0,
+        "keepAspectRatio": true,
+        "audioPitchMode": "preservePitch",
+        "sourceIn": 9000000,
+        "type": "video",
+        "decibelAdjustment": -60
+      },
+      "timeline": {
+        "id": "9bf5f59a8f",
+        "name": "出兵入将｜E类参赛演示 V4"
+      },
+      "track": {
+        "id": "10144f909b",
+        "name": "真实网页与主要画面",
+        "trackType": "video"
+      },
+      "transitions": []
+    },
+    {
+      "asset": {
+        "id": "a26e98a921",
+        "name": "V4 · caption",
+        "type": "motion-graphic"
+      },
+      "attachedEffects": [],
+      "item": {
+        "blendingMode": "normal",
+        "durationFrames": 90,
+        "fadeInDurationFrames": 0,
+        "fadeOutDurationFrames": 0,
+        "height": 90,
+        "id": "f47ee7dcd6",
+        "left": 300,
+        "opacity": 1,
+        "rotation": 0,
+        "startFrame": 300,
+        "top": 900,
+        "width": 1320,
+        "assetId": "a26e98a921",
+        "attributeOverrides": null,
+        "cropBottom": 0,
+        "cropLeft": 0,
+        "cropRight": 0,
+        "cropTop": 0,
+        "keepAspectRatio": true,
+        "playbackRate": 1,
+        "propertyOverrides": {
+          "text": "走近水龙祠"
+        },
+        "type": "motion-graphic"
+      },
+      "timeline": {
+        "id": "9bf5f59a8f",
+        "name": "出兵入将｜E类参赛演示 V4"
+      },
+      "track": {
+        "id": "397502bfc0",
+        "name": "中文字幕与作品标题",
+        "trackType": "video"
+      },
+      "transitions": []
+    },
+    {
+      "asset": {
+        "id": "4d3b6bd2cb",
+        "name": "a03-theme-r2",
+        "type": "video"
+      },
+      "attachedEffects": [],
+      "item": {
+        "blendingMode": "normal",
+        "durationFrames": 360,
+        "fadeInDurationFrames": 0,
+        "fadeOutDurationFrames": 0,
+        "height": 1080,
+        "id": "1deb681681",
+        "left": 0,
+        "opacity": 1,
+        "rotation": 0,
+        "startFrame": 660,
+        "top": 0,
+        "width": 1920,
+        "assetId": "4d3b6bd2cb",
+        "borderRadius": 0,
+        "cropBottom": 0,
+        "cropLeft": 0,
+        "cropRight": 0,
+        "cropTop": 0,
+        "keepAspectRatio": true,
+        "audioPitchMode": "preservePitch",
+        "sourceIn": 0,
+        "type": "video",
+        "decibelAdjustment": -60
+      },
+      "timeline": {
+        "id": "9bf5f59a8f",
+        "name": "出兵入将｜E类参赛演示 V4"
+      },
+      "track": {
+        "id": "10144f909b",
+        "name": "真实网页与主要画面",
+        "trackType": "video"
+      },
+      "transitions": []
+    },
+    {
+      "asset": {
+        "id": "7e9c868d06",
+        "name": "a04-complete",
+        "type": "video"
+      },
+      "attachedEffects": [],
+      "item": {
+        "blendingMode": "normal",
+        "durationFrames": 690,
+        "fadeInDurationFrames": 0,
+        "fadeOutDurationFrames": 0,
+        "height": 1080,
+        "id": "b2476a2a43",
+        "left": 0,
+        "opacity": 1,
+        "rotation": 0,
+        "startFrame": 1020,
+        "top": 0,
+        "width": 1920,
+        "assetId": "7e9c868d06",
+        "borderRadius": 0,
+        "cropBottom": 0,
+        "cropLeft": 0,
+        "cropRight": 0,
+        "cropTop": 0,
+        "keepAspectRatio": true,
+        "audioPitchMode": "preservePitch",
+        "sourceIn": 0,
+        "type": "video",
+        "decibelAdjustment": -60
+      },
+      "timeline": {
+        "id": "9bf5f59a8f",
+        "name": "出兵入将｜E类参赛演示 V4"
+      },
+      "track": {
+        "id": "10144f909b",
+        "name": "真实网页与主要画面",
+        "trackType": "video"
+      },
+      "transitions": []
+    },
+    {
+      "asset": {
+        "id": "a26e98a921",
+        "name": "V4 · caption",
+        "type": "motion-graphic"
+      },
+      "attachedEffects": [],
+      "item": {
+        "blendingMode": "normal",
+        "durationFrames": 90,
+        "fadeInDurationFrames": 0,
+        "fadeOutDurationFrames": 0,
+        "height": 90,
+        "id": "cca68fb867",
+        "left": 300,
+        "opacity": 1,
+        "rotation": 0,
+        "startFrame": 1065,
+        "top": 40,
+        "width": 1320,
+        "assetId": "a26e98a921",
+        "attributeOverrides": null,
+        "cropBottom": 0,
+        "cropLeft": 0,
+        "cropRight": 0,
+        "cropTop": 0,
+        "keepAspectRatio": true,
+        "playbackRate": 1,
+        "propertyOverrides": {
+          "text": "第五幅 → 第一幅 → 第二幅"
+        },
+        "type": "motion-graphic"
+      },
+      "timeline": {
+        "id": "9bf5f59a8f",
+        "name": "出兵入将｜E类参赛演示 V4"
+      },
+      "track": {
+        "id": "397502bfc0",
+        "name": "中文字幕与作品标题",
+        "trackType": "video"
+      },
+      "transitions": []
+    },
+    {
+      "asset": {
+        "id": "1e0e45016a",
+        "name": "a05",
+        "type": "video"
+      },
+      "attachedEffects": [],
+      "item": {
+        "blendingMode": "normal",
+        "durationFrames": 180,
+        "fadeInDurationFrames": 0,
+        "fadeOutDurationFrames": 0,
+        "height": 1080,
+        "id": "2686aeeabb",
+        "left": 0,
+        "opacity": 1,
+        "rotation": 0,
+        "startFrame": 1710,
+        "top": 0,
+        "width": 1920,
+        "assetId": "1e0e45016a",
+        "borderRadius": 0,
+        "cropBottom": 0,
+        "cropLeft": 0,
+        "cropRight": 0,
+        "cropTop": 0,
+        "keepAspectRatio": true,
+        "audioPitchMode": "preservePitch",
+        "sourceIn": 0,
+        "type": "video",
+        "decibelAdjustment": -60
+      },
+      "timeline": {
+        "id": "9bf5f59a8f",
+        "name": "出兵入将｜E类参赛演示 V4"
+      },
+      "track": {
+        "id": "10144f909b",
+        "name": "真实网页与主要画面",
+        "trackType": "video"
+      },
+      "transitions": []
+    },
+    {
+      "asset": {
+        "id": "5aa8751e41",
+        "name": "a06",
+        "type": "video"
+      },
+      "attachedEffects": [],
+      "item": {
+        "blendingMode": "normal",
+        "durationFrames": 180,
+        "fadeInDurationFrames": 0,
+        "fadeOutDurationFrames": 0,
+        "height": 1080,
+        "id": "b034ce4231",
+        "left": 0,
+        "opacity": 1,
+        "rotation": 0,
+        "startFrame": 1890,
+        "top": 0,
+        "width": 1920,
+        "assetId": "5aa8751e41",
+        "borderRadius": 0,
+        "cropBottom": 0,
+        "cropLeft": 0,
+        "cropRight": 0,
+        "cropTop": 0,
+        "keepAspectRatio": true,
+        "audioPitchMode": "preservePitch",
+        "sourceIn": 0,
+        "type": "video",
+        "decibelAdjustment": -60
+      },
+      "timeline": {
+        "id": "9bf5f59a8f",
+        "name": "出兵入将｜E类参赛演示 V4"
+      },
+      "track": {
+        "id": "10144f909b",
+        "name": "真实网页与主要画面",
+        "trackType": "video"
+      },
+      "transitions": []
+    },
+    {
+      "asset": {
+        "id": "887b5a8bc2",
+        "name": "a07",
+        "type": "video"
+      },
+      "attachedEffects": [],
+      "item": {
+        "blendingMode": "normal",
+        "durationFrames": 205,
+        "fadeInDurationFrames": 0,
+        "fadeOutDurationFrames": 0,
+        "height": 1080,
+        "id": "877a4dd187",
+        "left": 0,
+        "opacity": 1,
+        "rotation": 0,
+        "startFrame": 2070,
+        "top": 0,
+        "width": 1920,
+        "assetId": "887b5a8bc2",
+        "borderRadius": 0,
+        "cropBottom": 0,
+        "cropLeft": 0,
+        "cropRight": 0,
+        "cropTop": 0,
+        "keepAspectRatio": true,
+        "audioPitchMode": "preservePitch",
+        "sourceIn": 0,
+        "type": "video",
+        "decibelAdjustment": -60
+      },
+      "timeline": {
+        "id": "9bf5f59a8f",
+        "name": "出兵入将｜E类参赛演示 V4"
+      },
+      "track": {
+        "id": "10144f909b",
+        "name": "真实网页与主要画面",
+        "trackType": "video"
+      },
+      "transitions": []
+    },
+    {
+      "asset": {
+        "id": "62701102ec",
+        "name": "a08-entry-r2",
+        "type": "video"
+      },
+      "attachedEffects": [],
+      "item": {
+        "blendingMode": "normal",
+        "durationFrames": 65,
+        "fadeInDurationFrames": 0,
+        "fadeOutDurationFrames": 0,
+        "height": 1080,
+        "id": "db6a7318ed",
+        "left": 0,
+        "opacity": 1,
+        "rotation": 0,
+        "startFrame": 2275,
+        "top": 0,
+        "width": 1920,
+        "assetId": "62701102ec",
+        "borderRadius": 0,
+        "cropBottom": 0,
+        "cropLeft": 0,
+        "cropRight": 0,
+        "cropTop": 0,
+        "keepAspectRatio": true,
+        "audioPitchMode": "preservePitch",
+        "sourceIn": 0,
+        "type": "video",
+        "decibelAdjustment": -60
+      },
+      "timeline": {
+        "id": "9bf5f59a8f",
+        "name": "出兵入将｜E类参赛演示 V4"
+      },
+      "track": {
+        "id": "10144f909b",
+        "name": "真实网页与主要画面",
+        "trackType": "video"
+      },
+      "transitions": []
+    },
+    {
+      "asset": {
+        "id": "674431d473",
+        "name": "b02-full",
+        "type": "video"
+      },
+      "attachedEffects": [],
+      "item": {
+        "blendingMode": "normal",
+        "durationFrames": 360,
+        "fadeInDurationFrames": 0,
+        "fadeOutDurationFrames": 0,
+        "height": 1080,
+        "id": "ca7f8ba230",
+        "left": 0,
+        "opacity": 1,
+        "rotation": 0,
+        "startFrame": 2340,
+        "top": 0,
+        "width": 1920,
+        "assetId": "674431d473",
+        "borderRadius": 0,
+        "cropBottom": 0,
+        "cropLeft": 0,
+        "cropRight": 0,
+        "cropTop": 0,
+        "keepAspectRatio": true,
+        "audioPitchMode": "preservePitch",
+        "sourceIn": 0,
+        "type": "video",
+        "decibelAdjustment": -60
+      },
+      "timeline": {
+        "id": "9bf5f59a8f",
+        "name": "出兵入将｜E类参赛演示 V4"
+      },
+      "track": {
+        "id": "10144f909b",
+        "name": "真实网页与主要画面",
+        "trackType": "video"
+      },
+      "transitions": []
+    },
+    {
+      "asset": {
+        "id": "a26e98a921",
+        "name": "V4 · caption",
+        "type": "motion-graphic"
+      },
+      "attachedEffects": [],
+      "item": {
+        "blendingMode": "normal",
+        "durationFrames": 90,
+        "fadeInDurationFrames": 0,
+        "fadeOutDurationFrames": 0,
+        "height": 90,
+        "id": "4ba0e41735",
+        "left": 300,
+        "opacity": 1,
+        "rotation": 0,
+        "startFrame": 2340,
+        "top": 50,
+        "width": 1320,
+        "assetId": "a26e98a921",
+        "attributeOverrides": null,
+        "cropBottom": 0,
+        "cropLeft": 0,
+        "cropRight": 0,
+        "cropTop": 0,
+        "keepAspectRatio": true,
+        "playbackRate": 1,
+        "propertyOverrides": null,
+        "type": "motion-graphic"
+      },
+      "timeline": {
+        "id": "9bf5f59a8f",
+        "name": "出兵入将｜E类参赛演示 V4"
+      },
+      "track": {
+        "id": "397502bfc0",
+        "name": "中文字幕与作品标题",
+        "trackType": "video"
+      },
+      "transitions": []
+    },
+    {
+      "asset": {
+        "id": "674431d473",
+        "name": "b02-full",
+        "type": "video"
+      },
+      "attachedEffects": [],
+      "item": {
+        "blendingMode": "normal",
+        "durationFrames": 809,
+        "fadeInDurationFrames": 0,
+        "fadeOutDurationFrames": 0,
+        "height": 1080,
+        "id": "a4b4861028",
+        "left": 0,
+        "opacity": 1,
+        "rotation": 0,
+        "startFrame": 2700,
+        "top": 0,
+        "width": 1920,
+        "assetId": "674431d473",
+        "borderRadius": 0,
+        "cropBottom": 0,
+        "cropLeft": 0,
+        "cropRight": 0,
+        "cropTop": 0,
+        "keepAspectRatio": true,
+        "audioPitchMode": "preservePitch",
+        "sourceIn": 12033333,
+        "type": "video",
+        "decibelAdjustment": -60
+      },
+      "timeline": {
+        "id": "9bf5f59a8f",
+        "name": "出兵入将｜E类参赛演示 V4"
+      },
+      "track": {
+        "id": "10144f909b",
+        "name": "真实网页与主要画面",
+        "trackType": "video"
+      },
+      "transitions": []
+    },
+    {
+      "asset": {
+        "id": "a26e98a921",
+        "name": "V4 · caption",
+        "type": "motion-graphic"
+      },
+      "attachedEffects": [],
+      "item": {
+        "blendingMode": "normal",
+        "durationFrames": 90,
+        "fadeInDurationFrames": 0,
+        "fadeOutDurationFrames": 0,
+        "height": 90,
+        "id": "b8b1e56072",
+        "left": 300,
+        "opacity": 1,
+        "rotation": 0,
+        "startFrame": 2880,
+        "top": 50,
+        "width": 1320,
+        "assetId": "a26e98a921",
+        "attributeOverrides": null,
+        "cropBottom": 0,
+        "cropLeft": 0,
+        "cropRight": 0,
+        "cropTop": 0,
+        "keepAspectRatio": true,
+        "playbackRate": 1,
+        "propertyOverrides": {
+          "text": "切换原图、线稿与数字色稿"
+        },
+        "type": "motion-graphic"
+      },
+      "timeline": {
+        "id": "9bf5f59a8f",
+        "name": "出兵入将｜E类参赛演示 V4"
+      },
+      "track": {
+        "id": "397502bfc0",
+        "name": "中文字幕与作品标题",
+        "trackType": "video"
+      },
+      "transitions": []
+    },
+    {
+      "asset": {
+        "id": "b232176a18",
+        "name": "v4-reading-hold",
+        "type": "image"
+      },
+      "attachedEffects": [],
+      "item": {
+        "blendingMode": "normal",
+        "durationFrames": 1,
+        "fadeInDurationFrames": 0,
+        "fadeOutDurationFrames": 0,
+        "height": 1080,
+        "id": "82573a55c8",
+        "left": 0,
+        "opacity": 1,
+        "rotation": 0,
+        "startFrame": 3509,
+        "top": 0,
+        "width": 1920,
+        "assetId": "b232176a18",
+        "borderRadius": 0,
+        "cropBottom": 0,
+        "cropLeft": 0,
+        "cropRight": 0,
+        "cropTop": 0,
+        "keepAspectRatio": true,
+        "type": "image"
+      },
+      "timeline": {
+        "id": "9bf5f59a8f",
+        "name": "出兵入将｜E类参赛演示 V4"
+      },
+      "track": {
+        "id": "10144f909b",
+        "name": "真实网页与主要画面",
+        "trackType": "video"
+      },
+      "transitions": []
+    },
+    {
+      "asset": {
+        "id": "648374636a",
+        "name": "V4 · gesture",
+        "type": "motion-graphic"
+      },
+      "attachedEffects": [],
+      "item": {
+        "blendingMode": "normal",
+        "durationFrames": 1020,
+        "fadeInDurationFrames": 0,
+        "fadeOutDurationFrames": 0,
+        "height": 1080,
+        "id": "dc0acdca1c",
+        "left": 0,
+        "opacity": 1,
+        "rotation": 0,
+        "startFrame": 3510,
+        "top": 0,
+        "width": 1920,
+        "assetId": "648374636a",
+        "attributeOverrides": null,
+        "cropBottom": 0,
+        "cropLeft": 0,
+        "cropRight": 0,
+        "cropTop": 0,
+        "keepAspectRatio": true,
+        "playbackRate": 1,
+        "propertyOverrides": null,
+        "type": "motion-graphic"
+      },
+      "timeline": {
+        "id": "9bf5f59a8f",
+        "name": "出兵入将｜E类参赛演示 V4"
+      },
+      "track": {
+        "id": "10144f909b",
+        "name": "真实网页与主要画面",
+        "trackType": "video"
+      },
+      "transitions": []
+    },
+    {
+      "asset": {
+        "id": "b019fd7255",
+        "name": "驻留确认音 · 自制",
+        "type": "audio"
+      },
+      "attachedEffects": [],
+      "item": {
+        "assetId": "b019fd7255",
+        "audioPitchMode": "preservePitch",
+        "audioStreamId": "default",
+        "decibelAdjustment": 0,
+        "durationFrames": 19,
+        "fadeInDurationFrames": 0,
+        "fadeOutDurationFrames": 0,
+        "id": "28289468a0",
+        "sourceIn": 0,
+        "startFrame": 3840,
+        "type": "audio"
+      },
+      "timeline": {
+        "id": "9bf5f59a8f",
+        "name": "出兵入将｜E类参赛演示 V4"
+      },
+      "track": {
+        "id": "c458224127",
+        "name": "交互确认音",
+        "trackType": "audio"
+      },
+      "transitions": []
+    },
+    {
+      "asset": {
+        "id": "b019fd7255",
+        "name": "驻留确认音 · 自制",
+        "type": "audio"
+      },
+      "attachedEffects": [],
+      "item": {
+        "assetId": "b019fd7255",
+        "audioPitchMode": "preservePitch",
+        "audioStreamId": "default",
+        "decibelAdjustment": 0,
+        "durationFrames": 19,
+        "fadeInDurationFrames": 0,
+        "fadeOutDurationFrames": 0,
+        "id": "6f4a941b89",
+        "sourceIn": 0,
+        "startFrame": 4170,
+        "type": "audio"
+      },
+      "timeline": {
+        "id": "9bf5f59a8f",
+        "name": "出兵入将｜E类参赛演示 V4"
+      },
+      "track": {
+        "id": "c458224127",
+        "name": "交互确认音",
+        "trackType": "audio"
+      },
+      "transitions": []
+    },
+    {
+      "asset": {
+        "id": "b019fd7255",
+        "name": "驻留确认音 · 自制",
+        "type": "audio"
+      },
+      "attachedEffects": [],
+      "item": {
+        "assetId": "b019fd7255",
+        "audioPitchMode": "preservePitch",
+        "audioStreamId": "default",
+        "decibelAdjustment": 0,
+        "durationFrames": 19,
+        "fadeInDurationFrames": 0,
+        "fadeOutDurationFrames": 0,
+        "id": "22f49b80e4",
+        "sourceIn": 0,
+        "startFrame": 4440,
+        "type": "audio"
+      },
+      "timeline": {
+        "id": "9bf5f59a8f",
+        "name": "出兵入将｜E类参赛演示 V4"
+      },
+      "track": {
+        "id": "c458224127",
+        "name": "交互确认音",
+        "trackType": "audio"
+      },
+      "transitions": []
+    },
+    {
+      "asset": {
+        "id": "f99bc65d70",
+        "name": "a01-a03",
+        "type": "video"
+      },
+      "attachedEffects": [],
+      "item": {
+        "blendingMode": "normal",
+        "durationFrames": 150,
+        "fadeInDurationFrames": 0,
+        "fadeOutDurationFrames": 0,
+        "height": 906.75,
+        "id": "da64c6e063",
+        "left": 154,
+        "opacity": 1,
+        "rotation": 0,
+        "startFrame": 4530,
+        "top": 3,
+        "width": 1612,
+        "assetId": "f99bc65d70",
+        "borderRadius": 0,
+        "cropBottom": 0,
+        "cropLeft": 0,
+        "cropRight": 0,
+        "cropTop": 0,
+        "keepAspectRatio": true,
+        "audioPitchMode": "preservePitch",
+        "sourceIn": 16000000,
+        "type": "video",
+        "decibelAdjustment": -60
+      },
+      "timeline": {
+        "id": "9bf5f59a8f",
+        "name": "出兵入将｜E类参赛演示 V4"
+      },
+      "track": {
+        "id": "10144f909b",
+        "name": "真实网页与主要画面",
+        "trackType": "video"
+      },
+      "transitions": []
+    },
+    {
+      "asset": {
+        "id": "adb4c1c4f5",
+        "name": "V4 · recap",
+        "type": "motion-graphic"
+      },
+      "attachedEffects": [],
+      "item": {
+        "blendingMode": "normal",
+        "durationFrames": 150,
+        "fadeInDurationFrames": 0,
+        "fadeOutDurationFrames": 0,
+        "height": 1080,
+        "id": "f94eca0af3",
+        "left": 0,
+        "opacity": 1,
+        "rotation": 0,
+        "startFrame": 4530,
+        "top": 0,
+        "width": 1920,
+        "assetId": "adb4c1c4f5",
+        "attributeOverrides": null,
+        "cropBottom": 0,
+        "cropLeft": 0,
+        "cropRight": 0,
+        "cropTop": 0,
+        "keepAspectRatio": true,
+        "playbackRate": 1,
+        "propertyOverrides": null,
+        "type": "motion-graphic"
+      },
+      "timeline": {
+        "id": "9bf5f59a8f",
+        "name": "出兵入将｜E类参赛演示 V4"
+      },
+      "track": {
+        "id": "397502bfc0",
+        "name": "中文字幕与作品标题",
+        "trackType": "video"
+      },
+      "transitions": []
+    },
+    {
+      "asset": {
+        "id": "674431d473",
+        "name": "b02-full",
+        "type": "video"
+      },
+      "attachedEffects": [],
+      "item": {
+        "blendingMode": "normal",
+        "durationFrames": 150,
+        "fadeInDurationFrames": 0,
+        "fadeOutDurationFrames": 0,
+        "height": 906.75,
+        "id": "149dac73c4",
+        "left": 154,
+        "opacity": 1,
+        "rotation": 0,
+        "startFrame": 4680,
+        "top": 3,
+        "width": 1612,
+        "assetId": "674431d473",
+        "borderRadius": 0,
+        "cropBottom": 0,
+        "cropLeft": 0,
+        "cropRight": 0,
+        "cropTop": 0,
+        "keepAspectRatio": true,
+        "audioPitchMode": "preservePitch",
+        "sourceIn": 16666667,
+        "type": "video",
+        "decibelAdjustment": -60
+      },
+      "timeline": {
+        "id": "9bf5f59a8f",
+        "name": "出兵入将｜E类参赛演示 V4"
+      },
+      "track": {
+        "id": "10144f909b",
+        "name": "真实网页与主要画面",
+        "trackType": "video"
+      },
+      "transitions": []
+    },
+    {
+      "asset": {
+        "id": "adb4c1c4f5",
+        "name": "V4 · recap",
+        "type": "motion-graphic"
+      },
+      "attachedEffects": [],
+      "item": {
+        "blendingMode": "normal",
+        "durationFrames": 150,
+        "fadeInDurationFrames": 0,
+        "fadeOutDurationFrames": 0,
+        "height": 1080,
+        "id": "da416fb952",
+        "left": 0,
+        "opacity": 1,
+        "rotation": 0,
+        "startFrame": 4680,
+        "top": 0,
+        "width": 1920,
+        "assetId": "adb4c1c4f5",
+        "attributeOverrides": null,
+        "cropBottom": 0,
+        "cropLeft": 0,
+        "cropRight": 0,
+        "cropTop": 0,
+        "keepAspectRatio": true,
+        "playbackRate": 1,
+        "propertyOverrides": {
+          "title": "02 / 图鉴探索",
+          "description": "从原图到线稿，探索壁画人物"
+        },
+        "type": "motion-graphic"
+      },
+      "timeline": {
+        "id": "9bf5f59a8f",
+        "name": "出兵入将｜E类参赛演示 V4"
+      },
+      "track": {
+        "id": "397502bfc0",
+        "name": "中文字幕与作品标题",
+        "trackType": "video"
+      },
+      "transitions": []
+    },
+    {
+      "asset": {
+        "id": "648374636a",
+        "name": "V4 · gesture",
+        "type": "motion-graphic"
+      },
+      "attachedEffects": [],
+      "item": {
+        "blendingMode": "normal",
+        "durationFrames": 180,
+        "fadeInDurationFrames": 0,
+        "fadeOutDurationFrames": 0,
+        "height": 906.75,
+        "id": "481f6a8d99",
+        "left": 154,
+        "opacity": 1,
+        "rotation": 0,
+        "startFrame": 4830,
+        "top": 3,
+        "width": 1612,
+        "assetId": "648374636a",
+        "attributeOverrides": null,
+        "cropBottom": 0,
+        "cropLeft": 0,
+        "cropRight": 0,
+        "cropTop": 0,
+        "keepAspectRatio": true,
+        "playbackRate": 1,
+        "propertyOverrides": {
+          "frameOffset": 600
+        },
+        "type": "motion-graphic"
+      },
+      "timeline": {
+        "id": "9bf5f59a8f",
+        "name": "出兵入将｜E类参赛演示 V4"
+      },
+      "track": {
+        "id": "10144f909b",
+        "name": "真实网页与主要画面",
+        "trackType": "video"
+      },
+      "transitions": []
+    },
+    {
+      "asset": {
+        "id": "adb4c1c4f5",
+        "name": "V4 · recap",
+        "type": "motion-graphic"
+      },
+      "attachedEffects": [],
+      "item": {
+        "blendingMode": "normal",
+        "durationFrames": 180,
+        "fadeInDurationFrames": 0,
+        "fadeOutDurationFrames": 0,
+        "height": 1080,
+        "id": "ed4a70b7c6",
+        "left": 0,
+        "opacity": 1,
+        "rotation": 0,
+        "startFrame": 4830,
+        "top": 0,
+        "width": 1920,
+        "assetId": "adb4c1c4f5",
+        "attributeOverrides": null,
+        "cropBottom": 0,
+        "cropLeft": 0,
+        "cropRight": 0,
+        "cropTop": 0,
+        "keepAspectRatio": true,
+        "playbackRate": 1,
+        "propertyOverrides": {
+          "title": "03 / 体感交互",
+          "description": "通过手势输入探索人物信息"
+        },
+        "type": "motion-graphic"
+      },
+      "timeline": {
+        "id": "9bf5f59a8f",
+        "name": "出兵入将｜E类参赛演示 V4"
+      },
+      "track": {
+        "id": "397502bfc0",
+        "name": "中文字幕与作品标题",
+        "trackType": "video"
+      },
+      "transitions": []
+    },
+    {
+      "asset": {
+        "id": "b019fd7255",
+        "name": "驻留确认音 · 自制",
+        "type": "audio"
+      },
+      "attachedEffects": [],
+      "item": {
+        "assetId": "b019fd7255",
+        "audioPitchMode": "preservePitch",
+        "audioStreamId": "default",
+        "decibelAdjustment": 0,
+        "durationFrames": 19,
+        "fadeInDurationFrames": 0,
+        "fadeOutDurationFrames": 0,
+        "id": "2f59e9b03a",
+        "sourceIn": 0,
+        "startFrame": 4890,
+        "type": "audio"
+      },
+      "timeline": {
+        "id": "9bf5f59a8f",
+        "name": "出兵入将｜E类参赛演示 V4"
+      },
+      "track": {
+        "id": "c458224127",
+        "name": "交互确认音",
+        "trackType": "audio"
+      },
+      "transitions": []
+    },
+    {
+      "asset": {
+        "id": "f1a4d3a9c8",
+        "name": "V4 · 壁画收束",
+        "type": "motion-graphic"
+      },
+      "attachedEffects": [],
+      "item": {
+        "blendingMode": "normal",
+        "durationFrames": 180,
+        "fadeInDurationFrames": 0,
+        "fadeOutDurationFrames": 12,
+        "height": 1080,
+        "id": "e7a70a3d71",
+        "left": 0,
+        "opacity": 1,
+        "rotation": 0,
+        "startFrame": 5010,
+        "top": 0,
+        "width": 1920,
+        "assetId": "f1a4d3a9c8",
+        "attributeOverrides": null,
+        "cropBottom": 0,
+        "cropLeft": 0,
+        "cropRight": 0,
+        "cropTop": 0,
+        "keepAspectRatio": true,
+        "playbackRate": 1,
+        "propertyOverrides": null,
+        "type": "motion-graphic"
+      },
+      "timeline": {
+        "id": "9bf5f59a8f",
+        "name": "出兵入将｜E类参赛演示 V4"
+      },
+      "track": {
+        "id": "10144f909b",
+        "name": "真实网页与主要画面",
+        "trackType": "video"
+      },
+      "transitions": []
+    }
+  ],
+  "limits": [
+    "Preset gestures, not physical-camera tests.",
+    "Human continuous viewing and listening pending."
+  ],
+  "export": {
+    "outputPath": "D:\\YJS\\出兵入将-PC端页面\\promo-video\\previews\\preview-v4-173s.mp4",
+    "taskId": "ac88eb83-fadf-4cc1-9ebb-b65a181bc32e",
+    "status": "done",
+    "outputSizeInBytes": 121774173
+  },
+  "technicalGate": {
+    "timelineId": "aa78de9525",
+    "durationFrames": 1620,
+    "tests": [
+      {
+        "file": "previews/technical-test-v4.mp4",
+        "taskId": "30a0b9bb-ee02-4f28-b3c7-7d3b37856f9d",
+        "status": "TECHNICAL_PASS"
+      },
+      {
+        "file": "previews/technical-test-v4-theme-r2.mp4",
+        "taskId": "757b2458-fc9c-4483-96a7-f0b450849d61",
+        "status": "TECHNICAL_PASS"
+      }
+    ]
+  },
+  "v3NativeTimingAndSourcesUnchanged": true,
+  "outputVerification": {
+    "source": "preview-v4-173s.mp4",
+    "status": "PASS",
+    "checks": {
+      "width": true,
+      "height": true,
+      "codec": true,
+      "pixelFormat": true,
+      "fps": true,
+      "decodedFrames": true,
+      "videoDuration": true,
+      "stereo48k": true,
+      "nonSilentAudio": true,
+      "noClippedPcmSamples": true,
+      "noInternalBlackRuns": true,
+      "noIdentityTags": true
+    },
+    "videoFrames": 5190,
+    "videoDuration": 173.0,
+    "audioDuration": 173.013312,
+    "containerDuration": 173.013313,
+    "sizeBytes": 121774173,
+    "peakDbFS": -3.4712115849083736,
+    "rmsDbFS": -20.01883003974182,
+    "blackRuns": [
+      {
+        "startFrame": 5188,
+        "endFrame": 5190
+      }
+    ],
+    "metadataTags": {
+      "major_brand": "mp42",
+      "minor_version": "0",
+      "compatible_brands": "mp41isom",
+      "creation_time": "2026-10-15T07:05:22.000000Z",
+      "language": "und",
+      "handler_name": "SoundHandler",
+      "vendor_id": "[0][0][0][0]",
+      "encoder": "AVC Coding"
+    },
+    "limits": [
+      "Automated encoding/PCM/pixel checks do not certify listening preference, cultural-source rights, all text pixels, or physical-camera recognition.",
+      "No LUFS or true-peak claim; measurements are decoded PCM peak and RMS."
+    ],
+    "sha256": "02f6aeb34b1b2dfea8d4be346b0ead48d79ff5b940a09c3e62682052e435a690",
+    "sfxOffsetsMs": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "visualReview": "36 cut/action handles, 1-second whole-film contact survey, 18 full-resolution keyframes",
+    "continuousHumanAudiovisualReview": "PENDING",
+    "listeningAcceptance": "PENDING",
+    "finalApproval": "PENDING"
+  },
+  "persistenceCheck": {
+    "retargetProjectReadback5190": true,
+    "v3TimingAndSourcesUnchanged": true,
+    "v3Mp4Sha256": "cb8543c797ba795c2721ffaa8bb4ff5a2a32360303e3471c58623f812f50808f",
+    "limits": [
+      "Re-target and readback verified, not an app restart or cross-machine media migration test."
+    ]
+  }
+}

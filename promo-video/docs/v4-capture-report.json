@@ -1,0 +1,78 @@
+{
+  "reports": [
+    {
+      "report": "capture-a-report.json",
+      "status": "CAPTURED",
+      "pageErrors": [],
+      "captures": [
+        {
+          "name": "a01-a03",
+          "frames": 1020,
+          "fps": 30,
+          "mode": "offline-browser-clock-png-lossless-h264",
+          "wallSeconds": 245.96
+        },
+        {
+          "name": "a04-complete",
+          "frames": 690,
+          "fps": 30,
+          "mode": "offline-browser-clock-png-lossless-h264",
+          "wallSeconds": 120.615
+        },
+        {
+          "name": "a05",
+          "frames": 180,
+          "fps": 30,
+          "mode": "offline-browser-clock-png-lossless-h264",
+          "wallSeconds": 35.659
+        },
+        {
+          "name": "a06",
+          "frames": 180,
+          "fps": 30,
+          "mode": "offline-browser-clock-png-lossless-h264",
+          "wallSeconds": 33.019
+        },
+        {
+          "name": "a07",
+          "frames": 205,
+          "fps": 30,
+          "mode": "offline-browser-clock-png-lossless-h264",
+          "wallSeconds": 31.969
+        }
+      ]
+    },
+    {
+      "report": "capture-b02-full-report.json",
+      "status": "CAPTURED",
+      "pageErrors": [],
+      "captures": [
+        {
+          "name": "b02-full",
+          "frames": 1170,
+          "fps": 30,
+          "mode": "offline-browser-clock-png-lossless-h264",
+          "wallSeconds": 294.2
+        }
+      ]
+    },
+    {
+      "report": "capture-theme-r2-report.json",
+      "status": "CAPTURED",
+      "pageErrors": [],
+      "captures": [
+        {
+          "name": "a03-theme-r2",
+          "frames": 360,
+          "fps": 30,
+          "mode": "offline-browser-clock-png-lossless-h264",
+          "wallSeconds": 63.736
+        }
+      ]
+    }
+  ],
+  "sourceMasterPolicy": "All V3 media retained; V4 samples are new lossless captures of unchanged web pages.",
+  "limits": [
+    "Offline controlled browser clock, not real-time or physical-camera certification."
+  ]
+}
