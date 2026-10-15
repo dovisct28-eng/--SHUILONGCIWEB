@@ -1,0 +1,40 @@
+{
+  "source": "technical-test-v2.mp4",
+  "status": "PASS",
+  "checks": {
+    "width": true,
+    "height": true,
+    "codec": true,
+    "pixelFormat": true,
+    "fps": true,
+    "decodedFrames": true,
+    "videoDuration": true,
+    "stereo48k": true,
+    "nonSilentAudio": true,
+    "noClippedPcmSamples": true,
+    "noInternalBlackRuns": true,
+    "noIdentityTags": true
+  },
+  "videoFrames": 600,
+  "videoDuration": 20.0,
+  "audioDuration": 20.010646,
+  "containerDuration": 20.010646,
+  "sizeBytes": 5442018,
+  "peakDbFS": -9.554096113802512,
+  "rmsDbFS": -27.933617882896478,
+  "blackRuns": [],
+  "metadataTags": {
+    "major_brand": "mp42",
+    "minor_version": "0",
+    "compatible_brands": "mp41isom",
+    "creation_time": "2026-10-15T01:08:30.000000Z",
+    "language": "und",
+    "handler_name": "SoundHandler",
+    "vendor_id": "[0][0][0][0]",
+    "encoder": "AVC Coding"
+  },
+  "limits": [
+    "Automated encoding/PCM/pixel checks do not certify listening preference, cultural-source rights, all text pixels, or physical-camera recognition.",
+    "No LUFS or true-peak claim; measurements are decoded PCM peak and RMS."
+  ]
+}

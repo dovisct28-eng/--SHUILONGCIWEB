@@ -1,0 +1,30 @@
+{
+  "musicCandidate": {
+    "peakDbFS": -0.8436398424884335,
+    "rmsDbFS": -22.18296304191158,
+    "listeningAcceptance": "PENDING_USER_LISTENING"
+  },
+  "confirm": {
+    "duration": 0.65,
+    "sampleRate": 48000,
+    "peakDbFS": -11.55982731003122,
+    "method": "Damped 880/1320 Hz partials; local synthesis; no reference recording"
+  },
+  "fullMusicEdit": {
+    "duration": 130.0,
+    "gain": 0.72,
+    "sourceSegmentsSeconds": [
+      [
+        0,
+        110.8
+      ],
+      [
+        177.59004166666668,
+        197.59004166666668
+      ]
+    ],
+    "crossfadeSeconds": 0.8,
+    "peakDbFS": -3.489747120669941,
+    "status": "LISTENING_CANDIDATE_NOT_APPROVED"
+  }
+}

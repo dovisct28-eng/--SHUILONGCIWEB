@@ -1,0 +1,6 @@
+const fs=require('node:fs'),path=require('node:path'),{spawnSync}=require('node:child_process'),sharp=require('sharp');
+const base=path.resolve(__dirname,'..'),ff=path.join(base,'editor/node_modules/@remotion/compositor-win32-x64-msvc/ffmpeg.exe');
+async function main(){const [sourceArg,timesArg,outputArg]=process.argv.slice(2),source=path.resolve(sourceArg),times=timesArg.split(',').map(Number),out=path.resolve(outputArg);fs.mkdirSync(path.dirname(out),{recursive:true});const layers=[];
+ for(let i=0;i<times.length;i++){const dest=out+'.'+i+'.jpg';const r=spawnSync(ff,['-v','error','-y','-ss',String(times[i]),'-i',source,'-frames:v','1','-q:v','3',dest],{encoding:'utf8',windowsHide:true});if(r.status)throw Error(r.stderr);const jpg=await sharp(dest).resize(640,360).toBuffer(),label=Buffer.from(`<svg width="640" height="32"><rect width="640" height="32" fill="#eee"/><text x="12" y="23" font-size="20">${times[i]} s</text></svg>`);const x=i%3*640,y=Math.floor(i/3)*392;layers.push({input:jpg,left:x,top:y},{input:label,left:x,top:y+360});}
+ await sharp({create:{width:1920,height:Math.ceil(times.length/3)*392,channels:3,background:'#222'}}).composite(layers).jpeg({quality:85}).toFile(out);console.log(out);}
+main().catch(e=>{console.error(e.message);process.exitCode=1;});
