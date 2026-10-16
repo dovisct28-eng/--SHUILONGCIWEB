@@ -1,0 +1,82 @@
+{
+  "date": "2026-10-16",
+  "files": [
+    {
+      "path": "output/出兵·入将-独立阅读评审版V3.pdf",
+      "bytes": 20221584,
+      "sha256": "e4676065d3f41247b3e2b4130df73694c0d8804b1f5b136abe5ffde4d1b28a98"
+    },
+    {
+      "path": "output/出兵·入将-独立阅读评审版V3.pptx",
+      "bytes": 29864111,
+      "sha256": "f0d6bd9316bb331db63d383d23f6452cb36bacc6833ca526d06c9c51868c0959"
+    },
+    {
+      "path": "preview/slides/slide-01.png",
+      "bytes": 2764371,
+      "sha256": "2373ad6b3f0d9de821ac43382d1c5f8988a5bc259bb53ff85c1c14d4077e5ff9"
+    },
+    {
+      "path": "preview/slides/slide-02.png",
+      "bytes": 2072760,
+      "sha256": "205a91035f591edae3dfc57036a5c5e3a6ec5853b55d6e3cd11fca5625766a08"
+    },
+    {
+      "path": "preview/slides/slide-03.png",
+      "bytes": 498413,
+      "sha256": "14a91a6279166178734c332bd335f44417c27519892f22a7b0689df1bfe38e35"
+    },
+    {
+      "path": "preview/slides/slide-04.png",
+      "bytes": 884857,
+      "sha256": "91daf4d3bbfd7647b59a68a9503ee879f88819594ecdf9e6a0d9fe51c6b0ed45"
+    },
+    {
+      "path": "preview/slides/slide-05.png",
+      "bytes": 870243,
+      "sha256": "2a954c55269b21742ca6d57a0ed9effa93162269129b4843d87999ef227dc0ad"
+    },
+    {
+      "path": "preview/slides/slide-06.png",
+      "bytes": 1464979,
+      "sha256": "e9dd005d3c7a18163e856221eebece7ec8c97584b4b645939620dce4b23894ab"
+    },
+    {
+      "path": "preview/slides/slide-07.png",
+      "bytes": 1770142,
+      "sha256": "d5b53f4b2d345ba954f416620ddf84b337b5d1a147defbe4f87c093aa22d87f2"
+    },
+    {
+      "path": "preview/slides/slide-08.png",
+      "bytes": 1737478,
+      "sha256": "e15480ff505131cd0f234b9087c4ec63a588588fccca75e33b31ab3b588d62dd"
+    },
+    {
+      "path": "preview/slides/slide-09.png",
+      "bytes": 355879,
+      "sha256": "0aa22dffa9c9fd90af3b164a2d611089d953efac3f3359f042bd46b680478368"
+    },
+    {
+      "path": "preview/slides/slide-10.png",
+      "bytes": 170429,
+      "sha256": "c27055e18477ffa4be6bbd756d155d063e6f8c6b1743eaaf210618d99ec8c492"
+    },
+    {
+      "path": "preview/slides/slide-11.png",
+      "bytes": 665750,
+      "sha256": "7e40fbfc93c92c46a13afd7b1b7a160a2137c544fa793e5074461e769e840440"
+    },
+    {
+      "path": "preview/slides/slide-12.png",
+      "bytes": 2109940,
+      "sha256": "bc0c77c67818fa23f7d49b5c38a6b58c71b2aad882b810f0244abf8a4f539292"
+    },
+    {
+      "path": "preview/contact-sheet.png",
+      "bytes": 1619776,
+      "sha256": "3d204892fec5dbd00f9244ec7921299bb4b837c7d6bfa2972bc8a690cd040b59"
+    }
+  ],
+  "nativePowerPointReview": false,
+  "pdfSelectableText": false
+}

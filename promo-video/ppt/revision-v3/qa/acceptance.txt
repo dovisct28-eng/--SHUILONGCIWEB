@@ -1,0 +1,14 @@
+test_actions_and_results_are_visible_without_notes (__main__.Acceptance.test_actions_and_results_are_visible_without_notes) ... ok
+test_all_slide_previews_and_pdf_roundtrip (__main__.Acceptance.test_all_slide_previews_and_pdf_roundtrip) ... ok
+test_authenticity_boundaries_are_visible_on_relevant_pages (__main__.Acceptance.test_authenticity_boundaries_are_visible_on_relevant_pages) ... ok
+test_existing_deck_and_every_media_part_are_preserved (__main__.Acceptance.test_existing_deck_and_every_media_part_are_preserved) ... ok
+test_geometry_and_structural_receipts (__main__.Acceptance.test_geometry_and_structural_receipts) ... ok
+test_journey_keeps_three_murals_and_user_entry (__main__.Acceptance.test_journey_keeps_three_murals_and_user_entry) ... ok
+test_no_added_personal_identity_or_placeholder (__main__.Acceptance.test_no_added_personal_identity_or_placeholder) ... ok
+test_pptx_is_editable_and_has_twelve_visible_slides (__main__.Acceptance.test_pptx_is_editable_and_has_twelve_visible_slides) ... ok
+test_reader_can_identify_product_before_detail_pages (__main__.Acceptance.test_reader_can_identify_product_before_detail_pages) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.434s
+
+OK
