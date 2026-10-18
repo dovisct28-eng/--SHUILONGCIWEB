@@ -1,0 +1,43 @@
+{
+  "Status": "PASS",
+  "DeletedPaths": 26,
+  "DeletedFiles": 19786,
+  "DeletedBytes": 5328674200.0,
+  "FreedGiB": 4.963,
+  "PreservedPptFiles": 28,
+  "ProtectedProjectFiles": 461,
+  "ProtectedHashesVerified": 289,
+  "PptHashes": [
+    {
+      "Path": "promo-video/ppt/revision-v3/output/出兵·入将-独立阅读评审版V3.pdf",
+      "Bytes": 20221584,
+      "Hash": "E4676065D3F41247B3E2B4130DF73694C0D8804B1F5B136ABE5FFDE4D1B28A98"
+    },
+    {
+      "Path": "promo-video/ppt/revision-v3/output/出兵·入将-独立阅读评审版V3.pptx",
+      "Bytes": 29858038,
+      "Hash": "EFACE3EE8EDDEFC46AB3A6AE683B9727CD70A9FBDD39E033A4C8EECF15FABDC6"
+    }
+  ],
+  "retainedPptCheck": {
+    "status": "PASS",
+    "file": "promo-video/ppt/revision-v3/output/出兵·入将-独立阅读评审版V3.pptx",
+    "sha256": "eface3ee8eddefc46ab3a6ae683b9727cd70a9fbdd39e033a4c8eecf15fabdc6",
+    "bytes": 29858038,
+    "slides": 12,
+    "zipCRC": "PASS",
+    "missingInternalRelationships": [],
+    "externalMediaDependencies": [],
+    "preservedWithoutRewriting": true,
+    "pdfNote": "Existing PDF preserved byte-for-byte; not regenerated from subsequent user edits to the PPTX."
+  },
+  "authorization": "User confirmed deletion of competition video and other PPT versions, explicitly preserving V3.",
+  "scope": "Local workspace and current Git tree only; no history rewrite and no ChatCut application project deletion.",
+  "ModuleASyntax": {
+    "status": "PASS",
+    "nativeSyntaxFiles": 179,
+    "inlineModule": true
+  },
+  "ModuleBTests": "129 passed in full suite; one launcher test initially blocked by sandbox EPERM, then passed when rerun with filesystem permission.",
+  "HistoricalBuildCheck": "module-a/guide/build-check.cjs failed its hard-coded 20e6cd6 historical-baseline diff assertion; not changed or represented as passing."
+}
