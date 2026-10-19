@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-19",
+  "slideCount": 15,
+  "addedSlides": [
+    5,
+    6,
+    7
+  ],
+  "outputs": [
+    {
+      "file": "出兵·入将-设计演进增补版V4-预览.pdf",
+      "bytes": 22607743,
+      "sha256": "13d300604e68c1a60df02362d2ba9da3161ed041d809b08a97631cdb9adf6aeb"
+    },
+    {
+      "file": "出兵·入将-设计演进增补版V4.pptx",
+      "bytes": 32822320,
+      "sha256": "344fa79f7627ce2ad207b00a46e3092642642e037c041d323deeb4351990279b"
+    }
+  ],
+  "screenshots": [
+    {
+      "file": "slide-05.webp",
+      "bytes": 42862,
+      "sha256": "4dc580c6306646ef629ba711c902a3dc6351f148097a49dacf30f3f8c747144c"
+    },
+    {
+      "file": "slide-06.webp",
+      "bytes": 180946,
+      "sha256": "b0732706e77017b763c6699e629bbe4010d528428387abddc9527d30a3fe6897"
+    },
+    {
+      "file": "slide-07.webp",
+      "bytes": 785208,
+      "sha256": "ddff51f793625edc64e8aa79607700bcdf285976f2de243ce631844c5e9ece68"
+    }
+  ],
+  "selectedTotalBytes": 1009016,
+  "repairedSlidesRenderIdentical": true
+}

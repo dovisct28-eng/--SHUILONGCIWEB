@@ -1,0 +1,14 @@
+test_all_original_media_and_slide_relationships_preserved (__main__.Delivery.test_all_original_media_and_slide_relationships_preserved) ... ok
+test_all_xml_parses_and_zip_crc (__main__.Delivery.test_all_xml_parses_and_zip_crc) ... ok
+test_master_ids_unique_and_single_notes_master (__main__.Delivery.test_master_ids_unique_and_single_notes_master) ... ok
+test_no_missing_internal_relationships (__main__.Delivery.test_no_missing_internal_relationships) ... ok
+test_original_slides_preserved_except_page_number (__main__.Delivery.test_original_slides_preserved_except_page_number) ... ok
+test_slide_order_and_dimensions (__main__.Delivery.test_slide_order_and_dimensions) ... ok
+test_source_is_unchanged (__main__.Delivery.test_source_is_unchanged) ... ok
+test_source_notes_present (__main__.Delivery.test_source_notes_present) ... ok
+test_three_new_slides_have_separate_editable_text_and_images (__main__.Delivery.test_three_new_slides_have_separate_editable_text_and_images) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 1.154s
+
+OK

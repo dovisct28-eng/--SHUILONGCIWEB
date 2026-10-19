@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-19",
+  "figmaExportDate": "2026-10-19",
+  "assets": [
+    {
+      "file": "figma-early-hero.png",
+      "kind": "Figma original frame",
+      "source": "https://www.figma.com/design/1oSGGtdcJY92KlzOdhLEpJ/Untitled?node-id=14-7",
+      "sha256": "b3cfc95b285b72c6085358303df9d015bf579bb680d5e9cbd2dc689939413ecf",
+      "bytes": 23346,
+      "width": 1440,
+      "height": 1024
+    },
+    {
+      "file": "figma-early-space.png",
+      "kind": "Figma original frame",
+      "source": "https://www.figma.com/design/1oSGGtdcJY92KlzOdhLEpJ/Untitled?node-id=25-7",
+      "sha256": "d598e65edffc8b7746706a5aacbda1053b936fbf3f8516adc53b9e78abd77636",
+      "bytes": 50042,
+      "width": 1440,
+      "height": 1024
+    },
+    {
+      "file": "figma-early-explore.png",
+      "kind": "Figma original frame",
+      "source": "https://www.figma.com/design/1oSGGtdcJY92KlzOdhLEpJ/Untitled?node-id=14-38",
+      "sha256": "0033c71296875257056f0f929f4f03521b271f88ed0495719d18636db50a554f",
+      "bytes": 29091,
+      "width": 1440,
+      "height": 1024
+    },
+    {
+      "file": "lofi-hero.png",
+      "kind": "Historical low-fidelity browser QA",
+      "source": "docs/validation/a01/a01-reading-1440x900.png",
+      "sha256": "133ca3512bad12fc104b196c48689aee25624f1e71fe488edb7bdd8594ff8757",
+      "bytes": 45913,
+      "width": 1425,
+      "height": 891
+    },
+    {
+      "file": "lofi-space.png",
+      "kind": "Historical low-fidelity browser QA",
+      "source": "docs/validation/a02/core-1440x900.png",
+      "sha256": "6f819af39601ca09a320a77240d6bc2325698e5b6572155193e747498f7215bc",
+      "bytes": 219145,
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "file": "current-hero.png",
+      "kind": "Implemented interface stage QA",
+      "source": "docs/validation/copy-update-2026-10-05/a01-1440x900.png",
+      "sha256": "9df96d870c1245f8ee08e3118243563ebcbaf28e08e8a1300f383bbe0b0ce4e8",
+      "bytes": 1338434,
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "file": "current-mural.png",
+      "kind": "Implemented interface stage QA; lossless PNG conversion",
+      "source": "docs/validation/a05-a08-editorial-2026-10-06/after/a05-opening-1440x900.webp",
+      "sha256": "2529dea60dea4c956a836ec9f760b86fde9b95efdaa40fe215837072e398293d",
+      "bytes": 1270072,
+      "width": 1440,
+      "height": 900
+    }
+  ]
+}
