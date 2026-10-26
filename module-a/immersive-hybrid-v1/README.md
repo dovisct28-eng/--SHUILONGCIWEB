@@ -1,4 +1,12 @@
-# 水龙祠原境数字展厅 · 混合验证 V1
+# 水龙祠原境数字展厅 · V2.1 入口与保留的 V1 验证
+
+2026-10-26：默认入口已切换到 V2.1 原场景复用与连续三维入门。复用原 A01 运行实例、地形、植被、材质、灯光、后期及原远山合成；五停靠点仅覆盖建筑总览→门内停靠。配置在 `src/entry-path.mjs`，同轨道前进/返回、滚轮消耗、减少动态、调试重播与交接导出在 `src/entry-main.mjs`。唯一共享入口改动受 `gallery-entry` URL 参数隔离，正式 A01–A08 不启用。
+
+启动命令仍见下文。V2.1 地址为 `http://127.0.0.1:4186/module-a/immersive-hybrid-v1/`；V1 后续室内和第一铺验证保留在 `http://127.0.0.1:4186/module-a/immersive-hybrid-v1/v1.html`，两者不自动切换。V1 原 main/model-view、场景清单、生成候选及历史证据均保留。
+
+V2.1 的实现审查、镜头坐标、实际浏览器结果、精选帧/运动录像、V2.2 接口和未完成项见 [入口验收](../../docs/validation/immersive-hybrid-v2-1/README.md)。V2.2 室内 2.5D 尚未实施，视觉与运动仍待用户审图。
+
+以下为保留的 V1 使用说明；原 V1 浏览器脚本已指向 v1.html。V2.1 使用上述验收文档的 entry 测试命令。
 
 独立分支 `feature/shuilongci-hybrid-gallery-v1`；基线 `af7235cdd7df1a5e88085cc6528d6bc0ff09d8ad`。范围：真实模型总览 → 大门 → 绕过戏台 → 右廊 → 第一铺 → 展开查看。只做第一铺；正式A01–A08、B、原GLB和母版未改。
 
@@ -11,7 +19,7 @@ $env:A01_PORT='4186'
 node module-a/a01/server.mjs
 ```
 
-打开 `http://127.0.0.1:4186/module-a/immersive-hybrid-v1/`。必须通过HTTP，不能双击index.html。复用项目现有静态服务器，不依赖在线图片、CDN、API或新npm安装。Three.js 0.180.0及MIT许可从项目既有内嵌版本提取到vendor，预览的renderer独立于正式页面。
+打开 V1 的 `http://127.0.0.1:4186/module-a/immersive-hybrid-v1/v1.html`。必须通过HTTP，不能双击index.html。复用项目现有静态服务器，不依赖在线图片、CDN、API或新npm安装。Three.js 0.180.0及MIT许可从项目既有内嵌版本提取到vendor，V1 的renderer独立于正式页面。
 
 向下滚轮或“下一处”推进，向上或“上一处”返回；底部可直接定位。第一铺点击真实图或“展开壁画”进入查看，±放大缩小，放大后拖动平移；Esc或关闭返回原处。减少动态支持系统设置和手动开关。没有自动滚页或滚轮preventDefault。
 

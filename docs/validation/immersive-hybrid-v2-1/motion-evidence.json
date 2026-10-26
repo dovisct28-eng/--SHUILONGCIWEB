@@ -1,0 +1,16 @@
+{
+  "pass": true,
+  "gpu": {
+    "vendor": "Google Inc. (NVIDIA)",
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "devicePixelRatio": 1
+  },
+  "forwardWallMs": 10991,
+  "railDurationCandidateMs": 10800,
+  "video": "selected/12-continuous-entry-and-return.webm",
+  "sequence": "selected/09-continuous-rail.webp",
+  "sequenceType": "actual WebGL frames sampled on the same rail; video records real timed playback",
+  "errors": [],
+  "performanceNotice": "Video recording is a separate instrumented run; do not use it as an uninstrumented frame-rate claim"
+}

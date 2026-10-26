@@ -1,0 +1,35 @@
+{
+  "pass": true,
+  "closed": [
+    {
+      "object": "07_Entrance-geometry",
+      "distance": 0.4650001525878906,
+      "point": [
+        0,
+        1.38,
+        12.03499984741211
+      ]
+    }
+  ],
+  "open": [],
+  "lintel": [
+    {
+      "object": "07_Entrance-geometry",
+      "distance": 0.4299995422363274,
+      "point": [
+        0,
+        1.7,
+        12.270000457763672
+      ]
+    },
+    {
+      "object": "07_Entrance-geometry",
+      "distance": 0.5800001144409173,
+      "point": [
+        0,
+        1.7,
+        12.119999885559082
+      ]
+    }
+  ]
+}

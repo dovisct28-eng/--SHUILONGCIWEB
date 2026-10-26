@@ -1,0 +1,248 @@
+{
+  "version": "2.1",
+  "modelUnits": "design model, not a survey",
+  "camera": {
+    "time": 0.84,
+    "position": [
+      0,
+      1.38,
+      12.984795918367347
+    ],
+    "target": [
+      -0.006297376093294461,
+      1.3801224489795918,
+      9.610816326530614
+    ],
+    "fov": 48,
+    "quaternion": [
+      0.00001814603639315026,
+      0.0009332255418527319,
+      -1.693435202241423e-8,
+      0.9999995643803096
+    ],
+    "near": 0.05662424427170657,
+    "far": 180,
+    "aspect": 1.7777777777777777
+  },
+  "viewport": [
+    1920,
+    1080
+  ],
+  "view": {
+    "verticalFov": 48,
+    "horizontalFov": 76.7244737832658,
+    "verticalSpanAtUnitDistance": 0.8904573706170722
+  },
+  "gatePlane": {
+    "z": 11.93,
+    "openingBelowLintel": {
+      "x": [
+        -0.76,
+        0.76
+      ],
+      "y": [
+        0.13,
+        1.615
+      ]
+    },
+    "corners": [
+      {
+        "x": 0.0466172245092758,
+        "y": 1.967395804511486,
+        "depth": 0.8933692278003568,
+        "visible": false
+      },
+      {
+        "x": 0.9569652640187378,
+        "y": 1.9713479472837407,
+        "depth": 0.8930803356593315,
+        "visible": false
+      },
+      {
+        "x": 0.046642383583825664,
+        "y": 0.2501789443259779,
+        "depth": 0.8933751798693675,
+        "visible": true
+      },
+      {
+        "x": 0.9569398378505151,
+        "y": 0.24950600929776534,
+        "depth": 0.8930863198329769,
+        "visible": true
+      }
+    ]
+  },
+  "components": {
+    "leftJamb": {
+      "world": [
+        -0.87,
+        1,
+        12.2
+      ],
+      "projection": {
+        "x": -0.19766998523579937,
+        "y": 1.0426965381013291,
+        "depth": 0.8565761176850368,
+        "visible": false
+      },
+      "hits": [
+        {
+          "object": "07_Entrance-geometry",
+          "distance": 1.0901682812888565,
+          "point": [
+            -0.7699999809265137,
+            1.0436781692504882,
+            12.290206444604056
+          ]
+        }
+      ]
+    },
+    "rightJamb": {
+      "world": [
+        0.87,
+        1,
+        12.2
+      ],
+      "projection": {
+        "x": 1.20292610840186,
+        "y": 1.0449468426615454,
+        "depth": 0.855978752521408,
+        "visible": false
+      },
+      "hits": [
+        {
+          "object": "07_Entrance-geometry",
+          "distance": 1.0901682812888565,
+          "point": [
+            0.7699999809265137,
+            1.0436781692504882,
+            12.290206444604056
+          ]
+        }
+      ]
+    },
+    "lintel": {
+      "world": [
+        0,
+        1.68,
+        12.17
+      ],
+      "projection": {
+        "x": 0.5011790189096825,
+        "y": 0.08656102029266483,
+        "depth": 0.8615972299552698,
+        "visible": true
+      },
+      "hits": [
+        {
+          "object": "07_Entrance-geometry",
+          "distance": 0.761706427541834,
+          "point": [
+            0,
+            1.6431807957639077,
+            12.270000457763672
+          ]
+        }
+      ]
+    },
+    "stageBack": {
+      "world": [
+        0,
+        1.68,
+        9.555
+      ],
+      "projection": {
+        "x": 0.5011790309214782,
+        "y": 0.40181187021361453,
+        "depth": 0.9675999965334475,
+        "visible": true
+      },
+      "hits": [
+        {
+          "object": "06_Stage-geometry",
+          "distance": 3.442890926569138,
+          "point": [
+            0,
+            1.6799999733066524,
+            9.555000305175781
+          ]
+        }
+      ]
+    },
+    "rightPassage": {
+      "world": [
+        2,
+        1.38,
+        9.5
+      ],
+      "projection": {
+        "x": 0.8641141735199487,
+        "y": 0.5000407566828075,
+        "depth": 0.9680863306323947,
+        "visible": true
+      },
+      "hits": []
+    }
+  },
+  "light": {
+    "exposure": 0.98,
+    "toneMapping": "ACESFilmic",
+    "colorSpace": "srgb",
+    "sun": {
+      "position": [
+        -16,
+        22,
+        16
+      ],
+      "intensity": 4.5,
+      "color": "ffd4a1"
+    },
+    "fill": {
+      "intensity": 0.72,
+      "color": "a5b9ce"
+    },
+    "existingGalleryBounce": {
+      "position": [
+        1.1861047604531838,
+        2.042269979169842,
+        10.36595031245237
+      ],
+      "intensity": 6.309200833206318,
+      "color": "f5c48d"
+    },
+    "fog": {
+      "color": "647b89",
+      "density": 0.01
+    },
+    "post": {
+      "enabled": true,
+      "error": null,
+      "passes": 2,
+      "size": [
+        1920,
+        1080
+      ],
+      "aoSamples": 12,
+      "stats": {
+        "frame": 32,
+        "calls": 47,
+        "triangles": 169890,
+        "points": 0,
+        "lines": 0
+      },
+      "colorDepthBytes": 24883200,
+      "multisampleBytes": 49766400,
+      "targetBytes": 74649600
+    }
+  },
+  "visibility": {
+    "gateBehindCamera": false,
+    "stageBackVisible": true,
+    "matchingInteriorAsset": false,
+    "readyForFinalComposite": false,
+    "reason": "门内停靠面向戏台及右通道；尚无匹配室内素材或正式切换蒙版"
+  },
+  "removedTriangles": 320,
+  "candidateOnly": true,
+  "transitionImplemented": false
+}

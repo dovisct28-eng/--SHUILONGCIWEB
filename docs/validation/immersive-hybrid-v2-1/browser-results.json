@@ -1,0 +1,2007 @@
+{
+  "pass": true,
+  "viewports": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "pass": true,
+      "loadAndFiveStopMs": 9466,
+      "rows": [
+        {
+          "state": "overview",
+          "pose": {
+            "time": 0,
+            "position": [
+              -23.33250595253667,
+              19.342753798798213,
+              -26.88031350693665
+            ],
+            "target": [
+              0,
+              -1.25,
+              -1.75
+            ],
+            "fov": 32
+          },
+          "stats": {
+            "rendererUUID": "e19ec7aa-ced9-4476-9bf7-6d92e25e227f",
+            "renderCount": 2,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 42,
+              "textures": 22
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1920,
+                1080
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 4,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 24883200,
+              "multisampleBytes": 49766400,
+              "targetBytes": 74649600
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          },
+          "frameMs": {
+            "samples": 0,
+            "p50": null,
+            "p95": null,
+            "max": null
+          }
+        },
+        {
+          "state": "approach",
+          "pose": {
+            "time": 0.52,
+            "position": [
+              -0.35,
+              2.2,
+              24
+            ],
+            "target": [
+              0,
+              1.32,
+              11.8
+            ],
+            "fov": 46
+          },
+          "stats": {
+            "rendererUUID": "e19ec7aa-ced9-4476-9bf7-6d92e25e227f",
+            "renderCount": 15,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 42,
+              "textures": 22
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1920,
+                1080
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 30,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 24883200,
+              "multisampleBytes": 49766400,
+              "targetBytes": 74649600
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          },
+          "frameMs": {
+            "samples": 25,
+            "p50": 4.199999999999818,
+            "p95": 4.299999999999272,
+            "max": 4.300000000000182
+          }
+        },
+        {
+          "state": "gate-close",
+          "pose": {
+            "time": 0.78,
+            "position": [
+              0,
+              1.38,
+              14.1
+            ],
+            "target": [
+              0,
+              1.38,
+              9.8
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "e19ec7aa-ced9-4476-9bf7-6d92e25e227f",
+            "renderCount": 28,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 42,
+              "textures": 22
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1920,
+                1080
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 56,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 24883200,
+              "multisampleBytes": 49766400,
+              "targetBytes": 74649600
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          },
+          "frameMs": {
+            "samples": 25,
+            "p50": 4.199999999999818,
+            "p95": 4.200000000000728,
+            "max": 4.300000000000182
+          }
+        },
+        {
+          "state": "threshold",
+          "pose": {
+            "time": 0.92,
+            "position": [
+              0,
+              1.38,
+              12.25
+            ],
+            "target": [
+              0.12,
+              1.38,
+              9.7
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "e19ec7aa-ced9-4476-9bf7-6d92e25e227f",
+            "renderCount": 41,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 42,
+              "textures": 22
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1920,
+                1080
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 82,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 24883200,
+              "multisampleBytes": 49766400,
+              "targetBytes": 74649600
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          },
+          "frameMs": {
+            "samples": 25,
+            "p50": 4.100000000000364,
+            "p95": 4.599999999999454,
+            "max": 4.899999999999636
+          }
+        },
+        {
+          "state": "gate-interior",
+          "pose": {
+            "time": 1,
+            "position": [
+              0.12,
+              1.38,
+              11.15
+            ],
+            "target": [
+              1.2,
+              1.38,
+              9.2
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "e19ec7aa-ced9-4476-9bf7-6d92e25e227f",
+            "renderCount": 54,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 42,
+              "textures": 22
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1920,
+                1080
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 108,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 24883200,
+              "multisampleBytes": 49766400,
+              "targetBytes": 74649600
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          },
+          "frameMs": {
+            "samples": 24,
+            "p50": 4.199999999999818,
+            "p95": 4.300000000000182,
+            "max": 4.300000000000182
+          }
+        }
+      ],
+      "clearance": {
+        "samples": 1600,
+        "radius": 0.065,
+        "collisions": 0
+      },
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4186/shuilong-temple/shuilong-temple.glb",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "pass": true,
+      "loadAndFiveStopMs": 5642,
+      "rows": [
+        {
+          "state": "overview",
+          "pose": {
+            "time": 0,
+            "position": [
+              -23.33250595253667,
+              19.342753798798213,
+              -26.88031350693665
+            ],
+            "target": [
+              0,
+              -1.25,
+              -1.75
+            ],
+            "fov": 32
+          },
+          "stats": {
+            "rendererUUID": "f28c6090-b680-4ba0-b6a3-36c721e59a3d",
+            "renderCount": 2,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 42,
+              "textures": 22
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1440,
+                900
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 4,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 15552000,
+              "multisampleBytes": 31104000,
+              "targetBytes": 46656000
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          },
+          "frameMs": {
+            "samples": 0,
+            "p50": null,
+            "p95": null,
+            "max": null
+          }
+        },
+        {
+          "state": "approach",
+          "pose": {
+            "time": 0.52,
+            "position": [
+              -0.35,
+              2.2,
+              24
+            ],
+            "target": [
+              0,
+              1.32,
+              11.8
+            ],
+            "fov": 46
+          },
+          "stats": {
+            "rendererUUID": "f28c6090-b680-4ba0-b6a3-36c721e59a3d",
+            "renderCount": 15,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 42,
+              "textures": 22
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1440,
+                900
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 30,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 15552000,
+              "multisampleBytes": 31104000,
+              "targetBytes": 46656000
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          },
+          "frameMs": {
+            "samples": 24,
+            "p50": 4.199999999999818,
+            "p95": 4.5,
+            "max": 4.5
+          }
+        },
+        {
+          "state": "gate-close",
+          "pose": {
+            "time": 0.78,
+            "position": [
+              0,
+              1.38,
+              14.1
+            ],
+            "target": [
+              0,
+              1.38,
+              9.8
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "f28c6090-b680-4ba0-b6a3-36c721e59a3d",
+            "renderCount": 28,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 42,
+              "textures": 22
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1440,
+                900
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 56,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 15552000,
+              "multisampleBytes": 31104000,
+              "targetBytes": 46656000
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          },
+          "frameMs": {
+            "samples": 24,
+            "p50": 4.199999999999818,
+            "p95": 4.599999999999909,
+            "max": 4.700000000000273
+          }
+        },
+        {
+          "state": "threshold",
+          "pose": {
+            "time": 0.92,
+            "position": [
+              0,
+              1.38,
+              12.25
+            ],
+            "target": [
+              0.12,
+              1.38,
+              9.7
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "f28c6090-b680-4ba0-b6a3-36c721e59a3d",
+            "renderCount": 41,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 42,
+              "textures": 22
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1440,
+                900
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 82,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 15552000,
+              "multisampleBytes": 31104000,
+              "targetBytes": 46656000
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          },
+          "frameMs": {
+            "samples": 24,
+            "p50": 4.199999999999818,
+            "p95": 4.600000000000364,
+            "max": 4.700000000000273
+          }
+        },
+        {
+          "state": "gate-interior",
+          "pose": {
+            "time": 1,
+            "position": [
+              0.12,
+              1.38,
+              11.15
+            ],
+            "target": [
+              1.2,
+              1.38,
+              9.2
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "f28c6090-b680-4ba0-b6a3-36c721e59a3d",
+            "renderCount": 54,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 42,
+              "textures": 22
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1440,
+                900
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 108,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 15552000,
+              "multisampleBytes": 31104000,
+              "targetBytes": 46656000
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          },
+          "frameMs": {
+            "samples": 24,
+            "p50": 4.199999999999818,
+            "p95": 4.200000000000273,
+            "max": 4.300000000000182
+          }
+        }
+      ],
+      "clearance": {
+        "samples": 1600,
+        "radius": 0.065,
+        "collisions": 0
+      },
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4186/shuilong-temple/shuilong-temple.glb",
+          "status": 200
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "pass": true,
+      "loadAndFiveStopMs": 5152,
+      "rows": [
+        {
+          "state": "overview",
+          "pose": {
+            "time": 0,
+            "position": [
+              -23.33250595253667,
+              19.342753798798213,
+              -26.88031350693665
+            ],
+            "target": [
+              0,
+              -1.25,
+              -1.75
+            ],
+            "fov": 32
+          },
+          "stats": {
+            "rendererUUID": "456916e6-bc52-4582-aa1f-e138fb04a3a1",
+            "renderCount": 2,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 42,
+              "textures": 22
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1366,
+                768
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 4,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 12589056,
+              "multisampleBytes": 25178112,
+              "targetBytes": 37767168
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          },
+          "frameMs": {
+            "samples": 0,
+            "p50": null,
+            "p95": null,
+            "max": null
+          }
+        },
+        {
+          "state": "approach",
+          "pose": {
+            "time": 0.52,
+            "position": [
+              -0.35,
+              2.2,
+              24
+            ],
+            "target": [
+              0,
+              1.32,
+              11.8
+            ],
+            "fov": 46
+          },
+          "stats": {
+            "rendererUUID": "456916e6-bc52-4582-aa1f-e138fb04a3a1",
+            "renderCount": 15,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 42,
+              "textures": 22
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1366,
+                768
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 30,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 12589056,
+              "multisampleBytes": 25178112,
+              "targetBytes": 37767168
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          },
+          "frameMs": {
+            "samples": 24,
+            "p50": 4.199999999999818,
+            "p95": 4.599999999999909,
+            "max": 4.599999999999909
+          }
+        },
+        {
+          "state": "gate-close",
+          "pose": {
+            "time": 0.78,
+            "position": [
+              0,
+              1.38,
+              14.1
+            ],
+            "target": [
+              0,
+              1.38,
+              9.8
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "456916e6-bc52-4582-aa1f-e138fb04a3a1",
+            "renderCount": 28,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 42,
+              "textures": 22
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1366,
+                768
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 56,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 12589056,
+              "multisampleBytes": 25178112,
+              "targetBytes": 37767168
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          },
+          "frameMs": {
+            "samples": 25,
+            "p50": 4.199999999999818,
+            "p95": 4.400000000000091,
+            "max": 4.400000000000091
+          }
+        },
+        {
+          "state": "threshold",
+          "pose": {
+            "time": 0.92,
+            "position": [
+              0,
+              1.38,
+              12.25
+            ],
+            "target": [
+              0.12,
+              1.38,
+              9.7
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "456916e6-bc52-4582-aa1f-e138fb04a3a1",
+            "renderCount": 41,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 42,
+              "textures": 22
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1366,
+                768
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 82,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 12589056,
+              "multisampleBytes": 25178112,
+              "targetBytes": 37767168
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          },
+          "frameMs": {
+            "samples": 24,
+            "p50": 4.199999999999818,
+            "p95": 4.5,
+            "max": 4.5
+          }
+        },
+        {
+          "state": "gate-interior",
+          "pose": {
+            "time": 1,
+            "position": [
+              0.12,
+              1.38,
+              11.15
+            ],
+            "target": [
+              1.2,
+              1.38,
+              9.2
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "456916e6-bc52-4582-aa1f-e138fb04a3a1",
+            "renderCount": 54,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 42,
+              "textures": 22
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1366,
+                768
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 108,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 12589056,
+              "multisampleBytes": 25178112,
+              "targetBytes": 37767168
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          },
+          "frameMs": {
+            "samples": 24,
+            "p50": 4.199999999999818,
+            "p95": 4.200000000000273,
+            "max": 4.300000000000182
+          }
+        }
+      ],
+      "clearance": {
+        "samples": 1600,
+        "radius": 0.065,
+        "collisions": 0
+      },
+      "resources": [
+        {
+          "url": "http://127.0.0.1:4186/shuilong-temple/shuilong-temple.glb",
+          "status": 200
+        }
+      ]
+    }
+  ],
+  "checks": [
+    "rapid wheel and mid-motion node input consumed without skipping",
+    "reverse wheel uses same rail to overview",
+    "previous/next/direct controls, resize, five repeat cycles, manual reduced motion",
+    "resource failure is visible; retry recovers without page reload",
+    "external GLB failure uses original embedded equivalent; OS reduced motion remains usable",
+    "V1 interior, first mural and detail remain runnable separately"
+  ],
+  "errors": [],
+  "warnings": [
+    {
+      "surface": "original-formal",
+      "message": "THREE.WebGLProgram: Program Info Log: (66,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(66,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value"
+    }
+  ],
+  "resources": [
+    {
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:4186/favicon.ico",
+      "preExistingProductionFavicon404": true
+    },
+    {
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:4186/favicon.ico",
+      "preExistingProductionFavicon404": true
+    },
+    {
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "url": "http://127.0.0.1:4186/favicon.ico",
+      "preExistingProductionFavicon404": true
+    }
+  ],
+  "regression": [
+    {
+      "chapter": "A01",
+      "screen": 5.7,
+      "diff": {
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixels": 0,
+        "pixels": 1296000
+      }
+    },
+    {
+      "chapter": "A02",
+      "screen": 9.65,
+      "diff": {
+        "meanAbsoluteChannelDifference": 0.00009336419753086419,
+        "changedPixels": 0,
+        "pixels": 1296000
+      }
+    },
+    {
+      "chapter": "A03",
+      "screen": 11.6,
+      "diff": {
+        "meanAbsoluteChannelDifference": 0.00008281893004115227,
+        "changedPixels": 0,
+        "pixels": 1296000
+      }
+    },
+    {
+      "chapter": "A04",
+      "screen": 14.5,
+      "diff": {
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixels": 0,
+        "pixels": 1296000
+      }
+    },
+    {
+      "chapter": "A05",
+      "screen": 20,
+      "diff": {
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixels": 0,
+        "pixels": 1296000
+      }
+    },
+    {
+      "chapter": "A06",
+      "screen": 27,
+      "diff": {
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixels": 0,
+        "pixels": 1296000
+      }
+    },
+    {
+      "chapter": "A07",
+      "screen": 34,
+      "diff": {
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixels": 0,
+        "pixels": 1296000
+      }
+    },
+    {
+      "chapter": "A08",
+      "screen": 41.7,
+      "diff": {
+        "meanAbsoluteChannelDifference": 0,
+        "changedPixels": 0,
+        "pixels": 1296000
+      }
+    }
+  ],
+  "limitations": [
+    "Headless Chrome on this machine; no weak GPU or physical-device test",
+    "JS heap is a browser estimate; renderer memory counters are not GPU VRAM",
+    "Visual composition remains subject to user review; V2.2 is not implemented"
+  ],
+  "sameCamera": {
+    "meanAbsoluteChannelDifference": 0,
+    "changedPixels": 0,
+    "pixels": 2073600
+  },
+  "startupMs": 1846,
+  "performance": [
+    {
+      "state": "approach",
+      "frameMs": {
+        "samples": 1254,
+        "p50": 4.200000000000728,
+        "p95": 8.099999999998545,
+        "max": 8.700000000000728
+      },
+      "stats": {
+        "rendererUUID": "f5861089-a3e2-4bb0-bd5f-96c2e7d3c8d0",
+        "renderCount": 1941,
+        "renderers": 1,
+        "canvases": 1,
+        "removedTriangles": 320,
+        "doorMeshes": 3,
+        "memory": {
+          "geometries": 42,
+          "textures": 22
+        },
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1920,
+            1080
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 3882,
+            "calls": 47,
+            "triangles": 169890,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 24883200,
+          "multisampleBytes": 49766400,
+          "targetBytes": 74649600
+        },
+        "environment": {
+          "weight": 1,
+          "establish": 1,
+          "visibility": 1,
+          "roomWeight": 0,
+          "posterWeight": 0,
+          "layerWeights": {
+            "ground": 1,
+            "foreground": 1,
+            "fog": 1
+          },
+          "trees": 201,
+          "visible": true,
+          "titleRects": [
+            [
+              -2,
+              -2,
+              -2,
+              -2
+            ],
+            [
+              -2,
+              -2,
+              -2,
+              -2
+            ]
+          ],
+          "layers": [
+            "Foreground",
+            "TempleGround",
+            "MidgroundGroves",
+            "DistanceMatte"
+          ],
+          "triangles": 87148,
+          "drawCalls": 10
+        }
+      }
+    },
+    {
+      "state": "gate-close",
+      "frameMs": {
+        "samples": 623,
+        "p50": 4.200000000000728,
+        "p95": 8.099999999998545,
+        "max": 8.900000000001455
+      },
+      "stats": {
+        "rendererUUID": "f5861089-a3e2-4bb0-bd5f-96c2e7d3c8d0",
+        "renderCount": 2253,
+        "renderers": 1,
+        "canvases": 1,
+        "removedTriangles": 320,
+        "doorMeshes": 3,
+        "memory": {
+          "geometries": 42,
+          "textures": 22
+        },
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1920,
+            1080
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 4506,
+            "calls": 47,
+            "triangles": 169890,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 24883200,
+          "multisampleBytes": 49766400,
+          "targetBytes": 74649600
+        },
+        "environment": {
+          "weight": 1,
+          "establish": 1,
+          "visibility": 1,
+          "roomWeight": 0,
+          "posterWeight": 0,
+          "layerWeights": {
+            "ground": 1,
+            "foreground": 1,
+            "fog": 1
+          },
+          "trees": 201,
+          "visible": true,
+          "titleRects": [
+            [
+              -2,
+              -2,
+              -2,
+              -2
+            ],
+            [
+              -2,
+              -2,
+              -2,
+              -2
+            ]
+          ],
+          "layers": [
+            "Foreground",
+            "TempleGround",
+            "MidgroundGroves",
+            "DistanceMatte"
+          ],
+          "triangles": 87148,
+          "drawCalls": 10
+        }
+      }
+    },
+    {
+      "state": "threshold",
+      "frameMs": {
+        "samples": 342,
+        "p50": 4.200000000000728,
+        "p95": 8,
+        "max": 8.700000000000728
+      },
+      "stats": {
+        "rendererUUID": "f5861089-a3e2-4bb0-bd5f-96c2e7d3c8d0",
+        "renderCount": 2425,
+        "renderers": 1,
+        "canvases": 1,
+        "removedTriangles": 320,
+        "doorMeshes": 3,
+        "memory": {
+          "geometries": 42,
+          "textures": 22
+        },
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1920,
+            1080
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 4850,
+            "calls": 47,
+            "triangles": 169890,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 24883200,
+          "multisampleBytes": 49766400,
+          "targetBytes": 74649600
+        },
+        "environment": {
+          "weight": 1,
+          "establish": 1,
+          "visibility": 1,
+          "roomWeight": 0,
+          "posterWeight": 0,
+          "layerWeights": {
+            "ground": 1,
+            "foreground": 1,
+            "fog": 1
+          },
+          "trees": 201,
+          "visible": true,
+          "titleRects": [
+            [
+              -2,
+              -2,
+              -2,
+              -2
+            ],
+            [
+              -2,
+              -2,
+              -2,
+              -2
+            ]
+          ],
+          "layers": [
+            "Foreground",
+            "TempleGround",
+            "MidgroundGroves",
+            "DistanceMatte"
+          ],
+          "triangles": 87148,
+          "drawCalls": 10
+        }
+      }
+    },
+    {
+      "state": "gate-interior",
+      "frameMs": {
+        "samples": 196,
+        "p50": 4.200000000000728,
+        "p95": 8,
+        "max": 8.799999999999272
+      },
+      "stats": {
+        "rendererUUID": "f5861089-a3e2-4bb0-bd5f-96c2e7d3c8d0",
+        "renderCount": 2524,
+        "renderers": 1,
+        "canvases": 1,
+        "removedTriangles": 320,
+        "doorMeshes": 3,
+        "memory": {
+          "geometries": 42,
+          "textures": 22
+        },
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1920,
+            1080
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 5048,
+            "calls": 47,
+            "triangles": 169890,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 24883200,
+          "multisampleBytes": 49766400,
+          "targetBytes": 74649600
+        },
+        "environment": {
+          "weight": 1,
+          "establish": 1,
+          "visibility": 1,
+          "roomWeight": 0,
+          "posterWeight": 0,
+          "layerWeights": {
+            "ground": 1,
+            "foreground": 1,
+            "fog": 1
+          },
+          "trees": 201,
+          "visible": true,
+          "titleRects": [
+            [
+              -2,
+              -2,
+              -2,
+              -2
+            ],
+            [
+              -2,
+              -2,
+              -2,
+              -2
+            ]
+          ],
+          "layers": [
+            "Foreground",
+            "TempleGround",
+            "MidgroundGroves",
+            "DistanceMatte"
+          ],
+          "triangles": 87148,
+          "drawCalls": 10
+        }
+      }
+    }
+  ],
+  "memory": {
+    "before": {
+      "heap": 40765646,
+      "stats": {
+        "rendererUUID": "f5861089-a3e2-4bb0-bd5f-96c2e7d3c8d0",
+        "renderCount": 2524,
+        "renderers": 1,
+        "canvases": 1,
+        "removedTriangles": 320,
+        "doorMeshes": 3,
+        "memory": {
+          "geometries": 42,
+          "textures": 22
+        },
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1920,
+            1080
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 5048,
+            "calls": 47,
+            "triangles": 169890,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 24883200,
+          "multisampleBytes": 49766400,
+          "targetBytes": 74649600
+        },
+        "environment": {
+          "weight": 1,
+          "establish": 1,
+          "visibility": 1,
+          "roomWeight": 0,
+          "posterWeight": 0,
+          "layerWeights": {
+            "ground": 1,
+            "foreground": 1,
+            "fog": 1
+          },
+          "trees": 201,
+          "visible": true,
+          "titleRects": [
+            [
+              -2,
+              -2,
+              -2,
+              -2
+            ],
+            [
+              -2,
+              -2,
+              -2,
+              -2
+            ]
+          ],
+          "layers": [
+            "Foreground",
+            "TempleGround",
+            "MidgroundGroves",
+            "DistanceMatte"
+          ],
+          "triangles": 87148,
+          "drawCalls": 10
+        }
+      }
+    },
+    "after": {
+      "heap": 45574781,
+      "stats": {
+        "rendererUUID": "f5861089-a3e2-4bb0-bd5f-96c2e7d3c8d0",
+        "renderCount": 2645,
+        "renderers": 1,
+        "canvases": 1,
+        "removedTriangles": 320,
+        "doorMeshes": 3,
+        "memory": {
+          "geometries": 42,
+          "textures": 22
+        },
+        "post": {
+          "enabled": true,
+          "error": null,
+          "passes": 2,
+          "size": [
+            1920,
+            1080
+          ],
+          "aoSamples": 12,
+          "stats": {
+            "frame": 5290,
+            "calls": 47,
+            "triangles": 169890,
+            "points": 0,
+            "lines": 0
+          },
+          "colorDepthBytes": 24883200,
+          "multisampleBytes": 49766400,
+          "targetBytes": 74649600
+        },
+        "environment": {
+          "weight": 1,
+          "establish": 1,
+          "visibility": 1,
+          "roomWeight": 0,
+          "posterWeight": 0,
+          "layerWeights": {
+            "ground": 1,
+            "foreground": 1,
+            "fog": 1
+          },
+          "trees": 201,
+          "visible": true,
+          "titleRects": [
+            [
+              -2,
+              -2,
+              -2,
+              -2
+            ],
+            [
+              -2,
+              -2,
+              -2,
+              -2
+            ]
+          ],
+          "layers": [
+            "Foreground",
+            "TempleGround",
+            "MidgroundGroves",
+            "DistanceMatte"
+          ],
+          "triangles": 87148,
+          "drawCalls": 10
+        }
+      }
+    },
+    "cycles": 5
+  },
+  "expectedFailureConsole": [
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+  ],
+  "regressionRetestedWithFontsReady": true,
+  "previousUnclassifiedFormalWarnings": [
+    "THREE.WebGLProgram: Program Info Log: (66,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(66,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value",
+    "THREE.WebGLProgram: Program Info Log: (66,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(66,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value"
+  ]
+}

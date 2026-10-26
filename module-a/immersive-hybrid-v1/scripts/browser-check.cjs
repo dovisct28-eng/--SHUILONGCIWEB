@@ -1,6 +1,6 @@
 const {chromium}=require('playwright');const sharp=require('sharp');const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const base=path.resolve(__dirname,'..'),out=path.resolve(base,'../../docs/validation/immersive-hybrid-v1'),local=path.join(out,'local');fs.mkdirSync(local,{recursive:true});fs.mkdirSync(path.join(out,'selected'),{recursive:true});
-const url='http://127.0.0.1:4186/module-a/immersive-hybrid-v1/';
+const url='http://127.0.0.1:4186/module-a/immersive-hybrid-v1/v1.html';
 (async()=>{const browser=await chromium.launch({channel:'chrome',headless:true});const report={viewports:[],errors:[],checks:[],performance:[],limitations:['Headless Chrome on this machine; no cross-device 60 FPS guarantee','AI visuals remain candidates for user review']};
 const errors=page=>page.on('pageerror',e=>report.errors.push(String(e)));
 const ready=async p=>{await p.goto(url);await p.waitForFunction(()=>window.hybrid?.ready,{timeout:60000});};

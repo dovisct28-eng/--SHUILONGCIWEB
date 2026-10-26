@@ -1,0 +1,61 @@
+{
+  "pass": true,
+  "syntax": true,
+  "productionSourceRestoresExactly": true,
+  "protection": [
+    {
+      "file": "shuilong-temple/shuilong-temple.glb",
+      "sha256": "fbbfce1c0bfbf8a09c33ed65a6bb1f60589b6c70300841fa0283c2a4498ae047",
+      "unchanged": true
+    },
+    {
+      "file": "shuilong-temple/model-source.js",
+      "sha256": "03cd2eb6cfd21dbb1fd7dbde7b4db3c3baaad364414badcbfe9a1433cfd4ef06",
+      "unchanged": true
+    },
+    {
+      "file": "shuilong-temple/mural-locations.json",
+      "sha256": "4e313a04bf4cf5f8da9fdd0cf0637bb18ad4f18a0b23a75cd30de16274e6e84e",
+      "unchanged": true
+    },
+    {
+      "file": "shuilong-temple/model-info.json",
+      "sha256": "d66b5fcca166089e3fd5c2900295e9d38cfa2c991d5fdd91970b1c47f36a1e9b",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/a01/app.mjs",
+      "sha256": "822c2633bbeaf94af46e8c6f22b39a3ccdad3bd509deeb220d40310331734ca9",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/a01/index.html",
+      "sha256": "2644c40ae7066315b54a0b2553338e7457b6c80e37d3b623e42f994c319ab0a7",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/a01/styles.css",
+      "sha256": "6fc11f26ea75d849970b0188f44dc5d627a5f70ac2951dce66ab4aa35e42f0bc",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/src/main.mjs",
+      "sha256": "f5668f9a872a79dcfdbffed89a5c8da34674f2b061300ad9e0bdcfc3dea19fa8",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/src/model-view.mjs",
+      "sha256": "55b786a5cfa35c5e08967e63720fa9f5224d7563eedd96491ae0495ac9b46fe0",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/scene-manifest.json",
+      "sha256": "a249264fe655cdfac052b27e3a56f7b46faadc898fa6e7e85d73fb4822671e7e",
+      "unchanged": true
+    }
+  ],
+  "archive": {
+    "module-a-lofi-final-v1.0^{}": "48f272497e86e4549c5bcd0dee275ff347171a3f",
+    "archive/module-a-lofi": "48f272497e86e4549c5bcd0dee275ff347171a3f"
+  }
+}
