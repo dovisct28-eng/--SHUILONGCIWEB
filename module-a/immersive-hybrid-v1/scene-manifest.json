@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "model": "../../shuilong-temple/shuilong-temple.glb",
+  "realMural": "./assets/murals/mural-01-display.webp",
+  "modelUnitNotice": "Design model coordinates, not surveyed dimensions",
+  "scenes": {
+    "gate-exterior": {
+      "id": "gate-exterior",
+      "camera": "R03",
+      "reference": "./assets/references/R03-gate-exterior.png",
+      "generated": "./assets/generated/S01-gate-exterior.webp",
+      "mask": "./assets/layers/R03-foreground-mask.png",
+      "status": "candidate",
+      "source": "Built-in image_gen; exact backend model not exposed",
+      "version": "v1",
+      "generatedDate": "2026-10-26",
+      "original": "./assets/generated/originals/S01-gate-exterior-v1.png",
+      "originalSize": [
+        1672,
+        941
+      ],
+      "webSize": [
+        1920,
+        1080
+      ],
+      "mural": null
+    },
+    "gate-interior": {
+      "id": "gate-interior",
+      "camera": "R04",
+      "reference": "./assets/references/R04-gate-interior.png",
+      "generated": "./assets/generated/S02-gate-interior.webp",
+      "mask": "./assets/layers/R04-foreground-mask.png",
+      "status": "candidate",
+      "source": "Built-in image_gen; exact backend model not exposed",
+      "version": "v1",
+      "generatedDate": "2026-10-26",
+      "original": "./assets/generated/originals/S02-gate-interior-v1.png",
+      "originalSize": [
+        1672,
+        941
+      ],
+      "webSize": [
+        1920,
+        1080
+      ],
+      "mural": null
+    },
+    "gallery-approach": {
+      "id": "gallery-approach",
+      "camera": "R05",
+      "reference": "./assets/references/R05-right-gallery.png",
+      "generated": "./assets/generated/S03-gallery-approach.webp",
+      "mask": "./assets/layers/R05-foreground-mask.png",
+      "status": "candidate",
+      "source": "Built-in image_gen; exact backend model not exposed",
+      "version": "v1",
+      "generatedDate": "2026-10-26",
+      "original": "./assets/generated/originals/S03-gallery-approach-v1.png",
+      "originalSize": [
+        1672,
+        941
+      ],
+      "webSize": [
+        1920,
+        1080
+      ],
+      "mural": null
+    },
+    "mural-01-stop": {
+      "id": "mural-01-stop",
+      "camera": "R06",
+      "reference": "./assets/references/R06-first-mural-stop.png",
+      "generated": "./assets/generated/S04-mural01-background.webp",
+      "mask": "./assets/layers/R06-foreground-mask.png",
+      "status": "candidate",
+      "source": "Built-in image_gen; exact backend model not exposed",
+      "version": "v1",
+      "generatedDate": "2026-10-26",
+      "original": "./assets/generated/originals/S04-mural01-background-v1.png",
+      "originalSize": [
+        1672,
+        941
+      ],
+      "webSize": [
+        1920,
+        1080
+      ],
+      "mural": "./assets/murals/mural-01-display.webp"
+    }
+  }
+}

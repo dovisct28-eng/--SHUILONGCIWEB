@@ -1,0 +1,162 @@
+{
+  "pass": true,
+  "assets": [
+    {
+      "file": "assets/references/R01-overview.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 471611,
+      "sha256": "c9e88b928feb28551d086be25f320ad2830a467230921f4f5eda93686e18f1bb"
+    },
+    {
+      "file": "assets/references/R02-gate-approach.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 1259337,
+      "sha256": "4ae7950744f621af4e8c19af9f9dcd940c29f60e7b20c5896ed72dc33a0e6c40"
+    },
+    {
+      "file": "assets/references/R03-gate-exterior.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 1038264,
+      "sha256": "f523bd707bce76c05ad34fd7786443fb13aa932cdc44ccca03addef7b1904e6d"
+    },
+    {
+      "file": "assets/references/R04-gate-interior.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 1568440,
+      "sha256": "952c0adb2e3f7f34a0c68514e18a1e570eaf869423ce88a5a1d9140f55f1f8e2"
+    },
+    {
+      "file": "assets/references/R05-right-gallery.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 1631422,
+      "sha256": "8986c3053eac850d57cea24775531e8aac1d700e9d6af9cb4bf9b9c0c6657144"
+    },
+    {
+      "file": "assets/references/R06-first-mural-stop.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 1787083,
+      "sha256": "5c2fb8a40dc04bcac2e2f61c88b39bdcaff5456b52eff83f0f0cdeb48f080300"
+    },
+    {
+      "file": "./assets/generated/S01-gate-exterior.webp",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 562290,
+      "sha256": "955765b0e56c46c8eb8609236dd3c97ce2c82ae5f481d6ac9e5ecb518e98e9f5"
+    },
+    {
+      "file": "./assets/layers/R03-foreground-mask.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 48883,
+      "sha256": "3cdad2386cf72ac2b81da8b087276d2886272096d54ddbbaf0eb2b1d4f5bb13c"
+    },
+    {
+      "file": "./assets/generated/originals/S01-gate-exterior-v1.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2741721,
+      "sha256": "874dd21cee4c6f2ca0ec43c09812169ab5967521036766c97ac15d8824c02eb1"
+    },
+    {
+      "file": "./assets/generated/S02-gate-interior.webp",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 472284,
+      "sha256": "1eb05f67c5845edfd1bf28be7f50828dd6de699f30e06f13ff2660dbf242e2b2"
+    },
+    {
+      "file": "./assets/layers/R04-foreground-mask.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 47137,
+      "sha256": "0de9463473ddb779867d6efad27c4968608856e55877e2e971054f448218215a"
+    },
+    {
+      "file": "./assets/generated/originals/S02-gate-interior-v1.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 2557660,
+      "sha256": "c02f124291e4634de0f91a49a3a17d2ba69f8e85e8950a6d14c2e4dd65a1ea07"
+    },
+    {
+      "file": "./assets/generated/S03-gallery-approach.webp",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 605360,
+      "sha256": "d39a610f409c6b949d70290d7652e1df0671f55fe8fa717d7da9085dbe999ffa"
+    },
+    {
+      "file": "./assets/layers/R05-foreground-mask.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 46316,
+      "sha256": "fcc645a26f47b194758bfbe034714e1b1a28cebbe0f778b56b25dc6cfa6354c5"
+    },
+    {
+      "file": "./assets/generated/originals/S03-gallery-approach-v1.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 3030844,
+      "sha256": "78494a530b4d3f4d1b453a998fa6e928cf025436806f8495f923082d5396259d"
+    },
+    {
+      "file": "./assets/generated/S04-mural01-background.webp",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 674138,
+      "sha256": "4fdf353dae4b873bd1c3ef36e0535c6a1c02275fc55a37e079714cbb5307ad32"
+    },
+    {
+      "file": "./assets/layers/R06-foreground-mask.png",
+      "width": 1920,
+      "height": 1080,
+      "bytes": 49491,
+      "sha256": "d40a7cf33b7944c2025456c690981cfbec48348fd7afb845881c2e45787e0c69"
+    },
+    {
+      "file": "./assets/generated/originals/S04-mural01-background-v1.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 3120151,
+      "sha256": "c633e33c30860711cbd3c0d487996fada1e73e21f8d5bc1d2b31323714cfa53e"
+    },
+    {
+      "file": "./assets/murals/mural-01-display.webp",
+      "width": 2880,
+      "height": 990,
+      "bytes": 1351148,
+      "sha256": "afc5a15eebec4e430151795f73c1cb958496ca6c629552d23be62588766716ef"
+    }
+  ],
+  "protection": [
+    {
+      "file": "shuilong-temple/shuilong-temple.glb",
+      "sha256": "fbbfce1c0bfbf8a09c33ed65a6bb1f60589b6c70300841fa0283c2a4498ae047",
+      "sameAsBase": true
+    },
+    {
+      "file": "shuilong-temple/model-source.js",
+      "sha256": "03cd2eb6cfd21dbb1fd7dbde7b4db3c3baaad364414badcbfe9a1433cfd4ef06",
+      "sameAsBase": true
+    },
+    {
+      "file": "shuilong-temple/mural-locations.json",
+      "sha256": "4e313a04bf4cf5f8da9fdd0cf0637bb18ad4f18a0b23a75cd30de16274e6e84e",
+      "sameAsBase": true
+    },
+    {
+      "file": "shuilong-temple/model-info.json",
+      "sha256": "d66b5fcca166089e3fd5c2900295e9d38cfa2c991d5fdd91970b1c47f36a1e9b",
+      "sameAsBase": true
+    }
+  ],
+  "archiveCommit": "48f272497e86e4549c5bcd0dee275ff347171a3f",
+  "totalAssetBytes": 23063580
+}

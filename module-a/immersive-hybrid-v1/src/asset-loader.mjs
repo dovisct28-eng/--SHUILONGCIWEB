@@ -1,0 +1,4 @@
+export function createAssetLoader(){const cache=new Map();
+ async function load(url){if(cache.has(url))return cache.get(url);const promise=(async()=>{const image=new Image();image.decoding='async';image.src=url;await image.decode();return image;})();cache.set(url,promise);try{return await promise;}catch(error){cache.delete(url);throw error;}}
+ return {load,clear(){cache.clear();},async scene(entry,reference=false){if(!reference&&entry.generated){try{return {image:await load(entry.generated),source:'AI 增强候选图',url:entry.generated};}catch{ /* Missing replacement is an expected recoverable state. */ }}return {image:await load(entry.reference),source:'参考渲染图',url:entry.reference};},trim(keep){for(const key of cache.keys())if(!keep.includes(key))cache.delete(key);},get count(){return cache.size;}};
+}

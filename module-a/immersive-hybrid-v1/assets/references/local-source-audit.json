@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-26",
+  "photos": [
+    {
+      "file": "水龙祠实地照片\\水龙祠正面.jpg",
+      "bytes": 173451,
+      "sha256": "4cf6dcb8c0412068de96f4388a856a45220bbe3a4de0a8444541b657ff5495f5",
+      "status": "visually inspected locally; not independently authenticated or surveyed"
+    },
+    {
+      "file": "水龙祠实地照片\\中间大门打开图.jpg",
+      "bytes": 221790,
+      "sha256": "0d215ab439d7d96a37756d68d9fcfd81089d87c1a95d221d0e467731f438c45a",
+      "status": "visually inspected locally; not independently authenticated or surveyed"
+    },
+    {
+      "file": "水龙祠实地照片\\右侧面向主殿.jpg",
+      "bytes": 360246,
+      "sha256": "0758ee63e5c27c1ae84783b405d3a3165b7ea955f08feb9279729af1f1fea2ac",
+      "status": "visually inspected locally; not independently authenticated or surveyed"
+    },
+    {
+      "file": "水龙祠实地照片\\内部图-主殿面向戏台.jpg",
+      "bytes": 600455,
+      "sha256": "52eb3967b20ee278d66961198eca56f40d96bfd0548df3d6f4161e3d505eecb3",
+      "status": "visually inspected locally; not independently authenticated or surveyed"
+    }
+  ],
+  "missing": "No locally identified photograph independently proves exact first-mural plane and dimensions. AI-named files in photo folder excluded from factual reference.",
+  "muralSources": [
+    "第一铺壁画原图.tif"
+  ],
+  "detailCandidates": [
+    "mural-01-detail.webp"
+  ],
+  "selected": "byte-identical mural-01-display.webp; no full-resolution master loaded in browser"
+}

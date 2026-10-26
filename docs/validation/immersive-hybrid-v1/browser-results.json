@@ -1,0 +1,326 @@
+{
+  "viewports": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "pass": true,
+      "modelRequests": 1,
+      "visibleMuralChangedPixels": 162916
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "pass": true,
+      "modelRequests": 1,
+      "visibleMuralChangedPixels": 91748
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "pass": true,
+      "modelRequests": 1,
+      "visibleMuralChangedPixels": 82504
+    }
+  ],
+  "errors": [],
+  "checks": [
+    "wheel burst does not skip states",
+    "reverse wheel returns to overview",
+    "all four missing AI assets fall back without fatal errors; OS reduced-motion respected",
+    "actual AI original substituted by fixed URL, comparison and resource reread work",
+    "live resize recomputes mural projection; detail resize and close preserve location",
+    "restoring generated file and rereading upgrades fallback to AI without code changes"
+  ],
+  "performance": [
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "state": "overview",
+      "frameMs": {
+        "samples": 0,
+        "median": null,
+        "p95": null
+      },
+      "stats": {
+        "calls": 37,
+        "triangles": 82742,
+        "textures": 19,
+        "geometries": 37
+      },
+      "source": "真实 Three.js 模型"
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "state": "gate-exterior",
+      "frameMs": {
+        "samples": 240,
+        "median": 4.199999999254942,
+        "p95": 4.599999999627471
+      },
+      "stats": {
+        "calls": 37,
+        "triangles": 82742,
+        "textures": 19,
+        "geometries": 37
+      },
+      "source": "AI 增强候选图"
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "state": "gate-interior",
+      "frameMs": {
+        "samples": 109,
+        "median": 4.199999999254942,
+        "p95": 4.5
+      },
+      "stats": {
+        "calls": 37,
+        "triangles": 82742,
+        "textures": 19,
+        "geometries": 37
+      },
+      "source": "AI 增强候选图"
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "state": "gallery-approach",
+      "frameMs": {
+        "samples": 117,
+        "median": 4.199999999254942,
+        "p95": 4.400000000372529
+      },
+      "stats": {
+        "calls": 29,
+        "triangles": 75318,
+        "textures": 19,
+        "geometries": 37
+      },
+      "source": "AI 增强候选图"
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "state": "mural-01-stop",
+      "frameMs": {
+        "samples": 114,
+        "median": 4.199999999254942,
+        "p95": 4.800000000745058
+      },
+      "stats": {
+        "calls": 27,
+        "triangles": 68278,
+        "textures": 19,
+        "geometries": 37
+      },
+      "source": "AI 增强候选图"
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "state": "overview",
+      "frameMs": {
+        "samples": 0,
+        "median": null,
+        "p95": null
+      },
+      "stats": {
+        "calls": 37,
+        "triangles": 82742,
+        "textures": 19,
+        "geometries": 37
+      },
+      "source": "真实 Three.js 模型"
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "state": "gate-exterior",
+      "frameMs": {
+        "samples": 240,
+        "median": 4.199999999254942,
+        "p95": 4.900000000372529
+      },
+      "stats": {
+        "calls": 37,
+        "triangles": 82742,
+        "textures": 19,
+        "geometries": 37
+      },
+      "source": "AI 增强候选图"
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "state": "gate-interior",
+      "frameMs": {
+        "samples": 115,
+        "median": 4.199999999254942,
+        "p95": 4.700000001117587
+      },
+      "stats": {
+        "calls": 37,
+        "triangles": 82742,
+        "textures": 19,
+        "geometries": 37
+      },
+      "source": "AI 增强候选图"
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "state": "gallery-approach",
+      "frameMs": {
+        "samples": 117,
+        "median": 4.199999999254942,
+        "p95": 4.799999998882413
+      },
+      "stats": {
+        "calls": 29,
+        "triangles": 75318,
+        "textures": 19,
+        "geometries": 37
+      },
+      "source": "AI 增强候选图"
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "state": "mural-01-stop",
+      "frameMs": {
+        "samples": 112,
+        "median": 4.199999999254942,
+        "p95": 6
+      },
+      "stats": {
+        "calls": 27,
+        "triangles": 68278,
+        "textures": 19,
+        "geometries": 37
+      },
+      "source": "AI 增强候选图"
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "state": "overview",
+      "frameMs": {
+        "samples": 0,
+        "median": null,
+        "p95": null
+      },
+      "stats": {
+        "calls": 37,
+        "triangles": 82742,
+        "textures": 19,
+        "geometries": 37
+      },
+      "source": "真实 Three.js 模型"
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "state": "gate-exterior",
+      "frameMs": {
+        "samples": 240,
+        "median": 4.199999999254942,
+        "p95": 4.699999999254942
+      },
+      "stats": {
+        "calls": 37,
+        "triangles": 82742,
+        "textures": 19,
+        "geometries": 37
+      },
+      "source": "AI 增强候选图"
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "state": "gate-interior",
+      "frameMs": {
+        "samples": 114,
+        "median": 4.199999999254942,
+        "p95": 5.099999999627471
+      },
+      "stats": {
+        "calls": 37,
+        "triangles": 82742,
+        "textures": 19,
+        "geometries": 37
+      },
+      "source": "AI 增强候选图"
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "state": "gallery-approach",
+      "frameMs": {
+        "samples": 115,
+        "median": 4.199999999254942,
+        "p95": 4.900000000372529
+      },
+      "stats": {
+        "calls": 29,
+        "triangles": 75318,
+        "textures": 19,
+        "geometries": 37
+      },
+      "source": "AI 增强候选图"
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "state": "mural-01-stop",
+      "frameMs": {
+        "samples": 116,
+        "median": 4.199999999254942,
+        "p95": 4.699999999254942
+      },
+      "stats": {
+        "calls": 27,
+        "triangles": 68278,
+        "textures": 19,
+        "geometries": 37
+      },
+      "source": "AI 增强候选图"
+    }
+  ],
+  "limitations": [
+    "Headless Chrome on this machine; no cross-device 60 FPS guarantee",
+    "AI visuals remain candidates for user review"
+  ],
+  "pass": true
+}

@@ -1,0 +1,32 @@
+{
+  "tool": "built-in image_gen",
+  "backendModel": "not exposed",
+  "date": "2026-10-26",
+  "transparent_background": false,
+  "runs": [
+    {
+      "id": "S01",
+      "references": ["assets/references/R03-gate-exterior.png", "../../水龙祠实地照片/水龙祠正面.jpg"],
+      "output": "assets/generated/originals/S01-gate-exterior-v1.png",
+      "prompt": "Use case: sketch-to-render. Asset: S01-gate-exterior, heritage architecture visualization, 1920x1080 16:9. Image 1 is STRICT composition and geometry edit target, image 2 ONLY material reference, do not copy its camera, people, landscape, watermark or layout. 以提供的水龙祠三维模型渲染截图为严格建筑结构参考，对画面进行高保真建筑可视化增强。保持原图建筑几何、入口位置、三个砖券门洞轮廓和相对位置、墙体、屋顶方向、柱梁比例、相机高度与透视。中门保持开放，背后戏台木墙保留，不把它改成通透大院。中国湖南乡村历史神祠，风化旧红褐砖墙、灰褐瓦面、旧深木门和石质台基地面，粗糙度、细砖缝、瓦片层次、接触阴影。柔和天光与来自画面左前方的暖日光，与模型阴影方向一致。精致克制的专业建筑可视化/PBR，无塑料质感，不设计新建筑。严格保留建筑边缘、檐口、台基、三扇门的像素位置和背景地平线。天空灰暖，无新增山林和邻近建筑。不增加装饰、植物、悬挂物、人、文字、标签、UI、水印。不得生成任何壁画。只增强材料与光影，不能重新设计结构。"
+    },
+    {
+      "id": "S02",
+      "references": ["assets/references/R04-gate-interior.png", "../../水龙祠实地照片/右侧面向主殿.jpg"],
+      "output": "assets/generated/originals/S02-gate-interior-v1.png",
+      "prompt": "Use case sketch-to-render. S02-gate-interior. Edit ONLY image 1, strict geometry and camera pixel layout. Image 2 is ONLY worn timber/plaster/paving material reference, NEVER its layout, fabric, vegetation or camera. 基于水龙祠三维模型内部视角截图制作高质量数字建筑可视化。严格保留第一张模型截图所有墙体、梁柱数量与画面位置、戏台背墙在左侧形成的大面积遮挡、右侧廊道和中间狭窄通道、远处主殿及台阶。镜头刚入大门后朝右侧绕过戏台看向院内。不能为了好看把左侧深木色戏台背墙移走，不拓宽通道，不改屋顶、廊道宽度、相机高度或透视。旧抹灰墙、旧木梁柱、石柱础、灰褐瓦片及石质铺地，丰富微观粗糙度与自然使用痕迹，克制的历史建筑PBR专业渲染，柔和自然天光与画面左前上方暖日光，阴影方向严格同第一图，暗部仍清晰。暖灰、灰褐、深木色、石色，细致自然，不游戏塑料。保持第一图边缘和消失点，16:9横图1920x1080。无人物、无任何壁画图像或画纹、无现代灯具、无悬挂布、无相框、无新建筑构件、无文字水印或UI。不是历史原貌复原，只对原图材质光影增强。"
+    },
+    {
+      "id": "S03",
+      "references": ["assets/references/R05-right-gallery.png", "assets/generated/originals/S02-gate-interior-v1.png"],
+      "output": "assets/generated/originals/S03-gallery-approach-v1.png",
+      "prompt": "Use case sketch-to-render. S03-gallery-approach. Image 1 is the ONLY structure and camera edit target. Image 2 ONLY the previous same building's material/light continuity. 基于第一张水龙祠建筑模型右侧廊道截图制作高保真建筑环境可视化，严格保留原图的墙体方向、廊道宽度、五根可见柱子的画面位置与粗细、屋顶和梁位置、屋檐高度、地面台阶和相机透视。第一图左边近处大柱、右边大块抹灰墙都不得移动；不要添加额外柱子、斜撑、窗户或门。用第二图相同的低饱和旧抹灰、深木色柱梁、旧石材柱础、旧石铺地、灰褐瓦片。自然左前侧暖日光和柔和天光，屋檐与柱子投影服从第一张，不改变光源方向。暗部有细节，克制历史使用痕迹和微观粗糙度，真实精致建筑可视化渲染品质。严格锁定所有主要边缘、消失点、前后景比例，只做材质光影细节增强，保持同一时间同一建筑观感。不加人物、游客、文字、UI、灯具、装饰、悬挂物、现代展板、任何壁画/古画/纹样。墙面干净供真实壁画之后独立叠加。16:9，1920x1080。"
+    },
+    {
+      "id": "S04",
+      "references": ["assets/references/R06-first-mural-stop.png", "assets/generated/originals/S03-gallery-approach-v1.png"],
+      "output": "assets/generated/originals/S04-mural01-background-v1.png",
+      "prompt": "Use case sketch-to-render. S04-mural01-background. Edit ONLY image 1 architecture. Image 2 is ONLY same-building materials and lighting continuity reference. 基于第一张水龙祠第一铺墙体三维模型截图对建筑环境进行高质量可视化增强。严守第一张截图建筑几何、墙面位置、两根近处柱梁在画面中的精确位置与宽度、屋檐线、地面台阶、视角、比例与透视消失点。保持左右两柱和整块抹灰墙像素轮廓不移动，不增加梁架或装饰。使用第二张同样旧抹灰墙、自然深木柱、灰褐瓦面和旧石地，柔和自然天光与左前方暖日光，原图投影方向，微观粗糙度和自然风化，精致克制的建筑遗产专业PBR渲染，暗部清晰。第一铺墙面中央保持完整、干净、均匀、适合独立贴合真实壁画的抹灰底板；风化主要在下沿，中央不造图案。绝对不得生成壁画、人物、图案、画纹、文字、相框、显示屏、灯箱、游客、悬挂物、UI、水印。不是全屏壁画海报，是建筑停靠空间底图。生成图像不能包含任何真实或虚构壁画。16:9 1920x1080。只增强材料和光影，不改建筑轮廓。"
+    }
+  ]
+}
