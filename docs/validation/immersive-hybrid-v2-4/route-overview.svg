@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 920" role="img" aria-labelledby="title desc">
+<title id="title">水龙祠五幅壁画路线草图</title><desc id="desc">基于设计模型坐标的候选路线；非现场测绘，部分段落未经通行检查。</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0L6 3L0 6Z" fill="#cba66c"/></marker></defs>
+<rect width="1000" height="920" fill="#121d24"/><g font-family="Microsoft YaHei, sans-serif" fill="#e3ddd0"><text x="42" y="54" font-size="27">五幅壁画：模型路线草图</text><text x="42" y="82" font-size="15" fill="#b9b6ab">设计模型坐标 · 待验证 · 不代表历史观看顺序</text></g>
+<!-- x increases right, z increases down; scale 24 px/model unit. -->
+<g transform="translate(500 522) scale(24)" fill="none" stroke="#78858a" stroke-width=".06">
+<rect x="-5" y="-15.5" width="10" height="27.5"/><rect x="-4.875" y="-15.35" width="9.75" height="7.2"/><rect x="-1.55" y="7.075" width="3.1" height="2.65"/>
+<path d="M-5 -7.2H-3.2 M-5 -2.4H-3.2 M-5 2.4H-3.2 M-5 7.2H-3.2 M3.2 -7.2H5 M3.2 -2.4H5 M3.2 2.4H5 M3.2 7.2H5" stroke="#495b62" stroke-width=".035"/>
+<g fill="#90755a" stroke="none"><circle cx="3.25" cy="7.2" r=".12"/><circle cx="3.25" cy="2.4" r=".12"/><circle cx="3.25" cy="-2.4" r=".12"/><circle cx="3.25" cy="-7.2" r=".12"/><circle cx="3.6" cy="-8.35" r=".15"/><circle cx="0" cy="-8.35" r=".15"/><circle cx="-3.6" cy="-8.35" r=".15"/></g>
+<g stroke="#e0aa72" stroke-width=".18"><path d="M4.865 2.975V6.625"/><path d="M4.515 -14.8V-8.7"/><path d="M.575 -14.865H3.925"/><path d="M-3.925 -14.865H-.575"/><path d="M-4.515 -14.8V-8.7"/></g>
+<path d="M0 12.8 L0 11.15 L3.85 9.7 L3.85 7.65 L3.85 0 L3.85 -6.5 L2.5 -7.5 L2.5 -9.5 L1.4 -11.75 L1.4 -12 L-1.4 -12 L-1.4 -11.75" stroke="#cba66c" stroke-width=".09" marker-mid="url(#arrow)" marker-end="url(#arrow)"/>
+<path d="M-1.4 -11.75 L-2.5 -9.5 L-2.5 -7.5 L-3.85 -6.5 L-3.85 9.7 L0 11.15" stroke="#91a3a3" stroke-dasharray=".28 .18" stroke-width=".08" marker-end="url(#arrow)"/>
+</g>
+<g font-family="Microsoft YaHei, sans-serif" fill="#e2d7c6" font-size="16"><text x="638" y="644">01 右廊</text><text x="628" y="244">02 主殿右墙</text><text x="552" y="151">03 后墙右</text><text x="350" y="151">04 后墙左</text><text x="241" y="244">05 主殿左墙</text><text x="458" y="863">大门 +Z</text><text x="457" y="725">戏台</text><text x="407" y="286">主殿</text><text x="42" y="100" fill="#cba66c">实线：候选正向段</text><text x="250" y="100" fill="#aebcba">虚线：回程设想，未核验</text><text x="42" y="900" font-size="14" fill="#b9b6ab">线段不代表最终相机轨道；相机视线、插值、楼梯和遮挡须另行验证。</text></g></svg>
