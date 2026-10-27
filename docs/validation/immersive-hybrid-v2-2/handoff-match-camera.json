@@ -1,0 +1,583 @@
+{
+  "version": "2.2",
+  "model": {
+    "asset": "shuilong-temple/shuilong-temple.glb",
+    "position": [
+      0,
+      0,
+      0
+    ],
+    "quaternion": [
+      0,
+      0,
+      0,
+      1
+    ],
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "matrixWorld": [
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1
+    ]
+  },
+  "modelUnits": "design model, not a survey",
+  "camera": {
+    "time": 1.8,
+    "position": [
+      3.85,
+      1.38,
+      8.4
+    ],
+    "target": [
+      4.05,
+      1.38,
+      2.4
+    ],
+    "fov": 48,
+    "quaternion": [
+      0,
+      -0.016659727201332797,
+      0,
+      0.999861217114444
+    ],
+    "projectionMatrix": [
+      1.2633956853211215,
+      0,
+      0,
+      0,
+      0,
+      2.2460367739042155,
+      0,
+      0,
+      0,
+      0,
+      -1.0005001250312577,
+      -1,
+      0,
+      0,
+      -0.09002250562640661,
+      0
+    ],
+    "matrixWorld": [
+      0.9994449069791543,
+      0,
+      0.03331483023263844,
+      0,
+      0,
+      1,
+      0,
+      0,
+      -0.03331483023263844,
+      0,
+      0.9994449069791543,
+      0,
+      3.85,
+      1.38,
+      8.4,
+      1
+    ],
+    "near": 0.045000000000000005,
+    "far": 180,
+    "aspect": 1.7777777777777777
+  },
+  "hybrid": {
+    "version": "2.2-procedural-candidate-1",
+    "phase": "corridor-hybrid",
+    "progress": 1.8,
+    "status": "ready",
+    "error": null,
+    "mode": "hybrid",
+    "manualBlend": null,
+    "weights": {
+      "foreground": 1,
+      "mid": 0.6064139941690965,
+      "far": 0.3690209647872991
+    },
+    "effective": [
+      {
+        "name": "V22-mid-wall",
+        "weight": 0.6064139941690965,
+        "visible": true,
+        "triangles": 14,
+        "source": "02_Enclosure"
+      },
+      {
+        "name": "V22-far-wall",
+        "weight": 0.3690209647872991,
+        "visible": true,
+        "triangles": 2,
+        "source": "03_MainHall"
+      },
+      {
+        "name": "V22-mid-floor",
+        "weight": 0.6064139941690965,
+        "visible": true,
+        "triangles": 2,
+        "source": "05_EastGallery"
+      }
+    ],
+    "foreground": "original geometry, unchanged",
+    "textures": 2,
+    "textureBytesEstimate": 11184810.666666666,
+    "decode": [
+      {
+        "id": "paving",
+        "loadAndDecodeMs": 27.599999999976717,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "id": "plaster",
+        "loadAndDecodeMs": 31,
+        "width": 1024,
+        "height": 1024
+      },
+      {
+        "id": "surface-programs",
+        "compileMs": 1209.3999999999069
+      }
+    ],
+    "mural": {
+      "id": "mural-01",
+      "position": [
+        4.865,
+        1.55,
+        4.8
+      ],
+      "rotationY": -1.5707963267948966,
+      "width": 3.65,
+      "height": 1.2547,
+      "enabled": false,
+      "source": "independent real mural; future docking"
+    }
+  },
+  "surfaces": {
+    "nearColumn": [
+      {
+        "world": [
+          3.25,
+          0.17,
+          7.2
+        ],
+        "projection": {
+          "x": 0.15738422092986598,
+          "y": 1.652209285207389,
+          "depth": 0.9241674943152554,
+          "visible": false
+        }
+      },
+      {
+        "world": [
+          3.25,
+          2.67,
+          7.2
+        ],
+        "projection": {
+          "x": 0.15738422092986598,
+          "y": -0.7283884115020924,
+          "depth": 0.9241674943152554,
+          "visible": false
+        }
+      }
+    ],
+    "beam": [
+      {
+        "world": [
+          3.25,
+          2.62,
+          7.2
+        ],
+        "projection": {
+          "x": 0.15738422092986598,
+          "y": -0.6807764575679032,
+          "depth": 0.9241674943152554,
+          "visible": false
+        }
+      },
+      {
+        "world": [
+          4.83,
+          2.62,
+          7.2
+        ],
+        "projection": {
+          "x": 0.9817165809363919,
+          "y": -0.6303268414792804,
+          "depth": 0.9274288668553117,
+          "visible": false
+        }
+      }
+    ],
+    "wall": [
+      {
+        "world": [
+          4.89,
+          0.32,
+          7.1
+        ],
+        "projection": {
+          "x": 0.9717224149737943,
+          "y": 1.3924030766366289,
+          "depth": 0.933013233738888,
+          "visible": false
+        }
+      },
+      {
+        "world": [
+          4.89,
+          2.6,
+          7.1
+        ],
+        "projection": {
+          "x": 0.9717224149737943,
+          "y": -0.5271054278270639,
+          "depth": 0.933013233738888,
+          "visible": false
+        }
+      },
+      {
+        "world": [
+          4.89,
+          2.6,
+          2.5
+        ],
+        "projection": {
+          "x": 0.5897660942446202,
+          "y": 0.26901088895643843,
+          "depth": 0.9853227765289745,
+          "visible": true
+        }
+      },
+      {
+        "world": [
+          4.89,
+          0.32,
+          2.5
+        ],
+        "projection": {
+          "x": 0.5897660942446202,
+          "y": 0.7006954571362092,
+          "depth": 0.9853227765289745,
+          "visible": true
+        }
+      }
+    ],
+    "floor": [
+      {
+        "world": [
+          3.175,
+          0.32,
+          9.5
+        ],
+        "projection": {
+          "x": 0.8592283203251599,
+          "y": -0.5610785208175428,
+          "depth": 1.0807428905055412,
+          "visible": false
+        }
+      },
+      {
+        "world": [
+          4.925,
+          0.32,
+          9.5
+        ],
+        "projection": {
+          "x": -0.1598942224817459,
+          "y": -0.619242574425396,
+          "depth": 1.0851414759269975,
+          "visible": false
+        }
+      },
+      {
+        "world": [
+          4.925,
+          0.32,
+          2.5
+        ],
+        "projection": {
+          "x": 0.5934731891287703,
+          "y": 0.7006560111668156,
+          "depth": 0.985325759582169,
+          "visible": true
+        }
+      },
+      {
+        "world": [
+          3.175,
+          0.32,
+          2.5
+        ],
+        "projection": {
+          "x": 0.40631561840026276,
+          "y": 0.7026474929166635,
+          "depth": 0.9851751562103503,
+          "visible": true
+        }
+      }
+    ]
+  },
+  "viewport": [
+    1920,
+    1080
+  ],
+  "view": {
+    "verticalFov": 48,
+    "horizontalFov": 76.7244737832658,
+    "verticalSpanAtUnitDistance": 0.8904573706170722
+  },
+  "gatePlane": {
+    "z": 11.93,
+    "openingBelowLintel": {
+      "x": [
+        -0.76,
+        0.76
+      ],
+      "y": [
+        0.13,
+        1.615
+      ]
+    },
+    "corners": [
+      {
+        "x": 1.2703729821316065,
+        "y": 0.07905362888552392,
+        "depth": 1.0249519857438312,
+        "visible": false
+      },
+      {
+        "x": 1.0168226133594114,
+        "y": 0.07318301246113634,
+        "depth": 1.025292997105269,
+        "visible": false
+      },
+      {
+        "x": 1.2703729821316065,
+        "y": 0.5716828965303637,
+        "depth": 1.0249519857438312,
+        "visible": false
+      },
+      {
+        "x": 1.0168226133594114,
+        "y": 0.5726826029504587,
+        "depth": 1.025292997105269,
+        "visible": false
+      }
+    ]
+  },
+  "components": {
+    "leftJamb": {
+      "world": [
+        -0.87,
+        1,
+        12.2
+      ],
+      "projection": {
+        "x": 1.2332207102310089,
+        "y": 0.3921030990022371,
+        "depth": 1.0232610341227881,
+        "visible": false
+      },
+      "hits": [
+        {
+          "object": "07_Entrance-geometry",
+          "distance": 5.929978050518513,
+          "point": [
+            -0.7599999904632564,
+            1.0088559329711786,
+            12.111440670288214
+          ]
+        },
+        {
+          "object": "07_Entrance-geometry",
+          "distance": 5.942841331228966,
+          "point": [
+            -0.7699999809265141,
+            1.0080508489932045,
+            12.119491510067956
+          ]
+        }
+      ]
+    },
+    "rightJamb": {
+      "world": [
+        0.87,
+        1,
+        12.2
+      ],
+      "projection": {
+        "x": 0.962244275361122,
+        "y": 0.3904982040822841,
+        "depth": 1.0235995875662764,
+        "visible": false
+      },
+      "hits": [
+        {
+          "object": "07_Entrance-geometry",
+          "distance": 4.206672928022948,
+          "point": [
+            1.262105412734182,
+            1.0500000190734862,
+            11.699999809265137
+          ]
+        },
+        {
+          "object": "07_Entrance-geometry",
+          "distance": 4.684703970200459,
+          "point": [
+            0.9680264653657611,
+            1.0125000190734863,
+            12.074999809265137
+          ]
+        }
+      ]
+    },
+    "lintel": {
+      "world": [
+        0,
+        1.68,
+        12.17
+      ],
+      "projection": {
+        "x": 1.1035023510941813,
+        "y": 0.5864709620831288,
+        "depth": 1.023605513037641,
+        "visible": false
+      },
+      "hits": [
+        {
+          "object": "07_Entrance-geometry",
+          "distance": 5.253643838356018,
+          "point": [
+            0.10212232756677908,
+            1.6720424160337575,
+            12.069999694824219
+          ]
+        }
+      ]
+    },
+    "stageBack": {
+      "world": [
+        0,
+        1.68,
+        9.555
+      ],
+      "projection": {
+        "x": 2.376142592701868,
+        "y": 0.7626695848213483,
+        "depth": 1.0706864919753225,
+        "visible": false
+      },
+      "hits": [
+        {
+          "object": "06_Stage-geometry",
+          "distance": 2.5492855508533916,
+          "point": [
+            1.4149999618530273,
+            1.569740262712751,
+            9.130500011444092
+          ]
+        },
+        {
+          "object": "06_Stage-geometry",
+          "distance": 3.5072296478274025,
+          "point": [
+            0.500000890096028,
+            1.641038891680829,
+            9.404999732971191
+          ]
+        }
+      ]
+    },
+    "rightPassage": {
+      "world": [
+        2,
+        1.38,
+        9.5
+      ],
+      "projection": {
+        "x": 1.4860649251286815,
+        "y": 0.5,
+        "depth": 1.078037431411358,
+        "visible": false
+      },
+      "hits": []
+    }
+  },
+  "light": {
+    "exposure": 0.98,
+    "toneMapping": "ACESFilmic",
+    "colorSpace": "srgb",
+    "sun": {
+      "position": [
+        -16,
+        22,
+        16
+      ],
+      "intensity": 4.5,
+      "color": "ffd4a1"
+    },
+    "fill": {
+      "intensity": 0.72,
+      "color": "a5b9ce"
+    },
+    "existingGalleryBounce": {
+      "position": [
+        0.7000000000000002,
+        2,
+        11
+      ],
+      "intensity": 8,
+      "color": "f5c48d"
+    },
+    "fog": {
+      "color": "647b89",
+      "density": 0.01
+    },
+    "post": {
+      "enabled": true,
+      "error": null,
+      "passes": 2,
+      "size": [
+        1920,
+        1080
+      ],
+      "aoSamples": 12,
+      "stats": {
+        "frame": 32,
+        "calls": 42,
+        "triangles": 162484,
+        "points": 0,
+        "lines": 0
+      },
+      "colorDepthBytes": 24883200,
+      "multisampleBytes": 49766400,
+      "targetBytes": 74649600
+    }
+  },
+  "visibility": {
+    "gateBehindCamera": true,
+    "stageBackVisible": false,
+    "matchingInteriorAsset": true,
+    "readyForFinalComposite": false,
+    "reason": "几何配准的程序材质候选；动态视觉须经用户审图"
+  },
+  "removedTriangles": 320
+}

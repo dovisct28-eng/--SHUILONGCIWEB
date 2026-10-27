@@ -1,0 +1,41 @@
+{
+  "files": [
+    {
+      "file": "01-gate-interior.png",
+      "bytes": 1166295
+    },
+    {
+      "file": "02-stage-turn.png",
+      "bytes": 1132440
+    },
+    {
+      "file": "03-corridor-3d.png",
+      "bytes": 1275232
+    },
+    {
+      "file": "04-corridor-depth.png",
+      "bytes": 36913
+    },
+    {
+      "file": "05-corridor-enhanced.png",
+      "bytes": 1311843
+    },
+    {
+      "file": "06-hybrid-50.png",
+      "bytes": 1263438
+    },
+    {
+      "file": "07-hybrid-final.png",
+      "bytes": 1467417
+    },
+    {
+      "file": "08-comparison.webp",
+      "bytes": 45948
+    },
+    {
+      "file": "09-transition.webm",
+      "bytes": 2010106
+    }
+  ],
+  "totalBytes": 9709632
+}

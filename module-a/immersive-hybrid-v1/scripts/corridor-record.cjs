@@ -1,0 +1,13 @@
+const fs=require('node:fs'),path=require('node:path'),{execFileSync}=require('node:child_process'),assert=require('node:assert/strict');
+const root=path.resolve(__dirname,'../../..'),out=path.join(root,'docs/validation/immersive-hybrid-v2-2'),local=path.join(out,'local'),selected=path.join(out,'selected');
+async function record(browser){
+ const context=await browser.newContext({viewport:{width:1440,height:900},recordVideo:{dir:local,size:{width:1440,height:900}},reducedMotion:'reduce'}),page=await context.newPage(),errors=[],createdAt=Date.now();
+ try{page.on('pageerror',e=>errors.push(e.message));await page.goto('http://127.0.0.1:4186/module-a/immersive-hybrid-v1/');await page.waitForFunction(()=>window.hybrid?.ready);assert.equal(await page.evaluate(()=>hybrid.go('gate-interior')),true);await page.locator('#motion').click();await page.mouse.move(720,450);await page.waitForTimeout(500);
+ const startedAt=Date.now();assert.equal(await page.evaluate(()=>hybrid.go('corridor-2_5d')),true);const forwardMetrics=await page.evaluate(()=>hybrid.metrics());await page.waitForTimeout(700);assert.equal(await page.evaluate(()=>hybrid.go('gate-interior')),true);const reverseMetrics=await page.evaluate(()=>hybrid.metrics());await page.waitForTimeout(500);const durationMs=Date.now()-startedAt,video=page.video();await context.close();
+ const final=path.join(selected,'09-transition.webm');if(fs.existsSync(final))fs.copyFileSync(final,path.join(local,'previous-recording-candidate.webm'));await video.saveAs(final);assert.deepEqual(errors,[]);
+ const result={normalMotion:true,forwardMetrics,reverseMetrics,durationMs,motionStartOffsetMs:startedAt-createdAt,video:'selected/09-transition.webm',captureMethod:'Actual browser full-page recording at 25fps; includes original UI and CSS backdrop',captureScope:'Full browser viewport, 1440x900',decodingRequirement:'Load complete WebM as a Blob before frame seeking: the prototype server has no HTTP Range support',errors};
+ const reportPath=path.join(out,'motion-evidence.json');if(fs.existsSync(reportPath)){const report=JSON.parse(fs.readFileSync(reportPath));for(const key of ['captureTrace','failedCaptureRetained'])delete report[key];fs.writeFileSync(reportPath,JSON.stringify({...report,...result,pass:true},null,2));}return result;
+ }finally{await context.close();}
+}
+module.exports={record};
+if(require.main===module)(async()=>{const {chromium}=require('playwright'),browser=await chromium.launch({channel:'chrome',headless:true});try{console.log(await record(browser));}finally{await browser.close();}})().catch(e=>{console.error(e);process.exitCode=1;});

@@ -1,4 +1,12 @@
-# 水龙祠原境数字展厅 · V2.1 入口与保留的 V1 验证
+# 水龙祠原境数字展厅 · V2.2 廊道合成候选与保留的 V1 验证
+
+2026-10-26 V2.2：默认入口保留 V2.1 五个停靠点，并延伸「戏台右侧→右廊→廊道行进→右廊停靠」。沿用同一建筑、Renderer、Scene、Camera 和后期，原柱梁承担遮挡，原墙地表面承载浅层纹理投影。S04 空白墙面局部作为材料样本，其余 V1 整室图仅供参考；没有整屏图片接替。正反向统一轨道，预载失败保留三维，重试先回到融合前再重新进入。
+
+地址仍为 `http://127.0.0.1:4186/module-a/immersive-hybrid-v1/`。调试提供原始3D/Hybrid、固定交接机位、手动融合、近景遮挡和参数导出。源配置在 `src/corridor-path.mjs`、`src/corridor-layers.mjs`；新素材及来源在 `assets/hybrid-v2-2/`。本轮为技术可审查候选，最终视觉采用待用户审图；第一幅停靠和展开未开发。
+
+复验：`node --test module-a/immersive-hybrid-v1/tests/*.test.mjs`，再运行 `scripts/corridor-build-check.cjs`、`scripts/corridor-browser-check.cjs`、`scripts/corridor-evidence.cjs`（后两者需要本地服务和下文 NODE_PATH）。完整结果和精选动态证据见 [V2.2 验收](../../docs/validation/immersive-hybrid-v2-2/README.md)。本轮在功能分支开发，不合并 master。
+
+以下 V2.1 与 V1 说明保留供追溯；其中“V2.2 尚未实施”描述的是当时版本。
 
 2026-10-26：默认入口已切换到 V2.1 原场景复用与连续三维入门。复用原 A01 运行实例、地形、植被、材质、灯光、后期及原远山合成；五停靠点仅覆盖建筑总览→门内停靠。配置在 `src/entry-path.mjs`，同轨道前进/返回、滚轮消耗、减少动态、调试重播与交接导出在 `src/entry-main.mjs`。唯一共享入口改动受 `gallery-entry` URL 参数隔离，正式 A01–A08 不启用。
 

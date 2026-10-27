@@ -1,0 +1,45 @@
+{
+  "version": "2.2-procedural-candidate-1",
+  "method": "original-surface planar texture projection; original light and depth",
+  "textures": [
+    {
+      "id": "plaster",
+      "url": "plaster-modulation-v1.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 119234,
+      "source": "V1 S04 blank plaster swatch [550,400,550,220], mean-neutralized and combined with procedural modulation; design expression only",
+      "seed": 17
+    },
+    {
+      "id": "paving",
+      "url": "paving-modulation-v1.webp",
+      "width": 1024,
+      "height": 1024,
+      "bytes": 97214,
+      "source": "Deterministic procedural material modulation; neutral 0.5; not a site sample",
+      "seed": 31
+    }
+  ],
+  "mural": {
+    "independent": true,
+    "id": "mural-01",
+    "position": [
+      4.865,
+      1.55,
+      4.8
+    ],
+    "width": 3.65,
+    "height": 1.2547,
+    "rotationY": -1.5707963267948966
+  },
+  "limits": {
+    "railOnly": true,
+    "forwardRange": [
+      7.65,
+      9.7
+    ],
+    "eyeHeight": 1.38
+  },
+  "historicalClaim": false
+}

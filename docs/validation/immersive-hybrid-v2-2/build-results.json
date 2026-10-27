@@ -1,0 +1,201 @@
+{
+  "pass": true,
+  "base": "4f80826592ffeeb2fa02243ff72c14c5917f3cad",
+  "syntax": true,
+  "protection": [
+    {
+      "file": "shuilong-temple/shuilong-temple.glb",
+      "sha256": "fbbfce1c0bfbf8a09c33ed65a6bb1f60589b6c70300841fa0283c2a4498ae047",
+      "unchanged": true
+    },
+    {
+      "file": "shuilong-temple/model-source.js",
+      "sha256": "03cd2eb6cfd21dbb1fd7dbde7b4db3c3baaad364414badcbfe9a1433cfd4ef06",
+      "unchanged": true
+    },
+    {
+      "file": "shuilong-temple/mural-locations.json",
+      "sha256": "4e313a04bf4cf5f8da9fdd0cf0637bb18ad4f18a0b23a75cd30de16274e6e84e",
+      "unchanged": true
+    },
+    {
+      "file": "shuilong-temple/model-info.json",
+      "sha256": "d66b5fcca166089e3fd5c2900295e9d38cfa2c991d5fdd91970b1c47f36a1e9b",
+      "unchanged": true
+    },
+    {
+      "file": "shuilong-temple/水龙祠-交互预览.html",
+      "sha256": "99d608a6644771aabceb6c985680ea67548940b02729fda8a85ab76f8591cd63",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/a01/app.mjs",
+      "sha256": "822c2633bbeaf94af46e8c6f22b39a3ccdad3bd509deeb220d40310331734ca9",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/a01/index.html",
+      "sha256": "2644c40ae7066315b54a0b2553338e7457b6c80e37d3b623e42f994c319ab0a7",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/a01/styles.css",
+      "sha256": "6fc11f26ea75d849970b0188f44dc5d627a5f70ac2951dce66ab4aa35e42f0bc",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/src/entry-path.mjs",
+      "sha256": "32ef05f9e5bdf14445d6d95100279c2b926e1021e1c83d5077497cbe17197b9b",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/src/main.mjs",
+      "sha256": "f5668f9a872a79dcfdbffed89a5c8da34674f2b061300ad9e0bdcfc3dea19fa8",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/src/model-view.mjs",
+      "sha256": "55b786a5cfa35c5e08967e63720fa9f5224d7563eedd96491ae0495ac9b46fe0",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/src/parallax-scene.mjs",
+      "sha256": "e5a6b8390729bc73d1886d017401637a0f39d3e64effe54d66406a4c5ab6374a",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/v1.html",
+      "sha256": "3904ba0dc8fb4aaef4ff0569d699cc8e00a9c81bbeac422d33f6d3ed386d9a74",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/scene-manifest.json",
+      "sha256": "a249264fe655cdfac052b27e3a56f7b46faadc898fa6e7e85d73fb4822671e7e",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/generated/S01-gate-exterior.webp",
+      "sha256": "955765b0e56c46c8eb8609236dd3c97ce2c82ae5f481d6ac9e5ecb518e98e9f5",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/generated/S02-gate-interior.webp",
+      "sha256": "1eb05f67c5845edfd1bf28be7f50828dd6de699f30e06f13ff2660dbf242e2b2",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/generated/S03-gallery-approach.webp",
+      "sha256": "d39a610f409c6b949d70290d7652e1df0671f55fe8fa717d7da9085dbe999ffa",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/generated/S04-mural01-background.webp",
+      "sha256": "4fdf353dae4b873bd1c3ef36e0535c6a1c02275fc55a37e079714cbb5307ad32",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/generated/originals/S01-gate-exterior-v1.png",
+      "sha256": "874dd21cee4c6f2ca0ec43c09812169ab5967521036766c97ac15d8824c02eb1",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/generated/originals/S02-gate-interior-v1.png",
+      "sha256": "c02f124291e4634de0f91a49a3a17d2ba69f8e85e8950a6d14c2e4dd65a1ea07",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/generated/originals/S03-gallery-approach-v1.png",
+      "sha256": "78494a530b4d3f4d1b453a998fa6e928cf025436806f8495f923082d5396259d",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/generated/originals/S04-mural01-background-v1.png",
+      "sha256": "c633e33c30860711cbd3c0d487996fada1e73e21f8d5bc1d2b31323714cfa53e",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/murals/mural-01-display.webp",
+      "sha256": "afc5a15eebec4e430151795f73c1cb958496ca6c629552d23be62588766716ef",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/references/R01-overview.png",
+      "sha256": "c9e88b928feb28551d086be25f320ad2830a467230921f4f5eda93686e18f1bb",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/references/R02-gate-approach.png",
+      "sha256": "4ae7950744f621af4e8c19af9f9dcd940c29f60e7b20c5896ed72dc33a0e6c40",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/references/R03-gate-exterior.png",
+      "sha256": "f523bd707bce76c05ad34fd7786443fb13aa932cdc44ccca03addef7b1904e6d",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/references/R04-gate-interior.png",
+      "sha256": "952c0adb2e3f7f34a0c68514e18a1e570eaf869423ce88a5a1d9140f55f1f8e2",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/references/R05-right-gallery.png",
+      "sha256": "8986c3053eac850d57cea24775531e8aac1d700e9d6af9cb4bf9b9c0c6657144",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/references/R06-first-mural-stop.png",
+      "sha256": "5c2fb8a40dc04bcac2e2f61c88b39bdcaff5456b52eff83f0f0cdeb48f080300",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/references/local-source-audit.json",
+      "sha256": "995c1f643e04b827baa55082a57541e5f0a4bf9905f5cfbeba456a2c56f7b3d2",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/references/reference-manifest.json",
+      "sha256": "f4efe716e364ac8a7d12bd89a980d904c9974ee4c4f77605cec929ede4fc6753",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/prompts/actual-generation-prompts.json",
+      "sha256": "56bdcd7d8005501990f7b139f75ab94e729f17e18bab3abfedaf1c86dd8ec0ed",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/prompts/generation-review.md",
+      "sha256": "54f7d5f34b894d38a99e27aa94f7ab910702dd0dd47c7e71f959e8f72e6f2196",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/prompts/scene-entrance-exterior.md",
+      "sha256": "edc0aa32a82847d001718d665278c01c2fcd4665b99899eea6d394a16dc3b6c2",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/prompts/scene-entrance-interior.md",
+      "sha256": "b852664faeb85f0d4100efbd7bc092835e4071694b02ea9d295d3b66ebed855f",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/prompts/scene-first-gallery.md",
+      "sha256": "e8fc1ecce15065dfc5628dae09e53357017a64dfdfe50376287faede46128bad",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/prompts/scene-first-stop.md",
+      "sha256": "9dde498cdea15371d2eeec0acd0e1e5dd06fdf22f309362191f985e2f8430af6",
+      "unchanged": true
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/prompts/visual-system.md",
+      "sha256": "6f7ea3f6da282f59a3beea4bbe150ef9db4aaf3158a67bca13997a9868543b31",
+      "unchanged": true
+    }
+  ],
+  "archive": {
+    "module-a-lofi-final-v1.0^{}": "48f272497e86e4549c5bcd0dee275ff347171a3f",
+    "archive/module-a-lofi": "48f272497e86e4549c5bcd0dee275ff347171a3f"
+  }
+}

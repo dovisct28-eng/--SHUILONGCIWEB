@@ -1,0 +1,65 @@
+{
+  "pass": true,
+  "gpu": {
+    "renderer": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+    "version": "WebGL 2.0 (OpenGL ES 3.0 Chromium)"
+  },
+  "normalMotion": true,
+  "forwardMetrics": {
+    "samples": 1109,
+    "p50": 4.199999999998909,
+    "p95": 4.300000000000182,
+    "max": 383.2000000000007
+  },
+  "reverseMetrics": {
+    "samples": 1194,
+    "p50": 4.199999999998909,
+    "p95": 4.300000000001091,
+    "max": 33.399999999999636
+  },
+  "durationMs": 11231,
+  "video": "selected/09-transition.webm",
+  "maxDepthDifference": 0.000010728836059570312,
+  "depthTolerance": 0.0001,
+  "adjacentFrames": 61,
+  "door": {
+    "closed": [
+      {
+        "object": "07_Entrance-geometry",
+        "distance": 0.4650001525878906,
+        "point": [
+          0,
+          1.38,
+          12.03499984741211
+        ]
+      }
+    ],
+    "open": [],
+    "lintel": [
+      {
+        "object": "07_Entrance-geometry",
+        "distance": 0.4299995422363274,
+        "point": [
+          0,
+          1.7,
+          12.270000457763672
+        ]
+      },
+      {
+        "object": "07_Entrance-geometry",
+        "distance": 0.5800001144409173,
+        "point": [
+          0,
+          1.7,
+          12.119999885559082
+        ]
+      }
+    ]
+  },
+  "errors": [],
+  "depthEncodingRechecked": true,
+  "captureMethod": "Actual browser full-page recording at 25fps; includes original UI and CSS backdrop",
+  "captureScope": "Full browser viewport, 1440x900",
+  "motionStartOffsetMs": 6445,
+  "decodingRequirement": "Load complete WebM as a Blob before frame seeking: the prototype server has no HTTP Range support"
+}

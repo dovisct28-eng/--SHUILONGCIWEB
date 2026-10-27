@@ -1,0 +1,60 @@
+{
+  "pass": true,
+  "duration": 18.2,
+  "width": 1440,
+  "height": 900,
+  "file": "selected/09-transition.webm",
+  "sha256": "c0c8df3f8f7b6f335ed7f9d19e47dc08a305158ac03b34ffee4b45ea9eecb51b",
+  "decoder": "Chrome: full file fetched into a Blob, then seek and play 180ms before drawImage; HTTP Range not required",
+  "frames": [
+    {
+      "seekTime": 0.5,
+      "actualTime": 0.6689,
+      "sha256": "f180ba6d8454378bb11c118036919edc9656b19e3e44c103fc13886cb665b93d"
+    },
+    {
+      "seekTime": 6.15,
+      "actualTime": 6.3366,
+      "sha256": "a1bb2ee171ed9372fafe8d3b1ad47fcb41a2042899ce3e97f6cace2f062827d5"
+    },
+    {
+      "seekTime": 7.95,
+      "actualTime": 8.1342,
+      "sha256": "33b73e2f7cac6e4202e8881ff201e90435646af768a75293f77e26c28720d70c"
+    },
+    {
+      "seekTime": 9.45,
+      "actualTime": 9.6298,
+      "sha256": "2e6160d974b1bf134b6a8a544df243a85c3d5562d400bc5aaee7c7a877548141"
+    },
+    {
+      "seekTime": 11.75,
+      "actualTime": 11.9355,
+      "sha256": "70e8a0e0579a3d7f5038f3c4b055cf44654693c2a026a18d6dc9f510f1efeff0"
+    },
+    {
+      "seekTime": 13.45,
+      "actualTime": 13.6275,
+      "sha256": "30a038b6076f32c12ac23d9ba33c235eace098758d3e1e0c65dada16d81f4d8d"
+    },
+    {
+      "seekTime": 15.45,
+      "actualTime": 15.6341,
+      "sha256": "3152d299d7a163fe646f349e9077ea7f82c327993c684e362d725171f683d486"
+    },
+    {
+      "seekTime": 17.34,
+      "actualTime": 17.5326,
+      "sha256": "387e169baa6fd0f4accd21a0ec41603df6a944ad4a9fed816b7029fa9ea9b718"
+    }
+  ],
+  "successiveMeanChannelDifferences": [
+    38.490180555555554,
+    31.03467361111111,
+    23.4089375,
+    15.447708333333333,
+    19.48065972222222,
+    29.56542824074074,
+    18.5008125
+  ]
+}

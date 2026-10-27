@@ -1,0 +1,72 @@
+const {chromium}=require('playwright'),sharp=require('sharp'),fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),{execFileSync}=require('node:child_process');
+const root=path.resolve(__dirname,'../../..'),out=path.join(root,'docs/validation/immersive-hybrid-v2-2'),local=path.join(out,'local'),selected=path.join(out,'selected'),assets=path.join(root,'module-a/immersive-hybrid-v1/assets/hybrid-v2-2');
+for(const d of [out,local,selected])fs.mkdirSync(d,{recursive:true});
+const url='http://127.0.0.1:4186/module-a/immersive-hybrid-v1/';
+const regressionOnly=process.argv.includes('--regression-only');
+const report=regressionOnly?JSON.parse(fs.readFileSync(path.join(out,'browser-results.json'))):{pass:false,viewports:[],checks:[],errors:[],warnings:[],regression:[],limitations:['Headless Chrome on this machine only','Texture memory is an uncompressed estimate; not actual VRAM','Procedural material projection candidate; final visual adoption requires user review']};
+report.pass=false;report.regression=[];
+function watch(p){p.on('pageerror',e=>report.errors.push(e.message));p.on('console',m=>{if(m.type()==='error')report.errors.push(m.text());if(m.type()==='warning'&&/WebGL|THREE|GL_/.test(m.text()))report.warnings.push(m.text());});}
+const settled=async p=>{await p.waitForFunction(()=>!hybrid.busy);await p.evaluate(()=>new Promise(r=>requestAnimationFrame(()=>requestAnimationFrame(r))));};
+const ready=async p=>{await p.goto(url);await p.waitForFunction(()=>window.hybrid?.ready,{timeout:60000});await p.evaluate(()=>document.fonts.ready);};
+const go=async(p,s)=>{assert.equal(await p.evaluate(s=>hybrid.go(s),s),true);await settled(p);};
+async function diff(a,b){const x=await sharp(a).removeAlpha().raw().toBuffer(),y=await sharp(b).removeAlpha().raw().toBuffer();assert.equal(x.length,y.length);let sum=0,max=0,changed=0;for(let i=0;i<x.length;i++){const d=Math.abs(x[i]-y[i]);sum+=d;max=Math.max(max,d);if(d>2)changed++;}return {mean:sum/x.length,max,changedChannels:changed};}
+async function snap(p,name,select=false){const f=path.join(local,name+'.png');const data=await p.screenshot({path:f});if(select)fs.copyFileSync(f,path.join(selected,name+'.png'));return data;}
+(async()=>{const browser=await chromium.launch({channel:'chrome',headless:true});try{
+ if(!regressionOnly){
+ for(const [width,height]of [[1920,1080],[1440,900],[1366,768]]){
+  const p=await browser.newPage({viewport:{width,height},reducedMotion:'reduce'});watch(p);const requests=[];p.on('response',r=>{if(/\.glb$|hybrid-v2-2\//.test(r.url()))requests.push({url:r.url(),status:r.status()});});const began=Date.now();await ready(p);await p.waitForFunction(()=>hybrid.model.hybrid.status==='ready');
+  const uuid=await p.evaluate(()=>hybrid.model.stats().rendererUUID),rows=[];const stops=await p.evaluate(()=>hybrid.stops);
+  for(const [i,s]of stops.entries()){
+   if(i)await go(p,s.id);await snap(p,`${s.id}-${width}x${height}`);
+   const state=await p.evaluate(()=>({pose:hybrid.model.pose,stats:hybrid.model.stats(),blend:hybrid.model.hybrid.state()}));rows.push({state:s.id,...state});
+   assert.equal(state.stats.rendererUUID,uuid);assert.equal(state.stats.renderers,1);assert.equal(state.stats.canvases,1);assert.equal(await p.locator('canvas').count(),0);assert.ok(!state.stats.post?.error);
+   assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
+   if(s.time<=1.6)assert.ok(state.blend.weights.mid<1e-20);
+  }
+  assert.equal(rows.at(-1).blend.weights.mid,1);assert.equal(rows.at(-1).blend.weights.far,1);assert.ok(rows.at(-1).blend.effective.length>=3);
+  const handoff=await p.evaluate(()=>hybrid.model.handoff());fs.writeFileSync(path.join(out,`handoff-${width}x${height}.json`),JSON.stringify(handoff,null,2));
+  const screen=await p.screenshot();await p.evaluate(()=>hybrid.model.hybrid.setMode('original'));await settled(p);const original=await p.screenshot();const delta=await diff(screen,original);assert.ok(delta.changedChannels>1000,'actual enhancement must change rendered pixels');assert.ok(delta.mean<8,'restrained material blend');await p.evaluate(()=>hybrid.model.hybrid.setMode('hybrid'));await settled(p);
+  // Depth is unchanged by planar skins, including a different aspect ratio.
+  if(width===1920){
+   const clearance=await p.evaluate(()=>{const collisions=[],r=.065;for(let i=1;i<=3000;i++){const a=hybrid.sample(1+(i-1)/3000),b=hybrid.sample(1+i/3000);for(const d of [[0,0,0],[r,0,0],[-r,0,0],[0,r,0],[0,-r,0]]){const x=a.position.map((n,j)=>n+d[j]),y=b.position.map((n,j)=>n+d[j]);const hits=[...hybrid.model.intersections(x,y),...hybrid.model.intersections(y,x)];if(hits.length)collisions.push({time:1+i/3000,offset:d,hits});}}return {samples:3000,sweeps:15000,radius:r,collisions};});
+   fs.writeFileSync(path.join(out,'geometry-results.json'),JSON.stringify(clearance,null,2));assert.deepEqual(clearance.collisions,[]);
+  }
+  const before=await p.evaluate(()=>hybrid.model.stats().memory);for(let i=0;i<5;i++){await go(p,'gate-interior');await go(p,'corridor-2_5d');}const after=await p.evaluate(()=>hybrid.model.stats().memory);assert.deepEqual(after,before);
+  await go(p,'overview');assert.deepEqual(await p.evaluate(()=>hybrid.model.pose.position),rows[0].pose.position);const renders=await p.evaluate(()=>hybrid.model.stats().renderCount);await p.waitForTimeout(350);assert.equal(await p.evaluate(()=>hybrid.model.stats().renderCount),renders);
+  assert.equal(requests.filter(r=>r.url.endsWith('.glb')).length,1);assert.equal(requests.filter(r=>r.url.endsWith('.webp')).length,2);
+  report.viewports.push({width,height,pass:true,elapsedMs:Date.now()-began,rows,enhancementDifference:delta,requests,memory:{before,after,cycles:5}});await p.close();console.log('viewport PASS',width,height);
+ }
+ // Normal-speed motion, wheel consumption, buttons, resize and live debug.
+ const p=await browser.newPage({viewport:{width:1440,height:900}});watch(p);await ready(p);await go(p,'gate-interior');
+ await p.mouse.move(720,450);await p.waitForTimeout(350);await p.mouse.wheel(0,100);await p.waitForFunction(()=>hybrid.busy);for(let i=0;i<8;i++){await p.mouse.wheel(0,200);await p.waitForTimeout(35);}assert.equal(await p.evaluate(()=>hybrid.go('corridor-2_5d')),false);await settled(p);assert.equal(await p.evaluate(()=>hybrid.state),'stage-turn');
+ report.performance=[];for(const s of ['corridor-3d','corridor-hybrid','corridor-2_5d']){await go(p,s);report.performance.push({state:s,metrics:await p.evaluate(()=>hybrid.metrics()),stats:await p.evaluate(()=>hybrid.model.stats())});}
+ await p.setViewportSize({width:1366,height:768});await p.waitForTimeout(200);assert.ok(Math.abs(await p.evaluate(()=>hybrid.model.camera.aspect)-1366/768)<1e-9);assert.equal(await p.evaluate(()=>hybrid.progress),2);
+ await p.locator('#motion').click();await p.locator('#previous').click();await settled(p);assert.equal(await p.evaluate(()=>hybrid.state),'corridor-hybrid');await p.locator('#next').click();await settled(p);assert.equal(await p.evaluate(()=>hybrid.state),'corridor-2_5d');
+  await p.mouse.move(700,400);await p.waitForTimeout(350);await p.mouse.wheel(0,-100);await p.waitForFunction(()=>hybrid.busy);await settled(p);assert.equal(await p.evaluate(()=>hybrid.state),'corridor-hybrid');
+ await p.locator('#debug-toggle').click();await p.locator('#render-mode').selectOption('original');assert.equal(await p.evaluate(()=>hybrid.model.hybrid.state().mode),'original');await p.locator('#render-mode').selectOption('hybrid');await p.locator('#blend').fill('0.5');assert.equal(await p.evaluate(()=>hybrid.model.hybrid.state().manualBlend),.5);await p.locator('#blend-auto').click();assert.equal(await p.evaluate(()=>hybrid.model.hybrid.state().manualBlend),null);await p.locator('#show-depth').click();assert.equal(await p.locator('#depth-overlay').isVisible(),true);await p.locator('#show-depth').click();await p.close();report.checks.push('normal motion, wheel forward/reverse, rapid input, previous/next, resize, reduced motion and debug modes');
+ // Delayed images never flash in while waiting or after a failed attempt.
+ const delayed=await browser.newPage({viewport:{width:1366,height:768},reducedMotion:'reduce'});watch(delayed);let release;const gate=new Promise(r=>release=r);await delayed.route('**/hybrid-v2-2/*.webp',async r=>{await gate;await r.continue();});await ready(delayed);const move=delayed.evaluate(()=>hybrid.go('corridor-2_5d'));await delayed.waitForTimeout(350);assert.equal(await delayed.evaluate(()=>hybrid.progress),0);assert.equal(await delayed.evaluate(()=>hybrid.model.hybrid.state().weights.mid),0);release();await move;await settled(delayed);assert.equal(await delayed.evaluate(()=>hybrid.progress),2);await delayed.close();report.checks.push('delayed texture decode gates fusion, retains original position and model');
+ const fail=await browser.newPage({viewport:{width:1440,height:900},reducedMotion:'reduce'});const expectedErrors=[];fail.on('console',m=>{if(m.type()==='error')expectedErrors.push(m.text());});fail.on('pageerror',e=>report.errors.push(e.message));const pattern='**/hybrid-v2-2/*.webp*';await fail.route(pattern,r=>r.fulfill({status:503,body:'offline texture'}));await ready(fail);await go(fail,'corridor-2_5d');assert.equal(await fail.evaluate(()=>hybrid.model.hybrid.status),'failed');assert.equal(await fail.evaluate(()=>hybrid.model.hybrid.state().weights.mid),0);assert.equal(await fail.locator('#retry-enhancement').isVisible(),true);await snap(fail,'texture-failure');await fail.unroute(pattern);assert.equal(await fail.evaluate(()=>hybrid.retryEnhancement()),true);await settled(fail);assert.equal(await fail.evaluate(()=>hybrid.state),'corridor-2_5d');assert.equal(await fail.evaluate(()=>hybrid.model.hybrid.state().weights.mid),1);report.expectedFailureConsole=expectedErrors;await fail.close();report.checks.push('503 texture failure remains usable 3D; retry returns to corridor-3d before blending again');
+ const v1=await browser.newPage({viewport:{width:1366,height:768},reducedMotion:'reduce'});watch(v1);await v1.goto(url+'v1.html');await v1.waitForFunction(()=>window.hybrid?.ready);await v1.evaluate(()=>hybrid.go('gallery-approach'));await v1.evaluate(()=>hybrid.go('mural-01-stop'));await v1.evaluate(()=>hybrid.go('mural-01-detail'));assert.equal(await v1.locator('dialog').evaluate(e=>e.open),true);await v1.keyboard.press('Escape');await v1.waitForFunction(()=>hybrid.state==='mural-01-stop');await v1.close();report.checks.push('V1 retained and real mural detail still accessible');
+ }
+ // Production comparison with the fetched V2.1 source, never enabling gallery-entry.
+ const baseline=execFileSync('git',['show','4f80826:shuilong-temple/水龙祠-交互预览.html'],{cwd:root,maxBuffer:20e6});
+ const old=await browser.newPage({viewport:{width:1440,height:900},reducedMotion:'reduce'}),current=await browser.newPage({viewport:{width:1440,height:900},reducedMotion:'reduce'});
+ await old.route(u=>decodeURIComponent(u.pathname).endsWith('水龙祠-交互预览.html'),r=>r.fulfill({contentType:'text/html; charset=utf-8',body:baseline}));
+ // Routing disables Chromium's HTTP cache. Apply the same cache policy to both
+ // pages rather than comparing an intercepted baseline to a cached live page.
+ await current.route('**/*',r=>r.continue());
+ for(const page of [old,current]){page.on('pageerror',e=>report.errors.push(e.message));await page.goto('http://127.0.0.1:4186/module-a/a01/');await page.waitForFunction(()=>document.querySelector('iframe').contentWindow.modelReady);}
+ for(const [chapter,screen]of [['A01',5.7],['A02',9.65],['A03',11.6],['A04',14.5],['A05',20],['A06',27],['A07',34],['A08',41.7]]){
+  const imgs=[];for(const [i,page]of [old,current].entries()){await page.bringToFront();await page.evaluate(n=>scrollTo(0,n*innerHeight),screen);await page.waitForTimeout(1200);await page.evaluate(async()=>{await document.fonts.ready;await document.querySelector('iframe').contentDocument.fonts.ready;await Promise.all([...document.images].map(i=>i.decode().catch(()=>{})));dispatchEvent(new Event('resize'));});await page.waitForTimeout(800);assert.equal(await page.evaluate(()=>Boolean(document.querySelector('iframe').contentWindow.shuilongTemple.entry)),false);let image=await page.screenshot();for(let attempt=0;attempt<4;attempt++){await page.waitForTimeout(300);const next=await page.screenshot();const d=await diff(image,next);image=next;if(d.mean<.01)break;}fs.writeFileSync(path.join(local,`formal-${chapter}-${i}.png`),image);imgs.push(image);}
+  const d=await diff(...imgs);
+  const layouts=[];for(const page of [old,current])layouts.push(await page.evaluate(()=>({screen:scrollY/innerHeight,phase:document.body.dataset.phase,images:[...document.querySelectorAll('.mural-guide__image')].map(e=>({src:e.currentSrc,style:e.getAttribute('style'),width:e.naturalWidth,height:e.naturalHeight,hidden:e.closest('section').hidden})),headings:[...document.querySelectorAll('h1,h2')].map(e=>({text:e.textContent,rect:{x:e.getBoundingClientRect().x,y:e.getBoundingClientRect().y,width:e.getBoundingClientRect().width,height:e.getBoundingClientRect().height}}))})));
+  assert.deepEqual(layouts[0],layouts[1],chapter+' semantic/layout regression');
+  // Chrome can rasterize the same downscaled 2880px mural differently between
+  // contexts. Keep raw differences, and compare low-frequency structure with
+  // a 2px Gaussian only after proving source, text and exact layout equality.
+  const structural=await diff(...await Promise.all(imgs.map(img=>sharp(img).blur(2).png().toBuffer())));
+  assert.ok(structural.mean<.3,chapter+' structural '+JSON.stringify(structural));report.regression.push({chapter,difference:d,structuralDifference:structural,exactLayoutAndSource:true,pixelIdentical:d.mean===0,rasterVariance:d.mean>=.3});
+ }await old.close();await current.close();
+ assert.deepEqual(report.errors,[]);assert.ok(report.warnings.every(w=>w.includes('X3595')),'unexpected shader warning');report.preExistingWarningEvidence='docs/validation/immersive-hybrid-v2-1/browser-results.json also records ANGLE X3595';report.pass=true;
+}finally{fs.writeFileSync(path.join(out,'browser-results.json'),JSON.stringify(report,null,2));await browser.close();}console.log(JSON.stringify({pass:report.pass,checks:report.checks,performance:report.performance?.map(r=>({state:r.state,metrics:r.metrics})),errors:report.errors,warnings:report.warnings},null,2));})().catch(e=>{console.error(e);process.exitCode=1;});

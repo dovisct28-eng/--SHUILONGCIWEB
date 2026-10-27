@@ -1,0 +1,19 @@
+✔ V2.1 samples and all five docks remain identical (44.3668ms)
+✔ corridor is C1, reversible, eye level and FOV do not jump (41.6089ms)
+✔ one rail clock controls every layer; loading cannot expose enhancement (11.2421ms)
+✔ concurrent input consumed, invalid state rejected, failed move releases lock (1.3925ms)
+✔ rail has exact deterministic stops, reversible sampling and continuous derivatives (16.9681ms)
+✔ gate eye stays inside actual aperture and stops before stage back wall (12.7146ms)
+✔ controller consumes concurrent input, preserves location on failure and unlocks (3.213ms)
+✔ one transition at a time, failure releases lock and retains previous location (2.9005ms)
+✔ projected mural corners preserve original order and texture orientation (1.5728ms)
+✔ camera interpolation is deterministic with exact endpoints (3.4281ms)
+✔ real mural copy is byte-identical and manifest contains exactly four preview scenes (19.0612ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 435.6395

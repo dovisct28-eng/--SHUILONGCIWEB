@@ -1,0 +1,69 @@
+{
+  "width": 1920,
+  "height": 1080,
+  "maxDepth": 60,
+  "encoding": "Float32 LE, top-left row-major, linear positive eye-space -Z, design-model units; 0=background; saturated at maxDepth",
+  "file": "corridor-eye-depth.f32.gz",
+  "compression": "gzip",
+  "camera": {
+    "time": 1.8,
+    "position": [
+      3.85,
+      1.38,
+      8.4
+    ],
+    "target": [
+      4.05,
+      1.38,
+      2.4
+    ],
+    "fov": 48,
+    "quaternion": [
+      0,
+      -0.016659727201332797,
+      0,
+      0.999861217114444
+    ],
+    "projectionMatrix": [
+      1.2633956853211215,
+      0,
+      0,
+      0,
+      0,
+      2.2460367739042155,
+      0,
+      0,
+      0,
+      0,
+      -1.0005001250312577,
+      -1,
+      0,
+      0,
+      -0.09002250562640661,
+      0
+    ],
+    "matrixWorld": [
+      0.9994449069791543,
+      0,
+      0.03331483023263844,
+      0,
+      0,
+      1,
+      0,
+      0,
+      -0.03331483023263844,
+      0,
+      0.9994449069791543,
+      0,
+      3.85,
+      1.38,
+      8.4,
+      1
+    ],
+    "near": 0.045000000000000005,
+    "far": 180,
+    "aspect": 1.7777777777777777
+  },
+  "quantizationMaxError": 0.0000017881394498431355,
+  "background": 0
+}
