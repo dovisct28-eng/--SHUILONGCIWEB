@@ -1,0 +1,11 @@
+{
+  "pass": true,
+  "delayedTextureGatesMotion": true,
+  "debugOpenMetrics": {
+    "samples": 240,
+    "p50": 4.199999999998909,
+    "p95": 4.299999999999272,
+    "max": 8.300000000001091
+  },
+  "errors": []
+}

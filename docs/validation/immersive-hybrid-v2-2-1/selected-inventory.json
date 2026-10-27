@@ -1,0 +1,41 @@
+{
+  "files": [
+    {
+      "file": "selected/01-original-v22.png",
+      "bytes": 1446818
+    },
+    {
+      "file": "selected/02-wall-detail.png",
+      "bytes": 347146
+    },
+    {
+      "file": "selected/03-wood-detail.png",
+      "bytes": 239420
+    },
+    {
+      "file": "selected/04-floor-detail.png",
+      "bytes": 183551
+    },
+    {
+      "file": "selected/05-lighting-before-after.webp",
+      "bytes": 84012
+    },
+    {
+      "file": "selected/06-hybrid-50.png",
+      "bytes": 1406141
+    },
+    {
+      "file": "selected/06-new-hybrid.png",
+      "bytes": 1494740
+    },
+    {
+      "file": "selected/07-three-way-comparison.webp",
+      "bytes": 119028
+    },
+    {
+      "file": "selected/08-transition.webm",
+      "bytes": 2519090
+    }
+  ],
+  "totalBytes": 7839946
+}

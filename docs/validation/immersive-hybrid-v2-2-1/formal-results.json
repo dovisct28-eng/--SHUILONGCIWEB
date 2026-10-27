@@ -1,0 +1,103 @@
+{
+  "pass": true,
+  "chapters": [
+    {
+      "chapter": "A01",
+      "raw": {
+        "mean": 0.00715380658436214,
+        "max": 2
+      },
+      "structural": {
+        "mean": 0.005876543209876543,
+        "max": 1
+      },
+      "exactLayoutAndSource": true
+    },
+    {
+      "chapter": "A02",
+      "raw": {
+        "mean": 0.00006069958847736625,
+        "max": 2
+      },
+      "structural": {
+        "mean": 0.0000573559670781893,
+        "max": 1
+      },
+      "exactLayoutAndSource": true
+    },
+    {
+      "chapter": "A03",
+      "raw": {
+        "mean": 0.00008384773662551441,
+        "max": 2
+      },
+      "structural": {
+        "mean": 0.00007973251028806585,
+        "max": 1
+      },
+      "exactLayoutAndSource": true
+    },
+    {
+      "chapter": "A04",
+      "raw": {
+        "mean": 0,
+        "max": 0
+      },
+      "structural": {
+        "mean": 0,
+        "max": 0
+      },
+      "exactLayoutAndSource": true
+    },
+    {
+      "chapter": "A05",
+      "raw": {
+        "mean": 0.7164899691358024,
+        "max": 68
+      },
+      "structural": {
+        "mean": 0.1601195987654321,
+        "max": 7
+      },
+      "exactLayoutAndSource": true
+    },
+    {
+      "chapter": "A06",
+      "raw": {
+        "mean": 0,
+        "max": 0
+      },
+      "structural": {
+        "mean": 0,
+        "max": 0
+      },
+      "exactLayoutAndSource": true
+    },
+    {
+      "chapter": "A07",
+      "raw": {
+        "mean": 0,
+        "max": 0
+      },
+      "structural": {
+        "mean": 0,
+        "max": 0
+      },
+      "exactLayoutAndSource": true
+    },
+    {
+      "chapter": "A08",
+      "raw": {
+        "mean": 0,
+        "max": 0
+      },
+      "structural": {
+        "mean": 0,
+        "max": 0
+      },
+      "exactLayoutAndSource": true
+    }
+  ],
+  "errors": [],
+  "scope": "Two live contexts of the unchanged production sources; source equivalence to 933a353 separately verified for 189 protected files"
+}

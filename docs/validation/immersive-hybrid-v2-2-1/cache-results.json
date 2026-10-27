@@ -1,0 +1,103 @@
+{
+  "pass": true,
+  "viewport": [
+    1440,
+    900
+  ],
+  "browser": "156.0.8078.47",
+  "cachePolicy": "No route interception. Same browser context, WebP HTTP cache enabled, no-store GLB still fetched each navigation.",
+  "rows": [
+    {
+      "metrics": {
+        "samples": 241,
+        "p50": 4.19999999999709,
+        "p95": 4.599999999998545,
+        "max": 4.799999999999272
+      },
+      "preparation": [
+        {
+          "id": "geometry",
+          "start": 6406.200000000186,
+          "ms": 1.1999999997206032,
+          "skins": 7
+        },
+        {
+          "id": "visible-program-compile",
+          "start": 6407.800000000279,
+          "ms": 475.5,
+          "programs": 53
+        },
+        {
+          "id": "offscreen-first-draw",
+          "start": 6883.5,
+          "ms": 1640.8999999999069
+        },
+        {
+          "id": "total-prepare",
+          "start": 1304,
+          "ms": 7220.399999999907
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/hybrid-v2-2/plaster-modulation-v1.webp",
+          "transferSize": 119534,
+          "encodedBodySize": 119234,
+          "duration": 5
+        },
+        {
+          "name": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/hybrid-v2-2/paving-modulation-v1.webp",
+          "transferSize": 97514,
+          "encodedBodySize": 97214,
+          "duration": 5.2000000001862645
+        }
+      ]
+    },
+    {
+      "metrics": {
+        "samples": 241,
+        "p50": 4.200000000000728,
+        "p95": 4.5,
+        "max": 4.699999999998909
+      },
+      "preparation": [
+        {
+          "id": "geometry",
+          "start": 1891.9000000003725,
+          "ms": 0.6999999997206032,
+          "skins": 7
+        },
+        {
+          "id": "visible-program-compile",
+          "start": 1893,
+          "ms": 93.20000000018626,
+          "programs": 53
+        },
+        {
+          "id": "offscreen-first-draw",
+          "start": 1986.2000000001863,
+          "ms": 292.20000000018626
+        },
+        {
+          "id": "total-prepare",
+          "start": 754,
+          "ms": 1524.4000000003725
+        }
+      ],
+      "resources": [
+        {
+          "name": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/hybrid-v2-2/plaster-modulation-v1.webp",
+          "transferSize": 0,
+          "encodedBodySize": 119234,
+          "duration": 0.8000000002793968
+        },
+        {
+          "name": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/hybrid-v2-2/paving-modulation-v1.webp",
+          "transferSize": 0,
+          "encodedBodySize": 97214,
+          "duration": 1.1000000000931323
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+const {chromium}=require('playwright'),fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const out=path.resolve(__dirname,'../../../docs/validation/immersive-hybrid-v2-2-1');
+(async()=>{const b=await chromium.launch({channel:'chrome',headless:true});try{const p=await b.newPage({viewport:{width:1440,height:900}}),rows=[];
+ for(let i=0;i<2;i++){await p.goto('http://127.0.0.1:4186/module-a/immersive-hybrid-v1/');await p.waitForFunction(()=>window.hybrid?.ready&&hybrid.model.hybrid.status==='ready',{timeout:60000});await p.evaluate(()=>hybrid.go('corridor-3d'));await p.evaluate(()=>hybrid.go('corridor-hybrid'));
+  rows.push(await p.evaluate(()=>({metrics:hybrid.metrics(),preparation:hybrid.model.hybrid.state().preparation,resources:document.querySelector('iframe').contentWindow.performance.getEntriesByType('resource').filter(x=>/hybrid-v2-2\/.*webp/.test(x.name)).map(x=>({name:x.name,transferSize:x.transferSize,encodedBodySize:x.encodedBodySize,duration:x.duration}))})));}
+ assert.ok(rows[0].resources.every(x=>x.transferSize>0));assert.ok(rows[1].resources.every(x=>x.transferSize===0));fs.writeFileSync(path.join(out,'cache-results.json'),JSON.stringify({pass:true,viewport:[1440,900],browser:b.version(),cachePolicy:'No route interception. Same browser context, WebP HTTP cache enabled, no-store GLB still fetched each navigation.',rows},null,2));console.log('PASS cold and actual HTTP cache hits',rows.map(r=>r.metrics));
+ }finally{await b.close();}})().catch(e=>{console.error(e);process.exitCode=1;});

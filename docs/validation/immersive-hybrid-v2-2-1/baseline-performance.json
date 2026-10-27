@@ -1,0 +1,5702 @@
+{
+  "browser": "156.0.8078.47",
+  "viewport": [
+    1440,
+    900
+  ],
+  "recording": false,
+  "results": [
+    {
+      "version": "v22",
+      "diagnostic": false,
+      "warmCache": false,
+      "cachePolicy": "HTTP cache disabled in both variants; warmCache reload uses browser process GPU/OS caches only",
+      "elapsedMs": 36978,
+      "rows": [
+        {
+          "cycle": 1,
+          "state": "corridor-3d",
+          "start": 16892.399999999907,
+          "end": 19904.30000000028,
+          "metrics": {
+            "samples": 720,
+            "p50": 4.200000000000728,
+            "p95": 4.700000000000728,
+            "max": 8.700000000000728
+          }
+        },
+        {
+          "cycle": 1,
+          "state": "corridor-hybrid",
+          "start": 19908.30000000028,
+          "end": 20912.200000000186,
+          "metrics": {
+            "samples": 175,
+            "p50": 4.200000000000728,
+            "p95": 4.5,
+            "max": 274.59999999999854
+          }
+        },
+        {
+          "cycle": 1,
+          "state": "corridor-2_5d",
+          "start": 20915.899999999907,
+          "end": 21924.100000000093,
+          "metrics": {
+            "samples": 241,
+            "p50": 4.200000000000728,
+            "p95": 4.600000000002183,
+            "max": 5
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-3d",
+          "start": 26932.5,
+          "end": 29939.5,
+          "metrics": {
+            "samples": 721,
+            "p50": 4.19999999999709,
+            "p95": 4.600000000002183,
+            "max": 4.900000000001455
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-hybrid",
+          "start": 29942.100000000093,
+          "end": 30952.5,
+          "metrics": {
+            "samples": 240,
+            "p50": 4.200000000000728,
+            "p95": 4.600000000002183,
+            "max": 8.30000000000291
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-2_5d",
+          "start": 30955.700000000186,
+          "end": 31960.700000000186,
+          "metrics": {
+            "samples": 240,
+            "p50": 4.19999999999709,
+            "p95": 4.700000000000728,
+            "max": 4.899999999997817
+          }
+        }
+      ],
+      "errors": [],
+      "details": {
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "stats": {
+          "rendererUUID": "d5d30c55-4974-4c4a-ad75-67824cc25553",
+          "renderCount": 3677,
+          "renderers": 1,
+          "canvases": 1,
+          "removedTriangles": 320,
+          "doorMeshes": 3,
+          "memory": {
+            "geometries": 45,
+            "textures": 24
+          },
+          "hybrid": {
+            "version": "2.2-procedural-candidate-1",
+            "phase": "gate-interior",
+            "progress": 1,
+            "status": "ready",
+            "error": null,
+            "mode": "hybrid",
+            "manualBlend": null,
+            "weights": {
+              "foreground": 1,
+              "mid": 0,
+              "far": 0
+            },
+            "effective": [
+              {
+                "name": "V22-mid-wall",
+                "weight": 0,
+                "visible": false,
+                "triangles": 14,
+                "source": "02_Enclosure"
+              },
+              {
+                "name": "V22-far-wall",
+                "weight": 0,
+                "visible": false,
+                "triangles": 2,
+                "source": "03_MainHall"
+              },
+              {
+                "name": "V22-mid-floor",
+                "weight": 0,
+                "visible": false,
+                "triangles": 2,
+                "source": "05_EastGallery"
+              }
+            ],
+            "foreground": "original geometry, unchanged",
+            "textures": 2,
+            "textureBytesEstimate": 11184810.666666666,
+            "decode": [
+              {
+                "id": "paving",
+                "loadAndDecodeMs": 24.200000000186265,
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "id": "plaster",
+                "loadAndDecodeMs": 25.5,
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "id": "surface-programs",
+                "compileMs": 1142.5
+              }
+            ],
+            "mural": {
+              "id": "mural-01",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "rotationY": -1.5707963267948966,
+              "width": 3.65,
+              "height": 1.2547,
+              "enabled": false,
+              "source": "independent real mural; future docking"
+            }
+          },
+          "post": {
+            "enabled": true,
+            "error": null,
+            "passes": 2,
+            "size": [
+              1440,
+              900
+            ],
+            "aoSamples": 12,
+            "stats": {
+              "frame": 7354,
+              "calls": 47,
+              "triangles": 169890,
+              "points": 0,
+              "lines": 0
+            },
+            "colorDepthBytes": 15552000,
+            "multisampleBytes": 31104000,
+            "targetBytes": 46656000
+          },
+          "environment": {
+            "weight": 1,
+            "establish": 1,
+            "visibility": 1,
+            "roomWeight": 0,
+            "posterWeight": 0,
+            "layerWeights": {
+              "ground": 1,
+              "foreground": 1,
+              "fog": 1
+            },
+            "trees": 201,
+            "visible": true,
+            "titleRects": [
+              [
+                -2,
+                -2,
+                -2,
+                -2
+              ],
+              [
+                -2,
+                -2,
+                -2,
+                -2
+              ]
+            ],
+            "layers": [
+              "Foreground",
+              "TempleGround",
+              "MidgroundGroves",
+              "DistanceMatte"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          }
+        },
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/hybrid-v2-2/layers.json",
+            "start": 1170.3999999999069,
+            "ms": 5.2999999998137355,
+            "transferSize": 1358
+          },
+          {
+            "name": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/hybrid-v2-2/plaster-modulation-v1.webp",
+            "start": 4874.299999999814,
+            "ms": 8.300000000279397,
+            "transferSize": 119534
+          },
+          {
+            "name": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/hybrid-v2-2/paving-modulation-v1.webp",
+            "start": 4874.5,
+            "ms": 9.399999999906868,
+            "transferSize": 97514
+          }
+        ]
+      }
+    },
+    {
+      "version": "v22",
+      "diagnostic": false,
+      "warmCache": false,
+      "cachePolicy": "HTTP cache disabled in both variants; warmCache reload uses browser process GPU/OS caches only",
+      "elapsedMs": 32942,
+      "rows": [
+        {
+          "cycle": 1,
+          "state": "corridor-3d",
+          "start": 12865.100000000093,
+          "end": 15874.100000000093,
+          "metrics": {
+            "samples": 720,
+            "p50": 4.199999999998909,
+            "p95": 4.699999999998909,
+            "max": 4.900000000001455
+          }
+        },
+        {
+          "cycle": 1,
+          "state": "corridor-hybrid",
+          "start": 15878,
+          "end": 16881,
+          "metrics": {
+            "samples": 223,
+            "p50": 4.199999999998909,
+            "p95": 4.600000000002183,
+            "max": 70.39999999999964
+          }
+        },
+        {
+          "cycle": 1,
+          "state": "corridor-2_5d",
+          "start": 16884.400000000373,
+          "end": 17889.30000000028,
+          "metrics": {
+            "samples": 240,
+            "p50": 4.200000000000728,
+            "p95": 4.700000000000728,
+            "max": 5
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-3d",
+          "start": 22900.700000000186,
+          "end": 25908.30000000028,
+          "metrics": {
+            "samples": 721,
+            "p50": 4.19999999999709,
+            "p95": 4.69999999999709,
+            "max": 5
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-hybrid",
+          "start": 25912.400000000373,
+          "end": 26917.700000000186,
+          "metrics": {
+            "samples": 240,
+            "p50": 4.200000000000728,
+            "p95": 4.5,
+            "max": 5
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-2_5d",
+          "start": 26921.100000000093,
+          "end": 27929.100000000093,
+          "metrics": {
+            "samples": 241,
+            "p50": 4.200000000000728,
+            "p95": 4.600000000002183,
+            "max": 5
+          }
+        }
+      ],
+      "errors": [],
+      "details": {
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "stats": {
+          "rendererUUID": "52aafce5-85ab-43cc-a906-adeea0df7096",
+          "renderCount": 3700,
+          "renderers": 1,
+          "canvases": 1,
+          "removedTriangles": 320,
+          "doorMeshes": 3,
+          "memory": {
+            "geometries": 45,
+            "textures": 24
+          },
+          "hybrid": {
+            "version": "2.2-procedural-candidate-1",
+            "phase": "gate-interior",
+            "progress": 1,
+            "status": "ready",
+            "error": null,
+            "mode": "hybrid",
+            "manualBlend": null,
+            "weights": {
+              "foreground": 1,
+              "mid": 0,
+              "far": 0
+            },
+            "effective": [
+              {
+                "name": "V22-mid-wall",
+                "weight": 0,
+                "visible": false,
+                "triangles": 14,
+                "source": "02_Enclosure"
+              },
+              {
+                "name": "V22-far-wall",
+                "weight": 0,
+                "visible": false,
+                "triangles": 2,
+                "source": "03_MainHall"
+              },
+              {
+                "name": "V22-mid-floor",
+                "weight": 0,
+                "visible": false,
+                "triangles": 2,
+                "source": "05_EastGallery"
+              }
+            ],
+            "foreground": "original geometry, unchanged",
+            "textures": 2,
+            "textureBytesEstimate": 11184810.666666666,
+            "decode": [
+              {
+                "id": "paving",
+                "loadAndDecodeMs": 21.300000000279397,
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "id": "plaster",
+                "loadAndDecodeMs": 22.700000000186265,
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "id": "surface-programs",
+                "compileMs": 243.60000000009313
+              }
+            ],
+            "mural": {
+              "id": "mural-01",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "rotationY": -1.5707963267948966,
+              "width": 3.65,
+              "height": 1.2547,
+              "enabled": false,
+              "source": "independent real mural; future docking"
+            }
+          },
+          "post": {
+            "enabled": true,
+            "error": null,
+            "passes": 2,
+            "size": [
+              1440,
+              900
+            ],
+            "aoSamples": 12,
+            "stats": {
+              "frame": 7400,
+              "calls": 47,
+              "triangles": 169890,
+              "points": 0,
+              "lines": 0
+            },
+            "colorDepthBytes": 15552000,
+            "multisampleBytes": 31104000,
+            "targetBytes": 46656000
+          },
+          "environment": {
+            "weight": 1,
+            "establish": 1,
+            "visibility": 1,
+            "roomWeight": 0,
+            "posterWeight": 0,
+            "layerWeights": {
+              "ground": 1,
+              "foreground": 1,
+              "fog": 1
+            },
+            "trees": 201,
+            "visible": true,
+            "titleRects": [
+              [
+                -2,
+                -2,
+                -2,
+                -2
+              ],
+              [
+                -2,
+                -2,
+                -2,
+                -2
+              ]
+            ],
+            "layers": [
+              "Foreground",
+              "TempleGround",
+              "MidgroundGroves",
+              "DistanceMatte"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          }
+        },
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/hybrid-v2-2/layers.json",
+            "start": 936.5,
+            "ms": 4.899999999906868,
+            "transferSize": 1358
+          },
+          {
+            "name": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/hybrid-v2-2/plaster-modulation-v1.webp",
+            "start": 1761.7999999998137,
+            "ms": 6.300000000279397,
+            "transferSize": 119534
+          },
+          {
+            "name": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/hybrid-v2-2/paving-modulation-v1.webp",
+            "start": 1762,
+            "ms": 6.899999999906868,
+            "transferSize": 97514
+          }
+        ]
+      }
+    },
+    {
+      "version": "v22",
+      "diagnostic": false,
+      "warmCache": true,
+      "cachePolicy": "HTTP cache disabled in both variants; warmCache reload uses browser process GPU/OS caches only",
+      "elapsedMs": 35190,
+      "rows": [
+        {
+          "cycle": 1,
+          "state": "corridor-3d",
+          "start": 12923.399999999907,
+          "end": 15931.69999999972,
+          "metrics": {
+            "samples": 720,
+            "p50": 4.199999999998909,
+            "p95": 4.600000000000364,
+            "max": 5.200000000000728
+          }
+        },
+        {
+          "cycle": 1,
+          "state": "corridor-hybrid",
+          "start": 15935.399999999907,
+          "end": 16942.600000000093,
+          "metrics": {
+            "samples": 225,
+            "p50": 4.19999999999709,
+            "p95": 4.600000000002183,
+            "max": 70.89999999999964
+          }
+        },
+        {
+          "cycle": 1,
+          "state": "corridor-2_5d",
+          "start": 16945.100000000093,
+          "end": 17952.19999999972,
+          "metrics": {
+            "samples": 240,
+            "p50": 4.200000000000728,
+            "p95": 4.700000000000728,
+            "max": 4.899999999997817
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-3d",
+          "start": 22963.299999999814,
+          "end": 25967.299999999814,
+          "metrics": {
+            "samples": 720,
+            "p50": 4.19999999999709,
+            "p95": 4.69999999999709,
+            "max": 5
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-hybrid",
+          "start": 25970.5,
+          "end": 26979,
+          "metrics": {
+            "samples": 240,
+            "p50": 4.200000000000728,
+            "p95": 4.600000000002183,
+            "max": 8.400000000001455
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-2_5d",
+          "start": 26981.799999999814,
+          "end": 27987.399999999907,
+          "metrics": {
+            "samples": 239,
+            "p50": 4.19999999999709,
+            "p95": 4.600000000002183,
+            "max": 8.30000000000291
+          }
+        }
+      ],
+      "errors": [],
+      "details": {
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "stats": {
+          "rendererUUID": "9fbec0c4-a92e-4d4a-9a87-a1bb3bef9edc",
+          "renderCount": 3702,
+          "renderers": 1,
+          "canvases": 1,
+          "removedTriangles": 320,
+          "doorMeshes": 3,
+          "memory": {
+            "geometries": 45,
+            "textures": 24
+          },
+          "hybrid": {
+            "version": "2.2-procedural-candidate-1",
+            "phase": "gate-interior",
+            "progress": 1,
+            "status": "ready",
+            "error": null,
+            "mode": "hybrid",
+            "manualBlend": null,
+            "weights": {
+              "foreground": 1,
+              "mid": 0,
+              "far": 0
+            },
+            "effective": [
+              {
+                "name": "V22-mid-wall",
+                "weight": 0,
+                "visible": false,
+                "triangles": 14,
+                "source": "02_Enclosure"
+              },
+              {
+                "name": "V22-far-wall",
+                "weight": 0,
+                "visible": false,
+                "triangles": 2,
+                "source": "03_MainHall"
+              },
+              {
+                "name": "V22-mid-floor",
+                "weight": 0,
+                "visible": false,
+                "triangles": 2,
+                "source": "05_EastGallery"
+              }
+            ],
+            "foreground": "original geometry, unchanged",
+            "textures": 2,
+            "textureBytesEstimate": 11184810.666666666,
+            "decode": [
+              {
+                "id": "paving",
+                "loadAndDecodeMs": 20.800000000279397,
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "id": "plaster",
+                "loadAndDecodeMs": 24.399999999906868,
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "id": "surface-programs",
+                "compileMs": 245.5
+              }
+            ],
+            "mural": {
+              "id": "mural-01",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "rotationY": -1.5707963267948966,
+              "width": 3.65,
+              "height": 1.2547,
+              "enabled": false,
+              "source": "independent real mural; future docking"
+            }
+          },
+          "post": {
+            "enabled": true,
+            "error": null,
+            "passes": 2,
+            "size": [
+              1440,
+              900
+            ],
+            "aoSamples": 12,
+            "stats": {
+              "frame": 7404,
+              "calls": 47,
+              "triangles": 169890,
+              "points": 0,
+              "lines": 0
+            },
+            "colorDepthBytes": 15552000,
+            "multisampleBytes": 31104000,
+            "targetBytes": 46656000
+          },
+          "environment": {
+            "weight": 1,
+            "establish": 1,
+            "visibility": 1,
+            "roomWeight": 0,
+            "posterWeight": 0,
+            "layerWeights": {
+              "ground": 1,
+              "foreground": 1,
+              "fog": 1
+            },
+            "trees": 201,
+            "visible": true,
+            "titleRects": [
+              [
+                -2,
+                -2,
+                -2,
+                -2
+              ],
+              [
+                -2,
+                -2,
+                -2,
+                -2
+              ]
+            ],
+            "layers": [
+              "Foreground",
+              "TempleGround",
+              "MidgroundGroves",
+              "DistanceMatte"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          }
+        },
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/hybrid-v2-2/layers.json",
+            "start": 871,
+            "ms": 5.800000000279397,
+            "transferSize": 1358
+          },
+          {
+            "name": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/hybrid-v2-2/plaster-modulation-v1.webp",
+            "start": 1793,
+            "ms": 6.100000000093132,
+            "transferSize": 119534
+          },
+          {
+            "name": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/hybrid-v2-2/paving-modulation-v1.webp",
+            "start": 1793.2000000001863,
+            "ms": 6.600000000093132,
+            "transferSize": 97514
+          }
+        ]
+      }
+    },
+    {
+      "version": "v22",
+      "diagnostic": true,
+      "warmCache": false,
+      "cachePolicy": "HTTP cache disabled in both variants; warmCache reload uses browser process GPU/OS caches only",
+      "elapsedMs": 32955,
+      "rows": [
+        {
+          "cycle": 1,
+          "state": "corridor-3d",
+          "start": 12873.600000000093,
+          "end": 15878.600000000093,
+          "metrics": {
+            "samples": 720,
+            "p50": 4.199999999998909,
+            "p95": 4.299999999999272,
+            "max": 4.700000000000728
+          }
+        },
+        {
+          "cycle": 1,
+          "state": "corridor-hybrid",
+          "start": 15883,
+          "end": 16893.5,
+          "metrics": {
+            "samples": 226,
+            "p50": 4.199999999998909,
+            "p95": 4.600000000002183,
+            "max": 65.89999999999964
+          }
+        },
+        {
+          "cycle": 1,
+          "state": "corridor-2_5d",
+          "start": 16897,
+          "end": 17905.100000000093,
+          "metrics": {
+            "samples": 241,
+            "p50": 4.19999999999709,
+            "p95": 4.299999999999272,
+            "max": 4.700000000000728
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-3d",
+          "start": 22910.100000000093,
+          "end": 25921.700000000186,
+          "metrics": {
+            "samples": 721,
+            "p50": 4.19999999999709,
+            "p95": 4.600000000002183,
+            "max": 4.900000000001455
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-hybrid",
+          "start": 25924.700000000186,
+          "end": 26930,
+          "metrics": {
+            "samples": 240,
+            "p50": 4.19999999999709,
+            "p95": 4.69999999999709,
+            "max": 4.900000000001455
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-2_5d",
+          "start": 26933.100000000093,
+          "end": 27938.200000000186,
+          "metrics": {
+            "samples": 240,
+            "p50": 4.100000000002183,
+            "p95": 4.700000000000728,
+            "max": 4.900000000001455
+          }
+        }
+      ],
+      "errors": [],
+      "details": {
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "stats": {
+          "rendererUUID": "273731d7-5171-4ed3-ab4e-8c6934ddf02e",
+          "renderCount": 3702,
+          "renderers": 1,
+          "canvases": 1,
+          "removedTriangles": 320,
+          "doorMeshes": 3,
+          "memory": {
+            "geometries": 45,
+            "textures": 24
+          },
+          "hybrid": {
+            "version": "2.2-procedural-candidate-1",
+            "phase": "gate-interior",
+            "progress": 1,
+            "status": "ready",
+            "error": null,
+            "mode": "hybrid",
+            "manualBlend": null,
+            "weights": {
+              "foreground": 1,
+              "mid": 0,
+              "far": 0
+            },
+            "effective": [
+              {
+                "name": "V22-mid-wall",
+                "weight": 0,
+                "visible": false,
+                "triangles": 14,
+                "source": "02_Enclosure"
+              },
+              {
+                "name": "V22-far-wall",
+                "weight": 0,
+                "visible": false,
+                "triangles": 2,
+                "source": "03_MainHall"
+              },
+              {
+                "name": "V22-mid-floor",
+                "weight": 0,
+                "visible": false,
+                "triangles": 2,
+                "source": "05_EastGallery"
+              }
+            ],
+            "foreground": "original geometry, unchanged",
+            "textures": 2,
+            "textureBytesEstimate": 11184810.666666666,
+            "decode": [
+              {
+                "id": "paving",
+                "loadAndDecodeMs": 24.100000000093132,
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "id": "plaster",
+                "loadAndDecodeMs": 25.699999999720603,
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "id": "surface-programs",
+                "compileMs": 242.60000000009313
+              }
+            ],
+            "mural": {
+              "id": "mural-01",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "rotationY": -1.5707963267948966,
+              "width": 3.65,
+              "height": 1.2547,
+              "enabled": false,
+              "source": "independent real mural; future docking"
+            }
+          },
+          "post": {
+            "enabled": true,
+            "error": null,
+            "passes": 2,
+            "size": [
+              1440,
+              900
+            ],
+            "aoSamples": 12,
+            "stats": {
+              "frame": 7404,
+              "calls": 47,
+              "triangles": 169890,
+              "points": 0,
+              "lines": 0
+            },
+            "colorDepthBytes": 15552000,
+            "multisampleBytes": 31104000,
+            "targetBytes": 46656000
+          },
+          "environment": {
+            "weight": 1,
+            "establish": 1,
+            "visibility": 1,
+            "roomWeight": 0,
+            "posterWeight": 0,
+            "layerWeights": {
+              "ground": 1,
+              "foreground": 1,
+              "fog": 1
+            },
+            "trees": 201,
+            "visible": true,
+            "titleRects": [
+              [
+                -2,
+                -2,
+                -2,
+                -2
+              ],
+              [
+                -2,
+                -2,
+                -2,
+                -2
+              ]
+            ],
+            "layers": [
+              "Foreground",
+              "TempleGround",
+              "MidgroundGroves",
+              "DistanceMatte"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          }
+        },
+        "glEvents": [
+          {
+            "name": "texImage2D",
+            "start": 718.8999999999069,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "texImage2D",
+            "start": 719,
+            "ms": 0
+          },
+          {
+            "name": "texImage2D",
+            "start": 719,
+            "ms": 0
+          },
+          {
+            "name": "texImage2D",
+            "start": 719,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "texImage2D",
+            "start": 719.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "texImage2D",
+            "start": 719.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "texImage2D",
+            "start": 719.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "texImage2D",
+            "start": 931.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 935.2000000001863,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "bufferData",
+            "start": 935.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 935.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 935.5,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 935.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 935.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 935.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 935.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 935.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 936,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 936,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 936,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 936,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 936.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 936.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 936.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 936.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 936.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 936.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 936.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 936.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 936.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 936.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 936.3000000002794,
+            "ms": 0.09999999962747097
+          },
+          {
+            "name": "bufferData",
+            "start": 936.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 936.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 936.5,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "bufferData",
+            "start": 936.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 936.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 938,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "bufferData",
+            "start": 938.1000000000931,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "bufferData",
+            "start": 938.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 938.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 938.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 938.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 938.5,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "bufferData",
+            "start": 938.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 938.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 938.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 938.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 938.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 938.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 938.7000000001863,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "bufferData",
+            "start": 938.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 939.3999999999069,
+            "ms": 0.20000000018626451
+          },
+          {
+            "name": "bufferData",
+            "start": 939.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 939.6000000000931,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "bufferData",
+            "start": 939.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 939.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 939.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 939.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 939.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 939.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 939.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 939.8999999999069,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "bufferData",
+            "start": 940,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 940,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 940,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 940,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 940.8999999999069,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "bufferData",
+            "start": 941,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "bufferData",
+            "start": 941.1000000000931,
+            "ms": 0.20000000018626451
+          },
+          {
+            "name": "bufferData",
+            "start": 941.3000000002794,
+            "ms": 0.09999999962747097
+          },
+          {
+            "name": "bufferData",
+            "start": 941.5,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 941.5,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 941.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 941.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 941.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 941.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 941.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 941.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 941.8999999999069,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "bufferData",
+            "start": 942,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 942,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 942.2000000001863,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "bufferData",
+            "start": 942.3000000002794,
+            "ms": 0.19999999972060323
+          },
+          {
+            "name": "bufferData",
+            "start": 942.5,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 942.5,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 942.5,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 942.5,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 942.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 942.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 942.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 943.1000000000931,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "bufferData",
+            "start": 943.2000000001863,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "bufferData",
+            "start": 943.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 943.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 943.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 943.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 943.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 943.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 943.6000000000931,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "bufferData",
+            "start": 943.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 943.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 943.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 943.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 943.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 943.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 943.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 943.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 943.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 943.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 943.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 943.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 943.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 944.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 944.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 944.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 944.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 944.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 945.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 945.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 945.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 950.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 950.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 950.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 951,
+            "ms": 0.6000000000931323
+          },
+          {
+            "name": "bufferData",
+            "start": 951.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 952.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 952.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 952.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 952.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 952.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 952.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 952.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 952.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 952.5,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "bufferData",
+            "start": 952.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 952.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "texImage2D",
+            "start": 953.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 957.2000000001863,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "compileShader",
+            "start": 957.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 957.3000000002794,
+            "ms": 0.19999999972060323
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 962.6000000000931,
+            "ms": 0.2999999998137355
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 962.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 963.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "texSubImage2D",
+            "start": 963.8999999999069,
+            "ms": 2.2000000001862645
+          },
+          {
+            "name": "bufferData",
+            "start": 966.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "texSubImage2D",
+            "start": 967.5,
+            "ms": 2.6000000000931323
+          },
+          {
+            "name": "bufferData",
+            "start": 970.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "texSubImage2D",
+            "start": 970.8000000002794,
+            "ms": 3.8999999999068677
+          },
+          {
+            "name": "bufferData",
+            "start": 974.8999999999069,
+            "ms": 0.20000000018626451
+          },
+          {
+            "name": "texSubImage2D",
+            "start": 975.8000000002794,
+            "ms": 2.7999999998137355
+          },
+          {
+            "name": "bufferData",
+            "start": 978.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 979.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 979.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 979.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "texSubImage2D",
+            "start": 979.8999999999069,
+            "ms": 2
+          },
+          {
+            "name": "bufferData",
+            "start": 981.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 982.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 982.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 982.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 995.3000000002794,
+            "ms": 0.2999999998137355
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 995.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 995.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "texSubImage2D",
+            "start": 996,
+            "ms": 2.1000000000931323
+          },
+          {
+            "name": "bufferData",
+            "start": 998.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 998.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 998.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 998.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 998.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 998.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 999,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 999.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 999.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 999.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 999.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 999.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 999.5,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 999.5,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 999.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 999.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 999.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 1000,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 1000.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 1000.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 1000.5,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 1000.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 1000.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 1000.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 1000.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 1000.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1001.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1001.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1001.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1010,
+            "ms": 0.20000000018626451
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1010.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1010.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 1010.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 1010.5,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1010.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1011,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1011,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1019.7000000001863,
+            "ms": 0.19999999972060323
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1019.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1019.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "texSubImage2D",
+            "start": 1020.1000000000931,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "bufferData",
+            "start": 1020.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1021.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1021.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1021.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1028.8999999999069,
+            "ms": 0.20000000018626451
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1029.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1029.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 1029.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1032,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1032.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1032.3999999999069,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1064.3000000002794,
+            "ms": 0.2999999998137355
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1064.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1064.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "texSubImage2D",
+            "start": 1065.5,
+            "ms": 2.3999999999068677
+          },
+          {
+            "name": "texSubImage2D",
+            "start": 1068.1000000000931,
+            "ms": 2.1000000000931323
+          },
+          {
+            "name": "compileShader",
+            "start": 1072.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1072.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1072.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1107.1000000000931,
+            "ms": 0.2999999998137355
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1107.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1107.5,
+            "ms": 0
+          },
+          {
+            "name": "texSubImage2D",
+            "start": 1107.7000000001863,
+            "ms": 2.3999999999068677
+          },
+          {
+            "name": "texSubImage2D",
+            "start": 1110.3000000002794,
+            "ms": 2
+          },
+          {
+            "name": "compileShader",
+            "start": 1114.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1114.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1114.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1154.7000000001863,
+            "ms": 0.39999999990686774
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1155.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1155.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "texSubImage2D",
+            "start": 1155.5,
+            "ms": 2.3000000002793968
+          },
+          {
+            "name": "texSubImage2D",
+            "start": 1157.8999999999069,
+            "ms": 2.400000000372529
+          },
+          {
+            "name": "compileShader",
+            "start": 1162,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1162.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1162.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1203.5,
+            "ms": 0.3000000002793968
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1203.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1204.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "texSubImage2D",
+            "start": 1204.3999999999069,
+            "ms": 2
+          },
+          {
+            "name": "texSubImage2D",
+            "start": 1206.6000000000931,
+            "ms": 2.3999999999068677
+          },
+          {
+            "name": "compileShader",
+            "start": 1211.5,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1212,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1212,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1244.3999999999069,
+            "ms": 0.3000000002793968
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1244.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1245,
+            "ms": 0
+          },
+          {
+            "name": "texSubImage2D",
+            "start": 1245.2000000001863,
+            "ms": 2.1999999997206032
+          },
+          {
+            "name": "texSubImage2D",
+            "start": 1247.3999999999069,
+            "ms": 2.900000000372529
+          },
+          {
+            "name": "compileShader",
+            "start": 1253,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1253.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1253.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1289.8999999999069,
+            "ms": 0.3000000002793968
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1290.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1290.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "texSubImage2D",
+            "start": 1290.5,
+            "ms": 2.5
+          },
+          {
+            "name": "texSubImage2D",
+            "start": 1293.1000000000931,
+            "ms": 2
+          },
+          {
+            "name": "compileShader",
+            "start": 1296.5,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1296.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1296.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1333.3999999999069,
+            "ms": 0.40000000037252903
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1333.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1333.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1335.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1335.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1335.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1370.5,
+            "ms": 0.5
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1371,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1371.2000000001863,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "compileShader",
+            "start": 1372.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1372.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1372.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1405.7000000001863,
+            "ms": 0.2999999998137355
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1406,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1406.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1408.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1409.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1409.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1445.5,
+            "ms": 0.3000000002793968
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1445.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1446,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1447,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1447.5,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1447.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1478.6000000000931,
+            "ms": 0.2999999998137355
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1478.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1479.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1480.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1481.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1481.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1513.8999999999069,
+            "ms": 0.3000000002793968
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1514.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1514.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1515.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1515.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1515.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1548.7000000001863,
+            "ms": 0.2999999998137355
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1549,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1549.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1550.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1551.5,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1551.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1574.7000000001863,
+            "ms": 0.19999999972060323
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1574.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1575.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1576.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1576.5,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1576.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1611,
+            "ms": 0.39999999990686774
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1611.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1611.7000000001863,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "compileShader",
+            "start": 1614.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1614.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1614.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1649.8000000002794,
+            "ms": 0.19999999972060323
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1650.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1650.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 1650.5,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1651.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1652.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1652.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1684.7000000001863,
+            "ms": 0.2999999998137355
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1685.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1685.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1686.5,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1687.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1687.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1717.8000000002794,
+            "ms": 0.2999999998137355
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1718.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1718.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1719,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1719,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1719,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1728.5,
+            "ms": 0.3000000002793968
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1728.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1728.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 1729.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 1730.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 1730.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 1730.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1730.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1730.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1730.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1748,
+            "ms": 0.39999999990686774
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1748.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1748.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 1748.5,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1792.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1793.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1793.1000000000931,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "compileShader",
+            "start": 1794.5,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1795,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1795,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1796.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1797.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1797.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1799.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1800.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1800.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1802.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1802.5,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1802.5,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1804.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1805.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1805.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1807.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1809.3000000002794,
+            "ms": 0.09999999962747097
+          },
+          {
+            "name": "linkProgram",
+            "start": 1809.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1815.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1822.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1822.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1824.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1825.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1825.3999999999069,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "compileShader",
+            "start": 1831.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1832.5,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1832.5,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1834.5,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1835.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1835.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1836.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1838.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1838.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1840.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1842.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1842.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1843.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1844.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1844.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1846.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1847.5,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1847.5,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1849.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1849.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1849.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1851.5,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1851.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1851.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1852.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1854.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1854.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1855.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1856.5,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1856.5,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1857.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1858.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1858.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1859.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1859.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1859.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1860.5,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1861.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1861.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1862.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 1863.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 1863.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8000000002794,
+            "ms": 0.09999999962747097
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1863.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1864,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1864,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1864,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1864,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1864,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1864,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1864,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1864,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1864,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1864,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1864,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1864,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.3999999999069,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.5,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1875.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1886.3000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1897.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1908.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.1000000000931,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1920.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.1000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1931.2000000001863,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1944.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1944.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1944.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1944.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1944.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1944.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1944.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1944.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1944.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1944.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1944.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1944.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1944.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1944.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1944.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1944.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1944.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1944.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1944.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1944.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1944.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1944.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1944.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1944.8999999999069,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1945,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1945,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1945,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1945,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1945,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1945,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1945,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1945,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1945,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1945,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1945,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1945,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1945,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1945,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1945,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1945,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1945,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1956.3999999999069,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1956.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1956.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1956.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1956.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1956.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1956.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1956.5,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1956.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1956.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1956.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1956.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1956.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1956.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1956.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1956.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1956.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1956.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1956.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1956.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1956.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1956.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1956.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1956.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1956.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1956.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1956.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1956.6000000000931,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1967.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1967.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1967.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1967.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1967.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1967.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1967.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1967.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1967.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1967.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1967.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1967.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1967.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1967.8999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1979.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1979.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1979.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1979.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1979.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1979.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1979.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1979.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1979.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1979.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1979.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1990.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1990.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1990.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1990.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1990.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1990.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1990.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1990.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 1990.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 2001.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 2001.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 2001.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 2001.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 2001.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 2001.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 2001.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 2001.8000000002794,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 2012.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 2012.3999999999069,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 2012.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 2012.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 2012.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 2012.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 2012.5,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 2022.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 2022.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 2022.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 2022.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 2022.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 2022.7000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 2033.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 2033.2000000001863,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 15899,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "bufferData",
+            "start": 15899.100000000093,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 15899.100000000093,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 15899.100000000093,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 15899.100000000093,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 15899.200000000186,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 15899.200000000186,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 15900.600000000093,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 15901,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 15901,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 15927.100000000093,
+            "ms": 0.5
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 15927.600000000093,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 15927.80000000028,
+            "ms": 0
+          },
+          {
+            "name": "texSubImage2D",
+            "start": 15928,
+            "ms": 3.3000000002793968
+          },
+          {
+            "name": "bufferData",
+            "start": 15931.5,
+            "ms": 0.20000000018626451
+          },
+          {
+            "name": "compileShader",
+            "start": 15932.5,
+            "ms": 0
+          },
+          {
+            "name": "compileShader",
+            "start": 15933,
+            "ms": 0
+          },
+          {
+            "name": "linkProgram",
+            "start": 15933,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 15965.30000000028,
+            "ms": 0.39999999990686774
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 15965.700000000186,
+            "ms": 0
+          },
+          {
+            "name": "getProgramParameter",
+            "start": 15965.899999999907,
+            "ms": 0
+          },
+          {
+            "name": "texSubImage2D",
+            "start": 15966,
+            "ms": 1.7000000001862645
+          },
+          {
+            "name": "bufferData",
+            "start": 15967.700000000186,
+            "ms": 0.10000000009313226
+          },
+          {
+            "name": "bufferData",
+            "start": 16235.80000000028,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 16235.80000000028,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 16235.80000000028,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 16235.80000000028,
+            "ms": 0
+          },
+          {
+            "name": "bufferData",
+            "start": 16236.80000000028,
+            "ms": 0
+          }
+        ],
+        "longTasks": [
+          {
+            "start": 329.70000000018626,
+            "ms": 353
+          },
+          {
+            "start": 705.5,
+            "ms": 60
+          },
+          {
+            "start": 1789.3999999999069,
+            "ms": 74
+          }
+        ],
+        "resources": [
+          {
+            "name": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/hybrid-v2-2/layers.json",
+            "start": 929.3000000002794,
+            "ms": 4.699999999720603,
+            "transferSize": 1358
+          },
+          {
+            "name": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/hybrid-v2-2/plaster-modulation-v1.webp",
+            "start": 1764,
+            "ms": 5.899999999906868,
+            "transferSize": 119534
+          },
+          {
+            "name": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/hybrid-v2-2/paving-modulation-v1.webp",
+            "start": 1764.2000000001863,
+            "ms": 6.7999999998137355,
+            "transferSize": 97514
+          }
+        ]
+      }
+    }
+  ]
+}

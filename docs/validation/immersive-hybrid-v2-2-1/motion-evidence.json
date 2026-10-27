@@ -1,0 +1,34 @@
+{
+  "pass": true,
+  "browser": "156.0.8078.47",
+  "capture": "Actual full browser viewport, 1440x900, normal motion forward and reverse; browser recording load differs from no-video metrics",
+  "forward": {
+    "samples": 1197,
+    "p50": 4.199999999998909,
+    "p95": 4.300000000001091,
+    "max": 16.700000000000728
+  },
+  "reverse": {
+    "samples": 1200,
+    "p50": 4.199999999998909,
+    "p95": 4.299999999999272,
+    "max": 8.30000000000291
+  },
+  "startOffsetMs": 9507,
+  "reverseOffsetMs": 15227,
+  "decodeSamplesSeconds": [
+    10.107,
+    14.207,
+    15.827,
+    19.927
+  ],
+  "decodedFrameMeanDifferences": [
+    34.265068158436215,
+    31.25772556584362
+  ],
+  "duration": 21.24,
+  "file": "selected/08-transition.webm",
+  "bytes": 2519090,
+  "sha256": "8e384f02df6ff55949dbcdae662f181f0c1d4e1fba732faa703a7a75f9b272bd",
+  "errors": []
+}

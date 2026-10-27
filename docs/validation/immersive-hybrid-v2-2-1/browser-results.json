@@ -1,0 +1,6143 @@
+{
+  "pass": true,
+  "viewports": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "rows": [
+        {
+          "progress": 0,
+          "pose": {
+            "time": 0,
+            "position": [
+              -23.33250595253667,
+              19.342753798798213,
+              -26.88031350693665
+            ],
+            "target": [
+              0,
+              -1.25,
+              -1.75
+            ],
+            "fov": 32
+          },
+          "stats": {
+            "rendererUUID": "832ab423-29c4-4a3b-9272-a2a6780c1689",
+            "renderCount": 3,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 48,
+              "textures": 24
+            },
+            "hybrid": {
+              "version": "2.2.1-candidate-1",
+              "phase": "entry-3d",
+              "progress": 0,
+              "status": "ready",
+              "error": null,
+              "mode": "hybrid",
+              "manualBlend": null,
+              "switches": {
+                "wall": true,
+                "floor": true,
+                "wood": true,
+                "lighting": true
+              },
+              "weights": {
+                "foreground": 1,
+                "mid": 0,
+                "far": 0
+              },
+              "effective": [
+                {
+                  "name": "V221-02_Enclosure-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 14,
+                  "source": "02_Enclosure",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-03_MainHall-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "03_MainHall",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-05_EastGallery-floor",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "05_EastGallery",
+                  "kind": "floor"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 312,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1440,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 20320,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1024,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                }
+              ],
+              "foreground": "original geometry, unchanged",
+              "textures": 2,
+              "textureBytesEstimate": 11184810.666666666,
+              "decode": [
+                {
+                  "id": "paving",
+                  "loadAndDecodeMs": 22.200000000186265,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "plaster",
+                  "loadAndDecodeMs": 25.799999999813735,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "surface-programs",
+                  "compileMs": 1452.1000000000931
+                }
+              ],
+              "preparation": [
+                {
+                  "id": "geometry",
+                  "start": 6129.100000000093,
+                  "ms": 2,
+                  "skins": 7
+                },
+                {
+                  "id": "visible-program-compile",
+                  "start": 6131.899999999907,
+                  "ms": 510.8000000002794,
+                  "programs": 53
+                },
+                {
+                  "id": "offscreen-first-draw",
+                  "start": 6643,
+                  "ms": 1712.6000000000931
+                },
+                {
+                  "id": "total-prepare",
+                  "start": 1152.7000000001863,
+                  "ms": 7203
+                }
+              ],
+              "programs": 60,
+              "legacyVersion": "2.2-procedural-candidate-1",
+              "mural": {
+                "id": "mural-01",
+                "position": [
+                  4.865,
+                  1.55,
+                  4.8
+                ],
+                "rotationY": -1.5707963267948966,
+                "width": 3.65,
+                "height": 1.2547,
+                "enabled": false
+              }
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1920,
+                1080
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 7,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 24883200,
+              "multisampleBytes": 49766400,
+              "targetBytes": 74649600
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          }
+        },
+        {
+          "progress": 0.52,
+          "pose": {
+            "time": 0.52,
+            "position": [
+              -0.35,
+              2.2,
+              24
+            ],
+            "target": [
+              0,
+              1.32,
+              11.8
+            ],
+            "fov": 46
+          },
+          "stats": {
+            "rendererUUID": "832ab423-29c4-4a3b-9272-a2a6780c1689",
+            "renderCount": 16,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 48,
+              "textures": 24
+            },
+            "hybrid": {
+              "version": "2.2.1-candidate-1",
+              "phase": "entry-3d",
+              "progress": 0.52,
+              "status": "ready",
+              "error": null,
+              "mode": "hybrid",
+              "manualBlend": null,
+              "switches": {
+                "wall": true,
+                "floor": true,
+                "wood": true,
+                "lighting": true
+              },
+              "weights": {
+                "foreground": 1,
+                "mid": 0,
+                "far": 0
+              },
+              "effective": [
+                {
+                  "name": "V221-02_Enclosure-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 14,
+                  "source": "02_Enclosure",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-03_MainHall-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "03_MainHall",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-05_EastGallery-floor",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "05_EastGallery",
+                  "kind": "floor"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 312,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1440,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 20320,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1024,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                }
+              ],
+              "foreground": "original geometry, unchanged",
+              "textures": 2,
+              "textureBytesEstimate": 11184810.666666666,
+              "decode": [
+                {
+                  "id": "paving",
+                  "loadAndDecodeMs": 22.200000000186265,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "plaster",
+                  "loadAndDecodeMs": 25.799999999813735,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "surface-programs",
+                  "compileMs": 1452.1000000000931
+                }
+              ],
+              "preparation": [
+                {
+                  "id": "geometry",
+                  "start": 6129.100000000093,
+                  "ms": 2,
+                  "skins": 7
+                },
+                {
+                  "id": "visible-program-compile",
+                  "start": 6131.899999999907,
+                  "ms": 510.8000000002794,
+                  "programs": 53
+                },
+                {
+                  "id": "offscreen-first-draw",
+                  "start": 6643,
+                  "ms": 1712.6000000000931
+                },
+                {
+                  "id": "total-prepare",
+                  "start": 1152.7000000001863,
+                  "ms": 7203
+                }
+              ],
+              "programs": 60,
+              "legacyVersion": "2.2-procedural-candidate-1",
+              "mural": {
+                "id": "mural-01",
+                "position": [
+                  4.865,
+                  1.55,
+                  4.8
+                ],
+                "rotationY": -1.5707963267948966,
+                "width": 3.65,
+                "height": 1.2547,
+                "enabled": false
+              }
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1920,
+                1080
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 33,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 24883200,
+              "multisampleBytes": 49766400,
+              "targetBytes": 74649600
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          }
+        },
+        {
+          "progress": 0.78,
+          "pose": {
+            "time": 0.78,
+            "position": [
+              0,
+              1.38,
+              14.1
+            ],
+            "target": [
+              0,
+              1.38,
+              9.8
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "832ab423-29c4-4a3b-9272-a2a6780c1689",
+            "renderCount": 30,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 48,
+              "textures": 24
+            },
+            "hybrid": {
+              "version": "2.2.1-candidate-1",
+              "phase": "entry-3d",
+              "progress": 0.78,
+              "status": "ready",
+              "error": null,
+              "mode": "hybrid",
+              "manualBlend": null,
+              "switches": {
+                "wall": true,
+                "floor": true,
+                "wood": true,
+                "lighting": true
+              },
+              "weights": {
+                "foreground": 1,
+                "mid": 0,
+                "far": 0
+              },
+              "effective": [
+                {
+                  "name": "V221-02_Enclosure-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 14,
+                  "source": "02_Enclosure",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-03_MainHall-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "03_MainHall",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-05_EastGallery-floor",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "05_EastGallery",
+                  "kind": "floor"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 312,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1440,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 20320,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1024,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                }
+              ],
+              "foreground": "original geometry, unchanged",
+              "textures": 2,
+              "textureBytesEstimate": 11184810.666666666,
+              "decode": [
+                {
+                  "id": "paving",
+                  "loadAndDecodeMs": 22.200000000186265,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "plaster",
+                  "loadAndDecodeMs": 25.799999999813735,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "surface-programs",
+                  "compileMs": 1452.1000000000931
+                }
+              ],
+              "preparation": [
+                {
+                  "id": "geometry",
+                  "start": 6129.100000000093,
+                  "ms": 2,
+                  "skins": 7
+                },
+                {
+                  "id": "visible-program-compile",
+                  "start": 6131.899999999907,
+                  "ms": 510.8000000002794,
+                  "programs": 53
+                },
+                {
+                  "id": "offscreen-first-draw",
+                  "start": 6643,
+                  "ms": 1712.6000000000931
+                },
+                {
+                  "id": "total-prepare",
+                  "start": 1152.7000000001863,
+                  "ms": 7203
+                }
+              ],
+              "programs": 60,
+              "legacyVersion": "2.2-procedural-candidate-1",
+              "mural": {
+                "id": "mural-01",
+                "position": [
+                  4.865,
+                  1.55,
+                  4.8
+                ],
+                "rotationY": -1.5707963267948966,
+                "width": 3.65,
+                "height": 1.2547,
+                "enabled": false
+              }
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1920,
+                1080
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 61,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 24883200,
+              "multisampleBytes": 49766400,
+              "targetBytes": 74649600
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          }
+        },
+        {
+          "progress": 0.92,
+          "pose": {
+            "time": 0.92,
+            "position": [
+              0,
+              1.38,
+              12.25
+            ],
+            "target": [
+              0.12,
+              1.38,
+              9.7
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "832ab423-29c4-4a3b-9272-a2a6780c1689",
+            "renderCount": 44,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 48,
+              "textures": 24
+            },
+            "hybrid": {
+              "version": "2.2.1-candidate-1",
+              "phase": "entry-3d",
+              "progress": 0.92,
+              "status": "ready",
+              "error": null,
+              "mode": "hybrid",
+              "manualBlend": null,
+              "switches": {
+                "wall": true,
+                "floor": true,
+                "wood": true,
+                "lighting": true
+              },
+              "weights": {
+                "foreground": 1,
+                "mid": 0,
+                "far": 0
+              },
+              "effective": [
+                {
+                  "name": "V221-02_Enclosure-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 14,
+                  "source": "02_Enclosure",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-03_MainHall-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "03_MainHall",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-05_EastGallery-floor",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "05_EastGallery",
+                  "kind": "floor"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 312,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1440,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 20320,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1024,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                }
+              ],
+              "foreground": "original geometry, unchanged",
+              "textures": 2,
+              "textureBytesEstimate": 11184810.666666666,
+              "decode": [
+                {
+                  "id": "paving",
+                  "loadAndDecodeMs": 22.200000000186265,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "plaster",
+                  "loadAndDecodeMs": 25.799999999813735,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "surface-programs",
+                  "compileMs": 1452.1000000000931
+                }
+              ],
+              "preparation": [
+                {
+                  "id": "geometry",
+                  "start": 6129.100000000093,
+                  "ms": 2,
+                  "skins": 7
+                },
+                {
+                  "id": "visible-program-compile",
+                  "start": 6131.899999999907,
+                  "ms": 510.8000000002794,
+                  "programs": 53
+                },
+                {
+                  "id": "offscreen-first-draw",
+                  "start": 6643,
+                  "ms": 1712.6000000000931
+                },
+                {
+                  "id": "total-prepare",
+                  "start": 1152.7000000001863,
+                  "ms": 7203
+                }
+              ],
+              "programs": 60,
+              "legacyVersion": "2.2-procedural-candidate-1",
+              "mural": {
+                "id": "mural-01",
+                "position": [
+                  4.865,
+                  1.55,
+                  4.8
+                ],
+                "rotationY": -1.5707963267948966,
+                "width": 3.65,
+                "height": 1.2547,
+                "enabled": false
+              }
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1920,
+                1080
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 89,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 24883200,
+              "multisampleBytes": 49766400,
+              "targetBytes": 74649600
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          }
+        },
+        {
+          "progress": 1,
+          "pose": {
+            "time": 1,
+            "position": [
+              0.12,
+              1.38,
+              11.15
+            ],
+            "target": [
+              1.2,
+              1.38,
+              9.2
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "832ab423-29c4-4a3b-9272-a2a6780c1689",
+            "renderCount": 58,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 48,
+              "textures": 24
+            },
+            "hybrid": {
+              "version": "2.2.1-candidate-1",
+              "phase": "gate-interior",
+              "progress": 1,
+              "status": "ready",
+              "error": null,
+              "mode": "hybrid",
+              "manualBlend": null,
+              "switches": {
+                "wall": true,
+                "floor": true,
+                "wood": true,
+                "lighting": true
+              },
+              "weights": {
+                "foreground": 1,
+                "mid": 0,
+                "far": 0
+              },
+              "effective": [
+                {
+                  "name": "V221-02_Enclosure-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 14,
+                  "source": "02_Enclosure",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-03_MainHall-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "03_MainHall",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-05_EastGallery-floor",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "05_EastGallery",
+                  "kind": "floor"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 312,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1440,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 20320,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1024,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                }
+              ],
+              "foreground": "original geometry, unchanged",
+              "textures": 2,
+              "textureBytesEstimate": 11184810.666666666,
+              "decode": [
+                {
+                  "id": "paving",
+                  "loadAndDecodeMs": 22.200000000186265,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "plaster",
+                  "loadAndDecodeMs": 25.799999999813735,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "surface-programs",
+                  "compileMs": 1452.1000000000931
+                }
+              ],
+              "preparation": [
+                {
+                  "id": "geometry",
+                  "start": 6129.100000000093,
+                  "ms": 2,
+                  "skins": 7
+                },
+                {
+                  "id": "visible-program-compile",
+                  "start": 6131.899999999907,
+                  "ms": 510.8000000002794,
+                  "programs": 53
+                },
+                {
+                  "id": "offscreen-first-draw",
+                  "start": 6643,
+                  "ms": 1712.6000000000931
+                },
+                {
+                  "id": "total-prepare",
+                  "start": 1152.7000000001863,
+                  "ms": 7203
+                }
+              ],
+              "programs": 60,
+              "legacyVersion": "2.2-procedural-candidate-1",
+              "mural": {
+                "id": "mural-01",
+                "position": [
+                  4.865,
+                  1.55,
+                  4.8
+                ],
+                "rotationY": -1.5707963267948966,
+                "width": 3.65,
+                "height": 1.2547,
+                "enabled": false
+              }
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1920,
+                1080
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 117,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 24883200,
+              "multisampleBytes": 49766400,
+              "targetBytes": 74649600
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          }
+        },
+        {
+          "progress": 1.43,
+          "pose": {
+            "time": 1.43,
+            "position": [
+              3.4199999999999995,
+              1.38,
+              10.5
+            ],
+            "target": [
+              4.02,
+              1.38,
+              5.500000000000001
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "832ab423-29c4-4a3b-9272-a2a6780c1689",
+            "renderCount": 72,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 48,
+              "textures": 24
+            },
+            "hybrid": {
+              "version": "2.2.1-candidate-1",
+              "phase": "stage-turn",
+              "progress": 1.43,
+              "status": "ready",
+              "error": null,
+              "mode": "hybrid",
+              "manualBlend": null,
+              "switches": {
+                "wall": true,
+                "floor": true,
+                "wood": true,
+                "lighting": true
+              },
+              "weights": {
+                "foreground": 1,
+                "mid": 0,
+                "far": 0
+              },
+              "effective": [
+                {
+                  "name": "V221-02_Enclosure-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 14,
+                  "source": "02_Enclosure",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-03_MainHall-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "03_MainHall",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-05_EastGallery-floor",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "05_EastGallery",
+                  "kind": "floor"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 312,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1440,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 20320,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1024,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                }
+              ],
+              "foreground": "original geometry, unchanged",
+              "textures": 2,
+              "textureBytesEstimate": 11184810.666666666,
+              "decode": [
+                {
+                  "id": "paving",
+                  "loadAndDecodeMs": 22.200000000186265,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "plaster",
+                  "loadAndDecodeMs": 25.799999999813735,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "surface-programs",
+                  "compileMs": 1452.1000000000931
+                }
+              ],
+              "preparation": [
+                {
+                  "id": "geometry",
+                  "start": 6129.100000000093,
+                  "ms": 2,
+                  "skins": 7
+                },
+                {
+                  "id": "visible-program-compile",
+                  "start": 6131.899999999907,
+                  "ms": 510.8000000002794,
+                  "programs": 53
+                },
+                {
+                  "id": "offscreen-first-draw",
+                  "start": 6643,
+                  "ms": 1712.6000000000931
+                },
+                {
+                  "id": "total-prepare",
+                  "start": 1152.7000000001863,
+                  "ms": 7203
+                }
+              ],
+              "programs": 60,
+              "legacyVersion": "2.2-procedural-candidate-1",
+              "mural": {
+                "id": "mural-01",
+                "position": [
+                  4.865,
+                  1.55,
+                  4.8
+                ],
+                "rotationY": -1.5707963267948966,
+                "width": 3.65,
+                "height": 1.2547,
+                "enabled": false
+              }
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1920,
+                1080
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 145,
+                "calls": 46,
+                "triangles": 169490,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 24883200,
+              "multisampleBytes": 49766400,
+              "targetBytes": 74649600
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          }
+        },
+        {
+          "progress": 1.6,
+          "pose": {
+            "time": 1.6,
+            "position": [
+              3.85,
+              1.38,
+              9.7
+            ],
+            "target": [
+              4.05,
+              1.38,
+              3.399999999999999
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "832ab423-29c4-4a3b-9272-a2a6780c1689",
+            "renderCount": 85,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 48,
+              "textures": 24
+            },
+            "hybrid": {
+              "version": "2.2.1-candidate-1",
+              "phase": "corridor-3d",
+              "progress": 1.6,
+              "status": "ready",
+              "error": null,
+              "mode": "hybrid",
+              "manualBlend": null,
+              "switches": {
+                "wall": true,
+                "floor": true,
+                "wood": true,
+                "lighting": true
+              },
+              "weights": {
+                "foreground": 1,
+                "mid": 3.018600402631422e-31,
+                "far": 0
+              },
+              "effective": [
+                {
+                  "name": "V221-02_Enclosure-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 14,
+                  "source": "02_Enclosure",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-03_MainHall-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "03_MainHall",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-05_EastGallery-floor",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "05_EastGallery",
+                  "kind": "floor"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 312,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1440,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 20320,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1024,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                }
+              ],
+              "foreground": "original geometry, unchanged",
+              "textures": 2,
+              "textureBytesEstimate": 11184810.666666666,
+              "decode": [
+                {
+                  "id": "paving",
+                  "loadAndDecodeMs": 22.200000000186265,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "plaster",
+                  "loadAndDecodeMs": 25.799999999813735,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "surface-programs",
+                  "compileMs": 1452.1000000000931
+                }
+              ],
+              "preparation": [
+                {
+                  "id": "geometry",
+                  "start": 6129.100000000093,
+                  "ms": 2,
+                  "skins": 7
+                },
+                {
+                  "id": "visible-program-compile",
+                  "start": 6131.899999999907,
+                  "ms": 510.8000000002794,
+                  "programs": 53
+                },
+                {
+                  "id": "offscreen-first-draw",
+                  "start": 6643,
+                  "ms": 1712.6000000000931
+                },
+                {
+                  "id": "total-prepare",
+                  "start": 1152.7000000001863,
+                  "ms": 7203
+                }
+              ],
+              "programs": 60,
+              "legacyVersion": "2.2-procedural-candidate-1",
+              "mural": {
+                "id": "mural-01",
+                "position": [
+                  4.865,
+                  1.55,
+                  4.8
+                ],
+                "rotationY": -1.5707963267948966,
+                "width": 3.65,
+                "height": 1.2547,
+                "enabled": false
+              }
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1920,
+                1080
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 171,
+                "calls": 42,
+                "triangles": 168770,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 24883200,
+              "multisampleBytes": 49766400,
+              "targetBytes": 74649600
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          }
+        },
+        {
+          "progress": 1.8,
+          "pose": {
+            "time": 1.8,
+            "position": [
+              3.85,
+              1.38,
+              8.4
+            ],
+            "target": [
+              4.05,
+              1.38,
+              2.4
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "832ab423-29c4-4a3b-9272-a2a6780c1689",
+            "renderCount": 99,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 48,
+              "textures": 24
+            },
+            "hybrid": {
+              "version": "2.2.1-candidate-1",
+              "phase": "corridor-hybrid",
+              "progress": 1.8,
+              "status": "ready",
+              "error": null,
+              "mode": "hybrid",
+              "manualBlend": null,
+              "switches": {
+                "wall": true,
+                "floor": true,
+                "wood": true,
+                "lighting": true
+              },
+              "weights": {
+                "foreground": 1,
+                "mid": 0.6064139941690965,
+                "far": 0.3690209647872991
+              },
+              "effective": [
+                {
+                  "name": "V221-02_Enclosure-wall",
+                  "weight": 0.606413994169096,
+                  "visible": true,
+                  "triangles": 14,
+                  "source": "02_Enclosure",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-03_MainHall-wall",
+                  "weight": 0.606413994169096,
+                  "visible": true,
+                  "triangles": 2,
+                  "source": "03_MainHall",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-05_EastGallery-floor",
+                  "weight": 0.606413994169096,
+                  "visible": true,
+                  "triangles": 2,
+                  "source": "05_EastGallery",
+                  "kind": "floor"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0.606413994169096,
+                  "visible": true,
+                  "triangles": 312,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0.606413994169096,
+                  "visible": true,
+                  "triangles": 1440,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0.606413994169096,
+                  "visible": true,
+                  "triangles": 20320,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0.606413994169096,
+                  "visible": true,
+                  "triangles": 1024,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                }
+              ],
+              "foreground": "original geometry, unchanged",
+              "textures": 2,
+              "textureBytesEstimate": 11184810.666666666,
+              "decode": [
+                {
+                  "id": "paving",
+                  "loadAndDecodeMs": 22.200000000186265,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "plaster",
+                  "loadAndDecodeMs": 25.799999999813735,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "surface-programs",
+                  "compileMs": 1452.1000000000931
+                }
+              ],
+              "preparation": [
+                {
+                  "id": "geometry",
+                  "start": 6129.100000000093,
+                  "ms": 2,
+                  "skins": 7
+                },
+                {
+                  "id": "visible-program-compile",
+                  "start": 6131.899999999907,
+                  "ms": 510.8000000002794,
+                  "programs": 53
+                },
+                {
+                  "id": "offscreen-first-draw",
+                  "start": 6643,
+                  "ms": 1712.6000000000931
+                },
+                {
+                  "id": "total-prepare",
+                  "start": 1152.7000000001863,
+                  "ms": 7203
+                }
+              ],
+              "programs": 60,
+              "legacyVersion": "2.2-procedural-candidate-1",
+              "mural": {
+                "id": "mural-01",
+                "position": [
+                  4.865,
+                  1.55,
+                  4.8
+                ],
+                "rotationY": -1.5707963267948966,
+                "width": 3.65,
+                "height": 1.2547,
+                "enabled": false
+              }
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1920,
+                1080
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 199,
+                "calls": 42,
+                "triangles": 162484,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 24883200,
+              "multisampleBytes": 49766400,
+              "targetBytes": 74649600
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          }
+        },
+        {
+          "progress": 2,
+          "pose": {
+            "time": 2,
+            "position": [
+              3.85,
+              1.38,
+              7.65
+            ],
+            "target": [
+              4.1,
+              1.38,
+              2
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "832ab423-29c4-4a3b-9272-a2a6780c1689",
+            "renderCount": 113,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 48,
+              "textures": 24
+            },
+            "hybrid": {
+              "version": "2.2.1-candidate-1",
+              "phase": "corridor-2_5d",
+              "progress": 2,
+              "status": "ready",
+              "error": null,
+              "mode": "hybrid",
+              "manualBlend": null,
+              "switches": {
+                "wall": true,
+                "floor": true,
+                "wood": true,
+                "lighting": true
+              },
+              "weights": {
+                "foreground": 1,
+                "mid": 1,
+                "far": 1
+              },
+              "effective": [
+                {
+                  "name": "V221-02_Enclosure-wall",
+                  "weight": 1,
+                  "visible": true,
+                  "triangles": 14,
+                  "source": "02_Enclosure",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-03_MainHall-wall",
+                  "weight": 1,
+                  "visible": true,
+                  "triangles": 2,
+                  "source": "03_MainHall",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-05_EastGallery-floor",
+                  "weight": 1,
+                  "visible": true,
+                  "triangles": 2,
+                  "source": "05_EastGallery",
+                  "kind": "floor"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 1,
+                  "visible": true,
+                  "triangles": 312,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 1,
+                  "visible": true,
+                  "triangles": 1440,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 1,
+                  "visible": true,
+                  "triangles": 20320,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 1,
+                  "visible": true,
+                  "triangles": 1024,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                }
+              ],
+              "foreground": "original geometry, unchanged",
+              "textures": 2,
+              "textureBytesEstimate": 11184810.666666666,
+              "decode": [
+                {
+                  "id": "paving",
+                  "loadAndDecodeMs": 22.200000000186265,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "plaster",
+                  "loadAndDecodeMs": 25.799999999813735,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "surface-programs",
+                  "compileMs": 1452.1000000000931
+                }
+              ],
+              "preparation": [
+                {
+                  "id": "geometry",
+                  "start": 6129.100000000093,
+                  "ms": 2,
+                  "skins": 7
+                },
+                {
+                  "id": "visible-program-compile",
+                  "start": 6131.899999999907,
+                  "ms": 510.8000000002794,
+                  "programs": 53
+                },
+                {
+                  "id": "offscreen-first-draw",
+                  "start": 6643,
+                  "ms": 1712.6000000000931
+                },
+                {
+                  "id": "total-prepare",
+                  "start": 1152.7000000001863,
+                  "ms": 7203
+                }
+              ],
+              "programs": 60,
+              "legacyVersion": "2.2-procedural-candidate-1",
+              "mural": {
+                "id": "mural-01",
+                "position": [
+                  4.865,
+                  1.55,
+                  4.8
+                ],
+                "rotationY": -1.5707963267948966,
+                "width": 3.65,
+                "height": 1.2547,
+                "enabled": false
+              }
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1920,
+                1080
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 227,
+                "calls": 38,
+                "triangles": 160728,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 24883200,
+              "multisampleBytes": 49766400,
+              "targetBytes": 74649600
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          }
+        }
+      ],
+      "memory": {
+        "geometries": 48,
+        "textures": 24
+      },
+      "cycles": 5,
+      "requests": [
+        {
+          "url": "http://127.0.0.1:4186/shuilong-temple/shuilong-temple.glb",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/hybrid-v2-2/layers.json",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/hybrid-v2-2/plaster-modulation-v1.webp",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/hybrid-v2-2/paving-modulation-v1.webp",
+          "status": 200
+        }
+      ],
+      "disabledDifference": {
+        "mean": 0.0008823623971193416,
+        "max": 1
+      }
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "rows": [
+        {
+          "progress": 0,
+          "pose": {
+            "time": 0,
+            "position": [
+              -23.33250595253667,
+              19.342753798798213,
+              -26.88031350693665
+            ],
+            "target": [
+              0,
+              -1.25,
+              -1.75
+            ],
+            "fov": 32
+          },
+          "stats": {
+            "rendererUUID": "14f69ed3-46bf-466a-ba4e-5dfd51c205ea",
+            "renderCount": 3,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 48,
+              "textures": 24
+            },
+            "hybrid": {
+              "version": "2.2.1-candidate-1",
+              "phase": "entry-3d",
+              "progress": 0,
+              "status": "ready",
+              "error": null,
+              "mode": "hybrid",
+              "manualBlend": null,
+              "switches": {
+                "wall": true,
+                "floor": true,
+                "wood": true,
+                "lighting": true
+              },
+              "weights": {
+                "foreground": 1,
+                "mid": 0,
+                "far": 0
+              },
+              "effective": [
+                {
+                  "name": "V221-02_Enclosure-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 14,
+                  "source": "02_Enclosure",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-03_MainHall-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "03_MainHall",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-05_EastGallery-floor",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "05_EastGallery",
+                  "kind": "floor"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 312,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1440,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 20320,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1024,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                }
+              ],
+              "foreground": "original geometry, unchanged",
+              "textures": 2,
+              "textureBytesEstimate": 11184810.666666666,
+              "decode": [
+                {
+                  "id": "paving",
+                  "loadAndDecodeMs": 27.800000000279397,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "plaster",
+                  "loadAndDecodeMs": 28.200000000186265,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "surface-programs",
+                  "compileMs": 360.09999999962747
+                }
+              ],
+              "preparation": [
+                {
+                  "id": "geometry",
+                  "start": 2940.2000000001863,
+                  "ms": 1.599999999627471,
+                  "skins": 7
+                },
+                {
+                  "id": "visible-program-compile",
+                  "start": 2942.7000000001863,
+                  "ms": 119.6999999997206,
+                  "programs": 53
+                },
+                {
+                  "id": "offscreen-first-draw",
+                  "start": 3062.5,
+                  "ms": 486.79999999981374
+                },
+                {
+                  "id": "total-prepare",
+                  "start": 1383.3999999999069,
+                  "ms": 2165.899999999907
+                }
+              ],
+              "programs": 60,
+              "legacyVersion": "2.2-procedural-candidate-1",
+              "mural": {
+                "id": "mural-01",
+                "position": [
+                  4.865,
+                  1.55,
+                  4.8
+                ],
+                "rotationY": -1.5707963267948966,
+                "width": 3.65,
+                "height": 1.2547,
+                "enabled": false
+              }
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1440,
+                900
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 7,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 15552000,
+              "multisampleBytes": 31104000,
+              "targetBytes": 46656000
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          }
+        },
+        {
+          "progress": 0.52,
+          "pose": {
+            "time": 0.52,
+            "position": [
+              -0.35,
+              2.2,
+              24
+            ],
+            "target": [
+              0,
+              1.32,
+              11.8
+            ],
+            "fov": 46
+          },
+          "stats": {
+            "rendererUUID": "14f69ed3-46bf-466a-ba4e-5dfd51c205ea",
+            "renderCount": 16,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 48,
+              "textures": 24
+            },
+            "hybrid": {
+              "version": "2.2.1-candidate-1",
+              "phase": "entry-3d",
+              "progress": 0.52,
+              "status": "ready",
+              "error": null,
+              "mode": "hybrid",
+              "manualBlend": null,
+              "switches": {
+                "wall": true,
+                "floor": true,
+                "wood": true,
+                "lighting": true
+              },
+              "weights": {
+                "foreground": 1,
+                "mid": 0,
+                "far": 0
+              },
+              "effective": [
+                {
+                  "name": "V221-02_Enclosure-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 14,
+                  "source": "02_Enclosure",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-03_MainHall-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "03_MainHall",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-05_EastGallery-floor",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "05_EastGallery",
+                  "kind": "floor"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 312,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1440,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 20320,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1024,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                }
+              ],
+              "foreground": "original geometry, unchanged",
+              "textures": 2,
+              "textureBytesEstimate": 11184810.666666666,
+              "decode": [
+                {
+                  "id": "paving",
+                  "loadAndDecodeMs": 27.800000000279397,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "plaster",
+                  "loadAndDecodeMs": 28.200000000186265,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "surface-programs",
+                  "compileMs": 360.09999999962747
+                }
+              ],
+              "preparation": [
+                {
+                  "id": "geometry",
+                  "start": 2940.2000000001863,
+                  "ms": 1.599999999627471,
+                  "skins": 7
+                },
+                {
+                  "id": "visible-program-compile",
+                  "start": 2942.7000000001863,
+                  "ms": 119.6999999997206,
+                  "programs": 53
+                },
+                {
+                  "id": "offscreen-first-draw",
+                  "start": 3062.5,
+                  "ms": 486.79999999981374
+                },
+                {
+                  "id": "total-prepare",
+                  "start": 1383.3999999999069,
+                  "ms": 2165.899999999907
+                }
+              ],
+              "programs": 60,
+              "legacyVersion": "2.2-procedural-candidate-1",
+              "mural": {
+                "id": "mural-01",
+                "position": [
+                  4.865,
+                  1.55,
+                  4.8
+                ],
+                "rotationY": -1.5707963267948966,
+                "width": 3.65,
+                "height": 1.2547,
+                "enabled": false
+              }
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1440,
+                900
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 33,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 15552000,
+              "multisampleBytes": 31104000,
+              "targetBytes": 46656000
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          }
+        },
+        {
+          "progress": 0.78,
+          "pose": {
+            "time": 0.78,
+            "position": [
+              0,
+              1.38,
+              14.1
+            ],
+            "target": [
+              0,
+              1.38,
+              9.8
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "14f69ed3-46bf-466a-ba4e-5dfd51c205ea",
+            "renderCount": 30,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 48,
+              "textures": 24
+            },
+            "hybrid": {
+              "version": "2.2.1-candidate-1",
+              "phase": "entry-3d",
+              "progress": 0.78,
+              "status": "ready",
+              "error": null,
+              "mode": "hybrid",
+              "manualBlend": null,
+              "switches": {
+                "wall": true,
+                "floor": true,
+                "wood": true,
+                "lighting": true
+              },
+              "weights": {
+                "foreground": 1,
+                "mid": 0,
+                "far": 0
+              },
+              "effective": [
+                {
+                  "name": "V221-02_Enclosure-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 14,
+                  "source": "02_Enclosure",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-03_MainHall-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "03_MainHall",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-05_EastGallery-floor",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "05_EastGallery",
+                  "kind": "floor"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 312,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1440,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 20320,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1024,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                }
+              ],
+              "foreground": "original geometry, unchanged",
+              "textures": 2,
+              "textureBytesEstimate": 11184810.666666666,
+              "decode": [
+                {
+                  "id": "paving",
+                  "loadAndDecodeMs": 27.800000000279397,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "plaster",
+                  "loadAndDecodeMs": 28.200000000186265,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "surface-programs",
+                  "compileMs": 360.09999999962747
+                }
+              ],
+              "preparation": [
+                {
+                  "id": "geometry",
+                  "start": 2940.2000000001863,
+                  "ms": 1.599999999627471,
+                  "skins": 7
+                },
+                {
+                  "id": "visible-program-compile",
+                  "start": 2942.7000000001863,
+                  "ms": 119.6999999997206,
+                  "programs": 53
+                },
+                {
+                  "id": "offscreen-first-draw",
+                  "start": 3062.5,
+                  "ms": 486.79999999981374
+                },
+                {
+                  "id": "total-prepare",
+                  "start": 1383.3999999999069,
+                  "ms": 2165.899999999907
+                }
+              ],
+              "programs": 60,
+              "legacyVersion": "2.2-procedural-candidate-1",
+              "mural": {
+                "id": "mural-01",
+                "position": [
+                  4.865,
+                  1.55,
+                  4.8
+                ],
+                "rotationY": -1.5707963267948966,
+                "width": 3.65,
+                "height": 1.2547,
+                "enabled": false
+              }
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1440,
+                900
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 61,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 15552000,
+              "multisampleBytes": 31104000,
+              "targetBytes": 46656000
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          }
+        },
+        {
+          "progress": 0.92,
+          "pose": {
+            "time": 0.92,
+            "position": [
+              0,
+              1.38,
+              12.25
+            ],
+            "target": [
+              0.12,
+              1.38,
+              9.7
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "14f69ed3-46bf-466a-ba4e-5dfd51c205ea",
+            "renderCount": 43,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 48,
+              "textures": 24
+            },
+            "hybrid": {
+              "version": "2.2.1-candidate-1",
+              "phase": "entry-3d",
+              "progress": 0.92,
+              "status": "ready",
+              "error": null,
+              "mode": "hybrid",
+              "manualBlend": null,
+              "switches": {
+                "wall": true,
+                "floor": true,
+                "wood": true,
+                "lighting": true
+              },
+              "weights": {
+                "foreground": 1,
+                "mid": 0,
+                "far": 0
+              },
+              "effective": [
+                {
+                  "name": "V221-02_Enclosure-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 14,
+                  "source": "02_Enclosure",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-03_MainHall-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "03_MainHall",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-05_EastGallery-floor",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "05_EastGallery",
+                  "kind": "floor"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 312,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1440,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 20320,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1024,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                }
+              ],
+              "foreground": "original geometry, unchanged",
+              "textures": 2,
+              "textureBytesEstimate": 11184810.666666666,
+              "decode": [
+                {
+                  "id": "paving",
+                  "loadAndDecodeMs": 27.800000000279397,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "plaster",
+                  "loadAndDecodeMs": 28.200000000186265,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "surface-programs",
+                  "compileMs": 360.09999999962747
+                }
+              ],
+              "preparation": [
+                {
+                  "id": "geometry",
+                  "start": 2940.2000000001863,
+                  "ms": 1.599999999627471,
+                  "skins": 7
+                },
+                {
+                  "id": "visible-program-compile",
+                  "start": 2942.7000000001863,
+                  "ms": 119.6999999997206,
+                  "programs": 53
+                },
+                {
+                  "id": "offscreen-first-draw",
+                  "start": 3062.5,
+                  "ms": 486.79999999981374
+                },
+                {
+                  "id": "total-prepare",
+                  "start": 1383.3999999999069,
+                  "ms": 2165.899999999907
+                }
+              ],
+              "programs": 60,
+              "legacyVersion": "2.2-procedural-candidate-1",
+              "mural": {
+                "id": "mural-01",
+                "position": [
+                  4.865,
+                  1.55,
+                  4.8
+                ],
+                "rotationY": -1.5707963267948966,
+                "width": 3.65,
+                "height": 1.2547,
+                "enabled": false
+              }
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1440,
+                900
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 87,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 15552000,
+              "multisampleBytes": 31104000,
+              "targetBytes": 46656000
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          }
+        },
+        {
+          "progress": 1,
+          "pose": {
+            "time": 1,
+            "position": [
+              0.12,
+              1.38,
+              11.15
+            ],
+            "target": [
+              1.2,
+              1.38,
+              9.2
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "14f69ed3-46bf-466a-ba4e-5dfd51c205ea",
+            "renderCount": 57,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 48,
+              "textures": 24
+            },
+            "hybrid": {
+              "version": "2.2.1-candidate-1",
+              "phase": "gate-interior",
+              "progress": 1,
+              "status": "ready",
+              "error": null,
+              "mode": "hybrid",
+              "manualBlend": null,
+              "switches": {
+                "wall": true,
+                "floor": true,
+                "wood": true,
+                "lighting": true
+              },
+              "weights": {
+                "foreground": 1,
+                "mid": 0,
+                "far": 0
+              },
+              "effective": [
+                {
+                  "name": "V221-02_Enclosure-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 14,
+                  "source": "02_Enclosure",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-03_MainHall-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "03_MainHall",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-05_EastGallery-floor",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "05_EastGallery",
+                  "kind": "floor"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 312,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1440,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 20320,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1024,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                }
+              ],
+              "foreground": "original geometry, unchanged",
+              "textures": 2,
+              "textureBytesEstimate": 11184810.666666666,
+              "decode": [
+                {
+                  "id": "paving",
+                  "loadAndDecodeMs": 27.800000000279397,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "plaster",
+                  "loadAndDecodeMs": 28.200000000186265,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "surface-programs",
+                  "compileMs": 360.09999999962747
+                }
+              ],
+              "preparation": [
+                {
+                  "id": "geometry",
+                  "start": 2940.2000000001863,
+                  "ms": 1.599999999627471,
+                  "skins": 7
+                },
+                {
+                  "id": "visible-program-compile",
+                  "start": 2942.7000000001863,
+                  "ms": 119.6999999997206,
+                  "programs": 53
+                },
+                {
+                  "id": "offscreen-first-draw",
+                  "start": 3062.5,
+                  "ms": 486.79999999981374
+                },
+                {
+                  "id": "total-prepare",
+                  "start": 1383.3999999999069,
+                  "ms": 2165.899999999907
+                }
+              ],
+              "programs": 60,
+              "legacyVersion": "2.2-procedural-candidate-1",
+              "mural": {
+                "id": "mural-01",
+                "position": [
+                  4.865,
+                  1.55,
+                  4.8
+                ],
+                "rotationY": -1.5707963267948966,
+                "width": 3.65,
+                "height": 1.2547,
+                "enabled": false
+              }
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1440,
+                900
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 115,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 15552000,
+              "multisampleBytes": 31104000,
+              "targetBytes": 46656000
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          }
+        },
+        {
+          "progress": 1.43,
+          "pose": {
+            "time": 1.43,
+            "position": [
+              3.4199999999999995,
+              1.38,
+              10.5
+            ],
+            "target": [
+              4.02,
+              1.38,
+              5.500000000000001
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "14f69ed3-46bf-466a-ba4e-5dfd51c205ea",
+            "renderCount": 71,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 48,
+              "textures": 24
+            },
+            "hybrid": {
+              "version": "2.2.1-candidate-1",
+              "phase": "stage-turn",
+              "progress": 1.43,
+              "status": "ready",
+              "error": null,
+              "mode": "hybrid",
+              "manualBlend": null,
+              "switches": {
+                "wall": true,
+                "floor": true,
+                "wood": true,
+                "lighting": true
+              },
+              "weights": {
+                "foreground": 1,
+                "mid": 0,
+                "far": 0
+              },
+              "effective": [
+                {
+                  "name": "V221-02_Enclosure-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 14,
+                  "source": "02_Enclosure",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-03_MainHall-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "03_MainHall",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-05_EastGallery-floor",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "05_EastGallery",
+                  "kind": "floor"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 312,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1440,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 20320,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1024,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                }
+              ],
+              "foreground": "original geometry, unchanged",
+              "textures": 2,
+              "textureBytesEstimate": 11184810.666666666,
+              "decode": [
+                {
+                  "id": "paving",
+                  "loadAndDecodeMs": 27.800000000279397,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "plaster",
+                  "loadAndDecodeMs": 28.200000000186265,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "surface-programs",
+                  "compileMs": 360.09999999962747
+                }
+              ],
+              "preparation": [
+                {
+                  "id": "geometry",
+                  "start": 2940.2000000001863,
+                  "ms": 1.599999999627471,
+                  "skins": 7
+                },
+                {
+                  "id": "visible-program-compile",
+                  "start": 2942.7000000001863,
+                  "ms": 119.6999999997206,
+                  "programs": 53
+                },
+                {
+                  "id": "offscreen-first-draw",
+                  "start": 3062.5,
+                  "ms": 486.79999999981374
+                },
+                {
+                  "id": "total-prepare",
+                  "start": 1383.3999999999069,
+                  "ms": 2165.899999999907
+                }
+              ],
+              "programs": 60,
+              "legacyVersion": "2.2-procedural-candidate-1",
+              "mural": {
+                "id": "mural-01",
+                "position": [
+                  4.865,
+                  1.55,
+                  4.8
+                ],
+                "rotationY": -1.5707963267948966,
+                "width": 3.65,
+                "height": 1.2547,
+                "enabled": false
+              }
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1440,
+                900
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 143,
+                "calls": 46,
+                "triangles": 169490,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 15552000,
+              "multisampleBytes": 31104000,
+              "targetBytes": 46656000
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          }
+        },
+        {
+          "progress": 1.6,
+          "pose": {
+            "time": 1.6,
+            "position": [
+              3.85,
+              1.38,
+              9.7
+            ],
+            "target": [
+              4.05,
+              1.38,
+              3.399999999999999
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "14f69ed3-46bf-466a-ba4e-5dfd51c205ea",
+            "renderCount": 84,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 48,
+              "textures": 24
+            },
+            "hybrid": {
+              "version": "2.2.1-candidate-1",
+              "phase": "corridor-3d",
+              "progress": 1.6,
+              "status": "ready",
+              "error": null,
+              "mode": "hybrid",
+              "manualBlend": null,
+              "switches": {
+                "wall": true,
+                "floor": true,
+                "wood": true,
+                "lighting": true
+              },
+              "weights": {
+                "foreground": 1,
+                "mid": 3.018600402631422e-31,
+                "far": 0
+              },
+              "effective": [
+                {
+                  "name": "V221-02_Enclosure-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 14,
+                  "source": "02_Enclosure",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-03_MainHall-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "03_MainHall",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-05_EastGallery-floor",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "05_EastGallery",
+                  "kind": "floor"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 312,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1440,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 20320,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1024,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                }
+              ],
+              "foreground": "original geometry, unchanged",
+              "textures": 2,
+              "textureBytesEstimate": 11184810.666666666,
+              "decode": [
+                {
+                  "id": "paving",
+                  "loadAndDecodeMs": 27.800000000279397,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "plaster",
+                  "loadAndDecodeMs": 28.200000000186265,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "surface-programs",
+                  "compileMs": 360.09999999962747
+                }
+              ],
+              "preparation": [
+                {
+                  "id": "geometry",
+                  "start": 2940.2000000001863,
+                  "ms": 1.599999999627471,
+                  "skins": 7
+                },
+                {
+                  "id": "visible-program-compile",
+                  "start": 2942.7000000001863,
+                  "ms": 119.6999999997206,
+                  "programs": 53
+                },
+                {
+                  "id": "offscreen-first-draw",
+                  "start": 3062.5,
+                  "ms": 486.79999999981374
+                },
+                {
+                  "id": "total-prepare",
+                  "start": 1383.3999999999069,
+                  "ms": 2165.899999999907
+                }
+              ],
+              "programs": 60,
+              "legacyVersion": "2.2-procedural-candidate-1",
+              "mural": {
+                "id": "mural-01",
+                "position": [
+                  4.865,
+                  1.55,
+                  4.8
+                ],
+                "rotationY": -1.5707963267948966,
+                "width": 3.65,
+                "height": 1.2547,
+                "enabled": false
+              }
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1440,
+                900
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 169,
+                "calls": 39,
+                "triangles": 162466,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 15552000,
+              "multisampleBytes": 31104000,
+              "targetBytes": 46656000
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          }
+        },
+        {
+          "progress": 1.8,
+          "pose": {
+            "time": 1.8,
+            "position": [
+              3.85,
+              1.38,
+              8.4
+            ],
+            "target": [
+              4.05,
+              1.38,
+              2.4
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "14f69ed3-46bf-466a-ba4e-5dfd51c205ea",
+            "renderCount": 98,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 48,
+              "textures": 24
+            },
+            "hybrid": {
+              "version": "2.2.1-candidate-1",
+              "phase": "corridor-hybrid",
+              "progress": 1.8,
+              "status": "ready",
+              "error": null,
+              "mode": "hybrid",
+              "manualBlend": null,
+              "switches": {
+                "wall": true,
+                "floor": true,
+                "wood": true,
+                "lighting": true
+              },
+              "weights": {
+                "foreground": 1,
+                "mid": 0.6064139941690965,
+                "far": 0.3690209647872991
+              },
+              "effective": [
+                {
+                  "name": "V221-02_Enclosure-wall",
+                  "weight": 0.606413994169096,
+                  "visible": true,
+                  "triangles": 14,
+                  "source": "02_Enclosure",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-03_MainHall-wall",
+                  "weight": 0.606413994169096,
+                  "visible": true,
+                  "triangles": 2,
+                  "source": "03_MainHall",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-05_EastGallery-floor",
+                  "weight": 0.606413994169096,
+                  "visible": true,
+                  "triangles": 2,
+                  "source": "05_EastGallery",
+                  "kind": "floor"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0.606413994169096,
+                  "visible": true,
+                  "triangles": 312,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0.606413994169096,
+                  "visible": true,
+                  "triangles": 1440,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0.606413994169096,
+                  "visible": true,
+                  "triangles": 20320,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0.606413994169096,
+                  "visible": true,
+                  "triangles": 1024,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                }
+              ],
+              "foreground": "original geometry, unchanged",
+              "textures": 2,
+              "textureBytesEstimate": 11184810.666666666,
+              "decode": [
+                {
+                  "id": "paving",
+                  "loadAndDecodeMs": 27.800000000279397,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "plaster",
+                  "loadAndDecodeMs": 28.200000000186265,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "surface-programs",
+                  "compileMs": 360.09999999962747
+                }
+              ],
+              "preparation": [
+                {
+                  "id": "geometry",
+                  "start": 2940.2000000001863,
+                  "ms": 1.599999999627471,
+                  "skins": 7
+                },
+                {
+                  "id": "visible-program-compile",
+                  "start": 2942.7000000001863,
+                  "ms": 119.6999999997206,
+                  "programs": 53
+                },
+                {
+                  "id": "offscreen-first-draw",
+                  "start": 3062.5,
+                  "ms": 486.79999999981374
+                },
+                {
+                  "id": "total-prepare",
+                  "start": 1383.3999999999069,
+                  "ms": 2165.899999999907
+                }
+              ],
+              "programs": 60,
+              "legacyVersion": "2.2-procedural-candidate-1",
+              "mural": {
+                "id": "mural-01",
+                "position": [
+                  4.865,
+                  1.55,
+                  4.8
+                ],
+                "rotationY": -1.5707963267948966,
+                "width": 3.65,
+                "height": 1.2547,
+                "enabled": false
+              }
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1440,
+                900
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 197,
+                "calls": 42,
+                "triangles": 162484,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 15552000,
+              "multisampleBytes": 31104000,
+              "targetBytes": 46656000
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          }
+        },
+        {
+          "progress": 2,
+          "pose": {
+            "time": 2,
+            "position": [
+              3.85,
+              1.38,
+              7.65
+            ],
+            "target": [
+              4.1,
+              1.38,
+              2
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "14f69ed3-46bf-466a-ba4e-5dfd51c205ea",
+            "renderCount": 111,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 48,
+              "textures": 24
+            },
+            "hybrid": {
+              "version": "2.2.1-candidate-1",
+              "phase": "corridor-2_5d",
+              "progress": 2,
+              "status": "ready",
+              "error": null,
+              "mode": "hybrid",
+              "manualBlend": null,
+              "switches": {
+                "wall": true,
+                "floor": true,
+                "wood": true,
+                "lighting": true
+              },
+              "weights": {
+                "foreground": 1,
+                "mid": 1,
+                "far": 1
+              },
+              "effective": [
+                {
+                  "name": "V221-02_Enclosure-wall",
+                  "weight": 1,
+                  "visible": true,
+                  "triangles": 14,
+                  "source": "02_Enclosure",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-03_MainHall-wall",
+                  "weight": 1,
+                  "visible": true,
+                  "triangles": 2,
+                  "source": "03_MainHall",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-05_EastGallery-floor",
+                  "weight": 1,
+                  "visible": true,
+                  "triangles": 2,
+                  "source": "05_EastGallery",
+                  "kind": "floor"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 1,
+                  "visible": true,
+                  "triangles": 312,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 1,
+                  "visible": true,
+                  "triangles": 1440,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 1,
+                  "visible": true,
+                  "triangles": 20320,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 1,
+                  "visible": true,
+                  "triangles": 1024,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                }
+              ],
+              "foreground": "original geometry, unchanged",
+              "textures": 2,
+              "textureBytesEstimate": 11184810.666666666,
+              "decode": [
+                {
+                  "id": "paving",
+                  "loadAndDecodeMs": 27.800000000279397,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "plaster",
+                  "loadAndDecodeMs": 28.200000000186265,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "surface-programs",
+                  "compileMs": 360.09999999962747
+                }
+              ],
+              "preparation": [
+                {
+                  "id": "geometry",
+                  "start": 2940.2000000001863,
+                  "ms": 1.599999999627471,
+                  "skins": 7
+                },
+                {
+                  "id": "visible-program-compile",
+                  "start": 2942.7000000001863,
+                  "ms": 119.6999999997206,
+                  "programs": 53
+                },
+                {
+                  "id": "offscreen-first-draw",
+                  "start": 3062.5,
+                  "ms": 486.79999999981374
+                },
+                {
+                  "id": "total-prepare",
+                  "start": 1383.3999999999069,
+                  "ms": 2165.899999999907
+                }
+              ],
+              "programs": 60,
+              "legacyVersion": "2.2-procedural-candidate-1",
+              "mural": {
+                "id": "mural-01",
+                "position": [
+                  4.865,
+                  1.55,
+                  4.8
+                ],
+                "rotationY": -1.5707963267948966,
+                "width": 3.65,
+                "height": 1.2547,
+                "enabled": false
+              }
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1440,
+                900
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 223,
+                "calls": 39,
+                "triangles": 160951,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 15552000,
+              "multisampleBytes": 31104000,
+              "targetBytes": 46656000
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          }
+        }
+      ],
+      "memory": {
+        "geometries": 48,
+        "textures": 24
+      },
+      "cycles": 5,
+      "requests": [
+        {
+          "url": "http://127.0.0.1:4186/shuilong-temple/shuilong-temple.glb",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/hybrid-v2-2/layers.json",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/hybrid-v2-2/plaster-modulation-v1.webp",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/hybrid-v2-2/paving-modulation-v1.webp",
+          "status": 200
+        }
+      ],
+      "disabledDifference": {
+        "mean": 0,
+        "max": 0
+      }
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "rows": [
+        {
+          "progress": 0,
+          "pose": {
+            "time": 0,
+            "position": [
+              -23.33250595253667,
+              19.342753798798213,
+              -26.88031350693665
+            ],
+            "target": [
+              0,
+              -1.25,
+              -1.75
+            ],
+            "fov": 32
+          },
+          "stats": {
+            "rendererUUID": "f05e26cb-df00-43e0-ab67-ab75b5ec0975",
+            "renderCount": 3,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 48,
+              "textures": 24
+            },
+            "hybrid": {
+              "version": "2.2.1-candidate-1",
+              "phase": "entry-3d",
+              "progress": 0,
+              "status": "ready",
+              "error": null,
+              "mode": "hybrid",
+              "manualBlend": null,
+              "switches": {
+                "wall": true,
+                "floor": true,
+                "wood": true,
+                "lighting": true
+              },
+              "weights": {
+                "foreground": 1,
+                "mid": 0,
+                "far": 0
+              },
+              "effective": [
+                {
+                  "name": "V221-02_Enclosure-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 14,
+                  "source": "02_Enclosure",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-03_MainHall-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "03_MainHall",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-05_EastGallery-floor",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "05_EastGallery",
+                  "kind": "floor"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 312,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1440,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 20320,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1024,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                }
+              ],
+              "foreground": "original geometry, unchanged",
+              "textures": 2,
+              "textureBytesEstimate": 11184810.666666666,
+              "decode": [
+                {
+                  "id": "paving",
+                  "loadAndDecodeMs": 22.799999999813735,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "plaster",
+                  "loadAndDecodeMs": 24.300000000279397,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "surface-programs",
+                  "compileMs": 342
+                }
+              ],
+              "preparation": [
+                {
+                  "id": "geometry",
+                  "start": 3167.899999999907,
+                  "ms": 1.7000000001862645,
+                  "skins": 7
+                },
+                {
+                  "id": "visible-program-compile",
+                  "start": 3170.399999999907,
+                  "ms": 127.8000000002794,
+                  "programs": 53
+                },
+                {
+                  "id": "offscreen-first-draw",
+                  "start": 3298.399999999907,
+                  "ms": 433.20000000018626
+                },
+                {
+                  "id": "total-prepare",
+                  "start": 1518.1000000000931,
+                  "ms": 2213.5
+                }
+              ],
+              "programs": 60,
+              "legacyVersion": "2.2-procedural-candidate-1",
+              "mural": {
+                "id": "mural-01",
+                "position": [
+                  4.865,
+                  1.55,
+                  4.8
+                ],
+                "rotationY": -1.5707963267948966,
+                "width": 3.65,
+                "height": 1.2547,
+                "enabled": false
+              }
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1366,
+                768
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 7,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 12589056,
+              "multisampleBytes": 25178112,
+              "targetBytes": 37767168
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          }
+        },
+        {
+          "progress": 0.52,
+          "pose": {
+            "time": 0.52,
+            "position": [
+              -0.35,
+              2.2,
+              24
+            ],
+            "target": [
+              0,
+              1.32,
+              11.8
+            ],
+            "fov": 46
+          },
+          "stats": {
+            "rendererUUID": "f05e26cb-df00-43e0-ab67-ab75b5ec0975",
+            "renderCount": 17,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 48,
+              "textures": 24
+            },
+            "hybrid": {
+              "version": "2.2.1-candidate-1",
+              "phase": "entry-3d",
+              "progress": 0.52,
+              "status": "ready",
+              "error": null,
+              "mode": "hybrid",
+              "manualBlend": null,
+              "switches": {
+                "wall": true,
+                "floor": true,
+                "wood": true,
+                "lighting": true
+              },
+              "weights": {
+                "foreground": 1,
+                "mid": 0,
+                "far": 0
+              },
+              "effective": [
+                {
+                  "name": "V221-02_Enclosure-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 14,
+                  "source": "02_Enclosure",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-03_MainHall-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "03_MainHall",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-05_EastGallery-floor",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "05_EastGallery",
+                  "kind": "floor"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 312,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1440,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 20320,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1024,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                }
+              ],
+              "foreground": "original geometry, unchanged",
+              "textures": 2,
+              "textureBytesEstimate": 11184810.666666666,
+              "decode": [
+                {
+                  "id": "paving",
+                  "loadAndDecodeMs": 22.799999999813735,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "plaster",
+                  "loadAndDecodeMs": 24.300000000279397,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "surface-programs",
+                  "compileMs": 342
+                }
+              ],
+              "preparation": [
+                {
+                  "id": "geometry",
+                  "start": 3167.899999999907,
+                  "ms": 1.7000000001862645,
+                  "skins": 7
+                },
+                {
+                  "id": "visible-program-compile",
+                  "start": 3170.399999999907,
+                  "ms": 127.8000000002794,
+                  "programs": 53
+                },
+                {
+                  "id": "offscreen-first-draw",
+                  "start": 3298.399999999907,
+                  "ms": 433.20000000018626
+                },
+                {
+                  "id": "total-prepare",
+                  "start": 1518.1000000000931,
+                  "ms": 2213.5
+                }
+              ],
+              "programs": 60,
+              "legacyVersion": "2.2-procedural-candidate-1",
+              "mural": {
+                "id": "mural-01",
+                "position": [
+                  4.865,
+                  1.55,
+                  4.8
+                ],
+                "rotationY": -1.5707963267948966,
+                "width": 3.65,
+                "height": 1.2547,
+                "enabled": false
+              }
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1366,
+                768
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 35,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 12589056,
+              "multisampleBytes": 25178112,
+              "targetBytes": 37767168
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          }
+        },
+        {
+          "progress": 0.78,
+          "pose": {
+            "time": 0.78,
+            "position": [
+              0,
+              1.38,
+              14.1
+            ],
+            "target": [
+              0,
+              1.38,
+              9.8
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "f05e26cb-df00-43e0-ab67-ab75b5ec0975",
+            "renderCount": 30,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 48,
+              "textures": 24
+            },
+            "hybrid": {
+              "version": "2.2.1-candidate-1",
+              "phase": "entry-3d",
+              "progress": 0.78,
+              "status": "ready",
+              "error": null,
+              "mode": "hybrid",
+              "manualBlend": null,
+              "switches": {
+                "wall": true,
+                "floor": true,
+                "wood": true,
+                "lighting": true
+              },
+              "weights": {
+                "foreground": 1,
+                "mid": 0,
+                "far": 0
+              },
+              "effective": [
+                {
+                  "name": "V221-02_Enclosure-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 14,
+                  "source": "02_Enclosure",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-03_MainHall-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "03_MainHall",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-05_EastGallery-floor",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "05_EastGallery",
+                  "kind": "floor"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 312,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1440,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 20320,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1024,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                }
+              ],
+              "foreground": "original geometry, unchanged",
+              "textures": 2,
+              "textureBytesEstimate": 11184810.666666666,
+              "decode": [
+                {
+                  "id": "paving",
+                  "loadAndDecodeMs": 22.799999999813735,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "plaster",
+                  "loadAndDecodeMs": 24.300000000279397,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "surface-programs",
+                  "compileMs": 342
+                }
+              ],
+              "preparation": [
+                {
+                  "id": "geometry",
+                  "start": 3167.899999999907,
+                  "ms": 1.7000000001862645,
+                  "skins": 7
+                },
+                {
+                  "id": "visible-program-compile",
+                  "start": 3170.399999999907,
+                  "ms": 127.8000000002794,
+                  "programs": 53
+                },
+                {
+                  "id": "offscreen-first-draw",
+                  "start": 3298.399999999907,
+                  "ms": 433.20000000018626
+                },
+                {
+                  "id": "total-prepare",
+                  "start": 1518.1000000000931,
+                  "ms": 2213.5
+                }
+              ],
+              "programs": 60,
+              "legacyVersion": "2.2-procedural-candidate-1",
+              "mural": {
+                "id": "mural-01",
+                "position": [
+                  4.865,
+                  1.55,
+                  4.8
+                ],
+                "rotationY": -1.5707963267948966,
+                "width": 3.65,
+                "height": 1.2547,
+                "enabled": false
+              }
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1366,
+                768
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 61,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 12589056,
+              "multisampleBytes": 25178112,
+              "targetBytes": 37767168
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          }
+        },
+        {
+          "progress": 0.92,
+          "pose": {
+            "time": 0.92,
+            "position": [
+              0,
+              1.38,
+              12.25
+            ],
+            "target": [
+              0.12,
+              1.38,
+              9.7
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "f05e26cb-df00-43e0-ab67-ab75b5ec0975",
+            "renderCount": 43,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 48,
+              "textures": 24
+            },
+            "hybrid": {
+              "version": "2.2.1-candidate-1",
+              "phase": "entry-3d",
+              "progress": 0.92,
+              "status": "ready",
+              "error": null,
+              "mode": "hybrid",
+              "manualBlend": null,
+              "switches": {
+                "wall": true,
+                "floor": true,
+                "wood": true,
+                "lighting": true
+              },
+              "weights": {
+                "foreground": 1,
+                "mid": 0,
+                "far": 0
+              },
+              "effective": [
+                {
+                  "name": "V221-02_Enclosure-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 14,
+                  "source": "02_Enclosure",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-03_MainHall-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "03_MainHall",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-05_EastGallery-floor",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "05_EastGallery",
+                  "kind": "floor"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 312,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1440,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 20320,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1024,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                }
+              ],
+              "foreground": "original geometry, unchanged",
+              "textures": 2,
+              "textureBytesEstimate": 11184810.666666666,
+              "decode": [
+                {
+                  "id": "paving",
+                  "loadAndDecodeMs": 22.799999999813735,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "plaster",
+                  "loadAndDecodeMs": 24.300000000279397,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "surface-programs",
+                  "compileMs": 342
+                }
+              ],
+              "preparation": [
+                {
+                  "id": "geometry",
+                  "start": 3167.899999999907,
+                  "ms": 1.7000000001862645,
+                  "skins": 7
+                },
+                {
+                  "id": "visible-program-compile",
+                  "start": 3170.399999999907,
+                  "ms": 127.8000000002794,
+                  "programs": 53
+                },
+                {
+                  "id": "offscreen-first-draw",
+                  "start": 3298.399999999907,
+                  "ms": 433.20000000018626
+                },
+                {
+                  "id": "total-prepare",
+                  "start": 1518.1000000000931,
+                  "ms": 2213.5
+                }
+              ],
+              "programs": 60,
+              "legacyVersion": "2.2-procedural-candidate-1",
+              "mural": {
+                "id": "mural-01",
+                "position": [
+                  4.865,
+                  1.55,
+                  4.8
+                ],
+                "rotationY": -1.5707963267948966,
+                "width": 3.65,
+                "height": 1.2547,
+                "enabled": false
+              }
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1366,
+                768
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 87,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 12589056,
+              "multisampleBytes": 25178112,
+              "targetBytes": 37767168
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          }
+        },
+        {
+          "progress": 1,
+          "pose": {
+            "time": 1,
+            "position": [
+              0.12,
+              1.38,
+              11.15
+            ],
+            "target": [
+              1.2,
+              1.38,
+              9.2
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "f05e26cb-df00-43e0-ab67-ab75b5ec0975",
+            "renderCount": 57,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 48,
+              "textures": 24
+            },
+            "hybrid": {
+              "version": "2.2.1-candidate-1",
+              "phase": "gate-interior",
+              "progress": 1,
+              "status": "ready",
+              "error": null,
+              "mode": "hybrid",
+              "manualBlend": null,
+              "switches": {
+                "wall": true,
+                "floor": true,
+                "wood": true,
+                "lighting": true
+              },
+              "weights": {
+                "foreground": 1,
+                "mid": 0,
+                "far": 0
+              },
+              "effective": [
+                {
+                  "name": "V221-02_Enclosure-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 14,
+                  "source": "02_Enclosure",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-03_MainHall-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "03_MainHall",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-05_EastGallery-floor",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "05_EastGallery",
+                  "kind": "floor"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 312,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1440,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 20320,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1024,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                }
+              ],
+              "foreground": "original geometry, unchanged",
+              "textures": 2,
+              "textureBytesEstimate": 11184810.666666666,
+              "decode": [
+                {
+                  "id": "paving",
+                  "loadAndDecodeMs": 22.799999999813735,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "plaster",
+                  "loadAndDecodeMs": 24.300000000279397,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "surface-programs",
+                  "compileMs": 342
+                }
+              ],
+              "preparation": [
+                {
+                  "id": "geometry",
+                  "start": 3167.899999999907,
+                  "ms": 1.7000000001862645,
+                  "skins": 7
+                },
+                {
+                  "id": "visible-program-compile",
+                  "start": 3170.399999999907,
+                  "ms": 127.8000000002794,
+                  "programs": 53
+                },
+                {
+                  "id": "offscreen-first-draw",
+                  "start": 3298.399999999907,
+                  "ms": 433.20000000018626
+                },
+                {
+                  "id": "total-prepare",
+                  "start": 1518.1000000000931,
+                  "ms": 2213.5
+                }
+              ],
+              "programs": 60,
+              "legacyVersion": "2.2-procedural-candidate-1",
+              "mural": {
+                "id": "mural-01",
+                "position": [
+                  4.865,
+                  1.55,
+                  4.8
+                ],
+                "rotationY": -1.5707963267948966,
+                "width": 3.65,
+                "height": 1.2547,
+                "enabled": false
+              }
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1366,
+                768
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 115,
+                "calls": 47,
+                "triangles": 169890,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 12589056,
+              "multisampleBytes": 25178112,
+              "targetBytes": 37767168
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          }
+        },
+        {
+          "progress": 1.43,
+          "pose": {
+            "time": 1.43,
+            "position": [
+              3.4199999999999995,
+              1.38,
+              10.5
+            ],
+            "target": [
+              4.02,
+              1.38,
+              5.500000000000001
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "f05e26cb-df00-43e0-ab67-ab75b5ec0975",
+            "renderCount": 70,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 48,
+              "textures": 24
+            },
+            "hybrid": {
+              "version": "2.2.1-candidate-1",
+              "phase": "stage-turn",
+              "progress": 1.43,
+              "status": "ready",
+              "error": null,
+              "mode": "hybrid",
+              "manualBlend": null,
+              "switches": {
+                "wall": true,
+                "floor": true,
+                "wood": true,
+                "lighting": true
+              },
+              "weights": {
+                "foreground": 1,
+                "mid": 0,
+                "far": 0
+              },
+              "effective": [
+                {
+                  "name": "V221-02_Enclosure-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 14,
+                  "source": "02_Enclosure",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-03_MainHall-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "03_MainHall",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-05_EastGallery-floor",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "05_EastGallery",
+                  "kind": "floor"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 312,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1440,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 20320,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1024,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                }
+              ],
+              "foreground": "original geometry, unchanged",
+              "textures": 2,
+              "textureBytesEstimate": 11184810.666666666,
+              "decode": [
+                {
+                  "id": "paving",
+                  "loadAndDecodeMs": 22.799999999813735,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "plaster",
+                  "loadAndDecodeMs": 24.300000000279397,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "surface-programs",
+                  "compileMs": 342
+                }
+              ],
+              "preparation": [
+                {
+                  "id": "geometry",
+                  "start": 3167.899999999907,
+                  "ms": 1.7000000001862645,
+                  "skins": 7
+                },
+                {
+                  "id": "visible-program-compile",
+                  "start": 3170.399999999907,
+                  "ms": 127.8000000002794,
+                  "programs": 53
+                },
+                {
+                  "id": "offscreen-first-draw",
+                  "start": 3298.399999999907,
+                  "ms": 433.20000000018626
+                },
+                {
+                  "id": "total-prepare",
+                  "start": 1518.1000000000931,
+                  "ms": 2213.5
+                }
+              ],
+              "programs": 60,
+              "legacyVersion": "2.2-procedural-candidate-1",
+              "mural": {
+                "id": "mural-01",
+                "position": [
+                  4.865,
+                  1.55,
+                  4.8
+                ],
+                "rotationY": -1.5707963267948966,
+                "width": 3.65,
+                "height": 1.2547,
+                "enabled": false
+              }
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1366,
+                768
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 141,
+                "calls": 46,
+                "triangles": 169490,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 12589056,
+              "multisampleBytes": 25178112,
+              "targetBytes": 37767168
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          }
+        },
+        {
+          "progress": 1.6,
+          "pose": {
+            "time": 1.6,
+            "position": [
+              3.85,
+              1.38,
+              9.7
+            ],
+            "target": [
+              4.05,
+              1.38,
+              3.399999999999999
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "f05e26cb-df00-43e0-ab67-ab75b5ec0975",
+            "renderCount": 83,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 48,
+              "textures": 24
+            },
+            "hybrid": {
+              "version": "2.2.1-candidate-1",
+              "phase": "corridor-3d",
+              "progress": 1.6,
+              "status": "ready",
+              "error": null,
+              "mode": "hybrid",
+              "manualBlend": null,
+              "switches": {
+                "wall": true,
+                "floor": true,
+                "wood": true,
+                "lighting": true
+              },
+              "weights": {
+                "foreground": 1,
+                "mid": 3.018600402631422e-31,
+                "far": 0
+              },
+              "effective": [
+                {
+                  "name": "V221-02_Enclosure-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 14,
+                  "source": "02_Enclosure",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-03_MainHall-wall",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "03_MainHall",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-05_EastGallery-floor",
+                  "weight": 0,
+                  "visible": false,
+                  "triangles": 2,
+                  "source": "05_EastGallery",
+                  "kind": "floor"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 312,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1440,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 20320,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0,
+                  "visible": true,
+                  "triangles": 1024,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                }
+              ],
+              "foreground": "original geometry, unchanged",
+              "textures": 2,
+              "textureBytesEstimate": 11184810.666666666,
+              "decode": [
+                {
+                  "id": "paving",
+                  "loadAndDecodeMs": 22.799999999813735,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "plaster",
+                  "loadAndDecodeMs": 24.300000000279397,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "surface-programs",
+                  "compileMs": 342
+                }
+              ],
+              "preparation": [
+                {
+                  "id": "geometry",
+                  "start": 3167.899999999907,
+                  "ms": 1.7000000001862645,
+                  "skins": 7
+                },
+                {
+                  "id": "visible-program-compile",
+                  "start": 3170.399999999907,
+                  "ms": 127.8000000002794,
+                  "programs": 53
+                },
+                {
+                  "id": "offscreen-first-draw",
+                  "start": 3298.399999999907,
+                  "ms": 433.20000000018626
+                },
+                {
+                  "id": "total-prepare",
+                  "start": 1518.1000000000931,
+                  "ms": 2213.5
+                }
+              ],
+              "programs": 60,
+              "legacyVersion": "2.2-procedural-candidate-1",
+              "mural": {
+                "id": "mural-01",
+                "position": [
+                  4.865,
+                  1.55,
+                  4.8
+                ],
+                "rotationY": -1.5707963267948966,
+                "width": 3.65,
+                "height": 1.2547,
+                "enabled": false
+              }
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1366,
+                768
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 167,
+                "calls": 42,
+                "triangles": 168770,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 12589056,
+              "multisampleBytes": 25178112,
+              "targetBytes": 37767168
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          }
+        },
+        {
+          "progress": 1.8,
+          "pose": {
+            "time": 1.8,
+            "position": [
+              3.85,
+              1.38,
+              8.4
+            ],
+            "target": [
+              4.05,
+              1.38,
+              2.4
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "f05e26cb-df00-43e0-ab67-ab75b5ec0975",
+            "renderCount": 96,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 48,
+              "textures": 24
+            },
+            "hybrid": {
+              "version": "2.2.1-candidate-1",
+              "phase": "corridor-hybrid",
+              "progress": 1.8,
+              "status": "ready",
+              "error": null,
+              "mode": "hybrid",
+              "manualBlend": null,
+              "switches": {
+                "wall": true,
+                "floor": true,
+                "wood": true,
+                "lighting": true
+              },
+              "weights": {
+                "foreground": 1,
+                "mid": 0.6064139941690965,
+                "far": 0.3690209647872991
+              },
+              "effective": [
+                {
+                  "name": "V221-02_Enclosure-wall",
+                  "weight": 0.606413994169096,
+                  "visible": true,
+                  "triangles": 14,
+                  "source": "02_Enclosure",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-03_MainHall-wall",
+                  "weight": 0.606413994169096,
+                  "visible": true,
+                  "triangles": 2,
+                  "source": "03_MainHall",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-05_EastGallery-floor",
+                  "weight": 0.606413994169096,
+                  "visible": true,
+                  "triangles": 2,
+                  "source": "05_EastGallery",
+                  "kind": "floor"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0.606413994169096,
+                  "visible": true,
+                  "triangles": 312,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0.606413994169096,
+                  "visible": true,
+                  "triangles": 1440,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0.606413994169096,
+                  "visible": true,
+                  "triangles": 20320,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 0.606413994169096,
+                  "visible": true,
+                  "triangles": 1024,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                }
+              ],
+              "foreground": "original geometry, unchanged",
+              "textures": 2,
+              "textureBytesEstimate": 11184810.666666666,
+              "decode": [
+                {
+                  "id": "paving",
+                  "loadAndDecodeMs": 22.799999999813735,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "plaster",
+                  "loadAndDecodeMs": 24.300000000279397,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "surface-programs",
+                  "compileMs": 342
+                }
+              ],
+              "preparation": [
+                {
+                  "id": "geometry",
+                  "start": 3167.899999999907,
+                  "ms": 1.7000000001862645,
+                  "skins": 7
+                },
+                {
+                  "id": "visible-program-compile",
+                  "start": 3170.399999999907,
+                  "ms": 127.8000000002794,
+                  "programs": 53
+                },
+                {
+                  "id": "offscreen-first-draw",
+                  "start": 3298.399999999907,
+                  "ms": 433.20000000018626
+                },
+                {
+                  "id": "total-prepare",
+                  "start": 1518.1000000000931,
+                  "ms": 2213.5
+                }
+              ],
+              "programs": 60,
+              "legacyVersion": "2.2-procedural-candidate-1",
+              "mural": {
+                "id": "mural-01",
+                "position": [
+                  4.865,
+                  1.55,
+                  4.8
+                ],
+                "rotationY": -1.5707963267948966,
+                "width": 3.65,
+                "height": 1.2547,
+                "enabled": false
+              }
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1366,
+                768
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 193,
+                "calls": 42,
+                "triangles": 162484,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 12589056,
+              "multisampleBytes": 25178112,
+              "targetBytes": 37767168
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          }
+        },
+        {
+          "progress": 2,
+          "pose": {
+            "time": 2,
+            "position": [
+              3.85,
+              1.38,
+              7.65
+            ],
+            "target": [
+              4.1,
+              1.38,
+              2
+            ],
+            "fov": 48
+          },
+          "stats": {
+            "rendererUUID": "f05e26cb-df00-43e0-ab67-ab75b5ec0975",
+            "renderCount": 110,
+            "renderers": 1,
+            "canvases": 1,
+            "removedTriangles": 320,
+            "doorMeshes": 3,
+            "memory": {
+              "geometries": 48,
+              "textures": 24
+            },
+            "hybrid": {
+              "version": "2.2.1-candidate-1",
+              "phase": "corridor-2_5d",
+              "progress": 2,
+              "status": "ready",
+              "error": null,
+              "mode": "hybrid",
+              "manualBlend": null,
+              "switches": {
+                "wall": true,
+                "floor": true,
+                "wood": true,
+                "lighting": true
+              },
+              "weights": {
+                "foreground": 1,
+                "mid": 1,
+                "far": 1
+              },
+              "effective": [
+                {
+                  "name": "V221-02_Enclosure-wall",
+                  "weight": 1,
+                  "visible": true,
+                  "triangles": 14,
+                  "source": "02_Enclosure",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-03_MainHall-wall",
+                  "weight": 1,
+                  "visible": true,
+                  "triangles": 2,
+                  "source": "03_MainHall",
+                  "kind": "wall"
+                },
+                {
+                  "name": "V221-05_EastGallery-floor",
+                  "weight": 1,
+                  "visible": true,
+                  "triangles": 2,
+                  "source": "05_EastGallery",
+                  "kind": "floor"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 1,
+                  "visible": true,
+                  "triangles": 312,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 1,
+                  "visible": true,
+                  "triangles": 1440,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 1,
+                  "visible": true,
+                  "triangles": 20320,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                },
+                {
+                  "name": "05_EastGallery-geometry",
+                  "weight": 1,
+                  "visible": true,
+                  "triangles": 1024,
+                  "source": "05_EastGallery",
+                  "kind": "wood"
+                }
+              ],
+              "foreground": "original geometry, unchanged",
+              "textures": 2,
+              "textureBytesEstimate": 11184810.666666666,
+              "decode": [
+                {
+                  "id": "paving",
+                  "loadAndDecodeMs": 22.799999999813735,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "plaster",
+                  "loadAndDecodeMs": 24.300000000279397,
+                  "width": 1024,
+                  "height": 1024
+                },
+                {
+                  "id": "surface-programs",
+                  "compileMs": 342
+                }
+              ],
+              "preparation": [
+                {
+                  "id": "geometry",
+                  "start": 3167.899999999907,
+                  "ms": 1.7000000001862645,
+                  "skins": 7
+                },
+                {
+                  "id": "visible-program-compile",
+                  "start": 3170.399999999907,
+                  "ms": 127.8000000002794,
+                  "programs": 53
+                },
+                {
+                  "id": "offscreen-first-draw",
+                  "start": 3298.399999999907,
+                  "ms": 433.20000000018626
+                },
+                {
+                  "id": "total-prepare",
+                  "start": 1518.1000000000931,
+                  "ms": 2213.5
+                }
+              ],
+              "programs": 60,
+              "legacyVersion": "2.2-procedural-candidate-1",
+              "mural": {
+                "id": "mural-01",
+                "position": [
+                  4.865,
+                  1.55,
+                  4.8
+                ],
+                "rotationY": -1.5707963267948966,
+                "width": 3.65,
+                "height": 1.2547,
+                "enabled": false
+              }
+            },
+            "post": {
+              "enabled": true,
+              "error": null,
+              "passes": 2,
+              "size": [
+                1366,
+                768
+              ],
+              "aoSamples": 12,
+              "stats": {
+                "frame": 221,
+                "calls": 38,
+                "triangles": 160728,
+                "points": 0,
+                "lines": 0
+              },
+              "colorDepthBytes": 12589056,
+              "multisampleBytes": 25178112,
+              "targetBytes": 37767168
+            },
+            "environment": {
+              "weight": 1,
+              "establish": 1,
+              "visibility": 1,
+              "roomWeight": 0,
+              "posterWeight": 0,
+              "layerWeights": {
+                "ground": 1,
+                "foreground": 1,
+                "fog": 1
+              },
+              "trees": 201,
+              "visible": true,
+              "titleRects": [
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ],
+                [
+                  -2,
+                  -2,
+                  -2,
+                  -2
+                ]
+              ],
+              "layers": [
+                "Foreground",
+                "TempleGround",
+                "MidgroundGroves",
+                "DistanceMatte"
+              ],
+              "triangles": 87148,
+              "drawCalls": 10
+            }
+          }
+        }
+      ],
+      "memory": {
+        "geometries": 48,
+        "textures": 24
+      },
+      "cycles": 5,
+      "requests": [
+        {
+          "url": "http://127.0.0.1:4186/shuilong-temple/shuilong-temple.glb",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/hybrid-v2-2/layers.json",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/hybrid-v2-2/plaster-modulation-v1.webp",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/hybrid-v2-2/paving-modulation-v1.webp",
+          "status": 200
+        }
+      ],
+      "disabledDifference": {
+        "mean": 0,
+        "max": 0
+      }
+    }
+  ],
+  "checks": [
+    "normal wheel, input lock, fixed camera, UI toggles, blend, depth and reduced motion",
+    "503 falls back to original geometry; retry safely returns before fusion",
+    "V1 mural candidate retained"
+  ],
+  "errors": [],
+  "warnings": [
+    "THREE.WebGLProgram: Program Info Log: (66,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value\n(66,12-86): warning X3595: gradient instruction used in a loop with varying iteration; partial derivatives may have undefined value"
+  ],
+  "legacyComparison": [
+    {
+      "width": 1920,
+      "height": 1080,
+      "difference": {
+        "mean": 0.0013863168724279834,
+        "max": 2
+      },
+      "exactCameraAndLights": true,
+      "tolerance": "mean < .01, max <= 2/255; raw values retained"
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "difference": {
+        "mean": 0,
+        "max": 0
+      },
+      "exactCameraAndLights": true,
+      "tolerance": "mean < .01, max <= 2/255; raw values retained"
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "difference": {
+        "mean": 0,
+        "max": 0
+      },
+      "exactCameraAndLights": true,
+      "tolerance": "mean < .01, max <= 2/255; raw values retained"
+    }
+  ],
+  "depth": {
+    "maxDifference": 0,
+    "tolerance": 0.0001
+  }
+}

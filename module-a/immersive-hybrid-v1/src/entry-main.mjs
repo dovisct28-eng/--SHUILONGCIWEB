@@ -3,18 +3,18 @@ import {GALLERY_STOPS as ENTRY_STOPS,sampleGallery as sampleEntry,createGalleryC
 const $=s=>document.querySelector(s),iframe=$('#temple'),status=$('#status');
 createInkScene($('#gallery'))(5,false);
 const query=matchMedia('(prefers-reduced-motion: reduce)');
-let reduced=query.matches,runtime=null,ready=false,progress=0,frames=[],last=0,failed=false,replayBusy=false;
+let reduced=query.matches,runtime=null,ready=false,progress=0,frames=[],last=0,failed=false,replayBusy=false,lastDebug=0;
 function metrics(){const a=frames.slice().sort((a,b)=>a-b);return {samples:a.length,p50:a[Math.floor(a.length*.5)]??null,p95:a[Math.floor(a.length*.95)]??null,max:a.at(-1)??null};}
-function debug(){if(runtime&&!$('#debug').hidden)$('#debug-data').textContent=JSON.stringify({state:controller.state,busy:controller.busy||replayBusy,progress,camera:runtime.pose,reducedMotion:reduced,frameMs:metrics(),stats:runtime.stats()},null,2);}
+function debug(force=true){if(!runtime||$('#debug').hidden)return;const now=performance.now();if(!force&&now-lastDebug<250)return;lastDebug=now;$('#debug-data').textContent=JSON.stringify({state:controller.state,busy:controller.busy||replayBusy,progress,camera:runtime.pose,reducedMotion:reduced,frameMs:metrics(),stats:runtime.stats()},null,2);}
 function draw(state){const i=ENTRY_STOPS.findIndex(s=>s.id===state);document.body.dataset.state=state;$('#step').textContent=`0${i+1} / 0${ENTRY_STOPS.length}`;$('#title').textContent=ENTRY_STOPS[i].label;$('#previous').disabled=!ready||i===0;$('#next').disabled=!ready||i===ENTRY_STOPS.length-1;for(const b of document.querySelectorAll('[data-stop]')){if(b.dataset.stop===state)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');}debug();}
 function moveTo(end,full=false){const start=progress,duration=reduced?100:Math.max(180,travelMs(start,end));frames=[];last=0;
  return new Promise((resolve,reject)=>{let began;function tick(now){try{began??=now;const u=Math.min(1,(now-began)/duration);if(last)frames.push(now-last);last=now;
    // Ease the clock, never reset the rail at a node. Reverse uses the same rail.
-   const eased=full?u:u*u*(3-2*u);progress=start+(end-start)*eased;runtime.setCamera(sampleEntry(progress));debug();
+   const eased=full?u:u*u*(3-2*u);progress=start+(end-start)*eased;runtime.setCamera(sampleEntry(progress));debug(false);
    if(u<1)requestAnimationFrame(tick);else resolve();
  }catch(e){reject(e);}}requestAnimationFrame(tick);});}
 let wheel=0,lastWheel=0,settledAt=0;
-async function prepareBlend(end){if(end<=1.6)return;if(runtime.hybrid.status==='loading')status.textContent='正在准备廊道…';const loaded=await runtime.hybrid.load();runtime.hybrid.setEnabled(loaded);$('#retry-enhancement').hidden=loaded;status.textContent=loaded?'':'廊道材质暂不可用，可继续参观或重试。';}
+async function prepareBlend(end){if(end<=1.6&&runtime.hybrid.status!=='loading')return;if(runtime.hybrid.status==='loading')status.textContent='正在准备廊道…';const loaded=await runtime.hybrid.load();runtime.hybrid.setEnabled(loaded);$('#retry-enhancement').hidden=loaded;status.textContent=loaded?'':'廊道材质暂不可用，可继续参观或重试。';}
 const controller=createEntryController(async next=>{if(!ready)throw Error('建筑尚未加载');$('#previous').disabled=$('#next').disabled=true;wheel=0;try{const end=ENTRY_STOPS.find(s=>s.id===next).time;await prepareBlend(end);await moveTo(end);if(runtime.hybrid.status!=='failed')status.textContent='';}catch(e){status.textContent=`镜头未能完成：${e.message}`;throw e;}finally{settledAt=performance.now();wheel=0;setTimeout(()=>draw(controller.state),0);}});
 async function go(next){if(!ready||replayBusy)return false;if(!controller.busy){$('#depth-overlay').hidden=true;runtime.hybrid.setBlend(null);}try{const result=await controller.go(next);draw(controller.state);return result;}catch(e){draw(controller.state);return false;}}
 $('#next').onclick=()=>go(ENTRY_STOPS[Math.min(ENTRY_STOPS.length-1,ENTRY_STOPS.findIndex(s=>s.id===controller.state)+1)].id);
@@ -29,6 +29,7 @@ $('#export').onclick=()=>{if(!runtime)return;const a=document.createElement('a')
 async function replay(){if(!ready||controller.busy||replayBusy)return false;await go('overview');replayBusy=true;try{await prepareBlend(2);await moveTo(1,true);await moveTo(2,true);}finally{replayBusy=false;}await go('corridor-2_5d');return true;}
 $('#replay').onclick=replay;
 $('#render-mode').onchange=()=>{if(!runtime||controller.busy||replayBusy)return;runtime.hybrid.setMode($('#render-mode').value);debug();};
+for(const input of document.querySelectorAll('[data-feature]'))input.onchange=()=>{if(!runtime||controller.busy||replayBusy)return;runtime.hybrid.setFeature(input.dataset.feature,input.checked);debug();};
 $('#blend').oninput=()=>{if(!runtime||controller.busy||replayBusy)return;runtime.hybrid.setBlend(Number($('#blend').value));debug();};
 $('#blend-auto').onclick=()=>{runtime?.hybrid.setBlend(null);debug();};
 $('#lock-camera').onclick=()=>go('corridor-hybrid');

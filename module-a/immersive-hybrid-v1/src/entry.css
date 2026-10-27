@@ -17,3 +17,4 @@ button,a{font:inherit;color:inherit}button{border:1px solid transparent;backgrou
 #depth-overlay{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none}
 #debug label{display:block;padding:8px 0}#debug select{background:#141b20;color:#d8d2c5;padding:5px}#debug input{vertical-align:middle;width:180px}
 @media(min-width:851px){.entry-footer nav{gap:12px}.entry-footer{gap:22px}.entry-controls{gap:8px}.entry-controls button{white-space:nowrap;padding:10px 14px}}
+#debug fieldset{border:1px solid #767a7350;display:flex;flex-wrap:wrap;gap:4px 14px;margin:8px 0}#debug fieldset input{width:auto;margin-right:5px}
