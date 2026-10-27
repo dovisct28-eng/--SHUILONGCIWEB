@@ -1,0 +1,799 @@
+{
+  "pass": true,
+  "base": "1c811b58c1a4eb7beb5583c7d4ee832f54ee76dd",
+  "syntax": true,
+  "branch": "feature/shuilongci-hybrid-gallery-v1",
+  "archiveUnchanged": true,
+  "mural": {
+    "source": "水龙祠壁画素材/网页展示图/mural-01-display.webp",
+    "asset": "module-a/immersive-hybrid-v1/assets/murals/mural-01-display.webp",
+    "sha256": "afc5a15eebec4e430151795f73c1cb958496ca6c629552d23be62588766716ef",
+    "byteIdentical": true
+  },
+  "protection": [
+    {
+      "file": "module-a/a01/README.md",
+      "sha256": "bb730a0525c13a8474d19d026455db8ebac9e387a578311035bd91cf65cb2050"
+    },
+    {
+      "file": "module-a/a01/app.mjs",
+      "sha256": "822c2633bbeaf94af46e8c6f22b39a3ccdad3bd509deeb220d40310331734ca9"
+    },
+    {
+      "file": "module-a/a01/cinematic-browser-check.cjs",
+      "sha256": "f9ed30c53b4ce3cb028d4688f00a5cade6edd08a98fee662b2f09cd7fff9ebf9"
+    },
+    {
+      "file": "module-a/a01/cinematic-contact.cjs",
+      "sha256": "47ca8292b30ed43800513017851050e08d8f93222202bc1f324f81c45e67c25c"
+    },
+    {
+      "file": "module-a/a01/cinematic-pass-check.cjs",
+      "sha256": "da182e039e7d3c50b10365dbe70b67419c321e5a3bd094c382333da09087e564"
+    },
+    {
+      "file": "module-a/a01/cinematic-performance-check.cjs",
+      "sha256": "19958ca7e42454e79adf9357bee08c06b4b5ec83dacea30ceaeb78c6e3f2cdf3"
+    },
+    {
+      "file": "module-a/a01/cinematic-protection-check.cjs",
+      "sha256": "865cbef6cf29dd0c43df992da90acb03ea9ac864f868370a936aae5ed409ed6d"
+    },
+    {
+      "file": "module-a/a01/cinematic-state.mjs",
+      "sha256": "1e34fc092b5959f02d1a3c1a831d62fdc8848a775cea2c7782234a72dad18d60"
+    },
+    {
+      "file": "module-a/a01/cinematic-state.test.mjs",
+      "sha256": "e79716ddb7401c95d9653e3c90777404fef0639faa2b6d059246e7649ea83f48"
+    },
+    {
+      "file": "module-a/a01/dark-before-check.cjs",
+      "sha256": "6fa32ed1b8577021115a97208174eb81b8241409ba01c52485094166b2372326"
+    },
+    {
+      "file": "module-a/a01/dark-browser-check.cjs",
+      "sha256": "8dc30848de7af6af7026ab18c170eac3ab15b25da18a1661f37bee20eb5b66e9"
+    },
+    {
+      "file": "module-a/a01/dark-contact.cjs",
+      "sha256": "0868d9794026381f666761b6258387b106ffe6e64afb5a0fbf670ed770aac670"
+    },
+    {
+      "file": "module-a/a01/dark-regression-check.cjs",
+      "sha256": "98d9cd5c8bbcb113ce33fc8e864ebdb9a6ff43933cebc18972ad4c749d2c8b45"
+    },
+    {
+      "file": "module-a/a01/font-browser-check.cjs",
+      "sha256": "fcd0e2704c7ec860d7f2cd1c798e0676e8ccb25f8d5cf2a01d21b1cc5bb1a9b5"
+    },
+    {
+      "file": "module-a/a01/fonts.test.mjs",
+      "sha256": "2fa230c8d47ccee886ba0e6b7cfc1ddd6966df11fb2ad5ecc814f99bf4c7f5ce"
+    },
+    {
+      "file": "module-a/a01/fonts/OFL-Sans.txt",
+      "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+    },
+    {
+      "file": "module-a/a01/fonts/OFL-Serif.txt",
+      "sha256": "6a73f9541c2de74158c0e7cf6b0a58ef774f5a780bf191f2d7ec9cc53efe2bf2"
+    },
+    {
+      "file": "module-a/a01/fonts/README.md",
+      "sha256": "9fb541e70c0d50f71a3fb5f335c780d07031db90edb03f4d9345174b3b81ad14"
+    },
+    {
+      "file": "module-a/a01/fonts/a01-sans.woff2",
+      "sha256": "968cde0999848ba84f7f4b0a572e1788c12f45353663fe2ab5fe6efd368501c0"
+    },
+    {
+      "file": "module-a/a01/fonts/a01-serif.woff2",
+      "sha256": "36b417eab4d95d2415be86122efef45e29fefece899385cd6e8f0b27ed696301"
+    },
+    {
+      "file": "module-a/a01/fonts/manifest.json",
+      "sha256": "27fc0231ad2aa9306f480776ca08d9419f9450f2de58192af21cc0063458a75e"
+    },
+    {
+      "file": "module-a/a01/fonts/subset-fonts.py",
+      "sha256": "36bd430c436031e44d21e85f731ccac7084179ecbbc14dfd77cf81a24dff9536"
+    },
+    {
+      "file": "module-a/a01/index.html",
+      "sha256": "2644c40ae7066315b54a0b2553338e7457b6c80e37d3b623e42f994c319ab0a7"
+    },
+    {
+      "file": "module-a/a01/ink-color-check.cjs",
+      "sha256": "ca010835b0d22a149602bff31dee96f1b7864700444352f7948f97b5506edd1f"
+    },
+    {
+      "file": "module-a/a01/ink-pass-check.cjs",
+      "sha256": "de22e07066b91d8d97b6ba9b83f6b8e50fe69b1ac0594d61280037abe80d65d1"
+    },
+    {
+      "file": "module-a/a01/ink-scene.mjs",
+      "sha256": "a5c88707d99b482720ef2d4bdca695bd8b52bc54c4b77df31af3ee2541d84e97"
+    },
+    {
+      "file": "module-a/a01/ink-scene.test.mjs",
+      "sha256": "835a2d808a5387c9faa0a9dd59f93990b55dc69890b54902eec884b73286ba19"
+    },
+    {
+      "file": "module-a/a01/line-browser-check.cjs",
+      "sha256": "dd9805de89bf6d6c86b8ad517a49eda1491525b2c4fee716a56abd8ab38ecc61"
+    },
+    {
+      "file": "module-a/a01/line-performance-check.cjs",
+      "sha256": "306e49068e4cb3fa0eb3d1d31ed18657ebd40cef452146002d8dc7f494ce2fd1"
+    },
+    {
+      "file": "module-a/a01/progress.mjs",
+      "sha256": "90d1d86fb61f7a1a9ad13096dfe2e8fbde40634383448bbae9292a531ed29d29"
+    },
+    {
+      "file": "module-a/a01/progress.test.mjs",
+      "sha256": "8bcd4b311e4fa90fce5f879ae58c97874670d1c4e7adfd26befa50616dd9b1fe"
+    },
+    {
+      "file": "module-a/a01/server.mjs",
+      "sha256": "3b54b5567c0ecf234249bf4e74bb692ef5179aabd34b2b611c7457b0c0dc1d48"
+    },
+    {
+      "file": "module-a/a01/styles.css",
+      "sha256": "6fc11f26ea75d849970b0188f44dc5d627a5f70ac2951dce66ab4aa35e42f0bc"
+    },
+    {
+      "file": "module-a/a01/v3-browser-check.cjs",
+      "sha256": "7aefa4681b64a3e02704c1b225d01d538e017222ffc271b282788416747be980"
+    },
+    {
+      "file": "module-a/a01/v3-contact.cjs",
+      "sha256": "797de02baced68520b6016746739d1be2918d9ed41f0816d66e22560b643a97d"
+    },
+    {
+      "file": "module-a/a01/v3-pass-check.cjs",
+      "sha256": "b34baadeb100ab2f717f1c4a9158a9ef5a732259ce26d964c853e8ac626b1643"
+    },
+    {
+      "file": "module-a/a01/v3-performance-check.cjs",
+      "sha256": "08e2ba8e5c7eea75ee352f19818760fbd6eef6454e3117de45c538a4a7e098a5"
+    },
+    {
+      "file": "module-a/a01/v3-regression-check.cjs",
+      "sha256": "9798f911ddff8d7a250cb2e9c0dfa747080fc14a7030bfa694fc54b298b9725d"
+    },
+    {
+      "file": "module-a/a01/visual-integration.test.mjs",
+      "sha256": "20eaf364d11e6a1e75a7b488f74f4871dcb714c32a9b38e051bb96d5fa9a4b12"
+    },
+    {
+      "file": "module-a/a01/visual-remaster-browser-check.cjs",
+      "sha256": "920706fb9cce603e3c28b1063cdc18078ecf8867e759c5e9b835e4c8430f0da7"
+    },
+    {
+      "file": "module-a/a01/visual-remaster-contact.cjs",
+      "sha256": "4127e07d11a9784d02bb40da601f5b850d5969cccd82d79f8c91fb8533db44e6"
+    },
+    {
+      "file": "module-a/a01/visual-remaster-performance-check.cjs",
+      "sha256": "d82bbef5879594e77924b7991bf36eaff72f1d596459a1812a8d5b676d11bd30"
+    },
+    {
+      "file": "module-a/guide/ambient.mjs",
+      "sha256": "47c7e0cd76c4bd6406de28f01bfc2da12e0f55f72926f19804aed915a58a5041"
+    },
+    {
+      "file": "module-a/guide/boards.cjs",
+      "sha256": "bb2b86f48635c14d57c5e537339531859c46ec935a05fb8ae65d9fa512b6dca3"
+    },
+    {
+      "file": "module-a/guide/build-check.cjs",
+      "sha256": "133b3c6ff7dfc5fafc3127058ff9f54b2e27da6869c6bd1d73b9021142915f31"
+    },
+    {
+      "file": "module-a/guide/controller.mjs",
+      "sha256": "62500aab0d952c30ad95f24d551d012b67ee423e2c42677f08edfc1c5bbd5969"
+    },
+    {
+      "file": "module-a/guide/delivery-check.cjs",
+      "sha256": "63ade1eea860f8aea0895e83f82c4f4c5f19dba023762ab2ab70e14497d77441"
+    },
+    {
+      "file": "module-a/guide/gallery-check.cjs",
+      "sha256": "63c3e4587082c7b4a5dedc7e6d44ee093307df590d2ba1971614baebf3a4ff55"
+    },
+    {
+      "file": "module-a/guide/multi-guide-check.cjs",
+      "sha256": "836e15043c3fb61d28dbd6cd72481f2c334fee3d7936c5989ad12ac827d4fcd7"
+    },
+    {
+      "file": "module-a/guide/performance-check.cjs",
+      "sha256": "be2ce7df51c88517c0ba38c14e9842929af0d8e8d8ba8035cd7afdd1469bce08"
+    },
+    {
+      "file": "module-a/guide/progress.mjs",
+      "sha256": "cb1397458b0d00ce3a41c753c2300d59c59f7a7f703ac3c7e9575779d0d1e875"
+    },
+    {
+      "file": "module-a/guide/progress.test.mjs",
+      "sha256": "a2dcf5413d09aaecca8dd365d175c67a99707f3c93b06fd3f82511db9f4ce32e"
+    },
+    {
+      "file": "module-a/guide/regression.cjs",
+      "sha256": "bc22733b5cde69da4cd1aa0e1cd7ee7c5837049a39b014ea13bcac9665410171"
+    },
+    {
+      "file": "module-a/guide/resilience-check.cjs",
+      "sha256": "555e01fe83dabfb426f0e675c38511142b4817cc141ee5f197db5d35cf4a7f06"
+    },
+    {
+      "file": "module-a/guide/styles.css",
+      "sha256": "829aac3e9fc54de5a32732e9137528b6fa0e4d027bd3890dec030bfe92dc5426"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/generated/S01-gate-exterior.webp",
+      "sha256": "955765b0e56c46c8eb8609236dd3c97ce2c82ae5f481d6ac9e5ecb518e98e9f5"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/generated/S02-gate-interior.webp",
+      "sha256": "1eb05f67c5845edfd1bf28be7f50828dd6de699f30e06f13ff2660dbf242e2b2"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/generated/S03-gallery-approach.webp",
+      "sha256": "d39a610f409c6b949d70290d7652e1df0671f55fe8fa717d7da9085dbe999ffa"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/generated/S04-mural01-background.webp",
+      "sha256": "4fdf353dae4b873bd1c3ef36e0535c6a1c02275fc55a37e079714cbb5307ad32"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/generated/originals/S01-gate-exterior-v1.png",
+      "sha256": "874dd21cee4c6f2ca0ec43c09812169ab5967521036766c97ac15d8824c02eb1"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/generated/originals/S02-gate-interior-v1.png",
+      "sha256": "c02f124291e4634de0f91a49a3a17d2ba69f8e85e8950a6d14c2e4dd65a1ea07"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/generated/originals/S03-gallery-approach-v1.png",
+      "sha256": "78494a530b4d3f4d1b453a998fa6e928cf025436806f8495f923082d5396259d"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/generated/originals/S04-mural01-background-v1.png",
+      "sha256": "c633e33c30860711cbd3c0d487996fada1e73e21f8d5bc1d2b31323714cfa53e"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/hybrid-v2-2-1/PROVENANCE.md",
+      "sha256": "67659e520e055e67978f3dfa1b778c79f7d2f277da473e5d4ead5369f851e1fa"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/hybrid-v2-2/PROVENANCE.md",
+      "sha256": "e8d367a9dafd9aebd694e7acec794ca93de2daf207ed13f8a76fdaf3459a28ea"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/hybrid-v2-2/corridor-enhanced-rgb.png",
+      "sha256": "31d180062ddca21f961aca8d3862b70c6167cc1c09c8f8ce21489e1bc6f44da9"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/hybrid-v2-2/corridor-eye-depth.f32.gz",
+      "sha256": "f53b1e6fc3e1974d29979bd61551ab7b50d4616abcd9dcb8514f74028286a402"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/hybrid-v2-2/corridor-foreground-mask.png",
+      "sha256": "9e184cbdd46cd8a8cadb78fc17c31a1434601a361b6263c301de1da5e156662a"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/hybrid-v2-2/corridor-reference-rgb.png",
+      "sha256": "065b548410962fbeab81b0aa9ca4183f6d268a9b591ee91bfb7a3b1c6d902757"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/hybrid-v2-2/corridor-surface-regions.png",
+      "sha256": "ee2e635598e75ca8b61adf677f7af6b6e0dead209cb6452d99053d99c7a2043e"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/hybrid-v2-2/depth.json",
+      "sha256": "c1530e034592222cd1055b7393c28bebefdae5c655a1e47caf90a4afa839a7ac"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/hybrid-v2-2/layers.json",
+      "sha256": "ef1c6a54aafa4c87dd7d9488345cfb115a0017e2f68d36d775a321d4ac6bb4ef"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/hybrid-v2-2/originals/paving-modulation-v1.png",
+      "sha256": "94194c2b188e4ea10f4baa6fffb140b8127bc5178d0316dcce697e89e587da1f"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/hybrid-v2-2/originals/plaster-modulation-v1.png",
+      "sha256": "15ad2de0f5ae1f9115fc387cd412d60eedaba3794afd3610f1e8627a228487d4"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/hybrid-v2-2/paving-modulation-v1.webp",
+      "sha256": "6ca8138011ac4c6f6af2043160c587a35af7f83675de304f8e9f07e17dea68b0"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/hybrid-v2-2/plaster-modulation-v1.webp",
+      "sha256": "161451a9fc805057302f1a4f118cae8ff2e7b78c66853734fa3e18d8e210ff79"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/layers/R03-foreground-mask.png",
+      "sha256": "3cdad2386cf72ac2b81da8b087276d2886272096d54ddbbaf0eb2b1d4f5bb13c"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/layers/R04-foreground-mask.png",
+      "sha256": "0de9463473ddb779867d6efad27c4968608856e55877e2e971054f448218215a"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/layers/R05-foreground-mask.png",
+      "sha256": "fcc645a26f47b194758bfbe034714e1b1a28cebbe0f778b56b25dc6cfa6354c5"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/layers/R06-foreground-mask.png",
+      "sha256": "d40a7cf33b7944c2025456c690981cfbec48348fd7afb845881c2e45787e0c69"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/murals/mural-01-display.webp",
+      "sha256": "afc5a15eebec4e430151795f73c1cb958496ca6c629552d23be62588766716ef"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/references/R01-overview.png",
+      "sha256": "c9e88b928feb28551d086be25f320ad2830a467230921f4f5eda93686e18f1bb"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/references/R02-gate-approach.png",
+      "sha256": "4ae7950744f621af4e8c19af9f9dcd940c29f60e7b20c5896ed72dc33a0e6c40"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/references/R03-gate-exterior.png",
+      "sha256": "f523bd707bce76c05ad34fd7786443fb13aa932cdc44ccca03addef7b1904e6d"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/references/R04-gate-interior.png",
+      "sha256": "952c0adb2e3f7f34a0c68514e18a1e570eaf869423ce88a5a1d9140f55f1f8e2"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/references/R05-right-gallery.png",
+      "sha256": "8986c3053eac850d57cea24775531e8aac1d700e9d6af9cb4bf9b9c0c6657144"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/references/R06-first-mural-stop.png",
+      "sha256": "5c2fb8a40dc04bcac2e2f61c88b39bdcaff5456b52eff83f0f0cdeb48f080300"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/references/local-source-audit.json",
+      "sha256": "995c1f643e04b827baa55082a57541e5f0a4bf9905f5cfbeba456a2c56f7b3d2"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/assets/references/reference-manifest.json",
+      "sha256": "f4efe716e364ac8a7d12bd89a980d904c9974ee4c4f77605cec929ede4fc6753"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/prompts/actual-generation-prompts.json",
+      "sha256": "56bdcd7d8005501990f7b139f75ab94e729f17e18bab3abfedaf1c86dd8ec0ed"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/prompts/generation-review.md",
+      "sha256": "54f7d5f34b894d38a99e27aa94f7ab910702dd0dd47c7e71f959e8f72e6f2196"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/prompts/scene-entrance-exterior.md",
+      "sha256": "edc0aa32a82847d001718d665278c01c2fcd4665b99899eea6d394a16dc3b6c2"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/prompts/scene-entrance-interior.md",
+      "sha256": "b852664faeb85f0d4100efbd7bc092835e4071694b02ea9d295d3b66ebed855f"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/prompts/scene-first-gallery.md",
+      "sha256": "e8fc1ecce15065dfc5628dae09e53357017a64dfdfe50376287faede46128bad"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/prompts/scene-first-stop.md",
+      "sha256": "9dde498cdea15371d2eeec0acd0e1e5dd06fdf22f309362191f985e2f8430af6"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/prompts/visual-system.md",
+      "sha256": "6f7ea3f6da282f59a3beea4bbe150ef9db4aaf3158a67bca13997a9868543b31"
+    },
+    {
+      "file": "module-a/navigation/browser-check.cjs",
+      "sha256": "4a66e669d932e284a72f10f748d8491e7729c03d0f7ae93b3ebdb04bba81ac67"
+    },
+    {
+      "file": "module-a/navigation/comparison-check.cjs",
+      "sha256": "d7f575a99ae7661c0ad28804298852563c5b89f9fef1987249befb026557871b"
+    },
+    {
+      "file": "module-a/navigation/controller.mjs",
+      "sha256": "29a3ae709f0d75b32302b7a9f8c4dd51d14fad09ee8cba29b36cdca2c17b719d"
+    },
+    {
+      "file": "module-a/navigation/exploration.mjs",
+      "sha256": "cf4e87928067a2dec104a01fb6d19150926e03d2c835a335da99b94b8e33f020"
+    },
+    {
+      "file": "module-a/navigation/pack-evidence.cjs",
+      "sha256": "e6cdabfb6d86876ed8c6677dd737f4227570b9dc71d881308100d4c06d9aa02a"
+    },
+    {
+      "file": "module-a/navigation/performance-check.cjs",
+      "sha256": "3e12baadaff7871c4adca349ccfa15a44652c0989f6960239fd8ff5547a1d638"
+    },
+    {
+      "file": "module-a/navigation/refinement-check.cjs",
+      "sha256": "3399dc717d215e627b5dfd64a3acdc08fef6e3ce456ffef2ab350fa74070edca"
+    },
+    {
+      "file": "module-a/navigation/regression.cjs",
+      "sha256": "a49b9d5e781241c378d6bc261e6846d75cc94cc6fb70c3a47e567a23051ca08d"
+    },
+    {
+      "file": "module-a/navigation/state.mjs",
+      "sha256": "3fbb9d251eba9dcd2027ea901c4ecd465423f3e1913317d96c2c0060c66c81ca"
+    },
+    {
+      "file": "module-a/navigation/state.test.mjs",
+      "sha256": "9a1a963d5d03ec4a45c6005cb06775fca32f58ecc6f742a527e1612d56c5710d"
+    },
+    {
+      "file": "module-a/navigation/styles.css",
+      "sha256": "fde524fe26c1f9133be1cc6bcc74d486da4f0b61a87b672a31637c3ef20b17b5"
+    },
+    {
+      "file": "shuilong-temple/Three-LICENSE.txt",
+      "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601"
+    },
+    {
+      "file": "shuilong-temple/a01-art-direction.mjs",
+      "sha256": "35fab5771a9030739c158fc04f1de090770cb04f60dc4944578a2e2427bb5f37"
+    },
+    {
+      "file": "shuilong-temple/a01-camera.mjs",
+      "sha256": "f9c5bc7fa882bd26a2ee473e94d93aae5b0899e751e4d10553b5899a145cc646"
+    },
+    {
+      "file": "shuilong-temple/a01-cinematic.test.mjs",
+      "sha256": "4da81bf1d84754c1f628d81f91c104fafdee693d783c7e899035805c51117709"
+    },
+    {
+      "file": "shuilong-temple/a01-environment.mjs",
+      "sha256": "17c404b20ccfed104bc981e391947cb94ec3e6f14fbcb1385d68cc9009e92970"
+    },
+    {
+      "file": "shuilong-temple/a01-lines-data.mjs",
+      "sha256": "19e956b315f8523fbf4799b271d080515503ed6a80788c88d8b4f252911ce893"
+    },
+    {
+      "file": "shuilong-temple/a01-lines.mjs",
+      "sha256": "711ef3c1b835a490daa7ebf3b566c38f763aa29a63a50c89c9e844b9c6c466ec"
+    },
+    {
+      "file": "shuilong-temple/a01-lines.test.mjs",
+      "sha256": "1b61347c52fde958fe48975a31195a539a5ccceab51d4be2640a210d29c34b9c"
+    },
+    {
+      "file": "shuilong-temple/a01-material.mjs",
+      "sha256": "689c3ac019f1f308ba336e4af4b8eabfa20a8d37984390c910afb976fe8bc948"
+    },
+    {
+      "file": "shuilong-temple/a01-post.mjs",
+      "readOnlyDepthGetterOnly": true
+    },
+    {
+      "file": "shuilong-temple/a02-light.mjs",
+      "sha256": "786ae7dc5903336189fbb4662e50061918e35550aee068dbba76e0ef6ffe0519"
+    },
+    {
+      "file": "shuilong-temple/a04-roof.test.mjs",
+      "sha256": "9d57e8e4aafb7597540ab0da568caeaf74a3502e7dfecb740be991b6638448d4"
+    },
+    {
+      "file": "shuilong-temple/a04-scene.mjs",
+      "sha256": "a11778bea8482f2245276bf0ebe7ece4b1c7f332fd55684b474a8b11124c3ff5"
+    },
+    {
+      "file": "shuilong-temple/architecture-style.test.py",
+      "sha256": "173bb750801bb264d2deb3e448195a754468686c35abe8fc43a0d775d919a063"
+    },
+    {
+      "file": "shuilong-temple/build-a01-lines.mjs",
+      "sha256": "eda5e175f7b06d6eefb5f14c3f889967888449c0bd73f6ec7c118339dbf9e24c"
+    },
+    {
+      "file": "shuilong-temple/build-model.mjs",
+      "sha256": "58dc4e8b815d2f86914a80783e78e149c3a16ee8eb3b4af34c7c4ffea28a4a88"
+    },
+    {
+      "file": "shuilong-temple/director-light.mjs",
+      "sha256": "86e148d5d589daac0dec4f0fcb8c6cecf0de1e700b294c5722c9374d43543407"
+    },
+    {
+      "file": "shuilong-temple/environment-assets/README.md",
+      "sha256": "07632828c31c359a099323fea76514ac7a224473299d78155cdd49b9bbf79e1a"
+    },
+    {
+      "file": "shuilong-temple/environment-assets/a01-v2/README.md",
+      "sha256": "3bd071f57641eea566103b267cb1cc12b696e24f75900327b2daef46b6b3f6ad"
+    },
+    {
+      "file": "shuilong-temple/environment-assets/a01-v2/karst-valley.webp",
+      "sha256": "c3b6f29eba6b0d716ad3dc40862a6022ed2e8329b2bb1ebf71e30b9109838bf5"
+    },
+    {
+      "file": "shuilong-temple/environment-assets/a01-v3/README.md",
+      "sha256": "eddcf25df39ee6a0d096a3d294c60024656f985ca48d0b889736a80e79b755be"
+    },
+    {
+      "file": "shuilong-temple/environment-assets/a01-v3/karst-valley.webp",
+      "sha256": "9a4c0ded91822f6794dc22b1e1e6e80daf5ab4db188953fe01f9afa88aa3dba7"
+    },
+    {
+      "file": "shuilong-temple/environment-assets/distant-landscape.webp",
+      "sha256": "b81208613ad9a71a17453eedec887dd909559bb5944ba5b3f217368dc5c255f5"
+    },
+    {
+      "file": "shuilong-temple/environment-assets/ivory-mist.webp",
+      "sha256": "3cdd3bd40ef58bc6930cca9c7dc7e80b2d057f566ca6ec4c4591d75f000cf337"
+    },
+    {
+      "file": "shuilong-temple/environment-assets/watercolor-tree.webp",
+      "sha256": "9acafb2ec8945aa32c2248d964dc97889967d2cf9900a8d58509b0e26014e415"
+    },
+    {
+      "file": "shuilong-temple/environment-browser-check.cjs",
+      "sha256": "e63440ed2679ad5641fbb6f950723ba0044afd0cb6a0b02cae313078d6ac2408"
+    },
+    {
+      "file": "shuilong-temple/environment-performance-check.cjs",
+      "sha256": "4d204e976c409aab08a604f659e0e83f47721e5bda62dfd0c9d5ee109d009ed5"
+    },
+    {
+      "file": "shuilong-temple/environment.mjs",
+      "sha256": "fe2e865bfc3a70d23771bac3331d0f1783317e2fbf91ac1f55c4998b46bf87d1"
+    },
+    {
+      "file": "shuilong-temple/environment.test.mjs",
+      "sha256": "55df5d64d930221bc15986fcecdd3de3959835ddd20388edfb8e0814ee586a2d"
+    },
+    {
+      "file": "shuilong-temple/generate-textures.py",
+      "sha256": "68f01da81c8c680d5d68e733bb2020c542e855837edd55abed227b40482e7029"
+    },
+    {
+      "file": "shuilong-temple/inline-a02.mjs",
+      "sha256": "61a7045216aac7f302090715d53b005a0317602a5393fd9a13ac9752ea75c9ea"
+    },
+    {
+      "file": "shuilong-temple/model-browser-check.cjs",
+      "sha256": "5c13ed1ffc1e1604d1c62f7d6b3f395edccf28eed59b465812025e31095f56d4"
+    },
+    {
+      "file": "shuilong-temple/model-chapters-check.cjs",
+      "sha256": "dd359fdea53059e427112680bf30c5bfff38ff45ba955a4be84ea4dcdfa92187"
+    },
+    {
+      "file": "shuilong-temple/model-info.json",
+      "sha256": "d66b5fcca166089e3fd5c2900295e9d38cfa2c991d5fdd91970b1c47f36a1e9b"
+    },
+    {
+      "file": "shuilong-temple/model-source.js",
+      "sha256": "03cd2eb6cfd21dbb1fd7dbde7b4db3c3baaad364414badcbfe9a1433cfd4ef06"
+    },
+    {
+      "file": "shuilong-temple/model.test.mjs",
+      "sha256": "8181c03298713d069c86beaab9b9c8a971795a0f65b2dd841b9acaecdcd1f877"
+    },
+    {
+      "file": "shuilong-temple/mural-locations.json",
+      "sha256": "4e313a04bf4cf5f8da9fdd0cf0637bb18ad4f18a0b23a75cd30de16274e6e84e"
+    },
+    {
+      "file": "shuilong-temple/narrative-markers.mjs",
+      "sha256": "676e4461bc4c73c83340a140124760a3f97715e5c8cc45458883724b524042da"
+    },
+    {
+      "file": "shuilong-temple/shared-world-a04-look-check.cjs",
+      "sha256": "3010b8f7d9bdebad8790a59c663d9a19b0d414be19eca0ed012f3f0ed8c45499"
+    },
+    {
+      "file": "shuilong-temple/shared-world-boards.cjs",
+      "sha256": "acee900e3bb3666795fc856ec56f2919891bd9410bf4b2aaa2b4682cb6f6d57e"
+    },
+    {
+      "file": "shuilong-temple/shared-world-check.cjs",
+      "sha256": "732ea5a7aa76d0b56cfd10df38a929194a97dee1ddb7146a2dff5c0661b4943c"
+    },
+    {
+      "file": "shuilong-temple/shared-world-performance.cjs",
+      "sha256": "ffb9bb934a3a0f9fa2a3fb7a31d9c26e319a4c5c01d1a00ab2a3eea126f2f14f"
+    },
+    {
+      "file": "shuilong-temple/shared-world-regression.cjs",
+      "sha256": "536e0f8220d4b5760429451c5fa8d46fe1ad625c75ce74020b06a190b83c5b23"
+    },
+    {
+      "file": "shuilong-temple/shared-world-sync.mjs",
+      "sha256": "1d8554e5c54e6cd624ca5fb6981ce721728846d537d953d0a9a7171e375ec44a"
+    },
+    {
+      "file": "shuilong-temple/shared-world-title-check.cjs",
+      "sha256": "cea2ecd92764f3818c4f166b3fbb16c847b5ad6275439c33c2edf04f3c7f4123"
+    },
+    {
+      "file": "shuilong-temple/shared-world.mjs",
+      "sha256": "03e83b39b3fab7b85e4ec44d6e2cca310ccc4d6fa47adcd3543de577324dd8d7"
+    },
+    {
+      "file": "shuilong-temple/shared-world.test.mjs",
+      "sha256": "364324fef0bf08ae5bd493ae3fa1cd57130583ded515b45d813fbbc74d35e9cd"
+    },
+    {
+      "file": "shuilong-temple/shuilong-temple.glb",
+      "sha256": "fbbfce1c0bfbf8a09c33ed65a6bb1f60589b6c70300841fa0283c2a4498ae047"
+    },
+    {
+      "file": "shuilong-temple/source-equivalence.mjs",
+      "sha256": "013a7f789789c372116105face87c64c3d32f4b3471d48f2ecedeeb33f93b7fd"
+    },
+    {
+      "file": "shuilong-temple/source-equivalence.test.mjs",
+      "sha256": "6fe218288c69060250f4a27fc6cd30ae49c9e562e10812e76e22a02612eed564"
+    },
+    {
+      "file": "shuilong-temple/sync-a02-preview.mjs",
+      "sha256": "8eeed229fe58615f0b8e1b3a69ff64039bef26f64729d14dce34353b5155cc1a"
+    },
+    {
+      "file": "shuilong-temple/texture-browser-check.cjs",
+      "sha256": "b383dcecb666e5b9c8d463dcc130f16c51df9a9b11443c86e7747ca7df7105eb"
+    },
+    {
+      "file": "shuilong-temple/textures/brick-basecolor.jpg",
+      "sha256": "47181da9aada975af591573565c6201e662deb4fa3fa3a9e3a5e0716f63c320b"
+    },
+    {
+      "file": "shuilong-temple/textures/brick-normal.jpg",
+      "sha256": "ef0227b874c561360784565babcba9e888ca3e1f7294d54597f2df47e922c168"
+    },
+    {
+      "file": "shuilong-temple/textures/brick-roughness.jpg",
+      "sha256": "bbd76f99cdec9438c111fa63aa14aa870eeee0c14f5568f10a4d05c15c1e0b51"
+    },
+    {
+      "file": "shuilong-temple/textures/paving-basecolor.jpg",
+      "sha256": "9d040625761eec19d8d75d7346e3de6e4c4b2b9a4572d46ba919ebf055579c0e"
+    },
+    {
+      "file": "shuilong-temple/textures/paving-normal.jpg",
+      "sha256": "ef0227b874c561360784565babcba9e888ca3e1f7294d54597f2df47e922c168"
+    },
+    {
+      "file": "shuilong-temple/textures/paving-roughness.jpg",
+      "sha256": "bbd76f99cdec9438c111fa63aa14aa870eeee0c14f5568f10a4d05c15c1e0b51"
+    },
+    {
+      "file": "shuilong-temple/textures/plaster-basecolor.jpg",
+      "sha256": "3ac17f09ed5553cbc4f2a0f87102cbc5166b91f8e2dc5cc87336ddfbc43d9f38"
+    },
+    {
+      "file": "shuilong-temple/textures/plaster-normal.jpg",
+      "sha256": "ec7666701ee1bc879fa9f7195dba110dd290f8263661815e93d9d02655837b84"
+    },
+    {
+      "file": "shuilong-temple/textures/plaster-roughness.jpg",
+      "sha256": "bbd76f99cdec9438c111fa63aa14aa870eeee0c14f5568f10a4d05c15c1e0b51"
+    },
+    {
+      "file": "shuilong-temple/textures/roof-basecolor.jpg",
+      "sha256": "3f0d6c302215e0a44556328065a146b1b5eb98172bd452277e2a6e20d6453409"
+    },
+    {
+      "file": "shuilong-temple/textures/roof-normal.jpg",
+      "sha256": "ef0227b874c561360784565babcba9e888ca3e1f7294d54597f2df47e922c168"
+    },
+    {
+      "file": "shuilong-temple/textures/roof-roughness.jpg",
+      "sha256": "bbd76f99cdec9438c111fa63aa14aa870eeee0c14f5568f10a4d05c15c1e0b51"
+    },
+    {
+      "file": "shuilong-temple/textures/stone-basecolor.jpg",
+      "sha256": "db3f7fb9a3bbe968e11c8961986d87ba4041d2d5f5340f70471db54d3f5bf5b4"
+    },
+    {
+      "file": "shuilong-temple/textures/stone-normal.jpg",
+      "sha256": "ec7666701ee1bc879fa9f7195dba110dd290f8263661815e93d9d02655837b84"
+    },
+    {
+      "file": "shuilong-temple/textures/stone-roughness.jpg",
+      "sha256": "bbd76f99cdec9438c111fa63aa14aa870eeee0c14f5568f10a4d05c15c1e0b51"
+    },
+    {
+      "file": "shuilong-temple/textures/wood-basecolor.jpg",
+      "sha256": "d90ea26594e61d11862dd4ff6b9d9212dc4a30c929fe63ca52f9e9e4061d9c2d"
+    },
+    {
+      "file": "shuilong-temple/textures/wood-normal.jpg",
+      "sha256": "ec7666701ee1bc879fa9f7195dba110dd290f8263661815e93d9d02655837b84"
+    },
+    {
+      "file": "shuilong-temple/textures/wood-roughness.jpg",
+      "sha256": "261c60f863f2c65a3119d65f4ecef6dca394746080cc6a39cef1af073f62f316"
+    },
+    {
+      "file": "shuilong-temple/visual-integration-browser-check.cjs",
+      "sha256": "26ab8bdfd7979c2df38f9de20093be80b1bb0a5661547a950ff48241a4ebaee0"
+    },
+    {
+      "file": "shuilong-temple/wall-finish-browser-check.cjs",
+      "sha256": "5592e19b6044b915306af1686a7f8c7b895487372cfd150771e5f8707dd71ec4"
+    },
+    {
+      "file": "shuilong-temple/watercolor-browser-check.cjs",
+      "sha256": "853761f2231d4669f6f5331e29bd4f61fe796d59cd3d24033ccdcb7ad071cf15"
+    },
+    {
+      "file": "shuilong-temple/使用说明.md",
+      "sha256": "bd1672763989d15832965e044a5206a18b20fb762187d044f89c2afce8f59f0d"
+    },
+    {
+      "file": "shuilong-temple/壁画位置预览.png",
+      "sha256": "7dd94af756929e4596d77c1407911f8ae624a3695e67b92cfb8d6523baf7ec4c"
+    },
+    {
+      "file": "shuilong-temple/壁画接口说明.md",
+      "sha256": "e79785e65c44f98bb4b69ff18211847c0379c1a036e43c2aa470378b825349d8"
+    },
+    {
+      "file": "shuilong-temple/模型预览.png",
+      "sha256": "93113ced1e4980d618c269ce1170de4d0eb5537a9d1f9f58ed2be0859e30a520"
+    },
+    {
+      "file": "shuilong-temple/水龙祠-交互预览.html",
+      "sha256": "99d608a6644771aabceb6c985680ea67548940b02729fda8a85ab76f8591cd63"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/src/entry-path.mjs",
+      "sha256": "32ef05f9e5bdf14445d6d95100279c2b926e1021e1c83d5077497cbe17197b9b"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/src/corridor-path.mjs",
+      "sha256": "883ddc59ffaadc49b8910f5046251adb9847520a2bb91d3a6a44647103c3fcd6"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/src/corridor-layers.mjs",
+      "sha256": "28cdf1a52ba5548f8e9ff5770490843c4c6189dd554052365522602c16e7e5dd"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/src/corridor-layers-v22.mjs",
+      "sha256": "460a2a00cbe288408b7879dba4f33960c1acd05f34344f48a9b6ddcb5e9678f2"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/src/corridor-finish.mjs",
+      "sha256": "86d7b8e8a3b43c82614eb8c2930f7810d7b59a80cd83409864a9e943a41cb78d"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/src/main.mjs",
+      "sha256": "f5668f9a872a79dcfdbffed89a5c8da34674f2b061300ad9e0bdcfc3dea19fa8"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/src/model-view.mjs",
+      "sha256": "55b786a5cfa35c5e08967e63720fa9f5224d7563eedd96491ae0495ac9b46fe0"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/src/depth-layers.mjs",
+      "sha256": "aba69f6a7807041adbbfcb461c6712132941ab2cbd52df6e5afc82b2ae11a259"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/src/parallax-scene.mjs",
+      "sha256": "e5a6b8390729bc73d1886d017401637a0f39d3e64effe54d66406a4c5ab6374a"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/src/mural-viewer.mjs",
+      "sha256": "1001fe82d0f0a70ce59f0a930298838a2c7e92d240251c5a60c4ac9ec62ad2b6"
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/v1.html",
+      "sha256": "3904ba0dc8fb4aaef4ff0569d699cc8e00a9c81bbeac422d33f6d3ed386d9a74"
+    }
+  ]
+}

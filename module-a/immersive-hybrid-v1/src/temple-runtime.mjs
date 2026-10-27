@@ -1,6 +1,7 @@
 // Opt-in adapter for the ORIGINAL running temple instance. No new renderer,
 // scene builder, GLB reader, environment copy or production scroll controller.
 import {createCorridorLayers} from './corridor-layers.mjs';
+import {createMuralCompositor} from './mural-compositor.mjs';
 export async function attachEntryRuntime(ctx){
   const {T,scene,root,camera,renderer,sun,fill,a01Art,a01Post,resizeScene,updateArtDirection,schedule,texturePromises}=ctx;
   const api=window.shuilongTemple;
@@ -32,10 +33,11 @@ export async function attachEntryRuntime(ctx){
   let scheduled=false,renderCount=0,pose={position:baseline.position,target:baseline.target,fov:baseline.fov},disposed=false;
   function invalidate(){if(!scheduled&&!disposed){scheduled=true;schedule();}}
   const hybrid=createCorridorLayers({T,scene,root,renderer,camera,invalidate});
+  const mural=createMuralCompositor({T,camera,renderer,invalidate,depthTexture:()=>a01Post?.getDepthTexture?.()});
   hybrid.load();
-  function setCamera(next){
+  function setCamera(next,{immediate=false}={}){
     if(!next||![...next.position,...next.target,next.fov].every(Number.isFinite))throw Error('Invalid entry camera');
-    pose=structuredClone(next);hybrid.update(pose.time??0);invalidate();
+    pose=structuredClone(next);hybrid.update(pose.time??0);if(immediate)renderFrame();else invalidate();
   }
   function renderFrame(){
     if(disposed)return;
@@ -46,7 +48,9 @@ export async function attachEntryRuntime(ctx){
     // light inside the doorway. Overview remains pixel-identical to A01.
     if(bounce){bounce.position.copy(bounceBase.position).lerp(new T.Vector3(.7,2,11),inside);bounce.intensity=8*inside;}
     camera.position.fromArray(pose.position);camera.lookAt(...pose.target);camera.fov=pose.fov;camera.updateProjectionMatrix();camera.updateMatrixWorld();
+    mural.update(pose.time??0);
     if(a01Post)a01Post.render();else renderer.render(scene,camera);
+    mural.render();
     renderCount++;window.modelReady=true;
   }
   const project=p=>{const v=new T.Vector3(...p).project(camera);return {x:(v.x+1)/2,y:(1-v.y)/2,depth:v.z,visible:v.z>=-1&&v.z<=1&&Math.abs(v.x)<=1&&Math.abs(v.y)<=1};};
@@ -81,10 +85,10 @@ export async function attachEntryRuntime(ctx){
       return {width,height,maxDepth,encoding:'Float32 LE, top-left row-major, linear positive eye-space -Z, design-model units; 0=background; saturated at maxDepth',depth:Array.from(depth)};
     }finally{scene.overrideMaterial=old;scene.background=background;renderer.setClearColor(clear,alpha);renderer.setRenderTarget(oldTarget);mat.dispose();target.dispose();invalidate();}
   }
-  const runtime={setCamera,renderFrame,invalidate,baseline,intersections,handoff,captureMask,captureDepth,captureRegions,setDoorOpen,hybrid,
+  const runtime={setCamera,renderFrame,invalidate,baseline,intersections,handoff,captureMask,captureDepth,captureRegions,setDoorOpen,hybrid,mural,
     get camera(){return camera;},get root(){return root;},get pose(){return structuredClone(pose);},
     stats:()=>({rendererUUID:renderer.domElement.dataset.entryRenderer,renderCount,renderers:1,canvases:document.querySelectorAll('canvas').length,removedTriangles,doorMeshes:saved.length,memory:{...renderer.info.memory},hybrid:hybrid.state(),post:a01Post?.getState(),environment:api.getA01EnvironmentState()}),
-    dispose(){disposed=true;hybrid.dispose();removeEventListener('resize',invalidate);removeEventListener('pageshow',invalidate);if(bounce){bounce.position.copy(bounceBase.position);bounce.intensity=bounceBase.intensity;}for(const item of saved){item.mesh.geometry=item.original;item.opened.dispose();}}};
+    dispose(){disposed=true;mural.dispose();hybrid.dispose();removeEventListener('resize',invalidate);removeEventListener('pageshow',invalidate);if(bounce){bounce.position.copy(bounceBase.position);bounce.intensity=bounceBase.intensity;}for(const item of saved){item.mesh.geometry=item.original;item.opened.dispose();}}};
   renderer.domElement.dataset.entryRenderer=crypto.randomUUID();
   addEventListener('resize',invalidate);addEventListener('pageshow',invalidate);addEventListener('pagehide',e=>{if(!e.persisted)runtime.dispose();});
   api.entry=runtime;return runtime;

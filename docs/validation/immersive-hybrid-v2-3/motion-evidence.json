@@ -1,0 +1,779 @@
+{
+  "pass": true,
+  "browser": "156.0.8078.47",
+  "viewport": [
+    1440,
+    900
+  ],
+  "source": "Actual browser viewport recording; includes load/positioning prelude; no synthetic replacement frames",
+  "events": [
+    {
+      "state": "mural-look",
+      "startMs": 9591,
+      "endMs": 11047,
+      "pose": {
+        "time": 2,
+        "position": [
+          3.5500000000000003,
+          1.38,
+          7.65
+        ],
+        "target": [
+          5.911943719042984,
+          1.8290387298560804,
+          2.530958479640682
+        ],
+        "fov": 48
+      },
+      "mural": {
+        "state": "mural-look",
+        "busy": false,
+        "error": null,
+        "turn": 1,
+        "reading": 0,
+        "metrics": {
+          "samples": 310,
+          "p50": 4.199999999998909,
+          "p95": 8.399999999999636,
+          "max": 12.399999999999636
+        },
+        "runs": [
+          {
+            "field": "turn",
+            "end": 1,
+            "elapsedMs": 1452.8999999994412,
+            "samples": 310,
+            "p50": 4.199999999998909,
+            "p95": 8.399999999999636,
+            "max": 12.399999999999636
+          }
+        ],
+        "composite": {
+          "status": "ready",
+          "error": null,
+          "active": true,
+          "progress": 0,
+          "mode": "hybrid",
+          "phases": {
+            "handoff": 0,
+            "rectify": 0,
+            "ui": 0
+          },
+          "anchor": {
+            "id": "mural-01",
+            "position": [
+              4.865,
+              1.55,
+              4.8
+            ],
+            "rotationY": -1.5707963267948966,
+            "width": 3.65,
+            "height": 1.2547
+          },
+          "source": {
+            "url": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/murals/mural-01-display.webp",
+            "width": 2880,
+            "height": 990,
+            "label": "第一幅壁画",
+            "location": "右侧廊内墙 · 越过戏台，朝向主殿",
+            "basis": "shuilong-temple/mural-locations.json; docs/CONTENT_MAP.md A06; model coordinates, not a site survey"
+          },
+          "corners": [
+            {
+              "x": 0.3892119148184123,
+              "y": 0.40400828437834746,
+              "depth": 0.9819158858076341
+            },
+            {
+              "x": 0.8484205825413246,
+              "y": 0.006253348918313195,
+              "depth": 0.942054025473086
+            },
+            {
+              "x": 0.8725139496909424,
+              "y": 0.9470928664953961,
+              "depth": 0.9380124636203184
+            },
+            {
+              "x": 0.3868856348869705,
+              "y": 0.6980473623427027,
+              "depth": 0.9815256620513866
+            }
+          ],
+          "readingCorners": [
+            {
+              "x": 0.3892119148184123,
+              "y": 0.40400828437834746,
+              "depth": 0.9819158858076341
+            },
+            {
+              "x": 0.8484205825413246,
+              "y": 0.006253348918313195,
+              "depth": 0.942054025473086
+            },
+            {
+              "x": 0.8725139496909424,
+              "y": 0.9470928664953961,
+              "depth": 0.9380124636203184
+            },
+            {
+              "x": 0.3868856348869705,
+              "y": 0.6980473623427027,
+              "depth": 0.9815256620513866
+            }
+          ],
+          "camera": {
+            "position": [
+              3.5500000000000003,
+              1.38,
+              7.65
+            ],
+            "quaternion": [
+              0.038805969503528964,
+              -0.21429977075460643,
+              0.008520957787951011,
+              0.9759595781915305
+            ],
+            "projectionMatrix": [
+              1.4037729836901347,
+              0,
+              0,
+              0,
+              0,
+              2.2460367739042155,
+              0,
+              0,
+              0,
+              0,
+              -1.0005001250312577,
+              -1,
+              0,
+              0,
+              -0.09002250562640661,
+              0
+            ]
+          },
+          "layers": [
+            "L0 original depth-tested architecture",
+            "L1 original anchored mural",
+            "L2 held original architecture with procedural depth field",
+            "L3 reading UI in parent"
+          ],
+          "timings": [
+            {
+              "id": "image-load-decode",
+              "ms": 173.5
+            },
+            {
+              "id": "shader-upload-first-draw",
+              "ms": 306.40000000037253
+            },
+            {
+              "id": "total-prepare",
+              "ms": 480.5
+            }
+          ],
+          "imageBytesEstimate": 15206400,
+          "sharedTexture": true,
+          "sharedGeometry": true,
+          "colorPipeline": "sRGB original texture, post-exempt overlay with actual architecture depth texture"
+        }
+      }
+    },
+    {
+      "state": "mural-reading",
+      "startMs": 11781,
+      "endMs": 13543,
+      "pose": {
+        "time": 2,
+        "position": [
+          3.5500000000000003,
+          1.38,
+          7.65
+        ],
+        "target": [
+          5.911943719042984,
+          1.8290387298560804,
+          2.530958479640682
+        ],
+        "fov": 48
+      },
+      "mural": {
+        "state": "mural-reading",
+        "busy": false,
+        "error": null,
+        "turn": 1,
+        "reading": 1,
+        "metrics": {
+          "samples": 397,
+          "p50": 4.199999999998909,
+          "p95": 8.200000000000728,
+          "max": 12.600000000000364
+        },
+        "runs": [
+          {
+            "field": "turn",
+            "end": 1,
+            "elapsedMs": 1452.8999999994412,
+            "samples": 310,
+            "p50": 4.199999999998909,
+            "p95": 8.399999999999636,
+            "max": 12.399999999999636
+          },
+          {
+            "field": "reading",
+            "end": 1,
+            "elapsedMs": 1756.4000000003725,
+            "samples": 397,
+            "p50": 4.199999999998909,
+            "p95": 8.200000000000728,
+            "max": 12.600000000000364
+          }
+        ],
+        "composite": {
+          "status": "ready",
+          "error": null,
+          "active": true,
+          "progress": 1,
+          "mode": "hybrid",
+          "phases": {
+            "handoff": 1,
+            "rectify": 1,
+            "ui": 1
+          },
+          "anchor": {
+            "id": "mural-01",
+            "position": [
+              4.865,
+              1.55,
+              4.8
+            ],
+            "rotationY": -1.5707963267948966,
+            "width": 3.65,
+            "height": 1.2547
+          },
+          "source": {
+            "url": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/murals/mural-01-display.webp",
+            "width": 2880,
+            "height": 990,
+            "label": "第一幅壁画",
+            "location": "右侧廊内墙 · 越过戏台，朝向主殿",
+            "basis": "shuilong-temple/mural-locations.json; docs/CONTENT_MAP.md A06; model coordinates, not a site survey"
+          },
+          "corners": [
+            {
+              "x": 0.3892119148184123,
+              "y": 0.40400828437834746,
+              "depth": 0.9819158858076341
+            },
+            {
+              "x": 0.8484205825413246,
+              "y": 0.006253348918313195,
+              "depth": 0.942054025473086
+            },
+            {
+              "x": 0.8725139496909424,
+              "y": 0.9470928664953961,
+              "depth": 0.9380124636203184
+            },
+            {
+              "x": 0.3868856348869705,
+              "y": 0.6980473623427027,
+              "depth": 0.9815256620513866
+            }
+          ],
+          "readingCorners": [
+            {
+              "x": 0.0900000000000003,
+              "y": 0.2744977534246576,
+              "depth": 0.9716860156621445
+            },
+            {
+              "x": 0.9100000000000001,
+              "y": 0.27449775342465754,
+              "depth": 0.9716860156621446
+            },
+            {
+              "x": 0.9100000000000001,
+              "y": 0.7255022465753425,
+              "depth": 0.9716860156621446
+            },
+            {
+              "x": 0.0900000000000003,
+              "y": 0.7255022465753423,
+              "depth": 0.9716860156621445
+            }
+          ],
+          "camera": {
+            "position": [
+              1.740749152153053,
+              1.55,
+              4.8
+            ],
+            "quaternion": [
+              0,
+              -0.7071067811865475,
+              0,
+              0.7071067811865476
+            ],
+            "projectionMatrix": [
+              1.4037729836901347,
+              0,
+              0,
+              0,
+              0,
+              2.2460367739042155,
+              0,
+              0,
+              0,
+              0,
+              -1.0005001250312577,
+              -1,
+              0,
+              0,
+              -0.09002250562640661,
+              0
+            ]
+          },
+          "layers": [
+            "L0 original depth-tested architecture",
+            "L1 original anchored mural",
+            "L2 held original architecture with procedural depth field",
+            "L3 reading UI in parent"
+          ],
+          "timings": [
+            {
+              "id": "image-load-decode",
+              "ms": 173.5
+            },
+            {
+              "id": "shader-upload-first-draw",
+              "ms": 306.40000000037253
+            },
+            {
+              "id": "total-prepare",
+              "ms": 480.5
+            }
+          ],
+          "imageBytesEstimate": 15206400,
+          "sharedTexture": true,
+          "sharedGeometry": true,
+          "colorPipeline": "sRGB original texture, post-exempt overlay with actual architecture depth texture"
+        }
+      }
+    },
+    {
+      "state": "mural-look",
+      "startMs": 14265,
+      "endMs": 16023,
+      "pose": {
+        "time": 2,
+        "position": [
+          3.5500000000000003,
+          1.38,
+          7.65
+        ],
+        "target": [
+          5.911943719042984,
+          1.8290387298560804,
+          2.530958479640682
+        ],
+        "fov": 48
+      },
+      "mural": {
+        "state": "mural-look",
+        "busy": false,
+        "error": null,
+        "turn": 1,
+        "reading": 0,
+        "metrics": {
+          "samples": 419,
+          "p50": 4.199999999998909,
+          "p95": 4.300000000001091,
+          "max": 8.700000000000728
+        },
+        "runs": [
+          {
+            "field": "turn",
+            "end": 1,
+            "elapsedMs": 1452.8999999994412,
+            "samples": 310,
+            "p50": 4.199999999998909,
+            "p95": 8.399999999999636,
+            "max": 12.399999999999636
+          },
+          {
+            "field": "reading",
+            "end": 1,
+            "elapsedMs": 1756.4000000003725,
+            "samples": 397,
+            "p50": 4.199999999998909,
+            "p95": 8.200000000000728,
+            "max": 12.600000000000364
+          },
+          {
+            "field": "reading",
+            "end": 0,
+            "elapsedMs": 1753.800000000745,
+            "samples": 419,
+            "p50": 4.199999999998909,
+            "p95": 4.300000000001091,
+            "max": 8.700000000000728
+          }
+        ],
+        "composite": {
+          "status": "ready",
+          "error": null,
+          "active": true,
+          "progress": 0,
+          "mode": "hybrid",
+          "phases": {
+            "handoff": 0,
+            "rectify": 0,
+            "ui": 0
+          },
+          "anchor": {
+            "id": "mural-01",
+            "position": [
+              4.865,
+              1.55,
+              4.8
+            ],
+            "rotationY": -1.5707963267948966,
+            "width": 3.65,
+            "height": 1.2547
+          },
+          "source": {
+            "url": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/murals/mural-01-display.webp",
+            "width": 2880,
+            "height": 990,
+            "label": "第一幅壁画",
+            "location": "右侧廊内墙 · 越过戏台，朝向主殿",
+            "basis": "shuilong-temple/mural-locations.json; docs/CONTENT_MAP.md A06; model coordinates, not a site survey"
+          },
+          "corners": [
+            {
+              "x": 0.3892119148184123,
+              "y": 0.40400828437834746,
+              "depth": 0.9819158858076341
+            },
+            {
+              "x": 0.8484205825413246,
+              "y": 0.006253348918313195,
+              "depth": 0.942054025473086
+            },
+            {
+              "x": 0.8725139496909424,
+              "y": 0.9470928664953961,
+              "depth": 0.9380124636203184
+            },
+            {
+              "x": 0.3868856348869705,
+              "y": 0.6980473623427027,
+              "depth": 0.9815256620513866
+            }
+          ],
+          "readingCorners": [
+            {
+              "x": 0.3892119148184123,
+              "y": 0.40400828437834746,
+              "depth": 0.9819158858076341
+            },
+            {
+              "x": 0.8484205825413246,
+              "y": 0.006253348918313195,
+              "depth": 0.942054025473086
+            },
+            {
+              "x": 0.8725139496909424,
+              "y": 0.9470928664953961,
+              "depth": 0.9380124636203184
+            },
+            {
+              "x": 0.3868856348869705,
+              "y": 0.6980473623427027,
+              "depth": 0.9815256620513866
+            }
+          ],
+          "camera": {
+            "position": [
+              3.5500000000000003,
+              1.38,
+              7.65
+            ],
+            "quaternion": [
+              0.038805969503528964,
+              -0.21429977075460643,
+              0.008520957787951011,
+              0.9759595781915305
+            ],
+            "projectionMatrix": [
+              1.4037729836901347,
+              0,
+              0,
+              0,
+              0,
+              2.2460367739042155,
+              0,
+              0,
+              0,
+              0,
+              -1.0005001250312577,
+              -1,
+              0,
+              0,
+              -0.09002250562640661,
+              0
+            ]
+          },
+          "layers": [
+            "L0 original depth-tested architecture",
+            "L1 original anchored mural",
+            "L2 held original architecture with procedural depth field",
+            "L3 reading UI in parent"
+          ],
+          "timings": [
+            {
+              "id": "image-load-decode",
+              "ms": 173.5
+            },
+            {
+              "id": "shader-upload-first-draw",
+              "ms": 306.40000000037253
+            },
+            {
+              "id": "total-prepare",
+              "ms": 480.5
+            }
+          ],
+          "imageBytesEstimate": 15206400,
+          "sharedTexture": true,
+          "sharedGeometry": true,
+          "colorPipeline": "sRGB original texture, post-exempt overlay with actual architecture depth texture"
+        }
+      }
+    },
+    {
+      "state": "corridor-2_5d",
+      "startMs": 16752,
+      "endMs": 18213,
+      "pose": {
+        "time": 2,
+        "position": [
+          3.85,
+          1.38,
+          7.65
+        ],
+        "target": [
+          4.1,
+          1.38,
+          2
+        ],
+        "fov": 48
+      },
+      "mural": {
+        "state": "corridor-2_5d",
+        "busy": false,
+        "error": null,
+        "turn": 0,
+        "reading": 0,
+        "metrics": {
+          "samples": 324,
+          "p50": 4.200000000000728,
+          "p95": 8.299999999999272,
+          "max": 8.5
+        },
+        "runs": [
+          {
+            "field": "turn",
+            "end": 1,
+            "elapsedMs": 1452.8999999994412,
+            "samples": 310,
+            "p50": 4.199999999998909,
+            "p95": 8.399999999999636,
+            "max": 12.399999999999636
+          },
+          {
+            "field": "reading",
+            "end": 1,
+            "elapsedMs": 1756.4000000003725,
+            "samples": 397,
+            "p50": 4.199999999998909,
+            "p95": 8.200000000000728,
+            "max": 12.600000000000364
+          },
+          {
+            "field": "reading",
+            "end": 0,
+            "elapsedMs": 1753.800000000745,
+            "samples": 419,
+            "p50": 4.199999999998909,
+            "p95": 4.300000000001091,
+            "max": 8.700000000000728
+          },
+          {
+            "field": "turn",
+            "end": 0,
+            "elapsedMs": 1455.5,
+            "samples": 324,
+            "p50": 4.200000000000728,
+            "p95": 8.299999999999272,
+            "max": 8.5
+          }
+        ],
+        "composite": {
+          "status": "ready",
+          "error": null,
+          "active": true,
+          "progress": 0,
+          "mode": "hybrid",
+          "phases": {
+            "handoff": 0,
+            "rectify": 0,
+            "ui": 0
+          },
+          "anchor": {
+            "id": "mural-01",
+            "position": [
+              4.865,
+              1.55,
+              4.8
+            ],
+            "rotationY": -1.5707963267948966,
+            "width": 3.65,
+            "height": 1.2547
+          },
+          "source": {
+            "url": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/murals/mural-01-display.webp",
+            "width": 2880,
+            "height": 990,
+            "label": "第一幅壁画",
+            "location": "右侧廊内墙 · 越过戏台，朝向主殿",
+            "basis": "shuilong-temple/mural-locations.json; docs/CONTENT_MAP.md A06; model coordinates, not a site survey"
+          },
+          "corners": [
+            {
+              "x": 0.6201767590424516,
+              "y": 0.310099224067649,
+              "depth": 0.9814085406905902
+            },
+            {
+              "x": 1.1361100323528865,
+              "y": -0.3377467232714584,
+              "depth": 0.9162776559816717
+            },
+            {
+              "x": 1.1361100323528865,
+              "y": 0.9805210558577802,
+              "depth": 0.9162776559816717
+            },
+            {
+              "x": 0.6201767590424516,
+              "y": 0.6089247129524809,
+              "depth": 0.9814085406905902
+            }
+          ],
+          "readingCorners": [
+            {
+              "x": 0.6201767590424516,
+              "y": 0.310099224067649,
+              "depth": 0.9814085406905902
+            },
+            {
+              "x": 1.1361100323528865,
+              "y": -0.3377467232714584,
+              "depth": 0.9162776559816717
+            },
+            {
+              "x": 1.1361100323528865,
+              "y": 0.9805210558577802,
+              "depth": 0.9162776559816717
+            },
+            {
+              "x": 0.6201767590424516,
+              "y": 0.6089247129524809,
+              "depth": 0.9814085406905902
+            }
+          ],
+          "camera": {
+            "position": [
+              3.85,
+              1.38,
+              7.65
+            ],
+            "quaternion": [
+              0,
+              -0.022107670950869057,
+              0,
+              0.9997555955758027
+            ],
+            "projectionMatrix": [
+              1.4037729836901347,
+              0,
+              0,
+              0,
+              0,
+              2.2460367739042155,
+              0,
+              0,
+              0,
+              0,
+              -1.0005001250312577,
+              -1,
+              0,
+              0,
+              -0.09002250562640661,
+              0
+            ]
+          },
+          "layers": [
+            "L0 original depth-tested architecture",
+            "L1 original anchored mural",
+            "L2 held original architecture with procedural depth field",
+            "L3 reading UI in parent"
+          ],
+          "timings": [
+            {
+              "id": "image-load-decode",
+              "ms": 173.5
+            },
+            {
+              "id": "shader-upload-first-draw",
+              "ms": 306.40000000037253
+            },
+            {
+              "id": "total-prepare",
+              "ms": 480.5
+            }
+          ],
+          "imageBytesEstimate": 15206400,
+          "sharedTexture": true,
+          "sharedGeometry": true,
+          "colorPipeline": "sRGB original texture, post-exempt overlay with actual architecture depth texture"
+        }
+      }
+    }
+  ],
+  "decoded": [
+    {
+      "state": "mural-look",
+      "seconds": 11.347
+    },
+    {
+      "state": "mural-reading",
+      "seconds": 13.843
+    },
+    {
+      "state": "mural-look",
+      "seconds": 16.323
+    },
+    {
+      "state": "corridor-2_5d",
+      "seconds": 18.513
+    }
+  ],
+  "file": "selected/07-full-transition.webm",
+  "bytes": 2801332,
+  "sha256": "c28cf95c19e91c87e042b7c33da37d8efdf5fca589b2c0127892a4133f3b3f8a",
+  "errors": []
+}

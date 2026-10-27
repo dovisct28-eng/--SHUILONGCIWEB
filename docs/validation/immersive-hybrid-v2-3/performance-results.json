@@ -1,0 +1,2378 @@
+{
+  "browser": "156.0.8078.47",
+  "viewport": [
+    1440,
+    900
+  ],
+  "recording": false,
+  "cachePolicy": "Both variants use routed HTTP-cache-disabled fresh contexts. Runs alternate order; second cycles share the same context.",
+  "results": [
+    {
+      "version": "v221",
+      "repetition": 1,
+      "readyMs": 7968,
+      "rail": [
+        {
+          "cycle": 1,
+          "state": "corridor-3d",
+          "metrics": {
+            "samples": 721,
+            "p50": 4.19999999999709,
+            "p95": 4.299999999999272,
+            "max": 4.899999999997817
+          }
+        },
+        {
+          "cycle": 1,
+          "state": "corridor-hybrid",
+          "metrics": {
+            "samples": 241,
+            "p50": 4.200000000000728,
+            "p95": 4.299999999999272,
+            "max": 4.400000000001455
+          }
+        },
+        {
+          "cycle": 1,
+          "state": "corridor-2_5d",
+          "metrics": {
+            "samples": 241,
+            "p50": 4.200000000000728,
+            "p95": 4.200000000000728,
+            "max": 4.69999999999709
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-3d",
+          "metrics": {
+            "samples": 721,
+            "p50": 4.19999999999709,
+            "p95": 4.299999999999272,
+            "max": 4.799999999999272
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-hybrid",
+          "metrics": {
+            "samples": 241,
+            "p50": 4.19999999999709,
+            "p95": 4.299999999999272,
+            "max": 4.30000000000291
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-2_5d",
+          "metrics": {
+            "samples": 241,
+            "p50": 4.19999999999709,
+            "p95": 4.30000000000291,
+            "max": 4.400000000001455
+          }
+        }
+      ],
+      "mural": [],
+      "details": {
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "stats": {
+          "rendererUUID": "193c8eb4-28f8-458b-bea9-206f318134db",
+          "renderCount": 3108,
+          "renderers": 1,
+          "canvases": 1,
+          "removedTriangles": 320,
+          "doorMeshes": 3,
+          "memory": {
+            "geometries": 48,
+            "textures": 24
+          },
+          "hybrid": {
+            "version": "2.2.1-candidate-1",
+            "phase": "corridor-2_5d",
+            "progress": 2,
+            "status": "ready",
+            "error": null,
+            "mode": "hybrid",
+            "manualBlend": null,
+            "switches": {
+              "wall": true,
+              "floor": true,
+              "wood": true,
+              "lighting": true
+            },
+            "weights": {
+              "foreground": 1,
+              "mid": 1,
+              "far": 1
+            },
+            "effective": [
+              {
+                "name": "V221-02_Enclosure-wall",
+                "weight": 1,
+                "visible": true,
+                "triangles": 14,
+                "source": "02_Enclosure",
+                "kind": "wall",
+                "directMaterial": false
+              },
+              {
+                "name": "V221-03_MainHall-wall",
+                "weight": 1,
+                "visible": true,
+                "triangles": 2,
+                "source": "03_MainHall",
+                "kind": "wall",
+                "directMaterial": false
+              },
+              {
+                "name": "V221-05_EastGallery-floor",
+                "weight": 1,
+                "visible": true,
+                "triangles": 2,
+                "source": "05_EastGallery",
+                "kind": "floor",
+                "directMaterial": false
+              },
+              {
+                "name": "05_EastGallery-geometry",
+                "weight": 1,
+                "visible": true,
+                "triangles": 312,
+                "source": "05_EastGallery",
+                "kind": "wood",
+                "directMaterial": true
+              },
+              {
+                "name": "05_EastGallery-geometry",
+                "weight": 1,
+                "visible": true,
+                "triangles": 1440,
+                "source": "05_EastGallery",
+                "kind": "wood",
+                "directMaterial": true
+              },
+              {
+                "name": "05_EastGallery-geometry",
+                "weight": 1,
+                "visible": true,
+                "triangles": 20320,
+                "source": "05_EastGallery",
+                "kind": "wood",
+                "directMaterial": true
+              },
+              {
+                "name": "05_EastGallery-geometry",
+                "weight": 1,
+                "visible": true,
+                "triangles": 1024,
+                "source": "05_EastGallery",
+                "kind": "wood",
+                "directMaterial": true
+              }
+            ],
+            "geometryBytesEstimate": 21628,
+            "foreground": "original geometry, unchanged",
+            "textures": 2,
+            "textureBytesEstimate": 11184810.666666666,
+            "decode": [
+              {
+                "id": "paving",
+                "loadAndDecodeMs": 23.90000000037253,
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "id": "plaster",
+                "loadAndDecodeMs": 26.90000000037253,
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "id": "surface-programs",
+                "compileMs": 1174.5
+              }
+            ],
+            "preparation": [
+              {
+                "id": "geometry",
+                "start": 5802.9000000003725,
+                "ms": 1,
+                "skins": 7
+              },
+              {
+                "id": "visible-program-compile",
+                "start": 5804.300000000745,
+                "ms": 408.5,
+                "programs": 53
+              },
+              {
+                "id": "offscreen-first-draw",
+                "start": 6212.9000000003725,
+                "ms": 1720.5999999996275
+              },
+              {
+                "id": "total-prepare",
+                "start": 1022.2000000001863,
+                "ms": 6911.4000000003725
+              }
+            ],
+            "programs": 60,
+            "legacyVersion": "2.2-procedural-candidate-1",
+            "mural": {
+              "id": "mural-01",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "rotationY": -1.5707963267948966,
+              "width": 3.65,
+              "height": 1.2547,
+              "enabled": false
+            }
+          },
+          "post": {
+            "enabled": true,
+            "error": null,
+            "passes": 2,
+            "size": [
+              1440,
+              900
+            ],
+            "aoSamples": 12,
+            "stats": {
+              "frame": 6217,
+              "calls": 39,
+              "triangles": 160951,
+              "points": 0,
+              "lines": 0
+            },
+            "colorDepthBytes": 15552000,
+            "multisampleBytes": 31104000,
+            "targetBytes": 46656000
+          },
+          "environment": {
+            "weight": 1,
+            "establish": 1,
+            "visibility": 1,
+            "roomWeight": 0,
+            "posterWeight": 0,
+            "layerWeights": {
+              "ground": 1,
+              "foreground": 1,
+              "fog": 1
+            },
+            "trees": 201,
+            "visible": true,
+            "titleRects": [
+              [
+                -2,
+                -2,
+                -2,
+                -2
+              ],
+              [
+                -2,
+                -2,
+                -2,
+                -2
+              ]
+            ],
+            "layers": [
+              "Foreground",
+              "TempleGround",
+              "MidgroundGroves",
+              "DistanceMatte"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "version": "v23",
+      "repetition": 1,
+      "readyMs": 3619,
+      "rail": [
+        {
+          "cycle": 1,
+          "state": "corridor-3d",
+          "metrics": {
+            "samples": 720,
+            "p50": 4.199999999998909,
+            "p95": 4.600000000000364,
+            "max": 4.900000000001455
+          }
+        },
+        {
+          "cycle": 1,
+          "state": "corridor-hybrid",
+          "metrics": {
+            "samples": 241,
+            "p50": 4.100000000002183,
+            "p95": 4.600000000002183,
+            "max": 5
+          }
+        },
+        {
+          "cycle": 1,
+          "state": "corridor-2_5d",
+          "metrics": {
+            "samples": 241,
+            "p50": 4.200000000000728,
+            "p95": 4.30000000000291,
+            "max": 4.5
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-3d",
+          "metrics": {
+            "samples": 721,
+            "p50": 4.200000000000728,
+            "p95": 4.299999999999272,
+            "max": 4.799999999999272
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-hybrid",
+          "metrics": {
+            "samples": 241,
+            "p50": 4.200000000000728,
+            "p95": 4.299999999999272,
+            "max": 5
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-2_5d",
+          "metrics": {
+            "samples": 240,
+            "p50": 4.19999999999709,
+            "p95": 4.299999999999272,
+            "max": 9.69999999999709
+          }
+        }
+      ],
+      "mural": [
+        {
+          "cycle": 1,
+          "state": "mural-look",
+          "elapsedMs": 1470,
+          "metrics": {
+            "samples": 336,
+            "p50": 4.200000000000728,
+            "p95": 4.400000000001455,
+            "max": 12.5
+          }
+        },
+        {
+          "cycle": 1,
+          "state": "mural-reading",
+          "elapsedMs": 1767,
+          "metrics": {
+            "samples": 413,
+            "p50": 4.19999999999709,
+            "p95": 4.299999999999272,
+            "max": 12.599999999998545
+          }
+        },
+        {
+          "cycle": 1,
+          "state": "mural-look",
+          "elapsedMs": 1753,
+          "metrics": {
+            "samples": 416,
+            "p50": 4.19999999999709,
+            "p95": 4.30000000000291,
+            "max": 12.599999999998545
+          }
+        },
+        {
+          "cycle": 1,
+          "state": "corridor-2_5d",
+          "elapsedMs": 1461,
+          "metrics": {
+            "samples": 349,
+            "p50": 4.19999999999709,
+            "p95": 4.30000000000291,
+            "max": 4.599999999998545
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "mural-look",
+          "elapsedMs": 1460,
+          "metrics": {
+            "samples": 343,
+            "p50": 4.19999999999709,
+            "p95": 4.30000000000291,
+            "max": 9.099999999998545
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "mural-reading",
+          "elapsedMs": 1760,
+          "metrics": {
+            "samples": 421,
+            "p50": 4.19999999999709,
+            "p95": 4.400000000001455,
+            "max": 4.69999999999709
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "mural-look",
+          "elapsedMs": 1761,
+          "metrics": {
+            "samples": 421,
+            "p50": 4.19999999999709,
+            "p95": 4.299999999995634,
+            "max": 4.5
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-2_5d",
+          "elapsedMs": 1457,
+          "metrics": {
+            "samples": 349,
+            "p50": 4.19999999999709,
+            "p95": 4.30000000000291,
+            "max": 4.5
+          }
+        }
+      ],
+      "details": {
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "stats": {
+          "rendererUUID": "479d342a-5354-44fe-b9dc-741d7ce9f92b",
+          "renderCount": 6174,
+          "renderers": 1,
+          "canvases": 1,
+          "removedTriangles": 320,
+          "doorMeshes": 3,
+          "memory": {
+            "geometries": 50,
+            "textures": 25
+          },
+          "hybrid": {
+            "version": "2.2.1-candidate-1",
+            "phase": "corridor-2_5d",
+            "progress": 2,
+            "status": "ready",
+            "error": null,
+            "mode": "hybrid",
+            "manualBlend": null,
+            "switches": {
+              "wall": true,
+              "floor": true,
+              "wood": true,
+              "lighting": true
+            },
+            "weights": {
+              "foreground": 1,
+              "mid": 1,
+              "far": 1
+            },
+            "effective": [
+              {
+                "name": "V221-02_Enclosure-wall",
+                "weight": 1,
+                "visible": true,
+                "triangles": 14,
+                "source": "02_Enclosure",
+                "kind": "wall",
+                "directMaterial": false
+              },
+              {
+                "name": "V221-03_MainHall-wall",
+                "weight": 1,
+                "visible": true,
+                "triangles": 2,
+                "source": "03_MainHall",
+                "kind": "wall",
+                "directMaterial": false
+              },
+              {
+                "name": "V221-05_EastGallery-floor",
+                "weight": 1,
+                "visible": true,
+                "triangles": 2,
+                "source": "05_EastGallery",
+                "kind": "floor",
+                "directMaterial": false
+              },
+              {
+                "name": "05_EastGallery-geometry",
+                "weight": 1,
+                "visible": true,
+                "triangles": 312,
+                "source": "05_EastGallery",
+                "kind": "wood",
+                "directMaterial": true
+              },
+              {
+                "name": "05_EastGallery-geometry",
+                "weight": 1,
+                "visible": true,
+                "triangles": 1440,
+                "source": "05_EastGallery",
+                "kind": "wood",
+                "directMaterial": true
+              },
+              {
+                "name": "05_EastGallery-geometry",
+                "weight": 1,
+                "visible": true,
+                "triangles": 20320,
+                "source": "05_EastGallery",
+                "kind": "wood",
+                "directMaterial": true
+              },
+              {
+                "name": "05_EastGallery-geometry",
+                "weight": 1,
+                "visible": true,
+                "triangles": 1024,
+                "source": "05_EastGallery",
+                "kind": "wood",
+                "directMaterial": true
+              }
+            ],
+            "geometryBytesEstimate": 21628,
+            "foreground": "original geometry, unchanged",
+            "textures": 2,
+            "textureBytesEstimate": 11184810.666666666,
+            "decode": [
+              {
+                "id": "paving",
+                "loadAndDecodeMs": 28.799999999813735,
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "id": "plaster",
+                "loadAndDecodeMs": 29.700000000186265,
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "id": "surface-programs",
+                "compileMs": 279.79999999981374
+              }
+            ],
+            "preparation": [
+              {
+                "id": "geometry",
+                "start": 2600.2000000001863,
+                "ms": 1.2999999998137355,
+                "skins": 7
+              },
+              {
+                "id": "visible-program-compile",
+                "start": 2601.7999999998137,
+                "ms": 103.6000000005588,
+                "programs": 53
+              },
+              {
+                "id": "offscreen-first-draw",
+                "start": 2705.5,
+                "ms": 413.20000000018626
+              },
+              {
+                "id": "total-prepare",
+                "start": 1147.5999999996275,
+                "ms": 1971.1000000005588
+              }
+            ],
+            "programs": 66,
+            "legacyVersion": "2.2-procedural-candidate-1",
+            "mural": {
+              "id": "mural-01",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "rotationY": -1.5707963267948966,
+              "width": 3.65,
+              "height": 1.2547,
+              "enabled": false
+            }
+          },
+          "post": {
+            "enabled": true,
+            "error": null,
+            "passes": 2,
+            "size": [
+              1440,
+              900
+            ],
+            "aoSamples": 12,
+            "stats": {
+              "frame": 16219,
+              "calls": 39,
+              "triangles": 160951,
+              "points": 0,
+              "lines": 0
+            },
+            "colorDepthBytes": 15552000,
+            "multisampleBytes": 31104000,
+            "targetBytes": 46656000
+          },
+          "environment": {
+            "weight": 1,
+            "establish": 1,
+            "visibility": 1,
+            "roomWeight": 0,
+            "posterWeight": 0,
+            "layerWeights": {
+              "ground": 1,
+              "foreground": 1,
+              "fog": 1
+            },
+            "trees": 201,
+            "visible": true,
+            "titleRects": [
+              [
+                -2,
+                -2,
+                -2,
+                -2
+              ],
+              [
+                -2,
+                -2,
+                -2,
+                -2
+              ]
+            ],
+            "layers": [
+              "Foreground",
+              "TempleGround",
+              "MidgroundGroves",
+              "DistanceMatte"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          }
+        },
+        "mural": {
+          "status": "ready",
+          "error": null,
+          "active": true,
+          "progress": 0,
+          "mode": "hybrid",
+          "phases": {
+            "handoff": 0,
+            "rectify": 0,
+            "ui": 0
+          },
+          "anchor": {
+            "id": "mural-01",
+            "position": [
+              4.865,
+              1.55,
+              4.8
+            ],
+            "rotationY": -1.5707963267948966,
+            "width": 3.65,
+            "height": 1.2547
+          },
+          "source": {
+            "url": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/murals/mural-01-display.webp",
+            "width": 2880,
+            "height": 990,
+            "label": "第一幅壁画",
+            "location": "右侧廊内墙 · 越过戏台，朝向主殿",
+            "basis": "shuilong-temple/mural-locations.json; docs/CONTENT_MAP.md A06; model coordinates, not a site survey"
+          },
+          "corners": [
+            {
+              "x": 0.6201767590424516,
+              "y": 0.310099224067649,
+              "depth": 0.9814085406905902
+            },
+            {
+              "x": 1.1361100323528865,
+              "y": -0.3377467232714584,
+              "depth": 0.9162776559816717
+            },
+            {
+              "x": 1.1361100323528865,
+              "y": 0.9805210558577802,
+              "depth": 0.9162776559816717
+            },
+            {
+              "x": 0.6201767590424516,
+              "y": 0.6089247129524809,
+              "depth": 0.9814085406905902
+            }
+          ],
+          "readingCorners": [
+            {
+              "x": 0.6201767590424516,
+              "y": 0.310099224067649,
+              "depth": 0.9814085406905902
+            },
+            {
+              "x": 1.1361100323528865,
+              "y": -0.3377467232714584,
+              "depth": 0.9162776559816717
+            },
+            {
+              "x": 1.1361100323528865,
+              "y": 0.9805210558577802,
+              "depth": 0.9162776559816717
+            },
+            {
+              "x": 0.6201767590424516,
+              "y": 0.6089247129524809,
+              "depth": 0.9814085406905902
+            }
+          ],
+          "camera": {
+            "position": [
+              3.85,
+              1.38,
+              7.65
+            ],
+            "quaternion": [
+              0,
+              -0.022107670950869057,
+              0,
+              0.9997555955758027
+            ],
+            "projectionMatrix": [
+              1.4037729836901347,
+              0,
+              0,
+              0,
+              0,
+              2.2460367739042155,
+              0,
+              0,
+              0,
+              0,
+              -1.0005001250312577,
+              -1,
+              0,
+              0,
+              -0.09002250562640661,
+              0
+            ]
+          },
+          "layers": [
+            "L0 original depth-tested architecture",
+            "L1 original anchored mural",
+            "L2 held original architecture with procedural depth field",
+            "L3 reading UI in parent"
+          ],
+          "timings": [
+            {
+              "id": "image-load-decode",
+              "ms": 176.09999999962747
+            },
+            {
+              "id": "shader-upload-first-draw",
+              "ms": 286.20000000018626
+            },
+            {
+              "id": "total-prepare",
+              "ms": 462.79999999981374
+            }
+          ],
+          "imageBytesEstimate": 15206400,
+          "sharedTexture": true,
+          "sharedGeometry": true,
+          "colorPipeline": "sRGB original texture, post-exempt overlay with actual architecture depth texture"
+        }
+      },
+      "errors": []
+    },
+    {
+      "version": "v23",
+      "repetition": 2,
+      "readyMs": 3056,
+      "rail": [
+        {
+          "cycle": 1,
+          "state": "corridor-3d",
+          "metrics": {
+            "samples": 721,
+            "p50": 4.199999999998909,
+            "p95": 4.600000000000364,
+            "max": 5
+          }
+        },
+        {
+          "cycle": 1,
+          "state": "corridor-hybrid",
+          "metrics": {
+            "samples": 240,
+            "p50": 4.200000000000728,
+            "p95": 4.600000000002183,
+            "max": 5
+          }
+        },
+        {
+          "cycle": 1,
+          "state": "corridor-2_5d",
+          "metrics": {
+            "samples": 241,
+            "p50": 4.200000000000728,
+            "p95": 4.700000000000728,
+            "max": 5.099999999998545
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-3d",
+          "metrics": {
+            "samples": 720,
+            "p50": 4.19999999999709,
+            "p95": 4.600000000002183,
+            "max": 5
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-hybrid",
+          "metrics": {
+            "samples": 240,
+            "p50": 4.200000000000728,
+            "p95": 4.600000000002183,
+            "max": 4.799999999999272
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-2_5d",
+          "metrics": {
+            "samples": 240,
+            "p50": 4.19999999999709,
+            "p95": 4.700000000000728,
+            "max": 4.900000000001455
+          }
+        }
+      ],
+      "mural": [
+        {
+          "cycle": 1,
+          "state": "mural-look",
+          "elapsedMs": 1461,
+          "metrics": {
+            "samples": 349,
+            "p50": 4.19999999999709,
+            "p95": 4.399999999997817,
+            "max": 4.5
+          }
+        },
+        {
+          "cycle": 1,
+          "state": "mural-reading",
+          "elapsedMs": 1757,
+          "metrics": {
+            "samples": 420,
+            "p50": 4.19999999999709,
+            "p95": 4.30000000000291,
+            "max": 8.400000000001455
+          }
+        },
+        {
+          "cycle": 1,
+          "state": "mural-look",
+          "elapsedMs": 1755,
+          "metrics": {
+            "samples": 420,
+            "p50": 4.19999999999709,
+            "p95": 4.400000000001455,
+            "max": 4.69999999999709
+          }
+        },
+        {
+          "cycle": 1,
+          "state": "corridor-2_5d",
+          "elapsedMs": 1457,
+          "metrics": {
+            "samples": 349,
+            "p50": 4.19999999999709,
+            "p95": 4.400000000001455,
+            "max": 4.700000000004366
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "mural-look",
+          "elapsedMs": 1452,
+          "metrics": {
+            "samples": 348,
+            "p50": 4.19999999999709,
+            "p95": 4.400000000001455,
+            "max": 7
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "mural-reading",
+          "elapsedMs": 1752,
+          "metrics": {
+            "samples": 420,
+            "p50": 4.19999999999709,
+            "p95": 4.5,
+            "max": 4.69999999999709
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "mural-look",
+          "elapsedMs": 1753,
+          "metrics": {
+            "samples": 420,
+            "p50": 4.19999999999709,
+            "p95": 4.599999999998545,
+            "max": 5.30000000000291
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-2_5d",
+          "elapsedMs": 1453,
+          "metrics": {
+            "samples": 348,
+            "p50": 4.19999999999709,
+            "p95": 4.599999999998545,
+            "max": 4.80000000000291
+          }
+        }
+      ],
+      "details": {
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "stats": {
+          "rendererUUID": "c435093c-150f-4631-a567-6c80f4c6437f",
+          "renderCount": 6199,
+          "renderers": 1,
+          "canvases": 1,
+          "removedTriangles": 320,
+          "doorMeshes": 3,
+          "memory": {
+            "geometries": 50,
+            "textures": 25
+          },
+          "hybrid": {
+            "version": "2.2.1-candidate-1",
+            "phase": "corridor-2_5d",
+            "progress": 2,
+            "status": "ready",
+            "error": null,
+            "mode": "hybrid",
+            "manualBlend": null,
+            "switches": {
+              "wall": true,
+              "floor": true,
+              "wood": true,
+              "lighting": true
+            },
+            "weights": {
+              "foreground": 1,
+              "mid": 1,
+              "far": 1
+            },
+            "effective": [
+              {
+                "name": "V221-02_Enclosure-wall",
+                "weight": 1,
+                "visible": true,
+                "triangles": 14,
+                "source": "02_Enclosure",
+                "kind": "wall",
+                "directMaterial": false
+              },
+              {
+                "name": "V221-03_MainHall-wall",
+                "weight": 1,
+                "visible": true,
+                "triangles": 2,
+                "source": "03_MainHall",
+                "kind": "wall",
+                "directMaterial": false
+              },
+              {
+                "name": "V221-05_EastGallery-floor",
+                "weight": 1,
+                "visible": true,
+                "triangles": 2,
+                "source": "05_EastGallery",
+                "kind": "floor",
+                "directMaterial": false
+              },
+              {
+                "name": "05_EastGallery-geometry",
+                "weight": 1,
+                "visible": true,
+                "triangles": 312,
+                "source": "05_EastGallery",
+                "kind": "wood",
+                "directMaterial": true
+              },
+              {
+                "name": "05_EastGallery-geometry",
+                "weight": 1,
+                "visible": true,
+                "triangles": 1440,
+                "source": "05_EastGallery",
+                "kind": "wood",
+                "directMaterial": true
+              },
+              {
+                "name": "05_EastGallery-geometry",
+                "weight": 1,
+                "visible": true,
+                "triangles": 20320,
+                "source": "05_EastGallery",
+                "kind": "wood",
+                "directMaterial": true
+              },
+              {
+                "name": "05_EastGallery-geometry",
+                "weight": 1,
+                "visible": true,
+                "triangles": 1024,
+                "source": "05_EastGallery",
+                "kind": "wood",
+                "directMaterial": true
+              }
+            ],
+            "geometryBytesEstimate": 21628,
+            "foreground": "original geometry, unchanged",
+            "textures": 2,
+            "textureBytesEstimate": 11184810.666666666,
+            "decode": [
+              {
+                "id": "paving",
+                "loadAndDecodeMs": 25.700000000186265,
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "id": "plaster",
+                "loadAndDecodeMs": 28,
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "id": "surface-programs",
+                "compileMs": 274.79999999981374
+              }
+            ],
+            "preparation": [
+              {
+                "id": "geometry",
+                "start": 2267.7000000001863,
+                "ms": 1,
+                "skins": 7
+              },
+              {
+                "id": "visible-program-compile",
+                "start": 2268.899999999441,
+                "ms": 98.20000000018626,
+                "programs": 53
+              },
+              {
+                "id": "offscreen-first-draw",
+                "start": 2367.2999999998137,
+                "ms": 338.79999999981374
+              },
+              {
+                "id": "total-prepare",
+                "start": 967.0999999996275,
+                "ms": 1739
+              }
+            ],
+            "programs": 66,
+            "legacyVersion": "2.2-procedural-candidate-1",
+            "mural": {
+              "id": "mural-01",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "rotationY": -1.5707963267948966,
+              "width": 3.65,
+              "height": 1.2547,
+              "enabled": false
+            }
+          },
+          "post": {
+            "enabled": true,
+            "error": null,
+            "passes": 2,
+            "size": [
+              1440,
+              900
+            ],
+            "aoSamples": 12,
+            "stats": {
+              "frame": 16294,
+              "calls": 39,
+              "triangles": 160951,
+              "points": 0,
+              "lines": 0
+            },
+            "colorDepthBytes": 15552000,
+            "multisampleBytes": 31104000,
+            "targetBytes": 46656000
+          },
+          "environment": {
+            "weight": 1,
+            "establish": 1,
+            "visibility": 1,
+            "roomWeight": 0,
+            "posterWeight": 0,
+            "layerWeights": {
+              "ground": 1,
+              "foreground": 1,
+              "fog": 1
+            },
+            "trees": 201,
+            "visible": true,
+            "titleRects": [
+              [
+                -2,
+                -2,
+                -2,
+                -2
+              ],
+              [
+                -2,
+                -2,
+                -2,
+                -2
+              ]
+            ],
+            "layers": [
+              "Foreground",
+              "TempleGround",
+              "MidgroundGroves",
+              "DistanceMatte"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          }
+        },
+        "mural": {
+          "status": "ready",
+          "error": null,
+          "active": true,
+          "progress": 0,
+          "mode": "hybrid",
+          "phases": {
+            "handoff": 0,
+            "rectify": 0,
+            "ui": 0
+          },
+          "anchor": {
+            "id": "mural-01",
+            "position": [
+              4.865,
+              1.55,
+              4.8
+            ],
+            "rotationY": -1.5707963267948966,
+            "width": 3.65,
+            "height": 1.2547
+          },
+          "source": {
+            "url": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/murals/mural-01-display.webp",
+            "width": 2880,
+            "height": 990,
+            "label": "第一幅壁画",
+            "location": "右侧廊内墙 · 越过戏台，朝向主殿",
+            "basis": "shuilong-temple/mural-locations.json; docs/CONTENT_MAP.md A06; model coordinates, not a site survey"
+          },
+          "corners": [
+            {
+              "x": 0.6201767590424516,
+              "y": 0.310099224067649,
+              "depth": 0.9814085406905902
+            },
+            {
+              "x": 1.1361100323528865,
+              "y": -0.3377467232714584,
+              "depth": 0.9162776559816717
+            },
+            {
+              "x": 1.1361100323528865,
+              "y": 0.9805210558577802,
+              "depth": 0.9162776559816717
+            },
+            {
+              "x": 0.6201767590424516,
+              "y": 0.6089247129524809,
+              "depth": 0.9814085406905902
+            }
+          ],
+          "readingCorners": [
+            {
+              "x": 0.6201767590424516,
+              "y": 0.310099224067649,
+              "depth": 0.9814085406905902
+            },
+            {
+              "x": 1.1361100323528865,
+              "y": -0.3377467232714584,
+              "depth": 0.9162776559816717
+            },
+            {
+              "x": 1.1361100323528865,
+              "y": 0.9805210558577802,
+              "depth": 0.9162776559816717
+            },
+            {
+              "x": 0.6201767590424516,
+              "y": 0.6089247129524809,
+              "depth": 0.9814085406905902
+            }
+          ],
+          "camera": {
+            "position": [
+              3.85,
+              1.38,
+              7.65
+            ],
+            "quaternion": [
+              0,
+              -0.022107670950869057,
+              0,
+              0.9997555955758027
+            ],
+            "projectionMatrix": [
+              1.4037729836901347,
+              0,
+              0,
+              0,
+              0,
+              2.2460367739042155,
+              0,
+              0,
+              0,
+              0,
+              -1.0005001250312577,
+              -1,
+              0,
+              0,
+              -0.09002250562640661,
+              0
+            ]
+          },
+          "layers": [
+            "L0 original depth-tested architecture",
+            "L1 original anchored mural",
+            "L2 held original architecture with procedural depth field",
+            "L3 reading UI in parent"
+          ],
+          "timings": [
+            {
+              "id": "image-load-decode",
+              "ms": 128.70000000018626
+            },
+            {
+              "id": "shader-upload-first-draw",
+              "ms": 192.5
+            },
+            {
+              "id": "total-prepare",
+              "ms": 321.59999999962747
+            }
+          ],
+          "imageBytesEstimate": 15206400,
+          "sharedTexture": true,
+          "sharedGeometry": true,
+          "colorPipeline": "sRGB original texture, post-exempt overlay with actual architecture depth texture"
+        }
+      },
+      "errors": []
+    },
+    {
+      "version": "v221",
+      "repetition": 2,
+      "readyMs": 2769,
+      "rail": [
+        {
+          "cycle": 1,
+          "state": "corridor-3d",
+          "metrics": {
+            "samples": 721,
+            "p50": 4.199999999998909,
+            "p95": 4.299999999999272,
+            "max": 4.800000000001091
+          }
+        },
+        {
+          "cycle": 1,
+          "state": "corridor-hybrid",
+          "metrics": {
+            "samples": 239,
+            "p50": 4.200000000000728,
+            "p95": 4.600000000002183,
+            "max": 8.400000000001455
+          }
+        },
+        {
+          "cycle": 1,
+          "state": "corridor-2_5d",
+          "metrics": {
+            "samples": 240,
+            "p50": 4.19999999999709,
+            "p95": 4.600000000002183,
+            "max": 4.900000000001455
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-3d",
+          "metrics": {
+            "samples": 720,
+            "p50": 4.19999999999709,
+            "p95": 4.600000000002183,
+            "max": 8.299999999999272
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-hybrid",
+          "metrics": {
+            "samples": 240,
+            "p50": 4.200000000000728,
+            "p95": 4.69999999999709,
+            "max": 4.899999999997817
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-2_5d",
+          "metrics": {
+            "samples": 241,
+            "p50": 4.200000000000728,
+            "p95": 4.700000000000728,
+            "max": 5.099999999998545
+          }
+        }
+      ],
+      "mural": [],
+      "details": {
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "stats": {
+          "rendererUUID": "00fd9de7-cca1-4698-b41d-1b28ceb38ecb",
+          "renderCount": 3106,
+          "renderers": 1,
+          "canvases": 1,
+          "removedTriangles": 320,
+          "doorMeshes": 3,
+          "memory": {
+            "geometries": 48,
+            "textures": 24
+          },
+          "hybrid": {
+            "version": "2.2.1-candidate-1",
+            "phase": "corridor-2_5d",
+            "progress": 2,
+            "status": "ready",
+            "error": null,
+            "mode": "hybrid",
+            "manualBlend": null,
+            "switches": {
+              "wall": true,
+              "floor": true,
+              "wood": true,
+              "lighting": true
+            },
+            "weights": {
+              "foreground": 1,
+              "mid": 1,
+              "far": 1
+            },
+            "effective": [
+              {
+                "name": "V221-02_Enclosure-wall",
+                "weight": 1,
+                "visible": true,
+                "triangles": 14,
+                "source": "02_Enclosure",
+                "kind": "wall",
+                "directMaterial": false
+              },
+              {
+                "name": "V221-03_MainHall-wall",
+                "weight": 1,
+                "visible": true,
+                "triangles": 2,
+                "source": "03_MainHall",
+                "kind": "wall",
+                "directMaterial": false
+              },
+              {
+                "name": "V221-05_EastGallery-floor",
+                "weight": 1,
+                "visible": true,
+                "triangles": 2,
+                "source": "05_EastGallery",
+                "kind": "floor",
+                "directMaterial": false
+              },
+              {
+                "name": "05_EastGallery-geometry",
+                "weight": 1,
+                "visible": true,
+                "triangles": 312,
+                "source": "05_EastGallery",
+                "kind": "wood",
+                "directMaterial": true
+              },
+              {
+                "name": "05_EastGallery-geometry",
+                "weight": 1,
+                "visible": true,
+                "triangles": 1440,
+                "source": "05_EastGallery",
+                "kind": "wood",
+                "directMaterial": true
+              },
+              {
+                "name": "05_EastGallery-geometry",
+                "weight": 1,
+                "visible": true,
+                "triangles": 20320,
+                "source": "05_EastGallery",
+                "kind": "wood",
+                "directMaterial": true
+              },
+              {
+                "name": "05_EastGallery-geometry",
+                "weight": 1,
+                "visible": true,
+                "triangles": 1024,
+                "source": "05_EastGallery",
+                "kind": "wood",
+                "directMaterial": true
+              }
+            ],
+            "geometryBytesEstimate": 21628,
+            "foreground": "original geometry, unchanged",
+            "textures": 2,
+            "textureBytesEstimate": 11184810.666666666,
+            "decode": [
+              {
+                "id": "paving",
+                "loadAndDecodeMs": 23.200000000186265,
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "id": "plaster",
+                "loadAndDecodeMs": 24.100000000558794,
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "id": "surface-programs",
+                "compileMs": 269.20000000018626
+              }
+            ],
+            "preparation": [
+              {
+                "id": "geometry",
+                "start": 2332.899999999441,
+                "ms": 1,
+                "skins": 7
+              },
+              {
+                "id": "visible-program-compile",
+                "start": 2334.2999999998137,
+                "ms": 100.79999999981374,
+                "programs": 53
+              },
+              {
+                "id": "offscreen-first-draw",
+                "start": 2435.399999999441,
+                "ms": 306.20000000018626
+              },
+              {
+                "id": "total-prepare",
+                "start": 1124.2999999998137,
+                "ms": 1617.2999999998137
+              }
+            ],
+            "programs": 60,
+            "legacyVersion": "2.2-procedural-candidate-1",
+            "mural": {
+              "id": "mural-01",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "rotationY": -1.5707963267948966,
+              "width": 3.65,
+              "height": 1.2547,
+              "enabled": false
+            }
+          },
+          "post": {
+            "enabled": true,
+            "error": null,
+            "passes": 2,
+            "size": [
+              1440,
+              900
+            ],
+            "aoSamples": 12,
+            "stats": {
+              "frame": 6213,
+              "calls": 39,
+              "triangles": 160951,
+              "points": 0,
+              "lines": 0
+            },
+            "colorDepthBytes": 15552000,
+            "multisampleBytes": 31104000,
+            "targetBytes": 46656000
+          },
+          "environment": {
+            "weight": 1,
+            "establish": 1,
+            "visibility": 1,
+            "roomWeight": 0,
+            "posterWeight": 0,
+            "layerWeights": {
+              "ground": 1,
+              "foreground": 1,
+              "fog": 1
+            },
+            "trees": 201,
+            "visible": true,
+            "titleRects": [
+              [
+                -2,
+                -2,
+                -2,
+                -2
+              ],
+              [
+                -2,
+                -2,
+                -2,
+                -2
+              ]
+            ],
+            "layers": [
+              "Foreground",
+              "TempleGround",
+              "MidgroundGroves",
+              "DistanceMatte"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "version": "v221",
+      "repetition": 3,
+      "readyMs": 2683,
+      "rail": [
+        {
+          "cycle": 1,
+          "state": "corridor-3d",
+          "metrics": {
+            "samples": 720,
+            "p50": 4.199999999998909,
+            "p95": 4.600000000000364,
+            "max": 5.399999999997817
+          }
+        },
+        {
+          "cycle": 1,
+          "state": "corridor-hybrid",
+          "metrics": {
+            "samples": 241,
+            "p50": 4.200000000000728,
+            "p95": 4.599999999998545,
+            "max": 4.799999999999272
+          }
+        },
+        {
+          "cycle": 1,
+          "state": "corridor-2_5d",
+          "metrics": {
+            "samples": 241,
+            "p50": 4.200000000000728,
+            "p95": 4.600000000002183,
+            "max": 4.799999999999272
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-3d",
+          "metrics": {
+            "samples": 721,
+            "p50": 4.19999999999709,
+            "p95": 4.5,
+            "max": 5.299999999999272
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-hybrid",
+          "metrics": {
+            "samples": 240,
+            "p50": 4.200000000000728,
+            "p95": 4.299999999999272,
+            "max": 4.69999999999709
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-2_5d",
+          "metrics": {
+            "samples": 240,
+            "p50": 4.19999999999709,
+            "p95": 4.700000000000728,
+            "max": 4.899999999997817
+          }
+        }
+      ],
+      "mural": [],
+      "details": {
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "stats": {
+          "rendererUUID": "4a4e1070-e105-4f51-9ec8-e7ed52bd8d51",
+          "renderCount": 3106,
+          "renderers": 1,
+          "canvases": 1,
+          "removedTriangles": 320,
+          "doorMeshes": 3,
+          "memory": {
+            "geometries": 48,
+            "textures": 24
+          },
+          "hybrid": {
+            "version": "2.2.1-candidate-1",
+            "phase": "corridor-2_5d",
+            "progress": 2,
+            "status": "ready",
+            "error": null,
+            "mode": "hybrid",
+            "manualBlend": null,
+            "switches": {
+              "wall": true,
+              "floor": true,
+              "wood": true,
+              "lighting": true
+            },
+            "weights": {
+              "foreground": 1,
+              "mid": 1,
+              "far": 1
+            },
+            "effective": [
+              {
+                "name": "V221-02_Enclosure-wall",
+                "weight": 1,
+                "visible": true,
+                "triangles": 14,
+                "source": "02_Enclosure",
+                "kind": "wall",
+                "directMaterial": false
+              },
+              {
+                "name": "V221-03_MainHall-wall",
+                "weight": 1,
+                "visible": true,
+                "triangles": 2,
+                "source": "03_MainHall",
+                "kind": "wall",
+                "directMaterial": false
+              },
+              {
+                "name": "V221-05_EastGallery-floor",
+                "weight": 1,
+                "visible": true,
+                "triangles": 2,
+                "source": "05_EastGallery",
+                "kind": "floor",
+                "directMaterial": false
+              },
+              {
+                "name": "05_EastGallery-geometry",
+                "weight": 1,
+                "visible": true,
+                "triangles": 312,
+                "source": "05_EastGallery",
+                "kind": "wood",
+                "directMaterial": true
+              },
+              {
+                "name": "05_EastGallery-geometry",
+                "weight": 1,
+                "visible": true,
+                "triangles": 1440,
+                "source": "05_EastGallery",
+                "kind": "wood",
+                "directMaterial": true
+              },
+              {
+                "name": "05_EastGallery-geometry",
+                "weight": 1,
+                "visible": true,
+                "triangles": 20320,
+                "source": "05_EastGallery",
+                "kind": "wood",
+                "directMaterial": true
+              },
+              {
+                "name": "05_EastGallery-geometry",
+                "weight": 1,
+                "visible": true,
+                "triangles": 1024,
+                "source": "05_EastGallery",
+                "kind": "wood",
+                "directMaterial": true
+              }
+            ],
+            "geometryBytesEstimate": 21628,
+            "foreground": "original geometry, unchanged",
+            "textures": 2,
+            "textureBytesEstimate": 11184810.666666666,
+            "decode": [
+              {
+                "id": "paving",
+                "loadAndDecodeMs": 23.600000000558794,
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "id": "plaster",
+                "loadAndDecodeMs": 28,
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "id": "surface-programs",
+                "compileMs": 300.79999999981374
+              }
+            ],
+            "preparation": [
+              {
+                "id": "geometry",
+                "start": 2235.7999999998137,
+                "ms": 1.1000000005587935,
+                "skins": 7
+              },
+              {
+                "id": "visible-program-compile",
+                "start": 2237.7000000001863,
+                "ms": 101.59999999962747,
+                "programs": 53
+              },
+              {
+                "id": "offscreen-first-draw",
+                "start": 2339.4000000003725,
+                "ms": 316.8999999994412
+              },
+              {
+                "id": "total-prepare",
+                "start": 987.1000000005588,
+                "ms": 1669.199999999255
+              }
+            ],
+            "programs": 60,
+            "legacyVersion": "2.2-procedural-candidate-1",
+            "mural": {
+              "id": "mural-01",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "rotationY": -1.5707963267948966,
+              "width": 3.65,
+              "height": 1.2547,
+              "enabled": false
+            }
+          },
+          "post": {
+            "enabled": true,
+            "error": null,
+            "passes": 2,
+            "size": [
+              1440,
+              900
+            ],
+            "aoSamples": 12,
+            "stats": {
+              "frame": 6213,
+              "calls": 39,
+              "triangles": 160951,
+              "points": 0,
+              "lines": 0
+            },
+            "colorDepthBytes": 15552000,
+            "multisampleBytes": 31104000,
+            "targetBytes": 46656000
+          },
+          "environment": {
+            "weight": 1,
+            "establish": 1,
+            "visibility": 1,
+            "roomWeight": 0,
+            "posterWeight": 0,
+            "layerWeights": {
+              "ground": 1,
+              "foreground": 1,
+              "fog": 1
+            },
+            "trees": 201,
+            "visible": true,
+            "titleRects": [
+              [
+                -2,
+                -2,
+                -2,
+                -2
+              ],
+              [
+                -2,
+                -2,
+                -2,
+                -2
+              ]
+            ],
+            "layers": [
+              "Foreground",
+              "TempleGround",
+              "MidgroundGroves",
+              "DistanceMatte"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          }
+        }
+      },
+      "errors": []
+    },
+    {
+      "version": "v23",
+      "repetition": 3,
+      "readyMs": 3166,
+      "rail": [
+        {
+          "cycle": 1,
+          "state": "corridor-3d",
+          "metrics": {
+            "samples": 721,
+            "p50": 4.199999999998909,
+            "p95": 4.299999999999272,
+            "max": 4.400000000001455
+          }
+        },
+        {
+          "cycle": 1,
+          "state": "corridor-hybrid",
+          "metrics": {
+            "samples": 241,
+            "p50": 4.19999999999709,
+            "p95": 4.30000000000291,
+            "max": 4.600000000002183
+          }
+        },
+        {
+          "cycle": 1,
+          "state": "corridor-2_5d",
+          "metrics": {
+            "samples": 241,
+            "p50": 4.200000000000728,
+            "p95": 4.299999999999272,
+            "max": 4.799999999999272
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-3d",
+          "metrics": {
+            "samples": 721,
+            "p50": 4.200000000000728,
+            "p95": 4.599999999998545,
+            "max": 5.100000000002183
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-hybrid",
+          "metrics": {
+            "samples": 241,
+            "p50": 4.200000000000728,
+            "p95": 4.599999999998545,
+            "max": 4.900000000001455
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-2_5d",
+          "metrics": {
+            "samples": 241,
+            "p50": 4.200000000000728,
+            "p95": 4.599999999998545,
+            "max": 5.200000000000728
+          }
+        }
+      ],
+      "mural": [
+        {
+          "cycle": 1,
+          "state": "mural-look",
+          "elapsedMs": 1457,
+          "metrics": {
+            "samples": 349,
+            "p50": 4.19999999999709,
+            "p95": 4.400000000001455,
+            "max": 4.5
+          }
+        },
+        {
+          "cycle": 1,
+          "state": "mural-reading",
+          "elapsedMs": 1758,
+          "metrics": {
+            "samples": 420,
+            "p50": 4.200000000000728,
+            "p95": 4.5,
+            "max": 8.400000000001455
+          }
+        },
+        {
+          "cycle": 1,
+          "state": "mural-look",
+          "elapsedMs": 1757,
+          "metrics": {
+            "samples": 420,
+            "p50": 4.19999999999709,
+            "p95": 4.5,
+            "max": 4.700000000004366
+          }
+        },
+        {
+          "cycle": 1,
+          "state": "corridor-2_5d",
+          "elapsedMs": 1453,
+          "metrics": {
+            "samples": 348,
+            "p50": 4.19999999999709,
+            "p95": 4.5,
+            "max": 4.69999999999709
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "mural-look",
+          "elapsedMs": 1457,
+          "metrics": {
+            "samples": 349,
+            "p50": 4.19999999999709,
+            "p95": 4.5,
+            "max": 4.69999999999709
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "mural-reading",
+          "elapsedMs": 1757,
+          "metrics": {
+            "samples": 421,
+            "p50": 4.19999999999709,
+            "p95": 4.5,
+            "max": 4.700000000004366
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "mural-look",
+          "elapsedMs": 1752,
+          "metrics": {
+            "samples": 420,
+            "p50": 4.19999999999709,
+            "p95": 4.5,
+            "max": 4.80000000000291
+          }
+        },
+        {
+          "cycle": 2,
+          "state": "corridor-2_5d",
+          "elapsedMs": 1453,
+          "metrics": {
+            "samples": 348,
+            "p50": 4.19999999999709,
+            "p95": 4.599999999998545,
+            "max": 5
+          }
+        }
+      ],
+      "details": {
+        "gpu": "ANGLE (NVIDIA, NVIDIA GeForce GTX 1660 Ti (0x00002191) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+        "stats": {
+          "rendererUUID": "3bf1f433-21e2-477d-8aad-944cd0ddb156",
+          "renderCount": 6200,
+          "renderers": 1,
+          "canvases": 1,
+          "removedTriangles": 320,
+          "doorMeshes": 3,
+          "memory": {
+            "geometries": 50,
+            "textures": 25
+          },
+          "hybrid": {
+            "version": "2.2.1-candidate-1",
+            "phase": "corridor-2_5d",
+            "progress": 2,
+            "status": "ready",
+            "error": null,
+            "mode": "hybrid",
+            "manualBlend": null,
+            "switches": {
+              "wall": true,
+              "floor": true,
+              "wood": true,
+              "lighting": true
+            },
+            "weights": {
+              "foreground": 1,
+              "mid": 1,
+              "far": 1
+            },
+            "effective": [
+              {
+                "name": "V221-02_Enclosure-wall",
+                "weight": 1,
+                "visible": true,
+                "triangles": 14,
+                "source": "02_Enclosure",
+                "kind": "wall",
+                "directMaterial": false
+              },
+              {
+                "name": "V221-03_MainHall-wall",
+                "weight": 1,
+                "visible": true,
+                "triangles": 2,
+                "source": "03_MainHall",
+                "kind": "wall",
+                "directMaterial": false
+              },
+              {
+                "name": "V221-05_EastGallery-floor",
+                "weight": 1,
+                "visible": true,
+                "triangles": 2,
+                "source": "05_EastGallery",
+                "kind": "floor",
+                "directMaterial": false
+              },
+              {
+                "name": "05_EastGallery-geometry",
+                "weight": 1,
+                "visible": true,
+                "triangles": 312,
+                "source": "05_EastGallery",
+                "kind": "wood",
+                "directMaterial": true
+              },
+              {
+                "name": "05_EastGallery-geometry",
+                "weight": 1,
+                "visible": true,
+                "triangles": 1440,
+                "source": "05_EastGallery",
+                "kind": "wood",
+                "directMaterial": true
+              },
+              {
+                "name": "05_EastGallery-geometry",
+                "weight": 1,
+                "visible": true,
+                "triangles": 20320,
+                "source": "05_EastGallery",
+                "kind": "wood",
+                "directMaterial": true
+              },
+              {
+                "name": "05_EastGallery-geometry",
+                "weight": 1,
+                "visible": true,
+                "triangles": 1024,
+                "source": "05_EastGallery",
+                "kind": "wood",
+                "directMaterial": true
+              }
+            ],
+            "geometryBytesEstimate": 21628,
+            "foreground": "original geometry, unchanged",
+            "textures": 2,
+            "textureBytesEstimate": 11184810.666666666,
+            "decode": [
+              {
+                "id": "paving",
+                "loadAndDecodeMs": 22.899999999441206,
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "id": "plaster",
+                "loadAndDecodeMs": 26,
+                "width": 1024,
+                "height": 1024
+              },
+              {
+                "id": "surface-programs",
+                "compileMs": 299.29999999981374
+              }
+            ],
+            "preparation": [
+              {
+                "id": "geometry",
+                "start": 2311.300000000745,
+                "ms": 1.199999999254942,
+                "skins": 7
+              },
+              {
+                "id": "visible-program-compile",
+                "start": 2313.2000000001863,
+                "ms": 101.40000000037253,
+                "programs": 53
+              },
+              {
+                "id": "offscreen-first-draw",
+                "start": 2414.800000000745,
+                "ms": 365.3999999994412
+              },
+              {
+                "id": "total-prepare",
+                "start": 995,
+                "ms": 1785.2000000001863
+              }
+            ],
+            "programs": 66,
+            "legacyVersion": "2.2-procedural-candidate-1",
+            "mural": {
+              "id": "mural-01",
+              "position": [
+                4.865,
+                1.55,
+                4.8
+              ],
+              "rotationY": -1.5707963267948966,
+              "width": 3.65,
+              "height": 1.2547,
+              "enabled": false
+            }
+          },
+          "post": {
+            "enabled": true,
+            "error": null,
+            "passes": 2,
+            "size": [
+              1440,
+              900
+            ],
+            "aoSamples": 12,
+            "stats": {
+              "frame": 16297,
+              "calls": 39,
+              "triangles": 160951,
+              "points": 0,
+              "lines": 0
+            },
+            "colorDepthBytes": 15552000,
+            "multisampleBytes": 31104000,
+            "targetBytes": 46656000
+          },
+          "environment": {
+            "weight": 1,
+            "establish": 1,
+            "visibility": 1,
+            "roomWeight": 0,
+            "posterWeight": 0,
+            "layerWeights": {
+              "ground": 1,
+              "foreground": 1,
+              "fog": 1
+            },
+            "trees": 201,
+            "visible": true,
+            "titleRects": [
+              [
+                -2,
+                -2,
+                -2,
+                -2
+              ],
+              [
+                -2,
+                -2,
+                -2,
+                -2
+              ]
+            ],
+            "layers": [
+              "Foreground",
+              "TempleGround",
+              "MidgroundGroves",
+              "DistanceMatte"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          }
+        },
+        "mural": {
+          "status": "ready",
+          "error": null,
+          "active": true,
+          "progress": 0,
+          "mode": "hybrid",
+          "phases": {
+            "handoff": 0,
+            "rectify": 0,
+            "ui": 0
+          },
+          "anchor": {
+            "id": "mural-01",
+            "position": [
+              4.865,
+              1.55,
+              4.8
+            ],
+            "rotationY": -1.5707963267948966,
+            "width": 3.65,
+            "height": 1.2547
+          },
+          "source": {
+            "url": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/murals/mural-01-display.webp",
+            "width": 2880,
+            "height": 990,
+            "label": "第一幅壁画",
+            "location": "右侧廊内墙 · 越过戏台，朝向主殿",
+            "basis": "shuilong-temple/mural-locations.json; docs/CONTENT_MAP.md A06; model coordinates, not a site survey"
+          },
+          "corners": [
+            {
+              "x": 0.6201767590424516,
+              "y": 0.310099224067649,
+              "depth": 0.9814085406905902
+            },
+            {
+              "x": 1.1361100323528865,
+              "y": -0.3377467232714584,
+              "depth": 0.9162776559816717
+            },
+            {
+              "x": 1.1361100323528865,
+              "y": 0.9805210558577802,
+              "depth": 0.9162776559816717
+            },
+            {
+              "x": 0.6201767590424516,
+              "y": 0.6089247129524809,
+              "depth": 0.9814085406905902
+            }
+          ],
+          "readingCorners": [
+            {
+              "x": 0.6201767590424516,
+              "y": 0.310099224067649,
+              "depth": 0.9814085406905902
+            },
+            {
+              "x": 1.1361100323528865,
+              "y": -0.3377467232714584,
+              "depth": 0.9162776559816717
+            },
+            {
+              "x": 1.1361100323528865,
+              "y": 0.9805210558577802,
+              "depth": 0.9162776559816717
+            },
+            {
+              "x": 0.6201767590424516,
+              "y": 0.6089247129524809,
+              "depth": 0.9814085406905902
+            }
+          ],
+          "camera": {
+            "position": [
+              3.85,
+              1.38,
+              7.65
+            ],
+            "quaternion": [
+              0,
+              -0.022107670950869057,
+              0,
+              0.9997555955758027
+            ],
+            "projectionMatrix": [
+              1.4037729836901347,
+              0,
+              0,
+              0,
+              0,
+              2.2460367739042155,
+              0,
+              0,
+              0,
+              0,
+              -1.0005001250312577,
+              -1,
+              0,
+              0,
+              -0.09002250562640661,
+              0
+            ]
+          },
+          "layers": [
+            "L0 original depth-tested architecture",
+            "L1 original anchored mural",
+            "L2 held original architecture with procedural depth field",
+            "L3 reading UI in parent"
+          ],
+          "timings": [
+            {
+              "id": "image-load-decode",
+              "ms": 156.29999999981374
+            },
+            {
+              "id": "shader-upload-first-draw",
+              "ms": 199.1000000005588
+            },
+            {
+              "id": "total-prepare",
+              "ms": 356.20000000018626
+            }
+          ],
+          "imageBytesEstimate": 15206400,
+          "sharedTexture": true,
+          "sharedGeometry": true,
+          "colorPipeline": "sRGB original texture, post-exempt overlay with actual architecture depth texture"
+        }
+      },
+      "errors": []
+    }
+  ]
+}

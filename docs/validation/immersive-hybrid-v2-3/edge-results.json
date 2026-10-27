@@ -1,0 +1,27 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "name": "immediate first navigation waits for mural decode/upload before moving",
+      "pass": true
+    },
+    {
+      "name": "refresh reading restores overview and clears overlays",
+      "pass": true
+    },
+    {
+      "name": "render failure restores exact corridor, unlocks input, and subsequent entry succeeds",
+      "pass": true
+    },
+    {
+      "name": "live debug modes and manual progress, throttled during normal-speed turn",
+      "pass": true,
+      "updates": 7
+    },
+    {
+      "name": "retained V1 real mural viewer",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

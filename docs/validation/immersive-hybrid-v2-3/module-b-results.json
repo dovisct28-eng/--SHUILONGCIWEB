@@ -1,0 +1,32 @@
+{
+  "pass": true,
+  "unitTests": {
+    "pass": 130,
+    "fail": 0,
+    "command": "npm --prefix Mural-Exhibition test"
+  },
+  "checks": [
+    {
+      "module": "B01",
+      "pass": true
+    },
+    {
+      "module": "B02",
+      "pass": true,
+      "hotspots": 8,
+      "panZoom": true,
+      "detail": true
+    },
+    {
+      "module": "B03",
+      "pass": true,
+      "scope": "Actual dependency-failure fallback with retry; model and camera initialization not verified",
+      "message": "gsap 体感组件加载失败，请检查资源网络后重试。"
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "Module B currently contains pre-existing user asset/content edits; this is a basic live regression of the current checkout",
+    "No physical camera or gesture-hardware acceptance"
+  ]
+}

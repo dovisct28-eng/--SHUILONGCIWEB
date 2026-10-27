@@ -31,6 +31,8 @@ export function createA01Post(T,renderer,scene,camera){
   // inside our existing render catch, so it cannot hide a healthy scene.
   const shaderFailure=(gl,program)=>{throw Error(`A01 post shader compilation failed: ${gl.getProgramInfoLog(program)}`);};
   return {
+    // Optional controlled-gallery reader. Read-only; ordinary A01 rendering is unchanged.
+    getDepthTexture(){return enabled&&!error?target.depthTexture:null;},
     apply(weight,line){uniforms.weight.value=weight*(line?.solid??1);enabled=weight>.001&&(line?.solid??1)>.02;},
     resize(width,height){const dpr=Math.min(renderer.getPixelRatio(),1.5);size=[Math.max(1,Math.round(width*dpr)),Math.max(1,Math.round(height*dpr))];target.setSize(...size);uniforms.texel.value.set(1/size[0],1/size[1]);},
     render(){if(!enabled||error){renderer.render(scene,camera);last={...renderer.info.render};return;}

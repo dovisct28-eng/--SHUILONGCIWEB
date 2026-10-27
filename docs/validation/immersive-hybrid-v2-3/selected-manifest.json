@@ -1,0 +1,62 @@
+{
+  "count": 8,
+  "totalBytes": 12476257,
+  "items": [
+    {
+      "file": "selected/01-corridor-end.png",
+      "viewport": "1440x900",
+      "state": "V2.2.1 endpoint pose; newly mounted real mural visible on wall",
+      "bytes": 1544049,
+      "sha256": "e59074a0a1eb0cd766dd9fe64a00ef8dcf940a94719463814e5aca82acd85a02"
+    },
+    {
+      "file": "selected/02-mural-turn.png",
+      "viewport": "1440x900",
+      "state": "actual physical turn midway",
+      "bytes": 1689857,
+      "sha256": "5e01691df7763e646e93cc8fe7b79638bdc618a548b04b446f5b71b742ff187b"
+    },
+    {
+      "file": "selected/03-mural-original.png",
+      "viewport": "1440x900",
+      "state": "mural-look, unchanged real source in architectural position",
+      "bytes": 1582001,
+      "sha256": "abcd23038c75dc53effcd01856f65a9ae9477467549da4bcc348d4af0112b12b"
+    },
+    {
+      "file": "selected/04-mural-hybrid-50.png",
+      "viewport": "1440x900",
+      "state": "same-location handoff 50%, no rectification",
+      "bytes": 1582199,
+      "sha256": "f3a1f1a95c9f765a7586b06d2649463c3f73bea5a31922fe258acdb8daed6357"
+    },
+    {
+      "file": "selected/05-mural-reading.png",
+      "viewport": "1440x900",
+      "state": "complete frontal digital reading",
+      "bytes": 1312764,
+      "sha256": "b66c3f844f82a39686a31ced0edb270a93fc5bbc79a14f65d3b2e259bd155953"
+    },
+    {
+      "file": "selected/06-reading-return.png",
+      "viewport": "1440x900",
+      "state": "actual running reverse animation",
+      "bytes": 1709683,
+      "sha256": "2ac1e6ed404b77cf531c57d93553e0bb2d05f1e2c3c2eca731ea9fef18305626"
+    },
+    {
+      "file": "selected/07-full-transition.webm",
+      "viewport": "1440x900",
+      "state": "actual normal-motion browser viewport recording, with loading/positioning prelude",
+      "bytes": 2801332,
+      "sha256": "c28cf95c19e91c87e042b7c33da37d8efdf5fca589b2c0127892a4133f3b3f8a"
+    },
+    {
+      "file": "selected/08-keyframe-comparison.webp",
+      "viewport": "1280x1296 comparison board",
+      "state": "keyframes scaled, arranged and labelled only",
+      "bytes": 254372,
+      "sha256": "1a6e72ad36d6e7f01c2dbf226060af31f4d9c84dacb1503774bf7b9796d1c7b0"
+    }
+  ]
+}

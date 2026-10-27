@@ -1,0 +1,103 @@
+{
+  "pass": true,
+  "chapters": [
+    {
+      "chapter": "A01",
+      "raw": {
+        "mean": 2.57201646090535e-7,
+        "max": 1
+      },
+      "structural": {
+        "mean": 0,
+        "max": 0
+      },
+      "exactLayoutAndSource": true
+    },
+    {
+      "chapter": "A02",
+      "raw": {
+        "mean": 0.00010082304526748971,
+        "max": 2
+      },
+      "structural": {
+        "mean": 0.0000779320987654321,
+        "max": 1
+      },
+      "exactLayoutAndSource": true
+    },
+    {
+      "chapter": "A03",
+      "raw": {
+        "mean": 0.00007355967078189301,
+        "max": 2
+      },
+      "structural": {
+        "mean": 0.00006790123456790123,
+        "max": 1
+      },
+      "exactLayoutAndSource": true
+    },
+    {
+      "chapter": "A04",
+      "raw": {
+        "mean": 2.57201646090535e-7,
+        "max": 1
+      },
+      "structural": {
+        "mean": 0,
+        "max": 0
+      },
+      "exactLayoutAndSource": true
+    },
+    {
+      "chapter": "A05",
+      "raw": {
+        "mean": 0.000028806584362139917,
+        "max": 1
+      },
+      "structural": {
+        "mean": 0.00002932098765432099,
+        "max": 1
+      },
+      "exactLayoutAndSource": true
+    },
+    {
+      "chapter": "A06",
+      "raw": {
+        "mean": 1.6091412037037036,
+        "max": 47
+      },
+      "structural": {
+        "mean": 0.2042710905349794,
+        "max": 5
+      },
+      "exactLayoutAndSource": true
+    },
+    {
+      "chapter": "A07",
+      "raw": {
+        "mean": 0,
+        "max": 0
+      },
+      "structural": {
+        "mean": 0,
+        "max": 0
+      },
+      "exactLayoutAndSource": true
+    },
+    {
+      "chapter": "A08",
+      "raw": {
+        "mean": 0,
+        "max": 0
+      },
+      "structural": {
+        "mean": 0,
+        "max": 0
+      },
+      "exactLayoutAndSource": true
+    }
+  ],
+  "errors": [],
+  "scope": "Actual A01-A08 comparison: baseline post module vs current read-only depth accessor; all other production source equivalence verified by build protection"
+}
