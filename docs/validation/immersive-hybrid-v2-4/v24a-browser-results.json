@@ -1,0 +1,354 @@
+{
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "pass": true,
+      "differenceMean": 3.812664609053498,
+      "memoryCycles": [
+        {
+          "geometries": 52,
+          "textures": 28
+        },
+        {
+          "geometries": 52,
+          "textures": 28
+        },
+        {
+          "geometries": 52,
+          "textures": 28
+        }
+      ],
+      "result": {
+        "camera": {
+          "time": 2,
+          "position": [
+            3.85,
+            1.38,
+            7.65
+          ],
+          "target": [
+            4.1,
+            1.38,
+            2
+          ],
+          "fov": 48
+        },
+        "layer": {
+          "mode": "hybrid",
+          "manual": null,
+          "enabled": {
+            "wall": true,
+            "floor": true
+          },
+          "pose": {
+            "time": 2,
+            "position": [
+              3.85,
+              1.38,
+              7.65
+            ],
+            "target": [
+              4.1,
+              1.38,
+              2
+            ],
+            "fov": 48
+          },
+          "layers": [
+            {
+              "name": "V24A-wall-02_Enclosure",
+              "visible": true,
+              "kind": "wall",
+              "opacity": 0.76,
+              "weights": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "name": "V24A-floor-05_EastGallery",
+              "visible": true,
+              "kind": "floor",
+              "opacity": 0.76,
+              "weights": [
+                0,
+                1,
+                0
+              ]
+            }
+          ],
+          "textures": 3,
+          "timings": [
+            {
+              "id": "g01",
+              "loadDecodeMs": 156.5,
+              "width": 1672,
+              "height": 941
+            },
+            {
+              "id": "g02",
+              "loadDecodeMs": 292.30000000074506,
+              "width": 1672,
+              "height": 941
+            },
+            {
+              "id": "g03",
+              "loadDecodeMs": 362.1000000014901,
+              "width": 1672,
+              "height": 941
+            },
+            {
+              "id": "total-decode-and-geometry",
+              "ms": 370
+            }
+          ]
+        },
+        "warmMs": 835,
+        "memory": {
+          "geometries": 52,
+          "textures": 28
+        }
+      }
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "pass": true,
+      "differenceMean": 3.982238940329218,
+      "memoryCycles": [
+        {
+          "geometries": 52,
+          "textures": 28
+        },
+        {
+          "geometries": 52,
+          "textures": 28
+        },
+        {
+          "geometries": 52,
+          "textures": 28
+        }
+      ],
+      "result": {
+        "camera": {
+          "time": 2,
+          "position": [
+            3.85,
+            1.38,
+            7.65
+          ],
+          "target": [
+            4.1,
+            1.38,
+            2
+          ],
+          "fov": 48
+        },
+        "layer": {
+          "mode": "hybrid",
+          "manual": null,
+          "enabled": {
+            "wall": true,
+            "floor": true
+          },
+          "pose": {
+            "time": 2,
+            "position": [
+              3.85,
+              1.38,
+              7.65
+            ],
+            "target": [
+              4.1,
+              1.38,
+              2
+            ],
+            "fov": 48
+          },
+          "layers": [
+            {
+              "name": "V24A-wall-02_Enclosure",
+              "visible": true,
+              "kind": "wall",
+              "opacity": 0.76,
+              "weights": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "name": "V24A-floor-05_EastGallery",
+              "visible": true,
+              "kind": "floor",
+              "opacity": 0.76,
+              "weights": [
+                0,
+                1,
+                0
+              ]
+            }
+          ],
+          "textures": 3,
+          "timings": [
+            {
+              "id": "g01",
+              "loadDecodeMs": 140.60000000149012,
+              "width": 1672,
+              "height": 941
+            },
+            {
+              "id": "g02",
+              "loadDecodeMs": 192.39999999850988,
+              "width": 1672,
+              "height": 941
+            },
+            {
+              "id": "g03",
+              "loadDecodeMs": 242.59999999776483,
+              "width": 1672,
+              "height": 941
+            },
+            {
+              "id": "total-decode-and-geometry",
+              "ms": 262.1000000014901
+            }
+          ]
+        },
+        "warmMs": 138.70000000298023,
+        "memory": {
+          "geometries": 52,
+          "textures": 28
+        }
+      }
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "pass": true,
+      "differenceMean": 3.356397493187734,
+      "memoryCycles": [
+        {
+          "geometries": 52,
+          "textures": 28
+        },
+        {
+          "geometries": 52,
+          "textures": 28
+        },
+        {
+          "geometries": 52,
+          "textures": 28
+        }
+      ],
+      "result": {
+        "camera": {
+          "time": 2,
+          "position": [
+            3.85,
+            1.38,
+            7.65
+          ],
+          "target": [
+            4.1,
+            1.38,
+            2
+          ],
+          "fov": 48
+        },
+        "layer": {
+          "mode": "hybrid",
+          "manual": null,
+          "enabled": {
+            "wall": true,
+            "floor": true
+          },
+          "pose": {
+            "time": 2,
+            "position": [
+              3.85,
+              1.38,
+              7.65
+            ],
+            "target": [
+              4.1,
+              1.38,
+              2
+            ],
+            "fov": 48
+          },
+          "layers": [
+            {
+              "name": "V24A-wall-02_Enclosure",
+              "visible": true,
+              "kind": "wall",
+              "opacity": 0.76,
+              "weights": [
+                0,
+                1,
+                0
+              ]
+            },
+            {
+              "name": "V24A-floor-05_EastGallery",
+              "visible": true,
+              "kind": "floor",
+              "opacity": 0.76,
+              "weights": [
+                0,
+                1,
+                0
+              ]
+            }
+          ],
+          "textures": 3,
+          "timings": [
+            {
+              "id": "g01",
+              "loadDecodeMs": 82.09999999776483,
+              "width": 1672,
+              "height": 941
+            },
+            {
+              "id": "g03",
+              "loadDecodeMs": 121.60000000149012,
+              "width": 1672,
+              "height": 941
+            },
+            {
+              "id": "g02",
+              "loadDecodeMs": 155.80000000074506,
+              "width": 1672,
+              "height": 941
+            },
+            {
+              "id": "total-decode-and-geometry",
+              "ms": 187.5
+            }
+          ]
+        },
+        "warmMs": 281.0999999977648,
+        "memory": {
+          "geometries": 52,
+          "textures": 28
+        }
+      }
+    }
+  ],
+  "failures": [
+    {
+      "scenario": "g02 503",
+      "fallback": "original V2.3 rail remains usable",
+      "pass": true
+    },
+    {
+      "scenario": "WebGL unavailable",
+      "fallback": "visible error and retry",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "pass": true
+}

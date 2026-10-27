@@ -1,0 +1,125 @@
+{
+  "source": "Live browser viewport video, automated clicks; no frame replacement",
+  "browser": "156.0.8078.48",
+  "events": [
+    {
+      "state": "approach",
+      "startMs": 9950,
+      "endMs": 15615,
+      "frames": {
+        "samples": 1347,
+        "p50": 4.199999999998909,
+        "p95": 4.300000000001091,
+        "max": 8.299999999999272
+      }
+    },
+    {
+      "state": "gate-close",
+      "startMs": 16088,
+      "endMs": 18919,
+      "frames": {
+        "samples": 670,
+        "p50": 4.19999999999709,
+        "p95": 4.300000000001091,
+        "max": 16.600000000000364
+      }
+    },
+    {
+      "state": "threshold",
+      "startMs": 19896,
+      "endMs": 21425,
+      "frames": {
+        "samples": 362,
+        "p50": 4.200000000000728,
+        "p95": 4.299999999999272,
+        "max": 8.299999999999272
+      }
+    },
+    {
+      "state": "gate-interior",
+      "startMs": 21894,
+      "endMs": 22775,
+      "frames": {
+        "samples": 208,
+        "p50": 4.200000000000728,
+        "p95": 4.299999999999272,
+        "max": 4.400000000001455
+      }
+    },
+    {
+      "state": "stage-turn",
+      "startMs": 23766,
+      "endMs": 25933,
+      "frames": {
+        "samples": 516,
+        "p50": 4.200000000000728,
+        "p95": 4.299999999999272,
+        "max": 8.399999999997817
+      }
+    },
+    {
+      "state": "corridor-3d",
+      "startMs": 26841,
+      "endMs": 27714,
+      "frames": {
+        "samples": 205,
+        "p50": 4.19999999999709,
+        "p95": 4.299999999999272,
+        "max": 4.400000000001455
+      }
+    },
+    {
+      "state": "corridor-hybrid",
+      "startMs": 28782,
+      "endMs": 29804,
+      "frames": {
+        "samples": 241,
+        "p50": 4.200000000000728,
+        "p95": 4.299999999999272,
+        "max": 4.5
+      }
+    },
+    {
+      "state": "corridor-2_5d",
+      "startMs": 30849,
+      "endMs": 31875,
+      "frames": {
+        "samples": 241,
+        "p50": 4.19999999999709,
+        "p95": 4.30000000000291,
+        "max": 5
+      }
+    },
+    {
+      "state": "mural-look",
+      "startMs": 32329,
+      "endMs": 33801,
+      "frames": {
+        "samples": 241,
+        "p50": 4.19999999999709,
+        "p95": 4.30000000000291,
+        "max": 5
+      }
+    },
+    {
+      "state": "mural-reading",
+      "startMs": 34918,
+      "endMs": 36693,
+      "frames": {
+        "samples": 241,
+        "p50": 4.19999999999709,
+        "p95": 4.30000000000291,
+        "max": 5
+      }
+    }
+  ],
+  "metadata": {
+    "duration": 43.6,
+    "width": 1440,
+    "height": 900
+  },
+  "errors": [],
+  "file": "selected-v24a/11-interaction.webm",
+  "bytes": 5736756,
+  "sha256": "302094099ed4f0da11b005cf457ed3cb9b5bacebde5877f468a764537dbabd15"
+}

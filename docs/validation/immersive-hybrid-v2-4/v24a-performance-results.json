@@ -1,0 +1,381 @@
+{
+  "browser": "156.0.8078.48",
+  "viewport": [
+    1440,
+    900
+  ],
+  "recording": false,
+  "initial": {
+    "layer": {
+      "mode": "hybrid",
+      "manual": null,
+      "enabled": {
+        "wall": true,
+        "floor": true
+      },
+      "pose": {
+        "time": 0,
+        "position": [
+          -23.33250595253667,
+          19.342753798798213,
+          -26.88031350693665
+        ],
+        "target": [
+          0,
+          -1.25,
+          -1.75
+        ],
+        "fov": 32
+      },
+      "layers": [
+        {
+          "name": "V24A-wall-02_Enclosure",
+          "visible": false,
+          "kind": "wall",
+          "opacity": 0,
+          "weights": [
+            1,
+            0,
+            0
+          ]
+        },
+        {
+          "name": "V24A-floor-05_EastGallery",
+          "visible": false,
+          "kind": "floor",
+          "opacity": 0,
+          "weights": [
+            1,
+            0,
+            0
+          ]
+        }
+      ],
+      "textures": 3,
+      "timings": [
+        {
+          "id": "g03",
+          "loadDecodeMs": 81.69999999925494,
+          "width": 1672,
+          "height": 941
+        },
+        {
+          "id": "g02",
+          "loadDecodeMs": 137.40000000223517,
+          "width": 1672,
+          "height": 941
+        },
+        {
+          "id": "g01",
+          "loadDecodeMs": 181.19999999925494,
+          "width": 1672,
+          "height": 941
+        },
+        {
+          "id": "total-decode-and-geometry",
+          "ms": 246.80000000074506
+        }
+      ]
+    },
+    "warmCpuMs": 852,
+    "memory": {
+      "geometries": 52,
+      "textures": 28
+    },
+    "uploads": [
+      {
+        "method": "texImage2D",
+        "cpuMs": 0.09999999776482582
+      },
+      {
+        "method": "texImage2D",
+        "cpuMs": 0
+      },
+      {
+        "method": "texImage2D",
+        "cpuMs": 0
+      },
+      {
+        "method": "texImage2D",
+        "cpuMs": 0
+      },
+      {
+        "method": "texImage2D",
+        "cpuMs": 0
+      },
+      {
+        "method": "texImage2D",
+        "cpuMs": 0
+      },
+      {
+        "method": "texImage2D",
+        "cpuMs": 0
+      },
+      {
+        "method": "texImage2D",
+        "cpuMs": 0
+      },
+      {
+        "method": "texImage2D",
+        "cpuMs": 0
+      },
+      {
+        "method": "texSubImage2D",
+        "cpuMs": 2.5
+      },
+      {
+        "method": "texSubImage2D",
+        "cpuMs": 2.599999997764826
+      },
+      {
+        "method": "texSubImage2D",
+        "cpuMs": 3.399999998509884
+      },
+      {
+        "method": "texSubImage2D",
+        "cpuMs": 3
+      },
+      {
+        "method": "texSubImage2D",
+        "cpuMs": 2.300000000745058
+      },
+      {
+        "method": "texSubImage2D",
+        "cpuMs": 2.2000000029802322
+      },
+      {
+        "method": "texSubImage2D",
+        "cpuMs": 0.10000000149011612
+      },
+      {
+        "method": "texSubImage2D",
+        "cpuMs": 1.800000000745058
+      },
+      {
+        "method": "texSubImage2D",
+        "cpuMs": 2.600000001490116
+      },
+      {
+        "method": "texSubImage2D",
+        "cpuMs": 2
+      },
+      {
+        "method": "texSubImage2D",
+        "cpuMs": 2.300000000745058
+      },
+      {
+        "method": "texSubImage2D",
+        "cpuMs": 1.8999999985098839
+      },
+      {
+        "method": "texSubImage2D",
+        "cpuMs": 2.100000001490116
+      },
+      {
+        "method": "texSubImage2D",
+        "cpuMs": 1.8999999985098839
+      },
+      {
+        "method": "texSubImage2D",
+        "cpuMs": 2.5
+      },
+      {
+        "method": "texSubImage2D",
+        "cpuMs": 2
+      },
+      {
+        "method": "texSubImage2D",
+        "cpuMs": 2.099999997764826
+      },
+      {
+        "method": "texSubImage2D",
+        "cpuMs": 2.100000001490116
+      },
+      {
+        "method": "texSubImage2D",
+        "cpuMs": 2.199999999254942
+      },
+      {
+        "method": "texSubImage2D",
+        "cpuMs": 40.5
+      },
+      {
+        "method": "texSubImage2D",
+        "cpuMs": 47.599999997764826
+      },
+      {
+        "method": "texSubImage2D",
+        "cpuMs": 41.69999999925494
+      },
+      {
+        "method": "texImage2D",
+        "cpuMs": 0
+      },
+      {
+        "method": "texSubImage2D",
+        "cpuMs": 2.099999997764826
+      },
+      {
+        "method": "texSubImage2D",
+        "cpuMs": 1.7000000029802322
+      },
+      {
+        "method": "texSubImage2D",
+        "cpuMs": 116.69999999925494
+      },
+      {
+        "method": "texImage2D",
+        "cpuMs": 0
+      }
+    ]
+  },
+  "moves": [
+    {
+      "state": "corridor-3d",
+      "frames": {
+        "samples": 3313,
+        "p50": 4.199999999998909,
+        "p95": 4.5,
+        "max": 6.5
+      },
+      "memory": {
+        "geometries": 52,
+        "textures": 28
+      }
+    },
+    {
+      "state": "corridor-hybrid",
+      "frames": {
+        "samples": 241,
+        "p50": 4.19999999999709,
+        "p95": 4.400000000001455,
+        "max": 4.799999999999272
+      },
+      "memory": {
+        "geometries": 52,
+        "textures": 28
+      }
+    },
+    {
+      "state": "corridor-2_5d",
+      "frames": {
+        "samples": 240,
+        "p50": 4.19999999999709,
+        "p95": 4.5,
+        "max": 4.899999999997817
+      },
+      "memory": {
+        "geometries": 52,
+        "textures": 28
+      }
+    },
+    {
+      "state": "mural-look",
+      "frames": {
+        "samples": 349,
+        "p50": 4.100000000002183,
+        "p95": 4.700000000000728,
+        "max": 4.799999999999272
+      },
+      "memory": {
+        "geometries": 52,
+        "textures": 28
+      }
+    },
+    {
+      "state": "mural-reading",
+      "frames": {
+        "samples": 420,
+        "p50": 4.200000000000728,
+        "p95": 4.400000000001455,
+        "max": 8.299999999999272
+      },
+      "memory": {
+        "geometries": 52,
+        "textures": 28
+      }
+    },
+    {
+      "state": "mural-look",
+      "frames": {
+        "samples": 419,
+        "p50": 4.200000000000728,
+        "p95": 4.5,
+        "max": 12.600000000002183
+      },
+      "memory": {
+        "geometries": 52,
+        "textures": 28
+      }
+    },
+    {
+      "state": "corridor-2_5d",
+      "frames": {
+        "samples": 240,
+        "p50": 4.19999999999709,
+        "p95": 4.5,
+        "max": 4.899999999997817
+      },
+      "memory": {
+        "geometries": 52,
+        "textures": 28
+      }
+    },
+    {
+      "state": "corridor-hybrid",
+      "frames": {
+        "samples": 240,
+        "p50": 4.19999999999709,
+        "p95": 4.5,
+        "max": 4.799999999999272
+      },
+      "memory": {
+        "geometries": 52,
+        "textures": 28
+      }
+    },
+    {
+      "state": "corridor-3d",
+      "frames": {
+        "samples": 241,
+        "p50": 4.19999999999709,
+        "p95": 4.5,
+        "max": 4.700000000000728
+      },
+      "memory": {
+        "geometries": 52,
+        "textures": 28
+      }
+    },
+    {
+      "state": "corridor-hybrid",
+      "frames": {
+        "samples": 228,
+        "p50": 4.200000000000728,
+        "p95": 4.30000000000291,
+        "max": 41.599999999998545
+      },
+      "memory": {
+        "geometries": 52,
+        "textures": 28
+      }
+    },
+    {
+      "state": "corridor-2_5d",
+      "frames": {
+        "samples": 240,
+        "p50": 4.19999999999709,
+        "p95": 4.299999999995634,
+        "max": 8
+      },
+      "memory": {
+        "geometries": 52,
+        "textures": 28
+      }
+    }
+  ],
+  "limitations": [
+    "RAF intervals are browser scheduling samples, not physical display FPS.",
+    "texImage2D and texSubImage2D CPU-call timing is not GPU completion time; calls include original-world assets and cannot isolate upload completion."
+  ]
+}
