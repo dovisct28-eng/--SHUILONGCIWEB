@@ -1,0 +1,323 @@
+{
+  "base": "c1e9507f5f3d93557df033817a56e23d14196ea2",
+  "browser": "156.0.8078.48",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "normalSpeed": true,
+      "reducedMotionCycles": 5,
+      "collision": {
+        "samples": 241,
+        "radius": 0.12,
+        "nearTriangles": 20,
+        "minSurfaceDistance": 0.12495071469549794,
+        "contacts": 0,
+        "segmentHits": 0
+      },
+      "dock": {
+        "pose": {
+          "time": 2,
+          "position": [
+            3.3000000000000003,
+            1.55,
+            4.8
+          ],
+          "target": [
+            4.865,
+            1.55,
+            4.8
+          ],
+          "fov": 48,
+          "muralFront": 1
+        },
+        "corners": [
+          {
+            "x": -0.31849383234328943,
+            "y": 0.049823907313479354,
+            "depth": 0.9429777572188572
+          },
+          {
+            "x": 1.31849383234329,
+            "y": 0.04982390731347902,
+            "depth": 0.9429777572188573
+          },
+          {
+            "x": 1.31849383234329,
+            "y": 0.9501760926865209,
+            "depth": 0.9429777572188573
+          },
+          {
+            "x": -0.31849383234328943,
+            "y": 0.9501760926865206,
+            "depth": 0.9429777572188572
+          }
+        ]
+      },
+      "readingRatio": 2.909061927153902,
+      "holdMs": 324.8999999999978,
+      "memory": [
+        {
+          "geometries": 52,
+          "textures": 28
+        },
+        {
+          "geometries": 52,
+          "textures": 28
+        },
+        {
+          "geometries": 52,
+          "textures": 28
+        },
+        {
+          "geometries": 52,
+          "textures": 28
+        },
+        {
+          "geometries": 52,
+          "textures": 28
+        }
+      ],
+      "failureRecovery": {
+        "result": false,
+        "state": "corridor-2_5d",
+        "busy": false,
+        "pose": {
+          "time": 2,
+          "position": [
+            3.85,
+            1.38,
+            7.65
+          ],
+          "target": [
+            4.1,
+            1.38,
+            2
+          ],
+          "fov": 48
+        }
+      },
+      "pass": true
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "normalSpeed": true,
+      "reducedMotionCycles": 5,
+      "collision": {
+        "samples": 241,
+        "radius": 0.12,
+        "nearTriangles": 20,
+        "minSurfaceDistance": 0.12495071469549794,
+        "contacts": 0,
+        "segmentHits": 0
+      },
+      "dock": {
+        "pose": {
+          "time": 2,
+          "position": [
+            3.3000000000000003,
+            1.55,
+            4.8
+          ],
+          "target": [
+            4.865,
+            1.55,
+            4.8
+          ],
+          "fov": 48,
+          "muralFront": 1
+        },
+        "corners": [
+          {
+            "x": -0.23664444910896065,
+            "y": 0.049823907313479354,
+            "depth": 0.9429777572188572
+          },
+          {
+            "x": 1.2366444491089612,
+            "y": 0.04982390731347902,
+            "depth": 0.9429777572188573
+          },
+          {
+            "x": 1.2366444491089612,
+            "y": 0.9501760926865209,
+            "depth": 0.9429777572188573
+          },
+          {
+            "x": -0.23664444910896065,
+            "y": 0.9501760926865206,
+            "depth": 0.9429777572188572
+          }
+        ]
+      },
+      "readingRatio": 2.909061927153902,
+      "holdMs": 325,
+      "memory": [
+        {
+          "geometries": 52,
+          "textures": 28
+        },
+        {
+          "geometries": 52,
+          "textures": 28
+        },
+        {
+          "geometries": 52,
+          "textures": 28
+        },
+        {
+          "geometries": 52,
+          "textures": 28
+        },
+        {
+          "geometries": 52,
+          "textures": 28
+        }
+      ],
+      "failureRecovery": {
+        "result": false,
+        "state": "corridor-2_5d",
+        "busy": false,
+        "pose": {
+          "time": 2,
+          "position": [
+            3.85,
+            1.38,
+            7.65
+          ],
+          "target": [
+            4.1,
+            1.38,
+            2
+          ],
+          "fov": 48
+        }
+      },
+      "pass": true
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "normalSpeed": true,
+      "reducedMotionCycles": 5,
+      "collision": {
+        "samples": 241,
+        "radius": 0.12,
+        "nearTriangles": 20,
+        "minSurfaceDistance": 0.12495071469549794,
+        "contacts": 0,
+        "segmentHits": 0
+      },
+      "dock": {
+        "pose": {
+          "time": 2,
+          "position": [
+            3.3000000000000003,
+            1.55,
+            4.8
+          ],
+          "target": [
+            4.865,
+            1.55,
+            4.8
+          ],
+          "fov": 48,
+          "muralFront": 1
+        },
+        "corners": [
+          {
+            "x": -0.23628493498055214,
+            "y": 0.049823907313479354,
+            "depth": 0.9429777572188572
+          },
+          {
+            "x": 1.2362849349805527,
+            "y": 0.04982390731347902,
+            "depth": 0.9429777572188573
+          },
+          {
+            "x": 1.2362849349805527,
+            "y": 0.9501760926865209,
+            "depth": 0.9429777572188573
+          },
+          {
+            "x": -0.23628493498055214,
+            "y": 0.9501760926865206,
+            "depth": 0.9429777572188572
+          }
+        ]
+      },
+      "readingRatio": 2.909061927153903,
+      "holdMs": 325,
+      "memory": [
+        {
+          "geometries": 52,
+          "textures": 28
+        },
+        {
+          "geometries": 52,
+          "textures": 28
+        },
+        {
+          "geometries": 52,
+          "textures": 28
+        },
+        {
+          "geometries": 52,
+          "textures": 28
+        },
+        {
+          "geometries": 52,
+          "textures": 28
+        }
+      ],
+      "failureRecovery": {
+        "result": false,
+        "state": "corridor-2_5d",
+        "busy": false,
+        "pose": {
+          "time": 2,
+          "position": [
+            3.85,
+            1.38,
+            7.65
+          ],
+          "target": [
+            4.1,
+            1.38,
+            2
+          ],
+          "fov": 48
+        }
+      },
+      "pass": true
+    }
+  ],
+  "fallback": [
+    {
+      "scenario": "g02 503",
+      "fullMuralLoop": true,
+      "label": "场景候选未加载 · 保留原建筑"
+    }
+  ],
+  "legacy": [
+    {
+      "state": "corridor-2_5d",
+      "meanRGBDifference": 0,
+      "exactPoseAndPhases": true
+    },
+    {
+      "state": "mural-look",
+      "meanRGBDifference": 0,
+      "exactPoseAndPhases": true
+    },
+    {
+      "state": "mural-reading",
+      "meanRGBDifference": 0.000025720164609053497,
+      "exactPoseAndPhases": true
+    }
+  ],
+  "errors": [],
+  "pass": true
+}

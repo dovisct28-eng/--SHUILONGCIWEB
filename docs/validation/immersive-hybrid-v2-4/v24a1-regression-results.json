@@ -1,0 +1,93 @@
+{
+  "pass": true,
+  "errors": [],
+  "formal": [
+    {
+      "chapter": "A01",
+      "screen": 5.7,
+      "controlledGalleryAbsent": true
+    },
+    {
+      "chapter": "A02",
+      "screen": 9.65,
+      "controlledGalleryAbsent": true
+    },
+    {
+      "chapter": "A03",
+      "screen": 11.6,
+      "controlledGalleryAbsent": true
+    },
+    {
+      "chapter": "A04",
+      "screen": 14.5,
+      "controlledGalleryAbsent": true
+    },
+    {
+      "chapter": "A05",
+      "screen": 20,
+      "controlledGalleryAbsent": true
+    },
+    {
+      "chapter": "A06",
+      "screen": 27,
+      "controlledGalleryAbsent": true
+    },
+    {
+      "chapter": "A07",
+      "screen": 34,
+      "controlledGalleryAbsent": true
+    },
+    {
+      "chapter": "A08",
+      "screen": 41.7,
+      "controlledGalleryAbsent": true
+    }
+  ],
+  "v24a": [
+    {
+      "state": "overview",
+      "meanRGBDifference": 0.0000023148148148148148,
+      "exactCamera": true,
+      "versionLabelHidden": true
+    },
+    {
+      "state": "gate-interior",
+      "meanRGBDifference": 0,
+      "exactCamera": true,
+      "versionLabelHidden": true
+    },
+    {
+      "state": "corridor-3d",
+      "meanRGBDifference": 0,
+      "exactCamera": true,
+      "versionLabelHidden": true
+    },
+    {
+      "state": "corridor-2_5d",
+      "meanRGBDifference": 0,
+      "exactCamera": true,
+      "versionLabelHidden": true
+    },
+    {
+      "state": "mural-look",
+      "meanRGBDifference": 0,
+      "exactCamera": true,
+      "versionLabelHidden": true
+    }
+  ],
+  "moduleB": [
+    {
+      "state": "B01 selection",
+      "pass": true
+    },
+    {
+      "state": "B02 panorama and detail",
+      "pass": true
+    },
+    {
+      "state": "B03 entry",
+      "actual": "selection",
+      "limitation": "No physical camera or gesture test"
+    }
+  ]
+}

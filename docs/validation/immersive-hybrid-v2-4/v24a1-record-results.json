@@ -1,0 +1,253 @@
+{
+  "source": "Actual browser WebM; real normal-speed clicks, drag, reverse; no frame substitution",
+  "browser": "156.0.8078.48",
+  "viewport": [
+    1440,
+    900
+  ],
+  "base": "c1e9507f5f3d93557df033817a56e23d14196ea2",
+  "sourceWorkingTree": "V2.4-A.1 source files staged/committed after QA; build-results hashes identify exact tested files",
+  "videoClock": 7450.5999999996275,
+  "events": [
+    {
+      "action": "#next",
+      "state": "approach",
+      "start": 7454,
+      "end": 13129.399999999907
+    },
+    {
+      "action": "#next",
+      "state": "gate-close",
+      "start": 13537.099999999627,
+      "end": 16382.399999999907
+    },
+    {
+      "action": "#next",
+      "state": "threshold",
+      "start": 16790.099999999627,
+      "end": 18321
+    },
+    {
+      "action": "#next",
+      "state": "gate-interior",
+      "start": 18724.799999999814,
+      "end": 19623.399999999907
+    },
+    {
+      "action": "#next",
+      "state": "stage-turn",
+      "start": 20027.299999999814,
+      "end": 22203.299999999814
+    },
+    {
+      "action": "#next",
+      "state": "corridor-3d",
+      "start": 22610.099999999627,
+      "end": 23499.19999999972
+    },
+    {
+      "action": "#next",
+      "state": "corridor-hybrid",
+      "start": 23906,
+      "end": 24928.19999999972
+    },
+    {
+      "action": "#next",
+      "state": "corridor-2_5d",
+      "start": 25334.899999999907,
+      "end": 26357.5
+    },
+    {
+      "action": "#next",
+      "state": "mural-look",
+      "start": 26762.799999999814,
+      "end": 28255.69999999972
+    },
+    {
+      "action": "#next",
+      "state": "mural-reading",
+      "start": 28667.19999999972,
+      "end": 32029.899999999907
+    },
+    {
+      "action": "#mural-return-wall",
+      "state": "mural-look",
+      "start": 33714.19999999972,
+      "end": 37115.299999999814
+    },
+    {
+      "action": "#previous",
+      "state": "corridor-2_5d",
+      "start": 37529.59999999963,
+      "end": 39029.5
+    }
+  ],
+  "phaseEvents": [
+    {
+      "t": 28686.5,
+      "phase": "mural-front-transition",
+      "front": 0,
+      "reading": 0
+    },
+    {
+      "t": 30294.5,
+      "phase": "mural-front",
+      "front": 1,
+      "reading": 0
+    },
+    {
+      "t": 30619.6,
+      "phase": "mural-reading-transition",
+      "front": 1,
+      "reading": 0
+    },
+    {
+      "t": 32027.6,
+      "phase": "mural-reading",
+      "front": 1,
+      "reading": 1
+    },
+    {
+      "t": 33756.8,
+      "phase": "mural-reading-transition",
+      "front": 1,
+      "reading": 1
+    },
+    {
+      "t": 35173.3,
+      "phase": "mural-front",
+      "front": 1,
+      "reading": 0
+    },
+    {
+      "t": 35498.2,
+      "phase": "mural-front-transition",
+      "front": 1,
+      "reading": 0
+    }
+  ],
+  "metadata": {
+    "duration": 39.48,
+    "width": 1440,
+    "height": 900
+  },
+  "decodedTimeupdateEvents": 149,
+  "frames": [
+    {
+      "t": 25.479999999999997,
+      "file": "video-frame-0.webp"
+    },
+    {
+      "t": 25.979999999999997,
+      "file": "video-frame-1.webp"
+    },
+    {
+      "t": 26.479999999999997,
+      "file": "video-frame-2.webp"
+    },
+    {
+      "t": 26.979999999999997,
+      "file": "video-frame-3.webp"
+    },
+    {
+      "t": 27.479999999999997,
+      "file": "video-frame-4.webp"
+    },
+    {
+      "t": 27.979999999999997,
+      "file": "video-frame-5.webp"
+    },
+    {
+      "t": 28.479999999999997,
+      "file": "video-frame-6.webp"
+    },
+    {
+      "t": 28.979999999999997,
+      "file": "video-frame-7.webp"
+    },
+    {
+      "t": 29.479999999999997,
+      "file": "video-frame-8.webp"
+    },
+    {
+      "t": 29.979999999999997,
+      "file": "video-frame-9.webp"
+    },
+    {
+      "t": 30.479999999999997,
+      "file": "video-frame-10.webp"
+    },
+    {
+      "t": 30.979999999999997,
+      "file": "video-frame-11.webp"
+    },
+    {
+      "t": 31.479999999999997,
+      "file": "video-frame-12.webp"
+    },
+    {
+      "t": 31.979999999999997,
+      "file": "video-frame-13.webp"
+    },
+    {
+      "t": 32.48,
+      "file": "video-frame-14.webp"
+    },
+    {
+      "t": 32.98,
+      "file": "video-frame-15.webp"
+    },
+    {
+      "t": 33.48,
+      "file": "video-frame-16.webp"
+    },
+    {
+      "t": 33.98,
+      "file": "video-frame-17.webp"
+    },
+    {
+      "t": 34.48,
+      "file": "video-frame-18.webp"
+    },
+    {
+      "t": 34.98,
+      "file": "video-frame-19.webp"
+    },
+    {
+      "t": 35.48,
+      "file": "video-frame-20.webp"
+    },
+    {
+      "t": 35.98,
+      "file": "video-frame-21.webp"
+    },
+    {
+      "t": 36.48,
+      "file": "video-frame-22.webp"
+    },
+    {
+      "t": 36.98,
+      "file": "video-frame-23.webp"
+    },
+    {
+      "t": 37.48,
+      "file": "video-frame-24.webp"
+    },
+    {
+      "t": 37.98,
+      "file": "video-frame-25.webp"
+    },
+    {
+      "t": 38.48,
+      "file": "video-frame-26.webp"
+    },
+    {
+      "t": 38.98,
+      "file": "video-frame-27.webp"
+    }
+  ],
+  "errors": [],
+  "file": "selected-v24a1/08-full-interaction.webm",
+  "bytes": 7768502,
+  "sha256": "5cf7fa4903afac53d79a524b6e10a22955047c2caf3d7416092add6a07a6acf4"
+}

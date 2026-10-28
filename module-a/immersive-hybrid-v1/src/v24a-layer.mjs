@@ -3,6 +3,7 @@
 const base=new URL('../assets/v24a/',import.meta.url);
 const specs=[['g01','gate-interior'],['g02','corridor-start'],['g03','mural-look']];
 const smooth=(a,b,x)=>{const t=Math.max(0,Math.min(1,(x-a)/(b-a)));return t*t*(3-2*t);};
+export const v24aFrontConfidence=pose=>1-smooth(0,.75,pose.muralFront??0);
 export function v24aWeights(pose){const t=pose.time??0,dx=pose.target[0]-pose.position[0],dz=pose.position[2]-pose.target[2],yaw=Math.atan2(dx,dz),second=smooth(1.36,1.65,t),third=smooth(.06,.40,yaw)*smooth(1.9,2,t);return {handoff:smooth(1.03,1.42,t),weights:[1-second,second*(1-third),second*third]};}
 export async function installV24Layers(runtime,T){
  let mode='hybrid',manual=null,enabled={wall:true,floor:true},last=runtime.pose,disposed=false;
@@ -32,7 +33,9 @@ vec4 a=projectLayer(scene0,matrix0,.62,.0),b=projectLayer(scene1,matrix1,.52,.42
  });
  if(!layers.some(l=>l.kind==='wall')||!layers.some(l=>l.kind==='floor')){for(const l of layers){l.proxy.geometry.dispose();l.mat.dispose();}for(const t of textures)t.dispose();group.removeFromParent();throw Error('Could not match original wall/floor geometry');}
  function update(pose){last=pose;const {handoff,weights}=v24aWeights(pose);
-  const strength=manual??handoff;for(const l of layers){l.u.weights.value.set(...weights);l.u.gain.value=mode==='original'||!enabled[l.kind]?0:strength*(mode==='ai'?1:.76);l.proxy.visible=l.u.gain.value>.001;}}
+  // The three reference cameras cover the original rail, not the new lateral
+  // front dock. Return locally to original surfaces on the same reverse clock.
+  const confidence=v24aFrontConfidence(pose),strength=(manual??handoff)*confidence;for(const l of layers){l.u.weights.value.set(...weights);l.u.gain.value=mode==='original'||!enabled[l.kind]?0:strength*(mode==='ai'?1:.76);l.proxy.visible=l.u.gain.value>.001;}}
  const previous=runtime.setCamera;runtime.setCamera=function(pose,options){update(pose);return previous.call(runtime,pose,options);};update(last);
  function redraw(){update(last);runtime.invalidate();}
  timings.push({id:'total-decode-and-geometry',ms:performance.now()-started});redraw();

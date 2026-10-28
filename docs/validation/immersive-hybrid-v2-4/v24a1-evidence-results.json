@@ -1,0 +1,16 @@
+{
+  "cameraShots": "Actual runtime screenshot plus separate metadata panel; no edits to source image",
+  "transition": "Actual browser debug sampler at reading=0.5 / real front=1, not a natural-clock timing capture. Natural flow is proved by 08-full-interaction.webm.",
+  "comparison": "Two original actual screenshot frames with metadata, resized side by side; supplementary board only",
+  "cameraProbeBasis": "Original running GLB; 13 offset bidirectional line sweeps, local clearance and five mural sightlines. Camera envelope only, not pedestrian/site survey.",
+  "files": [
+    "01-original-oblique.webp",
+    "02-front-camera.webp",
+    "03-front-dock.webp",
+    "04-reading-transition.webp",
+    "05-reading-final.webp",
+    "06-return-wall.webp",
+    "07-before-after.webp",
+    "08-full-interaction.webm"
+  ]
+}
