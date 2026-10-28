@@ -1,5 +1,7 @@
 # 水龙祠原境混合展厅 V1 · 验证记录
 
+> Repository Cleanup V1.0 历史提示：本页为当时版本的验收记录，以下入口、命令和视觉结论仅适用于[该历史提交](https://github.com/dovisct28-eng/--SHUILONGCIWEB/tree/882237b83768160bd0d8754cdab8aed53453cb9c)，不代表当前版本。当前共享建筑基线为 Combined B / V2.4-B1，入口与范围见[当前展厅说明](../../../module-a/immersive-hybrid-v1/README.md)；本页原有历史证据完整保留。
+
 2026-10-26；开发基线 `af7235cdd7df1a5e88085cc6528d6bc0ff09d8ad`，开始时已fetch核实远程master。交付分支 `feature/shuilongci-hybrid-gallery-v1`，不合并master。
 
 ## 结论

@@ -1,0 +1,977 @@
+{
+  "retention": [
+    {
+      "classification": "KEEP",
+      "paths": [
+        "shuilong-temple/",
+        "module-a/",
+        "Mural-Exhibition/",
+        "docs/validation/temple-model-v2/integration-b1/"
+      ],
+      "reason": "Current runtime, formal build and latest evidence; no functional changes."
+    },
+    {
+      "classification": "KEEP",
+      "paths": [
+        "docs/validation/temple-model-v2/src/baseline-model.js",
+        "docs/validation/temple-model-v2/src/candidate-model.mjs",
+        "docs/validation/temple-model-v2/candidate-config.json",
+        "docs/validation/temple-model-v2/model-manifest.json"
+      ],
+      "reason": "Referenced by combined-b.test.mjs and preserved B1 integration/model verification scripts."
+    },
+    {
+      "classification": "KEEP_MINIMAL",
+      "paths": [
+        "docs/validation/temple-model-v2/selected/",
+        "docs/validation/temple-model-v2/CANDIDATE_COMPARISON.md"
+      ],
+      "reason": "Retain all 11 selected design comparison files including two unique B0 motion comparisons."
+    },
+    {
+      "classification": "REVIEW_ONLY",
+      "paths": [
+        "docs/validation/immersive-hybrid-v*/",
+        "docs/validation/a*/",
+        "docs/validation/b*/",
+        "tmp/",
+        "**/local/",
+        "all pre-existing untracked files"
+      ],
+      "reason": "Unique historical, real-device or uncertain provenance; only exact ignored duplicates in targets may be removed."
+    }
+  ],
+  "dirty": [
+    {
+      "path": "Mural-Exhibition/public/assets/01_南门何五猖/info.txt",
+      "exists": true,
+      "sha256": "7e2fb0965e30ac95cf9c0ebb69f626f9b41e6f0570b6f63ee945654a7bfaead6"
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/02_东门陈五猖/info.txt",
+      "exists": true,
+      "sha256": "c9907a55e5903f0a13315b570cd70c389e9aeba6f63e6cfd55824d58184d5235"
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/03_西门谢五猖/info.txt",
+      "exists": true,
+      "sha256": "8341992bcf0bb99a9ac436f576b8c60367fe7d5ab64b8c01803aa5d44fe795db"
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/04_中门徐五猖/info.txt",
+      "exists": true,
+      "sha256": "dfc83c1b7a76ab9a7aaf74e56ad3d040d9d4dd1e835d03f3c9f465e3ac199962"
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/05_北门雷五猖/info.txt",
+      "exists": true,
+      "sha256": "0f2abd94a422e02c0f7a4deba0dbaa4575546aef8480da9adb80d67907fedb8f"
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/06_翻坛张五郎/info.txt",
+      "exists": true,
+      "sha256": "7cdca544335d1dd0962075ec85775a7ca19bd0e0de2552b6f4234673b78a60d6"
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/07_梅山猖兵/info.txt",
+      "exists": true,
+      "sha256": "37dda64158a84027d110fe17d26bdddaa2deba386c33c323658bfa0b655cbd37"
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/10_上层猖兵/color.png",
+      "exists": false,
+      "sha256": null
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/10_上层猖兵/info.txt",
+      "exists": false,
+      "sha256": null
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/10_上层猖兵/line.png",
+      "exists": false,
+      "sha256": null
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/10_上层猖兵/meta.json",
+      "exists": false,
+      "sha256": null
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/10_上层猖兵/org.png",
+      "exists": false,
+      "sha256": null
+    },
+    {
+      "path": "Mural-Exhibition/public/assets/10_上层猖兵/video.mp4",
+      "exists": false,
+      "sha256": null
+    },
+    {
+      "path": "docs/LOFI_ARCHIVE.md",
+      "exists": true,
+      "sha256": "5538f83c4a3852ac5441a89b01e21388cb8d3a02c438eb357458e39a5d33ee99"
+    },
+    {
+      "path": "scripts/Start-LofiArchive.ps1",
+      "exists": true,
+      "sha256": "5ba5c574b118e7aed3b51e9bec2d33bd51ca0f7e722e1f4408e91c61e11a2577"
+    },
+    {
+      "path": "scripts/lofi-launcher.test.cjs",
+      "exists": true,
+      "sha256": "d05e07271a9d0ddf442675530b34caed29a38a36af9ae251ffdb77f30abf8590"
+    },
+    {
+      "path": "水龙祠实地照片/水龙祠建筑插画-色稿v1.png",
+      "exists": false,
+      "sha256": null
+    },
+    {
+      "path": "水龙祠实地照片/水龙祠建筑结构稿-v2.png",
+      "exists": false,
+      "sha256": null
+    }
+  ],
+  "untrackedCount": 3539,
+  "protectedPresent": 648,
+  "b1Files": [
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/baseline.json",
+      "bytes": 4150,
+      "sha256": "58517e2a13a9813e2a322f1386d988dd6253fc655db69016b886fe40adaec005"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/browser-results.json",
+      "bytes": 23989,
+      "sha256": "149073652987c8accfb973daec47c9e7cc159bba3454c249701cb3b97449b5b1"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/camera-manifest.json",
+      "bytes": 65670,
+      "sha256": "078034d8e5f42625cec5807470dda7fe16678e8408a52e8eba2a2bc6267f297e"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/front-projection-verification.json",
+      "bytes": 4329,
+      "sha256": "5019379831ef410e825a38be3c8002975ddef24dd3e6a6886fd4c0f948ddc054"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/front-screenshot-verification.json",
+      "bytes": 427,
+      "sha256": "3caa910a87520862d45ac10c93d4ed88ef8629ff79b46aa9a6f33c78095ec6d6"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/INTEGRATION_REPORT.md",
+      "bytes": 7022,
+      "sha256": "bc62bcf03b3984fd8eddc59f2307773ac168d127c53ac51003c0466b114fc34f"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/A01-1366.webp",
+      "bytes": 82232,
+      "sha256": "5bfffdf336e0711779fdc2c2c4e4361cf358fdae57ffeb7abeea93e6ceb76592"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/A01-1440.webp",
+      "bytes": 98220,
+      "sha256": "a3f5d2a273a7df2a99c5b4308315ec3f7b1e959e41701e3ee50c1d4c99c7aeb4"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/A01-1920.webp",
+      "bytes": 140978,
+      "sha256": "ab640e6ab47a339c746d2e57ec80986d43159e1d91367bab221b96d942afbaa6"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/A02-1366.webp",
+      "bytes": 52970,
+      "sha256": "34560799e0feabe8adac4c9013f7b8f2fb8ec40c78146d1fda9526b44076ef0b"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/A02-1440.webp",
+      "bytes": 68672,
+      "sha256": "30ea417d04b6dc4c7774a9a507bbf428b629a634aa38b30b419f9ef694494ccd"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/A02-1920.webp",
+      "bytes": 88266,
+      "sha256": "3d80a240f860028836eab6b5a2a3196267cfd9ba59b328067eb28e9816edfcb2"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/A03-1366.webp",
+      "bytes": 86676,
+      "sha256": "83e6b350e99d98335c9e6ffd87c6f89e33728b0d9e603f9ecb8a6073ef8a9ff1"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/A03-1440.webp",
+      "bytes": 90924,
+      "sha256": "546ae43722dd905a27cb7aed64408cffcd469a6c982e2fb7444fe4ae4e5e75dd"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/A03-1920.webp",
+      "bytes": 133388,
+      "sha256": "7fc94a7b7d7f3da3be56ef247539142f562bc68fc45811d596351b9d38a73b78"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/A04-1366.webp",
+      "bytes": 82946,
+      "sha256": "36fcd0b8dcb5f5b9d5144cd72db0fe132a280c2dc18f56d0277d5263368bd88a"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/A04-1440.webp",
+      "bytes": 92620,
+      "sha256": "7e75f68bf637f7bb82d318402a8c486d632bb3452153942c1d0ec78cf527e000"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/A04-1920.webp",
+      "bytes": 136886,
+      "sha256": "92936b3a3b64e2de0a038be90f1fcd5571065ddbd271e080287e60b266a15aff"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/A04-interior-1440.webp",
+      "bytes": 92644,
+      "sha256": "6eead4c3cfc0b62ad94398f07fc3964671f808252729b8ade0dbafcc07e9c0c7"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/A05-1366.webp",
+      "bytes": 122018,
+      "sha256": "3b83435a67528b2898c1fc8b4acbd46482934321547399b5dc7801dd9633a35a"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/A05-1440.webp",
+      "bytes": 118664,
+      "sha256": "3f14e20b1f7685e5ead6907e973623d38ae4bfb48ad6205d2426f593fd8fbfb5"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/A05-1920.webp",
+      "bytes": 229062,
+      "sha256": "e534d04b9bd85bc566f18f05975e2b11b95f7de0ee99528f689f7ffa289bd246"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/A06-1366.webp",
+      "bytes": 157730,
+      "sha256": "84751db5747a50a744cc1867092f9ed7ebd63e403537fba4bc937fe94102ece3"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/A06-1440.webp",
+      "bytes": 207152,
+      "sha256": "7548a0a830671aae3fd8f2e8dc2da59af1e027f7fb56f8e701d23dd4ec31c7a7"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/A06-1920.webp",
+      "bytes": 428136,
+      "sha256": "6cdd402a582ddc2fb06de35732618fe9479565ecefc617064ee67a372172f7d6"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/A07-1366.webp",
+      "bytes": 134218,
+      "sha256": "fdae689598bea16102fe101696be6033f728fcad91444222ac3865c792fc47c1"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/A07-1440.webp",
+      "bytes": 135122,
+      "sha256": "d8bc5504980a5f196d3c3808ee384aeaa7505222348117142dd288e3805fab39"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/A07-1920.webp",
+      "bytes": 263696,
+      "sha256": "964ad712308aa477fdfa04c544f7f9a173e15a5e29153dba01d9966a1f82d784"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/A08-1366.webp",
+      "bytes": 163036,
+      "sha256": "fb210e0b2de7a51905c4c833f7d6e894cbcd2fe7daff87ddd23f816dbd180643"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/A08-1440.webp",
+      "bytes": 224280,
+      "sha256": "8350f57104162068140b6f3726f32f7e7dbebf37b7272b1e2d24062fb23f1f74"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/A08-1920.webp",
+      "bytes": 323198,
+      "sha256": "06253187e666ebde8387efc589d040724e0ab49c3098ae43a9e200c087a2659e"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/approach-1366.webp",
+      "bytes": 134102,
+      "sha256": "1fbfd524b2318effb25559f21462bbf06aa173c52578d67c8dc329887baac618"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/approach-1440.webp",
+      "bytes": 156808,
+      "sha256": "e7874ee4be501c52efb55e3608e11569fccacbc8a964e7f7c8f574b5222421d1"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/approach-1920.webp",
+      "bytes": 231132,
+      "sha256": "8086629a4219d336cc59c88680b57ddf8a7517d700af02339c02eab470ad37af"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/baseline-worktree.json",
+      "bytes": 488655,
+      "sha256": "14fcda291f23f1a600947c67b76214efe9a084d5b18b2c204f828ece7ff02295"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/commit-allowlist.json",
+      "bytes": 3926,
+      "sha256": "5681e943f93feb60d2ac2cb7c012e902d6b1bdb3292307456773f6009edd03c0"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/corridor-2_5d-1366.webp",
+      "bytes": 144144,
+      "sha256": "7839c436eaf6a0e547550a1787d51c67bac18ce6c3fb527f2f0673c07ecf16c8"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/corridor-2_5d-1440.webp",
+      "bytes": 160786,
+      "sha256": "39d2c0c9c1c3ce7f4b15885eaa0a3a9f7e68c54e0f96354eb4ff2df1f340e12f"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/corridor-2_5d-1920.webp",
+      "bytes": 259184,
+      "sha256": "4209daa057a75a4187b3d970dd03ad9d3e3df2bf54e621e5059de120ec722e16"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/corridor-3d-1366.webp",
+      "bytes": 50344,
+      "sha256": "4c03ab321b386ca66d0a1c58b4e03229f4bc550560dadf802f110818f5a68b31"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/corridor-3d-1440.webp",
+      "bytes": 60020,
+      "sha256": "72a686318c9b56e43e0783e2b0e01d8b4c77e17fdcf3907f66e88370ed25e103"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/corridor-3d-1920.webp",
+      "bytes": 78804,
+      "sha256": "69d493488a7b182faaa32ee322ce658dcdbf26ac0f2be6ad14e1bc1a76fa621d"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/corridor-hybrid-1366.webp",
+      "bytes": 84548,
+      "sha256": "41a85dd3c511a54870aec499acfe9744e188e60f0eab36746d1be069dcb74922"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/corridor-hybrid-1440.webp",
+      "bytes": 107284,
+      "sha256": "cde772237be47bc274da8d34cb54b8fdd3dfc0173627fd4d4d4976ccb274e770"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/corridor-hybrid-1920.webp",
+      "bytes": 149196,
+      "sha256": "7d9ca09b89fb47fbd34c70b7c65bfaf322d35ca9bf875ca44f956bb8234cab18"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/detail-1366.webp",
+      "bytes": 248768,
+      "sha256": "7fbaec780d18c6880c140903f70b5abb326082f1f4d323fa188aeb26db27bb1b"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/detail-1440.webp",
+      "bytes": 297014,
+      "sha256": "aa0409088e7c65e8fae225f15cdfdb9c3eceb2a49f3f1b59a7866d1f00a058fc"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/detail-1920.webp",
+      "bytes": 452736,
+      "sha256": "3fa4f0a65cc9504129ee2207dddd79937e735dd613908b455809f7f2872cb7b0"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/dock-frame-0.webp",
+      "bytes": 249304,
+      "sha256": "3680316fe43b9c21e715d2e97a819284c7d7a1f98a788f4d32b4c361738f82b2"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/dock-frame-1.webp",
+      "bytes": 245790,
+      "sha256": "7adec87150c84d219985d1f832997e92931961e01d0f12e712c07750b5ea7dce"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/dock-frame-10.webp",
+      "bytes": 162444,
+      "sha256": "4762da0415facbd6341d8ded99d8e5a168fd9a79244744b4eb4971311cea904c"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/dock-frame-11.webp",
+      "bytes": 117384,
+      "sha256": "54d7d1924d29079749d56c26cbf4bee1da12385b09918b4c62357aceef729eb4"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/dock-frame-12.webp",
+      "bytes": 131634,
+      "sha256": "3e2be726e0841e2d23228e49cb3bea923068b8d6af244a8082c054eb10f25401"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/dock-frame-13.webp",
+      "bytes": 134254,
+      "sha256": "4ca3e8dfb3424c0742c7c0f94260ec59eeb4ff6a5f4c623885cdb4f694b6edbc"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/dock-frame-14.webp",
+      "bytes": 142340,
+      "sha256": "e089d6f6f9141af92cd9bbfe45f14ca4073de3e67876ee9a680f64e41b707595"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/dock-frame-15.webp",
+      "bytes": 148264,
+      "sha256": "a66030f603e0e4697e270abe5bee9d491411f327ef97101acfedc901edc46c3d"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/dock-frame-16.webp",
+      "bytes": 168972,
+      "sha256": "95127fbb66ae798d41f5f33c89e985e3ef6b0a18f0c61b2c8e09ad6dac39cd8e"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/dock-frame-17.webp",
+      "bytes": 166816,
+      "sha256": "cfeccf352b5d1f4eb67f956993fc05077612f13c6e456688e5b98f1dd61ed43b"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/dock-frame-18.webp",
+      "bytes": 166724,
+      "sha256": "d4b6005e31da01b278999e954d3bef64dbc86cc04ce5f063f0a0f2c447466fd3"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/dock-frame-19.webp",
+      "bytes": 166862,
+      "sha256": "0bedb856b3f242890e9bda07100cd8d7700ae8f352a0660cac6ad09f0272291f"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/dock-frame-2.webp",
+      "bytes": 231240,
+      "sha256": "a397e50a3e0e9c833e3e591a88e029be35d5aaa01d2815f9202393bda275ddd2"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/dock-frame-20.webp",
+      "bytes": 166748,
+      "sha256": "c0024ef8928c677d9d6acbf1782e6ae3d6f8a01ab0124fc1c3314a9221af9b70"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/dock-frame-21.webp",
+      "bytes": 167094,
+      "sha256": "ce0c2620e3d654a2dd4283e08112046341ecd289a3ba17824e8c459ad3ae6da1"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/dock-frame-22.webp",
+      "bytes": 167094,
+      "sha256": "ce0c2620e3d654a2dd4283e08112046341ecd289a3ba17824e8c459ad3ae6da1"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/dock-frame-23.webp",
+      "bytes": 167094,
+      "sha256": "ce0c2620e3d654a2dd4283e08112046341ecd289a3ba17824e8c459ad3ae6da1"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/dock-frame-24.webp",
+      "bytes": 167058,
+      "sha256": "64a1c5cdac8a5a644dacf33e7c6a7cc0f5c7af8f12cb5e6efb295dcf48834d50"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/dock-frame-3.webp",
+      "bytes": 232366,
+      "sha256": "1a2ba9c2a308054831075f995018f296ff12256615e17cc45597c42ee01d5d14"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/dock-frame-4.webp",
+      "bytes": 246614,
+      "sha256": "daeb527f204bc92818e65b72dc308d7cc503b2240f35c3af87ab0b944577a3a5"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/dock-frame-5.webp",
+      "bytes": 246614,
+      "sha256": "daeb527f204bc92818e65b72dc308d7cc503b2240f35c3af87ab0b944577a3a5"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/dock-frame-6.webp",
+      "bytes": 248364,
+      "sha256": "704e08ed997d457835d82a02e19d4b5b0f5b704c02e53e8e0d8ce26f7a5fbfda"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/dock-frame-7.webp",
+      "bytes": 248510,
+      "sha256": "e2f6bb48a0a7eb78e21141b0917c82db1eb6e839a5aae4dc94544609db8cafe9"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/dock-frame-8.webp",
+      "bytes": 239088,
+      "sha256": "24f91d256b34dfbf368376d2531b8ac1d9468cd4e8651097494cb85fbcd85bc9"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/dock-frame-9.webp",
+      "bytes": 201236,
+      "sha256": "e422f7f9dee04b0b00ce01f96e3ab2b63c32344c6d568344d802a503e82114d0"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/dock-review.webp",
+      "bytes": 274566,
+      "sha256": "09ed55f4415ae588b7149ddb19e88abc60e88b72143d8df182289b20571a53e0"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/final-review.webp",
+      "bytes": 118610,
+      "sha256": "ce50af9bf35546329cf91e2eb6dbe04cff73483195d914730af779fe03a593ea"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/front-1366.webp",
+      "bytes": 247820,
+      "sha256": "a232b249bc34db78e85088b74e21519135b2c28861aecfec4a3d0f77714c9aa3"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/front-1440.webp",
+      "bytes": 297778,
+      "sha256": "1bc37e301ed4e6f05454e488b3a1968ecbe924e9c80acddd2a98383c2b2fa27e"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/front-1920.webp",
+      "bytes": 533376,
+      "sha256": "44faa93ac4e38c8b954e43128429bb3fa752931c3dba609c6dfaf0387cab17fc"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/gate-close-1366.webp",
+      "bytes": 59776,
+      "sha256": "03254be63afc3857a0f5303b44e88e4bb04d4b36b012540a5d62ab38d66f9164"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/gate-close-1440.webp",
+      "bytes": 62180,
+      "sha256": "9d9bb5ceae044329e13fd9f136a0f7ea8ab44eeef1e6fea787d178491be963e3"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/gate-close-1920.webp",
+      "bytes": 86948,
+      "sha256": "95c10d8460e1b9fd0ea62672e9a424db3299e32d3e727a8367017ecbf2184d00"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/gate-interior-1366.webp",
+      "bytes": 32982,
+      "sha256": "27d5a3f5fb3293a023105856035bdd413a888beecdddb2803d7216dc87223b1a"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/gate-interior-1440.webp",
+      "bytes": 36344,
+      "sha256": "cd095d6183487bd7eddd9c6538daf2c9213351f34e4156485b0838506f0b2f3c"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/gate-interior-1920.webp",
+      "bytes": 47904,
+      "sha256": "77ff8591b0cefba1b2c2083f6295d5681799b29fba5c334ad10976df3414a7f8"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/gate-option-0.webp",
+      "bytes": 9484,
+      "sha256": "c8469c1ace8346cb7a8f8da82b5c55f1f949756c3d1f1b795f2a5ba3fc9c3fae"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/gate-option-1.webp",
+      "bytes": 9600,
+      "sha256": "1d0052f2ad7f188754a24789ff20f474702e102721a1f5f42f1cbfbe0357ac6a"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/gate-refined.webp",
+      "bytes": 24088,
+      "sha256": "0b60a52faba08f150e8d4ec3823de2ef4424ac4af1a63b5448f386c385f2c188"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/interaction-trace.json",
+      "bytes": 8666116,
+      "sha256": "43b590bca092b60f352bf9246e28be066679e1200ffea212048c902d2ef813fe"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/mural-look-1366.webp",
+      "bytes": 124418,
+      "sha256": "44878bbad7381abd05757b6487e821eb62d04666848d8d25f6b91a783f6f52f9"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/mural-look-1440.webp",
+      "bytes": 164026,
+      "sha256": "1cf8b45619625abaee170b60ad95920f1d134fe1136983f6414ef5f18c4e0fd7"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/mural-look-1920.webp",
+      "bytes": 230010,
+      "sha256": "903cdab6c108157061d501a02b5bf7ce144fa6dd43588fa949c4c5a2eb5d4528"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/page@15e49cfff16bcd5b7cde6d24651dbfea.webm",
+      "bytes": 11209871,
+      "sha256": "e6b8e14d450f7adc1a8ad0fde2a8f8db59d9bc0eae8b1b026cf0d413ef90a4ef"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/page@e34181946b8398dfd2428255cbe02b99.webm",
+      "bytes": 11226727,
+      "sha256": "e24bb7daeeb425fe8e96982620110fcf6ffe7ef4e2d5cd935ccdaa507f93efe2"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/qa-gsap-3.12.5.js",
+      "bytes": 72214,
+      "sha256": "28033e449a31ebcc396e5be8b13b63152bf03094288fb5867034321927bce087"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/qa-three-0.160.0.mjs",
+      "bytes": 1272972,
+      "sha256": "76dea8151bc9352aef3528b4262e249b2604f62543828328db978d060d61a495"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/reading-1366.webp",
+      "bytes": 156346,
+      "sha256": "b02a63af513fa377cb682b545623174be03f31375b0d7c6e770bea832e9b0530"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/reading-1440.webp",
+      "bytes": 175790,
+      "sha256": "6e86778d91b8c57df40b2a08728aa80cbce86c2ffaef4aad1bd7086ab99cc1cd"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/reading-1920.webp",
+      "bytes": 271156,
+      "sha256": "5bd6ab440cfcffe27795162cc0d54cafdbc03dda4eb0cbfc40b9b2af6d4929f0"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/smoke-board.webp",
+      "bytes": 172756,
+      "sha256": "3232e3367a28eb678ed629b78ef83106101b2d78a12eeb92d0a4709593a5d0fd"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/smoke-corridor-2_5d.webp",
+      "bytes": 137200,
+      "sha256": "0425a2b7c8c03fd78c709b537a871fe58eaeba8ceee16137c2bc90bcecccfe57"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/smoke-corridor-3d.webp",
+      "bytes": 50690,
+      "sha256": "cd7ce78e40e1df8f893a39278977806da88d91cb5f055b8411cbdcb5f61f0409"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/smoke-gate-interior.webp",
+      "bytes": 68522,
+      "sha256": "b545031380edd28ccf529f49dd39e14e5081bda4fe63d5ce61e0bae81787be17"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/smoke-mural-look.webp",
+      "bytes": 140018,
+      "sha256": "b2354d23b92fa3b6b8fc5d9fc8409d5cced80054c2d3b2fc7d5e094ee9df572e"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/smoke-mural-reading.webp",
+      "bytes": 153010,
+      "sha256": "4ff8f27a0fce146795c99968ed2f75ff2a8191fa422af457b1b6659927589da3"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/smoke-overview.webp",
+      "bytes": 206306,
+      "sha256": "fa097d0dd10d3a4e8a579c2ab985aa59ebf1c3a5228e1b8d03f17ed9f7b9e3d0"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/smoke-stage-turn.webp",
+      "bytes": 37476,
+      "sha256": "d28f10b4ff7539c36771e029a05693a349ce58f01d50ec2a4bfb399e3cce42b8"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/smoke.cjs",
+      "bytes": 2863,
+      "sha256": "0697373e147b5859c3f93967d2a04cf63308eeb1268be209337002c9c205ab94"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/smoke.json",
+      "bytes": 12788,
+      "sha256": "9b780ab7a52467b802c383951620b013b74433a748e27d0c376e944d77d8d9ff"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/stage-turn-1366.webp",
+      "bytes": 39058,
+      "sha256": "8bb7098a6372fdbf16d9d28946b79a6e9a26d8dd7c090780b5ff74a638b830fe"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/stage-turn-1440.webp",
+      "bytes": 44048,
+      "sha256": "990642b393c65f0b696031fefa7f933099ab553e425cf0f69dc74d28fceb1d65"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/stage-turn-1920.webp",
+      "bytes": 57480,
+      "sha256": "fff34533dc421476bc597e2f933a39631c84d76ce7b780e3f5084da211945ac4"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/threshold-1366.webp",
+      "bytes": 59058,
+      "sha256": "d74add437ad55d2b7059a60aa9bbec51d8e36d7562238327a99b303525fe1d99"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/threshold-1440.webp",
+      "bytes": 67004,
+      "sha256": "9dfcdde71208b6cb419eb8a5b9f27bb77c202375496df917ba4a9033872b2d40"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/threshold-1920.webp",
+      "bytes": 88954,
+      "sha256": "2a6d295c5aa43c099873f354a9de4aa349bae98955fb1d0cf2cffa219a622e17"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/unit-tests.txt",
+      "bytes": 13429,
+      "sha256": "216b57710270fe50a00f3f2058c66a481f2b0c932f60c490f463a1d806481256"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/video-0.webp",
+      "bytes": 3828,
+      "sha256": "4b2fa514e73bf4eedd5f2c96a8a8f91a8d5e686f8aadbc2d73f05960dd43688c"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/video-1.webp",
+      "bytes": 5316,
+      "sha256": "8c9392384813acc7d8c7c827c0ff379a219a30aa59ce08a6bd14dea3cbf01aa8"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/video-10.webp",
+      "bytes": 166748,
+      "sha256": "c0024ef8928c677d9d6acbf1782e6ae3d6f8a01ab0124fc1c3314a9221af9b70"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/video-11.webp",
+      "bytes": 222486,
+      "sha256": "635e71b138e288d342e540af3a7bf37e7594cc09abaa3e2ecafb4e6096a3c2e8"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/video-12.webp",
+      "bytes": 161694,
+      "sha256": "802d5f1ac86641549dc916024a2a791744e9eba9acb4d2cb07d52c6960585618"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/video-13.webp",
+      "bytes": 54296,
+      "sha256": "5cd65f6b3491c98833a4420d7056d9b8f9dbec9f4951a922f2a96c01dc48882a"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/video-14.webp",
+      "bytes": 96130,
+      "sha256": "33c1bc48e72946d5434bb22f0aef6e7b8b869f7e9fd797eb441df069ac2e708b"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/video-15.webp",
+      "bytes": 92810,
+      "sha256": "7306c17964e816605e4950581f33425d5559e1a1387e1b5b9159ba25323f37a5"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/video-16.webp",
+      "bytes": 105440,
+      "sha256": "2ce7bd292ff209fc1f01d4e50c6641c40684842c7cca1171ef8d08675207d9ab"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/video-17.webp",
+      "bytes": 152116,
+      "sha256": "06dd7b4de9750bfa3efde0004df922beb3be510c0bebf20cc3e3bb27cfe362d9"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/video-2.webp",
+      "bytes": 128456,
+      "sha256": "fe8cb871dfbb6a16e8578a70d43a12611e1c4794631c0c8f508c1a2de366ba0a"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/video-3.webp",
+      "bytes": 93794,
+      "sha256": "11eee4f042be319497dad553fa1410851d72ff49435474c94d0917d354e080c7"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/video-4.webp",
+      "bytes": 73950,
+      "sha256": "cb1c2f4b4f106d41ebd5555d0e2467b8bbd12bcf3d87abc7616db058679d3dff"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/video-40-blob.webp",
+      "bytes": 97302,
+      "sha256": "15cfe8c4066e962c7feb8fc5b3082440a9ce262bf387c814c353f2a27511953b"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/video-40-display.webp",
+      "bytes": 3508,
+      "sha256": "0a7277a5b32f9de03df666fdad956969bc9609e2d244ae67006bd96367780b4c"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/video-5.webp",
+      "bytes": 75540,
+      "sha256": "2e75ae7272f8b2b970f27197d8eec15bc20e01346e4725b00bcc48ce34233200"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/video-6.webp",
+      "bytes": 46294,
+      "sha256": "588e25883b04891e7501470f23d0bc96ceaddda6eb2dd719978c359d605fb212"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/video-7.webp",
+      "bytes": 79854,
+      "sha256": "1d19ea9806094c468ff64b47de7abfcef2f54b3d5b0914505a3ef84e9667cc41"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/video-8.webp",
+      "bytes": 155654,
+      "sha256": "ef79a135879d340688ab9f1c815e9fc5bf2c5ba3187f616a168cd1a76dfc2f73"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/video-9.webp",
+      "bytes": 149738,
+      "sha256": "a9b96e84d0f627e2ed13efc7d7be4351bc43ee561381a2ea86ce87d6cd24f86c"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/video-decode.txt",
+      "bytes": 724,
+      "sha256": "06a6c29df5f2e98bfff7aa8af74ad3e1349da7db9860df8713b0084e69551a5d"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/local/video-review.webp",
+      "bytes": 128748,
+      "sha256": "b26a3162548340c7da4d872f712258e2f0411c94b8f137b0c61967eaa1b0dbac"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/model-verification.json",
+      "bytes": 4114,
+      "sha256": "3732089c28aef70354d7078a08fe3e718be71f7a5bc59caed4279e01d5858c37"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/module-b-smoke.json",
+      "bytes": 889,
+      "sha256": "22c756bbcdd160c8499749ab4a7edda9f6863e7c8d5fb808cce1e1639f58d55b"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/performance-results.json",
+      "bytes": 26218,
+      "sha256": "8bbcb3e62ad62d401fd6b67c364e50a5e0fc7b8062d1d7702a9bc0840cf04481"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/README.md",
+      "bytes": 3608,
+      "sha256": "16ebba28a03b575d3e7ef0d3c63067bbaf83f85acf7a02b48184e527e4bcb6cf"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/record-verification.json",
+      "bytes": 1810,
+      "sha256": "717140b6a5c3a8ecaf50b447bcd3670297f218113c755f501e1100503ac053f9"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/regression-results.json",
+      "bytes": 118183,
+      "sha256": "7afd421191c7299bc49f8dd8d5b19d4f3d545eaa9f17aa362cf65634b768c109"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/route-verification.json",
+      "bytes": 385,
+      "sha256": "4d81b0c3a474a669c014515d262db208ae364495b338fca8055372217a4e2b30"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/scripts/browser.cjs",
+      "bytes": 8726,
+      "sha256": "176909816e8b2a6c90d63ca837400a8968a7002a3b94c7c7bf2f2872b77fbb71"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/scripts/finalize.cjs",
+      "bytes": 13462,
+      "sha256": "26d00a63117fdebb81375767ee17b0c818de346d2125e6d370ade02c2b730de2"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/scripts/front-evidence.cjs",
+      "bytes": 920,
+      "sha256": "65ad090251cd00fa74c6331f7b718b3439b63b39b57140b36357c72fe819f2d3"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/scripts/integrate-source.cjs",
+      "bytes": 2801,
+      "sha256": "741eee2bb5671614d4f0ef2cca3d3410d57d3449f4ff4dece44a12017522a780"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/scripts/model-check.cjs",
+      "bytes": 4165,
+      "sha256": "a72fea263a267fdb8c8e925dcb833a9adcd93a63c04733e049db522c6c98b1d1"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/scripts/module-b.cjs",
+      "bytes": 2247,
+      "sha256": "9343e1244832b4e342b4f2bc9a6e048a30f5206751185cd3fb7d679540ba3ca6"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/scripts/performance.cjs",
+      "bytes": 3594,
+      "sha256": "67e36ddb69744df024d9d98742707635fcc7cba7991d2fbd03491bbda76b5f80"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/scripts/regression.cjs",
+      "bytes": 8390,
+      "sha256": "c5bcbca259a2a6534de6f7e5e0dceb7723417e5041efbb30ec678d1a04d5d87f"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/scripts/video-check.cjs",
+      "bytes": 3533,
+      "sha256": "1c8210c12b3f5f7feac74780c708115c0f9cf986f3720aa2f2e1b1a7639fd3a5"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/selected/01-a01-overview.webp",
+      "bytes": 98220,
+      "sha256": "a3f5d2a273a7df2a99c5b4308315ec3f7b1e959e41701e3ee50c1d4c99c7aeb4"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/selected/02-a02-space.webp",
+      "bytes": 68760,
+      "sha256": "4a8635232910ba0205d099b6580c32d7a8751af597d2bde746d90af90fae3ec7"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/selected/03-a03-cutaway.webp",
+      "bytes": 90934,
+      "sha256": "6685ba9c305667b9c8bd685d00d2e0a8ff8a3a6b6ed9e7ade5750f0da0b38e34"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/selected/04-a04-mural-locations.webp",
+      "bytes": 92620,
+      "sha256": "7e75f68bf637f7bb82d318402a8c486d632bb3452153942c1d0ec78cf527e000"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/selected/05-gate-interior.webp",
+      "bytes": 36344,
+      "sha256": "cd095d6183487bd7eddd9c6538daf2c9213351f34e4156485b0838506f0b2f3c"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/selected/06-stage-turn.webp",
+      "bytes": 44048,
+      "sha256": "990642b393c65f0b696031fefa7f933099ab553e425cf0f69dc74d28fceb1d65"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/selected/07-new-corridor.webp",
+      "bytes": 60020,
+      "sha256": "72a686318c9b56e43e0783e2b0e01d8b4c77e17fdcf3907f66e88370ed25e103"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/selected/08-mural-discovery.webp",
+      "bytes": 164026,
+      "sha256": "1cf8b45619625abaee170b60ad95920f1d134fe1136983f6414ef5f18c4e0fd7"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/selected/09-mural-front.webp",
+      "bytes": 248510,
+      "sha256": "e2f6bb48a0a7eb78e21141b0917c82db1eb6e839a5aae4dc94544609db8cafe9"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/selected/10-mural-reading.webp",
+      "bytes": 175790,
+      "sha256": "6e86778d91b8c57df40b2a08728aa80cbce86c2ffaef4aad1bd7086ab99cc1cd"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/selected/11-return.webp",
+      "bytes": 160770,
+      "sha256": "ab9e22eba7448a956fb1bffefa15f74231dd561d35617c8c300801d6077bd678"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/selected/12-full-interaction.webm",
+      "bytes": 11226727,
+      "sha256": "e24bb7daeeb425fe8e96982620110fcf6ffe7ef4e2d5cd935ccdaa507f93efe2"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/selected-manifest.json",
+      "bytes": 2099,
+      "sha256": "9cd208dfa2dadcac8a5b403f0139bd632381aec11fb1d18a1e29547cde5140f6"
+    },
+    {
+      "path": "docs/validation/temple-model-v2/integration-b1/source-manifest.json",
+      "bytes": 3435,
+      "sha256": "d9fb74259375b03347c47d156236f80d440d75f740db1be7d1d7effe18cd8f58"
+    }
+  ],
+  "preExistingUserUntrackedCount": 3538,
+  "untrackedCountNote": "Raw inventory count includes this task audit.cjs; all 3538 original user untracked files are preserved."
+}

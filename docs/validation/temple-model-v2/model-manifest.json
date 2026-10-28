@@ -7,7 +7,7 @@
     "baseline": {
       "id": "baseline",
       "label": "Baseline · 原模型",
-      "url": "../../../shuilong-temple/shuilong-temple.glb",
+      "url": "https://raw.githubusercontent.com/dovisct28-eng/--SHUILONGCIWEB/ef0f3667e6db2d6ce8b7dca676f5ff1a93231a11/shuilong-temple/shuilong-temple.glb",
       "bytes": 3329000,
       "triangles": 83360,
       "structure": {
@@ -30,7 +30,8 @@
         "stage": null,
         "roof": null
       },
-      "sha256": "fbbfce1c0bfbf8a09c33ed65a6bb1f60589b6c70300841fa0283c2a4498ae047"
+      "sha256": "fbbfce1c0bfbf8a09c33ed65a6bb1f60589b6c70300841fa0283c2a4498ae047",
+      "archivedOriginalUrl": "../../../shuilong-temple/shuilong-temple.glb"
     },
     "corridor-a": {
       "id": "corridor-a",
@@ -38,7 +39,7 @@
       "corridor": "A",
       "stage": null,
       "roof": null,
-      "url": "./models/corridor-a.glb",
+      "url": "https://raw.githubusercontent.com/dovisct28-eng/--SHUILONGCIWEB/temple-combined-b-b1-2026-10-28/docs/validation/temple-model-v2/models/corridor-a.glb",
       "bytes": 3296524,
       "triangles": 81872,
       "buildMs": 460.746,
@@ -275,7 +276,8 @@
           "side": true
         }
       ],
-      "sha256": "0fb21c504be498a6ff95bce9592c3f54b2c5c444efc2c10b8eae6ba8b3192d4b"
+      "sha256": "0fb21c504be498a6ff95bce9592c3f54b2c5c444efc2c10b8eae6ba8b3192d4b",
+      "archivedOriginalUrl": "./models/corridor-a.glb"
     },
     "corridor-b": {
       "id": "corridor-b",
@@ -283,7 +285,7 @@
       "corridor": "B",
       "stage": null,
       "roof": null,
-      "url": "./models/corridor-b.glb",
+      "url": "https://raw.githubusercontent.com/dovisct28-eng/--SHUILONGCIWEB/temple-combined-b-b1-2026-10-28/docs/validation/temple-model-v2/models/corridor-b.glb",
       "bytes": 3296524,
       "triangles": 81872,
       "buildMs": 330.84260000000006,
@@ -520,7 +522,8 @@
           "side": true
         }
       ],
-      "sha256": "fc0d9af5b5e32a547d064b1e50ed3ae241ec7d0e02b0403448e757325a1f03bc"
+      "sha256": "fc0d9af5b5e32a547d064b1e50ed3ae241ec7d0e02b0403448e757325a1f03bc",
+      "archivedOriginalUrl": "./models/corridor-b.glb"
     },
     "corridor-c": {
       "id": "corridor-c",
@@ -528,7 +531,7 @@
       "corridor": "C",
       "stage": null,
       "roof": null,
-      "url": "./models/corridor-c.glb",
+      "url": "https://raw.githubusercontent.com/dovisct28-eng/--SHUILONGCIWEB/temple-combined-b-b1-2026-10-28/docs/validation/temple-model-v2/models/corridor-c.glb",
       "bytes": 3296524,
       "triangles": 81872,
       "buildMs": 298.7713000000001,
@@ -765,7 +768,8 @@
           "side": true
         }
       ],
-      "sha256": "667690994202c5297dcb2b289718bbad77d96573ed3e71b47fd1b2dac0c790a6"
+      "sha256": "667690994202c5297dcb2b289718bbad77d96573ed3e71b47fd1b2dac0c790a6",
+      "archivedOriginalUrl": "./models/corridor-c.glb"
     },
     "stage-a": {
       "id": "stage-a",
@@ -773,7 +777,7 @@
       "corridor": "B",
       "stage": "A",
       "roof": null,
-      "url": "./models/stage-a.glb",
+      "url": "https://raw.githubusercontent.com/dovisct28-eng/--SHUILONGCIWEB/temple-combined-b-b1-2026-10-28/docs/validation/temple-model-v2/models/stage-a.glb",
       "bytes": 3330416,
       "triangles": 82720,
       "buildMs": 313.23569999999995,
@@ -1019,7 +1023,8 @@
           "side": true
         }
       ],
-      "sha256": "4f0afa6c7ee4ba4760f932ac76e95c56babb4874215fec0ba13a950910de1ab6"
+      "sha256": "4f0afa6c7ee4ba4760f932ac76e95c56babb4874215fec0ba13a950910de1ab6",
+      "archivedOriginalUrl": "./models/stage-a.glb"
     },
     "stage-b": {
       "id": "stage-b",
@@ -1027,7 +1032,7 @@
       "corridor": "B",
       "stage": "B",
       "roof": null,
-      "url": "./models/stage-b.glb",
+      "url": "https://raw.githubusercontent.com/dovisct28-eng/--SHUILONGCIWEB/temple-combined-b-b1-2026-10-28/docs/validation/temple-model-v2/models/stage-b.glb",
       "bytes": 3580600,
       "triangles": 90304,
       "buildMs": 329.8113999999998,
@@ -1273,7 +1278,8 @@
           "side": true
         }
       ],
-      "sha256": "06239aba408a2c4f3ab4be84a6c14a94d9ad17905797bee7914030c34ca0714a"
+      "sha256": "06239aba408a2c4f3ab4be84a6c14a94d9ad17905797bee7914030c34ca0714a",
+      "archivedOriginalUrl": "./models/stage-b.glb"
     },
     "roof-a": {
       "id": "roof-a",
@@ -1281,7 +1287,7 @@
       "corridor": null,
       "stage": null,
       "roof": "A",
-      "url": "./models/roof-a.glb",
+      "url": "https://raw.githubusercontent.com/dovisct28-eng/--SHUILONGCIWEB/temple-combined-b-b1-2026-10-28/docs/validation/temple-model-v2/models/roof-a.glb",
       "bytes": 3372516,
       "triangles": 83672,
       "buildMs": 241.40430000000015,
@@ -1537,7 +1543,8 @@
           "side": true
         }
       ],
-      "sha256": "bc875ac47009ad431810de94f610eefa73deeb1f846469eb0feda2602c5e8950"
+      "sha256": "bc875ac47009ad431810de94f610eefa73deeb1f846469eb0feda2602c5e8950",
+      "archivedOriginalUrl": "./models/roof-a.glb"
     },
     "roof-b": {
       "id": "roof-b",
@@ -1545,7 +1552,7 @@
       "corridor": null,
       "stage": null,
       "roof": "B",
-      "url": "./models/roof-b.glb",
+      "url": "https://raw.githubusercontent.com/dovisct28-eng/--SHUILONGCIWEB/temple-combined-b-b1-2026-10-28/docs/validation/temple-model-v2/models/roof-b.glb",
       "bytes": 3372512,
       "triangles": 83672,
       "buildMs": 199.9434000000001,
@@ -1801,7 +1808,8 @@
           "side": true
         }
       ],
-      "sha256": "0a20c595e0593d0dad80b712e9069ff24b94c5dccd5dabf9747bb1d52b09ac34"
+      "sha256": "0a20c595e0593d0dad80b712e9069ff24b94c5dccd5dabf9747bb1d52b09ac34",
+      "archivedOriginalUrl": "./models/roof-b.glb"
     },
     "combined-a": {
       "id": "combined-a",
@@ -1809,7 +1817,7 @@
       "corridor": "A",
       "stage": "A",
       "roof": "A",
-      "url": "./models/combined-a.glb",
+      "url": "https://raw.githubusercontent.com/dovisct28-eng/--SHUILONGCIWEB/temple-combined-b-b1-2026-10-28/docs/validation/temple-model-v2/models/combined-a.glb",
       "bytes": 3373868,
       "triangles": 83032,
       "buildMs": 278.3487,
@@ -2074,7 +2082,8 @@
           "side": true
         }
       ],
-      "sha256": "7db66775aa9533be7955e5c9e1fed438297b406c43500f483f9218c7b12bbe4a"
+      "sha256": "7db66775aa9533be7955e5c9e1fed438297b406c43500f483f9218c7b12bbe4a",
+      "archivedOriginalUrl": "./models/combined-a.glb"
     },
     "combined-b": {
       "id": "combined-b",
@@ -2082,7 +2091,7 @@
       "corridor": "B",
       "stage": "B",
       "roof": "B",
-      "url": "./models/combined-b.glb",
+      "url": "https://raw.githubusercontent.com/dovisct28-eng/--SHUILONGCIWEB/temple-combined-b-b1-2026-10-28/docs/validation/temple-model-v2/models/combined-b.glb",
       "bytes": 3624048,
       "triangles": 90616,
       "buildMs": 294.3813,
@@ -2347,7 +2356,14 @@
           "side": true
         }
       ],
-      "sha256": "93b3aceec0455c21c73bacffd82cdf4ad7b21857b14ea4ee9843a9b8313b4145"
+      "sha256": "93b3aceec0455c21c73bacffd82cdf4ad7b21857b14ea4ee9843a9b8313b4145",
+      "archivedOriginalUrl": "./models/combined-b.glb"
     }
+  },
+  "archive": {
+    "status": "retired-static-archive",
+    "tag": "temple-combined-b-b1-2026-10-28",
+    "baselineCommit": "ef0f3667e6db2d6ce8b7dca676f5ff1a93231a11",
+    "note": "Historical metrics only; URLs point to frozen historical resources. No current comparison viewer."
   }
 }

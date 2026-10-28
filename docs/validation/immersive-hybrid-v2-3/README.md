@@ -1,5 +1,7 @@
 # V2.3 水龙祠原境 → 第一幅壁画数字阅读
 
+> Repository Cleanup V1.0 历史提示：本页为当时版本的验收记录，以下入口、命令和视觉结论仅适用于[该历史提交](https://github.com/dovisct28-eng/--SHUILONGCIWEB/tree/ddef1d8daa31c13de4a83285713d5afb0f13817a)，不代表当前版本。当前共享建筑基线为 Combined B / V2.4-B1，入口与范围见[当前展厅说明](../../../module-a/immersive-hybrid-v1/README.md)；本页原有历史证据完整保留。
+
 2026-10-27。范围为功能分支 `feature/shuilongci-hybrid-gallery-v1` 的独立候选入口。开始前重新 fetch，远程最新基线为 `1c811b58c1a4eb7beb5583c7d4ee832f54ee76dd`；未合并 master。首轮 Windows Schannel 握手失败，使用命令级 `http.sslBackend=openssl` 后成功，没有修改全局 Git 配置。
 
 ## 实现与资料依据

@@ -35,6 +35,13 @@
 
 ## 开发行为规范
 
+### 当前功能分支与一次性维护任务（2026-10-28）
+
+- 当前建筑基线为 Combined B / V2.4-B1（Corridor B＋Stage B＋Roof B），提交 `25d87f7326ef7714b71936ab84afc61ce153a864`；不表示 A01–A08、模块 B 或全部展厅路线均已完成。
+- 本轮 Repository Cleanup V1.0 仅在 `feature/shuilongci-hybrid-gallery-v1` 提交、推送并核实同名远程分支，严禁推送或合并到 master。此要求优先于下文历史 master 默认流程；之后的任务须先确认适用分支。
+- 用户授权的一次性历史精简须先冻结 `temple-combined-b-b1-2026-10-28`、核对依赖并生成逐文件清单；仅清理确认废弃或完全重复的文件。原始素材、原有未提交工作、全部 B1 验收证据及低保真归档保持完整。详见 [维护记录](docs/maintenance/repository-cleanup-v1/README.md)与[一次性例外](docs/VALIDATION_ARCHIVE_POLICY.md)。
+- 当前实验入口为 `module-a/immersive-hybrid-v1/v24.html`。B0 独立对照入口退役，保留静态设计对照与可编辑候选源码；正式模型构建仍为 `node shuilong-temple/build-model.mjs`。
+
 ### 1. 修改范围控制
 
 每次开发任务开始前，先判断任务属于模块 A、模块 B 还是 shared，优先只修改任务所属模块：

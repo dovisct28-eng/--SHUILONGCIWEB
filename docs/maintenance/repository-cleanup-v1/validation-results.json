@@ -1,0 +1,380 @@
+{
+  "pass": true,
+  "baseline": "25d87f7326ef7714b71936ab84afc61ce153a864",
+  "tag": "temple-combined-b-b1-2026-10-28",
+  "static": {
+    "tests": [
+      {
+        "name": "module-a-model-tests",
+        "exit": 0,
+        "summary": [
+          "ℹ tests 148",
+          "ℹ pass 148",
+          "ℹ fail 0",
+          "ℹ skipped 0"
+        ]
+      },
+      {
+        "name": "cleanup-tests",
+        "exit": 0,
+        "summary": [
+          "ℹ tests 6",
+          "ℹ pass 6",
+          "ℹ fail 0",
+          "ℹ skipped 0"
+        ]
+      },
+      {
+        "name": "b01-static",
+        "exit": 0,
+        "summary": []
+      },
+      {
+        "name": "module-b-tests",
+        "exit": 0,
+        "summary": [
+          "ℹ tests 130",
+          "ℹ pass 130",
+          "ℹ fail 0",
+          "ℹ skipped 0"
+        ]
+      },
+      {
+        "name": "formal-build",
+        "exit": 0,
+        "summary": []
+      }
+    ],
+    "deterministicBuild": {
+      "deterministic": true,
+      "files": [
+        {
+          "path": "shuilong-temple/model-source.js",
+          "sha256": "c14ea94b302b0c42e8f97339c04fe165fd2a43f3655b577c9b0eaf2e34d7ff78"
+        },
+        {
+          "path": "shuilong-temple/shuilong-temple.glb",
+          "sha256": "00bdb6e207ee518932f97e4d15bc328c5a93b080646dc6258d9bfd3ab228640d"
+        },
+        {
+          "path": "shuilong-temple/model-info.json",
+          "sha256": "c99f861d263d6e01f5cef8457cfae8918826104f267dcb966c29dd8db9f79756"
+        },
+        {
+          "path": "shuilong-temple/水龙祠-交互预览.html",
+          "sha256": "f2c67bcc3eab4d7d5b2395247b86979a9b5ac23eebc59755802dcdce98a15bfd"
+        },
+        {
+          "path": "shuilong-temple/a01-lines-data.mjs",
+          "sha256": "fb617676d5278f4166694a9ccfbbdfc7b6e82542226a2f944bede7640bccca23"
+        },
+        {
+          "path": "shuilong-temple/mural-locations.json",
+          "sha256": "4e313a04bf4cf5f8da9fdd0cf0637bb18ad4f18a0b23a75cd30de16274e6e84e"
+        }
+      ]
+    },
+    "documentLinksChecked": 95,
+    "runtimeImportsChecked": 251
+  },
+  "preservation": {
+    "pass": true,
+    "originalHashedFilesChecked": 7333,
+    "preExistingDirty": 18,
+    "preExistingUntracked": 3538,
+    "inventoryNote": "Initial raw untracked count includes the newly created audit.cjs itself; excluded here from user files.",
+    "b1Unchanged": true,
+    "lofiRefsUnchanged": true
+  },
+  "browser": {
+    "pass": true,
+    "browser": "156.0.8078.48",
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900,
+        "events": 19
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "events": 19
+      },
+      {
+        "width": 1366,
+        "height": 768,
+        "events": 19
+      }
+    ],
+    "pageErrors": [],
+    "route": {
+      "samples": 903,
+      "radius": 0.12,
+      "nearTriangles": 532,
+      "minSurfaceDistance": 0.23500000953674327,
+      "contacts": [],
+      "segmentHits": 0,
+      "sightlines": [
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "scope": "Real-camera route .85..2, discovery and front; double-sided envelope proximity and bidirectional segment rays. Virtual reading camera is a projection, not a walk."
+    }
+  },
+  "formal": {
+    "chapters": [
+      {
+        "chapter": "A01",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "chapter": "A02",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "chapter": "A03",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "chapter": "A04",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "chapter": "A05",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "chapter": "A06",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "chapter": "A07",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "chapter": "A08",
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "chapter": "A01",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "chapter": "A02",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "chapter": "A03",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "chapter": "A04",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "chapter": "A05",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "chapter": "A06",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "chapter": "A07",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "chapter": "A08",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "chapter": "A01",
+        "width": 1366,
+        "height": 768
+      },
+      {
+        "chapter": "A02",
+        "width": 1366,
+        "height": 768
+      },
+      {
+        "chapter": "A03",
+        "width": 1366,
+        "height": 768
+      },
+      {
+        "chapter": "A04",
+        "width": 1366,
+        "height": 768
+      },
+      {
+        "chapter": "A05",
+        "width": 1366,
+        "height": 768
+      },
+      {
+        "chapter": "A06",
+        "width": 1366,
+        "height": 768
+      },
+      {
+        "chapter": "A07",
+        "width": 1366,
+        "height": 768
+      },
+      {
+        "chapter": "A08",
+        "width": 1366,
+        "height": 768
+      }
+    ],
+    "activeA08ToB": [
+      {
+        "width": 1440,
+        "activeA08ToB": true
+      },
+      {
+        "width": 1920,
+        "activeA08ToB": true
+      },
+      {
+        "width": 1366,
+        "activeA08ToB": true
+      }
+    ],
+    "browserBackToA": [
+      {
+        "width": 1440,
+        "browserBackToA": true
+      },
+      {
+        "width": 1920,
+        "browserBackToA": true
+      },
+      {
+        "width": 1366,
+        "browserBackToA": true
+      }
+    ],
+    "inputs": [
+      {
+        "continuousWheel": "stops at mural-look, does not skip reading"
+      },
+      {
+        "busyLock": {
+          "a": true,
+          "b": false,
+          "c": false,
+          "state": "mural-reading"
+        }
+      },
+      {
+        "reducedMotion": true,
+        "repeatedCycles": 4,
+        "exactCorridorReturns": true,
+        "readingWheelIsolated": true
+      }
+    ],
+    "failureRecovery": [
+      {
+        "muralFailureRollback": true,
+        "retryRecovered": true
+      },
+      {
+        "externalGLBFailureUsesEmbeddedModel": true
+      },
+      {
+        "modelFailureRetryRecovered": true
+      }
+    ],
+    "pageErrors": []
+  },
+  "moduleB": {
+    "pass": true,
+    "state": "cyber",
+    "canvases": 1,
+    "errors": [],
+    "input": "Existing synthetic camera/Hands/Pose fixture; no physical camera, gesture or MediaPipe accuracy acceptance.",
+    "dependencies": [
+      {
+        "url": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js*",
+        "file": "local/qa-three-0.160.0.mjs",
+        "sha256": "76dea8151bc9352aef3528b4262e249b2604f62543828328db978d060d61a495"
+      },
+      {
+        "url": "https://unpkg.com/gsap@3.12.5/dist/gsap.min.js",
+        "file": "local/qa-gsap-3.12.5.js",
+        "sha256": "28033e449a31ebcc396e5be8b13b63152bf03094288fb5867034321927bce087"
+      }
+    ],
+    "limitation": "Browser CDN loading failed on this host. QA routes use locally cached exact pinned versions already referenced by production. No Module B source changes or dependency installation; ordinary B03 still depends on its existing CDNs."
+  },
+  "network": {
+    "ordinaryErrors": 0,
+    "faultInjectionResponses": [
+      {
+        "url": "http://127.0.0.1:4186/shuilong-temple/%E6%B0%B4%E9%BE%99%E7%A5%A0-%E4%BA%A4%E4%BA%92%E9%A2%84%E8%A7%88.html?clean&controlled&gallery-entry&model=combined-b",
+        "status": 503
+      },
+      {
+        "url": "http://127.0.0.1:4186/shuilong-temple/%E6%B0%B4%E9%BE%99%E7%A5%A0-%E4%BA%A4%E4%BA%92%E9%A2%84%E8%A7%88.html?clean&controlled&gallery-entry&model=combined-b",
+        "status": 503
+      }
+    ],
+    "scope": "Formal chapters, V2.4 input/failure regression and Module B smoke. Two observers may report the same intentional 503. Original full-route replay also passed pageerror checks."
+  },
+  "selected": [
+    {
+      "name": "01-a03-cutaway.webp",
+      "bytes": 90902,
+      "sha256": "b85abfa918a8ffb232ed7afe5d7256a546d028bf638c91712b9b203c9c5daa10",
+      "viewport": [
+        1440,
+        900
+      ]
+    },
+    {
+      "name": "02-first-mural-front.webp",
+      "bytes": 297778,
+      "sha256": "1bc37e301ed4e6f05454e488b3a1968ecbe924e9c80acddd2a98383c2b2fa27e",
+      "viewport": [
+        1440,
+        900
+      ]
+    },
+    {
+      "name": "03-first-mural-reading.webp",
+      "bytes": 175808,
+      "sha256": "963ef74fa6ac90629e0a21a1121797923faacca9bc1450e10a53bf7d3a59d8de",
+      "viewport": [
+        1440,
+        900
+      ]
+    }
+  ],
+  "limitations": [
+    "Module B uses existing exact-version local QA CDN caches and synthetic camera/Hands/Pose fixture; ordinary CDN availability and physical gestures not accepted.",
+    "Technical regression is not a new visual acceptance of the entire B1 route or a completion claim for all chapters.",
+    "Preserved B1 historical scripts still contain point-in-time protection assertions; use original commit to reproduce, maintenance scripts for current checks.",
+    "Two overlapping preservation/build checks hit a Windows GLB file lock; serialized checks and deterministic rebuild succeeded; failed log retained in local/."
+  ]
+}

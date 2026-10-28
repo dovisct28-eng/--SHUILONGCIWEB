@@ -1,5 +1,7 @@
 # 水龙祠原境数字展厅 V2.1｜入口重构与验收
 
+> Repository Cleanup V1.0 历史提示：本页为当时版本的验收记录，以下入口、命令和视觉结论仅适用于[该历史提交](https://github.com/dovisct28-eng/--SHUILONGCIWEB/tree/4f80826592ffeeb2fa02243ff72c14c5917f3cad)，不代表当前版本。当前共享建筑基线为 Combined B / V2.4-B1，入口与范围见[当前展厅说明](../../../module-a/immersive-hybrid-v1/README.md)；本页原有历史证据完整保留。
+
 日期：2026-10-26。实施基线：`882237b83768160bd0d8754cdab8aed53453cb9c`。独立分支：`feature/shuilongci-hybrid-gallery-v1`。实施前已重新 fetch，远程功能分支仍为该提交；远程 master 为 `af7235cdd7df1a5e88085cc6528d6bc0ff09d8ad`。本轮不合并 master。
 
 本轮范围为原建筑总览、绕至正门、门前减速、穿过中央门洞、门内停靠。V2.2 室内展示及匹配合成尚未实施。视觉与运动参数为本轮可审查候选，技术通过不替代用户审图。

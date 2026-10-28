@@ -1,0 +1,1561 @@
+{
+  "pass": true,
+  "tests": [
+    {
+      "name": "module-a-model-tests",
+      "exit": 0,
+      "summary": [
+        "ℹ tests 148",
+        "ℹ pass 148",
+        "ℹ fail 0",
+        "ℹ skipped 0"
+      ]
+    },
+    {
+      "name": "cleanup-tests",
+      "exit": 0,
+      "summary": [
+        "ℹ tests 6",
+        "ℹ pass 6",
+        "ℹ fail 0",
+        "ℹ skipped 0"
+      ]
+    },
+    {
+      "name": "b01-static",
+      "exit": 0,
+      "summary": []
+    },
+    {
+      "name": "module-b-tests",
+      "exit": 0,
+      "summary": [
+        "ℹ tests 130",
+        "ℹ pass 130",
+        "ℹ fail 0",
+        "ℹ skipped 0"
+      ]
+    },
+    {
+      "name": "formal-build",
+      "exit": 0,
+      "summary": []
+    }
+  ],
+  "build": {
+    "deterministic": true,
+    "files": [
+      {
+        "path": "shuilong-temple/model-source.js",
+        "sha256": "c14ea94b302b0c42e8f97339c04fe165fd2a43f3655b577c9b0eaf2e34d7ff78"
+      },
+      {
+        "path": "shuilong-temple/shuilong-temple.glb",
+        "sha256": "00bdb6e207ee518932f97e4d15bc328c5a93b080646dc6258d9bfd3ab228640d"
+      },
+      {
+        "path": "shuilong-temple/model-info.json",
+        "sha256": "c99f861d263d6e01f5cef8457cfae8918826104f267dcb966c29dd8db9f79756"
+      },
+      {
+        "path": "shuilong-temple/水龙祠-交互预览.html",
+        "sha256": "f2c67bcc3eab4d7d5b2395247b86979a9b5ac23eebc59755802dcdce98a15bfd"
+      },
+      {
+        "path": "shuilong-temple/a01-lines-data.mjs",
+        "sha256": "fb617676d5278f4166694a9ccfbbdfc7b6e82542226a2f944bede7640bccca23"
+      },
+      {
+        "path": "shuilong-temple/mural-locations.json",
+        "sha256": "4e313a04bf4cf5f8da9fdd0cf0637bb18ad4f18a0b23a75cd30de16274e6e84e"
+      }
+    ]
+  },
+  "links": [
+    {
+      "source": "AGENTS.md",
+      "target": "docs/maintenance/repository-cleanup-v1/README.md",
+      "exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "docs/VALIDATION_ARCHIVE_POLICY.md",
+      "exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "docs/VALIDATION_ARCHIVE_POLICY.md",
+      "exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "docs/HIFI_VISUAL_SPEC.md",
+      "exists": true
+    },
+    {
+      "source": "docs/VALIDATION_ARCHIVE_POLICY.md",
+      "target": "maintenance/repository-cleanup-v1/cleanup-plan.json",
+      "exists": true
+    },
+    {
+      "source": "docs/VALIDATION_ARCHIVE_POLICY.md",
+      "target": "maintenance/repository-cleanup-v1/deleted-files.json",
+      "exists": true
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/README.md",
+      "target": "../../docs/validation/temple-model-v2/integration-b1/README.md",
+      "exists": true
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/README.md",
+      "target": "../../docs/validation/temple-model-v2/README.md",
+      "exists": true
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/README.md",
+      "target": "../../docs/maintenance/repository-cleanup-v1/README.md",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/temple-model-v2/README.md",
+      "target": "../../../module-a/immersive-hybrid-v1/README.md",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/temple-model-v2/README.md",
+      "target": "integration-b1/README.md",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/temple-model-v2/README.md",
+      "target": "CANDIDATE_COMPARISON.md",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/temple-model-v2/README.md",
+      "target": "candidate-config.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/temple-model-v2/README.md",
+      "target": "model-manifest.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/temple-model-v2/README.md",
+      "target": "../../maintenance/repository-cleanup-v1/deleted-files.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/temple-model-v2/CANDIDATE_COMPARISON.md",
+      "target": "README.md",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v1/README.md",
+      "target": "../../../module-a/immersive-hybrid-v1/README.md",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v1/README.md",
+      "target": "../../../module-a/immersive-hybrid-v1/README.md",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v1/README.md",
+      "target": "browser-results.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v1/README.md",
+      "target": "build-results.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v1/README.md",
+      "target": "../../../module-a/immersive-hybrid-v1/assets/references/local-source-audit.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v1/README.md",
+      "target": "../../../module-a/immersive-hybrid-v1/assets/references/reference-manifest.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v1/README.md",
+      "target": "../../../module-a/immersive-hybrid-v1/prompts/generation-review.md",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v1/README.md",
+      "target": "../../../module-a/immersive-hybrid-v1/prompts/actual-generation-prompts.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-1/README.md",
+      "target": "../../../module-a/immersive-hybrid-v1/README.md",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-1/README.md",
+      "target": "build-results.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-1/README.md",
+      "target": "browser-results.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-1/README.md",
+      "target": "geometry-results.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-1/README.md",
+      "target": "door-reversibility.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-1/README.md",
+      "target": "motion-evidence.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-1/README.md",
+      "target": "measurement-summary.md",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-1/README.md",
+      "target": "handoff-1920x1080.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-1/README.md",
+      "target": "handoff-1440x900.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-1/README.md",
+      "target": "handoff-1366x768.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-1/README.md",
+      "target": "handoff-occlusion-candidate.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-2/README.md",
+      "target": "../../../module-a/immersive-hybrid-v1/README.md",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-2-1/README.md",
+      "target": "../../../module-a/immersive-hybrid-v1/README.md",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-2-1/README.md",
+      "target": "../../../module-a/immersive-hybrid-v1/assets/hybrid-v2-2-1/PROVENANCE.md",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-2-1/README.md",
+      "target": "09-performance.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-2-1/README.md",
+      "target": "cache-results.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-2-1/README.md",
+      "target": "edge-results.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-2-1/README.md",
+      "target": "diagnosis.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-2-1/README.md",
+      "target": "build-results.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-2-1/README.md",
+      "target": "browser-results.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-2-1/README.md",
+      "target": "adjacent-states.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-2-1/README.md",
+      "target": "formal-results.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-2-1/README.md",
+      "target": "motion-evidence.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-2-1/README.md",
+      "target": "selected/01-original-v22.png",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-2-1/README.md",
+      "target": "selected/02-wall-detail.png",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-2-1/README.md",
+      "target": "selected/03-wood-detail.png",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-2-1/README.md",
+      "target": "selected/04-floor-detail.png",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-2-1/README.md",
+      "target": "selected/05-lighting-before-after.webp",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-2-1/README.md",
+      "target": "selected/06-hybrid-50.png",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-2-1/README.md",
+      "target": "selected/06-new-hybrid.png",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-2-1/README.md",
+      "target": "selected/07-three-way-comparison.webp",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-2-1/README.md",
+      "target": "selected/08-transition.webm",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-3/README.md",
+      "target": "../../../module-a/immersive-hybrid-v1/README.md",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-3/README.md",
+      "target": "build-results.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-3/README.md",
+      "target": "browser-results.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-3/README.md",
+      "target": "formal-results.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-3/README.md",
+      "target": "module-b-results.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-3/README.md",
+      "target": "edge-results.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-3/README.md",
+      "target": "motion-evidence.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-3/README.md",
+      "target": "performance-results.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-3/README.md",
+      "target": "performance-final-check.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-3/README.md",
+      "target": "selected-manifest.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-4/V24A_ACCEPTANCE.md",
+      "target": "../../../module-a/immersive-hybrid-v1/README.md",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-4/V24A_ACCEPTANCE.md",
+      "target": "../../../module-a/immersive-hybrid-v1/assets/v24a/PROVENANCE.md",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-4/V24A_ACCEPTANCE.md",
+      "target": "selected-v24a/12-model-ai-comparison.webp",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-4/V24A_ACCEPTANCE.md",
+      "target": "selected-v24a/13-original-hybrid-corridor.webp",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-4/V24A_ACCEPTANCE.md",
+      "target": "selected-v24a/11-interaction.webm",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-4/V24A_ACCEPTANCE.md",
+      "target": "selected-v24a/06-corridor.webp",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-4/V24A_ACCEPTANCE.md",
+      "target": "selected-v24a/08-mural-dock.webp",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-4/V24A_ACCEPTANCE.md",
+      "target": "selected-v24a/09-mural-reading.webp",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-4/V24A_ACCEPTANCE.md",
+      "target": "selected-v24a/10-return-wall.webp",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-4/V24A_ACCEPTANCE.md",
+      "target": "selected-v24a/04-projection-transition.webp",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-4/V24A_ACCEPTANCE.md",
+      "target": "selected-v24a/05-stage-turn.webp",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-4/V24A_ACCEPTANCE.md",
+      "target": "v24a-browser-results.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-4/V24A_ACCEPTANCE.md",
+      "target": "v24a-performance-results.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-4/V24A_ACCEPTANCE.md",
+      "target": "v24a-record-results.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-4/V24A_ACCEPTANCE.md",
+      "target": "v24a-video-decode.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-4/V24A1_FRONT_DOCK_ACCEPTANCE.md",
+      "target": "../../../module-a/immersive-hybrid-v1/README.md",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-4/V24A1_FRONT_DOCK_ACCEPTANCE.md",
+      "target": "v24a1-camera-probe.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-4/V24A1_FRONT_DOCK_ACCEPTANCE.md",
+      "target": "v24a1-browser-results.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-4/V24A1_FRONT_DOCK_ACCEPTANCE.md",
+      "target": "v24a1-regression-results.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-4/V24A1_FRONT_DOCK_ACCEPTANCE.md",
+      "target": "v24a1-build-results.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-4/V24A1_FRONT_DOCK_ACCEPTANCE.md",
+      "target": "v24a1-performance-results.json",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-4/V24A1_FRONT_DOCK_ACCEPTANCE.md",
+      "target": "selected-v24a1/01-original-oblique.webp",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-4/V24A1_FRONT_DOCK_ACCEPTANCE.md",
+      "target": "selected-v24a1/02-front-camera.webp",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-4/V24A1_FRONT_DOCK_ACCEPTANCE.md",
+      "target": "selected-v24a1/03-front-dock.webp",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-4/V24A1_FRONT_DOCK_ACCEPTANCE.md",
+      "target": "selected-v24a1/04-reading-transition.webp",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-4/V24A1_FRONT_DOCK_ACCEPTANCE.md",
+      "target": "selected-v24a1/05-reading-final.webp",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-4/V24A1_FRONT_DOCK_ACCEPTANCE.md",
+      "target": "selected-v24a1/06-return-wall.webp",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-4/V24A1_FRONT_DOCK_ACCEPTANCE.md",
+      "target": "selected-v24a1/07-before-after.webp",
+      "exists": true
+    },
+    {
+      "source": "docs/validation/immersive-hybrid-v2-4/V24A1_FRONT_DOCK_ACCEPTANCE.md",
+      "target": "selected-v24a1/08-full-interaction.webm",
+      "exists": true
+    }
+  ],
+  "imports": [
+    {
+      "source": "shuilong-temple/environment.test.mjs",
+      "target": "./source-equivalence.mjs"
+    },
+    {
+      "source": "shuilong-temple/environment.test.mjs",
+      "target": "./environment.mjs"
+    },
+    {
+      "source": "module-a/visual-director/state.test.mjs",
+      "target": "./state.mjs"
+    },
+    {
+      "source": "module-a/visual-director/projection.test.mjs",
+      "target": "./projection.mjs"
+    },
+    {
+      "source": "module-a/visual-director/projection.test.mjs",
+      "target": "../guide/progress.mjs"
+    },
+    {
+      "source": "shuilong-temple/水龙祠-交互预览.html",
+      "target": "../module-a/mural-resources.mjs"
+    },
+    {
+      "source": "shuilong-temple/水龙祠-交互预览.html",
+      "target": "../module-a/material-isolation.mjs"
+    },
+    {
+      "source": "shuilong-temple/水龙祠-交互预览.html",
+      "target": "./three.core.js"
+    },
+    {
+      "source": "shuilong-temple/水龙祠-交互预览.html",
+      "target": "./three.core.js"
+    },
+    {
+      "source": "shuilong-temple/水龙祠-交互预览.html",
+      "target": "../module-a/immersive-hybrid-v1/src/temple-runtime.mjs"
+    },
+    {
+      "source": "shuilong-temple/shared-world-performance.cjs",
+      "target": "../module-a/a02/capture.cjs"
+    },
+    {
+      "source": "shuilong-temple/shared-world-check.cjs",
+      "target": "../module-a/a02/capture.cjs"
+    },
+    {
+      "source": "shuilong-temple/shared-world-a04-look-check.cjs",
+      "target": "../module-a/a02/capture.cjs"
+    },
+    {
+      "source": "shuilong-temple/narrative-markers.mjs",
+      "target": "../module-a/visual-director/state.mjs"
+    },
+    {
+      "source": "shuilong-temple/narrative-markers.mjs",
+      "target": "../module-a/a02/markers.mjs"
+    },
+    {
+      "source": "shuilong-temple/narrative-markers.mjs",
+      "target": "../module-a/a03/composition.mjs"
+    },
+    {
+      "source": "shuilong-temple/model.test.mjs",
+      "target": "./source-equivalence.mjs"
+    },
+    {
+      "source": "shuilong-temple/model.test.mjs",
+      "target": "./inline-a02.mjs"
+    },
+    {
+      "source": "shuilong-temple/inline-a02.mjs",
+      "target": "../module-a/a02/markers.mjs"
+    },
+    {
+      "source": "shuilong-temple/inline-a02.mjs",
+      "target": "./a02-light.mjs"
+    },
+    {
+      "source": "shuilong-temple/inline-a02.mjs",
+      "target": "../module-a/a02/spatial.mjs"
+    },
+    {
+      "source": "shuilong-temple/inline-a02.mjs",
+      "target": "../module-a/visual-director/state.mjs"
+    },
+    {
+      "source": "shuilong-temple/inline-a02.mjs",
+      "target": "./a02-light.mjs"
+    },
+    {
+      "source": "shuilong-temple/shared-world.test.mjs",
+      "target": "./shared-world.mjs"
+    },
+    {
+      "source": "shuilong-temple/shared-world.test.mjs",
+      "target": "../module-a/a03/cutaway.mjs"
+    },
+    {
+      "source": "shuilong-temple/shared-world.test.mjs",
+      "target": "./director-light.mjs"
+    },
+    {
+      "source": "shuilong-temple/shared-world-title-check.cjs",
+      "target": "../module-a/a02/capture.cjs"
+    },
+    {
+      "source": "shuilong-temple/source-equivalence.test.mjs",
+      "target": "./source-equivalence.mjs"
+    },
+    {
+      "source": "shuilong-temple/sync-a02-preview.mjs",
+      "target": "./inline-a02.mjs"
+    },
+    {
+      "source": "shuilong-temple/a01-lines.test.mjs",
+      "target": "./a01-lines.mjs"
+    },
+    {
+      "source": "shuilong-temple/a01-lines.test.mjs",
+      "target": "./a01-lines-data.mjs"
+    },
+    {
+      "source": "shuilong-temple/a01-lines.test.mjs",
+      "target": "./a01-art-direction.mjs"
+    },
+    {
+      "source": "shuilong-temple/a01-lines.test.mjs",
+      "target": "./environment.mjs"
+    },
+    {
+      "source": "shuilong-temple/a01-lines.test.mjs",
+      "target": "./${dependency}"
+    },
+    {
+      "source": "shuilong-temple/a01-cinematic.test.mjs",
+      "target": "./a01-environment.mjs"
+    },
+    {
+      "source": "shuilong-temple/a01-cinematic.test.mjs",
+      "target": "./a01-material.mjs"
+    },
+    {
+      "source": "shuilong-temple/a01-cinematic.test.mjs",
+      "target": "./a01-post.mjs"
+    },
+    {
+      "source": "shuilong-temple/a01-cinematic.test.mjs",
+      "target": "./a01-lines.mjs"
+    },
+    {
+      "source": "shuilong-temple/a01-cinematic.test.mjs",
+      "target": "./a01-lines-data.mjs"
+    },
+    {
+      "source": "shuilong-temple/a01-art-direction.mjs",
+      "target": "./a01-camera.mjs"
+    },
+    {
+      "source": "shuilong-temple/a01-art-direction.mjs",
+      "target": "./a01-material.mjs"
+    },
+    {
+      "source": "shuilong-temple/a04-scene.mjs",
+      "target": "../module-a/visual-director/state.mjs"
+    },
+    {
+      "source": "shuilong-temple/a04-scene.mjs",
+      "target": "../module-a/a04/composition.mjs"
+    },
+    {
+      "source": "shuilong-temple/a04-scene.mjs",
+      "target": "../module-a/a04/timing.mjs"
+    },
+    {
+      "source": "shuilong-temple/a04-roof.test.mjs",
+      "target": "../module-a/a03/cutaway.mjs"
+    },
+    {
+      "source": "shuilong-temple/a02-light.mjs",
+      "target": "../module-a/a02/spatial.mjs"
+    },
+    {
+      "source": "shuilong-temple/a02-light.mjs",
+      "target": "../module-a/visual-director/state.mjs"
+    },
+    {
+      "source": "shuilong-temple/a02-light.mjs",
+      "target": "../module-a/a03/composition.mjs"
+    },
+    {
+      "source": "shuilong-temple/build-model.mjs",
+      "target": "./inline-a02.mjs"
+    },
+    {
+      "source": "shuilong-temple/build-model.mjs",
+      "target": "./a01-camera.mjs"
+    },
+    {
+      "source": "shuilong-temple/build-model.mjs",
+      "target": "./a01-material.mjs"
+    },
+    {
+      "source": "shuilong-temple/build-model.mjs",
+      "target": "./build-a01-lines.mjs"
+    },
+    {
+      "source": "shuilong-temple/combined-b.test.mjs",
+      "target": "../module-a/immersive-hybrid-v1/vendor/three.module.js"
+    },
+    {
+      "source": "shuilong-temple/combined-b.test.mjs",
+      "target": "../docs/validation/temple-model-v2/src/candidate-model.mjs"
+    },
+    {
+      "source": "shuilong-temple/combined-b.test.mjs",
+      "target": "../module-a/a03/cutaway.mjs"
+    },
+    {
+      "source": "shuilong-temple/combined-b.test.mjs",
+      "target": "../module-a/immersive-hybrid-v1/src/corridor-path.mjs"
+    },
+    {
+      "source": "shuilong-temple/combined-b.test.mjs",
+      "target": "../module-a/immersive-hybrid-v1/src/mural-front.mjs"
+    },
+    {
+      "source": "shuilong-temple/combined-b.test.mjs",
+      "target": "../module-a/immersive-hybrid-v1/src/gallery-config.mjs"
+    },
+    {
+      "source": "shuilong-temple/director-light.mjs",
+      "target": "../module-a/visual-director/state.mjs"
+    },
+    {
+      "source": "shuilong-temple/director-light.mjs",
+      "target": "./a02-light.mjs"
+    },
+    {
+      "source": "shuilong-temple/director-light.mjs",
+      "target": "../module-a/a03/lighting.mjs"
+    },
+    {
+      "source": "module-a/material-isolation.test.mjs",
+      "target": "./material-isolation.mjs"
+    },
+    {
+      "source": "module-a/mural-resources.test.mjs",
+      "target": "./mural-resources.mjs"
+    },
+    {
+      "source": "module-a/mural-resources.test.mjs",
+      "target": "./guide/progress.mjs"
+    },
+    {
+      "source": "module-a/guide/progress.test.mjs",
+      "target": "./progress.mjs"
+    },
+    {
+      "source": "module-a/guide/progress.test.mjs",
+      "target": "../a05/content.mjs"
+    },
+    {
+      "source": "module-a/guide/progress.test.mjs",
+      "target": "../a06/content.mjs"
+    },
+    {
+      "source": "module-a/guide/progress.test.mjs",
+      "target": "../a07/content.mjs"
+    },
+    {
+      "source": "module-a/guide/controller.mjs",
+      "target": "./progress.mjs"
+    },
+    {
+      "source": "module-a/guide/controller.mjs",
+      "target": "./ambient.mjs"
+    },
+    {
+      "source": "module-a/guide/controller.mjs",
+      "target": "../visual-director/projection.mjs"
+    },
+    {
+      "source": "module-a/guide/ambient.mjs",
+      "target": "./progress.mjs"
+    },
+    {
+      "source": "module-a/copy.test.mjs",
+      "target": "./a05/content.mjs"
+    },
+    {
+      "source": "module-a/copy.test.mjs",
+      "target": "./a06/content.mjs"
+    },
+    {
+      "source": "module-a/copy.test.mjs",
+      "target": "./a07/content.mjs"
+    },
+    {
+      "source": "Mural-Exhibition/public/pose-pipeline.mjs",
+      "target": "./interaction-config.mjs"
+    },
+    {
+      "source": "Mural-Exhibition/public/orbit-stage.mjs",
+      "target": "./orbit-layout.mjs"
+    },
+    {
+      "source": "Mural-Exhibition/public/orbit-stage.mjs",
+      "target": "./mural-surface.mjs"
+    },
+    {
+      "source": "Mural-Exhibition/public/orbit-stage.mjs",
+      "target": "./orbit-layout.mjs"
+    },
+    {
+      "source": "Mural-Exhibition/public/orbit-layout.mjs",
+      "target": "./figure-stage.mjs"
+    },
+    {
+      "source": "Mural-Exhibition/public/operator-tracker.mjs",
+      "target": "./interaction-config.mjs"
+    },
+    {
+      "source": "Mural-Exhibition/public/index.html",
+      "target": "./camera-lifecycle.mjs"
+    },
+    {
+      "source": "Mural-Exhibition/public/index.html",
+      "target": "./gesture-diagnostics.mjs"
+    },
+    {
+      "source": "Mural-Exhibition/public/index.html",
+      "target": "./gallery-panorama.mjs"
+    },
+    {
+      "source": "Mural-Exhibition/public/index.html",
+      "target": "./gallery-admin.mjs"
+    },
+    {
+      "source": "Mural-Exhibition/public/index.html",
+      "target": "./character-study.mjs"
+    },
+    {
+      "source": "Mural-Exhibition/public/index.html",
+      "target": "./figure-stage.mjs"
+    },
+    {
+      "source": "Mural-Exhibition/public/index.html",
+      "target": "./orbit-stage.mjs"
+    },
+    {
+      "source": "Mural-Exhibition/public/index.html",
+      "target": "./dwell-controller.mjs"
+    },
+    {
+      "source": "Mural-Exhibition/public/index.html",
+      "target": "./gesture-pointer.mjs"
+    },
+    {
+      "source": "Mural-Exhibition/public/index.html",
+      "target": "./hand-ownership.mjs"
+    },
+    {
+      "source": "Mural-Exhibition/public/index.html",
+      "target": "./dwell-feedback.mjs"
+    },
+    {
+      "source": "Mural-Exhibition/public/index.html",
+      "target": "./experience-guidance.mjs"
+    },
+    {
+      "source": "Mural-Exhibition/public/index.html",
+      "target": "./interaction-config.mjs"
+    },
+    {
+      "source": "Mural-Exhibition/public/index.html",
+      "target": "./operator-tracker.mjs"
+    },
+    {
+      "source": "Mural-Exhibition/public/index.html",
+      "target": "./pose-pipeline.mjs"
+    },
+    {
+      "source": "Mural-Exhibition/public/index.html",
+      "target": "./mural-surface.mjs"
+    },
+    {
+      "source": "Mural-Exhibition/public/hand-ownership.mjs",
+      "target": "./interaction-config.mjs"
+    },
+    {
+      "source": "Mural-Exhibition/public/hand-ownership.mjs",
+      "target": "./gesture-pointer.mjs"
+    },
+    {
+      "source": "Mural-Exhibition/public/gesture-pointer.mjs",
+      "target": "./interaction-config.mjs"
+    },
+    {
+      "source": "Mural-Exhibition/public/gesture-diagnostics.mjs",
+      "target": "./interaction-config.mjs"
+    },
+    {
+      "source": "Mural-Exhibition/public/dwell-feedback.mjs",
+      "target": "./interaction-config.mjs"
+    },
+    {
+      "source": "Mural-Exhibition/public/dwell-controller.mjs",
+      "target": "./interaction-config.mjs"
+    },
+    {
+      "source": "Mural-Exhibition/public/dwell-controller.mjs",
+      "target": "./gesture-pointer.mjs"
+    },
+    {
+      "source": "module-a/navigation/state.test.mjs",
+      "target": "./state.mjs"
+    },
+    {
+      "source": "module-a/navigation/state.test.mjs",
+      "target": "../a01/progress.mjs"
+    },
+    {
+      "source": "module-a/navigation/state.test.mjs",
+      "target": "../a03/progress.mjs"
+    },
+    {
+      "source": "module-a/navigation/state.test.mjs",
+      "target": "../a02/spatial.mjs"
+    },
+    {
+      "source": "module-a/navigation/state.test.mjs",
+      "target": "../guide/progress.mjs"
+    },
+    {
+      "source": "module-a/navigation/state.test.mjs",
+      "target": "../a05/content.mjs"
+    },
+    {
+      "source": "module-a/navigation/state.test.mjs",
+      "target": "./exploration.mjs"
+    },
+    {
+      "source": "module-a/navigation/state.mjs",
+      "target": "../a01/progress.mjs"
+    },
+    {
+      "source": "module-a/navigation/state.mjs",
+      "target": "../a02/progress.mjs"
+    },
+    {
+      "source": "module-a/navigation/state.mjs",
+      "target": "../a02/spatial.mjs"
+    },
+    {
+      "source": "module-a/navigation/state.mjs",
+      "target": "../a03/progress.mjs"
+    },
+    {
+      "source": "module-a/navigation/state.mjs",
+      "target": "../a05/content.mjs"
+    },
+    {
+      "source": "module-a/navigation/state.mjs",
+      "target": "../guide/progress.mjs"
+    },
+    {
+      "source": "module-a/navigation/controller.mjs",
+      "target": "./state.mjs"
+    },
+    {
+      "source": "module-a/navigation/browser-check.cjs",
+      "target": "../navigation/state.mjs"
+    },
+    {
+      "source": "module-a/a05/content.mjs",
+      "target": "../mural-resources.mjs"
+    },
+    {
+      "source": "module-a/a02/spatial.test.mjs",
+      "target": "./spatial.mjs"
+    },
+    {
+      "source": "module-a/a02/spatial.test.mjs",
+      "target": "./markers.mjs"
+    },
+    {
+      "source": "module-a/a02/spatial.test.mjs",
+      "target": "../a01/ink-scene.mjs"
+    },
+    {
+      "source": "module-a/a02/shared-regression-check.cjs",
+      "target": "./capture.cjs"
+    },
+    {
+      "source": "module-a/a02/room-browser-check.cjs",
+      "target": "./capture.cjs"
+    },
+    {
+      "source": "module-a/a02/review-evidence.cjs",
+      "target": "./capture.cjs"
+    },
+    {
+      "source": "module-a/a02/remaster.test.mjs",
+      "target": "../../shuilong-temple/a02-light.mjs"
+    },
+    {
+      "source": "module-a/a02/progress.test.mjs",
+      "target": "./progress.mjs"
+    },
+    {
+      "source": "module-a/a02/progress.test.mjs",
+      "target": "../../shuilong-temple/narrative-markers.mjs"
+    },
+    {
+      "source": "module-a/a02/progress.mjs",
+      "target": "../a01/progress.mjs"
+    },
+    {
+      "source": "module-a/a02/performance-check.cjs",
+      "target": "./capture.cjs"
+    },
+    {
+      "source": "module-a/a02/pass-check.cjs",
+      "target": "./capture.cjs"
+    },
+    {
+      "source": "module-a/a02/pack-evidence.cjs",
+      "target": "./capture.cjs"
+    },
+    {
+      "source": "module-a/a02/build-check.cjs",
+      "target": "./capture.cjs"
+    },
+    {
+      "source": "module-a/a02/boards.cjs",
+      "target": "./capture.cjs"
+    },
+    {
+      "source": "module-a/a08/progress.test.mjs",
+      "target": "./progress.mjs"
+    },
+    {
+      "source": "module-a/a08/controller.mjs",
+      "target": "./progress.mjs"
+    },
+    {
+      "source": "module-a/a06/content.mjs",
+      "target": "../mural-resources.mjs"
+    },
+    {
+      "source": "module-a/a01/progress.test.mjs",
+      "target": "./progress.mjs"
+    },
+    {
+      "source": "module-a/a01/ink-scene.test.mjs",
+      "target": "./ink-scene.mjs"
+    },
+    {
+      "source": "module-a/a01/ink-scene.test.mjs",
+      "target": "../../shuilong-temple/shared-world.mjs"
+    },
+    {
+      "source": "module-a/a01/ink-scene.mjs",
+      "target": "../../shuilong-temple/shared-world.mjs"
+    },
+    {
+      "source": "module-a/a03/progress.test.mjs",
+      "target": "./progress.mjs"
+    },
+    {
+      "source": "module-a/a03/progress.test.mjs",
+      "target": "../../shuilong-temple/narrative-markers.mjs"
+    },
+    {
+      "source": "module-a/a03/progress.mjs",
+      "target": "../a01/progress.mjs"
+    },
+    {
+      "source": "module-a/a03/progress.mjs",
+      "target": "../a02/progress.mjs"
+    },
+    {
+      "source": "module-a/a03/performance-check.cjs",
+      "target": "../../shuilong-temple/shared-world-performance.cjs"
+    },
+    {
+      "source": "module-a/a03/lighting.mjs",
+      "target": "./composition.mjs"
+    },
+    {
+      "source": "module-a/a03/lighting.mjs",
+      "target": "./cutaway.mjs"
+    },
+    {
+      "source": "module-a/a03/cutaway.mjs",
+      "target": "../a04/cutaway-state.mjs"
+    },
+    {
+      "source": "module-a/a03/cutaway-check.cjs",
+      "target": "../a02/capture.cjs"
+    },
+    {
+      "source": "module-a/a03/composition.test.mjs",
+      "target": "./composition.mjs"
+    },
+    {
+      "source": "module-a/a03/composition.test.mjs",
+      "target": "./progress.mjs"
+    },
+    {
+      "source": "module-a/a03/composition.test.mjs",
+      "target": "./lighting.mjs"
+    },
+    {
+      "source": "module-a/a03/composition.test.mjs",
+      "target": "../a01/ink-scene.mjs"
+    },
+    {
+      "source": "module-a/a03/composition.mjs",
+      "target": "./progress.mjs"
+    },
+    {
+      "source": "module-a/a03/composition.mjs",
+      "target": "../../shuilong-temple/shared-world.mjs"
+    },
+    {
+      "source": "module-a/a07/content.mjs",
+      "target": "../mural-resources.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/anchors.html",
+      "target": "./src/model-view.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/anchors.html",
+      "target": "./src/camera-presets.mjs"
+    },
+    {
+      "source": "module-a/a01/app.mjs",
+      "target": "../a04/controller.mjs"
+    },
+    {
+      "source": "module-a/a01/app.mjs",
+      "target": "./progress.mjs"
+    },
+    {
+      "source": "module-a/a01/app.mjs",
+      "target": "./cinematic-state.mjs"
+    },
+    {
+      "source": "module-a/a01/app.mjs",
+      "target": "../a02/progress.mjs"
+    },
+    {
+      "source": "module-a/a01/app.mjs",
+      "target": "../a03/progress.mjs"
+    },
+    {
+      "source": "module-a/a01/app.mjs",
+      "target": "../a03/view.mjs"
+    },
+    {
+      "source": "module-a/a01/app.mjs",
+      "target": "../a03/composition.mjs"
+    },
+    {
+      "source": "module-a/a01/app.mjs",
+      "target": "../guide/controller.mjs"
+    },
+    {
+      "source": "module-a/a01/app.mjs",
+      "target": "../a05/content.mjs"
+    },
+    {
+      "source": "module-a/a01/app.mjs",
+      "target": "../a06/content.mjs"
+    },
+    {
+      "source": "module-a/a01/app.mjs",
+      "target": "../a07/content.mjs"
+    },
+    {
+      "source": "module-a/a01/app.mjs",
+      "target": "../a08/controller.mjs"
+    },
+    {
+      "source": "module-a/a01/app.mjs",
+      "target": "../visual-director/state.mjs"
+    },
+    {
+      "source": "module-a/a01/app.mjs",
+      "target": "../a02/spatial.mjs"
+    },
+    {
+      "source": "module-a/a01/app.mjs",
+      "target": "../../shuilong-temple/shared-world.mjs"
+    },
+    {
+      "source": "module-a/a01/app.mjs",
+      "target": "../navigation/controller.mjs"
+    },
+    {
+      "source": "module-a/a01/app.mjs",
+      "target": "../navigation/exploration.mjs"
+    },
+    {
+      "source": "module-a/a01/app.mjs",
+      "target": "./ink-scene.mjs"
+    },
+    {
+      "source": "module-a/a01/cinematic-state.test.mjs",
+      "target": "./cinematic-state.mjs"
+    },
+    {
+      "source": "module-a/a04/sync-preview.mjs",
+      "target": "../../shuilong-temple/inline-a02.mjs"
+    },
+    {
+      "source": "module-a/a04/state.test.mjs",
+      "target": "./path.mjs"
+    },
+    {
+      "source": "module-a/a04/state.test.mjs",
+      "target": "./cutaway-state.mjs"
+    },
+    {
+      "source": "module-a/a04/state.test.mjs",
+      "target": "./timing.mjs"
+    },
+    {
+      "source": "module-a/a04/state.test.mjs",
+      "target": "./composition.mjs"
+    },
+    {
+      "source": "module-a/a04/roof-summary-check.cjs",
+      "target": "./capture.cjs"
+    },
+    {
+      "source": "module-a/a04/review-check.cjs",
+      "target": "./capture.cjs"
+    },
+    {
+      "source": "module-a/a04/performance-check.cjs",
+      "target": "./capture.cjs"
+    },
+    {
+      "source": "module-a/a04/path.test.mjs",
+      "target": "./path.mjs"
+    },
+    {
+      "source": "module-a/a04/path.mjs",
+      "target": "./timing.mjs"
+    },
+    {
+      "source": "module-a/a04/full-roof-check.cjs",
+      "target": "./path.mjs"
+    },
+    {
+      "source": "module-a/a04/full-roof-build-check.cjs",
+      "target": "../../shuilong-temple/inline-a02.mjs"
+    },
+    {
+      "source": "module-a/a04/cutaway-state.mjs",
+      "target": "./path.mjs"
+    },
+    {
+      "source": "module-a/a04/controller.mjs",
+      "target": "./path.mjs"
+    },
+    {
+      "source": "module-a/a04/controller.mjs",
+      "target": "./copy.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/scripts/v24a1-probe.cjs",
+      "target": "./src/mural-transition-controller.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/scripts/v24a1-probe.cjs",
+      "target": "./src/mural-anchor.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/scripts/v24a1-browser.cjs",
+      "target": "./vendor/three.module.js"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/scripts/v24a1-browser.cjs",
+      "target": "./src/mural-front.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/scripts/mural-transition-browser-check.cjs",
+      "target": "./src/mural-transition-controller.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/scripts/corridor-evidence.cjs",
+      "target": "./corridor-record.cjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/tests/v24a-layer.test.mjs",
+      "target": "../src/v24a-layer.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/tests/v24a-layer.test.mjs",
+      "target": "../src/corridor-path.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/tests/v24-murals.test.mjs",
+      "target": "../src/v24-murals.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/tests/v24-murals.test.mjs",
+      "target": "../src/mural-anchor.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/tests/mural-transition.test.mjs",
+      "target": "../src/mural-transition-controller.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/tests/mural-transition.test.mjs",
+      "target": "../src/corridor-path.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/tests/mural-projection.test.mjs",
+      "target": "../vendor/three.module.js"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/tests/mural-projection.test.mjs",
+      "target": "../src/mural-anchor.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/tests/mural-projection.test.mjs",
+      "target": "../src/mural-transition-controller.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/tests/mural-projection.test.mjs",
+      "target": "../src/depth-layers.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/tests/mural-front.test.mjs",
+      "target": "../src/mural-front.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/tests/mural-front.test.mjs",
+      "target": "../src/mural-transition-controller.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/tests/mural-front.test.mjs",
+      "target": "../src/v24a-layer.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/tests/logic.test.mjs",
+      "target": "../src/transition-controller.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/tests/logic.test.mjs",
+      "target": "../src/depth-layers.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/tests/logic.test.mjs",
+      "target": "../src/camera-presets.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/tests/finish.test.mjs",
+      "target": "../src/corridor-finish.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/tests/entry.test.mjs",
+      "target": "../src/entry-path.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/tests/corridor.test.mjs",
+      "target": "../src/entry-path.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/tests/corridor.test.mjs",
+      "target": "../src/corridor-path.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/v24a-entry.mjs",
+      "target": "./gallery-config.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/temple-runtime.mjs",
+      "target": "./corridor-layers.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/temple-runtime.mjs",
+      "target": "./mural-compositor.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/temple-runtime.mjs",
+      "target": "./gallery-config.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/mural-transition-controller.mjs",
+      "target": "./corridor-path.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/mural-reading.mjs",
+      "target": "./mural-transition-controller.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/mural-reading.mjs",
+      "target": "./mural-viewer.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/mural-reading.mjs",
+      "target": "./mural-front.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/mural-front.mjs",
+      "target": "./corridor-path.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/mural-front.mjs",
+      "target": "./mural-transition-controller.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/mural-compositor.mjs",
+      "target": "./corridor-path.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/mural-compositor.mjs",
+      "target": "./mural-anchor.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/mural-compositor.mjs",
+      "target": "./mural-transition-controller.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/mural-anchor.mjs",
+      "target": "./corridor-path.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/model-view.mjs",
+      "target": "../vendor/three.module.js"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/model-view.mjs",
+      "target": "./camera-presets.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/main.mjs",
+      "target": "./model-view.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/main.mjs",
+      "target": "./camera-presets.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/main.mjs",
+      "target": "./transition-controller.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/main.mjs",
+      "target": "./asset-loader.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/main.mjs",
+      "target": "./parallax-scene.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/main.mjs",
+      "target": "./mural-viewer.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/main.mjs",
+      "target": "./depth-layers.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/entry-main.mjs",
+      "target": "./mural-reading.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/entry-main.mjs",
+      "target": "../../a01/ink-scene.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/entry-main.mjs",
+      "target": "./corridor-path.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/corridor-path.mjs",
+      "target": "./entry-path.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/corridor-layers.mjs",
+      "target": "./corridor-layers-v22.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/corridor-layers.mjs",
+      "target": "./corridor-path.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/corridor-layers.mjs",
+      "target": "./corridor-finish.mjs"
+    },
+    {
+      "source": "module-a/immersive-hybrid-v1/src/corridor-layers-v22.mjs",
+      "target": "./corridor-path.mjs"
+    }
+  ],
+  "retired": {
+    "files": 23,
+    "allAbsent": true
+  }
+}

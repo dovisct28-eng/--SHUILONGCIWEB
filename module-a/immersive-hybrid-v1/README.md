@@ -1,42 +1,14 @@
-# 水龙祠原境数字展厅 · V2.3 壁画交接候选
+# 水龙祠数字展厅 · Combined B / V2.4-B1
 
-> V2.3 当前候选入口仍为 `index.html`，在 V2.2.1 右廊停靠后增加「走近壁画 → 展开壁画」。`v1.html` 继续保留早期验证；下方 V1 生成场景说明不代表 V2.3 的素材链路。V2.3 使用原建筑实时画面、共享真实深度与独立原始壁画纹理，不使用旧生成室内图。
->
-> 入口、纯 3D 原位停靠、手动同机位接管、数字阅读、完整反向、测试命令和证据见 [V2.3 验收](../../docs/validation/immersive-hybrid-v2-3/README.md)。视觉仍为候选，等待用户实际审图。
+当前建筑基线为用户确认的 **Combined B = Corridor B＋Stage B＋Roof B**，已整合到共享正式模型。基线提交 `25d87f7326ef7714b71936ab84afc61ce153a864`，稳定 Tag `temple-combined-b-b1-2026-10-28`。
 
-以下保留先前版本的实现记录。
+## 当前入口与范围
 
-## V2.2.1 廊道精修记录
+打开 [V2.4-B1 实验展厅](http://127.0.0.1:4186/module-a/immersive-hybrid-v1/v24.html)。共享建筑已用于 A01–A04，但本展厅仍为独立实验入口，尚未替代正式 A01–A08 的完整叙事。当前路线包含总览、进入大门、戏台右侧绕行、拓宽后的右廊、第一幅斜向发现、正视停靠、数字阅读和完整反向返回。
 
-2026-10-27 V2.2.1：沿原几何和同一 Renderer 精修墙面/地面、原木构材质、檐下反射亮度与低强度距离空气；不增加建筑构件、位图或灯光。保留原 V2.2 材质实现和资源，调试选择「原始 3D / 原 V2.2 Hybrid / V2.2.1 Hybrid 候选」，支持四项独立开关、同机位融合对照和自动轨道恢复。调试数据更新限制为每秒最多4次，关闭时不采集完整统计。
+旧 G01/G02/G03 生成室内图暂停使用，当前使用真实三维建筑与独立真实壁画纹理；后续室内图尚未重新生成。第二至第五幅完整观看路线尚未完成。模型设计确认不代表整套体验或新的室内图已完成。
 
-材质和 GPU 首次使用在进入融合前准备：以可见零透明度表面覆盖编译遍历，再在同一 Renderer 的临时 HDR 目标预热实际绘制。准备未完成时导航等待；失败可继续纯三维并重试。预热有启动耗时，不等于消除全部加载成本。
-
-本轮实现、同条件性能、三尺寸/正式八章回归和真实浏览器录像见 [V2.2.1 验收](../../docs/validation/immersive-hybrid-v2-2-1/README.md)，材质来源和系数见 [来源记录](assets/hybrid-v2-2-1/PROVENANCE.md)。最终高保真采用仍待用户审图；第一幅新交互未开发，功能分支不合并 master。
-
-复验命令：`node --test module-a/immersive-hybrid-v1/tests/*.test.mjs`；本轮脚本为 `scripts/refine-build.cjs`、`refine-browser.cjs`、`refine-formal.cjs`、`refine-edge.cjs`、`refine-cache.cjs`、`refine-performance.cjs`、`refine-record.cjs`。浏览器脚本需要下文依赖路径与 4186 本地服务；性能脚本单独运行，避免同时录像/其他浏览器验收。
-
-以下保留 V2.2、V2.1 与 V1 历史说明；旧脚本用于对应历史版本的复验，不应把旧输出路径当作本轮报告。
-
-2026-10-26 V2.2：默认入口保留 V2.1 五个停靠点，并延伸「戏台右侧→右廊→廊道行进→右廊停靠」。沿用同一建筑、Renderer、Scene、Camera 和后期，原柱梁承担遮挡，原墙地表面承载浅层纹理投影。S04 空白墙面局部作为材料样本，其余 V1 整室图仅供参考；没有整屏图片接替。正反向统一轨道，预载失败保留三维，重试先回到融合前再重新进入。
-
-地址仍为 `http://127.0.0.1:4186/module-a/immersive-hybrid-v1/`。调试提供原始3D/Hybrid、固定交接机位、手动融合、近景遮挡和参数导出。源配置在 `src/corridor-path.mjs`、`src/corridor-layers.mjs`；新素材及来源在 `assets/hybrid-v2-2/`。本轮为技术可审查候选，最终视觉采用待用户审图；第一幅停靠和展开未开发。
-
-复验：`node --test module-a/immersive-hybrid-v1/tests/*.test.mjs`，再运行 `scripts/corridor-build-check.cjs`、`scripts/corridor-browser-check.cjs`、`scripts/corridor-evidence.cjs`（后两者需要本地服务和下文 NODE_PATH）。完整结果和精选动态证据见 [V2.2 验收](../../docs/validation/immersive-hybrid-v2-2/README.md)。本轮在功能分支开发，不合并 master。
-
-以下 V2.1 与 V1 说明保留供追溯；其中“V2.2 尚未实施”描述的是当时版本。
-
-2026-10-26：默认入口已切换到 V2.1 原场景复用与连续三维入门。复用原 A01 运行实例、地形、植被、材质、灯光、后期及原远山合成；五停靠点仅覆盖建筑总览→门内停靠。配置在 `src/entry-path.mjs`，同轨道前进/返回、滚轮消耗、减少动态、调试重播与交接导出在 `src/entry-main.mjs`。唯一共享入口改动受 `gallery-entry` URL 参数隔离，正式 A01–A08 不启用。
-
-启动命令仍见下文。V2.1 地址为 `http://127.0.0.1:4186/module-a/immersive-hybrid-v1/`；V1 后续室内和第一铺验证保留在 `http://127.0.0.1:4186/module-a/immersive-hybrid-v1/v1.html`，两者不自动切换。V1 原 main/model-view、场景清单、生成候选及历史证据均保留。
-
-V2.1 的实现审查、镜头坐标、实际浏览器结果、精选帧/运动录像、V2.2 接口和未完成项见 [入口验收](../../docs/validation/immersive-hybrid-v2-1/README.md)。V2.2 室内 2.5D 尚未实施，视觉与运动仍待用户审图。
-
-以下为保留的 V1 使用说明；原 V1 浏览器脚本已指向 v1.html。V2.1 使用上述验收文档的 entry 测试命令。
-
-独立分支 `feature/shuilongci-hybrid-gallery-v1`；基线 `af7235cdd7df1a5e88085cc6528d6bc0ff09d8ad`。范围：真实模型总览 → 大门 → 绕过戏台 → 右廊 → 第一铺 → 展开查看。只做第一铺；正式A01–A08、B、原GLB和母版未改。
-
-## 启动
+## 本地启动
 
 在项目根目录运行：
 
@@ -45,41 +17,24 @@ $env:A01_PORT='4186'
 node module-a/a01/server.mjs
 ```
 
-打开 V1 的 `http://127.0.0.1:4186/module-a/immersive-hybrid-v1/v1.html`。必须通过HTTP，不能双击index.html。复用项目现有静态服务器，不依赖在线图片、CDN、API或新npm安装。Three.js 0.180.0及MIT许可从项目既有内嵌版本提取到vendor，V1 的renderer独立于正式页面。
+模块 A 正式入口：[A01–A08](http://127.0.0.1:4186/module-a/a01/)。模块 B 在 `Mural-Exhibition/` 中运行 `node server.js`，默认端口 3000。页面必须通过 HTTP 打开。当前建筑展厅无需外部图片 API；模块 B 沿用已有依赖。
 
-向下滚轮或“下一处”推进，向上或“上一处”返回；底部可直接定位。第一铺点击真实图或“展开壁画”进入查看，±放大缩小，放大后拖动平移；Esc或关闭返回原处。减少动态支持系统设置和手动开关。没有自动滚页或滚轮preventDefault。
+## 当前模型与第一幅交互
 
-右上“调试”显示来源、机位、资源尺寸、渲染统计和上次过渡帧间隔。勾选“对照原模型截图”可查看未增强锚点。正式观看不显示调试面板。
+正式构建命令：`node shuilong-temple/build-model.mjs`。源码、GLB、内嵌预览、模型信息和 A01 线稿由现有链路维护，不能运行旧 B0 候选构建替代它。
 
-## 资产与替换
+向下滚轮、方向键或“下一处”推进，反向输入或“上一处”返回。右廊后走近第一幅，经过正视停稳后展开；“详细查看”可缩放、拖动和复位。关闭详情后返回阅读，再返回墙面、廊道和总览。真实壁画不镜像、不重绘。完整基线证据见 [B1 整合记录](../../docs/validation/temple-model-v2/integration-b1/README.md)。该记录保持 B1 提交当时原貌，其中历史文件保留状态和复验命令不构成本次维护后的运行说明。
 
-- `assets/references/`：六张1920×1080原始模型截图和完整相机/屋顶/运行时调整清单。
-- `assets/generated/originals/`：四张未经覆盖的生成原件；生成工具的确切后端模型不可确定。
-- `assets/generated/`：Web副本S01至S04，固定命名。
-- `assets/layers/`：同相机模型输出的前景遮挡蒙版。
-- `assets/murals/mural-01-display.webp`：与用户真实源文件逐字节相同的独立副本，2880×990。
-- `scene-manifest.json`：四场景资源、参考机位、来源、版本、日期、原件及真实壁画映射。
-- `prompts/`：四组基础提示词原文、实际执行提示词、统一规范、生成差异记录。
+## 历史版本与退役入口
 
-替换固定文件名 `S01-gate-exterior.webp`、`S02-gate-interior.webp`、`S03-gallery-approach.webp`、`S04-mural01-background.webp`，或更新manifest路径。新图片保持16:9及参考透视，保留原件，重新检查墙柱轮廓、空白壁画墙、蒙版和对比图。刷新页面自动读取；调试面板“重新读取场景图”会清除解码缓存并加版本参数。生成图不存在时回退对应模型截图，明示“参考渲染图”。没有静默生成或把回退标为AI成品。
+`index.html` 对应旧 V2.3 实验实现，`v1.html` 为早期 V1；为保留历史代码与已有测试，本次不删除这些文件，它们不是当前 B1 入口。生成资产、提示词、来源及真实壁画完整保留。
 
-## 调整与扩展
+[B0 静态设计对照](../../docs/validation/temple-model-v2/README.md)保留参数、源码与关键图片。**历史候选对照已归档，不再提供当前运行入口。** 原 B0 HTML、候选二进制和独立构建/验收脚本已退役，可从[固定 B1 Tag](https://github.com/dovisct28-eng/--SHUILONGCIWEB/tree/temple-combined-b-b1-2026-10-28/docs/validation/temple-model-v2)恢复。B0 原始 Baseline 应回看 `ef0f366`，不能以当前共享 GLB 冒充当时模型。
 
-相机在 `src/camera-presets.mjs`。调整后先运行 `scripts/export-anchors.cjs` 重新导出六视角、前景蒙版及投影角点，再复核对应生成图；仅改模型机位会使旧图不再匹配。墙画投影从现有锚点 `[4.865,1.55,4.8]` 和3.65×1.2547模型展示尺寸计算，不手工猜屏幕位置，不镜像原图。
+V2.1–V2.4-A.1 的技术决策、独特录像和阶段证据仍保留在 `docs/validation/`；其中旧入口及机位说明仅适用于当时版本，不代表当前外观。
 
-未来新增壁画需在manifest增加场景、添加相机及独立真实图，扩展状态列表和标题、蒙版、测试。本轮未预填其余四铺的图像或历史内容，也未将参观顺序解释为历史顺序。
+## 维护后复验与后续工作
 
-## 复验
+原生单元测试：`node --test module-a/immersive-hybrid-v1/tests/*.test.mjs shuilong-temple/*.test.mjs`。本轮维护回归脚本与结果见 [Repository Cleanup V1.0](../../docs/maintenance/repository-cleanup-v1/README.md)，需要本机已配置的 Playwright/Sharp；不增加网页运行依赖，不覆盖 B1 原始验收记录。
 
-浏览器脚本使用Playwright与Sharp；依赖从当前Codex桌面运行时解析，项目运行本身不依赖这两项。若终端尚未解析，在本机设置：
-
-```powershell
-$env:NODE_PATH='C:\Users\dovis\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\node_modules'
-node --test module-a/immersive-hybrid-v1/tests/logic.test.mjs
-node module-a/immersive-hybrid-v1/scripts/build-check.cjs
-node module-a/immersive-hybrid-v1/scripts/browser-check.cjs
-```
-
-`scripts/prepare.mjs` 可从现有工程重新提取vendor与真实图，不修改原模型；`prepare-scenes.cjs`记录本轮生成输出的本机路径，仅用于本轮素材归档，不是用户运行样片的前置步骤。
-
-验收见 `docs/validation/immersive-hybrid-v1/README.md`。交互与构建通过；AI图为视觉候选，入口匹配与壁画边界融合仍待审图。不能称为现场实测复原或已正式上线。
+后续包括当前展厅的视觉审查、重新生成与 Combined B 机位匹配的室内图、其余壁画路线及正式体验整合。本轮仅维护和回归。

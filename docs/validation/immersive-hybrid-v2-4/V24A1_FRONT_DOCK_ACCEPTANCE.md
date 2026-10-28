@@ -1,5 +1,7 @@
 # V2.4-A.1 第一幅壁画正视停靠与数字展开
 
+> Repository Cleanup V1.0 历史提示：本页为当时版本的验收记录，以下入口、命令和视觉结论仅适用于[该历史提交](https://github.com/dovisct28-eng/--SHUILONGCIWEB/tree/701b556cd0f118e7005f5395a3ee7ad01f73b976)，不代表当前版本。当前共享建筑基线为 Combined B / V2.4-B1，入口与范围见[当前展厅说明](../../../module-a/immersive-hybrid-v1/README.md)；本页原有历史证据完整保留。
+
 2026-10-28；仅独立实验入口 v24.html 和第一幅，分支 `feature/shuilongci-hybrid-gallery-v1`，不合并 master。基线 `c1e9507f5f3d93557df033817a56e23d14196ea2`。开工时 ls-remote 核实与本地一致；fetch 有间歇 TLS 失败，之后一次成功更新 FETCH_HEAD 并核对相同 SHA。最终同步以交付消息中的实际 commit 和远程核实为准。
 
 **实现、模型检查、自动化交互及运行帧审查通过，交付可审阅的视觉候选；常速节奏和最终观感待用户审阅录像，不标为视觉定稿。** 其他四幅未实现、未验证，不据此进入 V2.4-B。

@@ -1,0 +1,604 @@
+{
+  "capturedAt": "2026-10-28T13:10:33.354Z",
+  "scope": "Physical files under checkout including .git, dependencies and archive checkout; symlinks not followed. Logical byte lengths, not allocated clusters.",
+  "physical": {
+    "files": 15522,
+    "bytes": 22096871918
+  },
+  "workingFiles": {
+    "files": 14347,
+    "bytes": 11492330090
+  },
+  "trackedPresent": {
+    "files": 3831,
+    "bytes": 1757625174
+  },
+  "trackedIndexCount": 3839,
+  "untrackedCount": 3539,
+  "ignoredCount": 15506,
+  "missingTracked": [
+    "Mural-Exhibition/public/assets/10_上层猖兵/color.png",
+    "Mural-Exhibition/public/assets/10_上层猖兵/info.txt",
+    "Mural-Exhibition/public/assets/10_上层猖兵/line.png",
+    "Mural-Exhibition/public/assets/10_上层猖兵/meta.json",
+    "Mural-Exhibition/public/assets/10_上层猖兵/org.png",
+    "Mural-Exhibition/public/assets/10_上层猖兵/video.mp4",
+    "水龙祠实地照片/水龙祠建筑插画-色稿v1.png",
+    "水龙祠实地照片/水龙祠建筑结构稿-v2.png"
+  ],
+  "excludedSymlinks": [
+    "promo-video/ppt/revision-v4/local/node_modules"
+  ],
+  "groups": {
+    ".cache": {
+      "files": 2,
+      "bytes": 155476610,
+      "trackedFiles": 0,
+      "trackedBytes": 0
+    },
+    ".git": {
+      "files": 662,
+      "bytes": 10263206671,
+      "trackedFiles": 0,
+      "trackedBytes": 0
+    },
+    ".gitignore": {
+      "files": 1,
+      "bytes": 756,
+      "trackedFiles": 1,
+      "trackedBytes": 756
+    },
+    ".lofi-preview": {
+      "files": 513,
+      "bytes": 341335157,
+      "trackedFiles": 0,
+      "trackedBytes": 0
+    },
+    "AGENTS.md": {
+      "files": 1,
+      "bytes": 14464,
+      "trackedFiles": 1,
+      "trackedBytes": 14464
+    },
+    "build_scene.py": {
+      "files": 1,
+      "bytes": 16416,
+      "trackedFiles": 1,
+      "trackedBytes": 16416
+    },
+    "docs": {
+      "files": 37,
+      "bytes": 463703,
+      "trackedFiles": 36,
+      "trackedBytes": 452936
+    },
+    "docs/validation/a01": {
+      "files": 9,
+      "bytes": 342228,
+      "trackedFiles": 9,
+      "trackedBytes": 342228
+    },
+    "docs/validation/a01-cinematic-v2": {
+      "files": 278,
+      "bytes": 242260793,
+      "trackedFiles": 106,
+      "trackedBytes": 72614674
+    },
+    "docs/validation/a01-cinematic-v3": {
+      "files": 222,
+      "bytes": 116631326,
+      "trackedFiles": 222,
+      "trackedBytes": 116631326
+    },
+    "docs/validation/a01-ink-spatial": {
+      "files": 258,
+      "bytes": 177734941,
+      "trackedFiles": 39,
+      "trackedBytes": 13471398
+    },
+    "docs/validation/a01-line": {
+      "files": 839,
+      "bytes": 133915860,
+      "trackedFiles": 19,
+      "trackedBytes": 4231304
+    },
+    "docs/validation/a01-visual-remaster": {
+      "files": 278,
+      "bytes": 178012181,
+      "trackedFiles": 18,
+      "trackedBytes": 3984918
+    },
+    "docs/validation/a02": {
+      "files": 19,
+      "bytes": 4562577,
+      "trackedFiles": 19,
+      "trackedBytes": 4562577
+    },
+    "docs/validation/a02-copy-followup-2026-10-05": {
+      "files": 16,
+      "bytes": 7992063,
+      "trackedFiles": 9,
+      "trackedBytes": 354459
+    },
+    "docs/validation/a02-dark-room-2026-10-04": {
+      "files": 296,
+      "bytes": 294520997,
+      "trackedFiles": 158,
+      "trackedBytes": 127274458
+    },
+    "docs/validation/a02-director-remaster-2026-10-04": {
+      "files": 353,
+      "bytes": 285878212,
+      "trackedFiles": 127,
+      "trackedBytes": 29188415
+    },
+    "docs/validation/a03": {
+      "files": 31,
+      "bytes": 6194193,
+      "trackedFiles": 31,
+      "trackedBytes": 6194193
+    },
+    "docs/validation/a03-high-fidelity-2026-10-04": {
+      "files": 88,
+      "bytes": 97229558,
+      "trackedFiles": 25,
+      "trackedBytes": 21458357
+    },
+    "docs/validation/a03-poster-remaster-2026-10-04": {
+      "files": 279,
+      "bytes": 208091555,
+      "trackedFiles": 54,
+      "trackedBytes": 4179799
+    },
+    "docs/validation/a03-reading-title": {
+      "files": 67,
+      "bytes": 33768771,
+      "trackedFiles": 6,
+      "trackedBytes": 864384
+    },
+    "docs/validation/a03-refinement-2026-10-04": {
+      "files": 297,
+      "bytes": 211037501,
+      "trackedFiles": 67,
+      "trackedBytes": 5494267
+    },
+    "docs/validation/a04": {
+      "files": 32,
+      "bytes": 3869165,
+      "trackedFiles": 32,
+      "trackedBytes": 3869165
+    },
+    "docs/validation/a04-final": {
+      "files": 80,
+      "bytes": 64797496,
+      "trackedFiles": 80,
+      "trackedBytes": 64797496
+    },
+    "docs/validation/a04-full-roof-2026-10-05": {
+      "files": 62,
+      "bytes": 36134894,
+      "trackedFiles": 19,
+      "trackedBytes": 1538594
+    },
+    "docs/validation/a04-handoff": {
+      "files": 41,
+      "bytes": 22484606,
+      "trackedFiles": 41,
+      "trackedBytes": 22484606
+    },
+    "docs/validation/a04-high-fidelity-2026-10-05": {
+      "files": 262,
+      "bytes": 262964806,
+      "trackedFiles": 57,
+      "trackedBytes": 6576779
+    },
+    "docs/validation/a04-roof-summary-2026-10-05": {
+      "files": 66,
+      "bytes": 38204004,
+      "trackedFiles": 40,
+      "trackedBytes": 5013322
+    },
+    "docs/validation/a05": {
+      "files": 10,
+      "bytes": 12992410,
+      "trackedFiles": 10,
+      "trackedBytes": 12992410
+    },
+    "docs/validation/a05-a08-composition-v2-2026-10-05": {
+      "files": 49,
+      "bytes": 12194568,
+      "trackedFiles": 0,
+      "trackedBytes": 0
+    },
+    "docs/validation/a05-a08-editorial-2026-10-06": {
+      "files": 353,
+      "bytes": 158794594,
+      "trackedFiles": 270,
+      "trackedBytes": 59732089
+    },
+    "docs/validation/a05-a08-high-fidelity-2026-10-05": {
+      "files": 327,
+      "bytes": 188574704,
+      "trackedFiles": 244,
+      "trackedBytes": 68669754
+    },
+    "docs/validation/a05-a08-refinement-2026-10-06": {
+      "files": 275,
+      "bytes": 151074740,
+      "trackedFiles": 275,
+      "trackedBytes": 151074740
+    },
+    "docs/validation/a05-handoff": {
+      "files": 10,
+      "bytes": 13258308,
+      "trackedFiles": 10,
+      "trackedBytes": 13258308
+    },
+    "docs/validation/a06": {
+      "files": 7,
+      "bytes": 12045733,
+      "trackedFiles": 7,
+      "trackedBytes": 12045733
+    },
+    "docs/validation/a07": {
+      "files": 11,
+      "bytes": 20873707,
+      "trackedFiles": 11,
+      "trackedBytes": 20873707
+    },
+    "docs/validation/a08": {
+      "files": 5,
+      "bytes": 7532794,
+      "trackedFiles": 5,
+      "trackedBytes": 7532794
+    },
+    "docs/validation/b-character-intro-2026-10-14": {
+      "files": 10,
+      "bytes": 9271488,
+      "trackedFiles": 4,
+      "trackedBytes": 2200864
+    },
+    "docs/validation/b-ux-01-2026-10-08": {
+      "files": 477,
+      "bytes": 584056020,
+      "trackedFiles": 23,
+      "trackedBytes": 13764004
+    },
+    "docs/validation/b01-2026-10-06": {
+      "files": 17,
+      "bytes": 22005511,
+      "trackedFiles": 17,
+      "trackedBytes": 22005511
+    },
+    "docs/validation/b02-2026-10-06": {
+      "files": 48,
+      "bytes": 84978682,
+      "trackedFiles": 48,
+      "trackedBytes": 84978682
+    },
+    "docs/validation/b02-media-switch-2026-10-08": {
+      "files": 110,
+      "bytes": 147876523,
+      "trackedFiles": 17,
+      "trackedBytes": 11858843
+    },
+    "docs/validation/b03-2026-10-06": {
+      "files": 91,
+      "bytes": 131047917,
+      "trackedFiles": 91,
+      "trackedBytes": 131047917
+    },
+    "docs/validation/b03-exhibition-launcher-2026-10-09": {
+      "files": 6,
+      "bytes": 20437,
+      "trackedFiles": 2,
+      "trackedBytes": 2955
+    },
+    "docs/validation/b03-gesture-v2": {
+      "files": 153,
+      "bytes": 190921460,
+      "trackedFiles": 10,
+      "trackedBytes": 5164781
+    },
+    "docs/validation/b03-gesture-v3": {
+      "files": 174,
+      "bytes": 160217551,
+      "trackedFiles": 12,
+      "trackedBytes": 5139807
+    },
+    "docs/validation/b03-gesture-v3.1": {
+      "files": 201,
+      "bytes": 159982179,
+      "trackedFiles": 12,
+      "trackedBytes": 3020373
+    },
+    "docs/validation/b03-gesture-v4": {
+      "files": 272,
+      "bytes": 258199311,
+      "trackedFiles": 21,
+      "trackedBytes": 10601352
+    },
+    "docs/validation/b03-gesture-v4.2": {
+      "files": 172,
+      "bytes": 185589935,
+      "trackedFiles": 15,
+      "trackedBytes": 3190169
+    },
+    "docs/validation/b03-gesture-v4.3": {
+      "files": 205,
+      "bytes": 175817783,
+      "trackedFiles": 11,
+      "trackedBytes": 2046358
+    },
+    "docs/validation/b03-hand-lock-v4.1": {
+      "files": 225,
+      "bytes": 255668903,
+      "trackedFiles": 15,
+      "trackedBytes": 5824650
+    },
+    "docs/validation/b03-hf-01": {
+      "files": 137,
+      "bytes": 169039532,
+      "trackedFiles": 16,
+      "trackedBytes": 5961454
+    },
+    "docs/validation/b03-hf-02": {
+      "files": 180,
+      "bytes": 201135133,
+      "trackedFiles": 26,
+      "trackedBytes": 11610175
+    },
+    "docs/validation/b03-hf-03": {
+      "files": 202,
+      "bytes": 217168185,
+      "trackedFiles": 25,
+      "trackedBytes": 10632971
+    },
+    "docs/validation/b03-hf-04": {
+      "files": 266,
+      "bytes": 288795632,
+      "trackedFiles": 10,
+      "trackedBytes": 5156211
+    },
+    "docs/validation/b03-hf-05": {
+      "files": 236,
+      "bytes": 255136054,
+      "trackedFiles": 10,
+      "trackedBytes": 5254794
+    },
+    "docs/validation/b03-v2-2026-10-06": {
+      "files": 167,
+      "bytes": 196618586,
+      "trackedFiles": 67,
+      "trackedBytes": 44273196
+    },
+    "docs/validation/copy-update-2026-10-05": {
+      "files": 68,
+      "bytes": 62828819,
+      "trackedFiles": 16,
+      "trackedBytes": 2141964
+    },
+    "docs/validation/environment": {
+      "files": 1,
+      "bytes": 9652,
+      "trackedFiles": 1,
+      "trackedBytes": 9652
+    },
+    "docs/validation/guide-transitions": {
+      "files": 2,
+      "bytes": 552,
+      "trackedFiles": 2,
+      "trackedBytes": 552
+    },
+    "docs/validation/immersive-hybrid-v1": {
+      "files": 45,
+      "bytes": 69372034,
+      "trackedFiles": 14,
+      "trackedBytes": 22194673
+    },
+    "docs/validation/immersive-hybrid-v2-1": {
+      "files": 78,
+      "bytes": 101646091,
+      "trackedFiles": 23,
+      "trackedBytes": 20676381
+    },
+    "docs/validation/immersive-hybrid-v2-2": {
+      "files": 175,
+      "bytes": 192380922,
+      "trackedFiles": 23,
+      "trackedBytes": 9997524
+    },
+    "docs/validation/immersive-hybrid-v2-2-1": {
+      "files": 123,
+      "bytes": 130761035,
+      "trackedFiles": 21,
+      "trackedBytes": 9200829
+    },
+    "docs/validation/immersive-hybrid-v2-3": {
+      "files": 70,
+      "bytes": 93260256,
+      "trackedFiles": 18,
+      "trackedBytes": 12688849
+    },
+    "docs/validation/immersive-hybrid-v2-4": {
+      "files": 148,
+      "bytes": 86806982,
+      "trackedFiles": 41,
+      "trackedBytes": 17173113
+    },
+    "docs/validation/material-isolation": {
+      "files": 1,
+      "bytes": 274,
+      "trackedFiles": 1,
+      "trackedBytes": 274
+    },
+    "docs/validation/model-hifi": {
+      "files": 65,
+      "bytes": 62367752,
+      "trackedFiles": 21,
+      "trackedBytes": 14776079
+    },
+    "docs/validation/model-structure": {
+      "files": 10,
+      "bytes": 1586510,
+      "trackedFiles": 10,
+      "trackedBytes": 1586510
+    },
+    "docs/validation/module-a-dark-system": {
+      "files": 243,
+      "bytes": 179741630,
+      "trackedFiles": 20,
+      "trackedBytes": 3227735
+    },
+    "docs/validation/module-a-navigation-2026-10-06": {
+      "files": 234,
+      "bytes": 172587425,
+      "trackedFiles": 118,
+      "trackedBytes": 17553420
+    },
+    "docs/validation/module-a-visual-director-v2": {
+      "files": 602,
+      "bytes": 574022145,
+      "trackedFiles": 143,
+      "trackedBytes": 129147351
+    },
+    "docs/validation/mural-textures": {
+      "files": 16,
+      "bytes": 12858756,
+      "trackedFiles": 16,
+      "trackedBytes": 12858756
+    },
+    "docs/validation/ppt-design-evolution-v4": {
+      "files": 4,
+      "bytes": 1011548,
+      "trackedFiles": 4,
+      "trackedBytes": 1011548
+    },
+    "docs/validation/ppt-self-reading-v3": {
+      "files": 4,
+      "bytes": 1681800,
+      "trackedFiles": 4,
+      "trackedBytes": 1681800
+    },
+    "docs/validation/shared-temple-world-2026-10-04": {
+      "files": 413,
+      "bytes": 324641289,
+      "trackedFiles": 80,
+      "trackedBytes": 10088646
+    },
+    "docs/validation/temple-model-audit": {
+      "files": 53,
+      "bytes": 33110874,
+      "trackedFiles": 15,
+      "trackedBytes": 2180617
+    },
+    "docs/validation/temple-model-v2": {
+      "files": 680,
+      "bytes": 565103395,
+      "trackedFiles": 86,
+      "trackedBytes": 61444681
+    },
+    "docs/validation/visual-integration": {
+      "files": 125,
+      "bytes": 81700452,
+      "trackedFiles": 4,
+      "trackedBytes": 27341
+    },
+    "docs/validation/wall-finish": {
+      "files": 20,
+      "bytes": 13495314,
+      "trackedFiles": 20,
+      "trackedBytes": 13495314
+    },
+    "docs/validation/watercolor": {
+      "files": 3,
+      "bytes": 16502,
+      "trackedFiles": 3,
+      "trackedBytes": 16502
+    },
+    "docs.zip": {
+      "files": 1,
+      "bytes": 20604,
+      "trackedFiles": 0,
+      "trackedBytes": 0
+    },
+    "module-a": {
+      "files": 331,
+      "bytes": 55125323,
+      "trackedFiles": 330,
+      "trackedBytes": 55121904
+    },
+    "Mural-Exhibition": {
+      "files": 755,
+      "bytes": 250612959,
+      "trackedFiles": 165,
+      "trackedBytes": 52706149
+    },
+    "promo-video": {
+      "files": 384,
+      "bytes": 290283688,
+      "trackedFiles": 30,
+      "trackedBytes": 1688973
+    },
+    "scripts": {
+      "files": 4,
+      "bytes": 20211,
+      "trackedFiles": 4,
+      "trackedBytes": 20211
+    },
+    "shuilong-temple": {
+      "files": 79,
+      "bytes": 13705857,
+      "trackedFiles": 79,
+      "trackedBytes": 13705857
+    },
+    "tmp": {
+      "files": 1250,
+      "bytes": 427830957,
+      "trackedFiles": 0,
+      "trackedBytes": 0
+    },
+    "tmp-character-intro-tests.log": {
+      "files": 1,
+      "bytes": 14483,
+      "trackedFiles": 0,
+      "trackedBytes": 0
+    },
+    "启动低保真归档.bat": {
+      "files": 1,
+      "bytes": 501,
+      "trackedFiles": 1,
+      "trackedBytes": 501
+    },
+    "启动模块A原型.bat": {
+      "files": 1,
+      "bytes": 488,
+      "trackedFiles": 1,
+      "trackedBytes": 488
+    },
+    "水龙祠壁画素材": {
+      "files": 11,
+      "bytes": 753752327,
+      "trackedFiles": 3,
+      "trackedBytes": 7745946
+    },
+    "水龙祠实地照片": {
+      "files": 16,
+      "bytes": 19595586,
+      "trackedFiles": 3,
+      "trackedBytes": 8602
+    },
+    "水龙祠建筑插画": {
+      "files": 12,
+      "bytes": 22778017,
+      "trackedFiles": 10,
+      "trackedBytes": 17920539
+    },
+    "相关文献": {
+      "files": 7,
+      "bytes": 44109024,
+      "trackedFiles": 0,
+      "trackedBytes": 0
+    }
+  }
+}

@@ -1,5 +1,7 @@
 # V2.2.1 廊道材质、光影与首次融合优化候选
 
+> Repository Cleanup V1.0 历史提示：本页为当时版本的验收记录，以下入口、命令和视觉结论仅适用于[该历史提交](https://github.com/dovisct28-eng/--SHUILONGCIWEB/tree/1c811b58c1a4eb7beb5583c7d4ee832f54ee76dd)，不代表当前版本。当前共享建筑基线为 Combined B / V2.4-B1，入口与范围见[当前展厅说明](../../../module-a/immersive-hybrid-v1/README.md)；本页原有历史证据完整保留。
+
 2026-10-27；功能分支 `feature/shuilongci-hybrid-gallery-v1`。实施前 Fetch 核实本地/远程基线均为 `933a353a569982415fb39604cf70798b6669e7b3`。本轮不合并 master。工程验证通过；高保真视觉仍待用户结合真实截图和录像正式采用。
 
 ## 视觉与技术修改

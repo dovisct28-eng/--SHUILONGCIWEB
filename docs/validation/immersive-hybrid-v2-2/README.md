@@ -1,5 +1,7 @@
 # 水龙祠原境数字展厅 V2.2｜廊道连续合成候选
 
+> Repository Cleanup V1.0 历史提示：本页为当时版本的验收记录，以下入口、命令和视觉结论仅适用于[该历史提交](https://github.com/dovisct28-eng/--SHUILONGCIWEB/tree/933a353a569982415fb39604cf70798b6669e7b3)，不代表当前版本。当前共享建筑基线为 Combined B / V2.4-B1，入口与范围见[当前展厅说明](../../../module-a/immersive-hybrid-v1/README.md)；本页原有历史证据完整保留。
+
 2026-10-26，分支 `feature/shuilongci-hybrid-gallery-v1`。开始前重新fetch，本地与远程均为 `4f80826592ffeeb2fa02243ff72c14c5917f3cad`。本轮不合并master，保留工作区其他未提交工作。
 
 2026-10-27收尾复核：正式录像为完整浏览器视口，含原UI和CSS环境；经完整文件Blob解码抽查，已确认正向进入及反向返回。直接从本地HTTP跳转抽帧曾误读旧帧，原因是原型服务器不支持Range；不能据此认定原录像静止。排查候选保留local，正式WebM的SHA与实际解码帧差见 `video-metadata.json`。首次融合仍有单帧停顿，实测最大值保留在摘要，不宣称最终无缝验收。

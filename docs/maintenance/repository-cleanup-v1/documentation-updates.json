@@ -1,0 +1,39 @@
+{
+  "files": [
+    {
+      "path": "docs/validation/immersive-hybrid-v1/README.md",
+      "historicalRef": "882237b",
+      "change": "Add historical-only notice; original evidence and body retained."
+    },
+    {
+      "path": "docs/validation/immersive-hybrid-v2-1/README.md",
+      "historicalRef": "4f80826",
+      "change": "Add historical-only notice; original evidence and body retained."
+    },
+    {
+      "path": "docs/validation/immersive-hybrid-v2-2/README.md",
+      "historicalRef": "933a353",
+      "change": "Add historical-only notice; original evidence and body retained."
+    },
+    {
+      "path": "docs/validation/immersive-hybrid-v2-2-1/README.md",
+      "historicalRef": "1c811b5",
+      "change": "Add historical-only notice; original evidence and body retained."
+    },
+    {
+      "path": "docs/validation/immersive-hybrid-v2-3/README.md",
+      "historicalRef": "ddef1d8",
+      "change": "Add historical-only notice; original evidence and body retained."
+    },
+    {
+      "path": "docs/validation/immersive-hybrid-v2-4/V24A_ACCEPTANCE.md",
+      "historicalRef": "c1e9507",
+      "change": "Add historical-only notice; original evidence and body retained."
+    },
+    {
+      "path": "docs/validation/immersive-hybrid-v2-4/V24A1_FRONT_DOCK_ACCEPTANCE.md",
+      "historicalRef": "701b556",
+      "change": "Add historical-only notice; original evidence and body retained."
+    }
+  ]
+}

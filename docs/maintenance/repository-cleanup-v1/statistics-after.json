@@ -1,0 +1,26 @@
+{
+  "physical": {
+    "files": 15611,
+    "bytes": 22023589326
+  },
+  "workingFiles": {
+    "files": 14397,
+    "bytes": 11418341280
+  },
+  "scope": "Physical files under checkout including .git, dependencies and archive checkout; symlinks not followed. Logical byte lengths, not allocated clusters.",
+  "before": {
+    "files": 15522,
+    "bytes": 22096871918
+  },
+  "removedTracked": {
+    "files": 23,
+    "bytes": 30593931
+  },
+  "removedLocal": {
+    "files": 46,
+    "bytes": 92273024
+  },
+  "removedBytes": 122866955,
+  "netBytesReduction": 73282592,
+  "measurement": "Pre-commit closeout snapshot; logical file lengths. Includes newly generated QA, inventory and report files. Git objects/index can grow on commit/fetch; no Git history rewrite."
+}

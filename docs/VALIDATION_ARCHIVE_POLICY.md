@@ -1,5 +1,11 @@
 # 验收截图精选留档规范
 
+## Repository Cleanup V1.0 一次性授权（2026-10-28）
+
+用户已明确授权本轮历史验收资料精简。此例外优先于下文“不追溯删除”规则，仅适用于 [cleanup-plan.json](maintenance/repository-cleanup-v1/cleanup-plan.json) 审核清单：先建立并远程核实可恢复版本标记，再完成依赖检查、文件哈希与用户修改保护检查，保留必要设计证据，才可逐文件清理。实际删除见 [deleted-files.json](maintenance/repository-cleanup-v1/deleted-files.json)。
+
+不得删除原始素材、必要独特设计证据、未确认的用户文件或 B1 最新验收资料；不得破坏当前运行功能、改写 Git 历史或移动已有归档引用。本轮结束后恢复下述正常精选留档规则。未来历史清理仍需新的明确授权。
+
 2026-10-06 起适用于模块 A、模块 B、shared 的后续所有阶段。此规则控制提交到 GitHub 的截图范围，不减少测试覆盖，也不追溯整理或删除已存在的历史证据。
 
 ## 后续阶段的目录约定
