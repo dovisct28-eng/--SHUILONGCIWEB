@@ -1,0 +1,50 @@
+{
+  "pass": true,
+  "model": "combined-b",
+  "viewport": [
+    1440,
+    900
+  ],
+  "source": "Playwright actual browser recording; candidate route preview, not production integration",
+  "route": "gate -> behind stage -> right corridor -> first mural front -> exact reverse",
+  "nominalForwardMs": 16000,
+  "holdMs": 900,
+  "errors": [],
+  "decodedQA": {
+    "pass": true,
+    "codec": "VP8",
+    "viewport": [
+      1440,
+      900
+    ],
+    "durationSeconds": 35.76,
+    "bytes": 4929927,
+    "frames": [
+      {
+        "time": 2,
+        "file": "local/video-frame-02.png"
+      },
+      {
+        "time": 7,
+        "file": "local/video-frame-07.png"
+      },
+      {
+        "time": 12,
+        "file": "local/video-frame-12.png"
+      },
+      {
+        "time": 18,
+        "file": "local/video-frame-18.png"
+      },
+      {
+        "time": 24,
+        "file": "local/video-frame-24.png"
+      },
+      {
+        "time": 31,
+        "file": "local/video-frame-31.png"
+      }
+    ],
+    "method": "FFmpeg metadata plus six actual recorded-video keyframes; browser route ran forward and reverse."
+  }
+}

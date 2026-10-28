@@ -1,0 +1,1085 @@
+{
+  "pass": true,
+  "status": "建筑模型优化候选，等待用户视觉确认",
+  "base": "35a566c5ef25d40e18fc0d10a89c8967ad76079d",
+  "branch": "feature/shuilongci-hybrid-gallery-v1",
+  "scope": "New independent candidate directory only; no production replacement or master merge",
+  "models": [
+    {
+      "id": "baseline",
+      "triangles": 83360,
+      "bytes": 3329000,
+      "sha256": "fbbfce1c0bfbf8a09c33ed65a6bb1f60589b6c70300841fa0283c2a4498ae047"
+    },
+    {
+      "id": "corridor-a",
+      "triangles": 81872,
+      "bytes": 3296524,
+      "sha256": "0fb21c504be498a6ff95bce9592c3f54b2c5c444efc2c10b8eae6ba8b3192d4b"
+    },
+    {
+      "id": "corridor-b",
+      "triangles": 81872,
+      "bytes": 3296524,
+      "sha256": "fc0d9af5b5e32a547d064b1e50ed3ae241ec7d0e02b0403448e757325a1f03bc"
+    },
+    {
+      "id": "corridor-c",
+      "triangles": 81872,
+      "bytes": 3296524,
+      "sha256": "667690994202c5297dcb2b289718bbad77d96573ed3e71b47fd1b2dac0c790a6"
+    },
+    {
+      "id": "stage-a",
+      "triangles": 82720,
+      "bytes": 3330416,
+      "sha256": "4f0afa6c7ee4ba4760f932ac76e95c56babb4874215fec0ba13a950910de1ab6"
+    },
+    {
+      "id": "stage-b",
+      "triangles": 90304,
+      "bytes": 3580600,
+      "sha256": "06239aba408a2c4f3ab4be84a6c14a94d9ad17905797bee7914030c34ca0714a"
+    },
+    {
+      "id": "roof-a",
+      "triangles": 83672,
+      "bytes": 3372516,
+      "sha256": "bc875ac47009ad431810de94f610eefa73deeb1f846469eb0feda2602c5e8950"
+    },
+    {
+      "id": "roof-b",
+      "triangles": 83672,
+      "bytes": 3372512,
+      "sha256": "0a20c595e0593d0dad80b712e9069ff24b94c5dccd5dabf9747bb1d52b09ac34"
+    },
+    {
+      "id": "combined-a",
+      "triangles": 83032,
+      "bytes": 3373868,
+      "sha256": "7db66775aa9533be7955e5c9e1fed438297b406c43500f483f9218c7b12bbe4a"
+    },
+    {
+      "id": "combined-b",
+      "triangles": 90616,
+      "bytes": 3624048,
+      "sha256": "93b3aceec0455c21c73bacffd82cdf4ad7b21857b14ea4ee9843a9b8313b4145"
+    }
+  ],
+  "tests": {
+    "passed": 47,
+    "failed": 0,
+    "syntax": [
+      "src/baseline-model.js",
+      "src/cameras.mjs",
+      "src/candidate-model.mjs",
+      "src/glb-loader.mjs",
+      "src/glb-writer.mjs",
+      "src/preview.mjs",
+      "scripts/browser-check.cjs",
+      "scripts/build-candidates.mjs",
+      "scripts/camera-check.cjs",
+      "scripts/corridor-motion.cjs",
+      "scripts/evidence.cjs",
+      "scripts/final-check.cjs",
+      "scripts/geometry.test.mjs",
+      "scripts/protect.cjs",
+      "scripts/record-route.cjs",
+      "scripts/ui-check.cjs",
+      "scripts/video-check.cjs"
+    ]
+  },
+  "browser": {
+    "version": "156.0.8078.48",
+    "viewports": [
+      {
+        "viewport": [
+          1440,
+          900
+        ],
+        "models": 10,
+        "states": 136,
+        "performance": [
+          {
+            "id": "baseline",
+            "loadMs": 28.300000000745058,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.100000000000364,
+              "p95": 4.599999999999454,
+              "max": 4.800000000000182,
+              "memory": {
+                "geometries": 37,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 37,
+              "textures": 20
+            }
+          },
+          {
+            "id": "corridor-a",
+            "loadMs": 23.399999998509884,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.199999999998909,
+              "p95": 4.600000000000364,
+              "max": 4.700000000000728,
+              "memory": {
+                "geometries": 37,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 37,
+              "textures": 20
+            }
+          },
+          {
+            "id": "corridor-b",
+            "loadMs": 26.800000000745058,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.199999999998909,
+              "p95": 4.600000000000364,
+              "max": 4.799999999999272,
+              "memory": {
+                "geometries": 37,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 37,
+              "textures": 20
+            }
+          },
+          {
+            "id": "corridor-c",
+            "loadMs": 23.799999997019768,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.200000000000728,
+              "p95": 4.5,
+              "max": 4.599999999998545,
+              "memory": {
+                "geometries": 37,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 37,
+              "textures": 20
+            }
+          },
+          {
+            "id": "stage-a",
+            "loadMs": 22,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.200000000000728,
+              "p95": 4.600000000002183,
+              "max": 4.700000000000728,
+              "memory": {
+                "geometries": 39,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 39,
+              "textures": 20
+            }
+          },
+          {
+            "id": "stage-b",
+            "loadMs": 25.200000002980232,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.200000000000728,
+              "p95": 4.700000000000728,
+              "max": 5.299999999999272,
+              "memory": {
+                "geometries": 39,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 39,
+              "textures": 20
+            }
+          },
+          {
+            "id": "roof-a",
+            "loadMs": 27.599999997764826,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.200000000000728,
+              "p95": 4.600000000002183,
+              "max": 4.700000000000728,
+              "memory": {
+                "geometries": 40,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 40,
+              "textures": 20
+            }
+          },
+          {
+            "id": "roof-b",
+            "loadMs": 24.800000000745058,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.19999999999709,
+              "p95": 4.599999999998545,
+              "max": 4.80000000000291,
+              "memory": {
+                "geometries": 40,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 40,
+              "textures": 20
+            }
+          },
+          {
+            "id": "combined-a",
+            "loadMs": 23.800000000745058,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.19999999999709,
+              "p95": 4.599999999998545,
+              "max": 4.69999999999709,
+              "memory": {
+                "geometries": 42,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 42,
+              "textures": 20
+            }
+          },
+          {
+            "id": "combined-b",
+            "loadMs": 30,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.19999999999709,
+              "p95": 4.5,
+              "max": 4.5,
+              "memory": {
+                "geometries": 42,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 42,
+              "textures": 20
+            }
+          }
+        ],
+        "switchCycles": [
+          {
+            "id": "baseline",
+            "memory": {
+              "geometries": 37,
+              "textures": 20
+            },
+            "textureCache": 18
+          },
+          {
+            "id": "combined-b",
+            "memory": {
+              "geometries": 42,
+              "textures": 20
+            },
+            "textureCache": 18
+          },
+          {
+            "id": "combined-a",
+            "memory": {
+              "geometries": 42,
+              "textures": 20
+            },
+            "textureCache": 18
+          },
+          {
+            "id": "baseline",
+            "memory": {
+              "geometries": 37,
+              "textures": 20
+            },
+            "textureCache": 18
+          },
+          {
+            "id": "combined-b",
+            "memory": {
+              "geometries": 42,
+              "textures": 20
+            },
+            "textureCache": 18
+          },
+          {
+            "id": "combined-a",
+            "memory": {
+              "geometries": 42,
+              "textures": 20
+            },
+            "textureCache": 18
+          },
+          {
+            "id": "baseline",
+            "memory": {
+              "geometries": 37,
+              "textures": 20
+            },
+            "textureCache": 18
+          }
+        ],
+        "errors": []
+      },
+      {
+        "viewport": [
+          1920,
+          1080
+        ],
+        "models": 10,
+        "states": 120,
+        "performance": [
+          {
+            "id": "baseline",
+            "loadMs": 26.900000002235174,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.199999999999818,
+              "p95": 4.5,
+              "max": 4.599999999999454,
+              "memory": {
+                "geometries": 37,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 37,
+              "textures": 20
+            }
+          },
+          {
+            "id": "corridor-a",
+            "loadMs": 30.700000002980232,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.199999999998909,
+              "p95": 4.5,
+              "max": 4.699999999998909,
+              "memory": {
+                "geometries": 37,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 37,
+              "textures": 20
+            }
+          },
+          {
+            "id": "corridor-b",
+            "loadMs": 22.599999997764826,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.199999999998909,
+              "p95": 4.600000000000364,
+              "max": 4.700000000000728,
+              "memory": {
+                "geometries": 37,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 37,
+              "textures": 20
+            }
+          },
+          {
+            "id": "corridor-c",
+            "loadMs": 23.399999998509884,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.19999999999709,
+              "p95": 4.700000000000728,
+              "max": 4.700000000000728,
+              "memory": {
+                "geometries": 37,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 37,
+              "textures": 20
+            }
+          },
+          {
+            "id": "stage-a",
+            "loadMs": 29.5,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.200000000000728,
+              "p95": 4.600000000002183,
+              "max": 4.80000000000291,
+              "memory": {
+                "geometries": 39,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 39,
+              "textures": 20
+            }
+          },
+          {
+            "id": "stage-b",
+            "loadMs": 24.100000001490116,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.200000000000728,
+              "p95": 4.600000000002183,
+              "max": 4.700000000000728,
+              "memory": {
+                "geometries": 39,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 39,
+              "textures": 20
+            }
+          },
+          {
+            "id": "roof-a",
+            "loadMs": 20.900000002235174,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.19999999999709,
+              "p95": 4.5,
+              "max": 4.599999999998545,
+              "memory": {
+                "geometries": 40,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 40,
+              "textures": 20
+            }
+          },
+          {
+            "id": "roof-b",
+            "loadMs": 21.200000002980232,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.19999999999709,
+              "p95": 4.600000000005821,
+              "max": 4.700000000004366,
+              "memory": {
+                "geometries": 40,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 40,
+              "textures": 20
+            }
+          },
+          {
+            "id": "combined-a",
+            "loadMs": 22.900000002235174,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.19999999999709,
+              "p95": 4.600000000005821,
+              "max": 4.700000000004366,
+              "memory": {
+                "geometries": 42,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 42,
+              "textures": 20
+            }
+          },
+          {
+            "id": "combined-b",
+            "loadMs": 22.900000002235174,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.19999999999709,
+              "p95": 4.599999999998545,
+              "max": 4.599999999998545,
+              "memory": {
+                "geometries": 42,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 42,
+              "textures": 20
+            }
+          }
+        ],
+        "switchCycles": [
+          {
+            "id": "baseline",
+            "memory": {
+              "geometries": 37,
+              "textures": 20
+            },
+            "textureCache": 18
+          },
+          {
+            "id": "combined-b",
+            "memory": {
+              "geometries": 42,
+              "textures": 20
+            },
+            "textureCache": 18
+          },
+          {
+            "id": "combined-a",
+            "memory": {
+              "geometries": 42,
+              "textures": 20
+            },
+            "textureCache": 18
+          },
+          {
+            "id": "baseline",
+            "memory": {
+              "geometries": 37,
+              "textures": 20
+            },
+            "textureCache": 18
+          },
+          {
+            "id": "combined-b",
+            "memory": {
+              "geometries": 42,
+              "textures": 20
+            },
+            "textureCache": 18
+          },
+          {
+            "id": "combined-a",
+            "memory": {
+              "geometries": 42,
+              "textures": 20
+            },
+            "textureCache": 18
+          },
+          {
+            "id": "baseline",
+            "memory": {
+              "geometries": 37,
+              "textures": 20
+            },
+            "textureCache": 18
+          }
+        ],
+        "errors": []
+      },
+      {
+        "viewport": [
+          1366,
+          768
+        ],
+        "models": 10,
+        "states": 120,
+        "performance": [
+          {
+            "id": "baseline",
+            "loadMs": 24.800000000745058,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.199999999999818,
+              "p95": 4.5,
+              "max": 4.600000000000364,
+              "memory": {
+                "geometries": 37,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 37,
+              "textures": 20
+            }
+          },
+          {
+            "id": "corridor-a",
+            "loadMs": 22.699999999254942,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.199999999999818,
+              "p95": 4.5,
+              "max": 4.600000000000364,
+              "memory": {
+                "geometries": 37,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 37,
+              "textures": 20
+            }
+          },
+          {
+            "id": "corridor-b",
+            "loadMs": 26.399999998509884,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.199999999998909,
+              "p95": 4.5,
+              "max": 4.5,
+              "memory": {
+                "geometries": 37,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 37,
+              "textures": 20
+            }
+          },
+          {
+            "id": "corridor-c",
+            "loadMs": 22.199999999254942,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.200000000000728,
+              "p95": 4.700000000000728,
+              "max": 4.700000000000728,
+              "memory": {
+                "geometries": 37,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 37,
+              "textures": 20
+            }
+          },
+          {
+            "id": "stage-a",
+            "loadMs": 22.699999999254942,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.199999999998909,
+              "p95": 4.700000000000728,
+              "max": 4.899999999999636,
+              "memory": {
+                "geometries": 39,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 39,
+              "textures": 20
+            }
+          },
+          {
+            "id": "stage-b",
+            "loadMs": 28.699999999254942,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.199999999998909,
+              "p95": 4.5,
+              "max": 4.700000000000728,
+              "memory": {
+                "geometries": 39,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 39,
+              "textures": 20
+            }
+          },
+          {
+            "id": "roof-a",
+            "loadMs": 22.300000000745058,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.200000000000728,
+              "p95": 4.799999999999272,
+              "max": 4.899999999997817,
+              "memory": {
+                "geometries": 40,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 40,
+              "textures": 20
+            }
+          },
+          {
+            "id": "roof-b",
+            "loadMs": 22.200000002980232,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.200000000000728,
+              "p95": 4.599999999998545,
+              "max": 4.700000000000728,
+              "memory": {
+                "geometries": 40,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 40,
+              "textures": 20
+            }
+          },
+          {
+            "id": "combined-a",
+            "loadMs": 31.300000000745058,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.100000000002183,
+              "p95": 4.700000000000728,
+              "max": 4.799999999999272,
+              "memory": {
+                "geometries": 42,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 42,
+              "textures": 20
+            }
+          },
+          {
+            "id": "combined-b",
+            "loadMs": 29.600000001490116,
+            "frameIntervals": {
+              "samples": 60,
+              "p50": 4.200000000000728,
+              "p95": 4.5,
+              "max": 4.700000000000728,
+              "memory": {
+                "geometries": 42,
+                "textures": 20
+              },
+              "note": "Headless browser frame intervals; not physical-device acceptance"
+            },
+            "memory": {
+              "geometries": 42,
+              "textures": 20
+            }
+          }
+        ],
+        "switchCycles": [
+          {
+            "id": "baseline",
+            "memory": {
+              "geometries": 37,
+              "textures": 20
+            },
+            "textureCache": 18
+          },
+          {
+            "id": "combined-b",
+            "memory": {
+              "geometries": 42,
+              "textures": 20
+            },
+            "textureCache": 18
+          },
+          {
+            "id": "combined-a",
+            "memory": {
+              "geometries": 42,
+              "textures": 20
+            },
+            "textureCache": 18
+          },
+          {
+            "id": "baseline",
+            "memory": {
+              "geometries": 37,
+              "textures": 20
+            },
+            "textureCache": 18
+          },
+          {
+            "id": "combined-b",
+            "memory": {
+              "geometries": 42,
+              "textures": 20
+            },
+            "textureCache": 18
+          },
+          {
+            "id": "combined-a",
+            "memory": {
+              "geometries": 42,
+              "textures": 20
+            },
+            "textureCache": 18
+          },
+          {
+            "id": "baseline",
+            "memory": {
+              "geometries": 37,
+              "textures": 20
+            },
+            "textureCache": 18
+          }
+        ],
+        "errors": []
+      }
+    ],
+    "coldPages": [
+      {
+        "id": "baseline",
+        "observedGotoToReadyMs": 1122,
+        "modelLoadAndDecodeMs": 51.69999999925494,
+        "note": "New isolated page/context, shared host; local HTTP, includes textures for this page. Not network throttling or user-device measurement."
+      },
+      {
+        "id": "combined-a",
+        "observedGotoToReadyMs": 675,
+        "modelLoadAndDecodeMs": 65.5,
+        "note": "New isolated page/context, shared host; local HTTP, includes textures for this page. Not network throttling or user-device measurement."
+      },
+      {
+        "id": "combined-b",
+        "observedGotoToReadyMs": 682,
+        "modelLoadAndDecodeMs": 62.69999999925494,
+        "note": "New isolated page/context, shared host; local HTTP, includes textures for this page. Not network throttling or user-device measurement."
+      }
+    ],
+    "UI": [
+      {
+        "screenshotButton": true,
+        "size": [
+          1440,
+          728
+        ],
+        "wireDisposal": true
+      },
+      {
+        "dropdowns": true
+      }
+    ]
+  },
+  "cameras": {
+    "models": 10,
+    "routeRays": 56000,
+    "collisions": 0,
+    "firstMuralSightlinesClear": true,
+    "hallExtensionCentrelineOnly": true,
+    "references": 30
+  },
+  "oldAIProjection": false,
+  "originalTextureBytesIdentical": true,
+  "protectedFiles": 3751,
+  "archiveUnchanged": true,
+  "video": {
+    "pass": true,
+    "codec": "VP8",
+    "viewport": [
+      1440,
+      900
+    ],
+    "durationSeconds": 35.76,
+    "bytes": 4929927,
+    "frames": [
+      {
+        "time": 2,
+        "file": "local/video-frame-02.png"
+      },
+      {
+        "time": 7,
+        "file": "local/video-frame-07.png"
+      },
+      {
+        "time": 12,
+        "file": "local/video-frame-12.png"
+      },
+      {
+        "time": 18,
+        "file": "local/video-frame-18.png"
+      },
+      {
+        "time": 24,
+        "file": "local/video-frame-24.png"
+      },
+      {
+        "time": 31,
+        "file": "local/video-frame-31.png"
+      }
+    ],
+    "method": "FFmpeg metadata plus six actual recorded-video keyframes; browser route ran forward and reverse."
+  },
+  "corridorMotion": {
+    "pass": true,
+    "segments": [
+      {
+        "id": "baseline",
+        "recenter": false,
+        "x": 3.85,
+        "fov": 48,
+        "frames": 577
+      },
+      {
+        "id": "corridor-a",
+        "recenter": false,
+        "x": 3.85,
+        "fov": 48,
+        "frames": 577
+      },
+      {
+        "id": "corridor-b",
+        "recenter": false,
+        "x": 3.85,
+        "fov": 48,
+        "frames": 577
+      },
+      {
+        "id": "corridor-c",
+        "recenter": false,
+        "x": 3.85,
+        "fov": 48,
+        "frames": 577
+      },
+      {
+        "id": "baseline",
+        "recenter": true,
+        "x": 4.07,
+        "fov": 48,
+        "frames": 577
+      },
+      {
+        "id": "corridor-a",
+        "recenter": true,
+        "x": 3.9879999999999995,
+        "fov": 48,
+        "frames": 578
+      },
+      {
+        "id": "corridor-b",
+        "recenter": true,
+        "x": 3.9059999999999997,
+        "fov": 48,
+        "frames": 578
+      },
+      {
+        "id": "corridor-c",
+        "recenter": true,
+        "x": 3.8649999999999998,
+        "fov": 48,
+        "frames": 577
+      }
+    ],
+    "metadata": "[libvpx @ 0000020a37ad1380] v1.14.1\r\nInput #0, matroska,webm, from 'D:\\YJS\\出兵入将-PC端页面\\docs\\validation\\temple-model-v2\\selected\\11-corridor-motion-comparison.webm':\r\n  Metadata:\r\n    ENCODER         : Lavf61.1.100\r\n  Duration: 00:00:22.32, start: 0.000000, bitrate: 1084 kb/s\r\n  Stream #0:0(eng): Video: vp8 (libvpx), yuv420p(tv, progressive), 1440x900, SAR 1:1 DAR 8:5, 25 fps, 25 tbr, 1k tbn (default)\r\n      Metadata:\r\n        ENCODER         : Lavc61.3.100 libvpx\r\n        DURATION        : 00:00:22.320000000\r\nAt least one output file must be specified\r\n"
+  },
+  "selected": {
+    "files": [
+      {
+        "name": "01-original-corridor.webp",
+        "bytes": 1379510,
+        "sha256": "81fb7647ab7b993155d8e2ae292af876f8f5c09bf57724bb41df315572e4ff52"
+      },
+      {
+        "name": "02-corridor-A.webp",
+        "bytes": 1385430,
+        "sha256": "e77f848060c561047f38cce2884ccec88a407ceb34f41fb7b0bd228a5c7d15bf"
+      },
+      {
+        "name": "03-corridor-B.webp",
+        "bytes": 1393008,
+        "sha256": "b0db775affb5eb0a057634449dd51bbde4f452eaf20a124f60832f4aac76d0b9"
+      },
+      {
+        "name": "04-corridor-C.webp",
+        "bytes": 1404792,
+        "sha256": "4aaffdb11eee1af98e0a14a9f0cf68caab5641e349d7fb00fedd13e0006f10fd"
+      },
+      {
+        "name": "05-stage-comparison.webp",
+        "bytes": 834548,
+        "sha256": "ff4e4eb548cf2b9da715576358342bd7ee085fe6cd19c9d76455d2dea2c1b209"
+      },
+      {
+        "name": "06-roof-comparison.webp",
+        "bytes": 537228,
+        "sha256": "4cf0475738ee72e1fb0ce7983702212df7069c97b1938f093a39cffdeda3fc6d"
+      },
+      {
+        "name": "07-combined-a.webp",
+        "bytes": 261162,
+        "sha256": "529e802e3e1637a2b4a9dc41780ffb5eb15bea4bf62838846cde372c66e130c5"
+      },
+      {
+        "name": "08-combined-b.webp",
+        "bytes": 263604,
+        "sha256": "3405126cc0fbab8a5d54883606e325822c0ce82b20efebb4f60949c36a877361"
+      },
+      {
+        "name": "09-mural-front.webp",
+        "bytes": 2009580,
+        "sha256": "683c05dec3e7b99ce7b245b1b7bb5d77bfca5a336d6ad5aabf8e4dfa78d1ede0"
+      },
+      {
+        "name": "10-route-preview.webm",
+        "bytes": 4929927,
+        "sha256": "5ed86abc74a404d008386a5cd1a71bc4b7a16ce83de84c458d49db986c721262"
+      },
+      {
+        "name": "11-corridor-motion-comparison.webm",
+        "bytes": 3024814,
+        "sha256": "2ac4ef3144bd9af11314ef3e844cd2aae6ed9e891aa6a4b7664d6727e77f62d8"
+      }
+    ],
+    "totalBytes": 17423603
+  },
+  "limits": [
+    "Design model units, not measured metres",
+    "Independent camera route and raw-image dialog, not production 2.5D integration",
+    "Discrete eye envelope, not human accessibility",
+    "Local headless browser RAF cadence, not GPU completion or target-device acceptance",
+    "Visual recommendation awaits user confirmation"
+  ]
+}

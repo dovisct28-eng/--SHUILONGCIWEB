@@ -1,0 +1,28 @@
+{
+  "version":"V2.4-B0",
+  "status":"建筑模型优化候选，等待用户视觉确认",
+  "units":"design-model units; not surveyed metres",
+  "widthBasis":"baseline wall-to-column-centre distance 1.64; shaft and foot clearances reported separately",
+  "baseline":{"wallInner":4.89,"columnX":3.25,"columnRadius":0.15,"footHalfWidth":0.2,"floorOuter":4.925,"roofOuter":5.07},
+  "corridors":{"A":1.1,"B":1.2,"C":1.25},
+  "stages":{
+    "A":{"width":3.85,"depth":3.4,"z":8.25,"eave":2.88,"rise":1.0,"roofWidth":4.45,"roofDepth":4.0,"rearRoomDepth":1.0},
+    "B":{"width":4.45,"depth":4.05,"z":8.15,"eave":3.12,"rise":1.12,"roofWidth":5.05,"roofDepth":4.65,"rearRoomDepth":1.45}
+  },
+  "roofs":{
+    "A":{"width":10.65,"depth":8.15,"z":-11.75,"eave":3.35,"rise":1.85,"exponent":0.72},
+    "B":{"width":10.65,"depth":8.15,"z":-11.75,"eave":3.35,"rise":2.22,"exponent":0.88}
+  },
+  "variants":[
+    {"id":"baseline","label":"Baseline · 原模型","corridor":null,"stage":null,"roof":null},
+    {"id":"corridor-a","label":"Corridor A · +10%","corridor":"A","stage":null,"roof":null},
+    {"id":"corridor-b","label":"Corridor B · +20%","corridor":"B","stage":null,"roof":null},
+    {"id":"corridor-c","label":"Corridor C · +25%","corridor":"C","stage":null,"roof":null},
+    {"id":"stage-a","label":"Stage A · 配 Corridor B","corridor":"B","stage":"A","roof":null},
+    {"id":"stage-b","label":"Stage B · 配 Corridor B","corridor":"B","stage":"B","roof":null},
+    {"id":"roof-a","label":"Roof A · 其余原样","corridor":null,"stage":null,"roof":"A"},
+    {"id":"roof-b","label":"Roof B · 其余原样","corridor":null,"stage":null,"roof":"B"},
+    {"id":"combined-a","label":"Combined A · 保守","corridor":"A","stage":"A","roof":"A"},
+    {"id":"combined-b","label":"Combined B · 明显","corridor":"B","stage":"B","roof":"B"}
+  ]
+}

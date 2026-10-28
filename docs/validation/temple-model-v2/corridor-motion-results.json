@@ -1,0 +1,62 @@
+{
+  "pass": true,
+  "segments": [
+    {
+      "id": "baseline",
+      "recenter": false,
+      "x": 3.85,
+      "fov": 48,
+      "frames": 577
+    },
+    {
+      "id": "corridor-a",
+      "recenter": false,
+      "x": 3.85,
+      "fov": 48,
+      "frames": 577
+    },
+    {
+      "id": "corridor-b",
+      "recenter": false,
+      "x": 3.85,
+      "fov": 48,
+      "frames": 577
+    },
+    {
+      "id": "corridor-c",
+      "recenter": false,
+      "x": 3.85,
+      "fov": 48,
+      "frames": 577
+    },
+    {
+      "id": "baseline",
+      "recenter": true,
+      "x": 4.07,
+      "fov": 48,
+      "frames": 577
+    },
+    {
+      "id": "corridor-a",
+      "recenter": true,
+      "x": 3.9879999999999995,
+      "fov": 48,
+      "frames": 578
+    },
+    {
+      "id": "corridor-b",
+      "recenter": true,
+      "x": 3.9059999999999997,
+      "fov": 48,
+      "frames": 578
+    },
+    {
+      "id": "corridor-c",
+      "recenter": true,
+      "x": 3.8649999999999998,
+      "fov": 48,
+      "frames": 577
+    }
+  ],
+  "errors": []
+}
