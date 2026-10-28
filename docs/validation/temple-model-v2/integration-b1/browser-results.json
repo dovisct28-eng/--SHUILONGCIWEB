@@ -1,0 +1,1023 @@
+{
+  "pass": true,
+  "browser": "156.0.8078.48",
+  "viewports": [
+    {
+      "width": 1440,
+      "height": 900,
+      "loadMs": 7198,
+      "events": [
+        {
+          "selector": "#next",
+          "state": "approach",
+          "elapsedMs": 5702
+        },
+        {
+          "selector": "#next",
+          "state": "gate-close",
+          "elapsedMs": 2872
+        },
+        {
+          "selector": "#next",
+          "state": "threshold",
+          "elapsedMs": 1545
+        },
+        {
+          "selector": "#next",
+          "state": "gate-interior",
+          "elapsedMs": 2499
+        },
+        {
+          "selector": "#next",
+          "state": "stage-turn",
+          "elapsedMs": 2185
+        },
+        {
+          "selector": "#next",
+          "state": "corridor-3d",
+          "elapsedMs": 887
+        },
+        {
+          "selector": "#next",
+          "state": "corridor-hybrid",
+          "elapsedMs": 1057
+        },
+        {
+          "selector": "#next",
+          "state": "corridor-2_5d",
+          "elapsedMs": 1041
+        },
+        {
+          "selector": "#next",
+          "state": "mural-look",
+          "elapsedMs": 1484
+        },
+        {
+          "selector": "#mural-return-wall",
+          "state": "mural-look",
+          "elapsedMs": 3403
+        },
+        {
+          "selector": "#previous",
+          "state": "corridor-2_5d",
+          "elapsedMs": 1490
+        },
+        {
+          "selector": "#previous",
+          "state": "corridor-hybrid",
+          "elapsedMs": 1033
+        },
+        {
+          "selector": "#previous",
+          "state": "corridor-3d",
+          "elapsedMs": 1046
+        },
+        {
+          "selector": "#previous",
+          "state": "stage-turn",
+          "elapsedMs": 909
+        },
+        {
+          "selector": "#previous",
+          "state": "gate-interior",
+          "elapsedMs": 2204
+        },
+        {
+          "selector": "#previous",
+          "state": "threshold",
+          "elapsedMs": 2519
+        },
+        {
+          "selector": "#previous",
+          "state": "gate-close",
+          "elapsedMs": 1583
+        },
+        {
+          "selector": "#previous",
+          "state": "approach",
+          "elapsedMs": 2864
+        },
+        {
+          "selector": "#previous",
+          "state": "overview",
+          "elapsedMs": 5667
+        }
+      ],
+      "dock": {
+        "time": 2,
+        "position": [
+          2.8070000000000004,
+          1.55,
+          4.8
+        ],
+        "target": [
+          4.865,
+          1.55,
+          4.8
+        ],
+        "fov": 48,
+        "muralFront": 1,
+        "quaternion": [
+          0,
+          -0.7071067811865475,
+          0,
+          0.7071067811865476
+        ],
+        "projectionMatrix": [
+          1.4037729836901347,
+          0,
+          0,
+          0,
+          0,
+          2.2460367739042155,
+          0,
+          0,
+          0,
+          0,
+          -1.0005001250312577,
+          -1,
+          0,
+          0,
+          -0.09002250562640661,
+          0
+        ],
+        "matrixWorld": [
+          2.220446049250313e-16,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0,
+          2.220446049250313e-16,
+          0,
+          2.8070000000000004,
+          1.55,
+          4.8,
+          1
+        ],
+        "near": 0.045000000000000005,
+        "far": 180,
+        "aspect": 1.6
+      },
+      "reading": {
+        "corners": [
+          {
+            "x": 0.0900000000000003,
+            "y": 0.2744977534246576,
+            "depth": 0.9716860156621445
+          },
+          {
+            "x": 0.9100000000000001,
+            "y": 0.27449775342465754,
+            "depth": 0.9716860156621446
+          },
+          {
+            "x": 0.9100000000000001,
+            "y": 0.7255022465753425,
+            "depth": 0.9716860156621446
+          },
+          {
+            "x": 0.0900000000000003,
+            "y": 0.7255022465753423,
+            "depth": 0.9716860156621445
+          }
+        ],
+        "ratio": 2.909061927153902
+      },
+      "metrics": {
+        "stats": {
+          "rendererUUID": "7fb35f67-9a2c-4096-9763-1df1b29f80a2",
+          "renderCount": 5679,
+          "renderers": 1,
+          "canvases": 1,
+          "removedTriangles": 320,
+          "doorMeshes": 3,
+          "memory": {
+            "geometries": 49,
+            "textures": 23
+          },
+          "hybrid": {
+            "status": "disabled",
+            "mode": "original",
+            "generatedInterior": false,
+            "textures": 0,
+            "effective": [],
+            "preparation": [],
+            "reason": "Combined B pure 3D; old interior calibration suspended"
+          },
+          "post": {
+            "enabled": true,
+            "error": null,
+            "passes": 2,
+            "size": [
+              1440,
+              900
+            ],
+            "aoSamples": 12,
+            "stats": {
+              "frame": 13441,
+              "calls": 52,
+              "triangles": 177146,
+              "points": 0,
+              "lines": 0
+            },
+            "colorDepthBytes": 15552000,
+            "multisampleBytes": 31104000,
+            "targetBytes": 46656000
+          },
+          "environment": {
+            "weight": 1,
+            "establish": 1,
+            "visibility": 1,
+            "roomWeight": 0,
+            "posterWeight": 0,
+            "layerWeights": {
+              "ground": 1,
+              "foreground": 1,
+              "fog": 1
+            },
+            "trees": 201,
+            "visible": true,
+            "titleRects": [
+              [
+                -2,
+                -2,
+                -2,
+                -2
+              ],
+              [
+                -2,
+                -2,
+                -2,
+                -2
+              ]
+            ],
+            "layers": [
+              "Foreground",
+              "TempleGround",
+              "MidgroundGroves",
+              "DistanceMatte"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          }
+        },
+        "runs": [
+          {
+            "field": "turn",
+            "end": 1,
+            "elapsedMs": 1459.5,
+            "samples": 239,
+            "p50": 4.299999999995634,
+            "p95": 12.5,
+            "max": 16.799999999995634
+          },
+          {
+            "field": "front",
+            "end": 1,
+            "elapsedMs": 1613.5,
+            "samples": 290,
+            "p50": 4.200000000004366,
+            "p95": 8.599999999998545,
+            "max": 16.69999999999709
+          },
+          {
+            "field": "hold",
+            "end": 1,
+            "elapsedMs": 323.1000000014901
+          },
+          {
+            "field": "reading",
+            "end": 1,
+            "elapsedMs": 1408.800000000745,
+            "samples": 252,
+            "p50": 4.200000000004366,
+            "p95": 11.5,
+            "max": 29.19999999999709
+          },
+          {
+            "field": "reading",
+            "end": 0,
+            "elapsedMs": 1406.6000000014901,
+            "samples": 256,
+            "p50": 4.200000000004366,
+            "p95": 12,
+            "max": 17.099999999998545
+          },
+          {
+            "field": "hold",
+            "end": 1,
+            "elapsedMs": 321.80000000074506
+          },
+          {
+            "field": "front",
+            "end": 0,
+            "elapsedMs": 1609.5,
+            "samples": 295,
+            "p50": 4.19999999999709,
+            "p95": 8.400000000001455,
+            "max": 20.900000000001455
+          },
+          {
+            "field": "turn",
+            "end": 0,
+            "elapsedMs": 1452.4000000022352,
+            "samples": 233,
+            "p50": 4.5,
+            "p95": 12.400000000001455,
+            "max": 20.80000000000291
+          }
+        ]
+      },
+      "errors": 0
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "loadMs": 3793,
+      "events": [
+        {
+          "selector": "#next",
+          "state": "approach",
+          "elapsedMs": 5675
+        },
+        {
+          "selector": "#next",
+          "state": "gate-close",
+          "elapsedMs": 2845
+        },
+        {
+          "selector": "#next",
+          "state": "threshold",
+          "elapsedMs": 1532
+        },
+        {
+          "selector": "#next",
+          "state": "gate-interior",
+          "elapsedMs": 2486
+        },
+        {
+          "selector": "#next",
+          "state": "stage-turn",
+          "elapsedMs": 2177
+        },
+        {
+          "selector": "#next",
+          "state": "corridor-3d",
+          "elapsedMs": 876
+        },
+        {
+          "selector": "#next",
+          "state": "corridor-hybrid",
+          "elapsedMs": 1023
+        },
+        {
+          "selector": "#next",
+          "state": "corridor-2_5d",
+          "elapsedMs": 1032
+        },
+        {
+          "selector": "#next",
+          "state": "mural-look",
+          "elapsedMs": 1484
+        },
+        {
+          "selector": "#mural-return-wall",
+          "state": "mural-look",
+          "elapsedMs": 3352
+        },
+        {
+          "selector": "#previous",
+          "state": "corridor-2_5d",
+          "elapsedMs": 1472
+        },
+        {
+          "selector": "#previous",
+          "state": "corridor-hybrid",
+          "elapsedMs": 1028
+        },
+        {
+          "selector": "#previous",
+          "state": "corridor-3d",
+          "elapsedMs": 1138
+        },
+        {
+          "selector": "#previous",
+          "state": "stage-turn",
+          "elapsedMs": 871
+        },
+        {
+          "selector": "#previous",
+          "state": "gate-interior",
+          "elapsedMs": 2170
+        },
+        {
+          "selector": "#previous",
+          "state": "threshold",
+          "elapsedMs": 2492
+        },
+        {
+          "selector": "#previous",
+          "state": "gate-close",
+          "elapsedMs": 1529
+        },
+        {
+          "selector": "#previous",
+          "state": "approach",
+          "elapsedMs": 2832
+        },
+        {
+          "selector": "#previous",
+          "state": "overview",
+          "elapsedMs": 5642
+        }
+      ],
+      "dock": {
+        "time": 2,
+        "position": [
+          2.8070000000000004,
+          1.55,
+          4.8
+        ],
+        "target": [
+          4.865,
+          1.55,
+          4.8
+        ],
+        "fov": 48,
+        "muralFront": 1,
+        "quaternion": [
+          0,
+          -0.7071067811865475,
+          0,
+          0.7071067811865476
+        ],
+        "projectionMatrix": [
+          1.2633956853211215,
+          0,
+          0,
+          0,
+          0,
+          2.2460367739042155,
+          0,
+          0,
+          0,
+          0,
+          -1.0005001250312577,
+          -1,
+          0,
+          0,
+          -0.09002250562640661,
+          0
+        ],
+        "matrixWorld": [
+          2.220446049250313e-16,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0,
+          2.220446049250313e-16,
+          0,
+          2.8070000000000004,
+          1.55,
+          4.8,
+          1
+        ],
+        "near": 0.045000000000000005,
+        "far": 180,
+        "aspect": 1.7777777777777777
+      },
+      "reading": {
+        "corners": [
+          {
+            "x": 0.09000000000000014,
+            "y": 0.24944194824961963,
+            "depth": 0.9684844479544652
+          },
+          {
+            "x": 0.9099999999999999,
+            "y": 0.24944194824961952,
+            "depth": 0.9684844479544652
+          },
+          {
+            "x": 0.9099999999999999,
+            "y": 0.7505580517503805,
+            "depth": 0.9684844479544652
+          },
+          {
+            "x": 0.09000000000000014,
+            "y": 0.7505580517503804,
+            "depth": 0.9684844479544652
+          }
+        ],
+        "ratio": 2.909061927153902
+      },
+      "metrics": {
+        "stats": {
+          "rendererUUID": "d521db83-7bf3-4c92-9917-0a97f56beaa7",
+          "renderCount": 6316,
+          "renderers": 1,
+          "canvases": 1,
+          "removedTriangles": 320,
+          "doorMeshes": 3,
+          "memory": {
+            "geometries": 49,
+            "textures": 23
+          },
+          "hybrid": {
+            "status": "disabled",
+            "mode": "original",
+            "generatedInterior": false,
+            "textures": 0,
+            "effective": [],
+            "preparation": [],
+            "reason": "Combined B pure 3D; old interior calibration suspended"
+          },
+          "post": {
+            "enabled": true,
+            "error": null,
+            "passes": 2,
+            "size": [
+              1920,
+              1080
+            ],
+            "aoSamples": 12,
+            "stats": {
+              "frame": 15279,
+              "calls": 52,
+              "triangles": 177146,
+              "points": 0,
+              "lines": 0
+            },
+            "colorDepthBytes": 24883200,
+            "multisampleBytes": 49766400,
+            "targetBytes": 74649600
+          },
+          "environment": {
+            "weight": 1,
+            "establish": 1,
+            "visibility": 1,
+            "roomWeight": 0,
+            "posterWeight": 0,
+            "layerWeights": {
+              "ground": 1,
+              "foreground": 1,
+              "fog": 1
+            },
+            "trees": 201,
+            "visible": true,
+            "titleRects": [
+              [
+                -2,
+                -2,
+                -2,
+                -2
+              ],
+              [
+                -2,
+                -2,
+                -2,
+                -2
+              ]
+            ],
+            "layers": [
+              "Foreground",
+              "TempleGround",
+              "MidgroundGroves",
+              "DistanceMatte"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          }
+        },
+        "runs": [
+          {
+            "field": "turn",
+            "end": 1,
+            "elapsedMs": 1451.699999999255,
+            "samples": 341,
+            "p50": 4.19999999999709,
+            "p95": 4.400000000001455,
+            "max": 9.200000000000728
+          },
+          {
+            "field": "front",
+            "end": 1,
+            "elapsedMs": 1611.0999999977648,
+            "samples": 383,
+            "p50": 4.19999999999709,
+            "p95": 4.30000000000291,
+            "max": 9.200000000000728
+          },
+          {
+            "field": "hold",
+            "end": 1,
+            "elapsedMs": 323.80000000074506
+          },
+          {
+            "field": "reading",
+            "end": 1,
+            "elapsedMs": 1409.800000000745,
+            "samples": 333,
+            "p50": 4.19999999999709,
+            "p95": 4.30000000000291,
+            "max": 12.5
+          },
+          {
+            "field": "reading",
+            "end": 0,
+            "elapsedMs": 1400.5999999977648,
+            "samples": 334,
+            "p50": 4.19999999999709,
+            "p95": 4.30000000000291,
+            "max": 8.30000000000291
+          },
+          {
+            "field": "hold",
+            "end": 1,
+            "elapsedMs": 322.5999999977648
+          },
+          {
+            "field": "front",
+            "end": 0,
+            "elapsedMs": 1609.7000000029802,
+            "samples": 384,
+            "p50": 4.19999999999709,
+            "p95": 4.30000000000291,
+            "max": 8.30000000000291
+          },
+          {
+            "field": "turn",
+            "end": 0,
+            "elapsedMs": 1455.4000000022352,
+            "samples": 348,
+            "p50": 4.19999999999709,
+            "p95": 4.30000000000291,
+            "max": 8.30000000000291
+          }
+        ]
+      },
+      "errors": 0
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "loadMs": 3443,
+      "events": [
+        {
+          "selector": "#next",
+          "state": "approach",
+          "elapsedMs": 5659
+        },
+        {
+          "selector": "#next",
+          "state": "gate-close",
+          "elapsedMs": 2829
+        },
+        {
+          "selector": "#next",
+          "state": "threshold",
+          "elapsedMs": 1535
+        },
+        {
+          "selector": "#next",
+          "state": "gate-interior",
+          "elapsedMs": 2484
+        },
+        {
+          "selector": "#next",
+          "state": "stage-turn",
+          "elapsedMs": 2176
+        },
+        {
+          "selector": "#next",
+          "state": "corridor-3d",
+          "elapsedMs": 872
+        },
+        {
+          "selector": "#next",
+          "state": "corridor-hybrid",
+          "elapsedMs": 1025
+        },
+        {
+          "selector": "#next",
+          "state": "corridor-2_5d",
+          "elapsedMs": 1015
+        },
+        {
+          "selector": "#next",
+          "state": "mural-look",
+          "elapsedMs": 1478
+        },
+        {
+          "selector": "#mural-return-wall",
+          "state": "mural-look",
+          "elapsedMs": 3415
+        },
+        {
+          "selector": "#previous",
+          "state": "corridor-2_5d",
+          "elapsedMs": 1510
+        },
+        {
+          "selector": "#previous",
+          "state": "corridor-hybrid",
+          "elapsedMs": 1024
+        },
+        {
+          "selector": "#previous",
+          "state": "corridor-3d",
+          "elapsedMs": 1029
+        },
+        {
+          "selector": "#previous",
+          "state": "stage-turn",
+          "elapsedMs": 879
+        },
+        {
+          "selector": "#previous",
+          "state": "gate-interior",
+          "elapsedMs": 2181
+        },
+        {
+          "selector": "#previous",
+          "state": "threshold",
+          "elapsedMs": 2503
+        },
+        {
+          "selector": "#previous",
+          "state": "gate-close",
+          "elapsedMs": 1544
+        },
+        {
+          "selector": "#previous",
+          "state": "approach",
+          "elapsedMs": 2854
+        },
+        {
+          "selector": "#previous",
+          "state": "overview",
+          "elapsedMs": 5651
+        }
+      ],
+      "dock": {
+        "time": 2,
+        "position": [
+          2.8070000000000004,
+          1.55,
+          4.8
+        ],
+        "target": [
+          4.865,
+          1.55,
+          4.8
+        ],
+        "fov": 48,
+        "muralFront": 1,
+        "quaternion": [
+          0,
+          -0.7071067811865475,
+          0,
+          0.7071067811865476
+        ],
+        "projectionMatrix": [
+          1.2627790939666454,
+          0,
+          0,
+          0,
+          0,
+          2.2460367739042155,
+          0,
+          0,
+          0,
+          0,
+          -1.0005001250312577,
+          -1,
+          0,
+          0,
+          -0.09002250562640661,
+          0
+        ],
+        "matrixWorld": [
+          2.220446049250313e-16,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0,
+          2.220446049250313e-16,
+          0,
+          2.8070000000000004,
+          1.55,
+          4.8,
+          1
+        ],
+        "near": 0.045000000000000005,
+        "far": 180,
+        "aspect": 1.7786458333333333
+      },
+      "reading": {
+        "corners": [
+          {
+            "x": 0.09000000000000002,
+            "y": 0.2493196054509133,
+            "depth": 0.9684688152996426
+          },
+          {
+            "x": 0.9100000000000001,
+            "y": 0.2493196054509132,
+            "depth": 0.9684688152996426
+          },
+          {
+            "x": 0.9100000000000001,
+            "y": 0.7506803945490867,
+            "depth": 0.9684688152996426
+          },
+          {
+            "x": 0.09000000000000002,
+            "y": 0.7506803945490866,
+            "depth": 0.9684688152996426
+          }
+        ],
+        "ratio": 2.909061927153903
+      },
+      "metrics": {
+        "stats": {
+          "rendererUUID": "b4c1dbbf-8c04-4503-bd47-2d289358218e",
+          "renderCount": 6145,
+          "renderers": 1,
+          "canvases": 1,
+          "removedTriangles": 320,
+          "doorMeshes": 3,
+          "memory": {
+            "geometries": 49,
+            "textures": 23
+          },
+          "hybrid": {
+            "status": "disabled",
+            "mode": "original",
+            "generatedInterior": false,
+            "textures": 0,
+            "effective": [],
+            "preparation": [],
+            "reason": "Combined B pure 3D; old interior calibration suspended"
+          },
+          "post": {
+            "enabled": true,
+            "error": null,
+            "passes": 2,
+            "size": [
+              1366,
+              768
+            ],
+            "aoSamples": 12,
+            "stats": {
+              "frame": 14804,
+              "calls": 52,
+              "triangles": 177146,
+              "points": 0,
+              "lines": 0
+            },
+            "colorDepthBytes": 12589056,
+            "multisampleBytes": 25178112,
+            "targetBytes": 37767168
+          },
+          "environment": {
+            "weight": 1,
+            "establish": 1,
+            "visibility": 1,
+            "roomWeight": 0,
+            "posterWeight": 0,
+            "layerWeights": {
+              "ground": 1,
+              "foreground": 1,
+              "fog": 1
+            },
+            "trees": 201,
+            "visible": true,
+            "titleRects": [
+              [
+                -2,
+                -2,
+                -2,
+                -2
+              ],
+              [
+                -2,
+                -2,
+                -2,
+                -2
+              ]
+            ],
+            "layers": [
+              "Foreground",
+              "TempleGround",
+              "MidgroundGroves",
+              "DistanceMatte"
+            ],
+            "triangles": 87148,
+            "drawCalls": 10
+          }
+        },
+        "runs": [
+          {
+            "field": "turn",
+            "end": 1,
+            "elapsedMs": 1459.5,
+            "samples": 258,
+            "p50": 4.200000000000728,
+            "p95": 8.5,
+            "max": 129.20000000000073
+          },
+          {
+            "field": "front",
+            "end": 1,
+            "elapsedMs": 1605.0999999977648,
+            "samples": 373,
+            "p50": 4.200000000000728,
+            "p95": 4.299999999999272,
+            "max": 12.5
+          },
+          {
+            "field": "hold",
+            "end": 1,
+            "elapsedMs": 321.5999999977648
+          },
+          {
+            "field": "reading",
+            "end": 1,
+            "elapsedMs": 1409.699999999255,
+            "samples": 335,
+            "p50": 4.19999999999709,
+            "p95": 4.299999999999272,
+            "max": 12.5
+          },
+          {
+            "field": "reading",
+            "end": 0,
+            "elapsedMs": 1404.3999999985099,
+            "samples": 325,
+            "p50": 4.19999999999709,
+            "p95": 4.700000000004366,
+            "max": 10
+          },
+          {
+            "field": "hold",
+            "end": 1,
+            "elapsedMs": 322
+          },
+          {
+            "field": "front",
+            "end": 0,
+            "elapsedMs": 1652.5,
+            "samples": 358,
+            "p50": 4.19999999999709,
+            "p95": 4.30000000000291,
+            "max": 128.70000000000437
+          },
+          {
+            "field": "turn",
+            "end": 0,
+            "elapsedMs": 1457.300000000745,
+            "samples": 341,
+            "p50": 4.19999999999709,
+            "p95": 4.30000000000291,
+            "max": 8.60000000000582
+          }
+        ]
+      },
+      "errors": 0
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "width": 1440,
+      "glb": 1,
+      "oldInterior": []
+    },
+    {
+      "width": 1920,
+      "glb": 1,
+      "oldInterior": []
+    },
+    {
+      "width": 1366,
+      "glb": 1,
+      "oldInterior": []
+    }
+  ]
+}

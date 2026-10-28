@@ -1,0 +1,130 @@
+{
+  "head": "ef0f3667e6db2d6ce8b7dca676f5ff1a93231a11",
+  "remote": "ef0f3667e6db2d6ce8b7dca676f5ff1a93231a11",
+  "files": [
+    {
+      "file": "shuilong-temple/model-source.js",
+      "sha256": "03cd2eb6cfd21dbb1fd7dbde7b4db3c3baaad364414badcbfe9a1433cfd4ef06",
+      "bytes": 9734
+    },
+    {
+      "file": "shuilong-temple/shuilong-temple.glb",
+      "sha256": "fbbfce1c0bfbf8a09c33ed65a6bb1f60589b6c70300841fa0283c2a4498ae047",
+      "bytes": 3329000
+    },
+    {
+      "file": "shuilong-temple/model-info.json",
+      "sha256": "d66b5fcca166089e3fd5c2900295e9d38cfa2c991d5fdd91970b1c47f36a1e9b",
+      "bytes": 276
+    },
+    {
+      "file": "shuilong-temple/水龙祠-交互预览.html",
+      "sha256": "99d608a6644771aabceb6c985680ea67548940b02729fda8a85ab76f8591cd63",
+      "bytes": 7600677
+    },
+    {
+      "file": "shuilong-temple/a01-lines-data.mjs",
+      "sha256": "19e956b315f8523fbf4799b271d080515503ed6a80788c88d8b4f252911ce893",
+      "bytes": 36739
+    },
+    {
+      "file": "shuilong-temple/mural-locations.json",
+      "sha256": "4e313a04bf4cf5f8da9fdd0cf0637bb18ad4f18a0b23a75cd30de16274e6e84e",
+      "bytes": 1086
+    }
+  ],
+  "dirty": [
+    {
+      "status": " M",
+      "path": "Mural-Exhibition/public/assets/01_南门何五猖/info.txt",
+      "sha256": "7e2fb0965e30ac95cf9c0ebb69f626f9b41e6f0570b6f63ee945654a7bfaead6"
+    },
+    {
+      "status": " M",
+      "path": "Mural-Exhibition/public/assets/02_东门陈五猖/info.txt",
+      "sha256": "c9907a55e5903f0a13315b570cd70c389e9aeba6f63e6cfd55824d58184d5235"
+    },
+    {
+      "status": " M",
+      "path": "Mural-Exhibition/public/assets/03_西门谢五猖/info.txt",
+      "sha256": "8341992bcf0bb99a9ac436f576b8c60367fe7d5ab64b8c01803aa5d44fe795db"
+    },
+    {
+      "status": " M",
+      "path": "Mural-Exhibition/public/assets/04_中门徐五猖/info.txt",
+      "sha256": "dfc83c1b7a76ab9a7aaf74e56ad3d040d9d4dd1e835d03f3c9f465e3ac199962"
+    },
+    {
+      "status": " M",
+      "path": "Mural-Exhibition/public/assets/05_北门雷五猖/info.txt",
+      "sha256": "0f2abd94a422e02c0f7a4deba0dbaa4575546aef8480da9adb80d67907fedb8f"
+    },
+    {
+      "status": " M",
+      "path": "Mural-Exhibition/public/assets/06_翻坛张五郎/info.txt",
+      "sha256": "7cdca544335d1dd0962075ec85775a7ca19bd0e0de2552b6f4234673b78a60d6"
+    },
+    {
+      "status": " M",
+      "path": "Mural-Exhibition/public/assets/07_梅山猖兵/info.txt",
+      "sha256": "37dda64158a84027d110fe17d26bdddaa2deba386c33c323658bfa0b655cbd37"
+    },
+    {
+      "status": " D",
+      "path": "Mural-Exhibition/public/assets/10_上层猖兵/color.png",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Mural-Exhibition/public/assets/10_上层猖兵/info.txt",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Mural-Exhibition/public/assets/10_上层猖兵/line.png",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Mural-Exhibition/public/assets/10_上层猖兵/meta.json",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Mural-Exhibition/public/assets/10_上层猖兵/org.png",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "Mural-Exhibition/public/assets/10_上层猖兵/video.mp4",
+      "sha256": null
+    },
+    {
+      "status": " M",
+      "path": "docs/LOFI_ARCHIVE.md",
+      "sha256": "5538f83c4a3852ac5441a89b01e21388cb8d3a02c438eb357458e39a5d33ee99"
+    },
+    {
+      "status": " M",
+      "path": "scripts/Start-LofiArchive.ps1",
+      "sha256": "5ba5c574b118e7aed3b51e9bec2d33bd51ca0f7e722e1f4408e91c61e11a2577"
+    },
+    {
+      "status": " M",
+      "path": "scripts/lofi-launcher.test.cjs",
+      "sha256": "d05e07271a9d0ddf442675530b34caed29a38a36af9ae251ffdb77f30abf8590"
+    },
+    {
+      "status": " D",
+      "path": "水龙祠实地照片/水龙祠建筑插画-色稿v1.png",
+      "sha256": null
+    },
+    {
+      "status": " D",
+      "path": "水龙祠实地照片/水龙祠建筑结构稿-v2.png",
+      "sha256": null
+    }
+  ],
+  "preExistingEntries": 2364,
+  "fullWorktreeInventory": "local/baseline-worktree.json (local only)"
+}

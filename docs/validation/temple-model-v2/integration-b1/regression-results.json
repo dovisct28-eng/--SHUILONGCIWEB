@@ -1,0 +1,5751 @@
+{
+  "pass": true,
+  "errors": [],
+  "formal": [
+    {
+      "chapter": "A01",
+      "width": 1440,
+      "height": 900,
+      "newRoof": true,
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        }
+      ],
+      "murals": [
+        {
+          "id": "mural-01",
+          "label": "第一幅",
+          "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+          "position": [
+            4.865,
+            1.55,
+            4.8
+          ],
+          "width": 3.65,
+          "height": 1.2547,
+          "side": true
+        },
+        {
+          "id": "mural-02",
+          "label": "第二幅",
+          "wall": "主殿右侧内墙",
+          "position": [
+            4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.3796,
+          "side": true
+        },
+        {
+          "id": "mural-03",
+          "label": "第三幅",
+          "wall": "主殿后墙右侧",
+          "position": [
+            2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-04",
+          "label": "第四幅",
+          "wall": "主殿后墙左侧",
+          "position": [
+            -2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-05",
+          "label": "第五幅",
+          "wall": "主殿左侧内墙",
+          "position": [
+            -4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.64395,
+          "side": true
+        }
+      ],
+      "cut": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0,
+        "movie": {
+          "active": false,
+          "weight": 0,
+          "center": [
+            0,
+            0
+          ],
+          "half": [
+            0,
+            0
+          ],
+          "summary": 0
+        }
+      },
+      "a04": null,
+      "overflow": false,
+      "phase": "reading",
+      "entryAbsent": true
+    },
+    {
+      "chapter": "A02",
+      "width": 1440,
+      "height": 900,
+      "newRoof": true,
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        }
+      ],
+      "murals": [
+        {
+          "id": "mural-01",
+          "label": "第一幅",
+          "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+          "position": [
+            4.865,
+            1.55,
+            4.8
+          ],
+          "width": 3.65,
+          "height": 1.2547,
+          "side": true
+        },
+        {
+          "id": "mural-02",
+          "label": "第二幅",
+          "wall": "主殿右侧内墙",
+          "position": [
+            4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.3796,
+          "side": true
+        },
+        {
+          "id": "mural-03",
+          "label": "第三幅",
+          "wall": "主殿后墙右侧",
+          "position": [
+            2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-04",
+          "label": "第四幅",
+          "wall": "主殿后墙左侧",
+          "position": [
+            -2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-05",
+          "label": "第五幅",
+          "wall": "主殿左侧内墙",
+          "position": [
+            -4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.64395,
+          "side": true
+        }
+      ],
+      "cut": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0,
+        "movie": {
+          "active": false,
+          "weight": 0,
+          "center": [
+            0,
+            0
+          ],
+          "half": [
+            0,
+            0
+          ],
+          "summary": 0
+        }
+      },
+      "a04": null,
+      "overflow": false,
+      "phase": "a02-reading",
+      "entryAbsent": true
+    },
+    {
+      "chapter": "A03",
+      "width": 1440,
+      "height": 900,
+      "newRoof": true,
+      "roof": [
+        {
+          "visible": false,
+          "opacity": 0,
+          "shadow": false
+        },
+        {
+          "visible": false,
+          "opacity": 0,
+          "shadow": false
+        },
+        {
+          "visible": false,
+          "opacity": 0,
+          "shadow": false
+        },
+        {
+          "visible": false,
+          "opacity": 0,
+          "shadow": false
+        },
+        {
+          "visible": false,
+          "opacity": 0,
+          "shadow": false
+        },
+        {
+          "visible": false,
+          "opacity": 0,
+          "shadow": false
+        }
+      ],
+      "murals": [
+        {
+          "id": "mural-01",
+          "label": "第一幅",
+          "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+          "position": [
+            4.865,
+            1.55,
+            4.8
+          ],
+          "width": 3.65,
+          "height": 1.2547,
+          "side": true
+        },
+        {
+          "id": "mural-02",
+          "label": "第二幅",
+          "wall": "主殿右侧内墙",
+          "position": [
+            4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.3796,
+          "side": true
+        },
+        {
+          "id": "mural-03",
+          "label": "第三幅",
+          "wall": "主殿后墙右侧",
+          "position": [
+            2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-04",
+          "label": "第四幅",
+          "wall": "主殿后墙左侧",
+          "position": [
+            -2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-05",
+          "label": "第五幅",
+          "wall": "主殿左侧内墙",
+          "position": [
+            -4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.64395,
+          "side": true
+        }
+      ],
+      "cut": {
+        "active": true,
+        "main": 1,
+        "side": 1,
+        "handoff": 0,
+        "wall": 1,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": false,
+        "galleryCut": 1,
+        "movie": {
+          "active": false,
+          "weight": 0,
+          "center": [
+            0,
+            0
+          ],
+          "half": [
+            0,
+            0
+          ],
+          "summary": 0
+        }
+      },
+      "a04": null,
+      "overflow": false,
+      "phase": "a03-reading",
+      "entryAbsent": true
+    },
+    {
+      "chapter": "A04",
+      "width": 1440,
+      "height": 900,
+      "newRoof": true,
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        }
+      ],
+      "murals": [
+        {
+          "id": "mural-01",
+          "label": "第一幅",
+          "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+          "position": [
+            4.865,
+            1.55,
+            4.8
+          ],
+          "width": 3.65,
+          "height": 1.2547,
+          "side": true
+        },
+        {
+          "id": "mural-02",
+          "label": "第二幅",
+          "wall": "主殿右侧内墙",
+          "position": [
+            4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.3796,
+          "side": true
+        },
+        {
+          "id": "mural-03",
+          "label": "第三幅",
+          "wall": "主殿后墙右侧",
+          "position": [
+            2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-04",
+          "label": "第四幅",
+          "wall": "主殿后墙左侧",
+          "position": [
+            -2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-05",
+          "label": "第五幅",
+          "wall": "主殿左侧内墙",
+          "position": [
+            -4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.64395,
+          "side": true
+        }
+      ],
+      "cut": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0,
+        "movie": {
+          "active": true,
+          "name": "summary",
+          "weight": 1,
+          "center": [
+            -1.4,
+            -11.75
+          ],
+          "half": [
+            6.9,
+            4.4
+          ],
+          "summary": 1,
+          "wallWeight": 1
+        }
+      },
+      "a04": {
+        "camera": {
+          "position": [
+            -31.052363228499978,
+            29.097768376209487,
+            -13.151747911122516
+          ],
+          "target": [
+            1,
+            0.1,
+            -2.8
+          ]
+        },
+        "entryProgress": 1,
+        "paths": [
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ]
+          ],
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ],
+            [
+              -2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              -2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              -2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              3.8,
+              0.36,
+              4.8
+            ]
+          ],
+          [
+            [
+              3.8,
+              0.36,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              2.7,
+              0.56,
+              -11.75
+            ]
+          ]
+        ],
+        "growth": [
+          1,
+          1,
+          1
+        ],
+        "routeOpacity": 1,
+        "labelOpacity": 1,
+        "target": null,
+        "mode": "completed",
+        "elapsed": 45,
+        "storyTime": 45,
+        "currentRoute": -1,
+        "guideStartProgress": 0,
+        "secondaryOpacity": 1,
+        "nextGuideMuralId": "mural-05",
+        "routeComplete": true,
+        "overviewCamera": {
+          "position": [
+            -31.052363228499978,
+            29.097768376209487,
+            -13.151747911122516
+          ],
+          "target": [
+            1,
+            0.1,
+            -2.8
+          ]
+        },
+        "bounds": {
+          "left": 0.16689216743365431,
+          "right": 0.9057846056409846,
+          "top": 0.23271976969886854,
+          "bottom": 0.836633533338483
+        }
+      },
+      "overflow": false,
+      "phase": "a04-completed",
+      "entryAbsent": true
+    },
+    {
+      "chapter": "A05",
+      "width": 1440,
+      "height": 900,
+      "newRoof": true,
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        }
+      ],
+      "murals": [
+        {
+          "id": "mural-01",
+          "label": "第一幅",
+          "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+          "position": [
+            4.865,
+            1.55,
+            4.8
+          ],
+          "width": 3.65,
+          "height": 1.2547,
+          "side": true
+        },
+        {
+          "id": "mural-02",
+          "label": "第二幅",
+          "wall": "主殿右侧内墙",
+          "position": [
+            4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.3796,
+          "side": true
+        },
+        {
+          "id": "mural-03",
+          "label": "第三幅",
+          "wall": "主殿后墙右侧",
+          "position": [
+            2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-04",
+          "label": "第四幅",
+          "wall": "主殿后墙左侧",
+          "position": [
+            -2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-05",
+          "label": "第五幅",
+          "wall": "主殿左侧内墙",
+          "position": [
+            -4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.64395,
+          "side": true
+        }
+      ],
+      "cut": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0,
+        "movie": {
+          "active": true,
+          "name": "handoff",
+          "weight": 1,
+          "center": [
+            -1.4,
+            -11.75
+          ],
+          "half": [
+            6.9,
+            4.4
+          ],
+          "summary": 0,
+          "wallWeight": 0
+        }
+      },
+      "a04": {
+        "camera": {
+          "position": [
+            -1.5,
+            5.2,
+            -10.5
+          ],
+          "target": [
+            -4.515,
+            1.85,
+            -11.75
+          ]
+        },
+        "entryProgress": 1,
+        "paths": [
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ]
+          ],
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ],
+            [
+              -2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              -2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              -2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              3.8,
+              0.36,
+              4.8
+            ]
+          ],
+          [
+            [
+              3.8,
+              0.36,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              2.7,
+              0.56,
+              -11.75
+            ]
+          ]
+        ],
+        "growth": [
+          1,
+          1,
+          1
+        ],
+        "routeOpacity": 0,
+        "labelOpacity": 1,
+        "target": "mural-05",
+        "mode": "completed",
+        "elapsed": 45,
+        "storyTime": 45,
+        "currentRoute": -1,
+        "guideStartProgress": 1,
+        "secondaryOpacity": 0,
+        "nextGuideMuralId": "mural-05",
+        "routeComplete": true,
+        "overviewCamera": {
+          "position": [
+            -31.052363228499978,
+            29.097768376209487,
+            -13.151747911122516
+          ],
+          "target": [
+            1,
+            0.1,
+            -2.8
+          ]
+        },
+        "bounds": {
+          "left": -19312.59546435454,
+          "right": 14672.334414948278,
+          "top": -7846.1688654724,
+          "bottom": 6445.149659019629
+        }
+      },
+      "overflow": false,
+      "phase": "a05-introduction",
+      "entryAbsent": true
+    },
+    {
+      "chapter": "A06",
+      "width": 1440,
+      "height": 900,
+      "newRoof": true,
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        }
+      ],
+      "murals": [
+        {
+          "id": "mural-01",
+          "label": "第一幅",
+          "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+          "position": [
+            4.865,
+            1.55,
+            4.8
+          ],
+          "width": 3.65,
+          "height": 1.2547,
+          "side": true
+        },
+        {
+          "id": "mural-02",
+          "label": "第二幅",
+          "wall": "主殿右侧内墙",
+          "position": [
+            4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.3796,
+          "side": true
+        },
+        {
+          "id": "mural-03",
+          "label": "第三幅",
+          "wall": "主殿后墙右侧",
+          "position": [
+            2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-04",
+          "label": "第四幅",
+          "wall": "主殿后墙左侧",
+          "position": [
+            -2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-05",
+          "label": "第五幅",
+          "wall": "主殿左侧内墙",
+          "position": [
+            -4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.64395,
+          "side": true
+        }
+      ],
+      "cut": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0,
+        "movie": {
+          "active": true,
+          "name": "handoff",
+          "weight": 1,
+          "center": [
+            -1.4,
+            -11.75
+          ],
+          "half": [
+            6.9,
+            4.4
+          ],
+          "summary": 0,
+          "wallWeight": 0
+        }
+      },
+      "a04": {
+        "camera": {
+          "position": [
+            -1.5,
+            5.2,
+            -10.5
+          ],
+          "target": [
+            -4.515,
+            1.85,
+            -11.75
+          ]
+        },
+        "entryProgress": 1,
+        "paths": [
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ]
+          ],
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ],
+            [
+              -2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              -2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              -2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              3.8,
+              0.36,
+              4.8
+            ]
+          ],
+          [
+            [
+              3.8,
+              0.36,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              2.7,
+              0.56,
+              -11.75
+            ]
+          ]
+        ],
+        "growth": [
+          1,
+          1,
+          1
+        ],
+        "routeOpacity": 0,
+        "labelOpacity": 1,
+        "target": "mural-05",
+        "mode": "completed",
+        "elapsed": 45,
+        "storyTime": 45,
+        "currentRoute": -1,
+        "guideStartProgress": 1,
+        "secondaryOpacity": 0,
+        "nextGuideMuralId": "mural-05",
+        "routeComplete": true,
+        "overviewCamera": {
+          "position": [
+            -31.052363228499978,
+            29.097768376209487,
+            -13.151747911122516
+          ],
+          "target": [
+            1,
+            0.1,
+            -2.8
+          ]
+        },
+        "bounds": {
+          "left": -19312.59546435454,
+          "right": 14672.334414948278,
+          "top": -7846.1688654724,
+          "bottom": 6445.149659019629
+        }
+      },
+      "overflow": false,
+      "phase": "a06-introduction",
+      "entryAbsent": true
+    },
+    {
+      "chapter": "A07",
+      "width": 1440,
+      "height": 900,
+      "newRoof": true,
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        }
+      ],
+      "murals": [
+        {
+          "id": "mural-01",
+          "label": "第一幅",
+          "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+          "position": [
+            4.865,
+            1.55,
+            4.8
+          ],
+          "width": 3.65,
+          "height": 1.2547,
+          "side": true
+        },
+        {
+          "id": "mural-02",
+          "label": "第二幅",
+          "wall": "主殿右侧内墙",
+          "position": [
+            4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.3796,
+          "side": true
+        },
+        {
+          "id": "mural-03",
+          "label": "第三幅",
+          "wall": "主殿后墙右侧",
+          "position": [
+            2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-04",
+          "label": "第四幅",
+          "wall": "主殿后墙左侧",
+          "position": [
+            -2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-05",
+          "label": "第五幅",
+          "wall": "主殿左侧内墙",
+          "position": [
+            -4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.64395,
+          "side": true
+        }
+      ],
+      "cut": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0,
+        "movie": {
+          "active": true,
+          "name": "handoff",
+          "weight": 1,
+          "center": [
+            -1.4,
+            -11.75
+          ],
+          "half": [
+            6.9,
+            4.4
+          ],
+          "summary": 0,
+          "wallWeight": 0
+        }
+      },
+      "a04": {
+        "camera": {
+          "position": [
+            -1.5,
+            5.2,
+            -10.5
+          ],
+          "target": [
+            -4.515,
+            1.85,
+            -11.75
+          ]
+        },
+        "entryProgress": 1,
+        "paths": [
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ]
+          ],
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ],
+            [
+              -2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              -2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              -2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              3.8,
+              0.36,
+              4.8
+            ]
+          ],
+          [
+            [
+              3.8,
+              0.36,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              2.7,
+              0.56,
+              -11.75
+            ]
+          ]
+        ],
+        "growth": [
+          1,
+          1,
+          1
+        ],
+        "routeOpacity": 0,
+        "labelOpacity": 1,
+        "target": "mural-05",
+        "mode": "completed",
+        "elapsed": 45,
+        "storyTime": 45,
+        "currentRoute": -1,
+        "guideStartProgress": 1,
+        "secondaryOpacity": 0,
+        "nextGuideMuralId": "mural-05",
+        "routeComplete": true,
+        "overviewCamera": {
+          "position": [
+            -31.052363228499978,
+            29.097768376209487,
+            -13.151747911122516
+          ],
+          "target": [
+            1,
+            0.1,
+            -2.8
+          ]
+        },
+        "bounds": {
+          "left": -19312.59546435454,
+          "right": 14672.334414948278,
+          "top": -7846.1688654724,
+          "bottom": 6445.149659019629
+        }
+      },
+      "overflow": false,
+      "phase": "a07-introduction",
+      "entryAbsent": true
+    },
+    {
+      "chapter": "A08",
+      "width": 1440,
+      "height": 900,
+      "newRoof": true,
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        }
+      ],
+      "murals": [
+        {
+          "id": "mural-01",
+          "label": "第一幅",
+          "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+          "position": [
+            4.865,
+            1.55,
+            4.8
+          ],
+          "width": 3.65,
+          "height": 1.2547,
+          "side": true
+        },
+        {
+          "id": "mural-02",
+          "label": "第二幅",
+          "wall": "主殿右侧内墙",
+          "position": [
+            4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.3796,
+          "side": true
+        },
+        {
+          "id": "mural-03",
+          "label": "第三幅",
+          "wall": "主殿后墙右侧",
+          "position": [
+            2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-04",
+          "label": "第四幅",
+          "wall": "主殿后墙左侧",
+          "position": [
+            -2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-05",
+          "label": "第五幅",
+          "wall": "主殿左侧内墙",
+          "position": [
+            -4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.64395,
+          "side": true
+        }
+      ],
+      "cut": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0,
+        "movie": {
+          "active": true,
+          "name": "handoff",
+          "weight": 1,
+          "center": [
+            -1.4,
+            -11.75
+          ],
+          "half": [
+            6.9,
+            4.4
+          ],
+          "summary": 0,
+          "wallWeight": 0
+        }
+      },
+      "a04": {
+        "camera": {
+          "position": [
+            -1.5,
+            5.2,
+            -10.5
+          ],
+          "target": [
+            -4.515,
+            1.85,
+            -11.75
+          ]
+        },
+        "entryProgress": 1,
+        "paths": [
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ]
+          ],
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ],
+            [
+              -2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              -2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              -2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              3.8,
+              0.36,
+              4.8
+            ]
+          ],
+          [
+            [
+              3.8,
+              0.36,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              2.7,
+              0.56,
+              -11.75
+            ]
+          ]
+        ],
+        "growth": [
+          1,
+          1,
+          1
+        ],
+        "routeOpacity": 0,
+        "labelOpacity": 1,
+        "target": "mural-05",
+        "mode": "completed",
+        "elapsed": 45,
+        "storyTime": 45,
+        "currentRoute": -1,
+        "guideStartProgress": 1,
+        "secondaryOpacity": 0,
+        "nextGuideMuralId": "mural-05",
+        "routeComplete": true,
+        "overviewCamera": {
+          "position": [
+            -31.052363228499978,
+            29.097768376209487,
+            -13.151747911122516
+          ],
+          "target": [
+            1,
+            0.1,
+            -2.8
+          ]
+        },
+        "bounds": {
+          "left": -19312.59546435454,
+          "right": 14672.334414948278,
+          "top": -7846.1688654724,
+          "bottom": 6445.149659019629
+        }
+      },
+      "overflow": false,
+      "phase": "a08",
+      "entryAbsent": true
+    },
+    {
+      "width": 1440,
+      "activeA08ToB": true
+    },
+    {
+      "width": 1440,
+      "browserBackToA": true
+    },
+    {
+      "chapter": "A01",
+      "width": 1920,
+      "height": 1080,
+      "newRoof": true,
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        }
+      ],
+      "murals": [
+        {
+          "id": "mural-01",
+          "label": "第一幅",
+          "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+          "position": [
+            4.865,
+            1.55,
+            4.8
+          ],
+          "width": 3.65,
+          "height": 1.2547,
+          "side": true
+        },
+        {
+          "id": "mural-02",
+          "label": "第二幅",
+          "wall": "主殿右侧内墙",
+          "position": [
+            4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.3796,
+          "side": true
+        },
+        {
+          "id": "mural-03",
+          "label": "第三幅",
+          "wall": "主殿后墙右侧",
+          "position": [
+            2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-04",
+          "label": "第四幅",
+          "wall": "主殿后墙左侧",
+          "position": [
+            -2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-05",
+          "label": "第五幅",
+          "wall": "主殿左侧内墙",
+          "position": [
+            -4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.64395,
+          "side": true
+        }
+      ],
+      "cut": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0,
+        "movie": {
+          "active": false,
+          "weight": 0,
+          "center": [
+            0,
+            0
+          ],
+          "half": [
+            0,
+            0
+          ],
+          "summary": 0
+        }
+      },
+      "a04": null,
+      "overflow": false,
+      "phase": "reading",
+      "entryAbsent": true
+    },
+    {
+      "chapter": "A02",
+      "width": 1920,
+      "height": 1080,
+      "newRoof": true,
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        }
+      ],
+      "murals": [
+        {
+          "id": "mural-01",
+          "label": "第一幅",
+          "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+          "position": [
+            4.865,
+            1.55,
+            4.8
+          ],
+          "width": 3.65,
+          "height": 1.2547,
+          "side": true
+        },
+        {
+          "id": "mural-02",
+          "label": "第二幅",
+          "wall": "主殿右侧内墙",
+          "position": [
+            4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.3796,
+          "side": true
+        },
+        {
+          "id": "mural-03",
+          "label": "第三幅",
+          "wall": "主殿后墙右侧",
+          "position": [
+            2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-04",
+          "label": "第四幅",
+          "wall": "主殿后墙左侧",
+          "position": [
+            -2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-05",
+          "label": "第五幅",
+          "wall": "主殿左侧内墙",
+          "position": [
+            -4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.64395,
+          "side": true
+        }
+      ],
+      "cut": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0,
+        "movie": {
+          "active": false,
+          "weight": 0,
+          "center": [
+            0,
+            0
+          ],
+          "half": [
+            0,
+            0
+          ],
+          "summary": 0
+        }
+      },
+      "a04": null,
+      "overflow": false,
+      "phase": "a02-reading",
+      "entryAbsent": true
+    },
+    {
+      "chapter": "A03",
+      "width": 1920,
+      "height": 1080,
+      "newRoof": true,
+      "roof": [
+        {
+          "visible": false,
+          "opacity": 0,
+          "shadow": false
+        },
+        {
+          "visible": false,
+          "opacity": 0,
+          "shadow": false
+        },
+        {
+          "visible": false,
+          "opacity": 0,
+          "shadow": false
+        },
+        {
+          "visible": false,
+          "opacity": 0,
+          "shadow": false
+        },
+        {
+          "visible": false,
+          "opacity": 0,
+          "shadow": false
+        },
+        {
+          "visible": false,
+          "opacity": 0,
+          "shadow": false
+        }
+      ],
+      "murals": [
+        {
+          "id": "mural-01",
+          "label": "第一幅",
+          "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+          "position": [
+            4.865,
+            1.55,
+            4.8
+          ],
+          "width": 3.65,
+          "height": 1.2547,
+          "side": true
+        },
+        {
+          "id": "mural-02",
+          "label": "第二幅",
+          "wall": "主殿右侧内墙",
+          "position": [
+            4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.3796,
+          "side": true
+        },
+        {
+          "id": "mural-03",
+          "label": "第三幅",
+          "wall": "主殿后墙右侧",
+          "position": [
+            2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-04",
+          "label": "第四幅",
+          "wall": "主殿后墙左侧",
+          "position": [
+            -2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-05",
+          "label": "第五幅",
+          "wall": "主殿左侧内墙",
+          "position": [
+            -4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.64395,
+          "side": true
+        }
+      ],
+      "cut": {
+        "active": true,
+        "main": 1,
+        "side": 1,
+        "handoff": 0,
+        "wall": 1,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": false,
+        "galleryCut": 1,
+        "movie": {
+          "active": false,
+          "weight": 0,
+          "center": [
+            0,
+            0
+          ],
+          "half": [
+            0,
+            0
+          ],
+          "summary": 0
+        }
+      },
+      "a04": null,
+      "overflow": false,
+      "phase": "a03-reading",
+      "entryAbsent": true
+    },
+    {
+      "chapter": "A04",
+      "width": 1920,
+      "height": 1080,
+      "newRoof": true,
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        }
+      ],
+      "murals": [
+        {
+          "id": "mural-01",
+          "label": "第一幅",
+          "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+          "position": [
+            4.865,
+            1.55,
+            4.8
+          ],
+          "width": 3.65,
+          "height": 1.2547,
+          "side": true
+        },
+        {
+          "id": "mural-02",
+          "label": "第二幅",
+          "wall": "主殿右侧内墙",
+          "position": [
+            4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.3796,
+          "side": true
+        },
+        {
+          "id": "mural-03",
+          "label": "第三幅",
+          "wall": "主殿后墙右侧",
+          "position": [
+            2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-04",
+          "label": "第四幅",
+          "wall": "主殿后墙左侧",
+          "position": [
+            -2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-05",
+          "label": "第五幅",
+          "wall": "主殿左侧内墙",
+          "position": [
+            -4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.64395,
+          "side": true
+        }
+      ],
+      "cut": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0,
+        "movie": {
+          "active": true,
+          "name": "summary",
+          "weight": 1,
+          "center": [
+            -1.4,
+            -11.75
+          ],
+          "half": [
+            6.9,
+            4.4
+          ],
+          "summary": 1,
+          "wallWeight": 1
+        }
+      },
+      "a04": {
+        "camera": {
+          "position": [
+            -30.130679768338908,
+            28.26392148313018,
+            -12.85407766554902
+          ],
+          "target": [
+            1,
+            0.1,
+            -2.8
+          ]
+        },
+        "entryProgress": 1,
+        "paths": [
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ]
+          ],
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ],
+            [
+              -2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              -2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              -2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              3.8,
+              0.36,
+              4.8
+            ]
+          ],
+          [
+            [
+              3.8,
+              0.36,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              2.7,
+              0.56,
+              -11.75
+            ]
+          ]
+        ],
+        "growth": [
+          1,
+          1,
+          1
+        ],
+        "routeOpacity": 1,
+        "labelOpacity": 1,
+        "target": null,
+        "mode": "completed",
+        "elapsed": 45,
+        "storyTime": 45,
+        "currentRoute": -1,
+        "guideStartProgress": 0,
+        "secondaryOpacity": 1,
+        "nextGuideMuralId": "mural-05",
+        "routeComplete": true,
+        "overviewCamera": {
+          "position": [
+            -30.130679768338908,
+            28.26392148313018,
+            -12.85407766554902
+          ],
+          "target": [
+            1,
+            0.1,
+            -2.8
+          ]
+        },
+        "bounds": {
+          "left": 0.19086833081094617,
+          "right": 0.8763361189168206,
+          "top": 0.22552401513171189,
+          "bottom": 0.8487674867591858
+        }
+      },
+      "overflow": false,
+      "phase": "a04-completed",
+      "entryAbsent": true
+    },
+    {
+      "chapter": "A05",
+      "width": 1920,
+      "height": 1080,
+      "newRoof": true,
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        }
+      ],
+      "murals": [
+        {
+          "id": "mural-01",
+          "label": "第一幅",
+          "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+          "position": [
+            4.865,
+            1.55,
+            4.8
+          ],
+          "width": 3.65,
+          "height": 1.2547,
+          "side": true
+        },
+        {
+          "id": "mural-02",
+          "label": "第二幅",
+          "wall": "主殿右侧内墙",
+          "position": [
+            4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.3796,
+          "side": true
+        },
+        {
+          "id": "mural-03",
+          "label": "第三幅",
+          "wall": "主殿后墙右侧",
+          "position": [
+            2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-04",
+          "label": "第四幅",
+          "wall": "主殿后墙左侧",
+          "position": [
+            -2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-05",
+          "label": "第五幅",
+          "wall": "主殿左侧内墙",
+          "position": [
+            -4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.64395,
+          "side": true
+        }
+      ],
+      "cut": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0,
+        "movie": {
+          "active": true,
+          "name": "handoff",
+          "weight": 1,
+          "center": [
+            -1.4,
+            -11.75
+          ],
+          "half": [
+            6.9,
+            4.4
+          ],
+          "summary": 0,
+          "wallWeight": 0
+        }
+      },
+      "a04": {
+        "camera": {
+          "position": [
+            -1.5,
+            5.2,
+            -10.5
+          ],
+          "target": [
+            -4.515,
+            1.85,
+            -11.75
+          ]
+        },
+        "entryProgress": 1,
+        "paths": [
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ]
+          ],
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ],
+            [
+              -2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              -2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              -2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              3.8,
+              0.36,
+              4.8
+            ]
+          ],
+          [
+            [
+              3.8,
+              0.36,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              2.7,
+              0.56,
+              -11.75
+            ]
+          ]
+        ],
+        "growth": [
+          1,
+          1,
+          1
+        ],
+        "routeOpacity": 0,
+        "labelOpacity": 1,
+        "target": "mural-05",
+        "mode": "completed",
+        "elapsed": 45,
+        "storyTime": 45,
+        "currentRoute": -1,
+        "guideStartProgress": 1,
+        "secondaryOpacity": 0,
+        "nextGuideMuralId": "mural-05",
+        "routeComplete": true,
+        "overviewCamera": {
+          "position": [
+            -30.130679768338908,
+            28.26392148313018,
+            -12.85407766554902
+          ],
+          "target": [
+            1,
+            0.1,
+            -2.8
+          ]
+        },
+        "bounds": {
+          "left": -17381.28591791909,
+          "right": 13205.150973453454,
+          "top": -7846.1688654724,
+          "bottom": 6445.149659019629
+        }
+      },
+      "overflow": false,
+      "phase": "a05-introduction",
+      "entryAbsent": true
+    },
+    {
+      "chapter": "A06",
+      "width": 1920,
+      "height": 1080,
+      "newRoof": true,
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        }
+      ],
+      "murals": [
+        {
+          "id": "mural-01",
+          "label": "第一幅",
+          "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+          "position": [
+            4.865,
+            1.55,
+            4.8
+          ],
+          "width": 3.65,
+          "height": 1.2547,
+          "side": true
+        },
+        {
+          "id": "mural-02",
+          "label": "第二幅",
+          "wall": "主殿右侧内墙",
+          "position": [
+            4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.3796,
+          "side": true
+        },
+        {
+          "id": "mural-03",
+          "label": "第三幅",
+          "wall": "主殿后墙右侧",
+          "position": [
+            2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-04",
+          "label": "第四幅",
+          "wall": "主殿后墙左侧",
+          "position": [
+            -2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-05",
+          "label": "第五幅",
+          "wall": "主殿左侧内墙",
+          "position": [
+            -4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.64395,
+          "side": true
+        }
+      ],
+      "cut": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0,
+        "movie": {
+          "active": true,
+          "name": "handoff",
+          "weight": 1,
+          "center": [
+            -1.4,
+            -11.75
+          ],
+          "half": [
+            6.9,
+            4.4
+          ],
+          "summary": 0,
+          "wallWeight": 0
+        }
+      },
+      "a04": {
+        "camera": {
+          "position": [
+            -1.5,
+            5.2,
+            -10.5
+          ],
+          "target": [
+            -4.515,
+            1.85,
+            -11.75
+          ]
+        },
+        "entryProgress": 1,
+        "paths": [
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ]
+          ],
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ],
+            [
+              -2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              -2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              -2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              3.8,
+              0.36,
+              4.8
+            ]
+          ],
+          [
+            [
+              3.8,
+              0.36,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              2.7,
+              0.56,
+              -11.75
+            ]
+          ]
+        ],
+        "growth": [
+          1,
+          1,
+          1
+        ],
+        "routeOpacity": 0,
+        "labelOpacity": 1,
+        "target": "mural-05",
+        "mode": "completed",
+        "elapsed": 45,
+        "storyTime": 45,
+        "currentRoute": -1,
+        "guideStartProgress": 1,
+        "secondaryOpacity": 0,
+        "nextGuideMuralId": "mural-05",
+        "routeComplete": true,
+        "overviewCamera": {
+          "position": [
+            -30.130679768338908,
+            28.26392148313018,
+            -12.85407766554902
+          ],
+          "target": [
+            1,
+            0.1,
+            -2.8
+          ]
+        },
+        "bounds": {
+          "left": -17381.28591791909,
+          "right": 13205.150973453454,
+          "top": -7846.1688654724,
+          "bottom": 6445.149659019629
+        }
+      },
+      "overflow": false,
+      "phase": "a06-introduction",
+      "entryAbsent": true
+    },
+    {
+      "chapter": "A07",
+      "width": 1920,
+      "height": 1080,
+      "newRoof": true,
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        }
+      ],
+      "murals": [
+        {
+          "id": "mural-01",
+          "label": "第一幅",
+          "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+          "position": [
+            4.865,
+            1.55,
+            4.8
+          ],
+          "width": 3.65,
+          "height": 1.2547,
+          "side": true
+        },
+        {
+          "id": "mural-02",
+          "label": "第二幅",
+          "wall": "主殿右侧内墙",
+          "position": [
+            4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.3796,
+          "side": true
+        },
+        {
+          "id": "mural-03",
+          "label": "第三幅",
+          "wall": "主殿后墙右侧",
+          "position": [
+            2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-04",
+          "label": "第四幅",
+          "wall": "主殿后墙左侧",
+          "position": [
+            -2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-05",
+          "label": "第五幅",
+          "wall": "主殿左侧内墙",
+          "position": [
+            -4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.64395,
+          "side": true
+        }
+      ],
+      "cut": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0,
+        "movie": {
+          "active": true,
+          "name": "handoff",
+          "weight": 1,
+          "center": [
+            -1.4,
+            -11.75
+          ],
+          "half": [
+            6.9,
+            4.4
+          ],
+          "summary": 0,
+          "wallWeight": 0
+        }
+      },
+      "a04": {
+        "camera": {
+          "position": [
+            -1.5,
+            5.2,
+            -10.5
+          ],
+          "target": [
+            -4.515,
+            1.85,
+            -11.75
+          ]
+        },
+        "entryProgress": 1,
+        "paths": [
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ]
+          ],
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ],
+            [
+              -2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              -2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              -2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              3.8,
+              0.36,
+              4.8
+            ]
+          ],
+          [
+            [
+              3.8,
+              0.36,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              2.7,
+              0.56,
+              -11.75
+            ]
+          ]
+        ],
+        "growth": [
+          1,
+          1,
+          1
+        ],
+        "routeOpacity": 0,
+        "labelOpacity": 1,
+        "target": "mural-05",
+        "mode": "completed",
+        "elapsed": 45,
+        "storyTime": 45,
+        "currentRoute": -1,
+        "guideStartProgress": 1,
+        "secondaryOpacity": 0,
+        "nextGuideMuralId": "mural-05",
+        "routeComplete": true,
+        "overviewCamera": {
+          "position": [
+            -30.130679768338908,
+            28.26392148313018,
+            -12.85407766554902
+          ],
+          "target": [
+            1,
+            0.1,
+            -2.8
+          ]
+        },
+        "bounds": {
+          "left": -17381.28591791909,
+          "right": 13205.150973453454,
+          "top": -7846.1688654724,
+          "bottom": 6445.149659019629
+        }
+      },
+      "overflow": false,
+      "phase": "a07-introduction",
+      "entryAbsent": true
+    },
+    {
+      "chapter": "A08",
+      "width": 1920,
+      "height": 1080,
+      "newRoof": true,
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        }
+      ],
+      "murals": [
+        {
+          "id": "mural-01",
+          "label": "第一幅",
+          "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+          "position": [
+            4.865,
+            1.55,
+            4.8
+          ],
+          "width": 3.65,
+          "height": 1.2547,
+          "side": true
+        },
+        {
+          "id": "mural-02",
+          "label": "第二幅",
+          "wall": "主殿右侧内墙",
+          "position": [
+            4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.3796,
+          "side": true
+        },
+        {
+          "id": "mural-03",
+          "label": "第三幅",
+          "wall": "主殿后墙右侧",
+          "position": [
+            2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-04",
+          "label": "第四幅",
+          "wall": "主殿后墙左侧",
+          "position": [
+            -2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-05",
+          "label": "第五幅",
+          "wall": "主殿左侧内墙",
+          "position": [
+            -4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.64395,
+          "side": true
+        }
+      ],
+      "cut": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0,
+        "movie": {
+          "active": true,
+          "name": "handoff",
+          "weight": 1,
+          "center": [
+            -1.4,
+            -11.75
+          ],
+          "half": [
+            6.9,
+            4.4
+          ],
+          "summary": 0,
+          "wallWeight": 0
+        }
+      },
+      "a04": {
+        "camera": {
+          "position": [
+            -1.5,
+            5.2,
+            -10.5
+          ],
+          "target": [
+            -4.515,
+            1.85,
+            -11.75
+          ]
+        },
+        "entryProgress": 1,
+        "paths": [
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ]
+          ],
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ],
+            [
+              -2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              -2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              -2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              3.8,
+              0.36,
+              4.8
+            ]
+          ],
+          [
+            [
+              3.8,
+              0.36,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              2.7,
+              0.56,
+              -11.75
+            ]
+          ]
+        ],
+        "growth": [
+          1,
+          1,
+          1
+        ],
+        "routeOpacity": 0,
+        "labelOpacity": 1,
+        "target": "mural-05",
+        "mode": "completed",
+        "elapsed": 45,
+        "storyTime": 45,
+        "currentRoute": -1,
+        "guideStartProgress": 1,
+        "secondaryOpacity": 0,
+        "nextGuideMuralId": "mural-05",
+        "routeComplete": true,
+        "overviewCamera": {
+          "position": [
+            -30.130679768338908,
+            28.26392148313018,
+            -12.85407766554902
+          ],
+          "target": [
+            1,
+            0.1,
+            -2.8
+          ]
+        },
+        "bounds": {
+          "left": -17381.28591791909,
+          "right": 13205.150973453454,
+          "top": -7846.1688654724,
+          "bottom": 6445.149659019629
+        }
+      },
+      "overflow": false,
+      "phase": "a08",
+      "entryAbsent": true
+    },
+    {
+      "width": 1920,
+      "activeA08ToB": true
+    },
+    {
+      "width": 1920,
+      "browserBackToA": true
+    },
+    {
+      "chapter": "A01",
+      "width": 1366,
+      "height": 768,
+      "newRoof": true,
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        }
+      ],
+      "murals": [
+        {
+          "id": "mural-01",
+          "label": "第一幅",
+          "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+          "position": [
+            4.865,
+            1.55,
+            4.8
+          ],
+          "width": 3.65,
+          "height": 1.2547,
+          "side": true
+        },
+        {
+          "id": "mural-02",
+          "label": "第二幅",
+          "wall": "主殿右侧内墙",
+          "position": [
+            4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.3796,
+          "side": true
+        },
+        {
+          "id": "mural-03",
+          "label": "第三幅",
+          "wall": "主殿后墙右侧",
+          "position": [
+            2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-04",
+          "label": "第四幅",
+          "wall": "主殿后墙左侧",
+          "position": [
+            -2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-05",
+          "label": "第五幅",
+          "wall": "主殿左侧内墙",
+          "position": [
+            -4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.64395,
+          "side": true
+        }
+      ],
+      "cut": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0,
+        "movie": {
+          "active": false,
+          "weight": 0,
+          "center": [
+            0,
+            0
+          ],
+          "half": [
+            0,
+            0
+          ],
+          "summary": 0
+        }
+      },
+      "a04": null,
+      "overflow": false,
+      "phase": "reading",
+      "entryAbsent": true
+    },
+    {
+      "chapter": "A02",
+      "width": 1366,
+      "height": 768,
+      "newRoof": true,
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        }
+      ],
+      "murals": [
+        {
+          "id": "mural-01",
+          "label": "第一幅",
+          "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+          "position": [
+            4.865,
+            1.55,
+            4.8
+          ],
+          "width": 3.65,
+          "height": 1.2547,
+          "side": true
+        },
+        {
+          "id": "mural-02",
+          "label": "第二幅",
+          "wall": "主殿右侧内墙",
+          "position": [
+            4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.3796,
+          "side": true
+        },
+        {
+          "id": "mural-03",
+          "label": "第三幅",
+          "wall": "主殿后墙右侧",
+          "position": [
+            2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-04",
+          "label": "第四幅",
+          "wall": "主殿后墙左侧",
+          "position": [
+            -2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-05",
+          "label": "第五幅",
+          "wall": "主殿左侧内墙",
+          "position": [
+            -4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.64395,
+          "side": true
+        }
+      ],
+      "cut": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0,
+        "movie": {
+          "active": false,
+          "weight": 0,
+          "center": [
+            0,
+            0
+          ],
+          "half": [
+            0,
+            0
+          ],
+          "summary": 0
+        }
+      },
+      "a04": null,
+      "overflow": false,
+      "phase": "a02-reading",
+      "entryAbsent": true
+    },
+    {
+      "chapter": "A03",
+      "width": 1366,
+      "height": 768,
+      "newRoof": true,
+      "roof": [
+        {
+          "visible": false,
+          "opacity": 0,
+          "shadow": false
+        },
+        {
+          "visible": false,
+          "opacity": 0,
+          "shadow": false
+        },
+        {
+          "visible": false,
+          "opacity": 0,
+          "shadow": false
+        },
+        {
+          "visible": false,
+          "opacity": 0,
+          "shadow": false
+        },
+        {
+          "visible": false,
+          "opacity": 0,
+          "shadow": false
+        },
+        {
+          "visible": false,
+          "opacity": 0,
+          "shadow": false
+        }
+      ],
+      "murals": [
+        {
+          "id": "mural-01",
+          "label": "第一幅",
+          "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+          "position": [
+            4.865,
+            1.55,
+            4.8
+          ],
+          "width": 3.65,
+          "height": 1.2547,
+          "side": true
+        },
+        {
+          "id": "mural-02",
+          "label": "第二幅",
+          "wall": "主殿右侧内墙",
+          "position": [
+            4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.3796,
+          "side": true
+        },
+        {
+          "id": "mural-03",
+          "label": "第三幅",
+          "wall": "主殿后墙右侧",
+          "position": [
+            2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-04",
+          "label": "第四幅",
+          "wall": "主殿后墙左侧",
+          "position": [
+            -2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-05",
+          "label": "第五幅",
+          "wall": "主殿左侧内墙",
+          "position": [
+            -4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.64395,
+          "side": true
+        }
+      ],
+      "cut": {
+        "active": true,
+        "main": 1,
+        "side": 1,
+        "handoff": 0,
+        "wall": 1,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": false,
+        "galleryCut": 1,
+        "movie": {
+          "active": false,
+          "weight": 0,
+          "center": [
+            0,
+            0
+          ],
+          "half": [
+            0,
+            0
+          ],
+          "summary": 0
+        }
+      },
+      "a04": null,
+      "overflow": false,
+      "phase": "a03-reading",
+      "entryAbsent": true
+    },
+    {
+      "chapter": "A04",
+      "width": 1366,
+      "height": 768,
+      "newRoof": true,
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": true
+        }
+      ],
+      "murals": [
+        {
+          "id": "mural-01",
+          "label": "第一幅",
+          "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+          "position": [
+            4.865,
+            1.55,
+            4.8
+          ],
+          "width": 3.65,
+          "height": 1.2547,
+          "side": true
+        },
+        {
+          "id": "mural-02",
+          "label": "第二幅",
+          "wall": "主殿右侧内墙",
+          "position": [
+            4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.3796,
+          "side": true
+        },
+        {
+          "id": "mural-03",
+          "label": "第三幅",
+          "wall": "主殿后墙右侧",
+          "position": [
+            2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-04",
+          "label": "第四幅",
+          "wall": "主殿后墙左侧",
+          "position": [
+            -2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-05",
+          "label": "第五幅",
+          "wall": "主殿左侧内墙",
+          "position": [
+            -4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.64395,
+          "side": true
+        }
+      ],
+      "cut": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0,
+        "movie": {
+          "active": true,
+          "name": "summary",
+          "weight": 1,
+          "center": [
+            -1.4,
+            -11.75
+          ],
+          "half": [
+            6.9,
+            4.4
+          ],
+          "summary": 1,
+          "wallWeight": 1
+        }
+      },
+      "a04": {
+        "camera": {
+          "position": [
+            -30.130679768338908,
+            28.26392148313018,
+            -12.85407766554902
+          ],
+          "target": [
+            1,
+            0.1,
+            -2.8
+          ]
+        },
+        "entryProgress": 1,
+        "paths": [
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ]
+          ],
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ],
+            [
+              -2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              -2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              -2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              3.8,
+              0.36,
+              4.8
+            ]
+          ],
+          [
+            [
+              3.8,
+              0.36,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              2.7,
+              0.56,
+              -11.75
+            ]
+          ]
+        ],
+        "growth": [
+          1,
+          1,
+          1
+        ],
+        "routeOpacity": 1,
+        "labelOpacity": 1,
+        "target": null,
+        "mode": "completed",
+        "elapsed": 45,
+        "storyTime": 45,
+        "currentRoute": -1,
+        "guideStartProgress": 0,
+        "secondaryOpacity": 1,
+        "nextGuideMuralId": "mural-05",
+        "routeComplete": true,
+        "overviewCamera": {
+          "position": [
+            -30.130679768338908,
+            28.26392148313018,
+            -12.85407766554902
+          ],
+          "target": [
+            1,
+            0.1,
+            -2.8
+          ]
+        },
+        "bounds": {
+          "left": 0.19101920034202918,
+          "right": 0.8761524507279885,
+          "top": 0.22552401513171189,
+          "bottom": 0.8487674867591858
+        }
+      },
+      "overflow": false,
+      "phase": "a04-completed",
+      "entryAbsent": true
+    },
+    {
+      "chapter": "A05",
+      "width": 1366,
+      "height": 768,
+      "newRoof": true,
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        }
+      ],
+      "murals": [
+        {
+          "id": "mural-01",
+          "label": "第一幅",
+          "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+          "position": [
+            4.865,
+            1.55,
+            4.8
+          ],
+          "width": 3.65,
+          "height": 1.2547,
+          "side": true
+        },
+        {
+          "id": "mural-02",
+          "label": "第二幅",
+          "wall": "主殿右侧内墙",
+          "position": [
+            4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.3796,
+          "side": true
+        },
+        {
+          "id": "mural-03",
+          "label": "第三幅",
+          "wall": "主殿后墙右侧",
+          "position": [
+            2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-04",
+          "label": "第四幅",
+          "wall": "主殿后墙左侧",
+          "position": [
+            -2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-05",
+          "label": "第五幅",
+          "wall": "主殿左侧内墙",
+          "position": [
+            -4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.64395,
+          "side": true
+        }
+      ],
+      "cut": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0,
+        "movie": {
+          "active": true,
+          "name": "handoff",
+          "weight": 1,
+          "center": [
+            -1.4,
+            -11.75
+          ],
+          "half": [
+            6.9,
+            4.4
+          ],
+          "summary": 0,
+          "wallWeight": 0
+        }
+      },
+      "a04": {
+        "camera": {
+          "position": [
+            -1.5,
+            5.2,
+            -10.5
+          ],
+          "target": [
+            -4.515,
+            1.85,
+            -11.75
+          ]
+        },
+        "entryProgress": 1,
+        "paths": [
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ]
+          ],
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ],
+            [
+              -2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              -2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              -2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              3.8,
+              0.36,
+              4.8
+            ]
+          ],
+          [
+            [
+              3.8,
+              0.36,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              2.7,
+              0.56,
+              -11.75
+            ]
+          ]
+        ],
+        "growth": [
+          1,
+          1,
+          1
+        ],
+        "routeOpacity": 0,
+        "labelOpacity": 1,
+        "target": "mural-05",
+        "mode": "completed",
+        "elapsed": 45,
+        "storyTime": 45,
+        "currentRoute": -1,
+        "guideStartProgress": 1,
+        "secondaryOpacity": 0,
+        "nextGuideMuralId": "mural-05",
+        "routeComplete": true,
+        "overviewCamera": {
+          "position": [
+            -30.130679768338908,
+            28.26392148313018,
+            -12.85407766554902
+          ],
+          "target": [
+            1,
+            0.1,
+            -2.8
+          ]
+        },
+        "bounds": {
+          "left": -17372.802859882035,
+          "right": 13198.706536667969,
+          "top": -7846.1688654724,
+          "bottom": 6445.149659019629
+        }
+      },
+      "overflow": false,
+      "phase": "a05-introduction",
+      "entryAbsent": true
+    },
+    {
+      "chapter": "A06",
+      "width": 1366,
+      "height": 768,
+      "newRoof": true,
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        }
+      ],
+      "murals": [
+        {
+          "id": "mural-01",
+          "label": "第一幅",
+          "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+          "position": [
+            4.865,
+            1.55,
+            4.8
+          ],
+          "width": 3.65,
+          "height": 1.2547,
+          "side": true
+        },
+        {
+          "id": "mural-02",
+          "label": "第二幅",
+          "wall": "主殿右侧内墙",
+          "position": [
+            4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.3796,
+          "side": true
+        },
+        {
+          "id": "mural-03",
+          "label": "第三幅",
+          "wall": "主殿后墙右侧",
+          "position": [
+            2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-04",
+          "label": "第四幅",
+          "wall": "主殿后墙左侧",
+          "position": [
+            -2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-05",
+          "label": "第五幅",
+          "wall": "主殿左侧内墙",
+          "position": [
+            -4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.64395,
+          "side": true
+        }
+      ],
+      "cut": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0,
+        "movie": {
+          "active": true,
+          "name": "handoff",
+          "weight": 1,
+          "center": [
+            -1.4,
+            -11.75
+          ],
+          "half": [
+            6.9,
+            4.4
+          ],
+          "summary": 0,
+          "wallWeight": 0
+        }
+      },
+      "a04": {
+        "camera": {
+          "position": [
+            -1.5,
+            5.2,
+            -10.5
+          ],
+          "target": [
+            -4.515,
+            1.85,
+            -11.75
+          ]
+        },
+        "entryProgress": 1,
+        "paths": [
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ]
+          ],
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ],
+            [
+              -2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              -2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              -2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              3.8,
+              0.36,
+              4.8
+            ]
+          ],
+          [
+            [
+              3.8,
+              0.36,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              2.7,
+              0.56,
+              -11.75
+            ]
+          ]
+        ],
+        "growth": [
+          1,
+          1,
+          1
+        ],
+        "routeOpacity": 0,
+        "labelOpacity": 1,
+        "target": "mural-05",
+        "mode": "completed",
+        "elapsed": 45,
+        "storyTime": 45,
+        "currentRoute": -1,
+        "guideStartProgress": 1,
+        "secondaryOpacity": 0,
+        "nextGuideMuralId": "mural-05",
+        "routeComplete": true,
+        "overviewCamera": {
+          "position": [
+            -30.130679768338908,
+            28.26392148313018,
+            -12.85407766554902
+          ],
+          "target": [
+            1,
+            0.1,
+            -2.8
+          ]
+        },
+        "bounds": {
+          "left": -17372.802859882035,
+          "right": 13198.706536667969,
+          "top": -7846.1688654724,
+          "bottom": 6445.149659019629
+        }
+      },
+      "overflow": false,
+      "phase": "a06-introduction",
+      "entryAbsent": true
+    },
+    {
+      "chapter": "A07",
+      "width": 1366,
+      "height": 768,
+      "newRoof": true,
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        }
+      ],
+      "murals": [
+        {
+          "id": "mural-01",
+          "label": "第一幅",
+          "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+          "position": [
+            4.865,
+            1.55,
+            4.8
+          ],
+          "width": 3.65,
+          "height": 1.2547,
+          "side": true
+        },
+        {
+          "id": "mural-02",
+          "label": "第二幅",
+          "wall": "主殿右侧内墙",
+          "position": [
+            4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.3796,
+          "side": true
+        },
+        {
+          "id": "mural-03",
+          "label": "第三幅",
+          "wall": "主殿后墙右侧",
+          "position": [
+            2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-04",
+          "label": "第四幅",
+          "wall": "主殿后墙左侧",
+          "position": [
+            -2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-05",
+          "label": "第五幅",
+          "wall": "主殿左侧内墙",
+          "position": [
+            -4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.64395,
+          "side": true
+        }
+      ],
+      "cut": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0,
+        "movie": {
+          "active": true,
+          "name": "handoff",
+          "weight": 1,
+          "center": [
+            -1.4,
+            -11.75
+          ],
+          "half": [
+            6.9,
+            4.4
+          ],
+          "summary": 0,
+          "wallWeight": 0
+        }
+      },
+      "a04": {
+        "camera": {
+          "position": [
+            -1.5,
+            5.2,
+            -10.5
+          ],
+          "target": [
+            -4.515,
+            1.85,
+            -11.75
+          ]
+        },
+        "entryProgress": 1,
+        "paths": [
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ]
+          ],
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ],
+            [
+              -2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              -2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              -2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              3.8,
+              0.36,
+              4.8
+            ]
+          ],
+          [
+            [
+              3.8,
+              0.36,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              2.7,
+              0.56,
+              -11.75
+            ]
+          ]
+        ],
+        "growth": [
+          1,
+          1,
+          1
+        ],
+        "routeOpacity": 0,
+        "labelOpacity": 1,
+        "target": "mural-05",
+        "mode": "completed",
+        "elapsed": 45,
+        "storyTime": 45,
+        "currentRoute": -1,
+        "guideStartProgress": 1,
+        "secondaryOpacity": 0,
+        "nextGuideMuralId": "mural-05",
+        "routeComplete": true,
+        "overviewCamera": {
+          "position": [
+            -30.130679768338908,
+            28.26392148313018,
+            -12.85407766554902
+          ],
+          "target": [
+            1,
+            0.1,
+            -2.8
+          ]
+        },
+        "bounds": {
+          "left": -17372.802859882035,
+          "right": 13198.706536667969,
+          "top": -7846.1688654724,
+          "bottom": 6445.149659019629
+        }
+      },
+      "overflow": false,
+      "phase": "a07-introduction",
+      "entryAbsent": true
+    },
+    {
+      "chapter": "A08",
+      "width": 1366,
+      "height": 768,
+      "newRoof": true,
+      "roof": [
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        },
+        {
+          "visible": true,
+          "opacity": 1,
+          "shadow": false
+        }
+      ],
+      "murals": [
+        {
+          "id": "mural-01",
+          "label": "第一幅",
+          "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+          "position": [
+            4.865,
+            1.55,
+            4.8
+          ],
+          "width": 3.65,
+          "height": 1.2547,
+          "side": true
+        },
+        {
+          "id": "mural-02",
+          "label": "第二幅",
+          "wall": "主殿右侧内墙",
+          "position": [
+            4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.3796,
+          "side": true
+        },
+        {
+          "id": "mural-03",
+          "label": "第三幅",
+          "wall": "主殿后墙右侧",
+          "position": [
+            2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-04",
+          "label": "第四幅",
+          "wall": "主殿后墙左侧",
+          "position": [
+            -2.25,
+            1.85,
+            -14.865
+          ],
+          "width": 3.35,
+          "height": 2,
+          "side": false
+        },
+        {
+          "id": "mural-05",
+          "label": "第五幅",
+          "wall": "主殿左侧内墙",
+          "position": [
+            -4.515,
+            1.85,
+            -11.75
+          ],
+          "width": 6.1,
+          "height": 1.64395,
+          "side": true
+        }
+      ],
+      "cut": {
+        "active": false,
+        "main": 0,
+        "side": 0,
+        "handoff": 0,
+        "wall": 0,
+        "preserved": [
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "06_Stage",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          },
+          {
+            "group": "07_Entrance",
+            "visible": true,
+            "opacity": 1
+          }
+        ],
+        "mainRoofDrawn": true,
+        "galleryCut": 0,
+        "movie": {
+          "active": true,
+          "name": "handoff",
+          "weight": 1,
+          "center": [
+            -1.4,
+            -11.75
+          ],
+          "half": [
+            6.9,
+            4.4
+          ],
+          "summary": 0,
+          "wallWeight": 0
+        }
+      },
+      "a04": {
+        "camera": {
+          "position": [
+            -1.5,
+            5.2,
+            -10.5
+          ],
+          "target": [
+            -4.515,
+            1.85,
+            -11.75
+          ]
+        },
+        "entryProgress": 1,
+        "paths": [
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ]
+          ],
+          [
+            [
+              -2.7,
+              0.56,
+              -11.75
+            ],
+            [
+              -2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              -2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              -2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              3.8,
+              0.36,
+              4.8
+            ]
+          ],
+          [
+            [
+              3.8,
+              0.36,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              4.8
+            ],
+            [
+              2.7,
+              0.13,
+              -7.4
+            ],
+            [
+              2.7,
+              0.56,
+              -8.05
+            ],
+            [
+              2.7,
+              0.56,
+              -11.75
+            ]
+          ]
+        ],
+        "growth": [
+          1,
+          1,
+          1
+        ],
+        "routeOpacity": 0,
+        "labelOpacity": 1,
+        "target": "mural-05",
+        "mode": "completed",
+        "elapsed": 45,
+        "storyTime": 45,
+        "currentRoute": -1,
+        "guideStartProgress": 1,
+        "secondaryOpacity": 0,
+        "nextGuideMuralId": "mural-05",
+        "routeComplete": true,
+        "overviewCamera": {
+          "position": [
+            -30.130679768338908,
+            28.26392148313018,
+            -12.85407766554902
+          ],
+          "target": [
+            1,
+            0.1,
+            -2.8
+          ]
+        },
+        "bounds": {
+          "left": -17372.802859882035,
+          "right": 13198.706536667969,
+          "top": -7846.1688654724,
+          "bottom": 6445.149659019629
+        }
+      },
+      "overflow": false,
+      "phase": "a08",
+      "entryAbsent": true
+    },
+    {
+      "width": 1366,
+      "activeA08ToB": true
+    },
+    {
+      "width": 1366,
+      "browserBackToA": true
+    }
+  ],
+  "inputs": [
+    {
+      "continuousWheel": "stops at mural-look, does not skip reading"
+    },
+    {
+      "busyLock": {
+        "a": true,
+        "b": false,
+        "c": false,
+        "state": "mural-reading"
+      }
+    },
+    {
+      "reducedMotion": true,
+      "repeatedCycles": 4,
+      "exactCorridorReturns": true,
+      "readingWheelIsolated": true
+    }
+  ],
+  "failures": [
+    {
+      "muralFailureRollback": true,
+      "retryRecovered": true
+    },
+    {
+      "externalGLBFailureUsesEmbeddedModel": true
+    },
+    {
+      "modelFailureRetryRecovered": true
+    }
+  ],
+  "moduleB": [
+    {
+      "B01": true,
+      "B02PanoramaAndDetail": true,
+      "B03State": "selection",
+      "physicalCameraTest": false
+    }
+  ]
+}

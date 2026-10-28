@@ -30,9 +30,10 @@ export function createA03Cutaway(root){
   }
   root?.children.filter(g=>!g.name.startsWith('mural-')).forEach(g=>g.traverse(mesh=>{
     if(!mesh.isMesh)return;const m=mesh.material,key=m.userData.textureKey;
-    if(key==='roof'){
+    // Roof B gables and supporting trim belong to the same removable assembly.
+    if(key==='roof'||g.name==='08_MainHallRoof'){
       const entry={mesh,shadow:mesh.castShadow};
-      if(g.name==='03_MainHall'){hall.push(entry);patch(m,{value:0},'a03HallCut','0.');}
+      if(['03_MainHall','08_MainHallRoof'].includes(g.name)){hall.push(entry);patch(m,{value:0},'a03HallCut','0.');}
       else if(['04_WestGallery','05_EastGallery'].includes(g.name)){
         galleries.push(entry);patch(m,galleryReveal,'a03GalleryCut','1.-step(7.1,a03CutPosition.z)');
       }else preserved.push(entry);

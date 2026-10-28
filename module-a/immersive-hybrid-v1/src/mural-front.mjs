@@ -9,10 +9,10 @@ export function frontCamera({center,normal,standOff,fov=48}){
 }
 export const FIRST_FRONT_DOCK=Object.freeze({
  muralId:'mural-01',center:FIRST_MURAL.position,normal:Object.freeze([-1,0,0]),
- width:FIRST_MURAL.width,height:FIRST_MURAL.height,standOff:1.565,
+ width:FIRST_MURAL.width,height:FIRST_MURAL.height,standOff:2.058,
  discoveryCamera:sampleMuralTurn(1),
  // Keep the eye inside the corridor; full-image framing belongs to reading.
- frontCamera:frontCamera({center:FIRST_MURAL.position,normal:[-1,0,0],standOff:1.565}),
+ frontCamera:frontCamera({center:FIRST_MURAL.position,normal:[-1,0,0],standOff:2.058}),
  transition:Object.freeze({front:1600,hold:320,reading:1400}),
 });
 function direction(pose){const d=pose.target.map((v,i)=>v-pose.position[i]),length=Math.hypot(...d);return {unit:d.map(v=>v/length),length};}

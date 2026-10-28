@@ -2,6 +2,7 @@
 // Three.js 0.180.0 is already bundled in the preview, so this adds no dependency.
 import fs from 'node:fs';
 import path from 'node:path';
+import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import {inlineA02} from './inline-a02.mjs';
 
@@ -154,6 +155,6 @@ if(/^const inlineEnvironmentAssets=.*;$/m.test(embedded)) embedded=embedded.repl
 else embedded=embedded.replace('const localModule=',`${assetDeclaration}\nconst localModule=`);
 fs.writeFileSync(path.join(directory, 'shuilong-temple.glb'), output);
 fs.writeFileSync(previewPath, embedded);
-fs.writeFileSync(path.join(directory, 'model-info.json'), `${JSON.stringify({ triangles, bytes: output.length, groups: groups.map(group => group.name) }, null, 2)}\n`);
+fs.writeFileSync(path.join(directory, 'model-info.json'), `${JSON.stringify({ version:root.userData.modelVersion, sourceSha256:crypto.createHash('sha256').update(source).digest('hex'), triangles, bytes: output.length, groups: groups.map(group => group.name) }, null, 2)}\n`);
 console.log(`Built ${triangles} triangles, ${output.length} bytes; GLB and offline preview match.`);
 await import('./build-a01-lines.mjs');

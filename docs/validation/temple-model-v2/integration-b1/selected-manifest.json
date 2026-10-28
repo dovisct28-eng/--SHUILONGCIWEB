@@ -1,0 +1,66 @@
+{
+  "files": [
+    {
+      "name": "01-a01-overview.webp",
+      "bytes": 98220,
+      "sha256": "a3f5d2a273a7df2a99c5b4308315ec3f7b1e959e41701e3ee50c1d4c99c7aeb4"
+    },
+    {
+      "name": "02-a02-space.webp",
+      "bytes": 68760,
+      "sha256": "4a8635232910ba0205d099b6580c32d7a8751af597d2bde746d90af90fae3ec7"
+    },
+    {
+      "name": "03-a03-cutaway.webp",
+      "bytes": 90934,
+      "sha256": "6685ba9c305667b9c8bd685d00d2e0a8ff8a3a6b6ed9e7ade5750f0da0b38e34"
+    },
+    {
+      "name": "04-a04-mural-locations.webp",
+      "bytes": 92620,
+      "sha256": "7e75f68bf637f7bb82d318402a8c486d632bb3452153942c1d0ec78cf527e000"
+    },
+    {
+      "name": "05-gate-interior.webp",
+      "bytes": 36344,
+      "sha256": "cd095d6183487bd7eddd9c6538daf2c9213351f34e4156485b0838506f0b2f3c"
+    },
+    {
+      "name": "06-stage-turn.webp",
+      "bytes": 44048,
+      "sha256": "990642b393c65f0b696031fefa7f933099ab553e425cf0f69dc74d28fceb1d65"
+    },
+    {
+      "name": "07-new-corridor.webp",
+      "bytes": 60020,
+      "sha256": "72a686318c9b56e43e0783e2b0e01d8b4c77e17fdcf3907f66e88370ed25e103"
+    },
+    {
+      "name": "08-mural-discovery.webp",
+      "bytes": 164026,
+      "sha256": "1cf8b45619625abaee170b60ad95920f1d134fe1136983f6414ef5f18c4e0fd7"
+    },
+    {
+      "name": "09-mural-front.webp",
+      "bytes": 248510,
+      "sha256": "e2f6bb48a0a7eb78e21141b0917c82db1eb6e839a5aae4dc94544609db8cafe9"
+    },
+    {
+      "name": "10-mural-reading.webp",
+      "bytes": 175790,
+      "sha256": "6e86778d91b8c57df40b2a08728aa80cbce86c2ffaef4aad1bd7086ab99cc1cd"
+    },
+    {
+      "name": "11-return.webp",
+      "bytes": 160770,
+      "sha256": "ab9e22eba7448a956fb1bffefa15f74231dd561d35617c8c300801d6077bd678"
+    },
+    {
+      "name": "12-full-interaction.webm",
+      "bytes": 11226727,
+      "sha256": "e24bb7daeeb425fe8e96982620110fcf6ffe7ef4e2d5cd935ccdaa507f93efe2"
+    }
+  ],
+  "totalBytes": 12466769,
+  "policy": "11 representative frames and one complete normal-speed interaction video. All duplicate regression, diagnostics and intermediate recordings stay in local/."
+}

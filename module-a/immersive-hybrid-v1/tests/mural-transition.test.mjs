@@ -5,12 +5,14 @@ import {sampleGallery,FIRST_MURAL} from '../src/corridor-path.mjs';
 import {readFileSync} from 'node:fs';
 import {execFileSync} from 'node:child_process';
 
-test('V2.1 and V2.2 camera rail files match immutable V2.2.1 baseline',()=>{
- for(const file of ['entry-path.mjs','corridor-path.mjs']){const path='module-a/immersive-hybrid-v1/src/'+file;const before=execFileSync('git',['show','1c811b5:'+path],{encoding:'utf8'});assert.equal(readFileSync(path,'utf8').replaceAll('\r\n','\n'),before.replaceAll('\r\n','\n'));}
+test('exterior camera positions and gaze through 0.85 match the immutable rail',async()=>{
+ const path='module-a/immersive-hybrid-v1/src/entry-path.mjs';const before=execFileSync('git',['show','1c811b5:'+path],{encoding:'utf8'});
+ const old=await import('data:text/javascript;base64,'+Buffer.from(before).toString('base64'));
+ for(let i=0;i<=1000;i++){const t=i/1000;if(t<=.85){assert.deepEqual(sampleGallery(t).position,old.sampleEntry(t).position);assert.deepEqual(sampleGallery(t).target,old.sampleEntry(t).target);}}
 });
 test('independent turn is continuous, horizontal, bounded, and exactly reversible',()=>{
  assert.deepEqual(sampleMuralTurn(0),sampleGallery(2));
- let previous=sampleMuralTurn(0);for(let i=1;i<=1000;i++){const p=sampleMuralTurn(i/1000);assert.equal(p.position[1],1.38);assert.equal(p.position[2],7.65);assert.equal(p.fov,48);assert.ok(p.position[0]>=3.549&&p.position[0]<=3.85);for(const f of ['position','target'])p[f].forEach((x,k)=>{assert.ok(Number.isFinite(x));assert.ok(Math.abs(x-previous[f][k])<.03);});assert.deepEqual(p,sampleMuralTurn(i/1000));previous=p;}
+ let previous=sampleMuralTurn(0);for(let i=1;i<=1000;i++){const p=sampleMuralTurn(i/1000);assert.equal(p.position[1],1.55);assert.equal(p.position[2],7.65);assert.equal(p.fov,48);assert.ok(Math.abs(p.position[0]-3.906)<1e-12);for(const f of ['position','target'])p[f].forEach((x,k)=>{assert.ok(Number.isFinite(x));assert.ok(Math.abs(x-previous[f][k])<.03);});assert.deepEqual(p,sampleMuralTurn(i/1000));previous=p;}
  for(const t of [0,1]){const a=sampleMuralTurn(t),b=sampleMuralTurn(t?1-1e-5:1e-5);assert.ok(Math.abs(a.position[0]-b.position[0])<1e-10);}
  assert.deepEqual(FIRST_MURAL.position,[4.865,1.55,4.8]);
 });

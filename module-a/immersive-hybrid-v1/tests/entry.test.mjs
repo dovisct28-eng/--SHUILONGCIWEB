@@ -9,7 +9,7 @@ test('rail has exact deterministic stops, reversible sampling and continuous der
 });
 test('gate eye stays inside actual aperture and stops before stage back wall',()=>{
   for(let i=0;i<=3000;i++){const {position:[x,y,z]}=sampleEntry(i/3000);if(i/3000>=.65&&z>=11.65&&z<=12.4){assert.ok(Math.abs(x)<.6);assert.ok(y>.25&&y<1.53);}}
-  const end=sampleEntry(1);assert.ok(end.position[2]>9.555+.5);assert.ok(end.target[0]>end.position[0]);
+  const end=sampleEntry(1);assert.ok(end.position[2]>10.155+.5);assert.ok(end.target[0]>end.position[0]);
 });
 test('controller consumes concurrent input, preserves location on failure and unlocks',async()=>{
   let finish;const c=createEntryController(()=>new Promise(r=>finish=r));const first=c.step(1);assert.equal(c.busy,true);assert.equal(await c.go('threshold'),false);finish();assert.equal(await first,true);assert.equal(c.state,'approach');assert.equal(await c.go('bad'),false);

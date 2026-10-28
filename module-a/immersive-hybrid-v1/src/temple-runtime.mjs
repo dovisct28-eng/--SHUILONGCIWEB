@@ -2,6 +2,7 @@
 // scene builder, GLB reader, environment copy or production scroll controller.
 import {createCorridorLayers} from './corridor-layers.mjs';
 import {createMuralCompositor} from './mural-compositor.mjs';
+import {GALLERY_CONFIG,createDisabledInterior} from './gallery-config.mjs';
 export async function attachEntryRuntime(ctx){
   const {T,scene,root,camera,renderer,sun,fill,a01Art,a01Post,resizeScene,updateArtDirection,schedule,texturePromises}=ctx;
   const api=window.shuilongTemple;
@@ -32,7 +33,8 @@ export async function attachEntryRuntime(ctx){
   const bounceBase=bounce?{position:bounce.position.clone(),intensity:bounce.intensity}:null;
   let scheduled=false,renderCount=0,pose={position:baseline.position,target:baseline.target,fov:baseline.fov},disposed=false;
   function invalidate(){if(!scheduled&&!disposed){scheduled=true;schedule();}}
-  const hybrid=createCorridorLayers({T,scene,root,renderer,camera,invalidate});
+  const pure3D=new URLSearchParams(location.search).get('model')===GALLERY_CONFIG.model;
+  const hybrid=pure3D?createDisabledInterior():createCorridorLayers({T,scene,root,renderer,camera,invalidate});
   const mural=createMuralCompositor({T,camera,renderer,invalidate,depthTexture:()=>a01Post?.getDepthTexture?.()});
   hybrid.load();
   function setCamera(next,{immediate=false}={}){
@@ -60,10 +62,10 @@ export async function attachEntryRuntime(ctx){
   function handoff(){
     renderFrame();const vertical=2*Math.tan(camera.fov*Math.PI/360);
     const gate=[[ -.76,0,11.93],[.76,0,11.93],[-.76,1.615,11.93],[.76,1.615,11.93]];
-    const components={leftJamb:[-.87,1,12.20],rightJamb:[.87,1,12.20],lintel:[0,1.68,12.17],stageBack:[0,1.68,9.555],rightPassage:[2,1.38,9.5]};
+    const components={leftJamb:[-.87,1,12.20],rightJamb:[.87,1,12.20],lintel:[0,1.68,12.17],stageBack:pure3D?[0,1.68,10.155]:[0,1.68,9.555],rightPassage:pure3D?[3.906,1.55,9.5]:[2,1.38,9.5]};
     const occlusion=Object.fromEntries(Object.entries(components).map(([key,p])=>[key,{world:p,projection:project(p),...{hits:intersections(pose.position,p).slice(0,2)}}]));
-    const surfaces={nearColumn:[[3.25,.17,7.2],[3.25,2.67,7.2]],beam:[[3.25,2.62,7.2],[4.83,2.62,7.2]],wall:[[4.89,.32,7.1],[4.89,2.6,7.1],[4.89,2.6,2.5],[4.89,.32,2.5]],floor:[[3.175,.32,9.5],[4.925,.32,9.5],[4.925,.32,2.5],[3.175,.32,2.5]]};
-    return {version:'2.2',model:{asset:'shuilong-temple/shuilong-temple.glb',position:root.position.toArray(),quaternion:root.quaternion.toArray(),scale:root.scale.toArray(),matrixWorld:root.matrixWorld.toArray()},modelUnits:'design model, not a survey',camera:{...pose,quaternion:camera.quaternion.toArray(),projectionMatrix:camera.projectionMatrix.toArray(),matrixWorld:camera.matrixWorld.toArray(),near:camera.near,far:camera.far,aspect:camera.aspect},hybrid:hybrid.state(),surfaces:Object.fromEntries(Object.entries(surfaces).map(([k,points])=>[k,points.map(world=>({world,projection:project(world)}))])),viewport:[innerWidth,innerHeight],view:{verticalFov:camera.fov,horizontalFov:2*Math.atan(vertical/2*camera.aspect)*180/Math.PI,verticalSpanAtUnitDistance:vertical},gatePlane:{z:11.93,openingBelowLintel:{x:[-.76,.76],y:[.13,1.615]},corners:gate.map(project)},components:occlusion,light:{exposure:renderer.toneMappingExposure,toneMapping:'ACESFilmic',colorSpace:renderer.outputColorSpace,sun:{position:sun.position.toArray(),intensity:sun.intensity,color:sun.color.getHexString()},fill:{intensity:fill.intensity,color:fill.color.getHexString()},existingGalleryBounce:bounce?{position:bounce.position.toArray(),intensity:bounce.intensity,color:bounce.color.getHexString()}:null,fog:{color:scene.fog.color.getHexString(),density:scene.fog.density},post:a01Post?.getState()},visibility:{gateBehindCamera:gate.every(p=>!project(p).visible),stageBackVisible:occlusion.stageBack.projection.visible,matchingInteriorAsset:hybrid.status==='ready',readyForFinalComposite:false,reason:'几何配准的程序材质候选；动态视觉须经用户审图'},removedTriangles};
+    const surfaces=pure3D?{nearColumn:[[2.922,.32,7.2],[2.922,2.85,7.2]],beam:[[2.922,2.89,7.2],[4.89,2.89,7.2]],wall:[[4.89,.32,7.1],[4.89,2.6,7.1],[4.89,2.6,2.5],[4.89,.32,2.5]],floor:[[2.682,.32,9.5],[4.925,.32,9.5],[4.925,.32,2.5],[2.682,.32,2.5]]}:{nearColumn:[[3.25,.17,7.2],[3.25,2.67,7.2]],beam:[[3.25,2.62,7.2],[4.83,2.62,7.2]],wall:[[4.89,.32,7.1],[4.89,2.6,7.1],[4.89,2.6,2.5],[4.89,.32,2.5]],floor:[[3.175,.32,9.5],[4.925,.32,9.5],[4.925,.32,2.5],[3.175,.32,2.5]]};
+    return {version:pure3D?'V2.4-B1':'2.2',model:{version:pure3D?'V2.4-B1-combined-b':'shared',asset:'shuilong-temple/shuilong-temple.glb',position:root.position.toArray(),quaternion:root.quaternion.toArray(),scale:root.scale.toArray(),matrixWorld:root.matrixWorld.toArray()},modelUnits:'design model, not a survey',camera:{...pose,quaternion:camera.quaternion.toArray(),projectionMatrix:camera.projectionMatrix.toArray(),matrixWorld:camera.matrixWorld.toArray(),near:camera.near,far:camera.far,aspect:camera.aspect},hybrid:hybrid.state(),surfaces:Object.fromEntries(Object.entries(surfaces).map(([k,points])=>[k,points.map(world=>({world,projection:project(world)}))])),viewport:[innerWidth,innerHeight],view:{verticalFov:camera.fov,horizontalFov:2*Math.atan(vertical/2*camera.aspect)*180/Math.PI,verticalSpanAtUnitDistance:vertical},gatePlane:{z:11.93,openingBelowLintel:{x:[-.76,.76],y:[.13,1.615]},corners:gate.map(project)},components:occlusion,light:{exposure:renderer.toneMappingExposure,toneMapping:'ACESFilmic',colorSpace:renderer.outputColorSpace,sun:{position:sun.position.toArray(),intensity:sun.intensity,color:sun.color.getHexString()},fill:{intensity:fill.intensity,color:fill.color.getHexString()},existingGalleryBounce:bounce?{position:bounce.position.toArray(),intensity:bounce.intensity,color:bounce.color.getHexString()}:null,fog:{color:scene.fog.color.getHexString(),density:scene.fog.density},post:a01Post?.getState()},visibility:{gateBehindCamera:gate.every(p=>!project(p).visible),stageBackVisible:occlusion.stageBack.projection.visible,matchingInteriorAsset:hybrid.status==='ready',readyForFinalComposite:false,reason:pure3D?'Combined B 纯 3D 路线待用户视觉验收':'几何配准的程序材质候选；动态视觉须经用户审图'},removedTriangles};
   }
   function captureMask(cutoff=2){
     const old=scene.overrideMaterial,background=scene.background;

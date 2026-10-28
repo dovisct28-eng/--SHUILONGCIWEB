@@ -2,9 +2,9 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {sampleEntry,ENTRY_STOPS} from '../src/entry-path.mjs';
 import {sampleGallery,CORRIDOR_KEYS,GALLERY_STOPS,corridorWeights,corridorPhase,createGalleryController,FIRST_MURAL,travelMs} from '../src/corridor-path.mjs';
-test('V2.1 samples and all five docks remain identical',()=>{
+test('gallery sampler shares the entry rail and all five entry stops',()=>{
  for(let i=0;i<=3000;i++)assert.deepEqual(sampleGallery(i/3000),sampleEntry(i/3000));
- assert.deepEqual(GALLERY_STOPS.slice(0,5),ENTRY_STOPS);assert.equal(travelMs(0,1),10800);assert.equal(travelMs(1,2),5000);
+ assert.deepEqual(GALLERY_STOPS.slice(0,5),ENTRY_STOPS);assert.equal(travelMs(0,1),12400);assert.equal(travelMs(1,2),5000);
 });
 test('corridor is C1, reversible, eye level and FOV do not jump',()=>{
  for(const k of CORRIDOR_KEYS)assert.deepEqual(sampleGallery(1+k.t).position.map(n=>+n.toFixed(9)),k.position);
@@ -13,7 +13,7 @@ test('corridor is C1, reversible, eye level and FOV do not jump',()=>{
   const a=sampleGallery(k-eps)[f],b=sampleGallery(k)[f],c=sampleGallery(k+eps)[f];
   for(let j=0;j<3;j++)assert.ok(Math.abs((b[j]-a[j])/eps-(c[j]-b[j])/eps)<.04,`${k} ${f}`);
  }
- for(let i=0;i<=4000;i++){const t=1+i/4000,s=sampleGallery(t),back=sampleGallery(2-(1-i/4000));assert.ok([...s.position,...s.target,s.fov].every(Number.isFinite));assert.ok(Math.abs(s.position[1]-1.38)<1e-12);assert.equal(s.fov,48);for(const field of ['position','target'])s[field].forEach((n,j)=>assert.ok(Math.abs(n-back[field][j])<1e-10));}
+ for(let i=0;i<=4000;i++){const t=1+i/4000,s=sampleGallery(t),back=sampleGallery(2-(1-i/4000));assert.ok([...s.position,...s.target,s.fov].every(Number.isFinite));assert.ok(s.position[1]>=1.38-1e-12&&s.position[1]<=1.56);assert.equal(s.fov,48);for(const field of ['position','target'])s[field].forEach((n,j)=>assert.ok(Math.abs(n-back[field][j])<1e-10));}
  assert.deepEqual(FIRST_MURAL.position,[4.865,1.55,4.8]);assert.equal(FIRST_MURAL.rotationY,-Math.PI/2);
 });
 test('one rail clock controls every layer; loading cannot expose enhancement',()=>{

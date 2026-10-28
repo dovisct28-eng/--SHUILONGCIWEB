@@ -18,7 +18,11 @@ export const PATH_KEYS = [
   {t:.78,position:[0,1.38,14.1],target:[0,1.38,9.8],fov:48},
   {t:.85,position:[0,1.38,12.85],target:[0,1.38,9.6],fov:48},
   {t:.92,position:[0,1.38,12.25],target:[.12,1.38,9.7],fov:48},
-  {t:1,position:[.12,1.38,11.15],target:[1.2,1.38,9.2],fov:48},
+  // Clear the gate before moving laterally behind the enlarged stage. The
+  // inside dock looks between the moved columns rather than into its back wall.
+  {t:.945,position:[.08,1.38,11.35],target:[1.5,1.48,10.85],fov:48},
+  {t:.97,position:[1.45,1.45,10.95],target:[3.9,1.55,8.4],fov:48},
+  {t:1,position:[3.3,1.55,10.7],target:[3.906,1.55,5],fov:48},
 ];
 const clamp=t=>Math.max(0,Math.min(1,t));
 // Nonuniform cubic Hermite: continuous first derivatives, with zero endpoint

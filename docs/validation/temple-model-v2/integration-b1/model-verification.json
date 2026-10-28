@@ -1,0 +1,154 @@
+{
+  "pass": true,
+  "baseline": "ef0f3667e6db2d6ce8b7dca676f5ff1a93231a11",
+  "tests": [
+    "tests 148",
+    "pass 148",
+    "fail 0"
+  ],
+  "syntaxChecks": 60,
+  "rebuild": {
+    "command": "node shuilong-temple/build-model.mjs",
+    "output": "Built 90616 triangles, 3624100 bytes; GLB and offline preview match.\nA01 contours: 1164 segments; 40786 bytes.\n",
+    "deterministic": true,
+    "files": [
+      {
+        "file": "shuilong-temple/shuilong-temple.glb",
+        "sha256": "00bdb6e207ee518932f97e4d15bc328c5a93b080646dc6258d9bfd3ab228640d"
+      },
+      {
+        "file": "shuilong-temple/model-info.json",
+        "sha256": "c99f861d263d6e01f5cef8457cfae8918826104f267dcb966c29dd8db9f79756"
+      },
+      {
+        "file": "shuilong-temple/水龙祠-交互预览.html",
+        "sha256": "f2c67bcc3eab4d7d5b2395247b86979a9b5ac23eebc59755802dcdce98a15bfd"
+      },
+      {
+        "file": "shuilong-temple/a01-lines-data.mjs",
+        "sha256": "fb617676d5278f4166694a9ccfbbdfc7b6e82542226a2f944bede7640bccca23"
+      }
+    ]
+  },
+  "model": {
+    "version": "V2.4-B1-combined-b",
+    "sourceSha256": "c14ea94b302b0c42e8f97339c04fe165fd2a43f3655b577c9b0eaf2e34d7ff78",
+    "triangles": 90616,
+    "bytes": 3624100,
+    "groups": [
+      "01_Base",
+      "02_Enclosure",
+      "03_MainHall",
+      "04_WestGallery",
+      "05_EastGallery",
+      "06_Stage",
+      "08_MainHallRoof",
+      "07_Entrance",
+      "mural-01",
+      "mural-02",
+      "mural-03",
+      "mural-04",
+      "mural-05"
+    ],
+    "sha256": "00bdb6e207ee518932f97e4d15bc328c5a93b080646dc6258d9bfd3ab228640d",
+    "materials": 13,
+    "images": 18,
+    "primitives": 51,
+    "murals": [
+      {
+        "id": "mural-01",
+        "label": "第一幅",
+        "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+        "position": [
+          4.865,
+          1.55,
+          4.8
+        ],
+        "width": 3.65,
+        "height": 1.2547,
+        "side": true
+      },
+      {
+        "id": "mural-02",
+        "label": "第二幅",
+        "wall": "主殿右侧内墙",
+        "position": [
+          4.515,
+          1.85,
+          -11.75
+        ],
+        "width": 6.1,
+        "height": 1.3796,
+        "side": true
+      },
+      {
+        "id": "mural-03",
+        "label": "第三幅",
+        "wall": "主殿后墙右侧",
+        "position": [
+          2.25,
+          1.85,
+          -14.865
+        ],
+        "width": 3.35,
+        "height": 2,
+        "side": false
+      },
+      {
+        "id": "mural-04",
+        "label": "第四幅",
+        "wall": "主殿后墙左侧",
+        "position": [
+          -2.25,
+          1.85,
+          -14.865
+        ],
+        "width": 3.35,
+        "height": 2,
+        "side": false
+      },
+      {
+        "id": "mural-05",
+        "label": "第五幅",
+        "wall": "主殿左侧内墙",
+        "position": [
+          -4.515,
+          1.85,
+          -11.75
+        ],
+        "width": 6.1,
+        "height": 1.64395,
+        "side": true
+      }
+    ]
+  },
+  "comparisons": {
+    "previous": {
+      "triangles": 83360,
+      "bytes": 3329000
+    },
+    "candidateB": {
+      "triangles": 90616,
+      "bytes": 3624048
+    },
+    "geometry": "All source meshes match frozen Combined B positions and normals within 1e-6; only roof assembly group renamed."
+  },
+  "preservation": {
+    "preExistingFilesUnchanged": 2304,
+    "preExistingTrackedFiles": [
+      "Mural-Exhibition/public/assets/01_南门何五猖/info.txt",
+      "Mural-Exhibition/public/assets/02_东门陈五猖/info.txt",
+      "Mural-Exhibition/public/assets/03_西门谢五猖/info.txt",
+      "Mural-Exhibition/public/assets/04_中门徐五猖/info.txt",
+      "Mural-Exhibition/public/assets/05_北门雷五猖/info.txt",
+      "Mural-Exhibition/public/assets/06_翻坛张五郎/info.txt",
+      "Mural-Exhibition/public/assets/07_梅山猖兵/info.txt",
+      "docs/LOFI_ARCHIVE.md",
+      "scripts/Start-LofiArchive.ps1",
+      "scripts/lofi-launcher.test.cjs"
+    ],
+    "archiveRefsUnchanged": true,
+    "moduleBCodeDiff": "",
+    "historicalCandidateCodeDiff": ""
+  }
+}

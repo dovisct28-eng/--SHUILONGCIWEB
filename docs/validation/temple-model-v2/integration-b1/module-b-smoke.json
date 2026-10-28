@@ -1,0 +1,20 @@
+{
+  "pass": true,
+  "state": "cyber",
+  "canvases": 1,
+  "errors": [],
+  "input": "Existing synthetic camera/Hands/Pose fixture; no physical camera, gesture or MediaPipe accuracy acceptance.",
+  "dependencies": [
+    {
+      "url": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js*",
+      "file": "local/qa-three-0.160.0.mjs",
+      "sha256": "76dea8151bc9352aef3528b4262e249b2604f62543828328db978d060d61a495"
+    },
+    {
+      "url": "https://unpkg.com/gsap@3.12.5/dist/gsap.min.js",
+      "file": "local/qa-gsap-3.12.5.js",
+      "sha256": "28033e449a31ebcc396e5be8b13b63152bf03094288fb5867034321927bce087"
+    }
+  ],
+  "limitation": "Browser CDN loading failed on this host. QA routes use locally cached exact pinned versions already referenced by production. No Module B source changes or dependency installation; ordinary B03 still depends on its existing CDNs."
+}

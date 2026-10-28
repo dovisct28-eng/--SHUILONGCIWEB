@@ -7,7 +7,7 @@ const point=p=>{const {muralFront,...pose}=p;return pose;};
 test('front dock derives from the anchor normal; discovery is preserved exactly',()=>{
  assert.deepEqual(point(sampleMuralFront(0)),sampleMuralTurn(1));
  assert.deepEqual(point(sampleMuralFront(1)),FIRST_FRONT_DOCK.frontCamera);
- assert.ok(Math.abs(FIRST_FRONT_DOCK.frontCamera.position[0]-3.3)<1e-12);
+ assert.ok(Math.abs(FIRST_FRONT_DOCK.frontCamera.position[0]-2.807)<1e-12);
  assert.deepEqual(frontCamera({center:[2,3,4],normal:[0,0,2],standOff:3}).position,[2,3,7]);
  assert.throws(()=>frontCamera({center:[0,0,0],normal:[0,0,0],standOff:1}));
 });

@@ -1,0 +1,13 @@
+{
+  "pass": true,
+  "state": "mural-front hold",
+  "capture": "Frame extracted from the actual uninterrupted normal-speed interaction WebM; no camera assignment, pause or substituted frame.",
+  "frame": "local/dock-frame-7.webp",
+  "time": 37.919999999999995,
+  "videoSha256": "e24bb7daeeb425fe8e96982620110fcf6ffe7ef4e2d5cd935ccdaa507f93efe2",
+  "viewport": [
+    1440,
+    900
+  ],
+  "file": "selected/09-mural-front.webp"
+}

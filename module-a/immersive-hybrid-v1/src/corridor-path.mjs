@@ -1,15 +1,15 @@
 import {ENTRY_STOPS,PATH_KEYS,sampleEntry,ENTRY_DURATION} from './entry-path.mjs';
 
 // Coordinates checked against the running GLB, not site measurements. Keep the
-// complete V2.1 rail (including its zero-velocity interior dock) byte-for-byte.
+// exterior V2.1 rail. Recalibrate only the interior for Combined B.
 export const CORRIDOR_DURATION=5000;
 export const CORRIDOR_KEYS=[
- {t:0,position:[.12,1.38,11.15],target:[1.2,1.38,9.2],fov:48},
- {t:.22,position:[1.65,1.38,10.8],target:[3.35,1.38,8.25],fov:48},
- {t:.43,position:[3.42,1.38,10.5],target:[4.02,1.38,5.5],fov:48},
- {t:.60,position:[3.85,1.38,9.7],target:[4.05,1.38,3.4],fov:48},
- {t:.80,position:[3.85,1.38,8.4],target:[4.05,1.38,2.4],fov:48},
- {t:1,position:[3.85,1.38,7.65],target:[4.1,1.38,2],fov:48},
+ {t:0,position:[3.3,1.55,10.7],target:[3.906,1.55,5],fov:48},
+ {t:.22,position:[3.6,1.55,10.65],target:[3.906,1.55,5],fov:48},
+ {t:.43,position:[3.906,1.55,10.55],target:[3.906,1.55,5],fov:48},
+ {t:.60,position:[3.906,1.55,9.7],target:[3.906,1.55,3.4],fov:48},
+ {t:.80,position:[3.906,1.55,8.4],target:[3.906,1.55,2.4],fov:48},
+ {t:1,position:[3.906,1.55,7.65],target:[3.906,1.55,2],fov:48},
 ];
 export const GALLERY_STOPS=Object.freeze([...ENTRY_STOPS,
  {id:'stage-turn',label:'戏台右侧',time:1.43},
@@ -33,7 +33,8 @@ export function sampleGallery(time){
  return {...(t<=1?sampleEntry(t,PATH_KEYS):sampleEntry(t-1,CORRIDOR_KEYS)),time:t};
 }
 export function travelMs(a,b){
- const clock=t=>Math.min(1,t)*ENTRY_DURATION+Math.max(0,t-1)*CORRIDOR_DURATION;
+ // Add time only after the threshold; exterior approach timing stays intact.
+ const clock=t=>Math.min(1,t)*ENTRY_DURATION+Math.max(0,Math.min(1,(t-.92)/.08))*1600+Math.max(0,t-1)*CORRIDOR_DURATION;
  return Math.abs(clock(b)-clock(a));
 }
 export function createGalleryController(onChange){

@@ -3,13 +3,13 @@ import {FIRST_MURAL,sampleGallery} from './corridor-path.mjs';
 export const clamp=t=>Math.max(0,Math.min(1,t));
 export const ease=t=>{const u=clamp(t);return u*u*u*(10+u*(-15+6*u));};
 export const MURAL_TIMING=Object.freeze({turn:1450,reading:1750});
-// An independent extension after time=2. The V2.1 / V2.2 rail stays untouched.
+// The same discovery turn is sampled in reverse, using the new corridor centre.
 export function sampleMuralTurn(progress){
- const u=ease(progress),start=sampleGallery(2),position=start.position.map((v,i)=>v+([-0.30,0,0][i])*u);
+ const u=ease(progress),start=sampleGallery(2),position=[...start.position];
  if(progress<=0)return start;
  const startYaw=Math.atan2(start.target[0]-start.position[0],start.position[2]-start.target[2]);
- const endYaw=Math.atan2(FIRST_MURAL.position[0]-3.55,7.65-FIRST_MURAL.position[2]);
- const yaw=startYaw+(endYaw-startYaw)*u,pitch=Math.atan2(.25,Math.hypot(1.315,2.85))*u;
+ const endYaw=Math.atan2(FIRST_MURAL.position[0]-position[0],position[2]-FIRST_MURAL.position[2]);
+ const yaw=startYaw+(endYaw-startYaw)*u,pitch=0;
  const distance=Math.hypot(...start.target.map((v,i)=>v-start.position[i]));
  return {time:2,position,target:[position[0]+Math.sin(yaw)*Math.cos(pitch)*distance,position[1]+Math.sin(pitch)*distance,position[2]-Math.cos(yaw)*Math.cos(pitch)*distance],fov:48};
 }

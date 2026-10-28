@@ -1,0 +1,93 @@
+{
+  "pass": true,
+  "source": "Actual uninterrupted normal-speed interaction from overview to reading/detail and full return to overview; no debug camera assignment or frame substitution.",
+  "file": "selected/12-full-interaction.webm",
+  "duration": 70,
+  "width": 1440,
+  "height": 900,
+  "playbackVerificationRate": 4,
+  "playback": {
+    "updates": 66,
+    "total": 1750,
+    "dropped": 0,
+    "error": null
+  },
+  "fullPlaybackEnded": true,
+  "bytes": 11226727,
+  "sha256": "e24bb7daeeb425fe8e96982620110fcf6ffe7ef4e2d5cd935ccdaa507f93efe2",
+  "reviewFrames": [
+    {
+      "time": 0,
+      "path": "local/video-0.webp"
+    },
+    {
+      "time": 4,
+      "path": "local/video-1.webp"
+    },
+    {
+      "time": 8,
+      "path": "local/video-2.webp"
+    },
+    {
+      "time": 12,
+      "path": "local/video-3.webp"
+    },
+    {
+      "time": 16,
+      "path": "local/video-4.webp"
+    },
+    {
+      "time": 20,
+      "path": "local/video-5.webp"
+    },
+    {
+      "time": 24,
+      "path": "local/video-6.webp"
+    },
+    {
+      "time": 28,
+      "path": "local/video-7.webp"
+    },
+    {
+      "time": 32,
+      "path": "local/video-8.webp"
+    },
+    {
+      "time": 36,
+      "path": "local/video-9.webp"
+    },
+    {
+      "time": 40,
+      "path": "local/video-10.webp"
+    },
+    {
+      "time": 44,
+      "path": "local/video-11.webp"
+    },
+    {
+      "time": 48,
+      "path": "local/video-12.webp"
+    },
+    {
+      "time": 52,
+      "path": "local/video-13.webp"
+    },
+    {
+      "time": 56,
+      "path": "local/video-14.webp"
+    },
+    {
+      "time": 60,
+      "path": "local/video-15.webp"
+    },
+    {
+      "time": 64,
+      "path": "local/video-16.webp"
+    },
+    {
+      "time": 68,
+      "path": "local/video-17.webp"
+    }
+  ],
+  "contactSheet": "local/video-review.webp"
+}

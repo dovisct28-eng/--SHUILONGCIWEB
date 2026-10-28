@@ -1,6 +1,8 @@
 {
-  "triangles": 83360,
-  "bytes": 3329000,
+  "version": "V2.4-B1-combined-b",
+  "sourceSha256": "c14ea94b302b0c42e8f97339c04fe165fd2a43f3655b577c9b0eaf2e34d7ff78",
+  "triangles": 90616,
+  "bytes": 3624100,
   "groups": [
     "01_Base",
     "02_Enclosure",
@@ -8,6 +10,7 @@
     "04_WestGallery",
     "05_EastGallery",
     "06_Stage",
+    "08_MainHallRoof",
     "07_Entrance",
     "mural-01",
     "mural-02",

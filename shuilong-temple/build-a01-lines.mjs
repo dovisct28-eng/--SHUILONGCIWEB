@@ -13,7 +13,7 @@ const source = fs.readFileSync(new URL('model-source.js', directory), 'utf8');
 const root = new Function('T', `${source}\nreturn makeTemple(T);`)(T);
 root.updateMatrixWorld(true);
 const layers = Object.fromEntries(['hall','west','east','stage','entrance','roof','timber','court','detail'].map(key => [key, []]));
-const names = {'03_MainHall':'hall','04_WestGallery':'west','05_EastGallery':'east','06_Stage':'stage','07_Entrance':'entrance','02_Enclosure':'court'};
+const names = {'03_MainHall':'hall','08_MainHallRoof':'hall','04_WestGallery':'west','05_EastGallery':'east','06_Stage':'stage','07_Entrance':'entrance','02_Enclosure':'court'};
 const append = (key, a, b, matrix) => {
   a.applyMatrix4(matrix); b.applyMatrix4(matrix);
   layers[key].push(...a.toArray(), ...b.toArray());

@@ -1,0 +1,16 @@
+{
+  "samples": 903,
+  "radius": 0.12,
+  "nearTriangles": 532,
+  "minSurfaceDistance": 0.23500000953674327,
+  "contacts": [],
+  "segmentHits": 0,
+  "sightlines": [
+    [],
+    [],
+    [],
+    [],
+    []
+  ],
+  "scope": "Real-camera route .85..2, discovery and front; double-sided envelope proximity and bidirectional segment rays. Virtual reading camera is a projection, not a walk."
+}
