@@ -1,0 +1,39 @@
+{
+  "pass": true,
+  "base": "701b556cd0f118e7005f5395a3ee7ad01f73b976",
+  "branch": "feature/shuilongci-hybrid-gallery-v1",
+  "existingTrackedFilesCompared": 3736,
+  "existingBytesAndDeletionsUnchanged": true,
+  "archive": "48f272497e86e4549c5bcd0dee275ff347171a3f",
+  "selected": {
+    "files": [
+      {
+        "name": "01-model-top.webp",
+        "bytes": 232656,
+        "sha256": "fef00bf69c46865769bd38cd37489354cc2f57cab9090b2d58b774028fab60bd"
+      },
+      {
+        "name": "02-model-front.webp",
+        "bytes": 670688,
+        "sha256": "2cbbf96c9a76e3d9f48d1706ad41898b9efcd31b0197b369e20bf53cc584ffb0"
+      },
+      {
+        "name": "03-model-side.webp",
+        "bytes": 274268,
+        "sha256": "07157c776ed520acbe267379ec2d4a4987861339cefab323bf7d6054974c3bf3"
+      },
+      {
+        "name": "04-model-aerial.webp",
+        "bytes": 802096,
+        "sha256": "68f6ae2bf294d2fb9d194a5be1bb184709130a7f3a665b483bf69ed4cf54130f"
+      },
+      {
+        "name": "05-layout-comparison.webp",
+        "bytes": 73318,
+        "sha256": "db4fda538146f6e1745c6678967986e8ed38d3e219b8f2b0876abd96822994be"
+      }
+    ],
+    "totalBytes": 2053026
+  },
+  "scope": "Only new docs/validation/temple-model-audit files; original model and interactions unchanged"
+}

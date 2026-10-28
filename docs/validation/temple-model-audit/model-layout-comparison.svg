@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1320" viewBox="0 0 1800 1320" role="img" aria-labelledby="title desc">
+<title id="title">水龙祠空间布局对照 · 阶段一</title>
+<desc id="desc">左为2016文献图6的示意提炼，右为现有模型坐标。各自等比绘制并归一化主体纵长，不是共同米制比例。入口在下，主殿在上，右侧指从入口面向主殿。线条、标签、柱点和尺寸均为独立矢量对象。</desc>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif">
+<rect x="0.00" y="0.00" width="1800.00" height="1320.00" fill="#f7f6f0" stroke="none" stroke-width="2"/>
+<text x="64.00" y="70.00" font-size="38" fill="#374341" text-anchor="start" font-weight="600">水龙祠：保留主体，局部校正</text>
+<text x="64.00" y="111.00" font-size="21" fill="#6a7770" text-anchor="start" font-weight="400">历史测绘与现有模型的空间布局对照  /  阶段一审查 · 2026-10-28</text>
+<line x1="64.00" y1="143.00" x2="1736.00" y2="143.00" stroke="#bbc2b9" stroke-width="1"/>
+<text x="90.00" y="194.00" font-size="28" fill="#374341" text-anchor="start" font-weight="600">2016 测绘图提炼</text>
+<text x="90.00" y="229.00" font-size="19" fill="#6a7770" text-anchor="start" font-weight="400">来源：发现报告 PDF 第7页，图6；修复前状态</text>
+<text x="950.00" y="194.00" font-size="28" fill="#374341" text-anchor="start" font-weight="600">现有程序化模型</text>
+<text x="950.00" y="229.00" font-size="19" fill="#6a7770" text-anchor="start" font-weight="400">来源：model-source.js / GLB；基线 701b556</text>
+<line x1="880.00" y1="175.00" x2="880.00" y2="1140.00" stroke="#d6d9cf" stroke-width="1"/>
+<g id="historic-plan" aria-label="2016 plan schematic">
+<rect x="302.64" y="285.00" width="294.73" height="800.00" fill="#fcfbf7" stroke="none" stroke-width="2"/>
+<rect x="302.64" y="285.00" width="294.73" height="191.95" fill="#e1e5dc" stroke="none" stroke-width="2"/>
+<rect x="302.64" y="476.95" width="53.13" height="608.05" fill="#ece6d9" stroke="none" stroke-width="2"/>
+<rect x="540.91" y="476.95" width="56.45" height="608.05" fill="#ece6d9" stroke="none" stroke-width="2"/>
+<line x1="302.64" y1="285.00" x2="597.36" y2="285.00" stroke="#697774" stroke-width="2"/>
+<line x1="597.36" y1="285.00" x2="597.36" y2="1085.00" stroke="#697774" stroke-width="2"/>
+<line x1="302.64" y1="285.00" x2="302.64" y2="476.95" stroke="#697774" stroke-width="2"/>
+<line x1="302.64" y1="476.95" x2="302.64" y2="786.45" stroke="#697774" stroke-width="2" stroke-dasharray="8 6"/>
+<line x1="302.64" y1="786.45" x2="302.64" y2="1085.00" stroke="#697774" stroke-width="2"/>
+<line x1="355.77" y1="476.95" x2="355.77" y2="786.45" stroke="#697774" stroke-width="2" stroke-dasharray="8 6"/>
+<line x1="355.77" y1="786.45" x2="355.77" y2="1023.90" stroke="#697774" stroke-width="2"/>
+<line x1="540.91" y1="476.95" x2="540.91" y2="1023.90" stroke="#697774" stroke-width="2"/>
+<line x1="302.64" y1="476.95" x2="597.36" y2="476.95" stroke="#697774" stroke-width="2"/>
+<line x1="302.64" y1="1085.00" x2="343.48" y2="1085.00" stroke="#697774" stroke-width="2"/>
+<line x1="362.41" y1="1085.00" x2="434.47" y2="1085.00" stroke="#697774" stroke-width="2"/>
+<line x1="462.04" y1="1085.00" x2="529.95" y2="1085.00" stroke="#697774" stroke-width="2"/>
+<line x1="550.04" y1="1085.00" x2="597.36" y2="1085.00" stroke="#697774" stroke-width="2"/>
+<line x1="343.48" y1="1090.00" x2="362.41" y2="1090.00" stroke="#b1aaa0" stroke-width="2"/>
+<line x1="434.47" y1="1090.00" x2="462.04" y2="1090.00" stroke="#b1aaa0" stroke-width="2"/>
+<line x1="529.95" y1="1090.00" x2="550.04" y2="1090.00" stroke="#b1aaa0" stroke-width="2"/>
+<g id="historic-columns">
+<circle cx="393.63" cy="318.37" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="393.63" cy="358.39" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="393.63" cy="437.26" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="393.63" cy="476.95" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="506.21" cy="318.37" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="506.21" cy="358.39" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="506.21" cy="437.26" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="506.21" cy="476.95" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="355.77" cy="554.66" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2" stroke-dasharray="3 2"/>
+<circle cx="540.91" cy="554.66" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="355.77" cy="616.76" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2" stroke-dasharray="3 2"/>
+<circle cx="540.91" cy="616.76" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="355.77" cy="685.17" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2" stroke-dasharray="3 2"/>
+<circle cx="540.91" cy="685.17" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="355.77" cy="770.84" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2" stroke-dasharray="3 2"/>
+<circle cx="540.91" cy="770.84" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="355.77" cy="853.37" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="540.91" cy="853.37" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="355.77" cy="934.07" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="540.91" cy="934.07" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="355.77" cy="1003.31" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="540.91" cy="1003.31" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="355.77" cy="1035.19" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="540.91" cy="1035.19" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+</g>
+<path id="historic-stage-with-rear-room" d="M373.20,1023.90 L526.80,1023.90 L526.80,933.40 L503.55,933.40 L503.55,872.80 L396.45,872.80 L396.45,933.40 L373.20,933.40 Z" fill="#d9c5ad" stroke="#827261" stroke-width="2"/>
+<line x1="373.20" y1="959.14" x2="526.80" y2="959.14" stroke="#827261" stroke-width="1.5"/>
+<text x="450.00" y="920.12" font-size="20" fill="#374341" text-anchor="middle" font-weight="400">戏台</text>
+<text x="450.00" y="999.82" font-size="15" fill="#7b6d5d" text-anchor="middle" font-weight="400">后部空间</text>
+<text x="450.00" y="402.89" font-size="24" fill="#374341" text-anchor="middle" font-weight="400">主殿</text>
+<text x="450.00" y="700.11" font-size="24" fill="#374341" text-anchor="middle" font-weight="400">庭院</text>
+<text x="329.20" y="766.53" font-size="17" fill="#374341" text-anchor="middle" font-weight="400">左廊</text>
+<text x="569.14" y="766.53" font-size="17" fill="#374341" text-anchor="middle" font-weight="400">右廊</text>
+<text x="450.00" y="1121.00" font-size="19" fill="#374341" text-anchor="middle" font-weight="400">入口 → 面向主殿</text>
+<g id="historic-murals">
+<line x1="307.64" y1="290.23" x2="307.64" y2="476.95" stroke="#507b76" stroke-width="7"/>
+<circle cx="280.64" cy="384.63" r="13" fill="#eef3f1" stroke="#5b7874" stroke-width="1.4"/>
+<text x="280.64" y="390.63" font-size="18" fill="#3d625e" text-anchor="middle" font-weight="600">⑤</text>
+<line x1="592.36" y1="290.23" x2="592.36" y2="476.95" stroke="#507b76" stroke-width="7"/>
+<circle cx="619.36" cy="384.63" r="13" fill="#eef3f1" stroke="#5b7874" stroke-width="1.4"/>
+<text x="619.36" y="390.63" font-size="18" fill="#3d625e" text-anchor="middle" font-weight="600">②</text>
+<line x1="410.56" y1="290.00" x2="489.44" y2="290.00" stroke="#507b76" stroke-width="7"/>
+<circle cx="450.00" cy="261.00" r="13" fill="#eef3f1" stroke="#5b7874" stroke-width="1.4"/>
+<text x="450.00" y="267.00" font-size="18" fill="#3d625e" text-anchor="middle" font-weight="600">④</text>
+<line x1="522.64" y1="290.00" x2="567.48" y2="290.00" stroke="#507b76" stroke-width="7"/>
+<circle cx="545.06" cy="261.00" r="13" fill="#eef3f1" stroke="#5b7874" stroke-width="1.4"/>
+<text x="545.06" y="267.00" font-size="18" fill="#3d625e" text-anchor="middle" font-weight="600">③</text>
+<line x1="592.36" y1="876.61" x2="592.36" y2="963.46" stroke="#507b76" stroke-width="7"/>
+<circle cx="619.36" cy="920.04" r="13" fill="#eef3f1" stroke="#5b7874" stroke-width="1.4"/>
+<text x="619.36" y="926.04" font-size="18" fill="#3d625e" text-anchor="middle" font-weight="600">①</text>
+</g>
+<line x1="302.64" y1="1158.00" x2="597.36" y2="1158.00" stroke="#9aa19a" stroke-width="1"/>
+<line x1="302.64" y1="1153.00" x2="302.64" y2="1163.00" stroke="#9aa19a" stroke-width="1"/>
+<line x1="597.36" y1="1153.00" x2="597.36" y2="1163.00" stroke="#9aa19a" stroke-width="1"/>
+<text x="450.00" y="1148.00" font-size="17" fill="#69746e" text-anchor="middle" font-weight="400">图6 横向总标注 17.750 m</text>
+<text x="90.00" y="545.00" font-size="19" fill="#8c6c4e" text-anchor="start" font-weight="600">历史残损</text>
+<text x="90.00" y="577.00" font-size="17" fill="#374341" text-anchor="start" font-weight="400">左廊中段以虚线表示</text>
+<text x="90.00" y="605.00" font-size="17" fill="#374341" text-anchor="start" font-weight="400">图6标为“已毁过廊”</text>
+<text x="90.00" y="633.00" font-size="17" fill="#374341" text-anchor="start" font-weight="400">修复后照片可见两廊</text>
+<text x="90.00" y="661.00" font-size="17" fill="#374341" text-anchor="start" font-weight="400">不建议照搬残损状态</text>
+<line x1="267.00" y1="571.00" x2="302.64" y2="617.09" stroke="#9aab9c" stroke-width="1"/>
+<text x="90.00" y="751.00" font-size="17" fill="#7e6a55" text-anchor="start" font-weight="400">戏台轮廓含后部空间</text>
+<text x="90.00" y="779.00" font-size="16" fill="#7e6a55" text-anchor="start" font-weight="400">未标尺寸部分为示意提炼</text>
+<line x1="272.00" y1="783.00" x2="374.03" y2="949.18" stroke="#b29a7c" stroke-width="1"/>
+</g>
+<g id="current-plan" aria-label="Current model design coordinates">
+<rect x="1118.36" y="255.91" width="343.27" height="858.18" fill="none" stroke="#b7b6a8" stroke-width="1.5" stroke-dasharray="6 5"/>
+<rect x="1144.55" y="285.00" width="290.91" height="800.00" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<rect x="1148.18" y="289.36" width="283.64" height="209.45" fill="#e1e5dc" stroke="none" stroke-width="2"/>
+<rect x="1146.73" y="478.45" width="50.91" height="564.36" fill="#ece6d9" stroke="#a99b85" stroke-width="1"/>
+<circle cx="1195.45" cy="526.45" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="1195.45" cy="666.09" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="1195.45" cy="805.73" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="1195.45" cy="945.36" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="1195.45" cy="1012.27" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<rect x="1382.36" y="478.45" width="50.91" height="564.36" fill="#ece6d9" stroke="#a99b85" stroke-width="1"/>
+<circle cx="1384.55" cy="526.45" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="1384.55" cy="666.09" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="1384.55" cy="805.73" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="1384.55" cy="945.36" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="1384.55" cy="1012.27" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<line x1="1154.73" y1="298.09" x2="1154.73" y2="490.09" stroke="#697774" stroke-width="2"/>
+<line x1="1425.27" y1="298.09" x2="1425.27" y2="490.09" stroke="#697774" stroke-width="2"/>
+<line x1="1153.27" y1="299.55" x2="1426.73" y2="299.55" stroke="#697774" stroke-width="2"/>
+<circle cx="1185.27" cy="493.00" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="1290.00" cy="493.00" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="1394.73" cy="493.00" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<rect x="1244.91" y="941.73" width="90.18" height="77.09" fill="#d9c5ad" stroke="#827261" stroke-width="2"/>
+<circle cx="1252.76" cy="951.18" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="1252.76" cy="1007.91" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="1327.24" cy="951.18" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<circle cx="1327.24" cy="1007.91" r="4.8" fill="#fcfbf7" stroke="#697774" stroke-width="2"/>
+<text x="1290.00" y="989.00" font-size="17" fill="#374341" text-anchor="middle" font-weight="400">戏台</text>
+<text x="1290.00" y="395.55" font-size="24" fill="#374341" text-anchor="middle" font-weight="400">主殿</text>
+<text x="1290.00" y="744.64" font-size="24" fill="#374341" text-anchor="middle" font-weight="400">庭院</text>
+<text x="1172.18" y="765.00" font-size="17" fill="#374341" text-anchor="middle" font-weight="400">左廊</text>
+<text x="1407.82" y="765.00" font-size="17" fill="#374341" text-anchor="middle" font-weight="400">右廊</text>
+<line x1="1141.05" y1="1082.96" x2="1177.42" y2="1082.96" stroke="#697774" stroke-width="5"/>
+<line x1="1213.49" y1="1082.96" x2="1267.89" y2="1082.96" stroke="#697774" stroke-width="5"/>
+<line x1="1312.11" y1="1082.96" x2="1366.51" y2="1082.96" stroke="#697774" stroke-width="5"/>
+<line x1="1402.58" y1="1082.96" x2="1438.95" y2="1082.96" stroke="#697774" stroke-width="5"/>
+<text x="1290.00" y="1121.00" font-size="19" fill="#374341" text-anchor="middle" font-weight="400">入口 → 面向主殿</text>
+<g id="current-murals">
+<line x1="1158.65" y1="305.36" x2="1158.65" y2="482.82" stroke="#507b76" stroke-width="7"/>
+<circle cx="1135.65" cy="394.09" r="13" fill="#eef3f1" stroke="#5b7874" stroke-width="1.4"/>
+<text x="1135.65" y="400.09" font-size="18" fill="#3d625e" text-anchor="middle" font-weight="600">⑤</text>
+<line x1="1421.35" y1="305.36" x2="1421.35" y2="482.82" stroke="#507b76" stroke-width="7"/>
+<circle cx="1444.35" cy="394.09" r="13" fill="#eef3f1" stroke="#5b7874" stroke-width="1.4"/>
+<text x="1444.35" y="400.09" font-size="18" fill="#3d625e" text-anchor="middle" font-weight="600">②</text>
+<line x1="1175.82" y1="303.47" x2="1273.27" y2="303.47" stroke="#507b76" stroke-width="7"/>
+<circle cx="1224.55" cy="274.47" r="13" fill="#eef3f1" stroke="#5b7874" stroke-width="1.4"/>
+<text x="1224.55" y="280.47" font-size="18" fill="#3d625e" text-anchor="middle" font-weight="600">④</text>
+<line x1="1306.73" y1="303.47" x2="1404.18" y2="303.47" stroke="#507b76" stroke-width="7"/>
+<circle cx="1355.45" cy="274.47" r="13" fill="#eef3f1" stroke="#5b7874" stroke-width="1.4"/>
+<text x="1355.45" y="280.47" font-size="18" fill="#3d625e" text-anchor="middle" font-weight="600">③</text>
+<line x1="1431.53" y1="822.45" x2="1431.53" y2="928.64" stroke="#507b76" stroke-width="7"/>
+<circle cx="1455.53" cy="875.55" r="13" fill="#eef3f1" stroke="#5b7874" stroke-width="1.4"/>
+<text x="1455.53" y="881.55" font-size="18" fill="#3d625e" text-anchor="middle" font-weight="600">①</text>
+</g>
+<line x1="1144.55" y1="1158.00" x2="1435.45" y2="1158.00" stroke="#9aa19a" stroke-width="1"/>
+<line x1="1144.55" y1="1153.00" x2="1144.55" y2="1163.00" stroke="#9aa19a" stroke-width="1"/>
+<line x1="1435.45" y1="1153.00" x2="1435.45" y2="1163.00" stroke="#9aa19a" stroke-width="1"/>
+<text x="1290.00" y="1148.00" font-size="17" fill="#69746e" text-anchor="middle" font-weight="400">围墙轴线间宽 10 设计单位</text>
+<text x="1510.00" y="320.00" font-size="18" fill="#8c6c4e" text-anchor="start" font-weight="600">后墙两铺等宽</text>
+<text x="1510.00" y="350.00" font-size="16" fill="#374341" text-anchor="start" font-weight="400">图6中③④明显不等长</text>
+<line x1="1500.00" y1="328.00" x2="1403.45" y2="303.47" stroke="#b29a7c" stroke-width="1"/>
+<text x="960.00" y="453.00" font-size="18" fill="#8c6c4e" text-anchor="start" font-weight="600">主殿仅前沿三柱</text>
+<text x="960.00" y="481.00" font-size="16" fill="#374341" text-anchor="start" font-weight="400">测绘图为两列四排</text>
+<line x1="1135.00" y1="463.00" x2="1185.27" y2="493.00" stroke="#b29a7c" stroke-width="1"/>
+<text x="1510.00" y="760.00" font-size="18" fill="#507b76" text-anchor="start" font-weight="600">①墙位方向一致</text>
+<text x="1510.00" y="790.00" font-size="16" fill="#374341" text-anchor="start" font-weight="400">墙画尺寸不作米制换算</text>
+<line x1="1500.00" y1="768.00" x2="1431.53" y2="875.55" stroke="#90a39c" stroke-width="1"/>
+<text x="960.00" y="935.00" font-size="18" fill="#8c6c4e" text-anchor="start" font-weight="600">戏台约占轴线宽31%</text>
+<text x="960.00" y="963.00" font-size="16" fill="#374341" text-anchor="start" font-weight="400">测绘整体轮廓约占一半</text>
+<text x="960.00" y="991.00" font-size="16" fill="#374341" text-anchor="start" font-weight="400">两者含构件范围不同</text>
+<line x1="1147.00" y1="940.00" x2="1244.91" y2="980.27" stroke="#b29a7c" stroke-width="1"/>
+<text x="1510.00" y="1053.00" font-size="16" fill="#7d8377" text-anchor="start" font-weight="400">外框虚线是模型基座</text>
+<text x="1510.00" y="1081.00" font-size="16" fill="#7d8377" text-anchor="start" font-weight="400">11.8 × 29.5 设计单位</text>
+<line x1="1500.00" y1="1060.00" x2="1461.64" y2="1099.55" stroke="#b7b6a8" stroke-width="1"/>
+</g>
+<line x1="64.00" y1="1198.00" x2="1736.00" y2="1198.00" stroke="#bbc2b9" stroke-width="1"/>
+<rect x="64.00" y="1221.00" width="21.00" height="16.00" fill="#e1e5dc" stroke="none" stroke-width="2"/>
+<text x="96.00" y="1236.00" font-size="18" fill="#374341" text-anchor="start" font-weight="400">主殿</text>
+<rect x="185.00" y="1221.00" width="21.00" height="16.00" fill="#ece6d9" stroke="none" stroke-width="2"/>
+<text x="217.00" y="1236.00" font-size="18" fill="#374341" text-anchor="start" font-weight="400">过廊</text>
+<rect x="308.00" y="1221.00" width="21.00" height="16.00" fill="#d9c5ad" stroke="none" stroke-width="2"/>
+<text x="340.00" y="1236.00" font-size="18" fill="#374341" text-anchor="start" font-weight="400">戏台</text>
+<line x1="432.00" y1="1229.00" x2="458.00" y2="1229.00" stroke="#507b76" stroke-width="6"/>
+<text x="470.00" y="1236.00" font-size="18" fill="#374341" text-anchor="start" font-weight="400">五铺壁画墙面</text>
+<text x="750.00" y="1236.00" font-size="19" fill="#566b62" text-anchor="start" font-weight="600">两图各自等比，主体纵长归一；不是同一米制比例尺。</text>
+<text x="64.00" y="1276.00" font-size="18" fill="#6a7770" text-anchor="start" font-weight="400">左右均指从入口面向主殿；编号为项目沿用编号，不表示历史观看顺序。修复后构件细节不由修复前测绘单独判定。</text>
+</g></svg>

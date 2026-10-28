@@ -1,0 +1,997 @@
+{
+  "date": "2026-10-28",
+  "base": "701b556cd0f118e7005f5395a3ee7ad01f73b976",
+  "branch": "feature/shuilongci-hybrid-gallery-v1",
+  "pass": true,
+  "scope": "Read-only audit; no original source/model/material/image/camera changes",
+  "sourceFingerprints": [
+    {
+      "file": "D:/YJS/研二上/开题报告/参考文献/刘灿姣和林伟 - 2016 - 湖南江永水龙祠壁画的发现报告.pdf",
+      "bytes": 2264218,
+      "sha256": "c33c377739e9db5a7fd97ac8c44db1d5dfac8b653cbcb86a1df8947f03261fa6"
+    },
+    {
+      "file": "D:\\YJS\\出兵入将-PC端页面\\shuilong-temple\\model-source.js",
+      "bytes": 9734,
+      "sha256": "03cd2eb6cfd21dbb1fd7dbde7b4db3c3baaad364414badcbfe9a1433cfd4ef06"
+    },
+    {
+      "file": "D:\\YJS\\出兵入将-PC端页面\\shuilong-temple\\build-model.mjs",
+      "bytes": 11399,
+      "sha256": "58dc4e8b815d2f86914a80783e78e149c3a16ee8eb3b4af34c7c4ffea28a4a88"
+    },
+    {
+      "file": "D:\\YJS\\出兵入将-PC端页面\\shuilong-temple\\shuilong-temple.glb",
+      "bytes": 3329000,
+      "sha256": "fbbfce1c0bfbf8a09c33ed65a6bb1f60589b6c70300841fa0283c2a4498ae047"
+    },
+    {
+      "file": "D:\\YJS\\出兵入将-PC端页面\\shuilong-temple\\model-info.json",
+      "bytes": 276,
+      "sha256": "d66b5fcca166089e3fd5c2900295e9d38cfa2c991d5fdd91970b1c47f36a1e9b"
+    },
+    {
+      "file": "D:\\YJS\\出兵入将-PC端页面\\shuilong-temple\\mural-locations.json",
+      "bytes": 1086,
+      "sha256": "4e313a04bf4cf5f8da9fdd0cf0637bb18ad4f18a0b23a75cd30de16274e6e84e"
+    },
+    {
+      "file": "D:\\YJS\\出兵入将-PC端页面\\shuilong-temple\\水龙祠-交互预览.html",
+      "bytes": 7600677,
+      "sha256": "99d608a6644771aabceb6c985680ea67548940b02729fda8a85ab76f8591cd63"
+    },
+    {
+      "file": "D:\\YJS\\出兵入将-PC端页面\\水龙祠实地照片\\修复后-航拍图.jpg",
+      "bytes": 248372,
+      "sha256": "2af852e555a249a1139b8fdd0f063362e1a3fa036d912372a97e90c79338ae91"
+    },
+    {
+      "file": "D:\\YJS\\出兵入将-PC端页面\\水龙祠实地照片\\修复后-右侧图.png",
+      "bytes": 12271712,
+      "sha256": "d2d8f12392af78e1c79111e1d9e51dc4edf2785c6c0be5ce8a77fc6d04370c81"
+    },
+    {
+      "file": "D:\\YJS\\出兵入将-PC端页面\\水龙祠实地照片\\修复后-左侧图.jpg",
+      "bytes": 141364,
+      "sha256": "a3d674b486fdbdb24deb3022ed1bbf78c6155fddfc4259e7d0ac6ca664d92e24"
+    },
+    {
+      "file": "D:\\YJS\\出兵入将-PC端页面\\水龙祠实地照片\\水龙祠正面.jpg",
+      "bytes": 173451,
+      "sha256": "4cf6dcb8c0412068de96f4388a856a45220bbe3a4de0a8444541b657ff5495f5"
+    },
+    {
+      "file": "D:\\YJS\\出兵入将-PC端页面\\水龙祠实地照片\\内部图-主殿面向戏台.jpg",
+      "bytes": 600455,
+      "sha256": "52eb3967b20ee278d66961198eca56f40d96bfd0548df3d6f4161e3d505eecb3"
+    },
+    {
+      "file": "D:\\YJS\\出兵入将-PC端页面\\水龙祠实地照片\\右侧面向主殿.jpg",
+      "bytes": 360246,
+      "sha256": "0758ee63e5c27c1ae84783b405d3a3165b7ea955f08feb9279729af1f1fea2ac"
+    },
+    {
+      "file": "D:\\YJS\\出兵入将-PC端页面\\水龙祠实地照片\\中间大门打开图.jpg",
+      "bytes": 221790,
+      "sha256": "0d215ab439d7d96a37756d68d9fcfd81089d87c1a95d221d0e467731f438c45a"
+    }
+  ],
+  "model": {
+    "browser": "156.0.8078.48",
+    "viewport": [
+      1600,
+      1200
+    ],
+    "bounds": {
+      "01_Base": {
+        "min": [
+          -5.900000095367432,
+          -0.6000000238418579,
+          -16.5
+        ],
+        "max": [
+          5.900000095367432,
+          0.07000000029802322,
+          13
+        ],
+        "size": [
+          11.800000190734863,
+          0.6700000241398811,
+          29.5
+        ]
+      },
+      "02_Enclosure": {
+        "min": [
+          -5.170000076293945,
+          -4.7683716530855236e-8,
+          -15.5
+        ],
+        "max": [
+          5.170000076293945,
+          3.299999952316284,
+          12
+        ],
+        "size": [
+          10.34000015258789,
+          3.3000000000000007,
+          27.5
+        ]
+      },
+      "03_MainHall": {
+        "min": [
+          -5.380646228790283,
+          -1.0728836485895954e-8,
+          -15.697999954223633
+        ],
+        "max": [
+          5.380646228790283,
+          5.369858741760254,
+          -7.4019999504089355
+        ],
+        "size": [
+          10.761292457580566,
+          5.36985875248909,
+          8.296000003814697
+        ]
+      },
+      "04_WestGallery": {
+        "min": [
+          -5.14300012588501,
+          3.5762786065873797e-9,
+          -9.073037147521973
+        ],
+        "max": [
+          -2.9570000171661377,
+          3.450012445449829,
+          11.073037147521973
+        ],
+        "size": [
+          2.186000108718872,
+          3.4500124418735503,
+          20.146074295043945
+        ]
+      },
+      "05_EastGallery": {
+        "min": [
+          2.9570000171661377,
+          3.5762786065873797e-9,
+          -9.073037147521973
+        ],
+        "max": [
+          5.14300012588501,
+          3.450012445449829,
+          11.073037147521973
+        ],
+        "size": [
+          2.186000108718872,
+          3.4500124418735503,
+          20.146074295043945
+        ]
+      },
+      "06_Stage": {
+        "min": [
+          -1.885233998298645,
+          -9.53674295089968e-9,
+          6.7769999504089355
+        ],
+        "max": [
+          1.885233998298645,
+          3.860184669494629,
+          9.92300033569336
+        ],
+        "size": [
+          3.77046799659729,
+          3.860184679031372,
+          3.146000385284424
+        ]
+      },
+      "07_Entrance": {
+        "min": [
+          -5.25,
+          2.38418573772492e-9,
+          9.777000427246094
+        ],
+        "max": [
+          5.25,
+          3.690225839614868,
+          12.454999923706055
+        ],
+        "size": [
+          10.5,
+          3.6902258372306824,
+          2.677999496459961
+        ]
+      },
+      "mural-01": {
+        "min": [
+          4.839000225067139,
+          0.8951500058174133,
+          2.940000057220459
+        ],
+        "max": [
+          4.890999794006348,
+          2.2048499584198,
+          6.659999847412109
+        ],
+        "size": [
+          0.051999568939208984,
+          1.3096999526023865,
+          3.7199997901916504
+        ]
+      },
+      "mural-02": {
+        "min": [
+          4.488999843597412,
+          1.132699966430664,
+          -14.835000038146973
+        ],
+        "max": [
+          4.540999889373779,
+          2.5673000812530518,
+          -8.664999961853027
+        ],
+        "size": [
+          0.05200004577636719,
+          1.4346001148223877,
+          6.170000076293945
+        ]
+      },
+      "mural-03": {
+        "min": [
+          0.5399999618530273,
+          0.8224999904632568,
+          -14.890999794006348
+        ],
+        "max": [
+          3.9600000381469727,
+          2.877500057220459,
+          -14.83899974822998
+        ],
+        "size": [
+          3.4200000762939453,
+          2.055000066757202,
+          0.05200004577636719
+        ]
+      },
+      "mural-04": {
+        "min": [
+          -3.9600000381469727,
+          0.8224999904632568,
+          -14.890999794006348
+        ],
+        "max": [
+          -0.5399999618530273,
+          2.877500057220459,
+          -14.83899974822998
+        ],
+        "size": [
+          3.4200000762939453,
+          2.055000066757202,
+          0.05200004577636719
+        ]
+      },
+      "mural-05": {
+        "min": [
+          -4.540999889373779,
+          1.0005249977111816,
+          -14.835000038146973
+        ],
+        "max": [
+          -4.488999843597412,
+          2.699475049972534,
+          -8.664999961853027
+        ],
+        "size": [
+          0.05200004577636719,
+          1.6989500522613525,
+          6.170000076293945
+        ]
+      }
+    },
+    "triangles": 83360,
+    "nodes": [
+      "01_Base",
+      "02_Enclosure",
+      "03_MainHall",
+      "04_WestGallery",
+      "05_EastGallery",
+      "06_Stage",
+      "07_Entrance",
+      "mural-01",
+      "mural-02",
+      "mural-03",
+      "mural-04",
+      "mural-05"
+    ],
+    "views": [
+      {
+        "view": "top",
+        "cutaway": true,
+        "projection": "OrthographicCamera",
+        "position": [
+          0,
+          70,
+          -1.75
+        ],
+        "target": [
+          0,
+          0,
+          -1.75
+        ],
+        "up": [
+          0,
+          0,
+          -1
+        ],
+        "frustum": [
+          -21.633333333333336,
+          21.633333333333336,
+          16.224999999999987,
+          -16.225000000000016
+        ],
+        "trianglesRendered": 5440,
+        "hidden": "cutaway hides only roof-material meshes in this inspection scene"
+      },
+      {
+        "view": "front",
+        "cutaway": false,
+        "projection": "OrthographicCamera",
+        "position": [
+          0,
+          2.3,
+          60
+        ],
+        "target": [
+          0,
+          2.3,
+          -1.75
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "frustum": [
+          -6.490000104904176,
+          6.490000104904176,
+          4.95242943763733,
+          -4.782570719718934
+        ],
+        "trianglesRendered": 83360,
+        "hidden": "cutaway hides only roof-material meshes in this inspection scene"
+      },
+      {
+        "view": "side",
+        "cutaway": false,
+        "projection": "OrthographicCamera",
+        "position": [
+          65,
+          2.3,
+          -1.75
+        ],
+        "target": [
+          0,
+          2.3,
+          -1.75
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "frustum": [
+          -16.225000000000016,
+          16.224999999999987,
+          12.2536793589592,
+          -12.083820641040802
+        ],
+        "trianglesRendered": 83360,
+        "hidden": "cutaway hides only roof-material meshes in this inspection scene"
+      },
+      {
+        "view": "aerial",
+        "cutaway": false,
+        "projection": "OrthographicCamera",
+        "position": [
+          28,
+          33,
+          38
+        ],
+        "target": [
+          0,
+          1,
+          -1.75
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "frustum": [
+          -14.73773887530265,
+          14.73773887530264,
+          11.26794667391966,
+          -10.838661639034306
+        ],
+        "trianglesRendered": 83360,
+        "hidden": "cutaway hides only roof-material meshes in this inspection scene"
+      }
+    ],
+    "errors": []
+  },
+  "liveBrowser": {
+    "pass": true,
+    "errors": [],
+    "states": [
+      {
+        "state": "overview",
+        "busy": false,
+        "pose": {
+          "time": 0,
+          "position": [
+            -23.33250595253667,
+            19.342753798798213,
+            -26.88031350693665
+          ],
+          "target": [
+            0,
+            -1.25,
+            -1.75
+          ],
+          "fov": 32
+        },
+        "projection": [
+          {
+            "name": "V24A-wall-02_Enclosure",
+            "gain": 0
+          },
+          {
+            "name": "V24A-floor-05_EastGallery",
+            "gain": 0
+          }
+        ]
+      },
+      {
+        "state": "approach",
+        "busy": false,
+        "pose": {
+          "time": 0.52,
+          "position": [
+            -0.35,
+            2.2,
+            24
+          ],
+          "target": [
+            0,
+            1.32,
+            11.8
+          ],
+          "fov": 46
+        },
+        "projection": [
+          {
+            "name": "V24A-wall-02_Enclosure",
+            "gain": 0
+          },
+          {
+            "name": "V24A-floor-05_EastGallery",
+            "gain": 0
+          }
+        ]
+      },
+      {
+        "state": "gate-close",
+        "busy": false,
+        "pose": {
+          "time": 0.78,
+          "position": [
+            0,
+            1.38,
+            14.1
+          ],
+          "target": [
+            0,
+            1.38,
+            9.8
+          ],
+          "fov": 48
+        },
+        "projection": [
+          {
+            "name": "V24A-wall-02_Enclosure",
+            "gain": 0
+          },
+          {
+            "name": "V24A-floor-05_EastGallery",
+            "gain": 0
+          }
+        ]
+      },
+      {
+        "state": "threshold",
+        "busy": false,
+        "pose": {
+          "time": 0.92,
+          "position": [
+            0,
+            1.38,
+            12.25
+          ],
+          "target": [
+            0.12,
+            1.38,
+            9.7
+          ],
+          "fov": 48
+        },
+        "projection": [
+          {
+            "name": "V24A-wall-02_Enclosure",
+            "gain": 0
+          },
+          {
+            "name": "V24A-floor-05_EastGallery",
+            "gain": 0
+          }
+        ]
+      },
+      {
+        "state": "gate-interior",
+        "busy": false,
+        "pose": {
+          "time": 1,
+          "position": [
+            0.12,
+            1.38,
+            11.15
+          ],
+          "target": [
+            1.2,
+            1.38,
+            9.2
+          ],
+          "fov": 48
+        },
+        "projection": [
+          {
+            "name": "V24A-wall-02_Enclosure",
+            "gain": 0
+          },
+          {
+            "name": "V24A-floor-05_EastGallery",
+            "gain": 0
+          }
+        ]
+      },
+      {
+        "state": "stage-turn",
+        "busy": false,
+        "pose": {
+          "time": 1.43,
+          "position": [
+            3.4199999999999995,
+            1.38,
+            10.5
+          ],
+          "target": [
+            4.02,
+            1.38,
+            5.500000000000001
+          ],
+          "fov": 48
+        },
+        "projection": [
+          {
+            "name": "V24A-wall-02_Enclosure",
+            "gain": 0.76
+          },
+          {
+            "name": "V24A-floor-05_EastGallery",
+            "gain": 0.76
+          }
+        ]
+      },
+      {
+        "state": "corridor-3d",
+        "busy": false,
+        "pose": {
+          "time": 1.6,
+          "position": [
+            3.85,
+            1.38,
+            9.7
+          ],
+          "target": [
+            4.05,
+            1.38,
+            3.399999999999999
+          ],
+          "fov": 48
+        },
+        "projection": [
+          {
+            "name": "V24A-wall-02_Enclosure",
+            "gain": 0.76
+          },
+          {
+            "name": "V24A-floor-05_EastGallery",
+            "gain": 0.76
+          }
+        ]
+      },
+      {
+        "state": "corridor-hybrid",
+        "busy": false,
+        "pose": {
+          "time": 1.8,
+          "position": [
+            3.85,
+            1.38,
+            8.4
+          ],
+          "target": [
+            4.05,
+            1.38,
+            2.4
+          ],
+          "fov": 48
+        },
+        "projection": [
+          {
+            "name": "V24A-wall-02_Enclosure",
+            "gain": 0.76
+          },
+          {
+            "name": "V24A-floor-05_EastGallery",
+            "gain": 0.76
+          }
+        ]
+      },
+      {
+        "state": "corridor-2_5d",
+        "busy": false,
+        "pose": {
+          "time": 2,
+          "position": [
+            3.85,
+            1.38,
+            7.65
+          ],
+          "target": [
+            4.1,
+            1.38,
+            2
+          ],
+          "fov": 48
+        },
+        "projection": [
+          {
+            "name": "V24A-wall-02_Enclosure",
+            "gain": 0.76
+          },
+          {
+            "name": "V24A-floor-05_EastGallery",
+            "gain": 0.76
+          }
+        ]
+      },
+      {
+        "state": "mural-look",
+        "busy": false,
+        "pose": {
+          "time": 2,
+          "position": [
+            3.5500000000000003,
+            1.38,
+            7.65
+          ],
+          "target": [
+            5.911943719042984,
+            1.8290387298560804,
+            2.530958479640682
+          ],
+          "fov": 48,
+          "muralFront": 0
+        },
+        "projection": [
+          {
+            "name": "V24A-wall-02_Enclosure",
+            "gain": 0.76
+          },
+          {
+            "name": "V24A-floor-05_EastGallery",
+            "gain": 0.76
+          }
+        ]
+      },
+      {
+        "state": "mural-reading",
+        "busy": false,
+        "pose": {
+          "time": 2,
+          "position": [
+            3.3000000000000003,
+            1.55,
+            4.8
+          ],
+          "target": [
+            4.865,
+            1.55,
+            4.8
+          ],
+          "fov": 48,
+          "muralFront": 1
+        },
+        "projection": [
+          {
+            "name": "V24A-wall-02_Enclosure",
+            "gain": 0
+          },
+          {
+            "name": "V24A-floor-05_EastGallery",
+            "gain": 0
+          }
+        ]
+      },
+      {
+        "state": "mural-look",
+        "busy": false,
+        "pose": {
+          "time": 2,
+          "position": [
+            3.5500000000000003,
+            1.38,
+            7.65
+          ],
+          "target": [
+            5.911943719042984,
+            1.8290387298560804,
+            2.530958479640682
+          ],
+          "fov": 48,
+          "muralFront": 0
+        },
+        "projection": [
+          {
+            "name": "V24A-wall-02_Enclosure",
+            "gain": 0.76
+          },
+          {
+            "name": "V24A-floor-05_EastGallery",
+            "gain": 0.76
+          }
+        ]
+      },
+      {
+        "state": "corridor-2_5d",
+        "busy": false,
+        "pose": {
+          "time": 2,
+          "position": [
+            3.85,
+            1.38,
+            7.65
+          ],
+          "target": [
+            4.1,
+            1.38,
+            2
+          ],
+          "fov": 48
+        },
+        "projection": [
+          {
+            "name": "V24A-wall-02_Enclosure",
+            "gain": 0.76
+          },
+          {
+            "name": "V24A-floor-05_EastGallery",
+            "gain": 0.76
+          }
+        ]
+      },
+      {
+        "state": "gate-interior",
+        "busy": false,
+        "pose": {
+          "time": 1,
+          "position": [
+            0.12,
+            1.38,
+            11.15
+          ],
+          "target": [
+            1.2,
+            1.38,
+            9.2
+          ],
+          "fov": 48
+        },
+        "projection": [
+          {
+            "name": "V24A-wall-02_Enclosure",
+            "gain": 0
+          },
+          {
+            "name": "V24A-floor-05_EastGallery",
+            "gain": 0
+          }
+        ]
+      },
+      {
+        "state": "overview",
+        "busy": false,
+        "pose": {
+          "time": 0,
+          "position": [
+            -23.33250595253667,
+            19.342753798798213,
+            -26.88031350693665
+          ],
+          "target": [
+            0,
+            -1.25,
+            -1.75
+          ],
+          "fov": 32
+        },
+        "projection": [
+          {
+            "name": "V24A-wall-02_Enclosure",
+            "gain": 0
+          },
+          {
+            "name": "V24A-floor-05_EastGallery",
+            "gain": 0
+          }
+        ]
+      }
+    ],
+    "limits": "Design-camera line sweeps only; not human accessibility, site dimensions, or a validated route to mural-02.",
+    "clearance": {
+      "envelopeRadius": 0.065,
+      "unit": "model units",
+      "bidirectional": true,
+      "rails": [
+        {
+          "name": "gate-and-right-corridor",
+          "segments": 200,
+          "rays": 2800,
+          "hits": []
+        },
+        {
+          "name": "first-mural-front",
+          "segments": 100,
+          "rays": 1400,
+          "hits": []
+        }
+      ],
+      "front": {
+        "time": 2,
+        "position": [
+          3.3000000000000003,
+          1.55,
+          4.8
+        ],
+        "target": [
+          4.865,
+          1.55,
+          4.8
+        ],
+        "fov": 48,
+        "muralFront": 1
+      },
+      "gate": {
+        "z": 11.93,
+        "openingBelowLintel": {
+          "x": [
+            -0.76,
+            0.76
+          ],
+          "y": [
+            0.13,
+            1.615
+          ]
+        },
+        "corners": [
+          {
+            "x": -0.7326233218855485,
+            "y": 0.07126145325720046,
+            "depth": 1.0226731559737223,
+            "visible": false
+          },
+          {
+            "x": -1.4702561759272936,
+            "y": -0.18530649597471105,
+            "depth": 1.0359420563802368,
+            "visible": false
+          },
+          {
+            "x": -0.7326233218855485,
+            "y": 0.5179793584117948,
+            "depth": 1.0226731559737223,
+            "visible": false
+          },
+          {
+            "x": -1.4702561759272936,
+            "y": 0.5287386595086169,
+            "depth": 1.0359420563802368,
+            "visible": false
+          }
+        ]
+      },
+      "root": {
+        "asset": "shuilong-temple/shuilong-temple.glb",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "matrixWorld": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "doorTrianglesRemoved": 320,
+      "frontProjection": [
+        {
+          "name": "V24A-wall-02_Enclosure",
+          "gain": 0
+        },
+        {
+          "name": "V24A-floor-05_EastGallery",
+          "gain": 0
+        }
+      ]
+    }
+  },
+  "unitTests": {
+    "passed": 38,
+    "failed": 0,
+    "command": "node --test shuilong-temple/model.test.mjs shuilong-temple/source-equivalence.test.mjs module-a/immersive-hybrid-v1/tests/*.test.mjs"
+  },
+  "syntax": [
+    "audit.cjs",
+    "audit-view.mjs",
+    "browser-audit.cjs"
+  ],
+  "svg": {
+    "nativeEditableObjects": true,
+    "noEmbeddedBitmap": true,
+    "preview": [
+      1800,
+      1320
+    ],
+    "historic": "Approximate trace from PDF page 7 figure 6; un-dimensioned stage/aisle outlines schematic",
+    "scale": "Each panel keeps its own aspect, primary lengths normalized; not a common metre scale"
+  },
+  "archive": {
+    "tag": "48f272497e86e4549c5bcd0dee275ff347171a3f",
+    "branch": "48f272497e86e4549c5bcd0dee275ff347171a3f"
+  }
+}
