@@ -8,13 +8,13 @@ import {readingPhases} from './mural-transition-controller.mjs';
 export function createMuralCompositor({T,camera,renderer,invalidate,depthTexture}){
  let texture,geometry,original,digital,shade,loading,status='idle',error=null,progress=0,active=false,disposed=false,mode='hybrid';
  const scene=new T.Scene(),depthSize=new T.Vector2(),depthUniforms={architectureDepth:{value:null},depthSize:{value:depthSize}};
- let phaseSampler=readingPhases;
+ let phaseSampler=readingPhases,discoveryOpacity=()=>1;
  const timings=[],virtual=camera.clone(),front=camera.clone(),startQ=new T.Quaternion(),vp=new T.Matrix4(),uniforms={readingVP:{value:vp},rectify:{value:0}};
  function planeMaterial(projected){const m=new T.MeshBasicMaterial({map:texture,side:T.FrontSide,toneMapped:false,fog:false,transparent:true,depthWrite:false,depthTest:false});
   m.onBeforeCompile=s=>{Object.assign(s.uniforms,depthUniforms);s.fragmentShader='uniform sampler2D architectureDepth;uniform vec2 depthSize;\n'+s.fragmentShader.replace('void main() {','void main() {\nif(gl_FragCoord.z>texture2D(architectureDepth,gl_FragCoord.xy/depthSize).r+0.000003)discard;');if(projected){Object.assign(s.uniforms,uniforms);s.vertexShader='uniform mat4 readingVP;uniform float rectify;\n'+s.vertexShader.replace('#include <project_vertex>','#include <project_vertex>\nif(rectify>0.){gl_Position=readingVP*modelMatrix*vec4(transformed,1.);\ngl_Position.z=mix(gl_Position.z,-.90*gl_Position.w,smoothstep(0.,.35,rectify));}');}};m.customProgramCacheKey=()=>projected?'mural-v23-reading':'mural-v23-original';return m;}
  function clear(){for(const mesh of [original,digital,shade]){mesh?.removeFromParent();mesh?.material.dispose();}geometry?.dispose();shade?.geometry.dispose();texture?.dispose();original=digital=shade=texture=geometry=null;}
  function update(time=2){if(!original)return;const ph=phaseSampler(progress),q=mode==='original'?0:ph.rectify,blend=mode==='original'?0:mode==='digital'?1:ph.handoff;
-  const visible=time>1.59;original.visible=visible&&(!active||blend<1);digital.visible=visible&&active&&blend>0;digital.material.opacity=blend;
+  const visible=time>1.59;original.visible=visible&&(!active||blend<1);original.material.opacity=Math.max(0,Math.min(1,discoveryOpacity(time)));digital.visible=visible&&active&&blend>0;digital.material.opacity=blend;
   // Project a rigid, unchanged plane through a virtual reading camera. This
   // changes perspective, not the bitmap's intrinsic proportions or UVs.
   virtual.copy(camera);startQ.copy(camera.quaternion);const d=readingDistance(camera.aspect,camera.fov);
@@ -36,7 +36,8 @@ export function createMuralCompositor({T,camera,renderer,invalidate,depthTexture
  }
  return {load,update,render(){if(!original||!original.visible&&!digital.visible)return;const depth=depthTexture();if(!depth||renderer.getContext().isContextLost()){if(active)throw Error('建筑深度或 WebGL 暂不可用');return;}depthUniforms.architectureDepth.value=depth;renderer.getDrawingBufferSize(depthSize);const auto=renderer.autoClear;try{renderer.autoClear=false;renderer.render(scene,camera);}finally{renderer.autoClear=auto;}},get status(){return status;},get error(){return error;},setProgress(p,notify=true){active=true;progress=Math.max(0,Math.min(1,p));if(notify)invalidate();},reset(){active=false;progress=0;mode='hybrid';invalidate();},setMode(v){if(!['original','hybrid','digital'].includes(v))throw Error('Unknown mural mode');mode=v;invalidate();},
   setReadingPhases(sampler=readingPhases){phaseSampler=sampler;},
-  state(){return {status,error,active,progress,mode,phases:phaseSampler(progress),anchor:FIRST_MURAL,source:MURAL_SOURCE,corners:projectedCorners(T,camera),readingCorners:projectedCorners(T,virtual),camera:{position:virtual.position.toArray(),quaternion:virtual.quaternion.toArray(),projectionMatrix:virtual.projectionMatrix.toArray()},layers:['L0 original depth-tested architecture','L1 original anchored mural','L2 held original architecture with procedural depth field','L3 reading UI in parent'],timings:[...timings],imageBytesEstimate:2880*990*4*4/3,sharedTexture:true,sharedGeometry:true,colorPipeline:'sRGB original texture, post-exempt overlay with actual architecture depth texture'};},
+  setDiscoveryOpacity(sampler=()=>1){discoveryOpacity=sampler;invalidate();},
+  state(){return {status,error,active,progress,mode,originalOpacity:original?.material.opacity??null,phases:phaseSampler(progress),anchor:FIRST_MURAL,source:MURAL_SOURCE,corners:projectedCorners(T,camera),readingCorners:projectedCorners(T,virtual),camera:{position:virtual.position.toArray(),quaternion:virtual.quaternion.toArray(),projectionMatrix:virtual.projectionMatrix.toArray()},layers:['L0 original depth-tested architecture','L1 original anchored mural','L2 held original architecture with procedural depth field','L3 reading UI in parent'],timings:[...timings],imageBytesEstimate:2880*990*4*4/3,sharedTexture:true,sharedGeometry:true,colorPipeline:'sRGB original texture, post-exempt overlay with actual architecture depth texture'};},
   dispose(){disposed=true;clear();}
  };
 }
