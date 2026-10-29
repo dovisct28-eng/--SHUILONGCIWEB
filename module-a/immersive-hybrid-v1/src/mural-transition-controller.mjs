@@ -14,7 +14,7 @@ export function sampleMuralTurn(progress){
  return {time:2,position,target:[position[0]+Math.sin(yaw)*Math.cos(pitch)*distance,position[1]+Math.sin(pitch)*distance,position[2]-Math.cos(yaw)*Math.cos(pitch)*distance],fov:48};
 }
 export function readingPhases(progress){const p=clamp(progress);return {handoff:ease(p/.35),rectify:ease((p-.35)/.65),ui:ease((p-.82)/.18)};}
-export function createMuralController({prepare,animateTurn,animateReading,animateFront,holdFront,rollback}){
+export function createMuralController({prepare,animateTurn,animateReading,animateFront,holdFront,discover,rollback}){
  let state='corridor-2_5d',busy=false,error=null;
  const adjacent={'corridor-2_5d':['mural-look'],'mural-look':['corridor-2_5d','mural-reading'],'mural-reading':['mural-look']};
  return {get state(){return state;},get busy(){return busy;},get error(){return error;},async go(next){
@@ -26,7 +26,12 @@ export function createMuralController({prepare,animateTurn,animateReading,animat
     await animateFront?.(1);await holdFront?.();await animateReading(1);
    }else if(previous==='mural-reading'){
     await animateReading(0);await holdFront?.();await animateFront?.(0);
-   }else await animateTurn(next==='mural-look'?1:0);
+   }else{
+    await animateTurn(next==='mural-look'?1:0);
+    if(previous==='corridor-2_5d'&&next==='mural-look'&&discover){
+     await discover();await animateFront?.(1);await animateReading(1);next='mural-reading';
+    }
+   }
    state=next;return true;
   }
   catch(e){error=e.message;state='corridor-2_5d';await rollback?.(e);throw e;}finally{busy=false;}

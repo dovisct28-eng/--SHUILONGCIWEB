@@ -1,4 +1,6 @@
 #mural-copy{position:absolute;inset:0;z-index:2;pointer-events:none;color:#d8d2c5}
+#mural-cue{position:absolute;left:0;top:0;width:500px;height:110px;transform-origin:0 0;z-index:3;pointer-events:none;white-space:nowrap;font:700 90px/1.1 'Microsoft YaHei','Noto Sans CJK SC',sans-serif;letter-spacing:.04em;color:rgba(180,185,182,.55)}
+#mural-cue[hidden]{display:none}
 .mural-heading{position:absolute;left:9%;top:13%}.mural-heading p{font:11px 'Microsoft YaHei',sans-serif;letter-spacing:.16em;color:#aaa79d;margin:0 0 14px}.mural-heading h2{font:38px 'A01 Serif',SimSun,serif;letter-spacing:.14em;margin:0 0 12px}.mural-heading span,.mural-note span{font-size:12px;color:#aaa79d;letter-spacing:.04em}
 .mural-note{position:absolute;left:9%;top:77%}.mural-note p{font:19px 'A01 Serif',SimSun,serif;letter-spacing:.10em;margin:0 0 12px}.mural-actions{position:absolute;right:9%;top:78%;display:flex;gap:24px;pointer-events:auto;font-size:13px}.mural-actions button{border-bottom:1px solid #aaa79d70;padding:8px 0}
 body[data-state="mural-reading"] .entry-footer nav{visibility:hidden}body[data-state="mural-reading"] .entry-place{visibility:hidden}body[data-state="mural-look"] .entry-place h1{font-size:21px}
