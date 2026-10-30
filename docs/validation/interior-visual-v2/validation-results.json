@@ -1,0 +1,196 @@
+{
+  "date": "2026-10-30",
+  "baseline": "a523be67e0546d788331af55a0680e0a403ecf60",
+  "branch": "feature/shuilongci-hybrid-gallery-v1",
+  "unitTests": {
+    "total": 40,
+    "pass": 40,
+    "fail": 0
+  },
+  "browser": {
+    "browser": "156.0.8078.48",
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 900,
+        "projectionDifference": 2.852281635802469,
+        "readingRatio": 2.909090909090909,
+        "observations": 3,
+        "drag": true,
+        "wheel": true,
+        "keyboard": true,
+        "reverse": true,
+        "proxyCount": 4,
+        "pass": true
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "projectionDifference": 3.112448398919753,
+        "readingRatio": 2.909090909090909,
+        "observations": 3,
+        "drag": true,
+        "wheel": true,
+        "keyboard": true,
+        "reverse": true,
+        "proxyCount": 4,
+        "pass": true
+      },
+      {
+        "width": 1366,
+        "height": 768,
+        "projectionDifference": 3.10500993879128,
+        "readingRatio": 2.909090909090909,
+        "observations": 3,
+        "drag": true,
+        "wheel": true,
+        "keyboard": true,
+        "reverse": true,
+        "proxyCount": 4,
+        "pass": true
+      }
+    ],
+    "pass": true,
+    "fallback": {
+      "image503": true,
+      "readingUsable": true,
+      "retry": true
+    },
+    "comparison": {
+      "images": 20,
+      "pass": true
+    }
+  },
+  "motion": {
+    "pass": true,
+    "geometryUnchanged": true,
+    "wheelNavigation": true,
+    "cue": {
+      "phase": "mural-cue-hold",
+      "brightness": 0.14,
+      "opacity": 1,
+      "style": "matrix3d(-0.308797, -0.365775, 0, -0.0008128, 0, 0.551604, 0, 0, 0, 0, 1, 0, 601.456, 227.371, 0, 1)",
+      "title": "第一铺壁画"
+    },
+    "runs": [
+      {
+        "field": "turn",
+        "elapsedMs": 1453.6000000000931
+      },
+      {
+        "field": "mural-cue-in",
+        "elapsedMs": 504.40000000037253
+      },
+      {
+        "field": "mural-cue-hold",
+        "elapsedMs": 858.2999999998137
+      },
+      {
+        "field": "mural-brighten",
+        "elapsedMs": 907.7000000001863
+      },
+      {
+        "field": "front",
+        "elapsedMs": 1607.2999999998137
+      },
+      {
+        "field": "reading",
+        "elapsedMs": 1403.8000000002794
+      }
+    ],
+    "railSamples": [
+      0.88,
+      1,
+      1.15,
+      1.3,
+      1.43,
+      1.6,
+      1.8,
+      1.9,
+      2
+    ]
+  },
+  "selected": [
+    {
+      "name": "01-interior-atmosphere.webp",
+      "bytes": 106486
+    },
+    {
+      "name": "02-mural-discovery.webp",
+      "bytes": 113344
+    },
+    {
+      "name": "03-mural-reading.webp",
+      "bytes": 256464
+    },
+    {
+      "name": "04-mural-detail.webp",
+      "bytes": 233966
+    },
+    {
+      "name": "before-detail.webp",
+      "bytes": 224712
+    },
+    {
+      "name": "before-interior.webp",
+      "bytes": 104656
+    },
+    {
+      "name": "before-reading.webp",
+      "bytes": 198018
+    }
+  ],
+  "totalSelectedBytes": 1237646,
+  "protectedFiles": [
+    {
+      "name": "v24.html",
+      "sha256": "f79a712fd4d7721b3ab2d8b751364518897602326c2530284e9e7731dc9e6dac"
+    },
+    {
+      "name": "src/entry-main.mjs",
+      "sha256": "7922d6915b610ff3d3d0a1d8c4e9b8fff50315582595a8d5746921874efa9663"
+    },
+    {
+      "name": "src/entry.css",
+      "sha256": "adbe5c15ebbbaace59dd757dce939ef018f39f8353bba039e88c6e8b23df6f40"
+    },
+    {
+      "name": "src/v24a-entry.mjs",
+      "sha256": "5370ef2d6e9f2efebfe7bb60b0334ce8095f465795b26d53495ef9680bf94031"
+    },
+    {
+      "name": "src/v24b2-layer.mjs",
+      "sha256": "ce482ea13c6d9ed2ff6626811171f872769beb1bc2356503fe145afbfd89a1fa"
+    },
+    {
+      "name": "src/mural-reading.mjs",
+      "sha256": "437553375fd06bc892d41408f9e405751ab93a1afde2aa80bdb58c9661f4fe37"
+    },
+    {
+      "name": "src/mural-compositor.mjs",
+      "sha256": "2622891b933a9a5df3a534f844fc919e903d7e319af602240775c51fb87e3cb2"
+    },
+    {
+      "name": "src/mural-transition.css",
+      "sha256": "006598ff4177849027be28800e2a9e20e75b26fc7e13a0d4424b9ce64a2cf2e4"
+    },
+    {
+      "name": "src/mural-wall-cue.mjs",
+      "sha256": "4019553bcb2fe3866994a54dc94129f5aa291b11b8420b254eb93bd88314878d"
+    },
+    {
+      "name": "src/mural-viewer.mjs",
+      "sha256": "1001fe82d0f0a70ce59f0a930298838a2c7e92d240251c5a60c4ac9ec62ad2b6"
+    },
+    {
+      "name": "assets/murals/mural-01-display.webp",
+      "sha256": "afc5a15eebec4e430151795f73c1cb958496ca6c629552d23be62588766716ef"
+    }
+  ],
+  "limitations": [
+    "AI full-frame candidates contain structural drift; only safe model surfaces fused",
+    "2880x990 existing display source, not new high-resolution detail",
+    "No cross-device GPU, touch or long-session memory acceptance",
+    "Visual candidate pending user review; no production replacement"
+  ]
+}

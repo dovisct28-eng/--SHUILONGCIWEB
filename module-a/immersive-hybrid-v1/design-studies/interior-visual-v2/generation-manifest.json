@@ -1,0 +1,47 @@
+{
+  "tool": "Codex built-in image_gen",
+  "date": "2026-10-30",
+  "referenceRoot": "../../assets/combined-b-transition/references/",
+  "records": [
+    {
+      "name": "gate-interior",
+      "direction": "A",
+      "source": "C:\\Users\\dovis\\.codex\\generated_images\\01a18b41-c8c8-7cc3-8ea4-8c8f787a79ad\\exec-da61845e-c0dd-48cd-8a62-1d0ca017ffdf.png"
+    },
+    {
+      "name": "gate-interior",
+      "direction": "B",
+      "source": "C:\\Users\\dovis\\.codex\\generated_images\\01a18b41-c8c8-7cc3-8ea4-8c8f787a79ad\\exec-9951c751-963e-45d9-be68-b76c36cad7f2.png"
+    },
+    {
+      "name": "stage-turn",
+      "direction": "A",
+      "source": "C:\\Users\\dovis\\.codex\\generated_images\\01a18b41-c8c8-7cc3-8ea4-8c8f787a79ad\\exec-ec23e83b-4dbd-4309-9aee-79fb02125f00.png"
+    },
+    {
+      "name": "stage-turn",
+      "direction": "B",
+      "source": "C:\\Users\\dovis\\.codex\\generated_images\\01a18b41-c8c8-7cc3-8ea4-8c8f787a79ad\\exec-e2241ae5-148a-40a2-a559-b6c97965b2a6.png"
+    },
+    {
+      "name": "corridor-advance",
+      "direction": "A",
+      "source": "C:\\Users\\dovis\\.codex\\generated_images\\01a18b41-c8c8-7cc3-8ea4-8c8f787a79ad\\exec-eebb95aa-a542-49ac-ab89-96a35c342770.png"
+    },
+    {
+      "name": "corridor-advance",
+      "direction": "B",
+      "source": "C:\\Users\\dovis\\.codex\\generated_images\\01a18b41-c8c8-7cc3-8ea4-8c8f787a79ad\\exec-535e76c1-28ba-41a8-ae08-d65c2f09746f.png"
+    },
+    {
+      "name": "mural-approach",
+      "direction": "A",
+      "source": "C:\\Users\\dovis\\.codex\\generated_images\\01a18b41-c8c8-7cc3-8ea4-8c8f787a79ad\\exec-c774eee8-001a-49c7-aab2-8b65b1571365.png"
+    },
+    {
+      "name": "mural-approach",
+      "direction": "B",
+      "source": "C:\\Users\\dovis\\.codex\\generated_images\\01a18b41-c8c8-7cc3-8ea4-8c8f787a79ad\\exec-50c71172-88f1-476a-9530-cdd3ec96094e.png"
+    }
+  ]
+}

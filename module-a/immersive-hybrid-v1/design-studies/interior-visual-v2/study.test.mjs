@@ -1,0 +1,7 @@
+import test from 'node:test';import assert from 'node:assert/strict';
+import {OBSERVATIONS,fitImage,regionTransform,clampTransform,visibleRect} from './observations.mjs';
+import {b2Weights} from './surface-layer.mjs';
+for(const viewport of [{width:960,height:570},{width:1280,height:680},{width:840,height:440}]){
+ test(`unchanged image ratio / bounds ${viewport.width}`,()=>{const fit=fitImage(viewport.width,viewport.height);assert.ok(Math.abs(fit.width/fit.height-2880/990)<1e-10);for(const r of OBSERVATIONS){const t=regionTransform(r,viewport),rect=visibleRect(t,viewport);assert.ok(rect.x>=0&&rect.y>=0&&rect.x+rect.width<=2880+.001&&rect.y+rect.height<=990+.001);assert.ok(r.center[0]*2880>=rect.x&&r.center[0]*2880<=rect.x+rect.width);assert.ok(r.center[1]*990>=rect.y&&r.center[1]*990<=rect.y+rect.height);}assert.deepEqual(clampTransform({zoom:1,x:1e8,y:-1e8},viewport),{zoom:1,x:0,y:0});});
+}
+test('camera weights continuous, same four calibrated cameras, exit at mural turn and front',()=>{let old;for(let i=0;i<=1000;i++){const t=.7+i*.0014,v=b2Weights({time:t,position:[3.906,1.55,8],target:[3.906,1.55,2]});assert.ok(Math.abs(v.weights.reduce((a,b)=>a+b)-1)<1e-10);if(old)assert.ok(Math.abs(v.gain-old.gain)<.01);old=v;}assert.ok(b2Weights({time:1,position:[3.3,1.55,10.7],target:[3.906,1.55,5]}).gain>0);assert.equal(b2Weights({time:2,muralFront:1,position:[3.9,1.55,8],target:[3.9,1.55,2]}).gain,0);assert.equal(b2Weights({time:2,position:[3.9,1.55,8],target:[5,1.55,8]}).gain,0);});
