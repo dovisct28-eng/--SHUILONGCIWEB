@@ -80,11 +80,11 @@ async function updateMuralUI(){
  await $('#reading-image').decode();const img=$('#reading-image');setImageSize(img.naturalWidth,img.naturalHeight);
  $('#minimap svg').setAttribute('viewBox',`0 0 ${img.naturalWidth} ${img.naturalHeight}`);$('#minimap').style.aspectRatio=`${img.naturalWidth}/${img.naturalHeight}`;
  $('#reading h1').textContent=m.title;$('#reading .eyebrow').textContent=`图像 0${activeMural+1} / ${m.wall}`;
- $('#reading dd').textContent=m.wall;$('#reading dl div:last-child dd').textContent=`${img.naturalWidth} × ${img.naturalHeight} · 原图比例`;
+ $('#reading dd').textContent=m.wall;
  $('#reading figcaption span:first-child').textContent=m.title+' / 全幅';$('#reading figcaption span:last-child').textContent='水龙祠';
  $('#reading .reading-lead').textContent=activeMural===2?'留存的色线，与墙面痕迹。':activeMural===3?'沿轮廓，观察图像。':'从完整图像，走近细节。';
- $('#reading .reading-copy').textContent=m.note;
- $('#spatial-kicker').textContent=`0${activeMural+1} / 05 · ${m.wall}`;$('#spatial-note').textContent=activeMural===0?'循着墙面，走近壁画。':'模型候选墙位 · 尚待现场资料核对';
+ // m.note, registration and source remain internal; never bind them to audience copy.
+ $('#spatial-kicker').textContent=`0${activeMural+1} / 05 · ${m.wall}`;$('#spatial-note').textContent='循着墙面，走近壁画。';
  $('#observations').hidden=activeMural!==0;$('.observation>.eyebrow').textContent=activeMural===0?'图像观察 / 三处线索':'图像观察 / 自由查看';
  $('#detail').setAttribute('aria-label',m.title+'图像细读');$('#reading').setAttribute('aria-label',m.title+'完整阅读');
  $('#continue-tour').textContent=activeMural===4?'继续探索入将图 ↗':`继续前往${murals[activeMural+1].title.replace('《入将图》','')} →`;
@@ -105,7 +105,7 @@ async function placeCandidate(){
  if(!activeMural)return;
  const m=murals[activeMural];
  // Unrectified site photos are read as photos, never pasted as reconstructed wall murals.
- if(m.registration==='photo-unrectified'){message(m.title+'：现场照片可完整阅读；墙面配准尚待核对。');return;}
+ if(m.registration==='photo-unrectified')return;
  const tex=await new T.TextureLoader().loadAsync(m.image);tex.colorSpace=T.SRGBColorSpace;
  const ratio=tex.image.width/tex.image.height,height=Math.min(m.height,m.width/ratio);
  wallPlane=new T.Mesh(new T.PlaneGeometry(height*ratio,height),new T.MeshBasicMaterial({map:tex,transparent:true,opacity:.12,toneMapped:false,polygonOffset:true,polygonOffsetFactor:-2}));
@@ -133,7 +133,7 @@ $('#continue-tour').onclick=async()=>{
  try{if(await explorationAvailable()){sessionStorage.setItem('shuilongci-v3-return','mural-05');location.assign(EXPLORATION_URL);}else message('入将图探索服务暂不可达。请启动模块 B 后重试。');}finally{setBusy(false);}
 };
 $('#route-open').onclick=()=>{
- const list=$('#route-list');list.replaceChildren();for(const m of murals){const li=document.createElement('li');li.textContent=`${m.title} · ${m.wall} · ${m.order===1?'既有空间绑定':'模型候选墙位'}${m.registration==='photo-unrectified'?' · 现场照片待配准':''}`;list.append(li);}$('#route-dialog').showModal();
+ const list=$('#route-list');list.replaceChildren();for(const m of murals){const li=document.createElement('li');li.textContent=`${m.title} · ${m.wall}`;list.append(li);}$('#route-dialog').showModal();
 };
 $('#route-close').onclick=()=>$('#route-dialog').close();
 addEventListener('pageshow',e=>{if(e.persisted&&sessionStorage.getItem('shuilongci-v3-return')){sessionStorage.removeItem('shuilongci-v3-return');message('已返回第五铺，可继续查看或返回墙面。');}});

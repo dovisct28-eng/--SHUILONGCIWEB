@@ -1,0 +1,27 @@
+# V3 观众界面技术标注清理验收
+
+日期：2026-10-30。开发起点为 fetch 核实后的功能分支 HEAD `c3c7ee5ac939b04fac334df7b39c93d0bab9cc59`。
+
+## 改动
+
+- 删除全幅页 `.reading-copy` 元素及 `m.note` 赋值；技术 note 保持在 murals.json 内，不再绑定观众文案。
+- 删除标题区尺度栏及动态像素/原图比例赋值，保留壁画位置。
+- 删除第三/四铺的未校正/配准提示条、墙面技术提示及参观路线中的技术状态文字。内部状态、来源、配准文档和预览诊断区保留。
+- 全幅底部由三列改为导语/细读入口两列，清除空说明栏；原图 contain、标题风格、细读、返回和继续按钮保持。
+
+## 验证
+
+- `node --check study.mjs` 与专项浏览器脚本语法检查通过；V3 原有11项模块测试通过。
+- 真实 Chrome：1440×900、1920×1080、1366×768 减少动态，另含1440×900正常动态，共4组、20次五铺阅读检查通过。详见 results.json。
+- 每铺从全幅进入细读，验证按钮/键盘缩放、拖动、滚轮、返回全幅、返回墙面和再次展开；五铺前行与逆向返回均通过，无 pageerror。
+- 向每铺内部 note 注入 DEV_ONLY_NOTE，确认内部 note 仍存在，而全幅、细读、墙面、提示条及路线弹窗均不出现技术标注，防止切换时重新渲染。
+- 检查壁画 contain、自然尺寸与图像/标题/操作控件的视口边界。人工审图：第一铺横幅与第四铺竖图完整，底部无空说明列、控件无重叠。
+- Git diff 核对建筑、图像、murals.json、route-data.mjs 与 observations.mjs 未改。study.mjs 的变化仅限文本绑定/技术提示，镜头、动画、状态和操作逻辑未调整。
+
+## 截图精选
+
+3张，合计 433.0 KiB：第一铺全幅、第四铺全幅、第四铺细读。其他20张全幅回归PNG保留local，由现有gitignore排除。既有历史验收图不变。
+
+复现：按 V3 README 启动localhost:4186，设置环境提供的 Playwright/sharp NODE_PATH，运行 `node module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/label-cleanup-check.cjs`。
+
+本次仅清理观众界面标注；原有配准/墙位证据状态未因此改变。
