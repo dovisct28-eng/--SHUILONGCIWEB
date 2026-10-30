@@ -1,3 +1,4 @@
+import {MURAL_INTRODUCTIONS} from './mural-introductions.mjs';
 import {WAYPOINTS,segmentHits,lerpPose,routeSlice} from './route-data.mjs';
 import {EXPLORATION_URL,explorationAvailable} from '../../../navigation/exploration.mjs';
 import {installInteriorFinish} from './interior-finish.mjs';
@@ -44,7 +45,15 @@ async function chooseDirection(value){if(!ready||busy)return;setBusy(true);try{
  else{const T=await w.document.querySelector('#temple').contentWindow.eval("import('/module-a/immersive-hybrid-v1/vendor/three.module.js')");layer?.dispose();layer=null;layer=await installStudyLayers(h.model,T,{direction:value});w.v24a.layer?.setMode('original');h.model.setCamera(h.model.pose,{immediate:true});}
  window.study.layerError=null;if(activeMural)layer?.setMode('original');finish?.setEnabled(value==='A'||value==='B');message('');paintPosition();
  }catch(e){window.study.layerError=e.message;finish?.setEnabled(false);layer?.setMode('original');w.v24a.layer?.setMode('hybrid');message('新候选素材暂不可用，已回退到当前正式融合；可以重选方向重试。');}finally{setBusy(false);}}
-function updateObservation(region){activeObservation=region;for(const b of document.querySelectorAll('[data-observation]'))b.setAttribute('aria-pressed',String(b.dataset.observation===region?.id));$('#observation-number').textContent=region?`${region.number} / 03`:'01—03';$('#observation-title').textContent=region?.title??'先看整体，再看局部';$('#observation-copy').textContent=region?.copy??(activeMural?'自由拖动和缩放真实图像；按 0 键复位。':'选择一处线索，在全图中定位；也可以自由拖动和缩放画面。');$('#region-position').textContent=region?region.title:'全幅';}
+function updateObservation(region){
+ activeObservation=region;
+ for(const b of document.querySelectorAll('[data-observation]'))b.setAttribute('aria-pressed',String(b.dataset.observation===region?.id));
+ const mural=murals[activeMural];
+ $('#observation-number').textContent='整铺简介';
+ $('#observation-title').textContent=mural?.title??'壁画简介';
+ $('#observation-copy').textContent=MURAL_INTRODUCTIONS[mural?.id]??'';
+ $('#region-position').textContent=region?region.title:'全幅';
+}
 function drawDetail(animate=true){const vp=regionViewport();if(!vp.width||!vp.height)return;detail=clampTransform(detail,vp);const fit=fitImage(vp.width,vp.height),img=$('#detail-image');img.style.width=`${fit.width}px`;img.style.height=`${fit.height}px`;const transform=`translate(calc(-50% + ${detail.x}px),calc(-50% + ${detail.y}px)) scale(${detail.zoom})`;
  if(animate&&!motion()){const old=getComputedStyle(img).transform;detailAnimation?.cancel();img.style.transform=transform;detailAnimation=img.animate([{transform:old},{transform}],{duration:650,easing:'cubic-bezier(.2,.6,.2,1)'});}else{detailAnimation?.cancel();img.style.transform=transform;}
  $('#zoom-value').value=`${Math.round(detail.zoom*100)}%`;$('#zoom-out').disabled=detail.zoom<=1;$('#zoom-in').disabled=detail.zoom>=4;const rect=visibleRect(detail,vp);for(const [k,v] of Object.entries(rect))$('#mini-window').setAttribute(k,v);}
