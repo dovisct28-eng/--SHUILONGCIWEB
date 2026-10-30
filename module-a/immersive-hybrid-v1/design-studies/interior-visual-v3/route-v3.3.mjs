@@ -14,8 +14,8 @@ export const REAR_POINTS=[
  [REAR_DOCKS[2],at([-1.9,1.85,-11.1],[-3.2,1.85,-14]),REAR_DOCKS[3]],
 ];
 function cubic(points,i,t,key){const a=points[i][key],b=points[i+1][key],p=points[Math.max(0,i-1)][key],q=points[Math.min(points.length-1,i+2)][key];return a.map((x,k)=>{const m=.32*(b[k]-p[k]),n=.32*(q[k]-x),t2=t*t,t3=t2*t;return (2*t3-3*t2+1)*x+(t3-2*t2+t)*m+(-2*t3+3*t2)*b[k]+(t3-t2)*n;});}
-export function createRearRail(segment){
- const points=REAR_POINTS[segment];if(!points)throw Error('Unknown rear route');
+export function createRearRail(segment,overridePoints){
+ const points=Array.isArray(overridePoints)?overridePoints:REAR_POINTS[segment];if(!points)throw Error('Unknown rear route');
  const table=[{distance:0,i:0,t:0}];let length=0,previous=points[0].position;
  for(let i=0;i<points.length-1;i++)for(let j=1;j<=100;j++){const t=j/100,p=cubic(points,i,t,'position');length+=Math.hypot(...p.map((x,k)=>x-previous[k]));previous=p;table.push({distance:length,i,t});}
  function sample(progress){const u=Math.max(0,Math.min(1,progress)),d=u*length;let lo=0,hi=table.length-1;while(lo<hi){const m=(lo+hi)>>1;if(table[m].distance<d)lo=m+1;else hi=m;}const b=table[lo],a=table[Math.max(0,lo-1)],f=(d-a.distance)/(b.distance-a.distance||1),t=a.i===b.i?a.t+(b.t-a.t)*f:b.t*f;return {position:cubic(points,b.i,t,'position'),target:cubic(points,b.i,t,'target'),fov:48,time:3,...(segment<2?{route33:(segment+u)/2}:{}),rearSegment:segment,rearProgress:u};}

@@ -1,0 +1,221 @@
+{
+  "runs": [
+    {
+      "width": 1440,
+      "height": 900,
+      "reduced": false,
+      "state": {
+        "segment": 2,
+        "progress": 1,
+        "status": "lit",
+        "error": null,
+        "bridge": "soft-reversible-photo",
+        "projection": {
+          "enabled": true,
+          "progress": 1,
+          "weights": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "gain": 1,
+          "layers": [
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 4
+            },
+            {
+              "kind": 1,
+              "gain": 0,
+              "triangles": 44
+            },
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 4
+            }
+          ],
+          "referenceDepth": true,
+          "secondWallExcluded": true
+        },
+        "fifthProjection": {
+          "enabled": true,
+          "progress": 1,
+          "weights": [
+            0,
+            1
+          ],
+          "gain": 1,
+          "layers": [
+            {
+              "kind": 0,
+              "gain": 0.3,
+              "triangles": 4
+            },
+            {
+              "kind": 1,
+              "gain": 0.34,
+              "triangles": 44
+            },
+            {
+              "kind": 0,
+              "gain": 0.3,
+              "triangles": 4
+            }
+          ],
+          "referenceDepth": true,
+          "secondWallExcluded": true
+        },
+        "wall": [
+          {
+            "x": 123.15866947248301,
+            "y": 289.1512614228343,
+            "depth": 0.9830707918993803
+          },
+          {
+            "x": 1316.8413305309678,
+            "y": 289.1512614219041,
+            "depth": 0.9830707918992796
+          },
+          {
+            "x": 1316.8413305309678,
+            "y": 610.8487385780959,
+            "depth": 0.9830707918992796
+          },
+          {
+            "x": 123.15866947248301,
+            "y": 610.8487385771657,
+            "depth": 0.9830707918993803
+          }
+        ],
+        "reveals": {
+          "2": 0,
+          "3": 0.28,
+          "4": 1
+        },
+        "lengths": [
+          3.328930236730598,
+          4.518830287042765,
+          3.152355143398346
+        ],
+        "imageSize": [
+          6000,
+          1617
+        ]
+      },
+      "controls": "zoom, drag, reset, minimap, reading/wall return, reverse fourth",
+      "errors": []
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "reduced": true,
+      "state": {
+        "segment": 2,
+        "progress": 1,
+        "status": "lit",
+        "error": null,
+        "bridge": "soft-reversible-photo",
+        "projection": {
+          "enabled": true,
+          "progress": 1,
+          "weights": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "gain": 1,
+          "layers": [
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 4
+            },
+            {
+              "kind": 1,
+              "gain": 0,
+              "triangles": 44
+            },
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 4
+            }
+          ],
+          "referenceDepth": true,
+          "secondWallExcluded": true
+        },
+        "fifthProjection": {
+          "enabled": true,
+          "progress": 1,
+          "weights": [
+            0,
+            1
+          ],
+          "gain": 1,
+          "layers": [
+            {
+              "kind": 0,
+              "gain": 0.3,
+              "triangles": 4
+            },
+            {
+              "kind": 1,
+              "gain": 0.34,
+              "triangles": 44
+            },
+            {
+              "kind": 0,
+              "gain": 0.3,
+              "triangles": 4
+            }
+          ],
+          "referenceDepth": true,
+          "secondWallExcluded": true
+        },
+        "wall": [
+          {
+            "x": 173.69539794985218,
+            "y": 246.74240974748525,
+            "depth": 0.9830707918993803
+          },
+          {
+            "x": 1192.3046020530924,
+            "y": 246.74240974669152,
+            "depth": 0.9830707918992796
+          },
+          {
+            "x": 1192.3046020530924,
+            "y": 521.2575902533085,
+            "depth": 0.9830707918992796
+          },
+          {
+            "x": 173.69539794985218,
+            "y": 521.2575902525148,
+            "depth": 0.9830707918993803
+          }
+        ],
+        "reveals": {
+          "2": 0,
+          "3": 0.28,
+          "4": 1
+        },
+        "lengths": [
+          3.328930236730598,
+          4.518830287042765,
+          3.152355143398346
+        ],
+        "imageSize": [
+          6000,
+          1617
+        ]
+      },
+      "controls": "zoom, drag, reset, minimap, reading/wall return, reverse fourth",
+      "errors": []
+    }
+  ],
+  "pass": true
+}

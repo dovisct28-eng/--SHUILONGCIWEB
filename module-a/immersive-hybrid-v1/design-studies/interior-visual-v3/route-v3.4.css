@@ -1,0 +1,16 @@
+/* Shared V3.1 UI; layout changes are isolated to the two newly prepared photos. */
+#rear-wall-label{position:fixed;z-index:3;pointer-events:none;font:600 76px/1.1 'Microsoft YaHei',sans-serif;letter-spacing:.035em;color:rgba(193,195,186,.58);transform:translate(-50%,-50%)}
+body:not([data-view=A]):not([data-view=B]) #rear-wall-label{visibility:hidden}
+body[data-variant=v34][data-view=B]:is([data-mural-index="2"],[data-mural-index="3"]) .spatial-title{opacity:0}
+body[data-variant=v34]:is([data-mural-index="2"],[data-mural-index="3"]) #reading{inset-block:92px 24px;gap:14px;grid-template-rows:auto minmax(0,1fr) auto 24px}
+body[data-variant=v34]:is([data-mural-index="2"],[data-mural-index="3"]) .reading-head{padding-top:6px}
+body[data-variant=v34]:is([data-mural-index="2"],[data-mural-index="3"]) .reading-head h1{font-size:38px;margin-top:5px}
+body[data-variant=v34]:is([data-mural-index="2"],[data-mural-index="3"]) .reading-foot{padding-top:14px;gap:24px}
+body[data-variant=v34]:is([data-mural-index="2"],[data-mural-index="3"]) .reading-lead{font-size:21px}
+body[data-variant=v34]:is([data-mural-index="2"],[data-mural-index="3"]) .full-mural img{object-fit:contain}
+body[data-variant=v34][data-mural-index="3"] #minimap{max-height:85px}
+.rear-reading-bridge{position:fixed;z-index:4;pointer-events:none;transform-origin:center;object-fit:contain}
+@media(max-height:800px){body[data-variant=v34]:is([data-mural-index="2"],[data-mural-index="3"]) #reading{inset-block:83px 20px;gap:12px;grid-template-rows:auto minmax(0,1fr) auto 24px}body[data-variant=v34]:is([data-mural-index="2"],[data-mural-index="3"]) .reading-head h1{font-size:32px}}
+@media(min-width:1700px){body[data-variant=v34]:is([data-mural-index="2"],[data-mural-index="3"]) #reading{inset-block:110px 32px;gap:18px}body[data-variant=v34]:is([data-mural-index="2"],[data-mural-index="3"]) .reading-head h1{font-size:44px}}
+
+body[data-variant=v34][data-view=B][data-mural-index="4"] .spatial-title{opacity:0}

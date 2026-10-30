@@ -1,0 +1,26 @@
+{
+  "tool": "built-in image_gen; imagegen skill",
+  "prompt": "Use case: lighting-weather / precise architectural material refinement. Edit the supplied actual 3D model screenshot as a registered architectural texture reference. Preserve the EXACT 16:9 camera, perspective, crop, wall corners, floor/wall boundary, brick band shapes and black overhead timber silhouette. This is the interior rear wall of a quiet historic Chinese temple. Add restrained believable matte aged grey lime plaster microtexture, subtle charcoal stone paving grain, old dark wood grain only where timber already exists, subdued soft natural bounced illumination. Match the model's existing dark neutral warm-grey illumination and exposure. All plaster wall surfaces MUST remain EMPTY BLANK WALLS with no murals, no animals, no paintings, no symbols, no colored patterns, no text. Do not introduce any additional columns, roof beams, doors, windows, furniture, lamps, vegetation, people, cracks that change geometry, or decorative motifs. No reframing, lens change or newly reconstructed architecture. No glow, vignette, HDR or overly distressed surface. Only enhance material texture and quiet light, with exact geometric correspondence to the input.",
+  "blankMurals": true,
+  "items": [
+    {
+      "name": "turn-fifth",
+      "reference": "references/turn-fifth-model.png",
+      "originalGenerated": "D:/YJS/出兵入将-PC端页面/module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/route-v3.4/references/turn-fifth-model.png",
+      "candidate": "candidates/turn-fifth.webp",
+      "status": "generation-failed-model-only",
+      "failure": "network error: error decoding response body",
+      "use": "model reference only; all safe-mask channels zero",
+      "promptSuffix": "Reference view ID: turn-fifth. Return one image with precisely the same composition as this view. Keep the entire fifth-mural plaster wall blank."
+    },
+    {
+      "name": "fifth-dock",
+      "reference": "references/fifth-dock-model.png",
+      "originalGenerated": "C:/Users/dovis/.codex/generated_images/01a18c90-3dba-7903-9a37-fe4d393ef44e/exec-01e264e0-8413-4314-a073-c1e8e3efed69.png",
+      "candidate": "candidates/fifth-dock.webp",
+      "status": "generated",
+      "use": "only reliable eroded surface interiors; exclude mural, wood, brick and roof",
+      "promptSuffix": "Reference view ID: fifth-dock. Return one image with precisely the same composition as this view. Keep the entire fifth-mural plaster wall blank."
+    }
+  ]
+}

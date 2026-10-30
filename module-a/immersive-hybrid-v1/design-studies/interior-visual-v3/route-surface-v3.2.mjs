@@ -6,7 +6,7 @@ export async function installRouteSurfaces(runtime,T,options={}){
  if(!response.ok)throw Error('V3.2 配准机位未加载');const manifest=await response.json();
  let scene=runtime.root;while(scene.parent)scene=scene.parent;
  const group=new T.Group();group.name=options.name??'V32-route-surface-projections';scene.add(group);
- const textures=[],layers=[];let enabled=true,last=runtime.pose;
+ const textures=[],layers=[];let enabled=true,strength=1,last=runtime.pose;
  async function load(name,color){const image=new Image();image.src=new URL(name,base);await image.decode();const t=new T.Texture(image);t.colorSpace=color?T.SRGBColorSpace:T.NoColorSpace;t.minFilter=T.LinearFilter;t.magFilter=T.LinearFilter;t.generateMipmaps=false;t.needsUpdate=true;textures.push(t);return t;}
  try{
   const records=await Promise.all(manifest.items.map(async item=>({item,map:await load(`prepared/${item.name}.webp`,true),mask:await load(`prepared/${item.name}-safe.png`,false),depth:await load(`prepared/${item.name}-depth.png`,false)})));
@@ -35,8 +35,8 @@ export async function installRouteSurfaces(runtime,T,options={}){
    }if(ids.length)add(mesh,ids,kind);
   });
   const progressOf=options.progress??(pose=>pose.route12),weightsFor=options.weights??routeWeights;
-  function update(pose){last=pose;const progress=progressOf(pose),state=weightsFor(progress??0);for(const layer of layers){const gain=enabled&&progress!=null?state.gain*(options.gains??[.60,.32])[layer.kind]:0;layer.uniforms.gain.value=gain;records.forEach((r,i)=>layer.uniforms[`weight${i}`].value=state.weights[i]);layer.proxy.visible=gain>.001;}}
+  function update(pose){last=pose;const progress=progressOf(pose),state=weightsFor(progress??0);for(const layer of layers){const gain=enabled&&progress!=null?state.gain*(options.gains??[.60,.32])[layer.kind]*strength:0;layer.uniforms.gain.value=gain;records.forEach((r,i)=>layer.uniforms[`weight${i}`].value=state.weights[i]);layer.proxy.visible=gain>.001;}}
   update(last);
-  return {update,setEnabled(value){enabled=value;update(last);runtime.invalidate();},get state(){return {enabled,progress:progressOf(last)??null,...weightsFor(progressOf(last)??0),layers:layers.map(l=>({kind:l.kind,gain:l.uniforms.gain.value,triangles:l.proxy.geometry.index.count/3})),referenceDepth:true,secondWallExcluded:true};},dispose(){for(const l of layers){l.proxy.geometry.dispose();l.proxy.material.dispose();}textures.forEach(t=>t.dispose());group.removeFromParent();}};
+  return {update,setStrength(value){strength=Math.max(0,Math.min(1,value));update(last);runtime.invalidate();},setEnabled(value){enabled=value;update(last);runtime.invalidate();},get state(){return {enabled,progress:progressOf(last)??null,...weightsFor(progressOf(last)??0),layers:layers.map(l=>({kind:l.kind,gain:l.uniforms.gain.value,triangles:l.proxy.geometry.index.count/3})),referenceDepth:true,secondWallExcluded:true};},dispose(){for(const l of layers){l.proxy.geometry.dispose();l.proxy.material.dispose();}textures.forEach(t=>t.dispose());group.removeFromParent();}};
  }catch(e){textures.forEach(t=>t.dispose());group.removeFromParent();throw e;}
 }

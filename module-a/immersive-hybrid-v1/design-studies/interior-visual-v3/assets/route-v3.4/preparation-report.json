@@ -1,0 +1,60 @@
+[
+  {
+    "name": "turn-fifth",
+    "status": "generation-failed-model-only",
+    "inputSize": [
+      1280,
+      720
+    ],
+    "referenceSize": [
+      1280,
+      720
+    ],
+    "candidateSha256": "b1a0fb1f7df36be3451604290ae82e505871544890dea33162805c7c9d691b66",
+    "referenceSha256": "c1ef863a5a187af2cab576480d70c179879dca7ae50530ce37754d5cb1c26190",
+    "candidateMaskCoverage": [
+      0,
+      0,
+      0
+    ],
+    "depth": "RGB24 / 16777215 * 40; positive eye-space distance",
+    "excluded": [
+      "all generated wood, roof and brick",
+      "structural boundaries (20px erosion)",
+      "all five mural areas",
+      "entire fifth-mural plaster band",
+      "rear mural bands except non-mural central gap and upper wall"
+    ],
+    "runtimeGuard": "world-space exclusion in route-surface-v3.4.mjs; reference depth rejection; real-time model depth",
+    "illumination": "match blurred model/AI RGB ratio; no image warp"
+  },
+  {
+    "name": "fifth-dock",
+    "status": "generated",
+    "inputSize": [
+      1672,
+      941
+    ],
+    "referenceSize": [
+      1280,
+      720
+    ],
+    "candidateSha256": "97ad2efcebddb59bc318884fb5d558920e2a9cac49c5c1290910dc3bc3cadea7",
+    "referenceSha256": "7b13939b7d318272f50324e4709d58df90f22e6f2d1d0d12cbb0d70910bddda6",
+    "candidateMaskCoverage": [
+      0.5364377170138889,
+      0.19179361979166668,
+      0
+    ],
+    "depth": "RGB24 / 16777215 * 40; positive eye-space distance",
+    "excluded": [
+      "all generated wood, roof and brick",
+      "structural boundaries (20px erosion)",
+      "all five mural areas",
+      "entire fifth-mural plaster band",
+      "rear mural bands except non-mural central gap and upper wall"
+    ],
+    "runtimeGuard": "world-space exclusion in route-surface-v3.4.mjs; reference depth rejection; real-time model depth",
+    "illumination": "match blurred model/AI RGB ratio; no image warp"
+  }
+]

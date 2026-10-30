@@ -1,0 +1,253 @@
+{
+  "rails": [
+    {
+      "segment": 0,
+      "length": 3.152355143398346
+    }
+  ],
+  "collisionSamples": 400,
+  "clearanceRadius": 0.18,
+  "collisions": [],
+  "geometryChecks": [
+    {
+      "candidate": [
+        -4.515,
+        1.85,
+        -11.75
+      ],
+      "sightlineHits": [],
+      "wallBehind": [
+        {
+          "object": "03_MainHall-geometry",
+          "distance": 0.024999961853027663,
+          "point": [
+            -4.539999961853027,
+            1.85,
+            -11.75
+          ]
+        },
+        {
+          "object": "02_Enclosure-geometry",
+          "distance": 0.374999866485596,
+          "point": [
+            -4.889999866485596,
+            1.85,
+            -11.75
+          ]
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "name": "turn-fifth",
+      "progress": 0.5,
+      "pose": {
+        "position": [
+          -0.7745117129256278,
+          1.85,
+          -11.07686758148582
+        ],
+        "target": [
+          -4.413316234958436,
+          1.85,
+          -12.76257601581526
+        ],
+        "fov": 48,
+        "time": 3,
+        "rearSegment": 2,
+        "rearProgress": 0.5,
+        "route33": 1,
+        "route34": 0.5
+      },
+      "projection": [
+        1.2633956853211215,
+        0,
+        0,
+        0,
+        0,
+        2.2460367739042155,
+        0,
+        0,
+        0,
+        0,
+        -1.0005001250312577,
+        -1,
+        0,
+        0,
+        -0.09002250562640661,
+        0
+      ],
+      "cameraMatrix": [
+        0.4203446531646473,
+        0,
+        -0.9073645202210038,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.9073645202210038,
+        0,
+        0.4203446531646473,
+        0,
+        -0.7745117129256278,
+        1.85,
+        -11.07686758148582,
+        1
+      ],
+      "near": 0.045000000000000005,
+      "far": 180,
+      "aspect": 1.7777777777777777,
+      "modelTransform": {
+        "version": "V2.4-B1-combined-b",
+        "asset": "shuilong-temple/shuilong-temple.glb",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "matrixWorld": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "depth": {
+        "width": 1280,
+        "height": 720,
+        "maxDepth": 40,
+        "encoding": "Float32 LE, top-left row-major, linear positive eye-space -Z, design-model units; 0=background; saturated at maxDepth"
+      }
+    },
+    {
+      "name": "fifth-dock",
+      "progress": 1,
+      "pose": {
+        "position": [
+          0.65,
+          1.85,
+          -11.75
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ],
+        "fov": 48,
+        "time": 3,
+        "rearSegment": 2,
+        "rearProgress": 1,
+        "route33": 1,
+        "route34": 1
+      },
+      "projection": [
+        1.2633956853211215,
+        0,
+        0,
+        0,
+        0,
+        2.2460367739042155,
+        0,
+        0,
+        0,
+        0,
+        -1.0005001250312577,
+        -1,
+        0,
+        0,
+        -0.09002250562640661,
+        0
+      ],
+      "cameraMatrix": [
+        2.220446049250313e-16,
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        2.220446049250313e-16,
+        0,
+        0.65,
+        1.85,
+        -11.75,
+        1
+      ],
+      "near": 0.045000000000000005,
+      "far": 180,
+      "aspect": 1.7777777777777777,
+      "modelTransform": {
+        "version": "V2.4-B1-combined-b",
+        "asset": "shuilong-temple/shuilong-temple.glb",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "matrixWorld": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "depth": {
+        "width": 1280,
+        "height": 720,
+        "maxDepth": 40,
+        "encoding": "Float32 LE, top-left row-major, linear positive eye-space -Z, design-model units; 0=background; saturated at maxDepth"
+      }
+    }
+  ]
+}

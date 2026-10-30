@@ -9,7 +9,7 @@ import {installInteriorFinish} from './interior-finish.mjs';
 import {OBSERVATIONS,fitImage,clampTransform,regionTransform,visibleRect,setImageSize} from './observations.mjs';
 import {installStudyLayers} from './surface-layer.mjs';
 const $=s=>document.querySelector(s),frame=$('#space'),body=document.body;
-const variant33=body.dataset.variant==='v33';let rearGallery=null;
+const variant33=['v33','v34'].includes(body.dataset.variant);let rearGallery=null;
 let routeLayer,rail,routeProgress=0,secondReveal=0,secondStatus='idle',routeError=null;
 let finish,activeMural=0,murals=[],T,wallPlane=null,wallLabel=null;
 let h,w,layer,ready=false,busy=false,view='A',direction='B',compare=false,position='gate-interior',detail={zoom:1,x:0,y:0},drag=null,detailAnimation=null,activeObservation=null;
@@ -227,7 +227,8 @@ addEventListener('pagehide',e=>{if(!e.persisted){routeLayer?.dispose();rearGalle
 // V3.3 is an optional, lazily loaded extension. V3.2 keeps its original data and UI.
 async function initializeRear33(){
  const {createRearGallery}=await import('./gallery-v3.3.mjs');
- rearGallery=createRearGallery({runtime:h.model,T,murals,motion,
+ const fifth=body.dataset.variant==='v34'?(await import('./fifth-v3.4.mjs')).fifth:null;
+ rearGallery=createRearGallery({runtime:h.model,T,murals,motion,fifth,
   active:()=>activeMural,view:()=>view,setView:paintView,
   async activate(index){activeMural=index;await updateMuralUI();},
   async exitReading(){if(view==='D')paintView('C');if(view==='C'){body.dataset.readingExit='true';await syncReading(false);}},
