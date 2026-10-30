@@ -1,0 +1,59 @@
+/* V3.1: one static wall beneath both reading surfaces, never over the images. */
+.reading-ambience {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(116deg, #101618 0%, #1b2325 36%, #20282a 66%, #141b1e 100%);
+  transition: opacity 650ms cubic-bezier(.25,.1,.2,1);
+}
+.reading-ambience > div {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  transition: opacity 350ms ease;
+}
+.reading-ambience__light {
+  opacity: 1;
+  background:
+    radial-gradient(ellipse 90% 74% at 39% -12%, #c7b79c14, transparent 78%),
+    radial-gradient(ellipse 80% 90% at 63% 52%, #b8ae9909, transparent 76%);
+}
+.reading-ambience__grain {
+  background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22256%22%20height%3D%22256%22%20viewBox%3D%220%200%20256%20256%22%3E%3Cfilter%20id%3D%22grain%22%20x%3D%220%22%20y%3D%220%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%3CfeTurbulence%20type%3D%22fractalNoise%22%20baseFrequency%3D%22.52%22%20numOctaves%3D%223%22%20seed%3D%2217%22%20stitchTiles%3D%22stitch%22%2F%3E%3CfeColorMatrix%20type%3D%22saturate%22%20values%3D%220%22%2F%3E%3C%2Ffilter%3E%3Cpath%20fill%3D%22%23808080%22%20filter%3D%22url%28%23grain%29%22%20d%3D%22M0%200h256v256H0z%22%2F%3E%3C%2Fsvg%3E") repeat;
+  background-size: 256px 256px;
+  opacity: .045;
+}
+.reading-ambience__shade {
+  opacity: .72;
+  background:
+    linear-gradient(103deg, #060b0d26, transparent 25%, #060b0d14 40%, transparent 60%),
+    radial-gradient(ellipse 90% 100% at 53% 36%, transparent 36%, #060b0d52 100%),
+    linear-gradient(0deg, #060b0d29, transparent 45%);
+}
+main { z-index: 2; }
+#space { transition: visibility 0s linear; }
+body[data-view=C] .reading-ambience,
+body[data-view=D] .reading-ambience { opacity: 1; }
+body[data-view=C] #space,
+body[data-view=D] #space {
+  visibility: hidden;
+  transition-delay: 650ms;
+}
+/* D keeps the wall but reduces decorative light, grain and shadow to 40%. */
+body[data-view=D] .reading-ambience__light { opacity: .4; }
+body[data-view=D] .reading-ambience__grain { opacity: .018; }
+body[data-view=D] .reading-ambience__shade { opacity: .288; }
+/* Reverse first-mural unfolding: reveal the original space while the wall fades. */
+body[data-reading-exit=true] .reading-ambience { opacity: 0; }
+body[data-reading-exit=true] #space {
+  visibility: visible;
+  transition-delay: 0s;
+}
+body[data-reduced-motion=true] .reading-ambience,
+body[data-reduced-motion=true] .reading-ambience > div,
+body[data-reduced-motion=true] #space { transition: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reading-ambience, .reading-ambience > div, #space { transition: none; }
+}

@@ -1,0 +1,2938 @@
+{
+  "enter": [
+    {
+      "ms": 9.499999999628926,
+      "opacity": 0.0135165,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 13.79999999962456,
+      "opacity": 0.0182074,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 17.89999999963038,
+      "opacity": 0.0231664,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 21.999999999628926,
+      "opacity": 0.028617,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 26.199999999626016,
+      "opacity": 0.0347273,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 30.39999999963038,
+      "opacity": 0.041387,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 34.59999999962747,
+      "opacity": 0.0486116,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 38.59999999962747,
+      "opacity": 0.05603,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 42.79999999962456,
+      "opacity": 0.0643955,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 46.999999999628926,
+      "opacity": 0.07336,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 51.199999999626016,
+      "opacity": 0.0829297,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 55.39999999963038,
+      "opacity": 0.0931069,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 59.499999999628926,
+      "opacity": 0.103626,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 63.699999999626016,
+      "opacity": 0.114993,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 67.89999999963038,
+      "opacity": 0.126947,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 71.99999999962893,
+      "opacity": 0.139165,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 76.19999999962602,
+      "opacity": 0.15222,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 80.39999999963038,
+      "opacity": 0.16579,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 84.49999999962893,
+      "opacity": 0.179502,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 88.59999999962747,
+      "opacity": 0.193632,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 92.89999999963038,
+      "opacity": 0.208857,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 96.99999999962893,
+      "opacity": 0.223711,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 101.19999999962602,
+      "opacity": 0.239217,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 105.39999999963038,
+      "opacity": 0.254962,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 109.49999999962893,
+      "opacity": 0.270509,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 113.59999999962747,
+      "opacity": 0.286181,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 117.89999999963038,
+      "opacity": 0.302695,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 121.99999999962893,
+      "opacity": 0.318468,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 126.19999999962602,
+      "opacity": 0.334603,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 130.49999999962893,
+      "opacity": 0.351053,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 134.49999999962893,
+      "opacity": 0.366256,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 138.69999999962602,
+      "opacity": 0.382081,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 142.79999999962456,
+      "opacity": 0.397362,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 146.89999999963038,
+      "opacity": 0.412452,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 151.19999999962602,
+      "opacity": 0.42805,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 155.59999999962747,
+      "opacity": 0.443748,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 159.59999999962747,
+      "opacity": 0.457772,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 163.79999999962456,
+      "opacity": 0.472232,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 167.79999999962456,
+      "opacity": 0.485743,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 171.99999999962893,
+      "opacity": 0.49965,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 176.29999999962456,
+      "opacity": 0.513584,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 180.39999999963038,
+      "opacity": 0.526582,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 184.59999999962747,
+      "opacity": 0.539605,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 188.79999999962456,
+      "opacity": 0.552332,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 192.79999999962456,
+      "opacity": 0.56418,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 197.09999999962747,
+      "opacity": 0.57662,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 201.29999999962456,
+      "opacity": 0.588479,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 205.39999999963038,
+      "opacity": 0.599782,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 209.59999999962747,
+      "opacity": 0.611083,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 213.79999999962456,
+      "opacity": 0.622108,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 217.99999999962893,
+      "opacity": 0.632864,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 222.19999999962602,
+      "opacity": 0.643356,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 226.19999999962602,
+      "opacity": 0.653107,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 230.29999999962456,
+      "opacity": 0.662863,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 234.69999999962602,
+      "opacity": 0.67307,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 238.79999999962456,
+      "opacity": 0.682343,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 242.99999999962893,
+      "opacity": 0.691609,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 247.19999999962602,
+      "opacity": 0.700645,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 251.09999999962747,
+      "opacity": 0.708834,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 255.29999999962456,
+      "opacity": 0.717441,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 259.4999999996289,
+      "opacity": 0.725835,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 263.79999999962456,
+      "opacity": 0.734213,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 267.79999999962456,
+      "opacity": 0.741815,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 272.199999999626,
+      "opacity": 0.74997,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 276.3999999996304,
+      "opacity": 0.757557,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 280.4999999996289,
+      "opacity": 0.764781,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 284.59999999962747,
+      "opacity": 0.771831,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 288.699999999626,
+      "opacity": 0.778711,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 292.8999999996304,
+      "opacity": 0.785585,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 297.199999999626,
+      "opacity": 0.792448,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 301.3999999996304,
+      "opacity": 0.798982,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 305.59999999962747,
+      "opacity": 0.805355,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 309.699999999626,
+      "opacity": 0.811424,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 313.79999999962456,
+      "opacity": 0.817346,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 317.79999999962456,
+      "opacity": 0.822985,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 322.09999999962747,
+      "opacity": 0.828898,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 326.3999999996304,
+      "opacity": 0.834661,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 330.4999999996289,
+      "opacity": 0.840019,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 334.59999999962747,
+      "opacity": 0.845247,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 338.699999999626,
+      "opacity": 0.850347,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 342.9999999996289,
+      "opacity": 0.855562,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 347.199999999626,
+      "opacity": 0.860526,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 351.29999999962456,
+      "opacity": 0.865251,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 355.4999999996289,
+      "opacity": 0.869971,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 359.59999999962747,
+      "opacity": 0.874464,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 363.79999999962456,
+      "opacity": 0.87895,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 367.9999999996289,
+      "opacity": 0.883322,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 372.4999999996289,
+      "opacity": 0.887881,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 376.59999999962747,
+      "opacity": 0.891926,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 380.29999999962456,
+      "opacity": 0.895489,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 384.79999999962456,
+      "opacity": 0.899711,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 388.699999999626,
+      "opacity": 0.903275,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 393.199999999626,
+      "opacity": 0.907279,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 397.29999999962456,
+      "opacity": 0.910829,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 401.4999999996289,
+      "opacity": 0.914369,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 405.4999999996289,
+      "opacity": 0.917652,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 409.59999999962747,
+      "opacity": 0.920929,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 413.699999999626,
+      "opacity": 0.924119,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 418.199999999626,
+      "opacity": 0.927523,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 422.59999999962747,
+      "opacity": 0.930752,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 426.4999999996289,
+      "opacity": 0.933536,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 430.4999999996289,
+      "opacity": 0.936315,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 435.09999999962747,
+      "opacity": 0.939418,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 438.9999999996289,
+      "opacity": 0.941972,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 443.09999999962747,
+      "opacity": 0.944582,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 447.4999999996289,
+      "opacity": 0.9473,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 451.79999999962456,
+      "opacity": 0.949874,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 455.8999999996304,
+      "opacity": 0.952254,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 460.09999999962747,
+      "opacity": 0.954618,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 463.8999999996304,
+      "opacity": 0.956694,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 467.8999999996304,
+      "opacity": 0.958815,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 472.699999999626,
+      "opacity": 0.961276,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 476.199999999626,
+      "opacity": 0.963013,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 480.59999999962747,
+      "opacity": 0.965129,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 484.79999999962456,
+      "opacity": 0.967079,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 489.09999999962747,
+      "opacity": 0.969007,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 493.29999999962456,
+      "opacity": 0.970824,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 497.59999999962747,
+      "opacity": 0.972618,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 501.699999999626,
+      "opacity": 0.974266,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 505.59999999962747,
+      "opacity": 0.975779,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 509.4999999996289,
+      "opacity": 0.977239,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 513.699999999626,
+      "opacity": 0.978753,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 517.8999999996304,
+      "opacity": 0.980208,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 521.9999999996289,
+      "opacity": 0.981571,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 526.199999999626,
+      "opacity": 0.982911,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 530.2999999996246,
+      "opacity": 0.984164,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 534.3999999996304,
+      "opacity": 0.985363,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 538.5999999996275,
+      "opacity": 0.986537,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 543.4999999996289,
+      "opacity": 0.987838,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 547.5999999996275,
+      "opacity": 0.98887,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 551.3999999996304,
+      "opacity": 0.989782,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 555.7999999996246,
+      "opacity": 0.990784,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 560.0999999996275,
+      "opacity": 0.99171,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 564.199999999626,
+      "opacity": 0.992543,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 567.7999999996246,
+      "opacity": 0.993235,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 572.5999999996275,
+      "opacity": 0.994101,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 576.3999999996304,
+      "opacity": 0.994742,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 580.699999999626,
+      "opacity": 0.99542,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 584.3999999996304,
+      "opacity": 0.995964,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 588.5999999996275,
+      "opacity": 0.996537,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 592.8999999996304,
+      "opacity": 0.997076,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 597.199999999626,
+      "opacity": 0.997567,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 601.0999999996275,
+      "opacity": 0.997972,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 605.4999999996289,
+      "opacity": 0.998383,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 609.9999999996289,
+      "opacity": 0.998754,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 613.7999999996246,
+      "opacity": 0.999028,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 618.4999999996289,
+      "opacity": 0.999319,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 622.4999999996289,
+      "opacity": 0.999525,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 626.699999999626,
+      "opacity": 0.999701,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 630.8999999996304,
+      "opacity": 0.999836,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 635.0999999996275,
+      "opacity": 0.999931,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 639.199999999626,
+      "opacity": 0.999984,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 643.3999999996304,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 646.8999999996304,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 651.199999999626,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 655.699999999626,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 660.199999999626,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 664.3999999996304,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 668.4999999996289,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 672.699999999626,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 676.3999999996304,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 680.9999999996289,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 684.5999999996275,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 688.9999999996289,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 693.199999999626,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 697.3999999996304,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 701.5999999996275,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 705.9999999996289,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 710.199999999626,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 713.8999999996304,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 718.0999999996275,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 722.199999999626,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 726.2999999996246,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 730.9999999996289,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 735.199999999626,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 739.0999999996275,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 743.199999999626,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 747.2999999996246,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 751.2999999996246,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 755.9999999996289,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 759.9999999996289,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 764.3999999996304,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 768.4999999996289,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 772.5999999996275,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 776.199999999626,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 780.3999999996304,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 784.8999999996304,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 789.199999999626,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 792.699999999626,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 797.199999999626,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    },
+    {
+      "ms": 801.199999999626,
+      "opacity": 1,
+      "space": "hidden",
+      "imageDuration": []
+    }
+  ],
+  "exit": [
+    {
+      "ms": 0.2999999996245606,
+      "opacity": 0.997266,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 4.499999999628926,
+      "opacity": 0.994055,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 9.099999999627471,
+      "opacity": 0.990028,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 12.79999999962456,
+      "opacity": 0.986385,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 17.199999999626016,
+      "opacity": 0.981568,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 21.39999999963038,
+      "opacity": 0.976458,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 26.09999999962747,
+      "opacity": 0.970126,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 30.09999999962747,
+      "opacity": 0.964209,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 33.999999999628926,
+      "opacity": 0.957958,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 38.09999999962747,
+      "opacity": 0.950859,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 42.699999999626016,
+      "opacity": 0.942237,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 46.39999999963038,
+      "opacity": 0.934787,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 50.59999999962747,
+      "opacity": 0.925766,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 54.89999999963038,
+      "opacity": 0.915902,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 58.999999999628926,
+      "opacity": 0.905905,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 63.09999999962747,
+      "opacity": 0.89533,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 67.29999999962456,
+      "opacity": 0.883907,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 71.39999999963038,
+      "opacity": 0.872192,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 75.59999999962747,
+      "opacity": 0.85963,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 79.49999999962893,
+      "opacity": 0.847479,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 83.59999999962747,
+      "opacity": 0.834226,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 87.89999999963038,
+      "opacity": 0.819836,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 91.89999999963038,
+      "opacity": 0.806036,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 96.19999999962602,
+      "opacity": 0.790802,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 100.29999999962456,
+      "opacity": 0.775941,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 104.49999999962893,
+      "opacity": 0.76043,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 108.59999999962747,
+      "opacity": 0.745057,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 112.89999999963038,
+      "opacity": 0.728748,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 116.99999999962893,
+      "opacity": 0.713072,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 121.09999999962747,
+      "opacity": 0.697324,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 125.29999999962456,
+      "opacity": 0.681167,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 129.49999999962893,
+      "opacity": 0.665033,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 133.69999999962602,
+      "opacity": 0.648966,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 137.79999999962456,
+      "opacity": 0.633384,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 141.99999999962893,
+      "opacity": 0.617563,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 146.09999999962747,
+      "opacity": 0.602286,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 150.39999999963038,
+      "opacity": 0.58647,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 154.39999999963038,
+      "opacity": 0.571968,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 158.69999999962602,
+      "opacity": 0.556624,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 162.79999999962456,
+      "opacity": 0.542246,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 166.89999999963038,
+      "opacity": 0.528126,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 171.19999999962602,
+      "opacity": 0.513605,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 175.39999999963038,
+      "opacity": 0.499712,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 179.49999999962893,
+      "opacity": 0.486432,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 183.59999999962747,
+      "opacity": 0.473433,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 188.09999999962747,
+      "opacity": 0.459491,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 192.49999999962893,
+      "opacity": 0.446187,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 196.29999999962456,
+      "opacity": 0.434957,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 200.59999999962747,
+      "opacity": 0.422538,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 204.69999999962602,
+      "opacity": 0.410977,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 208.89999999963038,
+      "opacity": 0.399416,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 212.99999999962893,
+      "opacity": 0.388399,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 217.19999999962602,
+      "opacity": 0.377386,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 221.89999999963038,
+      "opacity": 0.365382,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 225.79999999962456,
+      "opacity": 0.355671,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 229.69999999962602,
+      "opacity": 0.346184,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 234.29999999962456,
+      "opacity": 0.335273,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 237.79999999962456,
+      "opacity": 0.32717,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 241.99999999962893,
+      "opacity": 0.317668,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 246.39999999963038,
+      "opacity": 0.307966,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 250.49999999962893,
+      "opacity": 0.299154,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 254.59999999962747,
+      "opacity": 0.290554,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 258.699999999626,
+      "opacity": 0.282164,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 262.9999999996289,
+      "opacity": 0.273583,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 267.199999999626,
+      "opacity": 0.265412,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 271.3999999996304,
+      "opacity": 0.257444,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 275.59999999962747,
+      "opacity": 0.249673,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 279.9999999996289,
+      "opacity": 0.241739,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 283.9999999996289,
+      "opacity": 0.234705,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 288.199999999626,
+      "opacity": 0.227499,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 291.9999999996289,
+      "opacity": 0.221132,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 296.59999999962747,
+      "opacity": 0.213616,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 300.29999999962456,
+      "opacity": 0.207718,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 304.4999999996289,
+      "opacity": 0.201179,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 308.699999999626,
+      "opacity": 0.194802,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 312.699999999626,
+      "opacity": 0.188876,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 316.9999999996289,
+      "opacity": 0.182661,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 321.4999999996289,
+      "opacity": 0.176327,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 325.29999999962456,
+      "opacity": 0.171109,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 329.3999999996304,
+      "opacity": 0.16561,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 333.59999999962747,
+      "opacity": 0.160116,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 337.79999999962456,
+      "opacity": 0.15476,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 341.9999999996289,
+      "opacity": 0.149537,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 346.699999999626,
+      "opacity": 0.143847,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 350.59999999962747,
+      "opacity": 0.139247,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 354.699999999626,
+      "opacity": 0.134527,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 358.59999999962747,
+      "opacity": 0.130145,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 363.09999999962747,
+      "opacity": 0.125217,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 366.9999999996289,
+      "opacity": 0.121055,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 371.3999999996304,
+      "opacity": 0.116478,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 375.59999999962747,
+      "opacity": 0.112224,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 379.699999999626,
+      "opacity": 0.108176,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 383.79999999962456,
+      "opacity": 0.104231,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 387.9999999996289,
+      "opacity": 0.100293,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 392.199999999626,
+      "opacity": 0.0964588,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 396.3999999996304,
+      "opacity": 0.092725,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 400.29999999962456,
+      "opacity": 0.0893467,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 404.699999999626,
+      "opacity": 0.0856355,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 408.8999999996304,
+      "opacity": 0.0821903,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 412.9999999996289,
+      "opacity": 0.0789171,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 417.29999999962456,
+      "opacity": 0.0755777,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 421.09999999962747,
+      "opacity": 0.0727049,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 425.4999999996289,
+      "opacity": 0.0694685,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 430.199999999626,
+      "opacity": 0.066116,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 433.9999999996289,
+      "opacity": 0.063483,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 438.09999999962747,
+      "opacity": 0.0607184,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 442.199999999626,
+      "opacity": 0.0580316,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 446.199999999626,
+      "opacity": 0.055484,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 450.59999999962747,
+      "opacity": 0.0527642,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 454.699999999626,
+      "opacity": 0.0503063,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 458.59999999962747,
+      "opacity": 0.0480356,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 462.9999999996289,
+      "opacity": 0.0455511,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 467.199999999626,
+      "opacity": 0.0432548,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 471.3999999996304,
+      "opacity": 0.0410307,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 475.4999999996289,
+      "opacity": 0.038928,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 479.4999999996289,
+      "opacity": 0.0369407,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 483.59999999962747,
+      "opacity": 0.0349684,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 487.9999999996289,
+      "opacity": 0.0329234,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 491.8999999996304,
+      "opacity": 0.0311718,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 496.199999999626,
+      "opacity": 0.0293059,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 500.199999999626,
+      "opacity": 0.0276308,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 504.4999999996289,
+      "opacity": 0.0258941,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 508.8999999996304,
+      "opacity": 0.0241847,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 512.699999999626,
+      "opacity": 0.0227626,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 516.8999999996304,
+      "opacity": 0.0212484,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 521.0999999996275,
+      "opacity": 0.0197938,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 525.2999999996246,
+      "opacity": 0.0183978,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 529.4999999996289,
+      "opacity": 0.0170596,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 534.0999999996275,
+      "opacity": 0.0156591,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 538.199999999626,
+      "opacity": 0.0144675,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 542.2999999996246,
+      "opacity": 0.0133285,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 546.5999999996275,
+      "opacity": 0.0121895,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 550.4999999996289,
+      "opacity": 0.0112051,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 554.8999999996304,
+      "opacity": 0.0101491,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 559.199999999626,
+      "opacity": 0.0091724,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 563.2999999996246,
+      "opacity": 0.00829119,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 566.9999999996289,
+      "opacity": 0.00753738,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 571.7999999996246,
+      "opacity": 0.00661721,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 575.2999999996246,
+      "opacity": 0.00598682,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 580.0999999996275,
+      "opacity": 0.00517713,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 584.0999999996275,
+      "opacity": 0.00455022,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 588.199999999626,
+      "opacity": 0.00395212,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 591.9999999996289,
+      "opacity": 0.0034375,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 596.2999999996246,
+      "opacity": 0.00290065,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 600.9999999996289,
+      "opacity": 0.00236837,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 604.9999999996289,
+      "opacity": 0.00195959,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 608.699999999626,
+      "opacity": 0.00161722,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 613.0999999996275,
+      "opacity": 0.00125425,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 617.199999999626,
+      "opacity": 0.000958688,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 621.7999999996246,
+      "opacity": 0.000675419,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 625.699999999626,
+      "opacity": 0.000474794,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 629.5999999996275,
+      "opacity": 0.000310005,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 633.7999999996246,
+      "opacity": 0.000172145,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 637.9999999996289,
+      "opacity": 0.0000748615,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 642.199999999626,
+      "opacity": 0.0000176595,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 646.0999999996275,
+      "opacity": 7.46063e-9,
+      "space": "visible",
+      "imageDuration": [
+        650
+      ]
+    },
+    {
+      "ms": 650.4999999996289,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 654.3999999996304,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 658.699999999626,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 662.7999999996246,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 667.199999999626,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 671.3999999996304,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 675.199999999626,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 679.699999999626,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 683.8999999996304,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 688.0999999996275,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 692.199999999626,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 696.0999999996275,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 700.4999999996289,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 704.4999999996289,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 708.8999999996304,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 712.699999999626,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 717.0999999996275,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 720.9999999996289,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 725.4999999996289,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 729.3999999996304,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 733.5999999996275,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 737.8999999996304,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 741.8999999996304,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 746.0999999996275,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 750.4999999996289,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 754.4999999996289,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 758.7999999996246,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 762.9999999996289,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 766.8999999996304,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 771.2999999996246,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 775.199999999626,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 779.3999999996304,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 783.8999999996304,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 787.7999999996246,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 792.199999999626,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 795.9999999996289,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    },
+    {
+      "ms": 800.4999999996289,
+      "opacity": 0,
+      "space": "visible",
+      "imageDuration": []
+    }
+  ],
+  "idleRenderCountDelta": 0,
+  "texture": {
+    "w": 256,
+    "h": 256
+  },
+  "checkboxReducedMotion": true,
+  "staticAfterTransition": 0,
+  "pass": true
+}

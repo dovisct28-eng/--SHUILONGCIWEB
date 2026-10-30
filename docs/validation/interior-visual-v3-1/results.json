@@ -1,0 +1,509 @@
+{
+  "runs": [
+    {
+      "width": 1440,
+      "height": 900,
+      "reduced": true,
+      "murals": [
+        {
+          "order": 1,
+          "image": {
+            "w": 2880,
+            "h": 990,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        },
+        {
+          "order": 2,
+          "image": {
+            "w": 6000,
+            "h": 1357,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        },
+        {
+          "order": 3,
+          "image": {
+            "w": 1280,
+            "h": 960,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        },
+        {
+          "order": 4,
+          "image": {
+            "w": 1280,
+            "h": 1707,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        },
+        {
+          "order": 5,
+          "image": {
+            "w": 6000,
+            "h": 1617,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        }
+      ],
+      "reverseRoute": true,
+      "errors": []
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "reduced": true,
+      "murals": [
+        {
+          "order": 1,
+          "image": {
+            "w": 2880,
+            "h": 990,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        },
+        {
+          "order": 2,
+          "image": {
+            "w": 6000,
+            "h": 1357,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        },
+        {
+          "order": 3,
+          "image": {
+            "w": 1280,
+            "h": 960,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        },
+        {
+          "order": 4,
+          "image": {
+            "w": 1280,
+            "h": 1707,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        },
+        {
+          "order": 5,
+          "image": {
+            "w": 6000,
+            "h": 1617,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        }
+      ],
+      "reverseRoute": true,
+      "errors": []
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "reduced": true,
+      "murals": [
+        {
+          "order": 1,
+          "image": {
+            "w": 2880,
+            "h": 990,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        },
+        {
+          "order": 2,
+          "image": {
+            "w": 6000,
+            "h": 1357,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        },
+        {
+          "order": 3,
+          "image": {
+            "w": 1280,
+            "h": 960,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        },
+        {
+          "order": 4,
+          "image": {
+            "w": 1280,
+            "h": 1707,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        },
+        {
+          "order": 5,
+          "image": {
+            "w": 6000,
+            "h": 1617,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        }
+      ],
+      "reverseRoute": true,
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "reduced": false,
+      "murals": [
+        {
+          "order": 1,
+          "image": {
+            "w": 2880,
+            "h": 990,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        },
+        {
+          "order": 2,
+          "image": {
+            "w": 6000,
+            "h": 1357,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        },
+        {
+          "order": 3,
+          "image": {
+            "w": 1280,
+            "h": 960,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        },
+        {
+          "order": 4,
+          "image": {
+            "w": 1280,
+            "h": 1707,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        },
+        {
+          "order": 5,
+          "image": {
+            "w": 6000,
+            "h": 1617,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        }
+      ],
+      "reverseRoute": true,
+      "errors": []
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "reduced": false,
+      "murals": [
+        {
+          "order": 1,
+          "image": {
+            "w": 2880,
+            "h": 990,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        },
+        {
+          "order": 2,
+          "image": {
+            "w": 6000,
+            "h": 1357,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        },
+        {
+          "order": 3,
+          "image": {
+            "w": 1280,
+            "h": 960,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        },
+        {
+          "order": 4,
+          "image": {
+            "w": 1280,
+            "h": 1707,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        },
+        {
+          "order": 5,
+          "image": {
+            "w": 6000,
+            "h": 1617,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        }
+      ],
+      "reverseRoute": true,
+      "errors": []
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "reduced": false,
+      "murals": [
+        {
+          "order": 1,
+          "image": {
+            "w": 2880,
+            "h": 990,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        },
+        {
+          "order": 2,
+          "image": {
+            "w": 6000,
+            "h": 1357,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        },
+        {
+          "order": 3,
+          "image": {
+            "w": 1280,
+            "h": 960,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        },
+        {
+          "order": 4,
+          "image": {
+            "w": 1280,
+            "h": 1707,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        },
+        {
+          "order": 5,
+          "image": {
+            "w": 6000,
+            "h": 1617,
+            "fit": "contain"
+          },
+          "full": true,
+          "detail": true,
+          "zoom": true,
+          "drag": true,
+          "returnFull": true,
+          "returnWall": true,
+          "copyClean": true
+        }
+      ],
+      "reverseRoute": true,
+      "errors": []
+    }
+  ],
+  "pass": true
+}

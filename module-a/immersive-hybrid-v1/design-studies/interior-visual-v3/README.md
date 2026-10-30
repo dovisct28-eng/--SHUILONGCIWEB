@@ -16,3 +16,8 @@
 基于远程最新 `c3c7ee5ac939b04fac334df7b39c93d0bab9cc59`。全幅页移除尺度/像素信息与技术说明段落，取消 `m.note` 向 `.reading-copy` 的绑定；底部改为简短导语与细读入口两列。第三/四铺不再弹出未校正/配准说明；墙面提示与参观路线弹窗不显示技术状态。`murals.json` 的 note、wallStatus、source、registration 及既有内部文档保持，不代表配准状态发生改变。预览诊断区继续可供开发检查。
 
 本次未改模型、图像、路线数据、机位、动画、阅读/细读/返回控制。专项检查为 `label-cleanup-check.cjs`，结果与精选截图见 [技术标注清理验收](../../../../docs/validation/interior-visual-v3-label-cleanup/README.md)。
+
+
+## V3.1 阅读展墙背景候选
+
+全幅与细读使用共享静态展墙背景，细读装饰强度约40%；不覆盖真实图像，原650ms展开与既有交互保持。实现与性能说明见 [READING_SPACE_V3_1.md](READING_SPACE_V3_1.md)，原型仍在当前目录；[实机验收与前后对比](../../../../docs/validation/interior-visual-v3-1/README.md)。待用户视觉验收，不替换正式展厅。
