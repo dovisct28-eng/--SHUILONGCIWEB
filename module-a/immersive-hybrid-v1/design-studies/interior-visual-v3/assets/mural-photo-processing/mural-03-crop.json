@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "mural-03",
+  "status": "preview-candidate-awaiting-user-confirmation",
+  "baselineCommit": "a2176cece5beefdee39ab7b6be04c0549d8fef86",
+  "source": "水龙祠壁画素材/壁画原图/第三铺壁画原图.jpg",
+  "existingWebSource": "module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-03-source.jpg",
+  "sourceSha256": "8124697c827c412912538dfdd29a41b0f652c38d2c8a7bae6ecece0b543d936d",
+  "sourceWidth": 1280,
+  "sourceHeight": 960,
+  "exifOrientation": null,
+  "orientationAction": "none; EXIF Orientation tag absent; decoded image already upright",
+  "coordinateSystem": "decoded source pixels; origin top-left; right and bottom exclusive",
+  "crop": {"left": 0, "top": 96, "right": 1280, "bottom": 760},
+  "outputWidth": 1280,
+  "outputHeight": 664,
+  "candidate": "mural-03-crop-candidate.png",
+  "perspective": {"method": "none", "rotationDegrees": 0, "reason": "上沿随照片略向右上倾斜，下沿破损不规则；缺少同平面可靠四角，保留原投影，不作旋转或透视拉伸。"},
+  "inspection": {
+    "orientation": "landscape",
+    "topBoundary": "主灰皮上沿约在 y=98–126，龙纹上部接近 y=132；从 y=96 保守保留。左侧少量檐下暗部保留，避免水平裁切切入倾斜灰皮。",
+    "bottomBoundary": "主体灰皮下沿不规则，约 y=685–754；保留至 y=760。下方裸砖主体移除，矩形内少量裸砖仍保留。",
+    "leftRight": "左右红色边带靠近照片边缘；不裁左右，照片外内容无法判断或恢复。",
+    "damageAndBlankAreas": "保留灰皮剥落、裂缝、污迹、褪色与下部浅色余边，不按有色笔画轮廓切割。",
+    "perspectiveAndTilt": "可见轻微倾斜；不据不规则灰皮推断精确透视或实际墙面比例。",
+    "uncertainty": "边界是基于照片的人工目视候选，不是文物边界鉴定或现场测绘；最外侧向下延伸的墙柱/灰皮不计入主体画面边界。"
+  },
+  "processing": {"tool": "Python / Pillow; see processing-report.json for version", "operations": ["decode JPEG", "integer-pixel rectangular crop", "lossless PNG with source ICC profile"], "resampleCandidate": false, "ai": false, "colorAdjustment": false, "repair": false, "alphaMask": false},
+  "wallRegistration": "unchanged; photo-unrectified; site position not verified"
+}

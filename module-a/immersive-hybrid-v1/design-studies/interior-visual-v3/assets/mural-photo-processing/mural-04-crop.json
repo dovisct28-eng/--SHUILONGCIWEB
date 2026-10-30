@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "mural-04",
+  "status": "preview-candidate-awaiting-user-confirmation",
+  "baselineCommit": "a2176cece5beefdee39ab7b6be04c0549d8fef86",
+  "source": "水龙祠壁画素材/壁画原图/第四铺壁画原图.jpg",
+  "existingWebSource": "module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-04-source.jpg",
+  "sourceSha256": "ad781539c28dbdc516846dbf911509ff5fc6d1a8d7b4b964b6192329f693b9be",
+  "sourceWidth": 1280,
+  "sourceHeight": 1707,
+  "exifOrientation": null,
+  "orientationAction": "none; EXIF Orientation tag absent; decoded image already upright",
+  "coordinateSystem": "decoded source pixels; origin top-left; right and bottom exclusive",
+  "crop": {"left": 0, "top": 196, "right": 1280, "bottom": 1568},
+  "outputWidth": 1280,
+  "outputHeight": 1372,
+  "candidate": "mural-04-crop-candidate.png",
+  "perspective": {"method": "none", "rotationDegrees": 0, "reason": "边带和下部灰皮存在轻微倾斜，但下沿破损、上沿波动；无可靠共面四角，不拉伸为标准矩形。"},
+  "inspection": {
+    "orientation": "portrait; conservative crop is near-square portrait",
+    "topBoundary": "檐下暗部约 y=0–115；上方粗灰墙至约 y=210。画面灰皮上沿不规则，左上飘带接近 y=211；从 y=196 保守保留。",
+    "bottomBoundary": "下方主体灰皮与裸砖交界约 y=1465–1555；保留至 y=1568。裸砖主体移除，右侧局部裸砖仍在矩形中。",
+    "leftRight": "红色边带及装饰靠近左右照片边缘；保留全部 1280 像素宽，不剪已有边带。",
+    "damageAndBlankAreas": "完整保留 y≈1145 以下的大面积浅色区、裂缝、灰皮缺失、斑痕和褪色；不能仅凭浅色认定为非壁画墙面。",
+    "perspectiveAndTilt": "边带和砖基略倾斜；照片自身可能有轻微透视，但无法用缺失灰皮可靠推算原构图比例。",
+    "uncertainty": "下部浅色带的属性待用户/现场资料确认；当前按可能属于壁画的区域保留。最外侧下延墙皮不计入主体边界。"
+  },
+  "processing": {"tool": "Python / Pillow; see processing-report.json for version", "operations": ["decode JPEG", "integer-pixel rectangular crop", "lossless PNG with source ICC profile"], "resampleCandidate": false, "ai": false, "colorAdjustment": false, "repair": false, "alphaMask": false},
+  "wallRegistration": "unchanged; photo-unrectified; site position not verified"
+}

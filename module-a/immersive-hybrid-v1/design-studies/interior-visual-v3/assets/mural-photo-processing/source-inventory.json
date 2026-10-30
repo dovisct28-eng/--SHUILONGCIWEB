@@ -1,0 +1,154 @@
+{
+  "scope": [
+    "水龙祠壁画素材/**",
+    "水龙祠实地照片/**",
+    "V3 assets/mural-0[34]-source.jpg"
+  ],
+  "finding": "原图与现有网页照片 SHA-256 相同；上述素材目录未找到同一照片的更高分辨率版本。不代表用户其他磁盘不存在原件。",
+  "images": [
+    {
+      "path": "水龙祠壁画素材/壁画原图/第一铺壁画原图.tif",
+      "width": 12199,
+      "height": 4193,
+      "bytes": 307677852
+    },
+    {
+      "path": "水龙祠壁画素材/壁画原图/第三铺壁画原图.jpg",
+      "width": 1280,
+      "height": 960,
+      "bytes": 196292
+    },
+    {
+      "path": "水龙祠壁画素材/壁画原图/第二铺壁画原图.png",
+      "width": 17507,
+      "height": 3960,
+      "bytes": 149142026
+    },
+    {
+      "path": "水龙祠壁画素材/壁画原图/第五铺壁画原图.jpg",
+      "width": 40544,
+      "height": 10925,
+      "bytes": 270321295
+    },
+    {
+      "path": "水龙祠壁画素材/壁画原图/第四铺壁画原图.jpg",
+      "width": 1280,
+      "height": 1707,
+      "bytes": 384254
+    },
+    {
+      "path": "水龙祠壁画素材/网页展示图/mural-01-display.webp",
+      "width": 2880,
+      "height": 990,
+      "bytes": 1351148
+    },
+    {
+      "path": "水龙祠壁画素材/网页展示图/mural-02-display.webp",
+      "width": 6000,
+      "height": 1357,
+      "bytes": 3552614
+    },
+    {
+      "path": "水龙祠壁画素材/网页展示图/mural-05-display.webp",
+      "width": 6000,
+      "height": 1617,
+      "bytes": 2842184
+    },
+    {
+      "path": "水龙祠壁画素材/高清展示图/mural-01-detail.webp",
+      "width": 3932,
+      "height": 1352,
+      "bytes": 2987838
+    },
+    {
+      "path": "水龙祠壁画素材/高清展示图/mural-02-detail.webp",
+      "width": 8192,
+      "height": 1853,
+      "bytes": 8029032
+    },
+    {
+      "path": "水龙祠壁画素材/高清展示图/mural-05-detail.webp",
+      "width": 8192,
+      "height": 2207,
+      "bytes": 7267792
+    },
+    {
+      "path": "水龙祠实地照片/ChatGPT Image 2026年9月20日 14_55_06.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2111265
+    },
+    {
+      "path": "水龙祠实地照片/Codex 图像 2026年9月20日 16_40_06.png",
+      "width": 1122,
+      "height": 1402,
+      "bytes": 2349459
+    },
+    {
+      "path": "水龙祠实地照片/中间大门打开图.jpg",
+      "width": 1280,
+      "height": 960,
+      "bytes": 221790
+    },
+    {
+      "path": "水龙祠实地照片/修复前-航拍图.png",
+      "width": 619,
+      "height": 330,
+      "bytes": 484701
+    },
+    {
+      "path": "水龙祠实地照片/修复前-航拍图2.jpg",
+      "width": 1047,
+      "height": 585,
+      "bytes": 513796
+    },
+    {
+      "path": "水龙祠实地照片/修复前航拍.jpg",
+      "width": 500,
+      "height": 375,
+      "bytes": 105339
+    },
+    {
+      "path": "水龙祠实地照片/修复后-右侧图.png",
+      "width": 8064,
+      "height": 6048,
+      "bytes": 12271712
+    },
+    {
+      "path": "水龙祠实地照片/修复后-左侧图.jpg",
+      "width": 1080,
+      "height": 720,
+      "bytes": 141364
+    },
+    {
+      "path": "水龙祠实地照片/修复后-航拍图.jpg",
+      "width": 1280,
+      "height": 640,
+      "bytes": 248372
+    },
+    {
+      "path": "水龙祠实地照片/内部图-主殿面向戏台.jpg",
+      "width": 1280,
+      "height": 854,
+      "bytes": 600455
+    },
+    {
+      "path": "水龙祠实地照片/右侧面向主殿.jpg",
+      "width": 1080,
+      "height": 1920,
+      "bytes": 360246
+    },
+    {
+      "path": "水龙祠实地照片/布局示意图.png",
+      "width": 302,
+      "height": 415,
+      "bytes": 5034
+    },
+    {
+      "path": "水龙祠实地照片/水龙祠正面.jpg",
+      "width": 1080,
+      "height": 721,
+      "bytes": 173451
+    }
+  ]
+}

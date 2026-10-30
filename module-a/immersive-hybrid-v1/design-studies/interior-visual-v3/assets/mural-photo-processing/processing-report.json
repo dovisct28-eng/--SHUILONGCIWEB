@@ -1,0 +1,47 @@
+{
+  "tool": "Python / Pillow 13.0.0",
+  "stage": "A / preview only",
+  "baseline": "a2176cece5beefdee39ab7b6be04c0549d8fef86",
+  "results": [
+    {
+      "id": "mural-03",
+      "status": "preview-candidate-awaiting-user-confirmation",
+      "sourceSha256": "8124697c827c412912538dfdd29a41b0f652c38d2c8a7bae6ecece0b543d936d",
+      "candidateSha256": "8ec8f3a1a4fd488cee0fc43b1a9ae1b27a8d644fa6c9a45d0fea5b74260da35f",
+      "output": [
+        1280,
+        664
+      ],
+      "widthToHeight": 1.927710843373494,
+      "pixelEquality": true,
+      "iccPreserved": true,
+      "sourceUnchanged": true,
+      "removedRows": {
+        "top": 96,
+        "bottom": 200
+      },
+      "perspective": "none",
+      "runtimeImageReplaced": false
+    },
+    {
+      "id": "mural-04",
+      "status": "preview-candidate-awaiting-user-confirmation",
+      "sourceSha256": "ad781539c28dbdc516846dbf911509ff5fc6d1a8d7b4b964b6192329f693b9be",
+      "candidateSha256": "9b3282662705cd274ae0934094fff09fb37ce6aa8b95e5e63599649d2b79dbbf",
+      "output": [
+        1280,
+        1372
+      ],
+      "widthToHeight": 0.9329446064139941,
+      "pixelEquality": true,
+      "iccPreserved": true,
+      "sourceUnchanged": true,
+      "removedRows": {
+        "top": 196,
+        "bottom": 139
+      },
+      "perspective": "none",
+      "runtimeImageReplaced": false
+    }
+  ]
+}
