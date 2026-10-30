@@ -1,0 +1,82 @@
+[
+  {
+    "name": "leave-first",
+    "maskCoverage": [
+      0.28405598958333333,
+      0.07182942708333333,
+      0
+    ],
+    "depth": "RGB24 / 16777215 * 40; positive reference eye-space distance",
+    "excluded": [
+      "wood and roof",
+      "steps and left courtyard",
+      "first-mural wall",
+      "entire second-mural wall"
+    ],
+    "illumination": "model/AI blurred RGB ratio; no geometric image warp"
+  },
+  {
+    "name": "east-corridor",
+    "maskCoverage": [
+      0.2821039496527778,
+      0.07536024305555555,
+      0
+    ],
+    "depth": "RGB24 / 16777215 * 40; positive reference eye-space distance",
+    "excluded": [
+      "wood and roof",
+      "steps and left courtyard",
+      "first-mural wall",
+      "entire second-mural wall"
+    ],
+    "illumination": "model/AI blurred RGB ratio; no geometric image warp"
+  },
+  {
+    "name": "hall-corner",
+    "maskCoverage": [
+      0.098134765625,
+      0.04822916666666666,
+      0
+    ],
+    "depth": "RGB24 / 16777215 * 40; positive reference eye-space distance",
+    "excluded": [
+      "wood and roof",
+      "steps and left courtyard",
+      "first-mural wall",
+      "entire second-mural wall"
+    ],
+    "illumination": "model/AI blurred RGB ratio; no geometric image warp"
+  },
+  {
+    "name": "turn-second",
+    "maskCoverage": [
+      0.29775065104166665,
+      0.01953125,
+      0
+    ],
+    "depth": "RGB24 / 16777215 * 40; positive reference eye-space distance",
+    "excluded": [
+      "wood and roof",
+      "steps and left courtyard",
+      "first-mural wall",
+      "entire second-mural wall"
+    ],
+    "illumination": "model/AI blurred RGB ratio; no geometric image warp"
+  },
+  {
+    "name": "second-dock",
+    "maskCoverage": [
+      0,
+      0,
+      0
+    ],
+    "depth": "RGB24 / 16777215 * 40; positive reference eye-space distance",
+    "excluded": [
+      "wood and roof",
+      "steps and left courtyard",
+      "first-mural wall",
+      "entire second-mural wall"
+    ],
+    "illumination": "model/AI blurred RGB ratio; no geometric image warp"
+  }
+]

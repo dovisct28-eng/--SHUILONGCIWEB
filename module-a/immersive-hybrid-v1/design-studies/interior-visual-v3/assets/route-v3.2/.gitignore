@@ -1,0 +1,4 @@
+# Lossless generation originals and full float exports remain available locally.
+# Versioned WebP candidates and RGB24 depth PNGs carry the portable deliverable.
+/candidates/*.png
+/references/*.f32

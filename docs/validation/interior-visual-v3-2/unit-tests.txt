@@ -1,0 +1,28 @@
+✔ first mural 650ms image unfolding remains source-identical (1.579ms)
+✔ detail coordinate math and interactions remain source-identical (0.2702ms)
+✔ camera travel, candidate placement and module B handoff stay source-identical (0.2266ms)
+✔ mural data, route, image math and architecture presentation are untouched (999.2063ms)
+✔ continuous rail returns exact endpoints, wider second dock and finite gaze (10.059ms)
+✔ arc-length sampling has uniform interior speed, no stops at waypoint joins (7.9821ms)
+✔ reverse follows identical geometry and projection weights form a partition (12.675ms)
+✔ captured Combined B path was probed, candidate registration retained (1.7059ms)
+✔ V3.2 remains isolated, preserves reading backdrop and original first route (3.3172ms)
+✔ five assets have explicit wall evidence and candidate state, never inferred historical order (4.7462ms)
+✔ contain and pan bounds 2880x990 (1.0466ms)
+✔ contain and pan bounds 6000x1357 (0.3509ms)
+✔ contain and pan bounds 1280x960 (0.2344ms)
+✔ contain and pan bounds 1280x1707 (0.2801ms)
+✔ contain and pan bounds 6000x1617 (0.26ms)
+✔ reverse rail retraces all waypoints and keeps last dock (1.499ms)
+✔ clearance probes both directions at center and offsets (0.5109ms)
+✔ pose interpolation preserves endpoint and finite gaze (0.4131ms)
+✔ poster giant text markup is exactly preserved; public thematic certainty removed (7.6ms)
+✔ site photos are byte-identical copies; originals protected (3.8962ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1550.5938

@@ -1,0 +1,58 @@
+{
+  "records": [
+    {
+      "name": "leave-first",
+      "source": "C:\\Users\\dovis\\.codex\\generated_images\\01a18bfc-0f49-7640-b21e-b73a12c1b07d\\exec-f4834d8d-3d26-42ea-bbb7-fc11c8dff459.png",
+      "reference": "references/leave-first-model.png",
+      "prompt": "Use case: precise architectural material edit. Edit this exact model reference render into a restrained, natural textured Chinese temple interior projection texture. Keep the EXACT camera, perspective, all structural edges, count/positions/widths of columns, beams, roof, walls, corridor, paving, steps, and every occlusion. Change ONLY surface microtexture: aged dark brown timber grain, subtle warm gray lime plaster, muted worn stone paving, quiet roof underside detail, gentle reflected daylight. Match the existing overall brightness and cast shadow directions, preserve shadow silhouettes and black open areas. NO new architectural elements, doors, windows, objects, people, displays, lamps, beams of light, decoration, text. ALL walls MUST remain EMPTY plaster. REMOVE any existing mural image from the reference, replacing it with plain plaster of the same brightness and geometry. Never generate mural figures or patterns. Material realism must be quiet, low contrast, consistent across adjacent viewpoints. Full bleed 1280x720 landscape, exact reference framing.\nView ID: leave-first",
+      "status": "reviewed; conservative wall/floor patches only",
+      "tool": "image_gen",
+      "date": "2026-10-30"
+    },
+    {
+      "name": "east-corridor",
+      "source": "C:\\Users\\dovis\\.codex\\generated_images\\01a18bfc-0f49-7640-b21e-b73a12c1b07d\\exec-6bb920de-6751-4361-8375-463c93d23adb.png",
+      "reference": "references/east-corridor-model.png",
+      "prompt": "Use case: precise architectural material edit. Edit this exact model reference render into a restrained, natural textured Chinese temple interior projection texture. Keep the EXACT camera, perspective, all structural edges, count/positions/widths of columns, beams, roof, walls, corridor, paving, steps, and every occlusion. Change ONLY surface microtexture: aged dark brown timber grain, subtle warm gray lime plaster, muted worn stone paving, quiet roof underside detail, gentle reflected daylight. Match the existing overall brightness and cast shadow directions, preserve shadow silhouettes and black open areas. NO new architectural elements, doors, windows, objects, people, displays, lamps, beams of light, decoration, text. ALL walls MUST remain EMPTY plaster. REMOVE any existing mural image from the reference, replacing it with plain plaster of the same brightness and geometry. Never generate mural figures or patterns. Material realism must be quiet, low contrast, consistent across adjacent viewpoints. Full bleed 1280x720 landscape, exact reference framing.\nView ID: east-corridor",
+      "status": "reviewed; conservative wall/floor patches only",
+      "tool": "image_gen",
+      "date": "2026-10-30"
+    },
+    {
+      "name": "hall-corner",
+      "source": "C:\\Users\\dovis\\.codex\\generated_images\\01a18bfc-0f49-7640-b21e-b73a12c1b07d\\exec-7fee9a87-065c-4d1b-bcff-ac1194f398d7.png",
+      "reference": "references/hall-corner-model.png",
+      "prompt": "Use case: precise architectural material edit. Edit this exact model reference render into a restrained, natural textured Chinese temple interior projection texture. Keep the EXACT camera, perspective, all structural edges, count/positions/widths of columns, beams, roof, walls, corridor, paving, steps, and every occlusion. Change ONLY surface microtexture: aged dark brown timber grain, subtle warm gray lime plaster, muted worn stone paving, quiet roof underside detail, gentle reflected daylight. Match the existing overall brightness and cast shadow directions, preserve shadow silhouettes and black open areas. NO new architectural elements, doors, windows, objects, people, displays, lamps, beams of light, decoration, text. ALL walls MUST remain EMPTY plaster. REMOVE any existing mural image from the reference, replacing it with plain plaster of the same brightness and geometry. Never generate mural figures or patterns. Material realism must be quiet, low contrast, consistent across adjacent viewpoints. Full bleed 1280x720 landscape, exact reference framing.\nView ID: hall-corner",
+      "status": "reviewed; conservative wall/floor patches only",
+      "tool": "image_gen",
+      "date": "2026-10-30"
+    },
+    {
+      "name": "turn-second",
+      "source": "C:\\Users\\dovis\\.codex\\generated_images\\01a18bfc-0f49-7640-b21e-b73a12c1b07d\\exec-c1f83518-2fca-4961-b4e0-bc66bc39aeb1.png",
+      "reference": "references/turn-second-model.png",
+      "prompt": "Use case: precise architectural material edit. Edit this exact model reference render into a restrained, natural textured Chinese temple interior projection texture. Keep the EXACT camera, perspective, all structural edges, count/positions/widths of columns, beams, roof, walls, corridor, paving, steps, and every occlusion. Change ONLY surface microtexture: aged dark brown timber grain, subtle warm gray lime plaster, muted worn stone paving, quiet roof underside detail, gentle reflected daylight. Match the existing overall brightness and cast shadow directions, preserve shadow silhouettes and black open areas. NO new architectural elements, doors, windows, objects, people, displays, lamps, beams of light, decoration, text. ALL walls MUST remain EMPTY plaster. REMOVE any existing mural image from the reference, replacing it with plain plaster of the same brightness and geometry. Never generate mural figures or patterns. Material realism must be quiet, low contrast, consistent across adjacent viewpoints. Full bleed 1280x720 landscape, exact reference framing.\nView ID: turn-second",
+      "status": "reviewed; conservative wall/floor patches only",
+      "tool": "image_gen",
+      "date": "2026-10-30"
+    },
+    {
+      "name": "second-dock",
+      "source": "C:\\Users\\dovis\\.codex\\generated_images\\01a18bfc-0f49-7640-b21e-b73a12c1b07d\\exec-c2231cac-27d0-4413-ba4b-2cabf0ba835b.png",
+      "reference": "references/second-dock-model.png",
+      "prompt": "Use case: precise architectural material edit. Edit this exact model reference render into a restrained, natural textured Chinese temple interior projection texture. Keep the EXACT camera, perspective, all structural edges, count/positions/widths of columns, beams, roof, walls, corridor, paving, steps, and every occlusion. Change ONLY surface microtexture: aged dark brown timber grain, subtle warm gray lime plaster, muted worn stone paving, quiet roof underside detail, gentle reflected daylight. Match the existing overall brightness and cast shadow directions, preserve shadow silhouettes and black open areas. NO new architectural elements, doors, windows, objects, people, displays, lamps, beams of light, decoration, text. ALL walls MUST remain EMPTY plaster. REMOVE any existing mural image from the reference, replacing it with plain plaster of the same brightness and geometry. Never generate mural figures or patterns. Material realism must be quiet, low contrast, consistent across adjacent viewpoints. Full bleed 1280x720 landscape, exact reference framing.\nView ID: second-dock",
+      "status": "superseded-before-integration-by-user-requested-wide-dock",
+      "tool": "image_gen",
+      "date": "2026-10-30"
+    },
+    {
+      "name": "second-dock",
+      "source": "C:/Users/dovis/.codex/generated_images/01a18bfc-0f49-7640-b21e-b73a12c1b07d/exec-644bd587-9fd0-4f72-be57-fb1da34b65dd.png",
+      "reference": "references/second-dock-model.png",
+      "prompt": "Use case: precise architectural material edit. Edit this exact model reference render into a restrained, natural textured Chinese temple interior projection texture. Keep the EXACT camera, perspective, all structural edges, count/positions/widths of columns, beams, roof, walls, corridor, paving, steps, and every occlusion. Change ONLY surface microtexture: aged dark brown timber grain, subtle warm gray lime plaster, muted worn stone paving, quiet roof underside detail, gentle reflected daylight. Match the existing overall brightness and cast shadow directions, preserve shadow silhouettes and black open areas. NO new architectural elements, doors, windows, objects, people, displays, lamps, beams of light, decoration, text. ALL walls MUST remain EMPTY plaster. REMOVE any existing mural image from the reference, replacing it with plain plaster of the same brightness and geometry. Never generate mural figures or patterns. Material realism must be quiet, low contrast, consistent across adjacent viewpoints. Full bleed 1280x720 landscape, exact reference framing.\nRevised second-dock wide view. Preserve the entire blank wall, top beam, plaster gable, brick bands, floor and side boundaries exactly. No mural.",
+      "status": "generated-wide-view; excluded-from-runtime-mural-wall",
+      "tool": "image_gen",
+      "date": "2026-10-30"
+    }
+  ]
+}
