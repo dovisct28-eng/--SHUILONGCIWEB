@@ -27,7 +27,9 @@ assert.ok(html.includes('data-src="gallery/mural-02-detail.webp"'));
 const entryComposition = s => block(s,'<section id="splash-screen"','<div id="entry-mode-notice"')
  .replace(/ aria-describedby="b01-(gallery|cyber)-help"/g,'')
  .replace(/            <div class="b01-mode-help">[\s\S]*?<\/div>\n/,'');
-assert.equal(entryComposition(html),entryComposition(base));
+// V3 explicitly authorizes the public brand; all other protected composition stays identical.
+assert.ok(html.includes('<p class="b01-brand">水龙祠</p>'));
+assert.equal(entryComposition(html),entryComposition(base).replace('<p class="b01-brand">出兵入将</p>','<p class="b01-brand">水龙祠</p>'));
 assert.ok(!html.includes("        initWebGL();"));
 assert.ok(fs.statSync(path.join(__dirname,'public/b01/mural-02-left.webp')).size<1024*1024);
 // V2 explicitly authorizes Alpha feedback, bounded point density and capped DPR.

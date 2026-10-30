@@ -2,12 +2,12 @@ export function createA03View(stage) {
   const poster=document.createElement('div');poster.className='a03-poster';
   poster.innerHTML='<h2 class="a03-title" aria-label="出庙 · 入庙"><span class="a03-title__out" aria-hidden="true">出庙</span><span class="a03-title__in" aria-hidden="true">入庙</span></h2>';
   stage.append(poster);
-  const section=document.createElement('section');section.className='a03';section.setAttribute('aria-label','出兵 · 入将主题引入');
+  const section=document.createElement('section');section.className='a03';section.setAttribute('aria-label','壁画空间引入');
   section.innerHTML=`
-    <p class="a03-kicker" data-a03-kicker>出兵入将</p>
+    <p class="a03-kicker" data-a03-kicker>水龙祠壁画</p>
     <article class="a03-copy" data-a03-copy>
-      <p class="a03-introduction">一出一入，三铺壁画分列两侧，留下了一场迎神赛会的始与终。</p>
-      <p class="a03-purpose">队伍从庙中出发，又重新归来；出行、仪仗与祭祀，被共同留在水龙祠的墙上。</p>
+      <p class="a03-introduction">壁画分布在不同墙面，建筑为观看提供空间线索。</p>
+      <p class="a03-purpose">从墙面位置走近图像，观察人物、持物与画面的排列。</p>
     </article>
     <p class="a03-reading-hint" data-a03-reading-hint>继续向下，从第五铺开始走近壁画</p>
     <div class="a03-handoff" data-a03-handoff><p>从第五铺出发</p></div>

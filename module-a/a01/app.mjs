@@ -111,7 +111,7 @@ function render() {
   a02.setAttribute('aria-hidden', String(spatial.heading === 0 || theme.takeover === 1));
   const focused = spatial.emphasis > .5;
   a02Status.textContent = focused ? '第五幅 · 第一幅 · 第二幅' : spatial.markers > 0 ? '五幅壁画 · 空间总览' : '建筑空间';
-  a02Hint.textContent = spatial.phase === 'a02-reading' ? '继续向下，走近“出兵入将”' : '';
+  a02Hint.textContent = spatial.phase === 'a02-reading' ? '继续向下，走近壁画' : '';
   const phase = theme.phase !== 'a02' ? theme.phase : spatial.phase === 'a01' ? state.phase : spatial.phase;
   stage.dataset.phase = phase;
   document.body.dataset.phase = phase;
