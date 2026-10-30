@@ -1,0 +1,169 @@
+[
+  {
+    "id": "mural-01",
+    "label": "第一幅",
+    "wall": "右侧廊内墙，越过戏台朝向主殿的一端",
+    "position": [
+      4.865,
+      1.55,
+      4.8
+    ],
+    "width": 3.65,
+    "height": 1.2547,
+    "side": true,
+    "order": 1,
+    "title": "第一铺壁画",
+    "rotation": -1.57079632679,
+    "image": "../../assets/murals/mural-01-display.webp",
+    "source": "水龙祠壁画素材/壁画原图/第一铺壁画原图.tif",
+    "wallStatus": "existing-first-mural-model-binding",
+    "registration": "existing",
+    "camera": null,
+    "routeStatus": "existing",
+    "note": "真实图像按原比例展示；模型位置不等于现场测绘。"
+  },
+  {
+    "id": "mural-02",
+    "label": "第二幅",
+    "wall": "主殿右侧内墙",
+    "position": [
+      4.515,
+      1.85,
+      -11.75
+    ],
+    "width": 6.1,
+    "height": 1.3796,
+    "side": true,
+    "order": 2,
+    "title": "第二铺《入将图》",
+    "rotation": -1.57079632679,
+    "image": "/水龙祠壁画素材/网页展示图/mural-02-display.webp",
+    "source": "水龙祠壁画素材/壁画原图/第二铺壁画原图.png",
+    "wallStatus": "model-record-needs-site-confirmation",
+    "registration": "candidate",
+    "camera": {
+      "id": "m02-dock",
+      "position": [
+        1.4,
+        1.85,
+        -11.75
+      ],
+      "target": [
+        4.515,
+        1.85,
+        -11.75
+      ],
+      "fov": 48
+    },
+    "routeStatus": "model-probe-and-browser-tested",
+    "note": "真实图像按原比例展示；模型位置不等于现场测绘。"
+  },
+  {
+    "id": "mural-03",
+    "label": "第三幅",
+    "wall": "主殿后墙右侧",
+    "position": [
+      2.25,
+      1.85,
+      -14.865
+    ],
+    "width": 3.35,
+    "height": 2,
+    "side": false,
+    "order": 3,
+    "title": "第三铺壁画",
+    "rotation": 0,
+    "image": "./assets/mural-03-source.jpg",
+    "source": "水龙祠壁画素材/壁画原图/第三铺壁画原图.jpg",
+    "wallStatus": "model-record-needs-site-confirmation",
+    "registration": "photo-unrectified",
+    "camera": {
+      "id": "rear-right",
+      "position": [
+        1.4,
+        1.85,
+        -12
+      ],
+      "target": [
+        2.25,
+        1.85,
+        -14.865
+      ],
+      "fov": 48
+    },
+    "routeStatus": "model-probe-and-browser-tested",
+    "note": "现场照片保留梁架、墙面和砖基；未裁切校正，墙面只作位置提示。"
+  },
+  {
+    "id": "mural-04",
+    "label": "第四幅",
+    "wall": "主殿后墙左侧",
+    "position": [
+      -2.25,
+      1.85,
+      -14.865
+    ],
+    "width": 3.35,
+    "height": 2,
+    "side": false,
+    "order": 4,
+    "title": "第四铺壁画",
+    "rotation": 0,
+    "image": "./assets/mural-04-source.jpg",
+    "source": "水龙祠壁画素材/壁画原图/第四铺壁画原图.jpg",
+    "wallStatus": "model-record-needs-site-confirmation",
+    "registration": "photo-unrectified",
+    "camera": {
+      "id": "rear-left",
+      "position": [
+        -1.4,
+        1.85,
+        -12
+      ],
+      "target": [
+        -2.25,
+        1.85,
+        -14.865
+      ],
+      "fov": 48
+    },
+    "routeStatus": "model-probe-and-browser-tested",
+    "note": "现场照片保留梁架、墙面和砖基；未裁切校正，墙面只作位置提示。"
+  },
+  {
+    "id": "mural-05",
+    "label": "第五幅",
+    "wall": "主殿左侧内墙",
+    "position": [
+      -4.515,
+      1.85,
+      -11.75
+    ],
+    "width": 6.1,
+    "height": 1.64395,
+    "side": true,
+    "order": 5,
+    "title": "第五铺壁画",
+    "rotation": 1.57079632679,
+    "image": "/水龙祠壁画素材/网页展示图/mural-05-display.webp",
+    "source": "水龙祠壁画素材/壁画原图/第五铺壁画原图.jpg",
+    "wallStatus": "model-record-needs-site-confirmation",
+    "registration": "candidate",
+    "camera": {
+      "id": "m05-dock",
+      "position": [
+        -1.4,
+        1.85,
+        -11.75
+      ],
+      "target": [
+        -4.515,
+        1.85,
+        -11.75
+      ],
+      "fov": 48
+    },
+    "routeStatus": "model-probe-and-browser-tested",
+    "note": "真实图像按原比例展示；模型位置不等于现场测绘。"
+  }
+]

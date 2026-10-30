@@ -1,0 +1,52 @@
+[
+  {
+    "from": "actual-first-return",
+    "to": "m01-return",
+    "hits": []
+  },
+  {
+    "from": "m01-return",
+    "to": "east-mid",
+    "hits": []
+  },
+  {
+    "from": "east-mid",
+    "to": "hall-approach",
+    "hits": []
+  },
+  {
+    "from": "hall-approach",
+    "to": "gallery-exit-turn",
+    "hits": []
+  },
+  {
+    "from": "gallery-exit-turn",
+    "to": "hall-front",
+    "hits": []
+  },
+  {
+    "from": "hall-front",
+    "to": "hall-inside",
+    "hits": []
+  },
+  {
+    "from": "hall-inside",
+    "to": "m02-dock",
+    "hits": []
+  },
+  {
+    "from": "m02-dock",
+    "to": "rear-right",
+    "hits": []
+  },
+  {
+    "from": "rear-right",
+    "to": "rear-left",
+    "hits": []
+  },
+  {
+    "from": "rear-left",
+    "to": "m05-dock",
+    "hits": []
+  }
+]

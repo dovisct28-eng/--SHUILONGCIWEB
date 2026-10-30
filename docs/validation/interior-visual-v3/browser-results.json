@@ -1,0 +1,383 @@
+{
+  "runs": [
+    {
+      "width": 1440,
+      "height": 900,
+      "reduced": true,
+      "projectionAndFillDifference": 9.545094650205762,
+      "routeSegments": 10,
+      "muralStates": [
+        {
+          "index": 2,
+          "dimensions": {
+            "w": 6000,
+            "h": 1357
+          },
+          "reading": true,
+          "detail": true,
+          "reverse": true,
+          "registration": "candidate",
+          "modelDock": true,
+          "wallReveal": true
+        },
+        {
+          "index": 3,
+          "dimensions": {
+            "w": 1280,
+            "h": 960
+          },
+          "reading": true,
+          "detail": true,
+          "reverse": true,
+          "registration": "photo-unrectified",
+          "modelDock": true,
+          "wallReveal": false
+        },
+        {
+          "index": 4,
+          "dimensions": {
+            "w": 1280,
+            "h": 1707
+          },
+          "reading": true,
+          "detail": true,
+          "reverse": true,
+          "registration": "photo-unrectified",
+          "modelDock": true,
+          "wallReveal": false
+        },
+        {
+          "index": 5,
+          "dimensions": {
+            "w": 6000,
+            "h": 1617
+          },
+          "reading": true,
+          "detail": true,
+          "reverse": true,
+          "registration": "candidate",
+          "modelDock": true,
+          "wallReveal": true
+        }
+      ],
+      "reverseAll": true,
+      "errors": []
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "reduced": true,
+      "projectionAndFillDifference": 10.418821212705762,
+      "routeSegments": 10,
+      "muralStates": [
+        {
+          "index": 2,
+          "dimensions": {
+            "w": 6000,
+            "h": 1357
+          },
+          "reading": true,
+          "detail": true,
+          "reverse": true,
+          "registration": "candidate",
+          "modelDock": true,
+          "wallReveal": true
+        },
+        {
+          "index": 3,
+          "dimensions": {
+            "w": 1280,
+            "h": 960
+          },
+          "reading": true,
+          "detail": true,
+          "reverse": true,
+          "registration": "photo-unrectified",
+          "modelDock": true,
+          "wallReveal": false
+        },
+        {
+          "index": 4,
+          "dimensions": {
+            "w": 1280,
+            "h": 1707
+          },
+          "reading": true,
+          "detail": true,
+          "reverse": true,
+          "registration": "photo-unrectified",
+          "modelDock": true,
+          "wallReveal": false
+        },
+        {
+          "index": 5,
+          "dimensions": {
+            "w": 6000,
+            "h": 1617
+          },
+          "reading": true,
+          "detail": true,
+          "reverse": true,
+          "registration": "candidate",
+          "modelDock": true,
+          "wallReveal": true
+        }
+      ],
+      "reverseAll": true,
+      "errors": []
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "reduced": true,
+      "projectionAndFillDifference": 10.332553290731251,
+      "routeSegments": 10,
+      "muralStates": [
+        {
+          "index": 2,
+          "dimensions": {
+            "w": 6000,
+            "h": 1357
+          },
+          "reading": true,
+          "detail": true,
+          "reverse": true,
+          "registration": "candidate",
+          "modelDock": true,
+          "wallReveal": true
+        },
+        {
+          "index": 3,
+          "dimensions": {
+            "w": 1280,
+            "h": 960
+          },
+          "reading": true,
+          "detail": true,
+          "reverse": true,
+          "registration": "photo-unrectified",
+          "modelDock": true,
+          "wallReveal": false
+        },
+        {
+          "index": 4,
+          "dimensions": {
+            "w": 1280,
+            "h": 1707
+          },
+          "reading": true,
+          "detail": true,
+          "reverse": true,
+          "registration": "photo-unrectified",
+          "modelDock": true,
+          "wallReveal": false
+        },
+        {
+          "index": 5,
+          "dimensions": {
+            "w": 6000,
+            "h": 1617
+          },
+          "reading": true,
+          "detail": true,
+          "reverse": true,
+          "registration": "candidate",
+          "modelDock": true,
+          "wallReveal": true
+        }
+      ],
+      "reverseAll": true,
+      "errors": []
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "reduced": false,
+      "projectionAndFillDifference": 9.545094650205762,
+      "routeSegments": 10,
+      "muralStates": [
+        {
+          "index": 2,
+          "dimensions": {
+            "w": 6000,
+            "h": 1357
+          },
+          "reading": true,
+          "detail": true,
+          "reverse": true,
+          "registration": "candidate",
+          "modelDock": true,
+          "wallReveal": true
+        },
+        {
+          "index": 3,
+          "dimensions": {
+            "w": 1280,
+            "h": 960
+          },
+          "reading": true,
+          "detail": true,
+          "reverse": true,
+          "registration": "photo-unrectified",
+          "modelDock": true,
+          "wallReveal": false
+        },
+        {
+          "index": 4,
+          "dimensions": {
+            "w": 1280,
+            "h": 1707
+          },
+          "reading": true,
+          "detail": true,
+          "reverse": true,
+          "registration": "photo-unrectified",
+          "modelDock": true,
+          "wallReveal": false
+        },
+        {
+          "index": 5,
+          "dimensions": {
+            "w": 6000,
+            "h": 1617
+          },
+          "reading": true,
+          "detail": true,
+          "reverse": true,
+          "registration": "candidate",
+          "modelDock": true,
+          "wallReveal": true
+        }
+      ],
+      "reverseAll": true,
+      "errors": []
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "reduced": false,
+      "projectionAndFillDifference": 10.418821212705762,
+      "routeSegments": 10,
+      "muralStates": [
+        {
+          "index": 2,
+          "dimensions": {
+            "w": 6000,
+            "h": 1357
+          },
+          "reading": true,
+          "detail": true,
+          "reverse": true,
+          "registration": "candidate",
+          "modelDock": true,
+          "wallReveal": true
+        },
+        {
+          "index": 3,
+          "dimensions": {
+            "w": 1280,
+            "h": 960
+          },
+          "reading": true,
+          "detail": true,
+          "reverse": true,
+          "registration": "photo-unrectified",
+          "modelDock": true,
+          "wallReveal": false
+        },
+        {
+          "index": 4,
+          "dimensions": {
+            "w": 1280,
+            "h": 1707
+          },
+          "reading": true,
+          "detail": true,
+          "reverse": true,
+          "registration": "photo-unrectified",
+          "modelDock": true,
+          "wallReveal": false
+        },
+        {
+          "index": 5,
+          "dimensions": {
+            "w": 6000,
+            "h": 1617
+          },
+          "reading": true,
+          "detail": true,
+          "reverse": true,
+          "registration": "candidate",
+          "modelDock": true,
+          "wallReveal": true
+        }
+      ],
+      "reverseAll": true,
+      "errors": []
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "reduced": false,
+      "projectionAndFillDifference": 10.332552972994957,
+      "routeSegments": 10,
+      "muralStates": [
+        {
+          "index": 2,
+          "dimensions": {
+            "w": 6000,
+            "h": 1357
+          },
+          "reading": true,
+          "detail": true,
+          "reverse": true,
+          "registration": "candidate",
+          "modelDock": true,
+          "wallReveal": true
+        },
+        {
+          "index": 3,
+          "dimensions": {
+            "w": 1280,
+            "h": 960
+          },
+          "reading": true,
+          "detail": true,
+          "reverse": true,
+          "registration": "photo-unrectified",
+          "modelDock": true,
+          "wallReveal": false
+        },
+        {
+          "index": 4,
+          "dimensions": {
+            "w": 1280,
+            "h": 1707
+          },
+          "reading": true,
+          "detail": true,
+          "reverse": true,
+          "registration": "photo-unrectified",
+          "modelDock": true,
+          "wallReveal": false
+        },
+        {
+          "index": 5,
+          "dimensions": {
+            "w": 6000,
+            "h": 1617
+          },
+          "reading": true,
+          "detail": true,
+          "reverse": true,
+          "registration": "candidate",
+          "modelDock": true,
+          "wallReveal": true
+        }
+      ],
+      "reverseAll": true,
+      "errors": []
+    }
+  ],
+  "pass": true
+}
