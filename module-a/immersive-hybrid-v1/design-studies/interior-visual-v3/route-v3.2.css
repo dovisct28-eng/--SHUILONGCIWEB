@@ -1,5 +1,5 @@
 /* V3.2 spatial additions only. V3.1 reading surfaces remain unchanged. */
-#second-wall-label{position:fixed;z-index:3;pointer-events:none;font:500 clamp(18px,1.6vw,28px)/1.5 'Microsoft YaHei',sans-serif;letter-spacing:.10em;color:#bebeb2;transform:translate(-50%,-100%);text-shadow:0 1px 5px #10171966}
+#second-wall-label{position:fixed;z-index:3;pointer-events:none;font:600 76px/1.1 'Microsoft YaHei','Noto Sans CJK SC',sans-serif;letter-spacing:.035em;color:rgba(193,195,186,.58);transform:translate(-50%,-50%)}
 body:not([data-view=A]):not([data-view=B]) #second-wall-label{visibility:hidden}
 body[data-mural-index="1"][data-view=B] .spatial-title{opacity:0}
 body[data-route-travel=true] .spatial-title{opacity:0}

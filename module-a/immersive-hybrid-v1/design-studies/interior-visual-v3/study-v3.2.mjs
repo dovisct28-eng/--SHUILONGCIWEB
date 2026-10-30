@@ -1,3 +1,5 @@
+import {projectWallCue} from '../../src/mural-wall-cue.mjs';
+import {FIRST_FRONT_DOCK} from '../../src/mural-front.mjs';
 import {createRail,ease,smooth} from './route-v3.2.mjs';
 import {installRouteSurfaces} from './route-surface-v3.2.mjs';
 import {MURAL_INTRODUCTIONS} from './mural-introductions.mjs';
@@ -169,7 +171,16 @@ async function createSecondWall(){
  wallPlane.name='V32-real-second-mural-candidate';wallPlane.position.fromArray(m.position);wallPlane.rotation.y=m.rotation;sceneRoot().add(wallPlane);wallPlane.updateMatrixWorld(true);setSecondReveal(0,false);
 }
 function secondCorners(){if(!wallPlane||!T||activeMural>1)return null;wallPlane.updateMatrixWorld(true);h.model.camera.updateMatrixWorld();const g=wallPlane.geometry.parameters,w=g.width/2,hg=g.height/2;return [[-w,hg],[w,hg],[w,-hg],[-w,-hg]].map(([x,y])=>{const v=new T.Vector3(x,y,0).applyMatrix4(wallPlane.matrixWorld).project(h.model.camera);return {x:(v.x+1)*innerWidth/2,y:(1-v.y)*innerHeight/2,depth:v.z};});}
-function positionSecondLabel(){const q=secondCorners(),label=$('#second-wall-label');if(!q)return;const x=(q[0].x+q[1].x)/2,y=Math.min(q[0].y,q[1].y)-20;label.style.left=`${x}px`;label.style.top=`${Math.max(112,y)}px`;}
+function positionSecondLabel(){
+ const label=$('#second-wall-label');if(!wallPlane||!T)return;
+ // Match the first cue's displayed type scale, including its wall projection.
+ const first=w.getComputedStyle(w.document.querySelector('#mural-cue')),pose=FIRST_FRONT_DOCK.discoveryCamera;
+ const reference=new T.PerspectiveCamera(pose.fov,innerWidth/innerHeight,.045,180);reference.position.fromArray(pose.position);reference.lookAt(...pose.target);reference.updateProjectionMatrix();
+ const {points}=projectWallCue(reference,{left:0,top:0,width:innerWidth,height:innerHeight},{left:0,top:0});
+ const scale=(Math.hypot(points[3][0]-points[0][0],points[3][1]-points[0][1])+Math.hypot(points[2][0]-points[1][0],points[2][1]-points[1][1]))/220;
+ label.style.fontFamily=first.fontFamily;label.style.fontWeight=first.fontWeight;label.style.fontSize=String(parseFloat(first.fontSize)*scale)+'px';label.style.lineHeight=first.lineHeight==='normal'?'normal':String(parseFloat(first.lineHeight)/parseFloat(first.fontSize));label.style.letterSpacing=String(parseFloat(first.letterSpacing)*scale)+'px';
+ const anchor=new T.Vector3(murals[1].position[0],2.88,murals[1].position[2]).project(h.model.camera);label.style.left=String((anchor.x+1)*innerWidth/2)+'px';label.style.top=String((1-anchor.y)*innerHeight/2)+'px';
+}
 function setSecondReveal(value,render=true){secondReveal=Math.max(0,Math.min(1,value));if(!wallPlane)return;const u=ease(secondReveal);wallPlane.material.color.setRGB(.12+.51*u,.115+.505*u,.105+.49*u);wallPlane.material.opacity=1;const label=$('#second-wall-label');label.hidden=secondReveal<.17;label.style.opacity=String(smooth(.17,.38,secondReveal));positionSecondLabel();secondStatus=secondReveal===0?'dark':secondReveal<.42?'title':secondReveal<1?'revealing':'lit';if(render)h.model.renderFrame();}
 async function animate32(duration,apply,spatial=false){if(motion()&&!spatial){apply(1);return;}await new Promise(resolve=>{let began;function tick(now){began??=now;const t=Math.min(1,(now-began)/duration);apply(t);if(t<1)requestAnimationFrame(tick);else resolve();}requestAnimationFrame(tick);});}
 async function revealSecond(){secondStatus='dark';await animate32(2400,t=>setSecondReveal(t));}

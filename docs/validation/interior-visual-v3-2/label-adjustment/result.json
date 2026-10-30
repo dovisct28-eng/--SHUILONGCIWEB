@@ -1,0 +1,16 @@
+{
+  "pass": true,
+  "font": "\"Microsoft YaHei\", \"Noto Sans CJK SC\", sans-serif",
+  "weight": "600",
+  "size": 56.2736,
+  "firstFont": "\"Microsoft YaHei\", \"Noto Sans CJK SC\", sans-serif",
+  "firstWeight": "600",
+  "rect": {
+    "top": 217.484375,
+    "bottom": 279.390625
+  },
+  "brick": {
+    "top": 195.60861321704434,
+    "bottom": 313.02002250148547
+  }
+}
