@@ -1,0 +1,499 @@
+{
+  "rails": [
+    {
+      "segment": 0,
+      "length": 3.328930236730598
+    },
+    {
+      "segment": 1,
+      "length": 4.518830287042765
+    },
+    {
+      "segment": 2,
+      "length": 1.430413064774741
+    }
+  ],
+  "collisionSamples": 1200,
+  "clearanceRadius": 0.18,
+  "collisions": [],
+  "geometryChecks": [
+    {
+      "candidate": [
+        2.25,
+        1.85,
+        -14.865
+      ],
+      "sightlineHits": [],
+      "wallBehind": [
+        {
+          "object": "03_MainHall-geometry",
+          "distance": 0.034999618530273224,
+          "point": [
+            2.25,
+            1.85,
+            -14.899999618530273
+          ]
+        },
+        {
+          "object": "02_Enclosure-geometry",
+          "distance": 0.31000019073486307,
+          "point": [
+            2.25,
+            1.85,
+            -15.175000190734863
+          ]
+        }
+      ]
+    },
+    {
+      "candidate": [
+        -2.25,
+        1.85,
+        -14.865
+      ],
+      "sightlineHits": [],
+      "wallBehind": [
+        {
+          "object": "03_MainHall-geometry",
+          "distance": 0.034999618530273224,
+          "point": [
+            -2.25,
+            1.85,
+            -14.899999618530273
+          ]
+        },
+        {
+          "object": "02_Enclosure-geometry",
+          "distance": 0.31000019073486307,
+          "point": [
+            -2.25,
+            1.85,
+            -15.175000190734863
+          ]
+        }
+      ]
+    }
+  ],
+  "items": [
+    {
+      "name": "turn-third",
+      "segment": 0,
+      "progress": 0.42,
+      "pose": {
+        "position": [
+          0.35630506132252204,
+          1.85,
+          -10.826924704341092
+        ],
+        "target": [
+          3.6828398226525145,
+          1.85,
+          -13.808274046095352
+        ],
+        "fov": 48,
+        "time": 3,
+        "route33": 0.21,
+        "rearSegment": 0,
+        "rearProgress": 0.42
+      },
+      "projection": [
+        1.2633956853211215,
+        0,
+        0,
+        0,
+        0,
+        2.2460367739042155,
+        0,
+        0,
+        0,
+        0,
+        -1.0005001250312577,
+        -1,
+        0,
+        0,
+        -0.09002250562640661,
+        0
+      ],
+      "cameraMatrix": [
+        0.667413312335112,
+        0,
+        0.7446874985642462,
+        0,
+        0,
+        1,
+        0,
+        0,
+        -0.7446874985642462,
+        0,
+        0.667413312335112,
+        0,
+        0.35630506132252204,
+        1.85,
+        -10.826924704341092,
+        1
+      ],
+      "near": 0.045000000000000005,
+      "far": 180,
+      "aspect": 1.7777777777777777,
+      "modelTransform": {
+        "version": "V2.4-B1-combined-b",
+        "asset": "shuilong-temple/shuilong-temple.glb",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "matrixWorld": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "depth": {
+        "width": 1280,
+        "height": 720,
+        "maxDepth": 40,
+        "encoding": "Float32 LE, top-left row-major, linear positive eye-space -Z, design-model units; 0=background; saturated at maxDepth"
+      }
+    },
+    {
+      "name": "third-dock",
+      "segment": 0,
+      "progress": 1,
+      "pose": {
+        "position": [
+          2.25,
+          1.85,
+          -10.6
+        ],
+        "target": [
+          2.25,
+          1.85,
+          -14.865
+        ],
+        "fov": 48,
+        "time": 3,
+        "route33": 0.5,
+        "rearSegment": 0,
+        "rearProgress": 1
+      },
+      "projection": [
+        1.2633956853211215,
+        0,
+        0,
+        0,
+        0,
+        2.2460367739042155,
+        0,
+        0,
+        0,
+        0,
+        -1.0005001250312577,
+        -1,
+        0,
+        0,
+        -0.09002250562640661,
+        0
+      ],
+      "cameraMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        2.25,
+        1.85,
+        -10.6,
+        1
+      ],
+      "near": 0.045000000000000005,
+      "far": 180,
+      "aspect": 1.7777777777777777,
+      "modelTransform": {
+        "version": "V2.4-B1-combined-b",
+        "asset": "shuilong-temple/shuilong-temple.glb",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "matrixWorld": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "depth": {
+        "width": 1280,
+        "height": 720,
+        "maxDepth": 40,
+        "encoding": "Float32 LE, top-left row-major, linear positive eye-space -Z, design-model units; 0=background; saturated at maxDepth"
+      }
+    },
+    {
+      "name": "rear-crossing",
+      "segment": 1,
+      "progress": 0.5,
+      "pose": {
+        "position": [
+          7.494005416219807e-16,
+          1.85,
+          -10.437999999999999
+        ],
+        "target": [
+          -0.32399999999999907,
+          1.85,
+          -14.864999999999998
+        ],
+        "fov": 48,
+        "time": 3,
+        "route33": 0.75,
+        "rearSegment": 1,
+        "rearProgress": 0.5
+      },
+      "projection": [
+        1.2633956853211215,
+        0,
+        0,
+        0,
+        0,
+        2.2460367739042155,
+        0,
+        0,
+        0,
+        0,
+        -1.0005001250312577,
+        -1,
+        0,
+        0,
+        -0.09002250562640661,
+        0
+      ],
+      "cameraMatrix": [
+        0.9973325237191996,
+        0,
+        -0.07299203471538751,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0.07299203471538751,
+        0,
+        0.9973325237191996,
+        0,
+        7.494005416219807e-16,
+        1.85,
+        -10.437999999999999,
+        1
+      ],
+      "near": 0.045000000000000005,
+      "far": 180,
+      "aspect": 1.7777777777777777,
+      "modelTransform": {
+        "version": "V2.4-B1-combined-b",
+        "asset": "shuilong-temple/shuilong-temple.glb",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "matrixWorld": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "depth": {
+        "width": 1280,
+        "height": 720,
+        "maxDepth": 40,
+        "encoding": "Float32 LE, top-left row-major, linear positive eye-space -Z, design-model units; 0=background; saturated at maxDepth"
+      }
+    },
+    {
+      "name": "fourth-dock",
+      "segment": 1,
+      "progress": 1,
+      "pose": {
+        "position": [
+          -2.25,
+          1.85,
+          -10.6
+        ],
+        "target": [
+          -2.25,
+          1.85,
+          -14.865
+        ],
+        "fov": 48,
+        "time": 3,
+        "route33": 1,
+        "rearSegment": 1,
+        "rearProgress": 1
+      },
+      "projection": [
+        1.2633956853211215,
+        0,
+        0,
+        0,
+        0,
+        2.2460367739042155,
+        0,
+        0,
+        0,
+        0,
+        -1.0005001250312577,
+        -1,
+        0,
+        0,
+        -0.09002250562640661,
+        0
+      ],
+      "cameraMatrix": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        -2.25,
+        1.85,
+        -10.6,
+        1
+      ],
+      "near": 0.045000000000000005,
+      "far": 180,
+      "aspect": 1.7777777777777777,
+      "modelTransform": {
+        "version": "V2.4-B1-combined-b",
+        "asset": "shuilong-temple/shuilong-temple.glb",
+        "position": [
+          0,
+          0,
+          0
+        ],
+        "quaternion": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "matrixWorld": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      "depth": {
+        "width": 1280,
+        "height": 720,
+        "maxDepth": 40,
+        "encoding": "Float32 LE, top-left row-major, linear positive eye-space -Z, design-model units; 0=background; saturated at maxDepth"
+      }
+    }
+  ]
+}

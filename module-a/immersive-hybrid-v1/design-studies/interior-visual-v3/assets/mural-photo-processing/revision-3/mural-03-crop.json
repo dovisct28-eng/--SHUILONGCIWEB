@@ -1,0 +1,186 @@
+{
+  "id": "mural-03",
+  "revision": 3,
+  "status": "user-approved-for-display",
+  "source": "水龙祠壁画素材/壁画原图/第三铺壁画原图.jpg",
+  "sourceSha256": "8124697c827c412912538dfdd29a41b0f652c38d2c8a7bae6ecece0b543d936d",
+  "base": "../revision-2/mural-03-front-candidate.png",
+  "sourcePlasterPolygon": [
+    [
+      30,
+      130
+    ],
+    [
+      160,
+      128
+    ],
+    [
+      315,
+      121
+    ],
+    [
+      480,
+      118
+    ],
+    [
+      640,
+      118
+    ],
+    [
+      800,
+      111
+    ],
+    [
+      960,
+      112
+    ],
+    [
+      1120,
+      105
+    ],
+    [
+      1280,
+      103
+    ],
+    [
+      1280,
+      750
+    ],
+    [
+      1260,
+      746
+    ],
+    [
+      1220,
+      739
+    ],
+    [
+      1190,
+      741
+    ],
+    [
+      1155,
+      751
+    ],
+    [
+      1100,
+      750
+    ],
+    [
+      1050,
+      751
+    ],
+    [
+      1000,
+      754
+    ],
+    [
+      950,
+      752
+    ],
+    [
+      915,
+      744
+    ],
+    [
+      883,
+      730
+    ],
+    [
+      850,
+      712
+    ],
+    [
+      800,
+      702
+    ],
+    [
+      720,
+      701
+    ],
+    [
+      650,
+      696
+    ],
+    [
+      600,
+      696
+    ],
+    [
+      545,
+      693
+    ],
+    [
+      480,
+      693
+    ],
+    [
+      430,
+      689
+    ],
+    [
+      379,
+      688
+    ],
+    [
+      368,
+      723
+    ],
+    [
+      330,
+      729
+    ],
+    [
+      285,
+      729
+    ],
+    [
+      240,
+      729
+    ],
+    [
+      205,
+      737
+    ],
+    [
+      165,
+      729
+    ],
+    [
+      110,
+      730
+    ],
+    [
+      55,
+      732
+    ],
+    [
+      25,
+      720
+    ],
+    [
+      0,
+      711
+    ],
+    [
+      0,
+      650
+    ]
+  ],
+  "rectifiedCanvasCrop": [
+    36,
+    36,
+    1322,
+    672
+  ],
+  "output": [
+    1286,
+    636
+  ],
+  "candidate": "mural-03-clean-candidate.png",
+  "candidateSha256": "4444f07955b23ae00e35debb3ecfa816c814af8062c68b229d98e2025993af7d",
+  "rgbResampledAgain": false,
+  "alpha": "boundary-only mask; bilinear edge antialiasing; no content fill",
+  "uncertainty": "Manual photo boundary candidate; keep damage and plaster margins, not a measured heritage outline",
+  "approval": "2026-10-30 user: 采用这版，继续接入"
+}

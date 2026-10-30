@@ -92,7 +92,16 @@
       "fov": 48
     },
     "routeStatus": "model-probe-and-browser-tested",
-    "note": "现场照片保留梁架、墙面和砖基；未裁切校正，墙面只作位置提示。"
+    "note": "现场照片保留梁架、墙面和砖基；未裁切校正，墙面只作位置提示。",
+    "approvedDisplay": {
+      "image": "./assets/mural-03-display.webp",
+      "width": 1286,
+      "height": 636,
+      "processing": "cropped-perspective-corrected-plaster-outline-mask",
+      "approvedCandidate": "module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-photo-processing/revision-3/mural-03-clean-candidate.png",
+      "approval": "2026-10-30 user: 采用这版，继续接入",
+      "wallRegistration": "model-candidate-not-site-verified"
+    }
   },
   {
     "id": "mural-04",
@@ -128,7 +137,16 @@
       "fov": 48
     },
     "routeStatus": "model-probe-and-browser-tested",
-    "note": "现场照片保留梁架、墙面和砖基；未裁切校正，墙面只作位置提示。"
+    "note": "现场照片保留梁架、墙面和砖基；未裁切校正，墙面只作位置提示。",
+    "approvedDisplay": {
+      "image": "./assets/mural-04-display.webp",
+      "width": 1280,
+      "height": 939,
+      "processing": "user-directed-crop-unrectified",
+      "approvedCandidate": "module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-photo-processing/revision-2/mural-04-crop-candidate.png",
+      "approval": "2026-10-30 user confirmed revision-2",
+      "wallRegistration": "model-candidate-not-site-verified"
+    }
   },
   {
     "id": "mural-05",

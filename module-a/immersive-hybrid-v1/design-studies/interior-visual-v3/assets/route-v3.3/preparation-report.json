@@ -1,0 +1,110 @@
+[
+  {
+    "name": "turn-third",
+    "generatedSize": [
+      1672,
+      941
+    ],
+    "referenceSize": [
+      1280,
+      720
+    ],
+    "candidateSha256": "364f0d6ca438b149a61f539afe8830eeede4fc5c2efc31cb1f9c1783c4387d44",
+    "referenceSha256": "aef640a0cff852cad329a854ecff8044d761f23f687a4bb39a639fbd6832167e",
+    "candidateMaskCoverage": [
+      0.6253005642361111,
+      0.1349099392361111,
+      0
+    ],
+    "depth": "RGB24 / 16777215 * 40; positive eye-space distance",
+    "excluded": [
+      "all generated wood, roof and brick",
+      "structural boundaries (20px erosion)",
+      "all first/second/fifth mural areas",
+      "rear mural bands except non-mural central gap and upper wall"
+    ],
+    "runtimeGuard": "world-space exclusion in route-surface-v3.3.mjs; reference depth rejection; real-time model depth",
+    "illumination": "match blurred model/AI RGB ratio; no image warp"
+  },
+  {
+    "name": "third-dock",
+    "generatedSize": [
+      1672,
+      941
+    ],
+    "referenceSize": [
+      1280,
+      720
+    ],
+    "candidateSha256": "af429fbcb5e908d7d2f4d33359c72f3aee1de9187bf73baea5bb38fb955c9772",
+    "referenceSha256": "12bb7c036f2ea715df9a0969f3a585d89252b229c87992b5651356858b109fef",
+    "candidateMaskCoverage": [
+      0.6402777777777777,
+      0.1282638888888889,
+      0
+    ],
+    "depth": "RGB24 / 16777215 * 40; positive eye-space distance",
+    "excluded": [
+      "all generated wood, roof and brick",
+      "structural boundaries (20px erosion)",
+      "all first/second/fifth mural areas",
+      "rear mural bands except non-mural central gap and upper wall"
+    ],
+    "runtimeGuard": "world-space exclusion in route-surface-v3.3.mjs; reference depth rejection; real-time model depth",
+    "illumination": "match blurred model/AI RGB ratio; no image warp"
+  },
+  {
+    "name": "rear-crossing",
+    "generatedSize": [
+      1672,
+      941
+    ],
+    "referenceSize": [
+      1280,
+      720
+    ],
+    "candidateSha256": "75732488772e3048d565c1fa987e6570211f4295546001480535653c570257e8",
+    "referenceSha256": "d7d05cf35fe48f8db1165c7c16da6077500ff5741d4797dfde6ef1444c36f39b",
+    "candidateMaskCoverage": [
+      0.6402463107638889,
+      0.14991319444444445,
+      0
+    ],
+    "depth": "RGB24 / 16777215 * 40; positive eye-space distance",
+    "excluded": [
+      "all generated wood, roof and brick",
+      "structural boundaries (20px erosion)",
+      "all first/second/fifth mural areas",
+      "rear mural bands except non-mural central gap and upper wall"
+    ],
+    "runtimeGuard": "world-space exclusion in route-surface-v3.3.mjs; reference depth rejection; real-time model depth",
+    "illumination": "match blurred model/AI RGB ratio; no image warp"
+  },
+  {
+    "name": "fourth-dock",
+    "generatedSize": [
+      1672,
+      941
+    ],
+    "referenceSize": [
+      1280,
+      720
+    ],
+    "candidateSha256": "feff274abed180cddbb3a185b602c5aa620bbad5674c5364589ef289af197090",
+    "referenceSha256": "58e08810999ca01c756344a2f901379d4c38164d67257f2612906cf89ed97a01",
+    "candidateMaskCoverage": [
+      0.5394140625,
+      0.128369140625,
+      0
+    ],
+    "depth": "RGB24 / 16777215 * 40; positive eye-space distance",
+    "excluded": [
+      "all generated wood, roof and brick",
+      "structural boundaries (20px erosion)",
+      "all first/second/fifth mural areas",
+      "rear mural bands except non-mural central gap and upper wall"
+    ],
+    "runtimeGuard": "world-space exclusion in route-surface-v3.3.mjs; reference depth rejection; real-time model depth",
+    "illumination": "match blurred model/AI RGB ratio; no image warp"
+  }
+]

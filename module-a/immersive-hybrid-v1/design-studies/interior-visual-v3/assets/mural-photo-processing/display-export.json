@@ -1,0 +1,30 @@
+[
+  {
+    "id": "mural-03",
+    "approvedCandidate": "module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-photo-processing/revision-3/mural-03-clean-candidate.png",
+    "candidateSha256": "4444f07955b23ae00e35debb3ecfa816c814af8062c68b229d98e2025993af7d",
+    "display": "module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-03-display.webp",
+    "displaySha256": "52b8a3ae08d0b50c3c67a2d5c88c57ff7c1dd01be8f0e203090c19d7ca823cc0",
+    "size": [
+      1286,
+      636
+    ],
+    "approval": "User: 采用这版，继续接入",
+    "processing": "cropped-perspective-corrected-plaster-outline-mask",
+    "resampled": true
+  },
+  {
+    "id": "mural-04",
+    "approvedCandidate": "module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-photo-processing/revision-2/mural-04-crop-candidate.png",
+    "candidateSha256": "be6ff9c4d10429ef94577e807a8446ba3334e428f26d39d33193754906f9d932",
+    "display": "module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-04-display.webp",
+    "displaySha256": "1214fa65eba6cbc25a033ac2d90815c2d0c5da1c02450feab8d0b515d074b9fd",
+    "size": [
+      1280,
+      939
+    ],
+    "approval": "User: 壁画图没问题，继续执行",
+    "processing": "user-directed-crop-unrectified",
+    "resampled": false
+  }
+]

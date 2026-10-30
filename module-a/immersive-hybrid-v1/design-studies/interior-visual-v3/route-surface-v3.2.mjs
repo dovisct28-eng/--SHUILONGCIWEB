@@ -1,11 +1,11 @@
 import {routeWeights} from './route-v3.2.mjs';
 // Independent route: fixed world-space projection, reference-depth rejection,
 // eroded semantic masks and the existing live architecture depth buffer.
-export async function installRouteSurfaces(runtime,T){
- const base=new URL('./assets/route-v3.2/',import.meta.url),response=await fetch(new URL('references/camera-manifest.json',base));
+export async function installRouteSurfaces(runtime,T,options={}){
+ const base=new URL(options.base??'./assets/route-v3.2/',import.meta.url),response=await fetch(new URL('references/camera-manifest.json',base));
  if(!response.ok)throw Error('V3.2 配准机位未加载');const manifest=await response.json();
  let scene=runtime.root;while(scene.parent)scene=scene.parent;
- const group=new T.Group();group.name='V32-route-surface-projections';scene.add(group);
+ const group=new T.Group();group.name=options.name??'V32-route-surface-projections';scene.add(group);
  const textures=[],layers=[];let enabled=true,last=runtime.pose;
  async function load(name,color){const image=new Image();image.src=new URL(name,base);await image.decode();const t=new T.Texture(image);t.colorSpace=color?T.SRGBColorSpace:T.NoColorSpace;t.minFilter=T.LinearFilter;t.magFilter=T.LinearFilter;t.generateMipmaps=false;t.needsUpdate=true;textures.push(t);return t;}
  try{
@@ -19,8 +19,8 @@ export async function installRouteSurfaces(runtime,T){
    const uniforms={gain:{value:0},kind:{value:kind}};
    records.forEach((r,i)=>{uniforms[`pic${i}`]={value:r.map};uniforms[`mask${i}`]={value:r.mask};uniforms[`dep${i}`]={value:r.depth};const view=new T.Matrix4().fromArray(r.item.cameraMatrix).invert();uniforms[`view${i}`]={value:view};uniforms[`proj${i}`]={value:new T.Matrix4().fromArray(r.item.projection).multiply(view)};uniforms[`weight${i}`]={value:0};});
    const material=new T.MeshBasicMaterial({transparent:true,depthTest:true,depthWrite:false,polygonOffset:true,polygonOffsetFactor:-1,polygonOffsetUnits:-1,toneMapped:false,fog:false});
-   material.onBeforeCompile=s=>{Object.assign(s.uniforms,uniforms);s.vertexShader='varying vec3 routeWorld;\n'+s.vertexShader.replace('#include <worldpos_vertex>','#include <worldpos_vertex>\nrouteWorld=(modelMatrix*vec4(transformed,1.)).xyz;');s.fragmentShader=`varying vec3 routeWorld;uniform int kind;uniform float gain;\n${declarations}\n`+s.fragmentShader;s.fragmentShader=s.fragmentShader.replace('#include <map_fragment>',`#include <map_fragment>\nif(routeWorld.z>7.9||routeWorld.z< -15.1)discard;if(kind==0&&((routeWorld.z< -8.&&routeWorld.x<4.7)||(routeWorld.z>2.9&&routeWorld.z<6.7&&routeWorld.y>.8&&routeWorld.y<2.3)))discard;vec3 sum=vec3(0.);float total=0.;\n${sample}\nif(total<.001)discard;diffuseColor.rgb=sum/total;diffuseColor.a*=min(1.,total)*gain;`);};
-   material.customProgramCacheKey=()=>`route32-${kind}`;
+   material.onBeforeCompile=s=>{Object.assign(s.uniforms,uniforms);s.vertexShader='varying vec3 routeWorld;\n'+s.vertexShader.replace('#include <worldpos_vertex>','#include <worldpos_vertex>\nrouteWorld=(modelMatrix*vec4(transformed,1.)).xyz;');s.fragmentShader=`varying vec3 routeWorld;uniform int kind;uniform float gain;\n${declarations}\n`+s.fragmentShader;s.fragmentShader=s.fragmentShader.replace('#include <map_fragment>',`#include <map_fragment>\n${options.fragmentGuard??'if(routeWorld.z>7.9||routeWorld.z< -15.1)discard;if(kind==0&&((routeWorld.z< -8.&&routeWorld.x<4.7)||(routeWorld.z>2.9&&routeWorld.z<6.7&&routeWorld.y>.8&&routeWorld.y<2.3)))discard;'}vec3 sum=vec3(0.);float total=0.;\n${sample}\nif(total<.001)discard;diffuseColor.rgb=sum/total;diffuseColor.a*=min(1.,total)*gain;`);};
+   material.customProgramCacheKey=()=>`${options.name??'route32'}-${kind}-${records.length}`;
    const proxy=new T.Mesh(geometry,material);proxy.matrixAutoUpdate=false;proxy.matrix.copy(mesh.matrixWorld);proxy.frustumCulled=false;proxy.renderOrder=2;group.add(proxy);layers.push({proxy,uniforms,kind});
   }
   runtime.root.updateMatrixWorld(true);
@@ -29,13 +29,14 @@ export async function installRouteSurfaces(runtime,T){
    const key=mesh.material?.userData?.textureKey,kind=key==='plaster'?0:key==='stone'?1:-1;if(kind<0)return;
    const g=mesh.geometry,p=g.attributes.position,n=g.attributes.normal,index=g.index,ids=[];if(!p||!n)return;
    for(let i=0;i<(index?.count??p.count);i+=3){const tri=[0,1,2].map(j=>index?index.getX(i+j):i+j);
-    const safe=tri.every(k=>{const x=p.getX(k),y=p.getY(k),z=p.getZ(k);if(kind===0)return x>4.4&&n.getX(k)<-.9;if(kind===1)return n.getY(k)>.9&&y>.20&&y<.80;return false;});
+    const safe=tri.every(k=>{if(options.safeVertex)return options.safeVertex(mesh,p,n,k,kind);const x=p.getX(k),y=p.getY(k),z=p.getZ(k);if(kind===0)return x>4.4&&n.getX(k)<-.9;if(kind===1)return n.getY(k)>.9&&y>.20&&y<.80;return false;});
     // Exclude the ENTIRE candidate mural wall, not only the texture rectangle.
     if(safe)ids.push(...tri);
    }if(ids.length)add(mesh,ids,kind);
   });
-  function update(pose){last=pose;const state=routeWeights(pose.route12??0);for(const layer of layers){const gain=enabled&&pose.route12!=null?state.gain*(layer.kind===0?.60:.32):0;layer.uniforms.gain.value=gain;records.forEach((r,i)=>layer.uniforms[`weight${i}`].value=state.weights[i]);layer.proxy.visible=gain>.001;}}
+  const progressOf=options.progress??(pose=>pose.route12),weightsFor=options.weights??routeWeights;
+  function update(pose){last=pose;const progress=progressOf(pose),state=weightsFor(progress??0);for(const layer of layers){const gain=enabled&&progress!=null?state.gain*(options.gains??[.60,.32])[layer.kind]:0;layer.uniforms.gain.value=gain;records.forEach((r,i)=>layer.uniforms[`weight${i}`].value=state.weights[i]);layer.proxy.visible=gain>.001;}}
   update(last);
-  return {update,setEnabled(value){enabled=value;update(last);runtime.invalidate();},get state(){return {enabled,progress:last.route12??null,...routeWeights(last.route12??0),layers:layers.map(l=>({kind:l.kind,gain:l.uniforms.gain.value,triangles:l.proxy.geometry.index.count/3})),referenceDepth:true,secondWallExcluded:true};},dispose(){for(const l of layers){l.proxy.geometry.dispose();l.proxy.material.dispose();}textures.forEach(t=>t.dispose());group.removeFromParent();}};
+  return {update,setEnabled(value){enabled=value;update(last);runtime.invalidate();},get state(){return {enabled,progress:progressOf(last)??null,...weightsFor(progressOf(last)??0),layers:layers.map(l=>({kind:l.kind,gain:l.uniforms.gain.value,triangles:l.proxy.geometry.index.count/3})),referenceDepth:true,secondWallExcluded:true};},dispose(){for(const l of layers){l.proxy.geometry.dispose();l.proxy.material.dispose();}textures.forEach(t=>t.dispose());group.removeFromParent();}};
  }catch(e){textures.forEach(t=>t.dispose());group.removeFromParent();throw e;}
 }

@@ -1,0 +1,44 @@
+{
+  "tool": "built-in image_gen; imagegen skill",
+  "useCase": "lighting-weather / precise architectural material refinement",
+  "prompt": "Use case: lighting-weather / precise architectural material refinement. Edit the supplied actual 3D model screenshot as a registered architectural texture reference. Preserve the EXACT 16:9 camera, perspective, crop, wall corners, floor/wall boundary, brick band shapes and black overhead timber silhouette. This is the interior rear wall of a quiet historic Chinese temple. Add restrained believable matte aged grey lime plaster microtexture, subtle charcoal stone paving grain, old dark wood grain only where timber already exists, subdued soft natural bounced illumination. Match the model's existing dark neutral warm-grey illumination and exposure. All plaster wall surfaces MUST remain EMPTY BLANK WALLS with no murals, no animals, no paintings, no symbols, no colored patterns, no text. Do not introduce any additional columns, roof beams, doors, windows, furniture, lamps, vegetation, people, cracks that change geometry, or decorative motifs. No reframing, lens change or newly reconstructed architecture. No glow, vignette, HDR or overly distressed surface. Only enhance material texture and quiet light, with exact geometric correspondence to the input.",
+  "blankMurals": true,
+  "items": [
+    {
+      "name": "turn-third",
+      "reference": "references/turn-third-model.png",
+      "originalGenerated": "C:/Users/dovis/.codex/generated_images/01a18c90-3dba-7903-9a37-fe4d393ef44e/exec-ceb3223b-a3be-4da7-9d34-6a69a1a7c408.png",
+      "candidate": "candidates/turn-third.webp",
+      "inspection": "Blank walls; exclude all generated wood, brick bands and structural boundaries. Use only eroded surface interiors with reference depth and live geometry.",
+      "status": "generated",
+      "promptSuffix": "Reference view ID: turn-third. Return one image with precisely the same composition as this view."
+    },
+    {
+      "name": "third-dock",
+      "reference": "references/third-dock-model.png",
+      "originalGenerated": "C:/Users/dovis/.codex/generated_images/01a18c90-3dba-7903-9a37-fe4d393ef44e/exec-383ab07c-4417-43bf-9413-177423a9e613.png",
+      "candidate": "candidates/third-dock.webp",
+      "inspection": "Blank walls; exclude all generated wood, brick bands and structural boundaries. Use only eroded surface interiors with reference depth and live geometry.",
+      "status": "generated",
+      "promptSuffix": "Reference view ID: third-dock. Return one image with precisely the same composition as this view."
+    },
+    {
+      "name": "rear-crossing",
+      "reference": "references/rear-crossing-model.png",
+      "originalGenerated": "C:/Users/dovis/.codex/generated_images/01a18c90-3dba-7903-9a37-fe4d393ef44e/exec-6dbda3b9-7bda-4eea-a49d-93a0590c1081.png",
+      "candidate": "candidates/rear-crossing.webp",
+      "inspection": "Blank walls; exclude all generated wood, brick bands and structural boundaries. Use only eroded surface interiors with reference depth and live geometry.",
+      "status": "generated",
+      "promptSuffix": "Reference view ID: rear-crossing. Return one image with precisely the same composition as this view."
+    },
+    {
+      "name": "fourth-dock",
+      "reference": "references/fourth-dock-model.png",
+      "originalGenerated": "C:/Users/dovis/.codex/generated_images/01a18c90-3dba-7903-9a37-fe4d393ef44e/exec-a13fcf85-69c4-4667-9a45-757db96ca3c8.png",
+      "candidate": "candidates/fourth-dock.webp",
+      "inspection": "Blank walls; exclude all generated wood, brick bands and structural boundaries. Use only eroded surface interiors with reference depth and live geometry.",
+      "status": "generated",
+      "promptSuffix": "Reference view ID: fourth-dock. Return one image with precisely the same composition as this view."
+    }
+  ]
+}
