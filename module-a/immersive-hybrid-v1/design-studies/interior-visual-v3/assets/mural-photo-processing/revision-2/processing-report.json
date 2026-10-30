@@ -1,0 +1,114 @@
+{
+  "revision": 2,
+  "stage": "A / preview only",
+  "baselineCommit": "990bcdf8e416a2050ea75446d3c3f7d9514bdcf1",
+  "tool": "Python / Pillow 13.0.0 / NumPy 2.3.5",
+  "runtimeImageReplaced": false,
+  "mural03": {
+    "sourceSha256": "8124697c827c412912538dfdd29a41b0f652c38d2c8a7bae6ecece0b543d936d",
+    "candidateSha256": "5016ec505828e2a986b1715ecdfa7b1a6dc1ed334ad54637a2f071f1e45800a6",
+    "output": [
+      1323,
+      698
+    ],
+    "sourceToOutputHomography": [
+      [
+        1.152145325892634,
+        0.08340392215425178,
+        -7.6568926658445875
+      ],
+      [
+        0.030875838074880178,
+        1.1338544569107798,
+        -108.80013781085103
+      ],
+      [
+        8.241911221838819e-05,
+        0.00010478787677910486,
+        1.0
+      ]
+    ],
+    "outputToCropHomography": [
+      [
+        0.8784048344415568,
+        -0.06458576543528993,
+        -0.3010886455008594
+      ],
+      [
+        -0.02391667918257984,
+        0.892556852771007,
+        -0.03580149821853055
+      ],
+      [
+        -6.919509115008897e-05,
+        -8.732755265004693e-05,
+        1.0
+      ]
+    ],
+    "fullCropCornersInOutput": [
+      [
+        0.3463992109317596,
+        0.049393175211881905
+      ],
+      [
+        1322.2964772944486,
+        35.471961289224616
+      ],
+      [
+        1291.3936239131633,
+        668.6581317894032
+      ],
+      [
+        51.61919789829654,
+        697.3899594561036
+      ]
+    ],
+    "controlPointsInOutput": [
+      [
+        56.0,
+        67.00000000000001
+      ],
+      [
+        1287.9999999999998,
+        67.00000000000011
+      ],
+      [
+        1288.0,
+        611.0000000000002
+      ],
+      [
+        56.0,
+        611.0
+      ]
+    ],
+    "pixelEquality": false,
+    "reason": "BICUBIC geometric interpolation; no color adjustment",
+    "alphaOutsideSource": true,
+    "iccPreserved": true,
+    "unrectifiedCandidatePreserved": true
+  },
+  "mural04": {
+    "sourceSha256": "ad781539c28dbdc516846dbf911509ff5fc6d1a8d7b4b964b6192329f693b9be",
+    "candidateSha256": "be6ff9c4d10429ef94577e807a8446ba3334e428f26d39d33193754906f9d932",
+    "output": [
+      1280,
+      939
+    ],
+    "pixelEquality": true,
+    "iccPreserved": true,
+    "referenceSha256": "ab66222b3b91bff8ea8acaf79ac586725fb71ccf895d71a416ee90e8bd1d1828",
+    "referenceMatching": {
+      "interiorRGBMeanSquaredError": 58.00664170027527,
+      "resizedSourceWidth": 528,
+      "referenceToResizedSourceOffset": [
+        -1,
+        79
+      ],
+      "mappedSourceTopApprox": 191.5151515151515,
+      "mappedSourceBottomApprox": 1134.5454545454545,
+      "method": "LANCZOS reference-width search and integer translation; 10px border excluded"
+    },
+    "cropBottom": 1135,
+    "cropDecision": "user reference, not heritage-boundary identification"
+  }
+}

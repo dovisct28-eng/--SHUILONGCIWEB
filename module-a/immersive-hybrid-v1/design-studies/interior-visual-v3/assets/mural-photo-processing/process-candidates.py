@@ -170,7 +170,9 @@ def main():
                         'removedRows': {'top': box[1], 'bottom': spec['sourceHeight'] - box[3]},
                         'perspective': 'none', 'runtimeImageReplaced': False})
     (HERE / 'source-inventory.json').write_text(json.dumps(inventory(), ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
-    (HERE / 'index.html').write_text(review_page(specs), encoding='utf-8')
+    # Revision 2 owns the active review; rebuilding revision 1 must not roll it back.
+    review_name = 'initial-review.html' if (HERE / 'revision-2/processing-report.json').exists() else 'index.html'
+    (HERE / review_name).write_text(review_page(specs), encoding='utf-8')
     report = {'tool': f'Python / Pillow {PIL.__version__}', 'stage': 'A / preview only',
               'baseline': specs[0]['baselineCommit'], 'results': results}
     (HERE / 'processing-report.json').write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')

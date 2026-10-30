@@ -1,0 +1,27 @@
+{
+  "id": "mural-03",
+  "revision": 2,
+  "status": "preview-candidate-awaiting-user-confirmation",
+  "source": "水龙祠壁画素材/壁画原图/第三铺壁画原图.jpg",
+  "sourceSha256": "8124697c827c412912538dfdd29a41b0f652c38d2c8a7bae6ecece0b543d936d",
+  "sourceWidth": 1280,
+  "sourceHeight": 960,
+  "sourceCrop": {"left": 0, "top": 96, "right": 1280, "bottom": 760},
+  "unrectifiedCandidate": "../mural-03-crop-candidate.png",
+  "candidate": "mural-03-front-candidate.png",
+  "outputWidth": 1323,
+  "outputHeight": 698,
+  "perspective": {
+    "method": "single planar homography, source-pixel coordinates",
+    "pointOrder": "top-left, top-right, bottom-right, bottom-left",
+    "sourceQuad": [[45, 155], [1245, 128], [1273, 696], [10, 673]],
+    "anchorBasis": "人工目视选取左右红色边带与上下边界附近的参考交点/延长线；边界残损，均为展示校正控制点，非现场测绘点。",
+    "targetPlane": {"width": 1232, "height": 544, "ratioBasis": "mean lengths of opposing photographed edges; display estimate only"},
+    "canvas": "outward-rounded bounding box of the entire original conservative crop after projection; no extra crop",
+    "resampling": "Pillow BICUBIC, one geometric transform",
+    "outsideSource": "transparent; no inpainting or edge extension",
+    "reason": "按用户反馈适度减轻梯形和倾斜，使两侧边带竖直、参考上下边水平；真实物理宽高比无法由本照片确认。"
+  },
+  "processing": {"ai": false, "repair": false, "colorAdjustment": false, "iccPreserved": true, "geometricResampling": true, "highResolutionClaim": false},
+  "wallRegistration": "unchanged; no gallery replacement or site-registration claim"
+}

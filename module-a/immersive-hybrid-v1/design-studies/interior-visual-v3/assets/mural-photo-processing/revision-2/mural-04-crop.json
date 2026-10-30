@@ -1,0 +1,28 @@
+{
+  "id": "mural-04",
+  "revision": 2,
+  "status": "user-directed-crop-preview-awaiting-review",
+  "source": "水龙祠壁画素材/壁画原图/第四铺壁画原图.jpg",
+  "sourceSha256": "ad781539c28dbdc516846dbf911509ff5fc6d1a8d7b4b964b6192329f693b9be",
+  "sourceWidth": 1280,
+  "sourceHeight": 1707,
+  "crop": {"left": 0, "top": 196, "right": 1280, "bottom": 1135},
+  "coordinateSystem": "decoded source pixels, origin top-left; right/bottom exclusive",
+  "candidate": "mural-04-crop-candidate.png",
+  "previousCandidate": "../mural-04-crop-candidate.png",
+  "outputWidth": 1280,
+  "outputHeight": 939,
+  "reference": {
+    "file": "user-mural-04-crop-reference.png",
+    "attachmentName": "codex-clipboard-a93eaef2-4907-468e-b8c2-0aee1b4b9645.png",
+    "size": [528, 389],
+    "instruction": "第四铺下面切到我裁切的位置即可。",
+    "matching": "resize source to reference width and compare interior RGB to locate vertical offset; report in processing-report.json",
+    "mappedBottomApprox": 1134.5454545454545,
+    "rounding": "ceil to y=1135; retain existing top=196 and full width as user changed bottom only",
+    "uncertainty": "附图含边框/缩放，原图下沿映射为近似位置；不是新判定浅色带不属于文物。"
+  },
+  "perspective": {"method": "none"},
+  "processing": {"ai": false, "repair": false, "colorAdjustment": false, "resampleCandidate": false, "iccPreserved": true},
+  "wallRegistration": "unchanged; no gallery replacement or site-registration claim"
+}

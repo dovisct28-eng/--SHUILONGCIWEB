@@ -39,27 +39,27 @@ const url = 'http://127.0.0.1:4188/module-a/immersive-hybrid-v1/design-studies/i
         }));
         assert.equal(state.overflow, false);
         assert.equal(state.externalResources, 0);
-        assert.deepEqual(state.images.map(im => [im.width, im.height]), [[1280, 960], [1280, 960], [1280, 664], [1280, 1707], [1280, 1707], [1280, 1372]]);
+        assert.deepEqual(state.images.map(im => [im.width, im.height]), [[1280, 664], [1280, 960], [1323, 698], [1280, 1372], [528, 389], [1280, 939]]);
         assert.ok(state.images.every(im => im.fit === 'contain'));
         // Follow actual candidate and parameter links; inspect decoded original-sized PNG.
-        const candidateLink = page.locator('a[href="mural-04-crop-candidate.png"]');
+        const candidateLink = page.locator('a[href="revision-2/mural-04-crop-candidate.png"]');
         await candidateLink.click();
         await page.waitForURL('**/mural-04-crop-candidate.png');
         await page.locator('img').evaluate(im => im.decode());
-        assert.deepEqual(await page.locator('img').evaluate(im => [im.naturalWidth, im.naturalHeight]), [1280, 1372]);
+        assert.deepEqual(await page.locator('img').evaluate(im => [im.naturalWidth, im.naturalHeight]), [1280, 939]);
         await page.goBack();
         await page.locator('img').evaluateAll(images => Promise.all(images.map(im => im.decode())));
         await page.keyboard.press('Tab');
         assert.equal(await page.evaluate(() => document.activeElement.tagName), 'A');
         assert.deepEqual(errors, []);
-        await page.screenshot({ path: path.join(local, `review-${width}-${height}-${reduce ? 'reduce' : 'normal'}.png`), fullPage: true });
+        await page.screenshot({ path: path.join(local, `revision-2-review-${width}-${height}-${reduce ? 'reduce' : 'normal'}.png`), fullPage: true });
         report.runs.push({ width, height, reducedMotion: reduce, ...state, directCandidateLink: true, keyboardLink: true, errors, ignoredBrowserRequests });
         await context.close();
       }
     }
     report.pass = true;
   } finally {
-    fs.writeFileSync(path.join(out, 'browser-results.json'), JSON.stringify(report, null, 2) + '\n');
+    fs.writeFileSync(path.join(out, 'browser-results-revision-2.json'), JSON.stringify(report, null, 2) + '\n');
     await browser.close();
   }
   console.log(`Crop review browser checks passed: ${report.runs.length}/6`);
