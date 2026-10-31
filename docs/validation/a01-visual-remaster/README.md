@@ -1,11 +1,15 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # A01 Visual Remaster 验收
 
 2026-10-02；基线 `7e59a973b0caa487b325b6c95a11b704b216385f`。完整说明见 [A01_HIGH_FIDELITY.md](../../A01_HIGH_FIDELITY.md)。环境与材质只作设计表达，原几何/壁画资料边界不变。
 
-- [Before / After](contact/before-after.jpg)：1440×900，开发前实际截图与最终实现。
-- [四尺寸 Hero](contact/heroes.jpg)：1920×1080、1440×900、1366×768、1024×768。
-- [生长及交接](contact/growth-and-handoff.jpg)：1440 的 11 个指定状态。
-- [四尺寸全部状态](contact/all-states.jpg)：44 帧联系表；单帧 PNG 保留本地 `after/`。
+- [Before / After（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-visual-remaster/contact/before-after.jpg)：1440×900，开发前实际截图与最终实现。
+- [四尺寸 Hero（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-visual-remaster/contact/heroes.jpg)：1920×1080、1440×900、1366×768、1024×768。
+- [生长及交接（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-visual-remaster/contact/growth-and-handoff.jpg)：1440 的 11 个指定状态。
+- [四尺寸全部状态（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-visual-remaster/contact/all-states.jpg)：44 帧联系表；单帧 PNG 保留本地 `after/`。
 - [浏览器结果](results.json)：实际顶点投影、各帧状态、资源、可逆恢复与交接取样。
 - [性能对照](performance.json)：同机每版本三个冷加载样本；HTTP 路由拦截口径相同。
 - [线层回归](line-regression/results.json)：36 状态、像素比较、停滚/刷新/快速跳转/resize、六种减少动态或失败模式；新增 mural group 隐藏/恢复断言。

@@ -1,3 +1,7 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # Shared Temple World + A03 selective cutaway
 
 日期：2026-10-04开始，2026-10-05完成A04材质/光照追改。开始时已 fetch 并核实 HEAD 与远程 master 一致：`49eac2fbc3e31a545e970a723c0db37120692586`。范围为 Module A 的 A01–A03 共享呈现及 A04 入口状态恢复及用户追加的建筑材质/光照统一；不开发新的 A04 路线或 Module B。
@@ -116,15 +120,15 @@ HTTP资源减少553612字节（约0.53MiB）；浏览器统计中纹理数量不
 
 要求的11张1920×1080 WebP位于本目录：`01-a01-stable.webp`、`02-a01-a02-transition.webp`、`03-a02-stable.webp`、`04-a02-a03-transition.webp`、`05-a03-entry.webp`、`06-a03-poster.webp`、`07-a03-cutaway.webp`、`08-a03-three-murals.webp`、`09-a03-fifth-focus.webp`、`10-a03-a04-transition.webp`、`11-a04-route.webp`。补充 `12-a04-playing.webp`。同样四尺寸在 `viewports/1920、1440、1366、1024/`。
 
-![Before / After](before-after.webp)
+[Before / After（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/shared-temple-world-2026-10-04/before-after.webp)
 
-![A04 shared material and lighting](a04-before-after.webp)
+[A04 shared material and lighting（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/shared-temple-world-2026-10-04/a04-before-after.webp)
 
-![A01–A04 sequence](sequence-board.webp)
+[A01–A04 sequence（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/shared-temple-world-2026-10-04/sequence-board.webp)
 
-![Continuous transitions and route playback](sequence-detail-board.webp)
+[Continuous transitions and route playback（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/shared-temple-world-2026-10-04/sequence-detail-board.webp)
 
-![Four viewports](responsive-board.webp)
+[Four viewports（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/shared-temple-world-2026-10-04/responsive-board.webp)
 
 ## Q1–Q20 人工审图
 

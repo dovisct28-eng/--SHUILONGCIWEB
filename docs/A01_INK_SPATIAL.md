@@ -1,3 +1,5 @@
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # A01 暗灰水墨空间：拆解与实施记录
 
 2026-10-02—03；开发基线 master `9191fed7cd5d2c7dbe50c859231ead46f37cebd1`。
@@ -33,11 +35,11 @@
 
 | Pass | 实施与审查 | 前后对照 |
 | --- | --- | --- |
-| Camera | 实际主殿近看：设计 target (0,4.5,-12)，距离 11.5，窄桌面后撤。原 travel 内回全貌。主殿和屋顶线提前，20% 集齐；仍用原 780 条模型轮廓。稳定 Hero 不变 | [Camera](validation/a01-ink-spatial/camera-comparison.jpg) |
-| Lighting | 暗底辅助观察，原单方向光加冷灰半球。第一版外墙过暗，读图后改光位 (-9,18,-20)，没有加灯。柱列、檐下、院落分区 | [Lighting](validation/a01-ink-spatial/lighting-comparison.jpg) |
-| Material | 六类原 PBR 贴图不改文件。瓦面局部 uniform 混冷灰亮度，避免暖光把屋面染棕；瓦纹法线保留。砖、木、灰、石分别调整 | [Material](validation/a01-ink-spatial/material-comparison.jpg) |
-| Environment | 复用 tree/mountain/mist；全屏低对比山形、山图、三组暗树影。初版山形硬，读图后压低软化并复用山图。世界地面冷灰、薄雾减弱，去亮色光圈 | [Environment](validation/a01-ink-spatial/environment-comparison.jpg) |
-| Composite | 入口视域扩大，近轮廓有意越画边。小名称移左上避线。Hero 字级、尺度不增；纸色和文字在原交接恢复，中间明度校正对比；A02 前专属层隐藏 | [Composite](validation/a01-ink-spatial/composite-comparison.jpg) |
+| Camera | 实际主殿近看：设计 target (0,4.5,-12)，距离 11.5，窄桌面后撤。原 travel 内回全貌。主殿和屋顶线提前，20% 集齐；仍用原 780 条模型轮廓。稳定 Hero 不变 | [Camera（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-ink-spatial/camera-comparison.jpg) |
+| Lighting | 暗底辅助观察，原单方向光加冷灰半球。第一版外墙过暗，读图后改光位 (-9,18,-20)，没有加灯。柱列、檐下、院落分区 | [Lighting（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-ink-spatial/lighting-comparison.jpg) |
+| Material | 六类原 PBR 贴图不改文件。瓦面局部 uniform 混冷灰亮度，避免暖光把屋面染棕；瓦纹法线保留。砖、木、灰、石分别调整 | [Material（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-ink-spatial/material-comparison.jpg) |
+| Environment | 复用 tree/mountain/mist；全屏低对比山形、山图、三组暗树影。初版山形硬，读图后压低软化并复用山图。世界地面冷灰、薄雾减弱，去亮色光圈 | [Environment（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-ink-spatial/environment-comparison.jpg) |
+| Composite | 入口视域扩大，近轮廓有意越画边。小名称移左上避线。Hero 字级、尺度不增；纸色和文字在原交接恢复，中间明度校正对比；A02 前专属层隐藏 | [Composite（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-ink-spatial/composite-comparison.jpg) |
 
 Hero 光照：方向光 #ffca8a，强度 3.55；半球天空 #8fa6bc / 地面 #252d33，强度 .75；曝光 .98；雾色 #303c44；地面阴影 .35。保留 2048² PCF、原 renderer、Canvas、RAF；没有 WebGL 后处理。
 

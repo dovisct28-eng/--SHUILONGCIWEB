@@ -1,15 +1,19 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # A01 Cinematic v2：实际页面验收 / 待审图
 
 日期：2026-10-03。对照基线 `fab296b3a558a7037da99bb2f30c67cf3c5ecafd`。本轮环境为艺术化喀斯特山谷，不是实地测绘、遗产照片或历史资料。
 
 ## 审图入口
 
-- [1440×900 最终 Hero](08-final-hero.png)
-- [参考 / 基线 / 本轮](reference-baseline-final.jpg)：参考仅裁出原展板顶部画面；各图等比完整显示，黑边保留不同比例。
-- [逐 Pass 演进](visual-evolution.jpg)：Camera C、Environment、Lighting、Material、Post、Composite 为各步真实页面截图。
-- [相机 A / B / C](camera/candidates.png)
-- [十个动画点](07-line-animation.jpg)：0 / 5 / 12 / 20 / 30 / 40 / 50 / 60 / 75 / 100%，源截图在 `animation/`。
-- [四尺寸 Hero](four-size-heroes.jpg)：1440×900、1920×1080、1366×768、1024×768。
+- [1440×900 最终 Hero（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-cinematic-v2/08-final-hero.png)
+- [参考 / 基线 / 本轮（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-cinematic-v2/reference-baseline-final.jpg)：参考仅裁出原展板顶部画面；各图等比完整显示，黑边保留不同比例。
+- [逐 Pass 演进（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-cinematic-v2/visual-evolution.jpg)：Camera C、Environment、Lighting、Material、Post、Composite 为各步真实页面截图。
+- [相机 A / B / C（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-cinematic-v2/camera/candidates.png)
+- [十个动画点（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-cinematic-v2/07-line-animation.jpg)：0 / 5 / 12 / 20 / 30 / 40 / 50 / 60 / 75 / 100%，源截图在 `animation/`。
+- [四尺寸 Hero（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-cinematic-v2/four-size-heroes.jpg)：1440×900、1920×1080、1366×768、1024×768。
 - [设计与实施说明](../../A01_CINEMATIC_V2.md)
 
 编号 01—06 为基线至后期 Pass，07 为动画联系表，08 为最终 Hero。Pass 原图及 JSON 记录留在各自目录；最终技术验收在 `final/results.json`，包含四尺寸各 11 个 A01 状态、A02—A04 回归以及四类回退。动画是页面实际渲染，不是 AI 生成的动画截图。Git 保留十点四尺寸动画、最终四尺寸、Pass 图、回退图与技术 JSON；其余重复回归原图保留在本地，不重复纳入 Git。

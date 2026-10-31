@@ -1,3 +1,7 @@
+> 2026-10-31清理V2：本目录保留技术报告、视频元数据与10张当前精选；大批原始媒体已精简，新运行默认local/latest。清理后的真实回归见 [清理验收](../../maintenance/repository-cleanup-v2/VALIDATION.md)。历史完整媒体按deleted-files.json中的Tag或副本恢复。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # 水龙祠 V3.5 整合与验收
 
 > 用户最新要求：第三、第四铺方位存在报告与现场的分歧，现保留**A现有模型**和**B报告对照**两种可切换路线，待导师意见后再固定其中一条。顶部“路线对照”可切换，切换后从入口开始。见[两方案说明](ROUTE-COMPARISON.md)。以下原单路线记录属于方案A的工程验收，不证明现场墙位正确。
@@ -17,6 +21,6 @@
 
 文档：[诊断](AUDIT.md)、[视觉参数](VISUAL-CHANGES.md)、[正式整合](INTEGRATION.md)、[测试及限制](TEST-RESULTS.md)。独立原型v32/v33/v34保留；历史V3.2–V3.4证据未覆盖；原始壁画、已确认裁切、Combined B及用户原有脏文件未改。
 
-[方案A连续录屏](selected/continuous-walk-1440x900.webm)、[方案B连续录屏](selected/continuous-walk-report-1440x900.webm)：均为1440×900、VP8/25fps，无剪辑，完整解码结果及实际时长见video-check.json。精选包含12张必要对照截图和两条不同路线视频，清单与体积见selected/manifest.json；完整回归保留local。
+[方案A连续录屏（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/interior-visual-v3-5/selected/continuous-walk-1440x900.webm)、[方案B连续录屏（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/interior-visual-v3-5/selected/continuous-walk-report-1440x900.webm)：均为1440×900、VP8/25fps，无剪辑，完整解码结果及实际时长见video-check.json。精选包含12张必要对照截图和两条不同路线视频，清单与体积见selected/manifest.json；完整回归保留local。
 
 阶段提交：60ae370诊断；46c9a6f合并视觉与阅读转场小调整；53ca442正式接入与性能/状态准备；最终验收提交见本目录Git记录。仅同步feature/shuilongci-hybrid-gallery-v1，不合并master。

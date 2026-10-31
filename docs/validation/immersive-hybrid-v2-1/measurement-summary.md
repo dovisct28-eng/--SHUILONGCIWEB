@@ -1,3 +1,5 @@
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # V2.1 实测摘要
 
 日期：2026-10-26。以下值读取自本目录的实际浏览器、构建与运动报告。
@@ -47,16 +49,16 @@
 | 文件 | MiB |
 | --- | ---: |
 | [01-original-overview.png](selected/01-original-overview.png) | 2.50 |
-| [02-reused-overview.png](selected/02-reused-overview.png) | 2.50 |
-| [03-gate-approach.png](selected/03-gate-approach.png) | 1.59 |
-| [04-gate-close.png](selected/04-gate-close.png) | 1.36 |
-| [05-threshold.png](selected/05-threshold.png) | 1.17 |
-| [06-gate-interior.png](selected/06-gate-interior.png) | 1.11 |
-| [07-overview-comparison.webp](selected/07-overview-comparison.webp) | 0.18 |
-| [08-interior-depth-mask.png](selected/08-interior-depth-mask.png) | 0.04 |
-| [09-continuous-rail.webp](selected/09-continuous-rail.webp) | 0.15 |
-| [10-gate-occlusion-mask.png](selected/10-gate-occlusion-mask.png) | 0.04 |
-| [11-gate-occlusion-candidate.png](selected/11-gate-occlusion-candidate.png) | 0.97 |
-| [12-continuous-entry-and-return.webm](selected/12-continuous-entry-and-return.webm) | 8.03 |
+| [02-reused-overview.png（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-1/selected/02-reused-overview.png) | 2.50 |
+| [03-gate-approach.png（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-1/selected/03-gate-approach.png) | 1.59 |
+| [04-gate-close.png（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-1/selected/04-gate-close.png) | 1.36 |
+| [05-threshold.png（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-1/selected/05-threshold.png) | 1.17 |
+| [06-gate-interior.png（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-1/selected/06-gate-interior.png) | 1.11 |
+| [07-overview-comparison.webp（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-1/selected/07-overview-comparison.webp) | 0.18 |
+| [08-interior-depth-mask.png（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-1/selected/08-interior-depth-mask.png) | 0.04 |
+| [09-continuous-rail.webp（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-1/selected/09-continuous-rail.webp) | 0.15 |
+| [10-gate-occlusion-mask.png（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-1/selected/10-gate-occlusion-mask.png) | 0.04 |
+| [11-gate-occlusion-candidate.png（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-1/selected/11-gate-occlusion-candidate.png) | 0.97 |
+| [12-continuous-entry-and-return.webm（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-1/selected/12-continuous-entry-and-return.webm) | 8.03 |
 
 未验证：弱 GPU、其他机器、实际投影/显示器观感、用户最终视觉接受。V2.2 匹配素材与正式 2.5D 切换未完成。

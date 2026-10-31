@@ -1,3 +1,7 @@
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
+> 当前规范：正式主线为A01→A02→A03→五铺gallery（①②③④⑤）→主动进入模块B；只在feature/shuilongci-hybrid-gallery-v1迭代与同步。A/B墙位对照待导师确认。下文旧三铺、A04–A08正式主线、旧master规则和历史冻结状态仅作当时设计记录，不指导当前开发。见 [当前架构](CURRENT_ARCHITECTURE.md)。
+
 > 2026-10-31用户追加：第三/第四铺方位暂不定稿。正式展厅增加A现有模型（③右④左）与B报告对照（③左④右，随后回左⑤）两种可切换方案，导师确认前两者均不作为现场正确性结论。详见 [路线对照](validation/interior-visual-v3-5/ROUTE-COMPARISON.md)。
 
 > 2026-10-31 V3.5正式整合覆盖：默认模块A保留A01–A03，A03主动接入 /module-a/gallery/ 的大门→①→②→③→④→⑤→模块B路线。旧A04–A08退出默认主路径，/module-a/a01/?legacy 保留历史实现；真实素材、Combined B与模块B内部不改。此条覆盖下方旧三铺路线限制；技术验证与用户视觉验收分开记录。详见 [V3.5整合](validation/interior-visual-v3-5/INTEGRATION.md)。
@@ -603,7 +607,7 @@ Accent 联合打样仍按第5.2节冻结门槛执行：单页阶段可以只读�
 
 当前导演样式对 A05/A06 canvas 使用 radial-gradient、对图像使用外围 box-shadow；A07 canvas 为 `background:none`，图像阴影为 none；A08 使用径向/线性渐变承托。建筑导演层已有 exposure、fill、sun、材质权重及目标墙段轻度增亮。并非完全没有光照或连续控制；本轮要深化已有结构，不能将它们推翻重建。
 
-**本轮视觉审查判断**：用户指出部分页面“平、空、缺乏纵深、背景与主体分离”。结合上述实现和 [总体展板](validation/module-a-visual-director-v2/boards/08-overall.png)、[三幅导读展板](validation/module-a-visual-director-v2/boards/06-three-murals.png)，将“对象放在黑底上”作为需要在后续逐页原尺寸审图验证的问题。展板缩略图不足以量化纵深、正常观看的 Grain 感知或用户理解效果；不能据此宣布所有状态失败，也不能宣布 v1.1 已解决问题。
+**本轮视觉审查判断**：用户指出部分页面“平、空、缺乏纵深、背景与主体分离”。结合上述实现和 [总体展板（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-visual-director-v2/boards/08-overall.png)、[三幅导读展板（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-visual-director-v2/boards/06-three-murals.png)，将“对象放在黑底上”作为需要在后续逐页原尺寸审图验证的问题。展板缩略图不足以量化纵深、正常观看的 Grain 感知或用户理解效果；不能据此宣布所有状态失败，也不能宣布 v1.1 已解决问题。
 
 **已冻结规则**：新概念是「墨夜光场」；暗部由色场、光场、空气、距离、局部照度和负空间共同组织。设计感主要来自摄影式光场控制，执行优先级为：构图 → 明暗关系 → 主体尺度 → 负空间 → 前后关系 → 字体 → 线条 → 必要 UI；装饰排最后，不为“丰富”添加元素。
 

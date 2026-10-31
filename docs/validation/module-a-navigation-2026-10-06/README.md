@@ -1,3 +1,7 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # 模块 A 沉浸式导航与全局验收 · 2026-10-06
 
 基线：重新fetch核实的master `20e6cd6deadf73e0c4532205babafe3d48b177f9`。当前状态：**高保真候选完成 / 技术验收通过 / 待用户最终视觉确认**。没有正式封版Tag。章节、壁画、模型及B内部未改，归档固定引用仍为 `48f272497e86e4549c5bcd0dee275ff347171a3f`。
@@ -21,20 +25,20 @@
 
 ## 审图材料
 
-[本地完整审图画廊](review.html) / [六帧总览](review-sheet.webp)。总览依次为A02默认、目录展开、A03海报、A04完整路线、A05巡视、A08终态。
+[本地完整审图画廊](review.html) / [六帧总览（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-navigation-2026-10-06/review-sheet.webp)。总览依次为A02默认、目录展开、A03海报、A04完整路线、A05巡视、A08终态。
 
 | 关键帧 | 图片 |
 | --- | --- |
-| A01最终Hero，导航隐藏 | [A01](screenshots/a01-hero.webp) |
-| A02默认导航 | [A02](screenshots/a02-default.webp) |
-| 目录展开 | [目录](screenshots/directory-open.webp) |
-| A03海报与导航 | [A03](screenshots/a03-poster.webp) |
-| A04路线总结与原控件避让 | [A04](screenshots/a04-summary.webp) |
-| A05整体介绍/巡视 | [INTRO](screenshots/a05-intro.webp)、[SCAN](screenshots/a05-scan.webp) |
-| A06整体介绍 | [A06](screenshots/a06-intro.webp) |
-| A07整体介绍/巡视 | [INTRO](screenshots/a07-intro.webp)、[SCAN](screenshots/a07-scan.webp) |
-| A08最终墙面与主CTA | [A08](screenshots/a08-final.webp) |
-| 390px移动目录 | [390×844](screenshots/nav-open-390x844.webp) |
+| A01最终Hero，导航隐藏 | [A01（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-navigation-2026-10-06/screenshots/a01-hero.webp) |
+| A02默认导航 | [A02（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-navigation-2026-10-06/screenshots/a02-default.webp) |
+| 目录展开 | [目录（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-navigation-2026-10-06/screenshots/directory-open.webp) |
+| A03海报与导航 | [A03（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-navigation-2026-10-06/screenshots/a03-poster.webp) |
+| A04路线总结与原控件避让 | [A04（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-navigation-2026-10-06/screenshots/a04-summary.webp) |
+| A05整体介绍/巡视 | [INTRO（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-navigation-2026-10-06/screenshots/a05-intro.webp)、[SCAN（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-navigation-2026-10-06/screenshots/a05-scan.webp) |
+| A06整体介绍 | [A06（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-navigation-2026-10-06/screenshots/a06-intro.webp) |
+| A07整体介绍/巡视 | [INTRO（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-navigation-2026-10-06/screenshots/a07-intro.webp)、[SCAN（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-navigation-2026-10-06/screenshots/a07-scan.webp) |
+| A08最终墙面与主CTA | [A08（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-navigation-2026-10-06/screenshots/a08-final.webp) |
+| 390px移动目录 | [390×844（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-navigation-2026-10-06/screenshots/nav-open-390x844.webp) |
 
 其余1920×1080、1440×900、1366×768、1024×768、1440×650、760×768展开截图在screenshots内。WebP是浏览器PNG的压缩交付副本；原PNG留在本机工作树，未将大型重复历史截图全部纳入提交。25对基线/候选截图同样为真实页面截图压缩副本，不是生成式效果图。
 

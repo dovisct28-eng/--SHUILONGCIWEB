@@ -1,3 +1,7 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # A01 Cinematic V3｜交付与审图证据
 
 2026-10-03。状态：**A01 High-Fidelity V3 Implementation Complete / Ready for Visual Review**。技术验收和以下视觉自检不等于用户批准或视觉冻结。
@@ -6,14 +10,14 @@
 
 ## 直接审图
 
-- [真实页面 Before / After](before-after.jpg)
-- [参考 B / 真实基线 / V3 三联](reference-current-v3.jpg)：参考 B 上半部分仅作艺术方向。
-- [18 帧 Animation Contact Sheet](animation-contact-sheet.jpg)
-- [四尺寸 Hero](responsive-contact-sheet.jpg)
-- [逐项视觉 Pass](pass-contact-sheet.jpg)
-- [最终 1440×900 Hero](08-responsive/hero-1440x900.png)
+- [真实页面 Before / After（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-cinematic-v3/before-after.jpg)
+- [参考 B / 真实基线 / V3 三联（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-cinematic-v3/reference-current-v3.jpg)：参考 B 上半部分仅作艺术方向。
+- [18 帧 Animation Contact Sheet（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-cinematic-v3/animation-contact-sheet.jpg)
+- [四尺寸 Hero（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-cinematic-v3/responsive-contact-sheet.jpg)
+- [逐项视觉 Pass（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-cinematic-v3/pass-contact-sheet.jpg)
+- [最终 1440×900 Hero（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-cinematic-v3/08-responsive/hero-1440x900.png)
 - [最终光扫：58 / 61 / 64 / 67 / 70%](03-light-reveal-final/)
-- [最终地形与遮挡](05-environment-final/100-1440x900.png)
+- [最终地形与遮挡（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-cinematic-v3/05-environment-final/100-1440x900.png)
 
 所有截图由 localhost 的实际页面渲染取得；合成展板只缩放、排列截图及添加审图标签，没有重绘建筑或替换页面内容。Camera pass 使用精确基线 line 模块隔离相机。Line / Lighting / 初版 Environment 等中间候选保留在各自目录，最终状态以 `07-animation`、`08-responsive`、最终光扫和最终环境为准。
 

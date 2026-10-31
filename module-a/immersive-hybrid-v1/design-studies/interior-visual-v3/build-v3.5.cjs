@@ -1,5 +1,5 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict'),cp=require('node:child_process');
-const root=path.resolve(__dirname,'../../../..'),out=path.join(root,'docs/validation/interior-visual-v3-5');
+const root=path.resolve(__dirname,'../../../..'),out=require('./validation-paths-v3.5.cjs').out;
 const files=['module-a/a01/app.mjs','module-a/a03/view.mjs','module-a/navigation/controller.mjs',...fs.readdirSync(__dirname).filter(f=>/\.(?:mjs|cjs)$/.test(f)).map(f=>'module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/'+f)];
 for(const file of files){const result=cp.spawnSync(process.execPath,['--check',path.join(root,file)],{encoding:'utf8'});assert.equal(result.status,0,result.stderr);}
 const source=fs.readFileSync(path.join(__dirname,'v35.html'),'utf8'),formal=fs.readFileSync(path.join(root,'module-a/gallery/index.html'),'utf8');assert.equal(formal,source.replace('<head>','<head><base href="../immersive-hybrid-v1/design-studies/interior-visual-v3/">').replace('data-variant="v35"','data-variant="v35" data-audience="true"'));

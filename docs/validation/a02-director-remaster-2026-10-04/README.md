@@ -1,3 +1,7 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # A02 建筑空间 · 视觉导演重制
 
 日期：2026-10-04。开发基线：`73f3e57a818826e2a395034ff6947b69f9d9e989`，开始时 fetch 后本地 HEAD 与 origin/master 一致。范围仅 A02 与必要共享接口，未进入 A03，未修改模块 B。
@@ -23,12 +27,12 @@
 
 ## 可审查材料
 
-- [A01→A02 Contact Sheet](A01-A02-contact-sheet.png)
-- [A02五状态及输出/逆向](A02-state-sheet.png)
-- [同视口 before / after](before-after.png)
-- [四尺寸展板](responsive-sheet.png)
-- 原尺寸核心态：[1920×1080](responsive/1920x1080.jpg)、[1440×900](responsive/1440x900.jpg)、[1366×768](responsive/1366x768.jpg)、[1024×768](responsive/1024x768.jpg)
-- reduced-motion：[1920](reduced/core-1920x1080.jpg)、[1440](reduced/core-1440x900.jpg)、[1366](reduced/core-1366x768.jpg)、[1024](reduced/core-1024x768.jpg)
+- [A01→A02 Contact Sheet（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-director-remaster-2026-10-04/A01-A02-contact-sheet.png)
+- [A02五状态及输出/逆向（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-director-remaster-2026-10-04/A02-state-sheet.png)
+- [同视口 before / after（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-director-remaster-2026-10-04/before-after.png)
+- [四尺寸展板（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-director-remaster-2026-10-04/responsive-sheet.png)
+- 原尺寸核心态：[1920×1080（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-director-remaster-2026-10-04/responsive/1920x1080.jpg)、[1440×900（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-director-remaster-2026-10-04/responsive/1440x900.jpg)、[1366×768（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-director-remaster-2026-10-04/responsive/1366x768.jpg)、[1024×768（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-director-remaster-2026-10-04/responsive/1024x768.jpg)
+- reduced-motion：[1920（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-director-remaster-2026-10-04/reduced/core-1920x1080.jpg)、[1440（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-director-remaster-2026-10-04/reduced/core-1440x900.jpg)、[1366（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-director-remaster-2026-10-04/reduced/core-1366x768.jpg)、[1024（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-director-remaster-2026-10-04/reduced/core-1024x768.jpg)
 - `states/` 保存每尺寸 entry、stable、anchor、line、five、core、end、reverse；`contact/` 保存每尺寸6.20 / 6.45 / 6.70 / 6.95 / 7.55屏；`baseline/` 是修改前实际页面截图。
 - 原始 PNG 与像素一致的无损 WebP 留在本地，远程采用原尺寸 JPEG（质量90，4:4:4，有损，仅用于审图），不裁切或改变构图。[JPEG尺寸核验](review-packing.json)与[本地无损核验](evidence-packing.json)分别记录；未将 JPEG 声称为像素无损。展板是实际页面截图拼接，不是生成效果图。
 

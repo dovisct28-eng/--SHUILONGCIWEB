@@ -1,3 +1,7 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # A04 主殿屋顶全部透空：批注修正验收
 
 基线：GitHub `master` / 本地 `33f3cfdd2a766c1673662666da07ad58c50be624`，修改前已 fetch 核实。用户要求批注区域屋顶全部透空，取消主殿残留的小段坡面。
@@ -21,9 +25,9 @@ Chrome检查1920×1080、1440×900、1366×768、1024×768、780×614全部通�
 
 ## 证据与复现
 
-- [实际入场（对应批注窗口）](actual-entry.webp)、[实际第五铺停靠](actual-fifth.webp)、[自然完成总结](actual-summary.webp)。
-- [1920修改前](1920-before.webp) / [修改后](1920-after.webp)；[780修改前](780-before.webp) / [修改后](780-after.webp)。其余三个尺寸也保留前后对照。
-- [移动窗口10秒](1920-time-10.webp)、[第一铺20秒](1920-time-20.webp)、[总结45秒](1920-time-45.webp)。`time`和前后对照图通过测试固定模型状态，父页字幕维持已完成状态；真实运行图使用 `actual` 前缀。
+- [实际入场（对应批注窗口）（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a04-full-roof-2026-10-05/actual-entry.webp)、[实际第五铺停靠（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a04-full-roof-2026-10-05/actual-fifth.webp)、[自然完成总结（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a04-full-roof-2026-10-05/actual-summary.webp)。
+- [1920修改前（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a04-full-roof-2026-10-05/1920-before.webp) / [修改后（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a04-full-roof-2026-10-05/1920-after.webp)；[780修改前（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a04-full-roof-2026-10-05/780-before.webp) / [修改后（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a04-full-roof-2026-10-05/780-after.webp)。其余三个尺寸也保留前后对照。
+- [移动窗口10秒（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a04-full-roof-2026-10-05/1920-time-10.webp)、[第一铺20秒（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a04-full-roof-2026-10-05/1920-time-20.webp)、[总结45秒（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a04-full-roof-2026-10-05/1920-time-45.webp)。`time`和前后对照图通过测试固定模型状态，父页字幕维持已完成状态；真实运行图使用 `actual` 前缀。
 - [浏览器结果](results.json)、[构建与资源保护结果](build-results.json)。
 
 ```powershell

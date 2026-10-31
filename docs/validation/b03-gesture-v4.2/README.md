@@ -1,3 +1,5 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
 # B03 V4.2 摄像头与手势识别稳定性修复
 
 2026-10-08；实施基线 `7a0e2947269529854787edcb0d0fd25f82be9562`。**软件验收 PASS，真人摄像头验收 PENDING。** 本记录随修复提交；最终发布 SHA 由 `git log -1 --format=%H -- Mural-Exhibition/public/camera-lifecycle.mjs` 或交付报告核实，测试时导出的旧 HEAD 同时标记 `workingTreeChanged=true`，不冒充发布 SHA。

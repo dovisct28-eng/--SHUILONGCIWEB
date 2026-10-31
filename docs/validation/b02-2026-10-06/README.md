@@ -1,12 +1,16 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # B02 · 2026-10-06 验收记录
 
 交付：图鉴全景与人物数据基础设施高保真候选，最终视觉待用户审图。执行基线：`fd46e4f6d7f1e93a5ba761dd08aa3e06168ffd34`。使用方法、配置规范、接口与修改清单见 [作者操作教程](../../B02_GALLERY_AUTHORING.md)，逐文件列表见 [changed-files.txt](changed-files.txt)。本文件不填写尚未生成的自身 commit SHA，提交/同步状态以最终回复和 Git 元数据为准。
 
 ## 图像与八点
 
-[registration.json](registration.json) 记录完整尺寸、字节、源/部署 SHA、缩放 RGB 差与 ±3px 平移搜索；[左右配准对照](registration-left.png) 是相同比例的辅助证据。不是只以宽高比推断可沿用：完整边界、图像相对结构、零偏移最小误差与左端逐点核对共同支持迁移。
+[registration.json](registration.json) 记录完整尺寸、字节、源/部署 SHA、缩放 RGB 差与 ±3px 平移搜索；[左右配准对照（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b02-2026-10-06/registration-left.png) 是相同比例的辅助证据。不是只以宽高比推断可沿用：完整边界、图像相对结构、零偏移最小误差与左端逐点核对共同支持迁移。
 
-八点保持原百分比，名称与原图/线稿/色稿/档案对应；所有旧 PNG 和原档案保留。真实浏览器逐点悬停截图：[01](hotspot-01.png)、[02](hotspot-02.png)、[03](hotspot-03.png)、[04](hotspot-04.png)、[05](hotspot-05.png)、[06](hotspot-06.png)、[07](hotspot-07.png)、[10](hotspot-10.png)。这确认与既有绑定一致，不新增身份结论。
+八点保持原百分比，名称与原图/线稿/色稿/档案对应；所有旧 PNG 和原档案保留。真实浏览器逐点悬停截图：[01（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b02-2026-10-06/hotspot-01.png)、[02（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b02-2026-10-06/hotspot-02.png)、[03（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b02-2026-10-06/hotspot-03.png)、[04（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b02-2026-10-06/hotspot-04.png)、[05（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b02-2026-10-06/hotspot-05.png)、[06（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b02-2026-10-06/hotspot-06.png)、[07（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b02-2026-10-06/hotspot-07.png)、[10（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b02-2026-10-06/hotspot-10.png)。这确认与既有绑定一致，不新增身份结论。
 
 ## 测试与实际运行
 
@@ -24,14 +28,14 @@
 
 | 视口 | 左端初始画面 | 点击到可用 | 截图完成（含截图编码） |
 |---|---|---:|---:|
-| 1920×1080 | [查看](left-1920x1080.png) | 193 ms | 1486 ms |
-| 1440×900 | [查看](left-1440x900.png) | 132 ms | 1411 ms |
-| 1366×768 | [查看](left-1366x768.png) | 116 ms | 1165 ms |
-| 1280×800 | [查看](left-1280x800.png) | 130 ms | 1239 ms |
+| 1920×1080 | [查看（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b02-2026-10-06/left-1920x1080.png) | 193 ms | 1486 ms |
+| 1440×900 | [查看（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b02-2026-10-06/left-1440x900.png) | 132 ms | 1411 ms |
+| 1366×768 | [查看（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b02-2026-10-06/left-1366x768.png) | 116 ms | 1165 ms |
+| 1280×800 | [查看（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b02-2026-10-06/left-1280x800.png) | 130 ms | 1239 ms |
 
 首个上下文冷加载；后续同上下文缓存，不能作为四台电脑独立冷加载数据。四尺寸逐张目视检查：左边界 x=0、原比例、完整高度（扣除操作空间）、8个小标记可辨、按钮不相互遮挡、壁画无强滤镜与持续闪烁、无厚面板常驻观众画面。初始不水平居中，不自动横移。
 
-其他实际截图：[中段](middle.png)、[默认热点/密集区域](hotspots-default.png)、[悬停](hotspot-01.png)、[选中](hotspot-selected.png)、[兼容详情](detail-compatible.png)、[标注管理](admin.png)、[临时预览](admin-preview.png)、[保存成功](admin-saved.png)、[保存失败恢复](admin-save-failure.png)、[只有原图](original-only.png)。[B01入口](b01-regression/b01-1440x900.png) 与 [A08来源](b01-regression/a08-source.png) 用于对照，不修改该两页。
+其他实际截图：[中段（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b02-2026-10-06/middle.png)、[默认热点/密集区域（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b02-2026-10-06/hotspots-default.png)、[悬停（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b02-2026-10-06/hotspot-01.png)、[选中（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b02-2026-10-06/hotspot-selected.png)、[兼容详情（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b02-2026-10-06/detail-compatible.png)、[标注管理（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b02-2026-10-06/admin.png)、[临时预览（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b02-2026-10-06/admin-preview.png)、[保存成功（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b02-2026-10-06/admin-saved.png)、[保存失败恢复（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b02-2026-10-06/admin-save-failure.png)、[只有原图（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b02-2026-10-06/original-only.png)。[B01入口（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b02-2026-10-06/b01-regression/b01-1440x900.png) 与 [A08来源（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b02-2026-10-06/b01-regression/a08-source.png) 用于对照，不修改该两页。
 
 临时人物、测试档案与压力测试截图中“测试人物”明确属于测试证据，未混入正式数据。视觉定位为候选，未新增全局字体/色板或视觉冻结。
 
@@ -44,6 +48,6 @@
 | 30 | 219 | 4.2 ms | 4.3 ms | 0 |
 | 50 | 218 | 4.2 ms | 4.3 ms | 0 |
 
-[30组](stress-30.png)、[50组](stress-50.png) 用集中区域模拟最拥挤情况；全部ID保留在标记/展开列表，支持鼠标与键盘选择，不靠删热点解决。拖动100步+滚轮时统一事件调度。无头Chrome rAF约238次/秒是测试调度频率，不是物理屏幕呈现FPS，也不能证明普通桌面GPU持续60 FPS。未新增每热点动画循环，静止没有图鉴持续RAF。
+[30组（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b02-2026-10-06/stress-30.png)、[50组（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b02-2026-10-06/stress-50.png) 用集中区域模拟最拥挤情况；全部ID保留在标记/展开列表，支持鼠标与键盘选择，不靠删热点解决。拖动100步+滚轮时统一事件调度。无头Chrome rAF约238次/秒是测试调度频率，不是物理屏幕呈现FPS，也不能证明普通桌面GPU持续60 FPS。未新增每热点动画循环，静止没有图鉴持续RAF。
 
 30次真实详情访问后强制GC，JS usedSize从2,403,184 B到2,440,052 B（+36,868 B）；总堆从2,998,272 B到2,998,272 B。该有限样本未观察到无界JS增长，不能证明所有长期泄漏不存在。此测量不包含图像解码、GPU或整个浏览器进程内存；同机物理屏幕帧率/完整RSS与真实摄像头手势仍需实机验收。

@@ -9,7 +9,7 @@
 | `/module-a/a01/` | 正式前言，止于A03稳定构图 |
 | `/module-a/gallery/` | 正式五铺展厅，大门→①②③④⑤→主动进入B |
 | `design-studies/interior-visual-v3/v35.html` | 同一控制器的独立V3.5验证入口 |
-| `v32.html` / `v33.html` / `v34.html` | 历史独立原型，保留各自参数 |
+| V3.2 / V3.3 / V3.4历史独立入口 | 已退役，清理前Tag可恢复；参数与共用代码保留 |
 | `/module-a/a01/?legacy` | 原A01–A08历史三铺路线，非正式主路径 |
 | `http://localhost:3000/index.html` | 原模块B本地独立服务 |
 

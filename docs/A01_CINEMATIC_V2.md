@@ -1,3 +1,5 @@
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # A01 Cinematic Ink Landscape / 墨境入景 v2
 
 2026-10-03。核实开发基线：`fab296b3a558a7037da99bb2f30c67cf3c5ecafd`，本地与远程 master 一致。本轮是 **待用户审图的实现版本**，不是 `A01 High Fidelity v2 Approved`，不冻结字体、色值或全局视觉规范。
@@ -32,7 +34,7 @@
 
 ## Camera / scroll
 
-候选 A：沿用 .24rad 俯角偏移；B：.36rad 更低；C：.30rad＋-.10rad 方位偏移。三张 1440×900 实际截图见 [相机比较](validation/a01-cinematic-v2/camera/candidates.png)。A 保留更多院落视面；B 体量更明显但院落压缩；C 对主殿、院落与纵向延伸的平衡较好，因此继续采用 C。未镜像建筑或变更坐标。
+候选 A：沿用 .24rad 俯角偏移；B：.36rad 更低；C：.30rad＋-.10rad 方位偏移。三张 1440×900 实际截图见 [相机比较（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-cinematic-v2/camera/candidates.png)。A 保留更多院落视面；B 体量更明显但院落压缩；C 对主殿、院落与纵向延伸的平衡较好，因此继续采用 C。未镜像建筑或变更坐标。
 
 仍为原 5 屏动画、1.2 屏稳定阅读、1 屏交接；20% / 65% / 82% 外层分段不改。任务书推荐 38%–55% 等比例用于视觉分析，没有当成新的冻结边界。近看实际主殿，4% 后连续后撤，完整结构线早于实体；原实体按高度显露和旋转保留，材质、光、环境叠合进入；65% 前实体完成，再按既有规则右移和显字。
 
@@ -75,11 +77,11 @@
 
 ## 截图与验收索引
 
-- [Reference / Baseline / Final](validation/a01-cinematic-v2/reference-baseline-final.jpg)
-- [Visual Evolution](validation/a01-cinematic-v2/visual-evolution.jpg)
-- [Final Hero 1440×900](validation/a01-cinematic-v2/08-final-hero.png)
-- [十个动画节点](validation/a01-cinematic-v2/07-line-animation.jpg)
-- [四尺寸 Hero](validation/a01-cinematic-v2/four-size-heroes.jpg)
+- [Reference / Baseline / Final（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-cinematic-v2/reference-baseline-final.jpg)
+- [Visual Evolution（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-cinematic-v2/visual-evolution.jpg)
+- [Final Hero 1440×900（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-cinematic-v2/08-final-hero.png)
+- [十个动画节点（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-cinematic-v2/07-line-animation.jpg)
+- [四尺寸 Hero（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-cinematic-v2/four-size-heroes.jpg)
 - [完整验收说明](validation/a01-cinematic-v2/README.md)
 
 浏览器验收中发现 CSS 改变 iframe 尺寸后 resize event 延迟，相机可能暂用旧 aspect；在原 RAF 渲染前按窗口尺寸即时同步，之后正反滚构图恢复。远景微缩放曾产生反滚重采样，已取消缩放，只保留平移视差。没有新增 RAF。数值状态严格比较；像素比较区分低幅合成舍入和稀疏线边缘误差，不声称逐像素一致，诊断见验收记录。

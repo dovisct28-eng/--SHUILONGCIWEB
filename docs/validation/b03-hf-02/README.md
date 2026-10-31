@@ -1,3 +1,7 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # B03-HF-02 · 多人物自适应与环绕面板布局
 
 2026-10-07。执行前 fetch / ls-remote 确认 HF-01 已实际推送：本地 HEAD、origin/master、GitHub master 均为 `6220d742143568ddd96f219bac715cdc3ef8a77d`。本记录为软件/浏览器验收及视觉候选，作者最终审图与实机验收仍待完成。本阶段止于自适应布局，没有进入第三阶段复杂动态和材质重制。
@@ -41,12 +45,12 @@ figure-only可进入体感；没有figure时继续沿用原line＋color兼容路
 
 | 视口 | ID01默认 | ID01展开 | 恢复与边界 |
 |---|---|---|---|
-| 1920×1080 | [默认](selected/formal-01-default-1920x1080.webp) | [展开](selected/formal-01-revealed-1920x1080.webp) | 收起布局严格相同；实际旋转DOM与人物投影占用、功能区分离 |
-| 1440×900 | [默认](selected/formal-01-default-1440x900.webp) | [展开](selected/formal-01-revealed-1440x900.webp) | 同上 |
-| 1366×768 | [默认](selected/formal-01-default-1366x768.webp) | [展开](selected/formal-01-revealed-1366x768.webp) | 同上 |
-| 1280×800 | [默认](selected/formal-01-default-1280x800.webp) | [展开](selected/formal-01-revealed-1280x800.webp) | 同上 |
+| 1920×1080 | [默认（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-02/selected/formal-01-default-1920x1080.webp) | [展开（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-02/selected/formal-01-revealed-1920x1080.webp) | 收起布局严格相同；实际旋转DOM与人物投影占用、功能区分离 |
+| 1440×900 | [默认（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-02/selected/formal-01-default-1440x900.webp) | [展开（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-02/selected/formal-01-revealed-1440x900.webp) | 同上 |
+| 1366×768 | [默认（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-02/selected/formal-01-default-1366x768.webp) | [展开（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-02/selected/formal-01-revealed-1366x768.webp) | 同上 |
+| 1280×800 | [默认](selected/formal-01-default-1280x800.webp) | [展开（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-02/selected/formal-01-revealed-1280x800.webp) | 同上 |
 
-其他精选均为1440×900：本地ID05 [默认](selected/local-author-05-default.webp) / [展开](selected/local-author-05-revealed.webp)证明同系统的另一真实作者素材构图；[纵向合成](selected/synthetic-tall-default.webp)、[横向合成](selected/synthetic-wide-default.webp)、[不对称合成](selected/synthetic-left-default.webp)、[弱Alpha细结构展开](selected/synthetic-thin-revealed.webp)展示极端/降级；[旧ID02兼容](selected/legacy-02.webp)展示资源不足时的保留行为。精选15张，不提交其他模块截图或整批恢复态。
+其他精选均为1440×900：本地ID05 [默认（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-02/selected/local-author-05-default.webp) / [展开（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-02/selected/local-author-05-revealed.webp)证明同系统的另一真实作者素材构图；[纵向合成（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-02/selected/synthetic-tall-default.webp)、[横向合成（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-02/selected/synthetic-wide-default.webp)、[不对称合成（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-02/selected/synthetic-left-default.webp)、[弱Alpha细结构展开（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-02/selected/synthetic-thin-revealed.webp)展示极端/降级；[旧ID02兼容（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-02/selected/legacy-02.webp)展示资源不足时的保留行为。精选15张，不提交其他模块截图或整批恢复态。
 
 已目视检查正式ID01四尺寸、ID05默认/展开及合成轮廓代表态，并由脚本核对真实旋转DOM、通过Three.js矩阵投影的原图有效边界和占用网格；不只依赖目标矩形或截图目视。按钮/摄像头/顶部文字/姓名/简介均使用实际DOM安全区域；展开采用简介目标offset边界排除CSS平移动画。
 

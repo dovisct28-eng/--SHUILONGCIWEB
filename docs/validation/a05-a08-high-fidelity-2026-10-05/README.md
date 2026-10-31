@@ -1,3 +1,7 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # A05–A08 连续壁画观看廊：联合高保真候选
 
 日期：2026-10-05。开发基线：`8d6517f5cb2303c3c875202fb13c45d91c4f6e63`。本轮用户联合任务替代旧A05–A08一般视觉描述；范围仅模块A的三幅整体导读及交接入口。字号、色值、88/86/82vh、文字分段窗口、4.5vw交接位移仍为**当前高保真候选 / 尚未视觉冻结**，技术验收不替代用户审图或用户体验研究。
@@ -73,10 +77,10 @@ node module-a/guide/boards.cjs
 
 ## 截图与展板
 
-- [旧版四联](01-current-before.webp)
-- [A05/A06/A07/A08四联](09-a05-a08-contact-sheet.webp)
-- [四尺寸联合展板](10-responsive.webp)
-- [分段阅读与巡视](11-reading-and-scan.webp)
-- [交接与CTA焦点](12-entry-and-focus.webp)
+- [旧版四联（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a05-a08-high-fidelity-2026-10-05/01-current-before.webp)
+- [A05/A06/A07/A08四联（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a05-a08-high-fidelity-2026-10-05/09-a05-a08-contact-sheet.webp)
+- [四尺寸联合展板（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a05-a08-high-fidelity-2026-10-05/10-responsive.webp)
+- [分段阅读与巡视（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a05-a08-high-fidelity-2026-10-05/11-reading-and-scan.webp)
+- [交接与CTA焦点（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a05-a08-high-fidelity-2026-10-05/12-entry-and-focus.webp)
 
 展板取真实localhost整屏截图缩放排列，不裁改壁画、不修饰页面像素。独立的`before/`为修改前抓取，`after/`为本轮最终页面；`sample/`只保留迭代候选，不能代替最终验收图。既有回归产生的原始PNG保留在本地，仓库提交同名WebP及JSON/日志，避免重复加入114 MiB原始截图；运行上述检查可重建PNG。四尺寸专项分两批独立浏览器执行，合并结果保留两个原始报告及批次来源。后续Git提交与远程核实以该次交付的SHA及Git元数据为准。

@@ -1,12 +1,14 @@
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # V2.4 旧场景资产审查（初评）
 
 对照图为 V1 已保留的实际模型参考和生成候选；不同版本机位不相同，不可据此认定可直接配准。以下决定针对 V2.4 用途，非删除原资产。尺寸见 `scene-manifest.json`：生成原件 1672×941，Web 版本 1920×1080（放大版本）。每项依次评估空间、透视、墙面、拆层、风格、运动、画质。
 
 | 资产 | 处理建议 | 七项主要依据与证据 |
 |---|---|---|
-| S01 门外 | 保留为参考，不用于 V2.4 接管 | 三门与屋顶大体对应；R03 为静态近正面，非 V2.3 实际入门运动；没有室内壁画墙；门框可作遮挡参考但尚无拆层；暖日光与现有外部环境不同；移动视差未验证；原图放大到 Web 分辨率。见 [R03 对照](../immersive-hybrid-v1/selected/comparison-R03.webp)。外部继续用原真实模型。 |
-| S02 门内 | 修改后作为参考或重新生成 | 戏台背面与右廊大体可辨；R04 与门内轨道位置、FOV 不一致；右墙空白可用于测试；柱与墙重叠需专门遮罩；光照偏亮，与夜色环境有差；单视角不支持大转向；放大与图像生成纹理需复核。见 [R04 对照](../immersive-hybrid-v1/selected/comparison-R04.webp)。 |
-| S03 廊道 | 修改后作为参考或重新生成 | 右墙和柱列的方向接近模型，但柱的位置和轮廓有差；R05 不等于当前镜头；右墙无壁画但前柱遮挡；需柱、墙和地分层；室外光与现有环境不一致；不能以单图覆盖长距离；原图放大后细节需复核。见 [R05 对照](../immersive-hybrid-v1/selected/comparison-R05.webp)。 |
-| S04 第一幅背景 | 修改后作为参考，不直接用作当前停靠画面 | 在 R06 正对右廊墙而非 V2.3 右廊内看墙的机位；柱与墙有差；墙空白利于独立真图，但柱需独立遮挡；材质与其他候选近似、较现有环境明亮；不能直接承担真实廊道转向；Web 版为放大图。见 [R06 对照](../immersive-hybrid-v1/selected/comparison-R06.webp)。 |
+| S01 门外 | 保留为参考，不用于 V2.4 接管 | 三门与屋顶大体对应；R03 为静态近正面，非 V2.3 实际入门运动；没有室内壁画墙；门框可作遮挡参考但尚无拆层；暖日光与现有外部环境不同；移动视差未验证；原图放大到 Web 分辨率。见 [R03 对照（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v1/selected/comparison-R03.webp)。外部继续用原真实模型。 |
+| S02 门内 | 修改后作为参考或重新生成 | 戏台背面与右廊大体可辨；R04 与门内轨道位置、FOV 不一致；右墙空白可用于测试；柱与墙重叠需专门遮罩；光照偏亮，与夜色环境有差；单视角不支持大转向；放大与图像生成纹理需复核。见 [R04 对照（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v1/selected/comparison-R04.webp)。 |
+| S03 廊道 | 修改后作为参考或重新生成 | 右墙和柱列的方向接近模型，但柱的位置和轮廓有差；R05 不等于当前镜头；右墙无壁画但前柱遮挡；需柱、墙和地分层；室外光与现有环境不一致；不能以单图覆盖长距离；原图放大后细节需复核。见 [R05 对照（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v1/selected/comparison-R05.webp)。 |
+| S04 第一幅背景 | 修改后作为参考，不直接用作当前停靠画面 | 在 R06 正对右廊墙而非 V2.3 右廊内看墙的机位；柱与墙有差；墙空白利于独立真图，但柱需独立遮挡；材质与其他候选近似、较现有环境明亮；不能直接承担真实廊道转向；Web 版为放大图。见 [R06 对照（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v1/selected/comparison-R06.webp)。 |
 
 四图均是内置 image_gen 的候选，准确后端型号不可确认；生成日期、原图、Web 副本、参考、提示词和掩膜路径在 `module-a/immersive-hybrid-v1/scene-manifest.json` 与 `prompts/`。按 V2.3 的实现记录，旧整室图没有直接投入 V2.3，S04 只作为局部墙面材料来源；不可称已完成室内图像接管。01→02 的殿前、主殿右墙暂无经过核验的匹配图。

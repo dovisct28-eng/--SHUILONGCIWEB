@@ -1,5 +1,5 @@
 const {chromium}=require('playwright'),fs=require('fs'),path=require('path'),assert=require('assert/strict');
-const out=path.resolve('docs/validation/interior-visual-v3-5'),local=path.join(out,'local'),origin='http://127.0.0.1:4186';
+const out=require('./validation-paths-v3.5.cjs').out,local=path.join(out,'local'),origin='http://127.0.0.1:4186';
 const layout=process.env.V35_LAYOUT||'model',suffix=layout==='report'?'-report':'',galleryURL=origin+'/module-a/gallery/'+(layout==='report'?'?layout=report':'');
 const idle=p=>p.waitForFunction(()=>document.body.dataset.ready==='true'&&document.body.dataset.busy==='false',null,{timeout:90000});
 async function click(p,s){await p.locator(s).click();await idle(p);}

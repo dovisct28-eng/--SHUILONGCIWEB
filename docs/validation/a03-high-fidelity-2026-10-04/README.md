@@ -1,3 +1,7 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # A03 高保真验收 · 2026-10-04
 
 实际开发/对照基线：`b6ce49f90383534bb85c30d1251d8d2dab6cec7f`，重新 fetch 后核实本地与远程 master一致。最终 commit与push核实见本次交付回复及Git元数据。本轮候选完成技术验收，等待用户审图，未冻结视觉参数。
@@ -8,14 +12,14 @@
 
 | 状态 | 1920×1080 | 1440×900 |
 | --- | --- | --- |
-| A02核心稳定 / 9.65屏 | [01](screenshots/1920-01-a02-stable.png) | [01](screenshots/1440-01-a02-stable.png) |
-| A02→A03 / 10.4屏 | [02](screenshots/1920-02-a02-a03-transition.png) | [02](screenshots/1440-02-a02-a03-transition.png) |
-| A03进入 / 10.85屏 | [03](screenshots/1920-03-a03-enter.png) | [03](screenshots/1440-03-a03-enter.png) |
-| A03稳定阅读 / 11.7屏 | [04](screenshots/1920-04-a03-reading.png) | [04](screenshots/1440-04-a03-reading.png) |
-| 阅读细节 / 原浏览器截图裁切 | [Detail](screenshots/1920-reading-detail.png) | [Detail](screenshots/1440-reading-detail.png) |
-| 从第五幅出发 / 12.92屏 | [05](screenshots/1920-05-a03-handoff.png) | [05](screenshots/1440-05-a03-handoff.png) |
-| 现有A04入口 / 13.21屏 | [06](screenshots/1920-06-a04-entry.png) | [06](screenshots/1440-06-a04-entry.png) |
-| Reduced Motion | [1920](screenshots/1920-reduced.png) | [1440](screenshots/1440-reduced.png) |
+| A02核心稳定 / 9.65屏 | [01（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a03-high-fidelity-2026-10-04/screenshots/1920-01-a02-stable.png) | [01（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a03-high-fidelity-2026-10-04/screenshots/1440-01-a02-stable.png) |
+| A02→A03 / 10.4屏 | [02（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a03-high-fidelity-2026-10-04/screenshots/1920-02-a02-a03-transition.png) | [02（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a03-high-fidelity-2026-10-04/screenshots/1440-02-a02-a03-transition.png) |
+| A03进入 / 10.85屏 | [03（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a03-high-fidelity-2026-10-04/screenshots/1920-03-a03-enter.png) | [03（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a03-high-fidelity-2026-10-04/screenshots/1440-03-a03-enter.png) |
+| A03稳定阅读 / 11.7屏 | [04（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a03-high-fidelity-2026-10-04/screenshots/1920-04-a03-reading.png) | [04（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a03-high-fidelity-2026-10-04/screenshots/1440-04-a03-reading.png) |
+| 阅读细节 / 原浏览器截图裁切 | [Detail（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a03-high-fidelity-2026-10-04/screenshots/1920-reading-detail.png) | [Detail（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a03-high-fidelity-2026-10-04/screenshots/1440-reading-detail.png) |
+| 从第五幅出发 / 12.92屏 | [05（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a03-high-fidelity-2026-10-04/screenshots/1920-05-a03-handoff.png) | [05（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a03-high-fidelity-2026-10-04/screenshots/1440-05-a03-handoff.png) |
+| 现有A04入口 / 13.21屏 | [06（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a03-high-fidelity-2026-10-04/screenshots/1920-06-a04-entry.png) | [06（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a03-high-fidelity-2026-10-04/screenshots/1440-06-a04-entry.png) |
+| Reduced Motion | [1920（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a03-high-fidelity-2026-10-04/screenshots/1920-reduced.png) | [1440（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a03-high-fidelity-2026-10-04/screenshots/1440-reduced.png) |
 
 截图均来自 localhost 实际 Chrome，未生成替代效果图；Detail由浏览器直接截取阅读区域，无重绘。两张旧版阅读截图保存在 `baseline/a03-1920x1080.png` 与 `baseline/a03-1440x900.png`，用于视觉关系对照；其他基线/旧回归PNG留在本地。远程保留本表完整关键帧，不只提交最好的一张。
 

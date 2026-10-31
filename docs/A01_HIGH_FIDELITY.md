@@ -1,3 +1,5 @@
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # A01「一线成祠」实现与验收
 
 2026-10-02；开发基线 `4dbc656668880ed3a7d4aeb235064b5aa8701f0a`（开始前 fetch 后核实与远程 master 一致）。仅作用于模块 A 的 A01 视觉、共享预览的受控开屏接口及相关构建/验收。模块 B、A02—A08 叙事、A04 58 秒时间线、建筑源、GLB、原始壁画和低保真归档机制均保持原样。用户原有归档脚本修改及素材增删不纳入本次提交。
@@ -78,7 +80,7 @@ git diff --check
 
 正/反滚数值状态严格相等；截图允许少量 WebGL 透明阶段边缘抗锯齿误差，比较细节保留在 [results.json](validation/a01-line/results.json)，不宣称逐像素完全相同。停止 850ms、快速跨章、刷新中段、1920→1440→1024 resize、reduced-motion、线模块/数据/环境/字体/GLB 失败回退全部通过。A02 五幅定位可用，倒滚进 A01 清零；线层不在 A02 重新出现。A04 实际三次停靠、回撤、路线、跳过/重播、刷新/早离/后台暂停/键盘和 reduced-motion 通过；A04→A05 四尺寸交接、A05—A08 基本可达、建筑贴图及失败回退通过。
 
-本地 `validation/a01-line/` 保存四尺寸 initial、travel、line-early、line-complete、overlap、solid、shift、hero、transition，共 36 状态截图，以及 6 组 reduced/failure Hero。`before/` 为实施前四张 1440×900。提交精选 Hero/线态/叠合、全尺寸联系表和文本记录，其余大图留本地；视觉人工检查了联系表、窄桌面全图、字体 fallback 与关键线/实体叠合。代表图见 [联系表](validation/a01-line/contact.jpg)。
+本地 `validation/a01-line/` 保存四尺寸 initial、travel、line-early、line-complete、overlap、solid、shift、hero、transition，共 36 状态截图，以及 6 组 reduced/failure Hero。`before/` 为实施前四张 1440×900。提交精选 Hero/线态/叠合、全尺寸联系表和文本记录，其余大图留本地；视觉人工检查了联系表、窄桌面全图、字体 fallback 与关键线/实体叠合。代表图见 [联系表（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-line/contact.jpg)。
 
 ## 仍需区分的事项
 
@@ -155,7 +157,7 @@ Chrome 154.0.8037.93 headless、1440×900，同机每版本三个独立 context 
 
 倒滚的数值状态严格一致；透明线/实体叠合存在 WebGL 边缘像素误差。最新四尺寸最大像素通道差 23—27，变化像素占全图约 0.081%—0.129%；保留幅度、占比和变化像素均值联合阈值，没有关闭截图比较。一次诊断差异图也已查看，变化集中在结构线/透明边缘，不能将结果称为逐像素完全一致。
 
-产物见 [验收目录](validation/a01-visual-remaster/README.md)、[四尺寸 Hero](validation/a01-visual-remaster/contact/heroes.jpg)、[Before / After](validation/a01-visual-remaster/contact/before-after.jpg)、[生长与交接](validation/a01-visual-remaster/contact/growth-and-handoff.jpg)。原 `a01-line/` 记录未覆盖，完整原始 PNG 保留本地，提交精选图、联系表和结构化报告。
+产物见 [验收目录](validation/a01-visual-remaster/README.md)、[四尺寸 Hero（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-visual-remaster/contact/heroes.jpg)、[Before / After（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-visual-remaster/contact/before-after.jpg)、[生长与交接（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-visual-remaster/contact/growth-and-handoff.jpg)。原 `a01-line/` 记录未覆盖，完整原始 PNG 保留本地，提交精选图、联系表和结构化报告。
 
 仍存在的限制：1024 的高度为 46.8vh，优先避免裁切与文案相压；原模型屋面/砖纹的程序重复感及未测绘细节仍在，没有为追逐参考图更改几何；本轮视觉改善不等于历史复原精度提升。
 

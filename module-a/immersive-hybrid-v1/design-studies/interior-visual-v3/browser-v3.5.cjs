@@ -1,7 +1,7 @@
 const {chromium}=require('playwright'),fs=require('fs'),path=require('path'),assert=require('assert/strict');
-const out=path.resolve('docs/validation/interior-visual-v3-5'),local=path.join(out,'local');fs.mkdirSync(local,{recursive:true});
+const out=require('./validation-paths-v3.5.cjs').out,local=path.join(out,'local');fs.mkdirSync(local,{recursive:true});
 const layout=process.env.V35_LAYOUT||'model',reportName=layout==='report'?'results-report.json':'results.json';
-const base='http://127.0.0.1:4186',url=base+'/module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/v35.html?layout='+layout;
+const base='http://127.0.0.1:4186',url=base+'/module-a/gallery/?debug&layout='+layout;
 const sizes=[[2880,990],[6000,1357],[1286,636],[1280,939],[6000,1617]];
 async function idle(p){await p.waitForFunction(()=>window.study?.ready&&!study.busy,null,{timeout:90000});}
 async function click(p,s){await p.locator(s).click();await idle(p);}
@@ -14,7 +14,7 @@ async function controls(p,index){
  await p.mouse.down();await p.mouse.move(vp.x+vp.width/2+70,vp.y+vp.height/2+35,{steps:4});await p.mouse.up();const drag=await p.evaluate(()=>study.detail);assert.ok(Math.abs(drag.x)>0||Math.abs(drag.y)>0);await p.keyboard.press('ArrowRight');const moved=await p.evaluate(()=>study.detail);assert.notEqual(moved.x,drag.x);
  const map=await p.locator('#minimap').boundingBox();assert.ok(Math.abs(map.width/map.height-sizes[index][0]/sizes[index][1])<.02,'minimap ratio');await p.mouse.click(map.x+map.width*.7,map.y+map.height*.3);
  const q=await p.locator('#mini-window').evaluate(r=>Object.fromEntries(['x','y','width','height'].map(k=>[k,+r.getAttribute(k)])));assert.ok(q.x>=0&&q.y>=0&&q.x+q.width<=sizes[index][0]+.01&&q.y+q.height<=sizes[index][1]+.01);
- await click(p,'#reset');assert.deepEqual(await p.evaluate(()=>study.detail),{zoom:1,x:0,y:0});assert.equal(await p.locator('#minimap svg').getAttribute('viewBox'),`0 0 ${sizes[index].join(' ')}`);await p.locator('#detail-viewport').focus();await p.keyboard.press('+');await p.keyboard.press('0');assert.equal(await p.evaluate(()=>study.detail.zoom),1);await click(p,'#detail-return');return{drag,moved,minimap:q};
+ if(index===2&&p.viewportSize().width===1440)await snap(p,'detail-third');await click(p,'#reset');assert.deepEqual(await p.evaluate(()=>study.detail),{zoom:1,x:0,y:0});assert.equal(await p.locator('#minimap svg').getAttribute('viewBox'),`0 0 ${sizes[index].join(' ')}`);await p.locator('#detail-viewport').focus();await p.keyboard.press('+');await p.keyboard.press('0');assert.equal(await p.evaluate(()=>study.detail.zoom),1);await click(p,'#detail-return');return{drag,moved,minimap:q};
 }
 (async()=>{const b=await chromium.launch({channel:'chrome',headless:true}),report={routeCase:layout,runs:[],pass:false};try{
  const configs=process.env.V35_ONE?[[1440,900,false]]:[[1440,900,false],[1920,1080,false],[1366,768,false],[1440,900,true],[1920,1080,true],[1366,768,true]];

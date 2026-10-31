@@ -1,3 +1,7 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # B03-HF-04｜动态环绕、空间层级与壁画质感深化
 
 2026-10-07。开发前 fetch 并核实 `HEAD = origin/master = 94e30cebe8ae7ca39235afd8513c86436c0a4bf8`。本轮交付 B03 表现层实现、实际浏览器动态证据与回归结果；作者最终审图、不同正式人物对比和展厅物理验收仍待进行。
@@ -49,12 +53,12 @@ Camera start/stop、权限、MediaPipe、摄像头预览DOM/位置/尺寸/边框
 
 | 精选 | 状态 |
 |---|---|
-| [1920默认](selected/formal-01-default-1920x1080.webp) | 正式01、Standard、层级/全景 |
+| [1920默认（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-04/selected/formal-01-default-1920x1080.webp) | 正式01、Standard、层级/全景 |
 | [1440默认](selected/formal-01-default-1440x900.webp) | 常规桌面、Standard材质对照复用 |
-| [巡游焦点](selected/formal-01-panel-focus.webp) | 1920、单窗提亮/connector事件关键帧 |
-| [人物切换](selected/formal-01-switching.webp) | 1440、旧正式01退场，下一选择为本地05；界面标题已更新、旧主体仍收束 |
-| [简介展开](selected/formal-01-revealed.webp) | 1440、原revealed安全布局 |
-| [材质关闭](selected/material-off.webp) | 1440、原figure显示对照 |
+| [巡游焦点（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-04/selected/formal-01-panel-focus.webp) | 1920、单窗提亮/connector事件关键帧 |
+| [人物切换（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-04/selected/formal-01-switching.webp) | 1440、旧正式01退场，下一选择为本地05；界面标题已更新、旧主体仍收束 |
+| [简介展开（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-04/selected/formal-01-revealed.webp) | 1440、原revealed安全布局 |
+| [材质关闭（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-04/selected/material-off.webp) | 1440、原figure显示对照 |
 
 精选6张，共5,042,336 B（约4.81MiB）。无损WebP与原PNG尺寸及RGBA逐一一致；清单/哈希见 [evidence-publication.json](evidence-publication.json)。1366/1280边界图、重复恢复图、错误诊断及全回归留local，未删除历史证据。可用 `node b03-hf04-evidence.cjs` 重新核验保护和整理本轮已有浏览器证据（需要sharp和完整local结果）。
 

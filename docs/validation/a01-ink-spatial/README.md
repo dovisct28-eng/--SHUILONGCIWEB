@@ -1,11 +1,15 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # A01 暗灰水墨空间验收
 
 2026-10-02—03；基线 `9191fed7cd5d2c7dbe50c859231ead46f37cebd1`。实施前视觉拆解与五 Pass 说明见 [A01_INK_SPATIAL.md](../../A01_INK_SPATIAL.md)。本轮只改变观看、材质、光影和设计环境，不提升历史复原可信度。
 
-- [Before / After](before-after.jpg)：实际 1440×900 Hero。
-- [首帧补验](entry-before-after.jpg)：左为五 Pass 完成时的空场，右为最终实际模型轮廓。最终从零滚动即有近景线稿；主体按既有进度后撤和成形。
-- 五轮对照：[Camera](camera-comparison.jpg)、[Lighting](lighting-comparison.jpg)、[Material](material-comparison.jpg)、[Environment](environment-comparison.jpg)、[Composite](composite-comparison.jpg)。每轮先保存 8 张原尺寸 PNG 并查看，再进入下一轮；比较图为缩小的联系表。
-- [四尺寸 Hero](final/contact/heroes.jpg)、[全部状态](final/contact/all-states.jpg)、[生长与交接](final/contact/growth-and-handoff.jpg)。完整原始 PNG 留本地，Git 提交精选图、联系表及报告。
+- [Before / After（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-ink-spatial/before-after.jpg)：实际 1440×900 Hero。
+- [首帧补验（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-ink-spatial/entry-before-after.jpg)：左为五 Pass 完成时的空场，右为最终实际模型轮廓。最终从零滚动即有近景线稿；主体按既有进度后撤和成形。
+- 五轮对照：[Camera（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-ink-spatial/camera-comparison.jpg)、[Lighting（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-ink-spatial/lighting-comparison.jpg)、[Material（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-ink-spatial/material-comparison.jpg)、[Environment（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-ink-spatial/environment-comparison.jpg)、[Composite（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-ink-spatial/composite-comparison.jpg)。每轮先保存 8 张原尺寸 PNG 并查看，再进入下一轮；比较图为缩小的联系表。
+- [四尺寸 Hero（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-ink-spatial/final/contact/heroes.jpg)、[全部状态（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-ink-spatial/final/contact/all-states.jpg)、[生长与交接（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a01-ink-spatial/final/contact/growth-and-handoff.jpg)。完整原始 PNG 留本地，Git 提交精选图、联系表及报告。
 - [新浏览器验证](final/results.json)：44 个 A01 帧、12 个共享章节帧；实际模型顶点投影、阅读/停滚、倒滚、交接、跳章，四种 reduced/艺术模块/墨景模块/墨景图片失败模式。
 - [线层回归](line-regression/results.json)：36 帧、像素倒滚、刷新中段、快速跳转、resize、六种 reduced/资源失败模式；A01 隐藏 mural groups、A02 恢复。
 - [合成文字对比](contrast.json)：实际背景采样，四个 Hero 最低 7.97 / 6.93 / 6.63 / 6.73 : 1；普通文字至少 4.5，大标题至少 3。调色变量在交接中也满足 4.5；淡出透明帧不等同完整阅读态。

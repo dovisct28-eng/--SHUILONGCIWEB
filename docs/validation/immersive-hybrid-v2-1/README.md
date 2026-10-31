@@ -1,3 +1,5 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
 # 水龙祠原境数字展厅 V2.1｜入口重构与验收
 
 > Repository Cleanup V1.0 历史提示：本页为当时版本的验收记录，以下入口、命令和视觉结论仅适用于[该历史提交](https://github.com/dovisct28-eng/--SHUILONGCIWEB/tree/4f80826592ffeeb2fa02243ff72c14c5917f3cad)，不代表当前版本。当前共享建筑基线为 Combined B / V2.4-B1，入口与范围见[当前展厅说明](../../../module-a/immersive-hybrid-v1/README.md)；本页原有历史证据完整保留。

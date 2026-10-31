@@ -37,3 +37,7 @@ Mural-Exhibition/public/assets/splash-bg.png
 
 # 后续阶段的重复回归与临时截图留在各阶段 local/，精选截图另行提交
 /docs/validation/**/local/
+
+# Cleanup V2: generated local reports/caches; formal sources and original media remain protected
+/.cache/
+/docs/maintenance/repository-cleanup-v2/local/

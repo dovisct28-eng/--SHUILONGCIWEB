@@ -1,3 +1,7 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # B03-HF-03 · 材质、显影与体感视觉反馈
 
 2026-10-07。基线 `2cae6f06e4055cebf48b3bdd241906ef88a0b161`，执行前重新 fetch 远程 master 并确认本地与 origin/master 相同。HF-01/02 的记录是技术通过的视觉候选，不能据此推定作者已完成最终审图；本轮沿用它们的构图、安全区和稳定随机布局。此记录交付软件实现和实际浏览器证据，最终作者审图、不同正式人物对比和展厅硬件验收仍待完成。
@@ -76,12 +80,12 @@ figure主体/轮廓共用一张纹理；反馈预算从≤80,000降至≤6,000�
 
 | 视口 | 默认 | 简介展开 |
 |---|---|---|
-| 1920×1080 | [默认](selected/formal-01-default-1920x1080.webp) | [展开](selected/formal-01-revealed-1920x1080.webp) |
-| 1440×900 | [默认/标准材质](selected/formal-01-default-1440x900.webp) | [展开](selected/formal-01-revealed-1440x900.webp) |
-| 1366×768 | [默认](selected/formal-01-default-1366x768.webp) | [展开](selected/formal-01-revealed-1366x768.webp) |
-| 1280×800 | [默认](selected/formal-01-default-1280x800.webp) | [展开](selected/formal-01-revealed-1280x800.webp) |
+| 1920×1080 | [默认（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-03/selected/formal-01-default-1920x1080.webp) | [展开（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-03/selected/formal-01-revealed-1920x1080.webp) |
+| 1440×900 | [默认/标准材质（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-03/selected/formal-01-default-1440x900.webp) | [展开（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-03/selected/formal-01-revealed-1440x900.webp) |
+| 1366×768 | [默认（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-03/selected/formal-01-default-1366x768.webp) | [展开（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-03/selected/formal-01-revealed-1366x768.webp) |
+| 1280×800 | [默认](selected/formal-01-default-1280x800.webp) | [展开（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-03/selected/formal-01-revealed-1280x800.webp) |
 
-1440×900材质对照：[关闭/原figure](selected/material-off.webp)、[轻质感](selected/material-subtle.webp)、[标准质感](selected/formal-01-default-1440x900.webp)。过程：[人物显影](selected/pigment-forming.webp)、[环绕渐进](selected/orbit-forming.webp)、[切换显影](selected/switching.webp)。默认和展开完成态复用上表，避免重复精选。降级/恢复/reduced/旧兼容和本地05等其余运行图保留local/，测试结果含其状态。
+1440×900材质对照：[关闭/原figure（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-03/selected/material-off.webp)、[轻质感（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-03/selected/material-subtle.webp)、[标准质感（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-03/selected/formal-01-default-1440x900.webp)。过程：[人物显影（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-03/selected/pigment-forming.webp)、[环绕渐进（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-03/selected/orbit-forming.webp)、[切换显影（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-03/selected/switching.webp)。默认和展开完成态复用上表，避免重复精选。降级/恢复/reduced/旧兼容和本地05等其余运行图保留local/，测试结果含其状态。
 
 ## 未完成的真实材料与实机验收
 

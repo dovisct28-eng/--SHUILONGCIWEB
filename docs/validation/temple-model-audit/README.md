@@ -1,10 +1,14 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # 阶段一审查成果与复验记录
 
 2026-10-28。范围为shared建筑的只读审查与功能分支影响分析；新增文件仅在本目录，未修改shared、正式A01–A08、模块B、现有实验入口、GLB、原材质/原图/摄像机/AI资产。
 
 - [审查报告](MODEL_AUDIT.md)：结论、尺寸表、五墙核对、优先级及依赖风险。
 - [可编辑SVG](model-layout-comparison.svg)：原生矢量对象，不嵌入截图；可在Illustrator继续编辑。历史图是有来源的示意提炼，不能作为精密CAD或修复后实测图。
-- [文献图6提取](references/figure-6-plan.webp)：原PDF物理第7页；仅旋转−90°、裁切。原件位置与哈希记于`validation-results.json`，整页原渲染与临时图留`local/`，未提交整份PDF或照片原件。
+- [文献图6提取（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/temple-model-audit/references/figure-6-plan.webp)：原PDF物理第7页；仅旋转−90°、裁切。原件位置与哈希记于`validation-results.json`，整页原渲染与临时图留`local/`，未提交整份PDF或照片原件。
 - [验证数据](validation-results.json)与[文件检查](file-checks.json)：实际运行、视图矩阵、包围盒、输入指纹及最终精选文件大小/哈希。
 
 ## 精选截图

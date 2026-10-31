@@ -1,3 +1,4 @@
+// Historical capture/reference only: retired v32/v33/v34 HTML must first be restored from pre-repository-cleanup-v2-2026-10-31. Current coverage: browser-v3.5 + integration-v3.5 + edge-v3.5.
 // Focused fifth-mural checks only. No prior-mural sweep and no recording.
 const {chromium}=require('playwright'),fs=require('fs'),path=require('path'),assert=require('assert/strict'),sharp=require('sharp');
 const out=path.resolve('docs/validation/interior-visual-v3-4'),local=path.join(out,'local'),selected=path.join(out,'selected');for(const d of[local,selected])fs.mkdirSync(d,{recursive:true});

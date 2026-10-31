@@ -1,3 +1,7 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # A04 空间观看路径高保真重制 · 2026-10-05
 
 开发基线：`65e76a187ebdb56a1b877fe9ddb61f2beefc9d08`，开始前fetch核实本地与origin/master一致。范围：Module A A04，以及A03末端舞台/共享cutaway/光照必要交接。依据为本轮用户任务书；旧58秒、全屋顶渐隐、小窗口放大限制由本轮明确授权覆盖。另按用户浏览器反馈将资料边界说明移至右下，字号13px与颜色`#b5b6ad`保持。
@@ -6,11 +10,11 @@
 
 ## 结果与证据
 
-![最终叙事序列](sequence.webp)
+[最终叙事序列（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a04-high-fidelity-2026-10-05/sequence.webp)
 
-- [修改前后](before-after.webp)：真实旧基线与实际45秒播放，含入口、第五铺、第一铺、完整路线。
-- [四尺寸审图](responsive.webp)：1920×1080、1440×900、1366×768、1024×768。
-- [45/58秒候选](duration-comparison.webp)：同一路径与里程点的实际播放截图。
+- [修改前后（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a04-high-fidelity-2026-10-05/before-after.webp)：真实旧基线与实际45秒播放，含入口、第五铺、第一铺、完整路线。
+- [四尺寸审图（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a04-high-fidelity-2026-10-05/responsive.webp)：1920×1080、1440×900、1366×768、1024×768。
+- [45/58秒候选（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a04-high-fidelity-2026-10-05/duration-comparison.webp)：同一路径与里程点的实际播放截图。
 - [最终播放状态](after/states.json)、[58秒播放状态](duration-58/states.json)、[旧基线状态](before/states.json)。对应WebP为无改图的截图压缩副本，原PNG保留本地；压缩证据不能替代壁画母版。
 - [四尺寸状态检查](review.json)、[浏览器运行](browser/results.json)、[纹理呈现](browser/mural-textures/results.json)、[异常恢复](resilience/resilience.json)、[性能](performance.json)、[构建与保护](build-results.json)。完整运行日志见 `logs/`。
 

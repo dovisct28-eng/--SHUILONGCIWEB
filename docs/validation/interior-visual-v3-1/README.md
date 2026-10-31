@@ -1,3 +1,7 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # V3.1 阅读展墙背景验收
 
 2026-10-30；基线：fetch 核实的 feature/shuilongci-hybrid-gallery-v1 / `8643a4daeb55cca217ab0be5222822c3716bf14c`。只更新独立 V3，未替换正式展厅。
@@ -29,12 +33,12 @@
 
 |内容|截图|
 |---|---|
-|第一铺全幅修改前|[before](selected/first-full-before.webp)|
-|第一铺全幅修改后|[after](selected/full-1-1440-true.webp)|
+|第一铺全幅修改前|[before（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/interior-visual-v3-1/selected/first-full-before.webp)|
+|第一铺全幅修改后|[after（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/interior-visual-v3-1/selected/full-1-1440-true.webp)|
 |第一铺细读修改后|[detail](selected/first-detail-after.webp)|
-|第三铺全幅修改后|[third](selected/full-3-1440-true.webp)|
-|第四铺竖幅修改后|[fourth](selected/full-4-1440-true.webp)|
-|第五铺全幅修改后|[fifth](selected/full-5-1440-true.webp)|
+|第三铺全幅修改后|[third（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/interior-visual-v3-1/selected/full-3-1440-true.webp)|
+|第四铺竖幅修改后|[fourth（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/interior-visual-v3-1/selected/full-4-1440-true.webp)|
+|第五铺全幅修改后|[fifth（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/interior-visual-v3-1/selected/full-5-1440-true.webp)|
 
 ## 复现
 

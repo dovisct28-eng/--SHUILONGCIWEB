@@ -1,3 +1,5 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
 # B03 V4.3 控制手连续追踪与交互可达性
 
 实施日期：2026-10-09。审查基线：`d61b145881d05aaa80e3562ae8f98a889b4505f7`（任务开始时本地 HEAD 与独立远程 master 一致）。真人状态固定为 `PHYSICAL_CAMERA_PENDING`。最终软件结果及完整修改文件清单见[test-results.json](test-results.json)，浏览器证据范围见[browser-results.json](browser-results.json)，保护检查见[build-results.json](build-results.json)。

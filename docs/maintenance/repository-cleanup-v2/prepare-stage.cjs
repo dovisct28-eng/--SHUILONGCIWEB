@@ -1,0 +1,10 @@
+const fs=require('fs'),path=require('path'),cp=require('child_process');const root=path.resolve(__dirname,'../../..');process.chdir(root);
+const git=(...a)=>cp.execFileSync('git',a,{encoding:'utf8',maxBuffer:20e6}).split('\0').filter(Boolean);
+const protectedFiles=new Set(JSON.parse(fs.readFileSync(path.join(__dirname,'original-work-protection.json'))).map(f=>f.path));
+const modified=[...new Set([...git('diff','--name-only','-z'),...git('diff','--cached','--name-only','-z')])],untracked=git('ls-files','--others','--exclude-standard','-z');
+const owned=p=>p.startsWith('docs/maintenance/repository-cleanup-v2/')&&!p.includes('/local/')||p==='docs/CURRENT_ARCHITECTURE.md'||/^docs\/validation\/[^/]+\/README\.md$/.test(p)||p==='docs/validation/interior-visual-v3-5/selected/13-third-detail.webp'||p==='module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/validation-paths-v3.5.cjs';
+const files=[...new Set([...modified.filter(f=>!protectedFiles.has(f)),...untracked.filter(f=>owned(f)&&!protectedFiles.has(f)),'docs/maintenance/repository-cleanup-v2/staging-review.json'])].sort();
+if(files.some(f=>protectedFiles.has(f)||f.startsWith('Mural-Exhibition/')||f.startsWith('.lofi-')||f.includes('/local/')))throw Error('Protected/unrelated stage path');
+fs.writeFileSync(path.join(__dirname,'staging-review.json'),JSON.stringify({paths:files,count:files.length,originalUserPathsExcluded:modified.filter(p=>protectedFiles.has(p)),originalUserChangesStaged:false,branch:'feature/shuilongci-hybrid-gallery-v1'},null,2)+'\n');
+const indexed=new Set(git('ls-files','-z')),addable=files.filter(f=>fs.existsSync(f)||indexed.has(f));
+fs.writeFileSync(path.join(__dirname,'local/stage-paths.bin'),addable.join('\0')+'\0');console.log('Reviewed paths',files.length,'add/update paths',addable.length,'original modified paths excluded',modified.filter(p=>protectedFiles.has(p)).length);

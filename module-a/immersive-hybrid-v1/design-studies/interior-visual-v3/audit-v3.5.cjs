@@ -1,6 +1,7 @@
+// Historical capture/reference only: retired v32/v33/v34 HTML must first be restored from pre-repository-cleanup-v2-2026-10-31. Current coverage: browser-v3.5 + integration-v3.5 + edge-v3.5.
 const {chromium}=require('playwright');
 const fs=require('node:fs'),path=require('node:path');
-const out=path.resolve('docs/validation/interior-visual-v3-5');
+const out=require('./validation-paths-v3.5.cjs').out;
 fs.mkdirSync(path.join(out,'local'),{recursive:true});
 async function state(p){return p.evaluate(()=>{let s=study.runtime.model.root;while(s.parent)s=s.parent;const walls=[];s.traverse(o=>{if(o.name.includes('real-')||o.name.includes('mural'))walls.push({name:o.name,visible:o.visible,image:o.material?.map?.image?.src,color:o.material?.color?.toArray()});});return{activeMural:study.activeMural,view:study.view,busy:study.busy,route:study.route32,rear:study.rear?.state,pose:study.runtime.model.pose,image:document.querySelector('#reading-image').currentSrc,walls};});}
 async function settled(p){await p.waitForFunction(()=>study.ready&&!study.busy,null,{timeout:90000});}

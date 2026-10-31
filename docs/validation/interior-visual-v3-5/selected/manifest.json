@@ -1,119 +1,89 @@
 {
   "items": [
     {
-      "file": "01-third-before.webp",
-      "source": "local/before-wall-2.png",
-      "state": "V3.4 continuous third dock",
-      "viewport": [
-        1440,
-        900
-      ],
-      "bytes": 106498
-    },
-    {
       "file": "02-third-after.webp",
-      "source": "local/after-wall-2.png",
-      "state": "A current-model third dock, right wall",
+      "source": "local/latest/local/after-wall-2.png",
+      "state": "A model third, right wall",
       "viewport": [
         1440,
         900
       ],
-      "bytes": 97460
-    },
-    {
-      "file": "03-fourth-before.webp",
-      "source": "local/before-wall-3.png",
-      "state": "V3.4 continuous fourth dock",
-      "viewport": [
-        1440,
-        900
-      ],
-      "bytes": 110332
+      "bytes": 97908
     },
     {
       "file": "04-fourth-after.webp",
-      "source": "local/after-wall-3.png",
-      "state": "A current-model fourth dock, left wall",
+      "source": "local/latest/local/after-wall-3.png",
+      "state": "A model fourth, left wall",
       "viewport": [
         1440,
         900
       ],
-      "bytes": 109086
+      "bytes": 109636
     },
     {
       "file": "05-second-dark.webp",
-      "source": "local/after-second-dark.png",
-      "state": "V3.5 real first-to-second dark phase",
+      "source": "local/latest/local/after-second-dark.png",
+      "state": "second mural dark hold",
       "viewport": [
         1440,
         900
       ],
-      "bytes": 85224
+      "bytes": 85870
     },
     {
       "file": "06-second-title.webp",
-      "source": "local/after-second-title.png",
-      "state": "V3.5 real first-to-second title phase",
+      "source": "local/latest/local/after-second-title.png",
+      "state": "second mural title/reveal",
       "viewport": [
         1440,
         900
       ],
-      "bytes": 91978
+      "bytes": 129560
     },
     {
       "file": "07-a03-entry.webp",
-      "source": "local/formal-a03.png",
-      "state": "formal A03 preserved poster + gallery link",
+      "source": "local/latest/local/formal-a03.png",
+      "state": "A03 active formal gallery entrance",
       "viewport": [
         1440,
         900
       ],
-      "bytes": 119318
-    },
-    {
-      "file": "08-module-b.webp",
-      "source": "local/formal-module-b.png",
-      "state": "real module B landing",
-      "viewport": [
-        1440,
-        900
-      ],
-      "bytes": 215100
+      "bytes": 119344
     },
     {
       "file": "09-fifth-full.webp",
-      "source": "local/after-reading-4.png",
-      "state": "fifth full contain image",
+      "source": "local/latest/local/after-reading-4.png",
+      "state": "fifth mural complete natural-ratio reading",
       "viewport": [
         1440,
         900
       ],
-      "bytes": 161756
+      "bytes": 161930
     },
     {
       "file": "10-case-b-third.webp",
-      "source": "local/report-after-wall-2.png",
-      "state": "B comparison third dragon on left",
+      "source": "local/latest/local/report-after-wall-2.png",
+      "state": "B report third, left wall",
       "viewport": [
         1440,
         900
       ],
-      "bytes": 83814
+      "bytes": 84236
     },
     {
       "file": "11-case-b-fourth.webp",
-      "source": "local/report-after-wall-3.png",
-      "state": "B comparison fourth qilin on right",
+      "source": "local/latest/local/report-after-wall-3.png",
+      "state": "B report fourth, right wall",
       "viewport": [
         1440,
         900
       ],
-      "bytes": 116418
+      "bytes": 117012
     },
     {
       "file": "12-route-selector.webp",
-      "source": "local/route-choice-report.png",
-      "state": "formal two-case selector",
+      "source": "local/latest/local/route-choice-report.png",
+      "state": "formal A/B selector",
       "viewport": [
         1440,
         900
@@ -121,25 +91,17 @@
       "bytes": 250496
     },
     {
-      "file": "continuous-walk-1440x900.webm",
-      "source": "D:\\YJS\\出兵入将-PC端页面\\docs\\validation\\interior-visual-v3-5\\local\\formal-video\\page@0c4ffa944c2a5055f9b52e7331a3c15d.webm",
-      "state": "model uncut real formal route and B handoff/return",
+      "file": "13-third-detail.webp",
+      "source": "local/latest/local/detail-third.png",
+      "state": "third mural zoom/pan/minimap detail",
       "viewport": [
         1440,
         900
       ],
-      "bytes": 13135583
-    },
-    {
-      "file": "continuous-walk-report-1440x900.webm",
-      "source": "D:\\YJS\\出兵入将-PC端页面\\docs\\validation\\interior-visual-v3-5\\local\\report-formal-video\\page@8cd027d6f3bff987e18a1213f77ffcff.webm",
-      "state": "report uncut real formal route and B handoff/return",
-      "viewport": [
-        1440,
-        900
-      ],
-      "bytes": 12339813
+      "bytes": 104560
     }
   ],
-  "totalBytes": 27022876
+  "totalBytes": 1260552,
+  "rawMedia": "local/latest; ignored; no video promoted",
+  "videoMetadata": "../video-check.json retains historical full-walk codec/decode results"
 }

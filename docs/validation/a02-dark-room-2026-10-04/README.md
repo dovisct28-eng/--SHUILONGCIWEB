@@ -1,3 +1,7 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # A02 建筑暗室 · 技术验收与待审图证据
 
 日期：2026-10-04。**本轮实现与技术验收完成，等待用户视觉审图，未最终冻结；未自行进入 A03。**
@@ -6,33 +10,33 @@
 
 ## 实拍入口
 
-- [A01→A02 Contact Sheet](A01-A02-contact-sheet.png)：A01 Hero、交接25/50/75%、A02稳定。
-- [A02 State Sheet](A02-state-sheet.png)：进入、无标记稳定、五幅、核心三幅、结束、逆向。
-- [Responsive Sheet](responsive-sheet.png)：四个独立 viewport，未用浏览器缩放模拟。
-- [标记建立三阶段](marker-build-sheet.png)：锚点→引线→标签。
-- [黑白缩略图](grayscale-thumbnail.png)：建筑明暗层级审查。
-- 原尺寸：[1920×1080](responsive/1920x1080.webp)、[1440×900](responsive/1440x900.webp)、[1366×768](responsive/1366x768.webp)、[1024×768](responsive/1024x768.webp)。
+- [A01→A02 Contact Sheet（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-dark-room-2026-10-04/A01-A02-contact-sheet.png)：A01 Hero、交接25/50/75%、A02稳定。
+- [A02 State Sheet（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-dark-room-2026-10-04/A02-state-sheet.png)：进入、无标记稳定、五幅、核心三幅、结束、逆向。
+- [Responsive Sheet（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-dark-room-2026-10-04/responsive-sheet.png)：四个独立 viewport，未用浏览器缩放模拟。
+- [标记建立三阶段（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-dark-room-2026-10-04/marker-build-sheet.png)：锚点→引线→标签。
+- [黑白缩略图（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-dark-room-2026-10-04/grayscale-thumbnail.png)：建筑明暗层级审查。
+- 原尺寸：[1920×1080（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-dark-room-2026-10-04/responsive/1920x1080.webp)、[1440×900（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-dark-room-2026-10-04/responsive/1440x900.webp)、[1366×768（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-dark-room-2026-10-04/responsive/1366x768.webp)、[1024×768（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-dark-room-2026-10-04/responsive/1024x768.webp)。
 - [实现与候选参数](../../A02_DARK_ROOM.md)。所有尺寸、字体、光场与 Accent 值都仍待审图。
 
 原始 PNG 留在本地；各目录提交无损 WebP，`evidence-packing.json` 对每张逐像素核验与 PNG 一致。主展板保留 PNG。截图是本轮 localhost 实际页面，不是参考图、AI 效果图或历史报告复用。
 
 ## Pass 执行
 
-1. Pass 1：隐藏 A02 信息/标记，只审查建筑回中与环境退出；[五帧记录](pass-1/results.json)、[稳定建筑](pass-1/stable.webp)。同一模型、朝向与滚动回中，无替换或瞬移。
-2. Pass 2：不依赖 UI，压低院落/底座、组织屋面/砖墙与檐下暗部；[无标记建筑](pass-2/stable.webp)。黑白缩略图可区分前后体量、廊道、院落与戏台，最深背光面仍克制。
-3. Pass 3：加入后层色场、宽照度、空气、边缘暗部和极弱 Grain；[空间层](pass-3/stable.webp)。层在 canvas 后，不给建筑或真实壁画叠滤镜。
-4. Pass 4：原文案及顶部安静排版；[排版](pass-4/stable.webp)。
+1. Pass 1：隐藏 A02 信息/标记，只审查建筑回中与环境退出；[五帧记录](pass-1/results.json)、[稳定建筑（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-dark-room-2026-10-04/pass-1/stable.webp)。同一模型、朝向与滚动回中，无替换或瞬移。
+2. Pass 2：不依赖 UI，压低院落/底座、组织屋面/砖墙与檐下暗部；[无标记建筑（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-dark-room-2026-10-04/pass-2/stable.webp)。黑白缩略图可区分前后体量、廊道、院落与戏台，最深背光面仍克制。
+3. Pass 3：加入后层色场、宽照度、空气、边缘暗部和极弱 Grain；[空间层（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-dark-room-2026-10-04/pass-3/stable.webp)。层在 canvas 后，不给建筑或真实壁画叠滤镜。
+4. Pass 4：原文案及顶部安静排版；[排版（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-dark-room-2026-10-04/pass-4/stable.webp)。
 5. Pass 5：接回全部五幅、锚点/引线/标签与同时强化；最终见 states、contact、responsive。
 
 ## 五状态与标记
 
 | 状态 | 屏进度 / 实拍 | 核查 |
 | --- | --- | --- |
-| 进入 | 6.70 / [entry](states/entry-1440x900.webp) | A01 场景退后，同一建筑回中，A02 信息尚未进入 |
-| 稳定 | 7.55 / [stable](states/stable-1440x900.webp) | 完整屋面、院落和轮廓；无壁画标记 |
+| 进入 | 6.70 / [entry（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-dark-room-2026-10-04/states/entry-1440x900.webp) | A01 场景退后，同一建筑回中，A02 信息尚未进入 |
+| 稳定 | 7.55 / [stable（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-dark-room-2026-10-04/states/stable-1440x900.webp) | 完整屋面、院落和轮廓；无壁画标记 |
 | 运动 / 建立 | 8.03、8.20、8.70 | 锚点早于引线，标签最后进入；先完整五幅，没有路线 |
-| 核心稳定 / 结束 | 9.65、10.15 / [core](states/core-1440x900.webp)、[end](states/end-1440x900.webp) | ⑤①②共同强调，③④为75%文字强度；完整屋面与暗室保持到10.2输出 |
-| 逆向 | 9.65 / [reverse](states/reverse-1440x900.webp) | 可见状态与正向完全一致；四尺寸像素最大通道差1/255 |
+| 核心稳定 / 结束 | 9.65、10.15 / [core（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-dark-room-2026-10-04/states/core-1440x900.webp)、[end（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-dark-room-2026-10-04/states/end-1440x900.webp) | ⑤①②共同强调，③④为75%文字强度；完整屋面与暗室保持到10.2输出 |
+| 逆向 | 9.65 / [reverse（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-dark-room-2026-10-04/states/reverse-1440x900.webp) | 可见状态与正向完全一致；四尺寸像素最大通道差1/255 |
 
 10.2–10.95 屏是将新 A02 输出接回已有 A03 输入的最小接口；没有实现 A03 新光域。A03 及后续各章源码未改，稳定画面回归见下方。
 
@@ -47,7 +51,7 @@
 
 宽视口保留垂直安全区，因此两项低于推荐58%起点；需用户判断建筑是否仍足够大，不将推荐值当作冻结值。四尺寸没有标签相撞、越界或横向溢出，标题和底部提示不压建筑。
 
-每个尺寸分别以 `reducedMotion:'reduce'` 运行，建筑、五幅、核心三幅及回到 A01 均可达；[1024核心态](reduced/core-1024x768.webp)。原开场跳过，章节仍随用户滚动变化，无新增自主动画；不声称整个项目已实现静态相机替代。
+每个尺寸分别以 `reducedMotion:'reduce'` 运行，建筑、五幅、核心三幅及回到 A01 均可达；[1024核心态（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-dark-room-2026-10-04/reduced/core-1024x768.webp)。原开场跳过，章节仍随用户滚动变化，无新增自主动画；不声称整个项目已实现静态相机替代。
 
 ## Tests / Browser / Build
 

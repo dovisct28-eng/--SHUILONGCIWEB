@@ -1,6 +1,10 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # V3.3 交付记录
 
-2026-10-30；功能分支 `feature/shuilongci-hybrid-gallery-v1`，开发基线 `902a65b7198e4f7c01a162fd9906fdd802d11983`，已通过 GitHub 分支查询核实。独立入口 [v33.html](../../../module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/v33.html)，不替换正式展厅、不合并 master。实现、派生图与 AI 提示词见 [V3.3报告](../../../module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/V3_3_REPORT.md)。
+2026-10-30；功能分支 `feature/shuilongci-hybrid-gallery-v1`，开发基线 `902a65b7198e4f7c01a162fd9906fdd802d11983`，已通过 GitHub 分支查询核实。独立入口 [v33.html（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/v33.html)，不替换正式展厅、不合并 master。实现、派生图与 AI 提示词见 [V3.3报告](../../../module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/V3_3_REPORT.md)。
 
 第三铺第三版（去黑檐/裸砖、保留灰皮自然轮廓）已由用户确认；第四铺使用先前确认的附图下沿。两铺原图与历史候选保持完整。展示图分别1286×636、1280×939；源照片、配准状态与处理状态分开记录。
 
@@ -35,7 +39,7 @@
 | `12-fourth-reading` | 第四铺全幅 |
 | `13-fourth-detail` | 第四铺细读与索引 |
 
-[连续实机片段](selected/second-to-fourth-continuous.webm)约32.175秒，1440×900，来自同一次Playwright浏览器录像。仅裁掉开头加载/已确认第二铺定位准备和末尾额外回归，保留中间连续区间；无静态插帧、无不同录制拼接、无重新排序。起止见`results.json`中的`clip`。片段包含第二铺阅读退出、第三铺发现/阅读/细读操作和第四铺发现/阅读/细读操作；不是所有渲染帧达到固定帧率的保证。
+[连续实机片段（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/interior-visual-v3-3/selected/second-to-fourth-continuous.webm)约32.175秒，1440×900，来自同一次Playwright浏览器录像。仅裁掉开头加载/已确认第二铺定位准备和末尾额外回归，保留中间连续区间；无静态插帧、无不同录制拼接、无重新排序。起止见`results.json`中的`clip`。片段包含第二铺阅读退出、第三铺发现/阅读/细读操作和第四铺发现/阅读/细读操作；不是所有渲染帧达到固定帧率的保证。
 
 精选13张WebP与1段WebM合计2,642,865字节（约2.52MiB）。其他视口、开关对照和临时截图在`local/`由既有规则忽略。节点A的原图、裁切、校正与第三版灰皮边界资料继续在[图像处理目录](../../../module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-photo-processing/README.md)和[节点A精选](../interior-visual-v3-3-stage-a/selected/)留档。
 

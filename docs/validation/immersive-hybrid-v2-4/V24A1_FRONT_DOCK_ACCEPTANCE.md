@@ -1,3 +1,5 @@
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # V2.4-A.1 第一幅壁画正视停靠与数字展开
 
 > Repository Cleanup V1.0 历史提示：本页为当时版本的验收记录，以下入口、命令和视觉结论仅适用于[该历史提交](https://github.com/dovisct28-eng/--SHUILONGCIWEB/tree/701b556cd0f118e7005f5395a3ee7ad01f73b976)，不代表当前版本。当前共享建筑基线为 Combined B / V2.4-B1，入口与范围见[当前展厅说明](../../../module-a/immersive-hybrid-v1/README.md)；本页原有历史证据完整保留。
@@ -94,14 +96,14 @@ Chrome 156.0.8078.48；1440×900、1920×1080、1366×768。入口 [v24.html](ht
 
 | 文件 | 内容及边界 |
 |---|---|
-| [01-original-oblique.webp](selected-v24a1/01-original-oblique.webp) | 原版实际模型斜视，截图下方独立参数栏 |
-| [02-front-camera.webp](selected-v24a1/02-front-camera.webp) | 全幅取景但直达穿柱的排除候选，明确标 REJECTED |
-| [03-front-dock.webp](selected-v24a1/03-front-dock.webp) | 正式常速停稳帧及机位/投影参数 |
-| [04-reading-transition.webp](selected-v24a1/04-reading-transition.webp) | 真实浏览器既有调试采样器 reading=0.5；不是自然时钟截图 |
-| [05-reading-final.webp](selected-v24a1/05-reading-final.webp) | 完整真实原图与阅读 UI |
-| [06-return-wall.webp](selected-v24a1/06-return-wall.webp) | 返回原斜视，壁画仍在墙面 |
-| [07-before-after.webp](selected-v24a1/07-before-after.webp) | 两个真实机位的缩放对照板，补充浏览 |
-| [08-full-interaction.webm](selected-v24a1/08-full-interaction.webm) | 39.48 秒、1440×900 真实浏览器常速录屏，含入门/廊道、发现、转正、展开、详情缩放拖动复位与逆向返回 |
+| [01-original-oblique.webp（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-4/selected-v24a1/01-original-oblique.webp) | 原版实际模型斜视，截图下方独立参数栏 |
+| [02-front-camera.webp（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-4/selected-v24a1/02-front-camera.webp) | 全幅取景但直达穿柱的排除候选，明确标 REJECTED |
+| [03-front-dock.webp（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-4/selected-v24a1/03-front-dock.webp) | 正式常速停稳帧及机位/投影参数 |
+| [04-reading-transition.webp（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-4/selected-v24a1/04-reading-transition.webp) | 真实浏览器既有调试采样器 reading=0.5；不是自然时钟截图 |
+| [05-reading-final.webp（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-4/selected-v24a1/05-reading-final.webp) | 完整真实原图与阅读 UI |
+| [06-return-wall.webp（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-4/selected-v24a1/06-return-wall.webp) | 返回原斜视，壁画仍在墙面 |
+| [07-before-after.webp（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-4/selected-v24a1/07-before-after.webp) | 两个真实机位的缩放对照板，补充浏览 |
+| [08-full-interaction.webm（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-4/selected-v24a1/08-full-interaction.webm) | 39.48 秒、1440×900 真实浏览器常速录屏，含入门/廊道、发现、转正、展开、详情缩放拖动复位与逆向返回 |
 
 7 张 WebP + 1 段 WebM，约 9.63 MB（十进制）；精确字节和 SHA256 在 build 记录。三视口、碰撞 trace、录像解码帧和抽查板保留 local/v24a1/。源视频完整播放解码，并检查末段连续 0.5 秒取样帧；未用静态图片拼接替代录像。视频与 performance.now 起点不同，不声称逐毫秒对齐。
 

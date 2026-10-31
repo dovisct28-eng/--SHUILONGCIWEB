@@ -1,0 +1,270 @@
+{
+  "updated": [
+    {
+      "file": "docs/A01_CINEMATIC_V2.md",
+      "replacedLinks": 6
+    },
+    {
+      "file": "docs/A01_HIGH_FIDELITY.md",
+      "replacedLinks": 4
+    },
+    {
+      "file": "docs/A01_INK_SPATIAL.md",
+      "replacedLinks": 5
+    },
+    {
+      "file": "docs/HIFI_VISUAL_SPEC.md",
+      "replacedLinks": 2
+    },
+    {
+      "file": "docs/validation/a01-cinematic-v2/README.md",
+      "replacedLinks": 6
+    },
+    {
+      "file": "docs/validation/a01-cinematic-v3/README.md",
+      "replacedLinks": 7
+    },
+    {
+      "file": "docs/validation/a01-ink-spatial/README.md",
+      "replacedLinks": 10
+    },
+    {
+      "file": "docs/validation/a01-visual-remaster/README.md",
+      "replacedLinks": 4
+    },
+    {
+      "file": "docs/validation/a02-copy-followup-2026-10-05/README.md",
+      "replacedLinks": 7
+    },
+    {
+      "file": "docs/validation/a02-dark-room-2026-10-04/README.md",
+      "replacedLinks": 19
+    },
+    {
+      "file": "docs/validation/a02-director-remaster-2026-10-04/README.md",
+      "replacedLinks": 12
+    },
+    {
+      "file": "docs/validation/a03-high-fidelity-2026-10-04/README.md",
+      "replacedLinks": 16
+    },
+    {
+      "file": "docs/validation/a03-poster-remaster-2026-10-04/README.md",
+      "replacedLinks": 8
+    },
+    {
+      "file": "docs/validation/a03-reading-title/README.md",
+      "replacedLinks": 4
+    },
+    {
+      "file": "docs/validation/a04-full-roof-2026-10-05/README.md",
+      "replacedLinks": 10
+    },
+    {
+      "file": "docs/validation/a04-high-fidelity-2026-10-05/README.md",
+      "replacedLinks": 4
+    },
+    {
+      "file": "docs/validation/a04-roof-summary-2026-10-05/README.md",
+      "replacedLinks": 1
+    },
+    {
+      "file": "docs/validation/a05-a08-high-fidelity-2026-10-05/README.md",
+      "replacedLinks": 5
+    },
+    {
+      "file": "docs/validation/a05-a08-refinement-2026-10-06/README.md",
+      "replacedLinks": 1
+    },
+    {
+      "file": "docs/validation/b01-2026-10-06/README.md",
+      "replacedLinks": 15
+    },
+    {
+      "file": "docs/validation/b02-2026-10-06/README.md",
+      "replacedLinks": 27
+    },
+    {
+      "file": "docs/validation/b03-2026-10-06/README.md",
+      "replacedLinks": 36
+    },
+    {
+      "file": "docs/validation/b03-hf-01/README.md",
+      "replacedLinks": 7
+    },
+    {
+      "file": "docs/validation/b03-hf-02/README.md",
+      "replacedLinks": 14
+    },
+    {
+      "file": "docs/validation/b03-hf-03/README.md",
+      "replacedLinks": 13
+    },
+    {
+      "file": "docs/validation/b03-hf-04/README.md",
+      "replacedLinks": 5
+    },
+    {
+      "file": "docs/validation/b03-hf-05/README.md",
+      "replacedLinks": 5
+    },
+    {
+      "file": "docs/validation/b03-v2-2026-10-06/README.md",
+      "replacedLinks": 50
+    },
+    {
+      "file": "docs/validation/copy-update-2026-10-05/README.md",
+      "replacedLinks": 10
+    },
+    {
+      "file": "docs/validation/immersive-hybrid-v2-1/measurement-summary.md",
+      "replacedLinks": 11
+    },
+    {
+      "file": "docs/validation/immersive-hybrid-v2-2-1/README.md",
+      "replacedLinks": 8
+    },
+    {
+      "file": "docs/validation/immersive-hybrid-v2-4/SCENE_ASSET_AUDIT.md",
+      "replacedLinks": 4
+    },
+    {
+      "file": "docs/validation/immersive-hybrid-v2-4/V24A1_FRONT_DOCK_ACCEPTANCE.md",
+      "replacedLinks": 8
+    },
+    {
+      "file": "docs/validation/immersive-hybrid-v2-4/V24A_ACCEPTANCE.md",
+      "replacedLinks": 9
+    },
+    {
+      "file": "docs/validation/interior-visual-v3-1/README.md",
+      "replacedLinks": 5
+    },
+    {
+      "file": "docs/validation/interior-visual-v3-3/README.md",
+      "replacedLinks": 2
+    },
+    {
+      "file": "docs/validation/interior-visual-v3-4/README.md",
+      "replacedLinks": 1
+    },
+    {
+      "file": "docs/validation/interior-visual-v3-5/README.md",
+      "replacedLinks": 2
+    },
+    {
+      "file": "docs/validation/module-a-dark-system/README.md",
+      "replacedLinks": 10
+    },
+    {
+      "file": "docs/validation/module-a-navigation-2026-10-06/README.md",
+      "replacedLinks": 13
+    },
+    {
+      "file": "docs/validation/module-a-visual-director-v2/README.md",
+      "replacedLinks": 11
+    },
+    {
+      "file": "docs/validation/shared-temple-world-2026-10-04/README.md",
+      "replacedLinks": 5
+    },
+    {
+      "file": "docs/validation/temple-model-audit/MODEL_AUDIT.md",
+      "replacedLinks": 1
+    },
+    {
+      "file": "docs/validation/temple-model-audit/README.md",
+      "replacedLinks": 1
+    },
+    {
+      "file": "docs/validation/temple-model-v2/integration-b1/README.md",
+      "replacedLinks": 1
+    },
+    {
+      "file": "module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/README.md",
+      "replacedLinks": 4
+    }
+  ],
+  "retiredStages": [
+    "a01",
+    "a01-cinematic-v2",
+    "a01-cinematic-v3",
+    "a01-ink-spatial",
+    "a01-line",
+    "a01-visual-remaster",
+    "a02",
+    "a02-copy-followup-2026-10-05",
+    "a02-dark-room-2026-10-04",
+    "a02-director-remaster-2026-10-04",
+    "a03",
+    "a03-high-fidelity-2026-10-04",
+    "a03-poster-remaster-2026-10-04",
+    "a03-reading-title",
+    "a03-refinement-2026-10-04",
+    "a04",
+    "a04-final",
+    "a04-full-roof-2026-10-05",
+    "a04-handoff",
+    "a04-high-fidelity-2026-10-05",
+    "a04-roof-summary-2026-10-05",
+    "a05",
+    "a05-a08-editorial-2026-10-06",
+    "a05-a08-high-fidelity-2026-10-05",
+    "a05-a08-refinement-2026-10-06",
+    "a05-handoff",
+    "a06",
+    "a07",
+    "a08",
+    "b-character-intro-2026-10-14",
+    "b-ux-01-2026-10-08",
+    "b01-2026-10-06",
+    "b02-2026-10-06",
+    "b02-media-switch-2026-10-08",
+    "b03-2026-10-06",
+    "b03-gesture-v2",
+    "b03-gesture-v3",
+    "b03-gesture-v3.1",
+    "b03-gesture-v4",
+    "b03-gesture-v4.2",
+    "b03-gesture-v4.3",
+    "b03-hand-lock-v4.1",
+    "b03-hf-01",
+    "b03-hf-02",
+    "b03-hf-03",
+    "b03-hf-04",
+    "b03-hf-05",
+    "b03-v2-2026-10-06",
+    "copy-update-2026-10-05",
+    "immersive-hybrid-v1",
+    "immersive-hybrid-v2-1",
+    "immersive-hybrid-v2-2",
+    "immersive-hybrid-v2-2-1",
+    "immersive-hybrid-v2-3",
+    "immersive-hybrid-v2-4",
+    "immersive-hybrid-v2-4-b2",
+    "immersive-mural-discovery-2026-10-29",
+    "interior-visual-v2",
+    "interior-visual-v3",
+    "interior-visual-v3-1",
+    "interior-visual-v3-2",
+    "interior-visual-v3-3",
+    "interior-visual-v3-3-stage-a",
+    "interior-visual-v3-4",
+    "interior-visual-v3-5",
+    "interior-visual-v3-label-cleanup",
+    "model-hifi",
+    "model-structure",
+    "module-a-dark-system",
+    "module-a-navigation-2026-10-06",
+    "module-a-visual-director-v2",
+    "mural-textures",
+    "ppt-design-evolution-v4",
+    "ppt-self-reading-v3",
+    "shared-temple-world-2026-10-04",
+    "temple-model-audit",
+    "temple-model-v2",
+    "wall-finish",
+    "visual-integration"
+  ],
+  "historicalMeasurementsRewritten": false
+}

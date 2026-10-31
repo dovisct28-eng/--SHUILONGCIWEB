@@ -1,3 +1,7 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # A03 第二次视觉重制验收
 
 2026-10-04。开发/图像对照基线 `8686c4d51d0414c80db5ae0377495fab2ec00005`。本轮只调整模块 A 的 A03 及其必要的环境、光照、投影接口；第一版的技术验收不代表视觉定稿，本轮仍为待用户审图的候选。
@@ -16,11 +20,11 @@
 
 ## 可审查图像
 
-- [四尺寸](boards/01-responsive.webp)
-- [本轮前后](boards/02-before-after.webp)
-- [效果图与实际模型](boards/03-reference-implementation.webp)
-- [连续衔接](boards/04-continuity.webp)
-- [1920稳定态](screenshots/1920-04-poster-stable.webp)、[1440稳定态](screenshots/1440-04-poster-stable.webp)、[1366稳定态](screenshots/1366-04-poster-stable.webp)、[1024稳定态](screenshots/1024-04-poster-stable.webp)
+- [四尺寸（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a03-poster-remaster-2026-10-04/boards/01-responsive.webp)
+- [本轮前后（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a03-poster-remaster-2026-10-04/boards/02-before-after.webp)
+- [效果图与实际模型（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a03-poster-remaster-2026-10-04/boards/03-reference-implementation.webp)
+- [连续衔接（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a03-poster-remaster-2026-10-04/boards/04-continuity.webp)
+- [1920稳定态（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a03-poster-remaster-2026-10-04/screenshots/1920-04-poster-stable.webp)、[1440稳定态（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a03-poster-remaster-2026-10-04/screenshots/1440-04-poster-stable.webp)、[1366稳定态（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a03-poster-remaster-2026-10-04/screenshots/1366-04-poster-stable.webp)、[1024稳定态（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a03-poster-remaster-2026-10-04/screenshots/1024-04-poster-stable.webp)
 
 截图来自 localhost 实际页面，WebP为同一截图的压缩展示版。参考图只进入对照板，未作为页面纹理、几何或模型来源。
 

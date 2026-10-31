@@ -1,5 +1,5 @@
 const {chromium}=require('playwright'),fs=require('fs'),assert=require('assert/strict');
-const out='docs/validation/interior-visual-v3-5',origin='http://127.0.0.1:4186';
+const out=require('./validation-paths-v3.5.cjs').out,origin='http://127.0.0.1:4186';
 const idle=p=>p.waitForFunction(()=>document.body.dataset.ready==='true'&&document.body.dataset.busy==='false',null,{timeout:90000});
 (async()=>{const b=await chromium.launch({channel:'chrome',headless:true}),p=await b.newPage({viewport:{width:1440,height:900},reducedMotion:'reduce'}),report={pass:false,layouts:[],errors:[]};p.on('pageerror',e=>report.errors.push(e.message));try{
  await p.goto(origin+'/module-a/gallery/');await idle(p);assert.equal(await p.getAttribute('body','data-route-case'),'model');assert.equal(await p.evaluate(()=>typeof study),'undefined');

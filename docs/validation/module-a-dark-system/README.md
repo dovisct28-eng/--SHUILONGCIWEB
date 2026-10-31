@@ -1,3 +1,7 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # 模块 A 全屏开场与深色视觉统一验收
 
 日期：2026-10-03。开发基线：`c6f021454dd4f7ab9afb4d597703f1cdd2548086`，修改前 fetch / 本地 HEAD / origin/master / GitHub master 一致。当前为技术验收通过、待用户整体视觉审查；不代表视觉冻结。
@@ -51,16 +55,16 @@ Chrome localhost 实际运行，四尺寸：1920×1080、1440×900、1366×768�
 
 以下展板、JSON、测试日志及 PNG SHA256 校验清单纳入 Git；223 张原始 PNG 本地证据约 168.3 MiB，完整 PNG 保存在同目录各子目录，未全部纳入 Git。展板只是等比排版原截图并加状态标签，没有修图；可用脚本在 localhost 重建完整证据。
 
-- [A01 时间轴](01-a01-cinematic-contact-sheet.jpg)
-- [A01→A02](02-a01-a02-handoff-contact-sheet.jpg)
-- [A02 建筑空间](03-a02-dark-space.jpg)
-- [A03 主题](04-a03-theme.jpg)
-- [A04 路线](05-a04-route.jpg)
-- [三幅导读](06-a05-a07-mural-space.jpg)
-- [A08 四尺寸](07-a08-ending.jpg)
-- [整体系统](08-module-a-dark-system-contact-sheet.jpg)
-- [Before / After](09-before-after.jpg)
-- [重点状态四尺寸](10-responsive-contact-sheet.jpg)
+- [A01 时间轴（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-dark-system/01-a01-cinematic-contact-sheet.jpg)
+- [A01→A02（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-dark-system/02-a01-a02-handoff-contact-sheet.jpg)
+- [A02 建筑空间（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-dark-system/03-a02-dark-space.jpg)
+- [A03 主题（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-dark-system/04-a03-theme.jpg)
+- [A04 路线（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-dark-system/05-a04-route.jpg)
+- [三幅导读（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-dark-system/06-a05-a07-mural-space.jpg)
+- [A08 四尺寸（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-dark-system/07-a08-ending.jpg)
+- [整体系统（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-dark-system/08-module-a-dark-system-contact-sheet.jpg)
+- [Before / After（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-dark-system/09-before-after.jpg)
+- [重点状态四尺寸（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-dark-system/10-responsive-contact-sheet.jpg)
 
 复跑：先启动 `node module-a/a01/server.mjs`，再运行 `dark-browser-check.cjs`；`dark-regression-check.cjs` 支持 a04 / guides / a08 / transfer / resilience，执行仓库原有断言且隔离历史证据；`dark-contact.cjs` 生成展板。Playwright / Sharp 由本机 NODE_PATH 提供；Before 脚本必须在开发基线运行，避免覆盖既有 Before。
 

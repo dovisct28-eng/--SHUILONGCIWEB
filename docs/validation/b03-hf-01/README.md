@@ -1,3 +1,7 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # B03-HF-01 · 人物数字剧场视觉构图重制
 
 2026-10-07。开发基线 `a52bbbd134a45a7398aca8e4fa29ee8f6a7ec3ec`；执行前 fetch / ls-remote 确认 HEAD、origin/master 与远程 master 一致。本记录为浏览器技术验收和视觉候选，等待作者审图，未进入第二阶段。
@@ -20,10 +24,10 @@ Chrome 无头浏览器，真实 Three.js / GSAP / MediaPipe 组件，摄像头�
 
 | 视口 | 默认 | 简介展开 | 收拢恢复与结论 |
 |---|---|---|---|
-| 1920×1080 | [截图](selected/default-1920x1080.webp) | [截图](selected/revealed-1920x1080.webp) | 恢复原有效矩形；大姓名与主体留白、档案及按钮完整 |
-| 1440×900 | [截图](selected/default-1440x900.webp) | [截图](selected/revealed-1440x900.webp) | 恢复原有效矩形；主设计视口人物/面板/档案层级清楚 |
-| 1366×768 | [截图](selected/default-1366x768.webp) | [截图](selected/revealed-1366x768.webp) | 恢复原有效矩形；较低屏幕仍避开标题、按钮和正文 |
-| 1280×800 | [截图](selected/default-1280x800.webp) | [截图](selected/revealed-1280x800.webp) | 恢复原有效矩形；旋转面板完整，正文与主体分离 |
+| 1920×1080 | [截图（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-01/selected/default-1920x1080.webp) | [截图（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-01/selected/revealed-1920x1080.webp) | 恢复原有效矩形；大姓名与主体留白、档案及按钮完整 |
+| 1440×900 | [截图（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-01/selected/default-1440x900.webp) | [截图（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-01/selected/revealed-1440x900.webp) | 恢复原有效矩形；主设计视口人物/面板/档案层级清楚 |
+| 1366×768 | [截图（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-01/selected/default-1366x768.webp) | [截图（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-01/selected/revealed-1366x768.webp) | 恢复原有效矩形；较低屏幕仍避开标题、按钮和正文 |
+| 1280×800 | [截图](selected/default-1280x800.webp) | [截图（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-01/selected/revealed-1280x800.webp) | 恢复原有效矩形；旋转面板完整，正文与主体分离 |
 
 目视核对上述四尺寸三状态、ID05额外默认/展开和兼容 ID02。自动核对旋转后的实际面板矩形与完整人物有效矩形不相交，避让上部导航/底部提示、标题/按钮及展开档案；默认4面板、展开2面板；人物展开中心左移、尺寸减小，收拢有效矩形严格相同。单个 renderer，缩放/反复收放不增加 GL 资源，不重新请求图片。边界数据和原始截图位置见 [剧场结果](theatre-results.json)。
 

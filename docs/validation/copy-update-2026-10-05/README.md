@@ -1,3 +1,7 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # A01 / A02 / A05–A07 纯文案更新验收
 
 日期：2026-10-05。基线：`master` / `origin/master` 在开始时 fetch 后均为 `e2ecdd6f39d6f0043549497db491012a6ca12770`。
@@ -29,15 +33,15 @@
 
 | 尺寸 | 五页联系表 |
 | --- | --- |
-| 1920×1080 | [查看](review-1920x1080.webp) |
-| 1440×900 | [查看](review-1440x900.webp) |
-| 1366×768 | [查看](review-1366x768.webp) |
-| 1024×768 | [查看](review-1024x768.webp) |
-| 760×900 | [查看](review-760x900.webp) |
-| 390×844 | [查看](review-390x844.webp) |
-| 390×667 | [查看](review-390x667.webp) |
+| 1920×1080 | [查看（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/copy-update-2026-10-05/review-1920x1080.webp) |
+| 1440×900 | [查看（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/copy-update-2026-10-05/review-1440x900.webp) |
+| 1366×768 | [查看（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/copy-update-2026-10-05/review-1366x768.webp) |
+| 1024×768 | [查看（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/copy-update-2026-10-05/review-1024x768.webp) |
+| 760×900 | [查看（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/copy-update-2026-10-05/review-760x900.webp) |
+| 390×844 | [查看（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/copy-update-2026-10-05/review-390x844.webp) |
+| 390×667 | [查看（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/copy-update-2026-10-05/review-390x667.webp) |
 
-末端提示：[A05](a05-handoff-1440x900.webp)、[A06](a06-handoff-1440x900.webp)、[A07](a07-handoff-1440x900.webp)。
+末端提示：[A05（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/copy-update-2026-10-05/a05-handoff-1440x900.webp)、[A06（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/copy-update-2026-10-05/a06-handoff-1440x900.webp)、[A07（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/copy-update-2026-10-05/a07-handoff-1440x900.webp)。
 
 人工复核确认标题和正文完整，A02 文字未新增明显遮挡，三幅保持同组排版；介绍态沿用原阅读遮罩，巡视态正文及遮罩完全退出。本轮不调整窄屏模型原有裁切/镜头，也不宣称模块 A 已成为完整移动端设计。未做其他浏览器/实体设备验证。
 

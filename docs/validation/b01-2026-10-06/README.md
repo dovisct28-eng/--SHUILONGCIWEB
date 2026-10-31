@@ -1,3 +1,7 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # B01 双模式探索入口 · 2026-10-06
 
 状态：B01 高保真候选，浏览器技术验收通过；最终视觉确认与真实摄像头/手势实机验收待用户完成。本轮不进入 B02 或体感内部界面高保真设计。
@@ -51,12 +55,12 @@
 
 | 状态 | 实际截图 |
 | --- | --- |
-| B01主画面 | [1440×900](b01-1440x900.png) |
-| 桌面适配 | [1920×1080](b01-1920x1080.png)、[1366×768](b01-1366x768.png)、[1280×800](b01-1280x800.png) |
-| 按钮反馈 | [Hover](b01-hover.png)、[Focus](b01-focus.png) |
-| 图鉴 | [全景](gallery-map.png)、[左端热点](gallery-map-hotspots.png)、[详情](gallery-detail.png) |
-| 体感 | [真实界面与模拟拒绝权限](cyber-permission.png)、[依赖异常](cyber-dependency-error.png) |
-| 资源异常 | [接口](asset-api-error.png)、[地图](map-image-error.png)、[首页图像](splash-image-error.png) |
-| A08对照 | [原A08](a08-source.png) |
+| B01主画面 | [1440×900（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b01-2026-10-06/b01-1440x900.png) |
+| 桌面适配 | [1920×1080（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b01-2026-10-06/b01-1920x1080.png)、[1366×768（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b01-2026-10-06/b01-1366x768.png)、[1280×800（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b01-2026-10-06/b01-1280x800.png) |
+| 按钮反馈 | [Hover（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b01-2026-10-06/b01-hover.png)、[Focus（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b01-2026-10-06/b01-focus.png) |
+| 图鉴 | [全景（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b01-2026-10-06/gallery-map.png)、[左端热点（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b01-2026-10-06/gallery-map-hotspots.png)、[详情（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b01-2026-10-06/gallery-detail.png) |
+| 体感 | [真实界面与模拟拒绝权限（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b01-2026-10-06/cyber-permission.png)、[依赖异常（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b01-2026-10-06/cyber-dependency-error.png) |
+| 资源异常 | [接口（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b01-2026-10-06/asset-api-error.png)、[地图（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b01-2026-10-06/map-image-error.png)、[首页图像（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b01-2026-10-06/splash-image-error.png) |
+| A08对照 | [原A08（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b01-2026-10-06/a08-source.png) |
 
 Commit SHA 与 push 后远程核实结果以本次交付回复及 Git 元数据为准；本文件不填尚未生成的自身提交 SHA。最终视觉需用户确认后才进入 B02高保真。

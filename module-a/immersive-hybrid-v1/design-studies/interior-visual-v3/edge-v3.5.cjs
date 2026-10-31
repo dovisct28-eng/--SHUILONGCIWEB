@@ -1,5 +1,5 @@
 const {chromium}=require('playwright'),fs=require('fs'),path=require('path'),assert=require('assert/strict');
-const out=path.resolve('docs/validation/interior-visual-v3-5'),base='http://127.0.0.1:4186',url=base+'/module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/v35.html';
+const out=require('./validation-paths-v3.5.cjs').out,base='http://127.0.0.1:4186',url=base+'/module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/v35.html';
 const idle=p=>p.waitForFunction(()=>study?.ready&&!study.busy,null,{timeout:90000});
 (async()=>{const b=await chromium.launch({channel:'chrome',headless:true}),report={pass:false,errors:[]};try{
  const c=await b.newContext({viewport:{width:1440,height:900},reducedMotion:'reduce'}),p=await c.newPage();p.on('pageerror',e=>report.errors.push(e.message));

@@ -1,0 +1,129 @@
+{
+  "scope": "logical regular-file sizes excluding .git, .lofi-preview and .lofi-runtime; includes dependencies, ignored and untracked local files; not NTFS allocated bytes",
+  "before": {
+    "fileCount": 15417,
+    "logicalBytes": 12516783857,
+    "trackedPresentCount": 4286,
+    "trackedPresentBytes": 1849341780,
+    "nonGitFileCount": 11131,
+    "nonGitLogicalBytes": 10667442077,
+    "categories": {
+      "other": {
+        "count": 1196,
+        "bytes": 396671260
+      },
+      "document": {
+        "count": 1596,
+        "bytes": 313411633
+      },
+      "code": {
+        "count": 1737,
+        "bytes": 34741239
+      },
+      "image": {
+        "count": 10806,
+        "bytes": 11240270456
+      },
+      "video": {
+        "count": 81,
+        "bytes": 528065169
+      },
+      "model": {
+        "count": 1,
+        "bytes": 3624100
+      }
+    },
+    "trackedIndexCount": 4294,
+    "trackedIndexBlobBytes": 1900585035,
+    "missingTracked": [
+      "Mural-Exhibition/public/assets/10_上层猖兵/color.png",
+      "Mural-Exhibition/public/assets/10_上层猖兵/info.txt",
+      "Mural-Exhibition/public/assets/10_上层猖兵/line.png",
+      "Mural-Exhibition/public/assets/10_上层猖兵/meta.json",
+      "Mural-Exhibition/public/assets/10_上层猖兵/org.png",
+      "Mural-Exhibition/public/assets/10_上层猖兵/video.mp4",
+      "水龙祠实地照片/水龙祠建筑插画-色稿v1.png",
+      "水龙祠实地照片/水龙祠建筑结构稿-v2.png"
+    ]
+  },
+  "after": {
+    "fileCount": 11397,
+    "logicalBytes": 8700505784,
+    "trackedPresentCount": 1791,
+    "trackedPresentBytes": 292187314,
+    "nonGitFileCount": 9606,
+    "nonGitLogicalBytes": 8408318470,
+    "categories": {
+      "other": {
+        "count": 1223,
+        "bytes": 241401680
+      },
+      "document": {
+        "count": 1641,
+        "bytes": 330696951
+      },
+      "code": {
+        "count": 1747,
+        "bytes": 34774142
+      },
+      "image": {
+        "count": 6730,
+        "bytes": 7810399694
+      },
+      "video": {
+        "count": 55,
+        "bytes": 279609217
+      },
+      "model": {
+        "count": 1,
+        "bytes": 3624100
+      }
+    },
+    "trackedIndexCount": 1799,
+    "trackedIndexBlobBytes": 343430830,
+    "missingTracked": [
+      "Mural-Exhibition/public/assets/10_上层猖兵/color.png",
+      "Mural-Exhibition/public/assets/10_上层猖兵/info.txt",
+      "Mural-Exhibition/public/assets/10_上层猖兵/line.png",
+      "Mural-Exhibition/public/assets/10_上层猖兵/meta.json",
+      "Mural-Exhibition/public/assets/10_上层猖兵/org.png",
+      "Mural-Exhibition/public/assets/10_上层猖兵/video.mp4",
+      "水龙祠实地照片/水龙祠建筑插画-色稿v1.png",
+      "水龙祠实地照片/水龙祠建筑结构稿-v2.png"
+    ]
+  },
+  "deleted": {
+    "fileCount": 4160,
+    "logicalBytes": 3970448872,
+    "trackedPresentCount": 0,
+    "trackedPresentBytes": 0,
+    "nonGitFileCount": 4160,
+    "nonGitLogicalBytes": 3970448872,
+    "categories": {
+      "image": {
+        "count": 4125,
+        "bytes": 3498381461
+      },
+      "video": {
+        "count": 30,
+        "bytes": 316571919
+      },
+      "code": {
+        "count": 3,
+        "bytes": 18882
+      },
+      "other": {
+        "count": 2,
+        "bytes": 155476610
+      }
+    }
+  },
+  "added": {
+    "files": 140,
+    "logicalBytes": 154051942,
+    "reportsAndValidationBytes": 17870840
+  },
+  "netLogicalBytesFreed": 3816278073,
+  "history": "Git objects, refs for existing tags/archives and worktrees were not removed or rewritten. Current checkout size only; no Git history size saving claimed.",
+  "measurementNote": "Includes statistics.json by stable byte count. Index metrics use Git blob sizes; trackedPresent uses actual worktree bytes. Existing user-deleted files remain unstaged and are not attributed to cleanup."
+}

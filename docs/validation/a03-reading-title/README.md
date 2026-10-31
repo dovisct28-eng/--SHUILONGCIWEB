@@ -1,3 +1,7 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # A03 标题层级验收 · 2026-10-03
 
 用户确认：A01 保留原样；A03 将“出兵·入将”降为主题标识，主标题改为“从出行与归来，看壁画之间的联系”。删除原有重复导语，保留研究解释、观看意图、来源和不同释读提示。此标题属于项目观看引导，不新增历史判断。
@@ -15,7 +19,7 @@
 
 ## 代表截图
 
-![1440×900](reading-1440x900.png)
-![1024×768](reading-1024x768.png)
-![1920×1080](reading-1920x1080.png)
-![1366×768](reading-1366x768.png)
+[1440×900（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a03-reading-title/reading-1440x900.png)
+[1024×768（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a03-reading-title/reading-1024x768.png)
+[1920×1080（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a03-reading-title/reading-1920x1080.png)
+[1366×768（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a03-reading-title/reading-1366x768.png)

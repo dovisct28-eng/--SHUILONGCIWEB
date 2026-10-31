@@ -1,3 +1,5 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
 # B02 无框展示与媒体互斥验收
 
 日期：2026-10-08。开始实施前通过 `git ls-remote origin refs/heads/master` 和 `git fetch origin master` 核对：远程 master / 本地 HEAD 均为 `53222053b5597e4db5d9728d05a16051f1e2fcb3`，与任务审查基线一致。

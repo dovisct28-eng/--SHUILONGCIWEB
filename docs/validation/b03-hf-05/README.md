@@ -1,3 +1,7 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # B03 HF-05｜动效增强与单向挥手
 
 2026-10-07。只修改模块 B 的 B03 动效和授权的单手挥动状态；基线为只读查询 GitHub master 得到的 `9bf45d4e9d9d911a603d40fc590f41563fcdc874`，与开发开始时本地 HEAD 一致。没有重做 HF-01～04 构图或人物适配，没有改人物、扫描体系、图鉴、B01/B02 产品代码、模块 A 或固定低保真归档。
@@ -55,11 +59,11 @@ READY→触发→锁定：持续张手即使超过1000ms也不重复跳人。原
 
 | 精选 | 实际状态 |
 |---|---|
-| [01-default](selected/01-default.webp) | 1920×1080、正式01默认 |
-| [01-focus](selected/01-focus.webp) | 1920×1080、实际周期扫描的面板聚焦 |
-| [01-switching](selected/01-switching.webp) | 1920×1080、合成挥手后的01退场；标题已推进到本地05，旧主体仍收束 |
-| [01-revealed](selected/01-revealed.webp) | 1440×900、档案阅读、外围降速与巡游暂停 |
-| [01-peak-1366x768](selected/01-peak-1366x768.webp) | 1366×768、测试强制精确组合峰值，代表极限边界 |
+| [01-default（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-05/selected/01-default.webp) | 1920×1080、正式01默认 |
+| [01-focus（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-05/selected/01-focus.webp) | 1920×1080、实际周期扫描的面板聚焦 |
+| [01-switching（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-05/selected/01-switching.webp) | 1920×1080、合成挥手后的01退场；标题已推进到本地05，旧主体仍收束 |
+| [01-revealed（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-05/selected/01-revealed.webp) | 1440×900、档案阅读、外围降速与巡游暂停 |
+| [01-peak-1366x768（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/b03-hf-05/selected/01-peak-1366x768.webp) | 1366×768、测试强制精确组合峰值，代表极限边界 |
 | [01-default-1280x800](selected/01-default-1280x800.webp) | 1280×800、紧凑视口安全布局 |
 
 6张无损WebP，共5,133,146 B（约4.90MiB）；原PNG和完整回归、录屏均保留local；无损文件与PNG的尺寸/RGBA逐一一致，具体字节、哈希、总体积见 [evidence-publication.json](evidence-publication.json)。没有清理历史证据。作者最终审图仍待确认；“吸引力是否足够”和展示距离下的观感不能由程序采样代替。

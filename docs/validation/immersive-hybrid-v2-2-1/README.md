@@ -1,3 +1,7 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # V2.2.1 廊道材质、光影与首次融合优化候选
 
 > Repository Cleanup V1.0 历史提示：本页为当时版本的验收记录，以下入口、命令和视觉结论仅适用于[该历史提交](https://github.com/dovisct28-eng/--SHUILONGCIWEB/tree/1c811b58c1a4eb7beb5583c7d4ee832f54ee76dd)，不代表当前版本。当前共享建筑基线为 Combined B / V2.4-B1，入口与范围见[当前展厅说明](../../../module-a/immersive-hybrid-v1/README.md)；本页原有历史证据完整保留。
@@ -60,14 +64,14 @@ V2.2首次使用后45几何/24纹理；本轮稳定48几何/24纹理，三个视
 | 文件 | 内容 | 字节 |
 |---|---|---:|
 | [selected/01-original-v22.png](selected/01-original-v22.png) | 原V2.2，同一终点机位 | 1446818 |
-| [selected/02-wall-detail.png](selected/02-wall-detail.png) | 新墙面裁切 | 347146 |
-| [selected/03-wood-detail.png](selected/03-wood-detail.png) | 原木构/檐下裁切 | 239420 |
-| [selected/04-floor-detail.png](selected/04-floor-detail.png) | 地面裁切 | 183551 |
-| [selected/05-lighting-before-after.webp](selected/05-lighting-before-after.webp) | 同机位旧/新材质与光影组合对比 | 84012 |
-| [selected/06-hybrid-50.png](selected/06-hybrid-50.png) | 同终点50%融合 | 1406141 |
-| [selected/06-new-hybrid.png](selected/06-new-hybrid.png) | 新终点画面 | 1494740 |
-| [selected/07-three-way-comparison.webp](selected/07-three-way-comparison.webp) | 原3D/旧Hybrid/新Hybrid | 119028 |
-| [selected/08-transition.webm](selected/08-transition.webm) | 实际正向、反向浏览器录像 | 2519090 |
+| [selected/02-wall-detail.png（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-2-1/selected/02-wall-detail.png) | 新墙面裁切 | 347146 |
+| [selected/03-wood-detail.png（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-2-1/selected/03-wood-detail.png) | 原木构/檐下裁切 | 239420 |
+| [selected/04-floor-detail.png（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-2-1/selected/04-floor-detail.png) | 地面裁切 | 183551 |
+| [selected/05-lighting-before-after.webp（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-2-1/selected/05-lighting-before-after.webp) | 同机位旧/新材质与光影组合对比 | 84012 |
+| [selected/06-hybrid-50.png（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-2-1/selected/06-hybrid-50.png) | 同终点50%融合 | 1406141 |
+| [selected/06-new-hybrid.png（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-2-1/selected/06-new-hybrid.png) | 新终点画面 | 1494740 |
+| [selected/07-three-way-comparison.webp（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-2-1/selected/07-three-way-comparison.webp) | 原3D/旧Hybrid/新Hybrid | 119028 |
+| [selected/08-transition.webm（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-2-1/selected/08-transition.webm) | 实际正向、反向浏览器录像 | 2519090 |
 
 精选9件，共7839946字节。截图来自实际浏览器；三张细节是明确裁切，对照板仅缩放排列及标注。完整三视口/连续帧/回归和解码抽帧留local，不提交，不删除历史证据。
 

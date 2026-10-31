@@ -1,3 +1,5 @@
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # V2.4-B1｜Combined B 正式建筑模型整合
 
 **Combined B 正式模型整合完成，纯 3D 观看路线待用户视觉验收。**
@@ -5,7 +7,7 @@
 入口：[已接入共享正式模型的实验展厅](http://127.0.0.1:4186/module-a/immersive-hybrid-v1/v24.html)。它使用现有网页状态机、输入和共享建筑运行时，不是 B0 独立候选路线播放器。A01–A08 的正式入口仍为 [模块 A](http://127.0.0.1:4186/module-a/a01/)。
 
 - [整合报告](INTEGRATION_REPORT.md)
-- [完整真实交互录像](selected/12-full-interaction.webm)，70.00 秒，1440×900、正常速度，包含总览到阅读、缩放拖动复位及全程返回总览。
+- [完整真实交互录像（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/temple-model-v2/integration-b1/selected/12-full-interaction.webm)，70.00 秒，1440×900、正常速度，包含总览到阅读、缩放拖动复位及全程返回总览。
 - [相机矩阵及视口](camera-manifest.json)，[模型一致性](model-verification.json)，[碰撞](route-verification.json)，[浏览器](browser-results.json)，[回归](regression-results.json)，[性能](performance-results.json)。
 - [录像完整解码](record-verification.json)，[正视静帧来源](front-screenshot-verification.json)，[模块 B 加载](module-b-smoke.json)。
 

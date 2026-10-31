@@ -1,3 +1,5 @@
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # V2.4-A 真实建筑与生成场景融合：可运行实验候选
 
 > Repository Cleanup V1.0 历史提示：本页为当时版本的验收记录，以下入口、命令和视觉结论仅适用于[该历史提交](https://github.com/dovisct28-eng/--SHUILONGCIWEB/tree/c1e9507f5f3d93557df033817a56e23d14196ea2)，不代表当前版本。当前共享建筑基线为 Combined B / V2.4-B1，入口与范围见[当前展厅说明](../../../module-a/immersive-hybrid-v1/README.md)；本页原有历史证据完整保留。
@@ -16,9 +18,9 @@
 
 ## 实际视觉判断
 
-- [同机位原模型与生成候选对照](selected-v24a/12-model-ai-comparison.webp)，[原 3D / Hybrid 右廊对照](selected-v24a/13-original-hybrid-corridor.webp)，以及 [真实浏览器连续录屏](selected-v24a/11-interaction.webm)。录像由实际页面和自动点击录制，为 1440×900 WebM，完整 Blob 已解码抽查；不是静态图片拼接。
-- 墙面和地面确实出现生成画面细节，第一幅可以保持独立真实纹理；[右廊](selected-v24a/06-corridor.webp)、[墙面停靠](selected-v24a/08-mural-dock.webp)、[展开](selected-v24a/09-mural-reading.webp)、[返回墙面](selected-v24a/10-return-wall.webp)可直接检查。
-- **不足：** 室内大部分仍是原 3D，生成内容是墙和地的局部空间投影，门内没有形成整组 AI 室内环境的充分接管。场景变化主要发生于绕过戏台之后，不应把[过渡中](selected-v24a/04-projection-transition.webp)或[转向完成](selected-v24a/05-stage-turn.webp)称为完整接管。
+- [同机位原模型与生成候选对照（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-4/selected-v24a/12-model-ai-comparison.webp)，[原 3D / Hybrid 右廊对照（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-4/selected-v24a/13-original-hybrid-corridor.webp)，以及 [真实浏览器连续录屏（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-4/selected-v24a/11-interaction.webm)。录像由实际页面和自动点击录制，为 1440×900 WebM，完整 Blob 已解码抽查；不是静态图片拼接。
+- 墙面和地面确实出现生成画面细节，第一幅可以保持独立真实纹理；[右廊（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-4/selected-v24a/06-corridor.webp)、[墙面停靠（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-4/selected-v24a/08-mural-dock.webp)、[展开（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-4/selected-v24a/09-mural-reading.webp)、[返回墙面（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-4/selected-v24a/10-return-wall.webp)可直接检查。
+- **不足：** 室内大部分仍是原 3D，生成内容是墙和地的局部空间投影，门内没有形成整组 AI 室内环境的充分接管。场景变化主要发生于绕过戏台之后，不应把[过渡中（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-4/selected-v24a/04-projection-transition.webp)或[转向完成（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/immersive-hybrid-v2-4/selected-v24a/05-stage-turn.webp)称为完整接管。
 - 三张生成图有不同光照和细节，投影边缘、材质变化及地面烘焙阴影可能在运动中显露，且墙面局部与真实壁画的材质衔接仍偏生硬。当前使用的是限制范围的平面投影，不是通过量化误差验证的多视角几何重建。不得仅凭自动通过或几张静帧宣称没有漂移、重影或视觉跳变；需审阅录像并进一步调试。
 - 因核心的“高保真生成式室内场景自然接管”未完整实现，A 独立入口、E 真图交互、G 记录和已测交互具备；B/C/D 的完整视觉质量，以及 H 对更广泛设备的稳定性尚不能判通过。本轮保留可运行实验，非视觉候选验收通过。
 

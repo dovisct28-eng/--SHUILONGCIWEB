@@ -1,3 +1,4 @@
+// Historical capture/reference only: retired v32/v33/v34 HTML must first be restored from pre-repository-cleanup-v2-2026-10-31. Current coverage: browser-v3.5 + integration-v3.5 + edge-v3.5.
 // Offline reference export only; the prototype keeps its existing renderer.
 const {chromium}=require('playwright'),fs=require('node:fs'),path=require('node:path');
 const out=path.join(__dirname,'assets/route-v3.2/references');fs.mkdirSync(out,{recursive:true});

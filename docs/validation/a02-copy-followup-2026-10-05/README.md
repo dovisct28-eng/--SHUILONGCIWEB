@@ -1,3 +1,7 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # A02 浏览器批注文案追加验收
 
 日期：2026-10-05。开始时 fetch 后 `HEAD` 与 `origin/master` 均为 `44d744a8df00724ab897abe49bc12bb0e3fa5d4a`。
@@ -11,6 +15,6 @@
 - 在用户批注地址 `http://127.0.0.1:4173/module-a/a01/` 验证七种尺寸，覆盖初始建筑空间、五幅总览、核心三幅及反向返回总览。实际 DOM 正文逐字一致、删除说明不存在；文字行框无视口溢出，浏览器无新增应用错误。测试对既有缺失 favicon 返回空响应，不改产品页面。[结果与浏览器版本](results.json)。
 - 人工复核批注对应的 1100×614 截图：第二段已缩短，底部说明整行已删除，原建筑与标记保持。
 
-截图：[1920×1080](a02-1920x1080.webp)、[1440×900](a02-1440x900.webp)、[1366×768](a02-1366x768.webp)、[1024×768](a02-1024x768.webp)、[1100×614](a02-1100x614.webp)、[760×900](a02-760x900.webp)、[390×844](a02-390x844.webp)。原始 PNG 留在本地同目录。
+截图：[1920×1080（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-copy-followup-2026-10-05/a02-1920x1080.webp)、[1440×900（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-copy-followup-2026-10-05/a02-1440x900.webp)、[1366×768（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-copy-followup-2026-10-05/a02-1366x768.webp)、[1024×768（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-copy-followup-2026-10-05/a02-1024x768.webp)、[1100×614（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-copy-followup-2026-10-05/a02-1100x614.webp)、[760×900（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-copy-followup-2026-10-05/a02-760x900.webp)、[390×844（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/a02-copy-followup-2026-10-05/a02-390x844.webp)。原始 PNG 留在本地同目录。
 
 本轮不重新审查其他章节视觉或其他浏览器/实体设备。提交和远程核实结果以 Git 元数据及交付回复为准。

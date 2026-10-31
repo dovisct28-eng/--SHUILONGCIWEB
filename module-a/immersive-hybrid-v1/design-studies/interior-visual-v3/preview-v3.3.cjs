@@ -1,5 +1,1 @@
-const http=require('node:http'),path=require('node:path'),{spawn}=require('node:child_process');
-const url='http://127.0.0.1:4186/module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/v33.html';
-function check(){return new Promise(resolve=>{const req=http.get(url,res=>{let text='';res.setEncoding('utf8');res.on('data',x=>text+=x);res.on('end',()=>resolve(res.statusCode===200&&text.includes('视觉原型 V3.3')));});req.on('error',()=>resolve(false));req.setTimeout(1500,()=>{req.destroy();resolve(false);});});}
-function open(){console.log(`预览：${url}`);if(process.platform==='win32')spawn('cmd.exe',['/c','start','',url],{windowsHide:true,stdio:'ignore'});}
-(async()=>{if(await check()){open();return;}const server=spawn(process.execPath,[path.resolve(__dirname,'../../../a01/server.mjs')],{env:{...process.env,A01_PORT:'4186'},stdio:'inherit'});server.on('error',e=>{console.error(e.message);process.exitCode=1;});for(let i=0;i<30;i++){await new Promise(r=>setTimeout(r,200));if(await check()){open();console.log('关闭此窗口可停止本次启动的本地服务。');return;}if(server.exitCode!==null)break;}console.error('本地预览未能启动，请检查端口 4186 是否被其他服务占用。');process.exitCode=1;})();
+console.error('V3.3 standalone preview retired by repository cleanup V2. Use /module-a/gallery/ for current work. Restore v33.html from pre-repository-cleanup-v2-2026-10-31 for historical comparison.');process.exitCode=1;

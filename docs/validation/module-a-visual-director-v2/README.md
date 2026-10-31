@@ -1,3 +1,7 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # A02–A08 视觉导演深化：实现与验收
 
 日期：2026-10-03。模块 A，`master`。本次执行基线为 `0ea01b6c8e759f851e20751d3883431037a87096`；A03 标题此前已独立提交并核实远程。原上传任务书保留，项目执行副本见 [修订任务书](../../A02_A08_VISUAL_DIRECTOR_BRIEF.md)。本记录区分技术验收、视觉判断与待核实资料；通过验收不自动冻结字体、Accent 或尺寸。
@@ -64,17 +68,17 @@
 
 | 展板 | 内容 |
 | --- | --- |
-| [01](boards/01-a02-before-after.png) | A02 前后空间与模型权重 |
-| [02](boards/02-a02-marker-stages.png) | 建筑→五幅→核心三幅 |
-| [03](boards/03-a03-theme.png) | A02→A03 主题建立 |
-| [04](boards/04-a04-route.png) | 真实内部停靠、路线总结 |
-| [05](boards/05-space-to-image.png) | A04→A05 空间转为图像 |
-| [06](boards/06-three-murals.png) | 三幅导读的界面退场 |
-| [07](boards/07-exploration-entry.png) | A08 默认／hover／focus |
-| [08](boards/08-overall.png) | A02–A08 全局缩略图 |
-| [09](boards/09-responsive.png) | 四尺寸对照 |
-| [10](boards/10-visual-rhythm.png) | A01→A08 节奏 |
-| [11](boards/11-accent-comparison.png) | 三组 Accent 的三场景比较 |
+| [01（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-visual-director-v2/boards/01-a02-before-after.png) | A02 前后空间与模型权重 |
+| [02（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-visual-director-v2/boards/02-a02-marker-stages.png) | 建筑→五幅→核心三幅 |
+| [03（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-visual-director-v2/boards/03-a03-theme.png) | A02→A03 主题建立 |
+| [04（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-visual-director-v2/boards/04-a04-route.png) | 真实内部停靠、路线总结 |
+| [05（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-visual-director-v2/boards/05-space-to-image.png) | A04→A05 空间转为图像 |
+| [06（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-visual-director-v2/boards/06-three-murals.png) | 三幅导读的界面退场 |
+| [07（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-visual-director-v2/boards/07-exploration-entry.png) | A08 默认／hover／focus |
+| [08（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-visual-director-v2/boards/08-overall.png) | A02–A08 全局缩略图 |
+| [09（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-visual-director-v2/boards/09-responsive.png) | 四尺寸对照 |
+| [10（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-visual-director-v2/boards/10-visual-rhythm.png) | A01→A08 节奏 |
+| [11（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/module-a-visual-director-v2/boards/11-accent-comparison.png) | 三组 Accent 的三场景比较 |
 
 展板只等比排布浏览器原始截图，没有修补、调色或替换任何壁画；不能用展板的小缩略图单独判断正文字号。全部尺寸图像保存在 `after/`；未将重复的历史回归截图全部加入 Git。
 

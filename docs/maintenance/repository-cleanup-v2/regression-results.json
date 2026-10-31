@@ -1,0 +1,1560 @@
+{
+  "cleanupRegression": true,
+  "allHistoricalTestsGreen": false,
+  "unitA": {
+    "tests": 203,
+    "pass": 197,
+    "fail": 6,
+    "existingFailures": [
+      "A01 and A02 contain the approved copy, without the superseded explanations",
+      "chapter fonts are licensed, within the recorded budget, and cover Chinese states and errors",
+      "local font subsets cover A01 copy, match manifest and remain within budget",
+      "local serif subset covers every rendered heading and body subset covers all new copy",
+      "poster retains one accessible heading, approved copy and real WebGL layering",
+      "three guides match the final copy verbatim, with coherent natural paragraphs"
+    ],
+    "baselineReplay": {
+      "tests": 13,
+      "pass": 7,
+      "fail": 6,
+      "sameFailures": true,
+      "method": "read-only pre-cleanup Git snapshot test replay; no browser or hardware mocked"
+    }
+  },
+  "unitB": {
+    "before": {
+      "tests": 130,
+      "pass": 130,
+      "fail": 0
+    },
+    "after": {
+      "tests": 130,
+      "pass": 130,
+      "fail": 0
+    },
+    "ordinarySandboxAttempts": "initial parallel attempt 128/130 with launcher timeouts; serial sandbox retry had launcher EPERM; final serial elevated run 130/130. Tests and assertions unchanged."
+  },
+  "cleanupTests": {
+    "tests": 4,
+    "pass": 4,
+    "fail": 0
+  },
+  "intro": {
+    "pass": true,
+    "runs": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "reduced": false,
+        "states": [
+          {
+            "phase": "travel",
+            "scroll": 0,
+            "canvas": true
+          },
+          {
+            "phase": "a02-space",
+            "scroll": 8424,
+            "canvas": true
+          },
+          {
+            "phase": "a03-reading",
+            "scroll": 12960,
+            "canvas": true
+          }
+        ],
+        "errors": [],
+        "failed": []
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "reduced": true,
+        "states": [
+          {
+            "phase": "travel",
+            "scroll": 0,
+            "canvas": true
+          },
+          {
+            "phase": "a02-space",
+            "scroll": 8424,
+            "canvas": true
+          },
+          {
+            "phase": "a03-reading",
+            "scroll": 12960,
+            "canvas": true
+          }
+        ],
+        "errors": [],
+        "failed": []
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "reduced": false,
+        "states": [
+          {
+            "phase": "travel",
+            "scroll": 0,
+            "canvas": true
+          },
+          {
+            "phase": "a02-space",
+            "scroll": 7020,
+            "canvas": true
+          },
+          {
+            "phase": "a03-reading",
+            "scroll": 10800,
+            "canvas": true
+          }
+        ],
+        "errors": [],
+        "failed": []
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "reduced": true,
+        "states": [
+          {
+            "phase": "travel",
+            "scroll": 0,
+            "canvas": true
+          },
+          {
+            "phase": "a02-space",
+            "scroll": 7020,
+            "canvas": true
+          },
+          {
+            "phase": "a03-reading",
+            "scroll": 10800,
+            "canvas": true
+          }
+        ],
+        "errors": [],
+        "failed": []
+      },
+      {
+        "width": 1366,
+        "height": 768,
+        "reduced": false,
+        "states": [
+          {
+            "phase": "travel",
+            "scroll": 0,
+            "canvas": true
+          },
+          {
+            "phase": "a02-space",
+            "scroll": 5990,
+            "canvas": true
+          },
+          {
+            "phase": "a03-reading",
+            "scroll": 9216,
+            "canvas": true
+          }
+        ],
+        "errors": [],
+        "failed": []
+      },
+      {
+        "width": 1366,
+        "height": 768,
+        "reduced": true,
+        "states": [
+          {
+            "phase": "travel",
+            "scroll": 0,
+            "canvas": true
+          },
+          {
+            "phase": "a02-space",
+            "scroll": 5990,
+            "canvas": true
+          },
+          {
+            "phase": "a03-reading",
+            "scroll": 9216,
+            "canvas": true
+          }
+        ],
+        "errors": [],
+        "failed": []
+      }
+    ]
+  },
+  "matrix": {
+    "model": {
+      "pass": true,
+      "runs": [
+        {
+          "width": 1440,
+          "height": 900,
+          "reduced": false,
+          "murals": [
+            {
+              "index": 0,
+              "natural": [
+                2880,
+                990
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 1,
+              "natural": [
+                6000,
+                1357
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 2,
+              "natural": [
+                1286,
+                636
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 3,
+              "natural": [
+                1280,
+                939
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 4,
+              "natural": [
+                6000,
+                1617
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            }
+          ],
+          "reverse": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "errors": [],
+          "failedRequests": [],
+          "collisions": []
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "reduced": false,
+          "murals": [
+            {
+              "index": 0,
+              "natural": [
+                2880,
+                990
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 1,
+              "natural": [
+                6000,
+                1357
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 2,
+              "natural": [
+                1286,
+                636
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 3,
+              "natural": [
+                1280,
+                939
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 4,
+              "natural": [
+                6000,
+                1617
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            }
+          ],
+          "reverse": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "errors": [],
+          "failedRequests": [],
+          "collisions": []
+        },
+        {
+          "width": 1366,
+          "height": 768,
+          "reduced": false,
+          "murals": [
+            {
+              "index": 0,
+              "natural": [
+                2880,
+                990
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 1,
+              "natural": [
+                6000,
+                1357
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 2,
+              "natural": [
+                1286,
+                636
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 3,
+              "natural": [
+                1280,
+                939
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 4,
+              "natural": [
+                6000,
+                1617
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            }
+          ],
+          "reverse": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "errors": [],
+          "failedRequests": [],
+          "collisions": []
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "reduced": true,
+          "murals": [
+            {
+              "index": 0,
+              "natural": [
+                2880,
+                990
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 1,
+              "natural": [
+                6000,
+                1357
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 2,
+              "natural": [
+                1286,
+                636
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 3,
+              "natural": [
+                1280,
+                939
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 4,
+              "natural": [
+                6000,
+                1617
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            }
+          ],
+          "reverse": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "errors": [],
+          "failedRequests": [],
+          "collisions": []
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "reduced": true,
+          "murals": [
+            {
+              "index": 0,
+              "natural": [
+                2880,
+                990
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 1,
+              "natural": [
+                6000,
+                1357
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 2,
+              "natural": [
+                1286,
+                636
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 3,
+              "natural": [
+                1280,
+                939
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 4,
+              "natural": [
+                6000,
+                1617
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            }
+          ],
+          "reverse": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "errors": [],
+          "failedRequests": [],
+          "collisions": []
+        },
+        {
+          "width": 1366,
+          "height": 768,
+          "reduced": true,
+          "murals": [
+            {
+              "index": 0,
+              "natural": [
+                2880,
+                990
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 1,
+              "natural": [
+                6000,
+                1357
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 2,
+              "natural": [
+                1286,
+                636
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 3,
+              "natural": [
+                1280,
+                939
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 4,
+              "natural": [
+                6000,
+                1617
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            }
+          ],
+          "reverse": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "errors": [],
+          "failedRequests": [],
+          "collisions": []
+        }
+      ]
+    },
+    "report": {
+      "pass": true,
+      "runs": [
+        {
+          "width": 1440,
+          "height": 900,
+          "reduced": false,
+          "murals": [
+            {
+              "index": 0,
+              "natural": [
+                2880,
+                990
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 1,
+              "natural": [
+                6000,
+                1357
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 2,
+              "natural": [
+                1286,
+                636
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 3,
+              "natural": [
+                1280,
+                939
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 4,
+              "natural": [
+                6000,
+                1617
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            }
+          ],
+          "reverse": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "errors": [],
+          "failedRequests": [],
+          "collisions": []
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "reduced": false,
+          "murals": [
+            {
+              "index": 0,
+              "natural": [
+                2880,
+                990
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 1,
+              "natural": [
+                6000,
+                1357
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 2,
+              "natural": [
+                1286,
+                636
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 3,
+              "natural": [
+                1280,
+                939
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 4,
+              "natural": [
+                6000,
+                1617
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            }
+          ],
+          "reverse": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "errors": [],
+          "failedRequests": [],
+          "collisions": []
+        },
+        {
+          "width": 1366,
+          "height": 768,
+          "reduced": false,
+          "murals": [
+            {
+              "index": 0,
+              "natural": [
+                2880,
+                990
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 1,
+              "natural": [
+                6000,
+                1357
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 2,
+              "natural": [
+                1286,
+                636
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 3,
+              "natural": [
+                1280,
+                939
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 4,
+              "natural": [
+                6000,
+                1617
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            }
+          ],
+          "reverse": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "errors": [],
+          "failedRequests": [],
+          "collisions": []
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "reduced": true,
+          "murals": [
+            {
+              "index": 0,
+              "natural": [
+                2880,
+                990
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 1,
+              "natural": [
+                6000,
+                1357
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 2,
+              "natural": [
+                1286,
+                636
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 3,
+              "natural": [
+                1280,
+                939
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 4,
+              "natural": [
+                6000,
+                1617
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            }
+          ],
+          "reverse": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "errors": [],
+          "failedRequests": [],
+          "collisions": []
+        },
+        {
+          "width": 1920,
+          "height": 1080,
+          "reduced": true,
+          "murals": [
+            {
+              "index": 0,
+              "natural": [
+                2880,
+                990
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 1,
+              "natural": [
+                6000,
+                1357
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 2,
+              "natural": [
+                1286,
+                636
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 3,
+              "natural": [
+                1280,
+                939
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 4,
+              "natural": [
+                6000,
+                1617
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            }
+          ],
+          "reverse": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "errors": [],
+          "failedRequests": [],
+          "collisions": []
+        },
+        {
+          "width": 1366,
+          "height": 768,
+          "reduced": true,
+          "murals": [
+            {
+              "index": 0,
+              "natural": [
+                2880,
+                990
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 1,
+              "natural": [
+                6000,
+                1357
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 2,
+              "natural": [
+                1286,
+                636
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 3,
+              "natural": [
+                1280,
+                939
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            },
+            {
+              "index": 4,
+              "natural": [
+                6000,
+                1617
+              ],
+              "fit": "contain",
+              "controlsTested": true
+            }
+          ],
+          "reverse": [
+            3,
+            2,
+            1,
+            0
+          ],
+          "errors": [],
+          "failedRequests": [],
+          "collisions": []
+        }
+      ]
+    }
+  },
+  "integration": {
+    "model": {
+      "routeCase": "model",
+      "pass": true,
+      "errors": [],
+      "formalEntry": true,
+      "unavailable": "browser connection-refused for localhost:3000; stayed at fifth",
+      "moduleB": true,
+      "browserBack": true,
+      "coldReturn": true,
+      "video": "D:\\YJS\\出兵入将-PC端页面\\docs\\validation\\interior-visual-v3-5\\local\\latest\\local\\formal-video\\page@18e9d3f831c91aa1b9ae8b4187b13c19.webm"
+    },
+    "report": {
+      "routeCase": "report",
+      "pass": true,
+      "errors": [],
+      "formalEntry": true,
+      "unavailable": "browser connection-refused for localhost:3000; stayed at fifth",
+      "moduleB": true,
+      "browserBack": true,
+      "coldReturn": true,
+      "video": "D:\\YJS\\出兵入将-PC端页面\\docs\\validation\\interior-visual-v3-5\\local\\latest\\local\\report-formal-video\\page@ac0db9c0478781ae8d0983fb4e5ec464.webm"
+    }
+  },
+  "switch": {
+    "pass": true,
+    "layouts": [
+      {
+        "width": 1440,
+        "height": 900,
+        "rects": [
+          {
+            "name": "brand",
+            "x": 72,
+            "y": 32.5,
+            "right": 147.609375,
+            "bottom": 67.5
+          },
+          {
+            "name": "route-open",
+            "x": 458.546875,
+            "y": 31.5,
+            "right": 565.125,
+            "bottom": 68.5
+          },
+          {
+            "name": "chapters",
+            "x": 876.0625,
+            "y": 30.5,
+            "right": 1125,
+            "bottom": 69.5
+          },
+          {
+            "name": "route-case",
+            "x": 1143,
+            "y": 27,
+            "right": 1302,
+            "bottom": 73
+          },
+          {
+            "name": "audience-motion",
+            "x": 1320,
+            "y": 32,
+            "right": 1368,
+            "bottom": 68
+          }
+        ]
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "rects": [
+          {
+            "name": "brand",
+            "x": 96,
+            "y": 32.5,
+            "right": 292.5,
+            "bottom": 67.5
+          },
+          {
+            "name": "route-open",
+            "x": 759,
+            "y": 31.5,
+            "right": 865.578125,
+            "bottom": 68.5
+          },
+          {
+            "name": "chapters",
+            "x": 1332.0625,
+            "y": 30.5,
+            "right": 1581,
+            "bottom": 69.5
+          },
+          {
+            "name": "route-case",
+            "x": 1599,
+            "y": 27,
+            "right": 1758,
+            "bottom": 73
+          },
+          {
+            "name": "audience-motion",
+            "x": 1776,
+            "y": 32,
+            "right": 1824,
+            "bottom": 68
+          }
+        ]
+      },
+      {
+        "width": 1366,
+        "height": 768,
+        "rects": [
+          {
+            "name": "brand",
+            "x": 68.296875,
+            "y": 23.5,
+            "right": 143.90625,
+            "bottom": 58.5
+          },
+          {
+            "name": "route-open",
+            "x": 421.546875,
+            "y": 22.5,
+            "right": 528.125,
+            "bottom": 59.5
+          },
+          {
+            "name": "chapters",
+            "x": 805.765625,
+            "y": 21.5,
+            "right": 1054.703125,
+            "bottom": 60.5
+          },
+          {
+            "name": "route-case",
+            "x": 1072.703125,
+            "y": 18,
+            "right": 1231.703125,
+            "bottom": 64
+          },
+          {
+            "name": "audience-motion",
+            "x": 1249.703125,
+            "y": 23,
+            "right": 1297.703125,
+            "bottom": 59
+          }
+        ]
+      }
+    ],
+    "errors": [],
+    "switchResets": true,
+    "reloadPersists": true,
+    "reverseSwitch": true,
+    "reportColdFifthReturn": true
+  },
+  "edge": {
+    "pass": true,
+    "errors": [],
+    "before": {
+      "geometries": 55,
+      "textures": 52,
+      "projections": 4,
+      "walls": 3
+    },
+    "after": {
+      "geometries": 55,
+      "textures": 52,
+      "projections": 4,
+      "walls": 3
+    },
+    "doubleNavigation": [
+      true,
+      false
+    ],
+    "doubleTravel": [
+      true,
+      false
+    ],
+    "moving": {
+      "samples": 73,
+      "p95": 24.899999999997817,
+      "max": 41.70000000000073,
+      "over50": []
+    },
+    "preparation": [
+      {
+        "name": "V33-real-mural-04",
+        "textures": 1,
+        "uploadMs": 91.10000000149012,
+        "totalMs": 2252.10000000149
+      },
+      {
+        "name": "V33-real-mural-03",
+        "textures": 1,
+        "uploadMs": 42,
+        "totalMs": 2465.5
+      },
+      {
+        "name": "V33-rear-surface-projections",
+        "textures": 12,
+        "uploadMs": 287.4000000022352,
+        "totalMs": 493.80000000074506
+      },
+      {
+        "name": "V33-real-mural-05",
+        "textures": 1,
+        "uploadMs": 645,
+        "totalMs": 651.5
+      },
+      {
+        "name": "V34-fifth-surface-projections",
+        "textures": 6,
+        "uploadMs": 122.69999999925494,
+        "totalMs": 262.5
+      }
+    ],
+    "collisionValidationMs": 1527.6000000014901,
+    "delayedImage": "busy controls locked; duplicate route rejected; real image eventually decoded",
+    "fallback": {
+      "active": 2,
+      "error": "The source image cannot be decoded.",
+      "image": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-03-display.webp"
+    }
+  },
+  "compat": {
+    "pass": true,
+    "variants": [
+      {
+        "variant": "v35",
+        "readingDetailAndWall": true
+      }
+    ],
+    "errors": [],
+    "developerModes": true,
+    "legacy": true
+  },
+  "build": {
+    "pass": true,
+    "syntaxFiles": 61,
+    "formalMatchesCanonical": true,
+    "localResources": true,
+    "archive": {
+      "module-a-lofi-final-v1.0^{}": "48f272497e86e4549c5bcd0dee275ff347171a3f",
+      "archive/module-a-lofi": "48f272497e86e4549c5bcd0dee275ff347171a3f"
+    },
+    "noBundler": true,
+    "modelRebuilt": false
+  },
+  "moduleB": {
+    "before": {
+      "pass": true,
+      "assets": [
+        {
+          "hotspot": {
+            "ids": "01",
+            "title": "南门何五猖"
+          },
+          "loaded": true,
+          "src": "/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/org.png",
+          "title": "南门何五猖"
+        },
+        {
+          "hotspot": {
+            "ids": "02",
+            "title": "东门陈五猖"
+          },
+          "loaded": true,
+          "src": "/assets/02_%E4%B8%9C%E9%97%A8%E9%99%88%E4%BA%94%E7%8C%96/org.png",
+          "title": "东门陈五猖"
+        },
+        {
+          "hotspot": {
+            "ids": "03",
+            "title": "西门谢五猖"
+          },
+          "loaded": true,
+          "src": "/assets/03_%E8%A5%BF%E9%97%A8%E8%B0%A2%E4%BA%94%E7%8C%96/org.png",
+          "title": "西门谢五猖"
+        },
+        {
+          "hotspot": {
+            "ids": "04",
+            "title": "中门徐五猖"
+          },
+          "loaded": true,
+          "src": "/assets/04_%E4%B8%AD%E9%97%A8%E5%BE%90%E4%BA%94%E7%8C%96/org.png",
+          "title": "中门徐五猖"
+        },
+        {
+          "hotspot": {
+            "ids": "05",
+            "title": "北门雷五猖"
+          },
+          "loaded": true,
+          "src": "/assets/05_%E5%8C%97%E9%97%A8%E9%9B%B7%E4%BA%94%E7%8C%96/org.png",
+          "title": "北门雷五猖"
+        },
+        {
+          "hotspot": {
+            "ids": "06",
+            "title": "翻坛张五郎"
+          },
+          "loaded": true,
+          "src": "/assets/06_%E7%BF%BB%E5%9D%9B%E5%BC%A0%E4%BA%94%E9%83%8E/org.png",
+          "title": "翻坛张五郎"
+        },
+        {
+          "hotspot": {
+            "ids": "07",
+            "title": "梅山猖兵"
+          },
+          "loaded": true,
+          "src": "/assets/07_%E6%A2%85%E5%B1%B1%E7%8C%96%E5%85%B5/org.png",
+          "title": "梅山猖兵"
+        },
+        {
+          "hotspot": {
+            "ids": "10",
+            "title": "上层猖兵"
+          },
+          "loaded": true,
+          "src": "/assets/08_%E4%B8%8A%E5%B1%82%E7%8C%96%E5%85%B5/org.png",
+          "title": "上层猖兵"
+        }
+      ],
+      "cyber": {
+        "physicalCamera": "not tested",
+        "state": "selection",
+        "message": "摄像头已停止 · 可使用页面按钮",
+        "resources": [
+          {
+            "url": "http://localhost:3000/pose-pipeline.mjs",
+            "duration": 31.800000000745058,
+            "transferSize": 6363
+          },
+          {
+            "url": "https://unpkg.com/gsap@3.12.5/dist/gsap.min.js",
+            "duration": 26.600000001490116,
+            "transferSize": 0
+          },
+          {
+            "url": "https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js",
+            "duration": 26.199999999254942,
+            "transferSize": 0
+          },
+          {
+            "url": "https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js",
+            "duration": 26.100000001490116,
+            "transferSize": 0
+          },
+          {
+            "url": "https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js",
+            "duration": 25.800000000745058,
+            "transferSize": 0
+          }
+        ]
+      }
+    },
+    "after": {
+      "pass": true,
+      "assets": [
+        {
+          "hotspot": {
+            "ids": "01",
+            "title": "南门何五猖"
+          },
+          "loaded": true,
+          "src": "/assets/01_%E5%8D%97%E9%97%A8%E4%BD%95%E4%BA%94%E7%8C%96/org.png",
+          "title": "南门何五猖"
+        },
+        {
+          "hotspot": {
+            "ids": "02",
+            "title": "东门陈五猖"
+          },
+          "loaded": true,
+          "src": "/assets/02_%E4%B8%9C%E9%97%A8%E9%99%88%E4%BA%94%E7%8C%96/org.png",
+          "title": "东门陈五猖"
+        },
+        {
+          "hotspot": {
+            "ids": "03",
+            "title": "西门谢五猖"
+          },
+          "loaded": true,
+          "src": "/assets/03_%E8%A5%BF%E9%97%A8%E8%B0%A2%E4%BA%94%E7%8C%96/org.png",
+          "title": "西门谢五猖"
+        },
+        {
+          "hotspot": {
+            "ids": "04",
+            "title": "中门徐五猖"
+          },
+          "loaded": true,
+          "src": "/assets/04_%E4%B8%AD%E9%97%A8%E5%BE%90%E4%BA%94%E7%8C%96/org.png",
+          "title": "中门徐五猖"
+        },
+        {
+          "hotspot": {
+            "ids": "05",
+            "title": "北门雷五猖"
+          },
+          "loaded": true,
+          "src": "/assets/05_%E5%8C%97%E9%97%A8%E9%9B%B7%E4%BA%94%E7%8C%96/org.png",
+          "title": "北门雷五猖"
+        },
+        {
+          "hotspot": {
+            "ids": "06",
+            "title": "翻坛张五郎"
+          },
+          "loaded": true,
+          "src": "/assets/06_%E7%BF%BB%E5%9D%9B%E5%BC%A0%E4%BA%94%E9%83%8E/org.png",
+          "title": "翻坛张五郎"
+        },
+        {
+          "hotspot": {
+            "ids": "07",
+            "title": "梅山猖兵"
+          },
+          "loaded": true,
+          "src": "/assets/07_%E6%A2%85%E5%B1%B1%E7%8C%96%E5%85%B5/org.png",
+          "title": "梅山猖兵"
+        },
+        {
+          "hotspot": {
+            "ids": "10",
+            "title": "上层猖兵"
+          },
+          "loaded": true,
+          "src": "/assets/08_%E4%B8%8A%E5%B1%82%E7%8C%96%E5%85%B5/org.png",
+          "title": "上层猖兵"
+        }
+      ],
+      "cyber": {
+        "physicalCamera": "not tested",
+        "state": "selection",
+        "message": "摄像头已停止 · 可使用页面按钮",
+        "resources": [
+          {
+            "url": "http://localhost:3000/pose-pipeline.mjs",
+            "duration": 94.30000000074506,
+            "transferSize": 6363
+          },
+          {
+            "url": "https://unpkg.com/gsap@3.12.5/dist/gsap.min.js",
+            "duration": 49.5,
+            "transferSize": 0
+          },
+          {
+            "url": "https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js",
+            "duration": 88.10000000149012,
+            "transferSize": 0
+          },
+          {
+            "url": "https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js",
+            "duration": 87.59999999776483,
+            "transferSize": 0
+          },
+          {
+            "url": "https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js",
+            "duration": 87.10000000149012,
+            "transferSize": 0
+          }
+        ]
+      }
+    },
+    "desktop": {
+      "pass": true,
+      "runs": [
+        {
+          "width": 1920,
+          "height": 1080,
+          "mapHotspots": 8,
+          "dragZoomReset": true,
+          "originalLineColor": true,
+          "detailsAndCharacterSwitch": true
+        },
+        {
+          "width": 1440,
+          "height": 900,
+          "mapHotspots": 8,
+          "dragZoomReset": true,
+          "originalLineColor": true,
+          "detailsAndCharacterSwitch": true
+        },
+        {
+          "width": 1366,
+          "height": 768,
+          "mapHotspots": 8,
+          "dragZoomReset": true,
+          "originalLineColor": true,
+          "detailsAndCharacterSwitch": true
+        }
+      ],
+      "pageErrors": [],
+      "dependencyFailures": [
+        {
+          "url": "https://unpkg.com/gsap@3.12.5/dist/gsap.min.js",
+          "error": "net::ERR_NETWORK_ACCESS_DENIED"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js",
+          "error": "net::ERR_NETWORK_ACCESS_DENIED"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js",
+          "error": "net::ERR_NETWORK_ACCESS_DENIED"
+        },
+        {
+          "url": "https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js",
+          "error": "net::ERR_NETWORK_ACCESS_DENIED"
+        }
+      ],
+      "physicalCamera": "not tested",
+      "cyber": {
+        "state": "selection",
+        "status": "gsap 体感组件加载失败，请检查资源网络后重试。",
+        "hands": "undefined",
+        "gsap": "undefined"
+      }
+    },
+    "sourceAndOriginalUserChanges": "protected; original-work hash verification passed"
+  },
+  "lofi": {
+    "fixedCommit": "48f272497e86e4549c5bcd0dee275ff347171a3f",
+    "launcher": "actual Start-LofiArchive.ps1 -NoBrowser -NoPause passed after port/process permissions were available",
+    "originalBrowser1440": {
+      "url": "http://127.0.0.1:4174/module-a/a01/",
+      "chapters": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A06",
+        "A07",
+        "A08"
+      ],
+      "a04": {
+        "completed": true,
+        "routeComplete": true
+      },
+      "reverseScroll": true,
+      "model": true,
+      "murals": true,
+      "critical404": false,
+      "consoleErrors": false,
+      "explorationHref": "http://localhost:3000/index.html"
+    },
+    "additionalViews": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "url": "http://127.0.0.1:4174/module-a/a01/",
+        "chapters": [
+          "A01",
+          "A02",
+          "A03",
+          "A04",
+          "A05",
+          "A06",
+          "A07",
+          "A08"
+        ],
+        "a04": {
+          "completed": true,
+          "routeComplete": true
+        },
+        "reverseScroll": true,
+        "model": true,
+        "murals": true,
+        "critical404": false,
+        "consoleErrors": false,
+        "explorationHref": "http://localhost:3000/index.html"
+      },
+      {
+        "width": 1366,
+        "height": 768,
+        "url": "http://127.0.0.1:4174/module-a/a01/",
+        "chapters": [
+          "A01",
+          "A02",
+          "A03",
+          "A04",
+          "A05",
+          "A06",
+          "A07",
+          "A08"
+        ],
+        "a04": {
+          "completed": true,
+          "routeComplete": true
+        },
+        "reverseScroll": true,
+        "model": true,
+        "murals": true,
+        "critical404": false,
+        "consoleErrors": false,
+        "explorationHref": "http://localhost:3000/index.html"
+      }
+    ],
+    "reducedMotion": "formal A01–A03 and gallery fully tested; additional low-fi reduced-motion matrix not run",
+    "guardTests": {
+      "tests": 1,
+      "pass": 1,
+      "fail": 0
+    },
+    "guardEnvironment": "ordinary sandbox denied local process/port inspection; isolated fixture passed with permissions, leaving actual archive refs unchanged"
+  },
+  "selected": {
+    "files": 10,
+    "totalBytes": 1260552,
+    "diagnosticCaptureNote": "Some route/detail captures use formal ?debug to expose assertions. Audience controls hidden by default verified separately in both integration runs.",
+    "visualInspection": "ten-still contact sheet and full-size detail inspected; technical QA only, no new user aesthetic sign-off"
+  },
+  "unresolved": [
+    "six original copy/font assertions already fail at pre-cleanup tag",
+    "third/fourth wall mapping awaits advisor",
+    "real external GSAP/Hands downloads fail in this environment; physical camera/gesture not verified",
+    "uncertain historical/original files retained in REVIEW"
+  ],
+  "performance": "parallel browser runs are functional coverage only, not a new performance benchmark"
+}

@@ -1,8 +1,12 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
+> 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
+
 # V3.4 第五铺开发
 
 2026-10-30；基线 `dbcc47c91739ef2ff01652b9c7f1499df203199e`，fetch核实功能分支与本地一致。继续在 `feature/shuilongci-hybrid-gallery-v1` 开发，master、正式v24、模型主体、原始壁画与模块B核心均未修改。
 
-入口：[v34.html](../../../module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/v34.html)，本地运行localhost:4186；可双击本目录原型的`启动V3.4.bat`。V3.3保留，新增行为仅由`data-variant=v34`启用。
+入口：[v34.html（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/v34.html)，本地运行localhost:4186；可双击本目录原型的`启动V3.4.bat`。V3.3保留，新增行为仅由`data-variant=v34`启用。
 
 ## 本次完成
 

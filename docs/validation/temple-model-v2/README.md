@@ -1,3 +1,5 @@
+> 历史阶段（已被V3.5主线替代）：保留参数、测试数据与设计演变说明。部分截图/录像已按V2文件级清单精简；原已跟踪媒体可在pre-repository-cleanup-v2-2026-10-31恢复，重复媒体见清单中的保留副本。不得重跑旧入口检查作为当前正式验收。
+
 # V2.4-B0 历史建筑候选 · 静态设计归档
 
 **历史候选对照已归档，不再提供当前运行入口。** 用户已确认 Combined B（Corridor B＋Stage B＋Roof B），当前共享正式模型基线为 V2.4-B1。当前入口及范围见 [展厅 README](../../../module-a/immersive-hybrid-v1/README.md)，B1 原始证据完整保留于 [integration-b1](integration-b1/README.md)。
