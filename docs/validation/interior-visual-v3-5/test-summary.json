@@ -1,0 +1,24 @@
+{
+  "pass": true,
+  "scope": "two comparison proposals; no site-correctness or hardware acceptance claim",
+  "unitA": 56,
+  "unitB": 130,
+  "matrix": {
+    "model": {
+      "runs": 6,
+      "pass": true
+    },
+    "report": {
+      "runs": 6,
+      "pass": true
+    }
+  },
+  "switch": true,
+  "formalModel": true,
+  "formalReport": true,
+  "videoDecode": true,
+  "unresolved": [
+    "advisor selection of wall mapping",
+    "B external cyber dependencies and physical-camera acceptance"
+  ]
+}

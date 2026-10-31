@@ -12,13 +12,13 @@
     },
     {
       "file": "02-third-after.webp",
-      "source": "local/formal-wall-2.png",
-      "state": "V3.5 formal continuous third dock",
+      "source": "local/after-wall-2.png",
+      "state": "A current-model third dock, right wall",
       "viewport": [
         1440,
         900
       ],
-      "bytes": 96458
+      "bytes": 97460
     },
     {
       "file": "03-fourth-before.webp",
@@ -32,13 +32,13 @@
     },
     {
       "file": "04-fourth-after.webp",
-      "source": "local/formal-wall-3.png",
-      "state": "V3.5 formal continuous fourth dock",
+      "source": "local/after-wall-3.png",
+      "state": "A current-model fourth dock, left wall",
       "viewport": [
         1440,
         900
       ],
-      "bytes": 108182
+      "bytes": 109086
     },
     {
       "file": "05-second-dark.webp",
@@ -48,7 +48,7 @@
         1440,
         900
       ],
-      "bytes": 84268
+      "bytes": 85224
     },
     {
       "file": "06-second-title.webp",
@@ -58,7 +58,7 @@
         1440,
         900
       ],
-      "bytes": 84268
+      "bytes": 91978
     },
     {
       "file": "07-a03-entry.webp",
@@ -68,7 +68,7 @@
         1440,
         900
       ],
-      "bytes": 117880
+      "bytes": 119318
     },
     {
       "file": "08-module-b.webp",
@@ -78,7 +78,7 @@
         1440,
         900
       ],
-      "bytes": 57116
+      "bytes": 215100
     },
     {
       "file": "09-fifth-full.webp",
@@ -88,18 +88,58 @@
         1440,
         900
       ],
-      "bytes": 159692
+      "bytes": 161756
     },
     {
-      "file": "continuous-walk-1440x900.webm",
-      "source": "D:\\YJS\\出兵入将-PC端页面\\docs\\validation\\interior-visual-v3-5\\local\\formal-video\\page@1fea223b89099d51211138a8b8c8274a.webm",
-      "state": "uncut real formal A03, gate, five murals, representative detail, unavailable + real B, browser return",
+      "file": "10-case-b-third.webp",
+      "source": "local/report-after-wall-2.png",
+      "state": "B comparison third dragon on left",
       "viewport": [
         1440,
         900
       ],
-      "bytes": 11667474
+      "bytes": 83814
+    },
+    {
+      "file": "11-case-b-fourth.webp",
+      "source": "local/report-after-wall-3.png",
+      "state": "B comparison fourth qilin on right",
+      "viewport": [
+        1440,
+        900
+      ],
+      "bytes": 116418
+    },
+    {
+      "file": "12-route-selector.webp",
+      "source": "local/route-choice-report.png",
+      "state": "formal two-case selector",
+      "viewport": [
+        1440,
+        900
+      ],
+      "bytes": 250496
+    },
+    {
+      "file": "continuous-walk-1440x900.webm",
+      "source": "D:\\YJS\\出兵入将-PC端页面\\docs\\validation\\interior-visual-v3-5\\local\\formal-video\\page@0c4ffa944c2a5055f9b52e7331a3c15d.webm",
+      "state": "model uncut real formal route and B handoff/return",
+      "viewport": [
+        1440,
+        900
+      ],
+      "bytes": 13135583
+    },
+    {
+      "file": "continuous-walk-report-1440x900.webm",
+      "source": "D:\\YJS\\出兵入将-PC端页面\\docs\\validation\\interior-visual-v3-5\\local\\report-formal-video\\page@8cd027d6f3bff987e18a1213f77ffcff.webm",
+      "state": "report uncut real formal route and B handoff/return",
+      "viewport": [
+        1440,
+        900
+      ],
+      "bytes": 12339813
     }
   ],
-  "totalBytes": 12592168
+  "totalBytes": 27022876
 }

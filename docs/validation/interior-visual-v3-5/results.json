@@ -1,4 +1,5 @@
 {
+  "routeCase": "model",
   "runs": [
     {
       "width": 1440,
@@ -254,7 +255,7 @@
       ],
       "errors": [],
       "failed": [],
-      "recordStart": 1793412594605,
+      "recordStart": 1793417042984,
       "second": [
         {
           "phase": "dark",
@@ -378,15 +379,15 @@
             "timings": [
               {
                 "id": "image-load-decode",
-                "ms": 134.20000000298023
+                "ms": 253
               },
               {
                 "id": "shader-upload-first-draw",
-                "ms": 203.90000000596046
+                "ms": 336.40000000596046
               },
               {
                 "id": "total-prepare",
-                "ms": 338.70000000298023
+                "ms": 590.2000000029802
               }
             ],
             "imageBytesEstimate": 15206400,
@@ -399,7 +400,7 @@
         {
           "phase": "title",
           "activeMural": 1,
-          "reveal": 0.2025416666666691,
+          "reveal": 0.4861249999999988,
           "texture": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
           "model": "corridor-2_5d",
           "composite": {
@@ -518,15 +519,15 @@
             "timings": [
               {
                 "id": "image-load-decode",
-                "ms": 134.20000000298023
+                "ms": 253
               },
               {
                 "id": "shader-upload-first-draw",
-                "ms": 203.90000000596046
+                "ms": 336.40000000596046
               },
               {
                 "id": "total-prepare",
-                "ms": 338.70000000298023
+                "ms": 590.2000000029802
               }
             ],
             "imageBytesEstimate": 15206400,
@@ -539,7 +540,7 @@
         {
           "phase": "revealing",
           "activeMural": 1,
-          "reveal": 0.5526666666666703,
+          "reveal": 0.8825833333333322,
           "texture": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
           "model": "corridor-2_5d",
           "composite": {
@@ -658,15 +659,15 @@
             "timings": [
               {
                 "id": "image-load-decode",
-                "ms": 134.20000000298023
+                "ms": 253
               },
               {
                 "id": "shader-upload-first-draw",
-                "ms": 203.90000000596046
+                "ms": 336.40000000596046
               },
               {
                 "id": "total-prepare",
-                "ms": 338.70000000298023
+                "ms": 590.2000000029802
               }
             ],
             "imageBytesEstimate": 15206400,
@@ -677,141 +678,169 @@
           "image": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp"
         }
       ],
-      "recordEnd": 1793412690759,
+      "recordEnd": 1793417152803,
       "diagnostic": "second material + original reading compositor exited",
       "collisions": [],
       "performance": {
-        "samples": 18643,
-        "p50": 6.900000000008731,
-        "p95": 7.099999999991269,
-        "max": 819.7000000000044,
-        "over50": 14,
+        "samples": 18342,
+        "p50": 6.900000000023283,
+        "p95": 7.30000000000291,
+        "max": 1430.5,
+        "over50": 24,
         "longTasks": [
           {
-            "start": 138.59999999403954,
-            "duration": 56
+            "start": 920.8999999910593,
+            "duration": 58
           },
           {
-            "start": 462.8999999910593,
-            "duration": 377
+            "start": 1173.0999999940395,
+            "duration": 773
           },
           {
-            "start": 4711.0999999940395,
-            "duration": 170
+            "start": 1997,
+            "duration": 70
           },
           {
-            "start": 4885.399999991059,
-            "duration": 164
+            "start": 2079.2999999970198,
+            "duration": 53
           },
           {
-            "start": 5195.20000000298,
-            "duration": 3599
+            "start": 2172.0999999940395,
+            "duration": 76
           },
           {
-            "start": 42995.09999999404,
-            "duration": 826
+            "start": 8075,
+            "duration": 279
           },
           {
-            "start": 43987.79999999702,
-            "duration": 274
+            "start": 8363,
+            "duration": 258
           },
           {
-            "start": 44863.39999999106,
-            "duration": 267
+            "start": 8803.70000000298,
+            "duration": 5661
           },
           {
-            "start": 51474.39999999106,
-            "duration": 366
+            "start": 49861.5,
+            "duration": 1333
           },
           {
-            "start": 52969.29999999702,
-            "duration": 73
+            "start": 51465.5,
+            "duration": 463
           },
           {
-            "start": 70837.79999999702,
-            "duration": 136
+            "start": 52194.89999999106,
+            "duration": 63
           },
           {
-            "start": 73327.59999999404,
-            "duration": 581
+            "start": 59874.39999999106,
+            "duration": 598
           },
           {
-            "start": 74090.39999999106,
-            "duration": 128
+            "start": 61621.20000000298,
+            "duration": 133
           },
           {
-            "start": 94217.89999999106,
-            "duration": 361
+            "start": 80920,
+            "duration": 468
           },
           {
-            "start": 94635.89999999106,
-            "duration": 74
+            "start": 84164.39999999106,
+            "duration": 1434
           },
           {
-            "start": 96408.5,
-            "duration": 55
+            "start": 85699,
+            "duration": 51
           },
           {
-            "start": 155242.70000000298,
-            "duration": 326
+            "start": 85969.20000000298,
+            "duration": 293
+          },
+          {
+            "start": 87345.70000000298,
+            "duration": 134
+          },
+          {
+            "start": 96973.09999999404,
+            "duration": 83
+          },
+          {
+            "start": 110666.70000000298,
+            "duration": 539
+          },
+          {
+            "start": 111290,
+            "duration": 134
+          },
+          {
+            "start": 113386.70000000298,
+            "duration": 82
+          },
+          {
+            "start": 126229.5,
+            "duration": 265
+          },
+          {
+            "start": 176271.59999999404,
+            "duration": 603
           }
         ],
-        "heap": 40485223,
+        "heap": 41204521,
         "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
         "cores": 8,
         "preparation": [
           {
             "name": "V32-route-surface-projections",
             "textures": 15,
-            "uploadMs": 178.90000000596046,
-            "totalMs": 1636.2000000029802
+            "uploadMs": 239.90000000596046,
+            "totalMs": 2083.9000000059605
           },
           {
             "name": "V32-real-second-mural-candidate",
             "textures": 1,
-            "uploadMs": 360.20000000298023,
-            "totalMs": 385.20000000298023
+            "uploadMs": 589.3999999910593,
+            "totalMs": 632.2000000029802
           },
           {
             "name": "V33-real-mural-04",
             "textures": 1,
-            "uploadMs": 25.100000008940697,
-            "totalMs": 27.200000002980232
+            "uploadMs": 48.20000000298023,
+            "totalMs": 51.5
           },
           {
             "name": "V33-real-mural-03",
             "textures": 1,
-            "uploadMs": 25.299999997019768,
-            "totalMs": 57.70000000298023
+            "uploadMs": 37.1000000089407,
+            "totalMs": 102.29999999701977
           },
           {
             "name": "V33-rear-surface-projections",
             "textures": 12,
-            "uploadMs": 124.70000000298023,
-            "totalMs": 215.5
+            "uploadMs": 284.20000000298023,
+            "totalMs": 444.5
           },
           {
             "name": "V33-real-mural-05",
             "textures": 1,
-            "uploadMs": 358.29999999701977,
-            "totalMs": 360.29999999701977
+            "uploadMs": 534,
+            "totalMs": 537.8999999910593
           },
           {
             "name": "V34-fifth-surface-projections",
             "textures": 6,
-            "uploadMs": 69.20000000298023,
-            "totalMs": 149.20000000298023
+            "uploadMs": 119.40000000596046,
+            "totalMs": 232.90000000596046
           },
           {
             "name": "V32-real-second-mural-candidate",
             "textures": 1,
-            "uploadMs": 323.19999998807907,
-            "totalMs": 335.79999999701977
+            "uploadMs": 597.3000000119209,
+            "totalMs": 628.6000000089407
           }
         ],
         "stats": {
-          "rendererUUID": "e5e2adcf-2af7-4a93-a393-39e2042821b9",
-          "renderCount": 18522,
+          "rendererUUID": "ced5d391-cfa5-4c94-9882-f98e241a101f",
+          "renderCount": 17652,
           "renderers": 1,
           "canvases": 1,
           "removedTriangles": 320,
@@ -839,7 +868,7 @@
             ],
             "aoSamples": 12,
             "stats": {
-              "frame": 54466,
+              "frame": 51875,
               "calls": 34,
               "triangles": 124304,
               "points": 0,
@@ -887,7 +916,7 @@
           }
         }
       },
-      "video": "D:\\YJS\\出兵入将-PC端页面\\docs\\validation\\interior-visual-v3-5\\local\\video\\page@6e71f20dbda2529fcab94553a3b1926f.webm"
+      "video": "D:\\YJS\\出兵入将-PC端页面\\docs\\validation\\interior-visual-v3-5\\local\\video\\page@648b82c8c0d81114065034d872b7992a.webm"
     },
     {
       "width": 1920,
@@ -1143,7 +1172,7 @@
       ],
       "errors": [],
       "failed": [],
-      "recordStart": 1793412747789,
+      "recordStart": 1793417217704,
       "second": [
         {
           "phase": "dark",
@@ -1267,15 +1296,15 @@
             "timings": [
               {
                 "id": "image-load-decode",
-                "ms": 123.40000000596046
+                "ms": 263
               },
               {
                 "id": "shader-upload-first-draw",
-                "ms": 166.1000000089407
+                "ms": 292.1000000089407
               },
               {
                 "id": "total-prepare",
-                "ms": 290.20000000298023
+                "ms": 555.7999999970198
               }
             ],
             "imageBytesEstimate": 15206400,
@@ -1288,7 +1317,7 @@
         {
           "phase": "title",
           "activeMural": 1,
-          "reveal": 0.2027499999999994,
+          "reveal": 0.3096666666666655,
           "texture": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
           "model": "corridor-2_5d",
           "composite": {
@@ -1407,15 +1436,15 @@
             "timings": [
               {
                 "id": "image-load-decode",
-                "ms": 123.40000000596046
+                "ms": 263
               },
               {
                 "id": "shader-upload-first-draw",
-                "ms": 166.1000000089407
+                "ms": 292.1000000089407
               },
               {
                 "id": "total-prepare",
-                "ms": 290.20000000298023
+                "ms": 555.7999999970198
               }
             ],
             "imageBytesEstimate": 15206400,
@@ -1428,7 +1457,7 @@
         {
           "phase": "revealing",
           "activeMural": 1,
-          "reveal": 0.5528749999999976,
+          "reveal": 0.5526666666666703,
           "texture": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
           "model": "corridor-2_5d",
           "composite": {
@@ -1547,15 +1576,15 @@
             "timings": [
               {
                 "id": "image-load-decode",
-                "ms": 123.40000000596046
+                "ms": 263
               },
               {
                 "id": "shader-upload-first-draw",
-                "ms": 166.1000000089407
+                "ms": 292.1000000089407
               },
               {
                 "id": "total-prepare",
-                "ms": 290.20000000298023
+                "ms": 555.7999999970198
               }
             ],
             "imageBytesEstimate": 15206400,
@@ -1566,137 +1595,137 @@
           "image": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp"
         }
       ],
-      "recordEnd": 1793412836218,
+      "recordEnd": 1793417309135,
       "diagnostic": "second material + original reading compositor exited",
       "collisions": [],
       "performance": {
-        "samples": 18500,
+        "samples": 17656,
         "p50": 6.900000000008731,
-        "p95": 7.599999999998545,
-        "max": 534.6999999999971,
-        "over50": 9,
+        "p95": 7.69999999999709,
+        "max": 1312.5999999999985,
+        "over50": 8,
         "longTasks": [
           {
-            "start": 397.3999999910593,
-            "duration": 379
+            "start": 841.4000000059605,
+            "duration": 80
           },
           {
-            "start": 800.5999999940395,
-            "duration": 62
+            "start": 1225.1000000089407,
+            "duration": 869
           },
           {
-            "start": 898.0999999940395,
-            "duration": 55
+            "start": 2142.4000000059605,
+            "duration": 81
           },
           {
-            "start": 2175.3999999910593,
-            "duration": 153
+            "start": 2297.4000000059605,
+            "duration": 88
           },
           {
-            "start": 2331.7999999970198,
-            "duration": 127
+            "start": 4551.600000008941,
+            "duration": 266
           },
           {
-            "start": 2572.3999999910593,
-            "duration": 825
+            "start": 4823.29999999702,
+            "duration": 220
           },
           {
-            "start": 36937.29999999702,
-            "duration": 543
+            "start": 5237,
+            "duration": 1685
           },
           {
-            "start": 37629.09999999404,
-            "duration": 236
+            "start": 40774.20000000298,
+            "duration": 1311
           },
           {
-            "start": 43862,
-            "duration": 317
+            "start": 42478.5,
+            "duration": 620
           },
           {
-            "start": 62815.59999999404,
-            "duration": 102
+            "start": 49434.60000000894,
+            "duration": 574
           },
           {
-            "start": 64639.79999999702,
-            "duration": 522
+            "start": 69122,
+            "duration": 358
           },
           {
-            "start": 65323.5,
-            "duration": 122
+            "start": 70862.40000000596,
+            "duration": 589
           },
           {
-            "start": 65490.29999999702,
-            "duration": 105
+            "start": 71633.40000000596,
+            "duration": 133
           },
           {
-            "start": 83014.19999998808,
-            "duration": 258
+            "start": 89408.5,
+            "duration": 286
           },
           {
-            "start": 83318.69999998808,
-            "duration": 56
+            "start": 89751,
+            "duration": 58
           },
           {
-            "start": 141727.39999999106,
-            "duration": 319
+            "start": 148822.79999999702,
+            "duration": 463
           }
         ],
-        "heap": 41182466,
+        "heap": 40612147,
         "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
         "cores": 8,
         "preparation": [
           {
             "name": "V32-route-surface-projections",
             "textures": 15,
-            "uploadMs": 152.29999999701977,
-            "totalMs": 446.09999999403954
+            "uploadMs": 324.1000000089407,
+            "totalMs": 756.1000000089407
           },
           {
             "name": "V32-real-second-mural-candidate",
             "textures": 1,
-            "uploadMs": 312.40000000596046,
-            "totalMs": 325
-          },
-          {
-            "name": "V33-real-mural-04",
-            "textures": 1,
-            "uploadMs": 24.299999997019768,
-            "totalMs": 26
+            "uploadMs": 565.2000000029802,
+            "totalMs": 580.2999999970198
           },
           {
             "name": "V33-real-mural-03",
             "textures": 1,
-            "uploadMs": 19,
-            "totalMs": 48.79999999701977
+            "uploadMs": 20.700000002980232,
+            "totalMs": 22.799999997019768
+          },
+          {
+            "name": "V33-real-mural-04",
+            "textures": 1,
+            "uploadMs": 25.700000002980232,
+            "totalMs": 53.29999999701977
           },
           {
             "name": "V33-rear-surface-projections",
             "textures": 12,
-            "uploadMs": 118.5,
-            "totalMs": 142.59999999403954
+            "uploadMs": 129.8999999910593,
+            "totalMs": 162.09999999403954
           },
           {
             "name": "V33-real-mural-05",
             "textures": 1,
-            "uploadMs": 256.3999999910593,
-            "totalMs": 257.8999999910593
+            "uploadMs": 284.20000000298023,
+            "totalMs": 286
           },
           {
             "name": "V34-fifth-surface-projections",
             "textures": 6,
-            "uploadMs": 52.400000005960464,
-            "totalMs": 77.40000000596046
+            "uploadMs": 54.30000001192093,
+            "totalMs": 86.70000000298023
           },
           {
             "name": "V32-real-second-mural-candidate",
             "textures": 1,
-            "uploadMs": 309,
-            "totalMs": 329.70000000298023
+            "uploadMs": 460.20000000298023,
+            "totalMs": 515.5
           }
         ],
         "stats": {
-          "rendererUUID": "c15e95a5-b6f3-46d0-b67c-b4b2701d3eee",
-          "renderCount": 18563,
+          "rendererUUID": "36671965-1f99-408c-b71e-03e65f1951e8",
+          "renderCount": 16612,
           "renderers": 1,
           "canvases": 1,
           "removedTriangles": 320,
@@ -1724,7 +1753,7 @@
             ],
             "aoSamples": 12,
             "stats": {
-              "frame": 54586,
+              "frame": 48745,
               "calls": 34,
               "triangles": 124304,
               "points": 0,
@@ -2027,7 +2056,7 @@
       ],
       "errors": [],
       "failed": [],
-      "recordStart": 1793412890654,
+      "recordStart": 1793417365480,
       "second": [
         {
           "phase": "dark",
@@ -2151,15 +2180,15 @@
             "timings": [
               {
                 "id": "image-load-decode",
-                "ms": 127.29999999701977
+                "ms": 162.69999998807907
               },
               {
                 "id": "shader-upload-first-draw",
-                "ms": 163
+                "ms": 201.20000000298023
               },
               {
                 "id": "total-prepare",
-                "ms": 290.79999999701977
+                "ms": 364.29999999701977
               }
             ],
             "imageBytesEstimate": 15206400,
@@ -2172,7 +2201,7 @@
         {
           "phase": "title",
           "activeMural": 1,
-          "reveal": 0.20229166666666668,
+          "reveal": 0.3038333333333352,
           "texture": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
           "model": "corridor-2_5d",
           "composite": {
@@ -2291,15 +2320,15 @@
             "timings": [
               {
                 "id": "image-load-decode",
-                "ms": 127.29999999701977
+                "ms": 162.69999998807907
               },
               {
                 "id": "shader-upload-first-draw",
-                "ms": 163
+                "ms": 201.20000000298023
               },
               {
                 "id": "total-prepare",
-                "ms": 290.79999999701977
+                "ms": 364.29999999701977
               }
             ],
             "imageBytesEstimate": 15206400,
@@ -2312,7 +2341,7 @@
         {
           "phase": "revealing",
           "activeMural": 1,
-          "reveal": 0.5523749999999988,
+          "reveal": 0.5527499999999994,
           "texture": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
           "model": "corridor-2_5d",
           "composite": {
@@ -2431,15 +2460,15 @@
             "timings": [
               {
                 "id": "image-load-decode",
-                "ms": 127.29999999701977
+                "ms": 162.69999998807907
               },
               {
                 "id": "shader-upload-first-draw",
-                "ms": 163
+                "ms": 201.20000000298023
               },
               {
                 "id": "total-prepare",
-                "ms": 290.79999999701977
+                "ms": 364.29999999701977
               }
             ],
             "imageBytesEstimate": 15206400,
@@ -2450,125 +2479,133 @@
           "image": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp"
         }
       ],
-      "recordEnd": 1793412979040,
+      "recordEnd": 1793417456194,
       "diagnostic": "second material + original reading compositor exited",
       "collisions": [],
       "performance": {
-        "samples": 18510,
+        "samples": 18675,
         "p50": 6.900000000008731,
-        "p95": 7.5,
-        "max": 534.7999999999956,
+        "p95": 7.599999999991269,
+        "max": 666.5999999999985,
         "over50": 8,
         "longTasks": [
           {
-            "start": 388.5,
-            "duration": 346
+            "start": 501.30000001192093,
+            "duration": 509
           },
           {
-            "start": 2088.6000000089407,
-            "duration": 150
+            "start": 1040.5,
+            "duration": 67
           },
           {
-            "start": 2242.2000000029802,
-            "duration": 125
+            "start": 1153,
+            "duration": 58
           },
           {
-            "start": 2482.300000011921,
-            "duration": 868
+            "start": 2691.6000000089407,
+            "duration": 176
           },
           {
-            "start": 36882.40000000596,
-            "duration": 542
+            "start": 2871.6000000089407,
+            "duration": 151
           },
           {
-            "start": 37555.20000000298,
-            "duration": 230
+            "start": 3151.1000000089407,
+            "duration": 1115
           },
           {
-            "start": 43784.40000000596,
-            "duration": 319
+            "start": 37874.70000000298,
+            "duration": 679
           },
           {
-            "start": 62739.20000000298,
-            "duration": 102
+            "start": 38740.40000000596,
+            "duration": 324
           },
           {
-            "start": 64563.90000000596,
-            "duration": 531
+            "start": 45266.40000000596,
+            "duration": 364
           },
           {
-            "start": 65248.30000001192,
-            "duration": 121
+            "start": 64273.20000000298,
+            "duration": 105
           },
           {
-            "start": 82917.70000000298,
-            "duration": 261
+            "start": 66124.80000001192,
+            "duration": 602
           },
           {
-            "start": 83230.20000000298,
-            "duration": 56
+            "start": 66907.20000000298,
+            "duration": 128
           },
           {
-            "start": 141926.70000000298,
-            "duration": 362
+            "start": 84646.40000000596,
+            "duration": 288
+          },
+          {
+            "start": 84983.70000000298,
+            "duration": 55
+          },
+          {
+            "start": 145005.10000000894,
+            "duration": 341
           }
         ],
-        "heap": 40887203,
+        "heap": 40130603,
         "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
         "cores": 8,
         "preparation": [
           {
             "name": "V32-route-surface-projections",
             "textures": 15,
-            "uploadMs": 150.79999999701977,
-            "totalMs": 435.1000000089407
+            "uploadMs": 195.40000000596046,
+            "totalMs": 668.6000000089407
           },
           {
             "name": "V32-real-second-mural-candidate",
             "textures": 1,
-            "uploadMs": 315.59999999403954,
-            "totalMs": 328.5
-          },
-          {
-            "name": "V33-real-mural-03",
-            "textures": 1,
-            "uploadMs": 20.299999997019768,
-            "totalMs": 22.399999991059303
+            "uploadMs": 358.3999999910593,
+            "totalMs": 372.19999998807907
           },
           {
             "name": "V33-real-mural-04",
             "textures": 1,
-            "uploadMs": 23.19999998807907,
-            "totalMs": 50.099999994039536
+            "uploadMs": 26.900000005960464,
+            "totalMs": 29.100000008940697
+          },
+          {
+            "name": "V33-real-mural-03",
+            "textures": 1,
+            "uploadMs": 20.19999998807907,
+            "totalMs": 52.5
           },
           {
             "name": "V33-rear-surface-projections",
             "textures": 12,
-            "uploadMs": 117.5,
-            "totalMs": 141.59999999403954
+            "uploadMs": 125,
+            "totalMs": 151.69999998807907
           },
           {
             "name": "V33-real-mural-05",
             "textures": 1,
-            "uploadMs": 259.30000001192093,
-            "totalMs": 260.90000000596046
+            "uploadMs": 285,
+            "totalMs": 287.40000000596046
           },
           {
             "name": "V34-fifth-surface-projections",
             "textures": 6,
-            "uploadMs": 51.80000001192093,
-            "totalMs": 76.20000000298023
+            "uploadMs": 51.3999999910593,
+            "totalMs": 1411.7000000029802
           },
           {
             "name": "V32-real-second-mural-candidate",
             "textures": 1,
-            "uploadMs": 359.79999999701977,
-            "totalMs": 371.8999999910593
+            "uploadMs": 338.90000000596046,
+            "totalMs": 353
           }
         ],
         "stats": {
-          "rendererUUID": "9fb90322-89dd-41ff-b3ce-33b9afe79a1e",
-          "renderCount": 18567,
+          "rendererUUID": "7dc9103c-46b5-4b42-bcd0-86205408f775",
+          "renderCount": 18506,
           "renderers": 1,
           "canvases": 1,
           "removedTriangles": 320,
@@ -2596,7 +2633,7 @@
             ],
             "aoSamples": 12,
             "stats": {
-              "frame": 54599,
+              "frame": 54430,
               "calls": 34,
               "triangles": 124304,
               "points": 0,
@@ -2899,126 +2936,126 @@
       ],
       "errors": [],
       "failed": [],
-      "recordStart": 1793413033824,
-      "recordEnd": 1793413060821,
+      "recordStart": 1793417511498,
+      "recordEnd": 1793417541263,
       "diagnostic": "second material + original reading compositor exited",
       "collisions": [],
       "performance": {
-        "samples": 6131,
+        "samples": 6367,
         "p50": 6.900000000001455,
-        "p95": 7.5,
-        "max": 548.5,
-        "over50": 7,
+        "p95": 7.30000000000291,
+        "max": 791.5999999999995,
+        "over50": 9,
         "longTasks": [
           {
-            "start": 400.20000000298023,
-            "duration": 361
+            "start": 483.59999999403954,
+            "duration": 401
           },
           {
-            "start": 786.1000000089407,
-            "duration": 50
+            "start": 911.0999999940395,
+            "duration": 63
           },
           {
-            "start": 2107.1000000089407,
-            "duration": 152
+            "start": 2418.2000000029802,
+            "duration": 176
           },
           {
-            "start": 2263.5,
-            "duration": 126
+            "start": 2597.5999999940395,
+            "duration": 141
           },
           {
-            "start": 2526.2000000029802,
-            "duration": 818
+            "start": 2861.0999999940395,
+            "duration": 993
           },
           {
-            "start": 6687.5,
-            "duration": 555
+            "start": 7321.20000000298,
+            "duration": 797
           },
           {
-            "start": 7375.5,
-            "duration": 243
+            "start": 8298.09999999404,
+            "duration": 326
           },
           {
-            "start": 8502.10000000894,
-            "duration": 315
+            "start": 9705.59999999404,
+            "duration": 413
           },
           {
-            "start": 25417.70000000298,
-            "duration": 520
+            "start": 28162.39999999106,
+            "duration": 702
           },
           {
-            "start": 26101.90000000596,
-            "duration": 125
+            "start": 29082,
+            "duration": 148
           },
           {
-            "start": 28636.60000000894,
-            "duration": 253
+            "start": 31739.29999999702,
+            "duration": 302
           },
           {
-            "start": 28934.20000000298,
-            "duration": 53
+            "start": 32104.70000000298,
+            "duration": 68
           },
           {
-            "start": 51100.29999999702,
-            "duration": 316
+            "start": 54358.70000000298,
+            "duration": 398
           }
         ],
-        "heap": 55666628,
+        "heap": 55664652,
         "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
         "cores": 8,
         "preparation": [
           {
             "name": "V32-route-surface-projections",
             "textures": 15,
-            "uploadMs": 157.69999998807907,
-            "totalMs": 456.3999999910593
+            "uploadMs": 199.09999999403954,
+            "totalMs": 627
           },
           {
             "name": "V32-real-second-mural-candidate",
             "textures": 1,
-            "uploadMs": 310.59999999403954,
-            "totalMs": 323.29999999701977
+            "uploadMs": 408.1000000089407,
+            "totalMs": 1781
           },
           {
             "name": "V33-real-mural-04",
             "textures": 1,
-            "uploadMs": 24.200000002980232,
-            "totalMs": 26.200000002980232
+            "uploadMs": 29.5,
+            "totalMs": 31.600000008940697
           },
           {
             "name": "V33-real-mural-03",
             "textures": 1,
-            "uploadMs": 19.100000008940697,
-            "totalMs": 47.80000001192093
+            "uploadMs": 21.400000005960464,
+            "totalMs": 57.5
           },
           {
             "name": "V33-rear-surface-projections",
             "textures": 12,
-            "uploadMs": 121.90000000596046,
-            "totalMs": 147.30000001192093
+            "uploadMs": 144.29999999701977,
+            "totalMs": 178
           },
           {
             "name": "V33-real-mural-05",
             "textures": 1,
-            "uploadMs": 251.5,
-            "totalMs": 252.8999999910593
+            "uploadMs": 299,
+            "totalMs": 301.40000000596046
           },
           {
             "name": "V34-fifth-surface-projections",
             "textures": 6,
-            "uploadMs": 49.599999994039536,
-            "totalMs": 75
+            "uploadMs": 62.79999999701977,
+            "totalMs": 94
           },
           {
             "name": "V32-real-second-mural-candidate",
             "textures": 1,
-            "uploadMs": 314.1000000089407,
-            "totalMs": 330.80000001192093
+            "uploadMs": 395.19999998807907,
+            "totalMs": 416.29999999701977
           }
         ],
         "stats": {
-          "rendererUUID": "e5c9d8f3-6c4f-442a-83ac-33c9dd761f31",
-          "renderCount": 6531,
+          "rendererUUID": "9d31df07-ac22-42c1-99b2-190c40f6837c",
+          "renderCount": 6526,
           "renderers": 1,
           "canvases": 1,
           "removedTriangles": 320,
@@ -3046,7 +3083,7 @@
             ],
             "aoSamples": 12,
             "stats": {
-              "frame": 19541,
+              "frame": 19526,
               "calls": 34,
               "triangles": 124304,
               "points": 0,
@@ -3349,130 +3386,134 @@
       ],
       "errors": [],
       "failed": [],
-      "recordStart": 1793413086087,
-      "recordEnd": 1793413113037,
+      "recordStart": 1793417568601,
+      "recordEnd": 1793417596821,
       "diagnostic": "second material + original reading compositor exited",
       "collisions": [],
       "performance": {
-        "samples": 6126,
+        "samples": 6047,
         "p50": 6.900000000001455,
-        "p95": 7.599999999998545,
-        "max": 513.8999999999996,
-        "over50": 7,
+        "p95": 7.5,
+        "max": 673.5999999999995,
+        "over50": 9,
         "longTasks": [
           {
-            "start": 397,
-            "duration": 364
+            "start": 412,
+            "duration": 70
           },
           {
-            "start": 782.7000000029802,
-            "duration": 61
+            "start": 689.9000000059605,
+            "duration": 589
           },
           {
-            "start": 883.5,
-            "duration": 51
+            "start": 1309.2000000029802,
+            "duration": 50
           },
           {
-            "start": 2139.0999999940395,
-            "duration": 151
+            "start": 1400.2999999970198,
+            "duration": 52
           },
           {
-            "start": 2293.0999999940395,
-            "duration": 128
+            "start": 2869.4000000059605,
+            "duration": 193
           },
           {
-            "start": 2538.2000000029802,
-            "duration": 797
+            "start": 3067.7000000029802,
+            "duration": 146
           },
           {
-            "start": 6696.29999999702,
-            "duration": 520
+            "start": 3381.2000000029802,
+            "duration": 1388
           },
           {
-            "start": 7348.5999999940395,
-            "duration": 216
+            "start": 8146.600000008941,
+            "duration": 679
           },
           {
-            "start": 8460.39999999106,
-            "duration": 316
+            "start": 8995.20000000298,
+            "duration": 565
           },
           {
-            "start": 25376,
-            "duration": 488
+            "start": 10345,
+            "duration": 357
           },
           {
-            "start": 26033.79999999702,
-            "duration": 117
+            "start": 27385.90000000596,
+            "duration": 670
           },
           {
-            "start": 28575,
-            "duration": 254
+            "start": 28293.79999999702,
+            "duration": 153
           },
           {
-            "start": 28873.20000000298,
-            "duration": 53
+            "start": 30980.90000000596,
+            "duration": 356
           },
           {
-            "start": 51031.20000000298,
-            "duration": 324
+            "start": 31396.79999999702,
+            "duration": 75
+          },
+          {
+            "start": 53975.10000000894,
+            "duration": 405
           }
         ],
-        "heap": 39841948,
+        "heap": 41676358,
         "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
         "cores": 8,
         "preparation": [
           {
             "name": "V32-route-surface-projections",
             "textures": 15,
-            "uploadMs": 151.5,
-            "totalMs": 447.40000000596046
+            "uploadMs": 181.3999999910593,
+            "totalMs": 624.7000000029802
           },
           {
             "name": "V32-real-second-mural-candidate",
             "textures": 1,
-            "uploadMs": 312,
-            "totalMs": 325.1000000089407
+            "uploadMs": 352.5,
+            "totalMs": 365.20000000298023
           },
           {
             "name": "V33-real-mural-04",
             "textures": 1,
-            "uploadMs": 24.700000002980232,
-            "totalMs": 26.600000008940697
+            "uploadMs": 41.20000000298023,
+            "totalMs": 45.20000000298023
           },
           {
             "name": "V33-real-mural-03",
             "textures": 1,
-            "uploadMs": 19,
-            "totalMs": 48.8999999910593
+            "uploadMs": 30,
+            "totalMs": 81.5
           },
           {
             "name": "V33-rear-surface-projections",
             "textures": 12,
-            "uploadMs": 113.79999999701977,
-            "totalMs": 138.70000000298023
+            "uploadMs": 149.8999999910593,
+            "totalMs": 181.3999999910593
           },
           {
             "name": "V33-real-mural-05",
             "textures": 1,
-            "uploadMs": 252.69999998807907,
-            "totalMs": 254
+            "uploadMs": 351.90000000596046,
+            "totalMs": 354.90000000596046
           },
           {
             "name": "V34-fifth-surface-projections",
             "textures": 6,
-            "uploadMs": 49.29999999701977,
-            "totalMs": 71.5
+            "uploadMs": 70,
+            "totalMs": 96.29999999701977
           },
           {
             "name": "V32-real-second-mural-candidate",
             "textures": 1,
-            "uploadMs": 322.40000000596046,
-            "totalMs": 335.40000000596046
+            "uploadMs": 401.90000000596046,
+            "totalMs": 415.09999999403954
           }
         ],
         "stats": {
-          "rendererUUID": "85d8f8e1-30e2-49c7-9cdb-5f45f91c83cf",
-          "renderCount": 6529,
+          "rendererUUID": "c5255110-ebf6-4179-8919-ded8bf061c5e",
+          "renderCount": 6291,
           "renderers": 1,
           "canvases": 1,
           "removedTriangles": 320,
@@ -3500,7 +3541,7 @@
             ],
             "aoSamples": 12,
             "stats": {
-              "frame": 19536,
+              "frame": 18820,
               "calls": 34,
               "triangles": 124304,
               "points": 0,
@@ -3803,122 +3844,130 @@
       ],
       "errors": [],
       "failed": [],
-      "recordStart": 1793413138371,
-      "recordEnd": 1793413165365,
+      "recordStart": 1793417624627,
+      "recordEnd": 1793417653569,
       "diagnostic": "second material + original reading compositor exited",
       "collisions": [],
       "performance": {
-        "samples": 6120,
+        "samples": 6221,
         "p50": 6.900000000001455,
-        "p95": 7.5,
-        "max": 520.8999999999996,
-        "over50": 8,
+        "p95": 7.400000000001455,
+        "max": 826.2000000000007,
+        "over50": 9,
         "longTasks": [
           {
-            "start": 379.5,
-            "duration": 360
+            "start": 570.9000000059605,
+            "duration": 500
           },
           {
-            "start": 2164.5,
-            "duration": 171
+            "start": 1102.2999999970198,
+            "duration": 51
           },
           {
-            "start": 2339.9000000059605,
-            "duration": 132
+            "start": 1202.2999999970198,
+            "duration": 59
           },
           {
-            "start": 2592,
-            "duration": 840
+            "start": 3307.6000000089407,
+            "duration": 265
           },
           {
-            "start": 6785.0999999940395,
-            "duration": 527
+            "start": 3579,
+            "duration": 205
           },
           {
-            "start": 7449.4000000059605,
-            "duration": 246
+            "start": 3924.1000000089407,
+            "duration": 1281
           },
           {
-            "start": 8572.09999999404,
-            "duration": 316
+            "start": 8871.60000000894,
+            "duration": 833
           },
           {
-            "start": 25493.79999999702,
-            "duration": 497
+            "start": 9910.29999999702,
+            "duration": 362
           },
           {
-            "start": 26155.20000000298,
-            "duration": 125
+            "start": 11383.5,
+            "duration": 425
           },
           {
-            "start": 28678.09999999404,
-            "duration": 256
+            "start": 28469.10000000894,
+            "duration": 684
           },
           {
-            "start": 28979.29999999702,
-            "duration": 64
+            "start": 29354.29999999702,
+            "duration": 148
           },
           {
-            "start": 51357.79999999702,
-            "duration": 350
+            "start": 32010.60000000894,
+            "duration": 324
+          },
+          {
+            "start": 32401.40000000596,
+            "duration": 75
+          },
+          {
+            "start": 55071.10000000894,
+            "duration": 362
           }
         ],
-        "heap": 59556969,
+        "heap": 55417740,
         "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
         "cores": 8,
         "preparation": [
           {
             "name": "V32-route-surface-projections",
             "textures": 15,
-            "uploadMs": 153.79999999701977,
-            "totalMs": 466.5
+            "uploadMs": 207.70000000298023,
+            "totalMs": 659.9000000059605
           },
           {
             "name": "V32-real-second-mural-candidate",
             "textures": 1,
-            "uploadMs": 312.69999998807907,
-            "totalMs": 325.69999998807907
+            "uploadMs": 421.29999999701977,
+            "totalMs": 439.3999999910593
           },
           {
             "name": "V33-real-mural-04",
             "textures": 1,
-            "uploadMs": 24.099999994039536,
-            "totalMs": 26.099999994039536
+            "uploadMs": 28.30000001192093,
+            "totalMs": 31.100000008940697
           },
           {
             "name": "V33-real-mural-03",
             "textures": 1,
-            "uploadMs": 19.5,
-            "totalMs": 48.599999994039536
+            "uploadMs": 24.599999994039536,
+            "totalMs": 58.69999998807907
           },
           {
             "name": "V33-rear-surface-projections",
             "textures": 12,
-            "uploadMs": 121.79999999701977,
-            "totalMs": 146.3999999910593
+            "uploadMs": 143.09999999403954,
+            "totalMs": 181.29999999701977
           },
           {
             "name": "V33-real-mural-05",
             "textures": 1,
-            "uploadMs": 253.59999999403954,
-            "totalMs": 255.29999999701977
+            "uploadMs": 321.20000000298023,
+            "totalMs": 323.6000000089407
           },
           {
             "name": "V34-fifth-surface-projections",
             "textures": 6,
-            "uploadMs": 59.900000005960464,
-            "totalMs": 85.40000000596046
+            "uploadMs": 71.1000000089407,
+            "totalMs": 103.40000000596046
           },
           {
             "name": "V32-real-second-mural-candidate",
             "textures": 1,
-            "uploadMs": 348.09999999403954,
-            "totalMs": 360.8999999910593
+            "uploadMs": 359.69999998807907,
+            "totalMs": 379.8999999910593
           }
         ],
         "stats": {
-          "rendererUUID": "46ac2c4f-1153-45a0-a5ad-87bada7c48db",
-          "renderCount": 6533,
+          "rendererUUID": "403e733f-e6c8-4bc7-a028-74b3396457a1",
+          "renderCount": 6516,
           "renderers": 1,
           "canvases": 1,
           "removedTriangles": 320,
@@ -3946,7 +3995,7 @@
             ],
             "aoSamples": 12,
             "stats": {
-              "frame": 19547,
+              "frame": 19496,
               "calls": 34,
               "triangles": 124304,
               "points": 0,

@@ -17,7 +17,8 @@ import {createNavigation} from '../navigation/controller.mjs';
 import {connectExploration} from '../navigation/exploration.mjs';
 
 const formalGallery=!new URLSearchParams(location.search).has('legacy');
-const galleryHref=new URL('../gallery/',import.meta.url).href;
+const galleryURL=new URL('../gallery/',import.meta.url),routeLayout=new URLSearchParams(location.search).get('layout');if(['model','report'].includes(routeLayout))galleryURL.searchParams.set('layout',routeLayout);
+const galleryHref=galleryURL.href;
 const story = document.querySelector('[data-story]');
 const stage = document.querySelector('[data-stage]');
 const modelFrame = document.querySelector('[data-model-frame]');
@@ -41,6 +42,7 @@ const renderA06 = formalGallery ? ()=>{} : createMuralGuide(stage, a06Guide, req
 const renderA07 = formalGallery ? ()=>{} : createMuralGuide(stage, a07Guide, requestRender);
 const renderA08 = formalGallery ? ()=>{} : createA08Controller(stage);
 const renderA03 = createA03View(stage,{galleryHref:formalGallery?galleryHref:null});
+if(formalGallery)stage.querySelector('[data-a03-kicker]').textContent='水龙祠壁画 · 现有模型位置示意';
 const renderNavigation = createNavigation(stage, requestRender,{galleryHref:formalGallery?galleryHref:null});
 connectExploration(stage);
 let renderInkScene=()=>{};

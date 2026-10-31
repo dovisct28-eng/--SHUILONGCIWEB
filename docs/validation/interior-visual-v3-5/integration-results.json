@@ -1,4 +1,5 @@
 {
+  "routeCase": "model",
   "pass": true,
   "errors": [],
   "formalEntry": true,
@@ -6,5 +7,5 @@
   "moduleB": true,
   "browserBack": true,
   "coldReturn": true,
-  "video": "D:\\YJS\\出兵入将-PC端页面\\docs\\validation\\interior-visual-v3-5\\local\\formal-video\\page@1fea223b89099d51211138a8b8c8274a.webm"
+  "video": "D:\\YJS\\出兵入将-PC端页面\\docs\\validation\\interior-visual-v3-5\\local\\formal-video\\page@0c4ffa944c2a5055f9b52e7331a3c15d.webm"
 }

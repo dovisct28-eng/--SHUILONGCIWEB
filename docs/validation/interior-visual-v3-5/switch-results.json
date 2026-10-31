@@ -1,0 +1,133 @@
+{
+  "pass": true,
+  "layouts": [
+    {
+      "width": 1440,
+      "height": 900,
+      "rects": [
+        {
+          "name": "brand",
+          "x": 72,
+          "y": 32.5,
+          "right": 147.609375,
+          "bottom": 67.5
+        },
+        {
+          "name": "route-open",
+          "x": 458.546875,
+          "y": 31.5,
+          "right": 565.125,
+          "bottom": 68.5
+        },
+        {
+          "name": "chapters",
+          "x": 876.0625,
+          "y": 30.5,
+          "right": 1125,
+          "bottom": 69.5
+        },
+        {
+          "name": "route-case",
+          "x": 1143,
+          "y": 27,
+          "right": 1302,
+          "bottom": 73
+        },
+        {
+          "name": "audience-motion",
+          "x": 1320,
+          "y": 32,
+          "right": 1368,
+          "bottom": 68
+        }
+      ]
+    },
+    {
+      "width": 1920,
+      "height": 1080,
+      "rects": [
+        {
+          "name": "brand",
+          "x": 96,
+          "y": 32.5,
+          "right": 292.5,
+          "bottom": 67.5
+        },
+        {
+          "name": "route-open",
+          "x": 759,
+          "y": 31.5,
+          "right": 865.578125,
+          "bottom": 68.5
+        },
+        {
+          "name": "chapters",
+          "x": 1332.0625,
+          "y": 30.5,
+          "right": 1581,
+          "bottom": 69.5
+        },
+        {
+          "name": "route-case",
+          "x": 1599,
+          "y": 27,
+          "right": 1758,
+          "bottom": 73
+        },
+        {
+          "name": "audience-motion",
+          "x": 1776,
+          "y": 32,
+          "right": 1824,
+          "bottom": 68
+        }
+      ]
+    },
+    {
+      "width": 1366,
+      "height": 768,
+      "rects": [
+        {
+          "name": "brand",
+          "x": 68.296875,
+          "y": 23.5,
+          "right": 143.90625,
+          "bottom": 58.5
+        },
+        {
+          "name": "route-open",
+          "x": 421.546875,
+          "y": 22.5,
+          "right": 528.125,
+          "bottom": 59.5
+        },
+        {
+          "name": "chapters",
+          "x": 805.765625,
+          "y": 21.5,
+          "right": 1054.703125,
+          "bottom": 60.5
+        },
+        {
+          "name": "route-case",
+          "x": 1072.703125,
+          "y": 18,
+          "right": 1231.703125,
+          "bottom": 64
+        },
+        {
+          "name": "audience-motion",
+          "x": 1249.703125,
+          "y": 23,
+          "right": 1297.703125,
+          "bottom": 59
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "switchResets": true,
+  "reloadPersists": true,
+  "reverseSwitch": true,
+  "reportColdFifthReturn": true
+}

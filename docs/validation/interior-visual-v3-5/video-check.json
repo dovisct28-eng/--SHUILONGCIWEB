@@ -1,11 +1,29 @@
 {
   "pass": true,
-  "untrimmed": true,
-  "codecMetadata": [
-    "  Duration: 00:01:56.92, start: 0.000000, bitrate: 798 kb/s",
-    "    Stream #0:0(eng): Video: vp8, yuv420p(progressive), 1440x900, SAR 1:1 DAR 8:5, 25 fps, 25 tbr, 1k tbn, 1k tbc (default)"
-  ],
-  "decodeExit": 0,
-  "decodeErrors": "",
-  "bytes": 11667474
+  "videos": [
+    {
+      "routeCase": "model",
+      "file": "continuous-walk-1440x900.webm",
+      "untrimmed": true,
+      "codecMetadata": [
+        "  Duration: 00:02:10.32, start: 0.000000, bitrate: 806 kb/s",
+        "    Stream #0:0(eng): Video: vp8, yuv420p(progressive), 1440x900, SAR 1:1 DAR 8:5, 25 fps, 25 tbr, 1k tbn, 1k tbc (default)"
+      ],
+      "decodeExit": 0,
+      "decodeErrors": "",
+      "bytes": 13135583
+    },
+    {
+      "routeCase": "report",
+      "file": "continuous-walk-report-1440x900.webm",
+      "untrimmed": true,
+      "codecMetadata": [
+        "  Duration: 00:02:17.80, start: 0.000000, bitrate: 716 kb/s",
+        "    Stream #0:0(eng): Video: vp8, yuv420p(progressive), 1440x900, SAR 1:1 DAR 8:5, 25 fps, 25 tbr, 1k tbn, 1k tbc (default)"
+      ],
+      "decodeExit": 0,
+      "decodeErrors": "",
+      "bytes": 12339813
+    }
+  ]
 }
