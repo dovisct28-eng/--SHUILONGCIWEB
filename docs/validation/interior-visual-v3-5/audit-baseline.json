@@ -1,0 +1,3575 @@
+{
+  "errors": [],
+  "forward": [
+    {
+      "activeMural": 0,
+      "view": "C",
+      "busy": false,
+      "route": {
+        "progress": 0,
+        "reveal": 0,
+        "status": "idle",
+        "error": null,
+        "wall": null
+      },
+      "rear": {
+        "segment": 0,
+        "progress": 0,
+        "status": "idle",
+        "error": null,
+        "bridge": "soft-reversible-photo",
+        "wall": null,
+        "reveals": {},
+        "lengths": [
+          3.328930236730598,
+          4.518830287042765,
+          3.152355143398346
+        ],
+        "imageSize": null
+      },
+      "pose": {
+        "time": 2,
+        "position": [
+          2.8070000000000004,
+          1.55,
+          4.8
+        ],
+        "target": [
+          4.865,
+          1.55,
+          4.8
+        ],
+        "fov": 48,
+        "muralFront": 1
+      },
+      "image": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/murals/mural-01-display.webp",
+      "walls": [
+        {
+          "name": "mural-01",
+          "visible": false
+        },
+        {
+          "name": "mural-01-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-01-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-02",
+          "visible": false
+        },
+        {
+          "name": "mural-02-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-02-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-03",
+          "visible": false
+        },
+        {
+          "name": "mural-03-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-03-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-04",
+          "visible": false
+        },
+        {
+          "name": "mural-04-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-04-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-05",
+          "visible": false
+        },
+        {
+          "name": "mural-05-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-05-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        }
+      ]
+    },
+    {
+      "activeMural": 1,
+      "view": "B",
+      "busy": false,
+      "route": {
+        "progress": 1,
+        "reveal": 1,
+        "status": "lit",
+        "error": null,
+        "projection": {
+          "enabled": true,
+          "progress": 1,
+          "weights": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "gain": 1,
+          "layers": [
+            {
+              "kind": 0,
+              "gain": 0.6,
+              "triangles": 14
+            },
+            {
+              "kind": 1,
+              "gain": 0.32,
+              "triangles": 48
+            },
+            {
+              "kind": 0,
+              "gain": 0.6,
+              "triangles": 2
+            },
+            {
+              "kind": 1,
+              "gain": 0.32,
+              "triangles": 74
+            }
+          ],
+          "referenceDepth": true,
+          "secondWallExcluded": true
+        },
+        "wall": {
+          "opacity": 1,
+          "color": [
+            0.63,
+            0.62,
+            0.595
+          ],
+          "corners": [
+            {
+              "x": 123.16587970050436,
+              "y": 315.0160164589306,
+              "depth": 0.9830707918992796
+            },
+            {
+              "x": 1316.834120296045,
+              "y": 315.0160164597112,
+              "depth": 0.9830707918993803
+            },
+            {
+              "x": 1316.834120296045,
+              "y": 584.9839835402888,
+              "depth": 0.9830707918993803
+            },
+            {
+              "x": 123.16587970050436,
+              "y": 584.9839835410694,
+              "depth": 0.9830707918992796
+            }
+          ]
+        }
+      },
+      "rear": {
+        "segment": 0,
+        "progress": 0,
+        "status": "idle",
+        "error": null,
+        "bridge": "soft-reversible-photo",
+        "wall": null,
+        "reveals": {},
+        "lengths": [
+          3.328930236730598,
+          4.518830287042765,
+          3.152355143398346
+        ],
+        "imageSize": null
+      },
+      "pose": {
+        "position": [
+          -0.65,
+          1.85,
+          -11.75
+        ],
+        "target": [
+          4.515,
+          1.85,
+          -11.75
+        ],
+        "fov": 48,
+        "time": 3,
+        "route12": 1
+      },
+      "image": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+      "walls": [
+        {
+          "name": "mural-01",
+          "visible": false
+        },
+        {
+          "name": "mural-01-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-01-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-02",
+          "visible": false
+        },
+        {
+          "name": "mural-02-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-02-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-03",
+          "visible": false
+        },
+        {
+          "name": "mural-03-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-03-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-04",
+          "visible": false
+        },
+        {
+          "name": "mural-04-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-04-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-05",
+          "visible": false
+        },
+        {
+          "name": "mural-05-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-05-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "V32-real-second-mural-candidate",
+          "visible": true,
+          "image": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+          "color": [
+            0.63,
+            0.62,
+            0.595
+          ]
+        }
+      ]
+    },
+    {
+      "activeMural": 2,
+      "view": "B",
+      "busy": false,
+      "route": {
+        "progress": 1,
+        "reveal": 1,
+        "status": "lit",
+        "error": null,
+        "projection": {
+          "enabled": false,
+          "progress": 1,
+          "weights": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "gain": 1,
+          "layers": [
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 14
+            },
+            {
+              "kind": 1,
+              "gain": 0,
+              "triangles": 48
+            },
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 2
+            },
+            {
+              "kind": 1,
+              "gain": 0,
+              "triangles": 74
+            }
+          ],
+          "referenceDepth": true,
+          "secondWallExcluded": true
+        },
+        "wall": {
+          "opacity": 1,
+          "color": [
+            0.63,
+            0.62,
+            0.595
+          ],
+          "corners": null
+        }
+      },
+      "rear": {
+        "segment": 0,
+        "progress": 1,
+        "status": "lit",
+        "error": null,
+        "bridge": "soft-reversible-photo",
+        "projection": {
+          "enabled": true,
+          "progress": 0.5,
+          "weights": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "gain": 1,
+          "layers": [
+            {
+              "kind": 0,
+              "gain": 0.3,
+              "triangles": 4
+            },
+            {
+              "kind": 1,
+              "gain": 0.34,
+              "triangles": 44
+            },
+            {
+              "kind": 0,
+              "gain": 0.3,
+              "triangles": 4
+            }
+          ],
+          "referenceDepth": true,
+          "secondWallExcluded": true
+        },
+        "wall": [
+          {
+            "x": 323.0597377889092,
+            "y": 253.69050795781203,
+            "depth": 0.9793928552478095
+          },
+          {
+            "x": 1116.9402622110908,
+            "y": 253.69050795781203,
+            "depth": 0.9793928552478095
+          },
+          {
+            "x": 1116.9402622110908,
+            "y": 646.309492042188,
+            "depth": 0.9793928552478095
+          },
+          {
+            "x": 323.0597377889092,
+            "y": 646.309492042188,
+            "depth": 0.9793928552478095
+          }
+        ],
+        "reveals": {
+          "2": 1,
+          "3": 0
+        },
+        "lengths": [
+          3.328930236730598,
+          4.518830287042765,
+          3.152355143398346
+        ],
+        "imageSize": [
+          1286,
+          636
+        ]
+      },
+      "pose": {
+        "position": [
+          2.25,
+          1.85,
+          -10.6
+        ],
+        "target": [
+          2.25,
+          1.85,
+          -14.865
+        ],
+        "fov": 48,
+        "time": 3,
+        "route33": 0.5,
+        "rearSegment": 0,
+        "rearProgress": 1
+      },
+      "image": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-03-display.webp",
+      "walls": [
+        {
+          "name": "mural-01",
+          "visible": false
+        },
+        {
+          "name": "mural-01-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-01-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-02",
+          "visible": false
+        },
+        {
+          "name": "mural-02-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-02-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-03",
+          "visible": false
+        },
+        {
+          "name": "mural-03-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-03-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-04",
+          "visible": false
+        },
+        {
+          "name": "mural-04-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-04-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-05",
+          "visible": false
+        },
+        {
+          "name": "mural-05-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-05-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "V32-real-second-mural-candidate",
+          "visible": true,
+          "image": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+          "color": [
+            0.63,
+            0.62,
+            0.595
+          ]
+        },
+        {
+          "name": "V33-real-mural-03",
+          "visible": true,
+          "image": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-03-display.webp",
+          "color": [
+            0.63,
+            0.62,
+            0.595
+          ]
+        },
+        {
+          "name": "V33-real-mural-04",
+          "visible": true,
+          "image": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-04-display.webp",
+          "color": [
+            0.12,
+            0.115,
+            0.105
+          ]
+        }
+      ]
+    },
+    {
+      "activeMural": 3,
+      "view": "B",
+      "busy": false,
+      "route": {
+        "progress": 1,
+        "reveal": 1,
+        "status": "lit",
+        "error": null,
+        "projection": {
+          "enabled": false,
+          "progress": 1,
+          "weights": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "gain": 1,
+          "layers": [
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 14
+            },
+            {
+              "kind": 1,
+              "gain": 0,
+              "triangles": 48
+            },
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 2
+            },
+            {
+              "kind": 1,
+              "gain": 0,
+              "triangles": 74
+            }
+          ],
+          "referenceDepth": true,
+          "secondWallExcluded": true
+        },
+        "wall": {
+          "opacity": 1,
+          "color": [
+            0.63,
+            0.62,
+            0.595
+          ],
+          "corners": null
+        }
+      },
+      "rear": {
+        "segment": 1,
+        "progress": 1,
+        "status": "lit",
+        "error": null,
+        "bridge": "soft-reversible-photo",
+        "projection": {
+          "enabled": true,
+          "progress": 1,
+          "weights": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "gain": 1,
+          "layers": [
+            {
+              "kind": 0,
+              "gain": 0.3,
+              "triangles": 4
+            },
+            {
+              "kind": 1,
+              "gain": 0.34,
+              "triangles": 44
+            },
+            {
+              "kind": 0,
+              "gain": 0.3,
+              "triangles": 4
+            }
+          ],
+          "referenceDepth": true,
+          "secondWallExcluded": true
+        },
+        "wall": [
+          {
+            "x": 396.96117773420673,
+            "y": 213.02073897845324,
+            "depth": 0.9793928552478095
+          },
+          {
+            "x": 1043.0388222657932,
+            "y": 213.02073897845324,
+            "depth": 0.9793928552478095
+          },
+          {
+            "x": 1043.0388222657932,
+            "y": 686.9792610215467,
+            "depth": 0.9793928552478095
+          },
+          {
+            "x": 396.96117773420673,
+            "y": 686.9792610215467,
+            "depth": 0.9793928552478095
+          }
+        ],
+        "reveals": {
+          "2": 0.28,
+          "3": 1
+        },
+        "lengths": [
+          3.328930236730598,
+          4.518830287042765,
+          3.152355143398346
+        ],
+        "imageSize": [
+          1280,
+          939
+        ]
+      },
+      "pose": {
+        "position": [
+          -2.25,
+          1.85,
+          -10.6
+        ],
+        "target": [
+          -2.25,
+          1.85,
+          -14.865
+        ],
+        "fov": 48,
+        "time": 3,
+        "route33": 1,
+        "rearSegment": 1,
+        "rearProgress": 1
+      },
+      "image": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-04-display.webp",
+      "walls": [
+        {
+          "name": "mural-01",
+          "visible": false
+        },
+        {
+          "name": "mural-01-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-01-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-02",
+          "visible": false
+        },
+        {
+          "name": "mural-02-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-02-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-03",
+          "visible": false
+        },
+        {
+          "name": "mural-03-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-03-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-04",
+          "visible": false
+        },
+        {
+          "name": "mural-04-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-04-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-05",
+          "visible": false
+        },
+        {
+          "name": "mural-05-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-05-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "V32-real-second-mural-candidate",
+          "visible": true,
+          "image": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+          "color": [
+            0.63,
+            0.62,
+            0.595
+          ]
+        },
+        {
+          "name": "V33-real-mural-03",
+          "visible": true,
+          "image": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-03-display.webp",
+          "color": [
+            0.12,
+            0.115,
+            0.105
+          ]
+        },
+        {
+          "name": "V33-real-mural-04",
+          "visible": true,
+          "image": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-04-display.webp",
+          "color": [
+            0.63,
+            0.62,
+            0.595
+          ]
+        }
+      ]
+    },
+    {
+      "activeMural": 4,
+      "view": "B",
+      "busy": false,
+      "route": {
+        "progress": 1,
+        "reveal": 1,
+        "status": "lit",
+        "error": null,
+        "projection": {
+          "enabled": false,
+          "progress": 1,
+          "weights": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "gain": 1,
+          "layers": [
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 14
+            },
+            {
+              "kind": 1,
+              "gain": 0,
+              "triangles": 48
+            },
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 2
+            },
+            {
+              "kind": 1,
+              "gain": 0,
+              "triangles": 74
+            }
+          ],
+          "referenceDepth": true,
+          "secondWallExcluded": true
+        },
+        "wall": {
+          "opacity": 1,
+          "color": [
+            0.63,
+            0.62,
+            0.595
+          ],
+          "corners": null
+        }
+      },
+      "rear": {
+        "segment": 2,
+        "progress": 1,
+        "status": "lit",
+        "error": null,
+        "bridge": "soft-reversible-photo",
+        "projection": {
+          "enabled": true,
+          "progress": 1,
+          "weights": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "gain": 1,
+          "layers": [
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 4
+            },
+            {
+              "kind": 1,
+              "gain": 0,
+              "triangles": 44
+            },
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 4
+            }
+          ],
+          "referenceDepth": true,
+          "secondWallExcluded": true
+        },
+        "fifthProjection": {
+          "enabled": true,
+          "progress": 1,
+          "weights": [
+            0,
+            1
+          ],
+          "gain": 1,
+          "layers": [
+            {
+              "kind": 0,
+              "gain": 0.3,
+              "triangles": 4
+            },
+            {
+              "kind": 1,
+              "gain": 0.34,
+              "triangles": 44
+            },
+            {
+              "kind": 0,
+              "gain": 0.3,
+              "triangles": 4
+            }
+          ],
+          "referenceDepth": true,
+          "secondWallExcluded": true
+        },
+        "wall": [
+          {
+            "x": 123.15866947248301,
+            "y": 289.1512614228343,
+            "depth": 0.9830707918993803
+          },
+          {
+            "x": 1316.8413305309678,
+            "y": 289.1512614219041,
+            "depth": 0.9830707918992796
+          },
+          {
+            "x": 1316.8413305309678,
+            "y": 610.8487385780959,
+            "depth": 0.9830707918992796
+          },
+          {
+            "x": 123.15866947248301,
+            "y": 610.8487385771657,
+            "depth": 0.9830707918993803
+          }
+        ],
+        "reveals": {
+          "2": 0.28,
+          "3": 0.28,
+          "4": 1
+        },
+        "lengths": [
+          3.328930236730598,
+          4.518830287042765,
+          3.152355143398346
+        ],
+        "imageSize": [
+          6000,
+          1617
+        ]
+      },
+      "pose": {
+        "position": [
+          0.65,
+          1.85,
+          -11.75
+        ],
+        "target": [
+          -4.515,
+          1.85,
+          -11.75
+        ],
+        "fov": 48,
+        "time": 3,
+        "rearSegment": 2,
+        "rearProgress": 1,
+        "route33": 1,
+        "route34": 1
+      },
+      "image": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+      "walls": [
+        {
+          "name": "mural-01",
+          "visible": false
+        },
+        {
+          "name": "mural-01-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-01-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-02",
+          "visible": false
+        },
+        {
+          "name": "mural-02-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-02-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-03",
+          "visible": false
+        },
+        {
+          "name": "mural-03-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-03-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-04",
+          "visible": false
+        },
+        {
+          "name": "mural-04-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-04-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-05",
+          "visible": false
+        },
+        {
+          "name": "mural-05-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-05-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "V32-real-second-mural-candidate",
+          "visible": true,
+          "image": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+          "color": [
+            0.63,
+            0.62,
+            0.595
+          ]
+        },
+        {
+          "name": "V33-real-mural-03",
+          "visible": true,
+          "image": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-03-display.webp",
+          "color": [
+            0.12,
+            0.115,
+            0.105
+          ]
+        },
+        {
+          "name": "V33-real-mural-04",
+          "visible": true,
+          "image": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-04-display.webp",
+          "color": [
+            0.12,
+            0.115,
+            0.105
+          ]
+        },
+        {
+          "name": "V33-real-mural-05",
+          "visible": true,
+          "image": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+          "color": [
+            0.63,
+            0.62,
+            0.595
+          ]
+        }
+      ]
+    }
+  ],
+  "reverse": [
+    {
+      "activeMural": 3,
+      "view": "B",
+      "busy": false,
+      "route": {
+        "progress": 1,
+        "reveal": 1,
+        "status": "lit",
+        "error": null,
+        "projection": {
+          "enabled": false,
+          "progress": 1,
+          "weights": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "gain": 1,
+          "layers": [
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 14
+            },
+            {
+              "kind": 1,
+              "gain": 0,
+              "triangles": 48
+            },
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 2
+            },
+            {
+              "kind": 1,
+              "gain": 0,
+              "triangles": 74
+            }
+          ],
+          "referenceDepth": true,
+          "secondWallExcluded": true
+        },
+        "wall": {
+          "opacity": 1,
+          "color": [
+            0.63,
+            0.62,
+            0.595
+          ],
+          "corners": null
+        }
+      },
+      "rear": {
+        "segment": 2,
+        "progress": 0,
+        "status": "lit",
+        "error": null,
+        "bridge": "soft-reversible-photo",
+        "projection": {
+          "enabled": true,
+          "progress": 1,
+          "weights": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "gain": 1,
+          "layers": [
+            {
+              "kind": 0,
+              "gain": 0.3,
+              "triangles": 4
+            },
+            {
+              "kind": 1,
+              "gain": 0.34,
+              "triangles": 44
+            },
+            {
+              "kind": 0,
+              "gain": 0.3,
+              "triangles": 4
+            }
+          ],
+          "referenceDepth": true,
+          "secondWallExcluded": true
+        },
+        "fifthProjection": {
+          "enabled": true,
+          "progress": 0,
+          "weights": [
+            1,
+            0
+          ],
+          "gain": 0,
+          "layers": [
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 4
+            },
+            {
+              "kind": 1,
+              "gain": 0,
+              "triangles": 44
+            },
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 4
+            }
+          ],
+          "referenceDepth": true,
+          "secondWallExcluded": true
+        },
+        "wall": [
+          {
+            "x": 396.96117773420673,
+            "y": 213.02073897845324,
+            "depth": 0.9793928552478095
+          },
+          {
+            "x": 1043.0388222657932,
+            "y": 213.02073897845324,
+            "depth": 0.9793928552478095
+          },
+          {
+            "x": 1043.0388222657932,
+            "y": 686.9792610215467,
+            "depth": 0.9793928552478095
+          },
+          {
+            "x": 396.96117773420673,
+            "y": 686.9792610215467,
+            "depth": 0.9793928552478095
+          }
+        ],
+        "reveals": {
+          "2": 0.28,
+          "3": 1,
+          "4": 0.28
+        },
+        "lengths": [
+          3.328930236730598,
+          4.518830287042765,
+          3.152355143398346
+        ],
+        "imageSize": [
+          1280,
+          939
+        ]
+      },
+      "pose": {
+        "position": [
+          -2.25,
+          1.85,
+          -10.6
+        ],
+        "target": [
+          -2.25,
+          1.85,
+          -14.865
+        ],
+        "fov": 48,
+        "time": 3,
+        "rearSegment": 2,
+        "rearProgress": 0,
+        "route33": 1,
+        "route34": 0
+      },
+      "image": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-04-display.webp",
+      "walls": [
+        {
+          "name": "mural-01",
+          "visible": false
+        },
+        {
+          "name": "mural-01-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-01-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-02",
+          "visible": false
+        },
+        {
+          "name": "mural-02-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-02-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-03",
+          "visible": false
+        },
+        {
+          "name": "mural-03-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-03-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-04",
+          "visible": false
+        },
+        {
+          "name": "mural-04-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-04-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-05",
+          "visible": false
+        },
+        {
+          "name": "mural-05-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-05-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "V32-real-second-mural-candidate",
+          "visible": true,
+          "image": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+          "color": [
+            0.63,
+            0.62,
+            0.595
+          ]
+        },
+        {
+          "name": "V33-real-mural-03",
+          "visible": true,
+          "image": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-03-display.webp",
+          "color": [
+            0.12,
+            0.115,
+            0.105
+          ]
+        },
+        {
+          "name": "V33-real-mural-04",
+          "visible": true,
+          "image": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-04-display.webp",
+          "color": [
+            0.63,
+            0.62,
+            0.595
+          ]
+        },
+        {
+          "name": "V33-real-mural-05",
+          "visible": true,
+          "image": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+          "color": [
+            0.12,
+            0.115,
+            0.105
+          ]
+        }
+      ]
+    },
+    {
+      "activeMural": 2,
+      "view": "B",
+      "busy": false,
+      "route": {
+        "progress": 1,
+        "reveal": 1,
+        "status": "lit",
+        "error": null,
+        "projection": {
+          "enabled": false,
+          "progress": 1,
+          "weights": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "gain": 1,
+          "layers": [
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 14
+            },
+            {
+              "kind": 1,
+              "gain": 0,
+              "triangles": 48
+            },
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 2
+            },
+            {
+              "kind": 1,
+              "gain": 0,
+              "triangles": 74
+            }
+          ],
+          "referenceDepth": true,
+          "secondWallExcluded": true
+        },
+        "wall": {
+          "opacity": 1,
+          "color": [
+            0.63,
+            0.62,
+            0.595
+          ],
+          "corners": null
+        }
+      },
+      "rear": {
+        "segment": 1,
+        "progress": 0,
+        "status": "lit",
+        "error": null,
+        "bridge": "soft-reversible-photo",
+        "projection": {
+          "enabled": true,
+          "progress": 0.5,
+          "weights": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "gain": 1,
+          "layers": [
+            {
+              "kind": 0,
+              "gain": 0.3,
+              "triangles": 4
+            },
+            {
+              "kind": 1,
+              "gain": 0.34,
+              "triangles": 44
+            },
+            {
+              "kind": 0,
+              "gain": 0.3,
+              "triangles": 4
+            }
+          ],
+          "referenceDepth": true,
+          "secondWallExcluded": true
+        },
+        "fifthProjection": {
+          "enabled": false,
+          "progress": 0,
+          "weights": [
+            1,
+            0
+          ],
+          "gain": 0,
+          "layers": [
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 4
+            },
+            {
+              "kind": 1,
+              "gain": 0,
+              "triangles": 44
+            },
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 4
+            }
+          ],
+          "referenceDepth": true,
+          "secondWallExcluded": true
+        },
+        "wall": [
+          {
+            "x": 323.0597377889092,
+            "y": 253.69050795781203,
+            "depth": 0.9793928552478095
+          },
+          {
+            "x": 1116.9402622110908,
+            "y": 253.69050795781203,
+            "depth": 0.9793928552478095
+          },
+          {
+            "x": 1116.9402622110908,
+            "y": 646.309492042188,
+            "depth": 0.9793928552478095
+          },
+          {
+            "x": 323.0597377889092,
+            "y": 646.309492042188,
+            "depth": 0.9793928552478095
+          }
+        ],
+        "reveals": {
+          "2": 1,
+          "3": 0.28,
+          "4": 0.28
+        },
+        "lengths": [
+          3.328930236730598,
+          4.518830287042765,
+          3.152355143398346
+        ],
+        "imageSize": [
+          1286,
+          636
+        ]
+      },
+      "pose": {
+        "position": [
+          2.25,
+          1.85,
+          -10.6
+        ],
+        "target": [
+          2.25,
+          1.85,
+          -14.865
+        ],
+        "fov": 48,
+        "time": 3,
+        "route33": 0.5,
+        "rearSegment": 1,
+        "rearProgress": 0
+      },
+      "image": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-03-display.webp",
+      "walls": [
+        {
+          "name": "mural-01",
+          "visible": false
+        },
+        {
+          "name": "mural-01-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-01-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-02",
+          "visible": false
+        },
+        {
+          "name": "mural-02-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-02-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-03",
+          "visible": false
+        },
+        {
+          "name": "mural-03-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-03-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-04",
+          "visible": false
+        },
+        {
+          "name": "mural-04-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-04-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-05",
+          "visible": false
+        },
+        {
+          "name": "mural-05-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-05-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "V32-real-second-mural-candidate",
+          "visible": true,
+          "image": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+          "color": [
+            0.63,
+            0.62,
+            0.595
+          ]
+        },
+        {
+          "name": "V33-real-mural-03",
+          "visible": true,
+          "image": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-03-display.webp",
+          "color": [
+            0.63,
+            0.62,
+            0.595
+          ]
+        },
+        {
+          "name": "V33-real-mural-04",
+          "visible": true,
+          "image": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-04-display.webp",
+          "color": [
+            0.12,
+            0.115,
+            0.105
+          ]
+        },
+        {
+          "name": "V33-real-mural-05",
+          "visible": true,
+          "image": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+          "color": [
+            0.12,
+            0.115,
+            0.105
+          ]
+        }
+      ]
+    },
+    {
+      "activeMural": 1,
+      "view": "B",
+      "busy": false,
+      "route": {
+        "progress": 1,
+        "reveal": 1,
+        "status": "lit",
+        "error": null,
+        "projection": {
+          "enabled": true,
+          "progress": 1,
+          "weights": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "gain": 1,
+          "layers": [
+            {
+              "kind": 0,
+              "gain": 0.6,
+              "triangles": 14
+            },
+            {
+              "kind": 1,
+              "gain": 0.32,
+              "triangles": 48
+            },
+            {
+              "kind": 0,
+              "gain": 0.6,
+              "triangles": 2
+            },
+            {
+              "kind": 1,
+              "gain": 0.32,
+              "triangles": 74
+            }
+          ],
+          "referenceDepth": true,
+          "secondWallExcluded": true
+        },
+        "wall": {
+          "opacity": 1,
+          "color": [
+            0.63,
+            0.62,
+            0.595
+          ],
+          "corners": [
+            {
+              "x": 123.16587970050436,
+              "y": 315.0160164589306,
+              "depth": 0.9830707918992796
+            },
+            {
+              "x": 1316.834120296045,
+              "y": 315.0160164597112,
+              "depth": 0.9830707918993803
+            },
+            {
+              "x": 1316.834120296045,
+              "y": 584.9839835402888,
+              "depth": 0.9830707918993803
+            },
+            {
+              "x": 123.16587970050436,
+              "y": 584.9839835410694,
+              "depth": 0.9830707918992796
+            }
+          ]
+        }
+      },
+      "rear": {
+        "segment": 0,
+        "progress": 0,
+        "status": "title",
+        "error": null,
+        "bridge": "soft-reversible-photo",
+        "projection": {
+          "enabled": false,
+          "progress": 0,
+          "weights": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "gain": 0,
+          "layers": [
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 4
+            },
+            {
+              "kind": 1,
+              "gain": 0,
+              "triangles": 44
+            },
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 4
+            }
+          ],
+          "referenceDepth": true,
+          "secondWallExcluded": true
+        },
+        "fifthProjection": {
+          "enabled": false,
+          "progress": 0,
+          "weights": [
+            1,
+            0
+          ],
+          "gain": 0,
+          "layers": [
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 4
+            },
+            {
+              "kind": 1,
+              "gain": 0,
+              "triangles": 44
+            },
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 4
+            }
+          ],
+          "referenceDepth": true,
+          "secondWallExcluded": true
+        },
+        "wall": null,
+        "reveals": {
+          "2": 0.28,
+          "3": 0.28,
+          "4": 0.28
+        },
+        "lengths": [
+          3.328930236730598,
+          4.518830287042765,
+          3.152355143398346
+        ],
+        "imageSize": null
+      },
+      "pose": {
+        "position": [
+          -0.65,
+          1.85,
+          -11.75
+        ],
+        "target": [
+          4.515,
+          1.85,
+          -11.75
+        ],
+        "fov": 48,
+        "time": 3,
+        "route33": 0,
+        "rearSegment": 0,
+        "rearProgress": 0
+      },
+      "image": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+      "walls": [
+        {
+          "name": "mural-01",
+          "visible": false
+        },
+        {
+          "name": "mural-01-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-01-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-02",
+          "visible": false
+        },
+        {
+          "name": "mural-02-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-02-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-03",
+          "visible": false
+        },
+        {
+          "name": "mural-03-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-03-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-04",
+          "visible": false
+        },
+        {
+          "name": "mural-04-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-04-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-05",
+          "visible": false
+        },
+        {
+          "name": "mural-05-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-05-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "V32-real-second-mural-candidate",
+          "visible": true,
+          "image": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+          "color": [
+            0.63,
+            0.62,
+            0.595
+          ]
+        },
+        {
+          "name": "V33-real-mural-03",
+          "visible": true,
+          "image": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-03-display.webp",
+          "color": [
+            0.12,
+            0.115,
+            0.105
+          ]
+        },
+        {
+          "name": "V33-real-mural-04",
+          "visible": true,
+          "image": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-04-display.webp",
+          "color": [
+            0.12,
+            0.115,
+            0.105
+          ]
+        },
+        {
+          "name": "V33-real-mural-05",
+          "visible": true,
+          "image": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+          "color": [
+            0.12,
+            0.115,
+            0.105
+          ]
+        }
+      ]
+    },
+    {
+      "activeMural": 0,
+      "view": "B",
+      "busy": false,
+      "route": {
+        "progress": 0,
+        "reveal": 0,
+        "status": "dark",
+        "error": null,
+        "projection": {
+          "enabled": false,
+          "progress": 0,
+          "weights": [
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "gain": 0,
+          "layers": [
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 14
+            },
+            {
+              "kind": 1,
+              "gain": 0,
+              "triangles": 48
+            },
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 2
+            },
+            {
+              "kind": 1,
+              "gain": 0,
+              "triangles": 74
+            }
+          ],
+          "referenceDepth": true,
+          "secondWallExcluded": true
+        },
+        "wall": null
+      },
+      "rear": {
+        "segment": 0,
+        "progress": 0,
+        "status": "title",
+        "error": null,
+        "bridge": "soft-reversible-photo",
+        "projection": {
+          "enabled": false,
+          "progress": 0,
+          "weights": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "gain": 0,
+          "layers": [
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 4
+            },
+            {
+              "kind": 1,
+              "gain": 0,
+              "triangles": 44
+            },
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 4
+            }
+          ],
+          "referenceDepth": true,
+          "secondWallExcluded": true
+        },
+        "fifthProjection": {
+          "enabled": false,
+          "progress": 0,
+          "weights": [
+            1,
+            0
+          ],
+          "gain": 0,
+          "layers": [
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 4
+            },
+            {
+              "kind": 1,
+              "gain": 0,
+              "triangles": 44
+            },
+            {
+              "kind": 0,
+              "gain": 0,
+              "triangles": 4
+            }
+          ],
+          "referenceDepth": true,
+          "secondWallExcluded": true
+        },
+        "wall": null,
+        "reveals": {
+          "2": 0.28,
+          "3": 0.28,
+          "4": 0.28
+        },
+        "lengths": [
+          3.328930236730598,
+          4.518830287042765,
+          3.152355143398346
+        ],
+        "imageSize": null
+      },
+      "pose": {
+        "time": 2,
+        "position": [
+          2.8070000000000004,
+          1.55,
+          4.8
+        ],
+        "target": [
+          4.865,
+          1.55,
+          4.8
+        ],
+        "fov": 48,
+        "muralFront": 1
+      },
+      "image": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/assets/murals/mural-01-display.webp",
+      "walls": [
+        {
+          "name": "mural-01",
+          "visible": false
+        },
+        {
+          "name": "mural-01-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-01-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-02",
+          "visible": false
+        },
+        {
+          "name": "mural-02-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-02-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-03",
+          "visible": false
+        },
+        {
+          "name": "mural-03-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-03-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-04",
+          "visible": false
+        },
+        {
+          "name": "mural-04-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-04-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-05",
+          "visible": false
+        },
+        {
+          "name": "mural-05-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-05-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "V33-real-mural-03",
+          "visible": true,
+          "image": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-03-display.webp",
+          "color": [
+            0.12,
+            0.115,
+            0.105
+          ]
+        },
+        {
+          "name": "V33-real-mural-04",
+          "visible": true,
+          "image": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-04-display.webp",
+          "color": [
+            0.12,
+            0.115,
+            0.105
+          ]
+        },
+        {
+          "name": "V33-real-mural-05",
+          "visible": true,
+          "image": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+          "color": [
+            0.12,
+            0.115,
+            0.105
+          ]
+        }
+      ]
+    }
+  ],
+  "second": [
+    {
+      "phase": "dark",
+      "activeMural": 1,
+      "view": "B",
+      "busy": true,
+      "route": {
+        "progress": 1,
+        "reveal": 0,
+        "status": "dark",
+        "error": null,
+        "projection": {
+          "enabled": true,
+          "progress": 1,
+          "weights": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "gain": 1,
+          "layers": [
+            {
+              "kind": 0,
+              "gain": 0.6,
+              "triangles": 14
+            },
+            {
+              "kind": 1,
+              "gain": 0.32,
+              "triangles": 48
+            },
+            {
+              "kind": 0,
+              "gain": 0.6,
+              "triangles": 2
+            },
+            {
+              "kind": 1,
+              "gain": 0.32,
+              "triangles": 74
+            }
+          ],
+          "referenceDepth": true,
+          "secondWallExcluded": true
+        },
+        "wall": {
+          "opacity": 1,
+          "color": [
+            0.12,
+            0.115,
+            0.105
+          ],
+          "corners": [
+            {
+              "x": 123.16587970050436,
+              "y": 315.0160164589306,
+              "depth": 0.9830707918992796
+            },
+            {
+              "x": 1316.834120296045,
+              "y": 315.0160164597112,
+              "depth": 0.9830707918993803
+            },
+            {
+              "x": 1316.834120296045,
+              "y": 584.9839835402888,
+              "depth": 0.9830707918993803
+            },
+            {
+              "x": 123.16587970050436,
+              "y": 584.9839835410694,
+              "depth": 0.9830707918992796
+            }
+          ]
+        }
+      },
+      "rear": {
+        "segment": 0,
+        "progress": 0,
+        "status": "idle",
+        "error": null,
+        "bridge": "soft-reversible-photo",
+        "wall": null,
+        "reveals": {},
+        "lengths": [
+          3.328930236730598,
+          4.518830287042765,
+          3.152355143398346
+        ],
+        "imageSize": null
+      },
+      "pose": {
+        "position": [
+          -0.65,
+          1.85,
+          -11.75
+        ],
+        "target": [
+          4.515,
+          1.85,
+          -11.75
+        ],
+        "fov": 48,
+        "time": 3,
+        "route12": 1
+      },
+      "image": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+      "walls": [
+        {
+          "name": "mural-01",
+          "visible": false
+        },
+        {
+          "name": "mural-01-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-01-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-02",
+          "visible": false
+        },
+        {
+          "name": "mural-02-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-02-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-03",
+          "visible": false
+        },
+        {
+          "name": "mural-03-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-03-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-04",
+          "visible": false
+        },
+        {
+          "name": "mural-04-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-04-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-05",
+          "visible": false
+        },
+        {
+          "name": "mural-05-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-05-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "V32-real-second-mural-candidate",
+          "visible": true,
+          "image": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+          "color": [
+            0.12,
+            0.115,
+            0.105
+          ]
+        }
+      ]
+    },
+    {
+      "phase": "title",
+      "activeMural": 1,
+      "view": "B",
+      "busy": true,
+      "route": {
+        "progress": 1,
+        "reveal": 0.20229166666666668,
+        "status": "title",
+        "error": null,
+        "projection": {
+          "enabled": true,
+          "progress": 1,
+          "weights": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "gain": 1,
+          "layers": [
+            {
+              "kind": 0,
+              "gain": 0.6,
+              "triangles": 14
+            },
+            {
+              "kind": 1,
+              "gain": 0.32,
+              "triangles": 48
+            },
+            {
+              "kind": 0,
+              "gain": 0.6,
+              "triangles": 2
+            },
+            {
+              "kind": 1,
+              "gain": 0.32,
+              "triangles": 74
+            }
+          ],
+          "referenceDepth": true,
+          "secondWallExcluded": true
+        },
+        "wall": {
+          "opacity": 1,
+          "color": [
+            0.15044451607878448,
+            0.14514604043095328,
+            0.1342506134874596
+          ],
+          "corners": [
+            {
+              "x": 123.16587970050436,
+              "y": 315.0160164589306,
+              "depth": 0.9830707918992796
+            },
+            {
+              "x": 1316.834120296045,
+              "y": 315.0160164597112,
+              "depth": 0.9830707918993803
+            },
+            {
+              "x": 1316.834120296045,
+              "y": 584.9839835402888,
+              "depth": 0.9830707918993803
+            },
+            {
+              "x": 123.16587970050436,
+              "y": 584.9839835410694,
+              "depth": 0.9830707918992796
+            }
+          ]
+        }
+      },
+      "rear": {
+        "segment": 0,
+        "progress": 0,
+        "status": "idle",
+        "error": null,
+        "bridge": "soft-reversible-photo",
+        "wall": null,
+        "reveals": {},
+        "lengths": [
+          3.328930236730598,
+          4.518830287042765,
+          3.152355143398346
+        ],
+        "imageSize": null
+      },
+      "pose": {
+        "position": [
+          -0.65,
+          1.85,
+          -11.75
+        ],
+        "target": [
+          4.515,
+          1.85,
+          -11.75
+        ],
+        "fov": 48,
+        "time": 3,
+        "route12": 1
+      },
+      "image": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+      "walls": [
+        {
+          "name": "mural-01",
+          "visible": false
+        },
+        {
+          "name": "mural-01-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-01-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-02",
+          "visible": false
+        },
+        {
+          "name": "mural-02-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-02-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-03",
+          "visible": false
+        },
+        {
+          "name": "mural-03-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-03-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-04",
+          "visible": false
+        },
+        {
+          "name": "mural-04-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-04-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-05",
+          "visible": false
+        },
+        {
+          "name": "mural-05-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-05-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "V32-real-second-mural-candidate",
+          "visible": true,
+          "image": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+          "color": [
+            0.15044451607878448,
+            0.14514604043095328,
+            0.1342506134874596
+          ]
+        }
+      ]
+    },
+    {
+      "phase": "revealing",
+      "activeMural": 1,
+      "view": "B",
+      "busy": true,
+      "route": {
+        "progress": 1,
+        "reveal": 0.5524583333333339,
+        "status": "revealing",
+        "error": null,
+        "projection": {
+          "enabled": true,
+          "progress": 1,
+          "weights": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "gain": 1,
+          "layers": [
+            {
+              "kind": 0,
+              "gain": 0.6,
+              "triangles": 14
+            },
+            {
+              "kind": 1,
+              "gain": 0.32,
+              "triangles": 48
+            },
+            {
+              "kind": 0,
+              "gain": 0.6,
+              "triangles": 2
+            },
+            {
+              "kind": 1,
+              "gain": 0.32,
+              "triangles": 74
+            }
+          ],
+          "referenceDepth": true,
+          "secondWallExcluded": true
+        },
+        "wall": {
+          "opacity": 1,
+          "color": [
+            0.4247963817477496,
+            0.4168081819266932,
+            0.39784358246352414
+          ],
+          "corners": [
+            {
+              "x": 123.16587970050436,
+              "y": 315.0160164589306,
+              "depth": 0.9830707918992796
+            },
+            {
+              "x": 1316.834120296045,
+              "y": 315.0160164597112,
+              "depth": 0.9830707918993803
+            },
+            {
+              "x": 1316.834120296045,
+              "y": 584.9839835402888,
+              "depth": 0.9830707918993803
+            },
+            {
+              "x": 123.16587970050436,
+              "y": 584.9839835410694,
+              "depth": 0.9830707918992796
+            }
+          ]
+        }
+      },
+      "rear": {
+        "segment": 0,
+        "progress": 0,
+        "status": "idle",
+        "error": null,
+        "bridge": "soft-reversible-photo",
+        "wall": null,
+        "reveals": {},
+        "lengths": [
+          3.328930236730598,
+          4.518830287042765,
+          3.152355143398346
+        ],
+        "imageSize": null
+      },
+      "pose": {
+        "position": [
+          -0.65,
+          1.85,
+          -11.75
+        ],
+        "target": [
+          4.515,
+          1.85,
+          -11.75
+        ],
+        "fov": 48,
+        "time": 3,
+        "route12": 1
+      },
+      "image": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+      "walls": [
+        {
+          "name": "mural-01",
+          "visible": false
+        },
+        {
+          "name": "mural-01-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-01-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-02",
+          "visible": false
+        },
+        {
+          "name": "mural-02-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-02-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-03",
+          "visible": false
+        },
+        {
+          "name": "mural-03-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-03-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-04",
+          "visible": false
+        },
+        {
+          "name": "mural-04-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-04-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "mural-05",
+          "visible": false
+        },
+        {
+          "name": "mural-05-placeholder",
+          "visible": true,
+          "color": [
+            0.13286832154414627,
+            0.2746773120495699,
+            0.26225065751888765
+          ]
+        },
+        {
+          "name": "mural-05-border",
+          "visible": true,
+          "color": [
+            0.6104955708001716,
+            0.3915724777393922,
+            0.10946171076915331
+          ]
+        },
+        {
+          "name": "V32-real-second-mural-candidate",
+          "visible": true,
+          "image": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+          "color": [
+            0.4247963817477496,
+            0.4168081819266932,
+            0.39784358246352414
+          ]
+        }
+      ]
+    }
+  ],
+  "debug": {
+    "activeMural": 1,
+    "view": "A",
+    "busy": false,
+    "route": {
+      "progress": 1,
+      "reveal": 0.25,
+      "status": "title",
+      "error": null,
+      "projection": {
+        "enabled": true,
+        "progress": 1,
+        "weights": [
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "gain": 1,
+        "layers": [
+          {
+            "kind": 0,
+            "gain": 0.6,
+            "triangles": 14
+          },
+          {
+            "kind": 1,
+            "gain": 0.32,
+            "triangles": 48
+          },
+          {
+            "kind": 0,
+            "gain": 0.6,
+            "triangles": 2
+          },
+          {
+            "kind": 1,
+            "gain": 0.32,
+            "triangles": 74
+          }
+        ],
+        "referenceDepth": true,
+        "secondWallExcluded": true
+      },
+      "wall": {
+        "opacity": 1,
+        "color": [
+          0.17279296875,
+          0.16727539062500002,
+          0.15572265624999998
+        ],
+        "corners": [
+          {
+            "x": 123.16587970050436,
+            "y": 315.0160164589306,
+            "depth": 0.9830707918992796
+          },
+          {
+            "x": 1316.834120296045,
+            "y": 315.0160164597112,
+            "depth": 0.9830707918993803
+          },
+          {
+            "x": 1316.834120296045,
+            "y": 584.9839835402888,
+            "depth": 0.9830707918993803
+          },
+          {
+            "x": 123.16587970050436,
+            "y": 584.9839835410694,
+            "depth": 0.9830707918992796
+          }
+        ]
+      }
+    },
+    "rear": {
+      "segment": 0,
+      "progress": 0,
+      "status": "title",
+      "error": null,
+      "bridge": "soft-reversible-photo",
+      "projection": {
+        "enabled": false,
+        "progress": 0,
+        "weights": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "gain": 0,
+        "layers": [
+          {
+            "kind": 0,
+            "gain": 0,
+            "triangles": 4
+          },
+          {
+            "kind": 1,
+            "gain": 0,
+            "triangles": 44
+          },
+          {
+            "kind": 0,
+            "gain": 0,
+            "triangles": 4
+          }
+        ],
+        "referenceDepth": true,
+        "secondWallExcluded": true
+      },
+      "fifthProjection": {
+        "enabled": false,
+        "progress": 0,
+        "weights": [
+          1,
+          0
+        ],
+        "gain": 0,
+        "layers": [
+          {
+            "kind": 0,
+            "gain": 0,
+            "triangles": 4
+          },
+          {
+            "kind": 1,
+            "gain": 0,
+            "triangles": 44
+          },
+          {
+            "kind": 0,
+            "gain": 0,
+            "triangles": 4
+          }
+        ],
+        "referenceDepth": true,
+        "secondWallExcluded": true
+      },
+      "wall": null,
+      "reveals": {
+        "2": 0.28,
+        "3": 0.28,
+        "4": 0.28
+      },
+      "lengths": [
+        3.328930236730598,
+        4.518830287042765,
+        3.152355143398346
+      ],
+      "imageSize": null
+    },
+    "pose": {
+      "position": [
+        -0.65,
+        1.85,
+        -11.75
+      ],
+      "target": [
+        4.515,
+        1.85,
+        -11.75
+      ],
+      "fov": 48,
+      "time": 3,
+      "route12": 1
+    },
+    "image": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+    "walls": [
+      {
+        "name": "mural-01",
+        "visible": false
+      },
+      {
+        "name": "mural-01-placeholder",
+        "visible": true,
+        "color": [
+          0.13286832154414627,
+          0.2746773120495699,
+          0.26225065751888765
+        ]
+      },
+      {
+        "name": "mural-01-border",
+        "visible": true,
+        "color": [
+          0.6104955708001716,
+          0.3915724777393922,
+          0.10946171076915331
+        ]
+      },
+      {
+        "name": "mural-02",
+        "visible": false
+      },
+      {
+        "name": "mural-02-placeholder",
+        "visible": true,
+        "color": [
+          0.13286832154414627,
+          0.2746773120495699,
+          0.26225065751888765
+        ]
+      },
+      {
+        "name": "mural-02-border",
+        "visible": true,
+        "color": [
+          0.6104955708001716,
+          0.3915724777393922,
+          0.10946171076915331
+        ]
+      },
+      {
+        "name": "mural-03",
+        "visible": false
+      },
+      {
+        "name": "mural-03-placeholder",
+        "visible": true,
+        "color": [
+          0.13286832154414627,
+          0.2746773120495699,
+          0.26225065751888765
+        ]
+      },
+      {
+        "name": "mural-03-border",
+        "visible": true,
+        "color": [
+          0.6104955708001716,
+          0.3915724777393922,
+          0.10946171076915331
+        ]
+      },
+      {
+        "name": "mural-04",
+        "visible": false
+      },
+      {
+        "name": "mural-04-placeholder",
+        "visible": true,
+        "color": [
+          0.13286832154414627,
+          0.2746773120495699,
+          0.26225065751888765
+        ]
+      },
+      {
+        "name": "mural-04-border",
+        "visible": true,
+        "color": [
+          0.6104955708001716,
+          0.3915724777393922,
+          0.10946171076915331
+        ]
+      },
+      {
+        "name": "mural-05",
+        "visible": false
+      },
+      {
+        "name": "mural-05-placeholder",
+        "visible": true,
+        "color": [
+          0.13286832154414627,
+          0.2746773120495699,
+          0.26225065751888765
+        ]
+      },
+      {
+        "name": "mural-05-border",
+        "visible": true,
+        "color": [
+          0.6104955708001716,
+          0.3915724777393922,
+          0.10946171076915331
+        ]
+      },
+      {
+        "name": "V33-real-mural-03",
+        "visible": true,
+        "image": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-03-display.webp",
+        "color": [
+          0.12,
+          0.115,
+          0.105
+        ]
+      },
+      {
+        "name": "V33-real-mural-04",
+        "visible": true,
+        "image": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-04-display.webp",
+        "color": [
+          0.12,
+          0.115,
+          0.105
+        ]
+      },
+      {
+        "name": "V33-real-mural-05",
+        "visible": true,
+        "image": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-05-display.webp",
+        "color": [
+          0.12,
+          0.115,
+          0.105
+        ]
+      },
+      {
+        "name": "V32-real-second-mural-candidate",
+        "visible": true,
+        "image": "http://127.0.0.1:4186/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp",
+        "color": [
+          0.17279296875,
+          0.16727539062500002,
+          0.15572265624999998
+        ]
+      }
+    ]
+  }
+}

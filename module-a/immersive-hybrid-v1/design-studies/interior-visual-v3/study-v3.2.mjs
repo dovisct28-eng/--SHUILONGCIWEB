@@ -188,7 +188,7 @@ function setSecondReveal(value,render=true){secondReveal=Math.max(0,Math.min(1,v
 async function animate32(duration,apply,spatial=false){if(motion()&&!spatial){apply(1);return;}await new Promise(resolve=>{let began;function tick(now){began??=now;const t=Math.min(1,(now-began)/duration);apply(t);if(t<1)requestAnimationFrame(tick);else resolve();}requestAnimationFrame(tick);});}
 async function revealSecond(){secondStatus='dark';await animate32(2400,t=>setSecondReveal(t));}
 function applyRail(progress){routeProgress=progress;const pose=rail.sample(progress);routeLayer?.update(pose);h.model.setCamera(pose,{immediate:true});if(wallPlane)positionSecondLabel();$('#location-label').textContent=progress<.12?'离开第一铺':progress<.57?'沿东廊前行':progress<.8?'经过主殿转角':'走近第二铺';$('.rail i').style.width=`${20+progress*20}%`;}
-async function seekRoute32(progress,{reveal=0}={}){if(busy)return false;await ensureRoute32();layer?.setMode('original');finish?.setEnabled(true);routeLayer?.setEnabled(true);activeMural=1;await updateMuralUI();if(!wallPlane)await createSecondWall();paintView('A');applyRail(progress);setSecondReveal(reveal);return true;}
+async function seekRoute32(progress,{reveal=0}={}){if(busy)return false;await goSpace('corridor-2_5d');await ensureRoute32();layer?.setMode('original');finish?.setEnabled(true);routeLayer?.setEnabled(true);activeMural=1;await updateMuralUI();if(!wallPlane)await createSecondWall();paintView('A');applyRail(progress);setSecondReveal(reveal);return true;}
 async function travelFirstSecond(reverse){
  await ensureRoute32();
  if(!reverse){
