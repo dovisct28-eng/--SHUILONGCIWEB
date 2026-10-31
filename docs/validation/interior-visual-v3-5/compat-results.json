@@ -1,0 +1,24 @@
+{
+  "pass": true,
+  "variants": [
+    {
+      "variant": "v32",
+      "readingDetailAndWall": true
+    },
+    {
+      "variant": "v33",
+      "readingDetailAndWall": true
+    },
+    {
+      "variant": "v34",
+      "readingDetailAndWall": true
+    },
+    {
+      "variant": "v35",
+      "readingDetailAndWall": true
+    }
+  ],
+  "errors": [],
+  "developerModes": true,
+  "legacy": true
+}

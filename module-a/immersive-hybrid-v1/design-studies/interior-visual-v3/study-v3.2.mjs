@@ -53,7 +53,7 @@ async function navigate(next,{replay=false}={}){if(!ready||busy)return false;set
  }catch(e){message(`预览未能完成：${e.message}。可打开预览选项切换原始模型。`);return false;}finally{setBusy(false);}}
 async function nextSpace(dir){if(!ready||busy)return;if(activeMural){if(dir<0)return travelTo(activeMural-1);return navigate(view==='B'?'C':'B');}if(view==='B')return navigate(dir<0?'A':'C');if(dir>0&&position==='corridor-2_5d')return navigate('B',{replay:true});const stops=h.stops.map(s=>s.id),i=stops.indexOf(position),next=stops[Math.max(0,Math.min(stops.length-1,i+dir))];setBusy(true);try{await goSpace(next);paintView('A');}catch(e){message(e.message);}finally{setBusy(false);}}
 async function chooseDirection(value,{initial=false}={}){if(!ready||busy&&!initial)return;
- if(variant35&&layer&&value===direction&&!compare){layer.setMode(activeMural?'original':'hybrid');w.v24a.layer?.setMode('original');finish?.setEnabled(true);routeLayer?.setEnabled(true);rearGallery?.setEnabled(true);return;}setBusy(true);try{
+ if(variant35&&layer&&['A','B'].includes(value)&&value===direction&&!compare){layer.setMode(activeMural?'original':'hybrid');w.v24a.layer?.setMode('original');finish?.setEnabled(true);routeLayer?.setEnabled(true);rearGallery?.setEnabled(true);return;}setBusy(true);try{
  direction=value;compare=false;$('#compare').setAttribute('aria-pressed','false');$('#direction').value=value;
  if(['current','original'].includes(value)){layer?.setMode('original');w.v24a.layer?.setMode(value==='current'?'hybrid':'original');}
  else{const T=await w.document.querySelector('#temple').contentWindow.eval("import('/module-a/immersive-hybrid-v1/vendor/three.module.js')");layer?.dispose();layer=null;layer=await installStudyLayers(h.model,T,{direction:value});w.v24a.layer?.setMode('original');h.model.setCamera(h.model.pose,{immediate:true});}
@@ -217,7 +217,7 @@ async function travelFirstSecond(reverse){
   paintView('A');body.dataset.routeTravel='true';routeLayer?.setEnabled(true);
   await animate32(rail.length/1.45*1000,t=>applyRail(1-ease(t)),true);
   wallPlane?.removeFromParent();wallPlane?.geometry.dispose();wallPlane?.material.map.dispose();wallPlane?.material.dispose();wallPlane=null;
-  routeLayer?.setEnabled(false);activeMural=0;await updateMuralUI();if(variant35){layer?.setMode('hybrid');finish?.setEnabled(true);}else await chooseDirection(direction);await goSpace('mural-look');paintView('B');
+  routeLayer?.setEnabled(false);activeMural=0;await updateMuralUI();if(variant35){layer?.setMode(['A','B'].includes(direction)?'hybrid':'original');w.v24a.layer?.setMode(direction==='current'?'hybrid':'original');finish?.setEnabled(['A','B'].includes(direction));}else await chooseDirection(direction);await goSpace('mural-look');paintView('B');
  }
  delete body.dataset.routeTravel;paintPosition();return true;
 }

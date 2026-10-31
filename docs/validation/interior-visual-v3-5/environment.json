@@ -1,0 +1,10 @@
+{
+  "date": "2026-10-31T02:11:18.582Z",
+  "platform": "win32",
+  "node": "v24.14.1",
+  "cpu": "Intel(R) Core(TM) i5-9300H CPU @ 2.40GHz",
+  "logicalCores": 8,
+  "totalMemoryGiB": 32,
+  "browser": "installed Chrome via Playwright, headless, deviceScaleFactor=1",
+  "note": "Parent requestAnimationFrame intervals and browser GPU object counters; not a physical-display FPS or all-device guarantee"
+}

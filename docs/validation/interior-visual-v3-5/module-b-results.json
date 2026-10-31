@@ -1,0 +1,35 @@
+{
+  "unitTests": {
+    "passed": 130,
+    "failed": 0
+  },
+  "viewports": [
+    {
+      "w": 1440,
+      "h": 900
+    },
+    {
+      "w": 1920,
+      "h": 1080
+    },
+    {
+      "w": 1366,
+      "h": 768
+    },
+    {
+      "w": 1280,
+      "h": 800
+    }
+  ],
+  "functional": [
+    "native keyboard Enter; map original image/8 hotspots; drag/wheel; hotspot to detail; org/line/color; detail→map→B01",
+    "external cyber dependency error reported, return/retry available"
+  ],
+  "pageErrors": [],
+  "cyberStartup": {
+    "status": "PENDING",
+    "message": "Hands 体感组件加载失败，请检查资源网络后重试。"
+  },
+  "physicalCamera": "not tested",
+  "processExit": "existing browser script exited with GSAP external component load failure; not counted as complete B cyber PASS"
+}

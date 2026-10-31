@@ -1,0 +1,12 @@
+{
+  "pass": true,
+  "syntaxFiles": 57,
+  "formalMatchesCanonical": true,
+  "localResources": true,
+  "archive": {
+    "module-a-lofi-final-v1.0^{}": "48f272497e86e4549c5bcd0dee275ff347171a3f",
+    "archive/module-a-lofi": "48f272497e86e4549c5bcd0dee275ff347171a3f"
+  },
+  "noBundler": true,
+  "modelRebuilt": false
+}

@@ -1,0 +1,69 @@
+{
+  "pass": true,
+  "errors": [],
+  "before": {
+    "geometries": 55,
+    "textures": 52,
+    "projections": 4,
+    "walls": 3
+  },
+  "after": {
+    "geometries": 55,
+    "textures": 52,
+    "projections": 4,
+    "walls": 3
+  },
+  "doubleNavigation": [
+    true,
+    false
+  ],
+  "doubleTravel": [
+    true,
+    false
+  ],
+  "moving": {
+    "samples": 101,
+    "p95": 7.600000000000364,
+    "max": 7.800000000001091,
+    "over50": []
+  },
+  "preparation": [
+    {
+      "name": "V33-real-mural-03",
+      "textures": 1,
+      "uploadMs": 26.5,
+      "totalMs": 1327.5
+    },
+    {
+      "name": "V33-real-mural-04",
+      "textures": 1,
+      "uploadMs": 26.400000005960464,
+      "totalMs": 1417.1000000089407
+    },
+    {
+      "name": "V33-rear-surface-projections",
+      "textures": 12,
+      "uploadMs": 142.3999999910593,
+      "totalMs": 244.19999998807907
+    },
+    {
+      "name": "V33-real-mural-05",
+      "textures": 1,
+      "uploadMs": 318.59999999403954,
+      "totalMs": 320.59999999403954
+    },
+    {
+      "name": "V34-fifth-surface-projections",
+      "textures": 6,
+      "uploadMs": 51.80000001192093,
+      "totalMs": 108.5
+    }
+  ],
+  "collisionValidationMs": 666.3999999910593,
+  "delayedImage": "busy controls locked; duplicate route rejected; real image eventually decoded",
+  "fallback": {
+    "active": 2,
+    "error": "The source image cannot be decoded.",
+    "image": "http://127.0.0.1:4186/module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-03-display.webp"
+  }
+}

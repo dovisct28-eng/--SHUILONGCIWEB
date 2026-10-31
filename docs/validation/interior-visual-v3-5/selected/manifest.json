@@ -1,0 +1,105 @@
+{
+  "items": [
+    {
+      "file": "01-third-before.webp",
+      "source": "local/before-wall-2.png",
+      "state": "V3.4 continuous third dock",
+      "viewport": [
+        1440,
+        900
+      ],
+      "bytes": 106498
+    },
+    {
+      "file": "02-third-after.webp",
+      "source": "local/formal-wall-2.png",
+      "state": "V3.5 formal continuous third dock",
+      "viewport": [
+        1440,
+        900
+      ],
+      "bytes": 96458
+    },
+    {
+      "file": "03-fourth-before.webp",
+      "source": "local/before-wall-3.png",
+      "state": "V3.4 continuous fourth dock",
+      "viewport": [
+        1440,
+        900
+      ],
+      "bytes": 110332
+    },
+    {
+      "file": "04-fourth-after.webp",
+      "source": "local/formal-wall-3.png",
+      "state": "V3.5 formal continuous fourth dock",
+      "viewport": [
+        1440,
+        900
+      ],
+      "bytes": 108182
+    },
+    {
+      "file": "05-second-dark.webp",
+      "source": "local/after-second-dark.png",
+      "state": "V3.5 real first-to-second dark phase",
+      "viewport": [
+        1440,
+        900
+      ],
+      "bytes": 84268
+    },
+    {
+      "file": "06-second-title.webp",
+      "source": "local/after-second-title.png",
+      "state": "V3.5 real first-to-second title phase",
+      "viewport": [
+        1440,
+        900
+      ],
+      "bytes": 84268
+    },
+    {
+      "file": "07-a03-entry.webp",
+      "source": "local/formal-a03.png",
+      "state": "formal A03 preserved poster + gallery link",
+      "viewport": [
+        1440,
+        900
+      ],
+      "bytes": 117880
+    },
+    {
+      "file": "08-module-b.webp",
+      "source": "local/formal-module-b.png",
+      "state": "real module B landing",
+      "viewport": [
+        1440,
+        900
+      ],
+      "bytes": 57116
+    },
+    {
+      "file": "09-fifth-full.webp",
+      "source": "local/after-reading-4.png",
+      "state": "fifth full contain image",
+      "viewport": [
+        1440,
+        900
+      ],
+      "bytes": 159692
+    },
+    {
+      "file": "continuous-walk-1440x900.webm",
+      "source": "D:\\YJS\\出兵入将-PC端页面\\docs\\validation\\interior-visual-v3-5\\local\\formal-video\\page@1fea223b89099d51211138a8b8c8274a.webm",
+      "state": "uncut real formal A03, gate, five murals, representative detail, unavailable + real B, browser return",
+      "viewport": [
+        1440,
+        900
+      ],
+      "bytes": 11667474
+    }
+  ],
+  "totalBytes": 12592168
+}
