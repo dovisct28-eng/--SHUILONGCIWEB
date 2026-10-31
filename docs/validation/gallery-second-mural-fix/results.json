@@ -1,0 +1,252 @@
+{
+  "pass": true,
+  "unitTests": {
+    "tests": 38,
+    "pass": 38,
+    "fail": 0
+  },
+  "matrix": {
+    "model": [
+      {
+        "width": 1440,
+        "height": 900,
+        "reduced": false,
+        "murals": 5,
+        "reverse": [
+          3,
+          2,
+          1,
+          0
+        ],
+        "errors": [],
+        "failed": []
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "reduced": false,
+        "murals": 5,
+        "reverse": [
+          3,
+          2,
+          1,
+          0
+        ],
+        "errors": [],
+        "failed": []
+      },
+      {
+        "width": 1366,
+        "height": 768,
+        "reduced": false,
+        "murals": 5,
+        "reverse": [
+          3,
+          2,
+          1,
+          0
+        ],
+        "errors": [],
+        "failed": []
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "reduced": true,
+        "murals": 5,
+        "reverse": [
+          3,
+          2,
+          1,
+          0
+        ],
+        "errors": [],
+        "failed": []
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "reduced": true,
+        "murals": 5,
+        "reverse": [
+          3,
+          2,
+          1,
+          0
+        ],
+        "errors": [],
+        "failed": []
+      },
+      {
+        "width": 1366,
+        "height": 768,
+        "reduced": true,
+        "murals": 5,
+        "reverse": [
+          3,
+          2,
+          1,
+          0
+        ],
+        "errors": [],
+        "failed": []
+      }
+    ],
+    "report": [
+      {
+        "width": 1440,
+        "height": 900,
+        "reduced": false,
+        "murals": 5,
+        "reverse": [
+          3,
+          2,
+          1,
+          0
+        ],
+        "errors": [],
+        "failed": []
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "reduced": false,
+        "murals": 5,
+        "reverse": [
+          3,
+          2,
+          1,
+          0
+        ],
+        "errors": [],
+        "failed": []
+      },
+      {
+        "width": 1366,
+        "height": 768,
+        "reduced": false,
+        "murals": 5,
+        "reverse": [
+          3,
+          2,
+          1,
+          0
+        ],
+        "errors": [],
+        "failed": []
+      },
+      {
+        "width": 1440,
+        "height": 900,
+        "reduced": true,
+        "murals": 5,
+        "reverse": [
+          3,
+          2,
+          1,
+          0
+        ],
+        "errors": [],
+        "failed": []
+      },
+      {
+        "width": 1920,
+        "height": 1080,
+        "reduced": true,
+        "murals": 5,
+        "reverse": [
+          3,
+          2,
+          1,
+          0
+        ],
+        "errors": [],
+        "failed": []
+      },
+      {
+        "width": 1366,
+        "height": 768,
+        "reduced": true,
+        "murals": 5,
+        "reverse": [
+          3,
+          2,
+          1,
+          0
+        ],
+        "errors": [],
+        "failed": []
+      }
+    ]
+  },
+  "recovery": {
+    "pass": true,
+    "cases": [
+      {
+        "name": "actual server stopped, first mural retained, same button retries after real restart",
+        "message": "第二铺《入将图》暂未加载，本地网页服务未连接。请重新运行“启动模块A原型”后重试。已保留上一铺，可再次点击继续。",
+        "pass": true
+      },
+      {
+        "name": "injected 404 classified as missing image, subsequent real image retry succeeds",
+        "pass": true
+      },
+      {
+        "name": "injected bad cached decode automatically requests one fresh URL and decodes actual second mural",
+        "freshURLs": [
+          "http://127.0.0.1:57866/%E6%B0%B4%E9%BE%99%E7%A5%A0%E5%A3%81%E7%94%BB%E7%B4%A0%E6%9D%90/%E7%BD%91%E9%A1%B5%E5%B1%95%E7%A4%BA%E5%9B%BE/mural-02-display.webp?image-retry=1793445155766"
+        ],
+        "pass": true
+      }
+    ]
+  },
+  "build": {
+    "pass": true,
+    "syntaxFiles": 63,
+    "formalMatchesCanonical": true,
+    "localResources": true,
+    "archive": {
+      "module-a-lofi-final-v1.0^{}": "48f272497e86e4549c5bcd0dee275ff347171a3f",
+      "archive/module-a-lofi": "48f272497e86e4549c5bcd0dee275ff347171a3f"
+    },
+    "noBundler": true,
+    "modelRebuilt": false
+  },
+  "provenance": {
+    "asset": "水龙祠壁画素材/网页展示图/mural-02-display.webp",
+    "currentBlob": "ea6b2f76abcc0fb2a812cbc91efcc2795848352c",
+    "beforeCleanupBlob": "ea6b2f76abcc0fb2a812cbc91efcc2795848352c",
+    "fixedLowfi": "48f272497e86e4549c5bcd0dee275ff347171a3f",
+    "archive": "48f272497e86e4549c5bcd0dee275ff347171a3f"
+  },
+  "liveRuntime": {
+    "app": "shuilongci-module-a",
+    "version": "V3.5-resilient-local-1",
+    "root": "D:\\YJS\\出兵入将-PC端页面"
+  },
+  "selected": [
+    {
+      "file": "selected/offline-message.webp",
+      "state": "offline-message",
+      "viewport": [
+        1440,
+        900
+      ],
+      "bytes": 278560
+    },
+    {
+      "file": "selected/second-restored.webp",
+      "state": "second-restored",
+      "viewport": [
+        1440,
+        900
+      ],
+      "bytes": 171220
+    }
+  ],
+  "limits": [
+    "Exact request that stopped the user server was not captured; missing directory is a separately reproduced crash trigger.",
+    "404 and bad-cache cases are labeled injected faults, followed by actual unchanged image decoding.",
+    "Full matrix used live 4173; normal rendering remains unchanged. No B or low-fi runtime edits."
+  ]
+}

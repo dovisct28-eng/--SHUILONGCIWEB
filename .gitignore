@@ -41,3 +41,4 @@ Mural-Exhibition/public/assets/splash-bg.png
 # Cleanup V2: generated local reports/caches; formal sources and original media remain protected
 /.cache/
 /docs/maintenance/repository-cleanup-v2/local/
+/.module-a-runtime/

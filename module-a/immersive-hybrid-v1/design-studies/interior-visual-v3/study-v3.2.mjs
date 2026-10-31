@@ -1,6 +1,7 @@
 import {ROUTE_CASES,routeCase,applyRouteCase,reportRails,returnMarker,returnMatchesCase} from './route-cases-v3.5.mjs';
 import {installPreparation} from './prepare-v3.5.mjs';
 import {photoBridge} from './bridge-v3.5.mjs';
+import {loadMuralImages} from './mural-image-load.mjs';
 import * as visual35 from './visual-v3.5.mjs';
 import {projectWallCue} from '../../src/mural-wall-cue.mjs';
 import {FIRST_FRONT_DOCK} from '../../src/mural-front.mjs';
@@ -103,9 +104,7 @@ addEventListener('pagehide',e=>{if(!e.persisted){layer?.dispose();finish?.dispos
 
 async function updateMuralUI(){
  const m=murals[activeMural];body.dataset.muralIndex=String(activeMural);
- for(const id of ['reading-image','detail-image'])$("#"+id).src=m.image;
- $('#minimap img').src=m.image;
- await Promise.all(['reading-image','detail-image'].map(id=>$('#'+id).decode()).concat($('#minimap img').decode()));const img=$('#reading-image');setImageSize(img.naturalWidth,img.naturalHeight);
+ await loadMuralImages([$('#reading-image'),$('#detail-image'),$('#minimap img')],m.image,m.title);const img=$('#reading-image');setImageSize(img.naturalWidth,img.naturalHeight);
  $('#minimap svg').setAttribute('viewBox',`0 0 ${img.naturalWidth} ${img.naturalHeight}`);$('#minimap').style.aspectRatio=`${img.naturalWidth}/${img.naturalHeight}`;if(variant35)$('#minimap').style.width=Math.min(220,80*img.naturalWidth/img.naturalHeight)+'px';
  if(variant33){$('#detail .detail-head .eyebrow').textContent=`图像 0${activeMural+1} / 局部观察`;$('#reading-image').alt=m.title+'完整真实图像';$('#detail-image').alt=m.title+'，可缩放和平移查看真实细节';}
  $('#reading h1').textContent=m.title;$('#reading .eyebrow').textContent=`图像 0${activeMural+1} / ${m.wall}`;
@@ -148,7 +147,7 @@ async function placeCandidate(){
 }
 async function travelTo(index){
  if(!ready||busy||index<0||index>4||Math.abs(index-activeMural)!==1)return false;
- setBusy(true);message('');const prior=activeMural,savedPose=h.model.pose;
+ setBusy(true);message('');const prior=activeMural,priorView=view,savedPose=h.model.pose;
  try{
   if(rearGallery?.handles(prior,index))return await rearGallery.travelTo(index);
   // Exit original first-mural state through its existing reverse path before taking the new rail.
@@ -161,7 +160,7 @@ async function travelTo(index){
   if(index===0){await movePose({...h.sample(2),time:3});activeMural=0;await updateMuralUI();await placeCandidate();await chooseDirection(direction);paintView('A');await goSpace('mural-look');if(h.state==='mural-reading')await goSpace('mural-look');paintView('B');}
   else{activeMural=index;if(index===1){await ensureRoute32();await movePose(rail.sample(1));routeLayer?.update(rail.sample(1));routeLayer?.setEnabled(true);}await updateMuralUI();await placeCandidate();paintView('B');}
   paintPosition();return true;
- }catch(e){message(e.message+'。该段尚未打通，可返回上一空间。');activeMural=prior;h.model.setCamera(savedPose,{immediate:true});try{await updateMuralUI();if(rearGallery?.isRear(prior))await rearGallery.restore(prior);else await placeCandidate();}catch{}wallPlane&&(wallPlane.visible=true);paintView('B');return false;}finally{delete body.dataset.routeTravel;setBusy(false);}
+ }catch(e){message(e.name==='MuralImageError'?e.message+'。已保留上一铺，可再次点击继续。':e.message+'。该段尚未打通，可返回上一空间。');activeMural=prior;h.model.setCamera(savedPose,{immediate:true});let restored=false;try{await updateMuralUI();if(rearGallery?.isRear(prior))await rearGallery.restore(prior);else await placeCandidate();restored=true;}catch{}wallPlane&&(wallPlane.visible=true);paintView(e.name==='MuralImageError'&&priorView==='C'&&restored?'C':'B');return false;}finally{delete body.dataset.routeTravel;setBusy(false);}
 }
 $('#continue-tour').onclick=async()=>{
  if(activeMural<4)return travelTo(activeMural+1);
@@ -181,7 +180,7 @@ async function ensureRoute32(){
 }
 function sceneRoot(){let s=h.model.root;while(s.parent)s=s.parent;return s;}
 async function createSecondWall(){
- const m=murals[1],texture=await new T.TextureLoader().loadAsync(m.image);texture.colorSpace=T.SRGBColorSpace;
+ const m=murals[1],texture=await new T.TextureLoader().loadAsync($('#reading-image').currentSrc||m.image);texture.colorSpace=T.SRGBColorSpace;
  const height=Math.min(m.height,m.width/(texture.image.width/texture.image.height));
  wallPlane=new T.Mesh(new T.PlaneGeometry(height*texture.image.width/texture.image.height,height),new T.MeshBasicMaterial({map:texture,color:new T.Color(.12,.115,.105),transparent:true,opacity:1,toneMapped:false,fog:true,depthTest:true,polygonOffset:true,polygonOffsetFactor:-2}));
  wallPlane.name='V32-real-second-mural-candidate';wallPlane.position.fromArray(m.position);wallPlane.rotation.y=m.rotation;sceneRoot().add(wallPlane);wallPlane.updateMatrixWorld(true);setSecondReveal(0,false);await h.model.prepareAssets?.(wallPlane,[texture]);
