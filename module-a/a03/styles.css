@@ -31,3 +31,6 @@
   .a03-reading-hint,.a03-end { font-size:11px;bottom:2%; }
 }
 @media(prefers-reduced-motion:reduce) { .a03-title span { transform:none; } }
+
+.a03 a.a03-reading-hint{pointer-events:auto;text-decoration:none;border-bottom:1px solid #aeb4ad66;padding:12px 0;font-size:14px;color:#ded8cb}
+.a03 a.a03-reading-hint:focus-visible{outline:2px solid #c7b79c;outline-offset:5px}

@@ -1,4 +1,4 @@
-export function createA03View(stage) {
+export function createA03View(stage,{galleryHref=null}={}) {
   const poster=document.createElement('div');poster.className='a03-poster';
   poster.innerHTML='<h2 class="a03-title" aria-label="出庙 · 入庙"><span class="a03-title__out" aria-hidden="true">出庙</span><span class="a03-title__in" aria-hidden="true">入庙</span></h2>';
   stage.append(poster);
@@ -12,6 +12,7 @@ export function createA03View(stage) {
     <p class="a03-reading-hint" data-a03-reading-hint>继续向下，从第五铺开始走近壁画</p>
     <div class="a03-handoff" data-a03-handoff><p>从第五铺出发</p></div>
     <p class="a03-end" data-a03-end>继续向下，观看空间路线 · 向上滚动可回看</p>`;
+  if(galleryHref){const hint=section.querySelector('[data-a03-reading-hint]'),link=document.createElement('a');link.className='a03-reading-hint';link.dataset.a03ReadingHint='';link.href=galleryHref;link.textContent='进入水龙祠 · 观看五铺壁画 →';hint.replaceWith(link);}
   stage.append(section);
   const groups=[[poster,'title'],[section.querySelector('[data-a03-kicker]'),'kicker'],[section.querySelector('[data-a03-copy]'),'text'],[section.querySelector('[data-a03-reading-hint]'),'hint'],[section.querySelector('[data-a03-handoff]'),'handoff'],[section.querySelector('[data-a03-end]'),'handoff']];
   return state=>{

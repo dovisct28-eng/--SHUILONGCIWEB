@@ -1,3 +1,4 @@
+import {installPreparation} from './prepare-v3.5.mjs';
 import {photoBridge} from './bridge-v3.5.mjs';
 import * as visual35 from './visual-v3.5.mjs';
 import {projectWallCue} from '../../src/mural-wall-cue.mjs';
@@ -14,16 +15,18 @@ const $=s=>document.querySelector(s),frame=$('#space'),body=document.body;
 const variant35=body.dataset.variant==='v35';
 body.dataset.dev=String(!variant35||new URLSearchParams(location.search).has('debug'));
 const variant33=['v33','v34','v35'].includes(body.dataset.variant);let rearGallery=null;
+let routeValidated=false;
 let routeLayer,rail,routeProgress=0,secondReveal=0,secondStatus='idle',routeError=null;
+let initializing=true,preparation=[];
 let finish,activeMural=0,murals=[],T,wallPlane=null,wallLabel=null;
 let h,w,layer,ready=false,busy=false,view='A',direction='B',compare=false,position='gate-interior',detail={zoom:1,x:0,y:0},drag=null,detailAnimation=null,activeObservation=null;
 const spatialStops=['gate-interior','stage-turn','corridor-3d','corridor-hybrid','corridor-2_5d'];
 const regionViewport=()=>$('#detail-viewport').getBoundingClientRect();
 const motion=()=>$('#reduced').checked||matchMedia('(prefers-reduced-motion:reduce)').matches;
 function message(text){$('#message').textContent=text;$('#message').hidden=!text;}
-function setBusy(value){busy=value;$('#continue-tour').disabled=value||!ready;body.dataset.busy=String(value);for(const button of document.querySelectorAll('.chapters button,#back,#forward,#direction,#compare,#replay-discovery,#motion-check,#detail-open,#wall-return,#stops button'))button.disabled=value||!ready||(activeMural>0&&(['replay-discovery','motion-check'].includes(button.id)||button.closest('#stops')));}
+function setBusy(value){value=value||initializing;busy=value;$('#continue-tour').disabled=value||!ready;body.dataset.busy=String(value);body.dataset.ready=String(ready&&!initializing);if($('#audience-motion')){$('#audience-motion').disabled=value||!ready;$('#audience-motion').setAttribute('aria-pressed',String(motion()));}for(const button of document.querySelectorAll('.chapters button,#back,#forward,#direction,#compare,#replay-discovery,#motion-check,#detail-open,#wall-return,#stops button'))button.disabled=value||!ready||(activeMural>0&&(['replay-discovery','motion-check'].includes(button.id)||button.closest('#stops')));}
 function paintView(next){delete body.dataset.readingExit;body.dataset.reducedMotion=String(motion());view=next;body.dataset.view=next;for(const b of document.querySelectorAll('.chapters button')){if(b.dataset.view===next)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');}$('#spatial').hidden=!['A','B'].includes(next);$('#reading').hidden=next!=='C';$('#detail').hidden=next!=='D';$('#spatial-title').textContent=activeMural?murals[activeMural].title:(next==='B'?'第一铺壁画':'沿廊而行');$('#back').disabled=busy||!ready;$('#forward').textContent=next==='B'?'展开全幅 →':activeMural?'阅读本铺 →':position==='corridor-2_5d'?'走近壁画 →':'继续前行 →';$('#route-open').textContent=`0${activeMural+1} / 05 · 参观路线`;if(next==='D')requestAnimationFrame(()=>drawDetail(false));}
-function paintPosition(){if(activeMural){$('#location-label').textContent=`0${activeMural+1} / 05 · ${murals[activeMural].title}`;$('.rail i').style.width=`${(activeMural+1)*20}%`;return;}const stops=h?.stops??[],i=stops.findIndex(s=>s.id===h?.state);if(i>=0){position=h.state;$('#location-label').textContent=`${stops[i].label} · 01 / 05`;$('.rail i').style.width=`${(i+1)/stops.length*100}%`;}for(const b of document.querySelectorAll('#stops button'))b.setAttribute('aria-pressed',String(h?.state===b.dataset.stop));$('#diagnostics').textContent=JSON.stringify({state:h?.state,view,direction,layerError:window.study?.layerError??null,layer:layer?.state,brightness:h?.model?.mural.state().brightness},null,2);}
+function paintPosition(){if(activeMural){$('#location-label').textContent=`0${activeMural+1} / 05 · ${murals[activeMural].title}`;$('.rail i').style.width=`${(activeMural+1)*20}%`;return;}const stops=h?.stops??[],i=stops.findIndex(s=>s.id===h?.state);if(i>=0){position=h.state;$('#location-label').textContent=`${stops[i].label} · 01 / 05`;$('.rail i').style.width=`${(i+1)/stops.length*100}%`;}for(const b of document.querySelectorAll('#stops button'))b.setAttribute('aria-pressed',String(h?.state===b.dataset.stop));$('#diagnostics').textContent=JSON.stringify({state:h?.state,view,direction,layerError:studyApi?.layerError??null,layer:layer?.state,brightness:h?.model?.mural.state().brightness},null,2);}
 async function goSpace(stop){if(!h)return false;if(h.state===stop){paintPosition();return true;}const result=await h.go(stop);if(!result)throw Error(`无法到达 ${stop}`);paintPosition();return result;}
 async function syncReading(enter){if(rearGallery?.isRear(activeMural))return rearGallery.readingBridge(enter);if(activeMural===1)return secondReadingBridge(enter);if(activeMural)return;
  const image=$('#reading-image');await image.decode();const q=h.model.mural.state().readingCorners,rect=image.getBoundingClientRect(),fit=fitImage(rect.width,rect.height),target={left:rect.left+(rect.width-fit.width)/2,top:rect.top+(rect.height-fit.height)/2,width:fit.width,height:fit.height};
@@ -49,13 +52,13 @@ async function navigate(next,{replay=false}={}){if(!ready||busy)return false;set
  }paintPosition();if(next==='D')$('#detail-viewport').focus({preventScroll:true});else if(next==='C'&&view==='C')$('#detail-open').focus({preventScroll:true});return true;
  }catch(e){message(`预览未能完成：${e.message}。可打开预览选项切换原始模型。`);return false;}finally{setBusy(false);}}
 async function nextSpace(dir){if(!ready||busy)return;if(activeMural){if(dir<0)return travelTo(activeMural-1);return navigate(view==='B'?'C':'B');}if(view==='B')return navigate(dir<0?'A':'C');if(dir>0&&position==='corridor-2_5d')return navigate('B',{replay:true});const stops=h.stops.map(s=>s.id),i=stops.indexOf(position),next=stops[Math.max(0,Math.min(stops.length-1,i+dir))];setBusy(true);try{await goSpace(next);paintView('A');}catch(e){message(e.message);}finally{setBusy(false);}}
-async function chooseDirection(value){if(!ready||busy)return;
+async function chooseDirection(value,{initial=false}={}){if(!ready||busy&&!initial)return;
  if(variant35&&layer&&value===direction&&!compare){layer.setMode(activeMural?'original':'hybrid');w.v24a.layer?.setMode('original');finish?.setEnabled(true);routeLayer?.setEnabled(true);rearGallery?.setEnabled(true);return;}setBusy(true);try{
  direction=value;compare=false;$('#compare').setAttribute('aria-pressed','false');$('#direction').value=value;
  if(['current','original'].includes(value)){layer?.setMode('original');w.v24a.layer?.setMode(value==='current'?'hybrid':'original');}
  else{const T=await w.document.querySelector('#temple').contentWindow.eval("import('/module-a/immersive-hybrid-v1/vendor/three.module.js')");layer?.dispose();layer=null;layer=await installStudyLayers(h.model,T,{direction:value});w.v24a.layer?.setMode('original');h.model.setCamera(h.model.pose,{immediate:true});}
- routeLayer?.setEnabled(['A','B'].includes(value));rearGallery?.setEnabled(['A','B'].includes(value));window.study.layerError=null;if(activeMural)layer?.setMode('original');finish?.setEnabled(value==='A'||value==='B');message('');paintPosition();
- }catch(e){window.study.layerError=e.message;finish?.setEnabled(false);layer?.setMode('original');w.v24a.layer?.setMode('hybrid');message('新候选素材暂不可用，已回退到当前正式融合；可以重选方向重试。');}finally{setBusy(false);}}
+ routeLayer?.setEnabled(['A','B'].includes(value));rearGallery?.setEnabled(['A','B'].includes(value));studyApi.layerError=null;if(activeMural)layer?.setMode('original');finish?.setEnabled(value==='A'||value==='B');message('');paintPosition();
+ }catch(e){studyApi.layerError=e.message;finish?.setEnabled(false);layer?.setMode('original');w.v24a.layer?.setMode('hybrid');message('新候选素材暂不可用，已回退到当前正式融合；可以重选方向重试。');}finally{setBusy(false);}}
 function updateObservation(region){
  activeObservation=region;
  for(const b of document.querySelectorAll('[data-observation]'))b.setAttribute('aria-pressed',String(b.dataset.observation===region?.id));
@@ -85,12 +88,14 @@ $('#reduced').checked=matchMedia('(prefers-reduced-motion:reduce)').matches;$('#
 $('#motion-check').onclick=async()=>{if(busy)return;setBusy(true);try{paintView('A');await goSpace('gate-interior');for(const stop of spatialStops.slice(1))await goSpace(stop);paintPosition();}catch(e){message(e.message);}finally{setBusy(false);}};
 addEventListener('resize',()=>{if(view==='D')drawDetail(false);});
 let wheel=0,wheelAt=0,wheelQuiet=0;addEventListener('wheel',e=>{if(!['A','B'].includes(view)||e.target.closest('button,aside,a,input,select')||busy)return;const now=performance.now();if(now<wheelQuiet)return;if(now-wheelAt>180)wheel=0;wheelAt=now;wheel+=e.deltaY*(e.deltaMode===1?16:e.deltaMode===2?innerHeight:1);if(Math.abs(wheel)>=75){const dir=Math.sign(wheel);wheel=0;wheelQuiet=now+650;nextSpace(dir).finally(()=>{wheelQuiet=performance.now()+400;});}},{passive:true});
-window.study={setRouteHybrid:v=>{routeLayer?.setEnabled(v);rearGallery?.setEnabled(v);h.model.renderFrame();},get route32(){return {progress:routeProgress,reveal:secondReveal,status:secondStatus,error:routeError,projection:routeLayer?.state,wall:wallPlane?{opacity:wallPlane.material.opacity,color:wallPlane.material.color?.toArray(),corners:secondCorners()}:null};},seekRoute:seekRoute32,setSecondReveal,travelTo,probeRoute,get rear(){return rearGallery?.api;},get activeMural(){return activeMural;},get murals(){return murals;},get finish(){return finish;},navigate,chooseDirection,selectRegion:id=>selectRegion(OBSERVATIONS.find(r=>r.id===id)),get ready(){return ready;},get busy(){return busy;},get view(){return view;},get runtime(){return h;},get layer(){return layer;},get detail(){return {...detail};},get direction(){return direction;},layerError:null,observations:OBSERVATIONS};
+const studyApi={setRouteHybrid:v=>{routeLayer?.setEnabled(v);rearGallery?.setEnabled(v);h.model.renderFrame();},get preparation(){return preparation;},get route32(){return {progress:routeProgress,reveal:secondReveal,status:secondStatus,error:routeError,projection:routeLayer?.state,wall:wallPlane?{opacity:wallPlane.material.opacity,color:wallPlane.material.color?.toArray(),corners:secondCorners()}:null};},seekRoute:seekRoute32,setSecondReveal,travelTo,probeRoute,get rear(){return rearGallery?.api;},get activeMural(){return activeMural;},get murals(){return murals;},get finish(){return finish;},navigate,chooseDirection,selectRegion:id=>selectRegion(OBSERVATIONS.find(r=>r.id===id)),get ready(){return ready&&!initializing;},get busy(){return busy;},get view(){return view;},get runtime(){return h;},get layer(){return layer;},get detail(){return {...detail};},get direction(){return direction;},layerError:null,observations:OBSERVATIONS};
+if(body.dataset.audience!=='true'||body.dataset.dev==='true')window.study=studyApi;
 async function initialize(){murals=await (await fetch('./murals.json')).json();if(variant33)murals=murals.map(m=>m.approvedDisplay?{...m,image:m.approvedDisplay.image}:m);const started=performance.now();while(!frame.contentWindow?.v24a?.ready){if(frame.contentWindow?.hybrid?.failed||performance.now()-started>65000)throw Error('建筑加载失败，请检查 localhost 服务后刷新');await new Promise(r=>setTimeout(r,100));}w=frame.contentWindow;h=w.hybrid;const style=w.document.createElement('style');style.textContent=`.entry-header,.entry-footer,#mural-copy,#debug,#mural-debug,.v24a-label{display:none!important}#mural-cue{font-size:${variant35?44:76}px;font-weight:600;letter-spacing:.035em;color:rgba(193,195,186,.58)}#status{top:90px}#gallery{background:#141b1e}`;w.document.head.append(style);
  // Instance-only light curve; original source, timing and state transitions remain intact.
  const setBrightness=h.model.mural.setBrightness.bind(h.model.mural);h.model.mural.setBrightness=(v,notify)=>{const t=Math.max(0,Math.min(1,(v-.14)/.86)),u=t*t*t*(10+t*(-15+6*t));return setBrightness(.14+.86*u,notify);};
  for(const stop of h.stops){const b=document.createElement('button');b.textContent=stop.label;b.dataset.stop=stop.id;b.onclick=async()=>{if(busy)return;setBusy(true);try{paintView('A');await goSpace(stop.id);}catch(e){message(e.message);}finally{setBusy(false);}};$('#stops').append(b);}
- T=await w.document.querySelector('#temple').contentWindow.eval("import('/module-a/immersive-hybrid-v1/vendor/three.module.js')");finish=installInteriorFinish(h.model,T);if(variant33)await initializeRear33();await goSpace('overview');ready=true;await chooseDirection(direction);await updateMuralUI();$('#loading').hidden=true;setBusy(false);paintView('A');paintPosition();if(sessionStorage.getItem('shuilongci-v3-return')){const reduced=$('#reduced').checked;$('#reduced').checked=true;for(let i=1;i<=4;i++)if(!await travelTo(i))break;if(activeMural===4)await navigate('C');$('#reduced').checked=reduced;sessionStorage.removeItem('shuilongci-v3-return');if(activeMural===4)message('已恢复第五铺阅读。');}}
+ T=await w.document.querySelector('#temple').contentWindow.eval("import('/module-a/immersive-hybrid-v1/vendor/three.module.js')");if(variant35)preparation=installPreparation(h.model,w.document.querySelector('#temple').contentWindow.shuilongTemple.getSharedWorldIdentity().renderer);finish=installInteriorFinish(h.model,T);if(variant33)await initializeRear33();await goSpace('overview');ready=true;await chooseDirection(direction,{initial:true});await updateMuralUI();paintView('A');paintPosition();if(sessionStorage.getItem('shuilongci-v3-return')){if(variant35){setBusy(true);try{await rearGallery.restoreDock(4);await reading();sessionStorage.removeItem('shuilongci-v3-return');message('已恢复第五铺阅读。');}catch(e){message('第五铺恢复未完成，可刷新重试：'+e.message);}finally{setBusy(false);}}else{initializing=false;setBusy(false);const reduced=$('#reduced').checked;$('#reduced').checked=true;for(let i=1;i<=4;i++)if(!await travelTo(i))break;if(activeMural===4)await navigate('C');$('#reduced').checked=reduced;sessionStorage.removeItem('shuilongci-v3-return');if(activeMural===4)message('已恢复第五铺阅读。');}}initializing=false;$('#loading').hidden=true;setBusy(false);}
+setBusy(true);
 initialize().catch(e=>{$('#loading p').textContent=`${e.message}。刷新可重试。`;const a=document.createElement('a');a.href='../../v24.html';a.textContent='打开原展厅 →';$('#loading').append(a);});
 addEventListener('pagehide',e=>{if(!e.persisted){layer?.dispose();finish?.dispose();detailAnimation?.cancel();if(wallPlane){wallPlane.removeFromParent();wallPlane.geometry.dispose();wallPlane.material.map?.dispose();wallPlane.material.dispose();wallPlane=null;}} });
 
@@ -169,7 +174,7 @@ addEventListener('pageshow',e=>{if(e.persisted&&sessionStorage.getItem('shuilong
 
 async function ensureRoute32(){
  rail??=createRail(h.sample(2));
- const hits=rail.validate(h.model);if(hits.length)throw Error('V3.2 曲线路径存在遮挡');
+ if(!variant35||!routeValidated){const hits=rail.validate(h.model);if(hits.length)throw Error('V3.2 曲线路径存在遮挡');routeValidated=true;}
  if(!routeLayer)try{routeLayer=await installRouteSurfaces(h.model,T);routeError=null;}catch(e){routeError=e.message;message('沿途 AI 素材加载失败，保留建筑原材质。可返回重试。');}
 }
 function sceneRoot(){let s=h.model.root;while(s.parent)s=s.parent;return s;}
@@ -177,7 +182,7 @@ async function createSecondWall(){
  const m=murals[1],texture=await new T.TextureLoader().loadAsync(m.image);texture.colorSpace=T.SRGBColorSpace;
  const height=Math.min(m.height,m.width/(texture.image.width/texture.image.height));
  wallPlane=new T.Mesh(new T.PlaneGeometry(height*texture.image.width/texture.image.height,height),new T.MeshBasicMaterial({map:texture,color:new T.Color(.12,.115,.105),transparent:true,opacity:1,toneMapped:false,fog:true,depthTest:true,polygonOffset:true,polygonOffsetFactor:-2}));
- wallPlane.name='V32-real-second-mural-candidate';wallPlane.position.fromArray(m.position);wallPlane.rotation.y=m.rotation;sceneRoot().add(wallPlane);wallPlane.updateMatrixWorld(true);setSecondReveal(0,false);
+ wallPlane.name='V32-real-second-mural-candidate';wallPlane.position.fromArray(m.position);wallPlane.rotation.y=m.rotation;sceneRoot().add(wallPlane);wallPlane.updateMatrixWorld(true);setSecondReveal(0,false);await h.model.prepareAssets?.(wallPlane,[texture]);
 }
 function secondCorners(){if(!wallPlane||!T||activeMural>1)return null;wallPlane.updateMatrixWorld(true);h.model.camera.updateMatrixWorld();const g=wallPlane.geometry.parameters,w=g.width/2,hg=g.height/2;return [[-w,hg],[w,hg],[w,-hg],[-w,-hg]].map(([x,y])=>{const v=new T.Vector3(x,y,0).applyMatrix4(wallPlane.matrixWorld).project(h.model.camera);return {x:(v.x+1)*innerWidth/2,y:(1-v.y)*innerHeight/2,depth:v.z};});}
 function positionSecondLabel(){
@@ -212,7 +217,7 @@ async function travelFirstSecond(reverse){
   paintView('A');body.dataset.routeTravel='true';routeLayer?.setEnabled(true);
   await animate32(rail.length/1.45*1000,t=>applyRail(1-ease(t)),true);
   wallPlane?.removeFromParent();wallPlane?.geometry.dispose();wallPlane?.material.map.dispose();wallPlane?.material.dispose();wallPlane=null;
-  routeLayer?.setEnabled(false);activeMural=0;await updateMuralUI();await chooseDirection(direction);await goSpace('mural-look');paintView('B');
+  routeLayer?.setEnabled(false);activeMural=0;await updateMuralUI();if(variant35){layer?.setMode('hybrid');finish?.setEnabled(true);}else await chooseDirection(direction);await goSpace('mural-look');paintView('B');
  }
  delete body.dataset.routeTravel;paintPosition();return true;
 }
@@ -239,7 +244,7 @@ async function initializeRear33(){
   active:()=>activeMural,view:()=>view,setView:paintView,
   async activate(index){activeMural=index;await updateMuralUI();},
   async exitReading(){if(view==='D')paintView('C');if(view==='C'){body.dataset.readingExit='true';await syncReading(false);}},
-  prepare(){layer?.setMode('original');finish?.setEnabled(true);routeLayer?.setEnabled(false);$('#second-wall-label').hidden=true;},
+  prepare(){layer?.setMode('original');finish?.setEnabled(true);routeLayer?.setEnabled(false);if(variant35&&wallPlane)setSecondReveal(0,false);$('#second-wall-label').hidden=true;},
   async showBase(index){if(index===1){await ensureRoute32();routeLayer?.update(rail.sample(1));routeLayer?.setEnabled(true);if(wallPlane?.name==='V32-real-second-mural-candidate'){wallPlane.visible=true;setSecondReveal(1);return;}}await placeCandidate();},
   labelStyle(){const el=$('#second-wall-label');positionSecondLabel();return {fontFamily:el.style.fontFamily,fontWeight:el.style.fontWeight,fontSize:el.style.fontSize,lineHeight:el.style.lineHeight,letterSpacing:el.style.letterSpacing};},
   paintPosition,message,

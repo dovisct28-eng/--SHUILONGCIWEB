@@ -1,3 +1,5 @@
+> 2026-10-31 V3.5任务覆盖：本阶段仅在 feature/shuilongci-hybrid-gallery-v1 开发与同步，不合并master。默认A01–A03主动接入 /module-a/gallery/ 的①②③④⑤路线；旧三铺及A04–A08仅在 ?legacy 历史路径保留。下方历史顺序、第三/第四铺排除与master默认流程不适用本轮。见 docs/validation/interior-visual-v3-5/INTEGRATION.md。
+
 # AGENTS.md
 
 ## 项目说明

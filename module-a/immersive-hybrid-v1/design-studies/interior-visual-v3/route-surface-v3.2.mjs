@@ -9,7 +9,11 @@ export async function installRouteSurfaces(runtime,T,options={}){
  const textures=[],layers=[];let enabled=true,strength=1,last=runtime.pose;
  async function load(name,color){const image=new Image();image.src=new URL(name,base);await image.decode();const t=new T.Texture(image);t.colorSpace=color?T.SRGBColorSpace:T.NoColorSpace;t.minFilter=T.LinearFilter;t.magFilter=T.LinearFilter;t.generateMipmaps=false;t.needsUpdate=true;textures.push(t);return t;}
  try{
-  const records=await Promise.all(manifest.items.map(async item=>({item,map:await load(`prepared/${item.name}.webp`,true),mask:await load(`prepared/${item.name}-safe.png`,false),depth:await load(`prepared/${item.name}-depth.png`,false)})));
+  // Settle every decoder before cleanup: a late sibling must not allocate a
+  // texture after another failed record has already been disposed.
+  const pending=await Promise.allSettled(manifest.items.map(async item=>({item,map:await load(`prepared/${item.name}.webp`,true),mask:await load(`prepared/${item.name}-safe.png`,false),depth:await load(`prepared/${item.name}-depth.png`,false)})));
+  const failed=pending.find(record=>record.status==='rejected');if(failed)throw failed.reason;
+  const records=pending.map(record=>record.value);
   // Nearest filtering is essential for packed reference depth.
   for(const r of records){r.depth.minFilter=T.NearestFilter;r.depth.magFilter=T.NearestFilter;}
   const declarations=records.map((_,i)=>`uniform sampler2D pic${i},mask${i},dep${i};uniform mat4 proj${i},view${i};uniform float weight${i};`).join('\n');
@@ -36,7 +40,7 @@ export async function installRouteSurfaces(runtime,T,options={}){
   });
   const progressOf=options.progress??(pose=>pose.route12),weightsFor=options.weights??routeWeights;
   function update(pose){last=pose;const progress=progressOf(pose),state=weightsFor(progress??0);for(const layer of layers){const gain=enabled&&progress!=null?state.gain*(options.gains??[.60,.32])[layer.kind]*strength:0;layer.uniforms.gain.value=gain;records.forEach((r,i)=>layer.uniforms[`weight${i}`].value=state.weights[i]);layer.proxy.visible=gain>.001;}}
-  update(last);
+  update(last);await runtime.prepareAssets?.(group,textures);
   return {update,setStrength(value){strength=Math.max(0,Math.min(1,value));update(last);runtime.invalidate();},setEnabled(value){enabled=value;update(last);runtime.invalidate();},get state(){return {enabled,progress:progressOf(last)??null,...weightsFor(progressOf(last)??0),layers:layers.map(l=>({kind:l.kind,gain:l.uniforms.gain.value,triangles:l.proxy.geometry.index.count/3})),referenceDepth:true,secondWallExcluded:true};},dispose(){for(const l of layers){l.proxy.geometry.dispose();l.proxy.material.dispose();}textures.forEach(t=>t.dispose());group.removeFromParent();}};
- }catch(e){textures.forEach(t=>t.dispose());group.removeFromParent();throw e;}
+ }catch(e){for(const l of layers){l.proxy.geometry.dispose();l.proxy.material.dispose();}textures.forEach(t=>t.dispose());group.removeFromParent();throw e;}
 }
