@@ -1,3 +1,5 @@
+import {photoBridge} from './bridge-v3.5.mjs';
+import * as visual35 from './visual-v3.5.mjs';
 import {projectWallCue} from '../../src/mural-wall-cue.mjs';
 import {FIRST_FRONT_DOCK} from '../../src/mural-front.mjs';
 import {createRail,ease,smooth} from './route-v3.2.mjs';
@@ -9,7 +11,9 @@ import {installInteriorFinish} from './interior-finish.mjs';
 import {OBSERVATIONS,fitImage,clampTransform,regionTransform,visibleRect,setImageSize} from './observations.mjs';
 import {installStudyLayers} from './surface-layer.mjs';
 const $=s=>document.querySelector(s),frame=$('#space'),body=document.body;
-const variant33=['v33','v34'].includes(body.dataset.variant);let rearGallery=null;
+const variant35=body.dataset.variant==='v35';
+body.dataset.dev=String(!variant35||new URLSearchParams(location.search).has('debug'));
+const variant33=['v33','v34','v35'].includes(body.dataset.variant);let rearGallery=null;
 let routeLayer,rail,routeProgress=0,secondReveal=0,secondStatus='idle',routeError=null;
 let finish,activeMural=0,murals=[],T,wallPlane=null,wallLabel=null;
 let h,w,layer,ready=false,busy=false,view='A',direction='B',compare=false,position='gate-interior',detail={zoom:1,x:0,y:0},drag=null,detailAnimation=null,activeObservation=null;
@@ -45,7 +49,8 @@ async function navigate(next,{replay=false}={}){if(!ready||busy)return false;set
  }paintPosition();if(next==='D')$('#detail-viewport').focus({preventScroll:true});else if(next==='C'&&view==='C')$('#detail-open').focus({preventScroll:true});return true;
  }catch(e){message(`预览未能完成：${e.message}。可打开预览选项切换原始模型。`);return false;}finally{setBusy(false);}}
 async function nextSpace(dir){if(!ready||busy)return;if(activeMural){if(dir<0)return travelTo(activeMural-1);return navigate(view==='B'?'C':'B');}if(view==='B')return navigate(dir<0?'A':'C');if(dir>0&&position==='corridor-2_5d')return navigate('B',{replay:true});const stops=h.stops.map(s=>s.id),i=stops.indexOf(position),next=stops[Math.max(0,Math.min(stops.length-1,i+dir))];setBusy(true);try{await goSpace(next);paintView('A');}catch(e){message(e.message);}finally{setBusy(false);}}
-async function chooseDirection(value){if(!ready||busy)return;setBusy(true);try{
+async function chooseDirection(value){if(!ready||busy)return;
+ if(variant35&&layer&&value===direction&&!compare){layer.setMode(activeMural?'original':'hybrid');w.v24a.layer?.setMode('original');finish?.setEnabled(true);routeLayer?.setEnabled(true);rearGallery?.setEnabled(true);return;}setBusy(true);try{
  direction=value;compare=false;$('#compare').setAttribute('aria-pressed','false');$('#direction').value=value;
  if(['current','original'].includes(value)){layer?.setMode('original');w.v24a.layer?.setMode(value==='current'?'hybrid':'original');}
  else{const T=await w.document.querySelector('#temple').contentWindow.eval("import('/module-a/immersive-hybrid-v1/vendor/three.module.js')");layer?.dispose();layer=null;layer=await installStudyLayers(h.model,T,{direction:value});w.v24a.layer?.setMode('original');h.model.setCamera(h.model.pose,{immediate:true});}
@@ -75,25 +80,26 @@ $('#minimap').onclick=e=>{const r=$('#minimap').getBoundingClientRect();mapTo((e
 for(const b of document.querySelectorAll('.chapters button'))b.onclick=()=>navigate(b.dataset.view);$('#detail-open').onclick=()=>navigate('D');$('#detail-return').onclick=()=>navigate('C');$('#wall-return').onclick=()=>navigate('B');$('#back').onclick=()=>nextSpace(-1);$('#forward').onclick=()=>nextSpace(1);$('#replay-discovery').onclick=()=>navigate('B',{replay:true});$('#direction').onchange=e=>chooseDirection(e.target.value);
 $('#compare').onclick=()=>{if(busy)return;finish?.setEnabled(compare);compare=!compare;layer?.setMode(compare?'original':'hybrid');w.v24a.layer?.setMode(compare||direction==='current'?'hybrid':'original');if(direction==='original')w.v24a.layer?.setMode(compare?'hybrid':'original');$('#compare').setAttribute('aria-pressed',String(compare));routeLayer?.setEnabled(!compare);rearGallery?.setEnabled(!compare);$('#compare').textContent=compare?'当前正式融合 · 点击返回候选':'按此切换当前版本对照';paintPosition();};
 function options(open){$('#options').hidden=!open;$('#options-open').setAttribute('aria-expanded',String(open));if(open)$('#options-close').focus();else $('#options-open').focus();}$('#options-open').onclick=()=>options($('#options').hidden);$('#options-close').onclick=()=>options(false);addEventListener('keydown',e=>{if(e.key==='Escape'){if(!$('#options').hidden)options(false);else if(view==='D')navigate('C');}if(e.target.closest('button,input,select,summary,a,#detail-viewport,#minimap'))return;if(['ArrowDown','ArrowRight'].includes(e.key)&&['A','B'].includes(view)){e.preventDefault();nextSpace(1);}if(['ArrowUp','ArrowLeft'].includes(e.key)&&['A','B'].includes(view)){e.preventDefault();nextSpace(-1);}});
-$('#reduced').checked=matchMedia('(prefers-reduced-motion:reduce)').matches;$('#reduced').onchange=()=>{body.dataset.reducedMotion=String(motion());const button=w.document.querySelector('#motion');if((button.getAttribute('aria-pressed')==='true')!==motion())button.click();};
+$('#audience-motion')?.addEventListener('click',()=>{if(busy||!ready)return;$('#reduced').checked=!motion();$('#reduced').dispatchEvent(new Event('change'));$('#audience-motion').setAttribute('aria-pressed',String(motion()));});
+$('#reduced').checked=matchMedia('(prefers-reduced-motion:reduce)').matches;$('#reduced').onchange=()=>{body.dataset.reducedMotion=String(motion());$('#audience-motion')?.setAttribute('aria-pressed',String(motion()));const button=w.document.querySelector('#motion');if((button.getAttribute('aria-pressed')==='true')!==motion())button.click();};
 $('#motion-check').onclick=async()=>{if(busy)return;setBusy(true);try{paintView('A');await goSpace('gate-interior');for(const stop of spatialStops.slice(1))await goSpace(stop);paintPosition();}catch(e){message(e.message);}finally{setBusy(false);}};
 addEventListener('resize',()=>{if(view==='D')drawDetail(false);});
 let wheel=0,wheelAt=0,wheelQuiet=0;addEventListener('wheel',e=>{if(!['A','B'].includes(view)||e.target.closest('button,aside,a,input,select')||busy)return;const now=performance.now();if(now<wheelQuiet)return;if(now-wheelAt>180)wheel=0;wheelAt=now;wheel+=e.deltaY*(e.deltaMode===1?16:e.deltaMode===2?innerHeight:1);if(Math.abs(wheel)>=75){const dir=Math.sign(wheel);wheel=0;wheelQuiet=now+650;nextSpace(dir).finally(()=>{wheelQuiet=performance.now()+400;});}},{passive:true});
 window.study={setRouteHybrid:v=>{routeLayer?.setEnabled(v);rearGallery?.setEnabled(v);h.model.renderFrame();},get route32(){return {progress:routeProgress,reveal:secondReveal,status:secondStatus,error:routeError,projection:routeLayer?.state,wall:wallPlane?{opacity:wallPlane.material.opacity,color:wallPlane.material.color?.toArray(),corners:secondCorners()}:null};},seekRoute:seekRoute32,setSecondReveal,travelTo,probeRoute,get rear(){return rearGallery?.api;},get activeMural(){return activeMural;},get murals(){return murals;},get finish(){return finish;},navigate,chooseDirection,selectRegion:id=>selectRegion(OBSERVATIONS.find(r=>r.id===id)),get ready(){return ready;},get busy(){return busy;},get view(){return view;},get runtime(){return h;},get layer(){return layer;},get detail(){return {...detail};},get direction(){return direction;},layerError:null,observations:OBSERVATIONS};
-async function initialize(){murals=await (await fetch('./murals.json')).json();if(variant33)murals=murals.map(m=>m.approvedDisplay?{...m,image:m.approvedDisplay.image}:m);const started=performance.now();while(!frame.contentWindow?.v24a?.ready){if(frame.contentWindow?.hybrid?.failed||performance.now()-started>65000)throw Error('建筑加载失败，请检查 localhost 服务后刷新');await new Promise(r=>setTimeout(r,100));}w=frame.contentWindow;h=w.hybrid;const style=w.document.createElement('style');style.textContent=`.entry-header,.entry-footer,#mural-copy,#debug,#mural-debug,.v24a-label{display:none!important}#mural-cue{font-size:76px;font-weight:600;letter-spacing:.035em;color:rgba(193,195,186,.58)}#status{top:90px}#gallery{background:#141b1e}`;w.document.head.append(style);
+async function initialize(){murals=await (await fetch('./murals.json')).json();if(variant33)murals=murals.map(m=>m.approvedDisplay?{...m,image:m.approvedDisplay.image}:m);const started=performance.now();while(!frame.contentWindow?.v24a?.ready){if(frame.contentWindow?.hybrid?.failed||performance.now()-started>65000)throw Error('建筑加载失败，请检查 localhost 服务后刷新');await new Promise(r=>setTimeout(r,100));}w=frame.contentWindow;h=w.hybrid;const style=w.document.createElement('style');style.textContent=`.entry-header,.entry-footer,#mural-copy,#debug,#mural-debug,.v24a-label{display:none!important}#mural-cue{font-size:${variant35?44:76}px;font-weight:600;letter-spacing:.035em;color:rgba(193,195,186,.58)}#status{top:90px}#gallery{background:#141b1e}`;w.document.head.append(style);
  // Instance-only light curve; original source, timing and state transitions remain intact.
  const setBrightness=h.model.mural.setBrightness.bind(h.model.mural);h.model.mural.setBrightness=(v,notify)=>{const t=Math.max(0,Math.min(1,(v-.14)/.86)),u=t*t*t*(10+t*(-15+6*t));return setBrightness(.14+.86*u,notify);};
  for(const stop of h.stops){const b=document.createElement('button');b.textContent=stop.label;b.dataset.stop=stop.id;b.onclick=async()=>{if(busy)return;setBusy(true);try{paintView('A');await goSpace(stop.id);}catch(e){message(e.message);}finally{setBusy(false);}};$('#stops').append(b);}
  T=await w.document.querySelector('#temple').contentWindow.eval("import('/module-a/immersive-hybrid-v1/vendor/three.module.js')");finish=installInteriorFinish(h.model,T);if(variant33)await initializeRear33();await goSpace('overview');ready=true;await chooseDirection(direction);await updateMuralUI();$('#loading').hidden=true;setBusy(false);paintView('A');paintPosition();if(sessionStorage.getItem('shuilongci-v3-return')){const reduced=$('#reduced').checked;$('#reduced').checked=true;for(let i=1;i<=4;i++)if(!await travelTo(i))break;if(activeMural===4)await navigate('C');$('#reduced').checked=reduced;sessionStorage.removeItem('shuilongci-v3-return');if(activeMural===4)message('已恢复第五铺阅读。');}}
 initialize().catch(e=>{$('#loading p').textContent=`${e.message}。刷新可重试。`;const a=document.createElement('a');a.href='../../v24.html';a.textContent='打开原展厅 →';$('#loading').append(a);});
-addEventListener('pagehide',e=>{if(!e.persisted)layer?.dispose();});
+addEventListener('pagehide',e=>{if(!e.persisted){layer?.dispose();finish?.dispose();detailAnimation?.cancel();if(wallPlane){wallPlane.removeFromParent();wallPlane.geometry.dispose();wallPlane.material.map?.dispose();wallPlane.material.dispose();wallPlane=null;}} });
 
 async function updateMuralUI(){
  const m=murals[activeMural];body.dataset.muralIndex=String(activeMural);
  for(const id of ['reading-image','detail-image'])$("#"+id).src=m.image;
  $('#minimap img').src=m.image;
- await $('#reading-image').decode();const img=$('#reading-image');setImageSize(img.naturalWidth,img.naturalHeight);
- $('#minimap svg').setAttribute('viewBox',`0 0 ${img.naturalWidth} ${img.naturalHeight}`);$('#minimap').style.aspectRatio=`${img.naturalWidth}/${img.naturalHeight}`;
+ await Promise.all(['reading-image','detail-image'].map(id=>$('#'+id).decode()).concat($('#minimap img').decode()));const img=$('#reading-image');setImageSize(img.naturalWidth,img.naturalHeight);
+ $('#minimap svg').setAttribute('viewBox',`0 0 ${img.naturalWidth} ${img.naturalHeight}`);$('#minimap').style.aspectRatio=`${img.naturalWidth}/${img.naturalHeight}`;if(variant35)$('#minimap').style.width=Math.min(220,80*img.naturalWidth/img.naturalHeight)+'px';
  if(variant33){$('#detail .detail-head .eyebrow').textContent=`图像 0${activeMural+1} / 局部观察`;$('#reading-image').alt=m.title+'完整真实图像';$('#detail-image').alt=m.title+'，可缩放和平移查看真实细节';}
  $('#reading h1').textContent=m.title;$('#reading .eyebrow').textContent=`图像 0${activeMural+1} / ${m.wall}`;
  $('#reading dd').textContent=m.wall;
@@ -183,8 +189,9 @@ function positionSecondLabel(){
  const scale=(Math.hypot(points[3][0]-points[0][0],points[3][1]-points[0][1])+Math.hypot(points[2][0]-points[1][0],points[2][1]-points[1][1]))/220;
  label.style.fontFamily=first.fontFamily;label.style.fontWeight=first.fontWeight;label.style.fontSize=String(parseFloat(first.fontSize)*scale)+'px';label.style.lineHeight=first.lineHeight==='normal'?'normal':String(parseFloat(first.lineHeight)/parseFloat(first.fontSize));label.style.letterSpacing=String(parseFloat(first.letterSpacing)*scale)+'px';
  const anchor=new T.Vector3(murals[1].position[0],2.88,murals[1].position[2]).project(h.model.camera);label.style.left=String((anchor.x+1)*innerWidth/2)+'px';label.style.top=String((1-anchor.y)*innerHeight/2)+'px';
+ if(variant35&&activeMural===1){const p=visual35.titlePlacement(secondCorners(),innerWidth,innerHeight);label.style.left=p.x+'px';label.style.top=p.y+'px';}
 }
-function setSecondReveal(value,render=true){secondReveal=Math.max(0,Math.min(1,value));if(!wallPlane)return;const u=ease(secondReveal);wallPlane.material.color.setRGB(.12+.51*u,.115+.505*u,.105+.49*u);wallPlane.material.opacity=1;const label=$('#second-wall-label');label.hidden=secondReveal<.17;label.style.opacity=String(smooth(.17,.38,secondReveal));positionSecondLabel();secondStatus=secondReveal===0?'dark':secondReveal<.42?'title':secondReveal<1?'revealing':'lit';if(render)h.model.renderFrame();}
+function setSecondReveal(value,render=true){secondReveal=Math.max(0,Math.min(1,value));if(!wallPlane)return;const u=ease(secondReveal);wallPlane.material.color.setRGB(.12+.51*u,.115+.505*u,.105+.49*u);if(variant35)wallPlane.material.color.setRGB(...visual35.wallColor(1,secondReveal));wallPlane.material.opacity=1;const label=$('#second-wall-label');label.hidden=secondReveal<.17;label.style.opacity=String(variant35?visual35.titleOpacity(secondReveal):smooth(.17,.38,secondReveal));positionSecondLabel();secondStatus=secondReveal===0?'dark':secondReveal<.42?'title':secondReveal<1?'revealing':'lit';if(render)h.model.renderFrame();}
 async function animate32(duration,apply,spatial=false){if(motion()&&!spatial){apply(1);return;}await new Promise(resolve=>{let began;function tick(now){began??=now;const t=Math.min(1,(now-began)/duration);apply(t);if(t<1)requestAnimationFrame(tick);else resolve();}requestAnimationFrame(tick);});}
 async function revealSecond(){secondStatus='dark';await animate32(2400,t=>setSecondReveal(t));}
 function applyRail(progress){routeProgress=progress;const pose=rail.sample(progress);routeLayer?.update(pose);h.model.setCamera(pose,{immediate:true});if(wallPlane)positionSecondLabel();$('#location-label').textContent=progress<.12?'离开第一铺':progress<.57?'沿东廊前行':progress<.8?'经过主殿转角':'走近第二铺';$('.rail i').style.width=`${20+progress*20}%`;}
@@ -213,7 +220,7 @@ async function travelFirstSecond(reverse){
 // At the face-on dock it is a rectangle; oblique/clipped views use a documented
 // reversible image bridge instead of inventing first-mural corner coordinates.
 async function secondReadingBridge(enter){
- if(motion())return;const image=$('#reading-image');await image.decode();const r=image.getBoundingClientRect(),ratio=image.naturalWidth/image.naturalHeight,w=Math.min(r.width,r.height*ratio),height=w/ratio;
+ if(motion())return;const image=$('#reading-image');if(variant35)return photoBridge(image,secondCorners(),enter);await image.decode();const r=image.getBoundingClientRect(),ratio=image.naturalWidth/image.naturalHeight,w=Math.min(r.width,r.height*ratio),height=w/ratio;
  const target={x:r.left+(r.width-w)/2,y:r.top+(r.height-height)/2,w,h:height},q=secondCorners();if(!q)return;
  const left=Math.min(...q.map(p=>p.x)),right=Math.max(...q.map(p=>p.x)),top=Math.min(...q.map(p=>p.y)),bottom=Math.max(...q.map(p=>p.y));
  const source={x:left,y:top,w:right-left,h:bottom-top},aligned=Math.abs(q[0].y-q[1].y)<2&&Math.abs(q[1].x-q[2].x)<2&&left>=0&&right<=innerWidth;
@@ -227,8 +234,8 @@ addEventListener('pagehide',e=>{if(!e.persisted){routeLayer?.dispose();rearGalle
 // V3.3 is an optional, lazily loaded extension. V3.2 keeps its original data and UI.
 async function initializeRear33(){
  const {createRearGallery}=await import('./gallery-v3.3.mjs');
- const fifth=body.dataset.variant==='v34'?(await import('./fifth-v3.4.mjs')).fifth:null;
- rearGallery=createRearGallery({runtime:h.model,T,murals,motion,fifth,
+ const fifth=['v34','v35'].includes(body.dataset.variant)?(await import('./fifth-v3.4.mjs')).fifth:null;
+ rearGallery=createRearGallery({runtime:h.model,T,murals,motion,fifth,visual:variant35?visual35:null,
   active:()=>activeMural,view:()=>view,setView:paintView,
   async activate(index){activeMural=index;await updateMuralUI();},
   async exitReading(){if(view==='D')paintView('C');if(view==='C'){body.dataset.readingExit='true';await syncReading(false);}},
