@@ -168,7 +168,7 @@ $('#continue-tour').onclick=async()=>{
  try{if(await explorationAvailable()){sessionStorage.setItem('shuilongci-v3-return',variant35?returnMarker(selectedCase.id):'mural-05');location.assign(EXPLORATION_URL);}else message('入将图探索服务暂不可达。请启动模块 B 后重试。');}finally{setBusy(false);}
 };
 $('#route-open').onclick=()=>{
- const list=$('#route-list');list.replaceChildren();for(const m of murals){const li=document.createElement('li');li.textContent=`${m.title} · ${m.wall}`;list.append(li);}if(variant35)$('#route-case-note').textContent=selectedCase.label+'：'+selectedCase.summary+'。两套空间方案待核对；切换后从入口重新参观。';$('#route-dialog').showModal();
+ const list=$('#route-list');list.replaceChildren();for(const m of murals){const li=document.createElement('li');li.textContent=`${m.title} · ${m.wall}`;list.append(li);}if(variant35)$('#route-case-note').textContent=selectedCase.summary+'。';$('#route-dialog').showModal();
 };
 $('#route-close').onclick=()=>$('#route-dialog').close();
 addEventListener('pageshow',e=>{if(e.persisted&&sessionStorage.getItem('shuilongci-v3-return')){sessionStorage.removeItem('shuilongci-v3-return');message('已返回第五铺，可继续查看或返回墙面。');}});
@@ -238,7 +238,6 @@ addEventListener('resize',()=>{if(activeMural===1)positionSecondLabel();});
 addEventListener('pagehide',e=>{if(!e.persisted){routeLayer?.dispose();rearGallery?.dispose();}});
 
 // V3.3 is an optional, lazily loaded extension. V3.2 keeps its original data and UI.
-if(variant35){const select=$('#route-layout');select.value=selectedCase.id;select.addEventListener('change',()=>{if(busy||!ready)return;const next=routeCase(select.value),url=new URL(location.href);url.searchParams.set('layout',next.id);sessionStorage.removeItem('shuilongci-v3-return');location.assign(url.href);});$('#route-case-note').textContent='两套空间方案待核对；切换后从入口重新参观。';const brand=$('.brand');const home=new URL(brand.href);home.searchParams.set('layout',selectedCase.id);brand.href=home.href;}
 async function initializeRear33(){
  const {createRearGallery}=await import('./gallery-v3.3.mjs');
  const fifth=['v34','v35'].includes(body.dataset.variant)?(await import('./fifth-v3.4.mjs')).fifth:null;

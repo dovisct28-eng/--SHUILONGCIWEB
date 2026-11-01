@@ -17,7 +17,7 @@ import {createNavigation} from '../navigation/controller.mjs';
 import {connectExploration} from '../navigation/exploration.mjs';
 
 const formalGallery=!new URLSearchParams(location.search).has('legacy');
-const galleryURL=new URL('../gallery/',import.meta.url),routeLayout=new URLSearchParams(location.search).get('layout');if(['model','report'].includes(routeLayout))galleryURL.searchParams.set('layout',routeLayout);
+const galleryURL=new URL('../gallery/',import.meta.url);
 const galleryHref=galleryURL.href;
 const story = document.querySelector('[data-story]');
 const stage = document.querySelector('[data-stage]');

@@ -1,19 +1,13 @@
 import {createRearRail,REAR_DOCKS} from './route-v3.3.mjs';
 import {FIFTH_DOCK} from './route-v3.4.mjs';
 
-// Comparison proposals, not a resolution of the historical/site discrepancy.
-export const ROUTE_CASES=Object.freeze({
- model:{id:'model',label:'A · 现有模型',summary:'③盘龙在右 → ④麒麟在左 → ⑤左侧墙',modelFallback:false},
- report:{id:'report',label:'B · 报告对照',summary:'③盘龙在左 → ④麒麟在右 → 回到⑤左侧墙',modelFallback:true},
-});
-export const routeCase=id=>ROUTE_CASES[id]??ROUTE_CASES.model;
-export function applyRouteCase(murals,id){
- const result=structuredClone(murals);if(id!=='report')return result;
- for(const [index,x,side]of[[2,-2.25,'左'],[3,2.25,'右']]){
-  result[index].position[0]=x;result[index].wall=`主殿正面${side}侧 · 方案B`;
-  result[index].camera={id:`report-${index+1}`,position:[x,1.85,-10.6],target:[x,1.85,-14.865],fov:48};
-  result[index].wallStatus='comparison-proposal-awaiting-advisor';
- }
+// Confirmed right-first route; old layout URLs resolve to the same route.
+export const ROUTE_CASES=Object.freeze({model:{id:'model',label:'参观路线',summary:'③麒麟在右 → ④盘龙在左 → ⑤左侧墙',modelFallback:false}});
+export const routeCase=()=>ROUTE_CASES.model;
+export function applyRouteCase(murals){
+ const result=structuredClone(murals);
+ // Preserve photographs and provenance together, and retain the spatial stops.
+ for(const key of ['image','source','registration','note','approvedDisplay']) [result[2][key],result[3][key]]=[result[3][key],result[2][key]];
  return result;
 }
 const pose=(x,z,tx,tz)=>({position:[x,1.85,z],target:[tx,1.85,tz],fov:48});
