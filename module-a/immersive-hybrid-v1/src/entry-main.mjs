@@ -1,6 +1,6 @@
 import {createMuralExperience} from './mural-reading.mjs';
 import {createInkScene} from '../../a01/ink-scene.mjs';
-import {GALLERY_STOPS as ENTRY_STOPS,sampleGallery as sampleEntry,createGalleryController as createEntryController,travelMs} from './corridor-path.mjs';
+import {GALLERY_STOPS as ENTRY_STOPS,sampleGallery as sampleEntry,createGalleryController as createEntryController,travelMs,GUIDED_TOUR_MS,guidedTourProgress} from './corridor-path.mjs';
 const $=s=>document.querySelector(s),iframe=$('#temple'),status=$('#status');
 createInkScene($('#gallery'))(5,false);
 const query=matchMedia('(prefers-reduced-motion: reduce)');
@@ -19,10 +19,10 @@ function draw(state=currentState(),force=true){
  for(const b of document.querySelectorAll('[data-stop]')){b.disabled=isBusy();if(b.dataset.stop===(extra?'corridor-2_5d':state))b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');}debug(force);
 }
 async function step(dir){const state=currentState();if(state==='mural-reading'){if(dir<0)return go('mural-look');$('#mural-detail-open').click();return false;}if(state==='mural-look')return go(dir>0?'mural-reading':'corridor-2_5d');if(state==='corridor-2_5d'&&dir>0)return go('mural-look');return go(ENTRY_STOPS[Math.max(0,Math.min(ENTRY_STOPS.length-1,ENTRY_STOPS.findIndex(s=>s.id===state)+dir))].id);}
-function moveTo(end,full=false){const start=progress,duration=reduced?100:Math.max(180,travelMs(start,end));frames=[];last=0;
+function moveTo(end,{linear=false,guided=false}={}){const start=progress,retime=guided&&!reduced&&start===0&&end===2,duration=reduced?100:retime?GUIDED_TOUR_MS:Math.max(180,travelMs(start,end));frames=[];last=0;
  return new Promise((resolve,reject)=>{let began;function tick(now){try{began??=now;const u=Math.min(1,(now-began)/duration);if(last)frames.push(now-last);last=now;
    // Ease the clock, never reset the rail at a node. Reverse uses the same rail.
-   const eased=full?u:u*u*(3-2*u);progress=start+(end-start)*eased;runtime.setCamera(sampleEntry(progress));debug(false);
+   const eased=linear?u:u*u*(3-2*u);progress=retime?guidedTourProgress(now-began):start+(end-start)*eased;runtime.setCamera(sampleEntry(progress));debug(false);
    if(u<1)requestAnimationFrame(tick);else resolve();
  }catch(e){
    progress=start;
@@ -36,7 +36,7 @@ async function prepareBlend(end){
  // immediate first click. A failed mural never blocks the usable old rail.
  if(mural&&runtime.mural.status!=='failed'){if(runtime.mural.status!=='ready')status.textContent='正在准备壁画与廊道…';try{await mural.prepare();}catch{}}
  if(end<=1.6&&runtime.hybrid.status!=='loading')return;if(runtime.hybrid.status==='loading')status.textContent='正在准备廊道…';const loaded=await runtime.hybrid.load();runtime.hybrid.setEnabled(loaded);$('#retry-enhancement').hidden=loaded;status.textContent=loaded?'':'廊道材质暂不可用，可继续参观或重试。';}
-const controller=createEntryController(async next=>{if(!ready)throw Error('建筑尚未加载');$('#previous').disabled=$('#next').disabled=true;wheel=0;try{const end=ENTRY_STOPS.find(s=>s.id===next).time;await prepareBlend(end);await moveTo(end);if(runtime.hybrid.status!=='failed')status.textContent='';}catch(e){status.textContent=`镜头未能完成：${e.message}`;throw e;}finally{settledAt=performance.now();wheel=0;setTimeout(()=>draw(controller.state),0);}});
+const controller=createEntryController(async (next,previous,options)=>{if(!ready)throw Error('建筑尚未加载');$('#previous').disabled=$('#next').disabled=true;wheel=0;try{const end=ENTRY_STOPS.find(s=>s.id===next).time;await prepareBlend(end);await moveTo(end,options);if(runtime.hybrid.status!=='failed')status.textContent='';}catch(e){status.textContent=`镜头未能完成：${e.message}`;throw e;}finally{settledAt=performance.now();wheel=0;setTimeout(()=>draw(controller.state),0);}});
 async function go(next,options){if(!ready||isBusy())return false;
  $('#depth-overlay').hidden=true;runtime.hybrid.setBlend(null);
  if(next==='mural-look'||next==='mural-reading'){
@@ -44,7 +44,7 @@ async function go(next,options){if(!ready||isBusy())return false;
   const result=await mural.go(next,options);settledAt=performance.now();wheel=0;draw();return result;
  }
  if(mural?.active){if(mural.state==='mural-reading'&&!await mural.go('mural-look'))return false;if(mural.state==='mural-look'&&!await mural.go('corridor-2_5d'))return false;if(next==='corridor-2_5d'){draw();return true;}}
- try{const result=await controller.go(next);draw();return result;}catch(e){draw();return false;}}
+ try{const result=await controller.go(next,options);draw();return result;}catch(e){draw();return false;}}
 $('#next').onclick=()=>step(1);
 $('#previous').onclick=()=>step(-1);
 for(const b of document.querySelectorAll('[data-stop]'))b.onclick=()=>go(b.dataset.stop);
@@ -54,7 +54,7 @@ function setReduced(value){reduced=value;$('#motion').setAttribute('aria-pressed
 $('#motion').onclick=()=>setReduced(!reduced);query.addEventListener('change',e=>setReduced(e.matches));setReduced(reduced);
 $('#debug-toggle').onclick=()=>{$('#debug').hidden=!$('#debug').hidden;$('#debug-toggle').setAttribute('aria-expanded',String(!$('#debug').hidden));$('#mural-debug').hidden=$('#debug').hidden;debug();};
 $('#export').onclick=()=>{if(!runtime)return;const a=document.createElement('a'),url=URL.createObjectURL(new Blob([JSON.stringify({temple:runtime.handoff(),mural:mural?.snapshot()},null,2)],{type:'application/json'}));a.href=url;a.download='shuilongci-mural-handoff-v2-3.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
-async function replay(){if(!ready||isBusy())return false;await go('overview');replayBusy=true;try{await prepareBlend(2);await moveTo(1,true);await moveTo(2,true);}finally{replayBusy=false;}await go('corridor-2_5d');return true;}
+async function replay(){if(!ready||isBusy())return false;await go('overview');replayBusy=true;try{await prepareBlend(2);await moveTo(1,{linear:true});await moveTo(2,{linear:true});}finally{replayBusy=false;}await go('corridor-2_5d');return true;}
 $('#replay').onclick=replay;
 $('#render-mode').onchange=()=>{if(!runtime||isBusy())return;runtime.hybrid.setMode($('#render-mode').value);debug();};
 for(const input of document.querySelectorAll('[data-feature]'))input.onchange=()=>{if(!runtime||isBusy())return;runtime.hybrid.setFeature(input.dataset.feature,input.checked);debug();};

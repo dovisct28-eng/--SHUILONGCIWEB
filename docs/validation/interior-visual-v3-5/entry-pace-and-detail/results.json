@@ -1,0 +1,366 @@
+{
+  "date": "2026-11-09",
+  "baseline": "223a5cf6eb93e26b1592852a7f657348ba95cf2b",
+  "pass": true,
+  "build": true,
+  "unitTests": {
+    "passed": 26,
+    "failed": 0
+  },
+  "runs": [
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "reducedMotion": false,
+      "elapsedMs": 25493,
+      "doorCloseToInsideMs": 2883,
+      "doorCloseToCorridorMs": 8869.7,
+      "state": "mural-look",
+      "poseError": 0,
+      "readingHidden": true,
+      "railFrameMs": {
+        "samples": 4882,
+        "p50": 4.2,
+        "p95": 4.5,
+        "max": 249.8
+      },
+      "forward": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "reverse": [
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "observations": [
+        [
+          "banners",
+          "rider",
+          "figures"
+        ],
+        [
+          "temple-and-table",
+          "cloud-bands",
+          "upper-flags"
+        ],
+        [],
+        [],
+        [
+          "raised-implements",
+          "remaining-clouds",
+          "temple-remains"
+        ]
+      ],
+      "consoleErrors": [],
+      "resourceFailures": []
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "reducedMotion": false,
+      "elapsedMs": 25329,
+      "doorCloseToInsideMs": 2887.2,
+      "doorCloseToCorridorMs": 8857.4,
+      "state": "mural-look",
+      "poseError": 0,
+      "readingHidden": true,
+      "railFrameMs": {
+        "samples": 5143,
+        "p50": 4.2,
+        "p95": 4.6,
+        "max": 112.1
+      },
+      "forward": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "reverse": [
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "observations": [
+        [
+          "banners",
+          "rider",
+          "figures"
+        ],
+        [
+          "temple-and-table",
+          "cloud-bands",
+          "upper-flags"
+        ],
+        [],
+        [],
+        [
+          "raised-implements",
+          "remaining-clouds",
+          "temple-remains"
+        ]
+      ],
+      "consoleErrors": [],
+      "resourceFailures": []
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "reducedMotion": false,
+      "elapsedMs": 25347,
+      "doorCloseToInsideMs": 2887.1,
+      "doorCloseToCorridorMs": 8857.3,
+      "state": "mural-look",
+      "poseError": 0,
+      "readingHidden": true,
+      "railFrameMs": {
+        "samples": 5146,
+        "p50": 4.2,
+        "p95": 4.3,
+        "max": 129.2
+      },
+      "forward": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "reverse": [
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "observations": [
+        [
+          "banners",
+          "rider",
+          "figures"
+        ],
+        [
+          "temple-and-table",
+          "cloud-bands",
+          "upper-flags"
+        ],
+        [],
+        [],
+        [
+          "raised-implements",
+          "remaining-clouds",
+          "temple-remains"
+        ]
+      ],
+      "consoleErrors": [],
+      "resourceFailures": []
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "reducedMotion": true,
+      "elapsedMs": 1320,
+      "doorCloseToInsideMs": 4,
+      "doorCloseToCorridorMs": 4,
+      "state": "mural-look",
+      "poseError": 0,
+      "readingHidden": true,
+      "railFrameMs": {
+        "samples": 12,
+        "p50": 4.2,
+        "p95": 237.6,
+        "max": 237.6
+      },
+      "forward": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "reverse": [
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "observations": [
+        [
+          "banners",
+          "rider",
+          "figures"
+        ],
+        [
+          "temple-and-table",
+          "cloud-bands",
+          "upper-flags"
+        ],
+        [],
+        [],
+        [
+          "raised-implements",
+          "remaining-clouds",
+          "temple-remains"
+        ]
+      ],
+      "consoleErrors": [],
+      "resourceFailures": []
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "reducedMotion": true,
+      "elapsedMs": 1339,
+      "doorCloseToInsideMs": 8.6,
+      "doorCloseToCorridorMs": 8.6,
+      "state": "mural-look",
+      "poseError": 0,
+      "readingHidden": true,
+      "railFrameMs": {
+        "samples": 12,
+        "p50": 4.2,
+        "p95": 233.3,
+        "max": 233.3
+      },
+      "forward": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "reverse": [
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "observations": [
+        [
+          "banners",
+          "rider",
+          "figures"
+        ],
+        [
+          "temple-and-table",
+          "cloud-bands",
+          "upper-flags"
+        ],
+        [],
+        [],
+        [
+          "raised-implements",
+          "remaining-clouds",
+          "temple-remains"
+        ]
+      ],
+      "consoleErrors": [],
+      "resourceFailures": []
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "reducedMotion": true,
+      "elapsedMs": 1270,
+      "doorCloseToInsideMs": 4.2,
+      "doorCloseToCorridorMs": 4.2,
+      "state": "mural-look",
+      "poseError": 0,
+      "readingHidden": true,
+      "railFrameMs": {
+        "samples": 12,
+        "p50": 4.2,
+        "p95": 187.5,
+        "max": 187.5
+      },
+      "forward": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "reverse": [
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "observations": [
+        [
+          "banners",
+          "rider",
+          "figures"
+        ],
+        [
+          "temple-and-table",
+          "cloud-bands",
+          "upper-flags"
+        ],
+        [],
+        [],
+        [
+          "raised-implements",
+          "remaining-clouds",
+          "temple-remains"
+        ]
+      ],
+      "consoleErrors": [],
+      "resourceFailures": []
+    }
+  ],
+  "stress": {
+    "view": "B",
+    "state": "mural-look",
+    "arrivals": 1,
+    "inertiaDuring": true,
+    "inertiaAfter": true
+  },
+  "formalEntry": {
+    "reachedFifth": true,
+    "unavailableServiceBehavior": "browser connection-refused for localhost:3000; stayed at fifth",
+    "firstLiveHandoff": "Timed out waiting for Module B navigation",
+    "isolatedRetry": {
+      "pass": true,
+      "responses": [
+        {
+          "url": "http://localhost:3000/api/b03-runtime",
+          "status": 200
+        },
+        {
+          "url": "http://127.0.0.1:4173/api/module-a-runtime",
+          "status": 200
+        }
+      ],
+      "failures": [],
+      "restoredFifth": true,
+      "finalTempleReading": true,
+      "moduleB": true,
+      "browserBack": true
+    }
+  }
+}

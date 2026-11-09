@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {sampleEntry,ENTRY_STOPS} from '../src/entry-path.mjs';
-import {sampleGallery,CORRIDOR_KEYS,GALLERY_STOPS,corridorWeights,corridorPhase,createGalleryController,FIRST_MURAL,travelMs} from '../src/corridor-path.mjs';
+import {sampleGallery,CORRIDOR_KEYS,GALLERY_STOPS,corridorWeights,corridorPhase,createGalleryController,FIRST_MURAL,travelMs,GUIDED_TOUR_MS,guidedTourProgress} from '../src/corridor-path.mjs';
 test('gallery sampler shares the entry rail and all five entry stops',()=>{
  for(let i=0;i<=3000;i++)assert.deepEqual(sampleGallery(i/3000),sampleEntry(i/3000));
  assert.deepEqual(GALLERY_STOPS.slice(0,5),ENTRY_STOPS);assert.equal(travelMs(0,1),12400);assert.equal(travelMs(1,2),5000);
@@ -15,6 +15,17 @@ test('corridor is C1, reversible, eye level and FOV do not jump',()=>{
  }
  for(let i=0;i<=4000;i++){const t=1+i/4000,s=sampleGallery(t),back=sampleGallery(2-(1-i/4000));assert.ok([...s.position,...s.target,s.fov].every(Number.isFinite));assert.ok(s.position[1]>=1.38-1e-12&&s.position[1]<=1.56);assert.equal(s.fov,48);for(const field of ['position','target'])s[field].forEach((n,j)=>assert.ok(Math.abs(n-back[field][j])<1e-10));}
  assert.deepEqual(FIRST_MURAL.position,[4.865,1.55,4.8]);assert.equal(FIRST_MURAL.rotationY,-Math.PI/2);
+});
+test('guided clock preserves the approach and adds time through the doorway and into the corridor',()=>{
+ const base=travelMs(0,2);
+ const original=ms=>{const u=ms/base;return 2*u*u*(3-2*u);};
+ const crossing=(clock,position)=>{let ms=0;while(clock(ms)<position)ms++;return ms;};
+ assert.equal(guidedTourProgress(0),0);
+ assert.equal(guidedTourProgress(GUIDED_TOUR_MS),2);
+ assert.ok(Math.abs(guidedTourProgress(5000)-original(5000))<1e-12);
+ for(let ms=10;ms<=GUIDED_TOUR_MS;ms+=10)assert.ok(guidedTourProgress(ms)>guidedTourProgress(ms-10));
+ assert.ok(crossing(guidedTourProgress,1)-crossing(guidedTourProgress,.78)>1.5*(crossing(original,1)-crossing(original,.78)));
+ assert.ok(crossing(guidedTourProgress,1.6)-crossing(guidedTourProgress,1)>1.5*(crossing(original,1.6)-crossing(original,1)));
 });
 test('one rail clock controls every layer; loading cannot expose enhancement',()=>{
  assert.deepEqual([1,1.43,1.6,1.8,2].map(corridorPhase),['gate-interior','stage-turn','corridor-3d','corridor-hybrid','corridor-2_5d']);

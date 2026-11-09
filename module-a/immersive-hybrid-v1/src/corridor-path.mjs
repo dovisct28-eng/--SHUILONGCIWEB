@@ -37,10 +37,20 @@ export function travelMs(a,b){
  const clock=t=>Math.min(1,t)*ENTRY_DURATION+Math.max(0,Math.min(1,(t-.92)/.08))*1600+Math.max(0,t-1)*CORRIDOR_DURATION;
  return Math.abs(clock(b)-clock(a));
 }
+const BASE_TOUR_MS=travelMs(0,2);
+const GATE_AND_CORRIDOR_EXTRA_MS=4200;
+export const GUIDED_TOUR_MS=BASE_TOUR_MS+GATE_AND_CORRIDOR_EXTRA_MS;
+export function guidedTourProgress(elapsed){
+ // Stretch the clock from the gate approach through the turn into the corridor.
+ // A smooth ramp keeps the rate positive and joins the original clock at both ends.
+ const added=GATE_AND_CORRIDOR_EXTRA_MS*smooth(.35*BASE_TOUR_MS,.66*BASE_TOUR_MS+GATE_AND_CORRIDOR_EXTRA_MS,elapsed);
+ return 2*smooth(0,BASE_TOUR_MS,elapsed-added);
+}
+
 export function createGalleryController(onChange){
  let state='overview',busy=false;
- return {get state(){return state;},get busy(){return busy;},async go(next){
+ return {get state(){return state;},get busy(){return busy;},async go(next,options){
   if(busy||next===state||!GALLERY_STOPS.some(s=>s.id===next))return false;
-  busy=true;try{await onChange(next,state);state=next;return true;}finally{busy=false;}
+  busy=true;try{await onChange(next,state,options);state=next;return true;}finally{busy=false;}
  }};
 }

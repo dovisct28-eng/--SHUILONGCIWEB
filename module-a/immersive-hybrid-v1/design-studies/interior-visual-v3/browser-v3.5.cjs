@@ -11,6 +11,17 @@ async function guidedTour(p,keep){
  const {width,height}=p.viewportSize();
  assert.deepEqual(await p.evaluate(()=>[study.view,study.runtime.state,study.runtime.stops.length]),['A','overview',9]);
  await p.mouse.move(width/2,height/2);
+ await p.evaluate(()=>{
+  const h=study.runtime,marks=[.78,.92,1,1.6,2];
+  window.guidedCrossings=[];
+  let start;
+  function sample(now){
+   if(h.progress>0)start??=now;
+   while(marks.length&&h.progress>=marks[0])guidedCrossings.push({position:marks.shift(),ms:now-start});
+   if(marks.length)requestAnimationFrame(sample);
+  }
+  requestAnimationFrame(sample);
+ });
  const start=Date.now();
  await p.mouse.wheel(0,120);
  await p.waitForFunction(()=>study.busy);
@@ -24,12 +35,16 @@ async function guidedTour(p,keep){
  });
  assert.deepEqual([wall.view,wall.state,wall.progress,wall.turn,wall.front,wall.reading,wall.brightness,wall.cueOpacity,wall.readingHidden],['B','mural-look',2,1,0,0,1,0,true]);
  assert.ok(wall.poseError<1e-6,'first mural wall camera');
- assert.deepEqual(wall.phases,await p.evaluate(()=>document.body.dataset.reducedMotion)==='true'?['turn','mural-cue-hold']:['turn','mural-cue-in','mural-cue-hold','mural-brighten']);
+ const reduced=await p.evaluate(()=>document.body.dataset.reducedMotion==='true');
+ assert.deepEqual(wall.phases,reduced?['turn','mural-cue-hold']:['turn','mural-cue-in','mural-cue-hold','mural-brighten']);
+ const crossings=await p.evaluate(()=>guidedCrossings);
+ assert.deepEqual(crossings.map(c=>c.position),[.78,.92,1,1.6,2]);
+ if(!reduced)assert.ok(crossings[3].ms-crossings[0].ms>7500,'slower passage from the gate close-up into the right corridor');
  if(keep)await snap(p,'guided-first-wall');
  await p.waitForTimeout(650);
  assert.equal(await p.evaluate(()=>study.runtime.state),'mural-look');
  await p.mouse.wheel(0,120);await p.waitForFunction(()=>study.view==='C');await idle(p);
- return{elapsedMs,...wall};
+ return{elapsedMs,crossings,...wall};
 }
 async function stressTour(p){
  await p.reload();await idle(p);
@@ -57,12 +72,30 @@ async function stressTour(p){
 }
 async function controls(p,index){
  await click(p,'#detail-open');assert.equal(await p.evaluate(()=>study.detail.zoom),index>=2?1.15:1);
+ const observations=await p.evaluate(()=>study.observations);
+ assert.equal(observations.length,[3,3,0,0,3][index]);
+ for(const region of observations){
+  const button=p.locator(`[data-observation="${region.id}"]`);
+  await button.click();assert.equal(await button.getAttribute('aria-pressed'),'true');
+  assert.equal(await p.locator('#observation-title').textContent(),region.title);
+  assert.equal(await p.locator('#observation-copy').textContent(),region.copy);
+  assert.equal(await p.locator('.observation-source').isVisible(),Boolean(region.source));
+  if(region.source)assert.equal(await p.locator('.observation-source').textContent(),region.source);
+  const visible=await p.locator('#mini-window').evaluate(r=>Object.fromEntries(['x','y','width','height'].map(k=>[k,+r.getAttribute(k)])));
+  const [x,y]=region.center.map((value,axis)=>value*sizes[index][axis]);
+  assert.ok(x>=visible.x&&x<=visible.x+visible.width&&y>=visible.y&&y<=visible.y+visible.height,region.id);
+  if(region.source&&p.viewportSize().width===1440&&await p.getAttribute('body','data-reduced-motion')==='false'){await p.waitForTimeout(700);await snap(p,region.id);}
+ }
+ if(observations.length){
+  await click(p,'#whole-image');assert.equal(await p.locator('#observation-number').textContent(),'整铺简介');
+  assert.equal(await p.locator('.observation-source').isVisible(),false);
+ }
  await click(p,'#zoom-in');await p.locator('#detail-viewport').focus();await p.keyboard.press('+');
  const vp=await p.locator('#detail-viewport').boundingBox();await p.mouse.move(vp.x+vp.width/2,vp.y+vp.height/2);const before=await p.evaluate(()=>study.detail.zoom);await p.mouse.wheel(0,-120);await p.waitForTimeout(100);assert.ok(await p.evaluate(()=>study.detail.zoom)>before);
  await p.mouse.down();await p.mouse.move(vp.x+vp.width/2+70,vp.y+vp.height/2+35,{steps:4});await p.mouse.up();const drag=await p.evaluate(()=>study.detail);assert.ok(Math.abs(drag.x)>0||Math.abs(drag.y)>0);await p.keyboard.press('ArrowRight');const moved=await p.evaluate(()=>study.detail);assert.notEqual(moved.x,drag.x);
  const map=await p.locator('#minimap').boundingBox();assert.ok(Math.abs(map.width/map.height-sizes[index][0]/sizes[index][1])<.02,'minimap ratio');await p.mouse.click(map.x+map.width*.7,map.y+map.height*.3);
  const q=await p.locator('#mini-window').evaluate(r=>Object.fromEntries(['x','y','width','height'].map(k=>[k,+r.getAttribute(k)])));assert.ok(q.x>=0&&q.y>=0&&q.x+q.width<=sizes[index][0]+.01&&q.y+q.height<=sizes[index][1]+.01);
- if(index===2&&p.viewportSize().width===1440)await snap(p,'detail-third');await click(p,'#reset');assert.deepEqual(await p.evaluate(()=>study.detail),{zoom:1,x:0,y:0});assert.equal(await p.locator('#minimap svg').getAttribute('viewBox'),`0 0 ${sizes[index].join(' ')}`);await p.locator('#detail-viewport').focus();await p.keyboard.press('+');await p.keyboard.press('0');assert.equal(await p.evaluate(()=>study.detail.zoom),1);await click(p,'#detail-return');return{drag,moved,minimap:q};
+ if(index===2&&p.viewportSize().width===1440)await snap(p,'detail-third');await click(p,'#reset');assert.deepEqual(await p.evaluate(()=>study.detail),{zoom:1,x:0,y:0});assert.equal(await p.locator('#minimap svg').getAttribute('viewBox'),`0 0 ${sizes[index].join(' ')}`);await p.locator('#detail-viewport').focus();await p.keyboard.press('+');await p.keyboard.press('0');assert.equal(await p.evaluate(()=>study.detail.zoom),1);await click(p,'#detail-return');return{drag,moved,minimap:q,observations:observations.map(r=>r.id)};
 }
 (async()=>{const b=await chromium.launch({channel:'chrome',headless:true}),report={routeCase:layout,runs:[],pass:false};try{
  const configs=process.env.V35_ONE?[[1440,900,false]]:[[1440,900,false],[1920,1080,false],[1366,768,false],[1440,900,true],[1920,1080,true],[1366,768,true]];
