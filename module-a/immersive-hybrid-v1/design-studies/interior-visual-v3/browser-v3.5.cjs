@@ -7,6 +7,36 @@ async function idle(p){await p.waitForFunction(()=>window.study?.ready&&!study.b
 async function click(p,s){await p.locator(s).click();await idle(p);}
 async function snap(p,name){await p.screenshot({path:path.join(local,(layout==='report'?'report-':'')+name+'.png')});}
 async function imageState(p){return p.locator('#reading-image').evaluate(im=>{const r=im.getBoundingClientRect(),scale=Math.min(r.width/im.naturalWidth,r.height/im.naturalHeight);return{natural:[im.naturalWidth,im.naturalHeight],fit:getComputedStyle(im).objectFit,width:im.naturalWidth*scale,height:im.naturalHeight*scale,x:r.x+(r.width-im.naturalWidth*scale)/2,y:r.y+(r.height-im.naturalHeight*scale)/2,src:im.currentSrc};});}
+async function observeWallMotion(p){
+ await p.evaluate(()=>{
+  const {model}=study.runtime;
+  let scene=model.root;
+  while(scene.parent)scene=scene.parent;
+  const names=['V32-real-second-mural-candidate',...['03','04','05'].map(i=>'V33-real-mural-'+i)];
+  window.wallMotion=[];
+  const setCamera=model.setCamera;
+  model.setCamera=(pose,options)=>{
+   setCamera(pose,options);
+   const progress=pose.route12??pose.rearProgress;
+   if(study.view!=='A'||!study.busy||document.body.dataset.routeTravel!=='true'||progress<=.1||progress>=.9||progress==null)return;
+   const first=model.mural.state();
+   const walls=names.map(name=>{
+    const mesh=scene.getObjectByName(name);
+    return mesh?.visible&&mesh.material.opacity===1&&mesh.material.color.toArray().every(c=>c<=.12);
+   });
+   wallMotion.push({first:first.originalVisible&&first.originalOpacity===1&&first.brightness===.14,walls});
+  };
+ });
+}
+async function assertWallMotion(p){
+ const samples=await p.evaluate(()=>wallMotion.splice(0));
+ assert.ok(samples.length,'sampled the walls during spatial movement');
+ for(const {first,walls} of samples){
+  assert.equal(first,true,'first mural remains dark and attached');
+  assert.deepEqual(walls,[true,true,true,true],'second through fifth murals remain dark and attached');
+ }
+ return samples.length;
+}
 async function guidedTour(p,keep){
  const {width,height}=p.viewportSize();
  assert.deepEqual(await p.evaluate(()=>[study.view,study.runtime.state,study.runtime.stops.length]),['A','overview',9]);
@@ -109,18 +139,19 @@ async function controls(p,index){
  for(const[width,height,reduced]of configs){const keep=width===1440&&!reduced,c=await b.newContext({viewport:{width,height},deviceScaleFactor:1,reducedMotion:reduced?'reduce':'no-preference',...(keep?{recordVideo:{dir:path.join(local,'video'),size:{width,height}}}:{})}),p=await c.newPage(),errors=[],failed=[],run={width,height,reduced,murals:[],reverse:[],errors,failed};
  p.on('pageerror',e=>errors.push(e.message));p.on('console',m=>{if(m.type()==='error')errors.push(m.text())});p.on('response',r=>{if(r.status()>=400)failed.push({url:r.url(),status:r.status()})});p.on('requestfailed',r=>failed.push({url:r.url(),error:r.failure()?.errorText}));
  await p.goto(url);await idle(p);await p.evaluate(()=>{window.perf35={frames:[],long:[],last:performance.now()};new PerformanceObserver(list=>perf35.long.push(...list.getEntries().map(e=>({start:e.startTime,duration:e.duration})))).observe({type:'longtask',buffered:true});function tick(now){if(study.busy)perf35.frames.push(now-perf35.last);perf35.last=now;requestAnimationFrame(tick);}requestAnimationFrame(tick);});
+ await observeWallMotion(p);run.wallMotion=[];
  run.recordStart=Date.now();run.guided=await guidedTour(p,keep);assert.equal(await p.evaluate(()=>study.view),'C');
  for(let index=0;index<5;index++){
   if(index){await p.locator('#continue-tour').click();if(index===1&&!reduced){run.second=[];for(const[phase,t]of[['dark',0],['title',.3],['revealing',.55]]){await p.waitForFunction(t=>study.activeMural===1&&study.route32.progress===1&&study.route32.reveal>=t,t,{timeout:60000});if(phase==='title')assert.equal(await p.locator('#second-wall-label').evaluate(e=>!e.hidden&&getComputedStyle(e).visibility==='visible'&&+getComputedStyle(e).opacity>.1),true);run.second.push(await p.evaluate(phase=>{let s=study.runtime.model.root;while(s.parent)s=s.parent;const mesh=s.getObjectByName('V32-real-second-mural-candidate');return{phase,activeMural:study.activeMural,reveal:study.route32.reveal,texture:mesh.material.map.image.src,model:study.runtime.state,composite:study.runtime.model.mural.state(),image:document.querySelector('#reading-image').currentSrc};},phase));if(keep)await snap(p,'after-second-'+phase);}}
    if(index>=2&&!reduced){await p.waitForFunction(i=>study.activeMural===i&&study.rear.state.progress===1&&(study.rear.state.reveals[i]??0)>=.3,index,{timeout:60000});assert.equal(await p.locator('#rear-wall-label').evaluate(e=>!e.hidden&&getComputedStyle(e).visibility==='visible'&&+getComputedStyle(e).opacity>.1),true);}
-   await idle(p);assert.equal(await p.evaluate(()=>study.activeMural),index);if(keep)await snap(p,'after-wall-'+index);await click(p,'#forward');
+   await idle(p);run.wallMotion.push(await assertWallMotion(p));assert.equal(await p.evaluate(()=>study.activeMural),index);if(keep)await snap(p,'after-wall-'+index);await click(p,'#forward');
   }
   if(index>=2){const expectedX=(index===2?2.25:index===3?-2.25:-4.515);assert.equal(await p.evaluate(i=>study.rear.state.bindings.find(b=>b.index===i).position[0],index),expectedX);}
   const im=await imageState(p);assert.deepEqual(im.natural,sizes[index]);assert.equal(im.fit,'contain');if(index===2||index===3)assert.ok(im.src.endsWith('/mural-0'+(index+1)+'-dng-display.webp'));assert.ok(im.x>=0&&im.y>=0&&im.x+im.width<=width+.1&&im.y+im.height<=height+.1);if(keep)await snap(p,'after-reading-'+index);
   const detail=await controls(p,index);run.murals.push({index,image:im,detail});await click(p,'#wall-return');assert.equal(await p.evaluate(()=>study.view),'B');await click(p,'#forward');
  }
  if(keep)await snap(p,'after-fifth-handoff');run.recordEnd=Date.now();
- for(let index=3;index>=0;index--){await click(p,'#wall-return');await click(p,'#back');assert.equal(await p.evaluate(()=>study.activeMural),index);run.reverse.push({index,pose:await p.evaluate(()=>study.runtime.model.pose)});await click(p,'#forward');assert.deepEqual((await imageState(p)).natural,sizes[index]);}
+ for(let index=3;index>=0;index--){await click(p,'#wall-return');await click(p,'#back');run.wallMotion.push(await assertWallMotion(p));assert.equal(await p.evaluate(()=>study.activeMural),index);run.reverse.push({index,pose:await p.evaluate(()=>study.runtime.model.pose)});await click(p,'#forward');assert.deepEqual((await imageState(p)).natural,sizes[index]);}
  // Diagnostics checked separately after the real round trip.
  await p.evaluate(()=>study.seekRoute(1,{reveal:.25}));assert.equal(await p.evaluate(()=>study.runtime.state),'corridor-2_5d');assert.match(await p.evaluate(()=>study.route32.wall?document.querySelector('#reading-image').currentSrc:''),/mural-02-display.webp/);run.diagnostic='second material + original reading compositor exited';if(keep)await snap(p,'after-debug-second');
  run.collisions=await p.evaluate(()=>study.rear.validate());assert.deepEqual(run.collisions,[]);run.performance=await p.evaluate(()=>{const f=perf35.frames.sort((a,b)=>a-b);return{samples:f.length,p50:f[Math.floor(f.length*.5)],p95:f[Math.floor(f.length*.95)],max:f.at(-1),over50:f.filter(x=>x>50).length,longTasks:perf35.long,heap:performance.memory?.usedJSHeapSize,userAgent:navigator.userAgent,cores:navigator.hardwareConcurrency,preparation:study.preparation,stats:study.runtime.model.stats()};});
