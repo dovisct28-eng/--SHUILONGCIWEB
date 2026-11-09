@@ -1,12 +1,16 @@
 const {chromium}=require('playwright'),fs=require('fs'),path=require('path'),assert=require('assert/strict');
-const out=require('./validation-paths-v3.5.cjs').out,local=path.join(out,'local'),origin=process.env.V35_ORIGIN||'http://127.0.0.1:4186';
+const out=require('./validation-paths-v3.5.cjs').out,local=path.join(out,'local'),origin=process.env.V35_ORIGIN||'http://127.0.0.1:4173';
 const layout=process.env.V35_LAYOUT||'model',suffix=layout==='report'?'-report':'',galleryURL=origin+'/module-a/gallery/'+(layout==='report'?'?layout=report':'');
 const idle=p=>p.waitForFunction(()=>document.body.dataset.ready==='true'&&document.body.dataset.busy==='false',null,{timeout:90000});
 async function click(p,s){await p.locator(s).click();await idle(p);}
 (async()=>{const b=await chromium.launch({channel:'chrome',headless:true}),report={routeCase:layout,pass:false,errors:[]};const c=await b.newContext({viewport:{width:1440,height:900},recordVideo:{dir:path.join(local,(layout==='report'?'report-':'')+'formal-video'),size:{width:1440,height:900}}}),p=await c.newPage();try{
  p.on('pageerror',e=>report.errors.push(e.message));await p.goto(origin+'/module-a/a01/'+(layout==='report'?'?layout=report':''));await p.waitForFunction(()=>document.querySelector('.a03-title'));await p.evaluate(()=>scrollTo(0,innerHeight*12));await p.waitForTimeout(1800);assert.equal(await p.locator('.a03-title__in').innerText(),'入庙');assert.equal(await p.locator('.a03-title__out').innerText(),'出庙');assert.equal(await p.locator('.a05').count(),0);await p.screenshot({path:path.join(local,(layout==='report'?'report-':'')+'formal-a03.png')});
  await Promise.all([p.waitForURL(galleryURL),p.locator('a[data-a03-reading-hint]').click()]);await idle(p);assert.equal(await p.evaluate(()=>typeof window.study),'undefined');assert.equal(await p.locator('#options-open').isVisible(),false);report.formalEntry=true;
- for(let i=0;i<9;i++)await click(p,'#forward');assert.equal(await p.getAttribute('body','data-view'),'C');
+ await p.mouse.move(720,450);await p.mouse.wheel(0,120);
+ await p.waitForFunction(()=>document.body.dataset.view==='B'&&document.body.dataset.busy==='false',null,{timeout:90000});
+ assert.equal(await p.frameLocator('#space').locator('body').getAttribute('data-state'),'mural-look');
+ await p.screenshot({path:path.join(local,'formal-guided-first-wall.png')});
+ await click(p,'#forward');assert.equal(await p.getAttribute('body','data-view'),'C');
  for(let index=0;index<5;index++){
   if(index){await click(p,'#continue-tour');assert.equal(await p.getAttribute('body','data-mural-index'),String(index));await p.screenshot({path:path.join(local,(layout==='report'?'report-':'')+'formal-wall-'+index+'.png')});await click(p,'#forward');}
   await p.waitForTimeout(500);if(index===2){await click(p,'#detail-open');await click(p,'#zoom-in');await p.locator('#detail-viewport').focus();await p.keyboard.press('ArrowRight');await click(p,'#reset');await click(p,'#detail-return');}

@@ -17,7 +17,7 @@ export function readingPhases(progress){const p=clamp(progress);return {handoff:
 export function createMuralController({prepare,animateTurn,animateReading,animateFront,holdFront,discover,rollback}){
  let state='corridor-2_5d',busy=false,error=null;
  const adjacent={'corridor-2_5d':['mural-look'],'mural-look':['corridor-2_5d','mural-reading'],'mural-reading':['mural-look']};
- return {get state(){return state;},get busy(){return busy;},get error(){return error;},async go(next){
+ return {get state(){return state;},get busy(){return busy;},get error(){return error;},async go(next,{wallOnly=false}={}){
   if(busy||!adjacent[state]?.includes(next))return false;
   const previous=state;busy=true;error=null;
   try{
@@ -29,7 +29,8 @@ export function createMuralController({prepare,animateTurn,animateReading,animat
    }else{
     await animateTurn(next==='mural-look'?1:0);
     if(previous==='corridor-2_5d'&&next==='mural-look'&&discover){
-     await discover();await animateFront?.(1);await animateReading(1);next='mural-reading';
+     await discover();
+     if(!wallOnly){await animateFront?.(1);await animateReading(1);next='mural-reading';}
     }
    }
    state=next;return true;

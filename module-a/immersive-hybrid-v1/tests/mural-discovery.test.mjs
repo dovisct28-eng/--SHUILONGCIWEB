@@ -6,6 +6,18 @@ test('first approach holds one lock through turn, wall cue, brighten, front and 
  assert.equal(await ctl.go('corridor-2_5d'),true);assert.equal(ctl.state,'corridor-2_5d');assert.equal(steps.at(-1),'turn:0');
 });
 test('failure during cue returns to corridor and releases the lock',async()=>{let rolled=false;const ctl=createMuralController({prepare:async()=>{},animateTurn:async()=>{},animateFront:async()=>{},discover:async()=>{throw Error('cue failed');},animateReading:async()=>{},rollback:async()=>{rolled=true;}});await assert.rejects(ctl.go('mural-look'),/cue failed/);assert.equal(ctl.state,'corridor-2_5d');assert.equal(ctl.busy,false);assert.equal(rolled,true);});
+test('wall-only discovery completes the reveal and waits for an explicit reading request',async()=>{
+ const steps=[],ctl=createMuralController({
+  prepare:async()=>steps.push('prepare'),animateTurn:async n=>steps.push('turn:'+n),
+  discover:async()=>{assert.equal(ctl.busy,true);steps.push('cue+brighten');},
+  animateFront:async n=>steps.push('front:'+n),animateReading:async n=>steps.push('reading:'+n),
+ });
+ assert.equal(await ctl.go('mural-look',{wallOnly:true}),true);
+ assert.equal(ctl.state,'mural-look');assert.equal(ctl.busy,false);
+ assert.deepEqual(steps,['prepare','turn:1','cue+brighten']);
+ assert.equal(await ctl.go('mural-reading'),true);assert.equal(ctl.state,'mural-reading');
+ assert.deepEqual(steps.slice(3),['front:1','reading:1']);
+});
 test('wall cue is projected above the authentic mural, never over its image',()=>{
  assert.ok(WALL_CUE_CORNERS.every(p=>p[1]>FIRST_MURAL.position[1]+FIRST_MURAL.height/2));
  for(const [width,height] of [[1440,900],[1920,1080],[1366,768],[1024,768]]){const p=sampleMuralTurn(1),c=new T.PerspectiveCamera(48,width/height,.045,180);c.position.fromArray(p.position);c.lookAt(...p.target);c.updateProjectionMatrix();c.updateMatrixWorld();const q=projectedCorners(T,c),cue=projectWallCue(c,{left:0,top:0,width,height},{left:0,top:0}),line=x=>(q[0].y+(q[1].y-q[0].y)*(x/width-q[0].x)/(q[1].x-q[0].x))*height;assert.ok(cue.matrix.every(Number.isFinite));assert.ok(cue.points.every(([x,y])=>x>=0&&x<=width&&y>=0&&y<=height&&y<line(x)));}

@@ -1,0 +1,302 @@
+{
+  "pass": true,
+  "baseline": "07bc1c76d990a62e52233f0c3681fd113f900811",
+  "date": "2026-11-09",
+  "browser": "Chrome/156.0.0.0",
+  "runner": "Windows headless Chrome, real localhost WebGL",
+  "unitTests": {
+    "focused": {
+      "passed": 18,
+      "failed": 0
+    },
+    "extended": {
+      "passed": 88,
+      "baselineFailures": 2
+    }
+  },
+  "runs": [
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "reducedMotion": false,
+      "elapsedMs": 21163,
+      "railFrameMs": {
+        "samples": 3596,
+        "p50": 4.2,
+        "p95": 8.3,
+        "max": 316.7
+      },
+      "view": "B",
+      "runtimeState": "mural-look",
+      "railProgress": 2,
+      "poseError": 0,
+      "brightness": 1,
+      "readingProgress": 0,
+      "readingHidden": true,
+      "revealPhases": [
+        "turn",
+        "mural-cue-in",
+        "mural-cue-hold",
+        "mural-brighten"
+      ],
+      "forward": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "reverse": [
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "consoleErrors": [],
+      "resourceFailures": [],
+      "collisions": []
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "reducedMotion": false,
+      "elapsedMs": 21244,
+      "railFrameMs": {
+        "samples": 3383,
+        "p50": 4.2,
+        "p95": 8.4,
+        "max": 212.2
+      },
+      "view": "B",
+      "runtimeState": "mural-look",
+      "railProgress": 2,
+      "poseError": 0,
+      "brightness": 1,
+      "readingProgress": 0,
+      "readingHidden": true,
+      "revealPhases": [
+        "turn",
+        "mural-cue-in",
+        "mural-cue-hold",
+        "mural-brighten"
+      ],
+      "forward": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "reverse": [
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "consoleErrors": [],
+      "resourceFailures": [],
+      "collisions": []
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "reducedMotion": false,
+      "elapsedMs": 21145,
+      "railFrameMs": {
+        "samples": 4124,
+        "p50": 4.2,
+        "p95": 4.6,
+        "max": 129.1
+      },
+      "view": "B",
+      "runtimeState": "mural-look",
+      "railProgress": 2,
+      "poseError": 0,
+      "brightness": 1,
+      "readingProgress": 0,
+      "readingHidden": true,
+      "revealPhases": [
+        "turn",
+        "mural-cue-in",
+        "mural-cue-hold",
+        "mural-brighten"
+      ],
+      "forward": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "reverse": [
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "consoleErrors": [],
+      "resourceFailures": [],
+      "collisions": []
+    },
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "reducedMotion": true,
+      "elapsedMs": 1324,
+      "railFrameMs": {
+        "samples": 12,
+        "p50": 4.2,
+        "p95": 233.4,
+        "max": 233.4
+      },
+      "view": "B",
+      "runtimeState": "mural-look",
+      "railProgress": 2,
+      "poseError": 0,
+      "brightness": 1,
+      "readingProgress": 0,
+      "readingHidden": true,
+      "revealPhases": [
+        "turn",
+        "mural-cue-hold"
+      ],
+      "forward": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "reverse": [
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "consoleErrors": [],
+      "resourceFailures": [],
+      "collisions": []
+    },
+    {
+      "viewport": [
+        1920,
+        1080
+      ],
+      "reducedMotion": true,
+      "elapsedMs": 1330,
+      "railFrameMs": {
+        "samples": 10,
+        "p50": 4.2,
+        "p95": 237.6,
+        "max": 237.6
+      },
+      "view": "B",
+      "runtimeState": "mural-look",
+      "railProgress": 2,
+      "poseError": 0,
+      "brightness": 1,
+      "readingProgress": 0,
+      "readingHidden": true,
+      "revealPhases": [
+        "turn",
+        "mural-cue-hold"
+      ],
+      "forward": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "reverse": [
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "consoleErrors": [],
+      "resourceFailures": [],
+      "collisions": []
+    },
+    {
+      "viewport": [
+        1366,
+        768
+      ],
+      "reducedMotion": true,
+      "elapsedMs": 1359,
+      "railFrameMs": {
+        "samples": 12,
+        "p50": 4.2,
+        "p95": 262.4,
+        "max": 262.4
+      },
+      "view": "B",
+      "runtimeState": "mural-look",
+      "railProgress": 2,
+      "poseError": 0,
+      "brightness": 1,
+      "readingProgress": 0,
+      "readingHidden": true,
+      "revealPhases": [
+        "turn",
+        "mural-cue-hold"
+      ],
+      "forward": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "reverse": [
+        5,
+        4,
+        3,
+        2,
+        1
+      ],
+      "consoleErrors": [],
+      "resourceFailures": [],
+      "collisions": []
+    }
+  ],
+  "keyboardAndInertia": {
+    "view": "B",
+    "state": "mural-look",
+    "arrivals": 1,
+    "inertiaDuring": true,
+    "inertiaAfter": true
+  },
+  "railFailureRecovery": {
+    "view": "A",
+    "state": "overview",
+    "progress": 0,
+    "poseAligned": true,
+    "errorVisible": true,
+    "retry": "mural-look"
+  },
+  "formalEntry": {
+    "routeCase": "model",
+    "pass": true,
+    "errors": [],
+    "formalEntry": true,
+    "unavailable": "browser connection-refused for localhost:3000; stayed at fifth",
+    "moduleB": true,
+    "browserBack": true,
+    "coldReturn": true
+  }
+}

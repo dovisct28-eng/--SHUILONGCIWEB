@@ -30,7 +30,7 @@ function message(text){$('#message').textContent=text;$('#message').hidden=!text
 function setBusy(value){value=value||initializing;busy=value;$('#continue-tour').disabled=value||!ready;body.dataset.busy=String(value);body.dataset.ready=String(ready&&!initializing);if($('#audience-motion')){$('#audience-motion').disabled=value||!ready;$('#audience-motion').setAttribute('aria-pressed',String(motion()));}for(const button of document.querySelectorAll('.chapters button,#back,#forward,#direction,#compare,#replay-discovery,#motion-check,#route-layout,#detail-open,#wall-return,#stops button'))button.disabled=value||!ready||(activeMural>0&&(['replay-discovery','motion-check'].includes(button.id)||button.closest('#stops')));}
 function paintView(next){delete body.dataset.readingExit;body.dataset.reducedMotion=String(motion());view=next;body.dataset.view=next;for(const b of document.querySelectorAll('.chapters button')){if(b.dataset.view===next)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');}$('#spatial').hidden=!['A','B'].includes(next);$('#reading').hidden=next!=='C';$('#detail').hidden=next!=='D';$('#spatial-title').textContent=activeMural?murals[activeMural].title:(next==='B'?'第一铺壁画':'沿廊而行');$('#back').disabled=busy||!ready;$('#forward').textContent=next==='B'?'展开全幅 →':activeMural?'阅读本铺 →':position==='corridor-2_5d'?'走近壁画 →':'继续前行 →';$('#route-open').textContent=`0${activeMural+1} / 05 · 参观路线`;if(next==='D')requestAnimationFrame(()=>drawDetail(false));}
 function paintPosition(){if(activeMural){$('#location-label').textContent=`0${activeMural+1} / 05 · ${murals[activeMural].title}`;$('.rail i').style.width=`${(activeMural+1)*20}%`;return;}const stops=h?.stops??[],i=stops.findIndex(s=>s.id===h?.state);if(i>=0){position=h.state;$('#location-label').textContent=`${stops[i].label} · 01 / 05`;$('.rail i').style.width=`${(i+1)/stops.length*100}%`;}for(const b of document.querySelectorAll('#stops button'))b.setAttribute('aria-pressed',String(h?.state===b.dataset.stop));$('#diagnostics').textContent=JSON.stringify({state:h?.state,view,direction,layerError:studyApi?.layerError??null,layer:layer?.state,brightness:h?.model?.mural.state().brightness},null,2);}
-async function goSpace(stop){if(!h)return false;if(h.state===stop){paintPosition();return true;}const result=await h.go(stop);if(!result)throw Error(`无法到达 ${stop}`);paintPosition();return result;}
+async function goSpace(stop,options){if(!h)return false;if(h.state===stop){paintPosition();return true;}const result=await h.go(stop,options);if(!result)throw Error(`无法到达 ${stop}`);paintPosition();return result;}
 async function syncReading(enter){if(rearGallery?.isRear(activeMural))return rearGallery.readingBridge(enter);if(activeMural===1)return secondReadingBridge(enter);if(activeMural)return;
  const image=$('#reading-image');await image.decode();const q=h.model.mural.state().readingCorners,rect=image.getBoundingClientRect(),fit=fitImage(rect.width,rect.height),target={left:rect.left+(rect.width-fit.width)/2,top:rect.top+(rect.height-fit.height)/2,width:fit.width,height:fit.height};
  const source={left:q[0].x*innerWidth,top:q[0].y*innerHeight,width:(q[1].x-q[0].x)*innerWidth,height:(q[3].y-q[0].y)*innerHeight};
@@ -55,6 +55,22 @@ async function navigate(next,{replay=false}={}){if(!ready||busy)return false;set
  }paintPosition();if(next==='D')$('#detail-viewport').focus({preventScroll:true});else if(next==='C'&&view==='C')$('#detail-open').focus({preventScroll:true});return true;
  }catch(e){message(`预览未能完成：${e.message}。可打开预览选项切换原始模型。`);return false;}finally{setBusy(false);}}
 async function nextSpace(dir){if(!ready||busy)return;if(activeMural){if(dir<0)return travelTo(activeMural-1);return navigate(view==='B'?'C':'B');}if(view==='B')return navigate(dir<0?'A':'C');if(dir>0&&position==='corridor-2_5d')return navigate('B',{replay:true});const stops=h.stops.map(s=>s.id),i=stops.indexOf(position),next=stops[Math.max(0,Math.min(stops.length-1,i+dir))];setBusy(true);try{await goSpace(next);paintView('A');}catch(e){message(e.message);}finally{setBusy(false);}}
+function canStartGuidedTour(){return variant35&&ready&&!busy&&!h.busy&&view==='A'&&activeMural===0&&h.state==='overview';}
+async function startGuidedTour(){
+ if(!canStartGuidedTour())return;
+ setBusy(true);message('');
+ try{
+  await goSpace('corridor-2_5d');
+  await goSpace('mural-look',{wallOnly:true});
+  paintView('B');paintPosition();
+ }catch(e){
+  paintPosition();
+  message(`预览未能完成：${e.message}。可打开预览选项切换原始模型。`);
+ }finally{
+  wheel=0;wheelQuiet=performance.now()+400;
+  setBusy(false);
+ }
+}
 async function chooseDirection(value,{initial=false}={}){if(!ready||busy&&!initial)return;
  if(variant35&&layer&&['A','B'].includes(value)&&value===direction&&!compare){layer.setMode(activeMural?'original':'hybrid');w.v24a.layer?.setMode('original');finish?.setEnabled(true);routeLayer?.setEnabled(true);rearGallery?.setEnabled(true);return;}setBusy(true);try{
  direction=value;compare=false;$('#compare').setAttribute('aria-pressed','false');$('#direction').value=value;
@@ -85,12 +101,39 @@ function mapTo(fx,fy){const vp=regionViewport(),fit=fitImage(vp.width,vp.height)
 $('#minimap').onclick=e=>{const r=$('#minimap').getBoundingClientRect();mapTo((e.clientX-r.left)/r.width,(e.clientY-r.top)/r.height);};$('#minimap').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();reset();}};
 for(const b of document.querySelectorAll('.chapters button'))b.onclick=()=>navigate(b.dataset.view);$('#detail-open').onclick=()=>navigate('D');$('#detail-return').onclick=()=>navigate('C');$('#wall-return').onclick=()=>navigate('B');$('#back').onclick=()=>nextSpace(-1);$('#forward').onclick=()=>nextSpace(1);$('#replay-discovery').onclick=()=>navigate('B',{replay:true});$('#direction').onchange=e=>chooseDirection(e.target.value);
 $('#compare').onclick=()=>{if(busy)return;finish?.setEnabled(compare);compare=!compare;layer?.setMode(compare?'original':'hybrid');w.v24a.layer?.setMode(compare||direction==='current'?'hybrid':'original');if(direction==='original')w.v24a.layer?.setMode(compare?'hybrid':'original');$('#compare').setAttribute('aria-pressed',String(compare));routeLayer?.setEnabled(!compare);rearGallery?.setEnabled(!compare);$('#compare').textContent=compare?'当前正式融合 · 点击返回候选':'按此切换当前版本对照';paintPosition();};
-function options(open){$('#options').hidden=!open;$('#options-open').setAttribute('aria-expanded',String(open));if(open)$('#options-close').focus();else $('#options-open').focus();}$('#options-open').onclick=()=>options($('#options').hidden);$('#options-close').onclick=()=>options(false);addEventListener('keydown',e=>{if(e.key==='Escape'){if(!$('#options').hidden)options(false);else if(view==='D')navigate('C');}if(e.target.closest('button,input,select,summary,a,#detail-viewport,#minimap'))return;if(['ArrowDown','ArrowRight'].includes(e.key)&&['A','B'].includes(view)){e.preventDefault();nextSpace(1);}if(['ArrowUp','ArrowLeft'].includes(e.key)&&['A','B'].includes(view)){e.preventDefault();nextSpace(-1);}});
+function options(open){$('#options').hidden=!open;$('#options-open').setAttribute('aria-expanded',String(open));if(open)$('#options-close').focus();else $('#options-open').focus();}$('#options-open').onclick=()=>options($('#options').hidden);$('#options-close').onclick=()=>options(false);
+addEventListener('keydown',e=>{
+ if(e.key==='Escape'){if(!$('#options').hidden)options(false);else if(view==='D')navigate('C');}
+ if(e.target.closest('button,input,select,summary,a,dialog,#detail-viewport,#minimap')||!['A','B'].includes(view))return;
+ if(['ArrowDown','ArrowRight'].includes(e.key)){
+  e.preventDefault();
+  if(variant35&&e.key==='ArrowDown'){
+   if(e.repeat)return;
+   if(canStartGuidedTour()){startGuidedTour();return;}
+  }
+  nextSpace(1);
+ }
+ if(['ArrowUp','ArrowLeft'].includes(e.key)){e.preventDefault();nextSpace(-1);}
+});
 $('#audience-motion')?.addEventListener('click',()=>{if(busy||!ready)return;$('#reduced').checked=!motion();$('#reduced').dispatchEvent(new Event('change'));$('#audience-motion').setAttribute('aria-pressed',String(motion()));});
 $('#reduced').checked=matchMedia('(prefers-reduced-motion:reduce)').matches;$('#reduced').onchange=()=>{body.dataset.reducedMotion=String(motion());$('#audience-motion')?.setAttribute('aria-pressed',String(motion()));const button=w.document.querySelector('#motion');if((button.getAttribute('aria-pressed')==='true')!==motion())button.click();};
 $('#motion-check').onclick=async()=>{if(busy)return;setBusy(true);try{paintView('A');await goSpace('gate-interior');for(const stop of spatialStops.slice(1))await goSpace(stop);paintPosition();}catch(e){message(e.message);}finally{setBusy(false);}};
 addEventListener('resize',()=>{if(view==='D')drawDetail(false);});
-let wheel=0,wheelAt=0,wheelQuiet=0;addEventListener('wheel',e=>{if(!['A','B'].includes(view)||e.target.closest('button,aside,a,input,select')||busy)return;const now=performance.now();if(now<wheelQuiet)return;if(now-wheelAt>180)wheel=0;wheelAt=now;wheel+=e.deltaY*(e.deltaMode===1?16:e.deltaMode===2?innerHeight:1);if(Math.abs(wheel)>=75){const dir=Math.sign(wheel);wheel=0;wheelQuiet=now+650;nextSpace(dir).finally(()=>{wheelQuiet=performance.now()+400;});}},{passive:true});
+let wheel=0,wheelAt=0,wheelQuiet=0;
+addEventListener('wheel',e=>{
+ if(!ready||busy||!['A','B'].includes(view)||e.target.closest('button,aside,a,input,select,dialog')||!e.deltaY||e.ctrlKey)return;
+ const now=performance.now();
+ if(now<wheelQuiet){wheelQuiet=Math.max(wheelQuiet,now+180);return;}
+ if(now-wheelAt>180)wheel=0;
+ wheelAt=now;wheel+=e.deltaY*(e.deltaMode===1?16:e.deltaMode===2?innerHeight:1);
+ const guided=wheel>0&&canStartGuidedTour();
+ // One standard wheel notch, including the usual three line-mode units.
+ if(Math.abs(wheel)<(guided?40:75))return;
+ const dir=Math.sign(wheel);wheel=0;
+ if(guided){startGuidedTour();return;}
+ wheelQuiet=now+650;
+ nextSpace(dir).finally(()=>{wheelQuiet=performance.now()+400;});
+},{passive:true});
 const studyApi={setRouteHybrid:v=>{routeLayer?.setEnabled(v);rearGallery?.setEnabled(v);h.model.renderFrame();},get routeCase(){return selectedCase;},get preparation(){return preparation;},get route32(){return {progress:routeProgress,reveal:secondReveal,status:secondStatus,error:routeError,projection:routeLayer?.state,wall:wallPlane?{opacity:wallPlane.material.opacity,color:wallPlane.material.color?.toArray(),corners:secondCorners()}:null};},seekRoute:seekRoute32,setSecondReveal,travelTo,probeRoute,get rear(){return rearGallery?.api;},get activeMural(){return activeMural;},get murals(){return murals;},get finish(){return finish;},navigate,chooseDirection,selectRegion:id=>selectRegion(OBSERVATIONS.find(r=>r.id===id)),get ready(){return ready&&!initializing;},get busy(){return busy;},get view(){return view;},get runtime(){return h;},get layer(){return layer;},get detail(){return {...detail};},get direction(){return direction;},layerError:null,observations:OBSERVATIONS};
 if(body.dataset.audience!=='true'||body.dataset.dev==='true')window.study=studyApi;
 async function initialize(){murals=await (await fetch('./murals.json')).json();if(variant33)murals=murals.map(m=>m.approvedDisplay?{...m,image:m.approvedDisplay.image}:m);if(variant35)murals=applyRouteCase(murals,selectedCase.id);const started=performance.now();while(!frame.contentWindow?.v24a?.ready){if(frame.contentWindow?.hybrid?.failed||performance.now()-started>65000)throw Error('建筑加载失败，请检查 localhost 服务后刷新');await new Promise(r=>setTimeout(r,100));}w=frame.contentWindow;h=w.hybrid;const style=w.document.createElement('style');style.textContent=`.entry-header,.entry-footer,#mural-copy,#debug,#mural-debug,.v24a-label{display:none!important}#mural-cue{font-size:${variant35?44:76}px;font-weight:600;letter-spacing:.035em;color:rgba(193,195,186,.58)}#status{top:90px}#gallery{background:#141b1e}`;w.document.head.append(style);

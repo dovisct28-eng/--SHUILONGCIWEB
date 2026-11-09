@@ -24,7 +24,12 @@ function moveTo(end,full=false){const start=progress,duration=reduced?100:Math.m
    // Ease the clock, never reset the rail at a node. Reverse uses the same rail.
    const eased=full?u:u*u*(3-2*u);progress=start+(end-start)*eased;runtime.setCamera(sampleEntry(progress));debug(false);
    if(u<1)requestAnimationFrame(tick);else resolve();
- }catch(e){reject(e);}}requestAnimationFrame(tick);});}
+ }catch(e){
+   progress=start;
+   try{runtime.setCamera(sampleEntry(start),{immediate:true});}
+   catch(restoreError){reject(Error(`${e.message}；镜头复位失败：${restoreError.message}`,{cause:e}));return;}
+   reject(e);
+ }}requestAnimationFrame(tick);});}
 let wheel=0,lastWheel=0,settledAt=0;
 async function prepareBlend(end){
  // Finish the one-off mural upload before any camera travel, including an
@@ -32,11 +37,11 @@ async function prepareBlend(end){
  if(mural&&runtime.mural.status!=='failed'){if(runtime.mural.status!=='ready')status.textContent='正在准备壁画与廊道…';try{await mural.prepare();}catch{}}
  if(end<=1.6&&runtime.hybrid.status!=='loading')return;if(runtime.hybrid.status==='loading')status.textContent='正在准备廊道…';const loaded=await runtime.hybrid.load();runtime.hybrid.setEnabled(loaded);$('#retry-enhancement').hidden=loaded;status.textContent=loaded?'':'廊道材质暂不可用，可继续参观或重试。';}
 const controller=createEntryController(async next=>{if(!ready)throw Error('建筑尚未加载');$('#previous').disabled=$('#next').disabled=true;wheel=0;try{const end=ENTRY_STOPS.find(s=>s.id===next).time;await prepareBlend(end);await moveTo(end);if(runtime.hybrid.status!=='failed')status.textContent='';}catch(e){status.textContent=`镜头未能完成：${e.message}`;throw e;}finally{settledAt=performance.now();wheel=0;setTimeout(()=>draw(controller.state),0);}});
-async function go(next){if(!ready||isBusy())return false;
+async function go(next,options){if(!ready||isBusy())return false;
  $('#depth-overlay').hidden=true;runtime.hybrid.setBlend(null);
  if(next==='mural-look'||next==='mural-reading'){
   if(controller.state!=='corridor-2_5d')return false;
-  const result=await mural.go(next);settledAt=performance.now();wheel=0;draw();return result;
+  const result=await mural.go(next,options);settledAt=performance.now();wheel=0;draw();return result;
  }
  if(mural?.active){if(mural.state==='mural-reading'&&!await mural.go('mural-look'))return false;if(mural.state==='mural-look'&&!await mural.go('corridor-2_5d'))return false;if(next==='corridor-2_5d'){draw();return true;}}
  try{const result=await controller.go(next);draw();return result;}catch(e){draw();return false;}}
