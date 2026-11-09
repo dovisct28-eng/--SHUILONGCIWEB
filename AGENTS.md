@@ -4,14 +4,14 @@
 
 ## 正式架构与入口
 
-- 模块 A：`/module-a/a01/`，A01开屏 → A02建筑空间 → A03主题及主动展厅入口。根路径及模块A启动器进入该页。
+- 模块 A：`/module-a/a01/`，A01开屏 → A02建筑空间 → A03主题及主动展厅入口。本地使用 `启动水龙祠数字展厅.bat` 联合启动模块 A、B，并打开模块 A 正式入口。
 - 五铺展厅：`/module-a/gallery/`，建筑总览 → 大门进入 → ① → ② → ③ → ④ → ⑤ → 用户主动进入模块B。不得恢复旧⑤→①→②为正式路线。
 - 模块 B：`Mural-Exhibition/`，本地 `http://localhost:3000/index.html`，图鉴探索及体感交互。模块A通过明确路由接入，不依赖或重写B内部缩放、热点、Canvas/WebGL、加载、节点和数据结构。
-- A/B空间方案必须保留：`?layout=model`（③右④左）、`?layout=report`（③左④右，再回左⑤），包含独立轨道、相机、返回标记与状态恢复。第三/第四铺方位待导师核对，均不得称为现场正确版；B后墙AI机位不匹配时保留原模型安全回退。
+- 正式展厅采用确认的单一路线：② → 右侧③麒麟 → 左侧④盘龙 → 左侧⑤。旧 `layout` 链接兼容同一条路线。旧墙位对照仅供历史查阅。项目路线及模型坐标用于数字展陈，现场测绘与历史观看顺序另有证据要求。保留 AI 机位不匹配时的原模型安全回退。
 - 正式gallery使用V3.5母版与既有Combined B运行时。`study-v3.2.mjs`、`gallery-v3.3.mjs`、`route-v3.4.css`及`route-v3.5.css`等旧编号代码仍属于当前依赖，不按文件名清理。
 - `v32.html/v33.html/v34.html`独立原型已退役；参数、算法和有价值源码保留。历史测试/捕获脚本不等于当前验收入口。`?legacy`保留旧A04–A08高保真实现，属于历史路径；不得作为默认开发主线。
 
-详见 [V3.5整合](docs/validation/interior-visual-v3-5/INTEGRATION.md)、[方位对照](docs/validation/interior-visual-v3-5/ROUTE-COMPARISON.md)、[当前架构](docs/CURRENT_ARCHITECTURE.md)。
+详见 [V3.5整合](docs/validation/interior-visual-v3-5/INTEGRATION.md)、[历史方位对照](docs/validation/interior-visual-v3-5/ROUTE-COMPARISON.md)、[当前架构](docs/CURRENT_ARCHITECTURE.md)。
 
 ## 修改范围与保护
 

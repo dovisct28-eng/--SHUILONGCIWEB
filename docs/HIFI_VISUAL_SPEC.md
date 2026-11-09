@@ -1,8 +1,6 @@
 > 2026-10-31清理注：被精简的历史媒体链接已改为清理前Tag或已核对的相同副本；下文原测试结果保持当时记录，不能作为最新运行结论。
 
-> 当前规范：正式主线为A01→A02→A03→五铺gallery（①②③④⑤）→主动进入模块B；只在feature/shuilongci-hybrid-gallery-v1迭代与同步。A/B墙位对照待导师确认。下文旧三铺、A04–A08正式主线、旧master规则和历史冻结状态仅作当时设计记录，不指导当前开发。见 [当前架构](CURRENT_ARCHITECTURE.md)。
-
-> 2026-10-31用户追加：第三/第四铺方位暂不定稿。正式展厅增加A现有模型（③右④左）与B报告对照（③左④右，随后回左⑤）两种可切换方案，导师确认前两者均不作为现场正确性结论。详见 [路线对照](validation/interior-visual-v3-5/ROUTE-COMPARISON.md)。
+> 当前规范：正式主线为 A01→A02→A03→五铺展厅→主动进入模块 B。正式观看顺序为①→②→右侧③麒麟→左侧④盘龙→左侧⑤。只在 feature/shuilongci-hybrid-gallery-v1 迭代与同步。下文旧三铺、A04–A08 正式主线、旧 master 规则和历史冻结状态仅作设计记录。见 [当前架构](CURRENT_ARCHITECTURE.md)。
 
 > 2026-10-31 V3.5正式整合覆盖：默认模块A保留A01–A03，A03主动接入 /module-a/gallery/ 的大门→①→②→③→④→⑤→模块B路线。旧A04–A08退出默认主路径，/module-a/a01/?legacy 保留历史实现；真实素材、Combined B与模块B内部不改。此条覆盖下方旧三铺路线限制；技术验证与用户视觉验收分开记录。详见 [V3.5整合](validation/interior-visual-v3-5/INTEGRATION.md)。
 

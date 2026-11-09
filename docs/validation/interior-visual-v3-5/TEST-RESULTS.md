@@ -1,5 +1,7 @@
 # V3.5 验证结果
 
+> 本页记录 2026-10-31 的历史验收。现行路线与启动方式见 [正式整合](INTEGRATION.md)。
+
 > 两方案追加：最新单元测试56项通过；A、B分别记录在results.json与results-report.json，选择器/状态隔离见switch-results.json，两方案正式交接见integration-results.json及integration-report-results.json。B后墙段明确采用原模型安全回退。原单路线六组合结论只表示工程运行，不表示现场方位得到证实。最终A/B矩阵在新增选择器后重新执行；部分回归进程并行运行，性能数据不作为单任务基准或显示帧率。
 
 2026-10-31；Windows、Intel i5-9300H、8逻辑核、32GiB RAM，安装版Chrome headless、deviceScaleFactor=1。环境详见 environment.json。所有截图与录屏来自浏览器真实执行。

@@ -1,4 +1,4 @@
-> 当前规范：正式主线为A01→A02→A03→五铺gallery（①②③④⑤）→主动进入模块B；只在feature/shuilongci-hybrid-gallery-v1迭代与同步。A/B墙位对照待导师确认。下文旧三铺、A04–A08正式主线、旧master规则和历史冻结状态仅作当时设计记录，不指导当前开发。见 [当前架构](CURRENT_ARCHITECTURE.md)。
+> 当前规范以 [当前架构](CURRENT_ARCHITECTURE.md) 为准。下文旧三铺、A04–A08 正式主线、旧 master 规则和历史冻结状态仅作设计记录。
 
 # 模块 A 高保真候选版本 · 2026-10-06
 

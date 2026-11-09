@@ -4,11 +4,11 @@
 
 # 水龙祠 V3.5 整合与验收
 
-> 用户最新要求：第三、第四铺方位存在报告与现场的分歧，现保留**A现有模型**和**B报告对照**两种可切换路线，待导师意见后再固定其中一条。顶部“路线对照”可切换，切换后从入口开始。见[两方案说明](ROUTE-COMPARISON.md)。以下原单路线记录属于方案A的工程验收，不证明现场墙位正确。
+> 当前展厅固定走①→②→右侧③麒麟→左侧④盘龙→左侧⑤。旧双路线的方案与证据见 [历史方位对照](ROUTE-COMPARISON.md)。本页的验收数字和录屏均为历史记录。
 
 状态：五铺观看、视觉统一及正式模块A接入完成，规定六组合桌面回归通过；**未标记全部整体完成**。模块B体感真实启动受外部GSAP/Hands加载失败影响，用户最终视觉验收尚未完成。已测试的观看核心未发现新增阻断回归。
 
-推荐入口：启动现有模块A本地服务后打开 `http://127.0.0.1:4186/module-a/a01/`，滚动到A03，主动进入五铺展厅。也可直接打开 `http://127.0.0.1:4186/module-a/gallery/`。原启动模块A原型.bat的4173入口同样适用。模块B沿用 `node Mural-Exhibition/server.js` 的localhost:3000独立服务。
+本地打开 `启动水龙祠数字展厅.bat`，从 `http://127.0.0.1:4173/module-a/a01/` 滚动到 A03，再主动进入五铺展厅。
 
 1. 五铺完整运行：六组分别完成从建筑进入、①②③④⑤全幅/细读、⑤④③②①逆向返回。
 2. 第二铺疑点：正常流程纹理正确；旧seekRoute未退出第一铺阅读合成层，诊断截图错图，已最小修复。
@@ -19,7 +19,7 @@
 7. 回归：56项（原53项加路线方案3项）A相关测试、130项B测试、六组合浏览器及资源/并发/内存循环通过；B体感外部依赖失败单独记录，不声称全功能通过。
 8. 限制：首次准备仍有等待；相机与墙位是设计模型，③④非实测配准；用户视觉、多GPU、实体摄像头仍待验收。
 
-文档：[诊断](AUDIT.md)、[视觉参数](VISUAL-CHANGES.md)、[正式整合](INTEGRATION.md)、[测试及限制](TEST-RESULTS.md)。独立原型v32/v33/v34保留；历史V3.2–V3.4证据未覆盖；原始壁画、已确认裁切、Combined B及用户原有脏文件未改。
+文档：[诊断](AUDIT.md)、[视觉参数](VISUAL-CHANGES.md)、[正式整合](INTEGRATION.md)、[历史测试及限制](TEST-RESULTS.md)。V3.2–V3.4 独立页面已退役，历史参数、源码与证据可供查阅。
 
 [方案A连续录屏（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/interior-visual-v3-5/selected/continuous-walk-1440x900.webm)、[方案B连续录屏（历史归档）](https://github.com/dovisct28-eng/--SHUILONGCIWEB/blob/pre-repository-cleanup-v2-2026-10-31/docs/validation/interior-visual-v3-5/selected/continuous-walk-report-1440x900.webm)：均为1440×900、VP8/25fps，无剪辑，完整解码结果及实际时长见video-check.json。精选包含12张必要对照截图和两条不同路线视频，清单与体积见selected/manifest.json；完整回归保留local。
 

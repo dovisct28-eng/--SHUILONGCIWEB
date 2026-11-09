@@ -1,8 +1,10 @@
-# 当前正式架构（2026-10-31）
+# 当前正式架构
 
 开发分支：feature/shuilongci-hybrid-gallery-v1；不合并master。
 
-正式路径：/module-a/a01/ 的A01→A02→A03，主动进入/module-a/gallery/，建筑大门→①②③④⑤→主动进入localhost:3000模块B。依用户2026-11-01确认，③麒麟靠近②，④盘龙；采用右先左后的单一路线，旧layout参数不再切换路线。模型坐标和图像配准不是现场测绘。
+双击 `启动水龙祠数字展厅.bat` 联合启动模块 A、B，打开 `http://127.0.0.1:4173/module-a/a01/`。从 A01→A02→A03 主动进入 `/module-a/gallery/`，经大门观看①→②→右侧③麒麟→左侧④盘龙→左侧⑤，最后主动进入 localhost:3000 的模块 B。
+
+2026-11-09 再确认第三铺为麒麟、第四铺为盘龙。正式展厅只有一条路线，旧 `layout` 链接沿用这条路线。模型墙位和图像配准属于数字展陈设计。
 
 Combined B模型及完整运行链保留，V3.5母版v35.html通过sync-formal-v3.5.cjs同步gallery/index.html。旧编号JS/CSS仍被正式入口加载。旧v32/v33/v34独立HTML已退役；preview脚本只提示退役，不再打开失效页。有价值的旧算法、参数和捕获脚本保留作研究资料，历史捕获需先从清理Tag恢复入口。?legacy仍为历史高保真路径。
 
@@ -10,4 +12,4 @@ Combined B模型及完整运行链保留，V3.5母版v35.html通过sync-formal-v
 
 V3.5原始验收产物默认local/latest；evidence-v3.5.cjs只提升必要静帧，不自动提交完整录像。保留原测试结果及视频元数据。历史媒体在清理Tag找回，精确重复文件还可用清单中的存活副本恢复；未知原图不删除。
 
-[整合说明](validation/interior-visual-v3-5/INTEGRATION.md) · [方位对照](validation/interior-visual-v3-5/ROUTE-COMPARISON.md) · [清理报告](maintenance/repository-cleanup-v2/CLEANUP_REPORT.md)
+[整合说明](validation/interior-visual-v3-5/INTEGRATION.md) · [历史方位对照](validation/interior-visual-v3-5/ROUTE-COMPARISON.md) · [清理报告](maintenance/repository-cleanup-v2/CLEANUP_REPORT.md)
