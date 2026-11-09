@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {sampleEntry,ENTRY_STOPS} from '../src/entry-path.mjs';
-import {sampleGallery,CORRIDOR_KEYS,GALLERY_STOPS,corridorWeights,corridorPhase,createGalleryController,FIRST_MURAL,travelMs,GUIDED_TOUR_MS,guidedTourProgress} from '../src/corridor-path.mjs';
+import {sampleGallery,sampleGuidedGallery,CORRIDOR_KEYS,GALLERY_STOPS,corridorWeights,corridorPhase,createGalleryController,FIRST_MURAL,travelMs,GUIDED_TOUR_MS,guidedTourProgress} from '../src/corridor-path.mjs';
 test('gallery sampler shares the entry rail and all five entry stops',()=>{
  for(let i=0;i<=3000;i++)assert.deepEqual(sampleGallery(i/3000),sampleEntry(i/3000));
  assert.deepEqual(GALLERY_STOPS.slice(0,5),ENTRY_STOPS);assert.equal(travelMs(0,1),12400);assert.equal(travelMs(1,2),5000);
@@ -16,7 +16,7 @@ test('corridor is C1, reversible, eye level and FOV do not jump',()=>{
  for(let i=0;i<=4000;i++){const t=1+i/4000,s=sampleGallery(t),back=sampleGallery(2-(1-i/4000));assert.ok([...s.position,...s.target,s.fov].every(Number.isFinite));assert.ok(s.position[1]>=1.38-1e-12&&s.position[1]<=1.56);assert.equal(s.fov,48);for(const field of ['position','target'])s[field].forEach((n,j)=>assert.ok(Math.abs(n-back[field][j])<1e-10));}
  assert.deepEqual(FIRST_MURAL.position,[4.865,1.55,4.8]);assert.equal(FIRST_MURAL.rotationY,-Math.PI/2);
 });
-test('guided clock preserves the approach and adds time through the doorway and into the corridor',()=>{
+test('guided clock adds time at the doorway and returns to the original pace before the right corridor',()=>{
  const base=travelMs(0,2);
  const original=ms=>{const u=ms/base;return 2*u*u*(3-2*u);};
  const crossing=(clock,position)=>{let ms=0;while(clock(ms)<position)ms++;return ms;};
@@ -24,8 +24,25 @@ test('guided clock preserves the approach and adds time through the doorway and 
  assert.equal(guidedTourProgress(GUIDED_TOUR_MS),2);
  assert.ok(Math.abs(guidedTourProgress(5000)-original(5000))<1e-12);
  for(let ms=10;ms<=GUIDED_TOUR_MS;ms+=10)assert.ok(guidedTourProgress(ms)>guidedTourProgress(ms-10));
- assert.ok(crossing(guidedTourProgress,1)-crossing(guidedTourProgress,.78)>1.5*(crossing(original,1)-crossing(original,.78)));
- assert.ok(crossing(guidedTourProgress,1.6)-crossing(guidedTourProgress,1)>1.5*(crossing(original,1.6)-crossing(original,1)));
+ assert.ok(crossing(guidedTourProgress,1.3)-crossing(guidedTourProgress,.92)>crossing(original,1.3)-crossing(original,.92));
+ assert.equal(GUIDED_TOUR_MS-crossing(guidedTourProgress,1.6),base-crossing(original,1.6));
+});
+test('guided turn joins the rails without a pause or the sharp look to the side',()=>{
+ const yaw=({position:p,target:q})=>Math.atan2(q[0]-p[0],p[2]-q[2])*180/Math.PI;
+ const eps=1e-5;
+ for(const t of [.85,1.6]){
+  assert.deepEqual(sampleGuidedGallery(t),sampleGallery(t));
+  const a=sampleGuidedGallery(t-eps),b=sampleGuidedGallery(t),c=sampleGuidedGallery(t+eps);
+  for(const field of ['position','target'])for(let i=0;i<3;i++)assert.ok(Math.abs((b[field][i]-a[field][i])-(c[field][i]-b[field][i]))/eps<.05);
+ }
+ for(let i=0;i<600;i++){
+  const t=.92+i/1000,pose=sampleGuidedGallery(t);
+  assert.ok(Math.abs(yaw(pose))<55);
+  if(t<.94)assert.ok(Math.abs(yaw(pose))<14);
+  const next=sampleGuidedGallery(t+eps);
+  assert.ok(Math.hypot(...pose.position.map((v,k)=>v-next.position[k]))/eps>1,'continuous motion behind the stage');
+ }
+ for(const t of [0,.52,1.6,1.8,2])assert.deepEqual(sampleGuidedGallery(t),sampleGallery(t));
 });
 test('one rail clock controls every layer; loading cannot expose enhancement',()=>{
  assert.deepEqual([1,1.43,1.6,1.8,2].map(corridorPhase),['gate-interior','stage-turn','corridor-3d','corridor-hybrid','corridor-2_5d']);

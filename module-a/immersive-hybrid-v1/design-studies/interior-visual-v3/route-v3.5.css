@@ -20,5 +20,3 @@ body[data-variant=v35] .masthead{gap:18px}
 body[data-variant=v35][data-view=B] .spatial-title{opacity:0}
 @media(max-height:800px){body[data-variant=v35] #reading{inset-block:83px 20px;gap:12px}body[data-variant=v35] .reading-head h1{font-size:32px}body[data-variant=v35] .reading-foot{padding-top:12px}}
 @media(min-width:1700px){body[data-variant=v35] #reading{inset-block:110px 30px;gap:20px}body[data-variant=v35] .reading-head h1{font-size:44px}}
-
-.observation-note .observation-source{display:block;margin-top:10px;font-size:13px;line-height:1.6;color:var(--muted)}

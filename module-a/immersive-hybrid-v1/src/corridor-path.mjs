@@ -32,18 +32,45 @@ export function sampleGallery(time){
  const t=Math.max(0,Math.min(2,time));
  return {...(t<=1?sampleEntry(t,PATH_KEYS):sampleEntry(t-1,CORRIDOR_KEYS)),time:t};
 }
+
+function turnKey(t,position,yawDegrees){
+ const yaw=yawDegrees*Math.PI/180;
+ const [x,y,z]=position;
+ return {t,position,target:[x+4*Math.sin(yaw),y,z-4*Math.cos(yaw)],fov:48};
+}
+
+// Use the checked positions around the stage, but pass through them on one
+// curve. The first and last neighbor pairs match the original rail tangents.
+const GUIDED_TURN_KEYS=[
+ {t:.78,...sampleGallery(.78)},
+ {t:.85,...sampleGallery(.85)},
+ {t:.92,...sampleGallery(.92)},
+ turnKey(.98,sampleGallery(.945).position,31),
+ turnKey(1.08,sampleGallery(.97).position,51),
+ turnKey(1.24,sampleGallery(1).position,23),
+ turnKey(1.34,sampleGallery(1.22).position,8),
+ {t:1.43,...sampleGallery(1.43)},
+ {t:1.6,...sampleGallery(1.6)},
+ {t:1.8,...sampleGallery(1.8)},
+].map(key=>({...key,t:key.t/2}));
+
+export function sampleGuidedGallery(time){
+ if(time<=.85||time>=1.6)return sampleGallery(time);
+ return {...sampleEntry(time/2,GUIDED_TURN_KEYS),time};
+}
+
 export function travelMs(a,b){
  // Add time only after the threshold; exterior approach timing stays intact.
  const clock=t=>Math.min(1,t)*ENTRY_DURATION+Math.max(0,Math.min(1,(t-.92)/.08))*1600+Math.max(0,t-1)*CORRIDOR_DURATION;
  return Math.abs(clock(b)-clock(a));
 }
 const BASE_TOUR_MS=travelMs(0,2);
-const GATE_AND_CORRIDOR_EXTRA_MS=4200;
-export const GUIDED_TOUR_MS=BASE_TOUR_MS+GATE_AND_CORRIDOR_EXTRA_MS;
+const GATE_TURN_EXTRA_MS=2000;
+export const GUIDED_TOUR_MS=BASE_TOUR_MS+GATE_TURN_EXTRA_MS;
 export function guidedTourProgress(elapsed){
- // Stretch the clock from the gate approach through the turn into the corridor.
+ // Spend the extra time near the doorway. Resume the usual clock before the right corridor.
  // A smooth ramp keeps the rate positive and joins the original clock at both ends.
- const added=GATE_AND_CORRIDOR_EXTRA_MS*smooth(.35*BASE_TOUR_MS,.66*BASE_TOUR_MS+GATE_AND_CORRIDOR_EXTRA_MS,elapsed);
+ const added=GATE_TURN_EXTRA_MS*smooth(.40*BASE_TOUR_MS,.62*BASE_TOUR_MS+GATE_TURN_EXTRA_MS,elapsed);
  return 2*smooth(0,BASE_TOUR_MS,elapsed-added);
 }
 

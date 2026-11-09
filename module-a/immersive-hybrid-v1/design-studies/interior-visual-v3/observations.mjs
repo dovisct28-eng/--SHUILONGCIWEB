@@ -9,14 +9,14 @@ export const OBSERVATIONS=Object.freeze([
 export const OBSERVATIONS_BY_MURAL=Object.freeze({
  'mural-01':OBSERVATIONS,
  'mural-02':[
-  {id:'temple-and-table',number:'01',title:'祠门与桌案',center:[.095,.78],zoom:3.8,copy:'画面左下有一座带匾额的建筑，门前可见一张红色桌案，几个人物聚在案旁。李济民将建筑辨读为水龙祠，并把桌案一带解释为设醮场景。',source:'李济民，2025，第119页，图7、8'},
-  {id:'cloud-bands',number:'02',title:'云纹分层',center:[.355,.675],zoom:3.6,copy:'顺着卷曲的云纹，可以看到人物和马匹分布在不同高度。《发现报告》将整幅画面概括为由云纹分隔的上、中、下三层。',source:'刘灿姣、林伟，2016，第20页'},
-  {id:'upper-flags',number:'03',title:'上层旗幡',center:[.504,.078],zoom:4,copy:'上层人物头顶伸出多根旗杆，红色和深色旗面相间。可沿旗杆往下看，观察旗幡如何穿插在人马之间。',source:'刘灿姣、林伟，2016，第20页'},
+  {id:'temple-and-table',number:'01',title:'祠门与桌案',center:[.095,.78],zoom:3.8,copy:'画面左下绘有带匾额的水龙祠，门前可见一张红色桌案。几个人物聚在案旁，这一带可读作设醮场景。'},
+  {id:'cloud-bands',number:'02',title:'云纹分层',center:[.355,.675],zoom:3.6,copy:'顺着卷曲的云纹，可以看到人物和马匹分布在不同高度。把视线拉回全幅，云纹将人马分隔成上、中、下三层。'},
+  {id:'upper-flags',number:'03',title:'上层旗幡',center:[.504,.078],zoom:4,copy:'上层人物头顶伸出多根旗杆，红色和深色旗面相间。可沿旗杆往下看，观察旗幡如何穿插在人马之间。'},
  ],
  'mural-05':[
-  {id:'raised-implements',number:'01',title:'举起长兵器的人物',center:[.908,.186],zoom:4,copy:'照片右上部仍能看到数道长杆斜向伸出。对照郑富天所引的壁画局部图，可以观察人物举起或向前持握长兵器的姿态。',source:'郑富天，2024，第125–126页，图3-41局部'},
-  {id:'remaining-clouds',number:'02',title:'云纹与人物残迹',center:[.606,.427],zoom:4,copy:'画面中部偏右还能看到浅红色的卷云，残存的人物轮廓分布在云纹上下。可对照郑富天对第五铺三层构图的描述，沿着这段云纹寻找分层的痕迹。',source:'郑富天，2024，第25、125页，图3-41（全图）'},
-  {id:'temple-remains',number:'03',title:'画中的水龙祠',center:[.971,.665],zoom:4,copy:'照片右下靠近露砖缺口的位置，仍可辨认横栏和框线。郑富天将第五铺下层描绘的建筑辨读为水龙祠，可对照这里残存的建筑线条。',source:'郑富天，2024，第126页'},
+  {id:'raised-implements',number:'01',title:'举起长兵器的人物',center:[.908,.186],zoom:4,copy:'照片右上部仍能看到数道长杆斜向伸出。沿着长杆往下看，可以辨认出人物举起或向前持握长兵器的姿态。'},
+  {id:'remaining-clouds',number:'02',title:'云纹与人物残迹',center:[.606,.427],zoom:4,copy:'画面中部偏右还能看到浅红色的卷云，残存的人物轮廓分布在云纹上下。沿着这段卷云，可以辨认出画面分层的痕迹。'},
+  {id:'temple-remains',number:'03',title:'画中的水龙祠',center:[.971,.665],zoom:4,copy:'画中的水龙祠位于照片右下。靠近露砖缺口的位置，还能辨认出建筑的横栏和框线。'},
  ],
 });
 let imageWidth=2880,imageHeight=990;

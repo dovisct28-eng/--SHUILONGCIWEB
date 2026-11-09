@@ -1,6 +1,6 @@
 import {createMuralExperience} from './mural-reading.mjs';
 import {createInkScene} from '../../a01/ink-scene.mjs';
-import {GALLERY_STOPS as ENTRY_STOPS,sampleGallery as sampleEntry,createGalleryController as createEntryController,travelMs,GUIDED_TOUR_MS,guidedTourProgress} from './corridor-path.mjs';
+import {GALLERY_STOPS as ENTRY_STOPS,sampleGallery as sampleEntry,sampleGuidedGallery,createGalleryController as createEntryController,travelMs,GUIDED_TOUR_MS,guidedTourProgress} from './corridor-path.mjs';
 const $=s=>document.querySelector(s),iframe=$('#temple'),status=$('#status');
 createInkScene($('#gallery'))(5,false);
 const query=matchMedia('(prefers-reduced-motion: reduce)');
@@ -22,7 +22,8 @@ async function step(dir){const state=currentState();if(state==='mural-reading'){
 function moveTo(end,{linear=false,guided=false}={}){const start=progress,retime=guided&&!reduced&&start===0&&end===2,duration=reduced?100:retime?GUIDED_TOUR_MS:Math.max(180,travelMs(start,end));frames=[];last=0;
  return new Promise((resolve,reject)=>{let began;function tick(now){try{began??=now;const u=Math.min(1,(now-began)/duration);if(last)frames.push(now-last);last=now;
    // Ease the clock, never reset the rail at a node. Reverse uses the same rail.
-   const eased=linear?u:u*u*(3-2*u);progress=retime?guidedTourProgress(now-began):start+(end-start)*eased;runtime.setCamera(sampleEntry(progress));debug(false);
+   const eased=linear?u:u*u*(3-2*u);progress=retime?guidedTourProgress(now-began):start+(end-start)*eased;
+   runtime.setCamera(retime?sampleGuidedGallery(progress):sampleEntry(progress));debug(false);
    if(u<1)requestAnimationFrame(tick);else resolve();
  }catch(e){
    progress=start;

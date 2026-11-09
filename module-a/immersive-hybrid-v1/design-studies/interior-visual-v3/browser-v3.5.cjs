@@ -11,13 +11,18 @@ async function guidedTour(p,keep){
  const {width,height}=p.viewportSize();
  assert.deepEqual(await p.evaluate(()=>[study.view,study.runtime.state,study.runtime.stops.length]),['A','overview',9]);
  await p.mouse.move(width/2,height/2);
- await p.evaluate(()=>{
+ await p.evaluate(async()=>{
+  const {sampleGuidedGallery}=await import('/module-a/immersive-hybrid-v1/src/corridor-path.mjs');
   const h=study.runtime,marks=[.78,.92,1,1.6,2];
   window.guidedCrossings=[];
   let start;
   function sample(now){
    if(h.progress>0)start??=now;
-   while(marks.length&&h.progress>=marks[0])guidedCrossings.push({position:marks.shift(),ms:now-start});
+   while(marks.length&&h.progress>=marks[0]){
+    const pose=h.model.pose,expected=sampleGuidedGallery(h.progress);
+    const poseError=Math.hypot(...['position','target'].flatMap(key=>pose[key].map((v,i)=>v-expected[key][i])));
+    guidedCrossings.push({position:marks.shift(),ms:now-start,poseError});
+   }
    if(marks.length)requestAnimationFrame(sample);
   }
   requestAnimationFrame(sample);
@@ -39,7 +44,11 @@ async function guidedTour(p,keep){
  assert.deepEqual(wall.phases,reduced?['turn','mural-cue-hold']:['turn','mural-cue-in','mural-cue-hold','mural-brighten']);
  const crossings=await p.evaluate(()=>guidedCrossings);
  assert.deepEqual(crossings.map(c=>c.position),[.78,.92,1,1.6,2]);
- if(!reduced)assert.ok(crossings[3].ms-crossings[0].ms>7500,'slower passage from the gate close-up into the right corridor');
+ if(!reduced){
+  assert.ok(crossings.slice(0,4).every(c=>c.poseError<1e-8),'guided motion uses the continuous turn');
+  const corridorMs=crossings[4].ms-crossings[3].ms;
+  assert.ok(Math.abs(corridorMs-4996)<500,'normal pace along the right corridor');
+ }
  if(keep)await snap(p,'guided-first-wall');
  await p.waitForTimeout(650);
  assert.equal(await p.evaluate(()=>study.runtime.state),'mural-look');
@@ -79,16 +88,14 @@ async function controls(p,index){
   await button.click();assert.equal(await button.getAttribute('aria-pressed'),'true');
   assert.equal(await p.locator('#observation-title').textContent(),region.title);
   assert.equal(await p.locator('#observation-copy').textContent(),region.copy);
-  assert.equal(await p.locator('.observation-source').isVisible(),Boolean(region.source));
-  if(region.source)assert.equal(await p.locator('.observation-source').textContent(),region.source);
+  assert.doesNotMatch(await p.locator('.observation-note').textContent(),/第\s*\d+\s*页|发现报告|郑富天|李济民|刘灿姣/);
   const visible=await p.locator('#mini-window').evaluate(r=>Object.fromEntries(['x','y','width','height'].map(k=>[k,+r.getAttribute(k)])));
   const [x,y]=region.center.map((value,axis)=>value*sizes[index][axis]);
   assert.ok(x>=visible.x&&x<=visible.x+visible.width&&y>=visible.y&&y<=visible.y+visible.height,region.id);
-  if(region.source&&p.viewportSize().width===1440&&await p.getAttribute('body','data-reduced-motion')==='false'){await p.waitForTimeout(700);await snap(p,region.id);}
+  if((index===1||index===4)&&p.viewportSize().width===1440&&await p.getAttribute('body','data-reduced-motion')==='false'){await p.waitForTimeout(700);await snap(p,region.id);}
  }
  if(observations.length){
   await click(p,'#whole-image');assert.equal(await p.locator('#observation-number').textContent(),'整铺简介');
-  assert.equal(await p.locator('.observation-source').isVisible(),false);
  }
  await click(p,'#zoom-in');await p.locator('#detail-viewport').focus();await p.keyboard.press('+');
  const vp=await p.locator('#detail-viewport').boundingBox();await p.mouse.move(vp.x+vp.width/2,vp.y+vp.height/2);const before=await p.evaluate(()=>study.detail.zoom);await p.mouse.wheel(0,-120);await p.waitForTimeout(100);assert.ok(await p.evaluate(()=>study.detail.zoom)>before);

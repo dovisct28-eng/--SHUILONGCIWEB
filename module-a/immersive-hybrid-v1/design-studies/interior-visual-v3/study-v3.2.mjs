@@ -78,9 +78,6 @@ async function chooseDirection(value,{initial=false}={}){if(!ready||busy&&!initi
  else{const T=await w.document.querySelector('#temple').contentWindow.eval("import('/module-a/immersive-hybrid-v1/vendor/three.module.js')");layer?.dispose();layer=null;layer=await installStudyLayers(h.model,T,{direction:value});w.v24a.layer?.setMode('original');h.model.setCamera(h.model.pose,{immediate:true});}
  routeLayer?.setEnabled(['A','B'].includes(value));rearGallery?.setEnabled(['A','B'].includes(value));studyApi.layerError=null;if(activeMural)layer?.setMode('original');finish?.setEnabled(value==='A'||value==='B');message('');paintPosition();
  }catch(e){studyApi.layerError=e.message;finish?.setEnabled(false);layer?.setMode('original');w.v24a.layer?.setMode('hybrid');message('新候选素材暂不可用，已回退到当前正式融合；可以重选方向重试。');}finally{setBusy(false);}}
-const observationSource=document.createElement('small');
-observationSource.className='observation-source';
-$('#observation-copy').after(observationSource);
 function muralObservations(){return OBSERVATIONS_BY_MURAL[murals[activeMural]?.id]??[];}
 function updateObservation(region){
  activeObservation=region;
@@ -89,8 +86,6 @@ function updateObservation(region){
  $('#observation-number').textContent=region?'局部 '+region.number:'整铺简介';
  $('#observation-title').textContent=region?.title??mural?.title??'壁画简介';
  $('#observation-copy').textContent=region?.copy??MURAL_INTRODUCTIONS[mural?.id]??'';
- observationSource.textContent=region?.source??'';
- observationSource.hidden=!region?.source;
  $('#region-position').textContent=region?region.title:'全幅';
 }
 function drawDetail(animate=true){const vp=regionViewport();if(!vp.width||!vp.height)return;detail=clampTransform(detail,vp);const fit=fitImage(vp.width,vp.height),img=$('#detail-image');img.style.width=`${fit.width}px`;img.style.height=`${fit.height}px`;const transform=`translate(calc(-50% + ${detail.x}px),calc(-50% + ${detail.y}px)) scale(${detail.zoom})`;
