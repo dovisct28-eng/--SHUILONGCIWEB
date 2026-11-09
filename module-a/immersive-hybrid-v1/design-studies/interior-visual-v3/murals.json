@@ -101,6 +101,14 @@
       "approvedCandidate": "module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-photo-processing/revision-3/mural-03-clean-candidate.png",
       "approval": "2026-10-30 user: 采用这版，继续接入",
       "wallRegistration": "model-candidate-not-site-verified"
+    },
+    "formalDisplay": {
+      "image": "./assets/mural-03-dng-display.webp",
+      "source": "水龙祠壁画素材/壁画原图/第三铺壁画原图.DNG",
+      "width": 2400,
+      "height": 1850,
+      "processing": "cropped-perspective-corrected-webp",
+      "note": "麒麟。采用2026-11-09上传的DNG照片，按可见边界裁切并校正视角。"
     }
   },
   {
@@ -146,6 +154,14 @@
       "approvedCandidate": "module-a/immersive-hybrid-v1/design-studies/interior-visual-v3/assets/mural-photo-processing/revision-2/mural-04-crop-candidate.png",
       "approval": "2026-10-30 user confirmed revision-2",
       "wallRegistration": "model-candidate-not-site-verified"
+    },
+    "formalDisplay": {
+      "image": "./assets/mural-04-dng-display.webp",
+      "source": "水龙祠壁画素材/壁画原图/第四铺壁画原图.DNG",
+      "width": 2400,
+      "height": 1200,
+      "processing": "cropped-perspective-corrected-webp",
+      "note": "盘龙。采用2026-11-09上传的DNG照片，按可见边界裁切并校正视角。"
     }
   },
   {

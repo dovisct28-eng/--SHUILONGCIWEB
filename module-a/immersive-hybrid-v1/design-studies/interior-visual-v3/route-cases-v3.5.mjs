@@ -8,6 +8,17 @@ export function applyRouteCase(murals){
  const result=structuredClone(murals);
  // Preserve photographs and provenance together, and retain the spatial stops.
  for(const key of ['image','source','registration','note','approvedDisplay']) [result[2][key],result[3][key]]=[result[3][key],result[2][key]];
+ // Formal replacements use the confirmed stop numbering, independent of the old asset names.
+ for (const mural of result.slice(2, 4)) {
+  const display = mural.formalDisplay;
+  if (!display) continue;
+  Object.assign(mural, {
+   image: display.image,
+   source: display.source,
+   registration: display.processing,
+   note: display.note,
+  });
+ }
  return result;
 }
 const pose=(x,z,tx,tz)=>({position:[x,1.85,z],target:[tx,1.85,tz],fov:48});

@@ -2,7 +2,7 @@ const {chromium}=require('playwright'),fs=require('fs'),path=require('path'),ass
 const out=require('./validation-paths-v3.5.cjs').out,local=path.join(out,'local');fs.mkdirSync(local,{recursive:true});
 const layout=process.env.V35_LAYOUT||'model',reportName=layout==='report'?'results-report.json':'results.json';
 const base=process.env.V35_ORIGIN||'http://127.0.0.1:4186',url=base+'/module-a/gallery/?debug&layout='+layout;
-const sizes=[[2880,990],[6000,1357],[1280,939],[1286,636],[6000,1617]];
+const sizes=[[2880,990],[6000,1357],[2400,1850],[2400,1200],[6000,1617]];
 async function idle(p){await p.waitForFunction(()=>window.study?.ready&&!study.busy,null,{timeout:90000});}
 async function click(p,s){await p.locator(s).click();await idle(p);}
 async function snap(p,name){await p.screenshot({path:path.join(local,(layout==='report'?'report-':'')+name+'.png')});}
@@ -28,7 +28,7 @@ async function controls(p,index){
    await idle(p);assert.equal(await p.evaluate(()=>study.activeMural),index);if(keep)await snap(p,'after-wall-'+index);await click(p,'#forward');
   }
   if(index>=2){const expectedX=(index===2?2.25:index===3?-2.25:-4.515);assert.equal(await p.evaluate(i=>study.rear.state.bindings.find(b=>b.index===i).position[0],index),expectedX);}
-  const im=await imageState(p);assert.deepEqual(im.natural,sizes[index]);assert.equal(im.fit,'contain');assert.ok(im.x>=0&&im.y>=0&&im.x+im.width<=width+.1&&im.y+im.height<=height+.1);if(keep)await snap(p,'after-reading-'+index);
+  const im=await imageState(p);assert.deepEqual(im.natural,sizes[index]);assert.equal(im.fit,'contain');if(index===2||index===3)assert.ok(im.src.endsWith('/mural-0'+(index+1)+'-dng-display.webp'));assert.ok(im.x>=0&&im.y>=0&&im.x+im.width<=width+.1&&im.y+im.height<=height+.1);if(keep)await snap(p,'after-reading-'+index);
   const detail=await controls(p,index);run.murals.push({index,image:im,detail});await click(p,'#wall-return');assert.equal(await p.evaluate(()=>study.view),'B');await click(p,'#forward');
  }
  if(keep)await snap(p,'after-fifth-handoff');run.recordEnd=Date.now();

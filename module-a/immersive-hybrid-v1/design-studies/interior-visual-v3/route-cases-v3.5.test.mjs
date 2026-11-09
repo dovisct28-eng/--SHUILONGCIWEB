@@ -1,5 +1,16 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
 import {applyRouteCase,routeCase,returnMarker,returnMatchesCase} from './route-cases-v3.5.mjs';
 const source=JSON.parse(fs.readFileSync(new URL('./murals.json',import.meta.url)));
-test('confirmed right-first route binds qilin third and dragon fourth with original provenance',()=>{const result=applyRouteCase(source);assert.equal(result[2].position[0],2.25);assert.equal(result[3].position[0],-2.25);for(const key of ['image','source','registration','note','approvedDisplay']){assert.deepEqual(result[2][key],source[3][key]);assert.deepEqual(result[3][key],source[2][key]);}assert.equal(result[2].id,'mural-03');assert.equal(result[3].id,'mural-04');assert.equal(routeCase('report').id,'model');assert.equal(source[2].position[0],2.25);});
+test('confirmed route uses the new DNG derivatives at the correct stops', () => {
+ const result = applyRouteCase(source);
+ for (const [index, id, x, original] of [[2,'mural-03',2.25,'第三铺'],[3,'mural-04',-2.25,'第四铺']]) {
+  const mural = result[index];
+  assert.equal(mural.id,id);
+  assert.equal(mural.position[0],x);
+  assert.equal(mural.image,'./assets/'+id+'-dng-display.webp');
+  assert.ok(mural.source.endsWith(original+'壁画原图.DNG'));
+  assert.ok(fs.existsSync(new URL(mural.image,import.meta.url)));
+ }
+ assert.equal(routeCase('report').id,'model');
+});
 test('old URLs select the confirmed route and obsolete report return markers are discarded',()=>{assert.equal(returnMarker('report'),'mural-05:model');assert.equal(returnMatchesCase('mural-05:report','model'),false);assert.equal(returnMatchesCase('mural-05:model','model'),true);});
