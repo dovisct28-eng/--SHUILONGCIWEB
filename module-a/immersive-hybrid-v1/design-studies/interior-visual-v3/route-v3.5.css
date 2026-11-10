@@ -5,6 +5,7 @@ body[data-variant=v35] .reading-head h1{font-size:38px;margin-top:6px}
 body[data-variant=v35] .reading-foot{padding-top:16px;gap:24px}
 body[data-variant=v35] .reading-lead{font-size:21px}
 body[data-variant=v35] #continue-tour{justify-self:end;font-size:13px;max-width:100%}
+body[data-variant=v35] .observation>#detail-continue-tour{margin-top:14px}
 body[data-variant=v35] .quiet-return{grid-row:5}
 body[data-variant=v35] #second-wall-label,body[data-variant=v35] #rear-wall-label{transform:translateY(-100%);font-family:'Microsoft YaHei','PingFang SC',sans-serif;color:rgba(193,195,186,.65)}
 body[data-variant=v35] #minimap{width:auto;max-width:220px;max-height:80px}

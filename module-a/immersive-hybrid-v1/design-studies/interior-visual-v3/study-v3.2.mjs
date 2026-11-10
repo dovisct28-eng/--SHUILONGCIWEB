@@ -15,6 +15,7 @@ import {OBSERVATIONS_BY_MURAL,fitImage,clampTransform,regionTransform,visibleRec
 import {installStudyLayers} from './surface-layer.mjs';
 const $=s=>document.querySelector(s),frame=$('#space'),body=document.body;
 const variant35=body.dataset.variant==='v35';
+const detailContinue=$('#detail-continue-tour');
 const selectedCase=routeCase(variant35?new URLSearchParams(location.search).get('layout'):'model');body.dataset.routeCase=selectedCase.id;
 body.dataset.dev=String(!variant35||new URLSearchParams(location.search).has('debug'));
 const variant33=['v33','v34','v35'].includes(body.dataset.variant);let rearGallery=null;
@@ -27,7 +28,7 @@ const spatialStops=['gate-interior','stage-turn','corridor-3d','corridor-hybrid'
 const regionViewport=()=>$('#detail-viewport').getBoundingClientRect();
 const motion=()=>$('#reduced').checked||matchMedia('(prefers-reduced-motion:reduce)').matches;
 function message(text){$('#message').textContent=text;$('#message').hidden=!text;}
-function setBusy(value){value=value||initializing;busy=value;$('#continue-tour').disabled=value||!ready;body.dataset.busy=String(value);body.dataset.ready=String(ready&&!initializing);for(const button of document.querySelectorAll('.chapters button,#back,#forward,#direction,#compare,#replay-discovery,#motion-check,#route-layout,#detail-open,#wall-return,#stops button'))button.disabled=value||!ready||(activeMural>0&&(['replay-discovery','motion-check'].includes(button.id)||button.closest('#stops')));}
+function setBusy(value){value=value||initializing;busy=value;$('#continue-tour').disabled=value||!ready;body.dataset.busy=String(value);body.dataset.ready=String(ready&&!initializing);for(const button of document.querySelectorAll('.chapters button,#back,#forward,#direction,#compare,#replay-discovery,#motion-check,#route-layout,#detail-open,#detail-continue-tour,#wall-return,#stops button'))button.disabled=value||!ready||(activeMural>0&&(['replay-discovery','motion-check'].includes(button.id)||button.closest('#stops')));}
 function paintView(next){delete body.dataset.readingExit;body.dataset.reducedMotion=String(motion());view=next;body.dataset.view=next;for(const b of document.querySelectorAll('.chapters button')){if(b.dataset.view===next)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');}$('#spatial').hidden=!['A','B'].includes(next);$('#reading').hidden=next!=='C';$('#detail').hidden=next!=='D';$('#spatial-title').textContent=activeMural?murals[activeMural].title:(next==='B'?'第一铺壁画':'沿廊而行');$('#back').disabled=busy||!ready;$('#forward').textContent=next==='B'?'展开全幅 →':activeMural?'阅读本铺 →':position==='corridor-2_5d'?'走近壁画 →':'继续前行 →';$('#route-open').textContent=`0${activeMural+1} / 05 · 参观路线`;if(next==='D')requestAnimationFrame(()=>drawDetail(false));}
 function paintPosition(){if(activeMural){$('#location-label').textContent=`0${activeMural+1} / 05 · ${murals[activeMural].title}`;$('.rail i').style.width=`${(activeMural+1)*20}%`;return;}const stops=h?.stops??[],i=stops.findIndex(s=>s.id===h?.state);if(i>=0){position=h.state;$('#location-label').textContent=`${stops[i].label} · 01 / 05`;$('.rail i').style.width=`${(i+1)/stops.length*100}%`;}for(const b of document.querySelectorAll('#stops button'))b.setAttribute('aria-pressed',String(h?.state===b.dataset.stop));$('#diagnostics').textContent=JSON.stringify({state:h?.state,view,direction,layerError:studyApi?.layerError??null,layer:layer?.state,brightness:h?.model?.mural.state().brightness},null,2);}
 async function goSpace(stop,options){if(!h)return false;if(h.state===stop){paintPosition();return true;}if(variant35&&h.state==='overview')await prepareRouteWalls();const result=await h.go(stop,options);if(!result)throw Error(`无法到达 ${stop}`);paintPosition();return result;}
@@ -162,6 +163,7 @@ addEventListener('pagehide',e=>{if(!e.persisted){disposed=true;layer?.dispose();
 
 async function updateMuralUI(){
  const m=murals[activeMural];body.dataset.muralIndex=String(activeMural);
+ if(detailContinue)detailContinue.hidden=activeMural!==3;
  await loadMuralImages([$('#reading-image'),$('#detail-image'),$('#minimap img')],m.image,m.title);const img=$('#reading-image');setImageSize(img.naturalWidth,img.naturalHeight);
  $('#minimap svg').setAttribute('viewBox',`0 0 ${img.naturalWidth} ${img.naturalHeight}`);$('#minimap').style.aspectRatio=`${img.naturalWidth}/${img.naturalHeight}`;if(variant35)$('#minimap').style.width=Math.min(220,80*img.naturalWidth/img.naturalHeight)+'px';
  if(variant33){$('#detail .detail-head .eyebrow').textContent=`图像 0${activeMural+1} / 局部观察`;$('#reading-image').alt=m.title+'完整真实图像';$('#detail-image').alt=m.title+'，可缩放和平移查看真实细节';}
@@ -225,6 +227,7 @@ async function travelTo(index){
   paintPosition();return true;
  }catch(e){message(e.name==='MuralImageError'?e.message+'。已保留上一铺，可再次点击继续。':e.message+'。该段尚未打通，可返回上一空间。');activeMural=prior;h.model.setCamera(savedPose,{immediate:true});let restored=false;try{await updateMuralUI();if(rearGallery?.isRear(prior))await rearGallery.restore(prior);else await placeCandidate();restored=true;}catch{}wallPlane&&(wallPlane.visible=true);paintView(e.name==='MuralImageError'&&priorView==='C'&&restored?'C':'B');return false;}finally{delete body.dataset.routeTravel;setBusy(false);}
 }
+detailContinue?.addEventListener('click',()=>{if(activeMural===3&&view==='D')return travelTo(4);});
 $('#continue-tour').onclick=async()=>{
  if(activeMural<4)return travelTo(activeMural+1);
  if(busy)return;setBusy(true);
