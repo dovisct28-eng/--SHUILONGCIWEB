@@ -147,7 +147,7 @@ async function controls(p,index){
    await idle(p);run.wallMotion.push(await assertWallMotion(p));assert.equal(await p.evaluate(()=>study.activeMural),index);if(keep)await snap(p,'after-wall-'+index);await click(p,'#forward');
   }
   if(index>=2){const expectedX=(index===2?2.25:index===3?-2.25:-4.515);assert.equal(await p.evaluate(i=>study.rear.state.bindings.find(b=>b.index===i).position[0],index),expectedX);}
-  const im=await imageState(p);assert.deepEqual(im.natural,sizes[index]);assert.equal(im.fit,'contain');if(index===2||index===3)assert.ok(im.src.endsWith('/mural-0'+(index+1)+'-dng-display.webp'));assert.ok(im.x>=0&&im.y>=0&&im.x+im.width<=width+.1&&im.y+im.height<=height+.1);if(keep)await snap(p,'after-reading-'+index);
+  const im=await imageState(p);assert.deepEqual(im.natural,sizes[index]);assert.equal(im.fit,'contain');if(index===2||index===3)assert.ok(im.src.endsWith('/mural-0'+(index+1)+'-dng-warm.webp'));assert.ok(im.x>=0&&im.y>=0&&im.x+im.width<=width+.1&&im.y+im.height<=height+.1);if(keep)await snap(p,'after-reading-'+index);
   const detail=await controls(p,index);run.murals.push({index,image:im,detail});await click(p,'#wall-return');assert.equal(await p.evaluate(()=>study.view),'B');await click(p,'#forward');
  }
  if(keep)await snap(p,'after-fifth-handoff');run.recordEnd=Date.now();
