@@ -3,10 +3,10 @@ import {FIFTH_DOCK} from './route-v3.4.mjs';
 
 const scanSettings=[
  {seconds:6,standOff:1.35,span:.32,fov:55},
- {seconds:8,standOff:3.75,span:.34},
+ {seconds:8,standOff:3.75,span:.34,fov:39},
  {seconds:4,standOff:3.9,span:.34},
  {seconds:4,standOff:3.9,span:.34},
- {seconds:8,standOff:3.9,span:.34},
+ {seconds:8,standOff:3.9,span:.34,fov:42},
 ];
 const pose=(position,target)=>({position,target,fov:48});
 const at=(x,y,z,tx,tz)=>pose([x,y,z],[tx,y,tz]);

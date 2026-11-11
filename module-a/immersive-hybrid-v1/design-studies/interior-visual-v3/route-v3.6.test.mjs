@@ -27,6 +27,12 @@ for(const [index,mural] of murals.entries())test(`${mural.id} follows the image'
  assertPose(sweep.approach.sample(0),docks[index]);
  assertPose(sweep.approach.sample(1),begin);
  assertPose(end,travel.sample(0));
+ if(index===1||index===4){
+  const sweepFov=index===1?39:42;
+  for(const progress of [0,.5,1])assert.equal(sweep.scan.sample(progress).fov,sweepFov);
+  assert.ok(sweep.approach.sample(.5).fov>sweepFov&&sweep.approach.sample(.5).fov<48);
+  assert.equal(travel.sample(1).fov,48);
+ }
  assert.ok(difference(begin.position,end.position).reduce((sum,value,i)=>sum+value*right[i],0)>1.5);
  assert.ok(Math.abs(wallDistance(begin.position)-wallDistance(end.position))<1e-9);
  for(let i=0;i<=500;i++){
