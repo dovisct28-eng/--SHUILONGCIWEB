@@ -55,20 +55,59 @@ const exitPoints=[
  at(-.08,1.38,11.35,0,15.4),
  at(0,1.38,12.25,0,16.25),
  at(0,1.38,14.1,0,18.1),
- at(0,1.38,16.5,0,20.5),
+ at(0,1.38,20.3,0,24.3),
 ];
-export const EXTERIOR_POSE={...at(0,1.38,16.5,0,11.8),time:.65};
+const turnStartZ=14.1;
+const turnDuration=3000;
+const walkDuration=18200;
+const acceleration=1100;
+const settle=750;
+const smoothstep=t=>t*t*(3-2*t);
+const integratedSmoothstep=t=>t*t*t*(1-t/2);
 
-export function exteriorTurn(progress){
- const heading=Math.PI*progress;
- return {...EXTERIOR_POSE,target:[-4.7*Math.sin(heading),1.38,16.5+4.7*Math.cos(heading)]};
-}
+export const EXIT_DURATION=walkDuration+turnDuration;
+export const EXTERIOR_POSE={position:[0,1.38,20.3],target:[0,1.9,12.1],fov:54,time:.65};
 
 export function exitRail(start){
  const rail=createTourRail(3,[start,...exitPoints]);
- return {...rail,sample(progress){
+ const walkLength=rail.length-(EXTERIOR_POSE.position[2]-turnStartZ);
+ const walkSpeed=walkLength/(walkDuration-acceleration/2);
+ const turnSpeed=(EXTERIOR_POSE.position[2]-turnStartZ-walkSpeed*acceleration/2)/
+  (turnDuration-acceleration/2-settle/2);
+
+ function sample(progress){
   const pose=rail.sample(progress);
   // Match the existing doorway light as the camera moves into the exterior.
   return {...pose,time:Math.max(.65,Math.min(1,1-(pose.position[2]-12)*.078))};
- }};
+ }
+
+ function sampleExit(progress){
+  const elapsed=progress*EXIT_DURATION;
+  if(elapsed>=EXIT_DURATION)return EXTERIOR_POSE;
+  if(elapsed<=walkDuration){
+   const distance=elapsed<acceleration
+    ?walkSpeed*acceleration*integratedSmoothstep(elapsed/acceleration)
+    :walkSpeed*(elapsed-acceleration/2);
+   return sample(distance/rail.length);
+  }
+
+  // The tail of the rail is straight down the central axis. Begin yaw only
+  // after clearing the doorway, while easing the last few steps to a stop.
+  const turning=elapsed-walkDuration;
+  const ramp=Math.min(turning,acceleration);
+  const braking=Math.max(0,turning-(turnDuration-settle));
+  const distance=walkSpeed*ramp+(turnSpeed-walkSpeed)*acceleration*integratedSmoothstep(ramp/acceleration)
+   +turnSpeed*(turning-ramp-settle*integratedSmoothstep(braking/settle));
+  const pose=sample((walkLength+distance)/rail.length);
+  const blend=smoothstep(turning/turnDuration);
+  const yaw=-Math.PI*blend;
+  const reach=4+4.2*blend;
+  const [x,y,z]=pose.position;
+  return {
+   ...pose,
+   target:[x+reach*Math.sin(yaw),y+(EXTERIOR_POSE.target[1]-y)*blend,z+reach*Math.cos(yaw)],
+   fov:pose.fov+(EXTERIOR_POSE.fov-pose.fov)*blend,
+  };
+ }
+ return {...rail,sample,sampleExit};
 }

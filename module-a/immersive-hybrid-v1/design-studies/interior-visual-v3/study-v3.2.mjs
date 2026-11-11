@@ -13,7 +13,8 @@ import {EXPLORATION_URL,explorationAvailable} from '../../../navigation/explorat
 import {installInteriorFinish} from './interior-finish.mjs';
 import {OBSERVATIONS_BY_MURAL,fitImage,clampTransform,regionTransform,visibleRect,setImageSize} from './observations.mjs';
 import {installStudyLayers} from './surface-layer.mjs';
-import {EXTERIOR_POSE,exitRail,exteriorTurn,onwardRail,wallSweep} from './route-v3.6.mjs';
+import {EXIT_DURATION,EXTERIOR_POSE,exitRail,onwardRail,wallSweep} from './route-v3.6.mjs';
+import {culturePhoto,moveCulturePhoto} from './culture-transition.mjs';
 const $=s=>document.querySelector(s),frame=$('#space'),body=document.body;
 const variant35=body.dataset.variant==='v35';
 const detailContinue=$('#detail-continue-tour');
@@ -293,13 +294,12 @@ async function leaveTemple(){
   $('#location-label').textContent='走向大门';
   await animate32(420,t=>rearGallery.api.setReveal(1-t));
   rearGallery.setEnabled(false);
-  await animate32(motion()?180:19000,t=>{
-   const pose=path.sample(ease(t));
-   if(pose.position[2]>11)$('#location-label').textContent='走出水龙祠';
+  prepareCulture();
+  await animate32(EXIT_DURATION,t=>{
+   const pose=path.sampleExit(t);
+   if(pose.position[2]>12.25)$('#location-label').textContent='走出水龙祠';
    h.model.setCamera(pose,{immediate:true});
-  },true);
-  await animate32(2200,t=>h.model.setCamera(exteriorTurn(ease(t)),{immediate:true}));
-  if(!motion())await new Promise(resolve=>setTimeout(resolve,650));
+  });
   showCulture(0);
   return true;
  }catch(e){
@@ -316,32 +316,59 @@ $('#continue-tour').onclick=async()=>{
  if(busy)return;setBusy(true);
  try{if(await explorationAvailable()){sessionStorage.setItem('shuilongci-v3-return',variant35?returnMarker(selectedCase.id):'mural-05');location.assign(EXPLORATION_URL);}else message('第二铺壁画探索服务暂不可达。请启动模块 B 后重试。');}finally{setBusy(false);}
 };
+function prepareCulture(){
+ const list=$('#culture-murals');
+ if(list.children.length)return;
+ for(const [index,mural] of murals.entries()){
+  const item=document.createElement('li'),figure=document.createElement('figure'),image=document.createElement('img');
+  const caption=document.createElement('figcaption'),number=document.createElement('span');
+  const name=index===2?'第三铺 · 麒麟':index===3?'第四铺 · 盘龙':mural.title;
+  image.src=mural.image;image.alt=name;
+  image.decoding='async';
+  image.dataset.cultureMural=String(index);
+  number.textContent=String(index+1).padStart(2,'0');
+  number.setAttribute('aria-hidden','true');
+  caption.append(number,name);
+  figure.append(image,caption);item.append(figure);list.append(item);
+ }
+ for(const image of culture.querySelectorAll('.culture-reading img,.culture-full img')){
+  image.decoding='async';image.src=murals[1].image;
+ }
+}
 function showCulture(step,{focus=true}={}){
+ prepareCulture();
  cultureStep=step;
  culture.dataset.step=String(step);
  const scene=culture.querySelector(`[data-culture-scene="${step}"]`);
  for(const article of culture.querySelectorAll('article'))article.hidden=article!==scene;
- const strip=$('#culture-murals');
- if(step===0&&!strip.children.length){
-  for(const mural of murals){
-   const figure=document.createElement('figure'),image=document.createElement('img'),caption=document.createElement('figcaption');
-   image.src=mural.image;image.alt=mural.title;caption.textContent=mural.title;
-   figure.append(image,caption);strip.append(figure);
-  }
- }
- const image=scene.querySelector('[data-culture-mural]');
- if(image&&!image.hasAttribute('src'))image.src=murals[Number(image.dataset.cultureMural)].image;
+ culture.scrollTop=0;
  $('#culture-back').hidden=step===0;
  $('#culture-next').hidden=step===2;
- $('#culture-next').textContent=step===0?'看画中的仪式 →':'走近第二铺壁画 →';
+ $('#culture-next').textContent=step===0?'循着画面，走近仪式 →':'走近第二铺壁画 →';
  $('#culture-explore').hidden=step!==2;
  if(view!=='E')paintView('E');
  message('');
  if(focus)scene.querySelector('h1').focus({preventScroll:true});
+ return scene;
+}
+async function changeCulture(step){
+ if(busy||view!=='E'||step<0||step>2)return;
+ if(motion()){showCulture(step);return;}
+ const from=culturePhoto(culture.querySelector('article:not([hidden])'));
+ culture.dataset.introComplete='';
+ culture.dataset.bridging='';
+ setBusy(true);
+ try{
+  const scene=showCulture(step);
+  await moveCulturePhoto(from,culturePhoto(scene));
+ }finally{
+  delete culture.dataset.bridging;
+  setBusy(false);
+ }
 }
 if(culture){
- $('#culture-back').onclick=()=>{if(!busy&&cultureStep>0)showCulture(cultureStep-1);};
- $('#culture-next').onclick=()=>{if(!busy&&cultureStep<2)showCulture(cultureStep+1);};
+ $('#culture-back').onclick=()=>changeCulture(cultureStep-1);
+ $('#culture-next').onclick=()=>changeCulture(cultureStep+1);
  $('#culture-explore').onclick=async()=>{
   if(busy||view!=='E'||cultureStep!==2)return;
   setBusy(true);message('');
@@ -350,7 +377,10 @@ if(culture){
     history.replaceState({...history.state,[cultureHistoryKey]:true},'');
     location.assign(EXPLORATION_URL);
    }else message('第二铺壁画探索暂不可达。请启动模块 B 后重试。');
-  }finally{setBusy(false);}
+  }finally{
+   setBusy(false);
+   if(!$('#message').hidden)$('#culture-explore').focus({preventScroll:true});
+  }
  };
 }
 $('#route-open').onclick=()=>{
