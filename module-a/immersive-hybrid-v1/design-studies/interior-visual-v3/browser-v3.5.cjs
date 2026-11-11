@@ -28,6 +28,22 @@ async function observeWallMotion(p){
   };
  });
 }
+async function observeFirstWallHandoff(p){
+ await p.evaluate(()=>{
+  const runtime=study.runtime;
+  const go=runtime.go;
+  window.firstWallHandoffs=[];
+  runtime.go=(stop,options)=>{
+   if(study.activeMural===0&&runtime.state==='mural-reading'&&stop==='mural-look'){
+    firstWallHandoffs.push({
+     readingHidden:document.querySelector('#reading').hidden,
+     spaceVisible:getComputedStyle(document.querySelector('#space')).visibility==='visible',
+    });
+   }
+   return go.call(runtime,stop,options);
+  };
+ });
+}
 async function assertWallMotion(p){
  const samples=await p.evaluate(()=>wallMotion.splice(0));
  assert.ok(samples.length,'sampled the walls during spatial movement');
@@ -143,10 +159,12 @@ async function controls(p,index){
  await observeWallMotion(p);run.wallMotion=[];
  run.recordStart=Date.now();run.guided=await guidedTour(p,keep);assert.equal(await p.evaluate(()=>study.view),'C');
  for(let index=0;index<5;index++){
+  if(index===1)await observeFirstWallHandoff(p);
   if(index){if(index===4)await click(p,'#detail-open');await p.locator(index===4?'#detail-continue-tour':'#continue-tour').click();if(index===1&&!reduced){run.second=[];for(const[phase,t]of[['dark',0],['title',.3],['revealing',.55]]){await p.waitForFunction(t=>study.activeMural===1&&study.route32.progress===1&&study.route32.reveal>=t,t,{timeout:60000});if(phase==='title')assert.equal(await p.locator('#second-wall-label').evaluate(e=>!e.hidden&&getComputedStyle(e).visibility==='visible'&&+getComputedStyle(e).opacity>.1),true);run.second.push(await p.evaluate(phase=>{let s=study.runtime.model.root;while(s.parent)s=s.parent;const mesh=s.getObjectByName('V32-real-second-mural-candidate');return{phase,activeMural:study.activeMural,reveal:study.route32.reveal,texture:mesh.material.map.image.src,model:study.runtime.state,composite:study.runtime.model.mural.state(),image:document.querySelector('#reading-image').currentSrc};},phase));if(keep)await snap(p,'after-second-'+phase);}}
    if(index>=2&&!reduced){await p.waitForFunction(i=>study.activeMural===i&&study.rear.state.progress===1&&(study.rear.state.reveals[i]??0)>=.3,index,{timeout:60000});assert.equal(await p.locator('#rear-wall-label').evaluate(e=>!e.hidden&&getComputedStyle(e).visibility==='visible'&&+getComputedStyle(e).opacity>.1),true);}
    await idle(p);run.wallMotion.push(await assertWallMotion(p));assert.equal(await p.evaluate(()=>study.activeMural),index);if(keep)await snap(p,'after-wall-'+index);await click(p,'#forward');
   }
+  if(index===1)assert.deepEqual(await p.evaluate(()=>firstWallHandoffs),[{readingHidden:true,spaceVisible:true}]);
   if(index>=2){const expectedX=(index===2?2.25:index===3?-2.25:-4.515);assert.equal(await p.evaluate(i=>study.rear.state.bindings.find(b=>b.index===i).position[0],index),expectedX);}
   const im=await imageState(p);assert.deepEqual(im.natural,sizes[index]);assert.equal(im.fit,'contain');if(index===2||index===3)assert.ok(im.src.endsWith('/mural-0'+(index+1)+'-dng-warm.webp'));assert.ok(im.x>=0&&im.y>=0&&im.x+im.width<=width+.1&&im.y+im.height<=height+.1);if(keep)await snap(p,'after-reading-'+index);
   const detail=await controls(p,index);run.murals.push({index,image:im,detail});await click(p,'#wall-return');assert.equal(await p.evaluate(()=>study.view),'B');await click(p,'#forward');

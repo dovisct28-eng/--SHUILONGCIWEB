@@ -261,7 +261,11 @@ async function sweepCurrentWall(){
   }finally{$('#detail').inert=false;}
  }
  if(view==='C'){body.dataset.readingExit='true';await syncReading(false);}
- if(activeMural===0&&h.state==='mural-reading')await goSpace('mural-look');
+ if(activeMural===0&&h.state==='mural-reading'){
+  // Finish the aligned photo handoff before the live wall changes perspective.
+  paintView('B');
+  await goSpace('mural-look');
+ }
  paintView('A');
  body.dataset.routeTravel='true';
  body.dataset.tourPhase='sweep';
