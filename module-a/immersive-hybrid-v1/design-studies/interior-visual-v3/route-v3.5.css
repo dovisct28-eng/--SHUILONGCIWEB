@@ -20,3 +20,30 @@ body[data-variant=v35] .masthead{gap:18px}
 body[data-variant=v35][data-view=B] .spatial-title{opacity:0}
 @media(max-height:800px){body[data-variant=v35] #reading{inset-block:83px 20px;gap:12px}body[data-variant=v35] .reading-head h1{font-size:32px}body[data-variant=v35] .reading-foot{padding-top:12px}}
 @media(min-width:1700px){body[data-variant=v35] #reading{inset-block:110px 30px;gap:20px}body[data-variant=v35] .reading-head h1{font-size:44px}}
+
+body[data-view=E] .chapters,body[data-view=E] #route-open,body[data-view=E] #options-open{visibility:hidden}
+#culture{position:absolute;inset:0;display:grid;grid-template-rows:minmax(0,1fr) auto;gap:24px;padding:clamp(88px,13vh,140px) var(--gutter) clamp(28px,6vh,68px);overflow:auto;background:linear-gradient(105deg,#141b1ef5,#182125df 52%,#12191ce8)}
+#culture[data-step="0"]{background:linear-gradient(180deg,#11191bda 0%,#131a1cc7 42%,#11181af5 90%)}
+.culture-scene{display:grid;grid-template-rows:auto minmax(0,1fr);align-content:center;gap:clamp(24px,5vh,60px);min-height:0;animation:culture-enter 480ms ease-out both}
+.culture-copy{max-width:48ch}
+.culture-copy h1{font-size:clamp(34px,4vw,64px);line-height:1.22;margin:0 0 24px;letter-spacing:.035em}
+.culture-copy p{font-size:clamp(15px,1.35vw,21px);line-height:1.9;color:#e5dccb}
+#culture-murals{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(8px,1.6vw,30px);align-items:end;align-self:center}
+#culture-murals figure{min-width:0}
+#culture-murals img{display:block;width:100%;aspect-ratio:1.9;object-fit:contain}
+#culture-murals figcaption{border-top:1px solid var(--line);padding-top:12px;margin-top:9px;font-size:13px;color:var(--muted)}
+.culture-pair{grid-template-columns:minmax(290px,1fr) minmax(0,1.75fr);grid-template-rows:minmax(0,1fr);align-items:center;gap:clamp(28px,5vw,95px)}
+.culture-image{min-width:0;display:grid;align-items:center}
+.culture-image img{width:100%;max-height:52vh;object-fit:contain}
+.culture-ritual{overflow:hidden}
+.culture-ritual img{height:clamp(200px,37vh,360px);object-fit:cover;object-position:left center}
+.culture-controls{display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--line);padding-top:12px}
+.culture-controls .text-action{margin-inline-start:auto}
+@keyframes culture-enter{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.culture-scene{animation:none}}
+@media(max-width:700px){
+ #culture{display:block;padding:88px 22px 28px}
+ .culture-scene{grid-template-columns:1fr;grid-template-rows:auto auto;gap:20px}
+ #culture-murals{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .culture-controls{margin-top:28px}
+}

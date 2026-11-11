@@ -14,11 +14,29 @@ export const REAR_POINTS=[
  [REAR_DOCKS[2],at([-1.9,1.85,-11.1],[-3.2,1.85,-14]),REAR_DOCKS[3]],
 ];
 function cubic(points,i,t,key){const a=points[i][key],b=points[i+1][key],p=points[Math.max(0,i-1)][key],q=points[Math.min(points.length-1,i+2)][key];return a.map((x,k)=>{const m=.32*(b[k]-p[k]),n=.32*(q[k]-x),t2=t*t,t3=t2*t;return (2*t3-3*t2+1)*x+(t3-2*t2+t)*m+(-2*t3+3*t2)*b[k]+(t3-t2)*n;});}
-export function createRearRail(segment,overridePoints){
+export function createRearRail(segment,overridePoints,{angularGaze=false}={}){
  const points=Array.isArray(overridePoints)?overridePoints:REAR_POINTS[segment];if(!points)throw Error('Unknown rear route');
+ let lastYaw;
+ const gazePoints=angularGaze?points.map(({position,target})=>{
+  const [x,y,z]=target.map((v,i)=>v-position[i]);
+  let yaw=Math.atan2(x,z);
+  if(lastYaw!==undefined)yaw=lastYaw+Math.atan2(Math.sin(yaw-lastYaw),Math.cos(yaw-lastYaw));
+  lastYaw=yaw;
+  return {gaze:[yaw,Math.atan2(y,Math.hypot(x,z)),Math.hypot(x,y,z)]};
+ }):null;
  const table=[{distance:0,i:0,t:0}];let length=0,previous=points[0].position;
  for(let i=0;i<points.length-1;i++)for(let j=1;j<=100;j++){const t=j/100,p=cubic(points,i,t,'position');length+=Math.hypot(...p.map((x,k)=>x-previous[k]));previous=p;table.push({distance:length,i,t});}
- function sample(progress){const u=Math.max(0,Math.min(1,progress)),d=u*length;let lo=0,hi=table.length-1;while(lo<hi){const m=(lo+hi)>>1;if(table[m].distance<d)lo=m+1;else hi=m;}const b=table[lo],a=table[Math.max(0,lo-1)],f=(d-a.distance)/(b.distance-a.distance||1),t=a.i===b.i?a.t+(b.t-a.t)*f:b.t*f;return {position:cubic(points,b.i,t,'position'),target:cubic(points,b.i,t,'target'),fov:48,time:3,...(segment<2?{route33:(segment+u)/2}:{}),rearSegment:segment,rearProgress:u};}
+ function sample(progress){const u=Math.max(0,Math.min(1,progress)),d=u*length;let lo=0,hi=table.length-1;while(lo<hi){const m=(lo+hi)>>1;if(table[m].distance<d)lo=m+1;else hi=m;}const b=table[lo],a=table[Math.max(0,lo-1)],f=(d-a.distance)/(b.distance-a.distance||1),t=a.i===b.i?a.t+(b.t-a.t)*f:b.t*f;
+  const position=cubic(points,b.i,t,'position');
+  let target=cubic(points,b.i,t,'target');
+  if(gazePoints&&u>0&&u<1){
+   const [yaw,pitch,distance]=cubic(gazePoints,b.i,t,'gaze'),horizontal=distance*Math.cos(pitch);
+   target=[position[0]+horizontal*Math.sin(yaw),position[1]+distance*Math.sin(pitch),position[2]+horizontal*Math.cos(yaw)];
+  }
+  const aFov=points[b.i].fov,bFov=points[b.i+1].fov;
+  const fov=gazePoints?aFov+(bFov-aFov)*smooth(0,1,t):48;
+  return {position,target,fov,time:3,...(segment<2?{route33:(segment+u)/2}:{}),rearSegment:segment,rearProgress:u};
+ }
  return {length,points,sample,validate(runtime){const hits=[];let a=sample(0);for(let i=1;i<=400;i++){const b=sample(i/400),h=segmentHits(runtime,a.position,b.position,.18);if(h.length)hits.push({segment,progress:i/400,hits:h});a=b;}return hits;}};
 }
 export const REAR_REFERENCES=[{name:'turn-third',segment:0,progress:.42},{name:'third-dock',segment:0,progress:1},{name:'rear-crossing',segment:1,progress:.5},{name:'fourth-dock',segment:1,progress:1}];

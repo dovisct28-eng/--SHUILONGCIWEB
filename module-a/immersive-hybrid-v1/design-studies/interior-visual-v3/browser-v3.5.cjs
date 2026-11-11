@@ -18,7 +18,7 @@ async function observeWallMotion(p){
   model.setCamera=(pose,options)=>{
    setCamera(pose,options);
    const progress=pose.route12??pose.rearProgress;
-   if(study.view!=='A'||!study.busy||document.body.dataset.routeTravel!=='true'||progress<=.1||progress>=.9||progress==null)return;
+   if(study.view!=='A'||!study.busy||document.body.dataset.routeTravel!=='true'||document.body.dataset.tourPhase==='sweep'||progress<=.1||progress>=.9||progress==null)return;
    const first=model.mural.state();
    const walls=names.map(name=>{
     const mesh=scene.getObjectByName(name);
@@ -111,7 +111,7 @@ async function stressTour(p){
 }
 async function controls(p,index){
  await click(p,'#detail-open');assert.equal(await p.evaluate(()=>study.detail.zoom),index>=2?1.15:1);
- assert.equal(await p.locator('#detail-continue-tour').isVisible(),index===3);
+ assert.equal(await p.locator('#detail-continue-tour').isVisible(),true);
  const observations=await p.evaluate(()=>study.observations);
  assert.equal(observations.length,[3,3,0,0,3][index]);
  for(const region of observations){

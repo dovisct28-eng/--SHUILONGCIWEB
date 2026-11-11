@@ -17,7 +17,7 @@ export function connectExploration(stage) {
   notice.className = 'exploration-notice';
   notice.hidden = true;
   notice.setAttribute('role', 'alert');
-  notice.innerHTML = '<p>《入将图》服务未启动或暂时不可达。请在 Mural-Exhibition 目录运行 node server.js，再点击入口重试。</p><button type="button">关闭</button>';
+  notice.innerHTML = '<p>第二铺壁画探索服务未启动或暂时不可达。请在 Mural-Exhibition 目录运行 node server.js，再点击入口重试。</p><button type="button">关闭</button>';
   stage.append(notice);
   let busy = false, source = null;
   function close() {

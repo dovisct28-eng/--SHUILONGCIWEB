@@ -6,6 +6,7 @@ export const ROUTE_CASES=Object.freeze({model:{id:'model',label:'参观路线',s
 export const routeCase=()=>ROUTE_CASES.model;
 export function applyRouteCase(murals){
  const result=structuredClone(murals);
+ result[1].title='第二铺壁画';
  // Preserve photographs and provenance together, and retain the spatial stops.
  for(const key of ['image','source','registration','note','approvedDisplay']) [result[2][key],result[3][key]]=[result[3][key],result[2][key]];
  // Formal replacements use the confirmed stop numbering, independent of the old asset names.
