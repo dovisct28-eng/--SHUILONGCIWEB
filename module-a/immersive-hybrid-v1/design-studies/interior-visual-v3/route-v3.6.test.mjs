@@ -38,6 +38,9 @@ for(const [index,mural] of murals.entries())test(`${mural.id} follows the image'
   assert.deepEqual(travel.sample(1).position,EXTERIOR_POSE.position);
   assertPose(exteriorTurn(1),EXTERIOR_POSE);
   const samples=Array.from({length:401},(_,i)=>travel.sample(i/400));
+  assert.ok(samples.filter(({position:[,,z]})=>z>=-9.4&&z<11.35).every(({position:[x]})=>x<0));
+  const gallery=samples.filter(({position:[,,z]})=>z>=0&&z<=9.5);
+  assert.ok(gallery.length>0&&gallery.every(({position:[x]})=>x<-3.3));
   const threshold=samples.find(sample=>sample.position[2]>11.93);
   assert.ok(Math.abs(threshold.position[0])<.5);
   assert.ok(threshold.position[1]<1.615);
