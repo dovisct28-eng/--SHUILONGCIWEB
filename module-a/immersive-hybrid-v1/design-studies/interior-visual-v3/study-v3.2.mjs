@@ -393,7 +393,7 @@ function showCulture(step,{focus=true}={}){
  $('#culture-back').hidden=step===0;
  $('#culture-next').hidden=step===2;
  $('#culture-next').textContent=step===0?'循着画面，走近仪式 →':'回看第二铺全幅 →';
- $('#culture-explore-entry').hidden=step!==2;
+ $('#culture-explore').hidden=step!==2;
  if(view!=='E')paintView('E');
  message('');
  if(focus)scene.querySelector('h1').focus({preventScroll:true});

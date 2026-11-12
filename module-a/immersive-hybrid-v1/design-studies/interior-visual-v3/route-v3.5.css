@@ -218,9 +218,6 @@ body:is([data-view=E],[data-tour-phase=exit]) :is(.chapters,#route-open,#options
 .culture-note-text {display:block;margin-top:4px;font-size:14px;color:var(--culture-copy)}
 .culture-note[data-highlighted] strong {color:var(--culture-gold)}
 .culture-pin[data-highlighted] {background:#f3dfb7;color:#28211a;outline:1px solid #f3dfb7;outline-offset:3px}
-#culture-explore-entry {display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:6px clamp(12px,2vw,24px);margin-inline-start:auto}
-#culture-explore-entry .text-action {margin-inline-start:0}
-#culture-explore-hint {font-size:13px;line-height:1.5;color:var(--culture-copy)}
 
 .culture-enter {display:grid;grid-template-rows:minmax(0,1fr) auto;align-content:center;gap:clamp(20px,4vh,54px)}
 .culture-full {align-self:center}
