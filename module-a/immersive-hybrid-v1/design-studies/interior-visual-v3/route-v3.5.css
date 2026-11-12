@@ -122,22 +122,22 @@ body:is([data-view=E],[data-tour-phase=exit]) :is(.chapters,#route-open,#options
 .culture-overview .culture-copy h1 {animation-delay:40ms}
 .culture-overview .culture-copy p:not(.culture-act) {animation-delay:110ms}
 #culture-murals {
- display:grid;
- grid-template-columns:repeat(5,minmax(0,1fr));
- gap:clamp(12px,1.55vw,30px);
+ --mural-gap:clamp(12px,1.55vw,30px);
+ --mural-height-cap:clamp(42px,9vh,98px);
+ --mural-height:min(var(--mural-height-cap),calc((100cqi - 4 * var(--mural-gap)) / var(--mural-ratio-sum)));
+ container-type:inline-size;
+ display:flex;
+ justify-content:center;
+ gap:var(--mural-gap);
  padding:0;
  margin:0;
  list-style:none;
 }
-#culture-murals li {min-width:0;animation:culture-picture-in 320ms ease-out calc(140ms + 42ms * var(--mural-order)) both}
-#culture-murals figure {
- display:grid;
- grid-template-rows:clamp(64px,9vh,104px) auto;
- align-items:end;
-}
+#culture-murals li {flex:none;animation:culture-picture-in 320ms ease-out calc(140ms + 42ms * var(--mural-order)) both}
 #culture-murals img {
- max-inline-size:100%;
- max-block-size:100%;
+ inline-size:auto;
+ block-size:var(--mural-height);
+ object-fit:contain;
 }
 #culture-murals figcaption {
  display:flex;
@@ -146,6 +146,7 @@ body:is([data-view=E],[data-tour-phase=exit]) :is(.chapters,#route-open,#options
  padding-block-start:9px;
  color:var(--culture-copy);
  font-size:13px;
+ line-height:1.4;
  white-space:nowrap;
 }
 #culture-murals figcaption span {color:var(--culture-gold);font-variant-numeric:tabular-nums}
@@ -240,7 +241,11 @@ body:is([data-view=E],[data-tour-phase=exit]) :is(.chapters,#route-open,#options
  #culture {display:block;padding-inline:22px}
  .culture-overview {gap:28px}
  .culture-overview .culture-copy {padding-block-end:0}
- #culture-murals {grid-template-columns:repeat(2,minmax(0,1fr))}
+ #culture-murals {
+  --mural-height:min(var(--mural-height-cap),calc((100cqi - var(--mural-gap)) / (2 * var(--mural-max-ratio))));
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+ }
  .culture-traces,.culture-reading {display:block}
  .culture-ritual {margin-block:22px}
  .culture-notes {grid-template-columns:1fr;gap:12px}

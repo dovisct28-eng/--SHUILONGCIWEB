@@ -321,19 +321,24 @@ $('#continue-tour').onclick=async()=>{
 function prepareCulture(){
  const list=$('#culture-murals');
  if(list.children.length)return;
+ const ratios=[];
  for(const [index,mural] of murals.entries()){
   const item=document.createElement('li'),figure=document.createElement('figure'),image=document.createElement('img');
   const caption=document.createElement('figcaption'),number=document.createElement('span');
-  const name=index===2?'第三铺 · 麒麟':index===3?'第四铺 · 盘龙':mural.title.replace(/壁画$/,'');
+  const {width,height}=mural.formalDisplay??{width:mural.imageWidth,height:mural.imageHeight};
+  image.width=width;image.height=height;
+  ratios.push(width/height);
   item.style.setProperty('--mural-order',index);
   image.src=mural.image;image.alt='';
   image.decoding='async';
   image.dataset.cultureMural=String(index);
   number.textContent=String(index+1).padStart(2,'0');
   number.setAttribute('aria-hidden','true');
-  caption.append(number,name);
+  caption.append(number,' '+mural.title.replace(/壁画$/,''));
   figure.append(image,caption);item.append(figure);list.append(item);
  }
+ list.style.setProperty('--mural-ratio-sum',ratios.reduce((sum,ratio)=>sum+ratio,0));
+ list.style.setProperty('--mural-max-ratio',Math.max(...ratios));
  for(const image of culture.querySelectorAll('.culture-reading img,.culture-full img')){
   image.decoding='async';image.src=murals[1].image;
  }

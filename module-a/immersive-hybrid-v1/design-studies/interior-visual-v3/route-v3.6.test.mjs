@@ -65,6 +65,10 @@ test('the exit keeps advancing after the central doorway while the camera turns'
  const turn=frames.findIndex((pose,i)=>i>=door&&yaw(pose)<-.05);
  assert.ok(turn>clear,'keep looking through the central doorway until outside');
  assert.ok((turn-door)*10<1000,'begin the visible turn within a second of the threshold');
+ const panning=frames.findIndex((pose,i)=>i>=turn&&yaw(pose)<-.175);
+ assert.ok(panning>=turn&&(panning-door)*10<=800,'reach a ten-degree pan within 800 ms of the threshold');
+ const turnToRest=(frames.length-1-turn)*10;
+ assert.ok(turnToRest>=2000&&turnToRest<=2500,'complete the moving turn within the intended window');
  for(let i=door;i<frames.length-50;i++){
   const [a,b]=frames.slice(i,i+2);
   assert.ok(b.position[2]-a.position[2]>.006,'no stop during the walking-to-turn handoff');

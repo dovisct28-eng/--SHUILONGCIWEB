@@ -63,19 +63,27 @@ const exitPoints=[
 ];
 // The gate geometry ends near z=12.2. Keep the forward gaze until the
 // camera and its collision clearance are both outside.
-const turnStartZ=12.8;
-const turnDuration=3500;
-const walkDuration=17500;
+const turnStartZ=12.6;
+const turnDuration=2500;
+const walkDuration=17400;
 const walkRamp=1100;
-const turnRamp=650;
-const settle=1050;
-const smoothstep=t=>t*t*(3-2*t);
+const turnRamp=840;
+const settle=800;
+const gazeRamp=250;
+const gazeSettle=710;
 const integratedSmoothstep=t=>t*t*t*(1-t/2);
 const exteriorLook=EXTERIOR_POSE.target.map((value,i)=>value-EXTERIOR_POSE.position[i]);
 const exteriorYaw=Math.atan2(exteriorLook[0],exteriorLook[2]);
 const exteriorReach=Math.hypot(exteriorLook[0],exteriorLook[2]);
 
 export const EXIT_DURATION=walkDuration+turnDuration;
+
+function rampedTravel(elapsed,duration,startSpeed,speed,ramp,settle){
+ const accelerating=Math.min(elapsed,ramp);
+ const braking=Math.max(0,elapsed-(duration-settle));
+ return startSpeed*accelerating+(speed-startSpeed)*ramp*integratedSmoothstep(accelerating/ramp)
+  +speed*(elapsed-accelerating-settle*integratedSmoothstep(braking/settle));
+}
 
 export function exitRail(start){
  const rail=createTourRail(3,[start,...exitPoints]);
@@ -103,12 +111,11 @@ export function exitRail(start){
   // Integrate the speed ramps on the same rail so the end of the walk,
   // the moving turn and the stop share a continuous velocity.
   const turning=elapsed-walkDuration;
-  const ramp=Math.min(turning,turnRamp);
-  const braking=Math.max(0,turning-(turnDuration-settle));
-  const distance=walkSpeed*ramp+(turnSpeed-walkSpeed)*turnRamp*integratedSmoothstep(ramp/turnRamp)
-   +turnSpeed*(turning-ramp-settle*integratedSmoothstep(braking/settle));
+  const distance=rampedTravel(turning,turnDuration,walkSpeed,turnSpeed,turnRamp,settle);
   const pose=sample((walkLength+distance)/rail.length);
-  const blend=smoothstep(turning/turnDuration);
+  // Build angular speed sooner, then leave a longer ease-out for the facade.
+  const blend=rampedTravel(turning,turnDuration,0,1,gazeRamp,gazeSettle)
+   /(turnDuration-(gazeRamp+gazeSettle)/2);
   const [x,y,z]=pose.position;
   const [dx,dy,dz]=pose.target.map((value,i)=>value-pose.position[i]);
   const yaw=Math.atan2(dx,dz)*(1-blend)+exteriorYaw*blend;
