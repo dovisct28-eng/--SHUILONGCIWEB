@@ -21,6 +21,29 @@ body[data-variant=v35][data-view=B] .spatial-title{opacity:0}
 @media(max-height:800px){body[data-variant=v35] #reading{inset-block:83px 20px;gap:12px}body[data-variant=v35] .reading-head h1{font-size:32px}body[data-variant=v35] .reading-foot{padding-top:12px}}
 @media(min-width:1700px){body[data-variant=v35] #reading{inset-block:110px 30px;gap:20px}body[data-variant=v35] .reading-head h1{font-size:44px}}
 
+/* The second mural has six observations. Other murals keep the single column. */
+body[data-variant=v35][data-mural-index="1"] #observations {
+ display:grid;
+ grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:4px 12px;
+}
+body[data-variant=v35][data-mural-index="1"] #observations button {
+ align-items:center;
+ gap:8px;
+ min-height:44px;
+ padding:7px 5px;
+}
+body[data-variant=v35][data-mural-index="1"] #observations button[aria-pressed=true] {
+ background:#d8b99012;
+}
+body[data-variant=v35][data-mural-index="1"] .observation>.eyebrow {margin-bottom:16px}
+body[data-variant=v35][data-mural-index="1"] .observation-note {margin-top:clamp(18px,3.2vh,34px)}
+@media (min-width:1051px) {
+ body[data-variant=v35][data-mural-index="1"] .detail-layout {
+  grid-template-columns:minmax(0,1fr) clamp(276px,21vw,326px);
+ }
+}
+
 body:is([data-view=E],[data-tour-phase=exit]) :is(.chapters,#route-open,#options-open){visibility:hidden}
 
 #culture {

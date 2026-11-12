@@ -9,9 +9,12 @@ export const OBSERVATIONS=Object.freeze([
 export const OBSERVATIONS_BY_MURAL=Object.freeze({
  'mural-01':OBSERVATIONS,
  'mural-02':[
-  {id:'temple-and-table',number:'01',title:'祠门与桌案',center:[.095,.78],zoom:3.8,copy:'画面左下绘有带匾额的水龙祠，门前可见一张红色桌案。几个人物聚在案旁，这一带可读作设醮场景。'},
-  {id:'cloud-bands',number:'02',title:'云纹分层',center:[.355,.675],zoom:3.6,copy:'顺着卷曲的云纹，可以看到人物和马匹分布在不同高度。把视线拉回全幅，云纹将人马分隔成上、中、下三层。'},
-  {id:'upper-flags',number:'03',title:'上层旗幡',center:[.504,.078],zoom:4,copy:'上层人物头顶伸出多根旗杆，红色和深色旗面相间。可沿旗杆往下看，观察旗幡如何穿插在人马之间。'},
+  {id:'upper-carriages',number:'01',title:'辇车与随行',center:[.847,.22],zoom:3.9,copy:'画面右上可见带车轮的辇车，人物坐在车上，周围有人随行。沿着车轮和车前的牵引线，可以辨认相邻的几组车驾。'},
+  {id:'upper-flags',number:'02',title:'旗幡与祈愿',center:[.552,.235],zoom:4,copy:'上层队伍的旗幡高高举起。两位穿红衣的人手里分别捧着「风调雨顺」和「五谷丰登」条幅。'},
+  {id:'riders-and-fans',number:'03',title:'骑乘与执扇',center:[.449,.49],zoom:4,copy:'中层人群中，有人骑马，有人步行。几把展开的折扇贴近人物胸前，与身后的长杆方向不同。'},
+  {id:'cloud-bands',number:'04',title:'云纹分层',center:[.346,.5],zoom:3.15,copy:'红色卷云在人物与马匹之间成带展开。顺着云纹向上、向下看，可以分辨画中不同高度的队伍。'},
+  {id:'lower-procession',number:'05',title:'下层仪仗',center:[.229,.805],zoom:4,copy:'下层队伍里，几面窄幡伸出人群，长杆斜穿过马匹与步行的人。沿这一层向左看，便能找到祠前的桌案。'},
+  {id:'temple-and-table',number:'06',title:'祠门与桌案',center:[.095,.78],zoom:3.8,copy:'画面左下是带匾额的水龙祠。门前红色桌案摆着器物与供品，案旁几个人手捧碟盘，朝向前来的队伍。'},
  ],
  'mural-05':[
   {id:'raised-implements',number:'01',title:'举起长兵器的人物',center:[.908,.186],zoom:4,copy:'照片右上部仍能看到数道长杆斜向伸出。沿着长杆往下看，可以辨认出人物举起或向前持握长兵器的姿态。'},

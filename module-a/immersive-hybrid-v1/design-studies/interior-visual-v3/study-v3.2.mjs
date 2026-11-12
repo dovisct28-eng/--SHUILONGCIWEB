@@ -113,7 +113,7 @@ function paintObservationButtons(){
   list.append(button);
  }
  list.hidden=!regions.length;
- $('.observation>.eyebrow').textContent=regions.length?'图像观察 / '+(regions.length===2?'两':'三')+'处线索':'图像观察 / 自由查看';
+ $('.observation>.eyebrow').textContent=regions.length?`图像观察 / ${regions.length} 处线索`:'图像观察 / 自由查看';
 }
 $('#zoom-in').onclick=()=>zoom(.25);$('#zoom-out').onclick=()=>zoom(-.25);$('#reset').onclick=$('#whole-image').onclick=reset;
 const viewport=$('#detail-viewport');viewport.addEventListener('pointerdown',e=>{if(e.button!==0)return;detailAnimation?.cancel();drawDetail(false);drag={x:e.clientX,y:e.clientY,initial:{...detail}};viewport.setPointerCapture(e.pointerId);});viewport.addEventListener('pointermove',e=>{if(!drag)return;detail.x=drag.initial.x+e.clientX-drag.x;detail.y=drag.initial.y+e.clientY-drag.y;drawDetail(false);});for(const event of ['pointerup','pointercancel','lostpointercapture'])viewport.addEventListener(event,()=>drag=null);
