@@ -295,11 +295,13 @@ async function leaveTemple(){
   await animate32(420,t=>rearGallery.api.setReveal(1-t));
   rearGallery.setEnabled(false);
   prepareCulture();
+  const locationLabel=$('#location-label');
   await animate32(EXIT_DURATION,t=>{
    const pose=path.sampleExit(t);
-   if(pose.position[2]>12.25)$('#location-label').textContent='走出水龙祠';
+   if(pose.position[2]>12.25&&locationLabel.textContent!=='走出水龙祠')locationLabel.textContent='走出水龙祠';
    h.model.setCamera(pose,{immediate:true});
   });
+  // The final camera sample is already rendered in the live iframe.
   showCulture(0);
   return true;
  }catch(e){
@@ -322,8 +324,9 @@ function prepareCulture(){
  for(const [index,mural] of murals.entries()){
   const item=document.createElement('li'),figure=document.createElement('figure'),image=document.createElement('img');
   const caption=document.createElement('figcaption'),number=document.createElement('span');
-  const name=index===2?'第三铺 · 麒麟':index===3?'第四铺 · 盘龙':mural.title;
-  image.src=mural.image;image.alt=name;
+  const name=index===2?'第三铺 · 麒麟':index===3?'第四铺 · 盘龙':mural.title.replace(/壁画$/,'');
+  item.style.setProperty('--mural-order',index);
+  image.src=mural.image;image.alt='';
   image.decoding='async';
   image.dataset.cultureMural=String(index);
   number.textContent=String(index+1).padStart(2,'0');

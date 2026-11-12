@@ -41,6 +41,9 @@ export function onwardRail(index,start){
  return createTourRail(Math.max(0,index-1),[start,...connections[index]]);
 }
 
+const exteriorZ=23;
+export const EXTERIOR_POSE={position:[0,1.38,exteriorZ],target:[-3.1,1.08,12.1],fov:64,time:.65};
+
 const exitPoints=[
  // Continue from the fifth mural along the west gallery. Cross toward
  // the central doorway only after clearing the stage.
@@ -55,25 +58,31 @@ const exitPoints=[
  at(-.08,1.38,11.35,0,15.4),
  at(0,1.38,12.25,0,16.25),
  at(0,1.38,14.1,0,18.1),
- at(0,1.38,20.3,0,24.3),
+ at(0,1.38,17.5,0,21.5),
+ at(0,1.38,exteriorZ,0,exteriorZ+4),
 ];
-const turnStartZ=14.1;
-const turnDuration=3000;
-const walkDuration=18200;
-const acceleration=1100;
-const settle=750;
+// The gate geometry ends near z=12.2. Keep the forward gaze until the
+// camera and its collision clearance are both outside.
+const turnStartZ=12.8;
+const turnDuration=3500;
+const walkDuration=17500;
+const walkRamp=1100;
+const turnRamp=650;
+const settle=1050;
 const smoothstep=t=>t*t*(3-2*t);
 const integratedSmoothstep=t=>t*t*t*(1-t/2);
+const exteriorLook=EXTERIOR_POSE.target.map((value,i)=>value-EXTERIOR_POSE.position[i]);
+const exteriorYaw=Math.atan2(exteriorLook[0],exteriorLook[2]);
+const exteriorReach=Math.hypot(exteriorLook[0],exteriorLook[2]);
 
 export const EXIT_DURATION=walkDuration+turnDuration;
-export const EXTERIOR_POSE={position:[0,1.38,20.3],target:[0,1.9,12.1],fov:54,time:.65};
 
 export function exitRail(start){
  const rail=createTourRail(3,[start,...exitPoints]);
- const walkLength=rail.length-(EXTERIOR_POSE.position[2]-turnStartZ);
- const walkSpeed=walkLength/(walkDuration-acceleration/2);
- const turnSpeed=(EXTERIOR_POSE.position[2]-turnStartZ-walkSpeed*acceleration/2)/
-  (turnDuration-acceleration/2-settle/2);
+ const turnLength=exteriorZ-turnStartZ;
+ const walkLength=rail.length-turnLength;
+ const walkSpeed=walkLength/(walkDuration-walkRamp/2);
+ const turnSpeed=(turnLength-walkSpeed*turnRamp/2)/(turnDuration-turnRamp/2-settle/2);
 
  function sample(progress){
   const pose=rail.sample(progress);
@@ -85,27 +94,28 @@ export function exitRail(start){
   const elapsed=progress*EXIT_DURATION;
   if(elapsed>=EXIT_DURATION)return EXTERIOR_POSE;
   if(elapsed<=walkDuration){
-   const distance=elapsed<acceleration
-    ?walkSpeed*acceleration*integratedSmoothstep(elapsed/acceleration)
-    :walkSpeed*(elapsed-acceleration/2);
+   const distance=elapsed<walkRamp
+    ?walkSpeed*walkRamp*integratedSmoothstep(elapsed/walkRamp)
+    :walkSpeed*(elapsed-walkRamp/2);
    return sample(distance/rail.length);
   }
 
-  // The tail of the rail is straight down the central axis. Begin yaw only
-  // after clearing the doorway, while easing the last few steps to a stop.
+  // Integrate the speed ramps on the same rail so the end of the walk,
+  // the moving turn and the stop share a continuous velocity.
   const turning=elapsed-walkDuration;
-  const ramp=Math.min(turning,acceleration);
+  const ramp=Math.min(turning,turnRamp);
   const braking=Math.max(0,turning-(turnDuration-settle));
-  const distance=walkSpeed*ramp+(turnSpeed-walkSpeed)*acceleration*integratedSmoothstep(ramp/acceleration)
+  const distance=walkSpeed*ramp+(turnSpeed-walkSpeed)*turnRamp*integratedSmoothstep(ramp/turnRamp)
    +turnSpeed*(turning-ramp-settle*integratedSmoothstep(braking/settle));
   const pose=sample((walkLength+distance)/rail.length);
   const blend=smoothstep(turning/turnDuration);
-  const yaw=-Math.PI*blend;
-  const reach=4+4.2*blend;
   const [x,y,z]=pose.position;
+  const [dx,dy,dz]=pose.target.map((value,i)=>value-pose.position[i]);
+  const yaw=Math.atan2(dx,dz)*(1-blend)+exteriorYaw*blend;
+  const reach=Math.hypot(dx,dz)*(1-blend)+exteriorReach*blend;
   return {
    ...pose,
-   target:[x+reach*Math.sin(yaw),y+(EXTERIOR_POSE.target[1]-y)*blend,z+reach*Math.cos(yaw)],
+   target:[x+reach*Math.sin(yaw),y+dy*(1-blend)+exteriorLook[1]*blend,z+reach*Math.cos(yaw)],
    fov:pose.fov+(EXTERIOR_POSE.fov-pose.fov)*blend,
   };
  }

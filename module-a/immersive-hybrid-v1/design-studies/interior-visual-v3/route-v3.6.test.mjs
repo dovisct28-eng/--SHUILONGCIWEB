@@ -61,19 +61,23 @@ test('the exit keeps advancing after the central doorway while the camera turns'
  const yaw=({position,target})=>Math.atan2(target[0]-position[0],target[2]-position[2]);
  const frames=Array.from({length:EXIT_DURATION/10+1},(_,i)=>sampleExit(i*10/EXIT_DURATION));
  const door=frames.findIndex(({position:[,,z]})=>z>11.93);
- const turn=frames.findIndex(pose=>pose.position[2]>12.25&&yaw(pose)<-.03);
- assert.ok(turn>door);
- assert.ok(frames[turn].position[2]>=14.1);
+ const clear=frames.findIndex(({position:[,,z]})=>z>=12.4);
+ const turn=frames.findIndex((pose,i)=>i>=door&&yaw(pose)<-.05);
+ assert.ok(turn>clear,'keep looking through the central doorway until outside');
+ assert.ok((turn-door)*10<1000,'begin the visible turn within a second of the threshold');
  for(let i=door;i<frames.length-50;i++){
   const [a,b]=frames.slice(i,i+2);
   assert.ok(b.position[2]-a.position[2]>.006,'no stop during the walking-to-turn handoff');
   assert.ok(Math.abs(a.position[0])<.5,'stay on the central axis outside');
   assert.ok(Math.abs(a.position[1]-b.position[1])<.004);
-  assert.ok(Math.abs(a.fov-b.fov)<.04);
+  assert.ok(Math.abs(a.fov-b.fov)<.08);
  }
  for(let i=turn;i<frames.length-1;i++){
   const [a,b]=frames.slice(i,i+2),delta=yaw(b)-yaw(a);
   assert.ok(Math.abs(Math.atan2(Math.sin(delta),Math.cos(delta)))<.017);
   assert.ok(Math.sin(delta)<=1e-9,'keep turning in the same direction across ±π');
  }
+ const steps=frames.slice(door).map(({position},i)=>norm(difference(position,frames[door+i-1].position)));
+ assert.ok(steps.every((step,i)=>i===0||Math.abs(step-steps[i-1])<.002),'no sudden change in exterior speed');
+ assert.ok(steps.at(-1)<.0001,'ease all the way to rest');
 });

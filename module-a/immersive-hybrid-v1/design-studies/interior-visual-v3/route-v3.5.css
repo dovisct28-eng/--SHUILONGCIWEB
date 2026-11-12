@@ -74,6 +74,13 @@ body:is([data-view=E],[data-tour-phase=exit]) :is(.chapters,#route-open,#options
  animation:culture-shade 680ms ease-out both;
 }
 #culture::after {background:linear-gradient(150deg,#251f1a,#181613 68%);transition:opacity 680ms ease}
+#culture[data-step="0"] {grid-template-rows:minmax(min-content,1fr) auto}
+#culture[data-step="0"]::before {
+ background:
+  linear-gradient(90deg,#191714b8 0%,#19171462 26%,transparent 43%),
+  linear-gradient(0deg,#191714 0%,#191714db 13%,#1917148c 26%,transparent 39%);
+ animation-duration:420ms;
+}
 #culture[data-step="0"]::after {opacity:0}
 .culture-scene {min-height:0;min-width:0}
 .culture-scene img {display:block}
@@ -92,32 +99,51 @@ body:is([data-view=E],[data-tour-phase=exit]) :is(.chapters,#route-open,#options
 .culture-copy h1:focus {outline:none}
 .culture-copy p:not(.culture-act) {font-size:clamp(15px,1.13vw,19px);line-height:1.75;color:var(--culture-copy)}
 
-.culture-overview {display:grid;grid-template-rows:auto 1fr;gap:clamp(12px,3vh,36px)}
-.culture-overview .culture-copy {max-width:360px;text-shadow:0 2px 15px #191714}
-.culture-overview .culture-copy p:not(.culture-act) {margin-top:16px;max-width:30ch}
-#culture-murals {
- align-self:end;
+.culture-overview {
  display:grid;
- grid-template-columns:repeat(24,minmax(0,1fr));
- grid-template-rows:auto auto;
- align-items:end;
- gap:clamp(12px,2vh,24px) 10px;
+ grid-template-rows:minmax(min-content,1fr) auto;
+ gap:clamp(20px,4vh,44px);
+}
+.culture-overview .culture-copy {
+ align-self:center;
+ max-inline-size:clamp(280px,27vw,480px);
+ padding-block-end:clamp(12px,4vh,44px);
+ text-shadow:0 2px 15px #191714;
+ animation:none;
+}
+.culture-overview h1 {font-size:clamp(38px,min(4.3vw,7.5vh),82px);line-height:1.12}
+.culture-overview h1 span {display:block;white-space:nowrap}
+.culture-overview .culture-copy p:not(.culture-act) {
+ margin-top:clamp(16px,2.5vh,28px);
+ max-inline-size:24em;
+ text-wrap:pretty;
+}
+.culture-overview .culture-copy > * {animation:culture-copy-in 420ms ease-out both}
+.culture-overview .culture-copy h1 {animation-delay:40ms}
+.culture-overview .culture-copy p:not(.culture-act) {animation-delay:110ms}
+#culture-murals {
+ display:grid;
+ grid-template-columns:repeat(5,minmax(0,1fr));
+ gap:clamp(12px,1.55vw,30px);
  padding:0;
  margin:0;
  list-style:none;
 }
-#culture-murals li {min-width:0;animation:culture-picture-in 760ms ease-out both;animation-delay:var(--appear)}
-#culture-murals li:nth-child(1) {grid-area:1 / 1 / 2 / 7;--appear:100ms}
-#culture-murals li:nth-child(2) {grid-area:2 / 2 / 3 / 10;--appear:170ms}
-#culture-murals li:nth-child(3) {grid-area:1 / 16 / 2 / 20;--appear:240ms}
-#culture-murals li:nth-child(4) {grid-area:1 / 20 / 2 / 25;--appear:310ms;align-self:center}
-#culture-murals li:nth-child(5) {grid-area:2 / 18 / 3 / 25;--appear:380ms}
-#culture-murals img {width:100%;height:auto}
+#culture-murals li {min-width:0;animation:culture-picture-in 320ms ease-out calc(140ms + 42ms * var(--mural-order)) both}
+#culture-murals figure {
+ display:grid;
+ grid-template-rows:clamp(64px,9vh,104px) auto;
+ align-items:end;
+}
+#culture-murals img {
+ max-inline-size:100%;
+ max-block-size:100%;
+}
 #culture-murals figcaption {
  display:flex;
  gap:10px;
  align-items:baseline;
- padding-block-start:7px;
+ padding-block-start:9px;
  color:var(--culture-copy);
  font-size:13px;
  white-space:nowrap;
@@ -201,20 +227,20 @@ body:is([data-view=E],[data-tour-phase=exit]) :is(.chapters,#route-open,#options
 .culture-controls .text-action {margin-inline-start:auto;color:#f5dfbe;border-color:#d8b9909c}
 .culture-controls .text-action:hover {color:#fff4e0;border-color:#fff4e0}
 .culture-image-bridge {position:fixed;z-index:12;pointer-events:none;transform-origin:top left}
-#culture[data-intro-complete] #culture-murals li {animation:none}
+#culture[data-intro-complete] #culture-murals li,
+#culture[data-intro-complete] .culture-overview .culture-copy > * {animation:none}
 #culture[data-bridging] .culture-ritual::after,#culture[data-bridging] .culture-pin {visibility:hidden}
 @keyframes culture-shade {from{opacity:0}to{opacity:1}}
 @keyframes culture-copy-in {from{opacity:0}to{opacity:1}}
-@keyframes culture-picture-in {from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@keyframes culture-picture-in {from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
 @media (max-height:810px) {
  .culture-ritual {width:min(100%,900px)}
- #culture-murals li:nth-child(3) {grid-column:17 / 20}
 }
 @media (max-width:800px) {
  #culture {display:block;padding-inline:22px}
  .culture-overview {gap:28px}
+ .culture-overview .culture-copy {padding-block-end:0}
  #culture-murals {grid-template-columns:repeat(2,minmax(0,1fr))}
- #culture-murals li:nth-child(n) {grid-area:auto}
  .culture-traces,.culture-reading {display:block}
  .culture-ritual {margin-block:22px}
  .culture-notes {grid-template-columns:1fr;gap:12px}
