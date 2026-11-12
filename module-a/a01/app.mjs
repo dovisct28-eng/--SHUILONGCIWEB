@@ -53,7 +53,13 @@ a03Styles.href = new URL('../a03/styles.css', import.meta.url).href;
 document.head.append(a03Styles);
 const directorStyles=document.createElement('link');directorStyles.rel='stylesheet';directorStyles.href=new URL('../visual-director/styles.css',import.meta.url).href;document.head.append(directorStyles);
 document.title = formalGallery?'水龙祠｜壁画数字交互体验':'水龙祠｜历史三铺叙事';
-if(formalGallery)document.querySelector('[data-a02-description] span:last-child').textContent='从建筑位置，走近五铺真实壁画';
+if(formalGallery){
+  document.documentElement.dataset.formalGallery='true';
+  stage.querySelector('.scroll-hint').textContent='向下滚动，走近水龙祠';
+  const description=document.querySelector('[data-a02-description]');
+  description.firstElementChild.textContent='五铺壁画散落在水龙祠的不同墙面。';
+  description.lastElementChild.textContent='从建筑位置，走近五铺真实壁画';
+}
 
 debug.hidden = !debugEnabled;
 
@@ -115,7 +121,7 @@ function render() {
   stage.style.setProperty('--a02-opacity', (a02Pass<4?0:room.heading) * (1 - theme.takeover));
   a02.setAttribute('aria-hidden', String(spatial.heading === 0 || theme.takeover === 1));
   const focused = spatial.emphasis > .5;
-  a02Status.textContent = formalGallery&&focused ? '五铺壁画 · 空间总览' : focused ? '第五幅 · 第一幅 · 第二幅' : spatial.markers > 0 ? '五幅壁画 · 空间总览' : '建筑空间';
+  a02Status.textContent = focused&&!formalGallery ? '第五幅 · 第一幅 · 第二幅' : spatial.markers > 0 ? (formalGallery?'五铺壁画 · 空间总览':'五幅壁画 · 空间总览') : '建筑空间';
   a02Hint.textContent = spatial.phase === 'a02-reading' ? '继续向下，走近壁画' : '';
   const phase = theme.phase !== 'a02' ? theme.phase : spatial.phase === 'a01' ? state.phase : spatial.phase;
   stage.dataset.phase = phase;
@@ -127,12 +133,14 @@ function render() {
   document.body.dataset.readingProgress = state.reading.toFixed(4);
   document.body.dataset.transitionProgress = state.transition.toFixed(4);
   if (!hasLines) setModelProgress(state.growth);
+  const overviewCutaway=formalGallery&&a02Pass>=5?smooth(spatial.markers)*(1-smooth(Math.min(1,Math.max(0,(screens-9.82)/.38)))):0;
   modelFrame.contentWindow?.shuilongTemple?.setMuralPresentation({
+    useMuralMeasure:formalGallery,
     visibility: a02Pass<5?0:smooth(spatial.markers), emphasis: smooth(spatial.emphasis), coreIds: formalGallery?['mural-01','mural-02','mural-03','mural-04','mural-05']:CORE_MURALS,
     revealWalls: screens>10.2 ? 0 : smooth(spatial.revealWalls)*(1-room.weight),
     spatialLabels: screens>10.2 ? 0 : undefined,
     roofTransparent: screens>10.2 ? false : undefined,
-    selectiveCutaway:screens>10.2,
+    selectiveCutaway:screens>10.2||overviewCutaway>0,
     secondaryVisibility: theme.secondary,
     architecturalWeight:room.weight,
     themeWeight:theme.composition,
@@ -143,7 +151,7 @@ function render() {
   renderInkScene(screens,reducedMotion.matches);
   roomField(a02Pass>=3?screens:0,themeVisual.field,themeVisual.environment);
   lastScreens = screens;
-  modelFrame.contentWindow?.shuilongTemple?.setVisualProgress?.(screens);
+  modelFrame.contentWindow?.shuilongTemple?.setVisualProgress?.(screens,{overviewCutaway});
   renderA04(screens);
   const titleRects=[stage.querySelector('.a03-title__in'),stage.querySelector('.a03-title__out')].map(e=>e.getBoundingClientRect());
   api?.setPosterTitleRects?.(normalizeTitleRects(titleRects,modelFrame.getBoundingClientRect()));

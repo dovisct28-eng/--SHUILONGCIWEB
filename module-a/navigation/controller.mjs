@@ -13,8 +13,8 @@ export function createNavigation(stage, requestRender,{galleryHref=null}={}) {
   nav.innerHTML = `<a class="story-nav__brand" href="#hero" data-jump="hero" aria-label="水龙祠，返回开屏稳定画面"><span>水龙祠</span><small>壁画数字交互体验</small></a>
     <div class="story-nav__tools"><div class="story-nav__progress" aria-hidden="true">${STAGES.map(() => '<i></i>').join('')}</div><span class="story-nav__position story-nav__sr"></span>
     <button class="story-nav__toggle" type="button" aria-label="章节目录" aria-expanded="false" aria-controls="story-directory">目录<span aria-hidden="true">＋</span></button></div>
-    <div class="story-nav__directory" id="story-directory" hidden inert aria-hidden="true"><a href="#space" data-jump="space">建筑空间</a><a href="#theme" data-jump="theme">壁画空间</a><a href="#guide" data-jump="guide">图像导读</a><a href="http://localhost:3000/index.html" data-exploration>进入探索 <span aria-hidden="true">↗</span></a></div>`;
-  if(galleryHref){const link=nav.querySelector('[data-jump=guide]');link.href=galleryHref;link.removeAttribute('data-jump');link.textContent='五铺壁画';}
+    <div class="story-nav__directory" id="story-directory" hidden inert aria-hidden="true"><a href="#space" data-jump="space">建筑空间</a><a href="#theme" data-jump="theme">壁画空间</a><a href="#guide" data-jump="guide">图像导读</a><a href="http://localhost:3000/index.html" data-exploration>${galleryHref?'直接探索第二铺':'进入探索'} <span aria-hidden="true">↗</span></a></div>`;
+  if(galleryHref){const link=nav.querySelector('[data-jump=guide]');link.href=galleryHref;link.removeAttribute('data-jump');link.textContent='五铺壁画展厅';}
   stage.append(nav);
   const toggle = nav.querySelector('button');
   const brand = nav.querySelector('.story-nav__brand');

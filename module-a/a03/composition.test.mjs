@@ -37,8 +37,9 @@ test('reading colors retain contrast and add no autonomous clock or render resou
 });
 test('poster retains one accessible heading, approved copy and real WebGL layering',()=>{
  const view=fs.readFileSync(new URL('./view.mjs',import.meta.url),'utf8'),css=fs.readFileSync(new URL('./styles.css',import.meta.url),'utf8');
- assert.equal((view.match(/<h2 /g)||[]).length,1);assert.match(view,/aria-label="出庙 · 入庙"/);assert.match(view,/data-a03-kicker>出兵入将/);
- for(const copy of ['一出一入，三铺壁画分列两侧，留下了一场迎神赛会的始与终。','队伍从庙中出发，又重新归来；出行、仪仗与祭祀，被共同留在水龙祠的墙上。'])assert.ok(view.includes(copy));
+ assert.equal((view.match(/<h2 /g)||[]).length,1);assert.match(view,/aria-label="出庙 · 入庙"/);assert.match(view,/data-a03-kicker>水龙祠壁画/);
+ for(const copy of ['壁画分布在不同墙面，建筑为观看提供空间线索。','从墙面位置走近图像，观察人物、持物与画面的排列。'])assert.ok(view.includes(copy));
+ assert.match(view,/link.textContent='进入五铺壁画展厅'/);
  assert.doesNotMatch(view,/研究视角|李济民|第122页|从出行与归来|03 \//);
  assert.match(css,/\.a03-poster[^}]+z-index:2/);assert.match(css,/\.a03 \{[^}]+z-index:5/);assert.doesNotMatch(css,/linear-gradient\(90deg|mask-image|animation:|backdrop-filter/);
 });

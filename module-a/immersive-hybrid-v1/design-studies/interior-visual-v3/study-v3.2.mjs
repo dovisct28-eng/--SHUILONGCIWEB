@@ -34,9 +34,38 @@ const spatialStops=['gate-interior','stage-turn','corridor-3d','corridor-hybrid'
 const regionViewport=()=>$('#detail-viewport').getBoundingClientRect();
 const motion=()=>$('#reduced').checked||matchMedia('(prefers-reduced-motion:reduce)').matches;
 function message(text){$('#message').textContent=text;$('#message').hidden=!text;}
-function setBusy(value){value=value||initializing;busy=value;$('#continue-tour').disabled=value||!ready;body.dataset.busy=String(value);body.dataset.ready=String(ready&&!initializing);for(const button of document.querySelectorAll('.chapters button,#back,#forward,#direction,#compare,#replay-discovery,#motion-check,#route-layout,#detail-open,#detail-continue-tour,#wall-return,#stops button,.culture-controls button'))button.disabled=value||!ready||(activeMural>0&&(['replay-discovery','motion-check'].includes(button.id)||button.closest('#stops')));}
-function paintView(next){delete body.dataset.readingExit;body.dataset.reducedMotion=String(motion());view=next;body.dataset.view=next;for(const b of document.querySelectorAll('.chapters button')){if(b.dataset.view===next)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');}$('#spatial').hidden=!['A','B'].includes(next);$('#reading').hidden=next!=='C';$('#detail').hidden=next!=='D';if(culture)culture.hidden=next!=='E';$('#spatial-title').textContent=activeMural?murals[activeMural].title:(next==='B'?'第一铺壁画':'沿廊而行');$('#back').disabled=busy||!ready;$('#forward').textContent=next==='B'?'展开全幅 →':activeMural?'阅读本铺 →':position==='corridor-2_5d'?'走近壁画 →':'继续前行 →';$('#route-open').textContent=`0${activeMural+1} / 05 · 参观路线`;if(next==='D')requestAnimationFrame(()=>drawDetail(false));}
-function paintPosition(){if(activeMural){$('#location-label').textContent=`0${activeMural+1} / 05 · ${murals[activeMural].title}`;$('.rail i').style.width=`${(activeMural+1)*20}%`;return;}const stops=h?.stops??[],i=stops.findIndex(s=>s.id===h?.state);if(i>=0){position=h.state;$('#location-label').textContent=`${stops[i].label} · 01 / 05`;$('.rail i').style.width=`${(i+1)/stops.length*100}%`;}for(const b of document.querySelectorAll('#stops button'))b.setAttribute('aria-pressed',String(h?.state===b.dataset.stop));$('#diagnostics').textContent=JSON.stringify({state:h?.state,view,direction,layerError:studyApi?.layerError??null,layer:layer?.state,brightness:h?.model?.mural.state().brightness},null,2);}
+function setBusy(value){value=value||initializing;busy=value;$('#continue-tour').disabled=value||!ready;body.dataset.busy=String(value);body.dataset.ready=String(ready&&!initializing);for(const button of document.querySelectorAll('.chapters button,#back,#forward,#direction,#compare,#replay-discovery,#motion-check,#route-layout,#detail-open,#detail-continue-tour,#wall-return,#stops button,.culture-controls button,.culture-note'))button.disabled=value||!ready||(activeMural>0&&(['replay-discovery','motion-check'].includes(button.id)||button.closest('#stops')));}
+const beforeFirstMural=()=>variant35&&activeMural===0&&!['mural-look','mural-reading'].includes(h?.state);
+const currentSpace=()=>h?.stops.find(stop=>stop.id===h.state);
+function paintWayfinding(){
+ const entering=beforeFirstMural(),overview=entering&&h?.state==='overview';
+ const routeNumber=`0${activeMural+1} / 05`;
+ if(variant35){
+  body.dataset.routeStage=overview?'overview':entering?'entry':'murals';
+  $('#spatial-kicker').textContent=entering?'五铺壁画 · 参观入口':`${routeNumber} · ${murals[activeMural].wall}`;
+  $('#spatial-note').textContent=entering?(overview?'从中央大门进入，沿右侧走廊抵达第一铺。':'前往右侧走廊，观看第一铺壁画。'):'循着墙面，走近壁画。';
+ }
+ $('#spatial-title').textContent=entering?(currentSpace()?.label??'建筑总览'):activeMural?murals[activeMural].title:(view==='B'?'第一铺壁画':'沿廊而行');
+ $('#forward').textContent=overview?'从大门进入 →':view==='B'?'展开全幅 →':activeMural?'阅读本铺 →':position==='corridor-2_5d'?'走近壁画 →':'继续前行 →';
+ $('#route-open').textContent=entering?'参观路线':`${routeNumber} · 参观路线`;
+ if($('#route-dialog').open)paintRouteDialogLocation();
+}
+function paintView(next){delete body.dataset.readingExit;body.dataset.reducedMotion=String(motion());view=next;body.dataset.view=next;for(const b of document.querySelectorAll('.chapters button')){if(b.dataset.view===next)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');}$('#spatial').hidden=!['A','B'].includes(next);$('#reading').hidden=next!=='C';$('#detail').hidden=next!=='D';if(culture)culture.hidden=next!=='E';paintWayfinding();$('#back').disabled=busy||!ready;if(next==='D')requestAnimationFrame(()=>drawDetail(false));}
+function paintPosition(){
+ const stops=h?.stops??[],i=stops.findIndex(s=>s.id===h?.state);
+ if(!activeMural&&i>=0)position=h.state;
+ if(variant35)paintWayfinding();
+ if(activeMural||(variant35&&!beforeFirstMural())){
+  $('#location-label').textContent=`0${activeMural+1} / 05 · ${murals[activeMural].title}`;
+  $('.rail i').style.width=`${(activeMural+1)*20}%`;
+  if(activeMural)return;
+ }else if(i>=0){
+  $('#location-label').textContent=variant35?stops[i].label:`${stops[i].label} · 01 / 05`;
+  $('.rail i').style.width=variant35?`${i/stops.length*20}%`:`${(i+1)/stops.length*100}%`;
+ }
+ for(const b of document.querySelectorAll('#stops button'))b.setAttribute('aria-pressed',String(h?.state===b.dataset.stop));
+ $('#diagnostics').textContent=JSON.stringify({state:h?.state,view,direction,layerError:studyApi?.layerError??null,layer:layer?.state,brightness:h?.model?.mural.state().brightness},null,2);
+}
 async function goSpace(stop,options){if(!h)return false;if(h.state===stop){paintPosition();return true;}if(variant35&&h.state==='overview')await prepareRouteWalls();const result=await h.go(stop,options);if(!result)throw Error(`无法到达 ${stop}`);paintPosition();return result;}
 async function syncReading(enter){if(rearGallery?.isRear(activeMural))return rearGallery.readingBridge(enter);if(activeMural===1)return secondReadingBridge(enter);if(activeMural)return;
  const image=$('#reading-image');await image.decode();const q=h.model.mural.state().readingCorners,rect=image.getBoundingClientRect(),fit=fitImage(rect.width,rect.height),target={left:rect.left+(rect.width-fit.width)/2,top:rect.top+(rect.height-fit.height)/2,width:fit.width,height:fit.height};
@@ -61,11 +90,12 @@ async function navigate(next,{replay=false}={}){if(!ready||busy||view==='E')retu
   if(view==='C'){body.dataset.readingExit='true';await syncReading(false);}paintView('A');await goSpace(position);
  }paintPosition();if(next==='D')$('#detail-viewport').focus({preventScroll:true});else if(next==='C'&&view==='C')$('#detail-open').focus({preventScroll:true});return true;
  }catch(e){message(`预览未能完成：${e.message}。可打开预览选项切换原始模型。`);return false;}finally{setBusy(false);}}
-async function nextSpace(dir){if(!ready||busy)return;if(activeMural){if(dir<0)return travelTo(activeMural-1);return navigate(view==='B'?'C':'B');}if(view==='B')return navigate(dir<0?'A':'C');if(dir>0&&position==='corridor-2_5d')return navigate('B',{replay:true});const stops=h.stops.map(s=>s.id),i=stops.indexOf(position),next=stops[Math.max(0,Math.min(stops.length-1,i+dir))];setBusy(true);try{await goSpace(next);paintView('A');}catch(e){message(e.message);}finally{setBusy(false);}}
+async function nextSpace(dir){if(!ready||busy)return;if(dir>0&&canStartGuidedTour())return startGuidedTour();if(activeMural){if(dir<0)return travelTo(activeMural-1);return navigate(view==='B'?'C':'B');}if(view==='B')return navigate(dir<0?'A':'C');if(dir>0&&position==='corridor-2_5d')return navigate('B',{replay:true});const stops=h.stops.map(s=>s.id),i=stops.indexOf(position),next=stops[Math.max(0,Math.min(stops.length-1,i+dir))];setBusy(true);try{await goSpace(next);paintView('A');}catch(e){message(e.message);}finally{setBusy(false);}}
 function canStartGuidedTour(){return variant35&&ready&&!busy&&!h.busy&&view==='A'&&activeMural===0&&h.state==='overview';}
 async function startGuidedTour(){
  if(!canStartGuidedTour())return;
  setBusy(true);message('');
+ $('#location-label').textContent='正在前往第一铺';
  try{
   await goSpace('corridor-2_5d',{guided:true});
   await goSpace('mural-look',{wallOnly:true});
@@ -129,10 +159,7 @@ addEventListener('keydown',e=>{
  if(e.target.closest('button,input,select,summary,a,dialog,#detail-viewport,#minimap')||!['A','B'].includes(view))return;
  if(['ArrowDown','ArrowRight'].includes(e.key)){
   e.preventDefault();
-  if(variant35&&e.key==='ArrowDown'){
-   if(e.repeat)return;
-   if(canStartGuidedTour()){startGuidedTour();return;}
-  }
+  if(variant35&&e.repeat)return;
   nextSpace(1);
  }
  if(['ArrowUp','ArrowLeft'].includes(e.key)){e.preventDefault();nextSpace(-1);}
@@ -153,7 +180,6 @@ addEventListener('wheel',e=>{
  // One standard wheel notch, including the usual three line-mode units.
  if(Math.abs(wheel)<(guided?40:75))return;
  const dir=Math.sign(wheel);wheel=0;
- if(guided){startGuidedTour();return;}
  wheelQuiet=now+650;
  nextSpace(dir).finally(()=>{wheelQuiet=performance.now()+400;});
 },{passive:true});
@@ -366,8 +392,8 @@ function showCulture(step,{focus=true}={}){
  culture.scrollTop=0;
  $('#culture-back').hidden=step===0;
  $('#culture-next').hidden=step===2;
- $('#culture-next').textContent=step===0?'循着画面，走近仪式 →':'走近第二铺壁画 →';
- $('#culture-explore').hidden=step!==2;
+ $('#culture-next').textContent=step===0?'循着画面，走近仪式 →':'回看第二铺全幅 →';
+ $('#culture-explore-entry').hidden=step!==2;
  if(view!=='E')paintView('E');
  message('');
  if(focus)scene.querySelector('h1').focus({preventScroll:true});
@@ -389,6 +415,29 @@ async function changeCulture(step){
  }
 }
 if(culture){
+ const notes=Array.from(culture.querySelectorAll('[data-culture-note]'));
+ const pins=Array.from(culture.querySelectorAll('[data-culture-pin]'));
+ let selected,hovered,focused;
+ function highlightTrace(){
+  const active=hovered??focused??selected;
+  for(const note of notes)note.toggleAttribute('data-highlighted',note===active);
+  for(const pin of pins)pin.toggleAttribute('data-highlighted',pin.dataset.culturePin===active?.dataset.cultureNote);
+ }
+ for(const note of notes){
+  note.addEventListener('pointerenter',e=>{if(e.pointerType!=='touch'){hovered=note;highlightTrace();}});
+  note.addEventListener('pointerleave',()=>{if(hovered===note)hovered=undefined;highlightTrace();});
+  note.addEventListener('focus',()=>{
+   focused=note.matches(':focus-visible')?note:undefined;
+   if(focused)hovered=undefined;
+   highlightTrace();
+  });
+  note.addEventListener('blur',()=>{focused=undefined;highlightTrace();});
+  note.addEventListener('click',()=>{
+   selected=selected===note?undefined:note;
+   for(const item of notes)item.setAttribute('aria-pressed',String(item===selected));
+   highlightTrace();
+  });
+ }
  $('#culture-back').onclick=()=>changeCulture(cultureStep-1);
  $('#culture-next').onclick=()=>changeCulture(cultureStep+1);
  $('#culture-explore').onclick=async()=>{
@@ -405,8 +454,18 @@ if(culture){
   }
  };
 }
+function paintRouteDialogLocation(){
+ const location=$('#route-current-location');
+ if(!location)return;
+ const entering=beforeFirstMural();
+ location.textContent='当前位置 · '+(entering?(currentSpace()?.label??'建筑总览'):murals[activeMural].title);
+ for(const [i,item] of Array.from($('#route-list').children).entries()){
+  if(!entering&&i===activeMural)item.setAttribute('aria-current','location');
+  else item.removeAttribute('aria-current');
+ }
+}
 $('#route-open').onclick=()=>{
- const list=$('#route-list');list.replaceChildren();for(const m of murals){const li=document.createElement('li');li.textContent=`${m.title} · ${m.wall}`;list.append(li);}if(variant35)$('#route-case-note').textContent=selectedCase.summary+'。';$('#route-dialog').showModal();
+ const list=$('#route-list');list.replaceChildren();for(const m of murals){const li=document.createElement('li');li.textContent=`${m.title} · ${m.wall}`;list.append(li);}if(variant35)$('#route-case-note').textContent=selectedCase.summary+'。';paintRouteDialogLocation();$('#route-dialog').showModal();
 };
 $('#route-close').onclick=()=>$('#route-dialog').close();
 addEventListener('pageshow',e=>{

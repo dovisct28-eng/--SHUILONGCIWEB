@@ -23,10 +23,12 @@ export function layoutLabels(points, width, height) {
 
 export function createMuralPresentation(pins, svg) {
   let visibility = 0, emphasis = 0, secondary = 1, roomWeight=0, themeWeight=0, fifthWeight=0, markerFocus=0, core = new Set();
-  let lastFifth='',themeLayout=null;
+  let lastFifth='',themeLayout=null,useMuralMeasure=false;
+  const labelFor=(p,useMeasure=useMuralMeasure)=>useMeasure?p.m.label.replace('幅','铺'):p.m.label;
   const clamp = n => Math.max(0, Math.min(1, Number(n) || 0));
   return {
-    set({ visibility: v = 0, emphasis: e = 0, coreIds = [], secondaryVisibility = 1, architecturalWeight=0, themeWeight:t=0, fifthWeight:f=0, markerFocus:m=0, themeLayout:l=null } = {}) {
+    set({ visibility: v = 0, emphasis: e = 0, coreIds = [], secondaryVisibility = 1, architecturalWeight=0, themeWeight:t=0, fifthWeight:f=0, markerFocus:m=0, themeLayout:l=null, useMuralMeasure:measure=false } = {}) {
+      useMuralMeasure=measure;
       themeLayout=l===null?null:clamp(l);
       markerFocus=clamp(m);
       themeWeight=clamp(t);fifthWeight=clamp(f);
@@ -36,7 +38,7 @@ export function createMuralPresentation(pins, svg) {
       document.body.classList.toggle('narrative-markers', visibility > 0);
       for (const p of pins) {
         p.button.tabIndex = -1;
-        p.button.setAttribute('aria-label', p.m.label + '，模型示意位置');
+        p.button.setAttribute('aria-label', labelFor(p) + '，模型示意位置');
         p.button.setAttribute('aria-hidden', String(visibility === 0 || (!core.has(p.m.id) && secondary === 0)));
       }
     },
@@ -65,9 +67,9 @@ export function createMuralPresentation(pins, svg) {
         p.button.style.color = roomWeight>.001?'#d8d2c5':isCore ? '#d8d2c5' : '#c6c9c2';
         p.button.style.fontWeight = isCore && emphasis > .5 ? '500' : '400';
         p.button.dataset.core = String(isCore);
-        const labelMode=themeActive?'theme':roomWeight>.001?'room':'legacy';
+        const labelMode=themeActive?'theme':roomWeight>.001?(useMuralMeasure?'overview':'room'):'legacy';
         if(p.button.dataset.labelMode!==labelMode||(labelMode!=='legacy'&&p.button.childElementCount===0)){
-          if(labelMode!=='legacy'){p.button.replaceChildren();const number=document.createElement('span');number.textContent=circled[p.m.id];number.style.cssText=`color:${isCore?palette.accent:'#a0a39c'};font-size:19px;margin-right:7px`;p.button.append(number,document.createTextNode(labelMode==='theme'?p.m.label.replace('幅','铺'):p.m.label));}
+          if(labelMode!=='legacy'){p.button.replaceChildren();const number=document.createElement('span');number.textContent=circled[p.m.id];number.style.cssText=`color:${isCore?palette.accent:'#a0a39c'};font-size:19px;margin-right:7px`;p.button.append(number,document.createTextNode(labelFor(p,labelMode==='theme'||labelMode==='overview')));}
           else p.button.textContent=p.m.label;
           p.button.dataset.labelMode=labelMode;
         }

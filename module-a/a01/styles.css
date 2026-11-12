@@ -16,6 +16,8 @@ h1{margin:0 0 20px;font-family:"A01 Serif","Songti SC",SimSun,serif;font-size:cl
 .copy p{max-width:360px;margin:0;color:var(--a01-secondary);font-size:18px;line-height:1.85;letter-spacing:.01em;text-wrap:pretty}
 .scroll-hint{position:absolute;z-index:6;left:50%;bottom:26px;transform:translateX(-50%);opacity:var(--hint-opacity);color:var(--a01-secondary);font-family:"A01 Sans","Microsoft YaHei","PingFang SC",system-ui,sans-serif;font-size:13px;line-height:1.5;letter-spacing:.05em}
 .scroll-hint::after{content:"";display:block;width:1px;height:22px;margin:12px auto 0;background:#747970}
+html[data-formal-gallery="true"] .scroll-hint{color:#c7c2b7;white-space:nowrap}
+html[data-formal-gallery="true"] .scroll-hint::after{width:7px;height:7px;margin:11px auto 5px;background:none;border-right:1px solid #c9b69a;border-bottom:1px solid #c9b69a;transform:rotate(45deg)}
 .debug{position:fixed;z-index:20;left:12px;bottom:12px;padding:7px 10px;border:1px solid #aaa;background:rgba(255,255,255,.82);color:#444;font:12px/1.4 ui-monospace,monospace}
 @media(max-width:1100px){.copy{left:5%;width:30vw}h1{font-size:72px}.eyebrow{font-size:13px}.theme{font-size:26px}.copy p{max-width:300px;font-size:17px}}
 @media(max-height:800px) and (min-width:761px){.eyebrow{margin-bottom:20px}h1{margin-bottom:16px}.theme{margin-bottom:24px}.scroll-hint{bottom:20px}}

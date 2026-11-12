@@ -12,7 +12,20 @@ export function createA03View(stage,{galleryHref=null}={}) {
     <p class="a03-reading-hint" data-a03-reading-hint>继续向下，从第五铺开始走近壁画</p>
     <div class="a03-handoff" data-a03-handoff><p>从第五铺出发</p></div>
     <p class="a03-end" data-a03-end>继续向下，观看空间路线 · 向上滚动可回看</p>`;
-  if(galleryHref){const hint=section.querySelector('[data-a03-reading-hint]'),link=document.createElement('a');link.className='a03-reading-hint';link.dataset.a03ReadingHint='';link.href=galleryHref;link.textContent='进入水龙祠 · 观看五铺壁画 →';hint.replaceWith(link);}
+  if(galleryHref){
+    section.classList.add('a03--gallery');
+    const hint=section.querySelector('[data-a03-reading-hint]');
+    const link=document.createElement('a');
+    link.className='a03-reading-hint';
+    link.dataset.a03ReadingHint='';
+    link.href=galleryHref;
+    link.textContent='进入五铺壁画展厅';
+    const arrow=document.createElement('span');
+    arrow.setAttribute('aria-hidden','true');
+    arrow.textContent='→';
+    link.append(arrow);
+    hint.replaceWith(link);
+  }
   stage.append(section);
   const groups=[[poster,'title'],[section.querySelector('[data-a03-kicker]'),'kicker'],[section.querySelector('[data-a03-copy]'),'text'],[section.querySelector('[data-a03-reading-hint]'),'hint'],[section.querySelector('[data-a03-handoff]'),'handoff'],[section.querySelector('[data-a03-end]'),'handoff']];
   return state=>{

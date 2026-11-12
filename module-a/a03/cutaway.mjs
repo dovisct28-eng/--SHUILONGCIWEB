@@ -44,12 +44,12 @@ export function createA03Cutaway(root){
     }
   }));
   const allRoofs=[...hall,...galleries,...preserved];
-  let state={active:false};
+  let state={active:false},overviewOpen=false;
   const roof=(entry,opacity)=>{const {mesh}=entry,m=mesh.material;mesh.visible=opacity>.001;
     const soft=opacity>.001&&opacity<.999;if(m.transparent!==soft){m.transparent=soft;m.needsUpdate=true;}
     m.opacity=opacity;m.depthWrite=!soft;mesh.castShadow=entry.shadow&&opacity>.999;};
   return {
-    apply(screens,reduced=false,tour=null){
+    apply(screens,reduced=false,tour=null,overviewCutaway=0){
       const local=screens-10.2,active=local>0&&local<=3.002;
       const still=reduced&&active&&local>.55&&local<2.85;
       const main=still?1:active?ease((local-.55)/.55):0,side=still?1:active?ease((local-1.1)/.45):0;
@@ -59,17 +59,21 @@ export function createA03Cutaway(root){
       const current=movieState.active?movieState:{center:[-1.4,-11.75],half:[6.9,4.4],summary:0};
       movie.weight.value=bridge;movie.summary.value=current.summary;movie.wall.value=current.wallWeight??1;movie.x.value=current.center[0];movie.z.value=current.center[1];movie.hx.value=current.half[0];movie.hz.value=current.half[1];
       galleryReveal.value=wallReveal.value=side*(1-bridge);
+      const overview=overviewCutaway>0&&!tour&&!active;
       if(active&&!tour){
         for(const e of hall)roof(e,(1-main)*(1-handoff)+handoff);
         for(const e of galleries)roof(e,1);
         for(const e of preserved)roof(e,1);
         for(const e of galleries)e.mesh.castShadow=e.shadow&&side<.001&&handoff<.001;
+      }else if(overview||overviewOpen&&!tour){
+        for(const e of hall)roof(e,1-(overview?overviewCutaway:0));
       }else if(tour||screens>13.2){for(const e of allRoofs)roof(e,1);}
       else for(const e of allRoofs){e.mesh.visible=true;e.mesh.castShadow=e.shadow;}
+      overviewOpen=overview;
       const fullRoof=movieState.active&&movieState.summary>=.999;
       for(const e of [...hall,...galleries])if(tour)e.mesh.castShadow=e.shadow&&fullRoof;
       for(const e of walls)e.mesh.castShadow=e.shadow&&side*(1-handoff)<.001&&(!tour||fullRoof);
-      state={active,main,side,handoff,wall:wallReveal.value,
+      state={active,main,side,handoff,overview:overview?overviewCutaway:0,wall:wallReveal.value,
         preserved:preserved.map(e=>({group:e.mesh.parent.name,visible:e.mesh.visible,opacity:e.mesh.material.opacity})),
         mainRoofDrawn:hall.some(e=>e.mesh.visible),galleryCut:galleryReveal.value,movie:movieState};
     },getState:()=>state,
