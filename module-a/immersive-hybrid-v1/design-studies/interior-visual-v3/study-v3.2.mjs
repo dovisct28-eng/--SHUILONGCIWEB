@@ -11,6 +11,7 @@ import {MURAL_INTRODUCTIONS} from './mural-introductions.mjs';
 import {WAYPOINTS,segmentHits,lerpPose,routeSlice} from './route-data.mjs';
 import {EXPLORATION_URL,explorationAvailable} from '../../../navigation/exploration.mjs';
 import {installInteriorFinish} from './interior-finish.mjs';
+import {installExitGround} from './exit-ground.mjs';
 import {OBSERVATIONS_BY_MURAL,fitImage,clampTransform,regionTransform,visibleRect,setImageSize} from './observations.mjs';
 import {installStudyLayers} from './surface-layer.mjs';
 import {EXIT_DURATION,EXTERIOR_POSE,exitRail,onwardRail,wallSweep} from './route-v3.6.mjs';
@@ -27,7 +28,7 @@ const variant33=['v33','v34','v35'].includes(body.dataset.variant);let rearGalle
 let routeValidated=false;
 let routeLayer,rail,routeProgress=0,secondReveal=0,secondStatus='idle',routeError=null;
 let initializing=true,disposed=false,preparation=[];
-let finish,activeMural=0,murals=[],T,wallPlane=null,wallLabel=null;
+let finish,setExitGround,activeMural=0,murals=[],T,wallPlane=null,wallLabel=null;
 let h,w,layer,ready=false,busy=false,view='A',direction='B',compare=false,position='gate-interior',detail={zoom:1,x:0,y:0},drag=null,detailAnimation=null,activeObservation=null;
 const spatialStops=['gate-interior','stage-turn','corridor-3d','corridor-hybrid','corridor-2_5d'];
 const regionViewport=()=>$('#detail-viewport').getBoundingClientRect();
@@ -163,7 +164,14 @@ async function initialize(){murals=await (await fetch('./murals.json')).json();i
  // Instance-only light curve; original source, timing and state transitions remain intact.
  const setBrightness=h.model.mural.setBrightness.bind(h.model.mural);h.model.mural.setBrightness=(v,notify)=>{const t=Math.max(0,Math.min(1,(v-.14)/.86)),u=t*t*t*(10+t*(-15+6*t));return setBrightness(.14+.86*u,notify);};
  for(const stop of h.stops){const b=document.createElement('button');b.textContent=stop.label;b.dataset.stop=stop.id;b.onclick=async()=>{if(busy)return;setBusy(true);try{paintView('A');await goSpace(stop.id);}catch(e){message(e.message);}finally{setBusy(false);}};$('#stops').append(b);}
- T=await w.document.querySelector('#temple').contentWindow.eval("import('/module-a/immersive-hybrid-v1/vendor/three.module.js')");if(variant35)preparation=installPreparation(h.model,w.document.querySelector('#temple').contentWindow.shuilongTemple.getSharedWorldIdentity().renderer);finish=installInteriorFinish(h.model,T);if(variant33)await initializeRear33();await goSpace('overview');ready=true;await chooseDirection(direction,{initial:true});await updateMuralUI();paintView('A');paintPosition();if(culture&&history.state?.[cultureHistoryKey]){activeMural=4;h.model.setCamera(EXTERIOR_POSE,{immediate:true});showCulture(2,{focus:false});}else if(variant35&&!returnMatchesCase(sessionStorage.getItem('shuilongci-v3-return'),selectedCase.id))sessionStorage.removeItem('shuilongci-v3-return');if(view!=='E'&&sessionStorage.getItem('shuilongci-v3-return')){if(variant35){setBusy(true);try{await prepareRouteWalls();await rearGallery.restoreDock(4);await reading();sessionStorage.removeItem('shuilongci-v3-return');message('已恢复第五铺阅读。');}catch(e){message('第五铺恢复未完成，可刷新重试：'+e.message);}finally{setBusy(false);}}else{initializing=false;setBusy(false);const reduced=$('#reduced').checked;$('#reduced').checked=true;for(let i=1;i<=4;i++)if(!await travelTo(i))break;if(activeMural===4)await navigate('C');$('#reduced').checked=reduced;sessionStorage.removeItem('shuilongci-v3-return');if(activeMural===4)message('已恢复第五铺阅读。');}}initializing=false;$('#loading').hidden=true;setBusy(false);}
+ const temple=w.document.querySelector('#temple').contentWindow;
+ T=await temple.eval("import('/module-a/immersive-hybrid-v1/vendor/three.module.js')");
+ if(variant35){
+  const {renderer,environment}=temple.shuilongTemple.getSharedWorldIdentity();
+  preparation=installPreparation(h.model,renderer);
+  setExitGround=installExitGround(environment,T);
+ }
+ finish=installInteriorFinish(h.model,T);if(variant33)await initializeRear33();await goSpace('overview');ready=true;await chooseDirection(direction,{initial:true});await updateMuralUI();paintView('A');paintPosition();if(culture&&history.state?.[cultureHistoryKey]){activeMural=4;setExitGround?.(1);h.model.setCamera(EXTERIOR_POSE,{immediate:true});showCulture(2,{focus:false});}else if(variant35&&!returnMatchesCase(sessionStorage.getItem('shuilongci-v3-return'),selectedCase.id))sessionStorage.removeItem('shuilongci-v3-return');if(view!=='E'&&sessionStorage.getItem('shuilongci-v3-return')){if(variant35){setBusy(true);try{await prepareRouteWalls();await rearGallery.restoreDock(4);await reading();sessionStorage.removeItem('shuilongci-v3-return');message('已恢复第五铺阅读。');}catch(e){message('第五铺恢复未完成，可刷新重试：'+e.message);}finally{setBusy(false);}}else{initializing=false;setBusy(false);const reduced=$('#reduced').checked;$('#reduced').checked=true;for(let i=1;i<=4;i++)if(!await travelTo(i))break;if(activeMural===4)await navigate('C');$('#reduced').checked=reduced;sessionStorage.removeItem('shuilongci-v3-return');if(activeMural===4)message('已恢复第五铺阅读。');}}initializing=false;$('#loading').hidden=true;setBusy(false);}
 setBusy(true);
 initialize().catch(e=>{$('#loading p').textContent=`${e.message}。刷新可重试。`;const a=document.createElement('a');a.href='../../v24.html';a.textContent='打开原展厅 →';$('#loading').append(a);});
 addEventListener('pagehide',e=>{if(!e.persisted){disposed=true;layer?.dispose();finish?.dispose();detailAnimation?.cancel();if(wallPlane){wallPlane.removeFromParent();wallPlane.geometry.dispose();wallPlane.material.map?.dispose();wallPlane.material.dispose();wallPlane=null;}} });
@@ -298,6 +306,7 @@ async function leaveTemple(){
   const locationLabel=$('#location-label');
   await animate32(EXIT_DURATION,t=>{
    const pose=path.sampleExit(t);
+   setExitGround?.(smooth(12.25,14.5,pose.position[2]));
    if(pose.position[2]>12.25&&locationLabel.textContent!=='走出水龙祠')locationLabel.textContent='走出水龙祠';
    h.model.setCamera(pose,{immediate:true});
   });
@@ -305,6 +314,7 @@ async function leaveTemple(){
   showCulture(0);
   return true;
  }catch(e){
+  setExitGround?.(0);
   h.model.setCamera(savedPose,{immediate:true});
   rearGallery.setEnabled(!compare&&['A','B'].includes(direction));rearGallery.api.setReveal(1);
   paintView(priorView);message(e.message+'。可再次尝试走出水龙祠。');
