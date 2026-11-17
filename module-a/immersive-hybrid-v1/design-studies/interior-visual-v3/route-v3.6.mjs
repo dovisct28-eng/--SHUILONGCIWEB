@@ -4,8 +4,8 @@ import {FIFTH_DOCK} from './route-v3.4.mjs';
 const scanSettings=[
  {seconds:6,standOff:1.35,span:.32,fov:55},
  {seconds:8,standOff:3.75,span:.34,fov:39},
- {seconds:4,standOff:3.9,span:.34},
- {seconds:4,standOff:3.9,span:.34},
+ null,
+ null,
  {seconds:8,standOff:3.9,span:.34,fov:42},
 ];
 const pose=(position,target)=>({position,target,fov:48});
@@ -15,7 +15,9 @@ const createTourRail=(segment,points)=>createRearRail(segment,points,{angularGaz
 // PlaneGeometry's local +X points to the photo's right edge. Rotate this
 // vector and the front normal by the same angle used for the wall texture.
 export function wallSweep(mural,index,start,aspect){
- const {seconds,standOff,span,fov=48}=scanSettings[index];
+ const settings=scanSettings[index];
+ if(!settings)return null;
+ const {seconds,standOff,span,fov=48}=settings;
  const {position:center,rotation,width,height}=mural;
  const half=Math.min(width,height*aspect)*span;
  const right=[Math.cos(rotation),0,-Math.sin(rotation)];

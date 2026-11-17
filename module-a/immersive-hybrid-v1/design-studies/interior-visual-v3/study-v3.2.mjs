@@ -263,7 +263,7 @@ async function travelTo(index){
  setBusy(true);message('');const prior=activeMural,priorView=view,savedPose=h.model.pose;
  try{
   if(variant35&&index>prior){
-   const rail=await sweepCurrentWall();
+   const rail=await prepareOnwardRail();
    body.dataset.tourPhase='travel';
    if(prior===0)return await continueToSecond(rail);
    return await rearGallery.travelTo(index,rail);
@@ -281,13 +281,14 @@ async function travelTo(index){
   paintPosition();return true;
  }catch(e){message(e.name==='MuralImageError'?e.message+'。已保留上一铺，可再次点击继续。':e.message+'。该段尚未打通，可返回上一空间。');activeMural=prior;h.model.setCamera(prior===0&&h.state==='mural-look'?FIRST_FRONT_DOCK.discoveryCamera:savedPose,{immediate:true});let restored=false;try{await updateMuralUI();if(rearGallery?.isRear(prior))await rearGallery.restore(prior);else await placeCandidate();if(prior===0)h.model.mural.setBrightness(1);restored=true;}catch{}wallPlane&&(wallPlane.visible=true);paintView(!restored||!['C','D'].includes(priorView)||prior===0&&h.state!=='mural-reading'?'B':priorView);return false;}finally{delete body.dataset.tourPhase;delete body.dataset.routeTravel;wheel=0;wheelQuiet=performance.now()+400;setBusy(false);}
 }
-async function sweepCurrentWall(){
+async function prepareOnwardRail(){
  const image=$('#reading-image');
  const start=activeMural===0&&h.state==='mural-reading'?FIRST_FRONT_DOCK.discoveryCamera:h.model.pose;
  const sweep=wallSweep(murals[activeMural],activeMural,start,image.naturalWidth/image.naturalHeight);
- const onward=activeMural===4?exitRail(sweep.end):onwardRail(activeMural,sweep.end);
- const hits=[sweep.approach,sweep.scan,onward].flatMap(rail=>rail.validate(h.model));
- if(hits.length){console.warn('Gallery rail intersections',JSON.stringify(hits.slice(0,3)));throw Error('巡视路线暂不可用');}
+ const onward=activeMural===4?exitRail(sweep.end):onwardRail(activeMural,sweep?.end??start);
+ const rails=sweep?[sweep.approach,sweep.scan,onward]:[onward];
+ const hits=rails.flatMap(rail=>rail.validate(h.model));
+ if(hits.length){console.warn('Gallery rail intersections',JSON.stringify(hits.slice(0,3)));throw Error('参观路线暂不可用');}
  if(view==='D'){
   body.dataset.tourPhase='restore';
   $('#detail').inert=true;
@@ -306,6 +307,7 @@ async function sweepCurrentWall(){
   await goSpace('mural-look');
  }
  paintView('A');
+ if(!sweep)return onward;
  body.dataset.routeTravel='true';
  body.dataset.tourPhase='sweep';
  $('#location-label').textContent='沿墙观看'+murals[activeMural].title;
@@ -327,7 +329,7 @@ async function leaveTemple(){
  setBusy(true);message('');
  const savedPose=h.model.pose,priorView=view;
  try{
-  const path=await sweepCurrentWall();
+  const path=await prepareOnwardRail();
   body.dataset.tourPhase='exit';
   $('#location-label').textContent='走向大门';
   await animate32(420,t=>rearGallery.api.setReveal(1-t));

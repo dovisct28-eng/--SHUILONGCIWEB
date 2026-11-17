@@ -18,7 +18,19 @@ const assertPose=(a,b)=>{
  assert.equal(a.fov,b.fov);
 };
 
-for(const [index,mural] of murals.entries())test(`${mural.id} follows the image's right-to-left axis and joins the onward rail`,()=>{
+for(const index of [2,3])test(`${murals[index].id} joins the onward rail directly from its wall dock`,()=>{
+ assert.equal(wallSweep(murals[index],index,docks[index],aspects[index]),null);
+ const travel=onwardRail(index,docks[index]);
+ assertPose(travel.sample(0),docks[index]);
+ assertPose(travel.sample(1),docks[index+1]);
+ for(let i=0;i<=500;i++){
+  const sample=travel.sample(i/500);
+  assert.ok(norm(difference(sample.target,sample.position))>.8);
+ }
+});
+
+for(const index of [0,1,4])test(`${murals[index].id} follows the image's right-to-left axis and joins the onward rail`,()=>{
+ const mural=murals[index];
  const sweep=wallSweep(mural,index,docks[index],aspects[index]);
  const begin=sweep.scan.sample(0),end=sweep.scan.sample(1);
  const travel=index===4?exitRail(end):onwardRail(index,end);
